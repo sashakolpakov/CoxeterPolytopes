@@ -4,12 +4,13 @@ Third-party papers, source archives and computational supplements are **not
 included in Git or the project bulk-data release**. Their local originals
 are preserved. The retained provenance files below identify upstream sources;
 [external-inputs-manifest.json](external-inputs-manifest.json) records the
-original paths, byte lengths and SHA-256 hashes of 36 excluded files, totalling
-60,626,353 bytes. This inventory records the local copies, not a redistribution
+original paths, byte lengths and SHA-256 hashes of 37 excluded files, totalling
+62,245,573 bytes. This inventory records the local copies, not a redistribution
 licence or a claim that the upstream URLs still serve identical bytes.
 
 The six primary papers' selected verification plans do not reference
-`data/external/`. Historical Enriques/K3 scripts do: they require the matching
+`data/external/` or the downloaded Chen–Labbé PDF below. Historical scripts
+may require these matching
 upstream inputs separately. In particular, the catalogue's
 `external_enriques` entry points to Martin's downloaded paper and extracted
 TeX source; it is an external reference, not a seventh project paper.
@@ -31,6 +32,7 @@ route promises a complete historical replay.
 | OSCAR 1.4.0, Type-I Enriques datum | [Provenance and pinned upstream URL](../data/external/oscar_enriques_type_i/README.md) | Serialized lattice/Borcherds context used by historical Type-I and K3-carrier certificates. |
 | Shimada, Enriques configuration data | [Provenance and landing page](../data/external/shimada_l10l26note/README.md) | Exact Enriques wall/configuration records. |
 | Felikson–Tumarkin, H7 diagram | [Author-maintained diagram](https://www.maths.dur.ac.uk/users/anna.felikson/Polytopes/poly/7-11.pdf), [local provenance note](../results/fresh_dimension_new_mechanisms_20261014.md) | The historical H7-based construction reconstructs exact geometry from this diagram. The PDF is a third-party reference, not a project figure. |
+| Chen–Labbé, Lorentzian Coxeter systems and Boyd–Maxwell ball packings | [arXiv 1310.8608v6](https://arxiv.org/pdf/1310.8608v6), [source-identification note](../results/fresh_all_ideal_seven_simplex_literature_20261017.md) | Figure 14, printed page 24, supplies a human-transcribed historical diagram. No current six-paper verification selection requires this PDF. |
 
 These are dependency examples, not a new completeness audit of every
 historical script. Consult the selected script and its source-bound receipts
@@ -57,6 +59,17 @@ It also contains upstream `texput.log` and `EnriquesFiniteAut.synctex` build
 products. Those two are inventoried for byte provenance but are unnecessary
 for scientific replay and need not be restored. Do not compile this external
 paper as part of the six primary papers' verification.
+
+For Chen–Labbé, the recorded version is arXiv 1310.8608v6, corresponding to
+DOI [10.1007/s10711-014-0004-1](https://doi.org/10.1007/s10711-014-0004-1).
+The preserved local copy belongs at
+`data/references/fresh_all_ideal_seven_simplex_literature_20261017_chen_labbe.pdf`:
+1,619,220 bytes, SHA-256
+`1d7a1fd1f20421f9cc7fdeb9b3deacdc05f6ce814e37b7849cd377f72d7f5e99`.
+No redistribution permission was recorded, so it was removed from the bulk
+payload before any asset upload. The historical checker compares a separately
+transcribed graph and hashes the PDF for source identification; downloading
+the paper does not verify that transcription.
 
 For the Apéry–Fermi supplement, selectively extract
 `AperyFermiCompData.txt` from the matching `compdata.zip`. The unused

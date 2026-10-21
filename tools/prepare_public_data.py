@@ -44,6 +44,8 @@ def public_file(path: Path) -> bool:
     # Third-party downloads remain local; their README files give provenance.
     if rel.parts[:2] == ("data", "external") and path.name != "README.md":
         return False
+    if rel.parts[:2] == ("data", "references") and path.suffix == ".pdf":
+        return False
     if "AGENTS" in path.name or path.name.startswith(("GOAL", "RESEARCH_PLAN")):
         return False
     return path.is_file()
@@ -247,7 +249,7 @@ def main() -> None:
         validate_completed(state, batches, work)
         manifest = {"schema_version": 1,
                     "repository": "sashakolpakov/CoxeterPolytopes",
-                    "release_tag": "research-data-2026-10-21",
+                    "release_tag": "research-data-2026-10-21-r1",
                     "scope": "Large scientific inputs and certificates; original files unchanged. This is data integrity, not mathematical verification.",
                     "original_bytes": sum(r["bytes"] for r in rows),
                     "parts": sorted(state["parts"], key=lambda p: p["name"])}

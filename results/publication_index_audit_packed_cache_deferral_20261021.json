@@ -1,0 +1,22 @@
+{
+  "status": "WATCHDOG_STOP_PRESERVED",
+  "record": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "tools/audit_public_tree.py"
+    ],
+    "exit_code": -15,
+    "stop_reason": "Publication I/O exceeded 256 MiB process-group RSS",
+    "observed_peak_group_rss_bytes": 292061184,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 143817371648,
+      "ram_available_bytes": 7556612096
+    },
+    "seconds": 4.173
+  },
+  "correction": "Git cat-file pack windows limited to16MiB with1MiB windows and8MiB delta cache; watchdog256MiB unchanged. Full indexed audit must pass after correction.",
+  "scope": "Publication hygiene only; no mathematical/Lean result affected."
+}

@@ -55,6 +55,8 @@ def main() -> int:
     allowed = {"tools/prepare_public_data.py", "scripts/fetch_public_data.py",
                "tools/audit_public_tree.py",
                "tools/upload_public_data.py",
+               "tools/audit_public_data_contents.py",
+               "tools/revise_public_data_reference_exclusion.py",
                "tests/test_public_data_io_20261021.py"}
     suffix = command[1:]
     if suffix[:1] == ["-B"]:

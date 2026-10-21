@@ -1,0 +1,94 @@
+{
+  "created_at": "2026-10-21T19:01:57.039470+00:00",
+  "status": "PASS_SCOPED_SCIENTIFIC_PAYLOAD_INSPECTION_NO_CONFIGURED_CREDENTIAL_MARKERS",
+  "manifest": {
+    "path": "repro/public-data-manifest.json",
+    "bytes": 213687,
+    "sha256": "57dfd7fee51da317b7482dda3401b330e84c7b36fbc8bb12d8e0cf0110ff0e6d"
+  },
+  "archives": 33,
+  "original_files": 936,
+  "original_bytes": 17665895736,
+  "compressed_bytes": 2177183089,
+  "formats": {
+    "JSON research record": 887,
+    "compressed research stream": 27,
+    "NumPy arrays": 13,
+    "SQLite research database": 9
+  },
+  "marker_findings": [],
+  "marker_scope": [
+    "private-key headers (selected common formats)",
+    "GitHub tokens",
+    "AWS access-key identifiers",
+    "selected JSON credential fields"
+  ],
+  "formats_opened": [
+    "all original bytes SHA-256 checked",
+    "gzip and Zstandard decoded streams",
+    "all NumPy ZIP members and dtype headers; no pickle loading",
+    "SQLite raw bytes plus immutable read-only schemas"
+  ],
+  "numpy_unicode_manual_review": [
+    {
+      "path": "data/enumerations/fresh_h21_source_corner_walk_20261013_group.npz",
+      "member": "source_manifest.npy",
+      "decoded_utf32_bytes": 1096,
+      "decoded_utf8_sha256": "ceeb046e4b49e14135230bb03690a1968c96d14d473ee8ec6404b35bb5eca86f",
+      "keys": [
+        "data/enumerations/borcherds_d4_h21_og10_carrier_obstruction.json",
+        "data/enumerations/fresh_h20_global_interior_sections_20261013.json"
+      ],
+      "value_types": {
+        "data/enumerations/borcherds_d4_h21_og10_carrier_obstruction.json": "str",
+        "data/enumerations/fresh_h20_global_interior_sections_20261013.json": "str"
+      },
+      "all_values_are_sha256_hex": true
+    }
+  ],
+  "source_inspection": {
+    "path": "tools/audit_public_data_contents.py",
+    "bytes": 6868,
+    "sha256": "c5fbdc9a5316b16d6e7aedd98aeb7ced6c0dac6d058a9409267e9da18d2ac4c7"
+  },
+  "source_review": {
+    "path": "results/review_public_bulk_manifest_metadata_sensitivity_compact_reviewer_20261021.md",
+    "bytes": 7042,
+    "sha256": "efa2f1e9c3a952ea945122f99f208c9b18df757aae8e044c1d0b8bab538ed22d"
+  },
+  "reference_exclusion": {
+    "path": "results/public_data_reference_exclusion_20261021.json",
+    "bytes": 1519,
+    "sha256": "860f24cac4ae9ace910c4c6642041fa7fea1854fd158a86d9262b93f996eaa60"
+  },
+  "local_raw_report_identity": {
+    "path": ".publication/payload_contents_inspection_20261021.json",
+    "bytes": 1007806,
+    "sha256": "a13080dc2413581fb6c2f8976eb6f520e83ed49614270deea7e928ce5ca7a3b5"
+  },
+  "local_stdout_identity": {
+    "path": ".publication/payload_contents_inspection_20261021.txt",
+    "bytes": 2479,
+    "sha256": "f290d2a962e5b8a507d5b824a660cf2a1d900d0ea0dd1a4fa1044ddc9c1ceb9b"
+  },
+  "watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "tools/audit_public_data_contents.py"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 44466176,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 143847411712,
+      "ram_available_bytes": 7126204416
+    },
+    "seconds": 136.715
+  },
+  "local_reports_published": false,
+  "limitations": "Heuristic marker and format/provenance inspection, not proof of absence of every possible private datum. JSON format uses prefix checks; mathematical contents are not verified. Raw prefixes/schema report remains local. Payload classification excludes administrative/history paths; no reference PDF or third-party download is in the revised payload.",
+  "network_uploads_during_inspection": 0
+}

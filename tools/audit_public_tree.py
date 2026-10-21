@@ -59,7 +59,12 @@ def main() -> None:
         raise SystemExit("Empty Git index; nothing has been audited")
     issues, total, largest, manifest = [], 0, (0, ""), None
     blob_list = hashlib.sha256()
-    child = subprocess.Popen(["git", "cat-file", "--batch"], stdin=subprocess.PIPE,
+    # Bound Git's mapped pack windows and delta cache after the first commit
+    # has packed the repository. Default caches can exceed the I/O watchdog.
+    child = subprocess.Popen(["git", "-c", "core.packedGitLimit=16m",
+                              "-c", "core.packedGitWindowSize=1m",
+                              "-c", "core.deltaBaseCacheLimit=8m",
+                              "cat-file", "--batch"], stdin=subprocess.PIPE,
                              stdout=subprocess.PIPE)
     try:
         for name, mode, oid in entries:

@@ -37,7 +37,7 @@ def main():
     manifest_path = ROOT / "repro/public-data-manifest.json"
     manifest = json.loads(manifest_path.read_text())
     repo, tag = manifest["repository"], manifest["release_tag"]
-    if repo != "sashakolpakov/CoxeterPolytopes" or tag != "research-data-2026-10-21":
+    if repo != "sashakolpakov/CoxeterPolytopes" or tag != "research-data-2026-10-21-r1":
         raise ValueError("Unexpected publication destination")
     parts = manifest["parts"]
     if not 0 < len(parts) < 100 or len({p["name"] for p in parts}) != len(parts):
