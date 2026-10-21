@@ -7,6 +7,13 @@ files are distributed as assets of the
 The versioned `public-data-manifest.json` records their original paths,
 lengths and SHA-256 hashes, and the corresponding archive hashes.
 
+**Availability:** no bulk assets have been uploaded. The revised manifest
+describes 936 research files in 33 prepared archives; publication of that
+payload is awaiting explicit authorization. The source repository, six
+paper PDFs and documentation site are public. The restore commands below
+require the release assets and do not yet establish a successful public
+restore.
+
 Inspect the local plan first. This command performs no network requests or
 mathematical checks:
 

@@ -1,0 +1,15 @@
+# Packed-object cache and release-tag source deltas
+
+21 October 2026. **SOURCE PASS for these two limited deltas.** I read both current utilities, the local Git configuration/manual and the preserved watchdog-stop record. I ran no Git command, audit, uploader, test, mathematical worker or network operation and changed no index or reviewed source.
+
+`tools/audit_public_tree.py` is 7,561 bytes, SHA-256 `7bb697e8a5911e6aacd792ee36b7aa6dedd8382d74d01f4c05a8fdbd3ea499ea`. Reversing only its added explanatory comment and three `git -c` flags exactly recovers the previously reviewed 7,210-byte source `0a25fb8e6981a5e1ed8d77e57a4035a810e719535e4a7055a95c6012c9e71bfd`.
+
+The flags are correctly placed before `cat-file --batch`: `core.packedGitLimit=16m`, `core.packedGitWindowSize=1m`, `core.deltaBaseCacheLimit=8m`. The installed `git-config.1`, lines3590–3626, documents these settings as simultaneous mapped-pack bytes, individual mapping-window bytes, and per-thread cached decompressed delta bases, with `m` suffix support. They control reading caches; `.git/config`'s separate `pack.*` settings concern pack production and do not replace these settings. Command-local `-c` does not mutate repository configuration.
+
+The index enumeration, staged object-ID requests, complete blob reads, secret/debris/size checks, manifest validation, required PDF presence and final path/object digest are byte-for-byte unchanged. Thus the change does not select different indexed blobs or weaken any check. This is a source equivalence statement for a given index, not my independent enumeration or certification of the present index. These caches also do not bound every Git allocation: the same sampled 256-MiB process-group watchdog remains required.
+
+`results/publication_index_audit_packed_cache_deferral_20261021.json`, 738 bytes, SHA `e73955198fbbae6f63de8a25d357b9827463a97feea0b6269dcf3f5996ce8f45`, honestly records the earlier watchdog stop: observed RSS292,061,184 bytes, exit−15, 4.173 seconds. It is not a successful audit. Root separately reports that the corrected full audit completed at105,185,280 bytes/8.312 seconds with zero issues; I did not rerun it.
+
+`tools/upload_public_data.py` is 4,496 bytes, SHA `24573f62b2d85744927b7eeaa91babd972d86daabd777f95494f08ea8f0f67fc`. Removing only `-r1` from its literal destination-tag guard exactly recovers the previously reviewed source `fbb9d14925f97ebc86759645725f08ceab6bb2dac8ca1d1e57555b5a4274abf1`. The new guard agrees with current manifest `57dfd7fee51da317b7482dda3401b330e84c7b36fbc8bb12d8e0cf0110ff0e6d`: repository `sashakolpakov/CoxeterPolytopes`, release `research-data-2026-10-21-r1`.
+
+All other uploader behavior is unchanged: actual tag-commit resolution against local HEAD, published-release requirement, serial local length/SHA verification, remote length/SHA/state verification, duplicate/incomplete-list refusal, and no overwrite/delete/clobber. This does not establish remote availability, completed upload or authorization to bypass the previous automatic rejection. No mathematical, Lean, paper or proof-resource claim changes.
