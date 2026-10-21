@@ -53,13 +53,19 @@ reduced necessary lists then had eight and eleven grouped rows; the global
 ceilings remain nineteen/seventeen, and the PDFs still prove twenty-three/
 twenty. The new cubic-field half-loss argument is a case-specific refinement
 after the common actual-vector geometry; it is not another dimension paper.
-The [latest endpoint batch](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
+The [previous endpoint batch](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
 closes the general A17 row, the ordinary-A1 choice beside general A18,
-and the arithmetic A15/A16 rows. The remaining necessary lists have seven
-and nine grouped rows. These are further supporting arguments within the
-same two compact papers, without a new global ceiling or another manuscript.
-One bounded construction interval now records the actual A9-7 corner at
-its explicit geometric input boundary; no new polytope is claimed.
+and the arithmetic A15/A16 rows. The [latest accepted batch](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
+also closes the last general A18 companion and every arithmetic A14 case,
+leaving six and eight necessary groups. The ceilings remain nineteen and
+seventeen, and the six printed editions are unchanged. Its restricted
+large-D quadrilateral theorem supplies no charge372 improvement.
+
+The same batch closes the literal norm79 construction host by an integral
+period between two full actual D9 germs, with explicit geometric/arithmetic
+premises and separate END0 and two-map execution records. This is a
+literal-module nonreflectivity result, not a field/form-class exclusion,
+new example or additional manuscript; an END8 search is unnecessary.
 
 The ideal RA4 paper already follows the requested sequence: the published
 minimum, the universal gap and equality reduction, the restricted
@@ -101,6 +107,13 @@ has a bounded compile and separate ten-declaration audit
 [PASS](../results/lean_endpoint_triangle_verification_20261021/manifest.json).
 It supplies internal algebra and norm logic for the latest arithmetic
 endpoint arguments, retaining their actual geometric and field interfaces.
+
+The [Lorentz obstruction kernel](lorentz_obstruction_kernel_logic_20261021.md)
+has bounded compilation and a separate seven-declaration actual axiom audit
+[PASS](../results/lean_lorentz_obstruction_verification_20261021/manifest.json),
+with standard axioms only and no `sorryAx`. Its second-orbit and restricted
+Schur/rank implications remain conditional on their written geometric,
+original-lattice, actual-germ and arithmetic application inputs.
 
 ## Preserved material
 

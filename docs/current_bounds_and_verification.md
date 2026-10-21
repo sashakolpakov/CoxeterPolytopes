@@ -18,10 +18,13 @@ records compact nineteen and arithmetic seventeen; the
 supplies the fresh necessary forests. The
 [previous A-family checkpoint](../results/a_family_and_prime79_frontier_continuations_acceptance_20261021.json)
 accepts further exclusions and five construction-model eliminations. The
-[latest endpoint checkpoint](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
+[previous endpoint checkpoint](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
 adds reviewed A17/A18 and arithmetic A15/A16 exclusions, with full root
 and other-author mathematical reviews, plus one actually executed norm79
-interval. It does not lower either global ceiling. The six-paper writing milestone is complete;
+interval. The [latest acceptance](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
+adds the last general A18 companion exclusion, all arithmetic A14 cases,
+and literal norm79 nonreflectivity with separate script and Lean records.
+Neither batch lowers a global ceiling. The six-paper writing milestone is complete;
 research has resumed within the existing paper families.
 
 ## Dimension comparison
@@ -103,6 +106,15 @@ which earn no credit. It derives cycle cancellation, the integral Bezout
 expression and norm-product logic; actual fields, cyclic integrality and
 endpoint geometry remain explicit application premises.
 
+The [Lorentz obstruction kernel](lorentz_obstruction_kernel_logic_20261021.md)
+now has bounded compilation and a separate actual seven-declaration axiom
+audit [PASS](../results/lean_lorentz_obstruction_verification_20261021/manifest.json).
+Only standard axioms occur, with no `sorryAx`; failed predecessors retain
+zero credit. It derives the second-orbit cutoff, the golden comparison,
+and restricted large-D Schur/rank implications. Actual averaging/Cauchy
+realization, full wall germs, original-lattice preservation, arithmetic
+covolume and Gram/rank interpretation remain written application inputs.
+
 ## Recent dimension proofs and next work
 
 The previous general dimension-twenty frontier is now closed. Its whole
@@ -172,19 +184,25 @@ ordinary-dihedral energy greater than one sixth.
 The latest [endpoint proofs](../results/review_endpoint_continuations_and_prime79_runtime_root_20261021.md)
 exclude that ordinary-T2 arithmetic A15 case, both ordinary and short
 A1 beside arithmetic A16, and every general A17 rank-two companion.
-The new general A18 component bound is greater than .91 with arbitrary
-finite spectators; it removes its ordinary A1 companion, leaving actual I.
+The general A18 component bound greater than .91 removes its ordinary A1
+companion. A subsequent [two-end paid-foot proof](../results/compact19_a18_isolated_i_two_end_paid_foot_exclusion_candidate_20261021.md)
+also excludes its actual-I companion, closing the entire A18 row.
 The arithmetic A16 extension first proves that its small-energy rank-one
 opposite is isolated, then extends the triangle norm argument to its
 larger height interval. It covers every actual field, including the rational
 case, without using Meyer. These supporting proofs belong in the existing
 two compact paper families and have separate full source-bound reviews.
 
+The fresh [arithmetic A14 proof](../results/arithmetic17_a14_all_spectator_energy_and_three_family_exclusions_20261021.md)
+proves component energy greater than .76 with arbitrary finite spectators
+over every actual field, and a stronger bound in the actual-I case.
+It excludes all three remaining A14 spectator alternatives. Its same-vector
+couplings do not assume that every ordinary T2 has energy greater than 1/6.
+
 The complete reduced necessary lists are now:
 
 | General compact nineteen: dominant | Entire remaining spectator alternatives |
 | --- | --- |
-| A18 | actual I |
 | A19 | none |
 | B18 | I |
 | B19 | none |
@@ -195,7 +213,6 @@ The complete reduced necessary lists are now:
 | Arithmetic first-type seventeen: dominant | Entire remaining spectator alternatives |
 | --- | --- |
 | A11 | I+(A5 or D5) |
-| A14 | ordinary T3, ordinary T2+A1, or I+T2 |
 | A17 | none |
 | B15 | either typed7 |
 | B16 | I |
@@ -205,11 +222,11 @@ The complete reduced necessary lists are now:
 | D17 | none |
 
 Here T2 and T3 are irreducible ordinary components, and I/typed7 retain
-their actual-wall definitions. There are seven and nine grouped rows,
+their actual-wall definitions. There are six and eight grouped rows,
 respectively. These necessary lists make no realization claim. The
-[latest checkpoint](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
-binds all new full reviews and the exact subtraction from the previous
-eight/eleven-row lists. It preserves the six printed paper editions.
+[latest checkpoint](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
+binds the full reviews and exact subtraction of the A18 and A14 rows
+from the preceding seven/nine-row lists. It preserves the six printed editions.
 The bounds still leave gaps of eleven and nine above the known compact
 example dimension eight. No new polytope example has been found.
 
@@ -222,6 +239,9 @@ complete written interfaces. It is not a fresh all-current target replay,
 whole-coupon deletion or a global fifty-six proof. The formal forest
 2D17+D23 still has charge 372, independently of A17; a new global budget
 argument would be necessary. No new polytope example has been found.
+The new [homogeneous large-D quadrilateral obstruction](../results/finite57_homogeneous_large_d_quadrilateral_schur_obstruction_20261021.md)
+excludes its precise full-white, unchanged-spectator configuration by a
+Schur/rank argument. It supplies no uniform charge saving or lower ceiling.
 A new [electrical proof for long affine A cycles](../results/finite57_long_affine_a_distance_five_zero_transfer_candidate_20261021.md)
 reproves the earlier held order-at-least-26 distance-four statement.
 It uses a cycle-Laplacian gap estimate and the native height gap; its
@@ -231,22 +251,25 @@ internal theorem, not a new bound or an accepted change to the frozen
 payment tables. It leaves the other affine families and the costly
 finite forests unresolved.
 
-The [norm79 construction](../results/compact_h9_nonunit_coupling_prime79_full_base_and_first_transverse_20261021.md)
-now has one completed bounded [interval census](../results/prime79_a7_c_interval_execution_20261021.json).
-Its [algorithm specification](../results/compact_h9_prime79_a7_c_interval_checker_spec_20261021.md)
-and complete first-simple domain have full source reviews. The actual run
-covered 38,784 scalar trials in 1.956 seconds at about 55 MiB peak process-tree
-RSS. Its [certificate](../results/prime79_a7_c_interval_20261021.jsonl) has two
-integral mirrors and a unique earliest A9-7 simple germ, conditional on the
-pinned actual base, classification and local-finiteness inputs.
+The [literal norm79 host](../results/compact_h9_nonunit_coupling_prime79_full_base_and_first_transverse_20261021.md)
+is now proved nonreflective at its accepted actual-germ and admissible-arithmetic
+boundaries. The earlier 38,784-trial interval found the asymmetric A9-7
+corner. The subsequent [END0 execution](../results/prime79_actual_a9_end0_interval_execution_20261021.json)
+completed all 810,436 scalar trials and six first-simple profiles: six
+integral mirrors, with unique minimum D9-right id4. Its
+[domain](../results/compact_h9_prime79_actual_a9_end_edge_upper_and_complete_contract_candidate_20261021.md)
+and [algorithm contract](../results/compact_h9_prime79_actual_a9_end_interval_checker_spec_20261021.md)
+have full source reviews.
 
-The observed controls are U=16+25φ and z=259+416φ. They are nondivisible
-by √5, so the reviewed [integral reversal criterion](../results/compact_h9_prime79_a9_bridge_integral_reversal_and_next_edge_candidate_20261021.md)
-does not supply a chamber reversal here. A divisible-branch period proof
-cannot be applied to this observed corner. The [next end-edge upper/domain](../results/compact_h9_prime79_actual_a9_end_edge_upper_and_complete_contract_candidate_20261021.md)
-and [new checker contract](../results/compact_h9_prime79_actual_a9_end_interval_checker_spec_20261021.md)
-are preserved preparations, still unreviewed and unexecuted. No period,
-host exclusion, finite-volume completion or new polytope follows.
+The [two-D9 proof](../results/compact_h9_prime79_two_actual_d9_germ_period_candidate_20261021.md)
+matches full actual germs and proves original-lattice integrality of an
+infinite-order chamber symmetry. A separate bounded
+[two-map exact check](../results/prime79_two_d9_germ_period_execution_20261021.json)
+passed all matrix/inverse, Gram, glue and orbit identities; it is not another
+root census. The [acceptance receipt](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
+binds both actual runs and full written reviews. END8 was refused before a
+child and is unnecessary for this conclusion. No new example, field-wide,
+form-class, other-lattice or infinite-family exclusion follows.
 
 ## Ideal and compact right-angled four-volume
 

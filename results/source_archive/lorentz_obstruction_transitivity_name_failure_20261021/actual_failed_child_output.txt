@@ -1,0 +1,33 @@
+CoxeterProofs/LorentzObstructionKernel.lean:46:23: error(lean.unknownIdentifier): Unknown identifier `le_trans`
+CoxeterProofs/LorentzObstructionKernel.lean:77:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.LorentzObstructionKernel.schur_numerator_identity`:
+  [LE R]
+  [LT R]
+  [Std.IsLinearOrder R]
+  [Std.LawfulOrderLT R]
+  [OrderedRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'CoxeterProofs.LorentzObstructionKernel.second_orbit_gap' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.norm_two_second_orbit_gap' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.golden_pair_beyond_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.no_finite_orbit_data' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.schur_numerator_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.large_d_schur_numerator_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.full_white_rank_contradiction' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,127 @@
+{
+  "created_utc": "2026-10-21T20:25:34.034185+00:00",
+  "status": "PASS_ONE_BOUNDED_COMPILE_AND_SEPARATE_ACTUAL_AXIOM_AUDIT",
+  "module": "CoxeterProofs.LorentzObstructionKernel",
+  "source": {
+    "path": "formal/CoxeterProofs/LorentzObstructionKernel.lean",
+    "sha256": "5c0f8e57c9a1fb2dd1ca740d2424a5359169cde199c351d782188fe328c0a6d1",
+    "bytes": 4765
+  },
+  "actual_declarations": [
+    {
+      "declaration": "CoxeterProofs.LorentzObstructionKernel.second_orbit_gap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.LorentzObstructionKernel.norm_two_second_orbit_gap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.LorentzObstructionKernel.golden_pair_beyond_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.LorentzObstructionKernel.no_finite_orbit_data",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.LorentzObstructionKernel.schur_numerator_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.LorentzObstructionKernel.large_d_schur_numerator_nonzero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.LorentzObstructionKernel.full_white_rank_contradiction",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "requested_and_actual_count": 7,
+  "runs": {
+    "compile": {
+      "ledger": {
+        "path": "results/lean_lorentz_obstruction_verification_20261021/CoxeterProofs_LorentzObstructionKernel.json",
+        "sha256": "59060c1edd68b0654bee12de98ff3d93934c46c3a7154b5b538d24577fcebe34",
+        "bytes": 1522
+      },
+      "outer_stdout": {
+        "path": "results/lorentz_obstruction_explicit_transitivity_compile_stdout_20261021.txt",
+        "sha256": "035c57b04d8ccc8a097a5c41e79b6401475a02e1d82415a9639257e404a0c171",
+        "bytes": 1716
+      },
+      "elapsed_seconds": 0.52,
+      "resources": {
+        "free_disk_gib": 134.56,
+        "available_memory_gib": 7.54
+      }
+    },
+    "axiom_audit": {
+      "ledger": {
+        "path": "results/lean_lorentz_obstruction_verification_20261021/CoxeterProofs_LorentzObstructionKernel_axiom_audit.json",
+        "sha256": "9c6dec43417023a8a3cebe2113834cb90b152157467212ba41280480dce3e9d3",
+        "bytes": 1441
+      },
+      "outer_stdout": {
+        "path": "results/lorentz_obstruction_actual_axiom_audit_stdout_20261021.txt",
+        "sha256": "8988c26e50dd5733d1a0fe37f0eb3c8d9255feef5437c27cbd64c51b110853d0",
+        "bytes": 3029
+      },
+      "elapsed_seconds": 0.51,
+      "resources": {
+        "free_disk_gib": 134.56,
+        "available_memory_gib": 7.57
+      }
+    }
+  },
+  "actual_child_output": {
+    "path": "results/lean_lorentz_obstruction_verification_20261021/actual_child_axiom_output_20261021.txt",
+    "sha256": "479036b2bdb8a7be1df2ecc32d69628e8a7a01a921458fed8108b4f6bf2322d0",
+    "bytes": 1434
+  },
+  "warnings": {
+    "count": 1,
+    "kind": "Unused ordered section variables in schur_numerator_identity; retained without suppression."
+  },
+  "failed_predecessors": [
+    {
+      "path": "results/lorentz_obstruction_initial_failure_preservation_20261021.json",
+      "sha256": "6055bd05e48325005fce86ee507550f27c627c0ffe9d75544539d9ab5211b12b",
+      "bytes": 1078
+    },
+    {
+      "path": "results/lorentz_obstruction_transitivity_name_failure_preservation_20261021.json",
+      "sha256": "cc804a9dbe2a67aac1b94c8c0237260410116c7bcb8be1baf5114efa40726056",
+      "bytes": 988
+    }
+  ],
+  "scope": "Conditional Lorentz second-orbit cutoff, exact golden comparison, large-D Schur numerator identity/sign and rank contradiction. Actual finite-order averaging/Cauchy realization, lattice/chamber germ and arithmetic covolume inputs, complete white support and Gram/rank interpretation remain explicit written inputs. No complete geometric formalization or new dimension theorem.",
+  "execution_discipline": "Strictly serial one module with2048MiB/one thread,40GiB/6GiB admission,8GiB/3GiB abort, unchanged runner/lock; no successful dependency rerun. Two failed attempts preserved with zero credit. Owned work directory and unused intermediates removed by runner; object remains ignored."
+}

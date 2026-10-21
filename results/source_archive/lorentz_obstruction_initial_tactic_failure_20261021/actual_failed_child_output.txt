@@ -1,0 +1,131 @@
+CoxeterProofs/LorentzObstructionKernel.lean:42:4: error: `grind` failed
+case grind.1
+R : Type u
+inst : CommRing R
+inst_1 : LE R
+inst_2 : LT R
+inst_3 : Std.IsLinearOrder R
+inst_4 : Std.LawfulOrderLT R
+inst_5 : OrderedRing R
+c q W second : R
+norm_positive : 0 < c
+time_square_nonnegative : 0 ≤ q
+spatial_norm : W = q + c
+cauchy : 2 * q ^ 2 ≤ W * (W + second + q)
+spatial_positive : 0 < W
+norm_square_positive : 0 < c * c
+bad : second ≤ -3 * c
+bracket : W + second + q ≤ 2 * q - 2 * c
+upper : (q + c) * (q + c + second + q) ≤ 2 * q ^ 2 - 2 * c ^ 2
+expansion : (q + c) * (2 * q - 2 * c) = 2 * q ^ 2 - 2 * c ^ 2
+h : ¬-3 * c < second
+h_1 : c = q
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] Std.IsLinearOrder R
+    [prop] Std.LawfulOrderLT R
+    [prop] OrderedRing R
+    [prop] 0 < c
+    [prop] 0 ≤ q
+    [prop] W = q + c
+    [prop] 2 * q ^ 2 ≤ W * (W + second + q)
+    [prop] 0 < W
+    [prop] 0 < c * c
+    [prop] second ≤ -3 * c
+    [prop] W + second + q ≤ 2 * q - 2 * c
+    [prop] (q + c) * (q + c + second + q) ≤ 2 * q ^ 2 - 2 * c ^ 2
+    [prop] (q + c) * (2 * q - 2 * c) = 2 * q ^ 2 - 2 * c ^ 2
+    [prop] ¬-3 * c < second
+    [prop] c = q
+  [eqc] True propositions
+    [prop] Std.IsLinearOrder R
+    [prop] Std.IsPreorder R
+    [prop] c = q
+    [prop] Std.LawfulOrderLT R
+    [prop] second ≤ -3 * c
+    [prop] 0 ≤ q
+    [prop] W + second + q ≤ 2 * q - 2 * c
+    [prop] 2 * q ^ 2 ≤ W * (W + second + q)
+    [prop] (q + c) * (q + c + second + q) ≤ 2 * q ^ 2 - 2 * c ^ 2
+    [prop] 0 < c
+    [prop] 0 < W
+    [prop] 0 < c * c
+    [prop] OrderedRing R
+  [eqc] False propositions
+    [prop] -3 * c < second
+  [eqc] Equivalence classes
+    [eqc] {c, q}
+    [eqc] {W, q + c}
+    [eqc] {W + second, q + c + second}
+    [eqc] {W + second + q, q + c + second + q}
+    [eqc] {-1 • c + 0 • One.one, -1 • q + 0 • One.one}
+    [eqc] {-1 • c ^ 2 + 0 • One.one, -1 • q ^ 2 + 0 • One.one}
+    [eqc] {c * c, c * q}
+    [eqc] {c * second, q * second}
+    [eqc] {W * (W + second + q), (q + c) * (q + c + second + q)}
+    [eqc] {2 * c, 2 * q}
+    [eqc] {2 * c ^ 2, 2 * q ^ 2}
+    [eqc] {(q + c) * (2 * q - 2 * c), 2 * q ^ 2 - 2 * c ^ 2}
+    [eqc] {c ^ 2, q ^ 2}
+    [eqc] {-1 • c, -1 • q}
+    [eqc] {-1 • (c * second), -1 • (q * second)}
+    [eqc] {-1 • c ^ 2, -1 • q ^ 2}
+    [eqc] {-2 • c ^ 2, -2 • q ^ 2}
+    [eqc] {1 • c, 1 • q}
+    [eqc] {1 • (c * second), 1 • (q * second)}
+    [eqc] {1 • c ^ 2, 1 • q ^ 2}
+    [eqc] {2 • c ^ 2, 2 • q ^ 2}
+  [cases] Case analyses
+    [cases] [1/2]: c = q
+      [cases] source: Model-based theory combination at argument #4 of
+            c ^ 2
+          and
+            q ^ 2
+  [ematch] E-matching patterns
+    [thm] Nat.pow_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+  [linarith] Linarith assignment for `R`
+    [assign] c := 1
+    [assign] q := 1
+    [assign] W := 2
+    [assign] second := -4
+    [assign] 「c ^ 2」 := 1
+    [assign] 「q ^ 2」 := 1
+    [assign] 「W ^ 2」 := 0
+  [ring] Ring `R`
+    [basis] Basis
+      [_] c + q + -1 * W = 0
+      [_] 2 * q + -1 * W = 0
+CoxeterProofs/LorentzObstructionKernel.lean:72:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.LorentzObstructionKernel.schur_numerator_identity`:
+  [LE R]
+  [LT R]
+  [Std.IsLinearOrder R]
+  [Std.LawfulOrderLT R]
+  [OrderedRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'CoxeterProofs.LorentzObstructionKernel.second_orbit_gap' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.norm_two_second_orbit_gap' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.golden_pair_beyond_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.no_finite_orbit_data' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.schur_numerator_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.large_d_schur_numerator_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.LorentzObstructionKernel.full_white_rank_contradiction' depends on axioms: [propext, Quot.sound]

@@ -49,6 +49,19 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`LorentzObstructionKernel` has bounded compilation and a separate actual
+seven-declaration axiom audit
+[PASS](../results/lean_lorentz_obstruction_verification_20261021/manifest.json).
+It derives the second-orbit cutoff, the exact golden comparison, and the
+restricted large-D Schur numerator/sign and rank contradiction. Only
+`propext`, `Classical.choice` and `Quot.sound` occur; no `sorryAx` is used.
+The [logic map](../docs/lorentz_obstruction_kernel_logic_20261021.md) retains
+actual finite-order averaging/Cauchy realization, full chamber germs,
+original-lattice preservation, arithmetic covolume and Gram/rank
+interpretation as written inputs. It does not formalize the entire host
+exclusion or change a dimension bound. Two failed predecessors are preserved
+with zero credit; successful dependencies were not rerun.
+
 `EndpointTriangleNormKernel` has bounded compilation and a separate actual
 ten-declaration axiom audit PASS. Its
 [receipt](../results/lean_endpoint_triangle_verification_20261021/manifest.json)

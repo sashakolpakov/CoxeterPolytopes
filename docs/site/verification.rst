@@ -115,3 +115,29 @@ separates derived cycle cancellation, the integral Bezout expression and
 finite norm inequalities from actual endpoint geometry, cyclic integrality
 and field-norm interpretation. It does not formalize a whole geometric paper.
 
+``LorentzObstructionKernel`` also has bounded compilation and a separate
+**seven-declaration actual axiom audit PASS**. Its
+:download:`receipt <../../results/lean_lorentz_obstruction_verification_20261021/manifest.json>`
+binds both serial runs and actual output; only standard axioms occur, with
+no ``sorryAx``. The :download:`logic map <../lorentz_obstruction_kernel_logic_20261021.md>`
+separates the second-orbit cutoff and restricted Schur/rank algebra from
+actual averaging/Cauchy realization, complete wall germs, original-lattice
+preservation, arithmetic covolume and Gram/rank interpretation.
+
+Latest supporting research
+--------------------------
+
+The :download:`accepted supporting batch <../../results/a14_a18_and_prime79_period_acceptance_20261021.json>`
+removes the remaining general A18 companion and all arithmetic A14 families.
+Six general nineteen and eight arithmetic seventeen groups remain necessary;
+the ceilings and the six printed papers are unchanged. Its restricted
+homogeneous large-D quadrilateral obstruction does not lower charge372.
+
+For the literal norm79 construction host, the accepted END0 run checked
+810,436 scalar trials and six profiles, finding six integral mirrors and
+the unique D9-right minimum id4. A separate constant-size two-map check
+verified the original-lattice period algebra. The full written proof then
+gives nonreflectivity at its explicit actual-germ and arithmetic-covolume
+boundary. END8 is unnecessary. This excludes that literal host only; no new
+example, field, form-class or other-lattice exclusion is claimed.
+

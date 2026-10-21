@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-21T20:31:10.068984+00:00",
+  "status": "PASS_STRICT_SPHINX_AND_LOCAL_TARGET_EXISTENCE",
+  "scope": "Documentation only; no mathematical checker, external link fetching, fragment validation or remote deploy in this build.",
+  "stdout": {
+    "path": "results/lorentz_publication_sphinx_stdout_20261021.txt",
+    "sha256": "82cee86b0d6ec6c25b1de0a19735d3db012426d627ff82ec9d2b00a7fa2d54cd",
+    "bytes": 5987
+  },
+  "watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/site_lorentz_20261021"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 102596608,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 144517713920,
+      "ram_available_bytes": 5317476352
+    },
+    "seconds": 2.041
+  },
+  "html_pages": 8,
+  "existing_local_targets_checked": 66,
+  "missing_local_targets": [],
+  "owned_generated_site_removed_after_check": ".publication/site_lorentz_20261021",
+  "owned_generated_bytes_removed": 4202332,
+  "preserved_papers": "Six frozen sources and final PDFs unchanged. No compiler objects, caches or generated site enter Git.",
+  "markdown_pages_checked": [
+    "README.md",
+    "docs/current_bounds_and_verification.md",
+    "docs/result_manuscript_correspondence.md",
+    "formal/README.md",
+    "docs/lorentz_obstruction_kernel_logic_20261021.md"
+  ],
+  "existing_markdown_local_targets_checked": 101,
+  "missing_markdown_local_targets": []
+}

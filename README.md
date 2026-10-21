@@ -38,11 +38,23 @@ the PDFs stating 23 and 20**. The [global composition](results/compact_dimension
 and [comparison guide](docs/current_bounds_and_verification.md) give their
 precise hypotheses and review records. General finite volume remains 57.
 
+The [latest accepted supporting batch](results/a14_a18_and_prime79_period_acceptance_20261021.json)
+removes the general A18+actual-I family and all three arithmetic A14
+families. Six general nineteen and eight arithmetic seventeen groups
+remain necessary possibilities; these are not realized examples.
+
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled
 120-cell minimum and second-volume problems remain open. Preserved
 field-specific arithmetic refinements are excluded from the current
 universal paper; they are not additional papers.
+
+The literal golden norm79 construction host is now proved nonreflective:
+two full actual D9 germs give an original-lattice integral chamber period
+of infinite order. The [proof](results/compact_h9_prime79_two_actual_d9_germ_period_candidate_20261021.md)
+has full internal reviews and separate exact execution records. Its actual-germ
+and arithmetic-covolume inputs are explicit; no field, form-class, other
+lattice or infinite-family exclusion follows.
 
 ## What “verified” means here
 
@@ -73,7 +85,7 @@ maps explain what each recorded check establishes. The
 coverage information. Written proof completion does not mean that Lean
 formalization is complete.
 
-The latest two selected kernels now have bounded compilation and separate
+The Regular24 and classical-composition kernels have bounded compilation and separate
 actual axiom-audit PASS records: Regular24 has **five actual declarations**,
 and ClassicalDimensionComposition has **four**. The
 [completion receipt](results/lean_publication_completion_20261021/manifest.json)
@@ -90,6 +102,14 @@ PASS. It derives cycle cancellation, an integral Bezout witness and finite
 norm contradictions. Its [receipt](results/lean_endpoint_triangle_verification_20261021/manifest.json)
 records the final source, actual output and preserved failed attempts;
 geometric and number-field application inputs remain explicit.
+
+The [Lorentz obstruction kernel](docs/lorentz_obstruction_kernel_logic_20261021.md)
+also has bounded compilation and a separate **seven-declaration** axiom audit
+[PASS](results/lean_lorentz_obstruction_verification_20261021/manifest.json),
+using only standard axioms and no `sorryAx`. It verifies the conditional
+second-orbit cutoff and restricted Schur/rank algebra. Actual finite-order
+averaging, chamber/lattice geometry and arithmetic interpretation remain
+written inputs; it is not a complete geometric formalization.
 
 ## Large research inputs
 
