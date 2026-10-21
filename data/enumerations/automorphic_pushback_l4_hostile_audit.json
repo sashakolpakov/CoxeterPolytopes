@@ -1,0 +1,486 @@
+{
+  "all_checks_pass": true,
+  "candidate_class_hostile_audit": [
+    {
+      "candidate": "all_compact_marked_arithmetic_P_n_ge_4",
+      "exact_pure_support_forced": false,
+      "known_non_singleton": true,
+      "native_Hilbert_classification_available": false,
+      "passes_L4": false,
+      "surface_free_raw_definition": true
+    },
+    {
+      "candidate": "compact_complete_root_chambers",
+      "exact_pure_support_forced": false,
+      "native_Hilbert_classification_available": false,
+      "passes_L4": false,
+      "same_open_chamber_return_if_no_hidden_cuts": true,
+      "surface_free_raw_definition": true
+    },
+    {
+      "candidate": "vanishing_Whittaker_obstruction_space",
+      "independent_Coxeter_definition": false,
+      "passes_L4": false,
+      "rejection": "Although computable from the lattice, this defines the class by a modular carrier gate equivalent to universal Borcherds principality; even granting it, no compact Hilbert-reflective classification is available.",
+      "surface_free_raw_definition": true
+    },
+    {
+      "candidate": "bounded_slope_or_reflective_form_exists",
+      "passes_L4": false,
+      "rejection": "circular by the flagship acceptance test",
+      "surface_free_raw_definition": false
+    },
+    {
+      "candidate": "trace_lattice_in_Ma_or_Wang_list",
+      "passes_L4": false,
+      "rejection": "membership does not turn an F-reflection into a Q reflection, does not force restriction to have exactly the P mirrors, and builds the desired bound into a classified finite list",
+      "surface_free_raw_definition": true
+    }
+  ],
+  "certificate_sha256": "a2886698ee28534bc790b2fb4f6022a203b17269d8873644cdf8ae33af677cca",
+  "checks": {
+    "Meyer_forces_degree_gt_one_for_compact_n_ge_4": true,
+    "all_group_dimension_formulas_match": true,
+    "all_sample_compact_rows_have_proper_restriction_group": true,
+    "all_sample_facet_reflections_fail_Q_pseudoreflection": true,
+    "all_sample_trace_fixed_loci_have_codimension_at_least_two": true
+  },
+  "classical_theorem_scope": {
+    "Gritsenko_Hulek_Kodaira": {
+      "Kodaira_label_alone_bounds_P": false,
+      "input": "a genuinely strongly reflective divisor on the same orthogonal modular quotient",
+      "strong_reflective_support_forced_by_P": false
+    },
+    "Ma_2018": {
+      "bounded_slope_finiteness_requires_reflective_form": true,
+      "input": "an integral Z-lattice of signature (2,N), with an arithmetic group finite-index in its rational orthogonal group",
+      "usable_on_native_compact_Hilbert_carrier": false
+    },
+    "Wang_2025_2026": {
+      "input": "an even Z-lattice of signature (N,2); the strongest root-system theorems often additionally use 2U+L or U+K",
+      "trace_numerology_is_not_a_transfer": true,
+      "usable_on_native_compact_Hilbert_carrier": false
+    }
+  },
+  "direction": "POLYTOPE -> canonical determinant-line Hilbert carrier -> independent AG -> theorem on the same POLYTOPE",
+  "minimum_completion_package": [
+    {
+      "known": false,
+      "name": "automatic_bounded_purity",
+      "statement": "For an independently defined non-singleton compact raw Coxeter class C, every canonical determinant gluing has a pure globally reflective divisor returning exactly P, with multiplicity/slope bounded independently of the facet count; or all alternative gluings are excluded."
+    },
+    {
+      "known": false,
+      "name": "Hilbert_reflective_finiteness",
+      "statement": "For anisotropic Res_{F/Q} SO(2,n) quotients, pure reflective forms of that bounded multiplicity/slope occur in only finitely many effectively enumerable F-lattices and dimensions."
+    }
+  ],
+  "native_Hilbert_exact_support_gates": {
+    "Bugaenko_control": "the unique determinant extension has an obstructed pure norm-two column and obstructed complete first compensator shell; this is not a no-go for every arbitrary reflective form",
+    "arbitrary_automorphic_exact_support_decidable": false,
+    "compensated_divisor_counts_as_pure_support": false,
+    "fixed_Borcherds_principal_part": "finite cusp-pairing linear algebra, hence decidable for a fixed enumerated support",
+    "forced_by_compact_root_reflectivity": false,
+    "reason": "known converse theorems require a hyperbolic split and do not cover the anisotropic compact Hilbert lattice"
+  },
+  "primary_sources": [
+    "https://arxiv.org/abs/0908.3076",
+    "https://arxiv.org/abs/1701.03225",
+    "https://arxiv.org/abs/2301.11536",
+    "https://arxiv.org/abs/2301.12606",
+    "https://arxiv.org/abs/1202.3361",
+    "https://arxiv.org/abs/2512.20701"
+  ],
+  "same_polytope_return_gate": {
+    "finite_carrier_lattices_alone_imply_finite_polytopes": false,
+    "required": [
+      "enumerate every determinant-line discriminant gluing",
+      "prove every global divisor component is reflective",
+      "prove no zero-auxiliary mirror cuts the open chamber",
+      "prove the original P is the complete chamber, not a chosen subchamber",
+      "retain Coxeter labels and wall normalizations"
+    ]
+  },
+  "schema_version": "coxeter.automorphic_pushback_l4_hostile_audit.v1",
+  "scope": {
+    "carrier_species": "canonical determinant line plus every reflection-stable isotropic discriminant gluing",
+    "claim_about_other_surface_or_hyperkaehler_carriers": false,
+    "dimension_range": "n>=4",
+    "noncompact_branch_separated": true,
+    "polytope_branch": "compact arithmetic Coxeter polytopes"
+  },
+  "trace_shadow_barrier": {
+    "consequence": "The native F-reflection does not become a branch pseudoreflection for the full rational trace orthogonal group.  A coincident Q-root hyperplane would be a separate root-by-root condition, not a functorial consequence.  The restriction-of-scalars arithmetic group is contained in a proper Q-subgroup and has infinite index in the full trace orthogonal arithmetic group.",
+    "sample_rows": [
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 6,
+        "Hilbert_type_IV_dimension": 4,
+        "Res_SO_Q_dimension": 30,
+        "classical_type_IV_dimension_N": 10,
+        "counterfactual_Wang_trace_status": "not_excluded_by_Wang_high_dimension_theorem",
+        "determinant_extension_F_rank": 6,
+        "facet_image_codimension_lower_bound": 7,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 2,
+        "field_degree_d": 2,
+        "full_trace_SO_Q_dimension": 66,
+        "group_dimension_difference": 36,
+        "group_dimension_difference_formula": 36,
+        "hyperbolic_dimension_n": 4,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 12,
+        "trace_fixed_locus_codimension": 2,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          10
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 10,
+        "Hilbert_type_IV_dimension": 8,
+        "Res_SO_Q_dimension": 90,
+        "classical_type_IV_dimension_N": 18,
+        "counterfactual_Wang_trace_status": "not_excluded_by_Wang_high_dimension_theorem",
+        "determinant_extension_F_rank": 10,
+        "facet_image_codimension_lower_bound": 11,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 2,
+        "field_degree_d": 2,
+        "full_trace_SO_Q_dimension": 190,
+        "group_dimension_difference": 100,
+        "group_dimension_difference_formula": 100,
+        "hyperbolic_dimension_n": 8,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 20,
+        "trace_fixed_locus_codimension": 2,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          18
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 11,
+        "Hilbert_type_IV_dimension": 9,
+        "Res_SO_Q_dimension": 110,
+        "classical_type_IV_dimension_N": 20,
+        "counterfactual_Wang_trace_status": "not_excluded_by_Wang_high_dimension_theorem",
+        "determinant_extension_F_rank": 11,
+        "facet_image_codimension_lower_bound": 12,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 2,
+        "field_degree_d": 2,
+        "full_trace_SO_Q_dimension": 231,
+        "group_dimension_difference": 121,
+        "group_dimension_difference_formula": 121,
+        "hyperbolic_dimension_n": 9,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 22,
+        "trace_fixed_locus_codimension": 2,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          20
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 12,
+        "Hilbert_type_IV_dimension": 10,
+        "Res_SO_Q_dimension": 132,
+        "classical_type_IV_dimension_N": 22,
+        "counterfactual_Wang_trace_status": "not_excluded_by_Wang_high_dimension_theorem",
+        "determinant_extension_F_rank": 12,
+        "facet_image_codimension_lower_bound": 13,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 2,
+        "field_degree_d": 2,
+        "full_trace_SO_Q_dimension": 276,
+        "group_dimension_difference": 144,
+        "group_dimension_difference_formula": 144,
+        "hyperbolic_dimension_n": 10,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 24,
+        "trace_fixed_locus_codimension": 2,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          22
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 13,
+        "Hilbert_type_IV_dimension": 11,
+        "Res_SO_Q_dimension": 156,
+        "classical_type_IV_dimension_N": 24,
+        "counterfactual_Wang_trace_status": "classically_excluded",
+        "determinant_extension_F_rank": 13,
+        "facet_image_codimension_lower_bound": 14,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 2,
+        "field_degree_d": 2,
+        "full_trace_SO_Q_dimension": 325,
+        "group_dimension_difference": 169,
+        "group_dimension_difference_formula": 169,
+        "hyperbolic_dimension_n": 11,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 26,
+        "trace_fixed_locus_codimension": 2,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          24
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 14,
+        "Hilbert_type_IV_dimension": 12,
+        "Res_SO_Q_dimension": 182,
+        "classical_type_IV_dimension_N": 26,
+        "counterfactual_Wang_trace_status": "classical_exception_dimension_only",
+        "determinant_extension_F_rank": 14,
+        "facet_image_codimension_lower_bound": 15,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 2,
+        "field_degree_d": 2,
+        "full_trace_SO_Q_dimension": 378,
+        "group_dimension_difference": 196,
+        "group_dimension_difference_formula": 196,
+        "hyperbolic_dimension_n": 12,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 28,
+        "trace_fixed_locus_codimension": 2,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          26
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 15,
+        "Hilbert_type_IV_dimension": 13,
+        "Res_SO_Q_dimension": 210,
+        "classical_type_IV_dimension_N": 28,
+        "counterfactual_Wang_trace_status": "classically_excluded",
+        "determinant_extension_F_rank": 15,
+        "facet_image_codimension_lower_bound": 16,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 2,
+        "field_degree_d": 2,
+        "full_trace_SO_Q_dimension": 435,
+        "group_dimension_difference": 225,
+        "group_dimension_difference_formula": 225,
+        "hyperbolic_dimension_n": 13,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 30,
+        "trace_fixed_locus_codimension": 2,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          28
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 12,
+        "Hilbert_type_IV_dimension": 4,
+        "Res_SO_Q_dimension": 45,
+        "classical_type_IV_dimension_N": 16,
+        "counterfactual_Wang_trace_status": "not_excluded_by_Wang_high_dimension_theorem",
+        "determinant_extension_F_rank": 6,
+        "facet_image_codimension_lower_bound": 13,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 3,
+        "field_degree_d": 3,
+        "full_trace_SO_Q_dimension": 153,
+        "group_dimension_difference": 108,
+        "group_dimension_difference_formula": 108,
+        "hyperbolic_dimension_n": 4,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 18,
+        "trace_fixed_locus_codimension": 3,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          16
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 16,
+        "Hilbert_type_IV_dimension": 6,
+        "Res_SO_Q_dimension": 84,
+        "classical_type_IV_dimension_N": 22,
+        "counterfactual_Wang_trace_status": "not_excluded_by_Wang_high_dimension_theorem",
+        "determinant_extension_F_rank": 8,
+        "facet_image_codimension_lower_bound": 17,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 3,
+        "field_degree_d": 3,
+        "full_trace_SO_Q_dimension": 276,
+        "group_dimension_difference": 192,
+        "group_dimension_difference_formula": 192,
+        "hyperbolic_dimension_n": 6,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 24,
+        "trace_fixed_locus_codimension": 3,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          22
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 18,
+        "Hilbert_type_IV_dimension": 7,
+        "Res_SO_Q_dimension": 108,
+        "classical_type_IV_dimension_N": 25,
+        "counterfactual_Wang_trace_status": "classically_excluded",
+        "determinant_extension_F_rank": 9,
+        "facet_image_codimension_lower_bound": 19,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 3,
+        "field_degree_d": 3,
+        "full_trace_SO_Q_dimension": 351,
+        "group_dimension_difference": 243,
+        "group_dimension_difference_formula": 243,
+        "hyperbolic_dimension_n": 7,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 27,
+        "trace_fixed_locus_codimension": 3,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          25
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 18,
+        "Hilbert_type_IV_dimension": 4,
+        "Res_SO_Q_dimension": 60,
+        "classical_type_IV_dimension_N": 22,
+        "counterfactual_Wang_trace_status": "not_excluded_by_Wang_high_dimension_theorem",
+        "determinant_extension_F_rank": 6,
+        "facet_image_codimension_lower_bound": 19,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 4,
+        "field_degree_d": 4,
+        "full_trace_SO_Q_dimension": 276,
+        "group_dimension_difference": 216,
+        "group_dimension_difference_formula": 216,
+        "hyperbolic_dimension_n": 4,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 24,
+        "trace_fixed_locus_codimension": 4,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          22
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 21,
+        "Hilbert_type_IV_dimension": 5,
+        "Res_SO_Q_dimension": 84,
+        "classical_type_IV_dimension_N": 26,
+        "counterfactual_Wang_trace_status": "classical_exception_dimension_only",
+        "determinant_extension_F_rank": 7,
+        "facet_image_codimension_lower_bound": 22,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 4,
+        "field_degree_d": 4,
+        "full_trace_SO_Q_dimension": 378,
+        "group_dimension_difference": 294,
+        "group_dimension_difference_formula": 294,
+        "hyperbolic_dimension_n": 5,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 28,
+        "trace_fixed_locus_codimension": 4,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          26
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 24,
+        "Hilbert_type_IV_dimension": 6,
+        "Res_SO_Q_dimension": 112,
+        "classical_type_IV_dimension_N": 30,
+        "counterfactual_Wang_trace_status": "classically_excluded",
+        "determinant_extension_F_rank": 8,
+        "facet_image_codimension_lower_bound": 25,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 4,
+        "field_degree_d": 4,
+        "full_trace_SO_Q_dimension": 496,
+        "group_dimension_difference": 384,
+        "group_dimension_difference_formula": 384,
+        "hyperbolic_dimension_n": 6,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 32,
+        "trace_fixed_locus_codimension": 4,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          30
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 24,
+        "Hilbert_type_IV_dimension": 4,
+        "Res_SO_Q_dimension": 75,
+        "classical_type_IV_dimension_N": 28,
+        "counterfactual_Wang_trace_status": "classically_excluded",
+        "determinant_extension_F_rank": 6,
+        "facet_image_codimension_lower_bound": 25,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 5,
+        "field_degree_d": 5,
+        "full_trace_SO_Q_dimension": 435,
+        "group_dimension_difference": 360,
+        "group_dimension_difference_formula": 360,
+        "hyperbolic_dimension_n": 4,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 30,
+        "trace_fixed_locus_codimension": 5,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          28
+        ]
+      },
+      {
+        "Hilbert_domain_codimension_in_trace_domain": 31,
+        "Hilbert_type_IV_dimension": 29,
+        "Res_SO_Q_dimension": 930,
+        "classical_type_IV_dimension_N": 60,
+        "counterfactual_Wang_trace_status": "classically_excluded",
+        "determinant_extension_F_rank": 31,
+        "facet_image_codimension_lower_bound": 32,
+        "facet_reflection_is_Q_pseudoreflection": false,
+        "facet_reflection_minus_eigenspace_Q_dimension": 2,
+        "field_degree_d": 2,
+        "full_trace_SO_Q_dimension": 1891,
+        "group_dimension_difference": 961,
+        "group_dimension_difference_formula": 961,
+        "hyperbolic_dimension_n": 29,
+        "restriction_group_is_proper": true,
+        "trace_Q_rank": 62,
+        "trace_fixed_locus_codimension": 2,
+        "trace_fixed_locus_is_divisor": false,
+        "trace_signature": [
+          2,
+          60
+        ]
+      }
+    ],
+    "theorem": "For compact n>=4 the minimal ground field has d>1.  The trace type-IV domain has dimension N=d(n+2)-2, the native Hilbert domain has codimension (d-1)(n+2), and an F-facet reflection has a d-dimensional Q (-1)-eigenspace. It is therefore not a Q pseudoreflection and its trace fixed locus has codimension d, not one.",
+    "what_remains_possible": "A classical trace-lattice form may restrict to the Hilbert subdomain, but a native Hilbert form is not forced to extend and cannot be normed over an infinite coset set."
+  },
+  "verdict": {
+    "new_nonexistence_theorem_for_polytopes_claimed": false,
+    "new_polytope_bound_claimed": false,
+    "rating": "L3_CARRIER_PLUS_L4_SCOPE_OBSTRUCTION_NOT_L4",
+    "result_level": "theorem-shaped trace/reflection obstruction plus exact two-lemma completion target",
+    "strict_noncircular_compact_L4_subclass_found": false
+  }
+}

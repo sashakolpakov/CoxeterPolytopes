@@ -1,0 +1,45 @@
+{
+  "alvin_declared_termination": false,
+  "backend_height_bound": 300,
+  "canonical_norm_histogram": {
+    "-theta+2theta^2": 1,
+    "1": 1,
+    "2": 8
+  },
+  "checks": {
+    "backend_walls_10_through_12_form_one_exact_same_height_packet": true,
+    "exact_backend_prefix_match_through_wall_9": true,
+    "live_wall_10_equals_exact_backend_wall_12": true,
+    "no_unknown_weight_error": true,
+    "printed_qf_semantically_unchanged": true,
+    "same_height_packet_is_pairwise_acute": true,
+    "ten_live_roots_parsed": true
+  },
+  "completed_at_utc": "2026-08-12T11:35:34Z",
+  "exact_backend_prefix_order_comparison": {
+    "equal_positions": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "maxv_truncated_inside_exact_same_height_packet": {
+      "backend_positions": [10, 11, 12],
+      "live_position_10_equals_backend_position": 12
+    }
+  },
+  "fixture_path": "tests/fixtures/cubic7_alvin/p13_r7_v3_maxv10.alvin.txt",
+  "fixture_sha256": "42761fbac1db7fa198fe56c6f761130ba31e2aecf42587390ff57eb46fa80dbd",
+  "live_root_count": 10,
+  "passes": true,
+  "return_code": 0,
+  "schema": "coxeter.k7_alvin.bounded_prefix_result.v1",
+  "scope": {
+    "bounded_by_maxv": 10,
+    "complete_termination_claimed": false,
+    "finite_volume_claimed": false,
+    "purpose": "exact live/backend enumeration-prefix regression"
+  },
+  "stdout_path": "stdout.txt",
+  "stdout_sha256": "42761fbac1db7fa198fe56c6f761130ba31e2aecf42587390ff57eb46fa80dbd",
+  "test": "tests/test_cubic7_nonunimodular_seed_search.py::test_v3_alvin_p13_r7_ten_wall_diagnostic_matches_exact_prefix",
+  "v3_patch_sha256": {
+    "alvin-rc7-fraction-conjugation.patch": "853e52a3bbb4ff45b11749ec682cecbcfc75366fa95bfde1b316a96042ded67c",
+    "alvin-rc7-spatial-r1.patch": "884ba9f1c25edb74a89e7566ce5ce676001ea9073ed08239e208b77f7977d6be"
+  }
+}

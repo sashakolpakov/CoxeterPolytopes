@@ -1,0 +1,24 @@
+# Review of the coupled H3 section obstruction
+
+The source, algebra, and geometric reduction pass review. Together with the earlier one-contact A3 result, they exclude an actual H3 face in any finite-volume Coxeter H20 hyperplane section of the saved Borcherds H21 chamber. They do **not** exclude sections without H3 faces or prove nonexistence of H20 Coxeter polytopes.
+
+The [separate checker](../scripts/fresh_h20_coupled_h3_obstruction_20261014_review.py) imports neither the [producer](../scripts/fresh_h20_coupled_h3_obstruction_20261014.py) nor its helpers. It reconstructs the angle equations using SymPy, computes the elimination and field-norm polynomials again, and compares their exact coefficients with the frozen certificate. The [review record](fresh_h20_coupled_h3_obstruction_20261014_review.json) binds the source and certificate hashes. This is an independent formula reconstruction using the same computer algebra system, accompanied by a source and mathematical proof review; it is not a second implementation of every arithmetic operation or a formalized proof.
+
+The reconstruction covers the two disconnected joins, all five oriented connected two-contact cases, and both orientations of each of the five three-contact cases. It verifies all thirty irreducibility claims: ten degree-four and twenty degree-eight norm polynomials. It also derives the D4 extension defect and the four B-endpoint norm bounds directly from the prescribed finite angles. All cleared denominators in a physical solution are nonzero because the projected wall norms and the specified contact squares are positive. Squaring and elimination can introduce extraneous solutions, which does not weaken the necessary irrationality conclusions.
+
+The geometric steps have the following scope and justification.
+
+* For the three roots of a proposed spherical H3 face, the old Gram matrix is the projected H3 Gram plus a positive semidefinite rank-one matrix. It is therefore positive definite. The literal source pair pools force an old crystallographic forest.
+* The contact count on these three roots is automatically at most three, regardless of contacts on other walls. Zero contacts cannot produce H3. One contact preserves the old graph and must occur at an A3 or B3 endpoint. With two contacts, the only possibilities are the disconnected A1/rank-two join or the center and a leaf of an old connected path. With three contacts, mixed signs force an old two-edge star with precisely one canceled edge. These are the cases treated in the proof; a sparse-pairing assumption elsewhere is not needed.
+* In the connected two-contact case, a putative H4 extension with nonzero section contact forces an old four-node star. A label-four edge makes that star non-positive, and an all-long star is absent because distinct long source roots are never orthogonal. Hence only the all-short D4 case remains. Its two target label-three equations give the archived nonzero defect, excluding it.
+* In the three-contact cases, the irrational ratio at the label-five endpoints forces a prospective H4 extension to have zero section contact. Its label-three attachment would then make the third projected squared norm rational, contradicting the independently checked degree-eight polynomials. The same irrational ratio forces every orthogonal face boundary to have zero section contact.
+* An actual H3 face in a finite-volume chamber is compact: H3 is contained in no affine Coxeter diagram. Its only proper connected spherical extension is H4. The preceding steps therefore leave only unchanged source roots as its boundary normals. The standard Coxeter-face construction for H3 applies here; it is not being assumed for arbitrary spherical diagrams.
+* Compactness makes those boundary normals span the face's Lorentzian space. Since the unchanged source roots are integral and their reflections preserve the original lattice, the rational span has a full invariant lattice. A compact reflection subgroup would have finite index in its integral orthogonal group. Meyer isotropy in this rank makes that group nonuniform, contradicting compactness. Rational coordinates alone would not prove this; the spanning and invariant-lattice steps are necessary and are present in the argument.
+
+Thus the stated completeness corollary is justified. An H4 diagram contains an H3 subdiagram, and an actual H4 face lies in the associated actual H3 face, so H4 faces are excluded as well. This review does not infer that every possible section must have either type.
+
+```sh
+python scripts/fresh_h20_coupled_h3_obstruction_20261014_review.py --verify
+```
+
+The frozen saved-result replay passed. The geometric classification and arithmetic-group steps above are checked as mathematical arguments, separately from the finite algebra certificate.

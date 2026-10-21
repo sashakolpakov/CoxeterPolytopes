@@ -1,0 +1,262 @@
+{
+  "candidate_id": "og10_golden_rank_two_reduction_no_go",
+  "certificate_kind": "exact_structural_reduction_and_norm_six_finite_box_no_go",
+  "certificate_payload_sha256": "26293b9d366e4250ce0b940298f3ff338937b022fcd0ebe262adf4805183eebb",
+  "checks": {
+    "all_structural_checks_pass": true,
+    "all_three_norm_six_boxes_have_zero_cutting_covectors": true,
+    "no_projective_realization_is_claimed_without_primitive_embedding": true,
+    "norm_six_gate_is_strictly_stronger_than_prior_norm_two_gate": true
+  },
+  "commands": [
+    "PYTHONPATH=src:. python3 scripts/certify_og10_golden_rank_two_reduction.py --write-certificate",
+    "PYTHONPATH=src:. python3 scripts/certify_og10_golden_rank_two_reduction.py --verify-certificate",
+    "PYTHONPATH=src:. pytest -q tests/test_og10_golden_rank_two_reduction.py"
+  ],
+  "conclusion": "The proposed genuine rank-two OG10 route is structurally impossible, and central-inversion coupling adds no projected norm-two wall type. The first reflective escape is the norm-six/divisibility-three one-line compiler, but its first three exact normalized covector boxes contain no wall cutting v61.",
+  "field": "Q(sqrt(5))",
+  "fixed_lattice": "F=<-2*phi>+E8+<2>",
+  "mod_p_folding_theorem": {
+    "og10_instance": {
+      "ambient_radical_dimension": 1,
+      "both_lifts_ambient_divisibility_three_is_impossible": true,
+      "independent_trace_lifts": 2,
+      "p": 3
+    },
+    "proof_gate": "Lambda/N is torsion-free, so Tor_1(Lambda/N,F_p)=0 and N/pN injects into Lambda/pLambda",
+    "statement": "for a primitive embedding N->Lambda, d mod-p independent classes of ambient divisibility p force d<=dim Rad(Lambda/pLambda)"
+  },
+  "norm_six_box_audit": {
+    "combined_audit_sha256": "bf49a9ed42bf1760e3912fa126659546adedd9ec0395aa5b93dbf57428983d70",
+    "families": {
+      "mixed_E8_first_b_shell": {
+        "b_vector_count": 240,
+        "canonical_wall_records_sha256": "564488b31ce9f5dfe2da81d94208f9b3cb94887361a30845fef98500c8186ffb",
+        "cutting_covector_count": 0,
+        "cutting_records": [],
+        "eligible_w_count": 13920,
+        "eligible_w_square_class_count": 3,
+        "exact_wall_test_count": 5760,
+        "family": "norm_six_mixed_E8",
+        "parameters": {
+          "b_nonzero": true,
+          "b_shell_max": 1,
+          "b_shell_min": 1,
+          "coefficient_bound": 30,
+          "conjugate_square_gate": "0 < w'^2 < 2"
+        },
+        "signature_admissible_parameter_pair_count_summed_over_w_square_classes": 24
+      },
+      "scalar_unit_E8": {
+        "canonical_wall_records_sha256": "c00e7fc4f8b31ba2a226e68d8f084496e7532b5d244ed14a051980e5f06ea0d1",
+        "cutting_covector_count": 0,
+        "cutting_records": [],
+        "e8_shell_counts": {
+          "2": 240,
+          "4": 2160,
+          "6": 6720,
+          "8": 17520
+        },
+        "e8_vector_count": 26640,
+        "exact_wall_test_count": 696000,
+        "family": "norm_six_scalar_unit_E8",
+        "parameters": {
+          "coefficient_bound": 30,
+          "e8_shell_max": 4,
+          "e8_shell_min": 1,
+          "unit_power_max": 8,
+          "unit_power_min": 1
+        },
+        "signature_admissible_parameter_pair_count_summed_over_power_and_shell": 136
+      },
+      "zero_E8": {
+        "canonical_wall_records_sha256": "f0c07a6c134f062378fcf9b794b4ea77bc456baa13139f5ff56a6ca9b20ac2c1",
+        "cutting_covector_count": 0,
+        "cutting_records": [],
+        "exact_wall_test_count": 18,
+        "family": "norm_six_zero_E8",
+        "parameters": {
+          "coefficient_bound": 30,
+          "w": "0"
+        },
+        "signature_admissible_normalized_covector_count": 18
+      }
+    }
+  },
+  "norm_six_divisibility_three_escape": {
+    "ambient_embedding_gate": "the primitive trace lattice must embed in Lambda_OG10 with positive rank-two complement; one selected class, say e/3, must survive as the unique nonzero ambient order-3 class of square -2/3=4/3 mod 2Z, while (phi-1)e/3 cannot also survive",
+    "ambient_mod_3_limit": "D and E are independent modulo 3, while the ambient OG10 mod-3 radical has dimension one; under a primitive embedding at most one can be an ambient divisibility-three wall",
+    "ambient_radical_intersection_warning": "the ambient radical line may meet span(D,E) in neither coordinate line; selecting D or E is an additional gluing condition",
+    "carrier": "H6(k)=[[F,3k],[3k^t,6]]",
+    "cut_gate": "k(interior)*k(v61)<0",
+    "field_reflection": "s_e(x)=x-H(x,e)*e/3",
+    "intrinsic_folded_reflection": "the two integral trace-lattice reflections multiply to the field reflection s_e",
+    "normalized_projection": "p0=F^-1*k; actual projection p=3*p0",
+    "paired_trace_gram": [
+      [
+        -6,
+        0
+      ],
+      [
+        0,
+        -6
+      ]
+    ],
+    "paired_trace_roots": "D=e and E=(phi-1)e",
+    "projected_hyperplane": "p0^perp",
+    "reflection_integrality": "H(e,H6) is contained in 3*Z[phi]",
+    "signature_gate": "0<q=2*p0^2<4/3 and q'<4/3",
+    "status": "first structurally viable reflective escape ansatz; no primitive OG10 embedding is asserted",
+    "wall_theorem_input": "a primitive ambient class of square -6 and divisibility 3 is an OG10 stably prime-exceptional (monodromy-reflective) wall"
+  },
+  "og10_rank_obstruction": {
+    "conclusion": "a genuine two-line Z[phi] extension cannot embed in the OG10 Beauville lattice and cannot be a projective OG10 Picard lattice",
+    "field_rank_two_extension_rank_over_Z_phi": 12,
+    "og10_beauville_signature": [
+      3,
+      21,
+      0
+    ],
+    "projective_og10_picard_rank_max": 22,
+    "required_trace_signature": [
+      1,
+      23,
+      0
+    ],
+    "trace_rank": 24
+  },
+  "prior_norm_two_box_reference": {
+    "certificate_payload_sha256": "48a4549d543b7f89cb69543d4656a739d5c3ca08abe8b077ffbd93af77fbfa97",
+    "combined_audit_sha256": "e13ef11274acfe60eada6beead349fe46dbc7397de27329fd2dfa0ee4cc8dcd9",
+    "file_sha256": "4797047cb255b1c7d02ef63cc1ff59d4b04ac59cab57c34db0b87de2ebdb8c6c",
+    "prior_conclusion": "No carrier in the three exactly frozen boxes cuts the archived v61 escape ray.",
+    "prior_signature_gate": "0<q<4 and q'<4"
+  },
+  "projected_arrangement_gates": [
+    "the projected hyperplane is not proportional to an old F norm-two mirror",
+    "at least one designed wall separates the archived interior from v61",
+    "all retained projected facets satisfy exact acute/Coxeter angle equations",
+    "the complete norm-two and norm-six/divisibility-three wall arrangement is closed",
+    "the trace lattice passes primitive OG10 gluing with the required order-3 class",
+    "a marked projective OG10 model selects the intended movable chamber",
+    "finite volume or compactness is certified after full wall completion"
+  ],
+  "rank_two_theorem": {
+    "central_inversion": "J=-I on F^perp",
+    "conclusion": "every projected norm-two root wall is already a one-root wall; rank-two cross-coupling cannot create a new projected-wall type",
+    "cut_gate": "ell(interior)*ell(v61)<0",
+    "full_rank_two_schur_gate": "S=R-L^t*F^-1*L is positive definite at both real places",
+    "hypotheses": [
+      "the fixed copy of F is saturated",
+      "at the identity embedding M is Lorentzian with its unique negative direction already contained in F",
+      "at the conjugate embedding M is positive definite",
+      "J is an integral isometric involution fixing F pointwise",
+      "Fix(J) over Q(sqrt(5)) is exactly F",
+      "r is an ambient field root of norm 2 whose mirror meets H(F)"
+    ],
+    "integrality": "2p=r+Jr lies in H intersect F_Q=F",
+    "one_root_subcarrier": "Gram(F+O*r)=[[F,ell],[ell^t,2]]",
+    "projection": "p=(r+Jr)/2=F^-1*ell",
+    "two_place_gate": "0<p^2<2 and (p')^2<2"
+  },
+  "ring": "Z[phi]",
+  "schema_version": "0.1.0",
+  "scope": "Global for genuine Z[phi]-rank-two OG10 extensions and for the central-inversion reduction under the stated two-place ambient signature hypotheses; finite-box only for norm-six walls. Norm-six covectors outside the declared boxes, nonsaturated fixed lattices, non-pointwise involutions, and other OG10 wall types remain open.",
+  "source_sha256": {
+    "certificate_script": "259f24c2c113c2b6cf64cf9e6db74669fd455010edb7513663f38a71deca2834",
+    "exact_matrix": "8bd1944f1a055baedc00d99b5a8c5be0d482c0cde10ba80adc2a322e82150003",
+    "fixed_field_lattice": "060e3c4722127307ab6d82ffdd957b83d9ad49ac7615c67de194008d442df1eb",
+    "golden_arithmetic": "fc9dde7ad0024b5f08f0a42af51d859a794ef6fd0b803bfb8f9aebe192425eb0",
+    "prior_box_enumerator": "cb7192a9d94ad2b976082c6367cd41e614e9e0696a9b13d418acca416c39575a",
+    "prior_norm_two_box_certificate": "4797047cb255b1c7d02ef63cc1ff59d4b04ac59cab57c34db0b87de2ebdb8c6c",
+    "standard_lattices": "53c404b413667cedfbe3106096717e1d35055eb6c69d52e082009602bba498f7",
+    "trace_lattice": "78b85c94ef3d264c86ea5a9bf101948cfac5a5cbd408abb7c6adfa724f39479c"
+  },
+  "structural_audit": {
+    "base": {
+      "field_conjugate_inertia": [
+        10,
+        0,
+        0
+      ],
+      "field_determinant": "-4*phi",
+      "field_identity_inertia": [
+        9,
+        1,
+        0
+      ],
+      "field_rank": 10,
+      "trace_determinant": "-16",
+      "trace_inertia": [
+        1,
+        19,
+        0
+      ],
+      "trace_rank": 20
+    },
+    "checks": {
+      "base_field_signatures": true,
+      "base_trace_is_even_signature_1_19": true,
+      "negative_index_obstructs_rank_two_trace_embedding": true,
+      "norm_six_golden_pair_spans_two_dimensional_mod_3_radical": true,
+      "norm_six_model_has_required_field_and_trace_signatures": true,
+      "norm_six_reflection_and_fixed_slice_involution_are_integral_isometries": true,
+      "norm_six_trace_root_has_square_minus_6_and_divisibility_3": true,
+      "og10_mod_3_radical_is_one_dimensional": true,
+      "og10_signature_and_determinant": true,
+      "rank_two_field_signatures": true,
+      "rank_two_involution_has_fixed_base_only": true,
+      "rank_two_involution_is_integral_order_two_isometry": true,
+      "rank_two_trace_is_even_signature_1_23": true
+    },
+    "mod_3_ambient_gate": {
+      "conclusion": "at most one of e and (phi-1)e can have ambient divisibility 3",
+      "og10_mod_3_radical_dimension": 1,
+      "primitive_embedding_is_injective_after_reduction_mod_3": true
+    },
+    "norm_six_test_model": {
+      "cuts_v61": false,
+      "discriminant_class_square": "-2/3 = 4/3 mod 2Z",
+      "field_determinant": "-6*phi",
+      "golden_pair_is_independent_mod_3": true,
+      "normalized_covector": "k=(0^9,1)",
+      "normalized_projected_square_twice": "1",
+      "trace_determinant": "-36",
+      "trace_mod_3_radical_dimension": 2,
+      "trace_root_divisibility_inside_test_lattice": 3,
+      "trace_root_square": -6
+    },
+    "og10_beauville_lattice": {
+      "determinant": "-3",
+      "inertia": [
+        3,
+        21,
+        0
+      ],
+      "max_projective_picard_rank": 22,
+      "rank": 24
+    },
+    "rank_two_model": {
+      "conjugate_inertia": [
+        12,
+        0,
+        0
+      ],
+      "field_rank": 12,
+      "identity_inertia": [
+        11,
+        1,
+        0
+      ],
+      "involution_anti_dimension": 2,
+      "involution_fixed_dimension": 10,
+      "trace_determinant": "-16",
+      "trace_inertia": [
+        1,
+        23,
+        0
+      ],
+      "trace_rank": 24
+    }
+  }
+}

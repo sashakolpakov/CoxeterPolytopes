@@ -1,0 +1,487 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\Dfive}{D_5}
+\newcommand{\actual}{\mathrm{act}}
+\newcommand{\upper}{\mathrm{up}}
+\newcommand{\cert}[1]{\nolinkurl{#1}}
+\title{A computer-assisted upper bound of58 for finite-volume hyperbolic Coxeter polytopes}
+\author{Internal manuscript translation of the frozen proof certificates}
+\date{18 October2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give the final proof composition establishing dimension at most58 for
+finite-sided, finite-volume real hyperbolic Coxeter polytopes. The argument
+combines a simultaneous local corner-payment theorem, an exact upper
+certificate for all finite Coxeter forests of rank59, and a positive
+shape-curvature surplus at every ideal vertex. Nonsimple cusps are treated
+through their products of simplex links. The finite upper equals the
+curvature coefficient, so the strictly positive global correction already
+gives a contradiction. We specify the computational certificate boundary
+and distinguish exact arithmetic checking, mathematical review and the
+ongoing proof-assistant translation. The local geometric atlas and the
+previously completed dimension59 tail are internal parts of the proof,
+not additional published assumptions.
+\end{abstract}
+
+\section{Statement and scope}
+
+\begin{theorem}\label{thm:main}
+Every finite-sided, finite-volume real hyperbolic Coxeter polytope has
+dimension at most58.
+\end{theorem}
+
+No arithmeticity, compactness, simple-cusp or facet-count hypothesis is
+imposed. The result is an internally checked computer-assisted proof.
+This manuscript does not assert external refereeing, novelty, optimality,
+or completed end-to-end Lean verification. The accompanying geometric
+atlas consists of the frozen local theorem reports and their exact
+certificates. The endpoint and its recursive dependency manifest are
+\cert{fresh_a15_d15_dimension58_20261018}.
+
+The proof has two logically distinct dimension steps. The completed
+internal bound59 excludes all dimensions at least60. We exclude
+dimension59 here. It would not suffice to exclude59 alone: no unproved
+claim about induced Coxeter faces is used to supply the higher tail.
+The later ambient58 search for a bound57 is independent of this proof.
+
+\section{Actual corners and cusp multiplicities}
+
+We use the norm-two convention for outward roots: diagonal Gram entries
+are2 and off-diagonal entries are nonpositive. At an actual two-face, the
+supporting white roots form an elliptic set of size $n-2$. Adjoining either
+incident side root gives an elliptic edge principal. At a finite vertex,
+the incident diagram is a finite Coxeter forest of rank$n$.
+
+At an ideal vertex$v$, write its irreducible affine factor ranks as
+$r_1,\ldots,r_s$, with $r_i\geq1$ and $\sum_i r_i=n-1$. Its Euclidean
+link is
+\[
+ L_v=\prod_{i=1}^s\Delta^{r_i},\qquad
+ V_v=\prod_{i=1}^s(r_i+1).
+\]
+The standard finite-volume link and simple-at-edges facts are the
+geometric input to the incidence reduction. They do not assert that an
+ideal vertex itself is simple.
+
+\begin{lemma}[Factor-fiber multiplicity]\label{lem:fiber}
+At an actual ideal two-face corner, its marked pair belongs to the one
+varying affine factor. A fixed pair in factor$i$ occurs in exactly
+$V_v/(r_i+1)$ actual corner fibers at$v$. Consequently, if the total pair
+weight of any rank$r$ affine factor is at most $(r+1)c(r)$, then the
+actual cusp charge satisfies
+\[
+ C_{\actual}(v)\leq V_v\sum_i c(r_i).
+\]
+\end{lemma}
+\begin{proof}
+An edge of the product link varies in exactly one simplex factor.
+The supporting white diagram retains $r_i-1$ nodes of that factor and
+one-node-deleted elliptic pieces from the other factors. The two marked
+sides restore the whole varying factor. The other factors admit
+$\prod_{j\ne i}(r_j+1)$ choices, proving the multiplicity.
+
+The use of a whole factor is justified geometrically. A positive kernel
+combination of an affine subdiagram is a nonzero feasible null vector:
+it is nonzero because its product with a strict chamber center is
+negative, and is feasible by acuteness. Its projective point is an ideal
+vertex, by strict convexity of the closed Klein ball. Within the ideal
+diagram it is a complete irreducible affine component, because a proper
+principal subdiagram of such a component is positive definite. The
+internal factor-fiber report records this argument and the corresponding
+published parabolic-containment input.
+\end{proof}
+
+\section{The deficit and its shape-curvature lower bound}
+
+For a two-face$F$, let$s(F)$ be its number of sides and put
+\[
+ \Dfive(P)=\sum_F(5-s(F)).
+\]
+For a vertex figure of dimension$d=n-1$, define
+\[
+ H(t)=\sum_{j=0}^d h_jt^j,\quad
+ V=H(1),\quad G=\sum_{j=0}^d h_j\min(j,d-j),\quad
+ \kappa=\frac{5G-dV}{2}.
+\]
+For an ideal vertex, $H(t)=\prod_i(1+t+\cdots+t^{r_i})$.
+For a finite vertex, the figure is a simplex, so $h_j=1$.
+
+\begin{lemma}[Shape-curvature inequality]\label{lem:curvature}
+In dimension59,
+\[
+ \Dfive(P)\geq\frac{783}{2}v_f+\sum_{v\text{ ideal}}\kappa(L_v)+4350.
+\]
+\end{lemma}
+\begin{proof}
+Choose a generic linear function on the bounded projective closure.
+For each vertex figure let$E$ be its number of edges and$E^0$ the number
+not cut by the induced level section. Khovanskii's exact reduction gives
+the two-face incidence sum $I=\sum E$ and $2f_2=\sum E^0$. Hence
+\[
+ \Dfive=\sum_v\left(\frac52E_v^0-E_v\right).
+\]
+Orient each simple vertex figure generically. A vertex of index$j$ has
+$j$ descending and$d-j$ ascending edges, and the index distribution is
+$h_j$. Assign an uncut edge below the section to its upper endpoint and
+one above to its lower endpoint. Each vertex receives either$j$ or$d-j$
+such contributions, giving $E^0\geq G$.
+
+The global minimum and maximum of the original polytope are distinct;
+their level sections miss the entire vertex figures. At either one,
+symmetry and the index formula give
+\[
+ E-G=\sum_{j>d/2}h_j(2j-d).
+\]
+All the vertex figures in question are simplices or products of
+simplices, so every$h_j\geq1$. At$d=58$ each extremum contributes an
+extra at least
+$\sum_{j=30}^{58}(2j-58)=870$ to$E^0-G$.
+Multiplication by$5/2$ and addition of the two extrema gives4350,
+counted once.
+
+For a finite vertex $G=\sum_{j=0}^{58}\min(j,58-j)=841$ and
+$E=58\cdot59/2$. Thus its curvature is
+\[
+ \frac{5\cdot841-58\cdot59}{2}=\frac{783}{2}.
+\]
+The ideal term is the stated$\kappa$. This proves the inequality.
+\end{proof}
+
+The exact incidence and index identities are published inputs.
+The retained shape term and the quantitative two-extrema strengthening
+above are internal deductions, not assumptions of the dimension bound.
+
+\section{One simultaneous local payment rule}
+
+A corner payment is an intrinsic nonnegative function of the actual
+marked finite diagram or varying affine factor, including any stated
+whole-component presence conditions. Its definition is the frozen
+baseline in \cert{fresh_a14_cd16_ambient59_frontier_20261018}, followed
+by the changes below. That baseline has its own complete local proof
+atlas, with selected and nonselected routes, arbitrary supporting-root
+arguments and a fixed actual-corner priority order.
+
+\begin{proposition}[Final local theorem]\label{prop:local}
+The final simultaneous rule gives every triangular two-face payment
+at least2 and every quadrilateral payment at least1. Relative to the
+baseline, whole A15 pairs$(0,12),(2,14)$ and whole D15 pair$(0,11)$
+change from$1/2$ to0. Add the following whole-component increments:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Small marked role&Large marked role&Increment per pair\\\midrule
+A1&A12 endpoint&$1/4$\\
+A1&A13 second node&$1/4$\\
+A4 inner node&A13 second node&$1/2$\\
+A4 endpoint&A11 endpoint&$1/2$\\\bottomrule
+\end{tabular}
+\end{center}
+All ideal weights and all other finite weights remain unchanged.
+\end{proposition}
+\begin{proof}
+Apply the independently proved ideal and finite6 actual-corner priorities
+first. Their short5, protected-leaf, whole-small and typed outputs survive.
+The cycle11 exception uses its separate replacement theorem; a short
+ideal path is not silently presumed to be a unit. The independent
+short8-to-short7-to-short6 chain likewise terminates in retained outputs.
+
+In the remaining branch, the complete finite selected proof either
+chooses an unchanged contribution or a changed rank15 pair. The full
+eligible domain has536 patterns. Explicit induced native embeddings
+give482 A15 maps and870 D15 maps, including the failed-search patterns.
+The eight changed A15 maps lie in four contexts, and the ten changed
+D15 maps in five contexts. The finite lists are complete because of
+the inherited universal reduction, not because a selection of known
+faces happened to contain no other example.
+
+For A15, two Lorentz cores exclude all remaining contacts by projection
+squares at least4. Two radical cores force either complete orthogonality
+or a retained short5 path. Every paying factor is therefore whole.
+Each context retains a distinct A16 half at$(1,13)$ or$(2,14)$.
+Two contexts add two quarters at two different other corners; the other
+two use the A4/A13 half. Thus the lower total remains1.
+
+For D15, proper contexts1030 and1613 require a norm-two root whose
+projection square is at least6. In context1641 the forced new center is
+saturated: its residual vector is zero. Its product with a required
+simple fork leaf is positive, zero or at most$-2$, never$-1$; the
+completion is impossible. In whole contexts1682 and2501 the relevant
+inverse diagonal entries4,4,14 seal the core unless the independent
+short8 alternative applies. A retained D16$(1,12)$ half and a distinct
+new A4/A11 endpoint half give total1.
+
+The geometric reasoning used here has no spectator cutoff. A Gram
+radical of an indefinite Lorentz core represents the zero vector,
+because the orthogonal complement of a timelike span is positive
+definite. Nonpositive contact products must annihilate that radical.
+The checked sign domains force a retained short path or orthogonality
+to the whole core. For a nondegenerate core, the residual square is
+$2-q^tG^{-1}q\geq0$; equality forces the root into the core span.
+These arguments prove whole-factor and proper-completion statements
+before using the displayed finite alternatives.
+
+No new zero is used as another new proof's positive output. The
+A15$(1,13)$ unit needed by the A14 theorem, the D15$(1,12)$ half needed
+by the D14 theorem and the D15$(0,10)$ unit needed by the ideal15
+theorem remain. The A1/D15 node11 sixteenth is a separate cross-component
+role. All rank16/17 and contextual alternatives are retained. The
+complete low-core, disjoint, protected and adaptive routes have no new
+long-rank15 output. The216 exact literal checks supplement these
+universal arguments and have zero new debit or credit; they are not
+a universal face census. Elementary triangle contributions are disjoint
+from the new long zeros and retain minimum2.
+\end{proof}
+
+The complete proofs are the A15 three-coupon and D15 A4/A11 reports.
+Their supporting-root and route-completeness arguments are internal
+theorems. In a formalization they must be translated, not admitted as
+external axioms under the label ``computer verification.''
+
+\section{Exact finite-forest upper bound}
+
+\begin{proposition}\label{prop:finite}
+Every actual finite Coxeter forest of total rank59 has final charge
+at most$783/2$.
+\end{proposition}
+\begin{proof}
+The final ordinary costs are A15=D15=100 and B15=97. The four added
+component-pair costs are respectively$1/2,1/2,2,2$. The representative
+A1/D13 allowance becomes$33/16$, and A4/D13 becomes8. The A1/A12 and
+A4/A11 charges fit their unchanged allowances$5/2$ and8. The exact
+certificate checks all180 actual component types through rank59,
+their bases and all32,400 ordered pair comparisons simultaneously.
+The arbitrary-label rank-two family and exceptional finite types are
+included by the stated representative classification.
+
+Fix all multiplicities of ranks9 through16 and of the separate A17
+representative. There are961 possible large-component vectors.
+Fixing the rank5 multiplicity as well gives2574 expanded vectors and
+interaction keys. Residual ranks are1--4,6--8,17--59; residual rank17
+is D17, whereas A17 has already been fixed. Residual pairwise upper
+interactions vanish. Each residual item consists of its base plus
+all interactions with the fixed factors;128,700 exact identities
+check this statement for the entire domain.
+
+For positive-rank items$(r,w_r)$, a table$V(0)=0$ satisfying
+\[
+ V(k)\geq V(k-r)+w_r\qquad(r\leq k)
+\]
+dominates every additive residual forest by induction after removing
+one item. An attaining predecessor proves equality when required.
+The5148 normal/no-A2 tables satisfy6,723,288 such inequalities and
+303,732 attaining-predecessor checks. The verifier checks inequalities
+and exact equality rather than trusting an optimizer's status.
+
+There are two contextual charges. The old A2/A2 charge is
+$a_2(a_2-1)/4$ when a whole A10 and at least two A1 factors occur.
+The other charge is$a_2d_5$ when a whole A9 and at least one A1 occur.
+The representative guards may allow any rank10/rank9 representative
+and replace D5 by A5. All A2 multiplicities are fixed explicitly.
+The no-context, one-reserved-A1 and two-reserved-A1 branches, using
+no-A2 residual tables, cover every forest. The last branch includes
+both charges if both guards hold. The relaxed one-A1 branch permits
+extra A1 only as an upper relaxation; the reconstructed winning forest
+has its full contextual cost checked. There are9191 options in total.
+
+Every expanded upper is at most6264 sixteenths, namely$783/2$.
+This is a representative upper, not a claim of actual attainment.
+Its representative maximizer $8A_1+3A_5+3D_{12}$ has actual literal
+cost355.5. Actual sharpness is unnecessary for the conclusion.
+\end{proof}
+
+\section{The ideal envelope and complete terminal domain}
+
+The normalized affine cost$c(r)$ is the total factor-pair allowance
+divided by$r+1$. For the completed58 proof it is
+\[
+\begin{array}{c|rrrrrrr}
+r&10&11&12&13&14&15&16\\\hline
+c(r)&53/11&31/6&11/2&40/7&367/60&411/64&227/34
+\end{array}
+\]
+with$c(r)=r/2$ for$1\leq r\leq9$. For$r\geq17$ the exact all-family
+envelope through58 is in the exported certificate; it follows the
+proved classical graph-count formulas, not a sampled large-rank cutoff.
+The factor-fiber lemma gives $C_{\actual}\leq C_{\upper}=V\sum c(r_i)$.
+
+\begin{lemma}[Low-nine concentration]\label{lem:concentration}
+Every positive rank partition of58 can be reduced to one with at most
+one part below9, such that its normalized curvature-minus-envelope
+margin and its product$V$ do not increase.
+\end{lemma}
+\begin{proof}
+For$1\leq a\leq b<9$, replace$(a,b)$ by$(a-1,b+1)$, omitting zero.
+Let$U_r$ be uniform on$\{0,\ldots,r\}$. Before centering, the probability
+of$U_a+U_b=j$ is
+\[
+ \frac{\min(j+1,a+1,b+1,a+b-j+1)}{(a+1)(b+1)}.
+\]
+After the replacement the denominator is$a(b+2)$, smaller by$b-a+1$.
+The new probability is larger on the tails$j<a$ or$j>b$ and smaller
+on$a\leq j\leq b$. Both distributions are symmetric about the same
+mean. Symmetrizing a convex test function makes it nondecreasing with
+distance from that mean; subtracting its value at the crossing radius
+proves the convex-order inequality. Adding the other independent
+uniforms preserves it.
+
+For$d=58$, the normalized curvature is
+\[
+ \frac{\kappa}{V}=\frac{3d}{4}
+   -\frac52\mathbb E\left|\sum_iU_{r_i}-\frac d2\right|.
+\]
+It therefore does not increase. The normalized cost is unchanged,
+because both affected ranks stay at most9 and$c(r)=r/2$ there.
+The product factor decreases from$(a+1)(b+1)$ to$a(b+2)$.
+Each move increases the bounded integer$\sum r_i^2$, so iteration
+terminates. No concentration of the ranks at least9 is used.
+\end{proof}
+
+\begin{proposition}\label{prop:ideal}
+Every actual ideal vertex in dimension59 has
+$\kappa-C_{\actual}\geq91/2$.
+\end{proposition}
+\begin{proof}
+Enumerate every multiset of ranks at least9 summing to$58-\ell$, for
+$0\leq\ell\leq8$, adjoining$\ell$ if it is positive. This gives exactly
+1890 terminal profiles. For every profile the exact certificate checks
+the product polynomial, its integer coefficients and moments
+\[
+ V=\sum_jh_j=\prod_i(r_i+1),\qquad
+ G=\sum_j\min(j,58-j)h_j,
+\]
+and the rational normalized margin
+\[
+ m=\frac{5G-58V}{2V}-\sum_i c(r_i).
+\]
+All are positive. The minimum normalized margin is$1/340$, attained
+at$(9,9,9,15,16)$; the minimum absolute surplus$Vm$ is$91/2$, attained
+at the singleton profile$(58)$.
+
+Under Lemma~\ref{lem:concentration}, the original profile has
+$V\geq V'$ and$m\geq m'>0$. Hence$Vm\geq V'm'\geq91/2$.
+This multiplication uses positivity; it would not follow from negative
+terminal margins. Finally $C_{\actual}\leq C_{\upper}$ gives the same
+lower surplus for the actual cusp charge, with its correct factor
+multiplicities. Nonsimple cusps have not been discarded.
+\end{proof}
+
+\section{The contradiction}
+
+For any polygon with at least five sides the deficit$5-s$ is nonpositive.
+Proposition~\ref{prop:local} therefore gives, by summing nonnegative
+corner weights and then regrouping by vertices,
+\[
+ \Dfive\leq\frac{783}{2}v_f+\sum_{v\text{ ideal}}C_{\actual}(v).
+\]
+Together with Lemma~\ref{lem:curvature} and Proposition~\ref{prop:ideal},
+this implies
+\[
+ 0\geq4350+\sum_{v\text{ ideal}}
+       \bigl(\kappa(L_v)-C_{\actual}(v)\bigr)
+   \geq4350+\frac{91}{2}v_i>0.
+\]
+Thus dimension59 is impossible, including the compact case$v_i=0$.
+The completed internal dimension59 theorem excludes all dimensions
+at least60. This proves Theorem~\ref{thm:main}.
+
+\section{Certificates, assumptions and formalization}
+
+The exact endpoint is reproduced by
+\begin{verbatim}
+python3 scripts/fresh_a15_d15_dimension58_20261018.py --verify
+\end{verbatim}
+It verifies the common frozen local/count/baseline bindings, complete
+saved domains, polynomial moment identities and curvature arithmetic.
+It does not repeat the historical native census, all supporting-root
+classifications, convolution generation or Bellman optimization.
+The finite-count producer's separate replay checks its full Bellman
+certificates. The geometric producers reconstruct their physical cores
+and exact proper-completion or sealing calculations; their reports
+contain the universal arguments not expressible as finite absence tests.
+
+The plain export
+\cert{data/certificates/finite_volume58_arithmetic_20261018.json}
+contains integer sixteenth-unit tables, typed cost matrices, complete
+fixed/context rows,1890 polynomial coefficient lists and rational
+envelopes, with source hashes. It is explicitly an export, not itself
+a formal proof. A kernel checker must establish the finite-domain
+bijections, domination, recurrence inequalities, contextual coverage,
+polynomial products and exact margins. Hash agreement establishes only
+identity of inputs.
+
+The published assumption boundary consists of precisely stated
+finite/affine Coxeter classification facts, the Lann\'er and quasi-Lann\'er
+order ceilings, the standard finite-volume cusp structure and the
+incidence/index identities used above. The high-rank internal census
+reproduces26 classical quasi-Lann\'er diagrams from146,262 attachments;
+the published order-ten ceiling is a separate input. All new local
+transfer theorems, arbitrary-support seals, priority retention, complete
+typed budgets, factor-fiber bookkeeping, concentration and completed
+dimension conclusions are internal obligations. They are not to be
+axiomatized wholesale in a proof assistant.
+
+The companion map \cert{docs/finite_volume58_lemma_map.md} supplies
+quantified interfaces for these obligations. The parent Lean project
+currently reports kernel-checked generic additive-table induction,
+selected-deficit summation, integer-gap and tail-composition results.
+The complete geometric-to-arithmetic bridge and all endpoint data have
+not yet been connected into an end-to-end Lean proof of58. Accordingly
+the formalization remains partial, while the frozen mathematical proof
+has completed generation/replay and three full internal composition
+reviews. Those reviews did not independently reprove every historical
+classification or repeat every numerical certificate.
+
+\appendix
+\section{Minimal frozen proof-atlas index}
+\small
+\begin{longtable}{p{.29\textwidth}p{.64\textwidth}}
+\toprule
+Role&Artifact stem (each has source, JSON and report)\\\midrule
+Final composition&\cert{fresh_a15_d15_dimension58_20261018}\\
+Finite upper and ideal rows&\cert{fresh_a15_d15_ambient59_forest_closure_20261018}\\
+Simultaneous baseline&\cert{fresh_a14_cd16_ambient59_frontier_20261018}\\
+A15 final transfer&\cert{fresh_finite_a15_three_coupon_zero_transfer_20261018}\\
+D15 final transfer&\cert{fresh_finite_d15_a4_a11_half_zero_transfer_20261018}\\
+Higher tail&\cert{fresh_depth6_dimension59_20261018}\\
+Factor geometry&\cert{fresh_cusp_factor_payment_framework_20261017}\\
+Shape curvature&\cert{fresh_cusp_link_shape_curvature_20261017}\\
+Convex order&\cert{fresh_distance14_unrestricted_dimension156_20261017}\\
+Classical high-rank census&\cert{fresh_high_rank_quasilanner_census_20261017}\\\bottomrule
+\end{longtable}
+\normalsize
+The recursive source manifests, rather than this short index, identify
+all inherited dependencies. The companion reproduction guide gives
+commands and verification limits. Later ambient58 experiments are not
+part of this index and cannot silently replace these frozen inputs.
+
+\begin{thebibliography}{9}
+\bibitem{Khovanskii}
+A.~G.~Khovanskii, \emph{Hyperplane sections of polyhedra, toroidal
+manifolds, and discrete groups in Lobachevskii space} (1986),
+Theorems2,6,9, as used in the frozen shape-curvature report.
+Primary text: \url{https://www.math.utoronto.ca/askold/1986-Faa-1-english.pdf}.
+\bibitem{Chein}
+M.~Chein, \emph{Recherche des graphes des matrices de Coxeter
+hyperboliques d'ordre$\leq10$} (1969); order ceiling and classification
+tables cited in the frozen high-rank census.
+Primary text: \url{https://www.numdam.org/item/M2AN_1969__3_3_3_0.pdf}.
+\bibitem{FeliksonTumarkin}
+A.~Felikson and P.~Tumarkin, \emph{On simple ideal hyperbolic Coxeter
+polytopes}, arXiv:math/0502413; the parabolic-subdiagram containment
+statement in Section1 is cited by the factor-fiber report.
+Primary text: \url{https://arxiv.org/pdf/math/0502413}.
+\end{thebibliography}
+\end{document}

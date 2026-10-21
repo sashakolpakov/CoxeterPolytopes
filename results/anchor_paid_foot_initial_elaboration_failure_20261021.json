@@ -1,0 +1,26 @@
+{
+  "status": "FAILED_ELABORATION_NOT_KERNEL_ACCEPTED",
+  "observed_exit_code": 1,
+  "compiler_child_started": true,
+  "source_and_stdout_preserved": [
+    {
+      "source": "formal/CoxeterProofs/AnchorAndPaidFootKernel.lean",
+      "preserved": "results/source_archive/AnchorAndPaidFootKernel_before_elaboration_repair_20261021.lean.gz",
+      "decoded_sha256": "b62bf37921cb0a2ff42f223f3e5287d3465402a28c2ee258396f088ebac32d99",
+      "bytes": 7260
+    },
+    {
+      "source": "formal/.proof-batches/last_failure.txt",
+      "preserved": "results/anchor_paid_foot_initial_elaboration_failure_20261021.txt",
+      "decoded_sha256": "49be53be2ef04c454ba58f0da5979b432223bbf12efaa3c1ca83b076d57dd5f9",
+      "bytes": 1007
+    }
+  ],
+  "errors": [
+    "Lean reserved token matches in binder",
+    "rw cannot unfold the partially applied paidVector definition"
+  ],
+  "partial_axiom_output_not_verification": true,
+  "repair_scope": "Rename binder and expose definitional equality before dot rewrites; no theorem or assumption changes.",
+  "caps": "Existing signal-safe runner:2048MiB, one thread, resource gates, exclusive lock; terminal failure, no live handle."
+}

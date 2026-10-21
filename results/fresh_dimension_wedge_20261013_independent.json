@@ -1,0 +1,31 @@
+{
+  "status": "PASS_INDEPENDENT_EXACT_WEDGE_SOURCE_REPLAY",
+  "sources": {
+    "results/fresh_dimension_wedge_20261013.json": "a440a23fe2a585004352a88397efb66fe7a8579c2480138c40e2a0ad3cf2b7e3",
+    "scripts/fresh_dimension_wedge_20261013.py": "9bf149613a66c7c22a38374eb773c39f304c9fdced69c5ecd1f626f251b800dc"
+  },
+  "H8_to_H9": {
+    "walls": 11,
+    "forbidden_old_labels": {
+      "5": 3,
+      "3": 8
+    }
+  },
+  "H19_to_H20": {
+    "walls": 36,
+    "obstruction_counts": {
+      "old finite label3": 24,
+      "label6 split against parallel neighbor": 12
+    }
+  },
+  "H21_to_H22": {
+    "walls": 210,
+    "obstruction_counts": {
+      "old finite label3": 210
+    }
+  },
+  "total_excluded_facets": 257,
+  "arithmetic": "Independent stdlib integers/Fractions and two-coefficient golden-field operations; no NumPy or SymPy.",
+  "mathematical_review": "The full-rank positive-definite triple forces the replacement pair to be right. The resulting cosine-square sum has exactly the possibilities (3,3),(3,4),(3,5), without a label cutoff. The parallel-neighbor obstruction for an old label six is valid. The corrected deletion and cusp side observations give genuine spacelike escapes within their explicitly stated scope.",
+  "scope": "All 257 recorded local obstructions independently replayed. This rules out the specified single-facet two-slope lift, not arbitrary dimension raising; no new root search or polytope classification is performed."
+}

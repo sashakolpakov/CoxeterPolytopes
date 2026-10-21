@@ -1,0 +1,567 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "all_three_cusps_have_exact_literal_7_plus_2_split": true,
+    "all_three_ideal_rays_have_full_rank_affine_neighborhoods": true,
+    "beta_zero_information_loss_explicitly_replayed": true,
+    "complete_nine_wall_extreme_ray_census_is_18_3_0": true,
+    "corrected_identity_rederived_without_project_imports": true,
+    "every_nonvertical_toric_cap_squared_is_two": true,
+    "field_split_valid_in_admissible_quadratic_scope": true,
+    "general_finiteness_valid_under_explicit_fixed_denominator_and_full_rank_cusp_hypotheses": true,
+    "peak_rss_below_half_gib": true,
+    "primary_beta_zero_repair_present": true
+  },
+  "field_audit": {
+    "k_not_Q": "a k-isotropic vector remains nonzero and isotropic at every embedding; a definite conjugate place forbids it, hence k-rank zero and compact quotient",
+    "meyer": "over Q, indefinite rank n+1>=5 is isotropic, so compact quadratic finite-covolume reflection chambers require n<=3",
+    "noncompact": "therefore a nonuniform admissible quadratic arithmetic lattice has k=Q"
+  },
+  "general_theorem_hypotheses": {
+    "field_split_scope": "admissible quadratic arithmetic lattices of simplest type; a finite-covolume reflection subgroup has finite index in the ambient arithmetic lattice",
+    "finiteness_logic": [
+      "nonzero beta lies in a discrete subgroup, giving a uniform height cap",
+      "removing cusp tails leaves a compact thick part, where lattice mirrors are locally finite",
+      "vertical w lies on a finite positive-definite projected-lattice shell",
+      "for each w, compact z-cell plus discrete alpha leaves finitely many offsets"
+    ],
+    "not_required_for_lattice_finiteness": "a neat level: the argument works for the arithmetic stack/orbifold; pass to a neat finite-index subgroup only when an honest variety is required",
+    "required": [
+      "candidate vectors belong to a fixed finite union of cosets of a fixed rational lattice (for Heegner support, mu+L inside L^vee), so every Witt coordinate has a uniform denominator",
+      "u is a primitive rational/integral isotropic cusp vector and v is one fixed rational isotropic vector with (u,v)=1; then pi_K(L^vee) and the alpha-pairing subgroup are discrete",
+      "P is finite-sided and its listed ideal vertices have full rank n-1 parabolic neighborhoods, equivalently compact horospherical cells",
+      "the finite support fixes both norm values and discriminant cosets; fixed norms without a fixed lattice/coset denominator are insufficient",
+      "any determinant-line/overlattice extension is fixed (or drawn from a proved finite list of finite-index extensions), preserving a uniform denominator for restricted Heegner vectors"
+    ]
+  },
+  "identity_audit": {
+    "beta_zero_information_loss_counterexample": {
+      "boxed_norm_equality_holds": true,
+      "h": 1,
+      "mirror_equation_holds": false,
+      "r": [
+        0,
+        0,
+        1
+      ],
+      "u": [
+        1,
+        1,
+        0
+      ],
+      "v": [
+        "1/2",
+        "-1/2",
+        0
+      ],
+      "x_pair_r": "-1",
+      "x_square": "1",
+      "z": [
+        0,
+        0,
+        1
+      ]
+    },
+    "correct_universal_identity": "beta^2*h^2+||beta*z-w||^2-rho=2*h*beta*(x,r)",
+    "exact_grid_trials": 300,
+    "logical_conclusion": "completed-square equivalence is valid only for beta!=0; beta=0 must retain <z,w>=alpha separately"
+  },
+  "independence": "no project Python module imported; literal I_(1,6) replay",
+  "primary_artifacts": {
+    "archive_sha256": "97259b2dd70bd48040cd998178a042d0fea675a77c93f511e8c866f78f2ed991",
+    "report_sha256": "8bc6da3d0e039b89647bb9d3e80ba0c00b2b8eced8f96eb41c3634a42b70399e",
+    "script_sha256": "fd416998b80952d8620efaf853d6dbac68a91883dbf3e4eeb5d34cf6d822baa0"
+  },
+  "rss_ceiling_gib": 0.5,
+  "schema": "coxeter.finite_volume_dessin_cusp_transfer.hostile_audit.v1",
+  "status_date": "2026-08-09",
+  "toric_h6_9_replay": {
+    "active_subset_trials": 84,
+    "cusps": [
+      {
+        "active_gram_rank": 5,
+        "active_wall_labels": [
+          "E2-E5",
+          "E3-E6",
+          "E4",
+          "E5",
+          "E6",
+          "H-E1-E2-E4",
+          "H-E3-E1-E6"
+        ],
+        "affine_components": [
+          {
+            "negative_semidefinite_corank_one": true,
+            "node_count": 3,
+            "positive_kernel_relation": [
+              1,
+              2,
+              1
+            ],
+            "rank": 2,
+            "wall_labels": [
+              "E3-E6",
+              "E6",
+              "H-E3-E1-E6"
+            ]
+          },
+          {
+            "negative_semidefinite_corank_one": true,
+            "node_count": 4,
+            "positive_kernel_relation": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "rank": 3,
+            "wall_labels": [
+              "E4",
+              "H-E1-E2-E4",
+              "E2-E5",
+              "E5"
+            ]
+          }
+        ],
+        "bounded_height_cap_squares": [
+          "2",
+          "2"
+        ],
+        "bounded_wall_labels": [
+          "E1-E4",
+          "H-E2-E3-E5"
+        ],
+        "compact_rank_five_horosphere_cell": true,
+        "u": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "v": [
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vertical_wall_labels": [
+          "E2-E5",
+          "E3-E6",
+          "E4",
+          "E5",
+          "E6",
+          "H-E1-E2-E4",
+          "H-E3-E1-E6"
+        ],
+        "wall_records": [
+          {
+            "alpha": "-1/2",
+            "beta": "1",
+            "height_cap_squared": "2",
+            "label": "E1-E4",
+            "rho": "2",
+            "vertical": false
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E4",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "H-E1-E2-E4",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E2-E5",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E5",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1/2",
+            "beta": "1",
+            "height_cap_squared": "2",
+            "label": "H-E2-E3-E5",
+            "rho": "2",
+            "vertical": false
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E3-E6",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E6",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "H-E3-E1-E6",
+            "rho": "2",
+            "vertical": true
+          }
+        ]
+      },
+      {
+        "active_gram_rank": 5,
+        "active_wall_labels": [
+          "E1-E4",
+          "E3-E6",
+          "E4",
+          "E5",
+          "E6",
+          "H-E1-E2-E4",
+          "H-E2-E3-E5"
+        ],
+        "affine_components": [
+          {
+            "negative_semidefinite_corank_one": true,
+            "node_count": 3,
+            "positive_kernel_relation": [
+              1,
+              2,
+              1
+            ],
+            "rank": 2,
+            "wall_labels": [
+              "E1-E4",
+              "E4",
+              "H-E1-E2-E4"
+            ]
+          },
+          {
+            "negative_semidefinite_corank_one": true,
+            "node_count": 4,
+            "positive_kernel_relation": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "rank": 3,
+            "wall_labels": [
+              "E5",
+              "H-E2-E3-E5",
+              "E3-E6",
+              "E6"
+            ]
+          }
+        ],
+        "bounded_height_cap_squares": [
+          "2",
+          "2"
+        ],
+        "bounded_wall_labels": [
+          "E2-E5",
+          "H-E3-E1-E6"
+        ],
+        "compact_rank_five_horosphere_cell": true,
+        "u": [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "v": [
+          "1/2",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vertical_wall_labels": [
+          "E1-E4",
+          "E3-E6",
+          "E4",
+          "E5",
+          "E6",
+          "H-E1-E2-E4",
+          "H-E2-E3-E5"
+        ],
+        "wall_records": [
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E1-E4",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E4",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "H-E1-E2-E4",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "-1/2",
+            "beta": "1",
+            "height_cap_squared": "2",
+            "label": "E2-E5",
+            "rho": "2",
+            "vertical": false
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E5",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "H-E2-E3-E5",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E3-E6",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E6",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1/2",
+            "beta": "1",
+            "height_cap_squared": "2",
+            "label": "H-E3-E1-E6",
+            "rho": "2",
+            "vertical": false
+          }
+        ]
+      },
+      {
+        "active_gram_rank": 5,
+        "active_wall_labels": [
+          "E1-E4",
+          "E2-E5",
+          "E4",
+          "E5",
+          "E6",
+          "H-E2-E3-E5",
+          "H-E3-E1-E6"
+        ],
+        "affine_components": [
+          {
+            "negative_semidefinite_corank_one": true,
+            "node_count": 3,
+            "positive_kernel_relation": [
+              1,
+              2,
+              1
+            ],
+            "rank": 2,
+            "wall_labels": [
+              "E2-E5",
+              "E5",
+              "H-E2-E3-E5"
+            ]
+          },
+          {
+            "negative_semidefinite_corank_one": true,
+            "node_count": 4,
+            "positive_kernel_relation": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "rank": 3,
+            "wall_labels": [
+              "E1-E4",
+              "E4",
+              "E6",
+              "H-E3-E1-E6"
+            ]
+          }
+        ],
+        "bounded_height_cap_squares": [
+          "2",
+          "2"
+        ],
+        "bounded_wall_labels": [
+          "E3-E6",
+          "H-E1-E2-E4"
+        ],
+        "compact_rank_five_horosphere_cell": true,
+        "u": [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "v": [
+          "1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        "vertical_wall_labels": [
+          "E1-E4",
+          "E2-E5",
+          "E4",
+          "E5",
+          "E6",
+          "H-E2-E3-E5",
+          "H-E3-E1-E6"
+        ],
+        "wall_records": [
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E1-E4",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E4",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1/2",
+            "beta": "1",
+            "height_cap_squared": "2",
+            "label": "H-E1-E2-E4",
+            "rho": "2",
+            "vertical": false
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E2-E5",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E5",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "H-E2-E3-E5",
+            "rho": "2",
+            "vertical": true
+          },
+          {
+            "alpha": "-1/2",
+            "beta": "1",
+            "height_cap_squared": "2",
+            "label": "E3-E6",
+            "rho": "2",
+            "vertical": false
+          },
+          {
+            "alpha": "0",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "E6",
+            "rho": "1",
+            "vertical": true
+          },
+          {
+            "alpha": "1",
+            "beta": "0",
+            "height_cap_squared": null,
+            "label": "H-E3-E1-E6",
+            "rho": "2",
+            "vertical": true
+          }
+        ]
+      }
+    ],
+    "extreme_ray_count": 21,
+    "finite_ideal_hyperideal": [
+      18,
+      3,
+      0
+    ],
+    "strict_interior": [
+      7,
+      -2,
+      -2,
+      -2,
+      -1,
+      -1,
+      -1
+    ]
+  },
+  "verdict": "PASS_AFTER_BETA_ZERO_REPAIR_WITH_HYPOTHESES_MADE_EXPLICIT"
+}

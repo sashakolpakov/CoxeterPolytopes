@@ -1,0 +1,683 @@
+% Directly included technical appendix to compact_arithmetic20.tex.
+% The complete local geometric derivations are an explicit internal supplement.
+\appendix
+\section{A rank 20 improvement in eight ground fields}\label{app:eight}
+
+Put $K_m=\Q(2\cos(2\pi/m))$ and let
+\[
+ \mathcal K=\{\Q(\sqrt3),\Q(\sqrt6),K_9,K_{11},K_{15},K_{16},K_{20},K_{24}\},
+ \qquad K_{24}=\Q(\sqrt2,\sqrt3).
+\]
+Here and below a statement about $K$ means equality with the actual
+ground field, rather than containment in a displayed overfield.
+\begin{theorem}\label{thm:eight19}
+A compact arithmetic hyperbolic Coxeter polytope whose ground field
+belongs to $\mathcal K$ has dimension at most 19.
+\end{theorem}
+Theorem~\ref{thm:main} already excludes dimensions at least 21. This
+appendix excludes dimension 20, without extrapolating its rank 20
+calculations to other dimensions. It does not improve the all-field
+ceiling 20. In particular it makes no ceiling 19 assertion for
+$\Q(\sqrt2),\Q(\sqrt5),\Q(\sqrt2,\sqrt5)$ or $K_7$.
+
+We give the complete composition of a new half-refund rule with the
+previous charge, its triangle and quadrilateral obligations, and the
+strict counting contradiction. The six local quadrilateral exclusions
+are imported \emph{internal geometric theorems}, with precise statements
+below. Their complete proofs form the named reproducibility supplement;
+they are not published inputs or consequences of the numerical rank 21
+certificate. Thus this appendix is a complete composition proof, not a
+self-contained replacement for every local geometric derivation.
+The machine-readable ledger is
+\path{manuscripts/supplements/compact_arithmetic_eight_field19_sources_final_20261019.json}.
+It records exact source bytes and roles, including the required
+spectator-$E_8$ coverage correction.
+
+\subsection{Inputs, normalization and the previous charge}
+All local roots in this appendix are unit outward normals. Distinct
+normals have nonpositive scalar product. A positive-definite root set
+defines an actual face, and a positive affine set is impossible, by
+Lemma~\ref{lem:projection}. A compact acute chamber is simple. We use
+the finite and affine Coxeter classification, arithmetic cyclic-product
+integrality and strict positivity at nonphysical embeddings, and the
+nonnegative symmetric $h$-vector theorem as external structural inputs.
+Arithmeticity of reflection groups in the relevant dimensions is of
+the simplest type, as in the main field reduction.
+
+One arithmetic observation will recur. Add an actual wall $c$ to the
+\emph{entire} positive rank 20 vertex diagram. At the old simple vertex
+the new wall inequality is strict, so the resulting 21 normals are
+independent and their physical Gram matrix is Lorentzian. The projection
+cost $q_c$ against the old vertex is therefore greater than 1 physically
+and less than 1 at every nonphysical embedding. If $q_c$ is a rational
+expression in a cyclic scalar $z\in K$, then
+\begin{equation}\label{eq:eight-field}
+ K=\Q(z).
+\end{equation}
+Indeed, if this were a proper subfield, another embedding of the totally
+real field $K$ extending its physical embedding would repeat $q_c>1$.
+If the cost is rational, the same argument forces $K=\Q$.
+This observation concerns the whole old vertex; it is not valid for
+an arbitrary embedded component with unexamined outside contacts.
+
+The initial charge on a marked pair is one when its distance in its
+finite component is at most two, and zero otherwise. Add one more
+when the pair is an \emph{entire} component $I_2(m)$ with $m\ge6$.
+Call this the original charge. Its triangle payments are at least 2
+and its quadrilateral payments at least 1 over $\mathcal K$, by the
+internal high-label theorem. Its complete finite-domain proof is an
+input, not a new assertion about an arbitrary arithmetic field.
+
+We retain the previously proved whole-$A$, whole-$D$, and $B$ reductions
+and their positive coupons. The inherited internal charge theorem used
+here has the following exact scope and consequences.
+\begin{proposition}[Previous charge interface]\label{prop:eight-old}
+There is a nonnegative charge on every actual rank 20 vertex over
+$\mathcal K$, obtained from the original charge by the reviewed
+whole-$A/D/B$ rules, with every triangle paying at least 2 and every
+quadrilateral at least 1. Its only vertex costs above 35 are
+\[
+ D_r+D_{20-r}\quad(10\le r\le16),\qquad
+ D_{12}+E_8,\quad D_{13}+E_7,\quad D_{14}+E_6,
+\]
+each with cost 36. It leaves both fork/short-leaf units in these forests
+unchanged. Its other exact bounds are
+\[
+\begin{array}{c|c}
+ \text{entire vertex forest}&\text{cost bound}\\\hline
+ A_{20},B_{20},D_{20}&35\\
+ D_{19}+A_1,\ D_{18}+I_2(m),\ m\ge6&35\\
+ B_{19}+A_1&139/4\\
+ \text{at least three components}&34.
+\end{array}
+\]
+The only positive coupon with at least three components is the
+$B_{18}+2A_1$ quarter, whose complete cost is $133/4$.
+\end{proposition}
+This is the composed prior theorem, not an application of a whole-$D$
+refund to a $D$ factor with spectators. Its inputs are the whole-$A$
+two-end refund, whole-$D$ three-unit refund, their mixed-consumer
+theorem, the $B$ simple-end and balanced-quarter rules, the $B_{20}$
+far-four quarter, and the spectator rules for $B_{19}+A_1$,
+$D_{19}+A_1$ and $D_{18}+I_2(m\ge6)$. All are identified in the ledger.
+
+For clarity, the finite-forest part needs no new enumeration. A
+connected rank-$r$ component has original cost $2r-2$ for $D/E$,
+for an entire high-label $I_2$, and for $A_1$ (cost zero); every other
+nontrivial component has cost $2r-3$. Indeed a tree contributes its
+edge count plus $\sum_v\binom{\deg v}{2}$ distance-two pairs. Thus
+a forest with $k$ components has original cost at most $40-2k$.
+For $k\ge3$ the only positive coupon is the stated $133/4<34$ case.
+For $k=2$ any nontrivial path component without a high-$I_2$ addition
+gives cost at most 35, apart from the separately bounded $B_{19}+A_1$.
+Two exceptional $E$ components cannot fill rank 20. The only remaining
+cost 36 cases are $D+D$, $D+E$, $D_{19}+A_1$ and
+$D_{18}+I_2(m\ge6)$; the last two have their own prior half-refunds.
+For $k=1$ only $A_{20},B_{20},D_{20}$ occur, already bounded by 35.
+This proves the stated frontier from the earlier consumer theorems.
+
+\subsection{The new rule and its complete support}
+At one of the ten cost 36 forests select the displayed larger $D_r$
+factor. At $D_{10}+D_{10}$ select either factor independently at each
+vertex. Write $a$ for its fork, $b,e$ for its short leaves and
+\[
+ a-l_1-\cdots-l_L,\qquad N=r-2\ge8,\quad L=N-1,
+\]
+for its long arm. Let $T_s$, $r+s=20$, be the entire other $D/E$
+component. Reduce the two weights on $(a,b)$ and $(a,e)$ from 1 to
+$1/2$. Leave the short-leaf pair $(b,e)$ and every other angle unchanged.
+
+The complete white support of a face carrying the pair $(a,b)$ is
+\begin{equation}\label{eq:eight-white}
+ W=A_1(e)+A_L+T_s.
+\end{equation}
+Its branched component $T_s$ distinguishes it from all previous
+decreasing supports: the whole-$A/D$ roles have $A_{18}$ or
+$A_{17}+A_1$, the $B$ roles have $A_{18}$ or a white bond of label 4,
+$D_{19}+A_1$ has $A_{16}+2A_1$, and the high-$I_2$ role has
+$A_{15}+A_1+I_2(m\ge6)$. The positive $B$ coupons have white support
+$B_{18}$. None equals~\eqref{eq:eight-white}. Consequently no previous
+decrease occurs at any other corner of this face, and an original
+positive corner still contributes at least one unless it is a new
+half-source.
+
+Among new roles the unique branched white component fixes $T_s$, and
+the path rank fixes $r$. Thus simultaneous new reductions on this face
+belong to the same family. In the tie case the whole white $D_{10}$
+already occupies its entire factor, so its roots cannot secretly supply
+a black selected pair. Omitting a reduction because a different factor
+was selected at another vertex can only increase payment. No consistent
+global choice of the selected factor is needed.
+
+\subsection{Every triangle retains two units}\label{app:eight-triangles}
+Let $a,b,c$ be the sides of an actual triangle with a new source at
+$(a,b)$. Both other corners are finite. In particular
+\[
+ W+a=A_{r-1}+T_s,\qquad A_{r-1}=e-a-l_1-\cdots-l_L.
+\]
+We first examine contacts to the whole spectator. A finite diagram is
+a forest, so $c$ touches at most one vertex in each connected component.
+If $c$ touches only $T_s$, a nonzero $b.c$ and the spectator contact
+must both be simple: a finite extension retaining a $D/E$ fork has only
+simple bonds. The whole old-plus-$c$ Gram data are then rational,
+contrary to~\eqref{eq:eight-field}. If $b.c=0$ that whole rank 21
+diagram is positive definite, impossible at positive index 20.
+If $c$ also touches the long path, the whole finite corner of rank 20
+is connected and contains $T_s$'s fork, so it must be $D_{20}$.
+The spectator is $D_s$ and $c$ joins its long endpoint to a path
+endpoint simply. A nonzero $b.c$ would make a second fork in the
+other finite corner. At $b.c=0$ the whole old-plus-$c$ cost is again
+rational and physically greater than 1, forcing $K=\Q$. Hence
+\begin{equation}\label{eq:eight-triangle-seal}
+ c\perp T_s
+\end{equation}
+in every possible triangle. Orthogonality has been proved after
+examining spectator contacts, not assumed at the outset.
+
+Finite extension of the whole path $A_{r-1}$, of rank at least 9,
+now leaves five cases: no path contact; a simple or label 4 contact at
+either endpoint $e,l_L$; or a simple contact at either next-to-end
+vertex $a,l_{L-1}$. Two path contacts create a cycle, and the
+exceptional finite diagrams cannot extend this path at its rank.
+Put $b.c=-\beta$. We show that each triangle remains paid even
+if its new fork units were deleted completely.
+
+\paragraph{Near endpoint $e$.}
+If $c.e$ has label 3 or4 and $\beta>0$, the finite path $e-c-b$
+allows ordered labels $(3,3),(3,4),(3,5),(4,3)$. The marks $(a,c)$
+and $(b,c)$ have respectively distance two and one. Neither is a new
+source, so they retain one unit each. At $\beta=0$, label 3 gives
+the affine $E_8$ tree with arms $1,2,5$ at $a$, using
+$a,b,e,c,l_1,\ldots,l_5$. Label 4 gives the affine block on
+$a,b,l_1,e,c$ with positive null coefficients $2$ at $a,e$,
+$1$ at $b,l_1$, and $\sqrt2$ at $c$. Both are forbidden.
+
+\paragraph{Far endpoint $l_L$.}
+At $\beta=0$, a simple contact makes the whole rank 21 diagram
+$D_{r+1}+T_s$ positive definite. A label 4 contact gives a positive null
+vector with coefficients $1$ on $a$ and the long arm, $1/2$ on
+$b,e$, and $1/\sqrt2$ on $c$. At $\beta>0$, finite classification
+of the opposite path forces the far contact simple and
+$\beta=1/2$ or $\sqrt2/2$. The first makes an affine simple cycle.
+For the second, the full old-plus-$c$ projection cost is
+\[
+ q_c=r\beta^2/2+\beta+1/2.
+\]
+The actual cycle puts $\sqrt2$ in $K$. Extend its sign-changing
+embedding to $K$; it gives
+$q_c'=r/4-\sqrt2/2+1/2>1$, contradicting conjugate positivity.
+
+\paragraph{Far next-to-end $l_{L-1}$.}
+The contact is simple. At $\beta=0$ there is an affine $D$
+vector: coefficients $1$ on $a,l_1,\ldots,l_{L-1}$ and $1/2$
+on $b,e,l_L,c$. At $\beta>0$ the other finite corner would
+have fork arms $1,2,L-2$ and rank $r-1\ge9$, which is not a
+finite diagram.
+
+\paragraph{Near next-to-end $a$.}
+Here $a.c=-1/2$ and $c\perp W$. At $\beta=0$ the star with
+center $a$ and leaves $b,e,l_1,c$ is affine $D_4$. Otherwise
+the two corners with pairs $(a,b),(a,c)$ are new fork roles, and
+the third is $W+I_2(m)$, where $\beta=\cos(\pi/m)$.
+The actual black cycle makes $2\beta$ integral in $K$, and
+\[
+ q_c=\frac{r\beta^2+2(r-2)\beta+r-2}{2},\qquad
+ q_c-1=\frac{(\beta+1)(r\beta+r-4)}2.
+\]
+Strict positivity gives, at each nonphysical embedding,
+\begin{equation}\label{eq:eight-near-window}
+ -1<\beta_i<-1+4/r\le-3/5,
+\end{equation}
+and the whole-star argument gives $K=\Q(\beta)$.
+Every field in $\mathcal K$ has degree at most 5. The elementary
+totient condition $\varphi(2m)\le10$ gives exactly
+\[
+ m=3,4,5,6,7,8,9,10,11,12,15.
+\]
+The prime divisors of $2m$ must be among $2,3,5,7,11$ and
+multiplying their Euler factors gives this complete list.
+Label 3 is affine $A_2$; labels 4,5 give the excluded exact fields
+$\Q(\sqrt2),\Q(\sqrt5)$. For $m=7,8,10,11$ use conjugate
+$\cos(3\pi/m)$, for $m=9,12$ use $\cos(5\pi/m)$, and for
+$m=15$ use $\cos(7\pi/m)$. These are genuine nonphysical
+conjugates and violate~\eqref{eq:eight-near-window}: all are
+positive except $\cos(5\pi/9)>-1/2$. Only $m=6$ remains.
+Its third corner is an \emph{entire} $I_2(6)$ and retains two
+units, paying the triangle even if both fork units were removed.
+
+\paragraph{No path contact.}
+Now $c\perp a,W$. At $\beta=0$ the whole rank 21 set is positive
+definite. Otherwise the integral two-cycle
+$z=4\beta^2=2+2\cos(2\pi/m)$ satisfies
+\[
+ q_c=rz/8,\qquad K=\Q(z),\qquad 0<z_i<8/r\le4/5.
+\]
+The complete condition $\varphi(m)\le10$ gives
+\[
+ m=3,4,5,6,7,8,9,10,11,12,14,15,16,18,20,22,24,30.
+\]
+Labels 3,4,6 give $\Q$; labels 5,8 give
+$\Q(\sqrt5),\Q(\sqrt2)$. For all remaining labels except 12,
+the following nonphysical residues are coprime to $m$, not $\pm1$,
+and have $k/m<1/3$:
+\[
+\begin{array}{c|rrrrrrrrrrrr}
+m&7&9&10&11&14&15&16&18&20&22&24&30\\
+k&2&2&3&2&3&2&3&5&3&3&5&7.
+\end{array}
+\]
+Their $z_i=2+2\cos(2k\pi/m)>1$ violate the window. This keeps
+label 20 explicitly; it does not assume $\beta$ belongs to its
+square field. Only $m=12$ remains, with exact field
+$\Q(\sqrt3)$. The entire $I_2(12)$ third corner retains two
+units. Thus every triangle, including all simultaneous new reductions,
+pays at least 2.
+
+\subsection{Quadrilaterals: complete reduction to six local lemmas}
+Two new half-sources already pay one. If a quadrilateral has exactly
+one new half-source and another original positive corner, that other
+corner retains at least one by the white-support separation above.
+We must therefore exclude just a quadrilateral $a,b,c,d$ with its
+source at $(a,b)$ and three other \emph{original} zero corners.
+The zeros imply
+\begin{equation}\label{eq:eight-zero}
+ a.d=b.c=c.d=0,\qquad d.e=d.l_1=0.
+\end{equation}
+The latter equalities hold because a contact to either root, both
+simply adjacent to $a$, would give a distance-two unit at $(a,d)$.
+Put $b.d=-\beta$ and $a.c=-x$. Actual acute Coxeter walls give
+$x,\beta=0$, a native finite cosine, or a value at least 1.
+We do not infer dotted ambient products merely from polygon opposition.
+
+Finite extension of the \emph{entire} $A_{r-1}+T_s$ at $W+a+d$
+and~\eqref{eq:eight-zero} give precisely the first-$d$ inventory
+in Table~\ref{tab:eight-d}. A near attachment is excluded by the
+zero at $(a,d)$. Two contacts in one old component create a cycle.
+A path-plus-spectator connected finite diagram has rank 20 and a
+fork, so it must be $D_{20}$: the bridge is simple and uses a
+$D$ long endpoint. Neither an $E$ spectator nor a second fork nor
+a bond of label 4 in that connected component is finite. The old path has
+rank at least 9, so no exceptional internal attachment is omitted.
+\begin{table}[ht]
+\centering
+\begin{tabular}{cl}\toprule
+Row&Contacts of $d$ to the complete white graph\\\midrule
+I&None\\
+F&Simple far endpoint $l_L$\\
+B&Far endpoint $l_L$ with label 4\\
+T&Simple far next-to-end $l_{L-1}$\\
+J&One simple contact to $T_s$, no path contact\\
+Bridge&Simple $l_L$ and a long endpoint of $T_s=D_s$\\\bottomrule
+\end{tabular}
+\caption{The complete first-wall inventory for three original zero corners.}
+\label{tab:eight-d}
+\end{table}
+
+Here are the exact local geometric inputs. Each statement has the
+entire old forest and all hypotheses~\eqref{eq:eight-zero}; it
+excludes every actual finite continuation $W+c+d$, not just an
+embedded classical subdiagram.
+\begin{proposition}[Internal six-row exclusion]\label{prop:eight-six}
+For $10\le r\le16$, $r+s=20$, $T_s=D_s,E_6,E_7,E_8$ and
+$K\in\mathcal K$, none of the six rows in
+Table~\ref{tab:eight-d} can be an actual compact quadrilateral
+with three original zero corners. Both finite and nonfinite ambient
+opposite products are included. The J statement includes the two
+$A_7$-to-$E_8$ continuations at $N=8$.
+\end{proposition}
+This proposition is an imported internal theorem assembled from the
+local sources below. We give its exact proof interface and principal
+calculations to make its coverage assessable. The source ledger provides
+the full individual derivations; accepting a smaller-rank extension of
+an old $D_{19}/D_{20}$ estimate is not one of the premises.
+
+\paragraph{The common determinant identity.}
+Project off the positive white block and write
+\[
+ \begin{pmatrix}
+ s_0&-1/2&-X&-\rho\\
+ -1/2&1&0&-\beta\\
+ -X&0&t&-\nu\\
+ -\rho&-\beta&-\nu&u
+ \end{pmatrix},\qquad
+ s_0=\frac{N+2}{4N},\quad t,u>0,\quad tu>\nu^2.
+\]
+There are 22 actual roots in Lorentz dimension 21, with a whole positive
+corner of rank 20, so this matrix has determinant zero. When
+$\Delta=\beta^2-u>0$, eliminating the $b,d$ block gives
+\begin{equation}\label{eq:eight-schur}
+ X=\frac{\nu(\beta/2+\rho)}\Delta+
+ \sqrt{\left(t+\frac{\nu^2}\Delta\right)
+ \left(s_0+\frac{\rho\beta+\rho^2+u/4}\Delta\right)}.
+\end{equation}
+The other algebraic root is negative: the constant term of the
+quadratic has the sign forced by $s_0>1/4$. Thus the positive root
+is determined geometrically. For $\beta\ge1$ its right side is
+nonincreasing: the relevant derivative numerators are
+\[
+ -\beta^2/2-2\rho\beta-u/2,\qquad
+ -\rho\beta^2-\rho u-2(\rho^2+u/4)\beta,
+\]
+both negative. Replacing $\beta$ by 1 is therefore an upper estimate.
+
+\paragraph{Row I: actual dottedness and the complete contact split.}
+Here $b,d\perp W$ and are also perpendicular to the projected $c$
+side. The actual compact polygon has a positive-length $c$ edge;
+its two adjacent side lines $b,d$ are perpendicular to that same
+line at distinct points. Their outward product is
+$-\cosh\ell$, so $\beta>1$ is derived from actual geometry.
+Put $\delta=4\beta^2-4\in\mathcal O_K$. The identity becomes
+\begin{equation}\label{eq:eight-I}
+ \left(\frac{(x+\kappa)^2}{t}-s_0\right)\delta=1,
+ \qquad q_c=1-t+2N(x+\kappa)^2.
+\end{equation}
+The complete $c$ split is: no long-path or spectator contact, with
+arbitrary finite $e$ contact; a long-path contact with every allowable
+$e$ contact; spectator only; spectator plus a simple $e$ contact; or a path/spectator
+bridge. The no-spectator branches include both $N=8$ exceptional
+$E_8$ attachments. Their full no-long, finite-long and dotted-long
+unit arguments are retained as separate internal lemmas in the
+supplement. No bounded algebraic-integer search is an input.
+
+For a spectator contact the residual squares after its projection are
+\[
+\begin{array}{c|c|c}
+T_s&\text{attachment}&t_T\\\hline
+D_s&\text{long endpoint (any leaf for }D_4)&1/2\\
+D_5,D_6,D_7&\text{short leaf}&3/8,1/4,1/8\\
+E_6&\text{length-two arm endpoint}&1/3\\
+E_7&\text{length-three arm endpoint}&1/4\\
+E_8&\text{none}&\text{--}.
+\end{array}
+\]
+This follows from finite $D/E$ arm lengths and unit-Gram determinant
+ratios. A spectator-plus-$e$ contact must be simple and leaves only
+$(t,N)=(1/4,8\ldots14),(1/8,13),(1/12,12)$.
+With the integral actual-cycle scalar $A=2x$ and $V=2A+1$,
+equation~\eqref{eq:eight-I} respectively produces
+\[
+\begin{array}{c|c|c}
+t& D_*&D_*\delta\\\hline
+1/4&2NA(A+1)-1&2N\\
+1/8&8NA(A+1)+N-2\quad(N=13)&52\\
+1/12&72A(A+1)+11\quad(N=12)&24.
+\end{array}
+\]
+In every row $D_*$ is coprime to its displayed divisor, hence is a
+unit. Either $x=0$ contradicts $\delta>0$ directly, or its physical
+absolute value exceeds 1; the full-star inequality gives absolute
+value greater than 1 at every other conjugate too. This contradicts
+its unit norm. For a path/spectator bridge the whole finite component
+is $D_{18}$, its residual is $1/(2N)$, and its two endpoint roles
+give an odd unit $D_*$ satisfying $D_*\delta=4$; the same conjugate
+norm contradiction applies. The spectator-only row is settled by
+the coupled integral-square norm argument. These are the five
+complete contact alternatives in the named I composition lemma.
+
+\paragraph{Rows F and T at finite $\beta$.}
+The integral cycle $2\beta$ belongs to $K$. The full old-star costs are
+\[
+ q_F=r\beta^2/2+\beta+1/2,\qquad
+ q_T=r\beta^2/2+2\beta+1.
+\]
+They give $K=\Q(\beta)$ and the common nonphysical window
+$-1/2<\beta_i<1/4$. The complete finite list is the
+$\varphi(2m)\le10$ list above. Labels 3,5 force excluded fields.
+For the other labels a forbidden nonphysical residue is
+\[
+\begin{array}{c|rrrrrrrrr}
+m&4&6&7&8&9&10&11&12&15\\
+k&3&5&5&3&7&3&3&5&11.
+\end{array}
+\]
+Negative entries have angle greater than $2\pi/3$; the positive
+exceptions exceed $1/4$, including
+\[
+ \cos(5\pi/12)=(\sqrt6-\sqrt2)/4>1/4.
+\]
+Also $\beta=0$ fails the physical cost $q_d>1$.
+
+\paragraph{Row B at finite $\beta$: the weighted-square exception.}
+The actual integral scalar is $A=2\sqrt2\beta$, not necessarily
+$\beta$. Its full cost is $rA^2/16+A/2+1$, giving
+\[
+ K=\Q(A),\qquad -8/r<A_i<0.
+\]
+If $\Q(A^2)$ were proper, the sign automorphism $A\mapsto-A$
+would give the forbidden conjugate $-A_0\le-\sqrt2$.
+Thus $K=\Q(A^2)=\Q(\cos(2\pi/m))$ and the complete
+$\varphi(m)\le10$ list applies, including $m=20$.
+All labels except 12 fail the necessary nonphysical square bound
+$\sigma(A^2)<64/r^2\le16/25$: for $m=5,8$ the values
+$3-\sqrt5>3/4$ and $4-2\sqrt2>1$ suffice; for the other
+nonrational labels use the residues $k/m<1/3$ listed above,
+giving $4+4\cos(2k\pi/m)>2$.
+For $m=12$, $A=1+\sqrt3$, so its conjugate window leaves only
+\[
+ r=10,\quad T_s=D_{10},\quad \beta=\cos(\pi/12),\quad K=\Q(\sqrt3).
+\]
+This necessary profile is not discarded. In it the complete opposite
+corner is $A_1+B_8+D_{10}$: $c$ has no path contact, or a simple
+near-end contact $l_1$ with $e$ absent or simple. Eliminating $b,d$
+gives $R_0=(2+\sqrt3)/8<1/2$. For no path contact,
+\[
+ (x+\gamma/2)^2=R_0(t_T-\gamma^2),\qquad \gamma=-c.e.
+\]
+The native gap leaves $x=0,1/2$. A spectator contact makes $t_T$
+rational, whereas the remaining possible equalities require
+$4-2\sqrt3$ or $1-\sqrt3/2$ as residuals. Without a spectator,
+the last $x=0$ case requires
+$4\gamma^2=(20+8\sqrt3)/13$, whose trace $40/13$ is not integral.
+For the near-end contact the exact identity is
+\[
+ (x+3/8+\gamma/2)^2
+ =R_0\left((12+\sqrt3)/24-\gamma^2\right),
+ \qquad \gamma=0,1/2.
+\]
+A positive $x$ makes the left side at least $49/64$, too large;
+at $x=0$ the two right numerators are respectively
+$27+14\sqrt3$ and $15+8\sqrt3$ over 192, different from the
+left numerators 27 and 75. This closes the genuine finite exception.
+
+\paragraph{Rows F, B and T for $\beta\ge1$.}
+For F the opposite path is $A_N$, for B it is $B_N$, and for T
+it is $D_N$. Their complete continuations are constrained by the
+whole finite corner, not by an assumed spectator seal. Equation
+\eqref{eq:eight-schur} has the following exact data and bounds:
+\[
+\begin{array}{c|c|c|c}
+\text{row}&u&\rho&Q(1)\text{ bound}\\\hline
+F&(N+1)/(2N)&1/(2N)&(N+3)/(2(N-1))\le11/14\\
+B&1/N&\sqrt2/(2N)&(5+\sqrt2)/14<1/2\\
+T&2/N&1/N&(N+6)/(4(N-2))\le7/12,
+\end{array}
+\]
+where $Q(\beta)$ is the second square-root factor. If $c$ has no
+path contact, $(x+\gamma/2)^2/t\le Q(1)$. The spectator table
+gives $t\le1/2$, or $t\le1/4$ with a simple $e$ contact. Native gaps,
+the induced affine $D/E/B$ witnesses, and the full-star exact fields
+$\Q$ or $\Q(\sqrt5)$ exclude these cases.
+
+For B and T the only path contact is simple at $l_1$, with
+$\gamma=0,1/2$ and no spectator contact. In T it gives
+$X\le11/16$, while a positive $x$ gives $X\ge15/16$.
+In B the corresponding upper bound is
+$X<1/8+\sqrt{2/7}<7/8<15/16$. Thus $x=0$, giving affine
+$D_5$ at $\gamma=0$ or the simple affine four-cycle at $\gamma=1/2$.
+
+For F the full path-contact list is a simple or label 4 near endpoint,
+simple near-next or far-next, or a simple near-end/spectator bridge.
+The respective estimates force $x=0$ with an affine witness, or
+contradict even its zero-contact lower bound. For example the
+simple near-end case has
+\[
+ X\le9/112+\sqrt{22}/7<15/16,
+ \qquad X\ge15/16\quad\text{if }x>0;
+\]
+the near-four and bridge upper bounds are respectively
+$9\sqrt2/112+\sqrt{11}/(7\sqrt2)<7\sqrt2/16$ and
+$9/112+\sqrt{11}/14<7/16$, below their lower bounds at $x=0$.
+The sole shared-far-end alternative instead gives
+\[
+ x\le1/2+\sqrt{(N+3)/(2(N-1))}<3/2.
+\]
+Its integral scalar $A=2x$ generates $K$ and has all other
+conjugates in $(-1/2,1/4)$, since
+$q_c=NA^2/2+A+1/2$. Finite native $x$ fails the complete
+cosine list. For $x\ge1$ and degree at least 3,
+$0<|\operatorname{Norm}A|<3(1/2)^{d-1}<1$.
+In degree two a positive other conjugate also has norm below 1;
+a negative one forces norm $-1$ and trace 2, hence
+$A=1+\sqrt2$ and the excluded exact field $\Q(\sqrt2)$.
+Degree one forces $\Q$. This is the all-height far-end argument,
+not a height-box census.
+
+\paragraph{Row J, with the small exceptional continuations retained.}
+A simple spectator contact has rational residual $u\le1/2$.
+The full-star integral square $z=4\beta^2$ generates $K$ and
+has $0<z_i<8u/r\le2/5$. Integer norms and traces exclude every
+finite native $\beta$ except
+\[
+ \beta=\cos(\pi/12),\quad K=\Q(\sqrt3),\quad
+ T_s=D_s\text{ at its long endpoint},\quad 10\le r\le14.
+\]
+This exception is kept in the local theorem. If both $c,d$ touch
+the spectator, the complete joint finite table is
+$D_4\to E_6,D_5\to E_7,D_6\to E_8$, with projected cross
+$\nu=1/4$ and no path contact. Their remaining constants satisfy
+$s_0\le7/24$, $u,t_T\le1/2$; an $e$ contact is absent or simple.
+For $\beta\ge1$, equation~\eqref{eq:eight-schur} gives
+$X<5/6$ when $\gamma=0$, and $x<\sqrt{13}/8<1/2$ when
+$\gamma=1/2$. The remaining native labels have rational or
+$\Q(\sqrt5)$ full-star costs and are excluded. At the finite
+exception only the $D_6\to E_8$ joint row remains; its exact
+comparison gives $X<4/5$, leaving $x=0,1/2,\sqrt2/2$, each
+excluded by its full-star cost.
+
+If $c\perp T_s$, then $\nu=0$ and
+\[
+ X^2=tR,\qquad R=s_0+\frac{u}{4(\beta^2-u)}.
+\]
+For $\beta\ge1$, $s_0<R\le(N+1)/(2N)\le9/16$; in the
+finite exception $R=s_0+\sqrt3/6$, strictly between
+$(N+1)/(2N)$ and $5/8$. The complete classical path/end/$e$
+inventory is excluded by the native gaps, affine witnesses and
+rational full-star costs in the J source. There are also two
+\emph{additional} continuations when $N=8$: $c$ can attach
+simply to $l_3$ or $l_5$, making $E_8$ from the white $A_7$.
+No $e$ contact is then possible. They have
+\[
+ t=1/16,\quad X=x+\kappa,\qquad
+ \kappa=5/16\ (l_3),\quad 3/16\ (l_5).
+\]
+For $\beta\ge1$, $X\le3/16$ excludes $l_3$; $l_5$ forces
+$x=0$ and the induced affine $D$ tree with its two forks at
+$a,l_5$. In the finite exception $X<1/5$, so again $l_3$
+fails, while $l_5$ forces $x=0$ and the impossible rational
+value $R=9/16$. These are the mandatory $E_8$ addendum cases.
+
+\paragraph{The bridge row.}
+The whole opposite white factor is $D_{18}+A_1(e)$. Thus $c$
+either misses $D_{18}$ and has any finite $e$ bond, or lengthens
+its long endpoint $l_1$ simply and has $e$ absent or simple.
+The integral $V=2\beta$ has $K=\Q(V)$ and
+$-4/r<V_i<0$. Finite $\beta$ gives
+$0<|\operatorname{Norm}V|<2(4/r)^{d-1}<1$ for $d\ge2$;
+degree one forces $\Q$. For $\beta\ge1$, the determinant
+data are $u=\rho=1/(2N)$ and
+\[
+ Q(1)=\frac{N+4}{2(2N-1)}\le2/5.
+\]
+No $D_{18}$ contact leaves the native labels 3,4, excluded by
+the usual affine $D/E/B$ witnesses. A simple $l_1$ contact gives
+$X\le3/80+\sqrt{17/75}<43/80$, below the $15/16$ lower
+bound when $x>0$. At $x=0$ its absent/simple $e$ bond gives
+affine $D_5$ or the simple affine four-cycle.
+
+Every affine witness above is principal on actual outward roots.
+Its positive null sum is nonzero by strict interior pairing and
+is feasible against \emph{all} other walls by acuteness, including
+any outside spectator walls. Additional contacts cannot remove
+the ideal ray. The complete local proofs supply all finite-corner
+inventories and the subsidiary native comparisons summarized here.
+With Proposition~\ref{prop:eight-six}, the one-half-source/three-zero
+quadrilateral is impossible. Every affected quadrilateral therefore
+retains payment at least 1.
+
+\subsection{Vertex bound, strict contradiction and verification}
+The new charge remains nonnegative. Its triangles pay 2 by
+Section~\ref{app:eight-triangles}; its quadrilaterals pay 1 by the
+preceding complete consumer argument. Every target forest loses
+exactly one: its two distinct original units become two halves.
+No positive coupon occurs on a target, and no unproved whole-factor
+deletion is applied through spectators. Every other forest is unchanged.
+Proposition~\ref{prop:eight-old} consequently gives total charge
+\begin{equation}\label{eq:eight-upper}
+ C\le35 f_0.
+\end{equation}
+
+On a $k$-gon, the payment is at least $5-k$: for triangles and
+quadrilaterals this was proved, and for $k\ge5$ it follows from
+nonnegativity. At a simple vertex in dimension 20 there are 190 two-faces, so
+\[
+ C\ge5f_2-190f_0.
+\]
+The nonnegative symmetric dual $h$-vector satisfies
+$f_0=\sum h_i$ and $f_2=\sum\binom{20-i}{2}h_i$.
+Pairing coefficients by $h_i=h_{20-i}$ gives the exact identity
+\begin{equation}\label{eq:eight-gap}
+ 5f_2-225f_0
+ =\frac52\sum_{i=0}^{20}(i-10)^2 h_i\ge500,
+\end{equation}
+because $h_0=h_{20}=1$. Hence $C\ge35f_0+500$, contradicting
+\eqref{eq:eight-upper}. This excludes dimension 20 in $\mathcal K$.
+Together with Theorem~\ref{thm:main}, it proves
+Theorem~\ref{thm:eight19}.
+
+The rank 20 step is written mathematics, not a new finite enumeration
+or optimizer certificate. The source
+\path{formal/CoxeterProofs/ArithmeticEightField19.lean} has compiled
+and passed a separate printed-axiom audit of seven final theorems.
+It checks the paired coefficients, endpoint surplus 500, quarter-scaled
+cost update, elementary triangle/quad logic, the charge contradiction
+and composition with the previous ceiling 20. Its printed axioms are
+only \texttt{propext} and \texttt{Quot.sound}; the coefficient identity
+is axiom-free. Actual geometry, local consumer classifications, complete
+forest coverage and the identification of actual $h$-vector/charge data
+remain explicit premises. This conditional kernel check is not an
+end-to-end formalization of the geometric supplement.
+
+\paragraph{Named internal supplement.}
+The complete main consumer source is
+\path{results/arithmetic_rank20_two_component_d_fork_half_refund_20261019.md};
+the prior whole-forest theorem is
+\path{results/arithmetic_rank20_complete_fourteen_family_frontier_20261019.md}.
+For the local theorem Proposition~\ref{prop:eight-six}, the full
+proofs are the following sources, all under \path{results/}:
+\begin{longtable}{p{.13\linewidth}p{.78\linewidth}}
+\toprule
+Row&Complete source\\\midrule
+I&\path{arithmetic_rank20_isolated_d_spectator_contact_obstruction_20261019.md}\\
+F finite; T&\path{arithmetic_rank20_simple_d_finite_beta_and_far_fork_closure_20261019.md}\\
+B finite&\path{arithmetic_rank20_far4_finite_beta_obstruction_20261019.md}\\
+F/B large&\path{arithmetic_rank20_far_simple_and_far4_large_beta_closure_20261019.md}\\
+J&\path{arithmetic_rank20_spectator_only_quad_obstruction_20261019.md}\\
+J correction&\path{arithmetic_rank20_spectator_only_e8_coverage_addendum_20261019.md}\\
+Bridge&\path{arithmetic_rank20_bridge_quad_obstruction_20261019.md}\\\bottomrule
+\end{longtable}
+The I composition explicitly imports its no-long, finite-long and
+dotted-long unit proofs; their source pins and subsidiary arguments
+are included in the supplement ledger. Its whole-spectator finite
+continuation table is
+\path{arithmetic_rank20_fork_spectator_continuation_research_20261019.md}.
+The ledger also identifies every inherited prior charge theorem,
+the separate written reviews and the conditional kernel evidence.
+
+The source ledger distinguishes those external structural inputs,
+inherited internal charge theorems, new local internal lemmas and the
+conditional kernel records. To make this appendix self-contained at
+the geometric level would require integrating all imported no-long,
+finite-long and dotted-long norm arguments and the preceding $A/B/D$
+consumer proofs, rather than replacing their source references by
+review counts. No external refereeing, worldwide priority, sharpness
+or new polytope example follows from the present theorem.

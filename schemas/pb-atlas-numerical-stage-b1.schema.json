@@ -1,0 +1,339 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://coxeter-polytopes.local/schemas/pb-atlas-numerical-stage-b1.schema.json",
+  "title": "PB-Atlas numerical cluster Stage-B1 packet",
+  "type": "object",
+  "required": [
+    "schema",
+    "scope",
+    "source_contract",
+    "endpoint",
+    "reverse_blowup_program",
+    "divisor_table",
+    "class_matrices",
+    "anti_canonical_evaluation_matrix_templates",
+    "invariant_cluster_profile",
+    "invariant_cluster_profile_sha256",
+    "checks",
+    "stage_B2_remaining",
+    "all_checks_pass"
+  ],
+  "properties": {
+    "schema": {
+      "const": "coxeter.pb_atlas.numerical_cluster_stage_b1.v1"
+    },
+    "scope": {"type": "string"},
+    "source_contract": {
+      "type": "object",
+      "required": [
+        "schema",
+        "arrays_and_integer_indices_only",
+        "stage_A_program_sha256",
+        "no_source_or_surface_labels_entered"
+      ],
+      "properties": {
+        "schema": {
+          "const": "coxeter.pb_atlas.numerical_contraction_stage_a.v1#endpointProgram"
+        },
+        "arrays_and_integer_indices_only": {"const": true},
+        "stage_A_program_sha256": {"$ref": "#/$defs/sha256"},
+        "no_source_or_surface_labels_entered": {"const": true}
+      }
+    },
+    "endpoint": {
+      "type": "object",
+      "required": [
+        "kind",
+        "hirzebruch_e",
+        "model_rank",
+        "model_basis_column_labels",
+        "F0_ruling_swap_is_an_unoriented_symmetry"
+      ],
+      "properties": {
+        "kind": {"enum": ["P2", "F_e"]},
+        "hirzebruch_e": {"type": ["integer", "null"], "minimum": 0},
+        "model_rank": {"enum": [1, 2]},
+        "model_basis_column_labels": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1,
+          "maxItems": 2
+        },
+        "F0_ruling_swap_is_an_unoriented_symmetry": {"type": "boolean"}
+      }
+    },
+    "reverse_blowup_program": {
+      "type": "object",
+      "required": [
+        "chronological_order_is_reverse_of_stage_A_sequential_contraction_order",
+        "stage_A_contraction_order_zero_based",
+        "reverse_source_wall_order_zero_based",
+        "center_records",
+        "dependency_layers_center_positions_zero_based",
+        "proximity_edges_child_to_parent_zero_based",
+        "proximity_incidence_matrix_Q_child_parent",
+        "strict_exceptional_to_total_matrix_P_chronological",
+        "identity_P_equals_I_minus_Q_transpose",
+        "strict_exceptional_gram_minus_P_P_transpose",
+        "satellite_parent_intersection_audit",
+        "center_kind_histogram",
+        "invariant_object_is_DAG_with_commuting_orders_not_the_raw_wall_indices"
+      ],
+      "properties": {
+        "chronological_order_is_reverse_of_stage_A_sequential_contraction_order": {"const": true},
+        "stage_A_contraction_order_zero_based": {"$ref": "#/$defs/nonnegativeIntegerVector"},
+        "reverse_source_wall_order_zero_based": {"$ref": "#/$defs/nonnegativeIntegerVector"},
+        "center_records": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/centerRecord"}
+        },
+        "dependency_layers_center_positions_zero_based": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/nonnegativeIntegerVector"}
+        },
+        "proximity_edges_child_to_parent_zero_based": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {"type": "integer", "minimum": 0},
+              {"type": "integer", "minimum": 0}
+            ],
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "proximity_incidence_matrix_Q_child_parent": {"$ref": "#/$defs/integerMatrix"},
+        "strict_exceptional_to_total_matrix_P_chronological": {"$ref": "#/$defs/integerMatrix"},
+        "identity_P_equals_I_minus_Q_transpose": {"const": true},
+        "strict_exceptional_gram_minus_P_P_transpose": {"$ref": "#/$defs/integerMatrix"},
+        "satellite_parent_intersection_audit": {"type": "array"},
+        "center_kind_histogram": {
+          "type": "object",
+          "additionalProperties": {"type": "integer", "minimum": 0}
+        },
+        "invariant_object_is_DAG_with_commuting_orders_not_the_raw_wall_indices": {"const": true}
+      }
+    },
+    "divisor_table": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/divisorRecord"}
+    },
+    "class_matrices": {
+      "type": "object",
+      "required": [
+        "basis_column_labels",
+        "intersection_gram",
+        "row_order",
+        "rows",
+        "minus_two_K_equals_weighted_boundary_sum"
+      ],
+      "properties": {
+        "basis_column_labels": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "intersection_gram": {"$ref": "#/$defs/integerMatrix"},
+        "row_order": {
+          "const": ["K", "minus_K", "minus_two_K", "weighted_boundary_sum"]
+        },
+        "rows": {
+          "type": "object",
+          "required": ["K", "minus_K", "minus_two_K", "weighted_boundary_sum"],
+          "additionalProperties": {"$ref": "#/$defs/integerVector"}
+        },
+        "minus_two_K_equals_weighted_boundary_sum": {"const": true}
+      }
+    },
+    "anti_canonical_evaluation_matrix_templates": {
+      "type": "object",
+      "required": ["minus_K", "minus_two_K"],
+      "properties": {
+        "minus_K": {"$ref": "#/$defs/linearSystem"},
+        "minus_two_K": {"$ref": "#/$defs/linearSystem"}
+      }
+    },
+    "invariant_cluster_profile": {"type": "object"},
+    "invariant_cluster_profile_sha256": {"$ref": "#/$defs/sha256"},
+    "checks": {
+      "type": "object",
+      "additionalProperties": {"const": true}
+    },
+    "stage_B2_remaining": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "all_checks_pass": {"const": true}
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "integerVector": {
+      "type": "array",
+      "items": {"type": "integer"}
+    },
+    "nonnegativeIntegerVector": {
+      "type": "array",
+      "items": {"type": "integer", "minimum": 0}
+    },
+    "integerMatrix": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/integerVector"}
+    },
+    "centerRecord": {
+      "type": "object",
+      "required": [
+        "center_position_zero_based",
+        "center_id",
+        "stage_A_total_exceptional_column_zero_based",
+        "source_contracted_wall_index_zero_based",
+        "parent_center_positions_zero_based",
+        "child_center_positions_zero_based",
+        "center_kind",
+        "dependency_depth",
+        "strict_exceptional_coordinates_in_chronological_total_basis"
+      ],
+      "properties": {
+        "center_position_zero_based": {"type": "integer", "minimum": 0},
+        "center_id": {"type": "string", "pattern": "^p[1-9][0-9]*$"},
+        "stage_A_total_exceptional_column_zero_based": {"type": "integer", "minimum": 0},
+        "source_contracted_wall_index_zero_based": {"type": "integer", "minimum": 0},
+        "parent_center_positions_zero_based": {"$ref": "#/$defs/nonnegativeIntegerVector"},
+        "child_center_positions_zero_based": {"$ref": "#/$defs/nonnegativeIntegerVector"},
+        "center_kind": {"enum": ["proper", "free", "satellite"]},
+        "dependency_depth": {"type": "integer", "minimum": 0},
+        "strict_exceptional_coordinates_in_chronological_total_basis": {"$ref": "#/$defs/integerVector"}
+      }
+    },
+    "proximityInequality": {
+      "type": "object",
+      "required": [
+        "parent_center_position_zero_based",
+        "child_center_positions_zero_based",
+        "parent_multiplicity",
+        "sum_proximate_child_multiplicities",
+        "proximity_excess",
+        "inequality_holds"
+      ],
+      "properties": {
+        "parent_center_position_zero_based": {"type": "integer", "minimum": 0},
+        "child_center_positions_zero_based": {"$ref": "#/$defs/nonnegativeIntegerVector"},
+        "parent_multiplicity": {"type": "integer"},
+        "sum_proximate_child_multiplicities": {"type": "integer"},
+        "proximity_excess": {"type": "integer"},
+        "inequality_holds": {"type": "boolean"}
+      }
+    },
+    "RRRecord": {
+      "type": "object",
+      "required": [
+        "arithmetic_genus",
+        "euler_characteristic_chi_O_D",
+        "RR_virtual_projective_dimension",
+        "endpoint_section_count",
+        "ordinary_cluster_condition_count",
+        "endpoint_sections_minus_conditions",
+        "expected_projective_dimension_if_conditions_are_independent",
+        "no_vanishing_or_independence_claim"
+      ],
+      "properties": {
+        "arithmetic_genus": {"type": "integer"},
+        "euler_characteristic_chi_O_D": {"type": "integer"},
+        "RR_virtual_projective_dimension": {"type": "integer"},
+        "endpoint_section_count": {"type": ["integer", "null"], "minimum": 0},
+        "ordinary_cluster_condition_count": {"type": ["integer", "null"], "minimum": 0},
+        "endpoint_sections_minus_conditions": {"type": ["integer", "null"]},
+        "expected_projective_dimension_if_conditions_are_independent": {"type": ["integer", "null"]},
+        "no_vanishing_or_independence_claim": {"const": true}
+      }
+    },
+    "divisorRecord": {
+      "type": "object",
+      "required": [
+        "wall_index_zero_based",
+        "is_contracted_wall",
+        "anti_bicanonical_boundary_weight",
+        "class_coordinates_chronological",
+        "endpoint_class_coordinates",
+        "exceptional_coefficients_chronological",
+        "multiplicities_chronological",
+        "self_intersection",
+        "canonical_intersection",
+        "riemann_roch",
+        "all_multiplicities_nonnegative",
+        "proximity_inequalities",
+        "all_proximity_inequalities_hold"
+      ],
+      "properties": {
+        "wall_index_zero_based": {"type": "integer", "minimum": 0},
+        "is_contracted_wall": {"type": "boolean"},
+        "anti_bicanonical_boundary_weight": {"type": "integer", "minimum": 0},
+        "class_coordinates_chronological": {"$ref": "#/$defs/integerVector"},
+        "endpoint_class_coordinates": {"$ref": "#/$defs/integerVector"},
+        "exceptional_coefficients_chronological": {"$ref": "#/$defs/integerVector"},
+        "multiplicities_chronological": {"$ref": "#/$defs/integerVector"},
+        "self_intersection": {"type": "integer"},
+        "canonical_intersection": {"type": "integer"},
+        "riemann_roch": {"$ref": "#/$defs/RRRecord"},
+        "all_multiplicities_nonnegative": {"type": "boolean"},
+        "proximity_inequalities": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/proximityInequality"}
+        },
+        "all_proximity_inequalities_hold": {"type": "boolean"},
+        "plane_degree": {"type": "integer"},
+        "hirzebruch_section_fiber_bidegree": {"$ref": "#/$defs/integerVector"}
+      },
+      "oneOf": [
+        {"required": ["plane_degree"]},
+        {"required": ["hirzebruch_section_fiber_bidegree"]}
+      ]
+    },
+    "linearSystem": {
+      "type": "object",
+      "required": [
+        "system",
+        "surface_class_coordinates",
+        "endpoint_class_coordinates",
+        "center_multiplicities_chronological",
+        "self_intersection",
+        "canonical_intersection",
+        "riemann_roch",
+        "proximity_inequalities",
+        "all_proximity_inequalities_hold",
+        "evaluation_matrix_template"
+      ],
+      "properties": {
+        "system": {"enum": ["-K", "-2K"]},
+        "surface_class_coordinates": {"$ref": "#/$defs/integerVector"},
+        "endpoint_class_coordinates": {"$ref": "#/$defs/integerVector"},
+        "center_multiplicities_chronological": {"$ref": "#/$defs/integerVector"},
+        "self_intersection": {"type": "integer"},
+        "canonical_intersection": {"type": "integer"},
+        "riemann_roch": {"$ref": "#/$defs/RRRecord"},
+        "proximity_inequalities": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/proximityInequality"}
+        },
+        "all_proximity_inequalities_hold": {"type": "boolean"},
+        "evaluation_matrix_template": {
+          "type": "object",
+          "required": [
+            "matrix_dimensions_rows_columns",
+            "section_column_index_kind",
+            "section_column_indices",
+            "jet_row_descriptors",
+            "jet_order_count_matrix_by_center",
+            "formal_entry",
+            "entries_require_stage_B2_universal_center_and_blowup_chart_coordinates",
+            "matrix_rank_not_asserted"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "status": "PASS_REVIEWED_DEPENDENCIES_AND_CASE_SPLIT_FOR_DIMENSION_225_CANDIDATE",
+  "sources": {
+    "scripts/fresh_nikulin_dimension_225_candidate_20261015.py": "40bb06f20f5169f9e3b3c97fba29aacb4b7d089762608ec48b1197fa80eaf3f4",
+    "results/fresh_nikulin_dimension_225_candidate_20261015.md": "170ccf0ff78482971ed07658b12766cf6c9cd6ab1ca886bf82ed784b4825904d",
+    "scripts/fresh_nikulin_narrow_20261015.py": "289cda106ea5c3bad7fcd25859a5e98ce5a8032f137677b4e6f004e1ae7cc583",
+    "results/fresh_nikulin_narrow_20261015.json": "0f6c460f0752ca3fc30c67c55f07ff02631f2b6705d50be024aefd94cd8abeec",
+    "results/fresh_nikulin_narrow_20261015.md": "52ad5cca34bee1f87bdc61483feaa49d208bcd8d798a4a9fb442a4b04f800751",
+    "scripts/fresh_nikulin_narrow_20261015_products.py": "5a8591959eb9df200c62073d542fe319b946cde88188c6049c2c2a4c0c1da539",
+    "results/fresh_nikulin_narrow_20261015_products.json": "8ff0134f332a4409fec4706fb0fcbf0cc329d2e0c45b6c7094700d5c388d5e6c",
+    "results/fresh_nikulin_narrow_20261015_products.md": "51769466dc2913e43c21cf16908d9906e4c1d3a396189bbeff8446e724edcc9d",
+    "scripts/fresh_nikulin_product_independent_20261015.py": "6754c184b560384516e58ea108395b948559be96c8cadc4c5fb964fe979a06c1",
+    "results/fresh_nikulin_product_independent_20261015.json": "3fceda6bf8a9418122d444bf2b42adfc81b4e7bd7dbb24d0057622bab439eef7",
+    "results/fresh_nikulin_product_independent_20261015.md": "fff8673db85e25bfaa987628175eba7760c5dfb8384764661e84f003d35a60bc",
+    "scripts/fresh_nikulin_narrow_20261015_compact_facet.py": "819ccae418e3269889a6181c37cec9fab1dcca34cf03e31f0bfcdd9103dd4967",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.json": "18136efb0c36029e5be53be7ca06b1608efeec94d96c7d891ec23aa1b1ef0a3b",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.md": "540390f627681fb27912c2349b593cad1b5b84917e1608d15f34bf2c801e7f13",
+    "scripts/fresh_dimension225_hostile_20261015.py": "9160cb46083c2274f6f90ed70923c30c3a74aa9b0a4c4fb2d2b8b616e6c6ff23",
+    "results/fresh_dimension225_hostile_20261015.json": "797e2021ae08a5d629695e978c8209231d87c6ba640280063d54aeca8e1d9ece",
+    "results/fresh_dimension225_hostile_20261015.md": "45b5115b8157a342015abb3338dcc609fa48f85cfd1d2b4b71161bfd01426d7d",
+    "scripts/dimension_bound_prokhorov_20261015_proof_review.py": "94e45edc61fd914eb702ac7dc4d971dc5bdd2f01c99de858e7a64ddf3a6b12e6",
+    "results/dimension_bound_prokhorov_20261015_proof_review.json": "0d46ed3aeb3294ec4718408a5f9f29ca68b7cacba8bce9856397bd0cd88e7ce5",
+    "results/dimension_bound_prokhorov_20261015_proof_review.md": "79d90fed91999743e372eeaf7f228738f87c54a392d3f79fadaed1a30774bf2b"
+  },
+  "recursive_manifests_checked": 9,
+  "recursive_source_files_checked": 16,
+  "candidate_statement": "Every finite-sided finite-volume real hyperbolic Coxeter polytope has dimension at most225.",
+  "arithmetic_assumption": false,
+  "chosen_narrow_facet_cases": [
+    {
+      "case": "contains an ideal vertex",
+      "ambient_dimension_at_most": 225,
+      "proof": "fresh_nikulin_narrow_20261015_products",
+      "independent_arithmetic": "fresh_nikulin_product_independent_20261015"
+    },
+    {
+      "case": "has only finite vertices, hence is compact",
+      "ambient_dimension_at_most": 143,
+      "proof": "fresh_nikulin_narrow_20261015_compact_facet"
+    }
+  ],
+  "geometric_review": "fresh_dimension225_hostile_20261015",
+  "first_excluded_dimension": 226,
+  "narrow_pairing_threshold": "14 for outward normals of square2",
+  "historical_status": "Nikulin ICM1986 printed659 announces n<300. This is an explicit research proof candidate, not a publication-priority/current-best assertion.",
+  "primary_sources": [
+    {
+      "url": "https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1986.1/ICM1986.1.ocr.pdf",
+      "pages": "printed655 TheoremA; printed657-659 method and announcement"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=im&paperid=1484&what=fullteng",
+      "pages": "printed407-408, section2 Propositions1-2; quasi-Lanner extraction/order10"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=mmo&option_lang=rus&paperid=444&what=fullt",
+      "pages": "printed70-71 h-vector; printed77 Proposition10 spherical distance-pair bound"
+    }
+  ],
+  "checker_scope": "Independent manifest closure and elementary case/scalar checks; imports no producer arithmetic. Geometric proofs and published classifications remain explicit mathematical dependencies, not a formal proof-assistant verification."
+}

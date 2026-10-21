@@ -1,0 +1,71 @@
+{
+  "status": "PASS_BOUNDED_NUMERICAL_30_WALL_RESCORE",
+  "sources": {
+    "results/fresh_h9_nine_contact_extension_20261015.json": "c6e5101b8fbdfe406d0693363fc5f40885a73bfd0b844e126d9a5de39060d901",
+    "scripts/fresh_h9_nine_contact_rescore_20261015.py": "da67a708aff819fa7e22dc5b51c2e4b01641002908c9c26318e66348a7ed5706",
+    "results/fresh_h9_after_third_vertex_free_scout_20261015.json": "43d64fc1365f6a4c27277341f409cc8e735868a22fd59e3081c2e5451a390fb0",
+    "data/enumerations/fresh_h9_after_third_vertex_free_scout_20261015_bank.json.gz": "8a570271cb9ec1ebee5c3472d3882ab43792f6e0bbe55c03a9139e90827556e9",
+    "results/fresh_h9_octic_base_scout_20261015.json": "9140bd0ac9b72889e1648404f4435a361b56b6b2202bf34359b9870dc8c70b08",
+    "data/enumerations/fresh_h9_octic_base_scout_20261015_bank.json.gz": "c4c70a93ab86f8b019ca82fd7345740fbbeb70567529dee9693d9d6aed871aed",
+    "results/fresh_h9_octic_germ_scout_20261015.json": "03e251fbc11b0bfe82e8a891bd81bca5a07a6bd2e8d466a0f4bb9e34359fea6c",
+    "data/enumerations/fresh_h9_octic_germ_scout_20261015_bank.json.gz": "dba77d389443ac4fcef184fbfa21dc80dc815c59e456a854cf3c10bc4e2ceda8"
+  },
+  "physical_precision_digits": 100,
+  "float_stage": "NumPy pairing transform and finite-label gates",
+  "pairing_basis": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    11
+  ],
+  "finite_gate_labels": [
+    2,
+    256
+  ],
+  "finite_fit_tolerance": 1e-07,
+  "dotted_gap": 1e-07,
+  "escape_margin": 1e-07,
+  "center_margin": 1e-08,
+  "banks": [
+    {
+      "bank": "data/enumerations/fresh_h9_after_third_vertex_free_scout_20261015_bank.json.gz",
+      "old_wall_count": 28,
+      "candidates": 68111,
+      "compatible": 66912,
+      "escape_cutters": 0,
+      "maximum_compatible_escape_pairing": -0.2251095984798,
+      "accepted_mask_sha256": "0b3b517066ac530cfb7d8f2ec7fc396b495dc4364f332953984a8da01ea4b89e",
+      "cutter_mask_sha256": "4b2134132a060348fcbcbbdfd1d7a702932e936639794d2ea16e812582e58e08",
+      "cutters": []
+    },
+    {
+      "bank": "data/enumerations/fresh_h9_octic_base_scout_20261015_bank.json.gz",
+      "old_wall_count": 29,
+      "candidates": 68526,
+      "compatible": 68004,
+      "escape_cutters": 0,
+      "maximum_compatible_escape_pairing": -0.2251095984798,
+      "accepted_mask_sha256": "8ceed674e4fa07786b0c7de0c86db33215eedca7895479096162f7a05731555c",
+      "cutter_mask_sha256": "04f722515adb349ec1d63d372b484fba4142ec614468ac85e5b789242cb309ec",
+      "cutters": []
+    },
+    {
+      "bank": "data/enumerations/fresh_h9_octic_germ_scout_20261015_bank.json.gz",
+      "old_wall_count": 29,
+      "candidates": 2173,
+      "compatible": 1910,
+      "escape_cutters": 0,
+      "maximum_compatible_escape_pairing": -0.5474991271214,
+      "accepted_mask_sha256": "c9dd1613600f97b2d85301d4f51d896a9d35c8406f9c95b40bcd06985017f2c0",
+      "cutter_mask_sha256": "e4d879a3407de578f579dfab4366fcea75a6649c683d9efe4f056f6505437574",
+      "cutters": []
+    }
+  ],
+  "scope": "Only these three frozen finite numerical banks are rescored. Earlier pair gates are inherited, labels are bounded and no interval error certification is supplied. No exact cap or all-label/all-parameter exclusion follows. Exactify surviving recipes before use."
+}

@@ -1,0 +1,124 @@
+{
+  "status": "EXACT_REMOTE_H4_ENDPOINT_CONSTRUCTION",
+  "source": "data/enumerations/fresh_h9_remote_caps_20261013_coupled_caps.json",
+  "source_sha256": "db1eebb9247bb773d9368d65c73a829a94c81eb0c22d497825cd9fd5b6b99d74",
+  "target_point": [
+    {
+      "a": "111912782629/250000000000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "328722498047/1000000000000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "223656371437/1000000000000",
+      "b": "0"
+    }
+  ],
+  "orthogonal_walls": [
+    "seed1",
+    "seed2",
+    "seed3",
+    "seed5",
+    "seed6",
+    "seed7",
+    "wall17"
+  ],
+  "pi3_wall": "coupled0",
+  "pi10_wall": "coupled1",
+  "negative_unit_seed": "seed0",
+  "norm": 2,
+  "definition": {
+    "orthogonal_frame": "Previous coupled stage has P^2=-1 and R^2=C^2=1; R=(coupled0+coupled1)/2 and C=(coupled0-coupled1)/2.",
+    "angle_constant": "L=sqrt(2+phi)>0",
+    "b": "-(1+L)/2",
+    "c": "(L-1)/2",
+    "a": "-[b(R,wall17)+c(C,wall17)]/(P,wall17)",
+    "u": "-sqrt((2+a^2-b^2-c^2)/2)",
+    "normal": "aP+bR+cC+u*seed0"
+  },
+  "scope": "Exact cap with two coupled finite angles closing a specific old edge and cutting the current target; not an exhaustive cap search.",
+  "escape": [
+    {
+      "a": "308057791353/1000000000000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "102344111429/1000000000000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "61731406981/200000000000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "280981062313/1000000000000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    }
+  ],
+  "numerical_geometry": {
+    "vertices": 58821,
+    "spacelike_vertices": 58801,
+    "maximum_vertex_norm": 0.055844158777730274,
+    "escape_proposal_support": [
+      0,
+      2,
+      4,
+      7
+    ],
+    "scope": "Numerical proposals only; exact strict escape is the volume certificate."
+  }
+}

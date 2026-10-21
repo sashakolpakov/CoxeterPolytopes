@@ -1,0 +1,83 @@
+{
+  "status": "PASS_EXPLICIT_CLASSICAL_IRREDUCIBLE_NARROW_CUSP_BOUNDS",
+  "sources": {
+    "scripts/fresh_nikulin_narrow_20261015.py": "289cda106ea5c3bad7fcd25859a5e98ce5a8032f137677b4e6f004e1ae7cc583",
+    "scripts/dimension_bound_prokhorov_20261015_proof_review.py": "94e45edc61fd914eb702ac7dc4d971dc5bdd2f01c99de858e7a64ddf3a6b12e6",
+    "results/dimension_bound_prokhorov_20261015_proof_review.json": "0d46ed3aeb3294ec4718408a5f9f29ca68b7cacba8bce9856397bd0cd88e7ce5"
+  },
+  "hypothesis": "Finite-sided finite-volume real hyperbolic Coxeter polytope; Nikulin narrow facet contains an ideal vertex whose full cusp diagram is one irreducible affine classical diagram.",
+  "bounds": {
+    "A": 135,
+    "B": 51,
+    "C": 47,
+    "D": 55
+  },
+  "exact_checks": {
+    "inverse_formulas": {
+      "A": 80,
+      "B_scaled": 79,
+      "D": 77
+    },
+    "norm_two_row_pairs": 382,
+    "narrow_node_selections": 1346,
+    "path_bounds": [
+      {
+        "affine_family": "C",
+        "rank_parameter": "m=n-1",
+        "first_excluded_m": 47,
+        "upper_ambient_dimension": 47,
+        "interior_null_weight": 1,
+        "guaranteed_energy": "(m-15)/1",
+        "guaranteed_negative_pairing": "(m-19)/2"
+      },
+      {
+        "affine_family": "B",
+        "rank_parameter": "m=n-1",
+        "first_excluded_m": 51,
+        "upper_ambient_dimension": 51,
+        "interior_null_weight": 2,
+        "guaranteed_energy": "(m-19)/4",
+        "guaranteed_negative_pairing": "(m-23)/2"
+      },
+      {
+        "affine_family": "D",
+        "rank_parameter": "m=n-1",
+        "first_excluded_m": 55,
+        "upper_ambient_dimension": 55,
+        "interior_null_weight": 2,
+        "guaranteed_energy": "(m-23)/4",
+        "guaranteed_negative_pairing": "(m-27)/2"
+      }
+    ],
+    "affine_A_boundary": {
+      "n": 136,
+      "L1": 64,
+      "L2": 64,
+      "energy": 32,
+      "negative_pairing": 14
+    }
+  },
+  "proof_scope": "Closed-form inverse, localization, Lorentz pairing and energy arguments in the report prove all ranks. Finite exact checks only validate their implementation and boundary indexing.",
+  "unresolved": [
+    "Products of affine cusp components",
+    "The case where the chosen narrow facet has only finite vertices",
+    "A complete proof of Nikulin dimension<300",
+    "Novelty or strongest-known-bound status"
+  ],
+  "primary_source": {
+    "url": "https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1986.1/ICM1986.1.ocr.pdf",
+    "printed_pages": [
+      655,
+      657,
+      658,
+      659
+    ],
+    "pdf_pages_one_based": [
+      757,
+      759,
+      760,
+      761
+    ],
+    "pdf_sha256": "0375d371245a73ed40ebd95ffc66846b2990d54fd25a447f75ecd358f4d1fcff"
+  }
+}

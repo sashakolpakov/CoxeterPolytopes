@@ -1,0 +1,253 @@
+{
+  "status": "EXACT_IDENTITIES_FOR_UNIVERSAL_FIVE_FACE_CARRIER_LEMMA",
+  "source_sha256": "d04b01ef1f3c8b495ffac2da4c2c934d0a22d55f930bd9b1a51feeee37fb2d0a",
+  "sources": {
+    "results/ideal_ra4_second_volume_20261018.md": "9dff11c375bddcf62f16f3f01ddabd7f5b5c137756cf02ebff275076e6869c25",
+    "results/ideal_ra4_second_volume_equality_20261018.md": "4d227e9f7f4577f0a61b30a3ebf2790c763feeb4f1acddf7799a83f96fc1d7e2"
+  },
+  "variables": [
+    "v",
+    "e",
+    "r",
+    "g",
+    "f",
+    "D",
+    "A",
+    "K",
+    "1"
+  ],
+  "premise_rows": [
+    [
+      -8,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      -24,
+      0,
+      3,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      -2
+    ],
+    [
+      -8,
+      0,
+      0,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -2,
+      24,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -3,
+      1,
+      1,
+      0
+    ]
+  ],
+  "identity_checks": [
+    {
+      "identity": "g=3v+3f-6",
+      "multipliers": [
+        -3,
+        1,
+        -3,
+        0,
+        0,
+        0
+      ],
+      "row": [
+        -3,
+        0,
+        0,
+        1,
+        -3,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "identity": "D=2v-6f+12",
+      "multipliers": [
+        6,
+        -2,
+        6,
+        1,
+        0,
+        0
+      ],
+      "row": [
+        -2,
+        0,
+        0,
+        0,
+        6,
+        1,
+        0,
+        0,
+        -12
+      ]
+    },
+    {
+      "identity": "A=3D-48",
+      "multipliers": [
+        -24,
+        8,
+        -24,
+        -3,
+        1,
+        0
+      ],
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -3,
+        1,
+        0,
+        48
+      ]
+    },
+    {
+      "identity": "K=48",
+      "multipliers": [
+        24,
+        -8,
+        24,
+        3,
+        -1,
+        1
+      ],
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -48
+      ]
+    }
+  ],
+  "known_four_facet_types": [
+    {
+      "type": "ideal24cell",
+      "vertices": 24,
+      "facets": 24,
+      "delta": 0,
+      "kappa": 0
+    },
+    {
+      "type": "double24cell",
+      "vertices": 42,
+      "facets": 38,
+      "delta": 4,
+      "kappa": -2
+    }
+  ],
+  "dimensions": [
+    {
+      "dimension": 5,
+      "finite_vertex_five_face_incidence": 1,
+      "four_face_five_cofaces": 1,
+      "weighted_carrier_coefficient": 48
+    },
+    {
+      "dimension": 6,
+      "finite_vertex_five_face_incidence": 6,
+      "four_face_five_cofaces": 2,
+      "weighted_carrier_coefficient": 48
+    },
+    {
+      "dimension": 7,
+      "finite_vertex_five_face_incidence": 21,
+      "four_face_five_cofaces": 3,
+      "weighted_carrier_coefficient": 48
+    },
+    {
+      "dimension": 8,
+      "finite_vertex_five_face_incidence": 56,
+      "four_face_five_cofaces": 4,
+      "weighted_carrier_coefficient": 48
+    },
+    {
+      "dimension": 9,
+      "finite_vertex_five_face_incidence": 126,
+      "four_face_five_cofaces": 5,
+      "weighted_carrier_coefficient": 48
+    },
+    {
+      "dimension": 10,
+      "finite_vertex_five_face_incidence": 252,
+      "four_face_five_cofaces": 6,
+      "weighted_carrier_coefficient": 48
+    },
+    {
+      "dimension": 11,
+      "finite_vertex_five_face_incidence": 462,
+      "four_face_five_cofaces": 7,
+      "weighted_carrier_coefficient": 48
+    },
+    {
+      "dimension": 12,
+      "finite_vertex_five_face_incidence": 792,
+      "four_face_five_cofaces": 8,
+      "weighted_carrier_coefficient": 48
+    }
+  ],
+  "conclusions": {
+    "ideal5_sum_kappa": 48,
+    "positive_kappa_facet_required": true,
+    "required_facet_volume_pi_squared_at_least": "3",
+    "weighted_mixed_bound": "48*(f5-binomial(n,5)*v_finite) <= (n-4)*sum_ideal4 max(kappa,0)",
+    "new_dimension_exclusion": false,
+    "new_example": false,
+    "arithmetic_field_restriction": false
+  },
+  "scope": "identity arithmetic only; universal face and cusp incidences proved in accompanying report"
+}

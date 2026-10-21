@@ -1,0 +1,1870 @@
+{
+  "status": "PASS_EXACT_CHECKS_FOR_COMPLETE_SQRT2_QUADRILATERAL_CLOSURE_AND_BOUND20_PENDING_INDEPENDENT_REVIEW",
+  "sources": {
+    "scripts/fresh_sqrt2_quad_exhaustion_20261015_closure.py": "709da3b9ee89a783831a8e1d2951faf332c0e4fa4ca36c4e0d5ef92ec9adf5ec",
+    "scripts/fresh_sqrt2_quad_exhaustion_20261015.py": "cdc7352acd8b5289ee09c0889411ab8e3bcbeef93613942aad6b9021d396cb19",
+    "results/fresh_sqrt2_quad_exhaustion_20261015.json": "144c8cc1f14740923ca9bf70188e248029f8a9673dcfe0811f4eb2fee3967417",
+    "scripts/fresh_sqrt2_quad_exhaustion_20261015_cores.py": "a6711be040c2b309e3825eedb106e8f15fb22dbd029fb26896d22bedd5df2aa2",
+    "results/fresh_sqrt2_quad_exhaustion_20261015_cores.json": "3075e25109f2fd21732c46d3649ae6e51133b3bafe78b4a668ff5388b7acfc5b",
+    "scripts/fresh_sqrt2_quad_exhaustion_20261015_extensions.py": "97ee3296ae9203285115343d25fc48cbf5e82ac3eadde3b6592c5d2da3306956",
+    "results/fresh_sqrt2_quad_exhaustion_20261015_extensions.json": "05089de565c872e626097ee35d8adce60a1276128a5b5f011ed99b95d748335c",
+    "scripts/fresh_sqrt2_dotted_tail_20261015.py": "7b24370c810a1d299d77b30b649170e6b62599ddda8a5d330378dc587ff1848a",
+    "results/fresh_sqrt2_dotted_tail_20261015.json": "7113e4b14ae0686782d86f940836465fba0051d56ecc3b8b95004c2ae25fe826",
+    "scripts/fresh_sqrt2_dotted_tail_20261015_review.py": "8fd2b3f60b08dbf2addc4cf133f2d0be54299971cc21db7f58be7e546be7faf6",
+    "results/fresh_sqrt2_dotted_tail_20261015_review.json": "b05ba2a1178cd914befadd2c71eca4ec2f90aabbfdb206255ad0b213efa1f048",
+    "results/fresh_compact_dimension_bound_20261015.json": "50ca6c500b5bb0d0a762f6d06139d17ef1a5ad9a807311fa1108e132713ac905",
+    "results/fresh_compact_dimension_bound_20261015_review.json": "6ad4c38d629f8a66e5abffc711a900284ea81e786e1633818b4828ec461ed53f"
+  },
+  "sealed_finite_cores": [
+    5,
+    9,
+    17,
+    32,
+    41,
+    47,
+    50
+  ],
+  "exact_core_extension_maps": [
+    {
+      "source_core": 14,
+      "path_length": 1,
+      "ends": [
+        2
+      ],
+      "target_core": 17,
+      "bijection": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        4
+      ]
+    },
+    {
+      "source_core": 37,
+      "path_length": 1,
+      "ends": [
+        0,
+        2
+      ],
+      "target_core": 41,
+      "bijection": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        4
+      ]
+    },
+    {
+      "source_core": 37,
+      "path_length": 2,
+      "ends": [
+        0,
+        2
+      ],
+      "target_core": 47,
+      "bijection": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        5,
+        4
+      ]
+    },
+    {
+      "source_core": 37,
+      "path_length": 3,
+      "ends": [
+        0,
+        2
+      ],
+      "target_core": 50,
+      "bijection": [
+        1,
+        0,
+        3,
+        2,
+        4,
+        5,
+        6,
+        9,
+        7,
+        8
+      ]
+    }
+  ],
+  "remaining_core37_rank": {
+    "polynomial": "-4*p*q - sqrt(2)*p + p - sqrt(2)*q + q + sqrt(2)",
+    "determinant_factor": "1/64 + sqrt(2)/64",
+    "tail_cases": [
+      {
+        "p": "1",
+        "q": "1",
+        "rank_polynomial": "-2 - sqrt(2)"
+      },
+      {
+        "p": "1",
+        "q": "3/4",
+        "rank_polynomial": "-5/4 - 3*sqrt(2)/4"
+      },
+      {
+        "p": "1",
+        "q": "2/3",
+        "rank_polynomial": "-1 - 2*sqrt(2)/3"
+      },
+      {
+        "p": "1",
+        "q": "5/8",
+        "rank_polynomial": "-5*sqrt(2)/8 - 7/8"
+      },
+      {
+        "p": "3/4",
+        "q": "1",
+        "rank_polynomial": "-5/4 - 3*sqrt(2)/4"
+      },
+      {
+        "p": "3/4",
+        "q": "3/4",
+        "rank_polynomial": "-3/4 - sqrt(2)/2"
+      },
+      {
+        "p": "3/4",
+        "q": "2/3",
+        "rank_polynomial": "-5*sqrt(2)/12 - 7/12"
+      },
+      {
+        "p": "3/4",
+        "q": "5/8",
+        "rank_polynomial": "-3*sqrt(2)/8 - 1/2"
+      },
+      {
+        "p": "2/3",
+        "q": "1",
+        "rank_polynomial": "-1 - 2*sqrt(2)/3"
+      },
+      {
+        "p": "2/3",
+        "q": "3/4",
+        "rank_polynomial": "-5*sqrt(2)/12 - 7/12"
+      },
+      {
+        "p": "2/3",
+        "q": "2/3",
+        "rank_polynomial": "-sqrt(2)/3 - 4/9"
+      },
+      {
+        "p": "2/3",
+        "q": "5/8",
+        "rank_polynomial": "-7*sqrt(2)/24 - 3/8"
+      },
+      {
+        "p": "5/8",
+        "q": "1",
+        "rank_polynomial": "-5*sqrt(2)/8 - 7/8"
+      },
+      {
+        "p": "5/8",
+        "q": "3/4",
+        "rank_polynomial": "-3*sqrt(2)/8 - 1/2"
+      },
+      {
+        "p": "5/8",
+        "q": "2/3",
+        "rank_polynomial": "-7*sqrt(2)/24 - 3/8"
+      },
+      {
+        "p": "5/8",
+        "q": "5/8",
+        "rank_polynomial": "-sqrt(2)/4 - 5/16"
+      }
+    ]
+  },
+  "connected_dotted_component_bounds": {
+    "single_squared": "3*sqrt(2)/4 + 3/2",
+    "double_contact": "1/2 + sqrt(2)",
+    "monotonicity": "positive inverse of white forest; p,q<=3/4; effective opposite contact increases"
+  },
+  "finite_core_corner_weights": {
+    "5": [
+      {
+        "marked": [
+          0,
+          1
+        ],
+        "distance": null,
+        "exceptional_type": null,
+        "weight": "0"
+      },
+      {
+        "marked": [
+          0,
+          3
+        ],
+        "distance": null,
+        "exceptional_type": null,
+        "weight": "0"
+      },
+      {
+        "marked": [
+          2,
+          1
+        ],
+        "distance": null,
+        "exceptional_type": null,
+        "weight": "0"
+      },
+      {
+        "marked": [
+          2,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "F4",
+        "weight": "1"
+      }
+    ],
+    "9": [
+      {
+        "marked": [
+          0,
+          1
+        ],
+        "distance": null,
+        "exceptional_type": null,
+        "weight": "0"
+      },
+      {
+        "marked": [
+          0,
+          3
+        ],
+        "distance": null,
+        "exceptional_type": null,
+        "weight": "0"
+      },
+      {
+        "marked": [
+          2,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "F4",
+        "weight": "1"
+      },
+      {
+        "marked": [
+          2,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "F4",
+        "weight": "1"
+      }
+    ],
+    "17": [
+      {
+        "marked": [
+          0,
+          1
+        ],
+        "distance": null,
+        "exceptional_type": null,
+        "weight": "0"
+      },
+      {
+        "marked": [
+          0,
+          3
+        ],
+        "distance": null,
+        "exceptional_type": null,
+        "weight": "0"
+      },
+      {
+        "marked": [
+          2,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "E6",
+        "weight": "1/2"
+      },
+      {
+        "marked": [
+          2,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "E6",
+        "weight": "1/2"
+      }
+    ],
+    "32": [
+      {
+        "marked": [
+          0,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "F4",
+        "weight": "1"
+      },
+      {
+        "marked": [
+          0,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "F4",
+        "weight": "1"
+      },
+      {
+        "marked": [
+          2,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "F4",
+        "weight": "1"
+      },
+      {
+        "marked": [
+          2,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "F4",
+        "weight": "1"
+      }
+    ],
+    "41": [
+      {
+        "marked": [
+          0,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "E6",
+        "weight": "1/2"
+      },
+      {
+        "marked": [
+          0,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "E6",
+        "weight": "1/2"
+      },
+      {
+        "marked": [
+          2,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "E6",
+        "weight": "1/2"
+      },
+      {
+        "marked": [
+          2,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "E6",
+        "weight": "1/2"
+      }
+    ],
+    "47": [
+      {
+        "marked": [
+          0,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "E7",
+        "weight": "1/4"
+      },
+      {
+        "marked": [
+          0,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "E7",
+        "weight": "1/4"
+      },
+      {
+        "marked": [
+          2,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "E7",
+        "weight": "1/4"
+      },
+      {
+        "marked": [
+          2,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "E7",
+        "weight": "1/4"
+      }
+    ],
+    "50": [
+      {
+        "marked": [
+          0,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "E8",
+        "weight": "1/4"
+      },
+      {
+        "marked": [
+          0,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "E8",
+        "weight": "1/4"
+      },
+      {
+        "marked": [
+          2,
+          1
+        ],
+        "distance": 3,
+        "exceptional_type": "E8",
+        "weight": "1/4"
+      },
+      {
+        "marked": [
+          2,
+          3
+        ],
+        "distance": 3,
+        "exceptional_type": "E8",
+        "weight": "1/4"
+      }
+    ]
+  },
+  "parent_tail_corner_weights": [
+    {
+      "double": false,
+      "tail_length": 0,
+      "corners": [
+        {
+          "marked": [
+            0,
+            2
+          ],
+          "type": "D5",
+          "weight": "1/2"
+        },
+        {
+          "marked": [
+            2,
+            1
+          ],
+          "type": null,
+          "weight": "0"
+        },
+        {
+          "marked": [
+            1,
+            3
+          ],
+          "type": null,
+          "weight": "0"
+        },
+        {
+          "marked": [
+            3,
+            0
+          ],
+          "type": "D5",
+          "weight": "1/2"
+        }
+      ]
+    },
+    {
+      "double": false,
+      "tail_length": 1,
+      "corners": [
+        {
+          "marked": [
+            0,
+            2
+          ],
+          "type": "E6",
+          "weight": "1/2"
+        },
+        {
+          "marked": [
+            2,
+            1
+          ],
+          "type": null,
+          "weight": "0"
+        },
+        {
+          "marked": [
+            1,
+            3
+          ],
+          "type": null,
+          "weight": "0"
+        },
+        {
+          "marked": [
+            3,
+            0
+          ],
+          "type": "E6",
+          "weight": "1/2"
+        }
+      ]
+    },
+    {
+      "double": true,
+      "tail_length": 0,
+      "corners": [
+        {
+          "marked": [
+            0,
+            2
+          ],
+          "type": "D5",
+          "weight": "1/2"
+        },
+        {
+          "marked": [
+            2,
+            1
+          ],
+          "type": "D5",
+          "weight": "1/2"
+        },
+        {
+          "marked": [
+            1,
+            3
+          ],
+          "type": "D5",
+          "weight": "1/2"
+        },
+        {
+          "marked": [
+            3,
+            0
+          ],
+          "type": "D5",
+          "weight": "1/2"
+        }
+      ]
+    }
+  ],
+  "triangle_checks": [
+    {
+      "kind": "L3",
+      "labels": [
+        2,
+        3,
+        8
+      ],
+      "short_paths": 2
+    },
+    {
+      "kind": "L3",
+      "labels": [
+        2,
+        4,
+        8
+      ],
+      "short_paths": 2
+    },
+    {
+      "kind": "L3",
+      "labels": [
+        2,
+        6,
+        8
+      ],
+      "short_paths": 2
+    },
+    {
+      "kind": "L3",
+      "labels": [
+        2,
+        8,
+        8
+      ],
+      "short_paths": 2
+    },
+    {
+      "kind": "L3",
+      "labels": [
+        3,
+        3,
+        4
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "L3",
+      "labels": [
+        3,
+        8,
+        8
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "L3",
+      "labels": [
+        4,
+        4,
+        4
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "L3",
+      "labels": [
+        4,
+        6,
+        6
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "L3",
+      "labels": [
+        4,
+        8,
+        8
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C4",
+      "black": [
+        0,
+        1,
+        2
+      ],
+      "gaps": [
+        1,
+        1,
+        2
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C4",
+      "black": [
+        0,
+        1,
+        3
+      ],
+      "gaps": [
+        1,
+        2,
+        1
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C4",
+      "black": [
+        0,
+        2,
+        3
+      ],
+      "gaps": [
+        2,
+        1,
+        1
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C4",
+      "black": [
+        1,
+        2,
+        3
+      ],
+      "gaps": [
+        1,
+        1,
+        2
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C5",
+      "black": [
+        0,
+        1,
+        2
+      ],
+      "gaps": [
+        1,
+        1,
+        3
+      ],
+      "short_paths": 2
+    },
+    {
+      "kind": "C5",
+      "black": [
+        0,
+        1,
+        3
+      ],
+      "gaps": [
+        1,
+        2,
+        2
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C5",
+      "black": [
+        0,
+        1,
+        4
+      ],
+      "gaps": [
+        1,
+        3,
+        1
+      ],
+      "short_paths": 2
+    },
+    {
+      "kind": "C5",
+      "black": [
+        0,
+        2,
+        3
+      ],
+      "gaps": [
+        2,
+        1,
+        2
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C5",
+      "black": [
+        0,
+        2,
+        4
+      ],
+      "gaps": [
+        2,
+        2,
+        1
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C5",
+      "black": [
+        0,
+        3,
+        4
+      ],
+      "gaps": [
+        3,
+        1,
+        1
+      ],
+      "short_paths": 2
+    },
+    {
+      "kind": "C5",
+      "black": [
+        1,
+        2,
+        3
+      ],
+      "gaps": [
+        1,
+        1,
+        3
+      ],
+      "short_paths": 2
+    },
+    {
+      "kind": "C5",
+      "black": [
+        1,
+        2,
+        4
+      ],
+      "gaps": [
+        1,
+        2,
+        2
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C5",
+      "black": [
+        1,
+        3,
+        4
+      ],
+      "gaps": [
+        2,
+        1,
+        2
+      ],
+      "short_paths": 3
+    },
+    {
+      "kind": "C5",
+      "black": [
+        2,
+        3,
+        4
+      ],
+      "gaps": [
+        1,
+        1,
+        3
+      ],
+      "short_paths": 2
+    }
+  ],
+  "component_weight_checks": [
+    {
+      "type": "A1",
+      "rank": 1,
+      "base": 0,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A2",
+      "rank": 2,
+      "base": 1,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A3",
+      "rank": 3,
+      "base": 3,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A4",
+      "rank": 4,
+      "base": 5,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A5",
+      "rank": 5,
+      "base": 7,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A6",
+      "rank": 6,
+      "base": 9,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A7",
+      "rank": 7,
+      "base": 11,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A8",
+      "rank": 8,
+      "base": 13,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A9",
+      "rank": 9,
+      "base": 15,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A10",
+      "rank": 10,
+      "base": 17,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A11",
+      "rank": 11,
+      "base": 19,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A12",
+      "rank": 12,
+      "base": 21,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A13",
+      "rank": 13,
+      "base": 23,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A14",
+      "rank": 14,
+      "base": 25,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A15",
+      "rank": 15,
+      "base": 27,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A16",
+      "rank": 16,
+      "base": 29,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A17",
+      "rank": 17,
+      "base": 31,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A18",
+      "rank": 18,
+      "base": 33,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A19",
+      "rank": 19,
+      "base": 35,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A20",
+      "rank": 20,
+      "base": 37,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A21",
+      "rank": 21,
+      "base": 39,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A22",
+      "rank": 22,
+      "base": 41,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A23",
+      "rank": 23,
+      "base": 43,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A24",
+      "rank": 24,
+      "base": 45,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A25",
+      "rank": 25,
+      "base": 47,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A26",
+      "rank": 26,
+      "base": 49,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A27",
+      "rank": 27,
+      "base": 51,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A28",
+      "rank": 28,
+      "base": 53,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A29",
+      "rank": 29,
+      "base": 55,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A30",
+      "rank": 30,
+      "base": 57,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A31",
+      "rank": 31,
+      "base": 59,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A32",
+      "rank": 32,
+      "base": 61,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A33",
+      "rank": 33,
+      "base": 63,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A34",
+      "rank": 34,
+      "base": 65,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A35",
+      "rank": 35,
+      "base": 67,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A36",
+      "rank": 36,
+      "base": 69,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A37",
+      "rank": 37,
+      "base": 71,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A38",
+      "rank": 38,
+      "base": 73,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A39",
+      "rank": 39,
+      "base": 75,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "A40",
+      "rank": 40,
+      "base": 77,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B2",
+      "rank": 2,
+      "base": 1,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B3",
+      "rank": 3,
+      "base": 3,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B4",
+      "rank": 4,
+      "base": 5,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B5",
+      "rank": 5,
+      "base": 7,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B6",
+      "rank": 6,
+      "base": 9,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B7",
+      "rank": 7,
+      "base": 11,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B8",
+      "rank": 8,
+      "base": 13,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B9",
+      "rank": 9,
+      "base": 15,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B10",
+      "rank": 10,
+      "base": 17,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B11",
+      "rank": 11,
+      "base": 19,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B12",
+      "rank": 12,
+      "base": 21,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B13",
+      "rank": 13,
+      "base": 23,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B14",
+      "rank": 14,
+      "base": 25,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B15",
+      "rank": 15,
+      "base": 27,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B16",
+      "rank": 16,
+      "base": 29,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B17",
+      "rank": 17,
+      "base": 31,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B18",
+      "rank": 18,
+      "base": 33,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B19",
+      "rank": 19,
+      "base": 35,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B20",
+      "rank": 20,
+      "base": 37,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B21",
+      "rank": 21,
+      "base": 39,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B22",
+      "rank": 22,
+      "base": 41,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B23",
+      "rank": 23,
+      "base": 43,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B24",
+      "rank": 24,
+      "base": 45,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B25",
+      "rank": 25,
+      "base": 47,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B26",
+      "rank": 26,
+      "base": 49,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B27",
+      "rank": 27,
+      "base": 51,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B28",
+      "rank": 28,
+      "base": 53,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B29",
+      "rank": 29,
+      "base": 55,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B30",
+      "rank": 30,
+      "base": 57,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B31",
+      "rank": 31,
+      "base": 59,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B32",
+      "rank": 32,
+      "base": 61,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B33",
+      "rank": 33,
+      "base": 63,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B34",
+      "rank": 34,
+      "base": 65,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B35",
+      "rank": 35,
+      "base": 67,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B36",
+      "rank": 36,
+      "base": 69,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B37",
+      "rank": 37,
+      "base": 71,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B38",
+      "rank": 38,
+      "base": 73,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B39",
+      "rank": 39,
+      "base": 75,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "B40",
+      "rank": 40,
+      "base": 77,
+      "extra": "0",
+      "deficit": "3",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D4",
+      "rank": 4,
+      "base": 6,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D5",
+      "rank": 5,
+      "base": 8,
+      "extra": "1",
+      "deficit": "1",
+      "exceptional_pairs": [
+        [
+          1,
+          4,
+          "1/2"
+        ],
+        [
+          2,
+          4,
+          "1/2"
+        ]
+      ]
+    },
+    {
+      "type": "D6",
+      "rank": 6,
+      "base": 10,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D7",
+      "rank": 7,
+      "base": 12,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D8",
+      "rank": 8,
+      "base": 14,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D9",
+      "rank": 9,
+      "base": 16,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D10",
+      "rank": 10,
+      "base": 18,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D11",
+      "rank": 11,
+      "base": 20,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D12",
+      "rank": 12,
+      "base": 22,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D13",
+      "rank": 13,
+      "base": 24,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D14",
+      "rank": 14,
+      "base": 26,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D15",
+      "rank": 15,
+      "base": 28,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D16",
+      "rank": 16,
+      "base": 30,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D17",
+      "rank": 17,
+      "base": 32,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D18",
+      "rank": 18,
+      "base": 34,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D19",
+      "rank": 19,
+      "base": 36,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D20",
+      "rank": 20,
+      "base": 38,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D21",
+      "rank": 21,
+      "base": 40,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D22",
+      "rank": 22,
+      "base": 42,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D23",
+      "rank": 23,
+      "base": 44,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D24",
+      "rank": 24,
+      "base": 46,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D25",
+      "rank": 25,
+      "base": 48,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D26",
+      "rank": 26,
+      "base": 50,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D27",
+      "rank": 27,
+      "base": 52,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D28",
+      "rank": 28,
+      "base": 54,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D29",
+      "rank": 29,
+      "base": 56,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D30",
+      "rank": 30,
+      "base": 58,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D31",
+      "rank": 31,
+      "base": 60,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D32",
+      "rank": 32,
+      "base": 62,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D33",
+      "rank": 33,
+      "base": 64,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D34",
+      "rank": 34,
+      "base": 66,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D35",
+      "rank": 35,
+      "base": 68,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D36",
+      "rank": 36,
+      "base": 70,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D37",
+      "rank": 37,
+      "base": 72,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D38",
+      "rank": 38,
+      "base": 74,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D39",
+      "rank": 39,
+      "base": 76,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "D40",
+      "rank": 40,
+      "base": 78,
+      "extra": "0",
+      "deficit": "2",
+      "exceptional_pairs": []
+    },
+    {
+      "type": "F4",
+      "rank": 4,
+      "base": 5,
+      "extra": "1",
+      "deficit": "2",
+      "exceptional_pairs": [
+        [
+          0,
+          3,
+          "1"
+        ]
+      ]
+    },
+    {
+      "type": "E6",
+      "rank": 6,
+      "base": 10,
+      "extra": "1",
+      "deficit": "1",
+      "exceptional_pairs": [
+        [
+          2,
+          5,
+          "1/2"
+        ],
+        [
+          3,
+          4,
+          "1/2"
+        ]
+      ]
+    },
+    {
+      "type": "E7",
+      "rank": 7,
+      "base": 12,
+      "extra": "1/4",
+      "deficit": "7/4",
+      "exceptional_pairs": [
+        [
+          3,
+          4,
+          "1/4"
+        ]
+      ]
+    },
+    {
+      "type": "E8",
+      "rank": 8,
+      "base": 14,
+      "extra": "1/4",
+      "deficit": "7/4",
+      "exceptional_pairs": [
+        [
+          3,
+          4,
+          "1/4"
+        ]
+      ]
+    }
+  ],
+  "all_rank_identities": {
+    "even_lower_minus_upper": "n**2/8 - 11*n/4 + 2",
+    "odd_lower_minus_upper": "n**2/8 - 11*n/4 + 21/8",
+    "vertex_upper": "2n-2 for n>=9",
+    "contradiction": "strict face lower bound for every n>=21"
+  },
+  "proof_scope": "Compact arithmetic Coxeter polytopes over Qsqrt2 only. Full external-white closure and h-vector argument are in the report; exact census is not substituted for those unbounded proofs."
+}

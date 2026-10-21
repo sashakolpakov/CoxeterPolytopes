@@ -1,0 +1,66 @@
+{
+  "status": "PASS_REVIEWED_DEPENDENCIES_AND_CASE_SPLIT_FOR_DIMENSION_166_CANDIDATE",
+  "sources": {
+    "scripts/fresh_nikulin_coupled_charge_20261015_dimension166.py": "39a3d05c08799d16cce815bda805688881ce77c483c95ca1d2da740edd3a9411",
+    "results/fresh_nikulin_coupled_charge_20261015_dimension166.md": "bdb7d35d7ccde9c05dd9b61c01bdea78180634d687cf55230d5fff76b5ef55a7",
+    "scripts/fresh_nikulin_unit_charge_20261015_dimension169.py": "714cc9731b9a69afa0aef026665f94d640b9b862a02b417e97e7b933c61bcce0",
+    "results/fresh_nikulin_unit_charge_20261015_dimension169.json": "8917ccfb2d87cf2039e442d00273b0c37e2a3b4bd7223e3112790b0a15c29b97",
+    "results/fresh_nikulin_unit_charge_20261015_dimension169.md": "fccd442849ba2baa9489041f82c11f6be647110a5a8643a41c421474531d02fc",
+    "scripts/fresh_nikulin_coupled_charge_20261015.py": "18d290b476ad0bbe722a25f67f40aea18a4d892d88ed3f9d120cfdcd7190e867",
+    "results/fresh_nikulin_coupled_charge_20261015.json": "8e3ba345a8940a59835c8b65020d72589b7732cba37cc9016c30bbe9060997aa",
+    "results/fresh_nikulin_coupled_charge_20261015.md": "054f3bc9cf40659a0a66e4ecdcc2e628bb911ad12db4f7500b92a63ca5029774",
+    "scripts/fresh_nikulin_coupled_charge_20261015_review.py": "e0cf797d1728f904ed1af5846d2badddae12164b04a20812b83b77ead9da1617",
+    "results/fresh_nikulin_coupled_charge_20261015_review.json": "ebe1f9874737905ea682dc08d0b4c6aa4ed1f70b5092a1334d2e2f76009b5eac",
+    "results/fresh_nikulin_coupled_charge_20261015_review.md": "b0ecdc2d995fb9bde2e5d4aac542ea18a7f63849ea9c5c89c96af956a0be18cb",
+    "scripts/fresh_nikulin_narrow_20261015_compact_facet.py": "819ccae418e3269889a6181c37cec9fab1dcca34cf03e31f0bfcdd9103dd4967",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.json": "18136efb0c36029e5be53be7ca06b1608efeec94d96c7d891ec23aa1b1ef0a3b",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.md": "540390f627681fb27912c2349b593cad1b5b84917e1608d15f34bf2c801e7f13"
+  },
+  "recursive_manifests_checked": 21,
+  "recursive_source_files_checked": 58,
+  "candidate_statement": "Every finite-sided finite-volume real hyperbolic Coxeter polytope has dimension at most166.",
+  "arithmetic_assumption": false,
+  "compactness_assumption": false,
+  "simple_cusp_assumption": false,
+  "chosen_narrow_facet_cases": [
+    {
+      "case": "contains an ideal vertex",
+      "ambient_dimension_at_most": 166,
+      "primary": "fresh_nikulin_coupled_charge_20261015",
+      "independent_review": "fresh_nikulin_coupled_charge_20261015_review"
+    },
+    {
+      "case": "only finite vertices, hence compact",
+      "ambient_dimension_at_most": 143,
+      "primary": "fresh_nikulin_narrow_20261015_compact_facet",
+      "independent_review": "fresh_dimension225_hostile_20261015"
+    }
+  ],
+  "cost_accounting": {
+    "total_schur_cost_at_most": 4,
+    "loss_per_cost": "7/6 if M<=21/20; 4/3 otherwise",
+    "avoid_node_deficit": "2/9"
+  },
+  "common_height_ratio_split": "21/20",
+  "first_excluded_dimension": 167,
+  "near_balanced_pairing_lower": "M*((n-1)-40)/9",
+  "other_pairing_lower": "M*((n-1)-43)/9",
+  "combined_candidate_dimension_at_most": 166,
+  "norm_two_narrow_threshold": 14,
+  "frozen_baseline": "fresh_nikulin_unit_charge_20261015_dimension169",
+  "primary_sources": [
+    {
+      "url": "https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1986.1/ICM1986.1.ocr.pdf",
+      "pages": "printed655 TheoremA; printed657-659 method and announcement"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=im&paperid=1484&what=fullteng",
+      "pages": "printed407-408, section2 Propositions1-2; quasi-Lanner extraction/order10"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=mmo&option_lang=rus&paperid=444&what=fullt",
+      "pages": "printed70-71 h-vector; printed77 Proposition10 spherical distance-pair bound"
+    }
+  ],
+  "scope": "Frozen proof/review dependency and complete case binder. No producer arithmetic imported. Internal research proof candidate; external validation, novelty and current-best status unestablished. Published geometry and classification inputs are mathematical dependencies, not formal proof-assistant certification."
+}

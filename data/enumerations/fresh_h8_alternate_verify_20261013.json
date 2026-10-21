@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "standard_library_only": true,
+  "seed_comparisons": [
+    {
+      "label": 3,
+      "omitted_wall": 5,
+      "caps": 256,
+      "coxeter_polar_caps": 0,
+      "hyperideal_dual_rays": 8
+    },
+    {
+      "label": 3,
+      "omitted_wall": 6,
+      "caps": 348,
+      "coxeter_polar_caps": 1,
+      "hyperideal_dual_rays": 8
+    },
+    {
+      "label": 4,
+      "omitted_wall": 4,
+      "caps": 108,
+      "coxeter_polar_caps": 1,
+      "hyperideal_dual_rays": 9
+    }
+  ],
+  "coupled_experiments": [
+    {
+      "file": "data/enumerations/fresh_h8_alternate_coupled_20261013.json",
+      "exact_new_caps": 76,
+      "verified_rounds": 3,
+      "certified_escape_rounds": 3,
+      "all_archived_escape_certificates_pass": true,
+      "last_all_cap_gate": "EXACT_STRICT_SPACELIKE_ESCAPE",
+      "forged_timelike_escape_rejected": true
+    },
+    {
+      "file": "data/enumerations/fresh_h8_alternate_polar_coupled_20261013.json",
+      "exact_new_caps": 144,
+      "verified_rounds": 4,
+      "certified_escape_rounds": 3,
+      "all_archived_escape_certificates_pass": true,
+      "last_all_cap_gate": "UNDECIDED_NO_NUMERIC_ESCAPE",
+      "forged_timelike_escape_rejected": true
+    }
+  ],
+  "selection_audit": {
+    "dictionary_nodes": 493,
+    "greedy_subset_escapes": 20,
+    "nonpositive_SAT_subset_escapes": 20,
+    "accepted_graph_SAT_subset_escapes": 4,
+    "exact_complete_escape_cover_clauses": 41,
+    "exact_positive_pair_conflicts": 64,
+    "standard_library_accepted_graph_UNSAT": true,
+    "DPLL_full_clause_states": 23,
+    "DPLL_total_states_including_compact_core": 37,
+    "independent_five_clause_core_UNSAT": true,
+    "core_nodes": 54,
+    "parallel_edges_added": [
+      [
+        20,
+        114
+      ],
+      [
+        21,
+        114
+      ]
+    ],
+    "core_with_parallel_edges_UNSAT": true,
+    "DPLL_core_with_parallel_states": 14,
+    "scope": "Core UNSAT includes both parallel edges. Completeness of its angle graph is supplied by the separate independent54-node graph audit."
+  },
+  "scope": "Exact finite-dictionary certificates only; numerical proposal scans are not exhaustive and no unrestricted completion obstruction is asserted."
+}

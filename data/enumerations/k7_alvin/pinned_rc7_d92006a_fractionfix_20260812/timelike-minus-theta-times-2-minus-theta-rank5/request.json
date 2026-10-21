@@ -1,0 +1,54 @@
+{
+  "case": "timelike-minus-theta-times-2-minus-theta-rank5",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "k7-alvin-timelike-minus-theta-times-2-minus-theta-rank5-1786532101311846000",
+    "--network=none",
+    "--volume",
+    "/Users/sasha/CoxeterPolytopes/data/enumerations/k7_alvin/pinned_rc7_d92006a_fractionfix_20260812/timelike-minus-theta-times-2-minus-theta-rank5/output:/opt/AlVin/build/output",
+    "--cpus",
+    "1.0",
+    "coxeter-alvin:rc7-fractionfix-d92006a",
+    "-k",
+    "rc7",
+    "-qf",
+    "[-4,-1,-2],1,1,1,1",
+    "-ip",
+    "-noimage"
+  ],
+  "contains_maxv": false,
+  "context_sha256": {
+    "Dockerfile": "7d6847bc3c8748b4327fad1a182d9e5fba1d9e9da84d8bb7b27fed699163731d",
+    "alvin-aarch64.patch": "7b24d5d38405bd868b818ad83e0a4a571b2237aae2a81c29f1c56e407ba088d7",
+    "alvin-norm-powers.patch": "0d5d8026d5524917e1f73d1b22c3278d3729716ecbbb685cf3c2152e7182cfc1",
+    "alvin-rc7-angle14.patch": "fa44d59e382a9ce8eeabe127b5bf0de162486c2b57eb3a909e9d0d3c0f0e652d",
+    "alvin-rc7-exact-bounds.patch": "3fa1dbfd7d37a2de167aeb9136fb29886f80fce765624a1e9bc910f5686dab85",
+    "alvin-rc7-fraction-conjugation.patch": "853e52a3bbb4ff45b11749ec682cecbcfc75366fa95bfde1b316a96042ded67c",
+    "gaol-aarch64.patch": "012f42d0f67e3e43bf905d36a987998081d4c656906ad26093cec5465bf4396c",
+    "vendor.sha256": "eb47c91d5c675726440074a9cec0656be2f7a628a387c69ad5c4973f2a50646a"
+  },
+  "description": "diag(-theta(2-theta),1^4)",
+  "docker_cpu_limit": 1.0,
+  "expected_alvin_commit": "d92006a842cb4668e7c89e8c8e2d30337e4b0f26",
+  "external_timeout_seconds": null,
+  "image": {
+    "alvin_commit": "d92006a842cb4668e7c89e8c8e2d30337e4b0f26",
+    "architecture": "arm64",
+    "created": "2026-08-12T12:53:15.772601936+02:00",
+    "id": "sha256:45b0180c691d5d07958b9e7c77163ace4aa3db4ba963faf56ad3af3b75b7043c",
+    "os": "linux",
+    "repo_digests": [
+      "coxeter-alvin@sha256:45b0180c691d5d07958b9e7c77163ace4aa3db4ba963faf56ad3af3b75b7043c"
+    ]
+  },
+  "kind": "seed",
+  "lane": "timelike-scaled",
+  "priority": "1b",
+  "qf": "[-4,-1,-2],1,1,1,1",
+  "runner_sha256": "35f342e2d8f3b1422b3b5542605fd6a06b0a1c15ce3730868e5ef84e7b873b5f",
+  "schema": "coxeter.k7_alvin.live_request.v1",
+  "started_at_utc": "2026-08-12T10:55:01.311950+00:00"
+}

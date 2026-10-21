@@ -1,0 +1,28 @@
+// Absolute-irreducibility replay for the explicit rational I_(1,n) cluster.
+// Tested with Singular 4.4.1 and absfact.lib.
+
+LIB "absfact.lib";
+ring r=0,(X,Y,Z),dp;
+
+poly C=Y^2*Z-X^3-Z^3;
+poly Q=Z^4+(X+Z)*C;
+poly S=Z^2*Q+C^2;
+
+def rc=absFactorize(C);
+setring rc;
+print("C_NONCONSTANT_FACTORS="+string(size(absolute_factors[1])-1));
+print("C_FACTOR_EXPONENT="+string(absolute_factors[2][2]));
+setring r;
+
+def rq=absFactorize(Q);
+setring rq;
+print("Q_NONCONSTANT_FACTORS="+string(size(absolute_factors[1])-1));
+print("Q_FACTOR_EXPONENT="+string(absolute_factors[2][2]));
+setring r;
+
+def rs=absFactorize(S);
+setring rs;
+print("S_NONCONSTANT_FACTORS="+string(size(absolute_factors[1])-1));
+print("S_FACTOR_EXPONENT="+string(absolute_factors[2][2]));
+
+quit;

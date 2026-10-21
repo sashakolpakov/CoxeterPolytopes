@@ -1,0 +1,90 @@
+{
+  "all_checks_pass": true,
+  "exact_gram_field": {
+    "all_cartan_entries_rational": true,
+    "all_cyclic_products_rational": true,
+    "cartan_entry_count": 676,
+    "cartan_sequence_sha256": "b8151dc65e1db916df80d4123af95b7e7e3dbb7572890759750d4c243e952884",
+    "cartan_unique_values": [
+      "-1/1",
+      "-1/2",
+      "-10/1",
+      "-2/1",
+      "-4/1",
+      "-6/1",
+      "-8/1",
+      "0/1",
+      "2/1"
+    ],
+    "facet_count": 26,
+    "length_two_cycle_sequence_sha256": "b264f297ba08c2132e6dfda548df103937af4bdb4c280fe1585eb201216534bd",
+    "length_two_cyclic_product_count": 325,
+    "length_two_cyclic_product_unique_values": [
+      "0/1",
+      "1/1",
+      "100/1",
+      "16/1",
+      "2/1",
+      "36/1",
+      "4/1",
+      "64/1",
+      "8/1"
+    ],
+    "recovered_Vinberg_field": "Q",
+    "scalar_coordinate_field": "Q"
+  },
+  "projective_rank_locus": {
+    "accepted": {
+      "algebra_Q_dimension": 1,
+      "chart_ideal": "b-1 in Q[b] on a=1",
+      "field_of_definition": "Q",
+      "field_of_moduli": "Q",
+      "galois_orbit_size": 1,
+      "geometric_point_count": 1,
+      "point": [
+        1,
+        1
+      ],
+      "reduced_coordinate_algebra": "Q[b]/(b-1) = Q"
+    },
+    "equation": "a^2-b^2=(a-b)(a+b)=0 in P1_Q",
+    "geometric_point_count_before_geometric_gate": 2,
+    "geometric_points": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "rejected": {
+      "chart_ideal": "b+1 in Q[b] on a=1",
+      "point": [
+        1,
+        -1
+      ],
+      "reason": "line boundary times a squared conic is nonreduced"
+    }
+  },
+  "schema": "coxeter.dessin_native_field_effectivity_h11.v1",
+  "scope": {
+    "global_field_finiteness": "open pending exhaustive zero-dimensionality",
+    "not_proved": "the variable-class Coxeter-Borcherds carrier stack is zero-dimensional",
+    "proved": "one rigidified accepted H11/26 line-quintic chart point has residue and Vinberg field Q"
+  },
+  "source_pins": [
+    {
+      "path": "data/enumerations/coble_type_i_two_boundary_plane_inverse.json",
+      "role": "exact projective rank locus and geometric branch audit",
+      "sha256": "6313b11cc9ba267834231aab2469d99e9d0242f4a95f53280047351f8318da04"
+    },
+    {
+      "path": "data/enumerations/coble_type_i_two_boundary_full_ns_h11.json",
+      "role": "exact rational wall Gram and same-polytope return",
+      "sha256": "bcfa2de1e96bf4f41282345a64f8ee6f3a75e715287bab4962d7082584b4d985"
+    }
+  ],
+  "status_date": "2026-08-09"
+}

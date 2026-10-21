@@ -1,0 +1,190 @@
+{
+  "status": "PASS_EXACT_TWO_PROBE_OBSTRUCTION",
+  "sources": {
+    "results/fresh_h20_intrinsic_caps_20261014_golden_seed.json": "29e90febee01d0bf5a6aeeafe6ddd3be1b688cdcfb79f0dd0afee72ce0f09a20",
+    "scripts/fresh_h20_intrinsic_caps_20261014_quarter_gate.py": "f48134c9e6ee8d2921483b8e227feb5c7cb7c17b71807514787a515c8ac9a075"
+  },
+  "field": "Q(phi), phi^2=phi+1, phi>1",
+  "bank": {
+    "centers": "z_v/4 for all 252 product-alcove vertices",
+    "radius": "3/2",
+    "coverage_distance_square_threshold": "36"
+  },
+  "probe_vertex_indices": [
+    0,
+    3
+  ],
+  "probe_omitted_source_walls": [
+    [
+      4,
+      23,
+      22
+    ],
+    [
+      4,
+      23,
+      33
+    ]
+  ],
+  "covering_cap_indices": [
+    [
+      0,
+      7,
+      14
+    ],
+    [
+      3,
+      10,
+      17
+    ]
+  ],
+  "cross_conflicts": [
+    {
+      "caps": [
+        0,
+        3
+      ],
+      "old_vertex_distance_square": [
+        "48",
+        "0"
+      ],
+      "normalized_cosine": [
+        "-1/3",
+        "0"
+      ],
+      "reason": "obtuse"
+    },
+    {
+      "caps": [
+        0,
+        10
+      ],
+      "old_vertex_distance_square": [
+        "60",
+        "12"
+      ],
+      "normalized_cosine": [
+        "-1/6",
+        "1/6"
+      ],
+      "reason": "strictly_between_cos_pi_2_and_cos_pi_3"
+    },
+    {
+      "caps": [
+        0,
+        17
+      ],
+      "old_vertex_distance_square": [
+        "60",
+        "12"
+      ],
+      "normalized_cosine": [
+        "-1/6",
+        "1/6"
+      ],
+      "reason": "strictly_between_cos_pi_2_and_cos_pi_3"
+    },
+    {
+      "caps": [
+        7,
+        3
+      ],
+      "old_vertex_distance_square": [
+        "60",
+        "12"
+      ],
+      "normalized_cosine": [
+        "-1/6",
+        "1/6"
+      ],
+      "reason": "strictly_between_cos_pi_2_and_cos_pi_3"
+    },
+    {
+      "caps": [
+        7,
+        10
+      ],
+      "old_vertex_distance_square": [
+        "48",
+        "0"
+      ],
+      "normalized_cosine": [
+        "-1/3",
+        "0"
+      ],
+      "reason": "obtuse"
+    },
+    {
+      "caps": [
+        7,
+        17
+      ],
+      "old_vertex_distance_square": [
+        "60",
+        "12"
+      ],
+      "normalized_cosine": [
+        "-1/6",
+        "1/6"
+      ],
+      "reason": "strictly_between_cos_pi_2_and_cos_pi_3"
+    },
+    {
+      "caps": [
+        14,
+        3
+      ],
+      "old_vertex_distance_square": [
+        "60",
+        "12"
+      ],
+      "normalized_cosine": [
+        "-1/6",
+        "1/6"
+      ],
+      "reason": "strictly_between_cos_pi_2_and_cos_pi_3"
+    },
+    {
+      "caps": [
+        14,
+        10
+      ],
+      "old_vertex_distance_square": [
+        "60",
+        "12"
+      ],
+      "normalized_cosine": [
+        "-1/6",
+        "1/6"
+      ],
+      "reason": "strictly_between_cos_pi_2_and_cos_pi_3"
+    },
+    {
+      "caps": [
+        14,
+        17
+      ],
+      "old_vertex_distance_square": [
+        "48",
+        "0"
+      ],
+      "normalized_cosine": [
+        "-1/3",
+        "0"
+      ],
+      "reason": "obtuse"
+    }
+  ],
+  "old_527_spherical_minimum_powers": [
+    [
+      "119/8",
+      "1/4"
+    ],
+    [
+      "131/8",
+      "1/4"
+    ]
+  ],
+  "conclusion": "No pairwise Coxeter-compatible subset of this 252-cap bank covers both probes, even with all 527 old walls.",
+  "scope": "Exact exclusion only of the uniform quarter-vertex bank. Face-barycenter caps and other placements are not excluded."
+}

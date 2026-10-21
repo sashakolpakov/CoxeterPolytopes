@@ -1,0 +1,29 @@
+# Independent review of the E8 face and its H12 completion
+
+**PASS, within the stated face-completion scope.** The E8 Schur argument is valid for every acute Coxeter label, and deleting predecessor wall 0 permits the stated finite-volume H12 face completion. The resulting 77-wall H20 chamber still has a strict spacelike escape. This review does not certify finite ambient volume or the later proposed cusp additions.
+
+The [independent checker](../scripts/fresh_h20_contact_closure_20261014_e8_face_review.py) and [saved result](fresh_h20_contact_closure_20261014_e8_face_review.json) use a separate Fraction implementation in `Q(sqrt(2),sqrt(79))` and SymPy rational matrix inversion, with no producer arithmetic imports. They reconstruct the E8 Gram and inverse, the projected strict center, all 56 strictly timelike nonorthogonal projections, the A12 face form, the two reverse-chain normals, and all 196 entries of their fourteen-root Gram isometry. They also check the common strict center and strict escape against all 77 walls. Generation and fresh saved replay pass. A fresh replay of the [E8 producer](../scripts/fresh_h20_contact_closure_20261014_e8_face.py) passes too. The 2,926 ambient pair classifications, all 35 finite-vertex checks and the complete H12 source volume census are inherited dependencies, not duplicated here.
+
+For the eight norm-two E8 roots, the independently reconstructed Gram is positive definite, has determinant one and arm lengths `1,2,4`. Every entry of its inverse is positive, and its diagonal is
+
+```text
+2, 6, 12, 20, 8, 30, 14, 4.
+```
+
+Let an additional acute Coxeter wall have normal `r`, square `q>0`, and `c_i=-(r,e_i)≥0`. If one pairing is nonzero, a finite nonright Coxeter angle gives `c_i²≥q/2`; parallel and dotted relations give a stronger bound. Consequently `cᵀB⁻¹c≥2c_i²≥q`, so the residual in `E8⊥` has nonpositive square. This also covers equality. A zero or null residual is not a spacelike facet normal.
+
+Orientation is essential and is checked. The projected strict center is `P=H+sum(t_i e_i)` with every `t_i>0`. For the general completion argument, use the actual strict center `H` of the proposed nonempty acute extension; additions need not retain the predecessor's center. Every new wall is still strict at this projected point. A nonzero residual of nonpositive square is therefore future causal and its inequality holds throughout the future timelike H12 face. It may touch an ideal point in the null case, but introduces no intrinsic facet. Thus every new facet that actually bounds this face must be orthogonal to E8. All 56 current nonorthogonal residuals are strictly timelike, so the current face is exactly the twelve-wall A12 orthant cone.
+
+Finite ambient volume would require finite volume of this twelve-dimensional face. In a finite-facet finite-volume hyperbolic polytope, the ideal boundary consists of finitely many ideal vertices. The face inherits this property. A full-dimensional hyperbolic polyhedral region of dimension at least two with only finitely many ideal boundary points has a bounded projective closure with only finite or ideal vertices and hence finite volume. Equivalently, an intrinsic open ideal patch would remain an ideal patch of the ambient chamber. The dimension restriction avoids the familiar infinite-length ideal-edge exception. This is a necessary condition on the face, not a sufficient condition for ambient finite volume.
+
+The [changed-core certificate](fresh_h20_contact_closure_20261014_h12_replacement.json) deletes wall 0, which belongs to neither E8 nor A12 and has a strictly timelike face projection. Thus deletion changes the ambient chamber while leaving the intrinsic A12 cone unchanged; 55 other timelike residuals remain redundant there. In the face basis, the new roots are `-omega10+2T` and `-omega2+3T`, with squares two and one, mutual pairing zero, and `T²=-1/13`. Their Gram with the reversed A12 chain matches the separately certified [fourteen-wall H12 source](fresh_h12_a12_source_20261014.md). The A12 block and timelike line span the face, so this is an isometry of the complete intrinsic chambers, not merely a shared subdiagram.
+
+That source has 35 finite and two ideal vertices and finite volume. The two ideal vertices still have an E8 recession direction in their ambient H20 links, and the independent replay confirms the saved strict escape. The correct conclusion is therefore **a completed finite-volume H12 face inside an infinite-volume 77-facet H20 chamber**. The construction replaces one old wall; it is not an addition retaining the full predecessor.
+
+There is also a useful exact restriction on the next construction. Once all fourteen H12 walls are retained, no further spacelike normal orthogonal to E8 can be acute to them. In source coordinates the B12 inequalities force `x1>=...>=x12>=0`, and the root `(1,1,1,1,0,...,0)` forces `t>=x1+x2+x3>=0`. If `t=0`, the vector vanishes. If `t>0`, divide by `t`; the separately certified complete source slice lies in the closed light cone, contradicting positive square. The independent checker verifies these literal source inequalities and rechecks the squares of all 37 saved extreme rays; completeness of that slice remains the explicit source-census dependency. Consequently every further acute spacelike cap retaining the completed source must have a nonzero E8 component and a nonspacelike intrinsic projection. Such caps can affect ambient cusp links while leaving the H12 face unchanged. This closes only the E8-orthogonal addition route, not the full H20 completion problem.
+
+```sh
+PYTHONPATH=src:. python scripts/fresh_h20_contact_closure_20261014_e8_face_review.py --verify
+```
+
+The review manifest binds source scripts and certificates, not prose reports, so adding a link to this note does not invalidate those bindings.

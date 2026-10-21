@@ -1,0 +1,489 @@
+{
+  "P1xP1_complete_grid": {
+    "anti_bicanonical_equation": "rF1+sF2-2 sum E_ij = -2K = 4F1+4F2-2 sum E_ij",
+    "forced_grid": "r=s=4; b=8; Picard rank 18; hyperbolic dimension 17",
+    "four_point_projectivity_stabilizers_and_exact_cones": {
+      "characteristic_3": {
+        "extreme_ray_count": 196052,
+        "finite": 190808,
+        "finite_volume": true,
+        "graph_wall_count": 24,
+        "group": "S4",
+        "hyperideal": 0,
+        "ideal": 5244,
+        "permutations": [
+          "1234",
+          "1243",
+          "1324",
+          "1342",
+          "1423",
+          "1432",
+          "2134",
+          "2143",
+          "2314",
+          "2341",
+          "2413",
+          "2431",
+          "3124",
+          "3142",
+          "3214",
+          "3241",
+          "3412",
+          "3421",
+          "4123",
+          "4132",
+          "4213",
+          "4231",
+          "4312",
+          "4321"
+        ],
+        "primitive_ray_list_sha256": "04d6df9b251c6a264060eb559d21ee51b80c294fcc95e264f75856a648a4da57",
+        "wall_count": 48
+      },
+      "equianharmonic": {
+        "extreme_ray_count": 13702,
+        "finite": 5360,
+        "finite_volume": false,
+        "graph_wall_count": 12,
+        "group": "A4",
+        "hyperideal": 5340,
+        "ideal": 3002,
+        "permutations": [
+          "1234",
+          "1342",
+          "1423",
+          "2143",
+          "2314",
+          "2431",
+          "3124",
+          "3241",
+          "3412",
+          "4132",
+          "4213",
+          "4321"
+        ],
+        "primitive_ray_list_sha256": "85c5a07dac12d6e50488e99b4fba081ef4928cee73b0675cdb462961c8386159",
+        "wall_count": 36
+      },
+      "generic": {
+        "extreme_ray_count": 5678,
+        "finite": 2000,
+        "finite_volume": false,
+        "graph_wall_count": 4,
+        "group": "V4",
+        "hyperideal": 2500,
+        "ideal": 1178,
+        "permutations": [
+          "1234",
+          "2143",
+          "3412",
+          "4321"
+        ],
+        "primitive_ray_list_sha256": "06e43b07ff892c26daed2f7f006af6de4594be7e237e2f04256bec4726cde847",
+        "wall_count": 28
+      },
+      "harmonic": {
+        "extreme_ray_count": 15748,
+        "finite": 10024,
+        "finite_volume": false,
+        "graph_wall_count": 8,
+        "group": "D4",
+        "hyperideal": 3344,
+        "ideal": 2380,
+        "permutations": [
+          "1234",
+          "1243",
+          "2134",
+          "2143",
+          "3412",
+          "3421",
+          "4312",
+          "4321"
+        ],
+        "primitive_ray_list_sha256": "3014969c410438f8c41476410a2a75d96e4229489afec8121b69bcf6c2be6b09",
+        "wall_count": 32
+      }
+    },
+    "theorem": "For the complete-projectivity grid family in characteristic not 2, finite volume is equivalent to full S4 projectivity, which is equivalent to characteristic 3 and cross-ratio lambda=-1=2. The unique survivor is the known MII H17/48 chamber."
+  },
+  "Tumarkin_n_plus_3_route": {
+    "Roberts_scope": "Roberts classifies precisely one non-simple vertex; he explicitly leaves simple polytopes and nonpyramidal polytopes with more than one non-simple vertex.",
+    "known_D1_split_CM_chambers": {
+      "I": {
+        "active_facet_histogram": {
+          "10": 3,
+          "9": 20
+        },
+        "kind_and_active_histogram": {
+          "finite_active_9": 14,
+          "ideal_active_10": 3,
+          "ideal_active_9": 6
+        },
+        "non_simple_ideal_vertex_count": 3,
+        "ray_count": 23
+      },
+      "II": {
+        "active_facet_histogram": {
+          "10": 3,
+          "9": 52
+        },
+        "kind_and_active_histogram": {
+          "finite_active_9": 38,
+          "ideal_active_10": 3,
+          "ideal_active_9": 14
+        },
+        "non_simple_ideal_vertex_count": 3,
+        "ray_count": 55
+      }
+    },
+    "published_scope": "Tumarkin classifies the compact n+3 case and noncompact pyramids, and proves the noncompact dimension bound n<=16. The general noncompact finite-volume n+3 classification is not complete.",
+    "verdict": "Both known H9/12 root chambers have three non-simple ideal vertices, so neither lies in Roberts' classified stratum. No published exhaustive list presently proves that D_1_split contains only Types I and II."
+  },
+  "all_checks_pass": true,
+  "checks": {
+    "Kondo_prunes_plane_partitions_to_five": true,
+    "both_known_H9_12_root_chambers_have_three_non_simple_ideal_vertices": true,
+    "every_boundary_component_has_square_minus_four": true,
+    "every_sextic_cluster_has_K_square_minus_b": true,
+    "every_sextic_cluster_has_N_equals_9_plus_b": true,
+    "four_point_stabilizer_orders_are_4_8_12_24": true,
+    "only_characteristic_3_grid_cone_has_no_hyperideal_ray": true,
+    "smooth_component_partitions_are_exactly_four": true,
+    "there_are_11_degree_partitions_of_six": true
+  },
+  "direction": "POLYTOPE_TO_SURFACE_ESSENTIAL_SURJECTIVITY_GATE_AUDIT",
+  "next_finite_computation": {
+    "grid": "closed negatively as a source of a non-singleton class",
+    "one_boundary": "Enumerate H9/12 Gale diagrams in the restricted simply-laced integral E10 stratum with Gram rank 10/corank 2, three non-simple ideal vertices, and complete cusp lifts; solve the finitely many determinant systems for dotted-edge integers and run literal Vinberg tests.",
+    "plane": "Start from the five Kondo-surviving sextic degree partitions [6], [5,1], [4,2], [3,3], [2,1,1,1,1]; enumerate multiplicity-two contact/proximity diagrams and low-degree special curves, then solve their saturated incidence ideals before running D_CobVin return."
+  },
+  "ordinary_simple_point_interpolation_obstruction": {
+    "conclusion": "No additional (-2)-curve is forced on the ordinary general-point locus. Finite-volume root stocks require special tangency, collinearity, finite-field, or other determinantal incidence.",
+    "degree_d_projective_dimension": "d(d+3)/2",
+    "minus_one_expected_dimension": "-(d-1)(d-2)/2",
+    "minus_one_simple_points_required": "d^2+1",
+    "minus_two_excess_conditions": "(d^2-3d+4)/2 > 0 for every integer d",
+    "minus_two_simple_points_required": "d^2+2"
+  },
+  "pinned_inputs": {
+    "one_boundary_full_NS": {
+      "path": "data/enumerations/coble_one_boundary_full_ns_h10.json",
+      "sha256": "1e90fcd5f9b1ba8538937b91d2f26ea401f6952e8484a597624939edaf2a873e"
+    },
+    "type_MII_full_NS": {
+      "path": "data/enumerations/coble_type_mii_full_ns_h17.json",
+      "sha256": "6ed6fba936c362e02793375fa3adfea0279d312c853a8bb4bab30c23b4b8c79c"
+    }
+  },
+  "plane_rational_sextic_factory": {
+    "Kondo_finite_Aut_surviving_degree_partitions": [
+      [
+        6
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "compactness": "Every branch is noncompact: after the first point blowup, pull back the pencil of lines through that point. Its primitive nef class has square 0.",
+    "rows": [
+      {
+        "K_square": -1,
+        "all_components_can_be_smooth": false,
+        "blowup_count": 10,
+        "boundary_count": 1,
+        "component_self_intersections": [
+          -4
+        ],
+        "degrees": [
+          6
+        ],
+        "expected_blowup_count_9_plus_b": 10,
+        "finite_Aut_boundary_count_survives_Kondo": true,
+        "hyperbolic_dimension": 10,
+        "internal_node_count": 10,
+        "pairwise_intersection_count": 0
+      },
+      {
+        "K_square": -2,
+        "all_components_can_be_smooth": false,
+        "blowup_count": 11,
+        "boundary_count": 2,
+        "component_self_intersections": [
+          -4,
+          -4
+        ],
+        "degrees": [
+          5,
+          1
+        ],
+        "expected_blowup_count_9_plus_b": 11,
+        "finite_Aut_boundary_count_survives_Kondo": true,
+        "hyperbolic_dimension": 11,
+        "internal_node_count": 6,
+        "pairwise_intersection_count": 5
+      },
+      {
+        "K_square": -2,
+        "all_components_can_be_smooth": false,
+        "blowup_count": 11,
+        "boundary_count": 2,
+        "component_self_intersections": [
+          -4,
+          -4
+        ],
+        "degrees": [
+          4,
+          2
+        ],
+        "expected_blowup_count_9_plus_b": 11,
+        "finite_Aut_boundary_count_survives_Kondo": true,
+        "hyperbolic_dimension": 11,
+        "internal_node_count": 3,
+        "pairwise_intersection_count": 8
+      },
+      {
+        "K_square": -3,
+        "all_components_can_be_smooth": false,
+        "blowup_count": 12,
+        "boundary_count": 3,
+        "component_self_intersections": [
+          -4,
+          -4,
+          -4
+        ],
+        "degrees": [
+          4,
+          1,
+          1
+        ],
+        "expected_blowup_count_9_plus_b": 12,
+        "finite_Aut_boundary_count_survives_Kondo": false,
+        "hyperbolic_dimension": 12,
+        "internal_node_count": 3,
+        "pairwise_intersection_count": 9
+      },
+      {
+        "K_square": -2,
+        "all_components_can_be_smooth": false,
+        "blowup_count": 11,
+        "boundary_count": 2,
+        "component_self_intersections": [
+          -4,
+          -4
+        ],
+        "degrees": [
+          3,
+          3
+        ],
+        "expected_blowup_count_9_plus_b": 11,
+        "finite_Aut_boundary_count_survives_Kondo": true,
+        "hyperbolic_dimension": 11,
+        "internal_node_count": 2,
+        "pairwise_intersection_count": 9
+      },
+      {
+        "K_square": -3,
+        "all_components_can_be_smooth": false,
+        "blowup_count": 12,
+        "boundary_count": 3,
+        "component_self_intersections": [
+          -4,
+          -4,
+          -4
+        ],
+        "degrees": [
+          3,
+          2,
+          1
+        ],
+        "expected_blowup_count_9_plus_b": 12,
+        "finite_Aut_boundary_count_survives_Kondo": false,
+        "hyperbolic_dimension": 12,
+        "internal_node_count": 1,
+        "pairwise_intersection_count": 11
+      },
+      {
+        "K_square": -4,
+        "all_components_can_be_smooth": false,
+        "blowup_count": 13,
+        "boundary_count": 4,
+        "component_self_intersections": [
+          -4,
+          -4,
+          -4,
+          -4
+        ],
+        "degrees": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "expected_blowup_count_9_plus_b": 13,
+        "finite_Aut_boundary_count_survives_Kondo": false,
+        "hyperbolic_dimension": 13,
+        "internal_node_count": 1,
+        "pairwise_intersection_count": 12
+      },
+      {
+        "K_square": -3,
+        "all_components_can_be_smooth": true,
+        "blowup_count": 12,
+        "boundary_count": 3,
+        "component_self_intersections": [
+          -4,
+          -4,
+          -4
+        ],
+        "degrees": [
+          2,
+          2,
+          2
+        ],
+        "expected_blowup_count_9_plus_b": 12,
+        "finite_Aut_boundary_count_survives_Kondo": false,
+        "hyperbolic_dimension": 12,
+        "internal_node_count": 0,
+        "pairwise_intersection_count": 12
+      },
+      {
+        "K_square": -4,
+        "all_components_can_be_smooth": true,
+        "blowup_count": 13,
+        "boundary_count": 4,
+        "component_self_intersections": [
+          -4,
+          -4,
+          -4,
+          -4
+        ],
+        "degrees": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "expected_blowup_count_9_plus_b": 13,
+        "finite_Aut_boundary_count_survives_Kondo": false,
+        "hyperbolic_dimension": 13,
+        "internal_node_count": 0,
+        "pairwise_intersection_count": 13
+      },
+      {
+        "K_square": -5,
+        "all_components_can_be_smooth": true,
+        "blowup_count": 14,
+        "boundary_count": 5,
+        "component_self_intersections": [
+          -4,
+          -4,
+          -4,
+          -4,
+          -4
+        ],
+        "degrees": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "expected_blowup_count_9_plus_b": 14,
+        "finite_Aut_boundary_count_survives_Kondo": true,
+        "hyperbolic_dimension": 14,
+        "internal_node_count": 0,
+        "pairwise_intersection_count": 14
+      },
+      {
+        "K_square": -6,
+        "all_components_can_be_smooth": true,
+        "blowup_count": 15,
+        "boundary_count": 6,
+        "component_self_intersections": [
+          -4,
+          -4,
+          -4,
+          -4,
+          -4,
+          -4
+        ],
+        "degrees": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "expected_blowup_count_9_plus_b": 15,
+        "finite_Aut_boundary_count_survives_Kondo": false,
+        "hyperbolic_dimension": 15,
+        "internal_node_count": 0,
+        "pairwise_intersection_count": 15
+      }
+    ],
+    "smooth_component_degree_partitions": [
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "smooth_component_finite_volume_consequence": "A smooth rational plane component has degree 1 or 2. Kondo's finite-Aut classification therefore leaves only b=5, dimension 14, and Type VI in characteristic 3; this lane has at most one exact finite-volume isometry type, not a strict non-singleton class.",
+    "strong_Coble_argument": "For a reduced union of rational nodal plane curves of total degree 6, blow up every internal node and every pairwise intersection. Then N=9+b, every strict component has square -4, and their reduced sum B equals -2K. Since B.B_i=-4, every member of |-2K| contains every B_i, hence |-2K|={B}; if -K were effective, twice it would equal the reduced B, impossible.",
+    "surviving_hyperbolic_dimensions": [
+      10,
+      11,
+      14
+    ]
+  },
+  "result": "The natural toric/Looijenga, smooth plane-sextic, and complete P1xP1-grid factories do not yield a non-singleton automatic finite-volume Coble denominator. The grid lane has an exact finite-volume iff: among the four projectivity stabilizers it survives only for S4 in characteristic 3.",
+  "schema": "coxeter.coble_incidence_automaticity_obstruction.v1",
+  "status_date": "2026-08-09",
+  "strict_contract_score": {
+    "L4_status": "still open",
+    "compact_implication": "none; every rational blowup branch here is noncompact",
+    "exact_structural_criterion": "obtained for the complete P1xP1 four-point grid, but it has one finite-volume survivor",
+    "new_non_singleton_class_with_forced_carrier": "not obtained"
+  },
+  "toric_and_Looijenga_no_go": "A toric boundary and, by definition, a Looijenga-pair boundary are effective anticanonical divisors. Boundary blowups preserve an effective -K divisor. They therefore cannot directly be a strong Coble carrier, which requires |-K| empty, without an additional quotient/cover/degeneration operation.",
+  "universality_warning": "Rank-three matroid/point-line realization spaces have Mn\u00ebv universality. Consequently local intersection counts, expected dimension, or a fixed Enriques diagram cannot force nonemptiness for arbitrary plane-incidence compiler branches; one needs a globally realizable structural matroid class or an exact incidence certificate."
+}
+

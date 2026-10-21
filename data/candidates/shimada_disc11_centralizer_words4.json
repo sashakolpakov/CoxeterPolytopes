@@ -1,0 +1,53 @@
+{
+  "analysis_id": "shimada_disc11_enhanced_centralizer_exact_length_4",
+  "verified": true,
+  "source_sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68",
+  "published_generator_count": 767,
+  "prior_length_three_certificate": {
+    "path": "data/candidates/shimada_disc11_centralizer_words3.json",
+    "file_sha256": "739e22e74747e16e766790e3afd293af8a2f63b7346647f84bf68436cd5f181b",
+    "centralizing_ordered_words": 4989,
+    "distinct_centralizing_actions": 2
+  },
+  "exact_length_four": {
+    "ordered_words_exhausted": 346083947521,
+    "half_words_per_side": 588289,
+    "split_equation": "A*tau*A^-1 = B^-1*tau*B",
+    "fingerprint": {
+      "role": "necessary_filter_only",
+      "prime": 1000003,
+      "probe_columns": 4,
+      "digest": "BLAKE2b-128",
+      "right_buckets": 547582,
+      "right_collision_buckets": 26785,
+      "largest_right_bucket": 682
+    },
+    "modular_candidate_quadruples": 1139377,
+    "exact_integral_commutator_checks": 1139377,
+    "false_modular_candidates": 0,
+    "centralizing_ordered_words": 1139377,
+    "word_quadruples_sha256": "012f1d1e0314b1a70925cafa7e5e633971d86d55ff27d51393fe92b675df352c",
+    "word_digest_encoding": "canonical compact JSON array in lexicographic word order",
+    "identity_word_multiplicity": 1138938,
+    "nonidentity_word_multiplicity": 439,
+    "distinct_centralizing_actions": 2,
+    "distinct_actions": [
+      {
+        "kind": "identity",
+        "column_action_sha256": "8817db0b345cc277b1b2e649062c98d9a923e6a5159c08ff8b075a3947d0d259",
+        "ordered_word_multiplicity": 1138938,
+        "characteristic_polynomial": "(lambda - 1)^20"
+      },
+      {
+        "kind": "known_D68_D27_involution",
+        "column_action_sha256": "6b4bc88ee93385bcb4a4c55828924860aa90158f84a8469ffc238dbe4f33e4eb",
+        "ordered_word_multiplicity": 439,
+        "matrix_equals_known_D68_D27_return": true,
+        "square_is_identity": true,
+        "characteristic_polynomial": "(lambda - 1)^18 (lambda + 1)^2"
+      }
+    ]
+  },
+  "combined_bounded_conclusion": "the centralizing actions represented by published-generator words of length at most four are exactly the identity and the known involution A",
+  "scope": "syntactic published-generator length at most four; not a classification of the full centralizer"
+}

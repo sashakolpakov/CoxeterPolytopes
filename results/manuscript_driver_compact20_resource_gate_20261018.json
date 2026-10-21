@@ -1,0 +1,29 @@
+{
+  "status": "DEFERRED_RESOURCE_GATE",
+  "manuscript": "compact20",
+  "mode": "scripts",
+  "created_utc": "2026-10-18T21:28:05.235543+00:00",
+  "catalogue_sha256": "7d8dc5bbd579a916a9c872a793d4f6b85d8545bf182bc7a13e858b2b61f9584c",
+  "manuscript_sha256": "f2094f4fd1780a992e3be8a0c77dc224806f99b6d8c75ac42e6dbd8a735ed256",
+  "runner_sha256": "bdde7a808adb2f5c352e6e9ceb95a660ad02248b8158cac3830d90e0343ec7c8",
+  "jobs": [
+    {
+      "id": "compact20_primal",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "Solver-free exact rational reconstruction and full face/forest checks,upper40.",
+      "exit_code": 1,
+      "elapsed_seconds": 0.06,
+      "stdout_sha256": "8f36cc51ebdd2ab23043acdee7f912fc777c9bdab8d89b20dd73d74f2c56f811",
+      "stdout_bytes": 675,
+      "source_sha256": "6559b432cb2059cb2f16f9a39e5dce75fbe25a9b40d2500d99a726d9760f0a87",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=193.1GiB memory=5.7GiB; require 40/6GiB\n"
+    }
+  ],
+  "planned_jobs": 3,
+  "remaining_formal_gaps": "New module has no successful module ledger. Whole-star coverage,pools,D5/H4,full coefficient/field geometry remain unformalized. New Manuscript* interfaces are source-prepared,not compiled; their published/script/written-geometric premises remain explicit.",
+  "assumption_document": "docs/manuscript_assumptions.md",
+  "assumption_document_sha256": "4bb3ba188817b2771ee8bb9db7ec8b1258a6095ce1a790c0b713441eec81daa4",
+  "end_to_end_geometric_lean_proof_claimed": false
+}

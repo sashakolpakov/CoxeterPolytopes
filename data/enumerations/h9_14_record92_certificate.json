@@ -1,0 +1,223 @@
+{
+  "backend_corroboration": {
+    "aggregate_backend_status": "unsat",
+    "branch_statuses": {
+      "0": "unsat",
+      "1": "unsat",
+      "2": "unsat"
+    },
+    "path": "data/enumerations/h9_14_schedule_split.json",
+    "sha256": "f9e3d149f4da9bc05220c84c1ffdde5ba8cb8ed9d388df94992d20d5f200b6f5",
+    "trusted_for_proof": false
+  },
+  "certificate_sha256": "c0e0903caa31469d3bd95d1e10cd42a62704a1de1859cfe370749065f05a5c25",
+  "claim": "H9/14 survivor record 92 cannot be the nerve of a compact hyperbolic Coxeter 9-polytope.",
+  "graph6": "M?????????W?o?w??",
+  "kind": "h9_14_record92_solver_independent_exclusion",
+  "nonclaims": [
+    "This excludes one graph shadow, not all compact H9/14 nerves.",
+    "The archived Z3 UNSAT run corroborates the theorem but is not used by the proof or verifier.",
+    "No Coxeter labeling or Lorentzian Gram analysis is needed because this shadow already fails necessary nerve conditions.",
+    "This is not a general non-existence theorem in dimension 9."
+  ],
+  "proof": {
+    "a0": {
+      "families": [
+        {
+          "five_transversal_count": 57,
+          "hit_pattern_multiset": [
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 840,
+          "representative_masks": [
+            248,
+            824,
+            1984
+          ],
+          "representative_vertices": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              8,
+              9
+            ],
+            [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "five_transversal_count": 75,
+          "hit_pattern_multiset": [
+            0,
+            3,
+            4
+          ],
+          "multiplicity": 336,
+          "representative_masks": [
+            248,
+            775,
+            7936
+          ],
+          "representative_vertices": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              8,
+              9
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ]
+        }
+      ],
+      "family_count": 2,
+      "five_transversal_count_histogram": {
+        "57": 840,
+        "75": 336
+      },
+      "forced_missing_five_count": 3,
+      "hit_pattern_counts": {
+        "0": 56,
+        "1": 70,
+        "3": 336,
+        "4": 196,
+        "5": 140,
+        "6": 210
+      },
+      "no_small_transversal_triple_count": 1176,
+      "pairwise_pattern_compatible_triple_count": 6773256,
+      "required_facet_count": 78
+    },
+    "graph6": "M?????????W?o?w??",
+    "minimal_graph_cover_masks": [
+      7,
+      8195,
+      14336
+    ],
+    "minimal_graph_cover_vertices": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        13
+      ],
+      [
+        11,
+        12,
+        13
+      ]
+    ],
+    "missing_edges": [
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        2,
+        13
+      ]
+    ],
+    "positive_a_branch_contradictions": [
+      {
+        "missing_four_count": 1,
+        "required_minimum": 14,
+        "summed_vertex_link_g4": 12
+      },
+      {
+        "missing_four_count": 2,
+        "required_minimum": 14,
+        "summed_vertex_link_g4": 6
+      }
+    ],
+    "schedule_link_g4_sums": [
+      {
+        "missing_four_count": 0,
+        "summed_vertex_link_g4": 18
+      },
+      {
+        "missing_four_count": 1,
+        "summed_vertex_link_g4": 12
+      },
+      {
+        "missing_four_count": 2,
+        "summed_vertex_link_g4": 6
+      }
+    ],
+    "strict_vertex_link_g4_lower_bound": 1,
+    "verified": true,
+    "vertex_link_count": 14
+  },
+  "proof_backend": "finite integer enumeration; no SAT/SMT backend",
+  "proof_dependencies": [
+    "every missing face of a compact Coxeter polytope is Lanner and has order at most five",
+    "the generalized lower-bound equality theorem makes g4 strictly positive for every nonsimplex vertex link",
+    "Dehn--Sommerville face-vector schedules",
+    "maximal faces are complementary to inclusion-minimal transversals of the minimal-nonface clutter"
+  ],
+  "record_index": 92,
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "data/enumerations/h9_14_nerve_support.json",
+    "second_layer_survivor_index": 92,
+    "sha256": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d"
+  },
+  "theorem_status": "certified_unsat",
+  "updated_theorem_partition": {
+    "certified_explicit_witness": 2,
+    "independently_certified_impossible": 114,
+    "theorem_undecided": 26,
+    "total_graph_shadows": 142
+  }
+}

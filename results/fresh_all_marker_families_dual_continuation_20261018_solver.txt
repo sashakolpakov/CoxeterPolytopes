@@ -1,0 +1,161 @@
+COMPLETE_FAMILY_EXPORTS {'input_counts': [{'package': 'fresh_raw76_extra_vertex_complete_family_20261018', 'exported_columns': 242, 'target_forests': 235}, {'package': 'fresh_raw56_raw57_extra_vertex_family_20261018', 'exported_columns': 1212, 'target_forests': 1212}, {'package': 'fresh_raw56_raw57_raw76_joint_marker_family_20261018', 'exported_columns': 1430, 'target_forests': 1394}, {'package': 'fresh_raw108_complete_marker_family_20261018', 'exported_columns': 415, 'target_forests': 383}, {'package': 'fresh_raw112_complete_marker_family_20261018', 'exported_columns': 529, 'target_forests': 383}], 'export_origins': 3828, 'distinct_joint_primitive_charges': 2354, 'ordinary_vector_inequalities': 7622, 'marker_boundary_inequalities': 5447, 'old_dual_violated_distinct_charges': 112, 'fixed_mass_ratio': '14671331978990040/1224897727063181', 'physical_tests_repeated': 0, 'clique_census_repeated': False, 'charge_validity': 'Frozen complete family geometry and marker envelopes inherited; saved ordinary-vector, omission, marker-boundary and source-coefficient arithmetic reconstructed.'}
+CURRENT327_NEW_CHARGES {'input_counts': [{'package': 'fresh_current324_new5073_local_covers_20261018', 'available_records': 600, 'exported_charges': 25}, {'package': 'fresh_new5073_raw76_high_mass_local_covers_20261018', 'available_records': 6, 'exported_charges': 6}, {'package': 'fresh_new5073_raw76_third_class_local_covers_20261018', 'available_records': 3, 'exported_charges': 3}], 'exported_charge_certificates': 34, 'charge_inequalities': 530, 'mixture_terms': 244, 'distinct_charges': 34, 'old_dual_violations': 34, 'fixed_mass_ratio': '222628992286411620/18626751528919241'}
+CURRENT324_CHARGE_AUDIT {'input_counts': [{'package': 'fresh_cross_vertex_current290_local_covers_20261018', 'records': 571, 'nonzero_charges': 512, 'exports': 16}, {'package': 'fresh_cross_vertex_historical32_local_covers_20261018', 'records': 161, 'nonzero_charges': 161, 'exports': 27}, {'package': 'fresh_new5121_raw4_two_face_local_covers_20261018', 'records': 6, 'nonzero_charges': 6, 'exports': 4}], 'saved_charge_certificates': 738, 'saved_charge_inequalities': 3273, 'zero_charge_records': 59, 'distinct_local_charges': 647, 'old_dual_violated_exports': 47, 'baseline_fixed_mass_bound': '205569148850452800/16961245013123269'}
+PREPARED_CURRENT324_MODEL {'inherited_variables': 439619, 'variables': 439822, 'faces': 82806, 'vertex_forests': 6558, 'active_variables': 173996, 'zero_budget_signed_variables': 96176, 'inherited_vertex_cost_signed_variables': 52, 'appended_local_columns': 203, 'reused_local_columns': 444, 'preserved_multi_owner_columns': 14, 'old_dual_violated_new_columns': 47, 'face_matrix_nonzeros': 829446} 0ddd1b3a76ca6041463b6f1e149efa44710eb12d0261472e5f55be0ddde7ee98 seconds 72.78
+PREPARED_CURRENT327_MODEL {'inherited_variables': 439822, 'variables': 439856, 'faces': 82806, 'vertex_forests': 6558, 'active_variables': 174030, 'zero_budget_signed_variables': 96176, 'inherited_vertex_cost_signed_variables': 52, 'appended_local_columns': 34, 'reused_local_columns': 0, 'preserved_multi_owner_columns': 14, 'old_dual_violated_new_columns': 34, 'face_matrix_nonzeros': 829635} 06c861427de31f38993789b9bc23e7c74c8a04ecbe0b13bc818c5ecde35ac8f3 seconds 77.57
+PREPARED_ALL_MARKER_FAMILIES {'inherited_variables': 439856, 'variables': 442210, 'faces': 82806, 'vertex_forests': 6558, 'active_variables': 176384, 'zero_budget_signed_variables': 96176, 'inherited_vertex_cost_signed_variables': 52, 'export_origins': 3828, 'distinct_family_charges': 2354, 'appended_family_columns': 2354, 'reused_family_columns': 0, 'preserved_multi_owner_columns': 14, 'face_matrix_nonzeros': 833679} bcf95974272b6e4bf4225003dd379fc50bb725d483177a6d2ab3c8c2d7d1a046 seconds 85.91
+Running HiGHS 1.14.0 (git hash: 7df0786): Copyright (c) 2026 under MIT licence terms
+EQUIVALENT_NORMALIZED_DUAL_IPM_BEGIN (176385, 89364) 920459 inactive_nonpositive_entries 66153
+LP has 176385 rows; 89364 cols; 920459 nonzeros
+Coefficient ranges:
+  Matrix  [1e+00, 3e+02]
+  Cost    [1e+00, 2e+01]
+  Bound   [0e+00, 0e+00]
+  RHS     [1e+00, 1e+00]
+Presolving model
+176385 rows, 89363 cols, 920458 nonzeros 0s
+117250 rows, 89337 cols, 715033 nonzeros 0s
+117143 rows, 89217 cols, 715392 nonzeros 5s
+Presolve reductions: rows 117143(-59242); columns 89217(-147); nonzeros 715392(-205067) 
+Solving the presolved LP
+IPX model has 117143 rows, 89217 columns and 715392 nonzeros
+Input
+    Number of variables:                                89217
+    Number of free variables:                           0
+    Number of constraints:                              117143
+    Number of equality constraints:                     72
+    Number of matrix entries:                           715392
+    Matrix range:                                       [1e+00, 3e+02]
+    RHS range:                                          [4e+00, 4e+00]
+    Objective range:                                    [1e+00, 2e+01]
+    Bounds range:                                       [0e+00, 0e+00]
+Preprocessing
+    Dualized model:                                     no
+    Number of dense columns:                            0
+    Range of scaling factors:                           [1.25e-01, 2.00e+00]
+    Scaled cost norm:                                   20
+    Scaled bounds norm:                                 4
+IPX version 1.0
+Interior point solve
+ Iter       primal obj         dual obj       pinf       dinf       gap      time
+   0   -3.87207255e+00  -3.94048698e+00   4.62e-01   3.09e-01  1.39e-02       5.9
+   1    8.19092768e+03  -2.89905696e+01   3.46e-01   2.13e-01  2.01e+00       6.3
+   2    1.44352464e+04  -5.32598196e+01   2.32e-01   1.42e-01  2.01e+00       6.6
+   3    1.61072466e+04  -9.31491079e+01   1.53e-01   7.31e-02  2.02e+00       6.8
+   4    1.35639096e+04  -1.33992107e+02   1.02e-01   3.59e-02  2.04e+00       7.1
+   5    1.06472424e+04  -1.93006831e+02   6.69e-02   1.35e-02  2.07e+00       7.5
+   6    3.12839371e+03  -2.36903318e+02   1.55e-02   1.35e-08  2.33e+00       7.9
+   7    2.48448205e+01  -2.35949382e+02   1.53e-04   2.57e-14  2.45e+00       8.2
+   8    6.02430648e-01  -1.92071734e+02   2.60e-05   1.62e-14  1.99e+00       8.7
+   9   -2.45001151e+00  -1.13743529e+02   1.05e-05   1.08e-14  1.88e+00       9.3
+  10   -3.67397686e+00  -6.92962049e+01   3.39e-06   5.41e-15  1.75e+00      10.1
+  11   -4.27101893e+00  -3.74185483e+01   1.11e-06   3.05e-15  1.52e+00      10.9
+  12   -4.63350570e+00  -3.14004516e+01   7.39e-07   3.38e-15  1.41e+00      11.9
+  13   -5.16799907e+00  -2.26351971e+01   4.41e-07   1.69e-15  1.17e+00      12.9
+ Constructing starting basis...
+ Iter       primal obj         dual obj       pinf       dinf       gap      time
+  14   -5.60554167e+00  -2.01673792e+01   3.37e-07   1.52e-15  1.05e+00      14.8
+  15   -6.24669211e+00  -1.85002144e+01   2.34e-07   1.35e-15  9.16e-01      15.4
+  16   -6.78561462e+00  -1.76731192e+01   1.69e-07   1.35e-15  8.23e-01      16.1
+  17   -7.22156695e+00  -1.67857059e+01   1.37e-07   1.35e-15  7.35e-01      16.7
+  18   -7.89421841e+00  -1.64769744e+01   9.58e-08   1.18e-15  6.51e-01      17.4
+  19   -8.54501229e+00  -1.57338929e+01   6.90e-08   8.46e-16  5.47e-01      18.1
+  20   -8.99352008e+00  -1.52785784e+01   4.80e-08   9.30e-16  4.78e-01      19.0
+  21   -9.41993374e+00  -1.50479622e+01   3.40e-08   1.35e-15  4.25e-01      19.9
+  22   -9.85080045e+00  -1.46057303e+01   2.47e-08   6.77e-16  3.59e-01      20.8
+  23   -1.00846740e+01  -1.41527194e+01   1.94e-08   8.46e-16  3.10e-01      21.7
+  24   -1.03567303e+01  -1.37886990e+01   1.33e-08   1.02e-15  2.63e-01      22.7
+  25   -1.06799473e+01  -1.35040429e+01   8.75e-09   1.02e-15  2.16e-01      23.7
+  26   -1.07225425e+01  -1.33792325e+01   7.44e-09   8.46e-16  2.04e-01      24.9
+  27   -1.10890699e+01  -1.31208999e+01   4.41e-09   6.77e-16  1.55e-01      25.7
+  28   -1.12308843e+01  -1.28789025e+01   3.05e-09   6.77e-16  1.26e-01      26.7
+  29   -1.13149996e+01  -1.27688158e+01   2.49e-09   1.02e-15  1.11e-01      27.7
+  30   -1.14250103e+01  -1.26922474e+01   1.83e-09   6.77e-16  9.70e-02      28.6
+  31   -1.15795274e+01  -1.26184682e+01   1.09e-09   8.46e-16  7.93e-02      29.3
+  32   -1.15932688e+01  -1.25981951e+01   9.82e-10   8.46e-16  7.67e-02      30.1
+  33   -1.16917686e+01  -1.25471439e+01   7.05e-10   1.02e-15  6.52e-02      30.8
+  34   -1.17547592e+01  -1.25092507e+01   5.37e-10   5.08e-16  5.75e-02      31.6
+  35   -1.17677427e+01  -1.24894575e+01   4.87e-10   6.77e-16  5.50e-02      32.4
+  36   -1.18451561e+01  -1.24752582e+01   3.84e-10   6.77e-16  4.79e-02      33.2
+  37   -1.18780575e+01  -1.24592849e+01   2.60e-10   1.02e-15  4.41e-02      34.0
+  38   -1.19958794e+01  -1.24271294e+01   1.70e-10   1.18e-15  3.26e-02      34.8
+  39   -1.20298531e+01  -1.24179648e+01   1.22e-10   1.02e-15  2.93e-02      35.7
+  40   -1.20808923e+01  -1.23955244e+01   8.73e-11   6.77e-16  2.38e-02      36.5
+  41   -1.21414907e+01  -1.23814484e+01   4.33e-11   1.02e-15  1.81e-02      37.4
+  42   -1.21508243e+01  -1.23798421e+01   3.92e-11   6.77e-16  1.73e-02      38.2
+  43   -1.22009450e+01  -1.23712657e+01   2.25e-11   1.02e-15  1.28e-02      38.9
+  44   -1.22241309e+01  -1.23653183e+01   1.57e-11   6.77e-16  1.06e-02      39.6
+  45   -1.22409553e+01  -1.23611432e+01   9.89e-12   8.46e-16  9.04e-03      40.4
+  46   -1.22591456e+01  -1.23576823e+01   6.22e-12   6.77e-16  7.40e-03      41.3
+  47   -1.22619146e+01  -1.23560848e+01   5.11e-12   1.02e-15  7.08e-03      42.2
+  48   -1.22801364e+01  -1.23509857e+01   3.49e-12   8.46e-16  5.32e-03      42.9
+  49   -1.22868612e+01  -1.23500012e+01   2.63e-12   8.46e-16  4.74e-03      43.9
+  50   -1.22888961e+01  -1.23492482e+01   2.32e-12   8.46e-16  4.53e-03      44.6
+  51   -1.23024930e+01  -1.23471249e+01   1.51e-12   1.18e-15  3.35e-03      45.2
+  52   -1.23093420e+01  -1.23457684e+01   8.11e-13   6.77e-16  2.73e-03      46.0
+  53   -1.23137044e+01  -1.23448279e+01   5.11e-13   6.77e-16  2.33e-03      46.7
+  54   -1.23178131e+01  -1.23440353e+01   2.83e-13   1.02e-15  1.97e-03      47.5
+  55   -1.23240067e+01  -1.23434916e+01   9.13e-14   6.77e-16  1.46e-03      48.3
+  56   -1.23269867e+01  -1.23426700e+01   4.26e-14   8.46e-16  1.18e-03      49.1
+  57   -1.23279385e+01  -1.23423485e+01   3.55e-14   6.77e-16  1.08e-03      50.0
+  58   -1.23308743e+01  -1.23419145e+01   2.33e-14   6.77e-16  8.28e-04      50.8
+  59   -1.23318552e+01  -1.23415412e+01   1.54e-14   6.77e-16  7.26e-04      51.7
+  60   -1.23329235e+01  -1.23411288e+01   1.16e-14   1.35e-15  6.15e-04      52.5
+  61   -1.23343271e+01  -1.23408748e+01   8.05e-15   1.35e-15  4.91e-04      53.4
+  62   -1.23352402e+01  -1.23406676e+01   4.81e-15   6.77e-16  4.07e-04      54.0
+  63   -1.23364314e+01  -1.23404090e+01   2.88e-15   8.46e-16  2.98e-04      54.7
+  64   -1.23370211e+01  -1.23403308e+01   1.93e-15   1.18e-15  2.48e-04      55.4
+  65   -1.23378092e+01  -1.23402067e+01   1.27e-15   6.77e-16  1.80e-04      56.2
+  66   -1.23382783e+01  -1.23400862e+01   1.45e-15   6.77e-16  1.36e-04      57.0
+  67   -1.23385014e+01  -1.23399937e+01   4.50e-16   8.46e-16  1.12e-04      57.7
+  68   -1.23388087e+01  -1.23399006e+01   8.84e-16   8.46e-16  8.19e-05      58.4
+  69   -1.23389689e+01  -1.23398914e+01   2.87e-16   1.35e-15  6.92e-05      59.1
+  70   -1.23391296e+01  -1.23398485e+01   3.68e-15   1.02e-15  5.39e-05      59.8
+  71   -1.23393004e+01  -1.23398229e+01   2.37e-15   1.02e-15  3.92e-05      60.5
+  72   -1.23393675e+01  -1.23397952e+01   1.12e-15   8.46e-16  3.21e-05      61.1
+  73   -1.23394626e+01  -1.23397766e+01   1.04e-15   1.02e-15  2.35e-05      61.6
+  74   -1.23394750e+01  -1.23397714e+01   1.37e-15   8.46e-16  2.22e-05      62.2
+  75   -1.23395240e+01  -1.23397577e+01   1.26e-15   1.02e-15  1.75e-05      62.7
+  76   -1.23395410e+01  -1.23397515e+01   8.14e-17   6.77e-16  1.58e-05      63.3
+  77   -1.23395875e+01  -1.23397441e+01   4.52e-16   1.02e-15  1.17e-05      63.7
+  78   -1.23396208e+01  -1.23397385e+01   1.21e-15   1.02e-15  8.82e-06      64.2
+  79   -1.23396446e+01  -1.23397275e+01   1.54e-15   6.77e-16  6.21e-06      64.8
+  80   -1.23396489e+01  -1.23397214e+01   2.10e-15   8.46e-16  5.43e-06      65.4
+  81   -1.23396665e+01  -1.23397184e+01   1.45e-16   1.18e-15  3.89e-06      65.9
+  82   -1.23396685e+01  -1.23397153e+01   2.03e-15   5.08e-16  3.51e-06      66.5
+  83   -1.23396829e+01  -1.23397140e+01   2.30e-15   8.46e-16  2.33e-06      67.0
+  84   -1.23396907e+01  -1.23397133e+01   1.77e-15   6.77e-16  1.69e-06      67.8
+  85   -1.23396960e+01  -1.23397116e+01   2.37e-15   8.46e-16  1.17e-06      68.5
+  86   -1.23397003e+01  -1.23397117e+01   3.54e-15   1.02e-15  8.56e-07      69.3
+  87   -1.23397043e+01  -1.23397114e+01   1.66e-15   8.46e-16  5.32e-07      70.1
+  88   -1.23397046e+01  -1.23397101e+01   2.40e-15   6.77e-16  4.08e-07      71.2
+  89   -1.23397070e+01  -1.23397107e+01   1.10e-15   1.35e-15  2.74e-07      71.6
+  90   -1.23397087e+01  -1.23397108e+01   2.53e-16   6.77e-16  1.61e-07      72.6
+  91   -1.23397098e+01  -1.23397112e+01   9.85e-17   6.77e-16  1.05e-07      73.6
+  92   -1.23397105e+01  -1.23397113e+01   1.22e-16   8.46e-16  5.63e-08      74.4
+  93   -1.23397106e+01  -1.23397113e+01   1.12e-15   6.77e-16  4.80e-08      75.1
+  94   -1.23397113e+01  -1.23397115e+01   1.45e-15   8.46e-16  1.33e-08      75.5
+  95*  -1.23397114e+01  -1.23397115e+01   1.37e-15   8.46e-16  8.19e-09      76.5
+Summary
+    Runtime:                                            76.48s
+    Status interior point solve:                        imprecise
+    Status crossover:                                   not run
+    objective value:                                    -1.23397111e+01
+    interior solution primal residual (abs/rel):        1.15e-07 / 2.29e-08
+    interior solution dual residual (abs/rel):          4.21e-09 / 2.00e-10
+    interior solution objective gap (abs/rel):          4.35e-07 / 3.26e-08
+WARNING: Ipx: IPM       imprecise
+WARNING: Unwelcome IPX status of Unknown: basis is not valid; solution is valid; run_crossover is "off"
+WARNING: Running postsolve on non-optimal solution of reduced LP
+
+WARNING: Model status changed from "Unknown" to "Optimal"
+
+Performed postsolve
+
+Model status        : Optimal
+IPM       iterations: 95
+Objective value     : -1.2339711100e+01
+P-D objective error :  1.6925878448e-08
+HiGHS run time      :         76.49
+EQUIVALENT_NORMALIZED_DUAL_IPM_END {'interface': 'highspy', 'highs_version': '1.14.0', 'scipy_version': '1.17.1', 'numpy_version': '2.4.4', 'method': 'IPM on equivalent normalized dual', 'options': {'solver': 'ipm', 'run_crossover': 'off', 'time_limit': 900.0, 'threads': 4, 'presolve': 'on', 'random_seed': 0}, 'run_status': 'HighsStatus.kOk', 'model_status': 'HighsModelStatus.kOptimal', 'model_status_string': 'Optimal', 'success': True, 'elapsed_seconds': 76.49415266700089, 'ipm_iterations': 95, 'simplex_iterations': 0, 'objective': -12.339711099623605, 'primal_solution_status': 2, 'dual_solution_status': 2, 'value_valid': True, 'dual_valid': True, 'numerical_warm_start': False, 'feasible_exact_start': 'Frozen raw112 normalized dual remains an exact feasible candidate; IPM is started without a basis so presolve stays available.'}
+PASS_EXACT_ALL_MARKER_FAMILIES_CONTINUATION_INTERVAL {'lower': '4275709870626110/346500030107667', 'upper': '1233971157349/100000000000', 'gap': '56110810193068294783/34650003010766700000000000', 'lower_exceeds12': True, 'upper_at_most12': False}

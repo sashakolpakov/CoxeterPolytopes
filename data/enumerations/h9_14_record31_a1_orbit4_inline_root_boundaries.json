@@ -1,0 +1,117 @@
+{
+  "kind": "h9_14_record31_a1_orbit4_inline_root_boundary_log",
+  "status": "terminal_complete_source_orbit_certificate_by_root_class_partition",
+  "source_orbit_index": 4,
+  "positive_A4_mask": 10252,
+  "class_id_convention": "One-based order in which a new canonical depth-one state is first inserted by the deterministic production traversal.",
+  "run": {
+    "command": "caffeinate -i /private/tmp/record31_a1_inline --quotient > /private/tmp/record31_a1_orbit4_inline_quotient.json",
+    "stdin": "1\n4 10252\n",
+    "started_at": "2026-08-07T12:10:08+0200",
+    "unified_session_id": 75192,
+    "generated_source_sha256": "ec577df47018f1d03d48e8304c56a2541ef02180144937600569ec0a9a7e68c7",
+    "binary_sha256": "0cb72b4b62c4ec8f66f3440f87d2eb4b1771a67dab6203ab67b0fe611e5c3bf4",
+    "full_prefix_depth_one_class_count": 6,
+    "full_prefix_depth_two_state_count": 89,
+    "full_prefix_diagnostic_search_node_count": 1233,
+    "state_spliced_from_another_run": false
+  },
+  "completed_class_boundaries": [
+    {
+      "completed_class_id": 1,
+      "next_active_class_id": 2,
+      "first_observed_search_node_checkpoint_after_transition": 30000000,
+      "canonical_state_counts_by_depth": [1, 2, 16, 545, 28041, 1759676, 19812477, 7667],
+      "target_orbit_lower_bound": 0
+    },
+    {
+      "completed_class_id": 2,
+      "next_active_class_id": 3,
+      "first_observed_search_node_checkpoint_after_transition": 60000000,
+      "canonical_state_counts_by_depth": [1, 3, 35, 1052, 49707, 2976652, 38387891, 19665],
+      "target_orbit_lower_bound": 0
+    },
+    {
+      "completed_class_id": 3,
+      "next_active_class_id": 4,
+      "first_observed_search_node_checkpoint_after_transition": 79000000,
+      "canonical_state_counts_by_depth": [1, 4, 51, 1749, 87940, 4760678, 49082526, 22912],
+      "target_orbit_lower_bound": 0
+    }
+  ],
+  "latest_observed_checkpoint": {
+    "search_node_count": 83000000,
+    "canonical_state_counts_by_depth": [1, 4, 57, 1907, 94502, 5033394, 51052435, 27343],
+    "active_class_id": 4,
+    "completed_class_ids": [1, 2, 3],
+    "target_orbit_lower_bound": 0
+  },
+  "clean_interrupt": {
+    "signal": "SIGINT",
+    "shell_exit_code": 1,
+    "terminal_stdout_bytes": 0,
+    "completed_class_ids_retained_as_exact_boundary": [1, 2, 3],
+    "partial_class_id": 4,
+    "partial_class_checkpoint_search_node_count": 83000000,
+    "partial_class_data_is_diagnostic_only": true,
+    "reason": "Memory priority was rebalanced to the positive-example X0 cast."
+  },
+  "planned_selective_restart": {
+    "root_class_begin": 4,
+    "root_class_end": 6,
+    "requirement": "Use the equivalence-tested root-class-range engine and treat fragment node/histogram counts as nonadditive overcoverage; the target-orbit union is theorem-facing.",
+    "status": "terminal_complete",
+    "command": "caffeinate -i /private/tmp/record31_a1_root_class --quotient --root-classes 4 6 > /private/tmp/record31_a1_orbit4_root_classes4_6.json",
+    "stdin": "1\n4 10252\n",
+    "started_at": "2026-08-07T12:54:23+0200",
+    "unified_session_id": 56760,
+    "generated_source_sha256": "b2e34b810432db09fe685b52b39ff97ade0c7c1b3250deea0fbe8904713ba945",
+    "binary_sha256": "c16296e21f5eddc43911c2b1bcbb5f05bccd8850911c2b057390a53a9d10ee0e",
+    "completed_original_root_class_boundaries": [
+      {
+        "completed_class_id": 4,
+        "next_active_class_id": 5,
+        "first_observed_fragment_search_node_checkpoint_after_transition": 23000000,
+        "fragment_canonical_state_counts_by_depth": [1, 2, 27, 779, 38613, 1903702, 12711634, 17671],
+        "fragment_target_orbit_lower_bound": 0
+      },
+      {
+        "completed_class_id": 5,
+        "next_active_class_id": 6,
+        "first_observed_fragment_search_node_checkpoint_after_transition": 84000000,
+        "fragment_canonical_state_counts_by_depth": [1, 3, 48, 1613, 84043, 4617082, 53554911, 22889],
+        "fragment_target_orbit_lower_bound": 0
+      }
+    ],
+    "latest_observed_fragment_checkpoint": {
+      "search_node_count": 105066986,
+      "canonical_state_counts_by_depth": [1, 3, 69, 2145, 106155, 5683652, 65673348, 31285],
+      "active_original_class_id": null,
+      "completed_original_class_ids": [4, 5, 6],
+      "target_orbit_lower_bound": 0
+    },
+    "terminal_completion": {
+      "completed_at": "2026-08-07T13:41:57+0200",
+      "exit_code": 0,
+      "search_node_count": 105066986,
+      "partition_depth_node_counts": [1, 196, 588, 11704, 337227, 11025632, 93591394, 100244],
+      "quotient_seen_counts": [1, 3, 69, 2145, 106155, 5683652, 65673348, 31285],
+      "discovered_root_class_count": 6,
+      "selected_root_class_ids": [4, 5, 6],
+      "skipped_root_class_ids": [1, 2, 3],
+      "pure_120_facet_target_count": 3184,
+      "pure_ridge_signature_count": 818,
+      "ridge_valid_target_orbit_count": 0,
+      "terminal_transcript": "data/enumerations/h9_14_record31_a1_orbit4_root_classes4_6.json",
+      "terminal_transcript_sha256": "dc463688433307ad8fe04c0a03af73b2080ef0fa49e71732743eaaca80675acc"
+    }
+  },
+  "claims": {
+    "terminal_transcript_written": true,
+    "target_orbit_count_is_final": true,
+    "source_orbit_census_complete": true,
+    "source_orbit_ridge_valid_target_orbit_count": 0,
+    "record31_a1_schedule_theorem": false
+  },
+  "logical_scope": "The normal depth-first traversal completed root classes 1 through 3 with zero ridge-valid targets. The terminal equivalence-tested complementary traversal exhausts classes 4 through 6 and also has zero ridge-valid targets. Their canonical target-orbit union is empty and exhausts source orbit 4. Fragment nodes and internal histograms are nonadditive and are not combined. This is not a full Record-31 a=1 schedule theorem or a finite-volume noncompact statement."
+}

@@ -1,0 +1,98 @@
+{
+  "status": "PASS_SEPARATE_INTERVAL_ALL_Y_DUAL_BOUND_REVIEW",
+  "sources": {
+    "results/fresh_h20_e8_completion_gate_20261014.json": "b5982e5fe27bf446dea6184018029201e1d752eadce9dab51210b72140ae284f",
+    "results/fresh_h20_e8_cusp_completion_20261014.json": "796d4783a48a93702f7700e132f6a574107a98e359d09da5a3b87a9efa4f2072",
+    "results/fresh_h20_contact_closure_20261014_h12_replacement.json": "873facedefb24909d24b909ac3c5d35fbc48933d806a7c56e2044e01798d8e97",
+    "scripts/fresh_h20_e8_completion_gate_20261014_review.py": "04017782c21c2422e678221c4baa5d515ea0f398ea41413810410e5e6049b8ab",
+    "scripts/fresh_h20_e8_cusp_completion_20261014_review.py": "b6f2c42d99d011c064758646bfdfbc6c40620636ba7d9ad419bbe7a2a4777bfe"
+  },
+  "dual_domains": [
+    {
+      "kind": "single_threshold",
+      "support": [
+        1
+      ],
+      "minimum_squared_magnitude": 1
+    },
+    {
+      "kind": "single_negative_linear",
+      "support": [
+        7
+      ],
+      "minimum_squared_magnitude": null
+    },
+    {
+      "kind": "single_threshold",
+      "support": [
+        0
+      ],
+      "minimum_squared_magnitude": 2
+    },
+    {
+      "kind": "single_threshold",
+      "support": [
+        2
+      ],
+      "minimum_squared_magnitude": 2
+    },
+    {
+      "kind": "independent_magnitudes_at_least_one",
+      "support": [
+        0,
+        1
+      ],
+      "minimum_squared_magnitude": null
+    },
+    {
+      "kind": "independent_magnitudes_at_least_one",
+      "support": [
+        0,
+        2
+      ],
+      "minimum_squared_magnitude": null
+    },
+    {
+      "kind": "independent_magnitudes_at_least_one",
+      "support": [
+        1,
+        2
+      ],
+      "minimum_squared_magnitude": null
+    },
+    {
+      "kind": "independent_magnitudes_at_least_one",
+      "support": [
+        1,
+        3
+      ],
+      "minimum_squared_magnitude": null
+    },
+    {
+      "kind": "independent_magnitudes_at_least_one",
+      "support": [
+        1,
+        7
+      ],
+      "minimum_squared_magnitude": null
+    },
+    {
+      "kind": "independent_magnitudes_at_least_one",
+      "support": [
+        2,
+        3
+      ],
+      "minimum_squared_magnitude": null
+    },
+    {
+      "kind": "equal_magnitudes_at_least_one",
+      "support": [
+        0,
+        7
+      ],
+      "minimum_squared_magnitude": null
+    }
+  ],
+  "null_ray_bounds": 2,
+  "scope": "Reconstructs all11 nonnegative dual recipes and all field inequalities using sparse radical multiplication and160bit rational intervals; no optimizer or producer imports. Source-cone completeness and embedding remain certified inherited dependencies, not a new enumeration. The bounds concern exactly the stated contact domains."
+}

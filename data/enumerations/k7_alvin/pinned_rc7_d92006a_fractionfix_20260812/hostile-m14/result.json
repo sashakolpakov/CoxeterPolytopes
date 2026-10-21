@@ -1,0 +1,225 @@
+{
+  "acceptance_passes": true,
+  "algorithm_ended_marker": true,
+  "case": "hostile-m14",
+  "checks": {
+    "complete_termination": true,
+    "expected_facets": true,
+    "expected_matrix": true,
+    "independent_exact_replay": true,
+    "printed_qf_no_squarefactor_change": true
+  },
+  "compact_reported_by_alvin": true,
+  "complete_termination": true,
+  "elapsed_seconds": 0.346519333019387,
+  "externally_stopped": null,
+  "finished_at_utc": "2026-08-12T10:53:41.789388+00:00",
+  "finite_volume_reported_by_alvin": true,
+  "graph": {
+    "coxeter_matrix": [
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        14
+      ],
+      [
+        2,
+        1,
+        14,
+        1
+      ]
+    ],
+    "coxiter_file": "2-[1,0,0],1,[-2,-5,-7].coxiter",
+    "dimension": 2,
+    "facets": 4
+  },
+  "independent_verifier": {
+    "command_argv": [
+      "/Users/sasha/.venvs/global/bin/python3",
+      "/Users/sasha/CoxeterPolytopes/tools/verify_cubic7_alvin.py",
+      "--coxiter",
+      "/Users/sasha/CoxeterPolytopes/data/enumerations/k7_alvin/pinned_rc7_d92006a_fractionfix_20260812/hostile-m14/output/2-[1,0,0],1,[-2,-5,-7].coxiter",
+      "--roots",
+      "/Users/sasha/CoxeterPolytopes/data/enumerations/k7_alvin/pinned_rc7_d92006a_fractionfix_20260812/hostile-m14/stdout.txt",
+      "--qf",
+      "[-1,0,0], 1, [-2,-5,-7]",
+      "--labelg",
+      "/opt/homebrew/bin/labelg",
+      "--output",
+      "/Users/sasha/CoxeterPolytopes/data/enumerations/k7_alvin/pinned_rc7_d92006a_fractionfix_20260812/hostile-m14/independent_verifier.json"
+    ],
+    "geometry": {
+      "compact": true,
+      "cusp_count": 0,
+      "extreme_rays": [
+        {
+          "active_facets": [
+            0,
+            3
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "0",
+            "b": "-4",
+            "c": "-2"
+          },
+          "vector": [
+            {
+              "a": "0",
+              "b": "2",
+              "c": "1"
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "c": "0"
+            },
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        },
+        {
+          "active_facets": [
+            0,
+            1
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "0",
+            "b": "-1",
+            "c": "0"
+          },
+          "vector": [
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "c": "0"
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        },
+        {
+          "active_facets": [
+            2,
+            3
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "1",
+            "b": "-1",
+            "c": "0"
+          },
+          "vector": [
+            {
+              "a": "0",
+              "b": "2",
+              "c": "1"
+            },
+            {
+              "a": "0",
+              "b": "1",
+              "c": "1"
+            },
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        },
+        {
+          "active_facets": [
+            1,
+            2
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "4",
+            "b": "-2",
+            "c": "-2"
+          },
+          "vector": [
+            {
+              "a": "3",
+              "b": "0",
+              "c": "-1"
+            },
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        }
+      ],
+      "finite_vertex_count": 4,
+      "finite_volume": true,
+      "hyperideal_ray_count": 0,
+      "status": "compact"
+    },
+    "passes": true,
+    "report": "independent_verifier.json",
+    "return_code": 0,
+    "scope": {
+      "alvin_transcript_declares_termination": true,
+      "alvin_wall_enumeration_completeness_independently_checked": false,
+      "warning": "This replay verifies the supplied chamber exactly. It does not replay AlVin's height-ordered root enumeration or prove that no reflecting wall was omitted."
+    }
+  },
+  "kind": "regression",
+  "output_artifacts": [
+    {
+      "bytes": 48,
+      "path": "output/2-[1,0,0],1,[-2,-5,-7].coxiter",
+      "sha256": "5eec3678e9c58aec777c47f0571d7b9277ae82b94e32198d8db59a90f6df2330"
+    },
+    {
+      "bytes": 118,
+      "path": "output/2-[1,0,0],1,[-2,-5,-7].graphviz",
+      "sha256": "e74d24d3e6609b4f1875652620c6edd450d1d9d448474ef4924ac5ccd3bf9673"
+    }
+  ],
+  "printed_qf_exact_input_order": true,
+  "printed_qf_same_diagonal_multiset": true,
+  "qf_printed": "[-1,0,0], 1, [-2,-5,-7]",
+  "qf_requested": "[-1,0,0],1,[-2,-5,-7]",
+  "return_code": 0,
+  "schema": "coxeter.k7_alvin.live_result.v1",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "a21e1e4dcce55c23b3a9c9d628ed863cfb98d53d35be10ffd3a4e72a22d377ab",
+  "vertices_at_infinity_reported_by_alvin": 0
+}

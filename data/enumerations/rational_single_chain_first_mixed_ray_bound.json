@@ -1,0 +1,549 @@
+{
+  "F2_low_pairing_certificate": {
+    "branch": "q=4, T_11=0, C.w_F2<0",
+    "rows": [
+      {
+        "a": 0,
+        "monotone_fibre_patterns": 1,
+        "square_solutions": 0,
+        "sum_and_section_candidates": 0
+      },
+      {
+        "a": 1,
+        "monotone_fibre_patterns": 2,
+        "square_solutions": 0,
+        "sum_and_section_candidates": 0
+      },
+      {
+        "a": 2,
+        "monotone_fibre_patterns": 13,
+        "square_solutions": 0,
+        "sum_and_section_candidates": 1
+      },
+      {
+        "a": 3,
+        "monotone_fibre_patterns": 24,
+        "square_solutions": 0,
+        "sum_and_section_candidates": 0
+      }
+    ],
+    "solutions": 0,
+    "tested_a_values": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "F2_symbolic_proof": {
+    "adjunction_total_multiplicity": "sum mu_i=2b+q-2",
+    "all_physical_pairings_nonnegative": true,
+    "fibre_nonintersection": "a>=mu_1+mu_2",
+    "mixed_pairing_identity": "C.w_F2=a-2q+4+2*sum_{i>11}mu_i",
+    "proximity": "mu_1>=mu_2>=...>=0 along the fibre-following free chain",
+    "section_nonintersection": "b>=2a",
+    "species": {
+      "minus_four": {
+        "T_at_least_2": "pairing nonnegative",
+        "T_equals_0_a_at_most_3_cases": {
+          "a=0_or_1": "total multiplicity sum contradicts b>=2a",
+          "a=2": "only b=4 and ten ones survive the sum bound; square sum 10 contradicts required 12",
+          "a=3": "total multiplicity is at most 12 but at least 14"
+        },
+        "T_equals_1": "proximity and fibre nonintersection give a>=mu_1+mu_2>=2",
+        "conclusion": "a>=4, so C.w_F2>=0",
+        "pairing_reparameterization": [
+          "T=sum_{i>11}mu_i",
+          "C.w_F2=a-4+2T"
+        ],
+        "q": 4
+      },
+      "minus_one": {
+        "pairing_lower_bound_from_a_ge_0": 2,
+        "q": 1
+      },
+      "minus_two": {
+        "pairing_lower_bound_from_a_ge_0": 0,
+        "q": 2
+      }
+    }
+  },
+  "certificate": "rational_single_chain_first_mixed_ray_bound",
+  "finite_volume_conclusion": {
+    "F2_chain_length_at_most": 10,
+    "plane_chain_length_at_most": 11,
+    "reason": "the spacelike first mixed ray lies in every physical wall halfspace; the homogeneous cone of a finite-volume finite-sided hyperbolic polyhedron cannot contain it"
+  },
+  "plane_low_pairing_certificate": {
+    "branch": "q=4, T_12=0, C.w_P2<0",
+    "rows": [
+      {
+        "R": 0,
+        "monotone_line_patterns": 1,
+        "square_solutions": 0,
+        "sum_and_proximity_candidates": 0
+      },
+      {
+        "R": 1,
+        "monotone_line_patterns": 2,
+        "square_solutions": 0,
+        "sum_and_proximity_candidates": 0
+      },
+      {
+        "R": 2,
+        "monotone_line_patterns": 13,
+        "square_solutions": 0,
+        "sum_and_proximity_candidates": 1
+      },
+      {
+        "R": 3,
+        "monotone_line_patterns": 24,
+        "square_solutions": 0,
+        "sum_and_proximity_candidates": 0
+      }
+    ],
+    "solutions": 0,
+    "tested_R_values": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "plane_symbolic_proof": {
+    "adjunction_total_multiplicity": "sum mu_i=3d+q-2",
+    "all_physical_pairings_nonnegative": true,
+    "line_nonintersection": "d>=mu_1+mu_2+mu_3",
+    "mixed_pairing_identity": "C.w_P2=d-mu_1-2q+4+2*sum_{i>12}mu_i",
+    "proximity": "mu_1>=mu_2>=...>=0",
+    "species": {
+      "minus_four": {
+        "T_at_least_2": "pairing nonnegative",
+        "T_equals_0_R_at_most_3_cases": {
+          "R=0_or_1": "total multiplicity sum is immediately too large",
+          "R=2": "the only large-sum pattern forces d=3 and ten remaining ones; remaining square sum 10 contradicts required 12",
+          "R=3": "eleven remaining positions have total at most 12, while the adjunction total is 2d+5 and the small d cases also fail"
+        },
+        "T_equals_1": "proximity gives mu_2,mu_3>=1, hence R>=2 and pairing>=0",
+        "conclusion": "R>=4, so C.w_P2>=0",
+        "pairing_reparameterization": [
+          "R=d-mu_1>=mu_2+mu_3",
+          "T=sum_{i>12}mu_i",
+          "C.w_P2=R-4+2T"
+        ],
+        "q": 4
+      },
+      "minus_one": {
+        "pairing_lower_bound_from_d_ge_mu1": 2,
+        "q": 1
+      },
+      "minus_two": {
+        "pairing_lower_bound_from_d_ge_mu1": 0,
+        "q": 2
+      }
+    }
+  },
+  "scope": {
+    "F2_frame": "s and delta_0 are actual unblown irreducible walls; the second centre is the fibre-following free infinitely-near point (only E1 exceptional), and later centres are free off s",
+    "adapted_half_boundary_host_covered_on_the_exact_frames": true,
+    "arbitrary_single_chain_covered": false,
+    "complete_physical_alphabet": "smooth rational (-1),(-2),(-4) facets",
+    "host": "direct or adapted; no parity/doubling is used",
+    "plane_frame": "alpha_0 and the free exceptional chain are actual unblown irreducible walls",
+    "reflection_classification_or_census_used": false
+  },
+  "standard_mixed_rays": {
+    "F2": [
+      {
+        "canonical_pairing": 4,
+        "m": 11,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 12,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 13,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 14,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 15,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 16,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 17,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 18,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 19,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 20,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 21,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 22,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 23,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 24,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 25,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 26,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 27,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 28,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 29,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 30,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 31,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 32,
+        "nonzero_standard_wall_pairings": {
+          "delta_11": 2,
+          "section_s": 1
+        },
+        "square": -4
+      }
+    ],
+    "plane": [
+      {
+        "canonical_pairing": 4,
+        "m": 12,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 13,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 14,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 15,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 16,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 17,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 18,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 19,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 20,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 21,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 22,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 23,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 24,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 25,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 26,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 27,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 28,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 29,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 30,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 31,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      },
+      {
+        "canonical_pairing": 4,
+        "m": 32,
+        "nonzero_standard_wall_pairings": {
+          "alpha_1": 1,
+          "alpha_12": 2
+        },
+        "square": -4
+      }
+    ]
+  },
+  "status": "PASS_EXACT_CONDITIONAL_DEPTH_BOUND"
+}

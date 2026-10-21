@@ -1,0 +1,92 @@
+{
+  "status": "ACTUAL_AXIOM_OUTPUT_PARSED",
+  "module": "CoxeterProofs.FiniteVolumeTailKernel",
+  "source": "formal/CoxeterProofs/FiniteVolumeTailKernel.lean",
+  "source_sha256": "b8f03fd42fd60248379280d07949f596c21dfd6f16adc44c99060574b4c39daa",
+  "declarations": [
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.bounded_cap_table_check",
+      "axioms": []
+    },
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.bounded_cap_comparison",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.payment_contradiction",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.bounded_tail_payment_contradiction",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.near_pairing_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.far_pairing_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.near_narrow_contradiction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.far_narrow_contradiction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.FiniteVolumeTailKernel.narrow_cusp_contradiction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "sorryAx": false,
+  "unexpected_axioms": [],
+  "runner_stdout": "results/FiniteVolumeTailKernel_axiom_stdout_20261020.txt",
+  "runner_stdout_sha256": "8c986affe06d23038c54fbb6eb2e67a4f50657a3e28878046fe7c56a7a4daf7c",
+  "runner_stdout_bytes": 1023,
+  "execution": "results/finite_volume_tail_kernel_execution_20261020.json",
+  "execution_sha256": "514621159e179f926c5d33cca098e3fc5323ef9c50fcb939d2ed4ad3976b77ac",
+  "compile_ledger": "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolumeTailKernel_compile_ad32bd841dca.json",
+  "compile_ledger_sha256": "ad32bd841dca7ed7c2a0a46655819eb7323d4be14492ddce7a08b16e9591b11a",
+  "axiom_audit_ledger": "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolumeTailKernel_audit_76fd2b13064f.json",
+  "axiom_audit_ledger_sha256": "76fd2b13064f9785c9251fab9c8b25f7bfde384a64c30e1d038c5dc2b1d43f42",
+  "olean": "formal/.lake/build/lib/lean/CoxeterProofs/FiniteVolumeTailKernel.olean",
+  "olean_sha256": "f2f73aa3d060af341c945cfcf0890fbac763691d6e6d394e77cf4eadcacce3c2",
+  "source_review": "results/review_finite_volume_tail_kernel_source_composition_20261020.md",
+  "source_review_sha256": "4ff14c5d7fa8e16d3dc7791a7d9c9b383e6d15f59fd787afe678a508e68e2012",
+  "assumptions_map": "docs/finite_volume_tail_kernel_assumptions_20261020.md",
+  "assumptions_map_sha256": "845e8c08f75c7d388f224f6fc1f04c2b34071c442664cb79790947561f6d01a1",
+  "source_review_pre_execution_map_archive": "formal/source_archives/finite_volume_tail_kernel_assumptions_before_execution_20261020.md.gz",
+  "scope": "105 actual scalar cap comparisons, finite/cusp sum/payment subtraction, and near/far Lorentz closure only. Actual rules, table domain/values, geometry, framing and compact-facet alternative remain explicit inputs; not a full dimension theorem."
+}

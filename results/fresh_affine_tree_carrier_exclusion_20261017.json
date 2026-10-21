@@ -1,0 +1,333 @@
+{
+  "continuations": {
+    "double_terminal_cases": [
+      {
+        "deleted": 14,
+        "old_affine": "B",
+        "order": 18,
+        "result_affine": "D",
+        "result_order": 19,
+        "roles": {
+          "p": 14,
+          "w": 19,
+          "x": 15,
+          "y": 13,
+          "z": 18
+        }
+      },
+      {
+        "deleted": 15,
+        "old_affine": "B",
+        "order": 19,
+        "result_affine": "D",
+        "result_order": 20,
+        "roles": {
+          "p": 15,
+          "w": 20,
+          "x": 16,
+          "y": 14,
+          "z": 19
+        }
+      },
+      {
+        "deleted": 19,
+        "old_affine": "B",
+        "order": 23,
+        "result_affine": "D",
+        "result_order": 24,
+        "roles": {
+          "p": 19,
+          "w": 24,
+          "x": 20,
+          "y": 18,
+          "z": 23
+        }
+      },
+      {
+        "deleted": 1,
+        "old_affine": "C",
+        "order": 18,
+        "result_affine": "B",
+        "result_order": 19,
+        "roles": {
+          "p": 1,
+          "w": 19,
+          "x": 0,
+          "y": 2,
+          "z": 18
+        }
+      },
+      {
+        "deleted": 1,
+        "old_affine": "C",
+        "order": 19,
+        "result_affine": "B",
+        "result_order": 20,
+        "roles": {
+          "p": 1,
+          "w": 20,
+          "x": 0,
+          "y": 2,
+          "z": 19
+        }
+      },
+      {
+        "deleted": 1,
+        "old_affine": "C",
+        "order": 23,
+        "result_affine": "B",
+        "result_order": 24,
+        "roles": {
+          "p": 1,
+          "w": 24,
+          "x": 0,
+          "y": 2,
+          "z": 23
+        }
+      }
+    ],
+    "fork_switch": {
+      "conductances": [
+        "1",
+        "1/2",
+        "1/2"
+      ],
+      "labels": [
+        4,
+        3,
+        3
+      ],
+      "positive_kernel": [
+        "1",
+        "1/sqrt(2)",
+        "1/2",
+        "1/2"
+      ],
+      "result": "connected affine B3; stronger continuation bond gives negative kernel value",
+      "scaled_diagonal": [
+        "2",
+        "1",
+        "1/2",
+        "1/2"
+      ]
+    }
+  },
+  "grounded_identity": {
+    "endpoint_and_lower_bound_checks": 32,
+    "formula": "q(s)=t_x^2*nu_x^2*s+t_y^2*nu_y^2*(L-s)",
+    "reason": "grounded tree Green diagonal, zero cross-component inverse entry"
+  },
+  "role_census": {
+    "opposite_end_lower_cost": "17/4",
+    "outcome_counts": {
+      "small_affine_A2": 1,
+      "small_affine_A3": 4,
+      "small_affine_A4": 1,
+      "terminal_triangle_contacts_both_black": 2,
+      "white_double_terminal_two_step": 1,
+      "white_fork_switch": 2
+    },
+    "rows": [
+      {
+        "contact_squares": [
+          1,
+          1
+        ],
+        "marked_positions": [
+          0,
+          1
+        ],
+        "outcome": "small_affine_A2",
+        "resistance": 1,
+        "role": "main_main",
+        "schur_costs": [
+          "1",
+          "1"
+        ]
+      },
+      {
+        "contact_squares": [
+          1,
+          1
+        ],
+        "marked_positions": [
+          0,
+          1
+        ],
+        "outcome": "terminal_triangle_contacts_both_black",
+        "resistance": 1,
+        "role": "double_main",
+        "schur_costs": [
+          "1",
+          "1/2"
+        ]
+      },
+      {
+        "contact_squares": [
+          2,
+          1
+        ],
+        "marked_positions": [
+          0,
+          1
+        ],
+        "outcome": "terminal_triangle_contacts_both_black",
+        "resistance": 1,
+        "role": "double_main",
+        "schur_costs": [
+          "1",
+          "1"
+        ]
+      },
+      {
+        "contact_squares": [
+          1,
+          1
+        ],
+        "marked_positions": [
+          1,
+          2
+        ],
+        "outcome": "white_double_terminal_two_step",
+        "resistance": 2,
+        "role": "double_main",
+        "schur_costs": [
+          "3/2",
+          "1"
+        ]
+      },
+      {
+        "contact_squares": [
+          1,
+          1
+        ],
+        "marked_positions": [
+          2,
+          3
+        ],
+        "outcome": "small_affine_A3",
+        "resistance": 3,
+        "role": "fork_main",
+        "schur_costs": [
+          "3/2",
+          "3/4"
+        ]
+      },
+      {
+        "contact_squares": [
+          1,
+          1
+        ],
+        "marked_positions": [
+          3,
+          4
+        ],
+        "outcome": "small_affine_A4",
+        "resistance": 4,
+        "role": "fork_main",
+        "schur_costs": [
+          "7/4",
+          "1"
+        ]
+      },
+      {
+        "contact_squares": [
+          1,
+          1
+        ],
+        "marked_positions": [
+          0,
+          2
+        ],
+        "outcome": "small_affine_A3",
+        "resistance": 4,
+        "role": "sibling_forks",
+        "schur_costs": [
+          "1",
+          "1"
+        ]
+      },
+      {
+        "contact_squares": [
+          1,
+          1
+        ],
+        "marked_positions": [
+          0,
+          4
+        ],
+        "outcome": "small_affine_A3",
+        "resistance": 4,
+        "role": "sibling_forks",
+        "schur_costs": [
+          "1",
+          "1"
+        ]
+      },
+      {
+        "contact_squares": [
+          1,
+          1
+        ],
+        "marked_positions": [
+          2,
+          4
+        ],
+        "outcome": "small_affine_A3",
+        "resistance": 4,
+        "role": "sibling_forks",
+        "schur_costs": [
+          "1",
+          "1"
+        ]
+      },
+      {
+        "contact_squares": [
+          1,
+          2
+        ],
+        "marked_positions": [
+          2,
+          4
+        ],
+        "outcome": "white_fork_switch",
+        "resistance": 4,
+        "role": "sibling_forks",
+        "schur_costs": [
+          "3/2",
+          "1"
+        ]
+      },
+      {
+        "contact_squares": [
+          2,
+          1
+        ],
+        "marked_positions": [
+          0,
+          2
+        ],
+        "outcome": "white_fork_switch",
+        "resistance": 4,
+        "role": "sibling_forks",
+        "schur_costs": [
+          "1",
+          "3/2"
+        ]
+      }
+    ],
+    "strict_universal_range": "L<8",
+    "trials": 908
+  },
+  "scope": "The finite role range is derived from q<2 and coefficient>=1/4. Full shared-path/carrier exclusion is the accompanying all-rank proof, not a finite-rank extrapolation.",
+  "source_sha256": "bc9a3f38202e4ce340c27a20ce4edad059aa25bbe768539869169cbe2d0f7444",
+  "sources": {
+    "results/fresh_affine_cycle_carrier_exclusion_20261017.md": "b06b75e5f61ce5340a7c79a705cc98f8cdde309b45398ce117f0f84c71373c2c",
+    "results/fresh_private_affine_tree_exclusion_20261017.json": "05e854d3970aef8d87edf9b8f6a873f2f384d6696241fe0c329ee19848de9ebf",
+    "results/fresh_private_affine_tree_exclusion_20261017.md": "2221259399e68fa259155cb33657c4d6c7cfaa69233e03ce6cabcc237e92ce28",
+    "results/fresh_simple_cusp_vinberg_weight_frontier_20261017.md": "9c1aad19b00720722144f59d12df9b16bb426a03f59fe7e78bc8ec2f6a6f1d69",
+    "results/fresh_simple_finite_quad_vinberg_transfer_20261017.md": "18b650b94447f00678fd343ac13a93e98893fa56b1f827b1db83f3e24624cdf8",
+    "scripts/fresh_private_affine_tree_exclusion_20261017.py": "933551efa152fd6f436bb389499bd7e09ce2814289033cbd2e399064d6f44fde"
+  },
+  "status": "PASS_ALL_RANK_AFFINE_TREE_CARRIER_ROLE_REDUCTION"
+}

@@ -1,0 +1,22 @@
+diff --git a/rcyclotomic7integer_alvin.cpp b/rcyclotomic7integer_alvin.cpp
+--- a/rcyclotomic7integer_alvin.cpp
++++ b/rcyclotomic7integer_alvin.cpp
+@@ -331,12 +331,16 @@ void RCyclotomic7Integer_AlVin::findVector(
+         rciPartialNorm.set(&rciSquare);
+         rciPartialNorm.multiplyBy(&rciQF[iIndex]);
+ 
+-        if (bBoundsUncertain) // In this contexte, we have to check if rci <= R1
++        // If any interval-derived coefficient bound straddled an integer,
++        // recheck the defining principal-embedding inequalities exactly.
++        // Since R1^2 = rciSumComp / rciQF[iIndex], rci <= R1 is
++        // equivalent to rciQF[iIndex] * rci^2 <= rciSumComp.
++        if (bBoundsUncertain)
+         {
+           if (!rci.isGreaterOEThan(0))
+             continue;
+ 
+-          if (!rci.isLessOEThan(rciSumComp))
++          if (!rciPartialNorm.isLessOEThan(rciSumComp))
+             continue;
+         }
+ 

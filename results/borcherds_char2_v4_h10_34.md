@@ -1,0 +1,117 @@
+# The unique high noncyclic section of the characteristic-two Borcherds chamber
+
+Last updated: 2026-08-07.
+
+## Result
+
+The full `241,920`-element weighted-diagram group of the Borcherds
+`H21/210` chamber has exactly one conjugacy class of noncyclic subgroups whose
+common fixed lattice has rank at least `11`.  It is a `V4` with element fusion
+
+`1 + 2a + 2c + 2c`.
+
+Its literal fixed section is a 34-facet finite-volume, noncompact Coxeter
+polytope in `H10`.  This is a new divisor-lattice/diagram realization, but it
+is **not a new abstract polytope**: its complete normalized Gram matrix is
+exactly permutation-isomorphic to the already certified
+`A15-C2-H10-34` chamber.
+
+## Why the noncyclic denominator is complete
+
+The Neron--Severi traces of the only element classes with fixed rank at least
+11 are
+
+| class | `1` | `2a` | `2c` | `2d` | `3b` |
+|---|---:|---:|---:|---:|---:|
+| trace on `NS` | 22 | 6 | 8 | 0 | 7 |
+
+If a subgroup has `n_2a,n_2c,n_2d,n_3b` nonidentity elements of these types,
+the Reynolds trace formula and fixed rank at least 11 give
+
+`5 n_2a + 3 n_2c + 11 n_2d + 4 n_3b <= 11`.
+
+A noncyclic exponent-two group is elementary abelian.  Rank three already
+violates the bound; for `V4`, integrality rules out fusion `2c+2c+2c`, and all
+other fusions exceed the bound except `2a+2c+2c`, whose fixed rank is exactly
+11.  A noncyclic 3-group has at least eight order-three elements.  In a mixed
+group, the two powers of an order-three element already cost eight, while an
+involution makes the group order divisible by six and forces more elements
+than the remaining bound permits.  Thus the displayed `V4` fusion is the only
+possibility.
+
+The exact GAP reconstruction then gives:
+
+- `C_G(2a)` has order `768`;
+- it contains `24` compatible `2c` elements whose product with the fixed
+  `2a` is again `2c`;
+- these give `12` distinct `V4` subgroups containing that `2a`;
+- the centralizer is transitive on the 12 subgroups; and
+- the resulting full-group subgroup class has size `3,780`, with normalizer
+  order `64`.
+
+This proves uniqueness up to the full diagram group, rather than merely
+finding one subgroup.
+
+## Exact chamber certificate
+
+The saturated common fixed lattice has signature `(1,10)`, determinant
+`1,024`, and Smith diagonal
+
+`1^4 2^4 4^3`.
+
+The `210` walls have `75` subgroup orbits, with orbit-size histogram
+`1^12 2^27 4^36`.  Exact restriction gives `34` negative genuine facets,
+`9` isotropic inactive restrictions, and `32` timelike inactive restrictions.
+Every facet has a strict timelike witness and an integral primitive reflection.
+The complete Coxeter-pair census is
+
+`m2=331, m3=17, m4=30, parallel=75, ultraparallel=108`.
+
+The literal Vinberg enumeration gives:
+
+| datum | count |
+|---|---:|
+| elliptic rank-9 edge diagrams | 12,792 |
+| finite vertices | 1,774 |
+| ideal vertices / cusps | 146 |
+| finite--finite edges | 6,046 |
+| finite--ideal edges | 5,648 |
+| ideal--ideal edges | 1,098 |
+| connected affine components | 426 |
+| bad edges / bad full parabolic neighborhoods | `0 / 0` |
+
+Thus the chamber is finite-volume and noncompact by Vinberg's literal
+edge-endpoint and full affine-neighborhood criteria.
+
+## Exact deduplication and geometric status
+
+The certificate records an explicit 34-entry facet permutation under which
+all `34^2=1,156` normalized squared Gram entries agree with
+`A15-C2-H10-34`.  Hence facet rescaling identifies the two Coxeter chambers
+exactly.  Their integral fixed lattices are nevertheless different:
+
+- characteristic-two `V4`: determinant `1,024`, Smith `1^4 2^4 4^3`;
+- Alexeev `(15,9,1)` involution: determinant `2,048`, Smith `1^2 2^7 4^2`.
+
+This is therefore a distinct divisor-lattice realization of a known abstract
+polytope.  It is not a fixed construction by a K3 automorphism subgroup: the
+`2a` element is geometric, but both `2c` elements lie outside
+Dolgachev--Kondo's index-two geometric subgroup.
+
+The chamber nevertheless now has a genuine complex-K3 carrier by a different
+route.  The unique maximal reflection-stable closure of the characteristic-
+two fixed lattice is odd of index eight; its doubled dual is even of
+determinant 128 and is explicitly
+`U+D4(-1)+A1(-1)^5`.  Under the displayed facet permutation, an integral
+isometry takes all 34 primitive oriented mirrors to the corresponding
+Alexeev mirrors.  They generate the full target Picard lattice, and an
+explicit square-2178 ample class has positive pairing at least four with
+every imported mirror.  Thus non-geometricity of the original `V4` action is
+not a carrier obstruction: it only prevents interpreting this particular
+fixed-section construction as a surface-automorphism fixed nef cone.  See
+the [common full-Picard carrier theorem](h10_34_ud4a1x5_k3_carrier.md).
+
+The replayable certificate is
+[`borcherds_char2_v4_h10_34_certificate.json`](../data/enumerations/borcherds_char2_v4_h10_34_certificate.json),
+generated by
+[`certify_borcherds_char2_v4_h10_34.py`](../scripts/certify_borcherds_char2_v4_h10_34.py).

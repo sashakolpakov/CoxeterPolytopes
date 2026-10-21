@@ -1,0 +1,13 @@
+# Finite old contacts after replacing one triangular-base wall
+
+Replacing only wall158 by branch1 of the [replacement diagnostic](fresh_h20_prism_replacement_20261017.md) admits542 numerical endpoint caps that pass every retained native Coxeter gate. This retains167 old walls and one replacement; it is a separate branch, not an extension retaining all168 frozen roots.
+
+The [source](../scripts/fresh_h20_replaced_triangle_events_20261017.py) and [data](fresh_h20_replaced_triangle_events_20261017.json) use all159 fixed spherical endpoint profiles on the three partner edges. For each of both norm-completion branches, an additional finite contact to each actual target-H3 old facet is solved as a quadratic in the conic parameter. A proposed contact must also give a positive-definite projected two-root Gram; finite ambient angles alone are insufficient. The old finite endpoint selects the coherent side, and all retained native contacts are then freely classified as right, finite, parallel, or dotted.
+
+The census has20,298 equations,19,826 positive solutions, and7,070 geometrically eligible intrinsic events. After deduplication,274 caps have an extra finite contact to145 and268 to152. Every accepted cap is dotted to the replacement base. All542 numerical target-face centers lie inside the unit ball, so these outputs have a numerical common hyperbolic interior. Their literal roots, prescribed contacts, other gate labels, and full target-face vertex lists are saved. Every event with at most three failed retained gates is also saved, identifying the actual blocking walls rather than silently dropping them.
+
+One simple candidate is right to T and161, with pi/3 contacts to160 and152. Its single-cap face changes10 finite/14 exterior vertices to11 finite/11 exterior, reducing the largest squared radius from2.2284093476 to2.1763967607. This is useful local geometry, but [the joint diagnostic](fresh_h20_replaced_triangle_joint_20261017.md) shows that the complete finite bank still leaves open regions.
+
+The fixed endpoint-profile census is inherited, but this event calculation is numerical and bounded: extra nonisolated finite labels2 through5 and isolated labels2 through64 are tested. The unbounded singleton151 endpoint profiles, unbounded isolated event labels, ideal endpoints, and intermediate facets not ending these three old edges are not exhausted. Old native angle recognition uses1e-7 tolerances. A selected wall requires independent exact reconstruction before promotion.
+
+Generation and a fresh saved replay pass; syntax, source hashes, and links are checked. The source/data/report are final/frozen as a bounded discovery package.

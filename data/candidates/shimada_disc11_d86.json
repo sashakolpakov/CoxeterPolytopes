@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status_date": "2026-08-04",
+  "analysis_id": "shimada_disc11_physical_D86_eigensection",
+  "status": "exact_local_section_and_internal_first_star_verified",
+  "source": {
+    "member": "threediscs/disc11.txt",
+    "sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68"
+  },
+  "physical_state": {
+    "entry": {"representative": 68, "orbit": 11, "member": 1},
+    "representative": 86,
+    "state_sha256": "9a1a2c3d5a57379afcfced29b458447aec6638188a185e6da722b8ceafeb3d45",
+    "physical_wall_rows_sha256": "ff6ffd9f03b0f4311e4fa550cb001f4d12ee0bd21853b16808ada305dc90839c",
+    "restricted_rows_sha256": "2228890afd06e69618ebb95667660e28ebabab53f200c4ffb6cbd6313c7b5a7d"
+  },
+  "local_section": {
+    "ambient_primitive_walls": 35,
+    "positive_proportional_classes": 27,
+    "irredundant_facets": 11,
+    "root_facets": 7,
+    "internal_facets": 4,
+    "root_facet_classes": [
+      [[0, 0], [13, 0]],
+      [[1, 0], [4, 0]],
+      [[2, 0], [16, 0]],
+      [[3, 0], [14, 0]],
+      [[6, 0], [12, 0]],
+      [[7, 0], [10, 0]],
+      [[8, 0], [9, 0]]
+    ],
+    "internal_facet_classes": [[[20, 0]], [[23, 0]], [[24, 0]], [[26, 0]]],
+    "exact_face_witnesses": 11,
+    "exact_positive_redundancy_dependences": 16
+  },
+  "root_filter": {
+    "ambient_minus_two_walls": 17,
+    "integral_field_roots": 16,
+    "shell_distribution": {"2": 8, "4 - 2*phi": 8},
+    "field_span_rank": 9,
+    "unique_non_field_root_wall": [15, 0]
+  },
+  "internal_first_star": [
+    {"orbit": 20, "target_representative": 55, "target_wall_count": 41},
+    {"orbit": 23, "target_representative": 30, "target_wall_count": 34},
+    {"orbit": 24, "target_representative": 27, "target_wall_count": 33},
+    {"orbit": 26, "target_representative": 68, "target_wall_count": 28}
+  ],
+  "scope": "complete_local_D86_section_and_internal_first_star_not_global_eigen_nef_completeness",
+  "report": "results/shimada_disc11_d86.md",
+  "verifier": "scripts/analyze_shimada_disc11_d86.py",
+  "tests": "tests/test_shimada_disc11_d86.py"
+}

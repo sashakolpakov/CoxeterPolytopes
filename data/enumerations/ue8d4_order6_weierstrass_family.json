@@ -1,0 +1,515 @@
+{
+  "all_checks_pass": true,
+  "brandhorst_hofmann_handoff": {
+    "archived_type_id": "R14_UE8D4_C3_S3",
+    "article": "https://doi.org/10.1017/fms.2023.50",
+    "database": "https://doi.org/10.5281/zenodo.10410278",
+    "existing_certificate_sha256": "4da4becc68f8ab9ef907714ad575cb114f6d451af39e0ab93a8974b4e29991a6",
+    "id": "0.6.3.1",
+    "same_d4_action_entrywise": true,
+    "same_discriminant_action": true
+  },
+  "checks": {
+    "bh_generic_ns": true,
+    "bh_picard_action_order": true,
+    "coinvariant_is_A2_minus2": true,
+    "fiber_euler_sum_is_24": true,
+    "fixed_d4_determinant": true,
+    "fixed_euler_characteristics": true,
+    "fixed_ns_rank_determinant": true,
+    "full_characteristic": true,
+    "ns_characteristic": true,
+    "ns_determinant": true,
+    "ns_signature": true,
+    "ns_smith": true,
+    "source_all_checks_pass": true,
+    "triality_isometry": true,
+    "triality_matches_bh": true,
+    "triality_order": true,
+    "trivial_lattice_rank_is_14": true,
+    "vinberg_finite_volume": true
+  },
+  "cohomology_and_fixed_loci": {
+    "fixed_euler_powers_1_2_3": {
+      "1": 17,
+      "2": 9,
+      "3": 8
+    },
+    "full_characteristic": "(lambda - 1)**12*(lambda**2 - lambda + 1)**4*(lambda**2 + lambda + 1)",
+    "generic_transcendental_rank": 8,
+    "h2_traces_powers_1_2_3": {
+      "1": 15,
+      "2": 7,
+      "3": 6
+    },
+    "transcendental_characteristic": "(lambda^2-lambda+1)^4"
+  },
+  "dillies_lineage": {
+    "classification_row": 11,
+    "dimension_after_collision": 3,
+    "dimension_before_collision": 4,
+    "fixed_locus_cube": {
+      "bh_tuple": [
+        [],
+        6,
+        1,
+        3
+      ],
+      "meaning": "6 rational curves and one genus-3 curve",
+      "status": "detailed BH 0.6.3.1 fingerprint; the genus-three change is independently obtained from the cyclic three-section by Riemann--Hurwitz, while this script directly checks the total Euler characteristic"
+    },
+    "fixed_locus_generator": {
+      "bh_tuple": [
+        [
+          5,
+          8
+        ],
+        2,
+        0,
+        1
+      ],
+      "meaning": "5 type-(2,5) points, 8 type-(3,4) points, 2 rational curves",
+      "status": "detailed BH 0.6.3.1 fingerprint, compatible with the Dillies row-11 local data; this script directly checks its Euler characteristic"
+    },
+    "fixed_locus_square": {
+      "bh_tuple": [
+        [
+          5
+        ],
+        3,
+        1,
+        2
+      ],
+      "meaning": "5 points, 3 rational curves, one genus-2 curve",
+      "status": "detailed BH 0.6.3.1 fingerprint, compatible with the Dillies row-11 order-three fixed-locus data; this script directly checks its Euler characteristic"
+    },
+    "noether_lefschetz_collision": "II + IV -> I0*",
+    "our_root_multiplicities": [
+      5,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "pre_collision_match_scope": "Dillies table 1 row 11 gives the fixed-locus data for zeta and zeta^2; it does not determine the zeta^3 fixed locus",
+    "primary_source": "https://arxiv.org/abs/0912.5228",
+    "row_11_generic_root_multiplicities": [
+      5,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "zeta3_collision_change": {
+      "after_collision_full_branch_points": 5,
+      "after_collision_genus": 3,
+      "before_collision_full_branch_points": 7,
+      "before_collision_genus": 5,
+      "fixed_three_section": "normalization of x^3=-p12(t)",
+      "riemann_hurwitz": "2g-2=-6+2r for r full branch points"
+    }
+  },
+  "family": {
+    "affine_equation": "y^2 = x^3 + t^3*(t-1)*(t-a)*(t-b)*(t-c)",
+    "automorphism": "zeta(x,y,t)=(omega*x,-y,t), omega^3=1, omega!=1",
+    "base_action": "identity",
+    "discriminant": "-432*[t^3*(t-1)*(t-a)*(t-b)*(t-c)]^2",
+    "fibers": [
+      {
+        "euler": 6,
+        "kodaira": "I0*",
+        "ord_a6": 3,
+        "ord_discriminant": 6,
+        "place": "t=0",
+        "root_lattice": "D4(-1)",
+        "root_rank": 4
+      },
+      {
+        "euler_each": 2,
+        "kodaira": "II",
+        "multiplicity": 4,
+        "ord_a6": 1,
+        "ord_discriminant": 2,
+        "place": "four roots of q4",
+        "root_rank": 0
+      },
+      {
+        "euler": 10,
+        "kodaira": "II*",
+        "ord_a6": 5,
+        "ord_discriminant": 10,
+        "place": "t=infinity",
+        "root_lattice": "E8(-1)",
+        "root_rank": 8
+      }
+    ],
+    "global_order": 6,
+    "holomorphic_two_form": "dt wedge dx/y",
+    "homogeneous_a6": "U^3*(U-V)*(U-aV)*(U-bV)*(U-cV)*V^5",
+    "parameter_open": "a,b,c are nonzero, pairwise distinct, and different from 1",
+    "two_form_multiplier": "-omega (a primitive sixth root)"
+  },
+  "hyperbolic_handoff": {
+    "abstract_polytope_novelty": "known; this is a new explicit realization in the project",
+    "bad_edges": 0,
+    "classification": "finite_volume_noncompact",
+    "cusps": 1,
+    "dimension": 11,
+    "elliptic_edges": 162,
+    "facets": 13,
+    "finite_vertices": 27
+  },
+  "neron_severi": {
+    "fiber_and_zero_section": "U",
+    "generic_exactness": {
+      "argument": "I0* and II* distinguish 0 and infinity; the four II positions modulo t-scaling have dimension 3.  Forgetting the marked fibration has discrete fibers.  Since zeta is primitive order 6, T is a Q(zeta_6)-module, so rank(T) and rho=22-rank(T) are even.  Since rho>=14, any strict jump would therefore have rho>=16.  Then rank(T)<=6 and the primitive-eigenvalue period domain would have dimension at most 2, contradicting the 3-dimensional family.  Hence very general rho=14.",
+      "parameter_moduli_dimension": 3,
+      "scope": "exact for the geometric generic/very general member; no specific rational triple (a,b,c) is certified here"
+    },
+    "gram": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2
+      ]
+    ],
+    "lower_bound_lattice": "U+E8(-1)+D4(-1)",
+    "primitive_at_rank_14": "an index-two even overlattice would be even unimodular of signature (1,13), impossible since 1-13 is not divisible by 8",
+    "rank_signature_determinant": [
+      14,
+      [
+        1,
+        13,
+        0
+      ],
+      -4
+    ],
+    "reducible_fiber_roots": "E8(-1)+D4(-1)",
+    "smith": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  "payload_sha256": "ef90365b2a3772e97e75da3d470d4d40f96ec61ff68bcdd0a401c2bf174cdfd8",
+  "picard_action": {
+    "characteristic_polynomial": "(lambda - 1)**12*(lambda**2 + lambda + 1)",
+    "coinvariant": {
+      "class": "A2(-2)",
+      "gram": [
+        [
+          -4,
+          2
+        ],
+        [
+          2,
+          -4
+        ]
+      ],
+      "rootless": true
+    },
+    "d4_gram": [
+      [
+        -2,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        -2,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        -2,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        -2
+      ]
+    ],
+    "d4_triality": [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "description": "identity on U+E8(-1); the I0* Tate cubic has three roots cycled by x->omega*x, giving the outer D4 3-cycle",
+    "fixed_lattice": {
+      "class": "U+E8(-1)+A2(-1)",
+      "d4_fixed_gram": [
+        [
+          -2,
+          3
+        ],
+        [
+          3,
+          -6
+        ]
+      ],
+      "determinant": -3,
+      "rank": 12
+    }
+  },
+  "schema": "ue8d4-order6-weierstrass-family-v1",
+  "theorem": "The very general minimal resolution of y^2=x^3+t^3(t-1)(t-a)(t-b)(t-c), with pairwise distinct nonzero 1,a,b,c, has NS=U+E8(-1)+D4(-1).  The order-six automorphism (x,y,t)->(omega*x,-y,t) induces D4 triality and therefore explicitly realizes BH 0.6.3.1 and the archived finite-volume noncompact H11/13 Coxeter section."
+}

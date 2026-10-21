@@ -1,0 +1,17 @@
+# Complete height100 prefix for the discriminant55 host
+
+The complete height100 Vinberg search for `L55=E8 ⊥ [[−2φ,−1],[−1,4]]` produces44 actual walls. Its exact cone has129 finite vertices, no ideal vertices and3186 spacelike extreme rays. The prefix has infinite volume. A subsequent [exact infinite-order corner symmetry](fresh_h9_beta55_corner_symmetries_20261014.md) strengthens this bounded result to nonreflectivity of the full literal lattice.
+
+The [enumeration wrapper](../scripts/fresh_h9_beta55_vinberg_h100_20261014.py) and [certificate](fresh_h9_beta55_vinberg_h100_20261014.json) preserve the frozen [height20 producer and proof](fresh_h9_beta55_pilot_20261014.md). They include all four norm classes `2,2(2+φ),2(4−φ),2(7+φ)` and the complete E8 zero sector. The signed residual coordinate `l=x−4t` is unrestricted in sign; the nonreflecting norm4 coordinate direction is not incorrectly inserted as a wall.
+
+There are132 complete positive control levels and90454 recursion nodes. The first58 levels and first12 walls agree literally with the frozen height20 certificate. Thirty-six positive-height walls join the eight zero-sector walls.
+
+For a bound T, both-place inequalities give `x²<72T/13`, `|x′|<5`, `|l|²<72(1+T)` and `|l′|<8`; the E8 dominant-coordinate bounds are stronger. At T=100 the finite integer coefficient boxes recorded by the producer are filtered exactly by the height, both norm equations, congruences, reflection integrality and all earlier wall inequalities. The search fixes signed l before using nonnegative E8-coordinate wall pruning. The height20 report proves these controls and the complete primitive norm alphabet; the height100 wrapper changes only the bound and adds explicit prefix-preservation assertions.
+
+The separate [geometry checker](../scripts/fresh_h9_beta55_geometry_h100_20261014.py) and [geometry certificate](fresh_h9_beta55_geometry_h100_20261014.json) use exact incremental double description with the project's Golden field arithmetic. They reconstruct the full44-wall cone, not merely selected finite supports. Every finite ray is checked directly for future orientation, negative norm and its exact nine-wall zero set. There are no opposite-sheet rays. A displayed spacelike extreme ray plus a positive rational multiple of the strict center gives a strict future spacelike escape against all44 walls.
+
+Every wall is actual: the enumeration stores a common strict timelike center and a timelike relative-interior point on each facet obtained by orthogonal projection, with all other wall inequalities strict. Generation and saved replays pass for the complete enumeration and the geometry. The geometry's saved scope describes the bounded-prefix stage; the separate symmetry certificate supplies the later host-wide conclusion without changing those frozen files.
+
+The [independent complete enumeration review](fresh_h9_beta55_vinberg_h100_20261014_review.md) uses separate Golden arithmetic and reversed dominant-coordinate order. Its61144-node recursion reproduces all132 levels and44 roots exactly and independently checks all129 saved finite-corner witnesses, all44 facet witnesses and the strict escape. Generation and saved replay pass. This independent review does not claim a second full extreme-ray census.
+
+No height beyond100 was attempted. The constructive experiment reached a decisive stopping point through a literal chamber stabilizer, rather than through an unbounded search or an inference from a surviving prefix escape.

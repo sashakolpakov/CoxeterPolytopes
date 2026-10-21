@@ -1,0 +1,12 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -10,7 +10,9 @@ add_definitions("-Wall")
+ add_definitions("-Wno-reorder")
+ add_definitions("-Wno-unknown-pragmas")
+-add_definitions("-msse3")
++if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(x86_64|AMD64|i.86)$")
++    add_definitions("-msse3")
++endif()
+ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+

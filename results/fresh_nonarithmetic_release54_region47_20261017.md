@@ -1,0 +1,13 @@
+# Bounded discovery around the changed12 exterior component
+
+These numerical diagnostics use only the frozen exact residual coordinates of the64-wall release54/replacement12 chamber. They do not use the older cavity gate as an obstruction: that gate concerned a different12 normal.
+
+The [first replacement47 screen](fresh_nonarithmetic_release54_region47_20261017.json), with [source](../scripts/fresh_nonarithmetic_release54_region47_20261017.py), keeps its contacts with7 and30 right and tests anchors12,52,8,44,65 at labels2–64,96,128,192,256,512. All680 branches and every native retained contact are checked. Finite events at12 require deletions10 and52 and worsen the boundary. The accepted events at52 for labels at least6 worsen16 to18 open ends. None is promoted.
+
+The [paired endpoint screen](fresh_nonarithmetic_release54_region47_pairs_20261017.json), with [source](../scripts/fresh_nonarithmetic_release54_region47_pairs_20261017.py), uses frames7/12/47 and30/47/52, labels2–48,64,96,128,192,256 and both norm branches. It finds2,712 and108 caps passing all64 native gates. All292,896 cross-group pairs are dotted. This bounded statement does not exclude finite contacts in untested domains.
+
+The [third-side screen](fresh_nonarithmetic_release54_region47_bridge_20261017.json), with [source](../scripts/fresh_nonarithmetic_release54_region47_bridge_20261017.py), takes endpoint labels at most8 and seeks a norm-two cap right47 and finite to both endcaps at labels2–8. All100,548 branches fail a center, obtuse or non-Coxeter gate. No all-parameter impossibility claim follows.
+
+The [relaxed replacement screen](fresh_nonarithmetic_release54_region47_relaxed_20261017.json), with [source](../scripts/fresh_nonarithmetic_release54_region47_relaxed_20261017.py), drops the requirement to preserve both7/30 contacts. It tests all three-root frames from7,12,30,52 at labels2–16,24,32,64,128, requiring an actual finite corner. All2,150 real branches are gated;486 distinct coherent replacements survive. Only three improve the measured boundary: right12/52 with label3,4 or5 to7. Each has15 open ends. The simplestπ3 branch is promoted in the separate [exact replacement47 package](fresh_nonarithmetic_replace47_close12_20261017.md).
+
+All four numerical producers passed generation and fresh saved replay. Their floating-point angle recognition and boundary counts are discovery diagnostics only; the promoted source recomputes its exact recipe, all native gates, finite census and complete intrinsic boundary independently of numerical acceptance. No finite-volume or exhaustive-family claim is made from these bounded banks.

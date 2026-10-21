@@ -1,0 +1,26 @@
+import CoxeterProofs.ManuscriptCompact20
+import CoxeterProofs.ManuscriptFinite57
+import CoxeterProofs.ManuscriptIdeal4
+import CoxeterProofs.ManuscriptRightAngled
+
+/-! Small conditional manuscript interface audit. This imports no generated
+large certificate module. All mathematical hypotheses must also be read
+in docs/manuscript_assumptions.md: proof parameters do not appear in
+the output of #print axioms. -/
+
+#print axioms CoxeterProofs.CompactArithmetic20.paired_coefficients21_formula
+#print axioms CoxeterProofs.ManuscriptCompact20.no_rank21_geometry
+#print axioms CoxeterProofs.ManuscriptCompact20.compact_arithmetic_dimension_at_most20
+#print axioms CoxeterProofs.ManuscriptFinite57.no_rank58_charges
+#print axioms CoxeterProofs.ManuscriptFinite57.finite_volume_dimension_at_most57
+#print axioms CoxeterProofs.ManuscriptIdeal4.minimum_or_second_gap
+#print axioms CoxeterProofs.ManuscriptIdeal4.equality_exactly_eight_all_three
+#print axioms CoxeterProofs.ManuscriptIdeal4.equality_spectrum_from_stages
+#print axioms CoxeterProofs.ManuscriptIdeal4.octD_decomposition_and_counts
+#print axioms CoxeterProofs.ManuscriptIdeal4.equality8_is_two_cell_chain_and_double
+#print axioms CoxeterProofs.ManuscriptIdeal4.two_volume_units_is_double
+#print axioms CoxeterProofs.ManuscriptIdeal4.minimum_gap_and_equality
+#print axioms CoxeterProofs.ManuscriptRightAngled.ideal5_excludes_small_three_face_spectrum
+#print axioms CoxeterProofs.ManuscriptRightAngled.carrier_excess_fraction_from_transport
+#print axioms CoxeterProofs.ManuscriptRightAngled.nine_part_further_support
+#print axioms CoxeterProofs.ManuscriptRightAngled.ideal6_sharp_vertex_lower4462

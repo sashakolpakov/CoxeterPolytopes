@@ -1,0 +1,37 @@
+{
+  "status": "PASS_INDEPENDENT_UNIVERSAL_MIXED_NORM_GAP_REVIEW",
+  "sources": {
+    "results/fresh_h9_beta11_mixed_norm_gap_20261014.json": "ac490e31d42a9787aa9e4eb50af1c6a9f887efc527b0157c8ce18deae3c11d04",
+    "results/fresh_h9_h8_cap_height_20261014_norm_pool_review.json": "70055918834ac6481d401171f5b78c7838851e6c4c85ba2c4098222f147dbdb7",
+    "scripts/fresh_h9_beta11_mixed_norm_gap_20261014.py": "35cf03d75b630e6c77b15141bec232aefc2cb477c492add75259c1dd7b0938c0",
+    "scripts/fresh_h9_beta11_mixed_norm_gap_20261014_review.py": "09869e65ff95b1c4294f6c316d005be56f75bc51086485c2b64706ba2e98690a"
+  },
+  "recursive_manifests": 10,
+  "arithmetic": "Standalone Fraction coefficient norm/trace arithmetic; no producer imports.",
+  "possible_norm_z": [
+    -1,
+    1
+  ],
+  "possible_trace": [
+    7
+  ],
+  "integral_candidates": [
+    [
+      "4",
+      "-1"
+    ],
+    [
+      "3",
+      "1"
+    ]
+  ],
+  "all_candidates_violate_embedding_bound": true,
+  "proof_checks": [
+    "Primitive long-root reflection gives Gr_long in beta*O^10, so pairing=beta*z.",
+    "Normbeta11 excludes proportional field root lines; injectivity preserves independence at the second embedding.",
+    "Conjugate positive definiteness makes the Cauchy bound strict:0<a_conjugate<4.",
+    "Nonorthogonal intersection or parallelism gives0<a<=4. Norm and trace contradiction includes equality at4.",
+    "Only the fixed integral lattice and its complete normalized reflection alphabet are covered."
+  ],
+  "scope": "Universal orthogonal-or-strictly-disjoint statement for the two primitive integral norm classes. Inherits prior independent lattice/signature/alphabet proof. No root enumeration, general geometric-cap restriction or reflectivity verdict."
+}

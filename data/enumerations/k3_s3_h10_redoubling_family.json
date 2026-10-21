@@ -1,0 +1,4652 @@
+{
+  "all_checks_pass": true,
+  "artifact_id": "K3-S3-H10-REDOUBLING-FAMILY",
+  "bounded_lineage": {
+    "checks": {
+      "all_49_pinned_H10_records_scanned": true,
+      "expected_path_headers_present": true,
+      "negative_control_seed_also_absent": true,
+      "sole_nonseed_global_histogram_collision_retained_for_exact_GI": true,
+      "zero_exact_CoxIter_matches_through_44_facets": true,
+      "zero_exact_local_ledger_matches_N2_N4": true
+    },
+    "corpus_inventory": {
+      "combined_H10_records": 49,
+      "coxiter_commit": "b800be48d8240fbabd2d1c9542e61054584ad7fe",
+      "doubling_H10_records": 22,
+      "doubling_archive_sha256": "3330ca41fb3e047123ace718f08542bc1dd0019b35922d4fa836a217647e7036",
+      "facet_histogram": {
+        "11": 14,
+        "12": 11,
+        "13": 8,
+        "14": 4,
+        "15": 1,
+        "16": 3,
+        "19": 1,
+        "20": 3,
+        "28": 2,
+        "44": 2
+      },
+      "maximum_facet_count": 44,
+      "ordinary_H10_records": 27,
+      "ordinary_archive_sha256": "ae04648b291c1e5f3d0e47d666c846dc805b244469a20486bca59674b4d171c3"
+    },
+    "histogram_collision_controls": [
+      {
+        "candidate": "N1_A",
+        "corpus_path": "graphs/group units qf/10-2,1,1,1,1,1,1,1,1,1,1.coxiter",
+        "exact_labelled_graph_isomorphic": false,
+        "same_global_histogram": true,
+        "same_node_profile_multiset": false
+      },
+      {
+        "candidate": "N1_A",
+        "corpus_path": "testing_index2/10-2,1,1,1,1,1,1,1,1,1,1-13-12_0.coxiter",
+        "exact_labelled_graph_isomorphic": false,
+        "same_global_histogram": true,
+        "same_node_profile_multiset": false
+      },
+      {
+        "candidate": "N1_A",
+        "corpus_path": "testing_index2/10-2,1,1,1,1,1,1,1,1,1,1-12-13_0.coxiter",
+        "exact_labelled_graph_isomorphic": false,
+        "same_global_histogram": true,
+        "same_node_profile_multiset": false
+      },
+      {
+        "candidate": "N2_B",
+        "corpus_path": "testing_index2/10-2,1,1,1,1,1,1,1,1,1,1-12-13_1.coxiter",
+        "exact_labelled_graph_isomorphic": false,
+        "same_global_histogram": true,
+        "same_node_profile_multiset": false
+      }
+    ],
+    "local_comparisons": [
+      {
+        "candidate": "N2_A",
+        "exact_labelled_graph_matches": [],
+        "same_header_local_records": [
+          "R11-UD8A1-H10-14",
+          "R11-UD8D4-R14_UD8D4_TYPE_4",
+          "R11-UD8D4-R14_UD8D4_TYPE_5"
+        ]
+      },
+      {
+        "candidate": "N2_B",
+        "exact_labelled_graph_matches": [],
+        "same_header_local_records": [
+          "R11-UD8A1-H10-14",
+          "R11-UD8D4-R14_UD8D4_TYPE_4",
+          "R11-UD8D4-R14_UD8D4_TYPE_5"
+        ]
+      },
+      {
+        "candidate": "N4_A",
+        "exact_labelled_graph_matches": [],
+        "same_header_local_records": [
+          "R12-stock1-class3"
+        ]
+      },
+      {
+        "candidate": "N4_B",
+        "exact_labelled_graph_matches": [],
+        "same_header_local_records": [
+          "R12-stock1-class3"
+        ]
+      }
+    ],
+    "local_sources": {
+      "R11_all_subgroups": {
+        "path": "data/enumerations/roulleau_ud8d4_all_subgroup_folds.json",
+        "sha256": "0348744e2cf17870616deccd81f1c20541c1df328ad80b4d9eb6bf2476f793b7"
+      },
+      "R11_direct": {
+        "path": "data/enumerations/roulleau_rank11_direct_graph_denominator.json",
+        "sha256": "d82e31de7dd9d1f567cba9cc9a98588168628714521842c87943a9c76ec20d43"
+      },
+      "R12_all_subgroups": {
+        "path": "data/enumerations/roulleau_rank12_graph_all_subgroup_folds.json",
+        "sha256": "51751779daa723e24dcaf27ec5dd69463dc68e662da28751506672defe7cbe63"
+      }
+    },
+    "negative_control": "the independently known seed P_1 is also absent, so corpus absence is evidence about these pinned lanes only",
+    "path_comparisons_N1_through_N32": [
+      {
+        "candidate": "N1_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 13,
+        "histogram_collision_count": 3,
+        "same_header_record_count": 8
+      },
+      {
+        "candidate": "N2_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 14,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 4
+      },
+      {
+        "candidate": "N2_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 14,
+        "histogram_collision_count": 1,
+        "same_header_record_count": 4
+      },
+      {
+        "candidate": "N3_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 15,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 1
+      },
+      {
+        "candidate": "N4_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 16,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 3
+      },
+      {
+        "candidate": "N4_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 16,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 3
+      },
+      {
+        "candidate": "N5_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 17,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N6_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 18,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N6_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 18,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N7_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 19,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 1
+      },
+      {
+        "candidate": "N8_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 20,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 3
+      },
+      {
+        "candidate": "N8_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 20,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 3
+      },
+      {
+        "candidate": "N9_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 21,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N10_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 22,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N10_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 22,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N11_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 23,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N12_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 24,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N12_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 24,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N13_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 25,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N14_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 26,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N14_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 26,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N15_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 27,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N16_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 28,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 2
+      },
+      {
+        "candidate": "N16_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 28,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 2
+      },
+      {
+        "candidate": "N17_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 29,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N18_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 30,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N18_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 30,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N19_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 31,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N20_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 32,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N20_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 32,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N21_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 33,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N22_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 34,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N22_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 34,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N23_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 35,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N24_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 36,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N24_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 36,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N25_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 37,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N26_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 38,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N26_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 38,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N27_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 39,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N28_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 40,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N28_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 40,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N29_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 41,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N30_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 42,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N30_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 42,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N31_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 43,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 0
+      },
+      {
+        "candidate": "N32_A",
+        "exact_labelled_graph_matches": [],
+        "facets": 44,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 2
+      },
+      {
+        "candidate": "N32_B",
+        "exact_labelled_graph_matches": [],
+        "facets": 44,
+        "histogram_collision_count": 0,
+        "same_header_record_count": 2
+      }
+    ],
+    "scope": "bounded nonmatch against the pinned CoxIter ordinary and index-two H10 lanes and selected local H10 ledgers; not a worldwide priority proof"
+  },
+  "checks": {
+    "allcock_applies_for_every_positive_N": true,
+    "both_N2_exact_Vinberg_and_extreme_ray_audits": true,
+    "bounded_lineage_green": true,
+    "closed_form_replay_N1_through_N12": true,
+    "odd_one_type_even_two_types": true,
+    "representative_cases_green": true,
+    "seed_redoubling_hypotheses": true,
+    "surface_scope_is_divisor_lattice_not_nef_or_automorphisms": true
+  },
+  "exact_N2_volume_audits": {
+    "N2_A": {
+      "checks": {
+        "all_elliptic_edges_have_two_endpoints": true,
+        "all_full_parabolic_neighborhoods_pass": true,
+        "all_ideal_links_parabolic": true,
+        "all_vertices_one_time_component": true,
+        "counts_match_independent_discovery": true,
+        "every_wall_irredundant": true,
+        "extreme_rays_match_vertex_counts": true,
+        "vertex_basis_is_full_rank": true,
+        "vinberg_finite_volume_noncompact": true
+      },
+      "classification": "finite_volume_noncompact",
+      "cusps": 5,
+      "elliptic_rank9_edges": 252,
+      "endpoint_type_histogram_finite_ideal": {
+        "0,2": 6,
+        "1,1": 82,
+        "2,0": 164
+      },
+      "facet_support": {
+        "1": {
+          "equality_extreme_ray_count": 33,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "10": {
+          "equality_extreme_ray_count": 39,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "11": {
+          "equality_extreme_ray_count": 39,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "12": {
+          "equality_extreme_ray_count": 43,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "13": {
+          "equality_extreme_ray_count": 39,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "14": {
+          "equality_extreme_ray_count": 40,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "2": {
+          "equality_extreme_ray_count": 10,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "3": {
+          "equality_extreme_ray_count": 38,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "4": {
+          "equality_extreme_ray_count": 25,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "5": {
+          "equality_extreme_ray_count": 39,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "6": {
+          "equality_extreme_ray_count": 38,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "7": {
+          "equality_extreme_ray_count": 33,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "8": {
+          "equality_extreme_ray_count": 10,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "9": {
+          "equality_extreme_ray_count": 38,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        }
+      },
+      "finite_vertices": 41,
+      "hyperideal_extreme_rays": 0,
+      "ideal_link_checks": [
+        {
+          "active_facets": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "inertia": [
+            9,
+            0,
+            2
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            2,
+            3,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "inertia": [
+            9,
+            0,
+            2
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "inertia": [
+            9,
+            0,
+            2
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            13,
+            14
+          ],
+          "inertia": [
+            9,
+            0,
+            2
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            14
+          ],
+          "inertia": [
+            9,
+            0,
+            1
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        }
+      ],
+      "parabolic_neighborhood_audit_count": 9
+    },
+    "N2_B": {
+      "checks": {
+        "all_elliptic_edges_have_two_endpoints": true,
+        "all_full_parabolic_neighborhoods_pass": true,
+        "all_ideal_links_parabolic": true,
+        "all_vertices_one_time_component": true,
+        "counts_match_independent_discovery": true,
+        "every_wall_irredundant": true,
+        "extreme_rays_match_vertex_counts": true,
+        "vertex_basis_is_full_rank": true,
+        "vinberg_finite_volume_noncompact": true
+      },
+      "classification": "finite_volume_noncompact",
+      "cusps": 6,
+      "elliptic_rank9_edges": 318,
+      "endpoint_type_histogram_finite_ideal": {
+        "0,2": 10,
+        "1,1": 96,
+        "2,0": 212
+      },
+      "facet_support": {
+        "1": {
+          "equality_extreme_ray_count": 26,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "10": {
+          "equality_extreme_ray_count": 48,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "11": {
+          "equality_extreme_ray_count": 48,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "12": {
+          "equality_extreme_ray_count": 56,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "13": {
+          "equality_extreme_ray_count": 48,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "14": {
+          "equality_extreme_ray_count": 47,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "2": {
+          "equality_extreme_ray_count": 26,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "3": {
+          "equality_extreme_ray_count": 46,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "4": {
+          "equality_extreme_ray_count": 25,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "5": {
+          "equality_extreme_ray_count": 25,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "6": {
+          "equality_extreme_ray_count": 48,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "7": {
+          "equality_extreme_ray_count": 46,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "8": {
+          "equality_extreme_ray_count": 49,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        },
+        "9": {
+          "equality_extreme_ray_count": 46,
+          "equality_ray_span_rank": 10,
+          "is_genuine_facet": true
+        }
+      },
+      "finite_vertices": 52,
+      "hyperideal_extreme_rays": 0,
+      "ideal_link_checks": [
+        {
+          "active_facets": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "inertia": [
+            9,
+            0,
+            2
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14
+          ],
+          "inertia": [
+            9,
+            0,
+            2
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "inertia": [
+            9,
+            0,
+            2
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14
+          ],
+          "inertia": [
+            9,
+            0,
+            2
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            2,
+            3,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14
+          ],
+          "inertia": [
+            9,
+            0,
+            1
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        },
+        {
+          "active_facets": [
+            1,
+            3,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14
+          ],
+          "inertia": [
+            9,
+            0,
+            1
+          ],
+          "parabolic_rank_n_minus_one": true,
+          "rank": 9
+        }
+      ],
+      "parabolic_neighborhood_audit_count": 10
+    }
+  },
+  "formula_replay_N1_through_N12": [
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": true,
+      "A_B_relation_isomorphic": true,
+      "N": 1,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 13,
+          "mirror_types": {
+            "-2,1": 2,
+            "-2,2": 2,
+            "-4,2": 9
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 2,
+            "2": 65,
+            "3": 9,
+            "4": 2
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 13,
+          "mirror_types": {
+            "-2,1": 2,
+            "-2,2": 2,
+            "-4,2": 9
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 2,
+            "2": 65,
+            "3": 9,
+            "4": 2
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": false,
+      "A_B_relation_isomorphic": false,
+      "N": 2,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 14,
+          "mirror_types": {
+            "-2,1": 2,
+            "-2,2": 2,
+            "-4,2": 10
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 3,
+            "1": 2,
+            "2": 75,
+            "3": 10,
+            "4": 1
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 14,
+          "mirror_types": {
+            "-2,1": 3,
+            "-2,2": 2,
+            "-4,2": 9
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 2,
+            "1": 2,
+            "2": 74,
+            "3": 10,
+            "4": 3
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": true,
+      "A_B_relation_isomorphic": true,
+      "N": 3,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 15,
+          "mirror_types": {
+            "-2,1": 3,
+            "-2,2": 2,
+            "-4,2": 10
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 3,
+            "1": 5,
+            "2": 84,
+            "3": 11,
+            "4": 2
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 15,
+          "mirror_types": {
+            "-2,1": 3,
+            "-2,2": 2,
+            "-4,2": 10
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 3,
+            "1": 5,
+            "2": 84,
+            "3": 11,
+            "4": 2
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": false,
+      "A_B_relation_isomorphic": false,
+      "N": 4,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 16,
+          "mirror_types": {
+            "-2,1": 3,
+            "-2,2": 2,
+            "-4,2": 11
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 4,
+            "1": 9,
+            "2": 94,
+            "3": 12,
+            "4": 1
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 16,
+          "mirror_types": {
+            "-2,1": 4,
+            "-2,2": 2,
+            "-4,2": 10
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 3,
+            "1": 9,
+            "2": 93,
+            "3": 12,
+            "4": 3
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": true,
+      "A_B_relation_isomorphic": true,
+      "N": 5,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 17,
+          "mirror_types": {
+            "-2,1": 4,
+            "-2,2": 2,
+            "-4,2": 11
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 4,
+            "1": 14,
+            "2": 103,
+            "3": 13,
+            "4": 2
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 17,
+          "mirror_types": {
+            "-2,1": 4,
+            "-2,2": 2,
+            "-4,2": 11
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 4,
+            "1": 14,
+            "2": 103,
+            "3": 13,
+            "4": 2
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": false,
+      "A_B_relation_isomorphic": false,
+      "N": 6,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 18,
+          "mirror_types": {
+            "-2,1": 4,
+            "-2,2": 2,
+            "-4,2": 12
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 5,
+            "1": 20,
+            "2": 113,
+            "3": 14,
+            "4": 1
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 18,
+          "mirror_types": {
+            "-2,1": 5,
+            "-2,2": 2,
+            "-4,2": 11
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 4,
+            "1": 20,
+            "2": 112,
+            "3": 14,
+            "4": 3
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": true,
+      "A_B_relation_isomorphic": true,
+      "N": 7,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 19,
+          "mirror_types": {
+            "-2,1": 5,
+            "-2,2": 2,
+            "-4,2": 12
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 5,
+            "1": 27,
+            "2": 122,
+            "3": 15,
+            "4": 2
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 19,
+          "mirror_types": {
+            "-2,1": 5,
+            "-2,2": 2,
+            "-4,2": 12
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 5,
+            "1": 27,
+            "2": 122,
+            "3": 15,
+            "4": 2
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": false,
+      "A_B_relation_isomorphic": false,
+      "N": 8,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 20,
+          "mirror_types": {
+            "-2,1": 5,
+            "-2,2": 2,
+            "-4,2": 13
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 6,
+            "1": 35,
+            "2": 132,
+            "3": 16,
+            "4": 1
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 20,
+          "mirror_types": {
+            "-2,1": 6,
+            "-2,2": 2,
+            "-4,2": 12
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 5,
+            "1": 35,
+            "2": 131,
+            "3": 16,
+            "4": 3
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": true,
+      "A_B_relation_isomorphic": true,
+      "N": 9,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 21,
+          "mirror_types": {
+            "-2,1": 6,
+            "-2,2": 2,
+            "-4,2": 13
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 6,
+            "1": 44,
+            "2": 141,
+            "3": 17,
+            "4": 2
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 21,
+          "mirror_types": {
+            "-2,1": 6,
+            "-2,2": 2,
+            "-4,2": 13
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 6,
+            "1": 44,
+            "2": 141,
+            "3": 17,
+            "4": 2
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": false,
+      "A_B_relation_isomorphic": false,
+      "N": 10,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 22,
+          "mirror_types": {
+            "-2,1": 6,
+            "-2,2": 2,
+            "-4,2": 14
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 7,
+            "1": 54,
+            "2": 151,
+            "3": 18,
+            "4": 1
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 22,
+          "mirror_types": {
+            "-2,1": 7,
+            "-2,2": 2,
+            "-4,2": 13
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 6,
+            "1": 54,
+            "2": 150,
+            "3": 18,
+            "4": 3
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": true,
+      "A_B_relation_isomorphic": true,
+      "N": 11,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 23,
+          "mirror_types": {
+            "-2,1": 7,
+            "-2,2": 2,
+            "-4,2": 14
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 7,
+            "1": 65,
+            "2": 160,
+            "3": 19,
+            "4": 2
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 23,
+          "mirror_types": {
+            "-2,1": 7,
+            "-2,2": 2,
+            "-4,2": 14
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 7,
+            "1": 65,
+            "2": 160,
+            "3": 19,
+            "4": 2
+          }
+        }
+      ]
+    },
+    {
+      "A_B_lattice_decorated_Gram_isomorphic": false,
+      "A_B_relation_isomorphic": false,
+      "N": 12,
+      "orientations": [
+        {
+          "doubling_wall_count": 2,
+          "facets": 24,
+          "mirror_types": {
+            "-2,1": 7,
+            "-2,2": 2,
+            "-4,2": 15
+          },
+          "orientation": "A",
+          "relations": {
+            "0": 8,
+            "1": 77,
+            "2": 170,
+            "3": 20,
+            "4": 1
+          }
+        },
+        {
+          "doubling_wall_count": 2,
+          "facets": 24,
+          "mirror_types": {
+            "-2,1": 8,
+            "-2,2": 2,
+            "-4,2": 14
+          },
+          "orientation": "B",
+          "relations": {
+            "0": 7,
+            "1": 77,
+            "2": 169,
+            "3": 20,
+            "4": 3
+          }
+        }
+      ]
+    }
+  ],
+  "payload_sha256": "11da6289847d134ffe56081604fbf6df8779f48f3984fd2a4a0e2aee4b8309f9",
+  "representative_polytopes": [
+    {
+      "checks": {
+        "all_boundary_reflections_integral": true,
+        "closed_boundary_formula": true,
+        "endpoint_divisibilities_two": true,
+        "endpoint_formula": true,
+        "endpoint_squares_minus_two": true,
+        "exactly_two_boundary_doubling_walls": true,
+        "facet_formula_N_plus_12": true,
+        "mirror_type_formula": true,
+        "normalized_squared_ratio_one_parallel": true,
+        "raw_endpoint_product_two": true,
+        "raw_product_squared_four": true,
+        "relation_formula": true,
+        "strict_timelike_interior": true,
+        "walls_span_full_Picard_index_one": true
+      },
+      "copy_count_N": 1,
+      "doubling_walls_one_based": [
+        1,
+        7
+      ],
+      "facet_count": 13,
+      "id": "K3-S3-H10-P1-A",
+      "minimum_strict_pairing": 2,
+      "mirror_type_histogram": {
+        "-2,1": 2,
+        "-2,2": 2,
+        "-4,2": 9
+      },
+      "normalized_squared_ratio_histogram": {
+        "0": 65,
+        "1": 2,
+        "1/2": 2,
+        "1/4": 9
+      },
+      "orientation": "A_wall10_first",
+      "parallel_endpoint_certificate": {
+        "classification": "parallel_asymptotic_not_ultraparallel",
+        "left": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "norm_product": 4,
+        "normalized_squared_ratio": "1",
+        "raw_inner_product": 2,
+        "raw_inner_product_squared": 4,
+        "right": [
+          -2,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          1
+        ],
+        "squares": [
+          -2,
+          -2
+        ]
+      },
+      "primitive_strict_interior": [
+        -42,
+        -40,
+        2,
+        -6,
+        -7,
+        -11,
+        -8,
+        -14,
+        3,
+        21,
+        19
+      ],
+      "reflection_audit": {
+        "all_primitive_integral_reflections": true,
+        "failed_zero_based": [],
+        "wall_count": 13
+      },
+      "reflection_subgroup_index": 1,
+      "relation_WL_hash": "5035fe3a41dd94356c0d1d8fb3e2189d",
+      "relation_histogram": {
+        "0": 2,
+        "2": 65,
+        "3": 9,
+        "4": 2
+      },
+      "strict_interior_square": 358,
+      "volume_multiple_of_seed": 1,
+      "wall_span": {
+        "full_index_one": true,
+        "index": 1,
+        "rank": 11,
+        "smith_invariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "boundary_roots_standard_F_coordinates": [
+        [
+          -4,
+          -4,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          -2,
+          0,
+          2,
+          2
+        ],
+        [
+          -4,
+          -4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -2,
+          0,
+          2,
+          1
+        ],
+        [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -2,
+          -3,
+          -3,
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -2,
+          -2,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          2,
+          4,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          2,
+          4,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "checks": {
+        "all_boundary_reflections_integral": true,
+        "closed_boundary_formula": true,
+        "endpoint_divisibilities_two": true,
+        "endpoint_formula": true,
+        "endpoint_squares_minus_two": true,
+        "exactly_two_boundary_doubling_walls": true,
+        "facet_formula_N_plus_12": true,
+        "mirror_type_formula": true,
+        "normalized_squared_ratio_one_parallel": true,
+        "raw_endpoint_product_two": true,
+        "raw_product_squared_four": true,
+        "relation_formula": true,
+        "strict_timelike_interior": true,
+        "walls_span_full_Picard_index_one": true
+      },
+      "copy_count_N": 2,
+      "doubling_walls_one_based": [
+        2,
+        8
+      ],
+      "facet_count": 14,
+      "id": "K3-S3-H10-P2-A",
+      "minimum_strict_pairing": 2,
+      "mirror_type_histogram": {
+        "-2,1": 2,
+        "-2,2": 2,
+        "-4,2": 10
+      },
+      "normalized_relation_matrix": [
+        [
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "1",
+          "2",
+          "0",
+          "2",
+          "2",
+          "1",
+          "0",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4"
+        ],
+        [
+          "2",
+          "0",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "0",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "1",
+          "0",
+          "2",
+          "0",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "1",
+          "3",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "1",
+          "2",
+          "3",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "4",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1"
+        ]
+      ],
+      "normalized_squared_ratio_histogram": {
+        "0": 75,
+        "1": 3,
+        "1/2": 1,
+        "1/4": 10,
+        "2": 2
+      },
+      "orientation": "A_wall10_first",
+      "parallel_endpoint_certificate": {
+        "classification": "parallel_asymptotic_not_ultraparallel",
+        "left": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "norm_product": 4,
+        "normalized_squared_ratio": "1",
+        "raw_inner_product": 2,
+        "raw_inner_product_squared": 4,
+        "right": [
+          -4,
+          -4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -2,
+          0,
+          2,
+          1
+        ],
+        "squares": [
+          -2,
+          -2
+        ]
+      },
+      "primitive_strict_interior": [
+        -44,
+        -42,
+        2,
+        -6,
+        -7,
+        -11,
+        -8,
+        -15,
+        3,
+        22,
+        20
+      ],
+      "reflection_audit": {
+        "all_primitive_integral_reflections": true,
+        "failed_zero_based": [],
+        "wall_count": 14
+      },
+      "reflection_subgroup_index": 2,
+      "relation_WL_hash": "0256721730be81b6664acc2a8a827dde",
+      "relation_histogram": {
+        "0": 3,
+        "1": 2,
+        "2": 75,
+        "3": 10,
+        "4": 1
+      },
+      "strict_interior_square": 360,
+      "volume_multiple_of_seed": 2,
+      "wall_span": {
+        "full_index_one": true,
+        "index": 1,
+        "rank": 11,
+        "smith_invariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "boundary_roots_standard_F_coordinates": [
+        [
+          -2,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        [
+          -2,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          1
+        ],
+        [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -2,
+          -3,
+          -3,
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -2,
+          -2,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          2,
+          4,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          2,
+          4,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "checks": {
+        "all_boundary_reflections_integral": true,
+        "closed_boundary_formula": true,
+        "endpoint_divisibilities_two": true,
+        "endpoint_formula": true,
+        "endpoint_squares_minus_two": true,
+        "exactly_two_boundary_doubling_walls": true,
+        "facet_formula_N_plus_12": true,
+        "mirror_type_formula": true,
+        "normalized_squared_ratio_one_parallel": true,
+        "raw_endpoint_product_two": true,
+        "raw_product_squared_four": true,
+        "relation_formula": true,
+        "strict_timelike_interior": true,
+        "walls_span_full_Picard_index_one": true
+      },
+      "copy_count_N": 2,
+      "doubling_walls_one_based": [
+        1,
+        2
+      ],
+      "facet_count": 14,
+      "id": "K3-S3-H10-P2-B",
+      "minimum_strict_pairing": 2,
+      "mirror_type_histogram": {
+        "-2,1": 3,
+        "-2,2": 2,
+        "-4,2": 9
+      },
+      "normalized_relation_matrix": [
+        [
+          "1",
+          "0",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "0",
+          "1",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4"
+        ],
+        [
+          "2",
+          "1",
+          "2",
+          "1",
+          "0",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "1",
+          "2",
+          "2",
+          "0",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "4",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "3",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "3",
+          "1",
+          "2",
+          "3",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "4",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1"
+        ]
+      ],
+      "normalized_squared_ratio_histogram": {
+        "0": 74,
+        "1": 2,
+        "1/2": 3,
+        "1/4": 10,
+        "4": 2
+      },
+      "orientation": "B_wall13_first",
+      "parallel_endpoint_certificate": {
+        "classification": "parallel_asymptotic_not_ultraparallel",
+        "left": [
+          -2,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          1
+        ],
+        "norm_product": 4,
+        "normalized_squared_ratio": "1",
+        "raw_inner_product": 2,
+        "raw_inner_product_squared": 4,
+        "right": [
+          -2,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "squares": [
+          -2,
+          -2
+        ]
+      },
+      "primitive_strict_interior": [
+        -42,
+        -40,
+        2,
+        -6,
+        -7,
+        -11,
+        -8,
+        -14,
+        3,
+        21,
+        0
+      ],
+      "reflection_audit": {
+        "all_primitive_integral_reflections": true,
+        "failed_zero_based": [],
+        "wall_count": 14
+      },
+      "reflection_subgroup_index": 2,
+      "relation_WL_hash": "ccbfb0c91dd3244c29a520ebde0dba39",
+      "relation_histogram": {
+        "0": 2,
+        "1": 2,
+        "2": 74,
+        "3": 10,
+        "4": 3
+      },
+      "strict_interior_square": 1080,
+      "volume_multiple_of_seed": 2,
+      "wall_span": {
+        "full_index_one": true,
+        "index": 1,
+        "rank": 11,
+        "smith_invariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "boundary_roots_standard_F_coordinates": [
+        [
+          -9,
+          -8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -4,
+          0,
+          4,
+          3
+        ],
+        [
+          -6,
+          -6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -3,
+          0,
+          3,
+          1
+        ],
+        [
+          -4,
+          -4,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          -2,
+          0,
+          2,
+          2
+        ],
+        [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -2,
+          -3,
+          -3,
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -2,
+          -2,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          2,
+          4,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          2,
+          4,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "checks": {
+        "all_boundary_reflections_integral": true,
+        "closed_boundary_formula": true,
+        "endpoint_divisibilities_two": true,
+        "endpoint_formula": true,
+        "endpoint_squares_minus_two": true,
+        "exactly_two_boundary_doubling_walls": true,
+        "facet_formula_N_plus_12": true,
+        "mirror_type_formula": true,
+        "normalized_squared_ratio_one_parallel": true,
+        "raw_endpoint_product_two": true,
+        "raw_product_squared_four": true,
+        "relation_formula": true,
+        "strict_timelike_interior": true,
+        "walls_span_full_Picard_index_one": true
+      },
+      "copy_count_N": 3,
+      "doubling_walls_one_based": [
+        2,
+        9
+      ],
+      "facet_count": 15,
+      "id": "K3-S3-H10-P3-A",
+      "minimum_strict_pairing": 6,
+      "mirror_type_histogram": {
+        "-2,1": 3,
+        "-2,2": 2,
+        "-4,2": 10
+      },
+      "normalized_relation_matrix": [
+        [
+          "1",
+          "2",
+          "2",
+          "2",
+          "0",
+          "2",
+          "2",
+          "1",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "1",
+          "4",
+          "2",
+          "1",
+          "2",
+          "2",
+          "1",
+          "0",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "4",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4"
+        ],
+        [
+          "0",
+          "1",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "0",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "1",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "2",
+          "0",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "1",
+          "3",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "1",
+          "2",
+          "3",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "2"
+        ],
+        [
+          "3",
+          "2",
+          "2",
+          "4",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1"
+        ]
+      ],
+      "normalized_squared_ratio_histogram": {
+        "0": 84,
+        "1": 3,
+        "1/2": 2,
+        "1/4": 11,
+        "2": 1,
+        "4": 1,
+        "8": 1,
+        "9": 1,
+        "9/2": 1
+      },
+      "orientation": "A_wall10_first",
+      "parallel_endpoint_certificate": {
+        "classification": "parallel_asymptotic_not_ultraparallel",
+        "left": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "norm_product": 4,
+        "normalized_squared_ratio": "1",
+        "raw_inner_product": 2,
+        "raw_inner_product_squared": 4,
+        "right": [
+          -6,
+          -6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -3,
+          0,
+          3,
+          1
+        ],
+        "squares": [
+          -2,
+          -2
+        ]
+      },
+      "primitive_strict_interior": [
+        -286,
+        -280,
+        6,
+        -18,
+        -21,
+        -33,
+        -24,
+        -122,
+        9,
+        143,
+        99
+      ],
+      "reflection_audit": {
+        "all_primitive_integral_reflections": true,
+        "failed_zero_based": [],
+        "wall_count": 15
+      },
+      "reflection_subgroup_index": 3,
+      "relation_WL_hash": "c725212c30f42a2e2a9b5b63f661e253",
+      "relation_histogram": {
+        "0": 3,
+        "1": 5,
+        "2": 84,
+        "3": 11,
+        "4": 2
+      },
+      "strict_interior_square": 9318,
+      "volume_multiple_of_seed": 3,
+      "wall_span": {
+        "full_index_one": true,
+        "index": 1,
+        "rank": 11,
+        "smith_invariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "boundary_roots_standard_F_coordinates": [
+        [
+          -16,
+          -16,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          -8,
+          0,
+          8,
+          4
+        ],
+        [
+          -9,
+          -8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -4,
+          0,
+          4,
+          3
+        ],
+        [
+          -8,
+          -8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -4,
+          0,
+          4,
+          1
+        ],
+        [
+          -4,
+          -4,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          -2,
+          0,
+          2,
+          2
+        ],
+        [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -2,
+          -3,
+          -3,
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -2,
+          -2,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          2,
+          4,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          2,
+          4,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "checks": {
+        "all_boundary_reflections_integral": true,
+        "closed_boundary_formula": true,
+        "endpoint_divisibilities_two": true,
+        "endpoint_formula": true,
+        "endpoint_squares_minus_two": true,
+        "exactly_two_boundary_doubling_walls": true,
+        "facet_formula_N_plus_12": true,
+        "mirror_type_formula": true,
+        "normalized_squared_ratio_one_parallel": true,
+        "raw_endpoint_product_two": true,
+        "raw_product_squared_four": true,
+        "relation_formula": true,
+        "strict_timelike_interior": true,
+        "walls_span_full_Picard_index_one": true
+      },
+      "copy_count_N": 4,
+      "doubling_walls_one_based": [
+        3,
+        10
+      ],
+      "facet_count": 16,
+      "id": "K3-S3-H10-P4-A",
+      "minimum_strict_pairing": 2,
+      "mirror_type_histogram": {
+        "-2,1": 3,
+        "-2,2": 2,
+        "-4,2": 11
+      },
+      "normalized_relation_matrix": [
+        [
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "1",
+          "1",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "1",
+          "0",
+          "2",
+          "2",
+          "0",
+          "2",
+          "2",
+          "1",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "0",
+          "1",
+          "1",
+          "2",
+          "1",
+          "2",
+          "2",
+          "1",
+          "0",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "1",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "0",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1",
+          "2",
+          "0",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "1",
+          "3",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "1",
+          "2",
+          "3",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "3",
+          "2",
+          "2",
+          "4",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1"
+        ]
+      ],
+      "normalized_squared_ratio_histogram": {
+        "0": 94,
+        "1": 4,
+        "1/2": 1,
+        "1/4": 12,
+        "2": 2,
+        "8": 4,
+        "9": 3
+      },
+      "orientation": "A_wall10_first",
+      "parallel_endpoint_certificate": {
+        "classification": "parallel_asymptotic_not_ultraparallel",
+        "left": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "norm_product": 4,
+        "normalized_squared_ratio": "1",
+        "raw_inner_product": 2,
+        "raw_inner_product_squared": 4,
+        "right": [
+          -8,
+          -8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -4,
+          0,
+          4,
+          1
+        ],
+        "squares": [
+          -2,
+          -2
+        ]
+      },
+      "primitive_strict_interior": [
+        -124,
+        -122,
+        2,
+        -6,
+        -7,
+        -11,
+        -8,
+        -55,
+        3,
+        62,
+        40
+      ],
+      "reflection_audit": {
+        "all_primitive_integral_reflections": true,
+        "failed_zero_based": [],
+        "wall_count": 16
+      },
+      "reflection_subgroup_index": 4,
+      "relation_WL_hash": "93037bc9debba6997f70375f8fe25e73",
+      "relation_histogram": {
+        "0": 4,
+        "1": 9,
+        "2": 94,
+        "3": 12,
+        "4": 1
+      },
+      "strict_interior_square": 1160,
+      "volume_multiple_of_seed": 4,
+      "wall_span": {
+        "full_index_one": true,
+        "index": 1,
+        "rank": 11,
+        "smith_invariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "boundary_roots_standard_F_coordinates": [
+        [
+          -9,
+          -8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -4,
+          0,
+          4,
+          -3
+        ],
+        [
+          -6,
+          -6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -3,
+          0,
+          3,
+          -1
+        ],
+        [
+          -4,
+          -4,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          -2,
+          0,
+          2,
+          -2
+        ],
+        [
+          -2,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          1
+        ],
+        [
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -2,
+          -3,
+          -3,
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -2,
+          -2,
+          -2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -2,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          2,
+          4,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          2,
+          4,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "checks": {
+        "all_boundary_reflections_integral": true,
+        "closed_boundary_formula": true,
+        "endpoint_divisibilities_two": true,
+        "endpoint_formula": true,
+        "endpoint_squares_minus_two": true,
+        "exactly_two_boundary_doubling_walls": true,
+        "facet_formula_N_plus_12": true,
+        "mirror_type_formula": true,
+        "normalized_squared_ratio_one_parallel": true,
+        "raw_endpoint_product_two": true,
+        "raw_product_squared_four": true,
+        "relation_formula": true,
+        "strict_timelike_interior": true,
+        "walls_span_full_Picard_index_one": true
+      },
+      "copy_count_N": 4,
+      "doubling_walls_one_based": [
+        2,
+        4
+      ],
+      "facet_count": 16,
+      "id": "K3-S3-H10-P4-B",
+      "minimum_strict_pairing": 2,
+      "mirror_type_histogram": {
+        "-2,1": 4,
+        "-2,2": 2,
+        "-4,2": 10
+      },
+      "normalized_relation_matrix": [
+        [
+          "1",
+          "2",
+          "2",
+          "1",
+          "2",
+          "0",
+          "1",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "1",
+          "4",
+          "0",
+          "2",
+          "1",
+          "1",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "4",
+          "1",
+          "1",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "1",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4"
+        ],
+        [
+          "0",
+          "1",
+          "2",
+          "1",
+          "2",
+          "1",
+          "0",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "2",
+          "2",
+          "0",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2"
+        ],
+        [
+          "1",
+          "1",
+          "2",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "3",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "2",
+          "3",
+          "1",
+          "2",
+          "3",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1",
+          "2",
+          "2"
+        ],
+        [
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "1",
+          "2"
+        ],
+        [
+          "3",
+          "2",
+          "2",
+          "2",
+          "4",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "1"
+        ]
+      ],
+      "normalized_squared_ratio_histogram": {
+        "0": 93,
+        "1": 3,
+        "1/2": 3,
+        "1/4": 12,
+        "16": 2,
+        "4": 2,
+        "49": 1,
+        "8": 2,
+        "9/2": 2
+      },
+      "orientation": "B_wall13_first",
+      "parallel_endpoint_certificate": {
+        "classification": "parallel_asymptotic_not_ultraparallel",
+        "left": [
+          -2,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          1
+        ],
+        "norm_product": 4,
+        "normalized_squared_ratio": "1",
+        "raw_inner_product": 2,
+        "raw_inner_product_squared": 4,
+        "right": [
+          -6,
+          -6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -3,
+          0,
+          3,
+          -1
+        ],
+        "squares": [
+          -2,
+          -2
+        ]
+      },
+      "primitive_strict_interior": [
+        -82,
+        -80,
+        2,
+        -6,
+        -7,
+        -11,
+        -8,
+        -34,
+        3,
+        41,
+        -20
+      ],
+      "reflection_audit": {
+        "all_primitive_integral_reflections": true,
+        "failed_zero_based": [],
+        "wall_count": 16
+      },
+      "reflection_subgroup_index": 4,
+      "relation_WL_hash": "c20160a03a61bc67321798d09019b2eb",
+      "relation_histogram": {
+        "0": 3,
+        "1": 9,
+        "2": 93,
+        "3": 12,
+        "4": 3
+      },
+      "strict_interior_square": 1880,
+      "volume_multiple_of_seed": 4,
+      "wall_span": {
+        "full_index_one": true,
+        "index": 1,
+        "rank": 11,
+        "smith_invariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "schema": "coxeter.k3_s3.h10_redoubling_family.v1",
+  "seed": {
+    "checks": {
+      "both_doubling_roots_minus_two_divisibility_two": true,
+      "common_ideal_direction_isotropic": true,
+      "doubling_walls_exactly_10_and_13": true,
+      "generator_matrices_on_ab_correct": true,
+      "nine_other_walls_fixed_by_both_reflections": true,
+      "normalized_squared_ratio_one": true,
+      "raw_inner_product_two": true,
+      "raw_product_squared_four": true
+    },
+    "common_ideal_delta_a_plus_b": [
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    "doubling_walls_one_based": [
+      10,
+      13
+    ],
+    "id": "K3-S3-C2-H10-13",
+    "parallel_normalization_warning": {
+      "conclusion": "parallel, not ultraparallel",
+      "norm_product": 4,
+      "normalized_squared_ratio": "1",
+      "raw_inner_product": 2,
+      "raw_inner_product_squared": 4
+    },
+    "source": {
+      "path": "data/enumerations/k3_s3_c2_h10_13_ue8m2a1_full_picard_carrier.json",
+      "payload_sha256": "c033a684aa04b2c6d0bfe80d1b5393f0c52f5a9c9c1039140ca674ea9cc67a34",
+      "sha256": "93cec35a3c395482f4f99be827b3f5a6ba44764fc7defa22bf23eb6ee951acf0"
+    },
+    "wall10_a": [
+      -2,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      1
+    ],
+    "wall13_b": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1
+    ]
+  },
+  "surface_carrier": {
+    "K3_family": {
+      "Noether_Lefschetz_argument": "The nine-dimensional family therefore dominates the nine-dimensional moduli component of (11,9,1) pairs.  Extra anti-invariant algebraic classes lie on the countable union of Noether-Lefschetz hyperplanes, so the very general member has NS equal to the invariant lattice.",
+      "checks": {
+        "explicit_family_green": true,
+        "full_moduli_dimension_nine": true,
+        "nine_parameters": true,
+        "nonempty_open_witness": true,
+        "same_Nikulin_invariants": true,
+        "same_standard_geometric_Gram": true,
+        "very_general_full_NS_literal": true
+      },
+      "coefficient_A": "A(t)=-3+a1*t+a2*t^2+a3*t^3+a4*t^4",
+      "coefficient_B": "B(t)=2+(1-a1)*t+b2*t^2+b3*t^3+b4*t^4+b5*t^5+b6*t^6",
+      "equation": "X: y^2=x^3+A(s^2)*x+B(s^2)",
+      "fibers": {
+        "I1": 22,
+        "I2": 1,
+        "smooth_at_infinity": 1
+      },
+      "geometric_basis": {
+        "<-2>": "the nonidentity component C of the ramified I2 fiber; C^2=-2 and C is orthogonal to U and to the corrected Shioda classes",
+        "E8(-2)": "R has no reducible fibers, so its Mordell-Weil height lattice is E8.  Pullback of its eight Shioda classes under the degree-two base change doubles every pairing, giving the orthogonal divisor lattice E8(-2).",
+        "U": "fiber f and O+f, where O is the zero section; their Gram is [[0,1],[1,0]]",
+        "saturation": "all eleven displayed divisor classes are invariant.  Their lattice has determinant 2^9, equal to the determinant forced by (r,a,delta)=(11,9,1); hence its index in H^2(X,Z)^iota is one."
+      },
+      "nonempty_open_witness": {
+        "A": "t**4 + t - 3",
+        "B": "t**6 + 2",
+        "Q": "31*t**11 + 12*t**8 - 36*t**7 + 120*t**5 - 72*t**4 + 108*t**3 + 4*t**2 - 36*t + 108",
+        "Q_discriminant": -20555730174812389035885952417761953764793647104,
+        "claim_scope": "this rational point proves the open is nonempty; its individual Picard lattice is not asserted to be generic",
+        "infinity_discriminant": 31,
+        "parameters": {
+          "a1": 1,
+          "a2": 0,
+          "a3": 0,
+          "a4": 1,
+          "b2": 0,
+          "b3": 0,
+          "b4": 0,
+          "b5": 0,
+          "b6": 1
+        },
+        "resultant_A_Q": -140633637507
+      },
+      "parameter_count": 9,
+      "parameter_open": "Disc_t(Q) is nonzero and 4*a4^3+27*b6^2 is nonzero.  Then Q has eleven simple nonzero roots, the fiber at infinity is smooth, and all twelve singular fibers of R are I1.",
+      "very_general_full_Picard": "NS(X)=U+E8(-2)+<-2> for a very general parameter"
+    },
+    "determinant": 512,
+    "generic_full_Picard_moduli_dimension": 9,
+    "lattice": "F=U+E8(-2)+<-2>",
+    "meaning": "on every very-general marked member, every displayed wall is an integral divisor class and every wall reflection is an integral NS isometry",
+    "rank": 11,
+    "scope_exclusions": [
+      "not a claim that P_N is the nef cone",
+      "not a claim that the wall classes are all irreducible curves",
+      "not a claim that the reflections are surface automorphisms",
+      "not a worldwide novelty claim"
+    ],
+    "signature": [
+      1,
+      10,
+      0
+    ]
+  },
+  "theorem": {
+    "allcock_input": {
+      "Cayley_graph": "the bi-infinite line for C2*C2",
+      "doi": "10.2140/gt.2006.10.737",
+      "doubling_walls": [
+        10,
+        13
+      ],
+      "finite_subtrees": "exactly finite paths",
+      "reference": "Daniel Allcock, Infinitely many hyperbolic Coxeter groups through dimension 19, Geometry & Topology 10 (2006), 737-758",
+      "result_used": "Theorem 4.1 and Corollary 4.2 (finite-subtree gluing of pairwise disjoint doubling walls)",
+      "url": "https://arxiv.org/abs/0903.0138",
+      "walls_are_disjoint_in_H10": "parallel with a common ideal point"
+    },
+    "boundary_proof": {
+      "endpoint_formula_A": "b and N*a+(N-1)*b",
+      "endpoint_formula_B": "a and (N-1)*a+N*b",
+      "endpoint_inner_product_identity": "(b,N*a+(N-1)b)=2",
+      "facet_count_identity": "9+(N+1)+2=N+12",
+      "fixed_outer_walls": 9,
+      "induction_engine": {
+        "s_a": [
+          [
+            -1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "s_b": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            -1
+          ]
+        ]
+      },
+      "moving_outer_wall_count": "N+1",
+      "moving_outer_wall_formula": "q_(2m)=c+2m^2 a+2m(m-1)b; q_(2m+1)=d+2m(m+1)a+2m^2 b",
+      "why_finite_volume": "P_N is the union of N finite-volume seed chambers with pairwise disjoint interiors; Allcock proves that this union is a Coxeter polytope",
+      "why_index_N": "Allcock Corollary 4.2",
+      "why_noncompact": "the index-N subgroup of the nonuniform seed reflection group contains powers of its parabolic elements and is therefore still nonuniform"
+    },
+    "closed_fingerprint_formulas": {
+      "N=2k+1": {
+        "mirror_types": {
+          "-2,1": "2+k",
+          "-2,2": "2",
+          "-4,2": "9+k"
+        },
+        "relations": {
+          "0": "k+2",
+          "1": "2k^2+3k",
+          "2": "65+19k",
+          "3": "9+2k",
+          "4": "2"
+        }
+      },
+      "N=2k_A": {
+        "mirror_types": {
+          "-2,1": "1+k",
+          "-2,2": "2",
+          "-4,2": "9+k"
+        },
+        "relations": {
+          "0": "k+2",
+          "1": "2k^2+k-1",
+          "2": "56+19k",
+          "3": "8+2k",
+          "4": "1"
+        }
+      },
+      "N=2k_B": {
+        "mirror_types": {
+          "-2,1": "2+k",
+          "-2,2": "2",
+          "-4,2": "8+k"
+        },
+        "relations": {
+          "0": "k+1",
+          "1": "2k^2+k-1",
+          "2": "55+19k",
+          "3": "8+2k",
+          "4": "3"
+        }
+      }
+    },
+    "exact_orbifold_invariants": {
+      "H10_Gauss_Bonnet_factor_vol_over_minus_chi": "32*pi^5/945",
+      "P_N_covolume": "N*pi^5*527/987614208000",
+      "P_N_rational_Euler_characteristic": "-N*527/33443020800",
+      "seed_covolume": "pi^5*527/987614208000",
+      "seed_rational_Euler_characteristic": "-527/33443020800"
+    },
+    "statement": "For every integer N>=1, either N-copy finite path in the Cayley line of <s_a,s_b>=C2*C2 gives a finite-volume noncompact H10 Coxeter polytope P_N with N+12 facets. Its boundary reflections generate an index-N subgroup of the seed reflection group, and vol(P_N)=N vol(P_1). Odd N has one lattice-decorated type under path reversal; every even N has two nonisomorphic A/B types."
+  }
+}

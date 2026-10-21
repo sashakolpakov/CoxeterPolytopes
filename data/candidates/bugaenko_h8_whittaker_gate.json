@@ -1,0 +1,70 @@
+{
+  "analysis_id": "bugaenko_h8_determinant_whittaker_gate_v1",
+  "status_date": "2026-08-08",
+  "verified": true,
+  "determinant_line_extension": {
+    "field_bilinear_gram": "<-2*phi> + E8 + <-4*phi>",
+    "quadratic_form": "Q(x)=phi*Hhat(x,x)/(2*sqrt(5))",
+    "field_signatures": "((8,2),(10,0))",
+    "trace_lattice": "E8 + E8 + <-2> + <2> + <-4> + <4>",
+    "trace_signature": [18, 2],
+    "trace_determinant": 64
+  },
+  "discriminant_weil_module": {
+    "field_module": "O/(2) + O/(4)",
+    "additive_group": "(Z/2)^2 + (Z/4)^2",
+    "order": 64,
+    "level_ideal": "(8)",
+    "quadratic_form": "sqrt(5)*Q(x,y)=-phi^2*x^2/4-phi^2*y^2/8 mod O",
+    "trace_square_form_mod_2Z": "<-1/2> + <1/2> + <-1/4> + <1/4>",
+    "isotropic_elements": 1,
+    "nontrivial_even_overlattices": 0,
+    "W_action": "trivial",
+    "kernel_sizes_v2_0_1_ge2": [1, 16, 64]
+  },
+  "weights": {
+    "Whittaker_input": [-3, 5],
+    "cusp_obstruction": [5, 5],
+    "Bessel_order": 4
+  },
+  "principal_part": {
+    "m0": "phi/sqrt(5)",
+    "mu0": "0",
+    "pure_input": "q^(-phi/sqrt(5))*e_0",
+    "independent_columns": 1,
+    "facet_sheets": 11,
+    "lower_face_contact_sheets": 309,
+    "closed_contact_sheets": 320,
+    "interior_cut_sheets": 0,
+        "facet_only_Heegner_divisor_selectable": false,
+        "facet_only_selectability_scope": "standard full-group/discriminant-module column Z(m0,0); finite-index level refinements are not decided"
+  },
+  "identity_term_certificate": {
+    "identity_coefficient": 1,
+    "norm_four_Kloosterman_row": "exactly_zero",
+    "norm_four_phase_histogram": {"0": 16, "2": 16, "4": 16, "6": 16},
+    "unit_error_upper": "0.592301824941505",
+    "nonunit_error_upper": "0.149847824366840",
+    "total_error_upper": "0.742149649308345",
+    "strictly_below_one": true,
+    "unit_exponent_cutoff": 10,
+    "ideal_norm_cutoff": 1024,
+    "nonunit_exact_fraction_sha256": "0bc0bb60f3db607e82a3e2edda963abd8688cb10b06b18e6b5d963eb8ea65f3b",
+    "rational_infinite_tail": "2243027/27996979200"
+  },
+  "verdict": {
+    "P_m0_0_nonzero": true,
+    "pure_norm_two_Whittaker_principal_part": "obstructed",
+        "facet_only_divisor": "not_selectable_by_standard_full_group_column; finite_index_level_refinements_not_decided",
+    "larger_compensating_principal_parts": "undecided",
+    "polytope_geometry": "independently_compact_and_unchanged"
+  },
+  "replay": {
+    "command": "PYTHONPATH=src:. python3 scripts/certify_bugaenko_whittaker_gate.py",
+    "test": "PYTHONPATH=src:. pytest -q tests/test_bugaenko_whittaker_gate.py",
+    "script_sha256": "d95a1b23854aa60017dbe09871bdd1db1b7734c6cecdffc9215398120da7c5d2",
+    "test_sha256": "caf7d96c200911d426590ea7c283cfd682506ff619331b23c7a685e9e31e71b7",
+    "polytope_archive_sha256": "c17ac49e443918e61e541c9de35c7f29da9120e22bd9883678cc8091a2f4fc5c",
+    "contact_archive_sha256": "e77bb81bcc738f4f542676748dbcf09418cab830da579a600fd1e309f03de782"
+  }
+}

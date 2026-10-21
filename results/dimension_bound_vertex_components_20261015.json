@@ -1,0 +1,2437 @@
+{
+  "status": "PASS_EXACT_COMPACT_VERTEX_COMPONENT_DIMENSION_NECESSITIES",
+  "sources": {
+    "scripts/dimension_bound_vertex_components_20261015.py": "85da35664fc6c24ed367e9893e8880c5578dda7d86ea8fa4b44b8d1a60759e9e"
+  },
+  "arithmetic": "Standalone Fraction/integer dynamic programming; no geometry or existing producer imports.",
+  "theorem_scope": "Compact finite-sided hyperbolic Coxeter polytopes, all facets and all labels. The three-free corollary additionally requires every missing face to have size2. No arithmetic, fixed-lattice, facet-count or source assumptions.",
+  "rigorous_new_derivation": "Average connected-pair count>T_d; maximum vertex-component rank r implies d<=4r. In the three-free class average number of components<d-T_d, giving the saved refined class bounds.",
+  "novelty": "Derived use of classical Nikulin/Gauss-Bonnet and Alexandrov quadrilateral charging. No publication-priority claim or improvement of unrestricted29/995 bounds.",
+  "exact_partition_checks": 2813,
+  "moments": [
+    {
+      "dimension": 4,
+      "nikulin_strict_upper": "6",
+      "strict_lower_average_connected_pairs": "-1",
+      "three_free_strict_upper_average_components": "5",
+      "rank_partitions": 5
+    },
+    {
+      "dimension": 5,
+      "nikulin_strict_upper": "5",
+      "strict_lower_average_connected_pairs": "0",
+      "three_free_strict_upper_average_components": "5",
+      "rank_partitions": 7
+    },
+    {
+      "dimension": 6,
+      "nikulin_strict_upper": "5",
+      "strict_lower_average_connected_pairs": "0",
+      "three_free_strict_upper_average_components": "6",
+      "rank_partitions": 11
+    },
+    {
+      "dimension": 7,
+      "nikulin_strict_upper": "14/3",
+      "strict_lower_average_connected_pairs": "3/2",
+      "three_free_strict_upper_average_components": "11/2",
+      "rank_partitions": 15
+    },
+    {
+      "dimension": 8,
+      "nikulin_strict_upper": "14/3",
+      "strict_lower_average_connected_pairs": "2",
+      "three_free_strict_upper_average_components": "6",
+      "rank_partitions": 22
+    },
+    {
+      "dimension": 9,
+      "nikulin_strict_upper": "9/2",
+      "strict_lower_average_connected_pairs": "4",
+      "three_free_strict_upper_average_components": "5",
+      "rank_partitions": 30
+    },
+    {
+      "dimension": 10,
+      "nikulin_strict_upper": "9/2",
+      "strict_lower_average_connected_pairs": "5",
+      "three_free_strict_upper_average_components": "5",
+      "rank_partitions": 42
+    },
+    {
+      "dimension": 11,
+      "nikulin_strict_upper": "22/5",
+      "strict_lower_average_connected_pairs": "15/2",
+      "three_free_strict_upper_average_components": "7/2",
+      "rank_partitions": 56
+    },
+    {
+      "dimension": 12,
+      "nikulin_strict_upper": "22/5",
+      "strict_lower_average_connected_pairs": "9",
+      "three_free_strict_upper_average_components": "3",
+      "rank_partitions": 77
+    },
+    {
+      "dimension": 13,
+      "nikulin_strict_upper": "13/3",
+      "strict_lower_average_connected_pairs": "12",
+      "three_free_strict_upper_average_components": "1",
+      "rank_partitions": 101
+    },
+    {
+      "dimension": 14,
+      "nikulin_strict_upper": "13/3",
+      "strict_lower_average_connected_pairs": "14",
+      "three_free_strict_upper_average_components": "0",
+      "rank_partitions": 135
+    },
+    {
+      "dimension": 15,
+      "nikulin_strict_upper": "30/7",
+      "strict_lower_average_connected_pairs": "35/2",
+      "three_free_strict_upper_average_components": "-5/2",
+      "rank_partitions": 176
+    },
+    {
+      "dimension": 16,
+      "nikulin_strict_upper": "30/7",
+      "strict_lower_average_connected_pairs": "20",
+      "three_free_strict_upper_average_components": "-4",
+      "rank_partitions": 231
+    },
+    {
+      "dimension": 17,
+      "nikulin_strict_upper": "17/4",
+      "strict_lower_average_connected_pairs": "24",
+      "three_free_strict_upper_average_components": "-7",
+      "rank_partitions": 297
+    },
+    {
+      "dimension": 18,
+      "nikulin_strict_upper": "17/4",
+      "strict_lower_average_connected_pairs": "27",
+      "three_free_strict_upper_average_components": "-9",
+      "rank_partitions": 385
+    },
+    {
+      "dimension": 19,
+      "nikulin_strict_upper": "38/9",
+      "strict_lower_average_connected_pairs": "63/2",
+      "three_free_strict_upper_average_components": "-25/2",
+      "rank_partitions": 490
+    },
+    {
+      "dimension": 20,
+      "nikulin_strict_upper": "38/9",
+      "strict_lower_average_connected_pairs": "35",
+      "three_free_strict_upper_average_components": "-15",
+      "rank_partitions": 627
+    },
+    {
+      "dimension": 21,
+      "nikulin_strict_upper": "21/5",
+      "strict_lower_average_connected_pairs": "40",
+      "three_free_strict_upper_average_components": "-19",
+      "rank_partitions": 792
+    },
+    {
+      "dimension": 22,
+      "nikulin_strict_upper": "21/5",
+      "strict_lower_average_connected_pairs": "44",
+      "three_free_strict_upper_average_components": "-22",
+      "rank_partitions": 1002
+    },
+    {
+      "dimension": 23,
+      "nikulin_strict_upper": "46/11",
+      "strict_lower_average_connected_pairs": "99/2",
+      "three_free_strict_upper_average_components": "-53/2",
+      "rank_partitions": 1255
+    },
+    {
+      "dimension": 24,
+      "nikulin_strict_upper": "46/11",
+      "strict_lower_average_connected_pairs": "54",
+      "three_free_strict_upper_average_components": "-30",
+      "rank_partitions": 1575
+    },
+    {
+      "dimension": 25,
+      "nikulin_strict_upper": "25/6",
+      "strict_lower_average_connected_pairs": "60",
+      "three_free_strict_upper_average_components": "-35",
+      "rank_partitions": 1958
+    },
+    {
+      "dimension": 26,
+      "nikulin_strict_upper": "25/6",
+      "strict_lower_average_connected_pairs": "65",
+      "three_free_strict_upper_average_components": "-39",
+      "rank_partitions": 2436
+    },
+    {
+      "dimension": 27,
+      "nikulin_strict_upper": "54/13",
+      "strict_lower_average_connected_pairs": "143/2",
+      "three_free_strict_upper_average_components": "-89/2",
+      "rank_partitions": 3010
+    },
+    {
+      "dimension": 28,
+      "nikulin_strict_upper": "54/13",
+      "strict_lower_average_connected_pairs": "77",
+      "three_free_strict_upper_average_components": "-49",
+      "rank_partitions": 3718
+    },
+    {
+      "dimension": 29,
+      "nikulin_strict_upper": "29/7",
+      "strict_lower_average_connected_pairs": "84",
+      "three_free_strict_upper_average_components": "-55",
+      "rank_partitions": 4565
+    }
+  ],
+  "class_bounds": [
+    {
+      "maximum_component_rank": 1,
+      "general_bound": 4,
+      "bound_combined_with_Vinberg": 4,
+      "three_free_bound": 4
+    },
+    {
+      "maximum_component_rank": 2,
+      "general_bound": 8,
+      "bound_combined_with_Vinberg": 8,
+      "three_free_bound": 8
+    },
+    {
+      "maximum_component_rank": 3,
+      "general_bound": 12,
+      "bound_combined_with_Vinberg": 12,
+      "three_free_bound": 10
+    },
+    {
+      "maximum_component_rank": 4,
+      "general_bound": 16,
+      "bound_combined_with_Vinberg": 16,
+      "three_free_bound": 11
+    },
+    {
+      "maximum_component_rank": 5,
+      "general_bound": 20,
+      "bound_combined_with_Vinberg": 20,
+      "three_free_bound": 11
+    },
+    {
+      "maximum_component_rank": 6,
+      "general_bound": 24,
+      "bound_combined_with_Vinberg": 24,
+      "three_free_bound": 12
+    },
+    {
+      "maximum_component_rank": 7,
+      "general_bound": 28,
+      "bound_combined_with_Vinberg": 28,
+      "three_free_bound": 12
+    }
+  ],
+  "rank_distribution": [
+    {
+      "dimension": 9,
+      "rank_cutoff": 2,
+      "low_vertex_maximum": 4,
+      "strict_lower_fraction_with_larger_component": "0"
+    },
+    {
+      "dimension": 12,
+      "rank_cutoff": 2,
+      "low_vertex_maximum": 6,
+      "strict_lower_fraction_with_larger_component": "1/20"
+    },
+    {
+      "dimension": 20,
+      "rank_cutoff": 2,
+      "low_vertex_maximum": 10,
+      "strict_lower_fraction_with_larger_component": "5/36"
+    },
+    {
+      "dimension": 20,
+      "rank_cutoff": 3,
+      "low_vertex_maximum": 19,
+      "strict_lower_fraction_with_larger_component": "16/171"
+    },
+    {
+      "dimension": 20,
+      "rank_cutoff": 4,
+      "low_vertex_maximum": 30,
+      "strict_lower_fraction_with_larger_component": "1/32"
+    },
+    {
+      "dimension": 29,
+      "rank_cutoff": 3,
+      "low_vertex_maximum": 28,
+      "strict_lower_fraction_with_larger_component": "4/27"
+    },
+    {
+      "dimension": 29,
+      "rank_cutoff": 5,
+      "low_vertex_maximum": 56,
+      "strict_lower_fraction_with_larger_component": "2/25"
+    },
+    {
+      "dimension": 29,
+      "rank_cutoff": 7,
+      "low_vertex_maximum": 84,
+      "strict_lower_fraction_with_larger_component": "0"
+    }
+  ],
+  "dimension_rank_thresholds": [
+    {
+      "dimension": 4,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 4,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 2,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 2,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 4,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 3,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 2,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 4,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 3,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 4,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 3,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 4,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 3,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 4,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 3,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 5,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 5,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 2,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 2,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 5,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 4,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 3,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 5,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 3,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 5,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 10,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 5,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 10,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 5,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 10,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 6,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 6,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 3,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 3,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 6,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 6,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 7,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 6,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 10,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 6,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 15,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 5,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 6,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 15,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 5,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 7,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 7,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 3,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 3,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 7,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 7,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 9,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 5,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 7,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 11,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 5,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 7,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 15,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 5,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 7,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 21,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 1,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 8,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 8,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 8,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 4,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 8,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 7,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 5,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 8,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 12,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 8,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 13,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 8,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 16,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 8,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 21,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 9,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 9,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 9,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 4,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 4,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 9,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 9,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 9,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 12,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 9,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 16,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 7,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 9,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 18,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 7,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 9,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 22,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 7,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 10,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 10,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 10,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 5,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 5,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 10,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 9,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 10,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 13,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 7,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 10,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 20,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 10,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 21,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 10,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 24,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 11,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 11,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 11,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 5,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 5,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 11,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 10,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 7,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 11,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 15,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 11,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 20,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 11,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 25,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 9,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 11,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 27,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 9,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 12,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 12,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 12,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 12,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 12,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 12,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 18,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 9,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 12,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 21,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 9,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 12,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 30,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 12,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 31,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": false
+    },
+    {
+      "dimension": 13,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 13,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 13,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 6,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 6,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 13,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 12,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 13,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 18,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 9,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 13,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 23,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 13,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 30,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 13,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 36,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 11,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 14,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 14,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 14,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 7,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 7,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 14,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 13,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 9,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 14,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 19,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 14,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 26,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 11,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 14,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 31,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 11,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 14,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 42,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 2,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 15,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 15,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 15,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 7,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 8,
+      "maximum_diagram_edges": 7,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 15,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 15,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 15,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 21,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 11,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 15,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 30,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 15,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 33,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 15,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 42,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 16,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 16,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 16,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 8,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 8,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 16,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 15,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 16,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 24,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 16,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 30,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 16,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 36,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 13,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 16,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 43,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 13,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 17,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 17,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 17,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 8,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 9,
+      "maximum_diagram_edges": 8,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 17,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 16,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 11,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 17,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 24,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 17,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 31,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 13,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 17,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 40,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 14,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 17,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 45,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 14,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 18,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 18,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 18,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 9,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 9,
+      "maximum_diagram_edges": 9,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 18,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 18,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 18,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 25,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 13,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 18,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 33,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 14,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 18,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 45,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 15,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 18,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 48,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 15,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 19,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 19,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 19,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 9,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 10,
+      "maximum_diagram_edges": 9,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 19,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 18,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 19,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 27,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 14,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 19,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 36,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 15,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 19,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 45,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 15,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 19,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 52,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 16,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 20,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 20,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 20,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 10,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 10,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 20,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 19,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 13,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 20,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 30,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 15,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 20,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 40,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 16,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 20,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 46,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 16,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 20,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 57,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 17,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 21,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 21,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 21,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 10,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 11,
+      "maximum_diagram_edges": 10,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 21,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 21,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 14,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 21,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 30,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 15,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 21,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 40,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 16,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 21,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 48,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 17,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 21,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 63,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 3,
+      "maximum_diagram_edges": 18,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 22,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 22,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 22,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 11,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 11,
+      "maximum_diagram_edges": 11,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 22,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 21,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 8,
+      "maximum_diagram_edges": 14,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 22,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 31,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 16,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 22,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 41,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 17,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 22,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 51,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 18,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 22,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 63,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 18,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 23,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 23,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 23,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 11,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 12,
+      "maximum_diagram_edges": 11,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 23,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 22,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 8,
+      "maximum_diagram_edges": 15,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 23,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 33,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 17,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 23,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 43,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 18,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 23,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 55,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 19,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 23,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 64,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 19,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 24,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 24,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 24,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 12,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 12,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 24,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 24,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 8,
+      "maximum_diagram_edges": 16,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 24,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 36,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 18,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 24,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 46,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 19,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 24,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 60,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 20,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 24,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 66,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 20,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 25,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 25,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 25,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 12,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 13,
+      "maximum_diagram_edges": 12,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 25,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 24,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 9,
+      "maximum_diagram_edges": 16,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 25,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 36,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 18,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 25,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 50,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 20,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 25,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 60,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 20,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 25,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 69,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 21,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 26,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 26,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 26,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 13,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 13,
+      "maximum_diagram_edges": 13,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 26,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 25,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 9,
+      "maximum_diagram_edges": 17,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 26,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 37,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 19,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 26,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 50,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 20,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 26,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 61,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 21,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 26,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 73,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 22,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 27,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 27,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 27,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 13,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 14,
+      "maximum_diagram_edges": 13,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 27,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 27,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 9,
+      "maximum_diagram_edges": 18,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 27,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 39,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 20,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 27,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 51,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 21,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 27,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 63,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 22,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 27,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 78,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 23,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 28,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 28,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 28,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 14,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 14,
+      "maximum_diagram_edges": 14,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 28,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 27,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 10,
+      "maximum_diagram_edges": 18,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 28,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 42,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 7,
+      "maximum_diagram_edges": 21,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 28,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 53,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 22,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 28,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 66,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 23,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 28,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 84,
+      "general_compact_excluded": false,
+      "minimum_vertex_components": 4,
+      "maximum_diagram_edges": 24,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 29,
+      "maximum_component_rank": 1,
+      "maximum_connected_pairs": 0,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 29,
+      "maximum_diagram_edges": 0,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 29,
+      "maximum_component_rank": 2,
+      "maximum_connected_pairs": 14,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 15,
+      "maximum_diagram_edges": 14,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 29,
+      "maximum_component_rank": 3,
+      "maximum_connected_pairs": 28,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 10,
+      "maximum_diagram_edges": 19,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 29,
+      "maximum_component_rank": 4,
+      "maximum_connected_pairs": 42,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 8,
+      "maximum_diagram_edges": 21,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 29,
+      "maximum_component_rank": 5,
+      "maximum_connected_pairs": 56,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 6,
+      "maximum_diagram_edges": 23,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 29,
+      "maximum_component_rank": 6,
+      "maximum_connected_pairs": 70,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 24,
+      "three_free_excluded": true
+    },
+    {
+      "dimension": 29,
+      "maximum_component_rank": 7,
+      "maximum_connected_pairs": 84,
+      "general_compact_excluded": true,
+      "minimum_vertex_components": 5,
+      "maximum_diagram_edges": 24,
+      "three_free_excluded": true
+    }
+  ],
+  "odd_boundary_checks": [
+    {
+      "r": 1,
+      "first_excluded_dimension": 5,
+      "exact_partition_maximum": 0
+    },
+    {
+      "r": 2,
+      "first_excluded_dimension": 9,
+      "exact_partition_maximum": 4
+    },
+    {
+      "r": 3,
+      "first_excluded_dimension": 13,
+      "exact_partition_maximum": 12
+    },
+    {
+      "r": 4,
+      "first_excluded_dimension": 17,
+      "exact_partition_maximum": 24
+    },
+    {
+      "r": 5,
+      "first_excluded_dimension": 21,
+      "exact_partition_maximum": 40
+    },
+    {
+      "r": 6,
+      "first_excluded_dimension": 25,
+      "exact_partition_maximum": 60
+    },
+    {
+      "r": 7,
+      "first_excluded_dimension": 29,
+      "exact_partition_maximum": 84
+    },
+    {
+      "r": 8,
+      "first_excluded_dimension": 33,
+      "exact_partition_maximum": 112
+    },
+    {
+      "r": 9,
+      "first_excluded_dimension": 37,
+      "exact_partition_maximum": 144
+    },
+    {
+      "r": 10,
+      "first_excluded_dimension": 41,
+      "exact_partition_maximum": 180
+    },
+    {
+      "r": 11,
+      "first_excluded_dimension": 45,
+      "exact_partition_maximum": 220
+    },
+    {
+      "r": 12,
+      "first_excluded_dimension": 49,
+      "exact_partition_maximum": 264
+    },
+    {
+      "r": 13,
+      "first_excluded_dimension": 53,
+      "exact_partition_maximum": 312
+    },
+    {
+      "r": 14,
+      "first_excluded_dimension": 57,
+      "exact_partition_maximum": 364
+    },
+    {
+      "r": 15,
+      "first_excluded_dimension": 61,
+      "exact_partition_maximum": 420
+    },
+    {
+      "r": 16,
+      "first_excluded_dimension": 65,
+      "exact_partition_maximum": 480
+    },
+    {
+      "r": 17,
+      "first_excluded_dimension": 69,
+      "exact_partition_maximum": 544
+    },
+    {
+      "r": 18,
+      "first_excluded_dimension": 73,
+      "exact_partition_maximum": 612
+    },
+    {
+      "r": 19,
+      "first_excluded_dimension": 77,
+      "exact_partition_maximum": 684
+    },
+    {
+      "r": 20,
+      "first_excluded_dimension": 81,
+      "exact_partition_maximum": 760
+    },
+    {
+      "r": 21,
+      "first_excluded_dimension": 85,
+      "exact_partition_maximum": 840
+    },
+    {
+      "r": 22,
+      "first_excluded_dimension": 89,
+      "exact_partition_maximum": 924
+    },
+    {
+      "r": 23,
+      "first_excluded_dimension": 93,
+      "exact_partition_maximum": 1012
+    },
+    {
+      "r": 24,
+      "first_excluded_dimension": 97,
+      "exact_partition_maximum": 1104
+    },
+    {
+      "r": 25,
+      "first_excluded_dimension": 101,
+      "exact_partition_maximum": 1200
+    },
+    {
+      "r": 26,
+      "first_excluded_dimension": 105,
+      "exact_partition_maximum": 1300
+    },
+    {
+      "r": 27,
+      "first_excluded_dimension": 109,
+      "exact_partition_maximum": 1404
+    },
+    {
+      "r": 28,
+      "first_excluded_dimension": 113,
+      "exact_partition_maximum": 1512
+    },
+    {
+      "r": 29,
+      "first_excluded_dimension": 117,
+      "exact_partition_maximum": 1624
+    },
+    {
+      "r": 30,
+      "first_excluded_dimension": 121,
+      "exact_partition_maximum": 1740
+    },
+    {
+      "r": 31,
+      "first_excluded_dimension": 125,
+      "exact_partition_maximum": 1860
+    },
+    {
+      "r": 32,
+      "first_excluded_dimension": 129,
+      "exact_partition_maximum": 1984
+    },
+    {
+      "r": 33,
+      "first_excluded_dimension": 133,
+      "exact_partition_maximum": 2112
+    },
+    {
+      "r": 34,
+      "first_excluded_dimension": 137,
+      "exact_partition_maximum": 2244
+    },
+    {
+      "r": 35,
+      "first_excluded_dimension": 141,
+      "exact_partition_maximum": 2380
+    },
+    {
+      "r": 36,
+      "first_excluded_dimension": 145,
+      "exact_partition_maximum": 2520
+    },
+    {
+      "r": 37,
+      "first_excluded_dimension": 149,
+      "exact_partition_maximum": 2664
+    },
+    {
+      "r": 38,
+      "first_excluded_dimension": 153,
+      "exact_partition_maximum": 2812
+    },
+    {
+      "r": 39,
+      "first_excluded_dimension": 157,
+      "exact_partition_maximum": 2964
+    },
+    {
+      "r": 40,
+      "first_excluded_dimension": 161,
+      "exact_partition_maximum": 3120
+    },
+    {
+      "r": 41,
+      "first_excluded_dimension": 165,
+      "exact_partition_maximum": 3280
+    },
+    {
+      "r": 42,
+      "first_excluded_dimension": 169,
+      "exact_partition_maximum": 3444
+    },
+    {
+      "r": 43,
+      "first_excluded_dimension": 173,
+      "exact_partition_maximum": 3612
+    },
+    {
+      "r": 44,
+      "first_excluded_dimension": 177,
+      "exact_partition_maximum": 3784
+    },
+    {
+      "r": 45,
+      "first_excluded_dimension": 181,
+      "exact_partition_maximum": 3960
+    },
+    {
+      "r": 46,
+      "first_excluded_dimension": 185,
+      "exact_partition_maximum": 4140
+    },
+    {
+      "r": 47,
+      "first_excluded_dimension": 189,
+      "exact_partition_maximum": 4324
+    },
+    {
+      "r": 48,
+      "first_excluded_dimension": 193,
+      "exact_partition_maximum": 4512
+    },
+    {
+      "r": 49,
+      "first_excluded_dimension": 197,
+      "exact_partition_maximum": 4704
+    },
+    {
+      "r": 50,
+      "first_excluded_dimension": 201,
+      "exact_partition_maximum": 4900
+    },
+    {
+      "r": 51,
+      "first_excluded_dimension": 205,
+      "exact_partition_maximum": 5100
+    },
+    {
+      "r": 52,
+      "first_excluded_dimension": 209,
+      "exact_partition_maximum": 5304
+    },
+    {
+      "r": 53,
+      "first_excluded_dimension": 213,
+      "exact_partition_maximum": 5512
+    },
+    {
+      "r": 54,
+      "first_excluded_dimension": 217,
+      "exact_partition_maximum": 5724
+    },
+    {
+      "r": 55,
+      "first_excluded_dimension": 221,
+      "exact_partition_maximum": 5940
+    },
+    {
+      "r": 56,
+      "first_excluded_dimension": 225,
+      "exact_partition_maximum": 6160
+    },
+    {
+      "r": 57,
+      "first_excluded_dimension": 229,
+      "exact_partition_maximum": 6384
+    },
+    {
+      "r": 58,
+      "first_excluded_dimension": 233,
+      "exact_partition_maximum": 6612
+    },
+    {
+      "r": 59,
+      "first_excluded_dimension": 237,
+      "exact_partition_maximum": 6844
+    },
+    {
+      "r": 60,
+      "first_excluded_dimension": 241,
+      "exact_partition_maximum": 7080
+    },
+    {
+      "r": 61,
+      "first_excluded_dimension": 245,
+      "exact_partition_maximum": 7320
+    },
+    {
+      "r": 62,
+      "first_excluded_dimension": 249,
+      "exact_partition_maximum": 7564
+    },
+    {
+      "r": 63,
+      "first_excluded_dimension": 253,
+      "exact_partition_maximum": 7812
+    },
+    {
+      "r": 64,
+      "first_excluded_dimension": 257,
+      "exact_partition_maximum": 8064
+    },
+    {
+      "r": 65,
+      "first_excluded_dimension": 261,
+      "exact_partition_maximum": 8320
+    },
+    {
+      "r": 66,
+      "first_excluded_dimension": 265,
+      "exact_partition_maximum": 8580
+    },
+    {
+      "r": 67,
+      "first_excluded_dimension": 269,
+      "exact_partition_maximum": 8844
+    },
+    {
+      "r": 68,
+      "first_excluded_dimension": 273,
+      "exact_partition_maximum": 9112
+    },
+    {
+      "r": 69,
+      "first_excluded_dimension": 277,
+      "exact_partition_maximum": 9384
+    },
+    {
+      "r": 70,
+      "first_excluded_dimension": 281,
+      "exact_partition_maximum": 9660
+    },
+    {
+      "r": 71,
+      "first_excluded_dimension": 285,
+      "exact_partition_maximum": 9940
+    },
+    {
+      "r": 72,
+      "first_excluded_dimension": 289,
+      "exact_partition_maximum": 10224
+    },
+    {
+      "r": 73,
+      "first_excluded_dimension": 293,
+      "exact_partition_maximum": 10512
+    },
+    {
+      "r": 74,
+      "first_excluded_dimension": 297,
+      "exact_partition_maximum": 10804
+    },
+    {
+      "r": 75,
+      "first_excluded_dimension": 301,
+      "exact_partition_maximum": 11100
+    },
+    {
+      "r": 76,
+      "first_excluded_dimension": 305,
+      "exact_partition_maximum": 11400
+    },
+    {
+      "r": 77,
+      "first_excluded_dimension": 309,
+      "exact_partition_maximum": 11704
+    },
+    {
+      "r": 78,
+      "first_excluded_dimension": 313,
+      "exact_partition_maximum": 12012
+    },
+    {
+      "r": 79,
+      "first_excluded_dimension": 317,
+      "exact_partition_maximum": 12324
+    },
+    {
+      "r": 80,
+      "first_excluded_dimension": 321,
+      "exact_partition_maximum": 12640
+    },
+    {
+      "r": 81,
+      "first_excluded_dimension": 325,
+      "exact_partition_maximum": 12960
+    },
+    {
+      "r": 82,
+      "first_excluded_dimension": 329,
+      "exact_partition_maximum": 13284
+    },
+    {
+      "r": 83,
+      "first_excluded_dimension": 333,
+      "exact_partition_maximum": 13612
+    },
+    {
+      "r": 84,
+      "first_excluded_dimension": 337,
+      "exact_partition_maximum": 13944
+    },
+    {
+      "r": 85,
+      "first_excluded_dimension": 341,
+      "exact_partition_maximum": 14280
+    },
+    {
+      "r": 86,
+      "first_excluded_dimension": 345,
+      "exact_partition_maximum": 14620
+    },
+    {
+      "r": 87,
+      "first_excluded_dimension": 349,
+      "exact_partition_maximum": 14964
+    },
+    {
+      "r": 88,
+      "first_excluded_dimension": 353,
+      "exact_partition_maximum": 15312
+    },
+    {
+      "r": 89,
+      "first_excluded_dimension": 357,
+      "exact_partition_maximum": 15664
+    },
+    {
+      "r": 90,
+      "first_excluded_dimension": 361,
+      "exact_partition_maximum": 16020
+    },
+    {
+      "r": 91,
+      "first_excluded_dimension": 365,
+      "exact_partition_maximum": 16380
+    },
+    {
+      "r": 92,
+      "first_excluded_dimension": 369,
+      "exact_partition_maximum": 16744
+    },
+    {
+      "r": 93,
+      "first_excluded_dimension": 373,
+      "exact_partition_maximum": 17112
+    },
+    {
+      "r": 94,
+      "first_excluded_dimension": 377,
+      "exact_partition_maximum": 17484
+    },
+    {
+      "r": 95,
+      "first_excluded_dimension": 381,
+      "exact_partition_maximum": 17860
+    },
+    {
+      "r": 96,
+      "first_excluded_dimension": 385,
+      "exact_partition_maximum": 18240
+    },
+    {
+      "r": 97,
+      "first_excluded_dimension": 389,
+      "exact_partition_maximum": 18624
+    },
+    {
+      "r": 98,
+      "first_excluded_dimension": 393,
+      "exact_partition_maximum": 19012
+    },
+    {
+      "r": 99,
+      "first_excluded_dimension": 397,
+      "exact_partition_maximum": 19404
+    },
+    {
+      "r": 100,
+      "first_excluded_dimension": 401,
+      "exact_partition_maximum": 19800
+    }
+  ],
+  "universal_identities": {
+    "first_boundary": "Cmax(4r+1,r)=2r(r-1)=T_(4r+1)",
+    "even_tail": "T_d-d(r-1)/2=d(d-4r-2)/8>=0 for even d>=4r+2",
+    "odd_tail": "T_d-d(r-1)/2=((4r+3+t)(1+t)+5)/8>0 for odd d=4r+3+t,t>=0"
+  },
+  "limitation": "The finite tables do not themselves prove the geometric premise; that proof is in the report. The universal tail follows the displayed algebra, not a finite numerical cutoff. No noncompact extension and no unjustified gadget-occurrence/LP theorem is claimed."
+}

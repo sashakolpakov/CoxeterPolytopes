@@ -1,0 +1,65 @@
+CoxeterProofs/ContinuousLossAbsorptionKernel.lean:31:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.ContinuousLossAbsorptionKernel.circle_identity`:
+  [LE R]
+  [LT R]
+  [Std.IsLinearOrder R]
+  [Std.LawfulOrderLT R]
+  [OrderedRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CoxeterProofs/ContinuousLossAbsorptionKernel.lean:50:3: error: unknown tactic
+CoxeterProofs/ContinuousLossAbsorptionKernel.lean:46:23: error: unsolved goals
+R : Type u
+inst✝⁵ : CommRing R
+inst✝⁴ : LE R
+inst✝³ : LT R
+inst✝² : Std.IsLinearOrder R
+inst✝¹ : Std.LawfulOrderLT R
+inst✝ : OrderedRing R
+a v s r : R
+root : s * s = v - v * v
+r_nonnegative : 0 ≤ r
+radius : 1 + a * a ≤ r * r
+identity : (2 * (a * v + s) - a) * (2 * (a * v + s) - a) + (2 * v - 1 - 2 * a * s) * (2 * v - 1 - 2 * a * s) = 1 + a * a
+square_nonnegative : 0 ≤ (2 * v - 1 - 2 * a * s) * (2 * v - 1 - 2 * a * s)
+⊢ 2 * (a * v + s) ≤ a + r
+CoxeterProofs/ContinuousLossAbsorptionKernel.lean:61:3: error: unknown tactic
+CoxeterProofs/ContinuousLossAbsorptionKernel.lean:57:41: error: unsolved goals
+R : Type u
+inst✝⁵ : CommRing R
+inst✝⁴ : LE R
+inst✝³ : LT R
+inst✝² : Std.IsLinearOrder R
+inst✝¹ : Std.LawfulOrderLT R
+inst✝ : OrderedRing R
+v s : R
+root : s * s = v - v * v
+s_nonnegative : 0 ≤ s
+circle : (2 * v - 1) * (2 * v - 1) + 4 * s * s = 1
+square_nonnegative : 0 ≤ (2 * v - 1) * (2 * v - 1)
+⊢ 2 * s ≤ 1
+'CoxeterProofs.ContinuousLossAbsorptionKernel.circle_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.ContinuousLossAbsorptionKernel.loss_square_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.ContinuousLossAbsorptionKernel.loss_linear_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.ContinuousLossAbsorptionKernel.half_circle_bound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.ContinuousLossAbsorptionKernel.adjusted_loss_absorption' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.ContinuousLossAbsorptionKernel.absorption_energy_term' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.ContinuousLossAbsorptionKernel.absorbed_reference_energy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

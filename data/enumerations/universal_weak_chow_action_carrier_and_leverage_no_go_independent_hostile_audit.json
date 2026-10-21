@@ -1,0 +1,191 @@
+{
+  "payload": {
+    "all_checks_pass": true,
+    "checks": {
+      "chow_orientation_replay_passes": true,
+      "exact_eigenslice_replay_passes": true,
+      "four_square_bound_replay_passes": true,
+      "leverage_replay_passes": true,
+      "owner_archive_base_pin_matches": true,
+      "owner_archive_passes": true,
+      "owner_scope_is_precise": true,
+      "stable_lattice_replay_passes": true,
+      "terminal_dependency_pins_match": true,
+      "terminal_owner_pins_match": true
+    },
+    "chow_orientation_replay": {
+      "action_rule": "C_A^t J = A",
+      "all_checks_pass": true,
+      "ambient_signature": [
+        1,
+        5,
+        0
+      ],
+      "checks": {
+        "cycle_push_pull_action_is_operator": true,
+        "group_homomorphism_orientation": true,
+        "independent_embedding_identity": true,
+        "lifts_restrict_exactly": true,
+        "m2_relation": true,
+        "m3_relation": true,
+        "middle_contraction_is_first_left_then_right": true,
+        "middle_contraction_is_not_wrong_order": true,
+        "noncommuting_pair_really_noncommutes": true,
+        "parabolic_nilpotency_index_three": true,
+        "parabolic_word_nontrivial": true,
+        "projector_idempotent": true,
+        "projector_self_adjoint": true,
+        "reflection_cycles_self_transpose": true,
+        "reflection_cycles_square_to_projector": true,
+        "source_signature_1_2": true
+      },
+      "composition_rule": "C_A J C_B = C_(BA)",
+      "homomorphism_rule": "Gamma_g o Gamma_h = Gamma_(gh)",
+      "projector_rank": 3,
+      "source_gram_determinant": 2
+    },
+    "dependency_pins": {
+      "data/enumerations/unconditional_maximal_arithmetic_reflection_chamber_finiteness.json": "2bce48c0a7156caea3f4b4890411d770450912b4d4b2d3827ce93cc7e9730acc",
+      "results/rational_surface_eigencarrier_universality.md": "57e607e7cd6646c5827b3d4d0bff86d7bf8294845e29fe95d4e8b1478b854333",
+      "results/unconditional_maximal_arithmetic_reflection_chamber_finiteness.md": "6eee91512840287ce47a195a317fa4bbfd19678a95b52869ec0a45775d61e67b",
+      "src/coxeter_polytopes/geometric/rational_surface_carrier.py": "ceba2ae954c7d83020f16d2d034c6d48adb30bcbb3fb8d43698d06189c5f2159"
+    },
+    "exact_eigenslice_replay": {
+      "all_checks_pass": true,
+      "checks": {
+        "conjugate_slice_negative_definite": true,
+        "distinguished_slice_signature_1_1": true,
+        "field_action_is_trace_self_adjoint": true,
+        "field_action_splits_by_real_embeddings": true,
+        "native_reflection_commutes_with_field_action": true,
+        "native_reflection_is_involution": true,
+        "native_reflection_is_trace_isometry": true,
+        "oriented_wall_pairings_positive": true,
+        "plus_eigenvalue_exact": true,
+        "plus_projector_idempotent": true,
+        "restriction_of_scalars_identity": true,
+        "strict_positive_slice_point": true,
+        "trace_gram_integral": true,
+        "trace_pairing_equals_distinguished_pairing": true,
+        "trace_signature_1_3": true
+      },
+      "common_surface_multiplier": "D^2*sigma_0(beta)>0",
+      "conjugate_signature": [
+        0,
+        2
+      ],
+      "distinguished_signature": [
+        1,
+        1
+      ],
+      "field": "Q(sqrt(2))",
+      "trace_rank": 4,
+      "trace_signature": [
+        1,
+        3,
+        0
+      ],
+      "wall_pairings": [
+        "1",
+        "2 + 2*sqrt(2)"
+      ]
+    },
+    "four_square_bound_replay": {
+      "all_checks_pass": true,
+      "blowup_count": 9,
+      "checks": {
+        "cleared_embedding_integral": true,
+        "exact_scaled_gram": true,
+        "first_negative_four_square_identity": true,
+        "positive_difference_of_two_squares": true,
+        "rank_three_uses_nine_blowups": true,
+        "second_negative_four_square_identity": true,
+        "uniform_rank_750_bound": true
+      },
+      "common_scale": 30,
+      "general_count": "1+4(R-1)=4R-3",
+      "source_diagonal": [
+        "7/3",
+        "-5/6",
+        "-11/10"
+      ]
+    },
+    "independence": {
+      "imports_owner_certifier": false,
+      "imports_owner_embedding_implementation": false,
+      "noncommuting_pair_makes_composition_order_observable": true,
+      "quadratic_field_eigenslice_is_separate_from_owner_triangle": true
+    },
+    "leverage_no_go_replay": {
+      "all_checks_pass": true,
+      "checks": {
+        "all_rational_matrices_are_divisor_product_actions": true,
+        "construction_rank_inequality_has_variable_right_side": true,
+        "fixed_degree_field_discriminants_are_not_height_bounded": true,
+        "imported_blowup_bound": true,
+        "imported_rank_bound": true,
+        "quadratic_field_relations_hold_on_fixed_rank_two_tate_part": true
+      },
+      "circularity_verdict": "2997 follows only after importing n+1<=30 and [k:Q]<=25",
+      "fixed_rank_two_real_quadratic_calibration": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        11,
+        13
+      ],
+      "only_internal_rank_statement": "d(n+1)=R <= rho(Bl_b(P2))=b+1",
+      "unbounded_family": "A_D=[[0,D],[1,0]], A_D^2=D I for squarefree D>1"
+    },
+    "owner_pins": {
+      "data/enumerations/universal_weak_chow_action_carrier.json": "d75897bbf8d80a662a7b9d3aa3ae729052494e20633d835566db70870bb0fc9e",
+      "results/universal_weak_chow_action_carrier_and_leverage_no_go.md": "df38b26e0cffd8a391834be922869153af5badf41a632e74a48b472b332e101a",
+      "scripts/certify_universal_weak_chow_action_carrier.py": "d3a19cfe7069b811721a77a624952d92ab5bc7c5574d9e332d2ff8c7f0205eba",
+      "tests/test_universal_weak_chow_action_carrier.py": "6da7b9e4590d7e531a7f3502ba2c971e806cbd3f259cb4722169553b7532c802"
+    },
+    "schema": "coxeter.universal-weak-chow-action-carrier-and-leverage-no-go.independent-hostile-audit.v1",
+    "scope_verdict": {
+      "imported": "n<30 and [k:Q]<=25, hence b<=2997",
+      "not_proved": "effective/nef/Mori return, regular or birational reflection action, or an AG-derived ABSW bound",
+      "proved": "universal marked weak divisor-Tate Chow action carrier with exact distinguished eigenslice"
+    },
+    "stable_lattice_replay": {
+      "all_checks_pass": true,
+      "checks": {
+        "cleared_form_integral": true,
+        "isometry_survives": true,
+        "one_positive_one_negative_direction": true,
+        "original_lattice_not_stable": true,
+        "rational_involution": true,
+        "sum_of_translates_contains_L": true,
+        "sum_of_translates_contains_gL": true,
+        "sum_of_translates_is_stable": true
+      },
+      "cleared_stable_gram": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "stable_action": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ]
+    },
+    "verdict": "PASS"
+  },
+  "payload_sha256": "d260c1810c683c980d75da6d0de628b46b37587c6c2c07d1c4ca8eb1079f48ed"
+}

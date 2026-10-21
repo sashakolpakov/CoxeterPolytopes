@@ -1,0 +1,119 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "claimed_delta_is_exact_decimal": true,
+    "printed_certificate_does_not_prove_degree_23": true,
+    "printed_degree_is_18": true,
+    "printed_lemma7_bound_is_between_27_and_28": true,
+    "printed_true_supremum_is_certified": true,
+    "rational_point_refutes_claimed_supremum": true,
+    "repair_changes_only_last_exponent_2_to_3": true,
+    "repair_is_translated_equation_13": true,
+    "repaired_degree_is_20": true,
+    "repaired_lemma7_bound_is_between_23_and_24": true,
+    "repaired_supremum_is_claimed_delta": true
+  },
+  "methodological_scope": {
+    "not_proved_here": "the global N(14) field theorem or an ABSW-type dimension theorem",
+    "proved_here": "exact failure of the arXiv-v4 polynomial and an independent verification of the repair later printed in the journal",
+    "role_of_Nikulin": "hostile regression target, not a dependency of the project dimension theorem"
+  },
+  "minimal_repair": {
+    "change": "replace the final exponent 2 in equation (24) by 3",
+    "critical_y": "8/5",
+    "degree": 20,
+    "exact_supremum": "884736/9765625",
+    "identity": "P_repaired(x)=P_equation_13(x+2)",
+    "lemma_7_at_t_14": {
+      "P_14": 159773975758768250880000,
+      "exact_sign_test_lower": "P(14)*delta^22>1",
+      "exact_sign_test_upper": "P(14)*delta^23<1",
+      "integer_degree_bound": 23,
+      "real_bound_decimal_30": "23.2493142903636456507734602341"
+    },
+    "polynomial": "(x+2)^3*(x+1)^4*x^4*(x-1)^3*(x^2+x-1)^3",
+    "supremum_decimal": "0.0905969664",
+    "verdict": "independently_verified_repair_of_this_subcase"
+  },
+  "printed_certificate": {
+    "claimed_supremum": "884736/9765625",
+    "degree": 18,
+    "exact_reduction": {
+      "absolute_polynomial": "y^4*(y-1)^2*(2-y)^3",
+      "derivative_factorization": "-y^3*(y-2)^2*(y-1)*(9*y^2-19*y+8)",
+      "substitution": "y=x*(x+1)",
+      "y_interval": [
+        "-1/4",
+        "2"
+      ]
+    },
+    "interval": [
+      "-2",
+      "1"
+    ],
+    "lemma_7_at_t_14": {
+      "P_14": 764468783534776320000,
+      "exact_sign_test_lower": "P(14)*delta^26>1",
+      "exact_sign_test_upper": "P(14)*delta^27<1",
+      "integer_degree_bound_from_this_certificate": 27,
+      "printed_claim_is_established_by_printed_certificate": false,
+      "printed_claimed_degree_bound": 23,
+      "real_bound_decimal_30": "27.2225709066620200011613536863"
+    },
+    "polynomial": "(x+2)^3*(x+1)^4*x^4*(x-1)^3*(x^2+x-1)^2",
+    "rational_counterexample": {
+      "absolute_value": "6471355275/68719476736",
+      "strictly_exceeds_claimed_supremum": true,
+      "x": "3/4"
+    },
+    "true_supremum": {
+      "critical_x_pair": [
+        "-1/2-sqrt(47+2*sqrt(73))/6",
+        "-1/2+sqrt(47+2*sqrt(73))/6"
+      ],
+      "critical_y": "(19+sqrt(73))/18",
+      "decimal_50": "0.15981269565946881966448636667590837045271772142020",
+      "exact_value": "(42029518+2327386*sqrt(73))/387420489",
+      "minimal_polynomial_coefficients": [
+        387420489,
+        -84059036,
+        3538944
+      ]
+    }
+  },
+  "propagation_scope": {
+    "global_N14_theorem_disproved": false,
+    "journal_dependency_chain": [
+      "equation (4.19), page 986",
+      "Theorem 4.6, page 989",
+      "Propositions 4.1 and 4.2, pages 990--991",
+      "Theorem 3.2 proof closure, page 998"
+    ],
+    "literal_v4_proof_status": "invalid_as_printed",
+    "peer_reviewed_journal_status": "equation (4.19) silently makes the exponent-3 repair; this specific gap does not affect the published journal theorem",
+    "printed_dependency_chain": [
+      "equation (24), pages 15--16",
+      "Theorem 11, page 19, s=k=3 branch",
+      "Propositions 12 and 13, page 20",
+      "Theorem 4 and its printed N(14)<=25 derivation",
+      "Applications Theorems 18 and 19"
+    ],
+    "remaining_global_dependencies_independently_certified_here": false
+  },
+  "schema": "coxeter.nikulin_transition_polynomial_hostile_audit.v1",
+  "source": {
+    "arxiv": "0910.5217v4",
+    "arxiv_date": "2010-01-23",
+    "journal_version": {
+      "citation": "Izvestiya: Mathematics 75:5 (2011), 971--1005",
+      "corrected_exponent": 3,
+      "corrected_location": "page 986, equation (4.19), case s=k=3",
+      "doi": "10.1070/IM2011v075n05ABEH002561",
+      "source_pdf_sha256": "716e6e7333efbfaa22060b60dc97e8303363a4914409ccdd56ef7a90c923c7af"
+    },
+    "paper": "V. V. Nikulin, The transition constant for arithmetic hyperbolic reflection groups",
+    "printed_location": "pages 15--16, equation (24), case s=k=3",
+    "source_pdf_sha256": "e5391ab018e6e3f92ba9e2af8c35aff79332f973f3021f9c085148f52336f54b"
+  },
+  "status": "arxiv_v4_certificate_fails_journal_repair_passes"
+}

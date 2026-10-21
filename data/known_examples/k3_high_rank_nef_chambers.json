@@ -1,0 +1,218 @@
+{
+  "schema_version": "0.1.0",
+  "status_date": "2026-08-04",
+  "artifact_id": "k3_high_rank_nef_chambers_rho15_19",
+  "artifact_status": "source_audited_gram_verified",
+  "scope": "Full nef chambers of general complex projective K3 surfaces with finite automorphism group in Picard ranks 15 through 19",
+  "conventions": {
+    "wall_norm": -2,
+    "off_diagonal_entry": "The intersection number A_i.A_j; omitted pairs have intersection zero",
+    "ade_sign": "All ADE summands in NS(X) are negative definite",
+    "hyperbolic_dimension": "rho(NS)-1",
+    "signature_order": [
+      "positive",
+      "negative",
+      "zero"
+    ]
+  },
+  "sources": {
+    "roulleau": {
+      "author": "Xavier Roulleau",
+      "title": "An atlas of K3 surfaces with finite automorphism group",
+      "arxiv": "2003.08985",
+      "url": "https://arxiv.org/abs/2003.08985",
+      "published_pdf": "https://epiga.episciences.org/10377/pdf",
+      "locators": {
+        "rank_15": "Section 15.1, printed pages 87-88",
+        "rank_16": "Section 15.2, printed pages 88-89",
+        "rank_17": "Section 15.3, printed page 89",
+        "rank_18": "Section 15.4, printed page 90",
+        "rank_19": "Section 15.5, printed pages 90-91",
+        "summary": "Section 16, high-rank rows of the table"
+      }
+    },
+    "kondo": {
+      "author": "Shigeyuki Kondo",
+      "title": "Algebraic K3 surfaces with finite automorphism groups",
+      "journal": "Nagoya Mathematical Journal 116 (1989), 1-15",
+      "doi": "10.1017/S0027763000001653",
+      "url": "https://doi.org/10.1017/S0027763000001653",
+      "locator": "Section 4, Figures 1-5"
+    },
+    "ahl": {
+      "authors": "Michela Artebani, Juergen Hausen, Antonio Laface",
+      "title": "On Cox rings of K3 surfaces",
+      "arxiv": "0901.0369",
+      "url": "https://arxiv.org/abs/0901.0369",
+      "locators": "Theorems 2.7, 2.11, and 2.12"
+    },
+    "pss": {
+      "authors": "I. I. Piatetski-Shapiro and I. R. Shafarevich",
+      "title": "A Torelli theorem for algebraic surfaces of type K3",
+      "doi": "10.1070/IM1971v005n03ABEH001075",
+      "url": "https://doi.org/10.1070/IM1971v005n03ABEH001075"
+    }
+  },
+  "cases": [
+    {
+      "rho": 15,
+      "hyperbolic_dimension": 14,
+      "lattice": "U + E8(-1) + D4(-1) + A1(-1)",
+      "absolute_discriminant": 8,
+      "wall_count": 21,
+      "general_automorphism_group": "(Z/2)^2",
+      "compactness": "finite_volume_noncompact",
+      "published_model": "Double cover of P2 branched over an irreducible sextic of geometric genus 4 with an A11 singularity; the configuration includes the tangent line at the singularity, three bitangent lines through it, and a 6-tangent conic",
+      "source_locator": "Roulleau Section 15.1; Kondo Section 4.5, Figure 5",
+      "basis_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "expected_basis_determinant": 8,
+      "expected_rank": 15,
+      "expected_signature": [1, 14, 6],
+      "intersections": {
+        "1": [
+          [1, 2], [1, 17], [1, 18], [1, 19], [2, 3], [3, 4],
+          [3, 5], [5, 6], [6, 7], [7, 8], [8, 9], [9, 10],
+          [10, 11], [10, 12], [12, 13], [13, 14], [13, 15], [13, 16]
+        ],
+        "2": [
+          [4, 21], [11, 20], [14, 17], [14, 21], [15, 18], [15, 21],
+          [16, 19], [16, 21], [17, 20], [18, 20], [19, 20]
+        ],
+        "6": [[20, 21]]
+      },
+      "provenance_note": "Roulleau's TikZ redraw prints six top fan spokes thin. They are recorded here with intersection 2, as in Kondo Figure 5 and as forced by Roulleau's equations 2D_2=A_20+A_21 and D_2.A_j=1 for j=14,...,19.",
+      "misprinted_pairs_corrected_from_1_to_2": [
+        [14, 21], [15, 21], [16, 21], [17, 20], [18, 20], [19, 20]
+      ],
+      "literal_roulleau_tikz_expected_rank": 19,
+      "literal_roulleau_tikz_expected_signature": [3, 16, 2]
+    },
+    {
+      "rho": 16,
+      "hyperbolic_dimension": 15,
+      "lattice": "U + E8(-1) + D6(-1)",
+      "absolute_discriminant": 4,
+      "wall_count": 19,
+      "general_automorphism_group": "(Z/2)^2",
+      "compactness": "finite_volume_noncompact",
+      "published_model": "Double cover of P2 branched over a sextic with an A13 singularity",
+      "source_locator": "Roulleau Section 15.2; Kondo Section 4.4, Figure 4",
+      "basis_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      "expected_basis_determinant": -4,
+      "expected_rank": 16,
+      "expected_signature": [1, 15, 3],
+      "intersections": {
+        "1": [
+          [1, 2], [1, 17], [1, 19], [2, 3], [3, 4], [3, 5],
+          [5, 6], [6, 7], [7, 8], [8, 9], [9, 10], [10, 11],
+          [11, 12], [12, 13], [12, 14], [14, 15], [15, 16], [15, 18]
+        ],
+        "2": [[16, 17], [18, 19]]
+      }
+    },
+    {
+      "rho": 17,
+      "hyperbolic_dimension": 16,
+      "lattice": "U + E8(-1) + E7(-1)",
+      "absolute_discriminant": 2,
+      "wall_count": 19,
+      "general_automorphism_group": "(Z/2)^2",
+      "compactness": "finite_volume_noncompact",
+      "published_model": "A singular quartic in P3; its coarse moduli space is an open subset of WP3(2,3,5,6)",
+      "source_locator": "Roulleau Section 15.3; Kondo Section 4.3, Figure 3",
+      "basis_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "expected_basis_determinant": 2,
+      "expected_rank": 17,
+      "expected_signature": [1, 16, 2],
+      "intersections": {
+        "1": [
+          [1, 2], [2, 3], [2, 6], [3, 4], [4, 5], [6, 7],
+          [7, 8], [8, 9], [9, 10], [10, 11], [11, 12], [12, 13],
+          [13, 14], [14, 15], [15, 18], [15, 19], [16, 17], [16, 19]
+        ],
+        "2": [[5, 17]]
+      }
+    },
+    {
+      "rho": 18,
+      "hyperbolic_dimension": 17,
+      "lattice": "U + E8(-1) + E8(-1)",
+      "absolute_discriminant": 1,
+      "wall_count": 19,
+      "general_automorphism_group": "(Z/2)^2",
+      "compactness": "finite_volume_noncompact",
+      "published_model": "Double cover of P2 branched over a sextic with an A17 singularity; the wall graph is the classical Vinberg graph",
+      "source_locator": "Roulleau Section 15.4; Kondo Section 4.2, Figure 2",
+      "basis_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+      "expected_basis_determinant": -1,
+      "expected_rank": 18,
+      "expected_signature": [1, 17, 1],
+      "intersections": {
+        "1": [
+          [1, 2], [2, 3], [3, 5], [5, 6], [6, 7], [7, 8],
+          [8, 19], [19, 9], [9, 10], [10, 11], [11, 12], [12, 13],
+          [13, 14], [14, 15], [15, 17], [17, 18], [3, 4], [15, 16]
+        ]
+      }
+    },
+    {
+      "rho": 19,
+      "hyperbolic_dimension": 18,
+      "lattice": "U + E8(-1) + E8(-1) + A1(-1)",
+      "absolute_discriminant": 2,
+      "wall_count": 24,
+      "general_automorphism_group": "S3 x Z/2",
+      "compactness": "finite_volume_noncompact",
+      "published_model": "Roulleau Section 15.5 supplies the complete 24-curve graph but no comparable explicit projective equation",
+      "source_locator": "Roulleau Section 15.5; Kondo Section 4.1, Figure 1",
+      "basis_indices": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21],
+      "expected_basis_determinant": 2,
+      "expected_rank": 19,
+      "expected_signature": [1, 18, 5],
+      "intersections": {
+        "1": [
+          [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 7],
+          [13, 12], [12, 11], [11, 10], [10, 9], [9, 8], [8, 7],
+          [13, 14], [14, 15], [15, 16], [16, 17], [17, 18], [18, 1],
+          [20, 7], [19, 1], [13, 21]
+        ],
+        "2": [[16, 23], [23, 20], [10, 22], [22, 19], [21, 24], [24, 4]],
+        "6": [[22, 23], [23, 24], [24, 22]]
+      },
+      "provenance_note": "The three thick chords in Roulleau's TikZ overlay previously drawn thin chords. Only the overlaid subsegments have intersection 2; the three outer subsegments have intersection 1."
+    }
+  ],
+  "derived_rank19_inose_model": {
+    "status": "derived_and_symbolically_verified_not_roulleau_quoted",
+    "genericity_condition": "s^3 is neither 0 nor 1, and s avoids the countable Noether-Lefschetz jumping set",
+    "equation": "y^2 = x^3 - 3*s^2*t^4*x + t^5*(t^2 - 2*(1-s^3)*t + 1)",
+    "a4": "-3*s^2*t^4",
+    "a6": "t^5*(t^2 - 2*(1-s^3)*t + 1)",
+    "c4": "144*s^2*t^4",
+    "discriminant": "-432*t^10*(t-1)^2*(t^2 + (4*s^3-2)*t + 1)",
+    "generic_fibers": [
+      {"place": "t=0", "kodaira_type": "II*", "euler_number": 10},
+      {"place": "t=infinity", "kodaira_type": "II*", "euler_number": 10},
+      {"place": "t=1", "kodaira_type": "I2", "euler_number": 2},
+      {"place": "two roots of t^2+(4*s^3-2)*t+1", "kodaira_type": "I1", "count": 2, "euler_number_each": 1}
+    ],
+    "trivial_lattice": "U + E8(-1) + E8(-1) + A1(-1)",
+    "generic_picard_rank": 19,
+    "generic_mordell_weil_rank": 0,
+    "generic_neron_severi_lattice": "U + E8(-1) + E8(-1) + A1(-1)",
+    "argument": "The two II* fibers and one I2 fiber give the rank-19 trivial lattice. The marked fiber configuration varies with s^3, so the family is non-isotrivial. The generic member therefore has rho=19 off the Noether-Lefschetz jumping set; Shioda-Tate gives MW rank zero, and the discriminant-2 trivial lattice has no proper even overlattice."
+  },
+  "classification_boundary": {
+    "source": "Artebani-Hausen-Laface Theorem 2.12, based on Nikulin and Vinberg",
+    "eligible_lattice_count_by_picard_rank": {
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "20": 0
+    },
+    "consequence": "The full nef/root chamber of a finite-automorphism complex projective K3 has hyperbolic dimension at most 18, and dimension 18 is attained. This is not an obstruction to irrational eigenspace slices or to Coxeter polytopes not arising as full K3 nef chambers."
+  },
+  "novelty_statement": "The five lattices, curve graphs, and finite automorphism groups are published examples, not new Coxeter polytopes. The potentially new contribution is the intrinsic intersection-Hessian/Cox-ring interpretation and their use as exact high-dimensional calibration objects for algebraic inverse design."
+}

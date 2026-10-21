@@ -1,0 +1,134 @@
+{
+  "actual_ridge": [
+    0,
+    74,
+    "acute",
+    "2/3",
+    [
+      "B",
+      21,
+      41
+    ]
+  ],
+  "clauses": [
+    "x_0",
+    "x_74",
+    "not x_0 or not x_74"
+  ],
+  "common_strict_timelike_center": [
+    61,
+    -136,
+    -92,
+    -182,
+    -270,
+    -220,
+    -168,
+    -114,
+    -58,
+    230,
+    152,
+    306,
+    462,
+    390,
+    320,
+    252,
+    186,
+    -58,
+    -114,
+    -84,
+    -46,
+    122
+  ],
+  "conflicting_pair_gram": [
+    [
+      4,
+      -4
+    ],
+    [
+      -4,
+      6
+    ]
+  ],
+  "mandatory_wall_witnesses": [
+    {
+      "index_zero_based": 0,
+      "maximum_other_wall_pairing": -2,
+      "own_wall_pairing": 289999984,
+      "square": 21024997679999942,
+      "vector": [
+        61,
+        -136,
+        -92,
+        -182,
+        -270,
+        -220,
+        -168,
+        -114,
+        -58,
+        230,
+        152,
+        306,
+        462,
+        390,
+        320,
+        252,
+        186,
+        -58,
+        -114,
+        -84,
+        72499954,
+        122
+      ]
+    },
+    {
+      "index_zero_based": 74,
+      "maximum_other_wall_pairing": -2,
+      "own_wall_pairing": 178461518,
+      "square": 6718042333490830,
+      "vector": [
+        998269353,
+        -2453846426,
+        -1661923260,
+        -3323846518,
+        -4907692848,
+        -3970769670,
+        -3028269566,
+        -2085769458,
+        -1087500116,
+        3881538922,
+        2587692612,
+        5175385228,
+        7763077848,
+        6525000780,
+        5392885256,
+        4260769734,
+        3128654218,
+        -909038578,
+        -1773461766,
+        -1277115552,
+        -713846246,
+        1996538706
+      ]
+    }
+  ],
+  "scope": "No subset of these580 outward halfspaces is both finite-volume and Coxeter. Adding genuinely new planes or different gluing constructions is not excluded.",
+  "source_boundary": "data/enumerations/new_dimension_h20_six_patch_boundary_20261013.json",
+  "source_geometry": "data/enumerations/borcherds_d4_h21_og10_carrier_obstruction.json",
+  "status": "ALL_580_WALL_SUBSETS_EXCLUDED",
+  "verification": {
+    "Boolean_truth_table": "UNSAT",
+    "Z3_status": "UNSAT",
+    "actual_ridge_check": "PASS",
+    "cosine_squared": "2/3",
+    "exact_escape_checks": "PASS",
+    "forged_spacelike_certificate": "REJECTED",
+    "mandatory_pair": [
+      0,
+      74
+    ],
+    "walls": 580
+  },
+  "witness_provenance": "Independent all-single-facet-deletion escape search by construction_audit; this file independently replays the minimal pair.",
+  "z3_proof": "unit-resolution(asserted(Or(Not(x_0), Not(x_74))),\n                asserted(x_0),\n                asserted(x_74),\n                False)",
+  "z3_smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun x_0 () Bool)\n(declare-fun x_74 () Bool)\n(assert\n x_0)\n(assert\n x_74)\n(assert\n (or (not x_0) (not x_74)))\n(check-sat)\n"
+}

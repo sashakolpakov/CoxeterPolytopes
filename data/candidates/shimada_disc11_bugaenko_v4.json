@@ -1,0 +1,66 @@
+{
+  "analysis_id": "shimada_disc11_bugaenko_fixed_slice_v4",
+  "status": "verified_exact_centralizer_of_A_not_full_enhanced_group",
+  "disc11_sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68",
+  "fixed_slice": {
+    "lattice": "<-2*phi> + E8",
+    "complete_bugaenko_wall_count": 11,
+    "compact": true,
+    "diagram_automorphism_group": "C2",
+    "nontrivial_diagram_permutation": [8, 7, 6, 5, 4, 3, 2, 1, 0, 10, 9]
+  },
+  "folds": {
+    "B_plus_root_reflections": 88,
+    "B_minus_root_reflections": 88,
+    "B_plus_exact_word_sha256": "a7120bb8d2f1466a1156bd6f7d6f827a7472a99ce704c495053cd14dd7cee3cb",
+    "B_minus_exact_word_sha256": "68007a8b84a28c6fa2d1fbb66367b6d61be9c6bfb741f15ac80a8487533d8fc1",
+    "both_terminal_strict_physical_D68": true
+  },
+  "enhanced_involutions": {
+    "A": {
+      "field_row_action_sha256": "5b6e9046cbbaf4cbffaf954c98a0332b169e3d246b851af9adeb43a8468cdefe",
+      "NS_characteristic_polynomial": "(t - 1)^18 (t + 1)^2",
+      "discriminant_action": -1,
+      "transcendental_extension": "-I_on_T11"
+    },
+    "B_plus": {
+      "field_row_action_sha256": "842661cdc5ca7c1039e90f449d64f009620bc6ee0a78560f322cb82fa9761abc",
+      "NS_characteristic_polynomial": "(t - 1)^12 (t + 1)^8",
+      "discriminant_action": 1,
+      "transcendental_extension": "+I_on_T11"
+    },
+    "B_minus": {
+      "field_row_action_sha256": "f4009609eb740c47a5a5934af8e3ef825703df7ab21d7369ecb4d9e54ecf8bac",
+      "NS_characteristic_polynomial": "(t - 1)^10 (t + 1)^10",
+      "discriminant_action": -1,
+      "transcendental_extension": "-I_on_T11"
+    }
+  },
+  "multiplication": {
+    "A_squared": "identity",
+    "B_plus_squared": "identity",
+    "B_minus_squared": "identity",
+    "B_plus_times_B_minus": "A",
+    "B_minus_times_B_plus": "A"
+  },
+  "A_fixed_lattice": {
+    "rank": 18,
+    "signature": [1, 17],
+    "determinant": -4,
+    "smith_invariants": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2],
+    "nikulin_invariants": [18, 2, 1],
+    "isometry_type": "U + E8(-1) + E7(-1) + A1(-1)",
+    "fixed_locus": {
+      "genus_one_curves": 1,
+      "rational_curves": 8
+    }
+  },
+  "theorem": {
+    "centralizer_of_A_in_Aut_X_tau": "C2 x C2",
+    "centralizer_order": 4,
+    "finite_volume_criterion": "the_Aut(X,tau)_orbit_of_the_unique_fixed_genus_one_curve_is_finite"
+  },
+  "full_Aut_X_tau_finiteness_decided": false,
+  "verified": true,
+  "verifier": "scripts/certify_shimada_disc11_bugaenko_v4.py"
+}

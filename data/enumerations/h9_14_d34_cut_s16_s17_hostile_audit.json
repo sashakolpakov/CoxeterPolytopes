@@ -1,0 +1,1695 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "all_748_oriented_exact_Gram_lanes_have_inertia": true,
+    "automorphism_orders_are_48_and_8": true,
+    "exactly_one_scaled_dual_Lorentzian_diagram_per_support": true,
+    "fresh_active_set_and_full_Vinberg_pass_for_both": true,
+    "no_production_or_old_D34_module_imported": true,
+    "normalization_iff_cut_checked_for_every_raw_mask": true,
+    "one_short4_long10_Lorentzian_lane_per_support": true,
+    "raw_counts_are_37180_labelled_and_3610_orbits": true,
+    "strong_and_countercalibration_scope_not_overclaimed": true,
+    "survivor_Grams_and_public_lineage_exact": true,
+    "two_literal_raw_supports_reconstructed": true
+  },
+  "cut_normalization_lemma": {
+    "computational_exhaustion": "the xor solver and cut enumerator agree on all 37180 raw masks",
+    "proof": "Encode norm square 2/4 by a bit. Crystallographic integrality forces equal bits across m3 and unequal bits across m4, which is precisely the coboundary equation. Conversely the bit assignment gives integral m3 pairing half the common norm and m4 pairing half the larger norm.",
+    "statement": "On a connected support, a primitive norm-square assignment in {2,4} exists exactly when the m4 edge set is delta(X); X and its complement are the two scaled-dual orientations."
+  },
+  "global_counts": {
+    "Lorentzian_diagram_orbits": 2,
+    "finite_volume_noncompact_polytopes": 2,
+    "normalizable_diagram_orbits": 374,
+    "normalizable_labelled_assignments": 4789,
+    "raw_labelled_eight_m4_assignments": 37180,
+    "raw_support_automorphism_orbits": 3610,
+    "scaled_dual_oriented_integral_Gram_lanes": 748,
+    "short4_long10_oriented_Lorentzian_lanes": 2
+  },
+  "method_independence": {
+    "S16_S17_synthesis_module_imported": false,
+    "T2_loader_module_imported": false,
+    "automorphism_method": "custom exhaustive adjacency-preserving bijection backtracking",
+    "cone_method": "independent exact rank-nine active-set ray enumeration",
+    "floating_point_used": false,
+    "inertia_method": "exact rational symmetric congruence",
+    "normalization_methods": [
+      "all vertex cuts with vertex 14 fixed outside",
+      "independent xor-constraint propagation on every raw eight-m4 mask"
+    ],
+    "old_D34_corpus_or_compiler_read": false,
+    "orbit_methods": [
+      "explicit group action partition",
+      "Burnside fixed-mask average"
+    ],
+    "production_denominator_module_imported": false,
+    "support_source": "two literal edge lists in this audit",
+    "volume_method": "generic exact Vinberg edge endpoints plus full affine zero-neighborhood audits"
+  },
+  "public_matrix_and_synthesis_cross_checks": {
+    "S16_generated_Gram_equals_public_T2_entry_for_entry": true,
+    "S17_generated_Coxeter_relation_matrix_equals_public_T1_label_for_label": true,
+    "S17_public_factory_Gram_is_a_different_root_scaling": true,
+    "T1_hash_manifest_internal_equality_checked": true,
+    "T1_package_hash_manifest": {
+      "N_gram": "d68824fa8c796b2a863f9da06120ce5bc97f8b41c7445aa987d7f7f1ba11290d",
+      "fixed_gram": "1043f0e859809ae85a71d873cb52ca0bc57092bfac50e0727e91d103b524ba72",
+      "involution": "ffdc40d029586dba12f9452e0ac087b540ee964b2d175d1fe43bc492fb237bcf",
+      "roots": "150fc6f2d3bc77dec983cc51e74ff4a39bb8ada3f6be6fb6b77c8a850b9969bd"
+    },
+    "T2_marked_bridge_matrix": {
+      "canonical_integer_matrix_sha256": "886fcbf0e95e0a266e1a6f24c5520dc1d5e950f78542a65daf00dc843dc4a7a0",
+      "determinant": 1,
+      "inverse_integral": true,
+      "published_matrix_sha256": "c1c7e49891a9467985e4df99d44ac41dff8bd21afa39c166dfc168a322ba1e14",
+      "published_string_matrix_sha256_recomputed": "c1c7e49891a9467985e4df99d44ac41dff8bd21afa39c166dfc168a322ba1e14"
+    },
+    "T2_package_hashes_equal_synthesis_manifest": true,
+    "T2_package_hashes_recomputed_directly_from_public_matrix_arrays": {
+      "fixed_gram": "0488d1fe0e46431d69209180b95bae530877afcccf175be09305b42e05b79666",
+      "ordered_24_roots": "463d67ffa490dbbd4c9f517659bb83c0460b1e976ffaeaefd8aeead226f9e12c",
+      "rank18_gram": "da790e3608234df11e7a58355a83848778b4365b1d83101a0220f71a4fe7cc65",
+      "rank18_involution": "d5e3fb7c5d4c60f4608a1c2172cd549b5b981092f54027a75f11aa974f8ca67f"
+    },
+    "independence_boundary": {
+      "T1_facet_Coxeter_identity": "independently recomputed from frozen factory Gram",
+      "T1_rank18_package_hashes": "manifest equality only: the obstruction archive does not expose the full rank18 matrix arrays, so their arithmetic is transported",
+      "T2_bridge_matrix_unimodularity": "independently recomputed from frozen P",
+      "T2_facet_and_package_matrix_hashes": "independently recomputed from frozen arrays",
+      "period_Torelli_complete_nef_and_exchanged_root_theorems": "transported from separately hash-pinned green certificates; not reproved here"
+    },
+    "pinned_public_archive_sha256": {
+      "T1_obstruction": "4eb338784ec452cb08fb4a75b6f4be4c43155d1e6fce2a2259bbe39f410037c1",
+      "T2_bridge": "92396280c6b276979a005f9732408944c97fc71c08998d1f127833c7bacd6595",
+      "T2_pilot": "e72a7b5690c16c8c405ddf8679cef4bafc18cf93f59f38f5e635acc9131d60c2",
+      "factory": "b1ee6fd769527ae6dab01a2bb58099e7c7d1776d0417b6a8d710316697e8a775",
+      "strong_promotion": "2ab7acc379e48ac55944e92b8d614c0992d7c482af1300c670f2bf8e899ba1b1"
+    },
+    "transported_green_flags": {
+      "T1_weak_carrier_and_exchanged_root_archive": true,
+      "T2_exact_bridge_archive": true,
+      "T2_period_Torelli_and_complete_nef_archive": true,
+      "first_T1_hidden_normal_pairings": [
+        -6,
+        6
+      ]
+    }
+  },
+  "schema": "coxeter.h9_14_d34_cut_s16_s17.hostile_audit.v1",
+  "scope_boundary": {
+    "T1_manifest_limit": "only the two matching T1 rank18 hash manifests are public in the obstruction archive; absent full arrays, this audit does not pretend to recompute them",
+    "independently_hash_checked": "S16/T2 public facet and rank18 package arrays, bridge matrix unimodularity, S17/T1 public Coxeter relation identity, and the frozen synthesis source hashes",
+    "independently_proved": "raw U0 denominator through support automorphisms, all labellings, cut iff normalization, 748 exact Grams/inertias, unique oriented survivors, exact survivor facet Grams, irredundant cones, and fresh full Vinberg V",
+    "lineage": "independent variable reconstruction of the known T2 and T1 H9/14 types",
+    "new_abstract_polytope": false,
+    "transported_not_reproved": "the 16/5 stable-overclosure inventories, uniqueness of weak K3 packages, the full T2 marked bridge equalities, K3 period/Torelli existence, complete T2 invariant-nef equality C, and the rank18 arithmetic behind the T1 exchanged-root obstruction"
+  },
+  "status_date": "2026-08-08",
+  "support_audits": [
+    {
+      "all_eight_m4_labellings": {
+        "binomial_count": 12870,
+        "burnside_fixed_count_histogram": {
+          "12870": 1,
+          "36": 8,
+          "4": 8,
+          "6": 12,
+          "646": 6,
+          "70": 13
+        },
+        "burnside_orbit_count": 376,
+        "explicit_orbit_count": 376,
+        "labelled_count": 12870,
+        "orbit_inventory_sha256": "9b833b958e65bd9beec6d7272342d2ee44597102a5d753b2e71140245b6477d8",
+        "orbit_size_histogram": {
+          "1": 2,
+          "12": 20,
+          "2": 2,
+          "24": 144,
+          "4": 2,
+          "48": 188,
+          "6": 4,
+          "8": 14
+        }
+      },
+      "edge_count": 16,
+      "edges_one_based": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          6,
+          14
+        ]
+      ],
+      "fresh_cone_and_vinberg": {
+        "active_set_endpoints_equal_vinberg_endpoints": true,
+        "generic_exact_vinberg": {
+          "bad_edge_count": 0,
+          "bad_full_parabolic_neighborhood_count": 0,
+          "compact": false,
+          "connected_affine_component_audit_count": 42,
+          "decision": "finite_volume_noncompact",
+          "edge_endpoint_type_histogram": {
+            "0,2": 97,
+            "1,1": 362,
+            "2,0": 224
+          },
+          "elliptic_rank8_edge_count": 683,
+          "finite_endpoint_count": 90,
+          "finite_volume": true,
+          "ideal_endpoint_count": 20
+        },
+        "independent_active_set_cone": {
+          "active_facet_sets_sha256": "50d13a4f199584b7853ce072d5260f7de63cf719ce0f41d086fef1c14e60a3d1",
+          "active_nine_subset_hits_before_deduplication": 388,
+          "all_14_facets_irredundant": true,
+          "extreme_ray_count": 110,
+          "extreme_rays_sha256": "b76a7c3b2360afadd02be58a8e9910d194c4bb0c03194a93fff22b35bbd68814",
+          "finite_ray_count": 90,
+          "hyperideal_ray_count": 0,
+          "ideal_ray_count": 20,
+          "principal_basis_facets_one_based": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "strict_interior_minimum_slack": 72,
+          "strict_interior_square": 109216
+        }
+      },
+      "graph": {
+        "automorphism_order": 48,
+        "bipartite": true,
+        "bipartition_sizes": [
+          6,
+          8
+        ],
+        "connected": true,
+        "custom_backtracking_search_nodes": 389,
+        "degree_sequence": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          4
+        ],
+        "edge_action_faithful": true,
+        "edge_permutations_sha256": "63beb072f1d3e7b384c2144fca2ba69ac5d1ece6649fe79cd22f7e928b97f605",
+        "group_closure_checked": true,
+        "vertex_permutations_sha256": "c36122ef4b10c825c640a3f06e8a7321451a9da37e4b7363ea566f9614e767be"
+      },
+      "oriented_integral_gram_lanes": {
+        "count": 272,
+        "exact_rank_inertia_histogram": {
+          "rank10/inertia_1_9_4": 2,
+          "rank12/inertia_2_10_2": 8,
+          "rank13/inertia_2_11_1": 46,
+          "rank14/inertia_2_12_0": 216
+        },
+        "lane_inventory_sha256": "f2ffc9059861eccc3b6684872e55a79bfb9a6161b6f86461dd78155c658f1a2b",
+        "norm_square_4_count_histogram": {
+          "10": 25,
+          "11": 4,
+          "12": 1,
+          "2": 1,
+          "3": 4,
+          "4": 25,
+          "5": 31,
+          "6": 50,
+          "7": 50,
+          "8": 50,
+          "9": 31
+        },
+        "short4_long10_selector_lane_count_before_inertia": 25,
+        "short4_long10_selector_lorentzian_lane_count": 1
+      },
+      "primitive_norm_2_4_normalization": {
+        "all_raw_masks_checked_by_independent_constraint_propagation": 12870,
+        "burnside_fixed_count_histogram": {
+          "3270": 1,
+          "358": 6,
+          "36": 8,
+          "38": 6,
+          "4": 8,
+          "6": 12,
+          "70": 7
+        },
+        "burnside_orbit_count": 136,
+        "constraint": "m3 endpoints have equal bits; m4 endpoints have unequal bits",
+        "cut_orbit_inventory_sha256": "99f24f5d47dc6e8616020d45e42a65d4214dc9a66549b8f76d50c18b6b68ab4b",
+        "explicit_orbit_count": 136,
+        "iff_cut_delta_X": true,
+        "labelled_compatible_count": 3270,
+        "orbit_size_histogram": {
+          "1": 2,
+          "12": 20,
+          "2": 2,
+          "24": 64,
+          "4": 2,
+          "48": 28,
+          "6": 4,
+          "8": 14
+        },
+        "side_and_complement_are_the_only_two_orientations": true
+      },
+      "support_id": "S16",
+      "unique_lorentzian_diagram_orbit": {
+        "canonical_cut_side_mask_hex": "0x1eee",
+        "canonical_cut_side_vertices_one_based": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13
+        ],
+        "diagram_stabilizer_order": 48,
+        "fixed_by_full_support_automorphism_group": true,
+        "m3_edges_one_based": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            3,
+            13
+          ]
+        ],
+        "m4_edges_one_based": [
+          [
+            4,
+            5
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            2,
+            14
+          ],
+          [
+            6,
+            14
+          ]
+        ],
+        "m4_mask_hex": "0xe564",
+        "scaled_dual_lanes": [
+          {
+            "gram": [
+              [
+                -2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                2,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                -2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -4,
+                2,
+                0,
+                2,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -2,
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                -4,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -4,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                -4,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                -4,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -2
+              ]
+            ],
+            "gram_sha256": "29cf54743bed2893831c59062868b75ff81b3e9985c66e5fd77efdc8ced1c511",
+            "normal_square_histogram": {
+              "2": 4,
+              "4": 10
+            },
+            "orientation": 0,
+            "rank_inertia": [
+              10,
+              1,
+              9,
+              4
+            ],
+            "short4_long10_selector": true
+          },
+          {
+            "gram": [
+              [
+                -4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                -2,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                -2,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                -2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                -4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                -2,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                -2,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                -2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -4,
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -2,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                -2,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -4
+              ]
+            ],
+            "gram_sha256": "9a7484e9327c35c16d35c9b2fbe9fb22d64eef9c33e698312a295e0d27722cd9",
+            "normal_square_histogram": {
+              "2": 10,
+              "4": 4
+            },
+            "orientation": 1,
+            "rank_inertia": [
+              10,
+              1,
+              9,
+              4
+            ],
+            "short4_long10_selector": false
+          }
+        ]
+      },
+      "vertices": 14
+    },
+    {
+      "all_eight_m4_labellings": {
+        "binomial_count": 24310,
+        "burnside_fixed_count_histogram": {
+          "140": 2,
+          "24310": 1,
+          "6": 2,
+          "600": 2,
+          "70": 1
+        },
+        "burnside_orbit_count": 3234,
+        "explicit_orbit_count": 3234,
+        "labelled_count": 24310,
+        "orbit_inventory_sha256": "3d0eaff23748f438fae2aaee20633dda1f94787eef2165db0eded74ae564ff11",
+        "orbit_size_histogram": {
+          "1": 6,
+          "2": 12,
+          "4": 362,
+          "8": 2854
+        }
+      },
+      "edge_count": 17,
+      "edges_one_based": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          9,
+          14
+        ]
+      ],
+      "fresh_cone_and_vinberg": {
+        "active_set_endpoints_equal_vinberg_endpoints": true,
+        "generic_exact_vinberg": {
+          "bad_edge_count": 0,
+          "bad_full_parabolic_neighborhood_count": 0,
+          "compact": false,
+          "connected_affine_component_audit_count": 32,
+          "decision": "finite_volume_noncompact",
+          "edge_endpoint_type_histogram": {
+            "0,2": 53,
+            "1,1": 300,
+            "2,0": 354
+          },
+          "elliptic_rank8_edge_count": 707,
+          "finite_endpoint_count": 112,
+          "finite_volume": true,
+          "ideal_endpoint_count": 15
+        },
+        "independent_active_set_cone": {
+          "active_facet_sets_sha256": "94ca7e03e19f97e9cc91546163051ef773f9fc0423db1d4360368639586655ae",
+          "active_nine_subset_hits_before_deduplication": 320,
+          "all_14_facets_irredundant": true,
+          "extreme_ray_count": 127,
+          "extreme_rays_sha256": "0927c505acbf76484e00d8b826e3238c9df4ec28b16ae768bd9f1a662130304f",
+          "finite_ray_count": 112,
+          "hyperideal_ray_count": 0,
+          "ideal_ray_count": 15,
+          "principal_basis_facets_one_based": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11
+          ],
+          "strict_interior_minimum_slack": 124,
+          "strict_interior_square": 786564
+        }
+      },
+      "graph": {
+        "automorphism_order": 8,
+        "bipartite": true,
+        "bipartition_sizes": [
+          7,
+          7
+        ],
+        "connected": true,
+        "custom_backtracking_search_nodes": 77,
+        "degree_sequence": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "edge_action_faithful": true,
+        "edge_permutations_sha256": "195c6bed0d9647ee03a3c70c0a793eeb14ac944005ae379d17c4c43a4bc797da",
+        "group_closure_checked": true,
+        "vertex_permutations_sha256": "22ef1fb0666a4ea93bdd7d4b6de8d5e8fe60fd519fefb28b229638a6ae13ec61"
+      },
+      "oriented_integral_gram_lanes": {
+        "count": 476,
+        "exact_rank_inertia_histogram": {
+          "rank10/inertia_1_9_4": 2,
+          "rank12/inertia_2_10_2": 6,
+          "rank13/inertia_2_11_1": 36,
+          "rank13/inertia_3_10_1": 4,
+          "rank14/inertia_2_12_0": 326,
+          "rank14/inertia_3_11_0": 102
+        },
+        "lane_inventory_sha256": "36bc6583df6b7023bc21e4649aa2ffde50c151b6b96f10528dbd17d186b2791f",
+        "norm_square_4_count_histogram": {
+          "10": 40,
+          "11": 10,
+          "3": 10,
+          "4": 40,
+          "5": 60,
+          "6": 86,
+          "7": 84,
+          "8": 86,
+          "9": 60
+        },
+        "short4_long10_selector_lane_count_before_inertia": 40,
+        "short4_long10_selector_lorentzian_lane_count": 1
+      },
+      "primitive_norm_2_4_normalization": {
+        "all_raw_masks_checked_by_independent_constraint_propagation": 24310,
+        "burnside_fixed_count_histogram": {
+          "147": 2,
+          "15": 1,
+          "1519": 1,
+          "3": 2,
+          "35": 2
+        },
+        "burnside_orbit_count": 238,
+        "constraint": "m3 endpoints have equal bits; m4 endpoints have unequal bits",
+        "cut_orbit_inventory_sha256": "79c61e057e4282b989841c57b997bd83c8f31dbf64a80e74374f0f763a4c19e7",
+        "explicit_orbit_count": 238,
+        "iff_cut_delta_X": true,
+        "labelled_compatible_count": 1519,
+        "orbit_size_histogram": {
+          "1": 3,
+          "2": 6,
+          "4": 82,
+          "8": 147
+        },
+        "side_and_complement_are_the_only_two_orientations": true
+      },
+      "support_id": "S17",
+      "unique_lorentzian_diagram_orbit": {
+        "canonical_cut_side_mask_hex": "0x17b7",
+        "canonical_cut_side_vertices_one_based": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          13
+        ],
+        "diagram_stabilizer_order": 8,
+        "fixed_by_full_support_automorphism_group": true,
+        "m3_edges_one_based": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            10,
+            13
+          ]
+        ],
+        "m4_edges_one_based": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            2,
+            14
+          ],
+          [
+            9,
+            14
+          ]
+        ],
+        "m4_mask_hex": "0x18ccc",
+        "scaled_dual_lanes": [
+          {
+            "gram": [
+              [
+                -4,
+                0,
+                2,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                -4,
+                2,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                2,
+                2,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                -2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                -4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                2,
+                2,
+                0,
+                0,
+                0,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -4,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -4,
+                2,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -4,
+                2,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                2,
+                0,
+                2,
+                0,
+                0,
+                -4,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                -2
+              ]
+            ],
+            "gram_sha256": "829dc6182c07948c4b1bc18a91f1e25228c00ee8a9bc45fd562ce36cbada34e2",
+            "normal_square_histogram": {
+              "2": 4,
+              "4": 10
+            },
+            "orientation": 0,
+            "rank_inertia": [
+              10,
+              1,
+              9,
+              4
+            ],
+            "short4_long10_selector": true
+          },
+          {
+            "gram": [
+              [
+                -2,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                -2,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                1,
+                1,
+                -2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                -2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0,
+                0,
+                -2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -4,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -2,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -2,
+                1,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                -2,
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                -2,
+                2,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                -4,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                -2,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                -4
+              ]
+            ],
+            "gram_sha256": "74ae56e2319789512febef457ef14895ac4d150e112e1b92dc1a43989a5686b8",
+            "normal_square_histogram": {
+              "2": 10,
+              "4": 4
+            },
+            "orientation": 1,
+            "rank_inertia": [
+              10,
+              1,
+              9,
+              4
+            ],
+            "short4_long10_selector": false
+          }
+        ]
+      },
+      "vertices": 14
+    }
+  ]
+}

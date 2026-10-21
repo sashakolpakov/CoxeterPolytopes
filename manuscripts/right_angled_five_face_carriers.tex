@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref,xurl}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{A five-face incidence identity for right-angled hyperbolic polytopes\linebreak and positive-curvature facet examples}
+\author{Coxeter Polytopes Frontier Project}
+\date{18 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For an ideal right-angled hyperbolic four-polytope $Q$, put
+$\kappa(Q)=3f_0(Q)-4f_3(Q)+24$. Every ideal right-angled hyperbolic
+five-polytope satisfies $\sum_Q\kappa(Q)=48$, with the sum over its facets.
+Our internally proved second-volume and equality theorems imply that at least
+one such facet has volume at least $3\pi^2$. We give analogous necessary
+incidence inequalities for ideal six-polytopes and mixed polytopes.
+The stronger proposed assertion that every ideal right-angled four-polytope
+has nonpositive $\kappa$ is false: three further facet doublings of the double
+24-cell give an exact example with $\kappa=6$. Iterating doubling makes
+positive $\kappa$ unbounded. No new dimension exclusion or five-dimensional
+example follows. The four-dimensional volume and equality inputs are explicit;
+these results are not presented as externally refereed or fully formalized.
+\end{abstract}
+
+\section{A universal carrier identity}
+Let $Q$ be an entirely ideal right-angled hyperbolic four-polytope. Define
+\[
+ \Delta(Q)=f_0(Q)-f_3(Q),\qquad
+ \kappa(Q)=3\Delta(Q)-(f_3(Q)-24).
+\]
+The published volume formula is
+$\operatorname{Vol}(Q)=(\Delta(Q)+4)\pi^2/3$ \cite{Kolpakov}.
+The ideal regular 24-cell has $(\Delta,\kappa)=(0,0)$; its reflected facet
+double has $(\Delta,\kappa)=(4,-2)$. We use the internal second-volume and
+equality theorems: every other ideal right-angled four-polytope has integer
+$\Delta\ge5$. These inputs are proved in the separate manuscripts
+\emph{The second volume of ideal right-angled hyperbolic four-polytopes} and
+\emph{The equality structure of the second-volume ideal right-angled
+hyperbolic four-polytope}; they are not consequences of the identity below.
+
+\begin{theorem}
+Every entirely ideal right-angled hyperbolic five-polytope $P$ satisfies
+\[
+ \sum_{Q\text{ a facet of }P}\kappa(Q)=48.
+\]
+Consequently it has a facet $Q$ with $\kappa(Q)>0$, $\Delta(Q)\ge5$ and
+$\operatorname{Vol}(Q)\ge3\pi^2$.
+\end{theorem}
+\begin{proof}
+Write $(v,e,r,g,f)=(f_0,f_1,f_2,f_3,f_4)(P)$. A cusp link is a rectangular
+four-box, with sixteen vertices, twenty-four two-faces and eight facets.
+Counting the corresponding incidences gives
+\[
+ e=8v,\qquad \sum_{R\in\Omega_3(P)} f_0(R)=24v,
+ \qquad \sum_{Q\in\Omega_4(P)}f_0(Q)=8v.
+\]
+Each ideal right-angled three-face satisfies $f_2(R)=f_0(R)+2$. A two-face
+belongs to three three-faces: its finite relative-interior normal diagram
+consists of three orthogonal walls. Hence $3r=24v+2g$. The boundary is a
+four-sphere, so $v-e+r-g+f=2$. Eliminating $e,r$ gives
+$g=3v+3f-6$.
+
+Each three-face belongs to two four-facets. Therefore
+\[
+ D:=\sum_Q\Delta(Q)=8v-2g=2v-6f+12,
+ \qquad
+ A:=\sum_Q(f_3(Q)-24)=2g-24f=3D-48.
+\]
+The desired identity is $\sum_Q\kappa(Q)=3D-A=48$.
+A positive summand exists. Neither the 24-cell nor its unique second-volume
+double has positive $\kappa$, so the asserted volume lower bound follows
+from the separate classification.
+\end{proof}
+A positive carrier satisfies $f_3(Q)\le3\Delta(Q)+23$ and
+$f_0(Q)\le4\Delta(Q)+23$. In the first possible branch $\Delta=5$, these
+bounds are respectively $38$ and $43$; this is a necessary domain, not an
+existence assertion.
+
+\begin{corollary}
+For an entirely ideal right-angled hyperbolic six-polytope,
+\[
+ \sum_{Q\in\Omega_4(P)}\kappa(Q)=24f_5(P).
+\]
+At least $\lceil f_5(P)/2\rceil$ four-faces have positive $\kappa$.
+\end{corollary}
+\begin{proof}
+Apply the theorem to every five-facet. Each four-face has exactly two
+five-cofaces, giving the identity. Each five-facet contains a positive
+carrier, and any one four-face can serve only its two cofaces.
+\end{proof}
+
+\section{Mixed finite-volume polytopes}
+Let $P$ be any finite-volume right-angled $n$-polytope, $n\ge5$, with
+$v_{\rm fin}$ finite vertices. Write $I_5$ for its entirely ideal five-faces.
+A nonideal five-face contains a finite vertex, and a finite vertex is simple,
+so belongs to $\binom n5$ five-faces. Thus
+\[
+ f_5-I_5\le\binom n5v_{\rm fin}.
+\]
+A four-face has an orthogonal relative-interior normal diagram of rank
+$n-4$ and exactly $n-4$ five-cofaces. Summing the carrier identity over
+ideal five-faces, discarding nonpositive terms and using this multiplicity,
+we obtain
+\[
+ \boxed{48\left(f_5-\binom n5v_{\rm fin}\right)
+ \le(n-4)\sum_{Q\text{ an ideal four-face}}\max(\kappa(Q),0).}
+\]
+If $h_4$ counts positive carriers, the unweighted version is
+$f_5\le\binom n5v_{\rm fin}+(n-4)h_4$.
+For $n=9,10,11,12$, the respective coefficient pairs are
+$(126,5),(252,6),(462,7),(792,8)$. No arithmetic restriction is imposed.
+These inequalities alone do not exclude any of the open dimensions.
+
+\section{A positive carrier by actual facet doubling}
+Use the Lorentz metric $\operatorname{diag}(-1,1,1,1,1)$ and outward unit
+wall normals. For a facet normal $n$ of an ideal right-angled polytope $P$,
+let $s_n$ be its wall reflection. Then $P\cup s_nP$ is exactly the
+intersection of the halfspaces with normals $m,s_nm$, $m\ne n$.
+Indeed, for $x\in P$, acuteness gives
+\[
+ \langle x,s_nm\rangle
+ =\langle x,m\rangle-2\langle m,n\rangle\langle x,n\rangle\le0.
+\]
+Conversely, a point of the indicated intersection is in $P$ if its product
+with $n$ is nonpositive, and otherwise reflects into $P$. The union is
+therefore convex, with disjoint interiors and doubled volume. Its Klein
+vertex set is the union of the two ideal vertex sets; every distinct point
+on the strictly convex sphere remains extreme.
+
+If the gluing facet has $b$ vertices, its $b+2$ neighboring facets merge
+with their reflected copies, while other facets occur twice. Indeed, if
+$m=s_n\ell$ are two old normals, acuteness and
+$\langle m,n\rangle=-\langle\ell,n\rangle$ force both products to be zero,
+so $m=\ell$. Thus there are no other cross-copy identifications, and
+\[
+ v'=2v-b,\qquad f'=2f-b-4,\qquad \kappa'=2\kappa+b-8. \tag{1}
+\]
+An adjacent facet with $a$ vertices, meeting the gluing facet in a $k$-gon,
+becomes a facet with $2a-k$ vertices.
+
+Start with the reflected double of the regular 24-cell. In the exact
+rational realization, take the three nine-vertex facets
+\[
+ F=(1,0,1,-1,0),\quad G=(1,0,1,0,-1),\quad H=(1,0,1,1,0).
+\]
+Their consecutive products are zero, their consecutive ridges are
+quadrilaterals, and $\langle F,H\rangle=-1$. Double successively across
+$F,G,H$. After doubling $F$, the $G$ facet has fourteen vertices while
+$H$ still has nine. After doubling $G$, the $H$ facet has fourteen.
+Equation (1) and the complete exact reflection certificate give
+\[
+\begin{array}{c|r|r|r|r}
+\text{24-cell copies}&\text{gluing size}&v&f&\kappa\\\hline
+2&-&42&38&-2\\
+4&9&75&63&-3\\
+8&14&136&108&0\\
+16&14&258&198&6.
+\end{array}
+\]
+The final f-vector is $(258,1032,972,198)$ and its volume is
+$64\pi^2/3$. This refutes $\kappa\le0$ universally, without constructing a
+five-polytope. Since every subsequent gluing facet has at least six
+vertices, further doubling gives
+$\kappa_{t+1}\ge2\kappa_t-2$ and hence $\kappa_t\ge4\cdot2^t+2$.
+Positive carrier values are unbounded.
+
+\section{Scope and reproduction}
+The five-face identity and its corollaries have two independent internal
+mathematical reviews. The positive-carrier construction has exact generation,
+fresh replay and an independent saved checker; two independent full mathematical reviews have passed. The precise review
+scopes are recorded in the accompanying repository report. These are necessary
+incidence constraints and actual four-dimensional examples, not new
+right-angled dimension bounds.
+The exact Python scripts use only the standard library. The identity
+certificate checks linear combinations of universal geometric premises;
+it does not prove those premises by sampling. The doubling checker imports
+no producer and verifies each saved reflected normal/vertex set, facet
+rank, strict center, cube cusp link and count. Completeness of the original
+24-cell vertex census is inherited from the frozen base certificate; the
+written halfspace-union proof transports completeness through each double.
+See \texttt{docs/right\_angled\_five\_face\_carriers\_reproduce.md} for commands
+and the precise internal/external lemma map.
+
+\begin{thebibliography}{9}
+\bibitem{Kolpakov} A. Kolpakov, \emph{On the optimality of the ideal right-angled
+24-cell}, Algebraic \& Geometric Topology 12 (2012), 1941--1960.
+\href{https://doi.org/10.2140/agt.2012.12.1941}{doi:10.2140/agt.2012.12.1941}.
+\end{thebibliography}
+\end{document}

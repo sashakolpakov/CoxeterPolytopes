@@ -1,0 +1,29 @@
+{
+  "status": "DEFERRED_RESOURCE_GATE",
+  "manuscript": "ideal_dimension4",
+  "mode": "core",
+  "created_utc": "2026-10-20T00:05:21.068214+00:00",
+  "catalogue_sha256": "5b80e0ee7f6c50cfd08e5c014342633038a92cca3366b2c09d32ad11055363a4",
+  "manuscript_sha256": "52296f3297f1e5b3696250ec729ba3524658494d8a442ee2ea2e1d0f956fb9b5",
+  "runner_sha256": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1",
+  "jobs": [
+    {
+      "id": "ideal_dimension4_model",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "Exact24 standard unit normals,276Gram pairs,12opposite pairs,24displayed null vertices/cubical cusp links,actualfacet witnesses and scalar identity. No external theorem or universalgeometry proof.",
+      "exit_code": 1,
+      "elapsed_seconds": 0.075,
+      "stdout_sha256": "261ee3420d12fad80d4144eeade53936c4ee8dd96aaa1bc135592acea667f6ae",
+      "stdout_bytes": 675,
+      "source_sha256": "bb506ec1ee98dee1429d6e668553af40316ebdeda6b59b82bbf03b8f3a6dc261",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=180.7GiB memory=5.8GiB; require 40/6GiB\n"
+    }
+  ],
+  "planned_jobs": 3,
+  "remaining_formal_gaps": "Musin and Kolpakov published inputs; all Lorentz/real geometry, normalized code reduction, opposite-pair center lemma, actual face inheritance and connectedness remain explicit premises.",
+  "assumption_document": "docs/manuscript_assumptions.md",
+  "assumption_document_sha256": "81d3e1abc7340b3fd5b97ae86a21d7e057f5e479063aa833ba9926afc1ef4a71",
+  "end_to_end_geometric_lean_proof_claimed": false
+}

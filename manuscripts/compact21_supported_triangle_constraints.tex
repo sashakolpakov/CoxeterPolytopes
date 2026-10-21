@@ -1,0 +1,271 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,xurl}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\E}{\mathrm E}
+\newcommand{\D}{\mathrm D}
+\newcommand{\A}{\mathrm A}
+\title{Triangle constraints at two compact arithmetic rank--21 vertex types}
+\author{Research manuscript with reproducible exact certificates}
+\date{18 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove local incidence restrictions at compact arithmetic hyperbolic
+Coxeter vertices with ground field $\mathbb Q(\sqrt5)$ and diagram
+$\A_1+\D_5+\E_7+\E_8$ or $\D_5+2\E_8$.
+The first type has at most seven triangular two-faces marked by
+nonadjacent roots within one nontrivial component. At either type, at
+most one of the three possible nonadjacent $\D_5$ triangles occurs.
+We describe forced simplex and product faces in the exceptional
+components. Exact finite-corner and arithmetic computations are supplied.
+These results do not improve a dimension ceiling or establish a new
+global charging inequality.
+\end{abstract}
+
+\section{Statements and hypotheses}
+Roots have square two. Number $\D_5$ by the edges $01,12,23,24$.
+Number $\E_n$ by the path $0-1-\cdots-(n-2)$ and the extra edge
+$2(n-1)$. All these bonds have label three.
+A pair of incident facet roots specifies a two-face at a simple vertex.
+Call the pair nonadjacent when it is not an edge of its old component
+diagram. We consider only pairs in a single component.
+
+\begin{theorem}\label{thm:seven}
+Let $P\subset\mathbb H^{21}$ be a compact arithmetic Coxeter polytope
+with ground field $\mathbb Q(\sqrt5)$, and let a vertex have diagram
+$\A_1+\D_5+\E_7+\E_8$. Among its $42$ two-faces marked by nonadjacent
+pairs within $\D_5,\E_7,\E_8$, at most seven are triangles.
+Equality in the necessary local domain requires the $\E_7$ third wall
+with label-five contact at root~5 and the two $\E_8$ third walls with
+label-five contacts at roots~0 and~6. It has no nonadjacent $\D_5$
+triangle. Realization of this necessary equality configuration is not asserted.
+\end{theorem}
+
+\begin{theorem}\label{thm:d5}
+At either $\A_1+\D_5+\E_7+\E_8$ or $\D_5+2\E_8$, under the same
+compact arithmetic and ground-field hypotheses, at most one of the
+$\D_5$ faces marked $(0,2),(1,3),(1,4)$ is triangular. Every other
+nonadjacent $\D_5$ face is nontriangular.
+\end{theorem}
+
+The repository's separate, completed internal compact-dimension--21
+field reduction leaves precisely this ground field. That reduction is
+an input when applying these conditional statements to an arbitrary
+compact arithmetic chamber in dimension~21. We do not extend the
+three-field theorem valid from dimension~22 to dimension~21.
+
+\section{Actual corners and a complete finite domain}
+Let $T$ be the positive span of the $21$ old vertex roots, and let $e$
+be its future unit timelike orthogonal vector. If the face marked $a,b$
+is a triangle with third wall $c$, both root sets replacing $a$ or $b$
+by $c$ are positive-definite actual corners.
+
+\begin{lemma}\label{lem:isolation}
+A whole untouched $\E_8$ is orthogonal to $c$. A whole untouched
+$\E_7$ is also orthogonal to $c$.
+\end{lemma}
+\begin{proof}
+Finite $\E_8$ has no connected finite extension. If $c$ meets a whole
+$\E_7$, its finite extension must be $\E_8$. Maximality then forces
+$c$ orthogonal to every other root in either new corner. Their union
+contains all old roots. The full old forest together with $c$ would
+therefore be positive definite of rank $22$, impossible in signature
+$(21,1)$.
+\end{proof}
+
+For $\D_5$ marks the remaining complete old domain is $\D_5+\A_1$,
+or just $\D_5$ at the second vertex type. For $\E_7$ or $\E_8$ marks
+in Theorem~\ref{thm:seven}, we retain respectively the full forests
+$\E_7+\D_5+\A_1$ and $\E_8+\D_5+\A_1$. No $\D_5$ or $\A_1$
+contact is assumed zero in these latter enumerations.
+
+\begin{lemma}\label{lem:labels}
+Every contact in these domains has label at most five.
+\end{lemma}
+\begin{proof}
+A label at least six in a finite Coxeter diagram belongs to an isolated
+$I_2(m)$. At an old root in a nontrivial connected component this
+contradicts the retained old neighbors in the two corners: the marks
+are distinct and nonadjacent. If instead the whole isolated $\A_1$
+has such a contact, the isolated-$I_2(m)$ requirement forces $c$
+orthogonal to every other old root in both corners, hence their union.
+Its height then is
+\[
+ H=\frac{(2\cos(\pi/m))^2}{2}-2<0,
+\]
+contradicting $c=p+\sqrt H e$ with positive height.
+\end{proof}
+
+The first finite corner can consequently be enumerated through finite
+trees. The new root has degree at most three, meets each old connected
+component at most once, and with degree three has only label-three
+bonds. Restore the omitted marked root with labels two through five
+and test the second corner. These conditions contain every actual
+triangle, not merely a selected finite witness.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Marks & First-corner trials & Second-corner trials & Finite eligible\\
+\midrule
+$\E_7$ in $\E_7+\D_5+\A_1$ &7497&2296&379\\
+$\E_8$ in $\E_8+\D_5+\A_1$ &12492&3368&470\\
+\bottomrule
+\end{tabular}
+\end{center}
+For $\D_5+\A_1$, a separate direct enumeration checks all
+$6\cdot4^6=24576$ contact vectors and has $139$ finite-eligible occurrences.
+
+\section{Arithmetic and the surviving normals}
+Put $s=\sqrt5$ and $\phi=(1+s)/2$. The computation uses exact rational
+arithmetic in $\mathbb Q(\sqrt2,\sqrt5)$, the field containing every
+contact allowed by Lemma~\ref{lem:labels}. For each old Gram $G$,
+\[
+ H=bG^{-1}b^{\mathsf T}-2.
+\]
+It rejects $H\le0$. Simple cycles use $c$ and the unique old path
+between two contacts; the old path contributes rational factors.
+Their products must belong to $\mathbb Q(s)$. Once that holds,
+$H\in\mathbb Q(s)$, and conjugate positive semidefiniteness requires
+$\overline H\le0$. The old rational positive Gram is unchanged, so
+this follows directly from its Schur complement. Connected affine
+principal subsets containing $c$ are excluded by compactness: their
+positive null kernels give a future ideal point in the chamber closure.
+Finite subsets, and connected subsets with label five, cannot be affine.
+
+The $\D_5+\A_1$ domain leaves six roots:
+\begin{center}\small
+\begin{tabular}{llll}
+\toprule
+Name & $\D_5$ contacts & $\A_1$ contact & $H$\\
+\midrule
+$C_0$&$\phi$ at0&0&$(s-1)/2$\\
+$L_3,L_4$&$\phi$ at3 or4&0&$(-1+5s)/8$\\
+$U_3,U_4$&1 at1, $\phi$ at3 or4&0&$(23+13s)/8$\\
+$C_*$&1 at0&$\phi$&$(s-1)/4$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first and last correspond to marks $(0,2)$; the two fork families
+correspond to $(1,3)$ and $(1,4)$. In $\D_5+2\E_8$ there is no
+$\A_1$, and only the first five roots occur.
+
+With the whole $\D_5+\A_1$ included, the exceptional domains leave:
+\begin{center}\small
+\begin{tabular}{llll}
+\toprule
+Name & Exceptional contact & $\A_1$ contact & $H$\\
+\midrule
+$E_0$&$\E_7$: $\phi$ at0&0&$1+s$\\
+$E_5$&$\E_7$: $\phi$ at5&0&$(1+3s)/4$\\
+$E_*$&$\E_7$: 1 at5&$\phi$&$(1+s)/4$\\
+$F_0$&$\E_8$: $\phi$ at0&0&$4+2s$\\
+$F_6$&$\E_8$: $\phi$ at6&0&$1+s$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All have zero $\D_5$ contact; this is an output of the complete domains.
+Their nonadjacent triangle marks are respectively
+\[
+\begin{gathered}
+E_0:(0,2),\quad E_5:(2,4),(2,5),(3,5),\quad E_*:(3,5),\\
+F_0:(0,2),\quad F_6:(3,5),(3,6),(4,6).
+\end{gathered}
+\]
+
+\section{Coupling at the common vertex}
+For two candidate walls,
+\[
+ c_i\cdot c_j=p_i\cdot p_j-\sqrt{H_iH_j}.
+\]
+The old projections of roots from different components are orthogonal,
+except for their explicitly shared $\A_1$ contacts. The ring of integers
+is $\mathbb Z[\phi]$: $a+bs$ is integral exactly when $2b$ and $a-b$
+are integers. With zero projection product, $H_iH_j$ is the length-two
+cyclic product and must be integral.
+
+\begin{proof}[Proof of Theorem~\ref{thm:d5}]
+The exact $\D_5+\A_1$ inverse gives positive projection product $p$
+and $p^2-H_iH_j>0$ for all fifteen pairs of the six candidate walls.
+Thus each mutual product would be positive, contrary to acuteness.
+For the new $C_*$ against $C_0,L_j,U_j$, these positive differences are
+\[
+ \frac{3(1+s)}4,\qquad\frac{-7+5s}{16},\qquad\frac{9+5s}{16}.
+\]
+The ten pairs among the old five are independently checked as well.
+Distinct marked faces use disjoint candidate sets, proving the result.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:seven}]
+The fifty-five candidate pairs split into eighteen forbidden positive
+mutual products, twenty-three nonintegral length-two cycles, two
+orthogonal necessary pairs, and twelve remaining necessary native or
+dotted possibilities. The shared $\A_1$ is essential: for $C_*,E_*$
+their actual product is $(1+s)/4>0$.
+
+Within $\E_7$, $E_5$ is incompatible with $E_0,E_*$, whereas $E_0,E_*$
+are orthogonal. Thus at most three designated triangles occur there.
+The two $\E_8$ roots are orthogonal and supply at most four. If any
+$\D_5$ triangle occurs, every $\E_7$ root except possibly $E_0$ is
+forbidden, giving at most $1+1+4=6$. Otherwise the total is at most
+$3+4=7$. The exact checker also enumerates all $2^{11}=2048$ necessary
+root subsets and gives the unique maximizing subset
+$\{E_5,F_0,F_6\}$.
+\end{proof}
+
+\section{Forced exceptional faces and the remaining charge problem}
+An actual $\E_8$ wall $F_0$ forces all three triangles on marks
+$\{0,1,2\}$, and $F_6$ forces all six on $\{3,4,5,6\}$. The checked
+positive corners are actual vertices by projection of a strict interior
+timelike point off a positive Gram span. The inverse is nonnegative,
+so all other inequalities remain strict. The resulting simplex-edge
+graphs saturate the degree of each simple face and hence exhaust its
+connected edge graph. These are actual simplex three- and four-faces.
+
+The inverse entries $J_{00}=4,J_{66}=2,J_{06}=2$ give
+\[
+ p_0\cdot p_6=2\phi^2=3+s,
+ \qquad H_0H_6=(3+s)^2,
+\]
+so the walls are orthogonal. If both occur, all twenty corners obtained
+by omitting one member of $\{0,1,2,F_0\}$ and one of
+$\{3,4,5,6,F_6\}$ are positive. Keeping root7 and the other old
+components as supports gives a seven-face with the full incidence
+structure $\Delta^3\times\Delta^4$, again by degree saturation and
+connectedness. Its intrinsic dihedral cosine at old roots1,2 is
+$1/\sqrt3$, so it is not intrinsically Coxeter.
+
+For $\D_5+2\E_8$, the earlier complete nonadjacent domain has an upper
+bound nine on its forty-eight designated triangles. The present
+$\D_5$ strengthening does not reduce it to eight: one long $\D_5$
+triangle and four from each $\E_8$ remain in the necessary domain.
+
+Finally, a nontriangle can be a quadrilateral. The current global rule
+requires total payment at least two on a triangle and at least one on
+a quadrilateral. The results here provide no new quadrilateral payment,
+vertex-allowance saving, dimension--20 theorem, or example. Their next
+use requires actual quadrilateral or edge compatibility and a verified
+change to the global charge system.
+
+\section{Reproducibility and verification scope}
+The accompanying proof map is
+\path{docs/compact21_supported_triangle_constraints_map.md}.
+The two complete new domain producers support \texttt{--verify};
+\path{check_compact21_e8_triangle_bundles_20261018.py} is a
+standalone exact arithmetic check of the earlier $\D_5$ and $\E_8$
+identities and all twenty product-face corners. Sources and field
+reduction inputs are hash-bound. Generation and separate full replays
+pass with measured peak resident memory below $32$ MiB. The jobs use
+one global lock, a $59$-second alarm and a periodic one-GiB memory guard.
+No optimizer or Lean process is launched.
+
+The universal actual-corner, compactness, projection and edge-graph
+arguments are written proofs. Published finite/affine classifications,
+compact simplicity and Vinberg's arithmetic criterion are explicit
+theoretical inputs. The earlier $\D_5+2\E_8$ domain and complete
+dimension--21 field reduction are separate internally checked inputs.
+No end-to-end Lean or external human verification is claimed.
+\end{document}

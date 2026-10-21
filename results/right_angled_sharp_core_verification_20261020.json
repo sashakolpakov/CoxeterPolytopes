@@ -1,0 +1,69 @@
+{
+  "status": "PASS_DECLARED_CHECKS_CONDITIONAL_ON_LISTED_ASSUMPTIONS",
+  "manuscript": "right_angled_sharp",
+  "mode": "core",
+  "created_utc": "2026-10-20T00:23:30.926269+00:00",
+  "catalogue_sha256": "4a9d4656036ccf32f871fd48855e9875db5d628b321f1dd0cc0c6837c5162e10",
+  "manuscript_sha256": "3c3ddd8540593004bcd5fb57832afc77ffc639268e66cb0ab29302b286654310",
+  "runner_sha256": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1",
+  "jobs": [
+    {
+      "id": "ideal_dimension4_model",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Exact24 standard unit normals,276Gram pairs,12opposite pairs,24displayed null vertices/cubical cusp links,actualfacet witnesses and scalar identity. No external theorem or universalgeometry proof.",
+      "exit_code": 0,
+      "elapsed_seconds": 0.219,
+      "stdout_sha256": "f0dfcba4e9b93cd0b205582dc74295863e16152fda9dbc15ecea179f7c60411f",
+      "stdout_bytes": 951,
+      "source_sha256": "bb506ec1ee98dee1429d6e668553af40316ebdeda6b59b82bbf03b8f3a6dc261",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"actual_facet_witnesses\": 24, \"arithmetic\": \"integer and Fraction, no floating point\", \"cubical_cusp_links\": 24, \"displayed_null_vertices\": 24, \"external_and_universal_geometry_verified\": false, \"opposite_normal_pairs\": 12, \"scalar_polynomial_identity\": true, \"status\": \"PASS_EXACT_24_CELL_MODEL\", \"unit_normals\": 24, \"unordered_gram_pairs\": 276, \"vertex_enumeration_completeness_claimed\": false}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_ideal_right_angled_dimension4_model_20261020.py\"], \"elapsed_seconds\": 0.113, \"peak_process_tree_rss_bytes\": 49184768, \"initial_resources\": {\"free_disk_gib\": 181.08, \"available_memory_gib\": 6.69}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 398, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"bb506ec1ee98dee1429d6e668553af40316ebdeda6b59b82bbf03b8f3a6dc261\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "right_angled_sharp_sos",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Exact12-variable polynomial identities for36rank2/216rank3 tensor contractions, explicit unit-ideal remainders, factor/positive coefficients, ratio27 and4-vector endpoint. No geometry/code enumeration.",
+      "exit_code": 0,
+      "elapsed_seconds": 0.257,
+      "stdout_sha256": "fd8c0cb3e1295dd255aeaf15778c5598a8c50acc1e966399f5d1471a4bc7e020",
+      "stdout_bytes": 662,
+      "source_sha256": "bd0ed1c4c1b7e18a219a2a8aca2b178dbe1d559d7e9ec90ad609150aedf8b2c3",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"status\": \"PASS\", \"mode\": \"verify\", \"rank2\": 36, \"rank3\": 216, \"ratio\": 27, \"strict_endpoint\": -2}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_right_angled_sharp_dimension_sos_20261020.py\", \"--verify\"], \"elapsed_seconds\": 0.147, \"peak_process_tree_rss_bytes\": 55934976, \"initial_resources\": {\"free_disk_gib\": 181.08, \"available_memory_gib\": 6.68}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 100, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"bd0ed1c4c1b7e18a219a2a8aca2b178dbe1d559d7e9ec90ad609150aedf8b2c3\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "CoxeterProofs.RightAngledSharpDimensions",
+      "kind": "conditional_lean",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Exactcubic/Gramcoefficients;N\u00b2<=27N count cancellation,strict26;threeactualprojectionsteps;independentgeneral8andideal4dimensionimplications.",
+      "exit_code": 0,
+      "elapsed_seconds": 2.075,
+      "stdout_sha256": "f8fb4d58ac7952941ebc1958510d7db9466948aa9b9cdfd54287531d0ea84cc2",
+      "stdout_bytes": 4456,
+      "source_sha256": "e1844d73a3f07de6cc512e514b948dafef4253e272b3f98de36148543554e323",
+      "execution_runner_sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+      "printed_axiom_audit_requested": true,
+      "output": "{\"status\": \"KERNEL_COMPILED\", \"module\": \"CoxeterProofs.RightAngledSharpDimensions\", \"inputs\": {\"source_sha256\": \"e1844d73a3f07de6cc512e514b948dafef4253e272b3f98de36148543554e323\", \"dependency_olean_sha256\": {}, \"compiler\": {\"lean-toolchain\": \"2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273\", \"lakefile.toml\": \"73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7\", \"lake-manifest.json\": \"31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395\", \"compiler_files\": {\"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean\": \"1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib\": \"c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib\": \"e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib\": \"be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182\"}, \"environment\": {\"ELAN_TOOLCHAIN\": \"\", \"LEAN_PATH\": \"\", \"LEAN_SRC_PATH\": \"\"}}, \"memory_cap_mib\": 2048, \"threads\": 1}, \"stdout_sha256\": \"dc3efdae2e35888b0e0416d03106376687b92d5fa23df9a7e2f9ec087bbec3b8\", \"output_bytes\": 1294, \"elapsed_seconds\": 0.9, \"resources\": {\"free_disk_gib\": 181.08, \"available_memory_gib\": 6.68}, \"olean_sha256\": \"f2bd3858fee23605e95212d21784afcc8f6a66f148e11f524ea3cbeb077d7f91\"}\n'CoxeterProofs.RightAngledSharpDimensions.cubic_factor_coefficients' does not depend on any axioms\n'CoxeterProofs.RightAngledSharpDimensions.cubic_kernel_coefficients' does not depend on any axioms\n'CoxeterProofs.RightAngledSharpDimensions.cubic_diagonal_and_positive_coefficients' does not depend on any axioms\n'CoxeterProofs.RightAngledSharpDimensions.four_half_all_ones_value' does not depend on any axioms\n'CoxeterProofs.RightAngledSharpDimensions.no_four_half_gram_positive' depends on axioms: [propext, Quot.sound]\n'CoxeterProofs.RightAngledSharpDimensions.strict_code_count_le27' depends on axioms: [propext, Quot.sound]\n'CoxeterProofs.RightAngledSharpDimensions.strict_code_count_le26' depends on axioms: [propext, Quot.sound]\n'CoxeterProofs.RightAngledSharpDimensions.actual_three_projection_flag' does not depend on any axioms\n'CoxeterProofs.RightAngledSharpDimensions.no_nine_polytope' depends on axioms: [propext, Quot.sound]\n'CoxeterProofs.RightAngledSharpDimensions.all_right_angled_dimension_at_most_eight' depends on axioms: [propext,\n Quot.sound]\n'CoxeterProofs.RightAngledSharpDimensions.no_ideal_five_polytope' depends on axioms: [propext, Quot.sound]\n'CoxeterProofs.RightAngledSharpDimensions.entirely_ideal_dimension_at_most_four' depends on axioms: [propext,\n Quot.sound]\n{\"status\": \"KERNEL_AXIOM_AUDIT\", \"module\": \"CoxeterProofs.RightAngledSharpDimensions\", \"inputs\": {\"source_sha256\": \"e1844d73a3f07de6cc512e514b948dafef4253e272b3f98de36148543554e323\", \"dependency_olean_sha256\": {}, \"compiler\": {\"lean-toolchain\": \"2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273\", \"lakefile.toml\": \"73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7\", \"lake-manifest.json\": \"31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395\", \"compiler_files\": {\"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean\": \"1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib\": \"c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib\": \"e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib\": \"be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182\"}, \"environment\": {\"ELAN_TOOLCHAIN\": \"\", \"LEAN_PATH\": \"\", \"LEAN_SRC_PATH\": \"\"}}, \"memory_cap_mib\": 2048, \"threads\": 1}, \"stdout_sha256\": \"dc3efdae2e35888b0e0416d03106376687b92d5fa23df9a7e2f9ec087bbec3b8\", \"output_bytes\": 1294, \"elapsed_seconds\": 0.73, \"resources\": {\"free_disk_gib\": 181.07, \"available_memory_gib\": 6.74}}\n{\"status\": \"PASS_SEQUENTIAL_MODULE_CHECK\", \"newly_capped_modules\": [\"CoxeterProofs.RightAngledSharpDimensions\"], \"legacy_cached_uncapped_modules\": [], \"all_dependencies_have_capped_ledger\": true}\n"
+    },
+    {
+      "id": "right_angled_sharp-pdf",
+      "kind": "typesetting",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Fresh PDF compilation; preserves published PDF and ledger.",
+      "exit_code": 0,
+      "elapsed_seconds": 1.897,
+      "stdout_sha256": "1516aa64c8e41f569b3a5a29b2f6d66935afb8f0efd617108b1f56d629d04204",
+      "stdout_bytes": 783,
+      "source_sha256": "3c3ddd8540593004bcd5fb57832afc77ffc639268e66cb0ab29302b286654310",
+      "execution_runner_sha256": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15",
+      "output": "{\"status\": \"PASS_TEX_BUILD\", \"source\": \"manuscripts/right_angled_sharp_dimension_bounds.tex\", \"source_sha256\": \"3c3ddd8540593004bcd5fb57832afc77ffc639268e66cb0ab29302b286654310\", \"pdf\": \"manuscripts/build/right_angled_sharp_dimension_bounds.pdf\", \"pdf_sha256\": \"6556030770e744d03b6cbcecf76125a9e26584a4dac8389f0d06ac99b20a8d31\", \"pdf_bytes\": 207718, \"pages\": 5, \"warnings\": [], \"passes\": [{\"pass\": 1, \"stdout_bytes\": 16805}, {\"pass\": 2, \"stdout_bytes\": 14882}], \"elapsed_seconds\": 1.789, \"peak_rss_bytes\": 83738624, \"initial_resources\": {\"free_disk_gib\": 181.07, \"available_memory_gib\": 6.76}, \"temporary_build_files_removed\": true, \"mathematical_verification_claimed\": false, \"check_only\": true, \"builder_sha256\": \"27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15\"}\n"
+    }
+  ],
+  "planned_jobs": 4,
+  "remaining_formal_gaps": "Actual Lorentz/real projection and height recurrence, radial code interpretation, universal real tensorSOS/equality Gram positivity, faceinheritance and publishedDufour/Musin/Kolpakov inputs remainexplicit typedpremises. No integerproxyforrealheights.",
+  "assumption_document": "docs/manuscript_assumptions.md",
+  "assumption_document_sha256": "f2dc956970cf5dbd651a3b750e7b81e1c307f2198db26f95fbd4201847424235",
+  "end_to_end_geometric_lean_proof_claimed": false
+}

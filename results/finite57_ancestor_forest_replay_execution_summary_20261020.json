@@ -1,0 +1,64 @@
+{
+  "status": "BOTH_DECLARED_ANCESTOR_FOREST_PHASES_ACTUAL_PASS",
+  "checker": "scripts/check_finite57_ancestor_forest_batches_20261020.py",
+  "checker_sha256": "685dfbcdef1c929f6949b98eff8eb3adab9b50989e115a14b8c09662a6812c23",
+  "actual_phase_records": [
+    {
+      "phase": "coarse",
+      "execution": "results/finite57_ancestor_coarse_execution_20261020.json",
+      "execution_sha256": "2ef9b021df30c8988e3baa5dd61c6fa683059e42004c56e4bd9d1528798955eb",
+      "wrapper_seconds": 3.05,
+      "peak_process_tree_rss_bytes": 318799872,
+      "facts": {
+        "certificate_sha256": "9e5838e5eb9afec9c5b050d4d753e2ec28dc962c788af0fc7e7d5cc144ccc70e",
+        "coarse_upper": "3573/8",
+        "context_options": 10677,
+        "excluded_actual_refinement_fields": [
+          "actual_attaining_forest",
+          "actual_attainment_of_global_upper_claimed",
+          "actual_maximum_claimed",
+          "exact_actual_maximum"
+        ],
+        "expanded_choices": 3298,
+        "fixed_vectors": 1295,
+        "full_producer_replay_claimed": false,
+        "mathematical_jobs_run": 1,
+        "native_source_closure_sha256": "97a5f76d8017a6e9b3f5210815bc3b7de89869e793c3b2a85219ac2ba492e505",
+        "source_pins": 131,
+        "tables": 6596,
+        "tight_predecessors": 382568,
+        "transition_inequalities": 8287874
+      }
+    },
+    {
+      "phase": "increasing",
+      "execution": "results/finite57_ancestor_increasing_execution_20261020.json",
+      "execution_sha256": "ad8f839019609bfdb9091012c7d3138f0cff54f2cb202ae34c2d024f90d4cb32",
+      "wrapper_seconds": 2.056,
+      "peak_process_tree_rss_bytes": 168067072,
+      "facts": {
+        "certificate_sha256": "f80edecac4af2021e39806a194befebcba0ab83c748138a6e40556a7dedc117c",
+        "context_options": 4453,
+        "full_producer_replay_claimed": false,
+        "item_identities": 37191,
+        "mathematical_jobs_run": 1,
+        "native_source_closure_sha256": "97a5f76d8017a6e9b3f5210815bc3b7de89869e793c3b2a85219ac2ba492e505",
+        "rows": 759,
+        "source_pins": 477,
+        "tables": 1518,
+        "tight_predecessors": 88044,
+        "transition_inequalities": 1907367,
+        "upper": "2837/8"
+      }
+    }
+  ],
+  "total_transition_inequalities": 10195241,
+  "total_tables": 8114,
+  "total_wrapper_seconds": 5.106,
+  "peak_process_tree_rss_bytes": 318799872,
+  "source_review": "results/review_finite57_ancestor_forest_batches_source_composition_20261020.md",
+  "source_review_sha256": "da05eb612583c17fd679997a3cedada62d01d320a1a4bea343b062b385023a10",
+  "contract": "results/finite57_ancestor_forest_replay_contract_20261020.md",
+  "full_producer_or_full_manuscript_replay_claimed": false,
+  "scope": "Complete mathematical coarse and first increasing-family certificate checks only. Local geometry, actual-refinement and other ancestors retain separately declared boundaries."
+}

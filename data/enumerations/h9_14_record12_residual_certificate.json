@@ -1,0 +1,721 @@
+{
+  "automorphism_quotient": {
+    "actions": [
+      "row and column permutations of the 5x5 branch matrices",
+      "simultaneous transpose induced by swapping the cut sides",
+      "independent bipartite complementation of X and Z",
+      "interchange of X and Z induced by swapping the K2,2 parts"
+    ],
+    "balanced_cut_stabilizer": "(S5 wr C2) x D8",
+    "full_orbits": 371,
+    "input_relative_embeddings": 42000,
+    "missing_edge_graph_automorphism_group": "D8 x S10"
+  },
+  "census": {
+    "coloured_branch_orbits": 1308,
+    "full_blocker_passing_relative_embeddings": 42000,
+    "full_graph_shadow_orbits": 371,
+    "locally_pair_feasible_states": 1391382,
+    "normalized_cut_states": 56310,
+    "profile_and_facet_compatible_ordered_type_pairs": 22858,
+    "relative_embedded_graphs": 2725719,
+    "safe_special_branch_states": 6184,
+    "surviving_balanced_branch_types": 10,
+    "surviving_ordered_type_pairs": 100,
+    "x_graph_count": 12172
+  },
+  "certificate_sha256": "c759980c4a18cbc9c5c5cdf892b7fe68a142bec472f7b8be5f7e9abf9b6c9a98",
+  "claim": "Under the published compact-H9/14 missing-face reductions, the entire record-12 graph shadow has exactly 371 abstract residual incidence-complex orbits, with a=0,...,4 histogram 48,95,144,63,21. Every representative passes the archived incidence, local g/Macaulay, Euler-link, and mod-two homology-link audits. PL, ordinary-polytopal, and Coxeter realizability are not asserted.",
+  "correction_history": {
+    "corrected_hostile_report": {
+      "path": "results/h9_14_record12_corrected_371_hostile_audit.md",
+      "sha256": "20284682d8956d27e5c36a45d75b7e2fba2b92c0804935dad5edf59455a51970"
+    },
+    "corrected_whole_shadow_count": 371,
+    "new_orbit_schedule_counts": {
+      "2": 15,
+      "3": 9,
+      "4": 3
+    },
+    "new_relative_transpose_orbits": 27,
+    "withdrawal_report": {
+      "path": "results/h9_14_record12_residual_hostile_audit.md",
+      "sha256": "2d0b484e26622a970f9f8b7823d4d00e7055f582e9f16ce4975ed8119274b2fd"
+    },
+    "withdrawn_restricted_count": 344
+  },
+  "cut_normalization_audit": {
+    "both_profile_pairs": 256,
+    "both_q_and_complement_q_enumerated": true,
+    "complement_images": 1376516,
+    "complement_profile_pairs": 9598,
+    "correction": "The complementary q-cut acts as a relative transpose of the second 5x5 branch matrix. Adding these orientations enlarges the provisional 344-orbit quotient to 371.",
+    "direct_images": 1381203,
+    "direct_profile_pairs": 13516,
+    "image_overlap": 32000,
+    "union_relative_embeddings": 2725719
+  },
+  "excluded_schedule_branches": {
+    "a=5,6,7": "no complete coupled blocker survives after exact branch pairing, both q-cut orientations, and the global quotient",
+    "a=8,9": "strict summed vertex-link g4 requires at least 14, while the two sums are 12 and 6"
+  },
+  "generation_streams": {
+    "coloured_branch_orbits": {
+      "command": "PYTHONPATH=src:. python3 -u scripts/explore_h9_14_record12_unfiltered_orbits.py /tmp/record12_branch_safe_special_correct.txt /tmp/record12_branch_safe_special_correct_orbits.txt",
+      "generator_source": "scripts/explore_h9_14_record12_unfiltered_orbits.py",
+      "line_count": 1308,
+      "raw_stream_sha256": "640217770888c33fe60fc2d1ffd6dbb05c499c9307c40d4ec9642a482fca1905"
+    },
+    "coupled_full_blocker_passes": {
+      "command": "/tmp/record12_safe_pairs < /tmp/record12_branch_safe_special_correct_orbits.txt | LC_ALL=C sort > /tmp/record12_safe_pairs_all_sorted.txt",
+      "generator_source": "scripts/explore_h9_14_record12_safe_pairs.cpp",
+      "line_count": 42000,
+      "raw_stream_sha256": "a189faa3d1faeb1f4db21630d2fbb816f8d3d4f1421d04eb251112d37945f336"
+    },
+    "full_automorphism_orbits": {
+      "command": "awk '{print \"BALANCED_PAIR\",$4,$5}' /tmp/record12_safe_pairs_all_sorted.txt | /tmp/record12_pair_orbits > /tmp/record12_safe_full_orbits_v2.txt",
+      "generator_source": "scripts/explore_h9_14_record12_pair_orbits.cpp",
+      "line_count": 371,
+      "raw_stream_sha256": "4d978594b6be052328b4056d6b05c6249e80e8b156a09d2eba8057f3b7daa23c"
+    },
+    "safe_special_branch_states": {
+      "command": "geng -q -t 10 | /tmp/record12_branch_safe -1 -3 > /tmp/record12_branch_safe_special_correct.txt",
+      "generator_source": "scripts/explore_h9_14_record12_branch.cpp",
+      "line_count": 6184,
+      "raw_stream_sha256": "c91021fe69bc047c8f2eea5f43bf708d9025492c8e3cac3552205b857731e4ee"
+    },
+    "unfiltered_local_ridge_states": {
+      "command": "geng -q -t 10 | /tmp/record12_branch_safe -1 -2 > /tmp/record12_local_all.txt",
+      "generator_source": "scripts/explore_h9_14_record12_branch.cpp",
+      "line_count": 1391382,
+      "raw_stream_sha256": "ed12edfbff40c2fab730ed3f1740bcf6e5272554f85a807468c7cb8e515961ca"
+    }
+  },
+  "graph6": "M???????????o?o??",
+  "independent_hostile_replay": {
+    "all_dual_graphs_connected": true,
+    "all_face_links_euler_spheres": true,
+    "all_face_links_mod2_homology_spheres": true,
+    "all_full_blockers_verified": true,
+    "all_ridge_degrees_two": true,
+    "all_strict_local_g_and_macaulay_audits": true,
+    "branch_summary_sha256": "de2ce0116ee97e2b9f958f6e3b616803744b0d96817f221db341931b2dfb3e3c",
+    "coloured_branch_orbits": 1308,
+    "compatible_ordered_type_pairs": 22858,
+    "complete_blocker_passes": 42000,
+    "full_symmetry_orbits": 371,
+    "locally_feasible_rows": 1391382,
+    "relative_embeddings": 2725719,
+    "report": {
+      "path": "results/h9_14_record12_corrected_371_hostile_audit.md",
+      "sha256": "20284682d8956d27e5c36a45d75b7e2fba2b92c0804935dad5edf59455a51970"
+    },
+    "safe_special_rows": 6184,
+    "semantic_pair_set_sha256": "a189faa3d1faeb1f4db21630d2fbb816f8d3d4f1421d04eb251112d37945f336",
+    "topology_output_file_sha256": "3119558a2e170ef2b2419b7049409e800d4ad3177fa2538db65ba8fad95145fc",
+    "topology_summary_sha256": "6a58b02d39324916d24de5d43a8b1091393f83cadc7963de8581023266c66c84",
+    "x_graphs": 12172
+  },
+  "kind": "h9_14_record12_exact_371_orbit_whole_shadow_certificate",
+  "nonclaims": [
+    "The 371 residuals are abstract incidence and mod-two homology-sphere candidates, not certified PL spheres.",
+    "Except for the separately certified single rational witness, ordinary convex-polytopal realizability is not claimed.",
+    "No Coxeter labels or Lorentzian Gram matrices are supplied.",
+    "No compact or finite-volume hyperbolic Coxeter polytope is claimed."
+  ],
+  "pairing_audit": {
+    "full_blocker_passing_relative_embeddings": 42000,
+    "surviving_branch_type_count": 10,
+    "surviving_branch_type_indices": [
+      539,
+      540,
+      543,
+      544,
+      545,
+      548,
+      550,
+      551,
+      552,
+      553
+    ],
+    "surviving_ordered_type_pairs": [
+      [
+        539,
+        539
+      ],
+      [
+        539,
+        540
+      ],
+      [
+        539,
+        543
+      ],
+      [
+        539,
+        544
+      ],
+      [
+        539,
+        545
+      ],
+      [
+        539,
+        548
+      ],
+      [
+        539,
+        550
+      ],
+      [
+        539,
+        551
+      ],
+      [
+        539,
+        552
+      ],
+      [
+        539,
+        553
+      ],
+      [
+        540,
+        539
+      ],
+      [
+        540,
+        540
+      ],
+      [
+        540,
+        543
+      ],
+      [
+        540,
+        544
+      ],
+      [
+        540,
+        545
+      ],
+      [
+        540,
+        548
+      ],
+      [
+        540,
+        550
+      ],
+      [
+        540,
+        551
+      ],
+      [
+        540,
+        552
+      ],
+      [
+        540,
+        553
+      ],
+      [
+        543,
+        539
+      ],
+      [
+        543,
+        540
+      ],
+      [
+        543,
+        543
+      ],
+      [
+        543,
+        544
+      ],
+      [
+        543,
+        545
+      ],
+      [
+        543,
+        548
+      ],
+      [
+        543,
+        550
+      ],
+      [
+        543,
+        551
+      ],
+      [
+        543,
+        552
+      ],
+      [
+        543,
+        553
+      ],
+      [
+        544,
+        539
+      ],
+      [
+        544,
+        540
+      ],
+      [
+        544,
+        543
+      ],
+      [
+        544,
+        544
+      ],
+      [
+        544,
+        545
+      ],
+      [
+        544,
+        548
+      ],
+      [
+        544,
+        550
+      ],
+      [
+        544,
+        551
+      ],
+      [
+        544,
+        552
+      ],
+      [
+        544,
+        553
+      ],
+      [
+        545,
+        539
+      ],
+      [
+        545,
+        540
+      ],
+      [
+        545,
+        543
+      ],
+      [
+        545,
+        544
+      ],
+      [
+        545,
+        545
+      ],
+      [
+        545,
+        548
+      ],
+      [
+        545,
+        550
+      ],
+      [
+        545,
+        551
+      ],
+      [
+        545,
+        552
+      ],
+      [
+        545,
+        553
+      ],
+      [
+        548,
+        539
+      ],
+      [
+        548,
+        540
+      ],
+      [
+        548,
+        543
+      ],
+      [
+        548,
+        544
+      ],
+      [
+        548,
+        545
+      ],
+      [
+        548,
+        548
+      ],
+      [
+        548,
+        550
+      ],
+      [
+        548,
+        551
+      ],
+      [
+        548,
+        552
+      ],
+      [
+        548,
+        553
+      ],
+      [
+        550,
+        539
+      ],
+      [
+        550,
+        540
+      ],
+      [
+        550,
+        543
+      ],
+      [
+        550,
+        544
+      ],
+      [
+        550,
+        545
+      ],
+      [
+        550,
+        548
+      ],
+      [
+        550,
+        550
+      ],
+      [
+        550,
+        551
+      ],
+      [
+        550,
+        552
+      ],
+      [
+        550,
+        553
+      ],
+      [
+        551,
+        539
+      ],
+      [
+        551,
+        540
+      ],
+      [
+        551,
+        543
+      ],
+      [
+        551,
+        544
+      ],
+      [
+        551,
+        545
+      ],
+      [
+        551,
+        548
+      ],
+      [
+        551,
+        550
+      ],
+      [
+        551,
+        551
+      ],
+      [
+        551,
+        552
+      ],
+      [
+        551,
+        553
+      ],
+      [
+        552,
+        539
+      ],
+      [
+        552,
+        540
+      ],
+      [
+        552,
+        543
+      ],
+      [
+        552,
+        544
+      ],
+      [
+        552,
+        545
+      ],
+      [
+        552,
+        548
+      ],
+      [
+        552,
+        550
+      ],
+      [
+        552,
+        551
+      ],
+      [
+        552,
+        552
+      ],
+      [
+        552,
+        553
+      ],
+      [
+        553,
+        539
+      ],
+      [
+        553,
+        540
+      ],
+      [
+        553,
+        543
+      ],
+      [
+        553,
+        544
+      ],
+      [
+        553,
+        545
+      ],
+      [
+        553,
+        548
+      ],
+      [
+        553,
+        550
+      ],
+      [
+        553,
+        551
+      ],
+      [
+        553,
+        552
+      ],
+      [
+        553,
+        553
+      ]
+    ]
+  },
+  "proof_backend": "blocker duality; all local zero-or-two ridge equations; exhaustive nauty order-ten triangle-free graph stream; all normalized cuts and y supports; only the proved special-meeting branch-blocker filter; exact coloured branch quotient; both direct and complementary q-cut orientations; complete coupled blocker before filtering isolate-only rows; full D8 x S10 quotient; direct face tables and all-face GF(2) link homology; no SAT/SMT result",
+  "proof_dependencies": [
+    "Burcroff's no-missing-triples theorem for compact H9/14 nerves",
+    "compact Coxeter missing faces are Lanner diagrams of order at most five",
+    "strict generalized lower-bound and Macaulay inequalities in all links",
+    "Dehn--Sommerville schedules for simplicial 9-polytopes",
+    "facet complements are the blocker of the complete minimal-nonface clutter",
+    "every ridge of a simplicial sphere has degree two",
+    "nauty geng supplies one representative of each unlabeled triangle-free graph"
+  ],
+  "proof_sources": [
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record12_residual.py",
+      "sha256": "8d71264321ede7378193e6be8c086700b8235b1d0c1216fdc9ed7ef495db86f4"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/simplicial_homology.py",
+      "sha256": "547f51b58c1146aac80c6e08910754bf93ace5fa808dae5a342da7e042958110"
+    },
+    {
+      "path": "scripts/build_h9_14_record12_residual_archive.py",
+      "sha256": "07d5a2fecb1ddf78d4881c36a765ededc05845ef364b0ae4e55f9789bcb79fd7"
+    },
+    {
+      "path": "scripts/enumerate_h9_14_record12_x_graphs.py",
+      "sha256": "ac4d08dfe557e13d130d791b4b4bdbfec8f3d9fcdeb5f86810ca104635f6df0c"
+    },
+    {
+      "path": "scripts/explore_h9_14_record12_branch.cpp",
+      "sha256": "93fae6156dd8e4ea2febfbfe614bfaa37a55cae76b5888ca268b03b523bd5032"
+    },
+    {
+      "path": "scripts/explore_h9_14_record12_unfiltered_orbits.py",
+      "sha256": "f67cfcf614140df7531ca7df1e0a475794290e73f7ad541ca17767a407f7a06f"
+    },
+    {
+      "path": "scripts/explore_h9_14_record12_safe_pairs.cpp",
+      "sha256": "2d1eff38d2a431fad3d5119b99ac458b3cf4436dc7deb430de0b3013d5965c7b"
+    },
+    {
+      "path": "scripts/explore_h9_14_record12_pair_orbits.cpp",
+      "sha256": "1b351273bf34eb76e2bf2357ca70175596e36a874a31449221c38b13f56d2cd7"
+    },
+    {
+      "path": "scripts/independent_h9_14_record12_371_branches.py",
+      "sha256": "edd501dabf990f8da8aac20580e57f928d8b44507b64f413623a0427147a8ff5"
+    },
+    {
+      "path": "scripts/independent_h9_14_record12_371_pairs.cpp",
+      "sha256": "f60d924e95f364377187165595b9d343d805144e382b48fc3ccaff3ff232976b"
+    },
+    {
+      "path": "scripts/independent_h9_14_record12_371_quotient.cpp",
+      "sha256": "5da00e6ecff30164fde90afece4ac2d5d7e9de0728f6da660172f92ee7cdd197"
+    },
+    {
+      "path": "scripts/independent_h9_14_record12_371_orbits.py",
+      "sha256": "993b0cfc9634eae2c2422f409843984cc5b0b895bfe04a70aa8473424a11e5b4"
+    }
+  ],
+  "record_index": 12,
+  "relation_to_known_example": "A separate exact rational certificate supplies one ordinary-polytopal a=2 member of the 371-orbit set. No other orbit is asserted polytopal here.",
+  "residual_archive": {
+    "certificate_sha256": "50ca012334e7a4973a4c29bde4226d4460bc8ade2d644a3b9dbf56b1bf92e8f4",
+    "coloured_branch_orbits": 1308,
+    "file_sha256": "faca367738bba58afc0ec78a43e9d4aa4b02721802c5d9e77b7d155c8e7faa05",
+    "graph6": "M???????????o?o??",
+    "path": "data/enumerations/h9_14_record12_residual.json",
+    "record_index": 12,
+    "relative_embedding_multiplicity_sum": 42000,
+    "residual_orbits": 371,
+    "schedule_orbit_counts": {
+      "0": 48,
+      "1": 95,
+      "2": 144,
+      "3": 63,
+      "4": 21
+    }
+  },
+  "safe_special_filter_lemma": {
+    "consequence": "Only special-meeting branch blocker rows are filtered to orders four and five. Isolate-only rows are never filtered before the two branches are coupled.",
+    "proof": "The row r hits its own branch by definition and the opposite branch because every opposite complement contains both branch specials. For each v in r, branch minimality supplies a branch triple disjoint from r without v; adjoining the opposite two-set remains disjoint because r contains none of those vertices. Thus every deletion of v fails globally.",
+    "statement": "If r is a minimal transversal of one branch triple clutter and r meets a special of that branch, then r is a minimal transversal of the full coupled facet-complement clutter."
+  },
+  "schedule_orbit_counts": {
+    "0": 48,
+    "1": 95,
+    "2": 144,
+    "3": 63,
+    "4": 21
+  },
+  "schedule_table": [
+    {
+      "facet_count": 130,
+      "missing_five_count": 12,
+      "missing_four_count": 0,
+      "residual_orbit_count": 48,
+      "summed_vertex_link_g4": 60
+    },
+    {
+      "facet_count": 128,
+      "missing_five_count": 18,
+      "missing_four_count": 1,
+      "residual_orbit_count": 95,
+      "summed_vertex_link_g4": 54
+    },
+    {
+      "facet_count": 126,
+      "missing_five_count": 24,
+      "missing_four_count": 2,
+      "residual_orbit_count": 144,
+      "summed_vertex_link_g4": 48
+    },
+    {
+      "facet_count": 124,
+      "missing_five_count": 30,
+      "missing_four_count": 3,
+      "residual_orbit_count": 63,
+      "summed_vertex_link_g4": 42
+    },
+    {
+      "facet_count": 122,
+      "missing_five_count": 36,
+      "missing_four_count": 4,
+      "residual_orbit_count": 21,
+      "summed_vertex_link_g4": 36
+    },
+    {
+      "facet_count": 120,
+      "missing_five_count": 42,
+      "missing_four_count": 5,
+      "residual_orbit_count": 0,
+      "summed_vertex_link_g4": 30
+    },
+    {
+      "facet_count": 118,
+      "missing_five_count": 48,
+      "missing_four_count": 6,
+      "residual_orbit_count": 0,
+      "summed_vertex_link_g4": 24
+    },
+    {
+      "facet_count": 116,
+      "missing_five_count": 54,
+      "missing_four_count": 7,
+      "residual_orbit_count": 0,
+      "summed_vertex_link_g4": 18
+    },
+    {
+      "facet_count": 114,
+      "missing_five_count": 60,
+      "missing_four_count": 8,
+      "residual_orbit_count": 0,
+      "summed_vertex_link_g4": 12
+    },
+    {
+      "facet_count": 112,
+      "missing_five_count": 66,
+      "missing_four_count": 9,
+      "residual_orbit_count": 0,
+      "summed_vertex_link_g4": 6
+    }
+  ],
+  "schema_version": "2.0.0",
+  "source": {
+    "path": "data/enumerations/h9_14_nerve_support.json",
+    "second_layer_survivor_index": 12,
+    "sha256": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d"
+  },
+  "theorem_status": "certified_exact_371_orbit_abstract_residual",
+  "x_graph_archive": {
+    "certificate_sha256": "84e80de3be27e5bec86791e4dc5721093cf6160692a327820040625fd0cc9056",
+    "file_sha256": "a055814261d48c85532baf38e8d51af7fca4970f390892baabe66cccc61cb80e",
+    "graph_count": 12172,
+    "path": "data/enumerations/h9_14_record12_x_graphs.json",
+    "raw_stream_sha256": "162cd507b93e74307ed9e88052da7bfb6f68e6cfeae6ccd2254c949c84ce0214"
+  }
+}

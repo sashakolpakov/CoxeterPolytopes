@@ -1,0 +1,286 @@
+{
+  "conclusion": "Exactly two necessary types can pair nonnegatively with the ray. Both are arithmetically empty by the exact S2/S3 minimum gates, so the strict hyperideal ray survives every possible wall through rational identity height 25000.",
+  "dependency": {
+    "independent_H10000_audit": "data/enumerations/silver_lambda22_h10000_replacement_independent_hostile_audit.json",
+    "independent_H10000_audit_sha256": "6c2e5782d84180ee53cac58742388e50f86bdd6c98b863b1c48adab889e693e4",
+    "independent_H10000_verdict": "PASS",
+    "production_H10000_artifact": "data/enumerations/silver_lambda22_h10000_replacement.json",
+    "production_H10000_sha256": "776a9a58f7d4b323e8167b087cd420def4c7a620d90973b2e99b8ac2c3bd4ad5"
+  },
+  "discovery": null,
+  "frontier": {
+    "control_count": 301,
+    "controls_by_norm": {
+      "1": 41,
+      "12": 15,
+      "12 + 6*sqrt(2)": 20,
+      "2": 83,
+      "3": 15,
+      "4": 41,
+      "4 + 2*sqrt(2)": 58,
+      "6": 28
+    },
+    "first_control_height": {
+      "display": "5026 + 3554*sqrt(2)",
+      "exact": {
+        "a": "5026",
+        "b": "3554"
+      },
+      "signs": [
+        1,
+        -1
+      ]
+    },
+    "last_control_height": {
+      "display": "12477 + 8823*sqrt(2)",
+      "exact": {
+        "a": "12477",
+        "b": "8823"
+      },
+      "signs": [
+        1,
+        -1
+      ]
+    },
+    "locally_admissible_extension_count_with_multiplicity": 2663705,
+    "locally_admissible_extensions_by_norm": {
+      "12": 91312,
+      "2": 1592152,
+      "4": 797565,
+      "6": 182676
+    },
+    "nonnegative_type_count": 2,
+    "retained_gate_compatible_type_count": 5575,
+    "retained_type_stream_sha256": "21240a46b23221f1c167ffd5c6267c71eb328a57b0a067fa70e488b3955f2e5f",
+    "retained_types_by_norm": {
+      "12": 730,
+      "2": 2046,
+      "4": 2069,
+      "6": 730
+    }
+  },
+  "height_bound_inclusive": {
+    "display": "25000",
+    "exact": {
+      "a": "25000",
+      "b": "0"
+    },
+    "signs": [
+      1,
+      1
+    ]
+  },
+  "height_start_exclusive": {
+    "display": "10000",
+    "exact": {
+      "a": "10000",
+      "b": "0"
+    },
+    "signs": [
+      1,
+      1
+    ]
+  },
+  "logical_scope": {
+    "all_integral_PSD_d_extensions_enumerated": true,
+    "bounded_prefix_only": true,
+    "complete_binary_Gram_necessary_superset": true,
+    "complete_control_alphabet": true,
+    "explicit_local_minimum_gate": "[-3,3]^3",
+    "global_nonreflectivity": false,
+    "vinberg_termination": false
+  },
+  "nonnegative_threat_resolutions": [
+    {
+      "control": {
+        "display": "176 + 124*sqrt(2)",
+        "exact": {
+          "a": "176",
+          "b": "124"
+        },
+        "signs": [
+          1,
+          1
+        ]
+      },
+      "d_dot_short_vector": 2,
+      "forced_relation": "v=40d",
+      "forced_relation_cross": 0,
+      "forced_relation_norm": 0,
+      "gate_sublattice": "S2",
+      "gate_sublattice_minimum": 12,
+      "gram": [
+        12772,
+        6400,
+        9040
+      ],
+      "height": {
+        "display": "6392 + 4520*sqrt(2)",
+        "exact": {
+          "a": "6392",
+          "b": "4520"
+        },
+        "signs": [
+          1,
+          -1
+        ]
+      },
+      "integral_PSD_extension_count": 437,
+      "local_gate_rejection_count": 0,
+      "locally_admissible_extension_count": 437,
+      "locally_admissible_stream_sha256": "238503f78fae77ed01d5453c01ab22ec47691fbe633af77d78245e06c6a0d412",
+      "nonnegative_extension_count": 1,
+      "norm": {
+        "display": "4",
+        "exact": {
+          "a": "4",
+          "b": "0"
+        },
+        "signs": [
+          1,
+          1
+        ]
+      },
+      "pairing_moduli": [
+        2,
+        2
+      ],
+      "resolution": "The zero Cauchy minor forces v=40d. The vector e=u-56d is nonzero of norm 4; because u is in S2 and 56d is visibly in S2, e is in S2, contradicting min(S2)=12.",
+      "short_vector": "e=u-56d",
+      "short_vector_norm": 4,
+      "target": {
+        "display": "25572 + 18080*sqrt(2)",
+        "exact": {
+          "a": "25572",
+          "b": "18080"
+        },
+        "signs": [
+          1,
+          1
+        ]
+      },
+      "unique_nonnegative_extension": {
+        "d_pairings": [
+          226,
+          160
+        ],
+        "extension_determinant": 0,
+        "margin": {
+          "display": "64/87 - 44/87*sqrt(2)",
+          "exact": {
+            "a": "64/87",
+            "b": "-44/87"
+          },
+          "signs": [
+            1,
+            1
+          ]
+        }
+      },
+      "zero_determinant_extension_count": 6
+    },
+    {
+      "control": {
+        "display": "264 + 186*sqrt(2)",
+        "exact": {
+          "a": "264",
+          "b": "186"
+        },
+        "signs": [
+          1,
+          1
+        ]
+      },
+      "d_dot_short_vector": 3,
+      "forced_relation": "v=60d",
+      "forced_relation_cross": 0,
+      "forced_relation_norm": 0,
+      "gate_sublattice": "S3",
+      "gate_sublattice_minimum": 24,
+      "gram": [
+        28734,
+        14400,
+        20340
+      ],
+      "height": {
+        "display": "9588 + 6780*sqrt(2)",
+        "exact": {
+          "a": "9588",
+          "b": "6780"
+        },
+        "signs": [
+          1,
+          -1
+        ]
+      },
+      "integral_PSD_extension_count": 327,
+      "local_gate_rejection_count": 0,
+      "locally_admissible_extension_count": 327,
+      "locally_admissible_stream_sha256": "446c1f99685dea1a8b48639b4b4b217002d368d86f876c9b01a2412f5c784716",
+      "nonnegative_extension_count": 1,
+      "norm": {
+        "display": "6",
+        "exact": {
+          "a": "6",
+          "b": "0"
+        },
+        "signs": [
+          1,
+          1
+        ]
+      },
+      "pairing_moduli": [
+        3,
+        3
+      ],
+      "resolution": "The zero Cauchy minor forces v=60d. The vector e=u-84d is nonzero of norm 6; because u is in S3 and 84d is visibly in S3, e is in S3, contradicting min(S3)=24.",
+      "short_vector": "e=u-84d",
+      "short_vector_norm": 6,
+      "target": {
+        "display": "57534 + 40680*sqrt(2)",
+        "exact": {
+          "a": "57534",
+          "b": "40680"
+        },
+        "signs": [
+          1,
+          1
+        ]
+      },
+      "unique_nonnegative_extension": {
+        "d_pairings": [
+          339,
+          240
+        ],
+        "extension_determinant": 0,
+        "margin": {
+          "display": "32/29 - 22/29*sqrt(2)",
+          "exact": {
+            "a": "32/29",
+            "b": "-22/29"
+          },
+          "signs": [
+            1,
+            1
+          ]
+        }
+      },
+      "zero_determinant_extension_count": 4
+    }
+  ],
+  "replacement_norm": {
+    "display": "10705/7569 - 1*sqrt(2)",
+    "exact": {
+      "a": "10705/7569",
+      "b": "-1"
+    },
+    "signs": [
+      1,
+      1
+    ]
+  },
+  "replacement_ray": "(1,(28/87)d), d^2=4",
+  "schema_version": "0.1.0",
+  "scope": "Complete gated necessary-wall obstruction strictly after rational identity height 10000 through inclusive rational identity height 25000; bounded prefix only.",
+  "seed_id": "silver-H22-Lambda22-a-sqrt2-1"
+}

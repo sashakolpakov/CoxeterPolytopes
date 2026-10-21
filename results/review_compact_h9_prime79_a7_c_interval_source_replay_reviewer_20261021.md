@@ -1,0 +1,52 @@
+# Norm79 A7+c interval checker: independent full source review
+
+21 October 2026. **PASS for the complete source/algorithm contract at its named geometric premises.** This is a pre-execution review: I did not import, run or compile the worker, execute its fixtures or census, or modify its source/specification. There is no new minimum, germ or runtime PASS in this review. I did not author this worker or specification. I previously independently reviewed source33f6 and have contributed older exact-checker/actual-germ foundations; those shared contributions do not constitute an execution of this code.
+
+Reviewed in full:
+
+| File | SHA256 | Bytes |
+|---|---|---:|
+| `scripts/check_compact_h9_prime79_a7_c_interval_20261021.py` | `59926019e0c228bb8364038660bed8e37b601bc771f4894fe4e024952390eda6` |21943|
+| `results/compact_h9_prime79_a7_c_interval_checker_spec_20261021.md` | `f1fb0ee9facdba32f2996120fcbec51c95d4f3c2a51471befb136294929df4ee` |12914|
+
+All eight fixed input pins were independently streamed and matched. They are domain proofb4de9185 (12461B), actual-base/edge source33f6cb9d (17368B), H8 certificatec17ac49e (7648B), transcriptc4178fc4 (8515B), bounded runner4d8a2a74 (5703B), RSS monitor27f14501 (6606B), signal-safe runnerc0ddc98c (1234B), and resource module97822ecf (14192B). The new source/specification hashes above also match current bytes. These metadata checks neither execute the mathematical worker nor independently replay the inherited H8 certificate.
+
+## 1. Literal geometry and full finite domain
+
+I read the complete b4de domain proof against the original-module formulas and the code. The worker consistently uses X,Y,e0,...,e7 with binary Gram `[[-2phi,3+3phi],[3+3phi,2]]` and the stated E8 edges. It does not switch to a similar diagonal lattice. The unchanged small H8 data is lifted by inserting the zero Y coordinate; the code compares all121 saved Gram entries and checks the four additional actual normals, all15 reflection covectors, norms and p1 orientations. Their actual-wall status remains the explicit source33f6 premise.
+
+The E8 system is solved exactly, not supplied as an unchecked inverse. Direct multiplication verifies that the required Q vector has Cartan image e1, hence square8, and the other inverse data are checked by the same solved system. The supplied upper has original binary coordinates `(1206+1953phi,−4738−7668phi)`: multiplication gives aU*=9477+15336phi, confirming that parity calculation. The runtime setup requires its norm/reflection, upper identity, collision and strict timelike endpoint. It does not infer that this upper mirror is a simple wall.
+
+The mathematical premises exclude both independent norm classes and c-only5 at all heights. For the remaining norm2 first SIMPLE wall, retained finite classification gives exactly c-only3, two A8, two D8, two E8 and two A9 bridge profiles. Finite labels needing square roots outside this actual field and5-bonds in a connected rank8/9 extension are excluded in the domain proof, not silently omitted by code. E8 unimodularity and original binary integrality give the stated O-controls; in the extension case, 2X and aX integral imply X integral because a is invertible modulo2. The code reconstructs every accepted control in the ORIGINAL module and checks norm2 and all eight retained products.
+
+The three square equations reproduce the norms exactly: c-only uses z=4Y; extensions use z=8Y+I_j with residual9/4/1; bridges use residual5. The parity check `(1−aU)/2 in O` applies to c-only and bridge rows and is equivalent to U=phi modulo2. Y>=0 is kept, and only the c-only row requires Y>0. The released -e1 is among all15 known-wall tests, so its full native own constraint is not replaced by mere Y nonnegativity.
+
+The exact closed bounds compare control squares with `(12/5)U*²`, `(R/20)U*²` or U*² and impose the corresponding conjugate inequalities with factors1/16/4. Equality survives both tests. The additional physical/radius strips are strictly conservative bounds proved inb4de. Since B=(t−t')/sqrt5>−1, B>=0; their upper limits and A offsets cover every possible integral control. The formula `(isqrt(5B²)−B)//2` is exactly floor(B(phi−1)); taking floor before division by the positive integer2 preserves the outer floor. Radius<1 needs offsets0/1; radius<2 needs−1/0/1/2. The nine explicit loops have exactly38784 raw visits, and completion requires that count. There is no early stop, saved-survivor filter or heuristic height cutoff.
+
+## 2. Exact arithmetic and complete square roots
+
+I checked the field multiplication, conjugation, norm, inversion and physical-order routine. Its opposite-sign comparison is the exact sign of `(2a+b)+b*sqrt5`; rational square comparison suffices, and the nonzero discriminant check excludes an impossible rational equality.
+
+For w=v² with v=x+yphi in O, N(w)=N(v)², `Tr(v)²=Tr(w)+2N(v)` and `5y²=Tr(w)−2N(v)`. The square routine tries BOTH signs of N(v), BOTH signs of trace and y, the exact parity of trace−y, and exact resquaring. Thus negative root norm, trace0, rational and zero cases are covered. A rational norm square alone never suffices. Its returned positive root is unique; returning the first successful sign branch cannot choose a different geometric root. The specified sqrt5/phi/zero/rational/nonsquare fixtures are appropriate, but remain unexecuted here.
+
+All division, Gaussian elimination, Gram pivots, collision and cone computations use Fraction pairs. No float or local/scientific module is used. Positive exact Schur pivots give positive definiteness of the symmetric Gram matrices. The solve routine's final vector reconstruction guards against treating an orthogonal projection as an exact expression.
+
+## 3. Native tests, minimum and ALL ties
+
+Every reconstructed norm2 reflector is checked against EVERY known wall, stopping only after storing its first rejection reason. Positive product is rejected, zero is orthogonal, and the integral two-cycle invariant is checked. The legitimate finite values1,2,phi²,3,2+phi correspond to3/4/5/6/10; 2−phi is correctly excluded. Value4 is excluded by the anisotropic-space premise, and values>4 are retained as dotted. A root equal to a known norm2 normal is recognized without a self-product rejection. Another scalar multiple cannot be missed: norm2 forces the multiple to be±1, and the negative orientation is incompatible with the positive control and p1 pairing. A norm2 normal cannot be a K-multiple of r of norm2b, since N(b)=79 is not a rational square.
+
+The code recomputes tau from ORIGINAL pairings and checks 0<tau<=tau*. All admitted collisions are compared by exact field subtraction; equal minima are appended, never overwritten by model order. Within a fixed profile tau²/(D/4) is respectively DU²/(DU²+3), 16DX²/(16DX²+R), or4DU²/(4DU²+5). Each is strictly increasing in its positive control, so at most one control per profile can realize a common minimum. This proves the nine-tie storage bound independently of the iteration order. Every integral mirror is streamed with its known-wall result; rejected candidates are not silently deleted from the certificate.
+
+The firstness bridge is sound at the full-arrangement premises: an actual first simple mirror lies in this complete nine-model domain and passes all known ACTUAL-wall tests. Conversely an integral mirror oriented negative at p1 cannot cut the actual chamber edge before its first endpoint. Therefore the admitted minimum is that endpoint. Known-wall admission alone is never called a proof that each admitted normal is simple.
+
+For each minimum tie h, the worker tests the complete nine-root basis consisting of the eight retained roots and h, positive definiteness, every tied normal's exact coordinates, and nonnegative cone coefficients. The ACTUAL new simple normal s is among those ties. Every tied arrangement root, oriented negative just before the endpoint, is positive in the actual finite tangent root system, hence lies in cone(retained,s). If the code also proves s in cone(retained,h), mutual substitution in the independent retained+s basis forces h to be a positive multiple of s; their common norm2 then gives h=s. This proves the recognition criterion. Considering EVERY candidate proposal avoids an arbitrary winner. A unique actual simple-germ status is output only if a proposal succeeds and all successful proposals have the same exact normal; otherwise the necessary interval is retained with unresolved germ status.
+
+## 4. Resource protocol, failure and honest conclusion
+
+Before calculation, mandatory CLI self/spec hashes and all eight fixed pins are checked. The same set is rechecked after the germ calculation and before its complete record. The worker requires -B, matching wrapper-owner parent and an already-held exclusive lock, a45-second wall alarm and45-second CPU ceiling. The documented invocation uses the unchanged pinned parent-lock bounded runner; its live watchdog/resources and terminal ledger remain separate requirements. I inspected that wrapper handoff; no watchdog is disabled and no child process/local module import is introduced by this worker.
+
+Only the small7648-byte inherited JSON is decoded; other inputs are streamed for hashing. Live mathematical storage consists of fixed-size10-vectors, small exact matrices, nine counters and at most nine minimum ties. JSONL streams integral-mirror records and flushes them individually. CPU/RSS/runtime success is not asserted or predicted by this storage observation.
+
+The destination resolves directly under results and is opened exclusively with xb. Existing evidence cannot be overwritten. The header is explicitly incomplete, failures append an incomplete record when catchable, and a watchdog/signal interruption leaves no successful final result. A complete certificate alone is not a terminal bounded-runtime PASS; the root-owned execution ledger must still bind exit status, command, resources, stdout and output bytes/hash. The compact stdout contains no full corpus.
+
+**No source/algorithm defect found.** This review supports a separately admitted bounded execution of this ONE literal A7+c interval. It does not certify that such execution occurred, predict a particular minimum, prove finite volume or nonreflectivity of the host, exhibit a period or H9 example, exclude a form class/family, change a dimension bound, or verify geometry in Lean. Those conclusions remain outside both reviewed files.

@@ -1,0 +1,65 @@
+{
+  "status": "PASS_REVIEWED_DEPENDENCIES_AND_CASE_SPLIT_FOR_DIMENSION_164_CANDIDATE",
+  "sources": {
+    "scripts/fresh_nikulin_defect_frontier_20261015_dimension164.py": "ea3f59de5f4b1c775bc6bd13f853ad80a9279b8860de0460a6097b994000901d",
+    "results/fresh_nikulin_defect_frontier_20261015_dimension164.md": "0dc49f46a76f8ead2ad1c45f66df58dc1cc9a9a6aa545eddfe084367e23aa8f1",
+    "scripts/fresh_nikulin_height_charge_20261015_dimension165.py": "1f01d2285fe5ba42e070e05deed2165b1ab904f61bf7eef61c2eb3587536380b",
+    "results/fresh_nikulin_height_charge_20261015_dimension165.json": "9bad098a6816e5c124c4302b79e349d0d520961e913412b456f110914ac0b6a2",
+    "results/fresh_nikulin_height_charge_20261015_dimension165.md": "a6e5217a3b6ea2fe4c0a75e62193a79f6b4c553e4d5df8bbfe9899c224538793",
+    "scripts/fresh_nikulin_defect_frontier_20261015.py": "771c8c3f3ae1f816975077e3f581c8b56dad070c2cfd98cceee81695e387e386",
+    "results/fresh_nikulin_defect_frontier_20261015.json": "3c8897e52d781b97c9b5de222e276234c84b8a95770f7039d2d2b99880614d04",
+    "results/fresh_nikulin_defect_frontier_20261015.md": "de3727604c2a1f6a89a51ed777d449d0480ca27a85053415056fa2d1b3a2b40b",
+    "scripts/fresh_nikulin_defect_frontier_20261015_review.py": "da34db7aef35f73a7bb516078aea5387fc1a1fab3435836bdb79109744e0525c",
+    "results/fresh_nikulin_defect_frontier_20261015_review.json": "a45b3764e1ba9fdc71e3c28a03d36368e1b4df0ded8f26f4dd585a26e9c63da2",
+    "results/fresh_nikulin_defect_frontier_20261015_review.md": "b644fdc5d9ed26a8c6eb3917dc211957e980f56d09fc003022b5cd3c8d7116c8",
+    "scripts/fresh_nikulin_narrow_20261015_compact_facet.py": "819ccae418e3269889a6181c37cec9fab1dcca34cf03e31f0bfcdd9103dd4967",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.json": "18136efb0c36029e5be53be7ca06b1608efeec94d96c7d891ec23aa1b1ef0a3b",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.md": "540390f627681fb27912c2349b593cad1b5b84917e1608d15f34bf2c801e7f13"
+  },
+  "recursive_manifests_checked": 27,
+  "recursive_source_files_checked": 74,
+  "candidate_statement": "Every finite-sided finite-volume real hyperbolic Coxeter polytope has dimension at most164.",
+  "arithmetic_assumption": false,
+  "compactness_assumption": false,
+  "simple_cusp_assumption": false,
+  "chosen_narrow_facet_cases": [
+    {
+      "case": "contains an ideal vertex",
+      "ambient_dimension_at_most": 164,
+      "primary": "fresh_nikulin_defect_frontier_20261015",
+      "independent_review": "fresh_nikulin_defect_frontier_20261015_review"
+    },
+    {
+      "case": "only finite vertices, hence compact",
+      "ambient_dimension_at_most": 143,
+      "primary": "fresh_nikulin_narrow_20261015_compact_facet",
+      "independent_review": "fresh_dimension225_hostile_20261015"
+    }
+  ],
+  "common_height_ratio_split": "21/20",
+  "total_retained_cost_at_most": 4,
+  "strict_subunit_residual_loss_at_most": "2/3",
+  "total_energy_loss_at_most": "38/9",
+  "avoid_node_deficit": "2/9",
+  "near_pairing_lower": "M*((n-1)-38)/9",
+  "far_pairing_lower": "M*((n-1)-43)/9",
+  "first_excluded_dimension": 165,
+  "combined_candidate_dimension_at_most": 164,
+  "norm_two_narrow_threshold": 14,
+  "frozen_baseline": "fresh_nikulin_height_charge_20261015_dimension165",
+  "primary_sources": [
+    {
+      "url": "https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1986.1/ICM1986.1.ocr.pdf",
+      "pages": "printed655 TheoremA; printed657-659 method and announcement"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=im&paperid=1484&what=fullteng",
+      "pages": "printed407-408, section2 Propositions1-2; quasi-Lanner extraction/order10"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=mmo&option_lang=rus&paperid=444&what=fullt",
+      "pages": "printed70-71 h-vector; printed77 Proposition10 spherical distance-pair bound"
+    }
+  ],
+  "scope": "Reviewed local-proof dependency and complete case binder. Inherited geometry remains a mathematical dependency. Internal research proof candidate; external validation, novelty and current-best status remain unestablished. No bound163 follows from this estimate."
+}

@@ -1,0 +1,194 @@
+{
+  "payload": {
+    "K3_rank_budget": [
+      {
+        "field_degree": 1,
+        "maximum_hyperbolic_dimension": 19,
+        "maximum_native_rank": 20
+      },
+      {
+        "field_degree": 2,
+        "maximum_hyperbolic_dimension": 9,
+        "maximum_native_rank": 10
+      },
+      {
+        "field_degree": 3,
+        "maximum_hyperbolic_dimension": 5,
+        "maximum_native_rank": 6
+      },
+      {
+        "field_degree": 4,
+        "maximum_hyperbolic_dimension": 4,
+        "maximum_native_rank": 5
+      },
+      {
+        "field_degree": 5,
+        "maximum_hyperbolic_dimension": 3,
+        "maximum_native_rank": 4
+      },
+      {
+        "field_degree": 6,
+        "maximum_hyperbolic_dimension": 2,
+        "maximum_native_rank": 3
+      }
+    ],
+    "dependency_sha256": {
+      "compact_field": "39c9a3a8422110bcdcf751ed7bae90ac86cdf3a720d220ee164ff241bd9ac9b5",
+      "composition_audit": "8fd86c7c588f247fd3ec380e8f1e68840da81484414ab7e7413a7b3487013900",
+      "nikulin_audit": "953717dabaf24dd1163c49ec738664eb1e84bc7652e3a9b0dc124eaa68b4bddb",
+      "nikulin_primary_pdf": "696652b6a67c6ed420de6c1cb61d9422e3619e28e081a78131a5323ce2edee9d",
+      "noncompact_field": "d738018bacc3803f78fa725da375bb8045ecce92a1c879b03b30a9998e980255",
+      "redoubling_archive": "c2cf3c5ee99765ecccc88c027f47666a059eafa521ae45f06a7df46bd47a4df0",
+      "redoubling_report": "62a9e4315a669c5428a29aa4121ad28c473993fd386ecbdd79c8c47178507c66",
+      "scaling_archive": "6aaeca3809bbed3e66af8a97fe89b3f93b9b5269755c00087ad924c5554d95c9",
+      "scaling_report": "bcd4e41d6b8915f09726a9512c8bcac1876da3aa3cdd513ac567a4bcf4c7b057"
+    },
+    "field_gate": {
+      "compact_discriminant_bound": "(32*14^10)^30",
+      "finite_field_set": true,
+      "noncompact_ground_field": "Q"
+    },
+    "logic": [
+      "exact K3 trace rank and finite-volume field theorem -> finite (k,m)",
+      "arithmetic W(P) inside O+(L), both lattices -> finite index",
+      "W(P) subset R(L) -> L reflective",
+      "Nikulin fixed-(k,m) theorem -> finite native similarity hosts",
+      "raw reflection maximality -> W(P)=R(L)",
+      "complete mirror chambers form one orbit -> finite normalized chambers"
+    ],
+    "nonmaximal_redoubling_control": {
+      "fixed_dimension": 10,
+      "fixed_divisor_lattice": true,
+      "fixed_ground_field": "Q",
+      "reflection_maximal": false,
+      "samples": [
+        {
+          "N": 1,
+          "facets": 13,
+          "reflection_subgroup_index": 1,
+          "volume_multiplier": 1
+        },
+        {
+          "N": 2,
+          "facets": 14,
+          "reflection_subgroup_index": 2,
+          "volume_multiplier": 2
+        },
+        {
+          "N": 3,
+          "facets": 15,
+          "reflection_subgroup_index": 3,
+          "volume_multiplier": 3
+        },
+        {
+          "N": 7,
+          "facets": 19,
+          "reflection_subgroup_index": 7,
+          "volume_multiplier": 7
+        },
+        {
+          "N": 25,
+          "facets": 37,
+          "reflection_subgroup_index": 25,
+          "volume_multiplier": 25
+        }
+      ],
+      "statement": "For every integer N>=1, either N-copy finite path in the Cayley line of <s_a,s_b>=C2*C2 gives a finite-volume noncompact H10 Coxeter polytope P_N with N+12 facets. Its boundary reflections generate an index-N subgroup of the seed reflection group, and vol(P_N)=N vol(P_1). Odd N has one lattice-decorated type under path reversal; every even N has two nonisomorphic A/B types."
+    },
+    "projected_physical_star": {
+      "complement_operator_diagonal": [
+        7,
+        1
+      ],
+      "implies_finite_ambient_NS_hosts": false,
+      "nonnegative_integral_upper_bound": 13,
+      "operator_squared_eigenvalues": [
+        49,
+        1
+      ],
+      "reason": "physical lifts need not span NS and their K3 reflections need not equal the native raw reflections",
+      "root_component_vector_squared_norm": 2,
+      "strict_real_upper_bound": 14
+    },
+    "scaling_control": {
+      "abstract_chamber_count_infinite": false,
+      "ambient_determinant": "64*s^3*(s-1)^3",
+      "glue_index": "s^3",
+      "integer_scale_domain": "s>=2",
+      "native_similarity_class_fixed": true
+    },
+    "schema": "coxeter.projected-k3-maximal-abstract-chamber-finiteness.v1",
+    "similarity_invariance": {
+      "cartan_matrix": [
+        [
+          "2",
+          "-1",
+          "0"
+        ],
+        [
+          "-2",
+          "2",
+          "-1"
+        ],
+        [
+          "0",
+          "-3",
+          "2"
+        ]
+      ],
+      "normalized_squared_gram": [
+        [
+          "4",
+          "2",
+          "0"
+        ],
+        [
+          "2",
+          "4",
+          "3"
+        ],
+        [
+          "0",
+          "3",
+          "4"
+        ]
+      ],
+      "raw_gram": [
+        [
+          -12,
+          6,
+          0
+        ],
+        [
+          6,
+          -6,
+          3
+        ],
+        [
+          0,
+          3,
+          -2
+        ]
+      ],
+      "reflection_formula_scale_cancels": true,
+      "tested_global_scales": [
+        2,
+        3,
+        5,
+        15,
+        101
+      ]
+    },
+    "theorem": {
+      "classification_free_AG_only_proof": false,
+      "exact_projected_full_trace_K3_return": true,
+      "finite_ambient_NS_hosts_required": false,
+      "finite_native_similarity_hosts": true,
+      "finite_unmarked_normalized_abstract_chambers": true,
+      "imported_fixed_data_input": "Nikulin 1982 Theorem 5.2.1: fixed totally real field and rank give finitely many similarity classes of reflective hyperbolic lattices",
+      "minimum_hyperbolic_dimension": 2,
+      "raw_reflection_maximality": true
+    }
+  },
+  "payload_sha256": "0b0f4e0ddde457641af2a7f985647e25ebaff6d589915c9353aa2a5efe3a9058"
+}

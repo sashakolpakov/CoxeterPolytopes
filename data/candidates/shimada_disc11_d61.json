@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status_date": "2026-08-04",
+  "analysis_id": "shimada_disc11_common_physical_D61_eigensection",
+  "status": "exact_local_section_and_internal_first_star_verified",
+  "source_sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68",
+  "physical_state": {
+    "representative": 61,
+    "D30_wall_22_equals_D27_wall_23": true,
+    "comparison": "cumulative_row_isometry_and_complete_physical_wall_set",
+    "state_sha256": "a428b0c6df63f0d40aa5708b2773d992e4b39eaa42ccb28958ea05ca3214df13",
+    "physical_wall_set_sha256": "a14712879a75637ed4330d2a9b1c9a8629c940195636f231ff952b1d3bdba785"
+  },
+  "local_section": {
+    "ambient_primitive_walls": 32,
+    "positive_proportional_classes": 25,
+    "irredundant_facets": 11,
+    "root_facets": 7,
+    "internal_facets": 4,
+    "exact_face_witnesses": 11,
+    "exact_positive_redundancy_dependences": 14
+  },
+  "root_filter": {
+    "ambient_minus_two_walls": 18,
+    "integral_field_roots": 17,
+    "shell_distribution": {"2": 8, "4 - 2*phi": 9},
+    "field_span_rank": 10,
+    "unique_non_field_root_wall": [16, 0]
+  },
+  "internal_first_star": [
+    {"wall": [18, 0], "target": 84, "new_physical_state": true},
+    {"wall": [19, 0], "target": 30, "same_physical_D30": true},
+    {"wall": [20, 0], "target": 27, "same_physical_D27": true},
+    {"wall": [23, 0], "target": 37, "new_physical_state": true}
+  ],
+  "report": "results/shimada_disc11_d61.md",
+  "verifier": "scripts/analyze_shimada_disc11_d61.py",
+  "tests": "tests/test_shimada_disc11_d61.py"
+}

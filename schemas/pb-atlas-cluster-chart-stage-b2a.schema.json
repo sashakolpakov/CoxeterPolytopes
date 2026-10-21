@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://coxeter-polytopes.local/schemas/pb-atlas-cluster-chart-stage-b2a.schema.json",
+  "title": "PB-Atlas exact P2 cluster-chart Stage-B2a packet",
+  "type": "object",
+  "required": [
+    "schema",
+    "scope",
+    "source_contract",
+    "chart",
+    "evaluation_matrices",
+    "checks",
+    "claims_not_made",
+    "stage_B2b_remaining",
+    "all_checks_pass"
+  ],
+  "properties": {
+    "schema": {"const": "coxeter.pb_atlas.cluster_chart_stage_b2a.v1"},
+    "scope": {"type": "string"},
+    "source_contract": {
+      "type": "object",
+      "required": [
+        "schema",
+        "stage_B1_packet_sha256",
+        "reads_only_B1_cluster_and_evaluation_arrays",
+        "no_surface_type_or_calibration_name_entered"
+      ],
+      "properties": {
+        "schema": {"const": "coxeter.pb_atlas.numerical_cluster_stage_b1.v1"},
+        "stage_B1_packet_sha256": {"$ref": "#/$defs/sha256"},
+        "reads_only_B1_cluster_and_evaluation_arrays": {"const": true},
+        "no_surface_type_or_calibration_name_entered": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "chart": {"$ref": "#/$defs/chart"},
+    "evaluation_matrices": {
+      "type": "object",
+      "required": ["minus_K", "minus_two_K"],
+      "properties": {
+        "minus_K": {"$ref": "#/$defs/evaluationMatrix"},
+        "minus_two_K": {"$ref": "#/$defs/evaluationMatrix"}
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"const": true}
+    },
+    "claims_not_made": {"type": "array", "items": {"type": "string"}},
+    "stage_B2b_remaining": {"type": "array", "items": {"type": "string"}},
+    "all_checks_pass": {"const": true}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nonnegativeIntegerVector": {
+      "type": "array",
+      "items": {"type": "integer", "minimum": 0}
+    },
+    "expression": {
+      "type": "object",
+      "required": ["numerator", "denominator"],
+      "properties": {
+        "numerator": {"type": "string"},
+        "denominator": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "centerChart": {
+      "type": "object",
+      "required": [
+        "center_position_zero_based",
+        "center_kind",
+        "parent_center_positions_zero_based",
+        "primary_parent_center_position_zero_based",
+        "local_variables",
+        "homogeneous_center_coordinates",
+        "proper_affine_patch_coordinate_zero_based",
+        "proper_local_frame",
+        "exceptional_axis_by_parent_center",
+        "chart_mode",
+        "direction_parameter",
+        "parent_local_substitution"
+      ],
+      "properties": {
+        "center_position_zero_based": {"type": "integer", "minimum": 0},
+        "center_kind": {"enum": ["proper", "free", "satellite"]},
+        "parent_center_positions_zero_based": {"$ref": "#/$defs/nonnegativeIntegerVector"},
+        "primary_parent_center_position_zero_based": {"type": ["integer", "null"], "minimum": 0},
+        "local_variables": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "homogeneous_center_coordinates": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 3}
+          ]
+        },
+        "proper_affine_patch_coordinate_zero_based": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+        "proper_local_frame": {
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "array",
+              "items": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2},
+              "minItems": 2,
+              "maxItems": 2
+            }
+          ]
+        },
+        "exceptional_axis_by_parent_center": {"type": "object", "additionalProperties": {"enum": ["u", "v"]}},
+        "chart_mode": {"enum": ["proper_affine", "blowup_A", "blowup_B"]},
+        "direction_parameter": {"type": ["string", "null"]},
+        "parent_local_substitution": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "object", "minProperties": 2, "maxProperties": 2, "additionalProperties": {"type": "string"}}
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "chart": {
+      "type": "object",
+      "required": [
+        "pgl3_gauge",
+        "coordinate_variables",
+        "center_charts",
+        "chart_open_conditions_not_asserted_nonempty",
+        "finite_chart_cover_boundary"
+      ],
+      "properties": {
+        "pgl3_gauge": {"type": "object"},
+        "coordinate_variables": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "center_charts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/centerChart"}},
+        "chart_open_conditions_not_asserted_nonempty": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "finite_chart_cover_boundary": {"type": "object"}
+      },
+      "additionalProperties": false
+    },
+    "jetDescriptor": {
+      "type": "object",
+      "required": ["center_position_zero_based", "local_jet_total_order", "local_jet_multiindex"],
+      "properties": {
+        "center_position_zero_based": {"type": "integer", "minimum": 0},
+        "local_jet_total_order": {"type": "integer", "minimum": 0},
+        "local_jet_multiindex": {
+          "type": "array",
+          "items": {"type": "integer", "minimum": 0},
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "additionalProperties": false
+    },
+    "evaluationMatrix": {
+      "type": "object",
+      "required": [
+        "degree",
+        "center_multiplicities_chronological",
+        "matrix_dimensions_rows_columns",
+        "section_column_indices",
+        "jet_row_descriptors",
+        "entries",
+        "entry_domain",
+        "formal_jet_tokens_remaining",
+        "matrix_rank_not_asserted",
+        "entries_sha256",
+        "system",
+        "source_B1_formal_entry",
+        "source_B1_template_sha256",
+        "coefficient_normalization"
+      ],
+      "properties": {
+        "degree": {"type": "integer", "minimum": 0},
+        "center_multiplicities_chronological": {"$ref": "#/$defs/nonnegativeIntegerVector"},
+        "matrix_dimensions_rows_columns": {
+          "type": "array",
+          "items": {"type": "integer", "minimum": 0},
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "section_column_indices": {"type": "array", "items": {"$ref": "#/$defs/nonnegativeIntegerVector"}},
+        "jet_row_descriptors": {"type": "array", "items": {"$ref": "#/$defs/jetDescriptor"}},
+        "entries": {
+          "type": "array",
+          "items": {"type": "array", "items": {"$ref": "#/$defs/expression"}}
+        },
+        "entry_domain": {"type": "string"},
+        "formal_jet_tokens_remaining": {"const": false},
+        "matrix_rank_not_asserted": {"const": true},
+        "entries_sha256": {"$ref": "#/$defs/sha256"},
+        "system": {"enum": ["-K", "-2K"]},
+        "source_B1_formal_entry": {"type": "string"},
+        "source_B1_template_sha256": {"$ref": "#/$defs/sha256"},
+        "coefficient_normalization": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+diff --git a/rcyclotomic7integer_alvin.cpp b/rcyclotomic7integer_alvin.cpp
+--- a/rcyclotomic7integer_alvin.cpp
++++ b/rcyclotomic7integer_alvin.cpp
+@@ -295,9 +295,11 @@ void RCyclotomic7Integer_AlVin::findVector(
+       gaol_max = RCyclotomic7Integer(2 * a - 2 * b, -b, a - b).to_interval();
+ 
+       if (!bR1IsAnInt)
+-        gaol_min =
+-            gaol_max -
+-            gaol_SQRTQuotient(rciSumComp, RCyclotomic7Integer(-1, -2, -2));
++        // R1 was computed above from the current diagonal coefficient:
++        // R1^2 = rciSumComp / rciQF[iIndex].  Recomputing it with the
++        // historical hard-coded element [-1,-2,-2] (= 2+theta) omits
++        // valid coordinates whenever rciQF[iIndex] differs from 2+theta.
++        gaol_min = gaol_max - gaol_R1;
+       else
+         gaol_min = RCyclotomic7Integer(iR1 + 2 * a - 2 * b, -b, iR1 + a - b)
+                        .to_interval();

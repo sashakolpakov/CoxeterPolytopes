@@ -1,0 +1,67 @@
+{
+  "status": "PASS_REVIEWED_DEPENDENCIES_AND_CASE_SPLIT_FOR_DIMENSION_165_CANDIDATE",
+  "sources": {
+    "scripts/fresh_nikulin_height_charge_20261015_dimension165.py": "1f01d2285fe5ba42e070e05deed2165b1ab904f61bf7eef61c2eb3587536380b",
+    "results/fresh_nikulin_height_charge_20261015_dimension165.md": "a6e5217a3b6ea2fe4c0a75e62193a79f6b4c553e4d5df8bbfe9899c224538793",
+    "scripts/fresh_nikulin_coupled_charge_20261015_dimension166.py": "39a3d05c08799d16cce815bda805688881ce77c483c95ca1d2da740edd3a9411",
+    "results/fresh_nikulin_coupled_charge_20261015_dimension166.json": "dcde9e76231e4928fc7b945202cda741dfeaf13c9235c88858149caa4c05b5fa",
+    "results/fresh_nikulin_coupled_charge_20261015_dimension166.md": "bdb7d35d7ccde9c05dd9b61c01bdea78180634d687cf55230d5fff76b5ef55a7",
+    "scripts/fresh_nikulin_height_charge_20261015.py": "9a87ff7b5658d7bd15f639ca41283a9c428f6557606887ea9e424af9858b15ff",
+    "results/fresh_nikulin_height_charge_20261015.json": "6427dadcaa1577d0416b31f48da7b67425eb647d4661ab464c2e7f55f7098b6b",
+    "results/fresh_nikulin_height_charge_20261015.md": "9265376bded7bedea8573ab2363fdbc54dd62078bac520d83bc5eb170f2475bc",
+    "scripts/fresh_nikulin_height_charge_20261015_review.py": "6afcde9bd55bb88e62221ce0fa949a300880fde15dc9fe08359de8260b5b1f74",
+    "results/fresh_nikulin_height_charge_20261015_review.json": "bebad068dac2e18fc70830adbb3fc9613487414ad2f1b3e0061dd399e9bfd449",
+    "results/fresh_nikulin_height_charge_20261015_review.md": "05d9dd9e050ac0bb6f5896bac1c47c00d796cd35ea3b82ff16ca9e0c9ba590a3",
+    "scripts/fresh_nikulin_narrow_20261015_compact_facet.py": "819ccae418e3269889a6181c37cec9fab1dcca34cf03e31f0bfcdd9103dd4967",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.json": "18136efb0c36029e5be53be7ca06b1608efeec94d96c7d891ec23aa1b1ef0a3b",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.md": "540390f627681fb27912c2349b593cad1b5b84917e1608d15f34bf2c801e7f13"
+  },
+  "recursive_manifests_checked": 24,
+  "recursive_source_files_checked": 66,
+  "candidate_statement": "Every finite-sided finite-volume real hyperbolic Coxeter polytope has dimension at most165.",
+  "arithmetic_assumption": false,
+  "compactness_assumption": false,
+  "simple_cusp_assumption": false,
+  "chosen_narrow_facet_cases": [
+    {
+      "case": "contains an ideal vertex",
+      "ambient_dimension_at_most": 165,
+      "primary": "fresh_nikulin_height_charge_20261015",
+      "independent_review": "fresh_nikulin_height_charge_20261015_review"
+    },
+    {
+      "case": "only finite vertices, hence compact",
+      "ambient_dimension_at_most": 143,
+      "primary": "fresh_nikulin_narrow_20261015_compact_facet",
+      "independent_review": "fresh_dimension225_hostile_20261015"
+    }
+  ],
+  "common_height_ratio_split": "31/30",
+  "total_retained_cost_at_most": 4,
+  "minimum_defective_factor_cost": "3/2",
+  "maximum_defective_factors": 2,
+  "maximum_each_defect": "2/9",
+  "total_cost_and_defect_loss": "40/9",
+  "avoid_node_deficit": "2/9",
+  "near_pairing_lower": "M*((n-1)-39)/9",
+  "far_pairing_lower": "M*((n-1)-43)/9",
+  "first_excluded_dimension": 166,
+  "combined_candidate_dimension_at_most": 165,
+  "norm_two_narrow_threshold": 14,
+  "frozen_baseline": "fresh_nikulin_coupled_charge_20261015_dimension166",
+  "primary_sources": [
+    {
+      "url": "https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1986.1/ICM1986.1.ocr.pdf",
+      "pages": "printed655 TheoremA; printed657-659 method and announcement"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=im&paperid=1484&what=fullteng",
+      "pages": "printed407-408, section2 Propositions1-2; quasi-Lanner extraction/order10"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=mmo&option_lang=rus&paperid=444&what=fullt",
+      "pages": "printed70-71 h-vector; printed77 Proposition10 spherical distance-pair bound"
+    }
+  ],
+  "scope": "Reviewed dependency and complete case binder, not an independent proof of the inherited geometry. Internal research proof candidate; external validation, novelty and current-best status remain unestablished. All prior frozen artifacts are unchanged."
+}

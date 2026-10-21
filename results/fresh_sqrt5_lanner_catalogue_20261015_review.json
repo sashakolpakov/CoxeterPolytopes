@@ -1,0 +1,504 @@
+{
+  "status": "PASS_INDEPENDENT_COMPLETE_QSQRT5_LANNER_CATALOGUE_REVIEW",
+  "sources": {
+    "scripts/fresh_sqrt5_lanner_catalogue_20261015_review.py": "5185285a3572bf6178cb92de8274e913c39ece9c2bc72ccbe7e4644cd832765f",
+    "scripts/fresh_sqrt5_lanner_catalogue_20261015.py": "0168dc24ac3b32ef462deae652277c1c8ec0a213a3da0255cf097c2626950357",
+    "results/fresh_sqrt5_lanner_catalogue_20261015.json": "263f9999ae41ca116cc090b0420e8969c5ba707b4195c671a27ec6941d5d2544"
+  },
+  "independent_arithmetic": "Integer basis1,sqrt2,sqrt5,sqrt10; doubled Gram; permutation determinants; Sylvester minors; no producer imports",
+  "independent_supports": "All connected edge masks with n-1 edges, or n edges and degree2 everywhere; no Pruefer generator",
+  "finite_PD_checks": [
+    {
+      "rank": 3,
+      "tested": 64,
+      "positive": 25
+    },
+    {
+      "rank": 4,
+      "tested": 4096,
+      "positive": 182
+    }
+  ],
+  "triangles": {
+    "counts": {
+      "not hyperbolic": 12,
+      "accepted": 12,
+      "conjugate not positive definite": 7,
+      "cycle outside Qsqrt5": 25
+    },
+    "accepted": [
+      {
+        "labels": [
+          2,
+          3,
+          10
+        ],
+        "cycle_product": [
+          0,
+          0
+        ],
+        "determinant": [
+          2,
+          -2
+        ],
+        "conjugate_determinant": [
+          0,
+          2
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          2,
+          4,
+          5
+        ],
+        "cycle_product": [
+          0,
+          0
+        ],
+        "determinant": [
+          2,
+          -2
+        ],
+        "conjugate_determinant": [
+          0,
+          2
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          2,
+          4,
+          10
+        ],
+        "cycle_product": [
+          0,
+          0
+        ],
+        "determinant": [
+          0,
+          -2
+        ],
+        "conjugate_determinant": [
+          -2,
+          2
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          2,
+          5,
+          5
+        ],
+        "cycle_product": [
+          0,
+          0
+        ],
+        "determinant": [
+          4,
+          -4
+        ],
+        "conjugate_determinant": [
+          0,
+          4
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          2,
+          5,
+          6
+        ],
+        "cycle_product": [
+          0,
+          0
+        ],
+        "determinant": [
+          0,
+          -2
+        ],
+        "conjugate_determinant": [
+          -2,
+          2
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          2,
+          5,
+          10
+        ],
+        "cycle_product": [
+          0,
+          0
+        ],
+        "determinant": [
+          2,
+          -4
+        ],
+        "conjugate_determinant": [
+          -2,
+          4
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          2,
+          10,
+          10
+        ],
+        "cycle_product": [
+          0,
+          0
+        ],
+        "determinant": [
+          0,
+          -4
+        ],
+        "conjugate_determinant": [
+          -4,
+          4
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          3,
+          3,
+          5
+        ],
+        "cycle_product": [
+          0,
+          1
+        ],
+        "determinant": [
+          2,
+          -4
+        ],
+        "conjugate_determinant": [
+          -2,
+          4
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          3,
+          5,
+          5
+        ],
+        "cycle_product": [
+          1,
+          1
+        ],
+        "determinant": [
+          0,
+          -6
+        ],
+        "conjugate_determinant": [
+          -6,
+          6
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          4,
+          4,
+          5
+        ],
+        "cycle_product": [
+          0,
+          2
+        ],
+        "determinant": [
+          -2,
+          -6
+        ],
+        "conjugate_determinant": [
+          -8,
+          6
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          5,
+          5,
+          5
+        ],
+        "cycle_product": [
+          1,
+          2
+        ],
+        "determinant": [
+          0,
+          -10
+        ],
+        "conjugate_determinant": [
+          -10,
+          10
+        ],
+        "status": "accepted"
+      },
+      {
+        "labels": [
+          5,
+          10,
+          10
+        ],
+        "cycle_product": [
+          1,
+          3
+        ],
+        "determinant": [
+          -4,
+          -12
+        ],
+        "conjugate_determinant": [
+          -16,
+          12
+        ],
+        "status": "accepted"
+      }
+    ],
+    "tested": 56
+  },
+  "higher_orders": [
+    {
+      "order": 4,
+      "counts": {
+        "tested": 675,
+        "tree_tested": 432,
+        "not_indefinite": 103,
+        "accepted_labelled": 78,
+        "proper_not_finite": 464,
+        "cycle_tested": 243,
+        "cycle_field_failure": 24,
+        "conjugate_failure": 6
+      },
+      "support_masks": 19,
+      "accepted_classes": [
+        {
+          "labels": [
+            2,
+            2,
+            3,
+            2,
+            3,
+            5
+          ],
+          "determinant": [
+            "4",
+            "-4"
+          ],
+          "conjugate_determinant": [
+            "0",
+            "4"
+          ]
+        },
+        {
+          "labels": [
+            2,
+            2,
+            3,
+            3,
+            2,
+            5
+          ],
+          "determinant": [
+            "5",
+            "-4"
+          ],
+          "conjugate_determinant": [
+            "1",
+            "4"
+          ]
+        },
+        {
+          "labels": [
+            2,
+            2,
+            4,
+            5,
+            2,
+            3
+          ],
+          "determinant": [
+            "2",
+            "-2"
+          ],
+          "conjugate_determinant": [
+            "0",
+            "2"
+          ]
+        },
+        {
+          "labels": [
+            2,
+            2,
+            5,
+            5,
+            2,
+            3
+          ],
+          "determinant": [
+            "6",
+            "-5"
+          ],
+          "conjugate_determinant": [
+            "1",
+            "5"
+          ]
+        },
+        {
+          "labels": [
+            2,
+            3,
+            3,
+            3,
+            5,
+            2
+          ],
+          "determinant": [
+            "2",
+            "-5"
+          ],
+          "conjugate_determinant": [
+            "-3",
+            "5"
+          ]
+        },
+        {
+          "labels": [
+            2,
+            3,
+            5,
+            5,
+            3,
+            2
+          ],
+          "determinant": [
+            "1",
+            "-7"
+          ],
+          "conjugate_determinant": [
+            "-6",
+            "7"
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "counts": {
+        "tested": 13041,
+        "tree_tested": 10125,
+        "not_indefinite": 497,
+        "proper_not_finite": 12124,
+        "accepted_labelled": 360,
+        "cycle_tested": 2916,
+        "cycle_field_failure": 60
+      },
+      "support_masks": 137,
+      "accepted_classes": [
+        {
+          "labels": [
+            2,
+            2,
+            2,
+            3,
+            2,
+            2,
+            3,
+            5,
+            2,
+            3
+          ],
+          "determinant": [
+            "4",
+            "-4"
+          ],
+          "conjugate_determinant": [
+            "0",
+            "4"
+          ]
+        },
+        {
+          "labels": [
+            2,
+            2,
+            2,
+            3,
+            2,
+            3,
+            3,
+            5,
+            2,
+            2
+          ],
+          "determinant": [
+            "6",
+            "-4"
+          ],
+          "conjugate_determinant": [
+            "2",
+            "4"
+          ]
+        },
+        {
+          "labels": [
+            2,
+            2,
+            2,
+            4,
+            2,
+            3,
+            3,
+            5,
+            2,
+            2
+          ],
+          "determinant": [
+            "2",
+            "-2"
+          ],
+          "conjugate_determinant": [
+            "0",
+            "2"
+          ]
+        },
+        {
+          "labels": [
+            2,
+            2,
+            2,
+            5,
+            2,
+            3,
+            3,
+            5,
+            2,
+            2
+          ],
+          "determinant": [
+            "8",
+            "-6"
+          ],
+          "conjugate_determinant": [
+            "2",
+            "6"
+          ]
+        }
+      ]
+    }
+  ],
+  "dotted_scope": "Symbolic complete parameter t inZphi, t>4,0<t_conjugate<4; not finitely enumerated",
+  "scope": "Catalogue only. Full ambient attachments, quadrilateral classification and any new Qsqrt5 dimension bound are outside this review."
+}

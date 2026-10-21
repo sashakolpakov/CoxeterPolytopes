@@ -1,0 +1,169 @@
+{
+  "conclusion": "The production H10000 bounded-prefix obstruction passes a clean-room replay. The sole nonnegative necessary extension is impossible, so the inherited strict hyperideal ray survives the necessary wall superset through H=10000; no claim beyond that cutoff is made.",
+  "continuity": {
+    "Lambda22_minimum": 4,
+    "base_H2786_sha256": "fc783c2e6ba29e25034df15adb65b0e9c2f6cd31e04fd1331cdad87e88abb26b",
+    "base_ray_strict_on_all_four_accepted_cutters": true,
+    "independent_minima_sha256": "35550b5c534cd00b87dee4490a0a645ae28a6cd9dd68c0790b9181377b76a72c"
+  },
+  "critical_extension_theorem": {
+    "exact_ellipse_inequality": "(3194*q-2260*p)^2 <= 2800*(12776-p^2)",
+    "explicit_local_gate": "all (a,b,c) in [-3,3]^3 except (0,0,0)",
+    "forced_relation_check": {
+      "norm_v_minus_20d": 0,
+      "positive_definiteness_forces": "v=20d",
+      "u_dot_v_minus_20d": 0
+    },
+    "gram": [
+      3194,
+      1600,
+      2260
+    ],
+    "integral_PSD_extension_count": 665,
+    "local_gate_rejection_count": 0,
+    "locally_admissible_extension_count": 665,
+    "locally_admissible_stream_sha256": "3bc3dc04c50765b15ba1be158bdefc6d6bbbbae0e8e90b6d721a659b85556594",
+    "nonnegative_extension_count": 1,
+    "short_vector": {
+      "contradicts_Lambda22_minimum": 4,
+      "norm": 2,
+      "vector": "u-28d"
+    },
+    "two_by_two_pairing_bounds": {
+      "d_dot_u": [
+        -113,
+        113
+      ],
+      "d_dot_v": [
+        -80,
+        80
+      ]
+    },
+    "unique_nonnegative_extension": {
+      "d_pairings": [
+        113,
+        80
+      ],
+      "extension_determinant": 0,
+      "margin": {
+        "a": "32/87",
+        "b": "-22/87"
+      },
+      "margin_numerator": [
+        32,
+        -22
+      ],
+      "margin_numerator_norm": 56
+    },
+    "zero_determinant_extension_count": 4
+  },
+  "cutoff_semantics": {
+    "coefficient_box_proof": {
+      "conjugate_embedding_absolute_bound": "<3",
+      "derived_radical_coefficient_bound": "<=250",
+      "derived_rational_coefficient_bound": "<=353",
+      "enumerated_symmetric_coefficient_box": 354,
+      "identity_embedding_absolute_bound": "<705"
+    },
+    "lower": "strict at the identity embedding",
+    "upper": "inclusive rational field element 10000 at the identity embedding"
+  },
+  "independence": "No project imports: standalone Q(sqrt(2)), exhaustive control box, binary Gram census, congruence/minimum gates, exact PSD ellipse enumeration, finite local short-vector gate, and ray signs.",
+  "logical_scope": {
+    "bounded_prefix_only": true,
+    "global_nonreflectivity": false,
+    "vinberg_termination": false,
+    "why_local_gate_is_safe": "Any PSD extension rejected by the explicit [-3,3]^3 gate already displays an actual nonzero integral Lambda22 combination of norm 1--3, impossible because min(Lambda22)=4.",
+    "why_unique_survivor_is_empty": "Its zero v,d Cauchy minor forces v=20d in the positive-definite lattice; then u-28d is a nonzero norm-two Lambda22 vector."
+  },
+  "new_interval": {
+    "control_count": 129,
+    "controls_by_norm": {
+      "1": 18,
+      "12": 6,
+      "12 + 6*sqrt(2)": 8,
+      "2": 35,
+      "3": 6,
+      "4": 18,
+      "4 + 2*sqrt(2)": 26,
+      "6": 12
+    },
+    "first_control_height": {
+      "a": "2790",
+      "b": "3947/2"
+    },
+    "last_control_height": {
+      "a": "4956",
+      "b": "7009/2"
+    },
+    "locally_admissible_extension_count_with_multiplicity": 496415,
+    "relaxed_nonnegative_type_count": 1,
+    "retained_type_count": 1555,
+    "retained_type_stream_sha256": "163ac164522dbea403b6776c8f016262dca910e8af427b5a1338782ceb433a6f",
+    "retained_types_by_norm": {
+      "12": 206,
+      "2": 569,
+      "4": 574,
+      "6": 206
+    },
+    "threats": [
+      {
+        "control": {
+          "a": "88",
+          "b": "62"
+        },
+        "gram": [
+          3194,
+          1600,
+          2260
+        ],
+        "height": {
+          "a": "3196",
+          "b": "2260"
+        },
+        "maximizing_d_pairings": [
+          113,
+          80
+        ],
+        "maximizing_extension_determinant": 0,
+        "maximizing_margin": {
+          "a": "32/87",
+          "b": "-22/87"
+        },
+        "nonnegative_extension_count": 1,
+        "nonnegative_extensions": [
+          {
+            "d_pairings": [
+              113,
+              80
+            ],
+            "extension_determinant": 0,
+            "margin": {
+              "a": "32/87",
+              "b": "-22/87"
+            }
+          }
+        ],
+        "norm": {
+          "a": "2",
+          "b": "0"
+        }
+      }
+    ]
+  },
+  "replacement_ray": {
+    "identity_sign": 1,
+    "norm": {
+      "a": "10705/7569",
+      "b": "-1"
+    },
+    "vector": "(1,(28/87)d), d^2=4"
+  },
+  "schema_version": "0.1.0",
+  "scope": "Independent bounded necessary-superset replay strictly after 2786+1970sqrt(2) through inclusive rational identity height 10000.",
+  "sources": {
+    "production_artifact": "data/enumerations/silver_lambda22_h10000_replacement.json",
+    "production_sha256": "776a9a58f7d4b323e8167b087cd420def4c7a620d90973b2e99b8ac2c3bd4ad5"
+  },
+  "verdict": "PASS"
+}

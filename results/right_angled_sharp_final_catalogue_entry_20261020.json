@@ -1,0 +1,96 @@
+{
+  "status": "FINAL_ENTRY_SAME_CORE_JOB_DEFINITIONS",
+  "manuscript": {
+    "id": "right_angled_sharp",
+    "tex": "manuscripts/right_angled_sharp_dimension_bounds.tex",
+    "role": "primary",
+    "bundle": "right_angled_sharp",
+    "result_scope": "Sharp finite-volume right-angled dimension<=8 for all vertex types; entirely ideal dimension<=4. No arithmetic or restricted-spectrum assumption.",
+    "result_sources": [
+      "results/right_angled_dimension8_descending_height_proof_20261020.md"
+    ],
+    "verification": [
+      "ideal_dimension4_model",
+      "right_angled_sharp_sos"
+    ],
+    "lean": {
+      "modules": [
+        "CoxeterProofs.RightAngledSharpDimensions"
+      ],
+      "status": "CONDITIONAL_KERNEL_VERIFIED",
+      "coverage": "CappedStd-onlycompilationand12-theoremaxiomauditPASS. Exactcubic/Gramcoefficients;count27-to26endpoint;3actualprojectionsteps;independentuniversal8andideal4implications.",
+      "gaps": "Actual Lorentz/real projection and height recurrence, radial code interpretation, universal real tensorSOS/equality Gram positivity, faceinheritance and publishedDufour/Musin/Kolpakov inputs remainexplicit typedpremises. No integerproxyforrealheights.",
+      "assumptions_map": "docs/manuscript_assumptions.md",
+      "axiom_audit_commands_present": true,
+      "module_source_sha256": {
+        "CoxeterProofs.RightAngledSharpDimensions": "e1844d73a3f07de6cc512e514b948dafef4253e272b3f98de36148543554e323"
+      },
+      "verification_ledger": "results/right_angled_sharp_lean_compile_20261020.json",
+      "axiom_audit": {
+        "executed": true,
+        "module": "CoxeterProofs.RightAngledSharpDimensions",
+        "theorem_count": 12,
+        "axioms": [
+          "Quot.sound",
+          "propext"
+        ],
+        "sorryAx": false,
+        "ledger": "results/right_angled_sharp_lean_axiom_audit_20261020.json",
+        "summary": "results/right_angled_sharp_lean_axiom_summary_20261020.json"
+      }
+    },
+    "pdf": {
+      "path": "manuscripts/build/right_angled_sharp_dimension_bounds.pdf",
+      "pages": 5,
+      "sha256": "3f769dc4f35404fcaf6aead34f9f6adde83fc6fdbd29a2e458f6642d2b2d1150",
+      "source_sha256": "3c3ddd8540593004bcd5fb57832afc77ffc639268e66cb0ab29302b286654310",
+      "status": "PASS_TEX_BUILD;0warnings;1figure_visually_reviewed",
+      "build_ledger": "results/right_angled_sharp_dimension_bounds_build_20261018.json"
+    },
+    "additional_pdfs": [],
+    "frozen": {
+      "tex_manifest": null,
+      "status": "new unified primary; earlier sources andPDFs preserved"
+    },
+    "proof_map": "docs/right_angled_sharp_dimensions_proof_map_20261020.md",
+    "depends_on": [],
+    "aliases": [
+      "right_angled_sharp_dimension_bounds"
+    ],
+    "written_reviews": [
+      "results/review_right_angled_dimension8_descent_root_20261020.md",
+      "results/review_right_angled_dimension8_descent_finite57_20261020.md",
+      "results/review_right_angled_dimension8_descending_height_batch_guard_20261020.md",
+      "results/review_right_angled_sharp_dimensions_manuscript_root_20261020.md",
+      "results/review_right_angled_sharp_dimension_bounds_finite57_20261020.md",
+      "results/review_right_angled_sharp_dimensions_translation_batch_guard_20261020.md",
+      "results/review_right_angled_sharp_final_sources_root_20261020.md",
+      "results/review_right_angled_sharp_dimensions_lean_interface_finite57_20261020.md"
+    ],
+    "visual_review": "results/right_angled_sharp_dimensions_figure_visual_review_20261020.json",
+    "verification_ledger": "results/right_angled_sharp_core_verification_20261020.json"
+  },
+  "checks": {
+    "ideal_dimension4_model": {
+      "id": "ideal_dimension4_model",
+      "argv": [
+        "scripts/check_ideal_right_angled_dimension4_model_20261020.py"
+      ],
+      "owns_lock": false,
+      "tier": "core",
+      "coverage": "Exact24 standard unit normals,276Gram pairs,12opposite pairs,24displayed null vertices/cubical cusp links,actualfacet witnesses and scalar identity. No external theorem or universalgeometry proof.",
+      "expected_status": "PASS_EXACT_24_CELL_MODEL"
+    },
+    "right_angled_sharp_sos": {
+      "id": "right_angled_sharp_sos",
+      "argv": [
+        "scripts/check_right_angled_sharp_dimension_sos_20261020.py",
+        "--verify"
+      ],
+      "owns_lock": false,
+      "tier": "core",
+      "coverage": "Exact12-variable polynomial identities for36rank2/216rank3 tensor contractions, explicit unit-ideal remainders, factor/positive coefficients, ratio27 and4-vector endpoint. No geometry/code enumeration.",
+      "expected_status": "PASS"
+    }
+  }
+}

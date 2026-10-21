@@ -1,0 +1,81 @@
+{
+  "schema_version": "0.1.0",
+  "candidate_id": "coupled_discriminant11",
+  "dimension": 9,
+  "field": "Q(sqrt(5))",
+  "field_gram_blocks": [
+    {
+      "type": "matrix",
+      "entries": [
+        [
+          {"a": "0", "b": "-2"},
+          {"a": "1", "b": "0"}
+        ],
+        [
+          {"a": "1", "b": "0"},
+          {"a": "2", "b": "0"}
+        ]
+      ]
+    },
+    {
+      "type": "standard_lattice",
+      "name": "E8",
+      "sign": 1
+    }
+  ],
+  "field_determinant": {"a": "-1", "b": "-4"},
+  "field_signatures": {
+    "identity": [9, 1, 0],
+    "conjugate": [10, 0, 0]
+  },
+  "trace_scalar": {"a": "-2/5", "b": "-1/5"},
+  "trace_lattice": "U + T11(-1) + E8(-1)^2",
+  "T11": [[18, 5], [5, 2]],
+  "T11_reduced": [[2, 1], [1, 6]],
+  "trace_determinant": "-11",
+  "trace_signature": [1, 19, 0],
+  "discriminant_group": "Z/11Z",
+  "self_adjoint_Z_phi_action_verified": true,
+  "primitive_k3_embedding_verified": true,
+  "k3_transcendental_lattice": [[18, 5], [5, 2]],
+  "k3_wall_field_norms": [
+    {"a": "5", "b": "-3"},
+    {"a": "4", "b": "-2"},
+    {"a": "3", "b": "-1"},
+    {"a": "2", "b": "0"},
+    {"a": "1", "b": "1"}
+  ],
+  "explicit_k3_model": {
+    "type": "Inose elliptic K3",
+    "base_field": "Q",
+    "cm_discriminant": -11,
+    "cm_j_invariant": "-32768",
+    "equation": "y^2 = x^3 - (64/3)*t^4*x + t^5*(t^2 - (1078/27)*t + 1)",
+    "discriminant": "-16*t^10*(t-1)^2*(27*t^2-2102*t+27)",
+    "singular_fibers": ["II*", "II*", "I2", "I1", "I1"]
+  },
+  "published_nef_data_filter": {
+    "source": "Shimada disc11.txt",
+    "surface_match_verified": true,
+    "minus_two_representatives": 347,
+    "field_integral_roots_surviving": 17,
+    "surviving_field_span_rank": 9,
+    "one_generator_step_distinct_curves": 2567,
+    "one_generator_step_new_field_roots": 0,
+    "fixed_marking_eigen_nef_empty": true,
+    "obstruction": "two published effective (-2)-walls have timelike eigenprojections in opposite time-cone components",
+    "artifact": "data/candidates/shimada_disc11_rm_filter.json"
+  },
+  "conjugate_marking_nef_data": {
+    "chamber": 68,
+    "eigen_ample_section_nonempty": true,
+    "local_integral_field_roots": 17,
+    "local_field_span_rank": 9,
+    "published_B_integral_field_roots": 18,
+    "published_B_field_span_rank": 10,
+    "wall_completeness_decided": false,
+    "artifact": "data/candidates/shimada_disc11_conjugate_marking.json"
+  },
+  "geometric_status": "conjugate_marking_eigen_ample_nonempty_wall_completeness_undecided",
+  "generator": "scripts/coupled_discriminant11_candidate.py"
+}

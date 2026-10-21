@@ -1,0 +1,38 @@
+{
+  "status": "PASS_RANK65_LARGE_COMPONENT_ONLY_REDUCTION_OBSTRUCTION",
+  "rank": 65,
+  "current_exact_maximum": "487",
+  "curvature": "480",
+  "unchanged_attainer": [
+    "D17",
+    "D16",
+    "D16",
+    "D16"
+  ],
+  "attainer_cost": "487",
+  "second_forest": [
+    "A1",
+    "D16",
+    "D16",
+    "D16",
+    "D16"
+  ],
+  "second_cost": "486",
+  "optimistic_zero_cost_rank_threshold": 18,
+  "optimistic_maximum": "487",
+  "necessary_deficits": {
+    "D17_plus_three_D16": "7",
+    "A1_plus_four_D16": "6"
+  },
+  "sources": {
+    "scripts/fresh_rank65_small_component_obstruction_20261017.py": "59a82b8ed77003e6669d179ee47882cc3e1f394cdadc854bad8c6523e6dbff66",
+    "scripts/fresh_a2_d11_full_coupon_forest_budget_20261017.py": "cce198f850f4709d7cb0b39e3425af6c11a87429940cf39ab85c6452946a5369",
+    "results/fresh_a2_d11_full_coupon_forest_budget_20261017.json": "8252a2db3dc2181ccdea84d1e398dc0c9519d86f619fb0310ba3d61fd5418044",
+    "results/fresh_a2_d11_full_coupon_forest_budget_20261017.md": "7f83eb7152310eb29f0b0ca081ae666d744200cba2c4e8256ddf3b50aac63609",
+    "scripts/fresh_finite_d17_long_pair_support_20261017.py": "e482589b0ddffbc33ae13c926f2852c75b80b505ec60822278624103b14462a8",
+    "results/fresh_finite_d17_long_pair_support_20261017.json": "a19e5b08125321f215b3a125225066376b6ee6dac3b91ad8f6b7a9d1fac8f328",
+    "results/fresh_finite_d17_long_pair_support_20261017.md": "b968047ccea17a4993ff2d42e486595cc35fd98df593b7c25f295afa631af619"
+  },
+  "proof": "Setting every payment involving a whole component of rank>=18 to zero cannot increase the old exact maximum487. The unchanged valid typed forest D17+3D16 still attains487, so the optimistic maximum remains487. This is an abstract finite-budget obstruction, not an actual hyperbolic vertex existence claim.",
+  "scope": "The present rule cannot reach finite allowance480 through reductions confined to components of rank>=18. A local-cost solution must lower D16 or D17 same-component cost; changing small-component coupons alone cannot change the first witness. Actual-vertex restrictions or justified global compensation are alternative routes. No nonexistence theorem or new ambient bound."
+}

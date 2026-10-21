@@ -1,0 +1,266 @@
+{
+  "acceptance_passes": false,
+  "algorithm_ended_marker": true,
+  "case": "hostile-m14",
+  "checks": {
+    "complete_termination": true,
+    "expected_facets": false,
+    "expected_matrix": false,
+    "independent_exact_replay": true,
+    "printed_qf_no_squarefactor_change": true
+  },
+  "compact_reported_by_alvin": true,
+  "complete_termination": true,
+  "elapsed_seconds": 1.0475423749885522,
+  "externally_stopped": null,
+  "finished_at_utc": "2026-08-12T10:33:23.137461+00:00",
+  "finite_volume_reported_by_alvin": true,
+  "graph": {
+    "coxeter_matrix": [
+      [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        7,
+        1
+      ],
+      [
+        1,
+        1,
+        7,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        2,
+        1
+      ]
+    ],
+    "coxiter_file": "2-[1,0,0],1,[-2,-5,-7].coxiter",
+    "dimension": 2,
+    "facets": 5
+  },
+  "independent_verifier": {
+    "command_argv": [
+      "/Users/sasha/.venvs/global/bin/python3",
+      "/Users/sasha/CoxeterPolytopes/tools/verify_cubic7_alvin.py",
+      "--coxiter",
+      "/Users/sasha/CoxeterPolytopes/data/enumerations/k7_alvin/pinned_rc7_d92006a_20260812/hostile-m14/output/2-[1,0,0],1,[-2,-5,-7].coxiter",
+      "--roots",
+      "/Users/sasha/CoxeterPolytopes/data/enumerations/k7_alvin/pinned_rc7_d92006a_20260812/hostile-m14/stdout.txt",
+      "--qf",
+      "[-1,0,0], 1, [-2,-5,-7]",
+      "--labelg",
+      "/opt/homebrew/bin/labelg",
+      "--output",
+      "/Users/sasha/CoxeterPolytopes/data/enumerations/k7_alvin/pinned_rc7_d92006a_20260812/hostile-m14/independent_verifier.json"
+    ],
+    "geometry": {
+      "compact": true,
+      "cusp_count": 0,
+      "extreme_rays": [
+        {
+          "active_facets": [
+            3,
+            4
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "2",
+            "b": "-2",
+            "c": "0"
+          },
+          "vector": [
+            {
+              "a": "2",
+              "b": "1",
+              "c": "0"
+            },
+            {
+              "a": "-1",
+              "b": "0",
+              "c": "1"
+            },
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        },
+        {
+          "active_facets": [
+            0,
+            4
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "2",
+            "b": "-1",
+            "c": "-1"
+          },
+          "vector": [
+            {
+              "a": "2",
+              "b": "1",
+              "c": "0"
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "c": "0"
+            },
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        },
+        {
+          "active_facets": [
+            0,
+            1
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "0",
+            "b": "-1",
+            "c": "0"
+          },
+          "vector": [
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "c": "0"
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        },
+        {
+          "active_facets": [
+            2,
+            3
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "1",
+            "b": "-1",
+            "c": "0"
+          },
+          "vector": [
+            {
+              "a": "0",
+              "b": "2",
+              "c": "1"
+            },
+            {
+              "a": "0",
+              "b": "1",
+              "c": "1"
+            },
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        },
+        {
+          "active_facets": [
+            1,
+            2
+          ],
+          "kind": "finite",
+          "link_verified": true,
+          "norm": {
+            "a": "4",
+            "b": "-2",
+            "c": "-2"
+          },
+          "vector": [
+            {
+              "a": "3",
+              "b": "0",
+              "c": "-1"
+            },
+            {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            {
+              "a": "0",
+              "b": "0",
+              "c": "0"
+            }
+          ]
+        }
+      ],
+      "finite_vertex_count": 5,
+      "finite_volume": true,
+      "hyperideal_ray_count": 0,
+      "status": "compact"
+    },
+    "passes": true,
+    "report": "independent_verifier.json",
+    "return_code": 0,
+    "scope": {
+      "alvin_transcript_declares_termination": true,
+      "alvin_wall_enumeration_completeness_independently_checked": false,
+      "warning": "This replay verifies the supplied chamber exactly. It does not replay AlVin's height-ordered root enumeration or prove that no reflecting wall was omitted."
+    }
+  },
+  "kind": "regression",
+  "output_artifacts": [
+    {
+      "bytes": 67,
+      "path": "output/2-[1,0,0],1,[-2,-5,-7].coxiter",
+      "sha256": "0cf8603cba80cdb48e2959a5fe771fcf8c30238985726d388c241bb72eff3d15"
+    },
+    {
+      "bytes": 207,
+      "path": "output/2-[1,0,0],1,[-2,-5,-7].graphviz",
+      "sha256": "9b18141c5180abeb9628f540ee3617390eaa62e8a0dbfaad438859ac7bb16a13"
+    }
+  ],
+  "printed_qf_exact_input_order": true,
+  "printed_qf_same_diagonal_multiset": true,
+  "qf_printed": "[-1,0,0], 1, [-2,-5,-7]",
+  "qf_requested": "[-1,0,0],1,[-2,-5,-7]",
+  "return_code": 0,
+  "schema": "coxeter.k7_alvin.live_result.v1",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "5034c4822dac5c7016bc316f697c517fc1a213a86410d893a343c302125c7d7c",
+  "vertices_at_infinity_reported_by_alvin": 0
+}

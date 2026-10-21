@@ -1,0 +1,598 @@
+{
+  "all_checks_pass": true,
+  "certificate_sha256": "6f60b32bd1a1d067661e990715e60f192f56867e32dfb361c1019013e32c89ed",
+  "checks": {
+    "canonical_square_forces_t_plus_or_minus_one": true,
+    "complex_k3_rank_obstruction": true,
+    "cross_incidence_has_105_edges": true,
+    "determinant_minus_4": true,
+    "direct_rational_dimension_obstruction": true,
+    "each_point_and_line_has_degree_5": true,
+    "fano_diagonal_determinant_minus_2": true,
+    "fano_frame_is_deterministic": true,
+    "fano_subplane_found": true,
+    "long_orthogonal_direction_square_minus_6": true,
+    "long_roots_span_rank_21": true,
+    "long_roots_square_minus_4_divisibility_2": true,
+    "only_trivial_and_full_discriminant_subgroups_are_W_stable": true,
+    "physical_square_classes_exhausted": true,
+    "rank_22_signature_1_21": true,
+    "same_colour_curves_are_disjoint": true,
+    "short_odd_coxeter_graph_connected": true,
+    "short_pairings_are_plus_or_minus_one": true,
+    "short_pairings_split_21_plus_21": true,
+    "short_roots_generate_L_integrally": true,
+    "short_roots_span_rank_22": true,
+    "short_roots_square_minus_2_divisibility_1": true,
+    "source_replay_passed": true,
+    "square_class_one_adjunction_contradiction": true,
+    "square_class_one_forces_short_minus_2": true,
+    "square_class_one_long_options_minus_1_minus_4": true,
+    "square_class_two_forces_long_minus_2": true,
+    "square_class_two_short_options_minus_1_minus_4": true,
+    "two_colourings_have_21_exceptional_21_boundary": true,
+    "unique_line_through_two_points": true,
+    "unique_point_on_two_lines": true,
+    "wall_reflections_induce_full_GL2_F2": true,
+    "wall_split_42_short_168_long": true
+  },
+  "complex_k3_and_direct_obstructions": {
+    "complex_k3_conclusion": "No injective full-trace or projected-root complex-K3 eigenslice can return a rank-22 chamber.",
+    "complex_k3_picard_rank_maximum": 20,
+    "direct_complex_rational_bound_imported": "dimension <= 11",
+    "direct_conclusion": "The direct full-NS rational branch is excluded by its proved dimension bound; its smooth-rational weak-log subcase was also excluded directly by the colouring calculation above.",
+    "full_trace_rank_inequality": "[k:Q]*rank(raw) <= rho(X) <= 20",
+    "projected_rank_inequality": "rank(raw image) <= rho(X) <= 20",
+    "raw_eigenspace_rank_required": 22
+  },
+  "frozen_input": {
+    "dimension": 21,
+    "facet_count": 210,
+    "ledger_id": "BOR-D4-H21-210",
+    "path": "data/enumerations/borcherds_d4_h21_og10_carrier_obstruction.json",
+    "sha256": "dc9053322bf54cedde15fcfc5080666ebd79e64feb065b071880dce6ff1552ca"
+  },
+  "outer_routing_verdict": {
+    "consequence": "Raw rationality, maximality, rank, cusp data, canonical colouring, MMP and section algebra do not force the proposed disjunction.  Therefore that disjunction cannot by itself prove the global n<=25 and finiteness theorem.",
+    "statement": "There exists an absolutely reflection-maximal finite-volume arithmetic chamber which has neither a direct/RLogComp complex rational return nor a full-trace/projected-root complex-K3 return.",
+    "status": "COUNTEREXAMPLE_TO_PROPOSED_EXHAUSTIVE_ROUTING"
+  },
+  "positive_characteristic_escape_clause": {
+    "long_orbit": "168 square-minus-four reflections realized by explicit Cremona involutions, not 168 prime nef-wall divisors",
+    "meaning": "This is a genuine AG mixed divisor/action realization of the raw reflection chamber.  The counterexample refutes only the stated complex rational/full-trace/projected-root routing disjunction, not every possible AG carrier category.",
+    "picard_lattice": "U + D20(-1), rank 22",
+    "reference": "Dolgachev--Kondo, A supersingular K3 surface in characteristic 2 and the Leech lattice",
+    "short_orbit": "42 actual smooth rational (-2)-curve classes",
+    "surface": "the unique supersingular K3 surface of Artin invariant one in characteristic 2",
+    "url": "https://arxiv.org/abs/math/0112283"
+  },
+  "projective_plane_obstruction": {
+    "conclusion": "Neither of the two exhaustive adjunction colourings can occur on a complex rational surface; hence RLogComp is EMPTY for this raw P.",
+    "contraction": {
+      "contracted_picard_rank": 1,
+      "disjoint_minus_1_curves": 21,
+      "each_boundary_curve_initial_square": -4,
+      "exceptional_points_on_each_boundary_curve": 5,
+      "image": "a projective line in P^2",
+      "image_square": 1,
+      "initial_picard_rank": 22,
+      "rank_one_minimal_rational_surface": "P^2"
+    },
+    "design_parameters": {
+      "common_line_for_two_points": 1,
+      "common_point_for_two_lines": 1,
+      "identification": "the point-line plane PG(2,4)",
+      "incidences": 105,
+      "lines": 21,
+      "lines_per_point": 5,
+      "points": 21,
+      "points_per_line": 5
+    },
+    "fano_subplane": {
+      "conclusion": "The Fano incidences force the three diagonal points to be collinear.  Their determinant is -2, so the configuration is representable only in characteristic 2, not over C.",
+      "determinant": -2,
+      "forced_diagonal_point_matrix_rows": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "incidence_by_line_wall_one_based": {
+        "31": [
+          4,
+          22,
+          33
+        ],
+        "34": [
+          2,
+          12,
+          33
+        ],
+        "40": [
+          6,
+          12,
+          22
+        ],
+        "47": [
+          2,
+          8,
+          22
+        ],
+        "5": [
+          2,
+          4,
+          6
+        ],
+        "51": [
+          4,
+          8,
+          12
+        ],
+        "7": [
+          6,
+          8,
+          33
+        ]
+      },
+      "line_walls_one_based": [
+        5,
+        7,
+        31,
+        34,
+        40,
+        47,
+        51
+      ],
+      "point_walls_one_based": [
+        2,
+        4,
+        6,
+        8,
+        12,
+        22,
+        33
+      ],
+      "standard_frame_lines": [
+        "ABD",
+        "ACE",
+        "BCF",
+        "AFG",
+        "BEG",
+        "CDG",
+        "DEF"
+      ],
+      "standard_frame_one_based": {
+        "A": 2,
+        "B": 4,
+        "C": 8,
+        "D": 6,
+        "E": 22,
+        "F": 12,
+        "G": 33
+      }
+    },
+    "one_colouring": "For t=1 the 21 pairing-minus-one short roots are disjoint (-1) curves and the 21 pairing-plus-one short roots are disjoint boundary (-4) curves; t=-1 exchanges the two parts."
+  },
+  "rational_physical_square_class_exhaustion": {
+    "allowed_physical_magnitudes_by_raw_norm_and_square_class": {
+      "2": {
+        "1": [
+          2
+        ],
+        "2": [
+          1,
+          4
+        ]
+      },
+      "4": {
+        "1": [
+          1,
+          4
+        ],
+        "2": [
+          2
+        ]
+      }
+    },
+    "common_square_classes": [
+      1,
+      2
+    ],
+    "physical_square_magnitudes": [
+      1,
+      2,
+      4
+    ],
+    "principle": "For one rational similarity c and a rational multiplier on each wall line, |C_i^2|/|r_i^2| has the common class [c] in Q*/Q*^2.",
+    "square_class_1": {
+      "adjunction": {
+        "long_minus_1": -1,
+        "long_minus_4": 2,
+        "short_minus_2": 0
+      },
+      "conclusion": "K=0 contradicts K.C=-1 on every (-1) option and K.C=2 on every (-4) option",
+      "long_lines": "physical square -1 or -4",
+      "short_lines": "all physical square -2; they span rank 22, so K=0"
+    },
+    "square_class_2": {
+      "canonical_line": "K=t*w because the 168 long walls have rank 21",
+      "canonical_parameters": [
+        -1,
+        1
+      ],
+      "long_lines": "all physical square -2 using multiplier 1/2",
+      "only_adjunction_colourings": [
+        {
+          "boundary_minus_4_short_walls_one_based": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            19,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            32,
+            33,
+            35,
+            49,
+            50,
+            64
+          ],
+          "canonical_parameter": -1,
+          "canonical_square_in_physical_form_2G": -12,
+          "canonical_vector_in_raw_basis": [
+            2,
+            -4,
+            -2,
+            -5,
+            -7,
+            -6,
+            -4,
+            -3,
+            -1,
+            5,
+            4,
+            7,
+            11,
+            9,
+            8,
+            6,
+            5,
+            -1,
+            -3,
+            -2,
+            -1,
+            3
+          ],
+          "exceptional_minus_1_short_walls_one_based": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            28,
+            29,
+            30,
+            31,
+            34,
+            39,
+            40,
+            41,
+            46,
+            47,
+            51
+          ],
+          "long_walls_all_minus_2": true
+        },
+        {
+          "boundary_minus_4_short_walls_one_based": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            18,
+            28,
+            29,
+            30,
+            31,
+            34,
+            39,
+            40,
+            41,
+            46,
+            47,
+            51
+          ],
+          "canonical_parameter": 1,
+          "canonical_square_in_physical_form_2G": -12,
+          "canonical_vector_in_raw_basis": [
+            -2,
+            4,
+            2,
+            5,
+            7,
+            6,
+            4,
+            3,
+            1,
+            -5,
+            -4,
+            -7,
+            -11,
+            -9,
+            -8,
+            -6,
+            -5,
+            1,
+            3,
+            2,
+            1,
+            -3
+          ],
+          "exceptional_minus_1_short_walls_one_based": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            19,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            32,
+            33,
+            35,
+            49,
+            50,
+            64
+          ],
+          "long_walls_all_minus_2": true
+        }
+      ],
+      "physical_K_square_formula": "K^2=-12*t^2",
+      "rational_surface_K_square": -12,
+      "raw_w_square": -6,
+      "representative_physical_form": "2G",
+      "short_lines": "physical square -1 using multiplier 1/2 or physical square -4 using multiplier 1"
+    }
+  },
+  "raw_lattice": {
+    "determinant": -4,
+    "discriminant_module": {
+      "W_stable_subgroup_sizes": [
+        1,
+        4
+      ],
+      "all_subgroup_sizes": [
+        1,
+        2,
+        2,
+        2,
+        4
+      ],
+      "basis_bits": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "generated_group": "GL(2,F2)=S3",
+      "generated_group_order": 6,
+      "structure": "(Z/2)^2",
+      "wall_action_generator_matrices_by_columns": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    "identification": "U + D20(-1)",
+    "long_wall_count": 168,
+    "long_wall_divisibilities": {
+      "2": 168
+    },
+    "long_wall_orthogonal_primitive_vector": [
+      -2,
+      4,
+      2,
+      5,
+      7,
+      6,
+      4,
+      3,
+      1,
+      -5,
+      -4,
+      -7,
+      -11,
+      -9,
+      -8,
+      -6,
+      -5,
+      1,
+      3,
+      2,
+      1,
+      -3
+    ],
+    "long_wall_orthogonal_vector_square": -6,
+    "long_wall_rank": 21,
+    "rank": 22,
+    "short_pairing_counts_with_orthogonal_vector": {
+      "-1": 21,
+      "1": 21
+    },
+    "short_wall_coordinate_smith_diagonal": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "short_wall_count": 42,
+    "short_wall_divisibilities": {
+      "1": 42
+    },
+    "short_wall_rank": 22,
+    "signature": [
+      1,
+      21
+    ]
+  },
+  "reflection_maximality": {
+    "conclusion": "The side group is absolutely maximal among discrete reflection overgroups, and hence maximal among arithmetic reflection groups.",
+    "esselmann_context_not_dependency": {
+      "doi": "10.1006/jnth.1996.0141",
+      "reference": "J. Number Theory 61 (1996), 103-144",
+      "statement": "Esselmann independently classifies the rank-22 endpoint as L and L* up to scale/isometry, but that classification is not used in the special-case overgroup proof above.",
+      "url": "https://doi.org/10.1006/jnth.1996.0141"
+    },
+    "level_1_complete_root_chamber": "Borcherds proves that the 210-wall polyhedron is a fundamental chamber for the full integral reflection group R(L).",
+    "level_2_arithmetic": "R(L) has finite index in O^+(L), hence is a finite-covolume arithmetic reflection lattice.",
+    "level_3_classification_free_absolute_overgroup_argument": [
+      "If R(L) is contained in a discrete reflection group Gamma, then the lattice-overgroup index [Gamma:R(L)] is finite.",
+      "A finite extension of an arithmetic lattice is arithmetic.  Thus Gamma preserves some integral Lorentzian lattice M in the same rational commensurability class.",
+      "The 42 short simple reflections have connected odd Coxeter graph, so their root lines are one W-conjugacy class.  Rescale M so its intersection with every short-root line is Zr.",
+      "The short roots generate L integrally.  Hence L is contained in M.  For x in M, s_r(x)-x=(x,r)r belongs to M intersection Qr=Zr; therefore (x,L) is integral and M is contained in L*.",
+      "Intermediate lattices L <= M <= L* correspond to subgroups of A_L=(Z/2)^2.  The 210 wall reflections generate GL(2,F2)=S3 on A_L, whose only invariant subgroups are 0 and A_L.  Thus M is L or L*.",
+      "Dualization gives O(L)=O(L*) and therefore R(L)=R(L*).  Every generating reflection of Gamma preserves M, so Gamma is contained in R(M)=R(L).  The original inclusion forces equality."
+    ],
+    "literature_inputs": [
+      {
+        "author": "Richard Borcherds",
+        "reference": "J. Algebra 111 (1987), Example 5, pp. 148-149",
+        "result": "complete 210-wall R(L) chamber and finite index",
+        "url": "https://math.berkeley.edu/~reb/papers/al/al.pdf"
+      }
+    ]
+  },
+  "schema": "coxeter.borcherds_h21.outer_routing_counterexample.v1",
+  "scope": {
+    "excluded_disjunction": [
+      "direct complex rational full-NS/full-nef return",
+      "complex rational weak-log RLogComp return with simultaneous prime smooth-rational facets of square -1,-2,-4",
+      "full-trace or projected-root complex-K3 eigenslice return"
+    ],
+    "input": "the classical noncompact finite-volume Borcherds chamber in H^21 for L=U+D20(-1), with all 210 mixed-root facets",
+    "not_excluded": [
+      "Dolgachev--Kondo's supersingular characteristic-two K3 mixed divisor/Cremona-action realization",
+      "an as-yet undefined algebraic carrier species not contained in the three displayed branches"
+    ]
+  }
+}

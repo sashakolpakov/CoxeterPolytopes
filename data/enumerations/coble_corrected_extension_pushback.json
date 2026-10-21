@@ -1,0 +1,283 @@
+{
+  "AG_pushback": {
+    "Kondo_classification_consequence": {
+      "all_characteristics_not_2": {
+        "boundary_counts": [
+          1,
+          2,
+          5,
+          8
+        ],
+        "hyperbolic_dimensions": [
+          10,
+          11,
+          14,
+          17
+        ]
+      },
+      "characteristic_3_rows": [
+        "I(n=1)",
+        "I(n=2)",
+        "II(n=1)",
+        "V(n=2)",
+        "VI(n=5)",
+        "MI(n=2)",
+        "MII(n=8)"
+      ],
+      "characteristic_5_dimensions": [
+        10,
+        11
+      ],
+      "characteristic_5_rows": [
+        "I(n=1)",
+        "I(n=2)",
+        "II(n=1)",
+        "VI(n=1)",
+        "VII(n=1)"
+      ]
+    },
+    "compact_scope": {
+      "reason": "The returned finite-Aut Coble chambers have primitive nef isotropic rays/genus-one fibrations and hence ideal vertices.  This theorem concerns finite-volume cusped polytopes only; it gives no compact example and no global compact nonexistence theorem.",
+      "verdict": "NO_COMPACT_OUTPUT_IN_THIS_COBLE_CLASS"
+    },
+    "extension_length_restrictions": {
+      "derivation": "For a strong Coble rational surface, disjoint (-4) boundary components satisfy K^2=-n and rho=10+n.  Every clean blowup extension raises rho by one, while Kondo's independent table restricts n.",
+      "desargues_triangle_cut_char5_base_n1": [
+        0,
+        1
+      ],
+      "grid_projectivity_char3_base_n8": [
+        0
+      ],
+      "mobius_S_3_4_10_char3_base_n2": [
+        0,
+        3,
+        6
+      ],
+      "polar_chord_char3_base_n5": [
+        0,
+        3
+      ],
+      "type_vii_tetrahedral_char5_base_n1": [
+        0,
+        1
+      ]
+    },
+    "hypothesis": "P lies in C_FG_HilbExt intersect D_CobVin",
+    "same_P_return": "The accepted tower gives a strong-Coble root seed.  D_CobVin supplies finite volume, Vinberg finite index, root exhaustion, cusp regeneration and hidden-wall exclusion, so the full nef chamber is literally the original marked P."
+  },
+  "H11_206_direct_extension_scan": {
+    "desargues_clean_one_centre_extension_witnesses": 0,
+    "desargues_frames_with_a_common_avoided_eleventh_centre": 0,
+    "desargues_profile_frames": 144,
+    "full_P2_frame_denominator": 154,
+    "full_P2_profile_histogram": {
+      "{\"d1:1,1,1\": 10, \"d2:1,1,1,1,1,1\": 10, \"d3:1,1,1,1,1,1,1,2\": 10}": 144,
+      "{\"d1:1,1,1\": 12, \"d2:1,1,1,1,1,1\": 18}": 10
+    },
+    "raw_row": "H11/206",
+    "smallest_missing_witness": "Among 154 full eleven-exceptional P2 frames, 144 have ten line, ten conic and ten cubic roots, but in each of the 144 the twenty prospective Desargues roots collectively use all eleven centres.  No centre is avoided by the complete old core.  The remaining ten frames have profile 12 lines and 18 conics; no frame has the Type-VII quartic profile.",
+    "type_vii_profile_frames": 0,
+    "verdict": "ZERO_CLEAN_ONE_CENTRE_EXTENSION_WITNESSES"
+  },
+  "all_checks_pass": true,
+  "checks": {
+    "P_indexed_witness_semantics_not_inflated_to_P_only": true,
+    "all_154_H11_206_plane_frames_replayed": true,
+    "compact_and_cusped_scope_separated": true,
+    "false_BPF_separable_clause_removed": true,
+    "finite_field_geometric_point_distinction_frozen": true,
+    "five_generic_C_FG_cores_loaded": true,
+    "nine_rows_accounted_for": true,
+    "no_H11_206_type_vii_profile": true,
+    "no_clean_H11_206_desargues_extension": true,
+    "nonzero_extension_denominator_empty": true,
+    "type_vii_is_exact_fifth_zero_step_core": true
+  },
+  "core_calibrations": {
+    "C_FG_generic_cores": [
+      "polar_chord",
+      "grid_projectivity",
+      "mobius_S_3_4_10",
+      "desargues_triangle_cut",
+      "tetrahedral_4_plus_6"
+    ],
+    "C_FG_original_four_cores": [
+      "polar_chord",
+      "grid_projectivity",
+      "mobius_S_3_4_10",
+      "desargues_triangle_cut"
+    ],
+    "fifth_explicit_core": {
+      "all_exact_checks_pass": true,
+      "characteristic": 5,
+      "core": "type_vii_tetrahedral_K6_factorization",
+      "minus_2K_kernel_dimension": 1,
+      "minus_K_kernel_dimension": 0,
+      "raw_polytope": "H10/72",
+      "role": "FIFTH_ZERO_STEP_CORE_CALIBRATION_NOT_A_NONZERO_EXTENSION",
+      "same_marked_polytope": true,
+      "strong_Coble": "PASS"
+    }
+  },
+  "corrected_extension_class": {
+    "base_gate": {
+      "allowed": [
+        "one of the five arbitrary-input C_FG cores",
+        "for the H10/72 core, the separate exact Type-VII explicit-section certificate"
+      ],
+      "forbidden_inputs": [
+        "Kondo type name",
+        "surface archive label",
+        "stored output Gram",
+        "known surface existence"
+      ]
+    },
+    "field_semantics": {
+      "finite_field_warning": "A nonempty geometric Bertini open need not contain an F_p-rational point. The tower proves a point over the algebraic closure (and therefore over some finite extension when all data descend to F_p).  An F_p-rational member is asserted only when an explicit rational coefficient vector is supplied.",
+      "theorem_base": "an algebraically closed field of characteristic different from two"
+    },
+    "final_Hilbert_gate": {
+      "marking": "Every constructed boundary/root class returns coefficientwise to the P-derived primitive lattice marking and has the required intersection data.",
+      "minus_2K": "The exact antibicanonical matrix has nullity one; its displayed generator is the reduced boundary B, with B=-2K and certified smooth disjoint strict transforms.  Thus |-2K|={B}.",
+      "minus_K": "The exact anticanonical jet/evaluation matrix has full column rank, so h0(-K)=0."
+    },
+    "hostile_quantifier_warning": "The existence of the coordinate/Hilbert witness is part of membership.  Raw Coxeter and arithmetic conditions do not yet force such a witness, and this certificate class does not exhaust all possible surface carriers.  Therefore it is P-indexed and independently checkable, but not an unconditional P-only classification theorem.",
+    "membership_semantics": "A normalized raw oriented wall datum P belongs when there exists a finite certificate, derived from P's exact contraction/dependency data, passing every gate below.  Coordinates are witnesses, not a stored surface/type template.",
+    "name": "C_FG_HilbExt",
+    "semantic_status": "P_INDEXED_FINITE_GEOMETRIC_CERTIFICATE_CLASS_NOT_UNQUALIFIED_P_ONLY",
+    "tower_gate": {
+      "ambient": "A finite tower T_i of geometrically integral parameter schemes carrying smooth projective geometrically integral rational surfaces X_i/T_i.",
+      "centre_step": "The new centre is the universal section over a nonempty open in X_i, with Jacobian/saturation certificates for smoothness, prescribed incidences, distinctness and avoidance.  Blowing up the relative smooth section gives X_(i+1).",
+      "constant_rank": "A finite complex representing R*pi_*(L) is supplied.  Fitting/minor identities certify a locally free rank-r H0 bundle, base change, and the claimed incidence/jet kernel on the same irreducible component.",
+      "explicit_curve_step": "A rank-one or exceptional system may instead supply a coefficient vector with exact incidence, Jacobian, saturation, absolute-irreducibility and strict-transform smoothness certificates.  Type VII uses this branch.",
+      "irreducible_parameter_induction": "Each next T is a nonempty open in a constant-rank projective bundle over the previous geometrically integral T.  Hence finite intersections of the certified dense opens are nonempty and geometrically integral.",
+      "moving_curve_step": {
+        "finite_Hilbert_certificate": "On Hilb^1(X_i/T_i) and Hilb^2(X_i/T_i), maximal-minor/Fitting ideals of the universal evaluation cokernel have empty support, certified by saturation/elimination (unit ideal on each chart).",
+        "good_open": "Smoothness and geometric integrality follow on a nonempty generic-fibre open by smooth Bertini and Jouanolou irreducibility.  Every additional incidence, transversality and avoidance bad locus has a saturated ideal and a Hilbert-dimension certificate proving it proper.",
+        "required": "After resolving the assigned base cluster, evaluation separates every relative length-one and length-two subscheme; equivalently the induced map X_i -> P_T(V^*) is a relative closed immersion."
+      }
+    }
+  },
+  "corrected_sufficient_theorem": {
+    "not_an_existence_claim_without_a_complete_certificate": true,
+    "not_necessary": true,
+    "proof_kernel": [
+      "The core calibration supplies a geometrically integral initial parameter point.",
+      "A relative smooth-section blowup preserves smooth geometrically integral fibres.",
+      "Fitting/base-change certificates make each section space a constant-rank vector bundle.",
+      "Length-one/two separation makes the resolved system a relative closed immersion.",
+      "Smooth Bertini plus Jouanolou gives a dense open of smooth geometrically integral divisors.",
+      "Proper-bad-locus Hilbert certificates and irreducibility keep the simultaneous good open nonempty.",
+      "Induction through the projective-bundle tower yields a geometric point of the whole dependency branch.",
+      "The final two exact Hilbert ranks give |-K| empty and |-2K| the displayed reduced boundary."
+    ],
+    "statement": "Every finite branch accepted by C_FG_HilbExt is geometrically nonempty: over the algebraic closure it produces a marked strong Coble root seed.  For branches also passing D_CobVin, the full nef chamber is exactly P, and Kondo's classification imposes the recorded dimension/type restrictions."
+  },
+  "direction": "RAW_POLYTOPE_TO_CERTIFIED_SURFACE_TO_THE_SAME_RAW_POLYTOPE_TO_AG_PUSHBACK",
+  "hostile_audit": {
+    "finite_field_warning": "A nonempty geometric Bertini open need not contain an F_p-rational point. The tower proves a point over the algebraic closure (and therefore over some finite extension when all data descend to F_p).  An F_p-rational member is asserted only when an explicit rational coefficient vector is supplied.",
+    "jet_warning": "Surjectivity on first jets at each single point alone does not separate distinct points; the certificate requires all relative length-two subschemes.",
+    "rejected_old_clause": "Base-point-free plus generically separable is insufficient: |O(2,0)| on P1xP1 is composed with the first projection and a general member is two fibres.",
+    "template_warning": "No surface label or classified output is allowed in membership.  Kondo is invoked only after geometric nonemptiness and exact same-P return.",
+    "why_corrected_gate_rejects_it": "The map is not a closed immersion and fails to separate two points on the same first-projection fibre."
+  },
+  "nine_row_extension_census": {
+    "denominator": "nine classified raw full-nef contraction rows",
+    "nonzero_extension_witness_count": 0,
+    "row_count": 9,
+    "rows": [
+      {
+        "full_P2_frames": 0,
+        "outcome": "not a core; rank cannot exceed a same-rank base by a nonzero blowup extension",
+        "rank": 11,
+        "roots": 12,
+        "row": "H10/22"
+      },
+      {
+        "full_P2_frames": 0,
+        "outcome": "not a core; rank cannot exceed a same-rank base by a nonzero blowup extension",
+        "rank": 11,
+        "roots": 12,
+        "row": "H10/30"
+      },
+      {
+        "full_P2_frames": 1,
+        "outcome": "zero-step Desargues core calibration",
+        "rank": 11,
+        "roots": 20,
+        "row": "H10/78"
+      },
+      {
+        "full_P2_frames": 5,
+        "outcome": "fifth zero-step Type-VII explicit-section core calibration",
+        "rank": 11,
+        "roots": 20,
+        "row": "H10/72"
+      },
+      {
+        "full_P2_frames": 0,
+        "max_disjoint_minus_one": 4,
+        "outcome": "no clean 11-exceptional P2 frame for a one-centre characteristic-five extension",
+        "rank": 12,
+        "roots": 10,
+        "row": "H11/26"
+      },
+      {
+        "full_P2_frames": 0,
+        "max_disjoint_minus_one": 7,
+        "outcome": "no clean 11-exceptional P2 frame for a one-centre characteristic-five extension",
+        "rank": 12,
+        "roots": 16,
+        "row": "H11/36"
+      },
+      {
+        "full_P2_frames": 154,
+        "outcome": "zero-step Mobius core; direct 154-frame scan gives no clean Desargues or Type-VII extension",
+        "rank": 12,
+        "roots": 30,
+        "row": "H11/206"
+      },
+      {
+        "full_P2_frames": 5,
+        "outcome": "zero-step polar core; fewer than 30 roots excludes a preserved Mobius core",
+        "rank": 15,
+        "roots": 10,
+        "row": "H14/60"
+      },
+      {
+        "boundary_crossing_graph": "K4,4",
+        "outcome": "zero-step grid core; 24<30 excludes Mobius and K4,4 has no K5 polar boundary subdesign; characteristic-five extensions are independently excluded above H11 by Kondo pushback",
+        "rank": 18,
+        "roots": 24,
+        "row": "H17/48"
+      }
+    ],
+    "scope_warning": "This is exhaustive only for the declared clean blowup-extension certificate on these nine raw rows.  It is neither abstract Coxeter-polytope nonexistence nor nonexistence of every possible surface carrier or infinitely-near model.",
+    "search_verdict": "FAILED_NONZERO_EXTENSION_SEARCH",
+    "zero_step_core_calibrations": [
+      "H10/78",
+      "H10/72",
+      "H11/206",
+      "H14/60",
+      "H17/48"
+    ]
+  },
+  "rating": {
+    "no_TOOT": true,
+    "overall": "L3_PLUS_CORRECTED_SUFFICIENT_EXTENSION_THEOREM; NOT_L4",
+    "positive_gain": "The false AG implication is replaced by a rigorous certificate theorem, a fifth exact explicit core is integrated, and Kondo gives class-wide extension-length bounds.",
+    "why_not_L4": "Primary defect: existence of a coordinate/Hilbert witness is part of class membership; raw Coxeter/arithmetic hypotheses neither force the certificate nor exhaust all carriers.  Secondary defect: the nine-row denominator has five zero-step cores and zero genuinely nonzero extensions; the smallest missing witness is a common avoided centre in the 144 relevant H11/206 frames."
+  },
+  "schema": "coxeter.coble_corrected_extension_pushback.v1",
+  "sources": {
+    "EGA_III_1": "https://www.numdam.org/articles/10.1007/BF02684273/",
+    "EGA_III_2": "https://numdam.org/articles/10.1007/BF02684890/",
+    "Grothendieck_Hilbert_schemes": "https://numdam.org/item/SB_1960-1961__6__249_0/",
+    "Jouanolou_Bertini": "https://books.google.com/books/about/Th%C3%A9or%C3%A8mes_de_Bertini_et_applications.html?id=Q0vvAAAAMAAJ",
+    "Kondo_classification": "https://arxiv.org/abs/2102.00591",
+    "Stacks_Jouanolou_crosscheck": "https://stacks.math.columbia.edu/tag/0G4C",
+    "Stacks_smooth_Bertini_crosscheck": "https://stacks.math.columbia.edu/tag/0FD4"
+  },
+  "status_date": "2026-08-09"
+}

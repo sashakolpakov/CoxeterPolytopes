@@ -1,0 +1,1133 @@
+{
+  "all_checks_pass": true,
+  "automorphisms": {
+    "picard_actions": {
+      "order12_h": "identity on U+E8(-1), outer triality on D4(-1)",
+      "order4_iota": "identity on NS",
+      "order6_zeta": "identity on U+E8(-1), outer triality on D4(-1)"
+    },
+    "relations": {
+      "common_square_relation": "iota^2=zeta^3=(x,-y,t)",
+      "commute": true,
+      "cyclic_group": "<zeta,iota>=<h>=C12; zeta=h^10 and iota=h^3",
+      "h=zeta*iota": "(x,y,t)->(-omega*x,-i*y,-t), order 12",
+      "iota": "(x,y,t)->(-x,i*y,-t), order 4",
+      "zeta": "(x,y,t)->(omega*x,-y,t), order 6"
+    },
+    "resolved_fiber_action": {
+      "U": "fiber and zero-section classes are fixed",
+      "four_II_fibers": "iota and h swap +1 with -1 and +2 with -2; these add no root classes",
+      "h": "the same outer D4 3-cycle as zeta",
+      "i0_star_blowup_chart": "x=t*X, y=t*Y; singular arm points satisfy X^3+4=0",
+      "ii_star": "the E8 affine diagram is rigid, so every component class is fixed",
+      "iota": "X->X and Y->-i*Y, fixing every D4 arm",
+      "zeta": "X->omega*X, a 3-cycle on the outer D4 arms"
+    },
+    "two_form_multipliers": {
+      "h": "i*omega, primitive order 12",
+      "iota": "-i, primitive order 4",
+      "zeta": "-omega, primitive order 6"
+    }
+  },
+  "brandhorst_hofmann": {
+    "article": "https://doi.org/10.1017/fms.2023.50",
+    "database": "https://doi.org/10.5281/zenodo.10410278",
+    "database_version": "2.1",
+    "database_zip_sha256": "c1272db2c0fe2ae0a788aed7745201fccd2a1337b6c2d85555880c434cab4d7c",
+    "discriminant_actions": {
+      "order4": {
+        "action_matrix_mod_2": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "group": "(Z/2)^2",
+        "half_vector_basis_rows": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        ],
+        "nonzero_action_cycle_lengths": [
+          1,
+          1,
+          1
+        ],
+        "q_histogram_mod_2Z": {
+          "0": 1,
+          "1": 3
+        },
+        "table": [
+          {
+            "coordinates": [
+              0,
+              0
+            ],
+            "image_coordinates": [
+              0,
+              0
+            ],
+            "q_mod_2Z": 0
+          },
+          {
+            "coordinates": [
+              0,
+              1
+            ],
+            "image_coordinates": [
+              0,
+              1
+            ],
+            "q_mod_2Z": 1
+          },
+          {
+            "coordinates": [
+              1,
+              0
+            ],
+            "image_coordinates": [
+              1,
+              0
+            ],
+            "q_mod_2Z": 1
+          },
+          {
+            "coordinates": [
+              1,
+              1
+            ],
+            "image_coordinates": [
+              1,
+              1
+            ],
+            "q_mod_2Z": 1
+          }
+        ]
+      },
+      "orders6_and12": {
+        "action_matrix_mod_2": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "group": "(Z/2)^2",
+        "half_vector_basis_rows": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "nonzero_action_cycle_lengths": [
+          3
+        ],
+        "q_histogram_mod_2Z": {
+          "0": 1,
+          "1": 3
+        },
+        "table": [
+          {
+            "coordinates": [
+              0,
+              0
+            ],
+            "image_coordinates": [
+              0,
+              0
+            ],
+            "q_mod_2Z": 0
+          },
+          {
+            "coordinates": [
+              0,
+              1
+            ],
+            "image_coordinates": [
+              1,
+              0
+            ],
+            "q_mod_2Z": 1
+          },
+          {
+            "coordinates": [
+              1,
+              0
+            ],
+            "image_coordinates": [
+              1,
+              1
+            ],
+            "q_mod_2Z": 1
+          },
+          {
+            "coordinates": [
+              1,
+              1
+            ],
+            "image_coordinates": [
+              0,
+              1
+            ],
+            "q_mod_2Z": 1
+          }
+        ]
+      }
+    },
+    "full_external_scan_available": true,
+    "order4_exact_block_decomposition": {
+      "action": "identity on every block",
+      "block_basis_determinant": 1,
+      "blocks": "U + E8(-1) + D4(-1)",
+      "d4_change_of_basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1,
+          0
+        ]
+      ],
+      "e8_reason": "even negative-definite unimodular rank 8, hence E8(-1)"
+    },
+    "order6_order12_exact_pair_equality": {
+      "block_basis_determinant": 1,
+      "blocks": "U+E8(-1) [identity] + D4(-1) [outer 3-cycle]",
+      "d4_action": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "same_ns_action_entrywise": true,
+      "same_ns_gram_entrywise": true
+    },
+    "rows": [
+      {
+        "automorphism_order": 4,
+        "complete_file_uniqueness_criterion": "unique row whose generic NS has rank 14 and determinant -4",
+        "fixed_coinvariant_glue_pair": "identity/full NS/trivial glue",
+        "full_characteristic": "(lambda - 1)**14*(lambda**2 + 1)**4",
+        "generic_ns_rank_signature_determinant": [
+          14,
+          [
+            1,
+            13,
+            0
+          ],
+          -4
+        ],
+        "generic_ns_smith": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "id": "0.4.3.1",
+        "member": "K3Groups/results/purely_ns/order04.txt",
+        "member_row_count": 79,
+        "member_sha256": "d5a61603c1539278e8411e188656c9417662336ff4282b714e939c40d38c94e8",
+        "ns_action_digest": "e4185c4fdc9dc1c675059566ff40bcb9ab8d2b86c414709914eac5bd258ba48a",
+        "ns_gram_digest": "f217e1cec1bb4cd615471c7d3f18287fd1b41c690c10207d8347e9c463f74320",
+        "row_one_based": 25,
+        "row_sha256_with_newline": "a4ad1c37a6864c2d6fc37d1139a99ba3a6f8a889b9a4a5c387ba2420dad00c4b",
+        "transcendental_characteristic": "(lambda**2 + 1)**4",
+        "transcendental_gram_digest": "d86d496503981b1e11a670c61bcf95ffb1153edc702cde97e5afdd307a27b46c",
+        "unique_rank14_det_minus4_hit": [
+          25,
+          "0.4.3.1",
+          "(lambda - 1)**14"
+        ]
+      },
+      {
+        "automorphism_order": 6,
+        "complete_file_uniqueness_criterion": "unique row whose generic NS has rank 14 and determinant -4",
+        "fixed_coinvariant_glue_pair": "U+E8+A2 fixed, A2(-2) coinvariant, index-3 glue, literal D4 triality",
+        "full_characteristic": "(lambda - 1)**12*(lambda**2 - lambda + 1)**4*(lambda**2 + lambda + 1)",
+        "generic_ns_rank_signature_determinant": [
+          14,
+          [
+            1,
+            13,
+            0
+          ],
+          -4
+        ],
+        "generic_ns_smith": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "id": "0.6.3.1",
+        "member": "K3Groups/results/purely_ns/order06.txt",
+        "member_row_count": 150,
+        "member_sha256": "45074265c680c21efafe549b03e34cfde10467f10e2a6cd73ef3a9eb19401f63",
+        "ns_action_digest": "2adeb56426c8bddffbfccf5c22a3413d92c6f37fe229e9694818ee280f548cf9",
+        "ns_gram_digest": "1e97b94f50ac272a897006ffd419af6d2bb2d4b8909e8364041e410f3431782e",
+        "row_one_based": 57,
+        "row_sha256_with_newline": "aacb4c5b6aa9e9f622921803a076c4b0baa0ff40a19d3f4cfd377325bd56b344",
+        "transcendental_characteristic": "(lambda**2 - lambda + 1)**4",
+        "transcendental_gram_digest": "c4c0fdd31752d2907ed9a66b370f7b01f1fc19eced6caaa7d82675c32a657f3b",
+        "unique_rank14_det_minus4_hit": [
+          57,
+          "0.6.3.1",
+          "(lambda - 1)**12*(lambda**2 + lambda + 1)"
+        ]
+      },
+      {
+        "automorphism_order": 12,
+        "complete_file_uniqueness_criterion": "unique row whose generic NS has rank 14 and determinant -4",
+        "fixed_coinvariant_glue_pair": "U+E8+A2 fixed, A2(-2) coinvariant, index-3 glue, literal D4 triality",
+        "full_characteristic": "(lambda - 1)**12*(lambda**2 + lambda + 1)*(lambda**4 - lambda**2 + 1)**2",
+        "generic_ns_rank_signature_determinant": [
+          14,
+          [
+            1,
+            13,
+            0
+          ],
+          -4
+        ],
+        "generic_ns_smith": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "id": "0.12.1.1",
+        "member": "K3Groups/results/purely_ns/order12.txt",
+        "member_row_count": 48,
+        "member_sha256": "d37bc4bbe2ae99c635cedab379909c0436a720ed06e28cdaa0f8973bf5b48c0b",
+        "ns_action_digest": "2adeb56426c8bddffbfccf5c22a3413d92c6f37fe229e9694818ee280f548cf9",
+        "ns_gram_digest": "1e97b94f50ac272a897006ffd419af6d2bb2d4b8909e8364041e410f3431782e",
+        "row_one_based": 13,
+        "row_sha256_with_newline": "8e3c52ca3b9809d1b7873adb119b4c34022f9fd9d61f3a43ab7b9e0057dc7bb3",
+        "transcendental_characteristic": "(lambda**4 - lambda**2 + 1)**2",
+        "transcendental_gram_digest": "acd6d3844019f1172db3433e1190b2c913762121aff756277d58d0412d76f5a0",
+        "unique_rank14_det_minus4_hit": [
+          13,
+          "0.12.1.1",
+          "(lambda - 1)**12*(lambda**2 + lambda + 1)"
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "bh_three_unique_exact_matches": true,
+    "displayed_trivial_lattice_has_rank_14": true,
+    "exact_char0_ns": true,
+    "global_k3_fiber_euler_sum": true,
+    "named_roots_distinct": true,
+    "no_cyclotomic_quotient_eigenvalue": true,
+    "no_same_rank_even_overlattice": true,
+    "point_counts_reconstruct_degree8_weil_polynomial": true,
+    "reduction_picard_rank_is_14_by_tate": true,
+    "specialization_bounds_char0_picard_rank_by_14": true,
+    "vinberg_triality_finite_volume": true
+  },
+  "coxeter_handoff": {
+    "novelty": "The abstract chambers are known.  The positive result is a named rational K3, an arithmetic proof of its exact NS, and simultaneous equation-level C4/C6/C12 realizations.",
+    "order4_full_chamber": {
+      "dimension": 13,
+      "facets": 15,
+      "finite_volume_noncompact": true,
+      "source_completeness": "direct_curve_enumeration_and_completeness_test",
+      "status": "known complete U+E8(-1)+D4(-1) K3 nef Coxeter chamber"
+    },
+    "orders6_and12_triality_chamber": {
+      "bad_edges": 0,
+      "classification": "finite_volume_noncompact",
+      "cusps": 1,
+      "dimension": 11,
+      "elliptic_edges": 162,
+      "facets": 13,
+      "finite_vertices": 27,
+      "parabolic_neighborhood_audits": 2
+    }
+  },
+  "fixed_coinvariant_glue": {
+    "identity_action": {
+      "coinvariant_lattice": "0",
+      "discriminant": {
+        "action_matrix_mod_2": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "group": "(Z/2)^2",
+        "half_vector_basis_rows": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ]
+        ],
+        "nonzero_action_cycle_lengths": [
+          1,
+          1,
+          1
+        ],
+        "q_histogram_mod_2Z": {
+          "0": 1,
+          "1": 3
+        },
+        "table": [
+          {
+            "coordinates": [
+              0,
+              0
+            ],
+            "image_coordinates": [
+              0,
+              0
+            ],
+            "q_mod_2Z": 0
+          },
+          {
+            "coordinates": [
+              0,
+              1
+            ],
+            "image_coordinates": [
+              0,
+              1
+            ],
+            "q_mod_2Z": 1
+          },
+          {
+            "coordinates": [
+              1,
+              0
+            ],
+            "image_coordinates": [
+              1,
+              0
+            ],
+            "q_mod_2Z": 1
+          },
+          {
+            "coordinates": [
+              1,
+              1
+            ],
+            "image_coordinates": [
+              1,
+              1
+            ],
+            "q_mod_2Z": 1
+          }
+        ]
+      },
+      "fixed_lattice": "all of NS"
+    },
+    "neron_severi": {
+      "class": "U+E8(-1)+D4(-1)",
+      "discriminant_q_histogram_mod_2Z": {
+        "0": 1,
+        "1": 3
+      },
+      "rank_signature_determinant": [
+        14,
+        [
+          1,
+          13,
+          0
+        ],
+        -4
+      ],
+      "smith": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    "triality_action": {
+      "coinvariant_lattice": {
+        "class": "A2(-2)",
+        "gram": [
+          [
+            -4,
+            2
+          ],
+          [
+            2,
+            -4
+          ]
+        ],
+        "rootless": true
+      },
+      "discriminant": {
+        "action_matrix_mod_2": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "group": "(Z/2)^2",
+        "half_vector_basis_rows": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ]
+        ],
+        "nonzero_action_cycle_lengths": [
+          3
+        ],
+        "q_histogram_mod_2Z": {
+          "0": 1,
+          "1": 3
+        },
+        "table": [
+          {
+            "coordinates": [
+              0,
+              0
+            ],
+            "image_coordinates": [
+              0,
+              0
+            ],
+            "q_mod_2Z": 0
+          },
+          {
+            "coordinates": [
+              0,
+              1
+            ],
+            "image_coordinates": [
+              1,
+              0
+            ],
+            "q_mod_2Z": 1
+          },
+          {
+            "coordinates": [
+              1,
+              0
+            ],
+            "image_coordinates": [
+              1,
+              1
+            ],
+            "q_mod_2Z": 1
+          },
+          {
+            "coordinates": [
+              1,
+              1
+            ],
+            "image_coordinates": [
+              0,
+              1
+            ],
+            "q_mod_2Z": 1
+          }
+        ]
+      },
+      "fixed_lattice": {
+        "class": "U+E8(-1)+A2(-1)",
+        "gram": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -2,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            -6
+          ]
+        ],
+        "rank_signature_determinant": [
+          12,
+          [
+            1,
+            11,
+            0
+          ],
+          -3
+        ]
+      },
+      "fixed_plus_coinvariant_index": 3,
+      "glue_generator": "outer D4 root = (fixed outer-sum + 2*c1 + c2)/3 modulo the displayed fixed/coinvariant bases",
+      "picard_characteristic": "(lambda-1)^12*(lambda^2+lambda+1)",
+      "quotient_smith": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    }
+  },
+  "payload_sha256": "39336a4a893b4d36f3db875f7f6af2f8d20b449568b83bec684e213734675d47",
+  "picard_rank_conclusion": {
+    "characteristic_zero_picard_rank": 14,
+    "exact_ns": "U+E8(-1)+D4(-1)",
+    "reduction_geometric_picard_rank": 14,
+    "saturation": "a proper index-2 even enlargement would be even unimodular of signature (1,13), impossible because 1-13 is not divisible by 8",
+    "specialization_injection": "NS(X_Qbar) injects into NS(X_F7bar)",
+    "tate_source": "https://arxiv.org/abs/1301.6326"
+  },
+  "point_count_and_tate_certificate": {
+    "algebraic_integer_exclusion": {
+      "equation": "7*u^2+2*u-23=0",
+      "reason": "a root of unity makes u an algebraic integer, but neither root lies in O_Q(sqrt(2))=Z[sqrt(2)]",
+      "roots": [
+        "(-1+9*sqrt(2))/7",
+        "(-1-9*sqrt(2))/7"
+      ],
+      "substitution": "u=x^2+x^(-2)"
+    },
+    "counts": [
+      {
+        "h2_trace": 77,
+        "i0_star_resolution_correction": 7,
+        "i0_star_split": false,
+        "ii_star_fiber_points": 64,
+        "known_ns_normalized_trace": 11,
+        "known_ns_trace": 77,
+        "n": 1,
+        "q": 7,
+        "quotient_trace": 0,
+        "raw_finite_weierstrass_sum": 56,
+        "resolved_surface_points": 127
+      },
+      {
+        "h2_trace": 511,
+        "i0_star_resolution_correction": 49,
+        "i0_star_split": false,
+        "ii_star_fiber_points": 442,
+        "known_ns_normalized_trace": 11,
+        "known_ns_trace": 539,
+        "n": 2,
+        "q": 49,
+        "quotient_trace": -28,
+        "raw_finite_weierstrass_sum": 2422,
+        "resolved_surface_points": 2913
+      },
+      {
+        "h2_trace": 4802,
+        "i0_star_resolution_correction": 1372,
+        "i0_star_split": true,
+        "ii_star_fiber_points": 3088,
+        "known_ns_normalized_trace": 14,
+        "known_ns_trace": 4802,
+        "n": 3,
+        "q": 343,
+        "quotient_trace": 0,
+        "raw_finite_weierstrass_sum": 117992,
+        "resolved_surface_points": 122452
+      },
+      {
+        "h2_trace": 39151,
+        "i0_star_resolution_correction": 2401,
+        "i0_star_split": false,
+        "ii_star_fiber_points": 21610,
+        "known_ns_normalized_trace": 11,
+        "known_ns_trace": 26411,
+        "n": 4,
+        "q": 2401,
+        "quotient_trace": 12740,
+        "raw_finite_weierstrass_sum": 5779942,
+        "resolved_surface_points": 5803953
+      }
+    ],
+    "cyclotomic_gcd_degrees": {
+      "1": 0,
+      "10": 0,
+      "12": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "18": 0,
+      "2": 0,
+      "20": 0,
+      "24": 0,
+      "3": 0,
+      "30": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "cyclotomic_orders_exhausted": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      14,
+      15,
+      16,
+      18,
+      20,
+      24,
+      30
+    ],
+    "determinant_sign_proof": "Frobenius commutes with zeta over F7; W=V_lambda+V_lambda^-1 with both dimensions 4, and cup product makes the second block 7^2*(A^-1)^t, so det(F|W)=7^8",
+    "fiber_resolution_formula": {
+      "arm_cubic": "X^3+4=0, or X^3=3 modulo 7",
+      "frobenius_arm_action": "3-cycle unless 3 divides n; identity otherwise",
+      "ii_star_points": "9q+1",
+      "nonsplit_i0_star_points": "2q+1; correction q",
+      "raw_i0_star_cusp_points": "q+1",
+      "split_i0_star_points": "5q+1; correction 4q"
+    },
+    "frobenius_polynomial": "T**8 + 14*T**6 - 3087*T**4 + 33614*T**2 + 5764801",
+    "good_reduction": {
+      "fiber_types_preserved": [
+        "I0*",
+        "II",
+        "II",
+        "II",
+        "II",
+        "II*"
+      ],
+      "pairwise_distinct_and_nonzero": true,
+      "roots_mod_7": [
+        5,
+        6,
+        1,
+        2
+      ]
+    },
+    "independent_python_flint_recount_available": true,
+    "normalized_primitive_polynomial": "7*x**8 + 2*x**6 - 9*x**4 + 2*x**2 + 7",
+    "prime": 7,
+    "quotient_dimension": 8,
+    "quotient_power_traces_n1_to_n4": [
+      0,
+      -28,
+      0,
+      12740
+    ]
+  },
+  "provenance": {
+    "order6_source": "data/enumerations/roulleau_ue8d4_generic_ns_k3_automorphisms.json",
+    "order6_source_sha256": "4da4becc68f8ab9ef907714ad575cb114f6d451af39e0ab93a8974b4e29991a6",
+    "stock_source": "data/enumerations/roulleau_rank11_14_source_stock_inventory.json",
+    "stock_source_sha256": "c3e9c0fba30c76c3e90bdb34fcf1d7d8b25574d1cd67ce1937b88e6905dbb317"
+  },
+  "schema": "ue8d4-named-c12-member-v1",
+  "surface": {
+    "affine_equation": "y^2 = x^3 + t^3*(t^2-1)*(t^2-4)",
+    "family_parameters": {
+      "a": -1,
+      "b": 2,
+      "c": -2
+    },
+    "fibers": [
+      {
+        "euler": 6,
+        "kodaira": "I0*",
+        "place": "0",
+        "root_lattice": "D4(-1)"
+      },
+      {
+        "euler": 8,
+        "kodaira": "four II",
+        "place": "+/-1,+/-2",
+        "root_lattice": "0"
+      },
+      {
+        "euler": 10,
+        "kodaira": "II*",
+        "place": "infinity",
+        "root_lattice": "E8(-1)"
+      }
+    ],
+    "field": "Q",
+    "trivial_lattice": "U+E8(-1)+D4(-1)"
+  },
+  "symmetric_c12_subfamily": {
+    "equation": "y^2=x^3+t^3*(t^2-r^2)*(t^2-s^2)",
+    "generic_exact_ns_argument": "The displayed divisors give rho>=14.  Primitive order 12 makes rank(T) divisible by phi(12)=4, so a jump has rho>=18; its primitive eigenspace has projective period dimension 0, whereas the symmetric family is genuinely one-dimensional.  Thus very general rho=14, and the determinant-4 saturation gate gives exact NS.",
+    "moduli_dimension": 1,
+    "nonisotrivial_parameter": "the ratio r/s, modulo a finite symmetry",
+    "open_condition": "r*s*(r^2-s^2) != 0"
+  },
+  "theorem": "The minimal resolution over Qbar of y^2=x^3+t^3(t^2-1)(t^2-4) has NS=U+E8(-1)+D4(-1).  It carries a cyclic order-12 action whose order-4, order-6, and order-12 cyclic subactions realize BH rows 0.4.3.1, 0.6.3.1, and 0.12.1.1 and the known full H13/15 and triality H11/13 Coxeter chambers."
+}

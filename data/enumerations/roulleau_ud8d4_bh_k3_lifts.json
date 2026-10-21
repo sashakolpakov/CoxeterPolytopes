@@ -1,0 +1,893 @@
+{
+  "all_checks_pass": true,
+  "brandhorst_hofmann": {
+    "article": "Finite subgroups of automorphisms of K3 surfaces",
+    "article_doi": "10.1017/fms.2023.50",
+    "database_doi": "10.5281/zenodo.10410278",
+    "database_version": "2.1",
+    "external_replay_command": "python3 scripts/certify_roulleau_ud8d4_bh_k3_lifts.py --brandhorst-hofmann-zip /path/to/K3Groups.zip --check-archive",
+    "license": "CC-BY-4.0",
+    "zip_md5": "143047b9cb76f4ad4cb2aadd5959d879",
+    "zip_sha256": "c1272db2c0fe2ae0a788aed7745201fccd2a1337b6c2d85555880c434cab4d7c"
+  },
+  "cases": [
+    {
+      "archived_divisor_action": {
+        "characteristic_polynomial": "(lambda - 1)**12*(lambda + 1)**2",
+        "class_one_based": 6,
+        "fixed_rank": 12,
+        "group_structure": "C2",
+        "ns_action_order": 2,
+        "type_id": "R14_UD8D4_TYPE_2"
+      },
+      "brandhorst_hofmann_row": {
+        "automorphism_order": 8,
+        "full_k3_action_replay_available": true,
+        "generic_picard_lattice": {
+          "isometry_class": "U+D8(-1)+D4(-1)",
+          "nikulin_invariants": [
+            14,
+            4,
+            0
+          ],
+          "ns_action_digest": "eb2ec4afe454ff935c628956e218ba4d039e7e6b1d9ecade5bb9df990c38140e",
+          "ns_gram_digest": "e07d9b83a4379fabaf6c562d03dd5153f5cf3065c39b1519c7523a09721ec01e",
+          "rank_signature_determinant": [
+            14,
+            [
+              1,
+              13,
+              0
+            ],
+            -16
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "generic_transcendental_lattice": {
+          "absolute_determinant": 16,
+          "action_characteristic_polynomial": "(lambda**4 + 1)**2",
+          "rank": 8,
+          "signature": [
+            2,
+            6,
+            0
+          ]
+        },
+        "id": "0.8.1.3",
+        "member": "K3Groups/results/purely_ns/order08.txt",
+        "member_row_count": 38,
+        "member_sha256": "719eb569ec3f4d399a9948499a795e273160dfb54bb607e6e18eb31e188138d7",
+        "row_one_based": 10,
+        "row_sha256_with_newline": "b543f8d219c913c3d0834188aea0e62dfe724b562569a017e887b6d199d59bd9"
+      },
+      "exact_action_conjugacy": {
+        "coinvariant_lattices": {
+          "action_intertwined": true,
+          "archived_gram": [
+            [
+              -4,
+              0
+            ],
+            [
+              0,
+              -4
+            ]
+          ],
+          "basis_intertwiner_P_with_PGarchivePt_equal_Gbh": [
+            [
+              1,
+              -1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "bh_gram": [
+            [
+              -8,
+              4
+            ],
+            [
+              4,
+              -4
+            ]
+          ],
+          "induced_discriminant_map": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "negative_definite": true,
+          "rootless": true,
+          "rootless_reason": "one half of the Gram is integral, even and negative definite, so every nonzero norm is at most -4",
+          "smith": [
+            4,
+            4
+          ]
+        },
+        "conclusion": "the fixed and coinvariant isometries carry the primitive glue graph and intertwine the actions, hence extend to a conjugacy of the full Picard-lattice actions",
+        "fixed_lattices": {
+          "archived_q_histogram_mod_2Z": {
+            "0": 2,
+            "1": 2,
+            "1/4": 4,
+            "3/2": 4,
+            "5/4": 4
+          },
+          "bh_q_histogram_mod_2Z": {
+            "0": 2,
+            "1": 2,
+            "1/4": 4,
+            "3/2": 4,
+            "5/4": 4
+          },
+          "determinant": -16,
+          "discriminant_isometry": {
+            "bijective": true,
+            "elements_checked": 16,
+            "matrix_on_nontrivial_smith_coordinates": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "quadratic_form_preserved_mod_2Z": true,
+            "source_invariant_factors": [
+              4,
+              4
+            ],
+            "target_invariant_factors": [
+              4,
+              4
+            ]
+          },
+          "nikulin_lifting": {
+            "conclusion": "the prescribed discriminant-form isometry lifts to an integral isometry of the fixed lattices",
+            "discriminant_length": 2,
+            "doi": "10.1070/IM1980v014n01ABEH001060",
+            "indefinite_even": true,
+            "rank": 12,
+            "rank_at_least_length_plus_two": true,
+            "reference": "Nikulin, Integral symmetric bilinear forms, Theorem 1.14.2"
+          },
+          "signature": [
+            1,
+            11,
+            0
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            4
+          ]
+        },
+        "offline_bh_picard_reconstruction": {
+          "action_characteristic_polynomial": "(lambda - 1)**12*(lambda + 1)**2",
+          "action_digest": "aac50f77138f12c40aae24aab79f743ee3c525a1ee975912968903086a9ac6b3",
+          "action_order": 2,
+          "discriminant_q_histogram_mod_2Z": {
+            "0": 6,
+            "1": 10
+          },
+          "from_pinned_fixed_coinvariant_and_glue": true,
+          "gram_digest": "a2699fe46dfae0010a211b640fae22f33b1a8ee31895f0e99c45fec0aafb94d0",
+          "rank_signature_determinant": [
+            14,
+            [
+              1,
+              13,
+              0
+            ],
+            -16
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "primitive_glue": {
+          "all_four_pairs_carried_exactly": true,
+          "archived_pairs_in_smith_coordinates": [
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2
+              ],
+              [
+                2,
+                0
+              ]
+            ]
+          ],
+          "bh_pairs_in_smith_coordinates": [
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                2
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2
+              ],
+              [
+                2,
+                0
+              ]
+            ]
+          ],
+          "index_of_fixed_plus_coinvariant": 4
+        }
+      },
+      "hyperbolic_polytope": {
+        "bad_edges": 0,
+        "classification": "finite_volume_noncompact",
+        "containing_full_reflection_group_index": null,
+        "cusps": 9,
+        "dimension": 11,
+        "elliptic_edges": 750,
+        "facets": 16,
+        "finite_vertices": 112,
+        "parabolic_neighborhood_audits": 18
+      },
+      "kahler_torelli_handoff": {
+        "algebraic_coinvariant_is_rootless": true,
+        "archived_complete_nef_chamber_is_action_stable": true,
+        "database_row_is_a_genuine_k3_automorphism_class": true,
+        "global_order_vs_picard_order": [
+          8,
+          2
+        ],
+        "refined_period_map_choice": "use the BH period and choose the marked Kahler chamber to be the archived action-stable Roulleau chamber",
+        "strong_torelli_conclusion": "the transported Hodge isometry preserving that chamber is induced by a K3 automorphism"
+      },
+      "name": "order8_type2",
+      "scope": {
+        "general_roulleau_surface_action_claimed": false,
+        "new_abstract_coxeter_diagram_claimed": false,
+        "new_positive_surface_realization_in_this_project": true,
+        "special_k3_in_bh_deformation_class_used": true,
+        "worldwide_surface_realization_priority_claimed": false
+      },
+      "theorem": "A purely non-symplectic K3 automorphism of order 8 realizes archived class 6 and its finite-volume H11/16 fixed section"
+    },
+    {
+      "archived_divisor_action": {
+        "characteristic_polynomial": "(lambda - 1)**11*(lambda + 1)*(lambda**2 + 1)",
+        "class_one_based": 14,
+        "fixed_rank": 11,
+        "group_structure": "C4",
+        "ns_action_order": 4,
+        "type_id": "R14_UD8D4_TYPE_4"
+      },
+      "brandhorst_hofmann_row": {
+        "automorphism_order": 16,
+        "full_k3_action_replay_available": true,
+        "generic_picard_lattice": {
+          "isometry_class": "U+D8(-1)+D4(-1)",
+          "nikulin_invariants": [
+            14,
+            4,
+            0
+          ],
+          "ns_action_digest": "d3d9c4e9a4d979a48fd2b5cd49ac58aec84b38a61eb032fb403670d3e42dc7bc",
+          "ns_gram_digest": "28410fa0543209b198c3aa27ba4a3a1d8cc7af264dfd8884f17b8b1e89ffb496",
+          "rank_signature_determinant": [
+            14,
+            [
+              1,
+              13,
+              0
+            ],
+            -16
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "generic_transcendental_lattice": {
+          "absolute_determinant": 16,
+          "action_characteristic_polynomial": "lambda**8 + 1",
+          "rank": 8,
+          "signature": [
+            2,
+            6,
+            0
+          ]
+        },
+        "id": "0.16.0.3",
+        "member": "K3Groups/results/purely_ns/order16.txt",
+        "member_row_count": 7,
+        "member_sha256": "2c8a58d846eb6b563a62b958bd665680790598b829d99723da463d9fa6e315ea",
+        "row_one_based": 3,
+        "row_sha256_with_newline": "2c78a6da28d3672826467dce6a7594d0adefec5f8d4fa2df869795751a8ffebb"
+      },
+      "exact_action_conjugacy": {
+        "coinvariant_lattices": {
+          "action_intertwined": true,
+          "archived_gram": [
+            [
+              -4,
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -4,
+              -2
+            ],
+            [
+              -2,
+              -2,
+              -4
+            ]
+          ],
+          "basis_intertwiner_P_with_PGarchivePt_equal_Gbh": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              -1
+            ],
+            [
+              -1,
+              0,
+              0
+            ]
+          ],
+          "bh_gram": [
+            [
+              -4,
+              0,
+              2
+            ],
+            [
+              0,
+              -4,
+              2
+            ],
+            [
+              2,
+              2,
+              -4
+            ]
+          ],
+          "induced_discriminant_map": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              7
+            ]
+          ],
+          "negative_definite": true,
+          "rootless": true,
+          "rootless_reason": "one half of the Gram is integral, even and negative definite, so every nonzero norm is at most -4",
+          "smith": [
+            2,
+            2,
+            8
+          ]
+        },
+        "conclusion": "the fixed and coinvariant isometries carry the primitive glue graph and intertwine the actions, hence extend to a conjugacy of the full Picard-lattice actions",
+        "fixed_lattices": {
+          "archived_q_histogram_mod_2Z": {
+            "0": 2,
+            "11/8": 2,
+            "3/2": 2,
+            "3/8": 2
+          },
+          "bh_q_histogram_mod_2Z": {
+            "0": 2,
+            "11/8": 2,
+            "3/2": 2,
+            "3/8": 2
+          },
+          "determinant": 8,
+          "discriminant_isometry": {
+            "bijective": true,
+            "elements_checked": 8,
+            "matrix_on_nontrivial_smith_coordinates": [
+              [
+                7
+              ]
+            ],
+            "quadratic_form_preserved_mod_2Z": true,
+            "source_invariant_factors": [
+              8
+            ],
+            "target_invariant_factors": [
+              8
+            ]
+          },
+          "nikulin_lifting": {
+            "conclusion": "the prescribed discriminant-form isometry lifts to an integral isometry of the fixed lattices",
+            "discriminant_length": 1,
+            "doi": "10.1070/IM1980v014n01ABEH001060",
+            "indefinite_even": true,
+            "rank": 11,
+            "rank_at_least_length_plus_two": true,
+            "reference": "Nikulin, Integral symmetric bilinear forms, Theorem 1.14.2"
+          },
+          "signature": [
+            1,
+            10,
+            0
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            8
+          ]
+        },
+        "offline_bh_picard_reconstruction": {
+          "action_characteristic_polynomial": "(lambda - 1)**11*(lambda + 1)*(lambda**2 + 1)",
+          "action_digest": "ab85e890ab28f9f22a972e6f9ef180b2afbdd883ce01fe17f6164cc3e231c722",
+          "action_order": 4,
+          "discriminant_q_histogram_mod_2Z": {
+            "0": 6,
+            "1": 10
+          },
+          "from_pinned_fixed_coinvariant_and_glue": true,
+          "gram_digest": "d3402ad70a577508fd82341f7ba6ee319b47ea15ca1d22f29404a95f421a7184",
+          "rank_signature_determinant": [
+            14,
+            [
+              1,
+              13,
+              0
+            ],
+            -16
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "primitive_glue": {
+          "all_four_pairs_carried_exactly": true,
+          "archived_pairs_in_smith_coordinates": [
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                2
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                4
+              ],
+              [
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                6
+              ],
+              [
+                0,
+                0,
+                6
+              ]
+            ]
+          ],
+          "bh_pairs_in_smith_coordinates": [
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                2
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                4
+              ],
+              [
+                0,
+                0,
+                4
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                6
+              ],
+              [
+                0,
+                0,
+                6
+              ]
+            ]
+          ],
+          "index_of_fixed_plus_coinvariant": 4
+        }
+      },
+      "hyperbolic_polytope": {
+        "bad_edges": 0,
+        "classification": "finite_volume_noncompact",
+        "containing_full_reflection_group_index": 992,
+        "cusps": 3,
+        "dimension": 10,
+        "elliptic_edges": 254,
+        "facets": 14,
+        "finite_vertices": 44,
+        "parabolic_neighborhood_audits": 7
+      },
+      "kahler_torelli_handoff": {
+        "algebraic_coinvariant_is_rootless": true,
+        "archived_complete_nef_chamber_is_action_stable": true,
+        "database_row_is_a_genuine_k3_automorphism_class": true,
+        "global_order_vs_picard_order": [
+          16,
+          4
+        ],
+        "refined_period_map_choice": "use the BH period and choose the marked Kahler chamber to be the archived action-stable Roulleau chamber",
+        "strong_torelli_conclusion": "the transported Hodge isometry preserving that chamber is induced by a K3 automorphism"
+      },
+      "name": "order16_type4",
+      "scope": {
+        "general_roulleau_surface_action_claimed": false,
+        "new_abstract_coxeter_diagram_claimed": false,
+        "new_positive_surface_realization_in_this_project": true,
+        "special_k3_in_bh_deformation_class_used": true,
+        "worldwide_surface_realization_priority_claimed": false
+      },
+      "theorem": "A purely non-symplectic K3 automorphism of order 16 realizes archived class 14 and its finite-volume H10/14 fixed section"
+    }
+  ],
+  "payload_sha256": "7b3bc27ac1c68658d9a8d5c1da0bd62c0c07a76e284e1003cf5ed19b07822fce",
+  "schema": "coxeter.roulleau_ud8d4.bh_k3_lifts.v1",
+  "source_sha256": {
+    "construction": "0348744e2cf17870616deccd81f1c20541c1df328ad80b4d9eb6bf2476f793b7",
+    "lineage": "654cbb85d6bf4956f513d9912463b43aa7679a166ee4fde67ccfff285f0a1538"
+  },
+  "summary": {
+    "compact": 0,
+    "dimensions": [
+      11,
+      10
+    ],
+    "finite_volume_noncompact": 2,
+    "genuine_k3_automorphism_lifts": 2,
+    "new_abstract_diagram_claims": 0
+  },
+  "theorem": "Two previously diagram-only Roulleau U+D8+D4 folds admit genuine K3-automorphism realizations: TYPE_2 H11/16 via BH 0.8.1.3 and TYPE_4 H10/14 via BH 0.16.0.3"
+}

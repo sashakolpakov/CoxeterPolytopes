@@ -1,0 +1,45 @@
+{
+  "status": "NECESSARY_IDEAL6_SIZE_AND_MIXED_SIX_FACE_DENSITY",
+  "source_sha256": "1c67b24b83944ae6cc4e3606458db76246a4317a4dceccfea8c4fb7fafa308a5",
+  "sources": {
+    "results/right_angled_five_face_carrier_20261018.md": "ce90d9a3fa3c217e6811163a48f84d8ccadaafbe9c99eb4d62ef86de36dc1e0d",
+    "results/ideal_ra4_second_volume_equality_20261018.md": "4d227e9f7f4577f0a61b30a3ebf2790c763feeb4f1acddf7799a83f96fc1d7e2"
+  },
+  "internal_incidence_premises": {
+    "ideal5_euler": "f3 = 3*v + 3*f4 - 6",
+    "ideal5_facet_incidence": "2*f3 >= 24*f4",
+    "actual_ideal_facet_injection": "facets(P) >= 1 + facets(Q) + vertices(Q)",
+    "ideal6_vertex_facet_incidence": "10*v6 = sum(vertices(Q5))"
+  },
+  "ideal5_minima": {
+    "facets": 56,
+    "vertices": 170
+  },
+  "ideal6_minima": {
+    "facets": 227,
+    "vertices": 3859
+  },
+  "external_inputs": {
+    "ideal_RA4_facet_minimum": 24,
+    "general_finite_volume_RA6_facet_minimum": 27,
+    "general_RA6_derivation": "Dufour nu5 >= 26 and facets >= 1 + nu5; no compact RA6",
+    "NK_range": "simple at edges; k=6,l=5,n=11,12",
+    "primary_statements": "https://arxiv.org/html/2303.09533v1#S6"
+  },
+  "mixed_rows": [
+    {
+      "n": 11,
+      "six_face_facet_average_strict_upper": "42",
+      "ideal_six_face_fraction_strict_upper": "3/40"
+    },
+    {
+      "n": 12,
+      "six_face_facet_average_strict_upper": "42",
+      "ideal_six_face_fraction_strict_upper": "3/40"
+    }
+  ],
+  "existence_asserted": false,
+  "new_dimension_bound": false,
+  "optimality_asserted": false,
+  "scope": "exact algebra of the universal written incidence arguments and explicit external bounds"
+}

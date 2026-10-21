@@ -1,0 +1,193 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "base_euler_matches_coxiter": true,
+    "base_has_13_facets": true,
+    "euler_ratio_is_positive_integer": true,
+    "independent_coxiter_f_vector_agrees": true,
+    "index_is_expected": true,
+    "subgroup_connected_count_matches_archive": true,
+    "subgroup_euler_is_expected": true,
+    "subgroup_rank_10_count_matches_finite_vertices": true,
+    "subgroup_rank_9_count_matches_vinberg_edges": true,
+    "volume_coefficient_is_expected": true
+  },
+  "hyperbolic_covolume": {
+    "gauss_bonnet_formula": "vol = -(32*pi^5/945)*chi in H10",
+    "value": "pi^5 * 527/340200"
+  },
+  "independent_coxiter_1_1_8_replay": {
+    "agreement_with_solomon_enumeration": true,
+    "cocompact": false,
+    "covolume": "pi^5 * 527/340200",
+    "f_vector": [
+      16560,
+      107233,
+      263403,
+      347634,
+      281244,
+      146599,
+      49643,
+      10650,
+      1350,
+      84,
+      1
+    ],
+    "finite_covolume": true,
+    "input_exporter": "scripts/export_jacobian_kummer_h12_coxiter.py --input data/enumerations/jacobian_kummer_h10_class0007_screen.json",
+    "rational_euler_characteristic": "-527/11520",
+    "vertices_at_infinity": 862
+  },
+  "index": {
+    "formula": "chi(W_84) / chi(W_f2_H10)",
+    "prime_factorization": {
+      "17": 1,
+      "2": 10,
+      "3": 3,
+      "5": 1,
+      "7": 1
+    },
+    "value": 16450560
+  },
+  "lineage_decision": {
+    "literal_84_wall_subgroup_priority_remains_open": true,
+    "maximal_reflection_group": "Vinberg f_2^10",
+    "subgroup_index_is_exact": true,
+    "subgroup_is_proper": true
+  },
+  "method": "Solomon rational Euler sum over every finite special subgroup",
+  "schema": "jacobian_kummer_h10_reflection_index_v1",
+  "sources": {
+    "connected_component_audit": "data/enumerations/jacobian_kummer_h10_class0007_component_audit.json",
+    "connected_component_audit_sha256": "9cc4b8b3c8e09fc29ce2aabfee0f17fa60b056fbde51897fbe1d5afcebe8510c",
+    "maximal_chamber_audit": "data/enumerations/jacobian_kummer_h10_maximal_reflection_lineage.json",
+    "maximal_chamber_audit_sha256": "3cb8b0e9120d13479f9b9e3a32cfb63922e03f41f2f0fc1dc501b0a9f6654c29",
+    "subgroup_screen": "data/enumerations/jacobian_kummer_h10_class0007_screen.json",
+    "subgroup_screen_sha256": "92e84e67d94ff7cc61709561ad57e64ea449b981e1cdbc082025a818c3379ffd"
+  },
+  "subgroup_84_wall_chamber": {
+    "connected_elliptic_count": 2116,
+    "connected_elliptic_rank_histogram": {
+      "1": 84,
+      "2": 184,
+      "3": 456,
+      "4": 528,
+      "5": 480,
+      "6": 384
+    },
+    "connected_finite_group_order_histogram": {
+      "120": 96,
+      "192": 48,
+      "1920": 96,
+      "2": 84,
+      "23040": 192,
+      "24": 168,
+      "384": 384,
+      "3840": 192,
+      "46080": 192,
+      "48": 288,
+      "6": 72,
+      "720": 192,
+      "8": 112
+    },
+    "euler_contribution_by_rank": [
+      "1",
+      "-42",
+      "635/2",
+      "-4369/4",
+      "498997/240",
+      "-74937/32",
+      "505297/320",
+      "-3563881/5760",
+      "199601/1536",
+      "-565361/46080",
+      "15119/46080"
+    ],
+    "facet_count": 84,
+    "finite_special_subset_count_by_rank": [
+      1,
+      84,
+      1350,
+      10650,
+      49643,
+      146599,
+      281244,
+      347634,
+      263403,
+      107233,
+      15698
+    ],
+    "rational_euler_characteristic": "-527/11520"
+  },
+  "vinberg_f2_h10_13_wall_chamber": {
+    "connected_elliptic_count": 80,
+    "connected_elliptic_rank_histogram": {
+      "1": 13,
+      "10": 1,
+      "2": 11,
+      "3": 10,
+      "4": 10,
+      "5": 10,
+      "6": 9,
+      "7": 8,
+      "8": 6,
+      "9": 2
+    },
+    "connected_finite_group_order_histogram": {
+      "10321920": 2,
+      "120": 8,
+      "185794560": 1,
+      "192": 1,
+      "1920": 2,
+      "2": 13,
+      "23040": 2,
+      "24": 9,
+      "2903040": 2,
+      "322560": 1,
+      "362880": 2,
+      "3628800": 1,
+      "3715891200": 1,
+      "384": 1,
+      "3840": 1,
+      "40320": 4,
+      "46080": 1,
+      "48": 1,
+      "5040": 5,
+      "5160960": 1,
+      "51840": 1,
+      "6": 9,
+      "645120": 1,
+      "696729600": 1,
+      "720": 7,
+      "8": 2
+    },
+    "euler_contribution_by_rank": [
+      "1",
+      "-13/2",
+      "18",
+      "-1331/48",
+      "149749/5760",
+      "-29243/1920",
+      "3193381/580608",
+      "-336793/290304",
+      "4234229/33177600",
+      "-1617559/278691840",
+      "45959/743178240"
+    ],
+    "facet_count": 13,
+    "finite_special_subset_count_by_rank": [
+      1,
+      13,
+      76,
+      264,
+      606,
+      966,
+      1092,
+      876,
+      488,
+      175,
+      29
+    ],
+    "rational_euler_characteristic": "-31/11147673600"
+  }
+}

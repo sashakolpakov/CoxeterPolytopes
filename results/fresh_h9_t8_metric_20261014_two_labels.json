@@ -1,0 +1,2983 @@
+{
+  "status": "PASS_T8_TWO_LABEL_FAMILY_M_GE_7_N_GE_4_EXCLUDED",
+  "sources": {
+    "results/fresh_h9_t8_metric_20261014.json": "ec8a49b9fbed936eeb502b81186c6af2dfcaa26d05f58b698ec773aeef4fa3c8",
+    "scripts/fresh_h9_t8_metric_20261014.py": "682a18a236b9f8fcc2a5d1b1aa7f8159425950cb37e96b05a8ce8d31a621393c",
+    "scripts/fresh_h9_t8_metric_20261014_two_labels.py": "7fe267579c0c35fefc89b31738b684f4f677e4862809158f502cd424632f2d03",
+    "scripts/fresh_h9_star_cube_metric_20261014.py": "6e4075ece7784b288edb1507f010046a37957198e7a6d76256e99105057077ac"
+  },
+  "parameter_pairs": {
+    "m": [
+      1,
+      2
+    ],
+    "n": [
+      12,
+      13
+    ]
+  },
+  "k0": [
+    "1",
+    "1/2"
+  ],
+  "parameters": "t=cos(pi/m)^2 in(3/4,1); k=1/(2(1-cos(pi/n)))>=1+sqrt2/2",
+  "positive_support_determinant": "(1-t)*(1-s^2)/4>0, s=cos(pi/n)<1",
+  "anchor_own_projection_norm": "((1/4)+(1/4)+s/2)/(1-s^2)=1/(2(1-s))=k",
+  "inherited_guards": "Only the internal12--13 label increases from4 to n>=4. All nonpositive actual-vertex Gram witnesses persist by Z-matrix monotonicity. The own-root deletion budgets remove this parameter edge; third14 foreign-contact costs use the inverse diagonal>=2 of I2(n). Thus anchors still have five patterns and third14 still has its fixed projection.",
+  "determinant_identity": "D_k=a1*q14+(ac-bc)^2>0; a1<0 and q14=-sqrt2/2-1/(4(1-t))<0. Anchor determinant decreases in k, remainsnegative, so D_t>0 too.",
+  "anchors": [
+    {
+      "foreign_contacts": [
+        null,
+        null
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        2
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-3/4"
+      ],
+      "negative_k_slope": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        3
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-3/4"
+      ],
+      "negative_k_slope": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        4
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-3/4"
+      ],
+      "negative_k_slope": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        5
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-3/4"
+      ],
+      "negative_k_slope": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        null
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-3/4"
+      ],
+      "negative_k_slope": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        2
+      ],
+      "anchor_determinant_at_k0": [
+        "-2",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        3
+      ],
+      "anchor_determinant_at_k0": [
+        "-11/8",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "-1/2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        4
+      ],
+      "anchor_determinant_at_k0": [
+        "-3/4",
+        "-1/2"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        5
+      ],
+      "anchor_determinant_at_k0": [
+        "-3/4",
+        "-1/2"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        null
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-3/4"
+      ],
+      "negative_k_slope": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        2
+      ],
+      "anchor_determinant_at_k0": [
+        "-11/8",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "-1/2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        3
+      ],
+      "anchor_determinant_at_k0": [
+        "-2",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        4
+      ],
+      "anchor_determinant_at_k0": [
+        "-3/4",
+        "-1/2"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        5
+      ],
+      "anchor_determinant_at_k0": [
+        "-3/4",
+        "-1/2"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        null
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-3/4"
+      ],
+      "negative_k_slope": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        2
+      ],
+      "anchor_determinant_at_k0": [
+        "-3/4",
+        "-1/2"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        3
+      ],
+      "anchor_determinant_at_k0": [
+        "-3/4",
+        "-1/2"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        4
+      ],
+      "anchor_determinant_at_k0": [
+        "-2",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        5
+      ],
+      "anchor_determinant_at_k0": [
+        "-11/8",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "-1/2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        null
+      ],
+      "anchor_determinant_at_k0": [
+        "-1",
+        "-3/4"
+      ],
+      "negative_k_slope": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        2
+      ],
+      "anchor_determinant_at_k0": [
+        "-3/4",
+        "-1/2"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        3
+      ],
+      "anchor_determinant_at_k0": [
+        "-3/4",
+        "-1/2"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        4
+      ],
+      "anchor_determinant_at_k0": [
+        "-11/8",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-1",
+        "-1/2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        5
+      ],
+      "anchor_determinant_at_k0": [
+        "-2",
+        "-1"
+      ],
+      "negative_k_slope": [
+        "-2",
+        "0"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "foreign_contacts": [
+        null,
+        null
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "2",
+        "3/2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        null
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "2",
+        "13/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        null
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "2",
+        "13/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        null
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/2",
+        "3/2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        2
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "15/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "2",
+        "23/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        2
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "21/8",
+        "5/4"
+      ],
+      "positive_minimum": [
+        "9/4",
+        "29/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        2
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "13/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "11/8",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        2
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "15/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "9/8",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        3
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "15/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "2",
+        "23/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        3
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "21/8",
+        "5/4"
+      ],
+      "positive_minimum": [
+        "9/4",
+        "29/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        3
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "13/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "11/8",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        3
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "15/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "9/8",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        4
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        4
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        4
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "15/8",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        4
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "11/8",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        5
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        5
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        5
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "15/8",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        null,
+        5
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "11/8",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        null
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "15/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "2",
+        "23/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        null
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "13/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "11/8",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        null
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "21/8",
+        "5/4"
+      ],
+      "positive_minimum": [
+        "9/4",
+        "29/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        null
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "15/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "9/8",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        2
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "9/4",
+        "3/2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        2
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "15/8",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        2
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "15/8",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        2
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/4",
+        "1"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        3
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "1"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        3
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/2",
+        "9/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        3
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/2",
+        "9/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        3
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/4",
+        "5/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        4
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "27/16",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        4
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_minimum": [
+        "17/16",
+        "13/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        4
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "17/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "37/16",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        4
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "19/16",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        5
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "27/16",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        5
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_minimum": [
+        "17/16",
+        "13/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        5
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "17/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "37/16",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        2,
+        5
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "19/16",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        null
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "15/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "2",
+        "23/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        null
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "13/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "11/8",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        null
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "21/8",
+        "5/4"
+      ],
+      "positive_minimum": [
+        "9/4",
+        "29/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        null
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "15/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "9/8",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        2
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "1"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        2
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/2",
+        "9/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        2
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/2",
+        "9/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        2
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/4",
+        "5/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        3
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "9/4",
+        "3/2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        3
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "15/8",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        3
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "15/8",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        3
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "3/4",
+        "1"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        4
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "27/16",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        4
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_minimum": [
+        "17/16",
+        "13/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        4
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "17/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "37/16",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        4
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "19/16",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        5
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "27/16",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        5
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_minimum": [
+        "17/16",
+        "13/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        5
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "17/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "37/16",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        3,
+        5
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "19/16",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        null
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        null
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "15/8",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        null
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        null
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "11/8",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        2
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "27/16",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        2
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "17/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "37/16",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        2
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_minimum": [
+        "17/16",
+        "13/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        2
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "19/16",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        3
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "27/16",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        3
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "17/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "37/16",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        3
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_minimum": [
+        "17/16",
+        "13/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        3
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "19/16",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        4
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "3",
+        "2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        4
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "25/8",
+        "17/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        4
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "25/8",
+        "17/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        4
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "5/2",
+        "2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        5
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "1"
+      ],
+      "positive_minimum": [
+        "19/8",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        5
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "5/2",
+        "29/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        5
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "5/2",
+        "29/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        4,
+        5
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "1"
+      ],
+      "positive_minimum": [
+        "17/8",
+        "25/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        null
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        null
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "15/8",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        null
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "7/4",
+        "11/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        null
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-3/2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "11/8",
+        "5/4"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        2
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "27/16",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        2
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "17/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "37/16",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        2
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_minimum": [
+        "17/16",
+        "13/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        2
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "19/16",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        3
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "27/16",
+        "19/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        3
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_k_slope_at_boundary": [
+        "17/8",
+        "1"
+      ],
+      "positive_minimum": [
+        "37/16",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        3
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/8",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/8",
+        "1/2"
+      ],
+      "positive_minimum": [
+        "17/16",
+        "13/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        3
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "0"
+      ],
+      "nonnegative_square": [
+        "3/8",
+        "1/4"
+      ],
+      "positive_k_slope_at_boundary": [
+        "11/8",
+        "3/4"
+      ],
+      "positive_minimum": [
+        "19/16",
+        "17/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        4
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "1"
+      ],
+      "positive_minimum": [
+        "19/8",
+        "27/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        4
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "5/2",
+        "29/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        4
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "7/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "5/2",
+        "29/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        4
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-1",
+        "-1/2"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "3/2",
+        "1"
+      ],
+      "positive_minimum": [
+        "17/8",
+        "25/16"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        5
+      ],
+      "contact_labels": [
+        2,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "3",
+        "2"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        5
+      ],
+      "contact_labels": [
+        2,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "25/8",
+        "17/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        5
+      ],
+      "contact_labels": [
+        3,
+        2
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "1/4",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "9/4",
+        "1"
+      ],
+      "positive_minimum": [
+        "25/8",
+        "17/8"
+      ]
+    },
+    {
+      "foreign_contacts": [
+        5,
+        5
+      ],
+      "contact_labels": [
+        3,
+        3
+      ],
+      "negative_anchor_slope": [
+        "-2",
+        "0"
+      ],
+      "nonnegative_square": [
+        "0",
+        "0"
+      ],
+      "positive_k_slope_at_boundary": [
+        "2",
+        "1"
+      ],
+      "positive_minimum": [
+        "5/2",
+        "2"
+      ]
+    }
+  ],
+  "scope": "All other mandatory labels retain their source T8 values; omitted contacts remain free subject to the proved necessary bounds. The two internal finite labels vary over m>=7,n>=4. Every one of the100 residual cases is positive on this whole real parameter region. This excludes this two-label metric family only, not the incidence or other mandatory assignments."
+}

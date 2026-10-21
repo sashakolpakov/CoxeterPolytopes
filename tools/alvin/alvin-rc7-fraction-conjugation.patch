@@ -1,0 +1,15 @@
+diff --git a/rcyclotomic7integer_alvinfractions.cpp b/rcyclotomic7integer_alvinfractions.cpp
+--- a/rcyclotomic7integer_alvinfractions.cpp
++++ b/rcyclotomic7integer_alvinfractions.cpp
+@@ -91,6 +91,12 @@ void RCyclotomic7Integer_VFs::computeNextAlVinFractions() {
+                           (gaol_2 * (gaol_l1 + gaol_l3) + gaol_3 * gaol_l2));
+ 
++    // rciE was advanced twice while computing its two non-identity
++    // embeddings.  Restore the canonical norm before it is used below to
++    // form and store the Vinberg fraction.  Leaving it conjugated also
++    // mutates aiPossibleNorms2 between batches and can permanently skip a
++    // root whose height lies in an earlier batch.
++    rciE->conjugate(2);
+     rciMinusAlpha0.conjugate(2); // Get back to the original value
+ 
+     gaol_min = ceil(gaol_min / gaol_7);

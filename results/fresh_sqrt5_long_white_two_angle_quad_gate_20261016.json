@@ -1,0 +1,183 @@
+{
+  "status": "PASS_LONG_WHITE_TWO_ANGLE_QUADRILATERAL_EXCLUSION",
+  "sources": {
+    "scripts/fresh_sqrt5_long_white_two_angle_quad_gate_20261016.py": "a458f72cba66b7db31c75629217eb52f0a09bca0d62c12eba43d860d8c7a151c"
+  },
+  "domain": {
+    "white": "A_r, r>=4, attached by one3-edge at its endpoint only to black0",
+    "black_adjacent_labels": {
+      "01": 3,
+      "03": 3,
+      "12": 2,
+      "23": 2
+    },
+    "black_opposite_products": {
+      "02": "-p",
+      "13": "-q"
+    },
+    "spectators": "All other common white components orthogonal to this local graph",
+    "assumptions": [
+      "Acute compact Coxeter quadrilateral face",
+      "Physical Gram has Lorentz index1",
+      "Cyclic products integral in Z[phi]",
+      "Conjugate positive semidefinite",
+      "Local Gram corank at least1"
+    ]
+  },
+  "determinant": {
+    "variable_order": [
+      "a",
+      "p",
+      "q"
+    ],
+    "polynomial": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        "-8"
+      ],
+      [
+        [
+          0,
+          0,
+          1
+        ],
+        "-4"
+      ],
+      [
+        [
+          0,
+          2,
+          0
+        ],
+        "-4"
+      ],
+      [
+        [
+          0,
+          2,
+          2
+        ],
+        "1"
+      ],
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        "8"
+      ],
+      [
+        [
+          1,
+          0,
+          2
+        ],
+        "-2"
+      ]
+    ],
+    "factorization": "(2+q)*((2*a-p*p)*(2-q)-4)"
+  },
+  "schur_diagonal": "a=1+1/m, m=r+1>=5",
+  "relation": "t=q-2=4/(p^2-2-2/m)>0",
+  "integral_relation": "m*t*(p^2-2)=2*t+4*m, hence m divides2*t in Z[phi]",
+  "conjugate_bound": "-4<=t_conjugate<0",
+  "physical_q_bound": "q<2 would make the (1,3) block positive definite, and corank would then make the whole Gram positive semidefinite; q=2 contradicts the determinant. Thus q>2.",
+  "finite_label_domain": {
+    "cyclotomic_totient_at_most4": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12
+    ],
+    "excluded_quadratic_fields": {
+      "8": "Q(sqrt2)",
+      "12": "Q(sqrt3)"
+    },
+    "remaining_labels": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      10
+    ]
+  },
+  "dotted_branch": {
+    "norm_upper_bound": "8*m/(m-1)",
+    "odd_m_at_least5": "m^2 divisibility exceeds bound<=10",
+    "even_m_at_least8": "(m/2)^2 divisibility exceeds bound<10",
+    "m6": "Norm(s)=-1 contradicts s=-4 modulo3"
+  },
+  "finite_branches": {
+    "labels_2_3_4": "p^2<=2<2+2/m",
+    "label6": "q rational>2 contradicts conjugate PSD",
+    "label5_small_m": [
+      {
+        "m": 5,
+        "q": [
+          "62/11",
+          "100/11"
+        ],
+        "integral": false
+      },
+      {
+        "m": 6,
+        "q": [
+          "22/5",
+          "36/5"
+        ],
+        "integral": false
+      },
+      {
+        "m": 7,
+        "q": [
+          "118/31",
+          "196/31"
+        ],
+        "integral": false
+      },
+      {
+        "m": 8,
+        "q": [
+          "38/11",
+          "64/11"
+        ],
+        "integral": false
+      },
+      {
+        "m": 9,
+        "q": [
+          "190/59",
+          "324/59"
+        ],
+        "integral": false
+      },
+      {
+        "m": 10,
+        "q": [
+          "58/19",
+          "100/19"
+        ],
+        "integral": false
+      }
+    ],
+    "label5_large_m": "m>=11: 0<8m/(m^2-2m-4)<1",
+    "label10_m5_q": [
+      "2/31",
+      "100/31"
+    ],
+    "label10_large_m": "m>=6: necessary phi>=2-2/m>=5/3 is false"
+  },
+  "consequence": "This specific two-discounted-corner quadrilateral is impossible; it cannot impose the proposed unconditional adjacent-discount cap1/2.",
+  "scope": "Restricted geometric pattern only. No claim that all quadrilaterals, all white attachments, or a proposed weight rule are covered. No dimension-bound improvement."
+}

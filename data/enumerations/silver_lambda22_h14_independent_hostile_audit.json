@@ -1,0 +1,148 @@
+{
+  "H14_packet": {
+    "dyadic_S2_norm20_shell_count": 1368576,
+    "ordinary_norm10_shell_count": 467596800,
+    "q4_difference_squares": [
+      10,
+      8,
+      6,
+      4,
+      0
+    ],
+    "q4_necessary_v_squares": [
+      10,
+      12,
+      14,
+      16,
+      20
+    ],
+    "q4_surviving_description": "u=v in the complete S2 norm-20 shell",
+    "same_height_pairings_at_bounds": {
+      "cross_dot_13": {
+        "a": "-1",
+        "b": "-2"
+      },
+      "dyadic_dot_14": {
+        "a": "-14",
+        "b": "-12"
+      },
+      "ordinary_dot_8": {
+        "a": "-4",
+        "b": "-4"
+      }
+    },
+    "total_root_count": 468965376
+  },
+  "conclusion": {
+    "H14_prefix_compact": false,
+    "H14_prefix_finite_volume": false,
+    "corrected_next_frontier": "H=36 mixed packet; obsolete H41 claim rejected",
+    "eventual_chamber_status": "unresolved"
+  },
+  "gram": {
+    "S2_index": 1048576,
+    "S3_index": 10460353203,
+    "determinant": 12,
+    "rank_mod_2": 20,
+    "rank_mod_3": 21,
+    "smith_invariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      6
+    ]
+  },
+  "hyperideal_witness": {
+    "description": "z=(1,d/3), d^2=4",
+    "dyadic_max_pairing": {
+      "a": "-4/3",
+      "b": "2/3"
+    },
+    "norm": {
+      "a": "13/9",
+      "b": "-1"
+    },
+    "ordinary_max_pairing": {
+      "a": "-1/3",
+      "b": "-1/3"
+    },
+    "strict": true
+  },
+  "independence": "No import of silver_lambda22; Gram parsing, mod-p kernels, Smith form, PARI shell counts, and Q(sqrt(2)) inequalities are replayed with standalone code.",
+  "pari_count_only": {
+    "S2_cumulative": {
+      "10": [
+        0,
+        0
+      ],
+      "12": [
+        8448,
+        12
+      ],
+      "16": [
+        58344,
+        16
+      ],
+      "20": [
+        1426920,
+        20
+      ]
+    },
+    "S3_cumulative": {
+      "23": [
+        0,
+        0
+      ],
+      "24": [
+        1782,
+        24
+      ]
+    },
+    "method": "qflllgram then qfminim(Q,b,m=1,default flag=0)",
+    "ordinary_cumulative": {
+      "10": [
+        520800918,
+        10
+      ],
+      "4": [
+        49896,
+        4
+      ],
+      "6": [
+        2871528,
+        6
+      ],
+      "8": [
+        53204118,
+        8
+      ]
+    }
+  },
+  "schema_version": "0.1.0",
+  "scope": "independent exact audit of the silver Lambda22 H14 prefix",
+  "sources": {
+    "gram_file": "data/lattices/lambda22_nebe_sloane_gram.txt",
+    "gram_file_sha256": "4f3dbdc96e7aead7fae09a834abdbe2d5319620ece24656720f13184dd85b2f1",
+    "production_artifact": "data/enumerations/silver_lambda22_h14.json",
+    "production_sha256": "5d81e273ae8d826c7b4c26f2cda99bc182ee287860a2fe1b39928ea862fc1a77"
+  },
+  "verdict": "PASS"
+}

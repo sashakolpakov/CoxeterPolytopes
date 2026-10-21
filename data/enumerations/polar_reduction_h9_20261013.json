@@ -1,0 +1,35 @@
+{
+  "schema": "coxeter.polar_reduction_h9.v1",
+  "proof_status": "NUMERICAL_BOUNDED_SEARCH_ONLY",
+  "mode": "complete_3456",
+  "chain_count": 65536,
+  "branch_label_alphabet": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "attachment_position_pairs": 45,
+  "labelled_templates": 47185920,
+  "polar_angle_test": "Nearest integer Coxeter label, with no imposed maximum label; floating tolerance 1e-7.",
+  "counts": {
+    "base_multiple_negative_directions": 62549,
+    "lorentz_base": 2606,
+    "parked_cusp_bearing_skeleton": 43290,
+    "parked_singular_base": 378,
+    "parked_zero_kernel_entry": 2465,
+    "positive_base": 3,
+    "rank10_lorentz_skeleton": 113099,
+    "removed_invisible_polar_walls": 1036376,
+    "retained_polar_old_angle_failure": 67344,
+    "retained_polar_walls": 268980,
+    "skeletons_with_polar_reduction": 67344
+  },
+  "hits_requiring_exact_verification": [],
+  "seconds": 26.321,
+  "scope": "The same bounded 11-node templates as the previous scan, now with all invisible polar cuts removed before angle tests. Numerical Gram/ray decisions remain unproved. Singular/degenerate/cusp cases are parked; other diagrams, labels and nonpolar cuts remain open.",
+  "generator_source": "scripts/fresh_gram_polar_h9_20261013.py",
+  "generator_sha256": "f6d3221e8c6e3ef9567a552ba6d3365e701603d8f653d41f19bb979e00c68503",
+  "retention_rule": "Keep a hyperideal-vertex polar cut iff its nine incident old walls have a connected Gram diagram.",
+  "retention_proof": "results/polar_reduction_h9_20261013.md"
+}

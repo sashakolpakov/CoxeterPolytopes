@@ -1,0 +1,2850 @@
+{
+  "schema_version": 1,
+  "status": "REVIEWABLE_PROPOSAL_ONLY_NOT_APPLIED",
+  "created_utc": "2026-10-20T20:31:36.342925+00:00",
+  "scope": "Replace only primary finite57 monolithic dimension108 verification selection with the current actual scanner fixture and complete actual bounded interval cover. No canonical file or mathematical job is changed or executed.",
+  "catalogue": {
+    "path": "manuscripts/catalogue.json",
+    "sha256_before": "9e8199f39a1b7dbfcbabea8b9a3b201a05aa5b05fe7ab5ee8937c6a076e06a52",
+    "manuscript_id": "finite57",
+    "manuscript_index": 0,
+    "selection_json_pointer": "/manuscripts/0/verification",
+    "proposed_full_catalogue_sha256_if_applied_with_indent2_newline": "ea32bf41808aaa07eb0c94c31186c507e9355b8aad99cd01dbe137609a1f663a"
+  },
+  "delta": {
+    "remove_from_selected_verification_only": [
+      "finite57_tail108"
+    ],
+    "preserve_original_check_object": {
+      "id": "finite57_tail108",
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/fresh_selective_distance9_dimension108_20261017.py",
+        "--verify"
+      ],
+      "owns_lock": false,
+      "tier": "full",
+      "coverage": "109\u2013116; exact joins/overlaps/controlled extensions and scalar rows. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+      "bounded_execution_status": "NOT_YET_EXECUTED_IN_PUBLICATION_FOLLOWUP; retain59s/1GiB caps"
+    },
+    "checks_to_add": {
+      "finite57_d9_scanner_contract": {
+        "id": "finite57_d9_scanner_contract",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_distance9_array_scanner_fixtures_20261020.py",
+          "--verify"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Scanner contract only: 13 positive fixtures, 32 required rejections and one 1262-row frozen-certificate projection. No mathematical replay or full JSON validation of skipped subtrees.",
+        "expected_status": "PASS_DISTANCE9_SCANNER_FIXTURES"
+      },
+      "finite57_d9_batch_metadata_0_1": {
+        "id": "finite57_d9_batch_metadata_0_1",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "metadata",
+          "--start",
+          "0",
+          "--stop",
+          "1"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: metadata whole-owner interval [0,1) of 1, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_domains_0_1": {
+        "id": "finite57_d9_batch_domains_0_1",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "domains",
+          "--start",
+          "0",
+          "--stop",
+          "1"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: domains whole-owner interval [0,1) of 1, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlap_domain_0_64": {
+        "id": "finite57_d9_batch_overlap_domain_0_64",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlap-domain",
+          "--start",
+          "0",
+          "--stop",
+          "64"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlap-domain whole-owner interval [0,64) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlap_domain_64_348": {
+        "id": "finite57_d9_batch_overlap_domain_64_348",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlap-domain",
+          "--start",
+          "64",
+          "--stop",
+          "348"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlap-domain whole-owner interval [64,348) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlap_domain_348_352": {
+        "id": "finite57_d9_batch_overlap_domain_348_352",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlap-domain",
+          "--start",
+          "348",
+          "--stop",
+          "352"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlap-domain whole-owner interval [348,352) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlap_domain_352_384": {
+        "id": "finite57_d9_batch_overlap_domain_352_384",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlap-domain",
+          "--start",
+          "352",
+          "--stop",
+          "384"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlap-domain whole-owner interval [352,384) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_0_32": {
+        "id": "finite57_d9_batch_disjoint_0_32",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "0",
+          "--stop",
+          "32"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [0,32) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_32_96": {
+        "id": "finite57_d9_batch_disjoint_32_96",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "32",
+          "--stop",
+          "96"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [32,96) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_96_160": {
+        "id": "finite57_d9_batch_disjoint_96_160",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "96",
+          "--stop",
+          "160"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [96,160) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_160_224": {
+        "id": "finite57_d9_batch_disjoint_160_224",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "160",
+          "--stop",
+          "224"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [160,224) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_224_288": {
+        "id": "finite57_d9_batch_disjoint_224_288",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "224",
+          "--stop",
+          "288"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [224,288) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_288_348": {
+        "id": "finite57_d9_batch_disjoint_288_348",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "288",
+          "--stop",
+          "348"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [288,348) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_348_352": {
+        "id": "finite57_d9_batch_disjoint_348_352",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "348",
+          "--stop",
+          "352"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [348,352) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_352_360": {
+        "id": "finite57_d9_batch_disjoint_352_360",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "352",
+          "--stop",
+          "360"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [352,360) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_360_368": {
+        "id": "finite57_d9_batch_disjoint_360_368",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "360",
+          "--stop",
+          "368"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [360,368) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_368_376": {
+        "id": "finite57_d9_batch_disjoint_368_376",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "368",
+          "--stop",
+          "376"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [368,376) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_disjoint_376_384": {
+        "id": "finite57_d9_batch_disjoint_376_384",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "376",
+          "--stop",
+          "384"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: disjoint whole-owner interval [376,384) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_inertia_0_80": {
+        "id": "finite57_d9_batch_inertia_0_80",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "inertia",
+          "--start",
+          "0",
+          "--stop",
+          "80"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: inertia whole-owner interval [0,80) of 85, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_inertia_80_85": {
+        "id": "finite57_d9_batch_inertia_80_85",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "inertia",
+          "--start",
+          "80",
+          "--stop",
+          "85"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: inertia whole-owner interval [80,85) of 85, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_0_32": {
+        "id": "finite57_d9_batch_overlaps_0_32",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "0",
+          "--stop",
+          "32"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [0,32) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_32_64": {
+        "id": "finite57_d9_batch_overlaps_32_64",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "32",
+          "--stop",
+          "64"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [32,64) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_64_96": {
+        "id": "finite57_d9_batch_overlaps_64_96",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "64",
+          "--stop",
+          "96"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [64,96) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_96_128": {
+        "id": "finite57_d9_batch_overlaps_96_128",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "96",
+          "--stop",
+          "128"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [96,128) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_128_160": {
+        "id": "finite57_d9_batch_overlaps_128_160",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "128",
+          "--stop",
+          "160"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [128,160) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_160_192": {
+        "id": "finite57_d9_batch_overlaps_160_192",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "160",
+          "--stop",
+          "192"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [160,192) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_192_224": {
+        "id": "finite57_d9_batch_overlaps_192_224",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "192",
+          "--stop",
+          "224"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [192,224) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_224_256": {
+        "id": "finite57_d9_batch_overlaps_224_256",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "224",
+          "--stop",
+          "256"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [224,256) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_256_288": {
+        "id": "finite57_d9_batch_overlaps_256_288",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "256",
+          "--stop",
+          "288"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [256,288) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_288_320": {
+        "id": "finite57_d9_batch_overlaps_288_320",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "288",
+          "--stop",
+          "320"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [288,320) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_320_348": {
+        "id": "finite57_d9_batch_overlaps_320_348",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "320",
+          "--stop",
+          "348"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [320,348) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_348_352": {
+        "id": "finite57_d9_batch_overlaps_348_352",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "348",
+          "--stop",
+          "352"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [348,352) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_352_356": {
+        "id": "finite57_d9_batch_overlaps_352_356",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "352",
+          "--stop",
+          "356"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [352,356) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_356_357": {
+        "id": "finite57_d9_batch_overlaps_356_357",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "356",
+          "--stop",
+          "357"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [356,357) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_357_360": {
+        "id": "finite57_d9_batch_overlaps_357_360",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "357",
+          "--stop",
+          "360"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [357,360) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_360_368": {
+        "id": "finite57_d9_batch_overlaps_360_368",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "360",
+          "--stop",
+          "368"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [360,368) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_overlaps_368_384": {
+        "id": "finite57_d9_batch_overlaps_368_384",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "368",
+          "--stop",
+          "384"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: overlaps whole-owner interval [368,384) of 384, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_0_32": {
+        "id": "finite57_d9_batch_isolation_0_32",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "0",
+          "--stop",
+          "32"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [0,32) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_32_96": {
+        "id": "finite57_d9_batch_isolation_32_96",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "32",
+          "--stop",
+          "96"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [32,96) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_96_160": {
+        "id": "finite57_d9_batch_isolation_96_160",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "96",
+          "--stop",
+          "160"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [96,160) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_160_224": {
+        "id": "finite57_d9_batch_isolation_160_224",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "160",
+          "--stop",
+          "224"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [160,224) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_224_288": {
+        "id": "finite57_d9_batch_isolation_224_288",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "224",
+          "--stop",
+          "288"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [224,288) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_288_352": {
+        "id": "finite57_d9_batch_isolation_288_352",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "288",
+          "--stop",
+          "352"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [288,352) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_352_416": {
+        "id": "finite57_d9_batch_isolation_352_416",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "352",
+          "--stop",
+          "416"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [352,416) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_416_480": {
+        "id": "finite57_d9_batch_isolation_416_480",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "416",
+          "--stop",
+          "480"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [416,480) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_480_544": {
+        "id": "finite57_d9_batch_isolation_480_544",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "480",
+          "--stop",
+          "544"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [480,544) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_544_608": {
+        "id": "finite57_d9_batch_isolation_544_608",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "544",
+          "--stop",
+          "608"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [544,608) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_608_672": {
+        "id": "finite57_d9_batch_isolation_608_672",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "608",
+          "--stop",
+          "672"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [608,672) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_672_736": {
+        "id": "finite57_d9_batch_isolation_672_736",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "672",
+          "--stop",
+          "736"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [672,736) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_736_800": {
+        "id": "finite57_d9_batch_isolation_736_800",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "736",
+          "--stop",
+          "800"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [736,800) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_800_864": {
+        "id": "finite57_d9_batch_isolation_800_864",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "800",
+          "--stop",
+          "864"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [800,864) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_864_928": {
+        "id": "finite57_d9_batch_isolation_864_928",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "864",
+          "--stop",
+          "928"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [864,928) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_928_934": {
+        "id": "finite57_d9_batch_isolation_928_934",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "928",
+          "--stop",
+          "934"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [928,934) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_934_935": {
+        "id": "finite57_d9_batch_isolation_934_935",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "934",
+          "--stop",
+          "935"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [934,935) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_935_943": {
+        "id": "finite57_d9_batch_isolation_935_943",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "935",
+          "--stop",
+          "943"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [935,943) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_isolation_943_949": {
+        "id": "finite57_d9_batch_isolation_943_949",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "943",
+          "--stop",
+          "949"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: isolation whole-owner interval [943,949) of 949, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      },
+      "finite57_d9_batch_profiles_0_8": {
+        "id": "finite57_d9_batch_profiles_0_8",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "profiles",
+          "--start",
+          "0",
+          "--stop",
+          "8"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Exact frozen dimension108 replay: profiles whole-owner interval [0,8) of 8, with original output comparisons and input pins. Complete replay requires all eight phase domains (2196 units); this entry checks only this executed interval.",
+        "expected_status": "PASS_DISTANCE9_REPLAY_PARTITION"
+      }
+    },
+    "selected_verification_before": [
+      "finite57",
+      "finite57_d13_parser_contract",
+      "finite57_d13_batch_pins_0",
+      "finite57_d13_batch_pins_1",
+      "finite57_d13_batch_pins_2",
+      "finite57_d13_batch_pins_3",
+      "finite57_d13_batch_metadata",
+      "finite57_d13_batch_support",
+      "finite57_d13_batch_rank15",
+      "finite57_d13_batch_one_sided",
+      "finite57_d13_batch_quiet",
+      "finite57_d13_batch_literal",
+      "finite57_d13_batch_later_0",
+      "finite57_d13_batch_later_1",
+      "finite57_d13_batch_later_2",
+      "finite57_d13_batch_later_3",
+      "finite57_d13_batch_newer",
+      "finite57_d13_batch_variants",
+      "finite57_d13_batch_d12",
+      "finite57_d13_batch_universal",
+      "finite57_d13_batch_finite",
+      "finite57_b13",
+      "finite57_frontier",
+      "finite57_low8",
+      "finite57_tail58",
+      "finite57_tail59",
+      "finite57_tail60",
+      "finite57_tail61",
+      "finite57_tail62",
+      "finite57_tail63",
+      "finite57_tail64",
+      "finite57_tail65",
+      "finite57_tail66",
+      "finite57_tail68",
+      "finite57_tail69",
+      "finite57_tail70",
+      "finite57_tail71",
+      "finite57_tail74",
+      "finite57_tail75",
+      "finite57_tail77",
+      "finite57_tail80",
+      "finite57_tail86",
+      "finite57_tail91",
+      "finite57_tail97",
+      "finite57_tail108",
+      "finite57_tail116",
+      "finite57_tail126",
+      "finite57_tail136",
+      "finite57_tail146",
+      "finite57_tail156",
+      "finite57_narrow_unit",
+      "finite57_narrow_defects",
+      "finite57_narrow_residual",
+      "finite57_narrow_compact",
+      "finite57_narrow_binder"
+    ],
+    "selected_verification_after": [
+      "finite57",
+      "finite57_d13_parser_contract",
+      "finite57_d13_batch_pins_0",
+      "finite57_d13_batch_pins_1",
+      "finite57_d13_batch_pins_2",
+      "finite57_d13_batch_pins_3",
+      "finite57_d13_batch_metadata",
+      "finite57_d13_batch_support",
+      "finite57_d13_batch_rank15",
+      "finite57_d13_batch_one_sided",
+      "finite57_d13_batch_quiet",
+      "finite57_d13_batch_literal",
+      "finite57_d13_batch_later_0",
+      "finite57_d13_batch_later_1",
+      "finite57_d13_batch_later_2",
+      "finite57_d13_batch_later_3",
+      "finite57_d13_batch_newer",
+      "finite57_d13_batch_variants",
+      "finite57_d13_batch_d12",
+      "finite57_d13_batch_universal",
+      "finite57_d13_batch_finite",
+      "finite57_b13",
+      "finite57_frontier",
+      "finite57_low8",
+      "finite57_tail58",
+      "finite57_tail59",
+      "finite57_tail60",
+      "finite57_tail61",
+      "finite57_tail62",
+      "finite57_tail63",
+      "finite57_tail64",
+      "finite57_tail65",
+      "finite57_tail66",
+      "finite57_tail68",
+      "finite57_tail69",
+      "finite57_tail70",
+      "finite57_tail71",
+      "finite57_tail74",
+      "finite57_tail75",
+      "finite57_tail77",
+      "finite57_tail80",
+      "finite57_tail86",
+      "finite57_tail91",
+      "finite57_tail97",
+      "finite57_d9_scanner_contract",
+      "finite57_d9_batch_metadata_0_1",
+      "finite57_d9_batch_domains_0_1",
+      "finite57_d9_batch_overlap_domain_0_64",
+      "finite57_d9_batch_overlap_domain_64_348",
+      "finite57_d9_batch_overlap_domain_348_352",
+      "finite57_d9_batch_overlap_domain_352_384",
+      "finite57_d9_batch_disjoint_0_32",
+      "finite57_d9_batch_disjoint_32_96",
+      "finite57_d9_batch_disjoint_96_160",
+      "finite57_d9_batch_disjoint_160_224",
+      "finite57_d9_batch_disjoint_224_288",
+      "finite57_d9_batch_disjoint_288_348",
+      "finite57_d9_batch_disjoint_348_352",
+      "finite57_d9_batch_disjoint_352_360",
+      "finite57_d9_batch_disjoint_360_368",
+      "finite57_d9_batch_disjoint_368_376",
+      "finite57_d9_batch_disjoint_376_384",
+      "finite57_d9_batch_inertia_0_80",
+      "finite57_d9_batch_inertia_80_85",
+      "finite57_d9_batch_overlaps_0_32",
+      "finite57_d9_batch_overlaps_32_64",
+      "finite57_d9_batch_overlaps_64_96",
+      "finite57_d9_batch_overlaps_96_128",
+      "finite57_d9_batch_overlaps_128_160",
+      "finite57_d9_batch_overlaps_160_192",
+      "finite57_d9_batch_overlaps_192_224",
+      "finite57_d9_batch_overlaps_224_256",
+      "finite57_d9_batch_overlaps_256_288",
+      "finite57_d9_batch_overlaps_288_320",
+      "finite57_d9_batch_overlaps_320_348",
+      "finite57_d9_batch_overlaps_348_352",
+      "finite57_d9_batch_overlaps_352_356",
+      "finite57_d9_batch_overlaps_356_357",
+      "finite57_d9_batch_overlaps_357_360",
+      "finite57_d9_batch_overlaps_360_368",
+      "finite57_d9_batch_overlaps_368_384",
+      "finite57_d9_batch_isolation_0_32",
+      "finite57_d9_batch_isolation_32_96",
+      "finite57_d9_batch_isolation_96_160",
+      "finite57_d9_batch_isolation_160_224",
+      "finite57_d9_batch_isolation_224_288",
+      "finite57_d9_batch_isolation_288_352",
+      "finite57_d9_batch_isolation_352_416",
+      "finite57_d9_batch_isolation_416_480",
+      "finite57_d9_batch_isolation_480_544",
+      "finite57_d9_batch_isolation_544_608",
+      "finite57_d9_batch_isolation_608_672",
+      "finite57_d9_batch_isolation_672_736",
+      "finite57_d9_batch_isolation_736_800",
+      "finite57_d9_batch_isolation_800_864",
+      "finite57_d9_batch_isolation_864_928",
+      "finite57_d9_batch_isolation_928_934",
+      "finite57_d9_batch_isolation_934_935",
+      "finite57_d9_batch_isolation_935_943",
+      "finite57_d9_batch_isolation_943_949",
+      "finite57_d9_batch_profiles_0_8",
+      "finite57_tail116",
+      "finite57_tail126",
+      "finite57_tail136",
+      "finite57_tail146",
+      "finite57_tail156",
+      "finite57_narrow_unit",
+      "finite57_narrow_defects",
+      "finite57_narrow_residual",
+      "finite57_narrow_compact",
+      "finite57_narrow_binder"
+    ],
+    "insertion_order": [
+      "finite57_d9_scanner_contract",
+      "finite57_d9_batch_metadata_0_1",
+      "finite57_d9_batch_domains_0_1",
+      "finite57_d9_batch_overlap_domain_0_64",
+      "finite57_d9_batch_overlap_domain_64_348",
+      "finite57_d9_batch_overlap_domain_348_352",
+      "finite57_d9_batch_overlap_domain_352_384",
+      "finite57_d9_batch_disjoint_0_32",
+      "finite57_d9_batch_disjoint_32_96",
+      "finite57_d9_batch_disjoint_96_160",
+      "finite57_d9_batch_disjoint_160_224",
+      "finite57_d9_batch_disjoint_224_288",
+      "finite57_d9_batch_disjoint_288_348",
+      "finite57_d9_batch_disjoint_348_352",
+      "finite57_d9_batch_disjoint_352_360",
+      "finite57_d9_batch_disjoint_360_368",
+      "finite57_d9_batch_disjoint_368_376",
+      "finite57_d9_batch_disjoint_376_384",
+      "finite57_d9_batch_inertia_0_80",
+      "finite57_d9_batch_inertia_80_85",
+      "finite57_d9_batch_overlaps_0_32",
+      "finite57_d9_batch_overlaps_32_64",
+      "finite57_d9_batch_overlaps_64_96",
+      "finite57_d9_batch_overlaps_96_128",
+      "finite57_d9_batch_overlaps_128_160",
+      "finite57_d9_batch_overlaps_160_192",
+      "finite57_d9_batch_overlaps_192_224",
+      "finite57_d9_batch_overlaps_224_256",
+      "finite57_d9_batch_overlaps_256_288",
+      "finite57_d9_batch_overlaps_288_320",
+      "finite57_d9_batch_overlaps_320_348",
+      "finite57_d9_batch_overlaps_348_352",
+      "finite57_d9_batch_overlaps_352_356",
+      "finite57_d9_batch_overlaps_356_357",
+      "finite57_d9_batch_overlaps_357_360",
+      "finite57_d9_batch_overlaps_360_368",
+      "finite57_d9_batch_overlaps_368_384",
+      "finite57_d9_batch_isolation_0_32",
+      "finite57_d9_batch_isolation_32_96",
+      "finite57_d9_batch_isolation_96_160",
+      "finite57_d9_batch_isolation_160_224",
+      "finite57_d9_batch_isolation_224_288",
+      "finite57_d9_batch_isolation_288_352",
+      "finite57_d9_batch_isolation_352_416",
+      "finite57_d9_batch_isolation_416_480",
+      "finite57_d9_batch_isolation_480_544",
+      "finite57_d9_batch_isolation_544_608",
+      "finite57_d9_batch_isolation_608_672",
+      "finite57_d9_batch_isolation_672_736",
+      "finite57_d9_batch_isolation_736_800",
+      "finite57_d9_batch_isolation_800_864",
+      "finite57_d9_batch_isolation_864_928",
+      "finite57_d9_batch_isolation_928_934",
+      "finite57_d9_batch_isolation_934_935",
+      "finite57_d9_batch_isolation_935_943",
+      "finite57_d9_batch_isolation_943_949",
+      "finite57_d9_batch_profiles_0_8"
+    ],
+    "other_changes": "NONE: every other registry entry, manuscript selection, metadata and atlas reference remains unchanged as a JSON value."
+  },
+  "source_bindings": {
+    "manuscripts/catalogue.json": "9e8199f39a1b7dbfcbabea8b9a3b201a05aa5b05fe7ab5ee8937c6a076e06a52",
+    "results/finite57_distance9_partitioned_replay_runtime_20261020.json": "1228a4a7c487c9b39d0b3d2daabac5c01127f068131003b268c79381ce7118bd",
+    "scripts/check_distance9_array_scanner_fixtures_20261020.py": "f6fd1267462f1c95632998125aef419f939803d08aaaf3ba307feaa273701ff2",
+    "scripts/check_partitioned_replay_coverage_20261020.py": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+    "scripts/check_d13_transfer_batches_20261020.py": "be8a42d1d3687204af4d559c6bd8a28779dbfac68aeccdd95d41a7172645d555",
+    "scripts/check_selective_distance9_batches_20261020.py": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+    "scripts/check_d13_json_projection_contract_20261020.py": "2f6b63daa564b1689215d105d215bd2fb707f5873b95604cf19b8be90509de94",
+    "scripts/run_bounded_research_check_20261018.py": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+    "scripts/verify_manuscript.py": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1",
+    "scripts/fresh_d13_three_rank15_context_transfer_20261018.py": "a95ea679854ba907ead8640964a258c3baeb3e998052a3e2e3ff20f230cce486",
+    "scripts/fresh_selective_distance9_dimension108_20261017.py": "f5cd7d0181cf9d5f96b10b6d4d6e7654caa3369b18ffa7473a16033f3124c81a",
+    "results/fresh_d13_three_rank15_context_transfer_20261018.json": "2c7d615cd38123bef20cffad68de8ab30baa91826c147a6bb084892590e8ca86",
+    "results/fresh_selective_distance9_dimension108_20261017.json": "e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9",
+    "results/distance9_json_key_lists_scanner_fixture_execution_20261020.json": "6b82784f1e7b7933d49539f77512fc8349008c5e00b885e1c07caa31da5cda7e",
+    "results/partitioned_replay_coverage_validation_20261020.json": "b9c3a2c7c37819da5346a445c6fd580ff916a5acfd379eb7210e7bf97bc999b1",
+    "results/finite57_d13_batched_replay_runtime_20261020.json": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+    "results/selective_distance9_batched_replay_contract_20261020.md": "6f1f601cf84f05d1c9ddf086842163c36ab254d17edfa8235c121a1add5fbd91",
+    "results/review_selective_distance9_batched_replay_root_20261020.md": "b2681884898fe72e5d4d742ec24247fbfdcd68c5a6a61c9b12d5babf5a6bc822",
+    "results/review_distance9_expected_key_json_representation_fix_finite57_20261020.md": "114e38930209f4bc23f965b7745d7ca000efe0d107859ad2b3625b3519b1e185",
+    "results/review_distance9_symbolic_boolean_count_fix_finite57_20261020.md": "3e9b97f2a0f09072e45deb5cc0dd4b74967f98b0ec6e59e550b9aad73d9f736f",
+    "results/distance9_remaining_phase_source_equivalence_and_schedule_20261020.md": "8e3cff7c4f92fbae6e3b3617a34a5dc8438b2cfaaff44f6364b7e1ba6e897f82"
+  },
+  "worker_fixed_pins": {
+    "scripts/fresh_selective_distance9_dimension108_20261017.py": "f5cd7d0181cf9d5f96b10b6d4d6e7654caa3369b18ffa7473a16033f3124c81a",
+    "results/fresh_selective_distance9_dimension108_20261017.json": "e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9",
+    "scripts/check_d13_transfer_batches_20261020.py": "be8a42d1d3687204af4d559c6bd8a28779dbfac68aeccdd95d41a7172645d555",
+    "scripts/run_bounded_research_check_20261018.py": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132"
+  },
+  "fixture_fixed_pins": {
+    "scripts/check_selective_distance9_batches_20261020.py": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+    "scripts/check_d13_transfer_batches_20261020.py": "be8a42d1d3687204af4d559c6bd8a28779dbfac68aeccdd95d41a7172645d555",
+    "results/fresh_selective_distance9_dimension108_20261017.json": "e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9"
+  },
+  "recorded_execution_evidence": {
+    "runtime_path": "results/finite57_distance9_partitioned_replay_runtime_20261020.json",
+    "runtime_sha256": "1228a4a7c487c9b39d0b3d2daabac5c01127f068131003b268c79381ce7118bd",
+    "current_runtime_analysis": {
+      "records_examined": 68,
+      "accepted_records": {
+        "distance9": 56
+      },
+      "ignored_records": 12,
+      "ignored_reasons": {
+        "stale distance9 source": 2,
+        "not a successful script record": 10
+      },
+      "current_parser_contract_pass_records": 0,
+      "distance9": {
+        "required_domains": {
+          "metadata": 1,
+          "domains": 1,
+          "overlap-domain": 384,
+          "disjoint": 384,
+          "inertia": 85,
+          "overlaps": 384,
+          "isolation": 949,
+          "profiles": 8
+        },
+        "covered_units": {
+          "metadata": 1,
+          "domains": 1,
+          "overlap-domain": 384,
+          "disjoint": 384,
+          "inertia": 85,
+          "overlaps": 384,
+          "isolation": 949,
+          "profiles": 8
+        },
+        "missing": {}
+      },
+      "complete": true
+    },
+    "selected_subset_analysis": {
+      "records_examined": 56,
+      "accepted_records": {
+        "distance9": 56
+      },
+      "ignored_records": 0,
+      "ignored_reasons": {},
+      "current_parser_contract_pass_records": 0,
+      "distance9": {
+        "required_domains": {
+          "metadata": 1,
+          "domains": 1,
+          "overlap-domain": 384,
+          "disjoint": 384,
+          "inertia": 85,
+          "overlaps": 384,
+          "isolation": 949,
+          "profiles": 8
+        },
+        "covered_units": {
+          "metadata": 1,
+          "domains": 1,
+          "overlap-domain": 384,
+          "disjoint": 384,
+          "inertia": 85,
+          "overlaps": 384,
+          "isolation": 949,
+          "profiles": 8
+        },
+        "missing": {}
+      },
+      "complete": true
+    },
+    "selected_intervals": [
+      {
+        "check_id": "finite57_d9_batch_metadata_0_1",
+        "phase": "metadata",
+        "start": 0,
+        "stop": 1,
+        "record_json_pointer": "/jobs/6",
+        "record_sha256": "74d1404811f6adebaddab67f4318544bfd8dc67243dcb56a7135d7fbb500e189",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "metadata",
+          "--start",
+          "0",
+          "--stop",
+          "1"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 13.743,
+        "peak_process_tree_rss_bytes": 134627328
+      },
+      {
+        "check_id": "finite57_d9_batch_domains_0_1",
+        "phase": "domains",
+        "start": 0,
+        "stop": 1,
+        "record_json_pointer": "/jobs/7",
+        "record_sha256": "070593f382babb068fa45e662dfac6deb084027177a49f329859886cb30c0372",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "domains",
+          "--start",
+          "0",
+          "--stop",
+          "1"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 5.319,
+        "peak_process_tree_rss_bytes": 146587648
+      },
+      {
+        "check_id": "finite57_d9_batch_overlap_domain_0_64",
+        "phase": "overlap-domain",
+        "start": 0,
+        "stop": 64,
+        "record_json_pointer": "/jobs/10",
+        "record_sha256": "67ab091a7a338df53dc59ac6aa90e08bc213dea893ab6517628f033b7c1eb497",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlap-domain",
+          "--start",
+          "0",
+          "--stop",
+          "64"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 1.904,
+        "peak_process_tree_rss_bytes": 133545984
+      },
+      {
+        "check_id": "finite57_d9_batch_overlap_domain_64_348",
+        "phase": "overlap-domain",
+        "start": 64,
+        "stop": 348,
+        "record_json_pointer": "/jobs/12",
+        "record_sha256": "d1b5a98fbb473d8ffd6ef009280f1dfb796074e79592e98e64f186bb885046a9",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlap-domain",
+          "--start",
+          "64",
+          "--stop",
+          "348"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 2.137,
+        "peak_process_tree_rss_bytes": 159432704
+      },
+      {
+        "check_id": "finite57_d9_batch_overlap_domain_348_352",
+        "phase": "overlap-domain",
+        "start": 348,
+        "stop": 352,
+        "record_json_pointer": "/jobs/9",
+        "record_sha256": "b89bfee09645254dcc36e4c66039063758544281802969967573350760048ac1",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlap-domain",
+          "--start",
+          "348",
+          "--stop",
+          "352"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 1.857,
+        "peak_process_tree_rss_bytes": 134414336
+      },
+      {
+        "check_id": "finite57_d9_batch_overlap_domain_352_384",
+        "phase": "overlap-domain",
+        "start": 352,
+        "stop": 384,
+        "record_json_pointer": "/jobs/14",
+        "record_sha256": "c7e18c1221f151925474fe06b1113a56236ef406828da4e20faab0bd6ff1e241",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlap-domain",
+          "--start",
+          "352",
+          "--stop",
+          "384"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 1.879,
+        "peak_process_tree_rss_bytes": 136593408
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_0_32",
+        "phase": "disjoint",
+        "start": 0,
+        "stop": 32,
+        "record_json_pointer": "/jobs/16",
+        "record_sha256": "80a73db6855a2ccefa29e9f3dca0dba071bd8342d8cee9a066eb8a834be16e19",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "0",
+          "--stop",
+          "32"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 2.66,
+        "peak_process_tree_rss_bytes": 135315456
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_32_96",
+        "phase": "disjoint",
+        "start": 32,
+        "stop": 96,
+        "record_json_pointer": "/jobs/19",
+        "record_sha256": "c9b301b3db5146d77623d262fd532e90e1271949c32ca36ad10603bc7f4abb49",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "32",
+          "--stop",
+          "96"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 3.312,
+        "peak_process_tree_rss_bytes": 136069120
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_96_160",
+        "phase": "disjoint",
+        "start": 96,
+        "stop": 160,
+        "record_json_pointer": "/jobs/20",
+        "record_sha256": "551921254bc374237ee4cf2619ca90065b080f30097b184f07134572f5fa76e0",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "96",
+          "--stop",
+          "160"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 3.306,
+        "peak_process_tree_rss_bytes": 136626176
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_160_224",
+        "phase": "disjoint",
+        "start": 160,
+        "stop": 224,
+        "record_json_pointer": "/jobs/21",
+        "record_sha256": "3e5383eff8c9ec32f1d942c7da6a54819a3641e4dc81c83783b314216d2fce57",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "160",
+          "--stop",
+          "224"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 4.935,
+        "peak_process_tree_rss_bytes": 137412608
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_224_288",
+        "phase": "disjoint",
+        "start": 224,
+        "stop": 288,
+        "record_json_pointer": "/jobs/22",
+        "record_sha256": "9ab323a4e356002532c215d60af5693aa17c8bc4ca331b64404ab16fab636589",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "224",
+          "--stop",
+          "288"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 6.916,
+        "peak_process_tree_rss_bytes": 137904128
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_288_348",
+        "phase": "disjoint",
+        "start": 288,
+        "stop": 348,
+        "record_json_pointer": "/jobs/23",
+        "record_sha256": "d4dcd1b09499a79ad1eb5d03f04a9e058f1875e41fd74d2fea13745dc51f6471",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "288",
+          "--stop",
+          "348"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 5.164,
+        "peak_process_tree_rss_bytes": 137314304
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_348_352",
+        "phase": "disjoint",
+        "start": 348,
+        "stop": 352,
+        "record_json_pointer": "/jobs/15",
+        "record_sha256": "f22fd28263a69a4388ff5690c46222df0f2451574ae7ea013350ef512fd55a69",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "348",
+          "--stop",
+          "352"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 5.979,
+        "peak_process_tree_rss_bytes": 138346496
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_352_360",
+        "phase": "disjoint",
+        "start": 352,
+        "stop": 360,
+        "record_json_pointer": "/jobs/24",
+        "record_sha256": "cd06e2fbeb49c3f4374778bb1a4a57e91ff519e81ca4ecf2aa00633ef4b3c983",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "352",
+          "--stop",
+          "360"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 11.203,
+        "peak_process_tree_rss_bytes": 140787712
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_360_368",
+        "phase": "disjoint",
+        "start": 360,
+        "stop": 368,
+        "record_json_pointer": "/jobs/25",
+        "record_sha256": "9963a88720ab805af74adaeb7073d51b7bbae7a526382ac75ef70963c1a2acd8",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "360",
+          "--stop",
+          "368"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 9.26,
+        "peak_process_tree_rss_bytes": 137478144
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_368_376",
+        "phase": "disjoint",
+        "start": 368,
+        "stop": 376,
+        "record_json_pointer": "/jobs/26",
+        "record_sha256": "b77c7118c54894bc2a2a8542254440c8822c2902a217555f426849948ea812a6",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "368",
+          "--stop",
+          "376"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 6.584,
+        "peak_process_tree_rss_bytes": 136069120
+      },
+      {
+        "check_id": "finite57_d9_batch_disjoint_376_384",
+        "phase": "disjoint",
+        "start": 376,
+        "stop": 384,
+        "record_json_pointer": "/jobs/27",
+        "record_sha256": "4eec8a368c728ff98b46ea066799b998918acf6fe2e5c4f461f4f742e3c36a14",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "disjoint",
+          "--start",
+          "376",
+          "--stop",
+          "384"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 5.167,
+        "peak_process_tree_rss_bytes": 135708672
+      },
+      {
+        "check_id": "finite57_d9_batch_inertia_0_80",
+        "phase": "inertia",
+        "start": 0,
+        "stop": 80,
+        "record_json_pointer": "/jobs/29",
+        "record_sha256": "ab249ea5e47b8d6d7db2eeafa13f19d700d6670e5196988db5545c420c7060eb",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "inertia",
+          "--start",
+          "0",
+          "--stop",
+          "80"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 5.184,
+        "peak_process_tree_rss_bytes": 137871360
+      },
+      {
+        "check_id": "finite57_d9_batch_inertia_80_85",
+        "phase": "inertia",
+        "start": 80,
+        "stop": 85,
+        "record_json_pointer": "/jobs/17",
+        "record_sha256": "5c900ed4af9a9f868380d65f9e7791dfce9e91cb489df3f434cec762aecd61bb",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "inertia",
+          "--start",
+          "80",
+          "--stop",
+          "85"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 1.67,
+        "peak_process_tree_rss_bytes": 135053312
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_0_32",
+        "phase": "overlaps",
+        "start": 0,
+        "stop": 32,
+        "record_json_pointer": "/jobs/31",
+        "record_sha256": "2e915ec1c54294f9e7bef94537daa9e9eb4cb377e3fe2aa3b5942b2ce53d160d",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "0",
+          "--stop",
+          "32"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 6.235,
+        "peak_process_tree_rss_bytes": 132595712
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_32_64",
+        "phase": "overlaps",
+        "start": 32,
+        "stop": 64,
+        "record_json_pointer": "/jobs/32",
+        "record_sha256": "69eba2a3f9e2716a566b8b62037ec9a2904a2cf9a0b25bd5c91b9ff710b6b8f1",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "32",
+          "--stop",
+          "64"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 6.691,
+        "peak_process_tree_rss_bytes": 134971392
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_64_96",
+        "phase": "overlaps",
+        "start": 64,
+        "stop": 96,
+        "record_json_pointer": "/jobs/33",
+        "record_sha256": "4205a72018f7174a699141cb58966c955c1a2c77d694c865ad489650afc155fc",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "64",
+          "--stop",
+          "96"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 5.773,
+        "peak_process_tree_rss_bytes": 134266880
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_96_128",
+        "phase": "overlaps",
+        "start": 96,
+        "stop": 128,
+        "record_json_pointer": "/jobs/37",
+        "record_sha256": "10517d59cf226b05270d9e1350b175daf8fa4d244a5dc8e80bc4d0487c89c5a9",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "96",
+          "--stop",
+          "128"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 2.151,
+        "peak_process_tree_rss_bytes": 134201344
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_128_160",
+        "phase": "overlaps",
+        "start": 128,
+        "stop": 160,
+        "record_json_pointer": "/jobs/38",
+        "record_sha256": "080910ab0fd3daf1d24de964c0054ff166cf9232c7ae71f1744d0e566c9e92f8",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "128",
+          "--stop",
+          "160"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 2.259,
+        "peak_process_tree_rss_bytes": 135544832
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_160_192",
+        "phase": "overlaps",
+        "start": 160,
+        "stop": 192,
+        "record_json_pointer": "/jobs/39",
+        "record_sha256": "fc7fd1b772e34a7ac020168f27a95eca242368a5942dc02d92dce91f78bb2745",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "160",
+          "--stop",
+          "192"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 3.82,
+        "peak_process_tree_rss_bytes": 135430144
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_192_224",
+        "phase": "overlaps",
+        "start": 192,
+        "stop": 224,
+        "record_json_pointer": "/jobs/40",
+        "record_sha256": "e734fe42c176e8c729a6fcc5b74f96bf858f4e8806243b57b9dccb72a9479258",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "192",
+          "--stop",
+          "224"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 2.119,
+        "peak_process_tree_rss_bytes": 136445952
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_224_256",
+        "phase": "overlaps",
+        "start": 224,
+        "stop": 256,
+        "record_json_pointer": "/jobs/41",
+        "record_sha256": "4e0982c15b12c5db9901674c2a50b598132ea66e46515ea4f58ed55337947390",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "224",
+          "--stop",
+          "256"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 2.09,
+        "peak_process_tree_rss_bytes": 139689984
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_256_288",
+        "phase": "overlaps",
+        "start": 256,
+        "stop": 288,
+        "record_json_pointer": "/jobs/42",
+        "record_sha256": "26cab2a757c815847af814ed1b39144736d77e7051c96f175828da5384977be2",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "256",
+          "--stop",
+          "288"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 8.218,
+        "peak_process_tree_rss_bytes": 137216000
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_288_320",
+        "phase": "overlaps",
+        "start": 288,
+        "stop": 320,
+        "record_json_pointer": "/jobs/43",
+        "record_sha256": "8d821e9198bb24b1c0cf710f2791bd9a37d890bfbce05f8270e360dd37b97337",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "288",
+          "--stop",
+          "320"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 3.218,
+        "peak_process_tree_rss_bytes": 142344192
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_320_348",
+        "phase": "overlaps",
+        "start": 320,
+        "stop": 348,
+        "record_json_pointer": "/jobs/44",
+        "record_sha256": "b7e569aa632f686306aae44b3543b7aae953d23300022f5b0c752bf205cbd3fb",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "320",
+          "--stop",
+          "348"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 3.344,
+        "peak_process_tree_rss_bytes": 139771904
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_348_352",
+        "phase": "overlaps",
+        "start": 348,
+        "stop": 352,
+        "record_json_pointer": "/jobs/45",
+        "record_sha256": "98577faef4ba64e171da58776e4815f87dfc5eae8b491ccf119c98b6483e0638",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "348",
+          "--stop",
+          "352"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 11.327,
+        "peak_process_tree_rss_bytes": 137887744
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_352_356",
+        "phase": "overlaps",
+        "start": 352,
+        "stop": 356,
+        "record_json_pointer": "/jobs/46",
+        "record_sha256": "4a4189570cc5a1fd3d6290d1db27eeffac7ffb834ce9365ba10a42c58f2a9dd5",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "352",
+          "--stop",
+          "356"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 2.374,
+        "peak_process_tree_rss_bytes": 134447104
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_356_357",
+        "phase": "overlaps",
+        "start": 356,
+        "stop": 357,
+        "record_json_pointer": "/jobs/30",
+        "record_sha256": "b2fc188ce5e1085b8959a94a0254a77f06573b46c1bc1de122eac9d56998eda0",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "356",
+          "--stop",
+          "357"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 35.723,
+        "peak_process_tree_rss_bytes": 139264000
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_357_360",
+        "phase": "overlaps",
+        "start": 357,
+        "stop": 360,
+        "record_json_pointer": "/jobs/47",
+        "record_sha256": "2ec992824962917d0b5343cee4177104766ab951f190bc6dd4f78a9bedfb9fd0",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "357",
+          "--stop",
+          "360"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 10.159,
+        "peak_process_tree_rss_bytes": 136019968
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_360_368",
+        "phase": "overlaps",
+        "start": 360,
+        "stop": 368,
+        "record_json_pointer": "/jobs/48",
+        "record_sha256": "c9e0fce85a33a8e936edfdf138fe112f90e1441c0a43d962d3df8e5f3846d2a8",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "360",
+          "--stop",
+          "368"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 10.227,
+        "peak_process_tree_rss_bytes": 138100736
+      },
+      {
+        "check_id": "finite57_d9_batch_overlaps_368_384",
+        "phase": "overlaps",
+        "start": 368,
+        "stop": 384,
+        "record_json_pointer": "/jobs/49",
+        "record_sha256": "c511c1caf94eb66645151ecab53206fefdb907de939cc1cb7a95891e9dd65609",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "overlaps",
+          "--start",
+          "368",
+          "--stop",
+          "384"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 4.709,
+        "peak_process_tree_rss_bytes": 135528448
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_0_32",
+        "phase": "isolation",
+        "start": 0,
+        "stop": 32,
+        "record_json_pointer": "/jobs/51",
+        "record_sha256": "3a71f07d7d8a2e6c953fd2ec6dd831d1421b0c1fc012035ec9119d0a3782851f",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "0",
+          "--stop",
+          "32"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 4.411,
+        "peak_process_tree_rss_bytes": 135053312
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_32_96",
+        "phase": "isolation",
+        "start": 32,
+        "stop": 96,
+        "record_json_pointer": "/jobs/52",
+        "record_sha256": "7894a235fab9c7bc8a93e21c3d5cb26d2c195c32f7530e501379eb79bacb93f4",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "32",
+          "--stop",
+          "96"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 7.43,
+        "peak_process_tree_rss_bytes": 135905280
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_96_160",
+        "phase": "isolation",
+        "start": 96,
+        "stop": 160,
+        "record_json_pointer": "/jobs/53",
+        "record_sha256": "64a8a6139f726e3dbafabdb79295d69d6bfce9849536c247ea8c326535530680",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "96",
+          "--stop",
+          "160"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 6.945,
+        "peak_process_tree_rss_bytes": 134905856
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_160_224",
+        "phase": "isolation",
+        "start": 160,
+        "stop": 224,
+        "record_json_pointer": "/jobs/54",
+        "record_sha256": "953eba940e3c22b803ed90c4a3cd6a2686d1081bbb2352320a1d14126f2c178d",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "160",
+          "--stop",
+          "224"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 6.738,
+        "peak_process_tree_rss_bytes": 135839744
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_224_288",
+        "phase": "isolation",
+        "start": 224,
+        "stop": 288,
+        "record_json_pointer": "/jobs/55",
+        "record_sha256": "2fdc9ad23ccc17cbedf8572f94233f7e9d13f53746864e9241f476087228ff1b",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "224",
+          "--stop",
+          "288"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 10.041,
+        "peak_process_tree_rss_bytes": 135593984
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_288_352",
+        "phase": "isolation",
+        "start": 288,
+        "stop": 352,
+        "record_json_pointer": "/jobs/56",
+        "record_sha256": "2a3d100e4a12aa2752aba318acf449843f396b5f27f972bb0d5ff4408e0abffa",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "288",
+          "--stop",
+          "352"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 8.001,
+        "peak_process_tree_rss_bytes": 135561216
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_352_416",
+        "phase": "isolation",
+        "start": 352,
+        "stop": 416,
+        "record_json_pointer": "/jobs/57",
+        "record_sha256": "fda5a7292bf3ceb1897333a578fe6daa4ec3605e28f902d7ac4803ae7f46f0c2",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "352",
+          "--stop",
+          "416"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 8.363,
+        "peak_process_tree_rss_bytes": 134004736
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_416_480",
+        "phase": "isolation",
+        "start": 416,
+        "stop": 480,
+        "record_json_pointer": "/jobs/58",
+        "record_sha256": "845bf9cab9c85281883fa7d25990ea1167d80db31af0cf5890d364c34d992ade",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "416",
+          "--stop",
+          "480"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 11.524,
+        "peak_process_tree_rss_bytes": 135069696
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_480_544",
+        "phase": "isolation",
+        "start": 480,
+        "stop": 544,
+        "record_json_pointer": "/jobs/59",
+        "record_sha256": "9f3b3a7f3e03fedbe7383cdd40c9ea59c3afa3cc2c1d18c4057693d2c8667cb2",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "480",
+          "--stop",
+          "544"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 10.823,
+        "peak_process_tree_rss_bytes": 135036928
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_544_608",
+        "phase": "isolation",
+        "start": 544,
+        "stop": 608,
+        "record_json_pointer": "/jobs/60",
+        "record_sha256": "73e636bc9766a039a1737c35a7b3cc37ab1c4019fcf3152bd975b43a2680db43",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "544",
+          "--stop",
+          "608"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 13.892,
+        "peak_process_tree_rss_bytes": 134348800
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_608_672",
+        "phase": "isolation",
+        "start": 608,
+        "stop": 672,
+        "record_json_pointer": "/jobs/61",
+        "record_sha256": "cb6e59d5c06a18f7b1ea6029ba9b5ab15ae4585923d10e62950c3b2865360d39",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "608",
+          "--stop",
+          "672"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 11.704,
+        "peak_process_tree_rss_bytes": 133283840
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_672_736",
+        "phase": "isolation",
+        "start": 672,
+        "stop": 736,
+        "record_json_pointer": "/jobs/62",
+        "record_sha256": "0aec6329d67f6a08614b4347a091e01b7f8e964afe132def998d351d959b913e",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "672",
+          "--stop",
+          "736"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 10.598,
+        "peak_process_tree_rss_bytes": 134660096
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_736_800",
+        "phase": "isolation",
+        "start": 736,
+        "stop": 800,
+        "record_json_pointer": "/jobs/63",
+        "record_sha256": "14a03cfb952e1e180d681a89da5b8fbff5ac2afc604de86a935b0f257c1f2bc4",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "736",
+          "--stop",
+          "800"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 16.001,
+        "peak_process_tree_rss_bytes": 134103040
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_800_864",
+        "phase": "isolation",
+        "start": 800,
+        "stop": 864,
+        "record_json_pointer": "/jobs/64",
+        "record_sha256": "bec70872e5ec08e6c361368e26e66b026a8148599b1ac3aa842854c02fbed94e",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "800",
+          "--stop",
+          "864"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 12.934,
+        "peak_process_tree_rss_bytes": 134725632
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_864_928",
+        "phase": "isolation",
+        "start": 864,
+        "stop": 928,
+        "record_json_pointer": "/jobs/65",
+        "record_sha256": "9dc4c863da97a9a38410b7d09e1ae411e3eea998d9f3e954eb913ded19755213",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "864",
+          "--stop",
+          "928"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 8.224,
+        "peak_process_tree_rss_bytes": 134758400
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_928_934",
+        "phase": "isolation",
+        "start": 928,
+        "stop": 934,
+        "record_json_pointer": "/jobs/66",
+        "record_sha256": "b4d42cb3c50c48cdd1be6fd545b9b819ae134e03ce41187732b48ddcb65523d4",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "928",
+          "--stop",
+          "934"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 3.025,
+        "peak_process_tree_rss_bytes": 134512640
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_934_935",
+        "phase": "isolation",
+        "start": 934,
+        "stop": 935,
+        "record_json_pointer": "/jobs/35",
+        "record_sha256": "d9be1eed7e52305f0ba015574bd3b36a5f3566e2e09333764bdc89044fd8377a",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "934",
+          "--stop",
+          "935"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 9.296,
+        "peak_process_tree_rss_bytes": 136953856
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_935_943",
+        "phase": "isolation",
+        "start": 935,
+        "stop": 943,
+        "record_json_pointer": "/jobs/50",
+        "record_sha256": "e954e0b9f3821b3b9f6dac1f66e647b911660e5265c7cb28ab145d07b5b4837c",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "935",
+          "--stop",
+          "943"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 3.76,
+        "peak_process_tree_rss_bytes": 134643712
+      },
+      {
+        "check_id": "finite57_d9_batch_isolation_943_949",
+        "phase": "isolation",
+        "start": 943,
+        "stop": 949,
+        "record_json_pointer": "/jobs/67",
+        "record_sha256": "84083e18905a884a20fed1da9cd387d51d5b11219579372ed743a9688ae4d53a",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "isolation",
+          "--start",
+          "943",
+          "--stop",
+          "949"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 3.63,
+        "peak_process_tree_rss_bytes": 134955008
+      },
+      {
+        "check_id": "finite57_d9_batch_profiles_0_8",
+        "phase": "profiles",
+        "start": 0,
+        "stop": 8,
+        "record_json_pointer": "/jobs/8",
+        "record_sha256": "e51a3532fdffc09f63514bbd2aa317eaca4f6eb1e02d58fb07a8e257843e18e8",
+        "actual_command": [
+          "scripts/check_selective_distance9_batches_20261020.py",
+          "--verify",
+          "--phase",
+          "profiles",
+          "--start",
+          "0",
+          "--stop",
+          "8"
+        ],
+        "status": "PASS_BOUNDED_RESEARCH_CHECK",
+        "elapsed_seconds": 2.052,
+        "peak_process_tree_rss_bytes": 130007040
+      }
+    ],
+    "selected_math_interval_count": 56,
+    "selected_wrapper_seconds": 388.008,
+    "selected_peak_process_tree_rss_bytes": 159432704,
+    "fixture": {
+      "path": "results/distance9_json_key_lists_scanner_fixture_execution_20261020.json",
+      "sha256": "6b82784f1e7b7933d49539f77512fc8349008c5e00b885e1c07caa31da5cda7e",
+      "actual_wrapper_status": "PASS_BOUNDED_RESEARCH_CHECK",
+      "actual_command": [
+        "scripts/check_distance9_array_scanner_fixtures_20261020.py",
+        "--verify"
+      ],
+      "actual_checker_sha256": "f6fd1267462f1c95632998125aef419f939803d08aaaf3ba307feaa273701ff2",
+      "actual_output": {
+        "checker_sha256": "f6fd1267462f1c95632998125aef419f939803d08aaaf3ba307feaa273701ff2",
+        "negative_cases": 32,
+        "positive_cases": 13,
+        "real_array_rows": 1262,
+        "real_prefix_cap": 2097152,
+        "scope": "Object-path and row projection tests, not a full JSON validator of skipped subtrees.",
+        "status": "PASS_DISTANCE9_SCANNER_FIXTURES",
+        "worker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843"
+      },
+      "elapsed_seconds": 1.732,
+      "peak_process_tree_rss_bytes": 89915392
+    },
+    "current_combined_snapshot_analysis": {
+      "records_examined": 93,
+      "accepted_records": {
+        "d13": 20,
+        "distance9": 56
+      },
+      "ignored_records": 17,
+      "ignored_reasons": {
+        "D13 argv/domain mismatch": 1,
+        "not a successful script record": 14,
+        "stale distance9 source": 2
+      },
+      "current_parser_contract_pass_records": 1,
+      "d13": {
+        "required_batches": 19,
+        "covered_batches": 19,
+        "missing": []
+      },
+      "distance9": {
+        "required_domains": {
+          "metadata": 1,
+          "domains": 1,
+          "overlap-domain": 384,
+          "disjoint": 384,
+          "inertia": 85,
+          "overlaps": 384,
+          "isolation": 949,
+          "profiles": 8
+        },
+        "covered_units": {
+          "metadata": 1,
+          "domains": 1,
+          "overlap-domain": 384,
+          "disjoint": 384,
+          "inertia": 85,
+          "overlaps": 384,
+          "isolation": 949,
+          "profiles": 8
+        },
+        "missing": {}
+      },
+      "complete": true
+    },
+    "combined_coverage_observation": {
+      "path": "results/partitioned_replay_coverage_validation_20261020.json",
+      "sha256": "b9c3a2c7c37819da5346a445c6fd580ff916a5acfd379eb7210e7bf97bc999b1",
+      "json_pointer": "/observations/14",
+      "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+      "ledger_bindings_as_recorded": {
+        "results/finite57_d13_batched_replay_runtime_20261020.json": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json": "1228a4a7c487c9b39d0b3d2daabac5c01127f068131003b268c79381ce7118bd"
+      },
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20,
+          "distance9": 56
+        },
+        "complete": true,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "distance9": {
+          "covered_units": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          },
+          "missing": {},
+          "required_domains": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          }
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 14,
+          "stale distance9 source": 2
+        },
+        "ignored_records": 17,
+        "ledger_files": 2,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 93,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "PASS_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e"
+      },
+      "qualification": "Current actual combined coverage observation binds the sealed runtime and D13 ledger. Top-level cached summaries are not relied upon."
+    }
+  },
+  "partition_contract": {
+    "required_domains": {
+      "metadata": 1,
+      "domains": 1,
+      "overlap-domain": 384,
+      "disjoint": 384,
+      "inertia": 85,
+      "overlaps": 384,
+      "isolation": 949,
+      "profiles": 8
+    },
+    "required_units": 2196,
+    "selection": "Per phase start at zero, select an actual current PASS interval covering the cursor with greatest executed stop (ties: start, record index), keep the entire executed interval/argv, advance and repeat. Revalidate selected records with the coverage analyzer.",
+    "whole_owner_groups_preserved": true,
+    "unexecuted_trimming_or_merging": false,
+    "coordinator_selected_as_scientific_check": false,
+    "provenance_limit": "Coverage validates unsigned local execution records; it does not authenticate them or perform mathematical replay."
+  },
+  "planner_assessment": {
+    "plan_for_source_sha256": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1",
+    "plans": {
+      "core_without_pdf": {
+        "before": 9,
+        "after": 9,
+        "before_by_kind": {
+          "script": 1,
+          "conditional_lean": 8
+        },
+        "after_by_kind": {
+          "script": 1,
+          "conditional_lean": 8
+        }
+      },
+      "core_with_pdf": {
+        "before": 10,
+        "after": 10,
+        "before_by_kind": {
+          "script": 1,
+          "conditional_lean": 8,
+          "typesetting": 1
+        },
+        "after_by_kind": {
+          "script": 1,
+          "conditional_lean": 8,
+          "typesetting": 1
+        }
+      },
+      "full_without_pdf": {
+        "before": 63,
+        "after": 119,
+        "before_by_kind": {
+          "script": 55,
+          "conditional_lean": 8
+        },
+        "after_by_kind": {
+          "script": 111,
+          "conditional_lean": 8
+        }
+      },
+      "full_with_pdf": {
+        "before": 64,
+        "after": 120,
+        "before_by_kind": {
+          "script": 55,
+          "conditional_lean": 8,
+          "typesetting": 1
+        },
+        "after_by_kind": {
+          "script": 111,
+          "conditional_lean": 8,
+          "typesetting": 1
+        }
+      }
+    },
+    "added_script_checks": 57,
+    "added_mathematical_intervals": 56,
+    "all_added_jobs_use_existing_parent_lock_wrapper": true,
+    "execution_performed": false,
+    "expected_status_note": "expected_status is documentary in the current planner. Actual source/output/argv/cap comparisons gate the recorded receipts here; future manuscript verification still requires successful worker exits."
+  },
+  "application_preconditions": [
+    "Require the original catalogue hash and all listed source/input bindings unchanged, or rebase and independently review.",
+    "Require every proposed ID absent; add checks in insertion_order and replace only the identified primary verification occurrence.",
+    "Retain finite57_tail108 registry object, original producer/certificate and all atlas/historical selections unchanged.",
+    "Parent independently reviews/applies. This proposal is not a newly executed combined full-manuscript run."
+  ],
+  "inherited_limits": [
+    "Written geometry/classification and saved ancestor interfaces remain explicit inherited inputs.",
+    "Scanner scope is object paths and row projections, not full skipped-subtree grammar validation.",
+    "Other existing stale catalogue status metadata is deliberately not rewritten by this narrow proposal."
+  ],
+  "preparation_history": [
+    {
+      "prepublication_draft_sha256": "0ede0186e0c7415876716f9b5af104c119df4f999ef7292b827b18bec316ffb4",
+      "change": "Metadata-only refresh to the parent\u2019s latest combined coverage observation, now binding sealed1228a4a7. Proposed catalogue, selection, checks and all actual interval receipts unchanged."
+    }
+  ]
+}

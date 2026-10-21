@@ -1,0 +1,513 @@
+"""Integral root-span presentations for the golden K3 inverse problem.
+
+For norm-two golden wall roots, let ``Q`` be the ordinary K3 intersection
+matrix and let ``B(x,y)=Q(tau*x,y)``, where ``tau**2=tau+1``.  The wall
+vectors alone need not be linearly dependent over ``Z`` when they are
+dependent over ``Z[phi]``.  The correct integral presentation therefore uses
+both ``delta_i`` and ``tau*delta_i``.  Its Gram matrix is
+
+    D(Q,B) = [[Q, B], [B, Q+B]].
+
+The saturated integral radical of ``D`` gives all relations among these
+generators.  Quotienting by it produces the canonical trace lattice generated
+by the proposed walls.  This module performs that quotient by an exact Smith
+decomposition whose right transformation is unimodular; merely clearing
+denominators in a rational nullspace would not certify saturation.
+
+The routines are exact lattice and Gram gates.  They do not prove that the
+listed roots are effective irreducible curves or that they form a complete
+nef chamber.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from fractions import Fraction
+from typing import Sequence
+
+from sympy import Matrix as SympyMatrix
+from sympy import ZZ
+from sympy.matrices.normalforms import smith_normal_form
+from sympy.polys.matrices import DomainMatrix
+from sympy.polys.matrices.normalforms import smith_normal_decomp
+
+from coxeter_polytopes.exact.golden import Golden, ZERO
+from coxeter_polytopes.exact.matrix import Inertia, determinant, inertia
+
+from .k3_design import recover_field_gram
+
+
+IntegralGram = Sequence[Sequence[int | Fraction]]
+
+
+def _coerce_two_grams(
+    curve_gram: IntegralGram,
+    correspondence_gram: IntegralGram,
+) -> tuple[list[list[int]], list[list[int]]]:
+    q_fraction = [[Fraction(entry) for entry in row] for row in curve_gram]
+    b_fraction = [
+        [Fraction(entry) for entry in row] for row in correspondence_gram
+    ]
+    size = len(q_fraction)
+    if any(len(row) != size for row in q_fraction):
+        raise ValueError("the curve Gram matrix must be square")
+    if len(b_fraction) != size or any(len(row) != size for row in b_fraction):
+        raise ValueError("the two Gram matrices must be square and equal-sized")
+    if any(
+        q_fraction[i][j] != q_fraction[j][i]
+        or b_fraction[i][j] != b_fraction[j][i]
+        for i in range(size)
+        for j in range(i)
+    ):
+        raise ValueError("the two Gram matrices must be symmetric")
+    if any(
+        entry.denominator != 1
+        for gram in (q_fraction, b_fraction)
+        for row in gram
+        for entry in row
+    ):
+        raise ValueError("the two Gram matrices must be integral")
+    if any(q_fraction[i][i] != -2 or b_fraction[i][i] != -2 for i in range(size)):
+        raise ValueError("norm-two K3 wall generators require Q_ii=B_ii=-2")
+    return (
+        [[entry.numerator for entry in row] for row in q_fraction],
+        [[entry.numerator for entry in row] for row in b_fraction],
+    )
+
+
+def doubled_trace_gram(
+    curve_gram: IntegralGram,
+    correspondence_gram: IntegralGram,
+) -> tuple[tuple[int, ...], ...]:
+    """Return the trace Gram matrix on ``(delta_i, tau*delta_i)``.
+
+    In the ordered basis with all ``delta_i`` first and all ``tau*delta_i``
+    second, self-adjointness and ``tau**2=tau+1`` give the four blocks
+    ``Q, B, B, Q+B``.
+    """
+
+    q, b = _coerce_two_grams(curve_gram, correspondence_gram)
+    size = len(q)
+    result = [[0 for _ in range(2 * size)] for _ in range(2 * size)]
+    for i in range(size):
+        for j in range(size):
+            result[i][j] = q[i][j]
+            result[i][size + j] = b[i][j]
+            result[size + i][j] = b[i][j]
+            result[size + i][size + j] = q[i][j] + b[i][j]
+    return tuple(tuple(row) for row in result)
+
+
+def golden_action_matrix(wall_count: int) -> tuple[tuple[int, ...], ...]:
+    """Return multiplication by ``phi`` on ``Z[phi]**wall_count``.
+
+    Coordinates are ordered as ``(x, y)`` for ``x+phi*y``.  Thus
+    ``phi*(x+phi*y)=y+phi*(x+y)``.
+    """
+
+    if wall_count < 0:
+        raise ValueError("wall_count must be nonnegative")
+    size = 2 * wall_count
+    action = [[0 for _ in range(size)] for _ in range(size)]
+    for i in range(wall_count):
+        action[i][wall_count + i] = 1
+        action[wall_count + i][i] = 1
+        action[wall_count + i][wall_count + i] = 1
+    return tuple(tuple(row) for row in action)
+
+
+def _integer_tuple(matrix: SympyMatrix) -> tuple[tuple[int, ...], ...]:
+    rows: list[tuple[int, ...]] = []
+    for i in range(matrix.rows):
+        row: list[int] = []
+        for j in range(matrix.cols):
+            entry = matrix[i, j]
+            if entry.is_Integer is not True:
+                raise ArithmeticError("an expected unimodular transform is nonintegral")
+            row.append(int(entry))
+        rows.append(tuple(row))
+    return tuple(rows)
+
+
+@dataclass(frozen=True, slots=True)
+class K3RootPresentation:
+    """Canonical trace lattice generated by a completed two-Gram wall system."""
+
+    wall_count: int
+    field_rank: int
+    doubled_gram: tuple[tuple[int, ...], ...]
+    generator_change: tuple[tuple[int, ...], ...]
+    quotient_lifts: tuple[tuple[int, ...], ...]
+    saturated_radical_basis: tuple[tuple[int, ...], ...]
+    quotient_gram: tuple[tuple[int, ...], ...]
+    quotient_action: tuple[tuple[int, ...], ...]
+    trace_inertia: Inertia
+    discriminant: int
+    discriminant_group_invariants: tuple[int, ...]
+
+    @property
+    def trace_rank(self) -> int:
+        return 2 * self.field_rank
+
+    @property
+    def radical_rank(self) -> int:
+        return 2 * self.wall_count - self.trace_rank
+
+    @property
+    def doubled_inertia(self) -> Inertia:
+        """Inertia of the degenerate generator presentation ``D(Q,B)``."""
+
+        return Inertia(
+            self.trace_inertia.positive,
+            self.trace_inertia.negative,
+            self.radical_rank,
+        )
+
+    @property
+    def is_even(self) -> bool:
+        return all(self.quotient_gram[i][i] % 2 == 0 for i in range(self.trace_rank))
+
+
+def build_k3_root_presentation(
+    curve_gram: IntegralGram,
+    correspondence_gram: IntegralGram,
+) -> K3RootPresentation:
+    """Build the saturated integral quotient presented by the wall generators.
+
+    The right transformation in the Smith decomposition is unimodular.  Its
+    final columns are therefore a *saturated* basis of the integral radical,
+    and its initial columns descend to a genuine ``Z``-basis of the quotient.
+    This is stronger than choosing arbitrary independent wall columns or a
+    denominator-cleared rational kernel.
+    """
+
+    doubled = doubled_trace_gram(curve_gram, correspondence_gram)
+    size = len(doubled)
+    domain_matrix = DomainMatrix(
+        [[ZZ(entry) for entry in row] for row in doubled],
+        (size, size),
+        ZZ,
+    )
+    normal, _, right = smith_normal_decomp(domain_matrix)
+    normal_matrix = normal.to_Matrix()
+    right_matrix = right.to_Matrix()
+    diagonal = tuple(int(normal_matrix[i, i]) for i in range(size))
+    trace_rank = sum(entry != 0 for entry in diagonal)
+    if any(diagonal[i] == 0 for i in range(trace_rank)) or any(
+        diagonal[i] != 0 for i in range(trace_rank, size)
+    ):
+        raise ArithmeticError("Smith diagonal did not place its radical last")
+    if trace_rank % 2:
+        raise ArithmeticError("a golden trace presentation must have even rank")
+    if abs(int(right_matrix.det())) != 1:
+        raise ArithmeticError("Smith right transformation is not unimodular")
+
+    doubled_matrix = SympyMatrix(doubled)
+    quotient_lifts = right_matrix[:, :trace_rank]
+    radical_basis = right_matrix[:, trace_rank:]
+    if doubled_matrix * radical_basis != SympyMatrix.zeros(size, size - trace_rank):
+        raise ArithmeticError("Smith radical columns do not annihilate the Gram matrix")
+
+    quotient_gram_matrix = quotient_lifts.T * doubled_matrix * quotient_lifts
+    if quotient_gram_matrix.det() == 0:
+        raise ArithmeticError("the saturated quotient Gram matrix is degenerate")
+    if any(quotient_gram_matrix[i, i] % 2 for i in range(trace_rank)):
+        raise ArithmeticError("the quotient of an even presentation became odd")
+
+    action_matrix = SympyMatrix(golden_action_matrix(size // 2))
+    if action_matrix * action_matrix != action_matrix + SympyMatrix.eye(size):
+        raise ArithmeticError("the standard golden action has the wrong polynomial")
+    if action_matrix.T * doubled_matrix != doubled_matrix * action_matrix:
+        raise ArithmeticError("the standard golden action is not self-adjoint")
+
+    transported_action = right_matrix.inv() * action_matrix * right_matrix
+    if transported_action[:trace_rank, trace_rank:] != SympyMatrix.zeros(
+        trace_rank, size - trace_rank
+    ):
+        raise ArithmeticError("the saturated radical is not golden-action invariant")
+    quotient_action_matrix = transported_action[:trace_rank, :trace_rank]
+    quotient_action = _integer_tuple(quotient_action_matrix)
+    if (
+        quotient_action_matrix * quotient_action_matrix
+        != quotient_action_matrix + SympyMatrix.eye(trace_rank)
+    ):
+        raise ArithmeticError("the descended golden action has the wrong polynomial")
+    if (
+        quotient_action_matrix.T * quotient_gram_matrix
+        != quotient_gram_matrix * quotient_action_matrix
+    ):
+        raise ArithmeticError("the descended golden action is not self-adjoint")
+
+    quotient_gram = _integer_tuple(quotient_gram_matrix)
+    quotient_smith = smith_normal_form(quotient_gram_matrix, domain=ZZ)
+    discriminant_invariants = tuple(
+        abs(int(quotient_smith[i, i]))
+        for i in range(trace_rank)
+        if abs(int(quotient_smith[i, i])) > 1
+    )
+
+    return K3RootPresentation(
+        wall_count=size // 2,
+        field_rank=trace_rank // 2,
+        doubled_gram=doubled,
+        generator_change=_integer_tuple(right_matrix),
+        quotient_lifts=_integer_tuple(quotient_lifts),
+        saturated_radical_basis=_integer_tuple(radical_basis),
+        quotient_gram=quotient_gram,
+        quotient_action=quotient_action,
+        trace_inertia=inertia(quotient_gram),
+        discriminant=int(quotient_gram_matrix.det()),
+        discriminant_group_invariants=discriminant_invariants,
+    )
+
+
+@dataclass(frozen=True, slots=True)
+class K3RootPresentationAudit:
+    """Rank, place-signature, and trace-signature audit for a target dimension."""
+
+    presentation: K3RootPresentation
+    hyperbolic_dimension: int
+    identity_inertia: Inertia
+    conjugate_inertia: Inertia
+
+    @property
+    def expected_field_rank(self) -> int:
+        return self.hyperbolic_dimension + 1
+
+    @property
+    def expected_field_corank(self) -> int:
+        return self.presentation.wall_count - self.expected_field_rank
+
+    @property
+    def expected_trace_inertia(self) -> Inertia:
+        return Inertia(1, 2 * self.hyperbolic_dimension + 1, 0)
+
+    @property
+    def expected_doubled_inertia(self) -> Inertia:
+        return Inertia(
+            1,
+            2 * self.hyperbolic_dimension + 1,
+            2 * self.expected_field_corank,
+        )
+
+    @property
+    def passes(self) -> bool:
+        field_corank = self.presentation.wall_count - self.presentation.field_rank
+        return (
+            self.presentation.field_rank == self.expected_field_rank
+            and field_corank == self.expected_field_corank
+            and self.identity_inertia
+            == Inertia(
+                self.hyperbolic_dimension,
+                1,
+                self.expected_field_corank,
+            )
+            and self.conjugate_inertia
+            == Inertia(
+                self.expected_field_rank,
+                0,
+                self.expected_field_corank,
+            )
+            and self.presentation.trace_inertia == self.expected_trace_inertia
+            and self.presentation.doubled_inertia == self.expected_doubled_inertia
+            and self.presentation.is_even
+        )
+
+
+def audit_k3_root_presentation(
+    curve_gram: IntegralGram,
+    correspondence_gram: IntegralGram,
+    *,
+    hyperbolic_dimension: int,
+) -> K3RootPresentationAudit:
+    """Audit a completed two-Gram system against a hyperbolic target."""
+
+    if hyperbolic_dimension < 1:
+        raise ValueError("hyperbolic_dimension must be positive")
+    presentation = build_k3_root_presentation(curve_gram, correspondence_gram)
+    field_gram = recover_field_gram(curve_gram, correspondence_gram)
+    return K3RootPresentationAudit(
+        presentation=presentation,
+        hyperbolic_dimension=hyperbolic_dimension,
+        identity_inertia=inertia(field_gram, embedding=0),
+        conjugate_inertia=inertia(field_gram, embedding=1),
+    )
+
+
+def _inverse_golden(matrix: Sequence[Sequence[Golden]]) -> list[list[Golden]]:
+    size = len(matrix)
+    work = [
+        [Golden.coerce(matrix[i][j]) for j in range(size)]
+        + [Golden(int(i == j)) for j in range(size)]
+        for i in range(size)
+    ]
+    for column in range(size):
+        pivot = next(
+            (row for row in range(column, size) if work[row][column]),
+            None,
+        )
+        if pivot is None:
+            raise ZeroDivisionError("the anchor Gram matrix is singular")
+        work[column], work[pivot] = work[pivot], work[column]
+        pivot_value = work[column][column]
+        work[column] = [entry / pivot_value for entry in work[column]]
+        for row in range(size):
+            if row == column or not work[row][column]:
+                continue
+            factor = work[row][column]
+            work[row] = [
+                work[row][j] - factor * work[column][j]
+                for j in range(2 * size)
+            ]
+    return [row[size:] for row in work]
+
+
+@dataclass(frozen=True, slots=True)
+class VertexAnchorAudit:
+    """Exact Schur and oriented-side audit at one finite vertex."""
+
+    vertex: tuple[int, ...]
+    anchor: int
+    remainder: tuple[int, ...]
+    vertex_identity_inertia: Inertia
+    vertex_conjugate_inertia: Inertia
+    basis_identity_inertia: Inertia
+    basis_conjugate_inertia: Inertia
+    basis_nonsingular: bool
+    schur_residual: tuple[tuple[Golden, ...], ...]
+    outer_anchor_coordinates: tuple[tuple[int, Golden], ...]
+    schur_zero: bool
+    same_vertex_side: bool
+
+    @property
+    def passes(self) -> bool:
+        dimension = len(self.vertex)
+        return (
+            self.vertex_identity_inertia == Inertia(dimension, 0, 0)
+            and self.vertex_conjugate_inertia == Inertia(dimension, 0, 0)
+            and self.basis_identity_inertia == Inertia(dimension, 1, 0)
+            and self.basis_conjugate_inertia == Inertia(dimension + 1, 0, 0)
+            and self.basis_nonsingular
+            and self.schur_zero
+            and self.same_vertex_side
+        )
+
+
+def _audit_vertex_anchor_field_gram(
+    field_gram: Sequence[Sequence[Golden]],
+    vertex: Sequence[int],
+    anchor: int,
+) -> VertexAnchorAudit:
+    size = len(field_gram)
+    vertex_tuple = tuple(vertex)
+    if len(vertex_tuple) != len(set(vertex_tuple)):
+        raise ValueError("a vertex facet list contains a repeated index")
+    if any(index < 0 or index >= size for index in vertex_tuple):
+        raise IndexError("a vertex facet index is out of range")
+    if anchor < 0 or anchor >= size:
+        raise IndexError("the anchor facet index is out of range")
+    if anchor in vertex_tuple:
+        raise ValueError("the anchor facet must not contain the chosen vertex")
+
+    basis = (*vertex_tuple, anchor)
+    remainder = tuple(index for index in range(size) if index not in basis)
+    vertex_gram = [[field_gram[i][j] for j in vertex_tuple] for i in vertex_tuple]
+    basis_gram = [[field_gram[i][j] for j in basis] for i in basis]
+    basis_nonsingular = determinant(basis_gram) != ZERO
+
+    schur_residual: tuple[tuple[Golden, ...], ...] = ()
+    outer_coordinates: tuple[tuple[int, Golden], ...] = ()
+    schur_zero = False
+    same_side = False
+    if basis_nonsingular:
+        inverse = _inverse_golden(basis_gram)
+        coordinate_list: list[tuple[int, Golden]] = []
+        for wall in remainder:
+            covector = [field_gram[i][wall] for i in basis]
+            coordinates = [
+                sum(
+                    (inverse[i][j] * covector[j] for j in range(len(basis))),
+                    start=ZERO,
+                )
+                for i in range(len(basis))
+            ]
+            coordinate_list.append((wall, coordinates[-1]))
+        outer_coordinates = tuple(coordinate_list)
+
+        residual_rows: list[tuple[Golden, ...]] = []
+        for left in remainder:
+            row: list[Golden] = []
+            left_covector = [field_gram[i][left] for i in basis]
+            for right in remainder:
+                right_covector = [field_gram[i][right] for i in basis]
+                prediction = sum(
+                    (
+                        left_covector[i]
+                        * inverse[i][j]
+                        * right_covector[j]
+                        for i in range(len(basis))
+                        for j in range(len(basis))
+                    ),
+                    start=ZERO,
+                )
+                row.append(field_gram[left][right] - prediction)
+            residual_rows.append(tuple(row))
+        schur_residual = tuple(residual_rows)
+        schur_zero = all(not entry for row in schur_residual for entry in row)
+        same_side = all(value.sign(0) > 0 for _, value in outer_coordinates)
+
+    return VertexAnchorAudit(
+        vertex=vertex_tuple,
+        anchor=anchor,
+        remainder=remainder,
+        vertex_identity_inertia=inertia(vertex_gram, embedding=0),
+        vertex_conjugate_inertia=inertia(vertex_gram, embedding=1),
+        basis_identity_inertia=inertia(basis_gram, embedding=0),
+        basis_conjugate_inertia=inertia(basis_gram, embedding=1),
+        basis_nonsingular=basis_nonsingular,
+        schur_residual=schur_residual,
+        outer_anchor_coordinates=outer_coordinates,
+        schur_zero=schur_zero,
+        same_vertex_side=same_side,
+    )
+
+
+def audit_vertex_anchor(
+    curve_gram: IntegralGram,
+    correspondence_gram: IntegralGram,
+    vertex: Sequence[int],
+    anchor: int,
+) -> VertexAnchorAudit:
+    """Audit one ``vertex + outside facet`` Gram basis.
+
+    If a rank-``d+1`` Gram realization has a finite simple vertex on ``d``
+    facets, adjoining any facet outside that vertex gives a basis.  The four
+    remaining facets in the 9/14 problem have zero Schur complement.  Their
+    coefficients along the anchor direction must all be positive because all
+    nonincident facets lie on the same oriented side of the vertex.
+    """
+
+    q, b = _coerce_two_grams(curve_gram, correspondence_gram)
+    field_gram = recover_field_gram(q, b)
+    return _audit_vertex_anchor_field_gram(field_gram, vertex, anchor)
+
+
+def audit_all_vertex_anchors(
+    curve_gram: IntegralGram,
+    correspondence_gram: IntegralGram,
+    vertices: Sequence[Sequence[int]],
+) -> tuple[VertexAnchorAudit, ...]:
+    """Audit every ``(finite vertex, outside anchor facet)`` pair."""
+
+    q, b = _coerce_two_grams(curve_gram, correspondence_gram)
+    field_gram = recover_field_gram(q, b)
+    size = len(field_gram)
+    audits: list[VertexAnchorAudit] = []
+    for vertex in vertices:
+        vertex_set = set(vertex)
+        for anchor in range(size):
+            if anchor not in vertex_set:
+                audits.append(
+                    _audit_vertex_anchor_field_gram(field_gram, vertex, anchor)
+                )
+    return tuple(audits)

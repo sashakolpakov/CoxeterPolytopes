@@ -1,0 +1,249 @@
+{
+  "algorithm": {
+    "directed_cycle_orientation": "choose the identity-positive square root and negate it for the acute directed three-cycle",
+    "golden_square_root_solver": "for A+B*phi=(m+n*phi)^2, t=n^2 solves 5*t^2-(4*A+2*B)*t+B^2=0; every root is multiplied back exactly",
+    "gram_determinant": "8-2*(c12+c23+c31)+2*b123",
+    "principal_ideal_squareclass_factorization": "exact rational-norm factorization, inert/ramified valuations, split-prime Hensel valuations, and the conjugate unit-sign class",
+    "reason": "a complete three-node graph has three nonorthogonal edges",
+    "squareclass_join": "group 6874 nonzero edge values by element squareclass; join bucket triples by XOR instead of materializing the cubic edge product",
+    "stream_digests_freeze_every_canonical_record": true,
+    "stream_materialized": false,
+    "zero_edge_removed": true
+  },
+  "counts": {
+    "compatible_bucket_triples": 27088,
+    "conjugate_nonpositive_rejections": 2134256,
+    "conjugate_positive_definite_packets": 2633885,
+    "edge_alphabet": 6875,
+    "element_squareclass_buckets": 3661,
+    "integral_golden_square_product_packets": 4768141,
+    "maximum_bucket_size": 109,
+    "nonzero_edge_values": 6874,
+    "raw_selected_degenerate": 1,
+    "raw_unordered_nonzero_edge_multisets": 54158527500,
+    "retained_selected_degenerate": 0,
+    "retained_selected_lorentzian": 2633885,
+    "retained_selected_positive_definite": 0,
+    "zero_edge_values": 1
+  },
+  "determinant_logic": {
+    "conjugate_requirement": "strictly positive determinant; the conjugate form is positive definite and the three frame roots remain independent",
+    "observed_retained_result": "all 2633885 packets passing conjugate positivity are already selected-Lorentzian; no selected-degenerate packet survives",
+    "selected_degenerate_compact_rule": "count universally, but reject for a compact reflection target: an affine/parabolic Coxeter subdiagram produces a parabolic element, whereas a cocompact lattice contains no parabolic element",
+    "selected_universal_possibilities": [
+      "positive definite",
+      "degenerate",
+      "Lorentzian"
+    ]
+  },
+  "outcome": {
+    "Qsqrt5_H22_H29_status": "OPEN",
+    "complete_local_triangle_tranche": true,
+    "dotted_edges_included": true,
+    "new_high_rank_nonexistence_proof": false,
+    "selected_positive_zero_is_not_a_no_go": "complete nonorthogonal triangles are not forced in a connected high-rank frame, while a selected-Lorentzian three-node restriction is locally allowed inside a global index-one form"
+  },
+  "schema": "golden-agcat-full-triangle-packets-0.1.0",
+  "scope": {
+    "canonicalization": "unordered edge-product multiset, equivalently modulo all S3 vertex permutations",
+    "edge_alphabet": "the complete 6875-element Coxeter-filtered independent-frame length-two alphabet from the golden H22--H29 AGCat manifest",
+    "field": "Q(sqrt(5))",
+    "frame_bound": 62,
+    "graph": "complete nonorthogonality graph on three nodes",
+    "strict_local_stage_warning": "This is the complete local three-node tranche only. It does not enumerate compatible rank-23--30 connected graphs, longer cycles, ideal gauges, orders, conductor lattices, or Vinberg hosts. A connected high-rank frame need not contain a complete nonorthogonal triangle; three-node induced subgraphs can be trees or contain zero edges, and no universal triangular three-face is asserted."
+  },
+  "strata": [
+    {
+      "conjugate_determinant_sign": -1,
+      "count": 509019,
+      "edge_kinds": [
+        "dotted",
+        "dotted",
+        "dotted"
+      ],
+      "identity_positive_root_conjugate_sign": -1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 1,
+      "count": 1826231,
+      "edge_kinds": [
+        "dotted",
+        "dotted",
+        "dotted"
+      ],
+      "identity_positive_root_conjugate_sign": -1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": -1,
+      "count": 1586565,
+      "edge_kinds": [
+        "dotted",
+        "dotted",
+        "dotted"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 1,
+      "count": 753359,
+      "edge_kinds": [
+        "dotted",
+        "dotted",
+        "dotted"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": -1,
+      "count": 7750,
+      "edge_kinds": [
+        "dotted",
+        "dotted",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": -1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 1,
+      "count": 38357,
+      "edge_kinds": [
+        "dotted",
+        "dotted",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": -1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": -1,
+      "count": 30560,
+      "edge_kinds": [
+        "dotted",
+        "dotted",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 1,
+      "count": 15318,
+      "edge_kinds": [
+        "dotted",
+        "dotted",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": -1,
+      "count": 42,
+      "edge_kinds": [
+        "dotted",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": -1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 1,
+      "count": 442,
+      "edge_kinds": [
+        "dotted",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": -1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": -1,
+      "count": 315,
+      "edge_kinds": [
+        "dotted",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 1,
+      "count": 173,
+      "edge_kinds": [
+        "dotted",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": -1,
+      "count": 1,
+      "edge_kinds": [
+        "finite",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": -1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 1,
+      "count": 4,
+      "edge_kinds": [
+        "finite",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": -1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": -1,
+      "count": 3,
+      "edge_kinds": [
+        "finite",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 1,
+      "count": 1,
+      "edge_kinds": [
+        "finite",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": -1
+    },
+    {
+      "conjugate_determinant_sign": 0,
+      "count": 1,
+      "edge_kinds": [
+        "finite",
+        "finite",
+        "finite"
+      ],
+      "identity_positive_root_conjugate_sign": 1,
+      "selected_determinant_sign": 0
+    }
+  ],
+  "stream_digests": {
+    "all_integral_square_product_packets_sha256": "41386c1bfb64c497acc2ddb967c9a0d646f82e67dfc8907b8bc7d3b50e85bbe3",
+    "conjugate_positive_packets_sha256": "8be12b4371f49e1a0dd35f2c290c4e5735e64da56dc209655d1e0af5b49476b6",
+    "record_format": "sorted edges c1;c2;c3;negative directed cycle;determinant, each golden integer encoded as decimal a,b and terminated by newline"
+  }
+}

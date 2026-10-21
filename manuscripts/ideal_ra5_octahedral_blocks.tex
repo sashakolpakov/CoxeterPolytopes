@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref,xurl}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Octahedral facet blocks in a specified\linebreak ideal right-angled five-dimensional spectrum}
+\author{Coxeter Polytopes Frontier Project}
+\date{18 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Restrict the four-facets of an entirely ideal right-angled hyperbolic
+five-polytope to the regular24-cell, its facet double, and one explicit
+sixteen-cell polytope. The last type splits into six-facet octahedral
+blocks under adjacency along24-vertex ridges. A block has at most two
+common adjacent facets. A coloring theorem then excludes the previously
+surviving count of30 sixteen-cell facets, improving the necessary counts
+to36 such facets and84 doubles. The spectrum itself remains unexcluded;
+no new dimension ceiling or geometric example is asserted.
+\end{abstract}
+
+\section{Scope and exact input}
+Let $C$ be the regular ideal right-angled hyperbolic24-cell and $D$ its
+reflection double across one facet. Let $T$ be the particular polytope
+obtained from $D$ by successive reflection doubles across the retained
+facets with native unit normals
+\[
+ (1,0,1,-1,0),\quad(1,0,1,0,-1),\quad(1,0,1,1,0)
+\]
+in metric $\operatorname{diag}(-1,1,1,1,1)$. The inherited doubling
+argument proves the halfspace-union identity and finite volume at each
+step. Its frozen exact certificate lists all198 walls and258 vertices
+of $T$. This paper assumes every four-facet of $P$ is isometric to
+$C,D$, or this particular $T$. It makes no classification assumption
+about other ideal right-angled four-polytopes.
+
+Write $x,y,z$ for these three facet counts. The predecessor carrier and
+cusp-count theorems, with the same spectrum hypothesis, give
+\begin{equation}\label{eq:counts}
+ y=3z-24,\qquad 6\mid z,\qquad z\ge30.
+\end{equation}
+They are internal proved inputs documented separately, rather than new
+external assumptions. Our only additional published theorem is the
+Andr\'asfai--Erd\H{o}s--S\'os coloring theorem~\cite{AES}.
+
+Exactly four ridges of $T$ have24 vertices. Their native unit normals,
+in saved order5,14,30,37, have Gram matrix
+\begin{equation}\label{eq:gram}
+ \begin{pmatrix}1&0&0&-1\\0&1&-1&0\\0&-1&1&0\\-1&0&0&1\end{pmatrix}.
+\end{equation}
+Both opposite-pair sums are positive multiples of the same ideal ray,
+saved vertex85. Each of these three-ridges has26 polygon faces:
+twelve triangles, twelve quadrilaterals and two hexagons. Precisely
+the two hexagons are its intersections with the other24-vertex ridges
+of $T$. Complete rational reconstruction of all104 records verifies
+these statements. Neither $C$ nor $D$ has a24-vertex ridge.
+
+\section{The octahedral partition}
+\begin{lemma}\label{lem:blocks}
+The graph $H$ on $T$ facets, with edges corresponding to24-vertex
+common ridges, is a disjoint union of induced $K_{2,2,2}$ graphs.
+Every block induces the same octahedral graph in the full facet graph.
+\end{lemma}
+\begin{proof}
+Every $T$ has exactly four such ridges, with distinct neighboring
+facets, all of type $T$. At a shared24-vertex ridge, the two hexagons
+are intrinsically identifiable. Seen from either adjacent $T$, they
+are exactly the intersections with its other24-vertex ridges. Thus
+the two corresponding neighboring facets are adjacent in $H$ to both
+ends of this edge. A two-face is contained in exactly three ambient
+facets, since its finite relative interior has a right-angled simplex
+link; the correspondence therefore identifies actual facets.
+Matrix~\eqref{eq:gram} says the neighborhood of each vertex induces
+a four-cycle. The opposite pairs are asymptotic, so cannot be adjacent
+even in the full facet graph.
+
+For completeness, a finite four-regular locally four-cycle graph is
+octahedral component by component. Give the neighbors of $v$ cyclic
+names $a,b,c,d$. The fourth neighbor $w$ of $a$ lies outside this set.
+The four-cycle in its neighborhood forces $w$ adjacent to $b,d$ and
+not to $v$. Now the neighborhood of $b$ is $v,a,c,w$; its four-cycle
+forces $w$ adjacent to $c$. All six degrees are filled by the resulting
+octahedron. The same description of opposite pairs inside its facets
+excludes extra diagonals in the full graph.
+\end{proof}
+
+\begin{lemma}\label{lem:common}
+At most two facets are adjacent to every member of an octahedral block.
+\end{lemma}
+\begin{proof}
+Use ambient Lorentz signature$(5,1)$. Choose a block normal $n$ and
+its four neighbors $r_i$ in $H$. Their span has two positive directions
+and a one-dimensional null radical $v$, by~\eqref{eq:gram} and its
+opposite-pair sums. Adjoining $n$ gives a four-dimensional space $U$
+with signature$(3,0,1)$. The sixth normal $m$ is orthogonal to the
+four $r_i$ and satisfies $\langle n,m\rangle=-1$: the latter follows
+from an adjacent facet's opposite pair in~\eqref{eq:gram}.
+Hence $m+n\in U^\perp$ is null. This orthogonal complement consists
+of one positive direction and radical $v$, so $m+n$ is a multiple of
+$v$ and all six block normals span $U$.
+
+A common adjacent facet has unit normal in $U^\perp$. Choose a unit
+positive vector $e$ there. Such normals have form $e+tv$ or $-e+tv$.
+Two with the same sign have product one, whereas distinct outward
+normals of an acute polytope have nonpositive product. At most two
+are possible.
+\end{proof}
+
+\section{The coloring obstruction}
+\begin{lemma}\label{lem:clique}
+The full facet-adjacency graph of an entirely ideal right-angled
+hyperbolic five-polytope is $K_5$-free.
+\end{lemma}
+\begin{proof}
+Five pairwise adjacent facets would have orthonormal unit normals
+$n_1,\ldots,n_5$. For a strict timelike interior vector $q$, put
+\[
+ p=q-\sum_i\langle q,n_i\rangle n_i.
+\]
+Then $\langle p,p\rangle=\langle q,q\rangle-
+\sum_i\langle q,n_i\rangle^2<0$, and $p$ has the same time orientation
+as $q$. For any other outward normal $m$,
+\[
+ \langle p,m\rangle=\langle q,m\rangle-
+ \sum_i\langle q,n_i\rangle\langle n_i,m\rangle
+ \le\langle q,m\rangle<0.
+\]
+Thus $p$ normalizes to an actual finite vertex on the five selected
+facets, contrary to ideality.
+\end{proof}
+
+\begin{theorem}
+Under the stated three-type facet restriction, $z\ge36$ and $y\ge84$.
+\end{theorem}
+\begin{proof}
+Let $G$ be the full ridge-adjacency graph on the $z$ facets of type $T$.
+Every $T$ has22 ridges with14 or24 vertices, each shared with a distinct
+$T$, so $\delta(G)\ge22$. Suppose $z=30$.
+By Lemma~\ref{lem:clique}, $G$ is $K_5$-free. Theorem1.1 of~\cite{AES},
+with its parameter $r=5$, gives four-colorability when
+$\delta(G)>8z/11$, which holds since $22>240/11$.
+
+Each nonempty color class has size at most eight, since its vertices
+need22 neighbors outside it. Hence four nonempty classes have sizes
+$(6,8,8,8)$ or$(7,7,8,8)$. Vertices in an eight-element class are
+adjacent to all vertices outside their class. Vertices in a seven-element
+class miss at most one vertex outside their class.
+
+Consider one of the five disjoint octahedral blocks from
+Lemma~\ref{lem:blocks}. Three colors would make its three opposite
+pairs monochromatic. If the omitted class has size eight, all eight
+vertices are common neighbors. If the sizes are$(6,8,8,8)$ and the
+omitted class has size six, all six are common neighbors. In the
+remaining case the omitted class has size seven and only the two
+block vertices in the other seven-element class can miss its members,
+at most one each. There are at least five common neighbors. Each
+case contradicts Lemma~\ref{lem:common}.
+
+Thus the block uses four colors, with exactly one bichromatic opposite
+pair. Neither endpoint of that nonedge can be in an eight-element
+class. The part sizes must therefore be$(7,7,8,8)$, with the split
+pair in the two seven-element classes. The other pairs use the two
+eight-element classes. Every block has color counts$(1,1,2,2)$.
+Five blocks would give$(5,5,10,10)$ instead of$(7,7,8,8)$, a contradiction.
+
+This excludes $z=30$. Equation~\eqref{eq:counts} now gives $z\ge36$
+and $y=3z-24\ge84$.
+\end{proof}
+
+\section{Reproduction and remaining scope}
+The new standard-library exact-fraction producer is
+\path{scripts/fresh_ideal_ra5_octahedral_blocks_20261018.py}; replay its
+saved certificate with \texttt{--verify}. It reconstructs the four
+ridge Gram and polygon-face data and exhausts all4096 four-colorings
+of a six-element block for each possible part-size vector. The full
+written proof, input hashes and verification scope are recorded in
+\path{results/ideal_ra5_octahedral_blocks_20261018.md} and the associated
+reproduction map. No optimizer, unbounded search, Lean compilation,
+or classification of unlisted facet types is used. The universal
+geometric arguments remain written proofs awaiting formalization.
+
+\begin{thebibliography}{1}
+\bibitem{AES} B.~Andr\'asfai, P.~Erd\H{o}s and V.~T.~S\'os,
+On the connection between chromatic number, maximal clique and minimal
+degree of a graph, \emph{Discrete Mathematics}8 (1974),205--218.
+\url{https://real.mtak.hu/110445/1/1974-18.pdf}.
+\end{thebibliography}
+\end{document}

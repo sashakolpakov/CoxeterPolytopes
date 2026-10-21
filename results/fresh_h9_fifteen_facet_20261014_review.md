@@ -1,0 +1,11 @@
+# Narrow review of the fifteen-facet port
+
+**PASS, source and proof scope only.** I read the frozen [engine](../scripts/fresh_h9_fifteen_facet_20261014_engine.py) and [incidence producer](../scripts/fresh_h9_fifteen_facet_20261014_incidence.py). No port or logical scope issue was found. The [review metadata](fresh_h9_fifteen_facet_20261014_review.json) binds both sources and the incidence certificate. This review does not rerun the incidence census, search joins or modular arithmetic.
+
+The engine consistently uses fifteen nodes and 105 pairs, while finite vertices retain rank nine and the full Lorentz Gram retains rank at most ten. A nonzero eleven-minor modulo 241 is a valid characteristic-zero obstruction in the inherited radical coefficient ring; these checks run only on fixed labels at most six. The category `≥7` is retained for the complete Lannér triangle and spherical I₂ logic and is skipped by those minor gates. No fourteen-facet-specific missing-triangle or maximum-label restriction is introduced.
+
+Unknown pairs are temporarily right, making the vertex tests a monotone spherical relaxation. Forced-right assignments, relation joins and shared table values give necessary conditions. Twin permutations preserve each minimal-nonface support individually, so retaining the same pending-constraint indices in the memoization key is safe. The imported finite/Lannér classifiers, residue map and complete six-node relation remain inherited dependencies rather than new independent checks here.
+
+For incidence, stellar subdivision at a face F does not change the old induced nerve on a support U when `F⊄U`. Intersecting the supports of known obstructions therefore gives a necessary eligibility condition. The source verifies every proposed automorphism on both old minimal nonfaces and vertices, and explicitly closes its cut orbits. The minimal-nonface and vertex formulas agree with a small face truncation. New obstructions are tested on the resulting fifteen-node nerve. The conclusion covers the saved codimension-two through five cuts of the 770 parents, not every fifteen-facet combinatorial type.
+
+The separate full-face and search replays are owned by the constructing agent; their outcomes are not silently incorporated into this source-only review.

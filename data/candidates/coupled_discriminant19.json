@@ -1,0 +1,122 @@
+{
+  "schema_version": "0.1.0",
+  "candidate_id": "coupled_discriminant19",
+  "dimension": 9,
+  "field": "Q(sqrt(5))",
+  "field_gram_blocks": [
+    {
+      "type": "matrix",
+      "entries": [
+        [
+          {"a": "0", "b": "-2"},
+          {"a": "0", "b": "1"}
+        ],
+        [
+          {"a": "0", "b": "1"},
+          {"a": "2", "b": "0"}
+        ]
+      ]
+    },
+    {
+      "type": "standard_lattice",
+      "name": "E8",
+      "sign": 1
+    }
+  ],
+  "field_determinant": {"a": "-1", "b": "-5"},
+  "field_determinant_norm": "-19",
+  "field_signatures": {
+    "identity": [9, 1, 0],
+    "conjugate": [10, 0, 0]
+  },
+  "trace_scalar": {"a": "-2/5", "b": "-1/5"},
+  "trace_lattice": "U + T19(-1) + E8(-1)^2",
+  "T19": [[2, 1], [1, 10]],
+  "coupled_trace_basis_change_columns": [
+    [-1, 1, -1, 0],
+    [-2, 2, -2, 1],
+    [2, -2, 3, -1],
+    [7, -6, 4, -1]
+  ],
+  "trace_basis_change_determinant": "1",
+  "trace_basis_change_verified": true,
+  "trace_determinant": "-19",
+  "trace_signature": [1, 19, 0],
+  "discriminant_group": "Z/19Z",
+  "self_adjoint_Z_phi_action_verified": true,
+  "primitive_k3_embedding_verified": true,
+  "primitive_extension_determinant": "-1",
+  "k3_transcendental_lattice": [[2, 1], [1, 10]],
+  "published_k3_match": {
+    "surface": "Shioda S19",
+    "neron_severi_lattice": "U + A18(-1)",
+    "transcendental_lattice": [[2, 1], [1, 10]],
+    "source": "Tetsuji Shioda, The elliptic K3 surfaces with a maximal singular fibre, Theorem 1.1 and Section 3",
+    "doi": "10.1016/j.crma.2003.07.007",
+    "url": "https://www.numdam.org/articles/10.1016/j.crma.2003.07.007/"
+  },
+  "explicit_k3_model": {
+    "type": "elliptic K3 with section",
+    "base_field": "Q",
+    "equation_shape": "y^2 = x^3 - 3*f(t)*x - 2*g(t)",
+    "f_coefficients_descending": [1, 6, 21, 50, 86, 114, 109, 74, 28],
+    "two_g_coefficients_descending": [2, 18, 90, 312, 816, 1692, 2832, 3864, 4272, 3746, 2517, 1167, 299],
+    "f_cubed_minus_g_squared": "-(27/4)*(4*t^5+15*t^4+38*t^3+61*t^2+62*t+59)",
+    "standard_discriminant": "-11664*(4*t^5+15*t^4+38*t^3+61*t^2+62*t+59)",
+    "singular_fibers": ["I19", "I1", "I1", "I1", "I1", "I1"],
+    "exact_polynomial_checks_verified": true,
+    "generator": "scripts/discriminant19_i19_model.py"
+  },
+  "eigen_positive_control": {
+    "field_vector": [
+      {"a": "2", "b": "0"},
+      {"a": "0", "b": "-1"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"}
+    ],
+    "field_form_square": {"a": "-2", "b": "-10"},
+    "identity_eigenspace_square": {"a": "14/5", "b": "32/5"},
+    "restriction_of_scalars_trace_square": "12",
+    "conclusion": "the distinguished real eigenspace has a nonempty positive cone"
+  },
+  "fixed_i19_fibration_marking": {
+    "status": "not_available",
+    "missing_datum": "an oriented integral isometry from the trace basis to Shioda's fiber-section-component basis, including its effective chamber",
+    "consequence": "eigen-nef nonemptiness for the fixed I19 fibration marking has not been tested"
+  },
+  "reflection_search": {
+    "method": "exact norm-two Vinberg height enumeration",
+    "control_vector": "(2,-phi,0^8)",
+    "control_square": "-2*(1+5*phi)",
+    "height_zero_root_system": "A1+E8",
+    "height_zero_root_count": 242,
+    "height_zero_simple_root_count": 9,
+    "identity_bound": 5,
+    "control_coordinates": ["1", "phi", "1+phi", "2*phi", "2+phi", "1+2*phi"],
+    "new_roots_by_level": [2, 1, 2, 1, 0, 7],
+    "prefix_wall_count": 22,
+    "hyperideal_extreme_ray": {
+      "active_facets": [0, 1, 2, 3, 4, 5, 8, 9, 13],
+      "norm": {"a": "115/2", "b": "-71/2"},
+      "verified_against_all_prefix_walls": true
+    },
+    "status": "bounded_prefix_not_compact_or_cofinite_later_roots_may_cut_the_witness",
+    "transcript": "data/candidates/h19_vinberg_prefix.json",
+    "generator": "scripts/build_h19_vinberg_transcript.py",
+    "diagnostic": "scripts/diagnose_h19_vinberg_prefix.py"
+  },
+  "geometric_status": "singular_k3_carrier_and_eigen_positive_cone_constructed_fixed_eigen_nef_and_reflectivity_unresolved",
+  "nonclaims": [
+    "No eigen-nef nonemptiness result has been proved for Shioda's fixed I19 fibration marking",
+    "The 22 walls are only the exact prefix through identity control-coordinate bound 5",
+    "Later roots may cut the archived hyperideal ray",
+    "Reflectivity, nonreflectivity, finite covolume, and compactness are not claimed"
+  ],
+  "generator": "scripts/coupled_discriminant19_candidate.py"
+}

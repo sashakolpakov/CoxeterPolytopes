@@ -1,0 +1,735 @@
+{
+  "all_checks_pass": true,
+  "artebani_sarti_lineage": {
+    "ambient_family": "y^2=x^3+a(t)x+b(t), with a(t) even and b(t) odd, carrying (x,y,t)->(-x,i*y,-t)",
+    "article": "https://doi.org/10.2969/jmsj/06720503",
+    "arxiv": "https://arxiv.org/abs/1102.4436",
+    "locator": "Example 6.3 and Proposition 1",
+    "novelty_scope": "new explicit carrier and exact Coxeter connection in this project; no claim that the normalized equation is absent from all prior literature",
+    "our_specialization": "a two-parameter simultaneous Noether--Lefschetz fiber enhancement at the two fixed base points: I2* at zero and II* at infinity"
+  },
+  "brandhorst_hofmann_handoff": {
+    "archived_action_certificate_sha256": "9aa30d14fddaa4c212c34642f391dd3476b17591254d0533ae8069cf836f908b",
+    "article": "https://doi.org/10.1017/fms.2023.50",
+    "database": "https://doi.org/10.5281/zenodo.10410278",
+    "exact_match": "same NS, fixed lattice, rootless <-4> coinvariant, nontrivial spinor discriminant action, and the same index-two (order-two,order-two) primitive glue; the prior certificate proves this integral action is Kondo tau_2 and the unique pure order-four database hit",
+    "existing_certificate_sha256": "85ec9fcb0633703d16600b86b03eb2c79a31919b5b38ad7296942890114c5953",
+    "full_group_row": "1.4.2.1",
+    "full_group_scope": "a separate compatible database realization supplies the commuting symplectic involution and C4 x C2 enrichment; the displayed equation itself certifies only the C4 row and does not claim that every very general X_(b,c) carries the extra involution",
+    "id": "0.4.2.2"
+  },
+  "checks": {
+    "archived_discriminant_action": true,
+    "bh_generic_ns": true,
+    "bh_global_order": true,
+    "bh_row": true,
+    "coinvariant_is_minus4": true,
+    "coinvariant_rootless": true,
+    "discriminant_actions_conjugate": true,
+    "discriminant_factorization": true,
+    "example_residual_discriminant": true,
+    "fiber_euler_sum_is_24": true,
+    "fixed_euler_generator": true,
+    "fixed_euler_square": true,
+    "fixed_q": true,
+    "fixed_rank_signature_determinant": true,
+    "fixed_smith": true,
+    "full_characteristic": true,
+    "lefschetz_excludes_picard_identity": true,
+    "literal_discriminant_action": true,
+    "literal_discriminant_q": true,
+    "ns_determinant": true,
+    "ns_q": true,
+    "ns_signature": true,
+    "ns_smith": true,
+    "outer_characteristic": true,
+    "outer_isometry": true,
+    "outer_lefschetz_alpha": true,
+    "outer_order": true,
+    "parameter_open_is_nonempty": true,
+    "primitive_glue_index": true,
+    "residual_at_a4_zero_factorization": true,
+    "residual_cubic_degree": true,
+    "residual_discriminant_factorization": true,
+    "source_all_checks_pass": true,
+    "source_glue_exact": true,
+    "target_coinvariant_match": true,
+    "target_fixed_match": true,
+    "trivial_lattice_rank_is_16": true,
+    "vinberg_finite_volume": true,
+    "vinberg_no_bad_or_hyperideal": true
+  },
+  "cohomology_and_fixed_loci": {
+    "bh_fingerprint": {
+      "fixed_points": "((10,),3,0,1)",
+      "fixed_points_square": "((),7,1,2)"
+    },
+    "fixed_euler_powers_1_2": {
+      "1": 16,
+      "2": 12
+    },
+    "full_characteristic": "(lambda - 1)**15*(lambda + 1)*(lambda**2 + 1)**3",
+    "generator": {
+      "derivation": "r=15,l=1 gives alpha=(r-l-2)/4=3 and n=2*alpha+4=10; the nontrivial base action forces every fixed curve to lie in a fixed fiber, hence it is rational",
+      "euler": 16,
+      "fixed_rational_curves": 3,
+      "isolated_points": 10
+    },
+    "generic_transcendental_rank": 6,
+    "h2_traces_powers_1_2": {
+      "1": 14,
+      "2": 10
+    },
+    "square": {
+      "euler": 12,
+      "fixed_positive_genus_curves": [
+        {
+          "count": 1,
+          "genus": 2
+        }
+      ],
+      "fixed_rational_curves": 7,
+      "isolated_points": 0,
+      "nikulin_invariants": [
+        16,
+        2,
+        1
+      ]
+    },
+    "transcendental_characteristic": "(lambda^2+1)^3"
+  },
+  "family": {
+    "Q_at_3": "9*(3*b + 9*c + 2)**2",
+    "a4": "t^2*(t^2-3)",
+    "a6": "t^3*(2+b*t^2+c*t^4)",
+    "affine_equation": "y^2 = x^3 + t^2*(t^2-3)*x + t^3*(2+b*t^2+c*t^4)",
+    "automorphism": "sigma(x,y,t)=(-x,i*y,-t)",
+    "disc_u_Q": "432*(3*b + 9*c + 2)**3*(27*b**2*c - 54*b*c + b - 432*c**2 - 9*c - 2)",
+    "discriminant": "-16*t^8*Q_(b,c)(t^2)",
+    "fibers": [
+      {
+        "euler": 8,
+        "kodaira": "I2*",
+        "place": "t=0",
+        "root_lattice": "D6(-1)",
+        "root_rank": 6,
+        "valuations_a4_a6_delta": [
+          2,
+          3,
+          8
+        ]
+      },
+      {
+        "euler_each": 1,
+        "kodaira": "I1",
+        "multiplicity": 6,
+        "place": "six roots of Q(t^2)",
+        "root_rank": 0,
+        "valuations_c4_delta": [
+          0,
+          1
+        ]
+      },
+      {
+        "euler": 10,
+        "kodaira": "II*",
+        "place": "t=infinity",
+        "root_lattice": "E8(-1)",
+        "root_rank": 8,
+        "valuations_a4_a6_delta": [
+          4,
+          5,
+          10
+        ]
+      }
+    ],
+    "global_order": 4,
+    "holomorphic_two_form": "dt wedge dx/y",
+    "homogeneous_a4": "T^2*(T^2-3*S^2)*S^4",
+    "homogeneous_a6": "T^3*(2*S^4+b*T^2*S^2+c*T^4)*S^5",
+    "open_nonempty_witness": {
+      "Q": "27*u**3 + 4*u**2 + 72*u + 108",
+      "Q_at_3": 1089,
+      "b": 0,
+      "c": 1,
+      "disc_u_Q": -254721456
+    },
+    "parameter_open": [
+      "c*(b+1)*(3*b+9*c+2)*(27*b^2*c-54*b*c+b-432*c^2-9*c-2) != 0",
+      "equivalently: c != 0, Q(0) != 0, disc_u(Q) != 0",
+      "disc_u(Q) != 0 also implies Q(3) != 0"
+    ],
+    "residual_cubic_Q": "108*b + 27*c**2*u**3 + u**2*(54*b*c + 4) + u*(27*b**2 + 108*c - 36) + 108",
+    "square": "sigma^2(x,y,t)=(x,-y,t)",
+    "two_form_multiplier": "-i"
+  },
+  "hyperbolic_handoff": {
+    "bad_edges": 0,
+    "classification": "finite_volume_noncompact",
+    "cusps": 5,
+    "dimension": 14,
+    "elliptic_edges": 704,
+    "facets": 17,
+    "finite_vertices": 89,
+    "hyperideal_vertices": 0,
+    "id": "R16-UE8D6-C2-H14-17",
+    "parabolic_neighborhood_audits": 8,
+    "published_identification": "Vinberg 1972 P14 / 14-vinb85.coxiter"
+  },
+  "kahler_chamber_handoff": {
+    "effectivity": "the displayed regular automorphism preserves a Kahler class; after Weyl transport to the archived complete 19-wall nef chamber, the exact integral action is the unique rank-15-fixed graph symmetry Kondo tau_2",
+    "fixed_section": "R16-UE8D6-C2-H14-17"
+  },
+  "neron_severi": {
+    "fiber_and_zero_section": "U",
+    "generic_exactness": {
+      "normalization_argument": "I2* and II* distinguish zero and infinity, so a fibration-preserving base isomorphism is t->lambda*t. After Weierstrass scaling, the normalized coefficient t^2(t^2-3) forces lambda^2=1; thus (b,c) retain two independent moduli.  Forgetting the marked fibration has discrete fibers because fiber and section classes are integral Neron--Severi classes.",
+      "parameter_moduli_dimension": 2,
+      "period_argument": "For a primitive order-four automorphism the transcendental lattice has only i and -i eigenvalues, so rank(T) and rho are even.  Since rho>=16, a strict jump gives rho>=18 and a primitive-eigenvalue period space of dimension at most one, contradicting the two-dimensional family.  Hence very general rho=16.",
+      "scope": "exact for the geometric generic/very general member; the witness (b,c)=(0,1) only proves the parameter open is nonempty, not that this named member has rho=16"
+    },
+    "gram": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2
+      ]
+    ],
+    "lower_bound_lattice": "U+E8(-1)+D6(-1)",
+    "rank_signature_determinant": [
+      16,
+      [
+        1,
+        15,
+        0
+      ],
+      -4
+    ],
+    "reducible_fiber_roots": "E8(-1)+D6(-1)",
+    "same_rank_saturation": "a proper even overlattice has index two and determinant one, hence would be even unimodular of signature (1,15); this is impossible since 1-15 is not divisible by 8",
+    "smith": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  "payload_sha256": "445992677f5e8a3a143ee9c0693db4d23cb83ebecbf52a1fdacf47bc1ae13207",
+  "picard_action": {
+    "characteristic_polynomial": "(lambda - 1)**15*(lambda + 1)",
+    "coinvariant": {
+      "class": "<-4>",
+      "gram": [
+        [
+          -4
+        ]
+      ],
+      "rootless": true
+    },
+    "d6_gram": [
+      [
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        -2,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        -2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2
+      ]
+    ],
+    "d6_outer_swap": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "description": "sigma fixes the fiber and zero-section classes.  The II* E8 graph has no nontrivial automorphism.  At I2*, sigma fixes the affine component met by the invariant zero section, and the stabilizer of that node in the affine D6 graph is {identity, spinor swap}.  Identity on D6 would give whole-H2 eigenspace ranks (r,l)=(16,0), contradicting Artebani--Sarti Proposition 1: r-l-2=4*alpha.  Therefore the component action is the nontrivial spinor swap.",
+    "discriminant_action": {
+      "archived_permutation": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "description": "nontrivial: it swaps the two spinor classes in A_D6=(Z/2)^2 and fixes the vector class",
+      "our_permutation": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "our_sorted_class_q_values": [
+        "0",
+        "1",
+        "1/2",
+        "1/2"
+      ],
+      "our_to_archived_class_identification": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    "fixed_lattice": {
+      "d6_fixed_gram": [
+        [
+          -2,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          -2,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          -2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          -4
+        ]
+      ],
+      "q_histogram_mod_2Z": {
+        "0": 1,
+        "1": 1,
+        "3/4": 2
+      },
+      "rank_signature_determinant": [
+        15,
+        [
+          1,
+          14,
+          0
+        ],
+        4
+      ],
+      "smith": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ]
+    },
+    "primitive_glue": {
+      "adjoined_vector": "alpha_5=(s+d)/2",
+      "coinvariant_order_two_class": "(alpha_5-alpha_6)/2",
+      "fixed_order_two_class": "(alpha_5+alpha_6)/2",
+      "index": 2,
+      "source_smith_pair": [
+        2,
+        2
+      ]
+    }
+  },
+  "schema": "ue8d6-order4-weierstrass-family-v1",
+  "theorem": "For (b,c) in the displayed nonempty Zariski open set, the very general minimal resolution of y^2=x^3+t^2(t^2-3)x+t^3(2+b*t^2+c*t^4) has NS=U+E8(-1)+D6(-1).  The primitive order-four automorphism sigma(x,y,t)=(-x,i*y,-t) induces the outer D6 spinor-node swap, hence realizes BH 0.4.2.2, Kondo tau_2, and the finite-volume noncompact H14/17 Vinberg P14 fixed-nef section."
+}

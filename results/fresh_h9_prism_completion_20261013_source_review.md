@@ -1,0 +1,15 @@
+# Independent source review of the six-cap prism completion
+
+**PASS for the stated mathematical scope.** This is a source and proof review of the [102-wall checker](../scripts/fresh_h9_prism_completion_20261013_verify.py), the [full-orbit checker](../scripts/fresh_h9_prism_completion_20261013_orbit_obstruction.py), and the [research report](fresh_h9_prism_completion_20261013.md). It is not a second execution of the complete root reconstruction or the 13,824 image-pairing tests.
+
+The six transported normals have exact norm two because the coordinate permutation preserves the seed Gram. The two fixed anchors follow from the checked column-difference identities and their four orthogonalities. Consequently the finite pair equalities are algebraic consequences of the source relations; the interval enclosures around these equalities are only consistency checks. The remaining strict dotted, center and escape signs use outward-rounded intervals. This distinction is correctly maintained in the source.
+
+The positive-semidefinite subset census is complete for subsets involving new walls: a dotted pair excludes positive semidefiniteness, and every remaining old wall must be a finite neighbor of every selected new wall. The enumerated common-neighbor subsets therefore contain every possible new affine circuit. The finite-vertex projection and subsequent ninth-wall tests support the stated three-vertex component and its frontier. None of those local checks is mistaken for a volume proof.
+
+The full weighted seed group has order 2,304. The only orthogonal eight-cliques are the two layers, so an automorphism either preserves or exchanges them. The distinguished matching forces the same permutation in both layers, while the second cross weight recovers the partition into two blocks of four. Independent permutations within these blocks, their exchange, and layer exchange exhaust the possibilities. The checker explicitly verifies the integer action on all sixteen seed vectors and the fixed seed sum.
+
+For each source row normal, evaluating its image on the common escape as `r*(M*y)` is the correct pairing transformation. It keeps the transformed test vector rational and introduces no unverified radical-field identification. The fixed timelike seed sum supplies a strict center for every source image. The strict future spacelike point and this center then expose an open patch of the sphere at infinity. The same argument remains valid after any inequalities are deleted.
+
+Thus the common-escape certificate excludes finite volume for **every selection from the 102 old walls and the 13,824 literal images of these six specified sources**. It does not exclude different source normals, a continuous family, or unrestricted completion of the host. Counting literal images rather than asserting that all mirrors are distinct is also appropriate.
+
+No mathematical correction was needed. This review is separate from the producer-free saved-certificate replays and rejection tests linked in the main report.

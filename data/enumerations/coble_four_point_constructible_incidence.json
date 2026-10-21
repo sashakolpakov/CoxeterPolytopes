@@ -1,0 +1,318 @@
+{
+  "P_derived_dependency_signatures": {
+    "rank15_60wall_input": {
+      "boundary_count": 5,
+      "boundary_frame_source": "P-derived de-scaling and square/intersection taxonomy",
+      "canonical_branch_selection": "smallest numerical conic-boundary index",
+      "center_dependency_acyclic": true,
+      "complete_pair_complement_set": true,
+      "direct_seed_curves": {
+        "actual_minus_two_curves": 10,
+        "all_CM_root_seeds_constructed": true,
+        "boundaries": 5,
+        "crossing_minus_one_curves": 10,
+        "cusp_lifts_deferred_to_general_Halphen_theorem": 35
+      },
+      "exceptional_basis_determinant_absolute": 1,
+      "naive_evaluation_surjectivity_passes": false,
+      "ordinary_line_intersection_centers": 6,
+      "plane_blowdown_count": 5,
+      "raw_surface_labels_read": false,
+      "residual_dependency_records": [
+        {
+          "complement": [
+            2,
+            3
+          ],
+          "pair": [
+            0,
+            1
+          ]
+        },
+        {
+          "complement": [
+            1,
+            3
+          ],
+          "pair": [
+            0,
+            2
+          ]
+        },
+        {
+          "complement": [
+            1,
+            2
+          ],
+          "pair": [
+            0,
+            3
+          ]
+        },
+        {
+          "complement": [
+            0,
+            3
+          ],
+          "pair": [
+            1,
+            2
+          ]
+        },
+        {
+          "complement": [
+            0,
+            2
+          ],
+          "pair": [
+            1,
+            3
+          ]
+        },
+        {
+          "complement": [
+            0,
+            1
+          ],
+          "pair": [
+            2,
+            3
+          ]
+        }
+      ],
+      "residual_root_curve_count": 6,
+      "root_dependency_grammar": "all two-subsets A of a four-set: pole(A) lies on chord(complement A)",
+      "standard_free_extension_steps_after_core": 0,
+      "tangency_chain_depth": 2,
+      "tangency_chains": 4,
+      "total_blowup_centers": 14
+    },
+    "rank18_48wall_input": {
+      "boundary_bipartition_sizes": [
+        4,
+        4
+      ],
+      "boundary_count": 8,
+      "boundary_frame_source": "unique P-derived parity/de-scaling frame",
+      "center_dependency_acyclic": true,
+      "center_dependency_depth": 1,
+      "complete_permutation_set": true,
+      "direct_seed_curves": {
+        "actual_minus_two_curves": 24,
+        "all_CM_root_seeds_constructed": true,
+        "boundaries": 8,
+        "crossing_minus_one_curves": 16
+      },
+      "naive_evaluation_surjectivity_passes": false,
+      "raw_surface_labels_read": false,
+      "root_curve_count": 24,
+      "root_dependency_grammar": "all bijections of two abstract four-sets",
+      "standard_free_extension_steps_after_core": 0,
+      "transverse_grid_centers": 16
+    }
+  },
+  "all_checks_pass": true,
+  "checks": {
+    "both_centers_are_acyclic": true,
+    "both_complete_four_point_cores_recovered": true,
+    "both_construct_all_CM_root_seeds": true,
+    "both_dependency_extractions_are_label_free": true,
+    "both_naive_free_predicates_fail": true,
+    "canonical_F3_core_nonempty_without_surface_template": true,
+    "no_Kondo_existence_used_in_incidence_gate": true,
+    "two_distinct_raw_inputs": true
+  },
+  "constructible_incidence_class": {
+    "P_only_membership_algorithm": [
+      "run the D_CobVin boundary/de-scaling/root/cusp/Vinberg gates",
+      "enumerate every numerical P2 or Hirzebruch contraction branch",
+      "derive and canonicalize the center/curve dependency hypergraph from intersection data",
+      "accept a complete four-point polar/chord or graph-projectivity core",
+      "require the complete dependency branch to end at the four-point core with zero remaining operations",
+      "never compare with a Kondo type, stored surface, or known output Gram"
+    ],
+    "certified_member_count": 2,
+    "exact_same_P_handoff": "The constructed actual (-2) and crossing (-1) curves realize every raw CM root.  D_CobVin Vinberg finite index and Kondo's root-exhaustion theorem exclude hidden roots; primitive-isotropic/Halphen theory realizes exactly the integral cusp lifts and excludes hidden (-1) curves.  Thus the full nef chamber is the input P.",
+    "independent_AG_pushback": "The four-point core forces characteristic three but does not compare with the surface catalogue.  Kondo's independent finite-Aut classification subsequently restricts every output to the characteristic-three rows of the nine full-NS list.",
+    "name": "D_CobVin^CI4",
+    "not_defined_as_union_of_two_archived_grams": true,
+    "prospective_extension_verifier": {
+      "certified_nonzero_extension_count": 0,
+      "counterexample_to_old_gate": "|O(2,0)| on P1xP1 is base-point-free and separable but is composed with a pencil, so its general divisor is reducible",
+      "repaired_curve_gate": "require either an explicit geometrically integral section certificate, or after base-cluster resolution image dimension at least two plus separability and the correct Bertini/avoidance hypotheses",
+      "status": "NOT_A_PROVED_NONEMPTINESS_THEOREM"
+    },
+    "proved_scope": {
+      "reason": "the only two certified inputs end at their complete four-point cores; no nonzero extension theorem is used",
+      "zero_extension_required": true
+    },
+    "strong_Coble_argument": "The P-derived disjoint smooth boundary curves sum to -2K on an iterated blowup of a rational minimal surface.  Intersection with each boundary component forces |-2K| to contain only that reduced boundary, and an effective -K would force half of a reduced boundary; hence |-K| is empty.",
+    "uniform_nonemptiness_argument": "Realize either complete four-point core explicitly on P1(F3); there are no remaining center or curve operations in the proved class."
+  },
+  "direction": "POLYTOPE_TO_CONSTRUCTIBLE_INCIDENCE_TO_STRONG_COBLE",
+  "four_point_projective_line_theorem": {
+    "common_nonemptiness_iff": {
+      "converse": "PGL2(F3)=S4 acts on P1(F3), and all six polar/chord determinants vanish",
+      "necessity_grid_integer_identity": "2*(lambda+1)-(2*lambda-1)=3",
+      "necessity_polar_integer_identity": "(lambda+1)-(lambda-2)=3",
+      "solution": "char=3, lambda=2=-1=1/2",
+      "statement": "Either complete four-point design is realizable over an algebraically closed field of characteristic not two iff the characteristic is three; modulo PGL2 the normalized point is lambda=2=-1=1/2.",
+      "surface_existence_imported": false,
+      "unique_normalized_four_set": true
+    },
+    "conic_polar_chord_design": {
+      "all_six_evaluation_ranks_at_char3_lambda2": {
+        "2": 6
+      },
+      "conditions_per_line": 3,
+      "conic": "x*z-y^2=0",
+      "linear_system": "O_P2(1)",
+      "polynomial_histogram": {
+        "(lambda - 1)*(lambda + 1)": 2,
+        "1 - 2*lambda": 2,
+        "lambda*(lambda - 2)": 2
+      },
+      "records": [
+        {
+          "collinearity_polynomial": "(lambda - 1)*(lambda + 1)",
+          "complement": [
+            2,
+            3
+          ],
+          "evaluation_rank_in_characteristic_three": 2,
+          "pair": [
+            0,
+            1
+          ]
+        },
+        {
+          "collinearity_polynomial": "lambda*(lambda - 2)",
+          "complement": [
+            1,
+            3
+          ],
+          "evaluation_rank_in_characteristic_three": 2,
+          "pair": [
+            0,
+            2
+          ]
+        },
+        {
+          "collinearity_polynomial": "1 - 2*lambda",
+          "complement": [
+            1,
+            2
+          ],
+          "evaluation_rank_in_characteristic_three": 2,
+          "pair": [
+            0,
+            3
+          ]
+        },
+        {
+          "collinearity_polynomial": "1 - 2*lambda",
+          "complement": [
+            0,
+            3
+          ],
+          "evaluation_rank_in_characteristic_three": 2,
+          "pair": [
+            1,
+            2
+          ]
+        },
+        {
+          "collinearity_polynomial": "lambda*(lambda - 2)",
+          "complement": [
+            0,
+            2
+          ],
+          "evaluation_rank_in_characteristic_three": 2,
+          "pair": [
+            1,
+            3
+          ]
+        },
+        {
+          "collinearity_polynomial": "(lambda - 1)*(lambda + 1)",
+          "complement": [
+            0,
+            1
+          ],
+          "evaluation_rank_in_characteristic_three": 2,
+          "pair": [
+            2,
+            3
+          ]
+        }
+      ],
+      "section_dimension": 3
+    },
+    "domain": "lambda != 0,1 and characteristic != 2",
+    "grid_graph_design": {
+      "all_24_evaluation_ranks_at_char3_lambda2": {
+        "3": 24
+      },
+      "conditions_per_graph": 4,
+      "determinant_histogram": {
+        "-(lambda - 1)*(lambda + 1)": 4,
+        "-lambda**2 + lambda - 1": 4,
+        "0": 4,
+        "2*lambda - 1": 4,
+        "lambda*(lambda - 2)": 4,
+        "lambda**2 - lambda + 1": 4
+      },
+      "full_design_equations_include": [
+        "(lambda-1)*(lambda+1)=0",
+        "2*lambda-1=0",
+        "lambda*(lambda-2)=0"
+      ],
+      "generic_projective_permutations": 4,
+      "linear_system": "O_P1xP1(1,1)",
+      "section_dimension": 4
+    },
+    "naive_free_predicate": {
+      "both_positive_rows_rejected": true,
+      "grid_failure": "all required graph maps have rank 3<4 at the simultaneous solution",
+      "polar_failure": "all required line maps have rank 2<3 at the simultaneous solution",
+      "requires_surjective_independent_evaluation": true
+    },
+    "normalization": [
+      "infinity",
+      "0",
+      "1",
+      "lambda"
+    ]
+  },
+  "hostile_level": {
+    "passes": [
+      "P-only finite membership schema",
+      "uniform geometric nonemptiness for the two complete zero-extension CI4 cores",
+      "exact same-P handoff through the existing D_CobVin theorem",
+      "independent Kondo output classification",
+      "two distinct certified raw members"
+    ],
+    "qualification": "The executable presently certifies only the two zero-extension core members, and their core presentations already encode much of the H14/H17 combinatorics and characteristic.  The former extension lemma has an O(2,0) counterexample; its repaired verifier is prospective and has no nonzero certified member.  This is therefore L3 calibration, not L3+ or a broad flagship denominator.",
+    "score": "L3_TWO_MEMBER_CORE_CALIBRATION;_NOT_L3_PLUS_OR_L4"
+  },
+  "naive_free_incidence_verdict": {
+    "decision": "FAILS_ON_BOTH_CERTIFIED_HIGH_DIMENSIONAL_INPUTS",
+    "reason": "The required residual curves occur because evaluation conditions become dependent, not because a surjective evaluation map leaves a free section."
+  },
+  "schema": "coxeter.coble_four_point_constructible_incidence.v1",
+  "sources": {
+    "bridge": {
+      "path": "data/enumerations/coble_polytope_first_blowdown_incidence_bridge.json",
+      "sha256": "08d40b33637fe4d332dc2e62a368bee401c0eda385baa3f823dde3285a15dfdd"
+    },
+    "type_mii": {
+      "path": "data/enumerations/coble_type_mii_full_ns_h17.json",
+      "sha256": "6ed6fba936c362e02793375fa3adfea0279d312c853a8bb4bab30c23b4b8c79c"
+    },
+    "type_vi": {
+      "path": "data/enumerations/coble_type_vi_char3_five_boundary_full_ns_h14.json",
+      "sha256": "8247ad85f7970d3bf1f08fe15517b70376409c17cc2784b8f14b129aaecc2ede"
+    }
+  },
+  "status_date": "2026-08-09"
+}

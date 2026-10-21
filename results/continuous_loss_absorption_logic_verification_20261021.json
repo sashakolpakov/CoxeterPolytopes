@@ -1,0 +1,145 @@
+{
+  "status": "SEVEN_GENERIC_CONTINUOUS_LOSS_AND_SUMMED_REFERENCE_DECLARATIONS_KERNEL_COMPILED_AND_ACTUAL_AXIOM_AUDITED",
+  "source": {
+    "path": "formal/CoxeterProofs/ContinuousLossAbsorptionKernel.lean",
+    "sha256": "be90f7f5c11e6512e426da6e01c75d0de33c9260012a1410b2732401be2e27bd",
+    "bytes": 7311
+  },
+  "import_source": {
+    "path": "formal/CoxeterProofs/SummedActualFootKernel.lean",
+    "sha256": "41d183ca03e0e405ce3d86ee838bdc3859c03f23ca19bb2cf9cd5239da050c28",
+    "bytes": 14269
+  },
+  "source_only_predecessor_review": {
+    "path": "results/review_continuous_loss_absorption_kernel_source_20261021.md",
+    "sha256": "f413f8501b53d71eb952788e9264c79a57b8294bf402330d299ac4a444128bcf",
+    "bytes": 3688
+  },
+  "compile": {
+    "path": "results/continuous_loss_absorption_compile_20261021.json",
+    "sha256": "b982a275cbb90034e24c39aa06153bb27e34b51f210de34a41a18588f15a35b8",
+    "bytes": 1979
+  },
+  "axiom_audit": {
+    "path": "results/continuous_loss_absorption_axiom_audit_20261021.json",
+    "sha256": "e1413f4177d9aeef93f505ec21992ac246388f438695435ed552845f264a8434",
+    "bytes": 1898
+  },
+  "full_stdout": {
+    "path": "results/continuous_loss_absorption_guarded_lean_retry_stdout_20261021.txt",
+    "sha256": "20efb5fb442b3fda623a3e7cdfb2bdaaa6e8601f27b2e6ba96fd5fd16c185afb",
+    "bytes": 5832
+  },
+  "actual_child_output_bytes": 1755,
+  "actual_child_output_sha256": "410b07604b7ae396e0ab0e820f42adfffdfdadb54d34214816b6b1b73599380d",
+  "declarations": [
+    {
+      "name": "CoxeterProofs.ContinuousLossAbsorptionKernel.circle_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.ContinuousLossAbsorptionKernel.loss_square_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.ContinuousLossAbsorptionKernel.loss_linear_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.ContinuousLossAbsorptionKernel.half_circle_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.ContinuousLossAbsorptionKernel.adjusted_loss_absorption",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.ContinuousLossAbsorptionKernel.absorption_energy_term",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.ContinuousLossAbsorptionKernel.absorbed_reference_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "sorryAx_in_actual_successful_output": false,
+  "necessary_object": {
+    "path": "formal/.lake/build/lib/lean/CoxeterProofs/ContinuousLossAbsorptionKernel.olean",
+    "sha256": "1448f9a77678170b61ebf483e431f7d8b2943a93a84f7c5f1edb6b1d6fc5b9ae",
+    "bytes": 360264
+  },
+  "compile_elapsed_seconds": 0.82,
+  "audit_elapsed_seconds": 0.89,
+  "memory_cap_mib": 2048,
+  "threads": 1,
+  "new_module_count": 1,
+  "reused_capped_dependency_count": 4,
+  "legacy_uncapped_dependencies": [],
+  "new_compiler_invocations_total": 3,
+  "first_attempt": {
+    "status": "FAILED_UNKNOWN_STD_TACTIC;NO_OBJECT_PUBLISHED",
+    "old_source_sha256": "f52af796a9cb2f3f77ee3740fc671ef0963d2130ec3c69af34b270c5007e0b22",
+    "source_archive": {
+      "path": "results/source_archive/continuous_loss_absorption_before_std_tactic_repair_20261021.lean.gz",
+      "sha256": "6f8be7e7c7d823d6811736d0f9d940da1a6ca14d84eba23119de49b1a322edc3",
+      "bytes": 2254
+    },
+    "diagnostics": {
+      "path": "results/continuous_loss_absorption_first_compile_failure_20261021.txt",
+      "sha256": "23ff673eae5d15e7cbed3f86e8cbcd672f4839b5153cf1ad17d7980b98449647",
+      "bytes": 2628
+    },
+    "stdout": {
+      "path": "results/continuous_loss_absorption_guarded_lean_stdout_20261021.txt",
+      "sha256": "9319ca8e586befb502265c93039bae13b10d019dc646423d9c29316bdebf65f5",
+      "bytes": 816
+    },
+    "repair": "Only two unsupported by_contra blocks replaced by by_cases. Theorem inventory/statements/premises unchanged; successful retry is separately bound."
+  },
+  "runner": {
+    "path": "scripts/run_lean_batches_signal_safe_20261018.py",
+    "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+    "bytes": 1234
+  },
+  "base_runner": {
+    "path": "scripts/run_lean_batches_20261018.py",
+    "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c",
+    "bytes": 14192
+  },
+  "scope_map": {
+    "path": "docs/continuous_loss_absorption_logic_20261021.md",
+    "sha256": "6c4c7aa1ff5590d15b84bd4fddcf08d202dd49014028e9f23c20eadc3ac93bc8",
+    "bytes": 5263
+  },
+  "scope": "Generic ordered-ring continuous loss maximum, two-half absorption and finite-coordinate reference energy. Actual geometry, field/cap inventory, square-root realization, concrete rational/reference and endpoint-graft bounds remain written inputs. No component or ambient theorem formalization claimed.",
+  "resource_scope": "2048MiB compiler cap and global resource gates; no measured process-tree peak RSS field in these Lean ledgers.",
+  "temporary_products": "Removed by existing runner; required olean retained."
+}

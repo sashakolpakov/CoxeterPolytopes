@@ -1,0 +1,159 @@
+{
+  "candidate_id": "og10_golden_h10_carrier",
+  "certificate_kind": "exact_OG10_complete_norm_two_chamber_involution",
+  "checks": {
+    "ambient_extension_verified": true,
+    "folded_endpoint_is_in_complete_open_chamber": true,
+    "h_closure_has_640_pairwise_acute_roots": true,
+    "h_has_order_two": true,
+    "h_is_nonidentity": true,
+    "h_lies_in_Gamma_tau_mon": true,
+    "h_transports_183_archived_walls_outside_the_prefix": true,
+    "interior_point_is_in_complete_open_chamber": true,
+    "no_infinite_order_same_chamber_element_certified": true,
+    "pell_square_equals_s0_s10": true,
+    "small_seed_scan_folds_only_to_identity_or_h": true
+  },
+  "complete_chamber_involution": {
+    "construction": "h=s0*A",
+    "equivalent_integral_reflection_normal": [
+      {
+        "a": "-1",
+        "b": "1"
+      },
+      {
+        "a": "2",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      },
+      {
+        "a": "0",
+        "b": "0"
+      }
+    ],
+    "field_matrix_first_binary_block_row_major": [
+      [
+        "1",
+        "1-phi"
+      ],
+      [
+        "0",
+        "-1"
+      ]
+    ],
+    "field_matrix_sha256": "3682d8d751dedf54fdf429e4d35ef4286b8cec5eb68f37040cce5e6fbd052607",
+    "normal_square": {
+      "a": "6",
+      "b": "2"
+    },
+    "order": 2
+  },
+  "conclusion": "the_complete_norm_two_chamber_has_a_nontrivial_order_two_Gamma_tau_mon_symmetry_h_and_the_enhanced_birational_image_contains_h;_no_infinite_order_same_chamber_element_is_certified",
+  "folding_search": {
+    "distinct_folded_matrices": 2,
+    "pell_A_folding_word": [
+      0
+    ],
+    "scanned_seed_count": 16,
+    "small_seed_folded_classes": [
+      "identity",
+      "h"
+    ]
+  },
+  "global_membership": {
+    "archived_prefix_complete_through": "x<=10",
+    "folded_h_endpoint_possible_violator_x_square_bound": {
+      "a": "98378394011/49215477949",
+      "b": "-98265338719/98430955898"
+    },
+    "folded_h_endpoint_possible_violator_x_square_bound_decimal": "0.3836204750237946",
+    "formula": "x^2 < 2*v^2/(D*(a^2*D-v^2/2)) for q=a*p+v and v perpendicular to p",
+    "interior_possible_violator_x_square_bound": {
+      "a": "2029167180/49215477949",
+      "b": "-1186149744/49215477949"
+    },
+    "interior_possible_violator_x_square_bound_decimal": "0.0022337805715294742",
+    "strict_pairing_check": "all 457 archived simple-root pairings are negative at both endpoints"
+  },
+  "monodromy_extension": {
+    "ambient_extension_order": 2,
+    "ambient_extension_sha256": "e5b0029e0e54a4fa41cfea5a4ee36446af17d0d1c75b93d0e8b9c3829963c1df",
+    "complement": "<2> + <66>",
+    "complement_action": "-identity",
+    "discriminant_group_order": 44,
+    "gluing_generator_action": [
+      "n1_to_n1",
+      "n2_to_minus_n2"
+    ],
+    "gluing_generator_orders": [
+      2,
+      22
+    ],
+    "hodge_scope": "minus identity on the positive period complement preserves the period line",
+    "orientation_scope": "h preserves the selected positive line and minus identity has determinant +1 on the positive complement plane",
+    "trace_action_sha256": "74339270c5e8a77d2bd6dcadef2b124b59fc42872ec4ef043311c50e1e36e847"
+  },
+  "pell_seed": {
+    "binary_block_row_major": [
+      [
+        "1",
+        "1-phi"
+      ],
+      [
+        "-1",
+        "phi"
+      ]
+    ],
+    "characteristic_polynomial_over_Z_phi": "(t-1)^9*(t^2-(1+phi)*t+1)",
+    "infinite_order": true,
+    "square_equals": "s0*s10"
+  },
+  "schema_version": "0.1.0",
+  "scope": "h has finite order and therefore does not prove infinite reflection index; the 183 transported walls are certified complete-chamber walls but need not exhaust their four control levels",
+  "verified": true,
+  "wall_transport": {
+    "archived_roots": 457,
+    "closed_root_set_sha256": "f4f4e5afbdc1eb8eaf1a64e3c3c0f23840668ec5c61623d0de237ae9b4755e8e",
+    "images_outside_archived_prefix": 183,
+    "images_retained_in_archived_prefix": 274,
+    "involution_closed_roots": 640,
+    "new_control_level_counts": {
+      "2+5phi": 20,
+      "3+5phi": 129,
+      "4+4phi": 3,
+      "4+5phi": 31
+    },
+    "new_roots_sha256": "3a0cdc70e695b452eaab5b119545420c042c389333626b5454d2b7c4b248ef22"
+  }
+}

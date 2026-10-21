@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-10-21T18:12:47.082801+00:00",
+  "status": "PUBLICATION_PREPARED_COMMIT_AND_PUSH_HELD_FOR_PENDING_LEAN",
+  "user_gate": "Finish pending selected Lean compilations and separate actual axiom audits before commit/push. Reaudit final Git index after those updates.",
+  "observed_resources": {
+    "observation_only_not_runner_admission": true,
+    "available_ram_bytes": 5232295936,
+    "available_ram_gib": 4.873,
+    "lean_start_ram_gib_required": 6,
+    "free_disk_gib": 138.215,
+    "new_proof_admission_attempts": 0
+  },
+  "pending_lean": [
+    {
+      "source": {
+        "path": "formal/CoxeterProofs/RegularIdeal24CellHeightKernel.lean",
+        "bytes": 4720,
+        "sha256": "633ae6fef8c5d0f0d0cafb2363d99f38e6922405d61c25c0e3a569e7bceaecec"
+      },
+      "module": "CoxeterProofs.RegularIdeal24CellHeightKernel",
+      "status": "UNCOMPILED",
+      "requested_axiom_prints": 5,
+      "actual_new_outputs": 0
+    },
+    {
+      "source": {
+        "path": "formal/CoxeterProofs/ClassicalDimensionComposition.lean",
+        "bytes": 8970,
+        "sha256": "c035f62de642c123ea168a61871bc6d3156113343b3f5301a877844f0062e102"
+      },
+      "module": "CoxeterProofs.ClassicalDimensionComposition",
+      "status": "UNCOMPILED",
+      "requested_axiom_prints": 4,
+      "actual_new_outputs": 0
+    }
+  ],
+  "next_commands": [
+    "python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.RegularIdeal24CellHeightKernel",
+    "python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.RegularIdeal24CellHeightKernel --audit-axioms",
+    "python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.ClassicalDimensionComposition",
+    "python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.ClassicalDimensionComposition --audit-axioms"
+  ],
+  "execution_policy": "Root alone, ONE module/process at a time,2048MiB/one thread; unchanged40/6GiB start and8/3GiB abort gates. Do not rerun successful dependencies. Selected conditional logic only, with explicit external/script/geometric premises.",
+  "publication_io": {
+    "path": "results/publication_data_preflight_20261021.json",
+    "bytes": 4417,
+    "sha256": "339b126e8328e70a92af637b15381fd91f4d9052018cdce8cea43e1090a46331"
+  },
+  "staged_baseline_audit": {
+    "path": "results/staged_publication_audit_baseline_20261021.json",
+    "bytes": 1776,
+    "sha256": "40674427a8dbd0b23860d0a93c5b0a35dba63342031b280646b0222bfdfc776b"
+  },
+  "sphinx_build": {
+    "path": "results/sphinx_publication_preflight_20261021.json",
+    "bytes": 2372,
+    "sha256": "cf309a7e66d9a87213e09f018943458dbe085e7754a880f14f9abb34437d7671"
+  },
+  "prior_lean_execution_ledgers": {
+    "path": "results/lean_execution_ledgers_snapshot_20261021/manifest.json",
+    "bytes": 40863,
+    "sha256": "e758c3490f76dab053ed3ce31413bda64523956bdc0c8fda624e5b7db2d02ba8"
+  },
+  "pre_lean_status_preservation": {
+    "path": "results/source_archive/publication_status_before_lean_20261021/manifest.json",
+    "bytes": 4353,
+    "sha256": "29410e5a1cacdd6991e14e90a9a0c6e89be68adbd370d558c95fc6780536f3b6"
+  },
+  "manuscripts": "Exactly six frozen primary source/PDF editions unchanged; printed compact23/20 versus separate reviewed written19/17. No new TeX build or mathematical proof job in publication preparation.",
+  "git_state": "Initialized main, staged source tree; no HEAD commit and no remote. No commit, push, release upload, Pages deployment or public remote creation.",
+  "planned_repository": "sashakolpakov/CoxeterPolytopes",
+  "bulk_release_state": "33 local fully decoded+original-hash-verified archives; originals preserved; no uploaded assets. Keep .publication/data until verified upload.",
+  "future_publication_sequence": "Complete pending Lean and separate output audits; preserve ledgers+actual stdout, update status maps/README/site; strictSphinx build and local-link check; stage and audit final indexed blobs; commit; create public repo/remote and push; upload33hashedreleaseassets, enable/verifyPages and record remote commit/asset digests/site URLs.",
+  "uncompiled_headers": "Prepared source headers retain their historical status until actual execution evidence is recorded; changing source comments after compilation would invalidate source bindings."
+}

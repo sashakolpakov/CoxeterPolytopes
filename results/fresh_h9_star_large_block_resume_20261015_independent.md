@@ -1,0 +1,15 @@
+# Separate complete star0 traversal
+
+The [standalone checker](../scripts/fresh_h9_star_large_block_resume_20261015_independent.py) returns **PASS_INDEPENDENT_COMPLETE_STAR0_EXCLUSION** in [its certificate](fresh_h9_star_large_block_resume_20261015_independent.json). It begins at the empty assignment, has no node cutoff, and finishes all163,894 visits without a survivor. It does not inherit the primary search's completed prefix or pending stack.
+
+This is a reuse of the previously separately implemented case5 arithmetic and recursion, adapted to star0. It imports only Python standard-library modules. The actual primal realization, missing-face data and497 reviewed analytic predicates are inherited through hash-bound certificates; their earlier geometry/algebra proofs are not repeated here.
+
+The checker reconstructs all378 nine-facet vertices from the complete minimal-nonface clutter and compares them with the literal incidence. It enumerates the175 hyperbolic triangle categories using exact rational reciprocal sums and verifies all16 simultaneous swaps of the four twin pairs against both the vertex set and full clutter. The four chosen ordering reductions act on separate root pairs and are therefore simultaneous valid symmetry reductions.
+
+Category7 covers all finite labels at least7, with no hidden upper cutoff. In a triangle containing this category, the only spherical case has the other two labels both2; otherwise the reciprocal sum is at most1/2+1/3+1/7<1. A connected three-node extension of an edge with label at least6 has a nonpositive path minor. Isolated two-node components accept every finite label. Cycles have a nonpositive all-ones witness. Every remaining spherical test is exact leaf-Schur elimination over the Fraction basis1,√5, using cosine squares for labels3,4,5. This differs from the producer's Dynkin-diagram classifier.
+
+The traversal uses immutable assignments and independently propagates shared triangle edges. It rederives all38 bridge clauses from disjoint minimal nonfaces whose union contains no further minimal nonface. Such blocks cannot be orthogonal in a Lorentzian realization. An unassigned cross pair is forced right only when its smallest nonright label3 already violates an actual positive-definite vertex support. Thus every bridge rejection remains valid for every omitted meeting label and dotted distance.
+
+The certificate records347,392 finite masks,82 rooted-tree pivots,497 analytic conditions and all recursion counters. Empty search supplies a complete necessary-label exclusion for this compact H9 incidence. It provides no exclusion of other incidences or of noncompact chambers. The independent implementation and the primary resumable search share the reviewed theorem inputs; this is independent traversal/arithmetic, not a second proof of every inherited analytic theorem.
+
+Generation and the complete saved replay both pass. The separate [hostile source review](fresh_h9_star_closure_hostile_20261015.md) checks the recursion, category coverage, literal inputs and aggregate transfer without repeating the full DFS. The checker, certificate and this scope note are frozen.

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-21",
+  "status": "DEFERRED_BEFORE_COMPILER_CHILD_RESOURCE_GATE",
+  "command": ["python3", "-B", "scripts/run_lean_batches_signal_safe_20261018.py", "CoxeterProofs.AnchorAndPaidFootKernel", "--audit-axioms"],
+  "observed_exit_code": 1,
+  "observed_message": "Resource gate: disk=155.9GiB memory=5.4GiB; require 40/6GiB",
+  "compiler_or_axiom_audit_child_started": false,
+  "repaired_source_sha256": "ac811bf2cd70cc975ccbbcd446d0a5d575311e5506e7141a967d150e7a639457",
+  "repair_scope": "Rename reserved binder matches to necessary_matches and expose the paidVector definition by change before applying dot rewrites. Statements and assumptions unchanged.",
+  "successful_new_kernel_declarations": 0,
+  "prior_failed_compile_preserved": "results/anchor_paid_foot_initial_elaboration_failure_20261021.json",
+  "gate_policy": "Original40GiB disk/6GiB RAM launch and8GiB/3GiB abort gates unchanged. No bypass or lowering."
+}

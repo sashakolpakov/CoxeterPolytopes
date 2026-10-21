@@ -1,0 +1,64 @@
+{
+  "status": "PASS_REVIEWED_DEPENDENCIES_AND_CASE_SPLIT_FOR_DIMENSION_169_CANDIDATE",
+  "sources": {
+    "scripts/fresh_nikulin_unit_charge_20261015_dimension169.py": "714cc9731b9a69afa0aef026665f94d640b9b862a02b417e97e7b933c61bcce0",
+    "results/fresh_nikulin_unit_charge_20261015_dimension169.md": "fccd442849ba2baa9489041f82c11f6be647110a5a8643a41c421474531d02fc",
+    "scripts/fresh_nikulin_dimension_181_candidate_20261015.py": "41856f2e4c6f226e7b47c56b63bd10cd26028d7d5876547d043fc478f9ad81c9",
+    "results/fresh_nikulin_dimension_181_candidate_20261015.json": "19a313de52752925d9fe9ba391064d6ec50890a0323fe295ab2879e7bef12934",
+    "results/fresh_nikulin_dimension_181_candidate_20261015.md": "fb5938e5c9a0132a6c8a548d46d9178d99666b041d9a56e62f25917538662731",
+    "scripts/fresh_nikulin_unit_charge_20261015.py": "5ae017ed94c892f7a488cae3b18f3b54e4e762f80cb228ed35c839ef9a0bdfb2",
+    "results/fresh_nikulin_unit_charge_20261015.json": "c6b85ef3c5abbcd53c9f90347f7e129ecd52285fac4672cea0b67563a67bd888",
+    "results/fresh_nikulin_unit_charge_20261015.md": "e8acc1c075861e24ae07f436f13b56add4220e40155b42fb85b09ab69109461f",
+    "scripts/fresh_nikulin_unit_charge_20261015_review.py": "362dd81bb17dc5505485c1f71c8711c35ccde3472bc8b2cfbd68bfe6b4d8a930",
+    "results/fresh_nikulin_unit_charge_20261015_review.json": "7b1d281d52b2d2e171b2ffe1b4155ca55708e333889c4b2525af579de5f88c14",
+    "results/fresh_nikulin_unit_charge_20261015_review.md": "999a3694e1889ecdb7932c97125e7f4be8b2b55b45a14a215a9b88b188e8d4fc",
+    "scripts/fresh_nikulin_narrow_20261015_compact_facet.py": "819ccae418e3269889a6181c37cec9fab1dcca34cf03e31f0bfcdd9103dd4967",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.json": "18136efb0c36029e5be53be7ca06b1608efeec94d96c7d891ec23aa1b1ef0a3b",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.md": "540390f627681fb27912c2349b593cad1b5b84917e1608d15f34bf2c801e7f13"
+  },
+  "recursive_manifests_checked": 18,
+  "recursive_source_files_checked": 49,
+  "candidate_statement": "Every finite-sided finite-volume real hyperbolic Coxeter polytope has dimension at most169.",
+  "arithmetic_assumption": false,
+  "compactness_assumption": false,
+  "simple_cusp_assumption": false,
+  "chosen_narrow_facet_cases": [
+    {
+      "case": "contains an ideal vertex",
+      "ambient_dimension_at_most": 169,
+      "primary": "fresh_nikulin_unit_charge_20261015",
+      "independent_review": "fresh_nikulin_unit_charge_20261015_review"
+    },
+    {
+      "case": "only finite vertices, hence compact",
+      "ambient_dimension_at_most": 143,
+      "primary": "fresh_nikulin_narrow_20261015_compact_facet",
+      "independent_review": "fresh_dimension225_hostile_20261015"
+    }
+  ],
+  "cost_accounting": {
+    "total_schur_cost_at_most": 4,
+    "loss_per_cost": "4/3",
+    "avoid_node_deficit": "2/9"
+  },
+  "negative_pairing_lower_bound": "M*((n-1)-43)/9, M>=1",
+  "first_excluded_dimension": 170,
+  "combined_candidate_dimension_at_most": 169,
+  "norm_two_narrow_threshold": 14,
+  "frozen_baseline": "fresh_nikulin_dimension_181_candidate_20261015",
+  "primary_sources": [
+    {
+      "url": "https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1986.1/ICM1986.1.ocr.pdf",
+      "pages": "printed655 TheoremA; printed657-659 method and announcement"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=im&paperid=1484&what=fullteng",
+      "pages": "printed407-408, section2 Propositions1-2; quasi-Lanner extraction/order10"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=mmo&option_lang=rus&paperid=444&what=fullt",
+      "pages": "printed70-71 h-vector; printed77 Proposition10 spherical distance-pair bound"
+    }
+  ],
+  "scope": "Frozen proof/review dependency and complete case binder. No producer arithmetic imported. Internal research proof candidate; external validation, novelty and current-best status unestablished. Published geometry and classification inputs are mathematical dependencies, not formal proof-assistant certification."
+}

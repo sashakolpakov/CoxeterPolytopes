@@ -1,0 +1,824 @@
+{
+  "status": "PASS_DEGREE50_AB_BASE_AND_ALL_CONSECUTIVE_ARCS_COMMON_WEAK_ESCAPE",
+  "sources": {
+    "results/fresh_h20_s61_multicap_20261014_exact.json": "8bf84134d9df313b47293d3afe5318c961af141a55fc974451eb50cbd4033334",
+    "results/fresh_h20_dotted_arc_cap_20261016.json": "d16785c8be08f50ce629bb029d90ebcbd0e5a36302444c6b57f5c1a72bd40b26",
+    "results/fresh_h20_dotted_arc_cap_20261016_review.json": "bdc719d26ac233c0155f5a56582262f3ed4fbc802ed9777c9737e7ef2b9e01c4",
+    "results/fresh_h20_chain_abelian_gate_20261016.json": "7b580e05ea937d9672f571cc9d066ce01b0537ee1b0daf2a71f53f8ab6cd86a5",
+    "results/fresh_h20_chain_abelian_gate_20261016_review.json": "0681848898358e8576bab043ac3187f626bd9f39a3b6d9b8116fe54c0f933347",
+    "results/fresh_h20_symmetric_arc_escape_gate_20261016_review.json": "1fa11baff029918dd1111e6f8bb822ac34bc5e34a938005a4cac224694c2e313",
+    "scripts/fresh_h20_asymmetric_arc_escape_gate_20261016.py": "af6a190e40dd931f62baa8bc086aa2521e3c0fe29a047b7ce65cedc78a33d9ff"
+  },
+  "recursive_manifest_audit": {
+    "files": 118,
+    "source_references": 284
+  },
+  "Galois_upgrade": {
+    "degree": 50,
+    "Frobenius_cycle_lengths": [
+      13,
+      37
+    ],
+    "power": 13,
+    "powered_cycle_lengths": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      37
+    ],
+    "proper_block_sizes": [
+      2,
+      5,
+      10,
+      25
+    ],
+    "block_counts": [
+      25,
+      10,
+      5,
+      2
+    ],
+    "primitive": true,
+    "commutator_transitive": true,
+    "degree_over_K_Qab": 50,
+    "no_nonzero_polynomial_over_Qab_of_degree_below": 50,
+    "scope": "Degree50 is over K Qab; only the lower bound50 is asserted over Qab itself."
+  },
+  "centers": [
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131
+  ],
+  "triple": {
+    "Gram_outer_polynomial": [
+      "-2",
+      "-4"
+    ],
+    "determinant": [
+      "0",
+      "-32",
+      "-32"
+    ],
+    "adjugate_quadratic_coefficients": {
+      "A2": [
+        "0",
+        "-16",
+        "-16"
+      ],
+      "B2": [
+        "4"
+      ],
+      "D2": [
+        "4"
+      ],
+      "BD": [
+        "8",
+        "16"
+      ]
+    },
+    "outer_sum_norm": [
+      "0",
+      "-8"
+    ],
+    "norm_formula": "A^2/2-((B+D)^2+4*C*B*D)/(8*C*(C+1))",
+    "abelian_polynomial": "8*C*(C+1)*(A^2/2-2+Q)-(B+D)^2-4*C*B*D",
+    "nonzero_constant": "-(B+D)^2",
+    "zero_outer_next_walls": [
+      [
+        108,
+        110
+      ],
+      [
+        109,
+        111
+      ],
+      [
+        110,
+        112
+      ],
+      [
+        111,
+        113
+      ],
+      [
+        112,
+        114
+      ],
+      [
+        113,
+        115
+      ],
+      [
+        114,
+        116
+      ],
+      [
+        115,
+        117
+      ],
+      [
+        116,
+        118
+      ],
+      [
+        117,
+        119
+      ],
+      [
+        118,
+        120
+      ],
+      [
+        119,
+        121
+      ],
+      [
+        120,
+        122
+      ],
+      [
+        121,
+        123
+      ],
+      [
+        122,
+        124
+      ],
+      [
+        123,
+        125
+      ],
+      [
+        124,
+        126
+      ],
+      [
+        125,
+        127
+      ],
+      [
+        126,
+        128
+      ],
+      [
+        127,
+        129
+      ],
+      [
+        128,
+        130
+      ],
+      [
+        129,
+        131
+      ],
+      [
+        130,
+        132
+      ],
+      [
+        131,
+        129
+      ]
+    ],
+    "u_upper": "2/C = 2+4/a^2"
+  },
+  "support": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    17,
+    31,
+    61,
+    87
+  ],
+  "support_Gram_LDL_pivots": [
+    "2",
+    "3/2",
+    "4/3",
+    "5/4",
+    "6/5",
+    "7/6",
+    "8/7",
+    "9/8",
+    "10/9",
+    "11/10",
+    "2",
+    "3/2",
+    "4/3",
+    "5/4",
+    "2",
+    "2",
+    "2",
+    "3/2"
+  ],
+  "all_label_budget": {
+    "total_support_cost_upper": "281/70",
+    "A10_cost_upper_if_dotted_outside": "141/70",
+    "minimum_inverse_diagonal": "1/2"
+  },
+  "weak_escape": {
+    "frame_coefficients": [
+      "1",
+      "-1/100",
+      "0"
+    ],
+    "dual_coefficients": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "norm": "190011/110000",
+    "frame_negative_norm": "9999/10000",
+    "support_pairings": {
+      "1": "0",
+      "2": "0",
+      "3": "0",
+      "4": "0",
+      "5": "-1",
+      "6": "0",
+      "7": "0",
+      "8": "0",
+      "9": "0",
+      "10": "0",
+      "12": "0",
+      "13": "0",
+      "14": "0",
+      "15": "0",
+      "17": "0",
+      "31": "0",
+      "61": "0",
+      "87": "0"
+    },
+    "off_support_old134_strict": true,
+    "strict_center_pair_negative": true,
+    "derivation": "E0=Eeps+eps*sum_{j!=5}omega_j; J>=0 and acuteness give every added term nonpositive offS and negative on a strict center."
+  },
+  "dotted_A10_endpoint_cases": [
+    {
+      "wall": 1,
+      "J": "10/11",
+      "z": "6/11",
+      "u_lower": "18/11",
+      "linear_coefficient": "73989/121000",
+      "strict_margin": "269901/665500"
+    },
+    {
+      "wall": 10,
+      "J": "10/11",
+      "z": "5/11",
+      "u_lower": "18/11",
+      "linear_coefficient": "84989/121000",
+      "strict_margin": "489901/665500"
+    }
+  ],
+  "A10_slots": [
+    1,
+    2,
+    9,
+    10
+  ],
+  "A10_profiles": [
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "A10_cost": "0",
+      "escape_A10_pair_magnitude": [
+        "0",
+        "0"
+      ],
+      "strict_squared_margin": [
+        "0",
+        "0"
+      ],
+      "proof": "u>0 and z_A=0; no quantitative gap required"
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        3
+      ],
+      "A10_cost": "10/11",
+      "escape_A10_pair_magnitude": [
+        "5/11",
+        "0"
+      ],
+      "strict_squared_margin": [
+        "84989/121000",
+        "0"
+      ],
+      "proof": "u>A10_cost>0 and K*A10_cost>z_A^2"
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0,
+        4
+      ],
+      "A10_cost": "20/11",
+      "escape_A10_pair_magnitude": [
+        "0",
+        "5/11"
+      ],
+      "strict_squared_margin": [
+        "84989/60500",
+        "0"
+      ],
+      "proof": "u>A10_cost>0 and K*A10_cost>z_A^2"
+    },
+    {
+      "labels": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "A10_cost": "18/11",
+      "escape_A10_pair_magnitude": [
+        "10/11",
+        "0"
+      ],
+      "strict_squared_margin": [
+        "489901/605000",
+        "0"
+      ],
+      "proof": "u>A10_cost>0 and K*A10_cost>z_A^2"
+    },
+    {
+      "labels": [
+        0,
+        3,
+        0,
+        0
+      ],
+      "A10_cost": "18/11",
+      "escape_A10_pair_magnitude": [
+        "12/11",
+        "0"
+      ],
+      "strict_squared_margin": [
+        "269901/605000",
+        "0"
+      ],
+      "proof": "u>A10_cost>0 and K*A10_cost>z_A^2"
+    },
+    {
+      "labels": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "A10_cost": "10/11",
+      "escape_A10_pair_magnitude": [
+        "6/11",
+        "0"
+      ],
+      "strict_squared_margin": [
+        "73989/121000",
+        "0"
+      ],
+      "proof": "u>A10_cost>0 and K*A10_cost>z_A^2"
+    },
+    {
+      "labels": [
+        3,
+        0,
+        0,
+        3
+      ],
+      "A10_cost": "2",
+      "escape_A10_pair_magnitude": [
+        "1",
+        "0"
+      ],
+      "strict_squared_margin": [
+        "4999/5000",
+        "0"
+      ],
+      "proof": "u>A10_cost>0 and K*A10_cost>z_A^2"
+    },
+    {
+      "labels": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "A10_cost": "20/11",
+      "escape_A10_pair_magnitude": [
+        "0",
+        "6/11"
+      ],
+      "strict_squared_margin": [
+        "73989/60500",
+        "0"
+      ],
+      "proof": "u>A10_cost>0 and K*A10_cost>z_A^2"
+    }
+  ],
+  "A10_excluded_profiles": [
+    {
+      "labels": [
+        0,
+        0,
+        3,
+        3
+      ],
+      "cost": [
+        "46/11",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        0,
+        0,
+        3,
+        4
+      ],
+      "cost": [
+        "38/11",
+        "18/11"
+      ]
+    },
+    {
+      "labels": [
+        0,
+        3,
+        0,
+        3
+      ],
+      "cost": [
+        "32/11",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        0,
+        3,
+        0,
+        4
+      ],
+      "cost": [
+        "38/11",
+        "4/11"
+      ]
+    },
+    {
+      "labels": [
+        0,
+        3,
+        3,
+        0
+      ],
+      "cost": [
+        "4",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        0,
+        3,
+        3,
+        3
+      ],
+      "cost": [
+        "76/11",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        0,
+        3,
+        3,
+        4
+      ],
+      "cost": [
+        "64/11",
+        "2"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        0,
+        0,
+        4
+      ],
+      "cost": [
+        "30/11",
+        "2/11"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        0,
+        3,
+        0
+      ],
+      "cost": [
+        "32/11",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        0,
+        3,
+        3
+      ],
+      "cost": [
+        "62/11",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        0,
+        3,
+        4
+      ],
+      "cost": [
+        "52/11",
+        "20/11"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "cost": [
+        "46/11",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        3,
+        0,
+        3
+      ],
+      "cost": [
+        "62/11",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        3,
+        0,
+        4
+      ],
+      "cost": [
+        "6",
+        "6/11"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        3,
+        3,
+        0
+      ],
+      "cost": [
+        "76/11",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "cost": [
+        "10",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        3,
+        3,
+        3,
+        4
+      ],
+      "cost": [
+        "96/11",
+        "24/11"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        0,
+        0,
+        3
+      ],
+      "cost": [
+        "30/11",
+        "2/11"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        0,
+        0,
+        4
+      ],
+      "cost": [
+        "4",
+        "0"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        0,
+        3,
+        0
+      ],
+      "cost": [
+        "38/11",
+        "4/11"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        0,
+        3,
+        3
+      ],
+      "cost": [
+        "6",
+        "6/11"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        0,
+        3,
+        4
+      ],
+      "cost": [
+        "62/11",
+        "2"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        3,
+        0,
+        0
+      ],
+      "cost": [
+        "38/11",
+        "18/11"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        3,
+        0,
+        3
+      ],
+      "cost": [
+        "52/11",
+        "20/11"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        3,
+        0,
+        4
+      ],
+      "cost": [
+        "62/11",
+        "2"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        3,
+        3,
+        0
+      ],
+      "cost": [
+        "64/11",
+        "2"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "cost": [
+        "96/11",
+        "24/11"
+      ]
+    },
+    {
+      "labels": [
+        4,
+        3,
+        3,
+        4
+      ],
+      "cost": [
+        "8",
+        "4"
+      ]
+    }
+  ],
+  "conclusion": "Every coherent norm2 cap retaining old133 with finite/parallel contacts to any consecutive triple pairs strictly negatively with E0. Any finite coherent collection of these caps, including the134th cap, leaves infinite volume after a small strict-interior perturbation of E0.",
+  "scope": "All24 consecutive triple centers; unequal outer contacts allowed; all integer finite labels and parallel contacts; arbitrary real coefficients and all18 support Coxeter contacts. No arithmeticity of the cap is assumed. Does not cover caps without such a consecutive triple or changes to retained oldwalls. Degree50 modular arithmetic and original physical chamber are inherited from independently reviewed frozen dependencies."
+}

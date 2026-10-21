@@ -1,0 +1,49 @@
+import CoxeterProofs.CertificateBounds
+import CoxeterProofs.IdealRA4Gap
+import CoxeterProofs.DimensionComposition
+import CoxeterProofs.IdealRA5
+import CoxeterProofs.Generated.Residual58
+import CoxeterProofs.CompactHVector
+import CoxeterProofs.Generated.Finite59
+import CoxeterProofs.Generated.Ideal59
+import CoxeterProofs.IdealDomainCompleteness
+import CoxeterProofs.ShapeCurvatureArithmetic
+import CoxeterProofs.FiveFaceCarrier
+import CoxeterProofs.DoublingKappa
+import CoxeterProofs.CompactFieldBudget
+import CoxeterProofs.GuardedRank58
+import CoxeterProofs.RightAngledDensity
+import CoxeterProofs.Generated.TypeDomination59
+import CoxeterProofs.Concentration58
+import CoxeterProofs.ContextCover59
+import CoxeterProofs.RestrictedCarrierCounts
+import CoxeterProofs.OptionalTableBounds
+
+#print axioms CoxeterProofs.additive_upper_of_last_item
+#print axioms CoxeterProofs.selected_defect_budget
+#print axioms CoxeterProofs.IdealRA4.defect_gap_of_partition
+#print axioms CoxeterProofs.IdealRA4.volume_numerator_at_least_eight
+#print axioms CoxeterProofs.Dimension.compact_arithmetic_field_composition
+#print axioms CoxeterProofs.Generated.Residual58.rank58_upper
+#print axioms CoxeterProofs.Generated.Residual58.witness_membership
+#print axioms CoxeterProofs.CompactHVector.strict_deficit_from_paired_identity
+#print axioms CoxeterProofs.Generated.Finite59.every_table_upper
+#print axioms CoxeterProofs.Generated.Ideal59.every_profile_gap
+#print axioms CoxeterProofs.Generated.Ideal59.domain_complete
+#print axioms CoxeterProofs.IdealProfile.canonical_terminal_profile_covered
+#print axioms CoxeterProofs.ShapeCurvature.extremal_slack_at_least870
+#print axioms CoxeterProofs.ShapeCurvature.total_payment_contradiction
+#print axioms CoxeterProofs.FiveFaceCarrier.ideal5_aggregate_identity
+#print axioms CoxeterProofs.FiveFaceCarrier.mixed_weighted_incidence
+#print axioms CoxeterProofs.DoublingKappa.exponential_lower
+#print axioms CoxeterProofs.CompactFieldBudget.all_rank_vertex_budget
+#print axioms CoxeterProofs.GuardedRank58.d13_three_large
+#print axioms CoxeterProofs.GuardedRank58.global_contradiction
+#print axioms CoxeterProofs.RightAngledDensity.ideal6_size
+#print axioms CoxeterProofs.RightAngledDensity.vertex_ratio12
+#print axioms CoxeterProofs.Generated.TypeDomination59.every_ordinary_forest_dominated
+#print axioms CoxeterProofs.Concentration58.convolution_moment_nonnegative
+
+#print axioms CoxeterProofs.ContextCover59.complete_three_branch_cover
+#print axioms CoxeterProofs.RestrictedCarrierCounts.thirty_carriers
+#print axioms CoxeterProofs.OptionalTable.forest_upper

@@ -1,0 +1,905 @@
+{
+  "schema": "compact-farthest-vertex-source-packet-v1",
+  "date": "2026-10-20",
+  "dimension_ceiling": 24,
+  "mathematical_status": "INTERNAL_WRITTEN_PROOFS_AND_REVIEWS_PASS",
+  "lean_status": "PENDING_NO_NEW_COMPILATION",
+  "scope": "Declared farthest-vertex proof/review library and locally named dated Markdown companions. Integrity of these bytes is not mathematical proof or verification of all historical computations.",
+  "canonical_manuscript": {
+    "path": "manuscripts/compact_farthest_vertex_bounds.tex",
+    "status": "DRAFT_UNCOMPILED; companion proofs explicit; source translation review and integration pending",
+    "included_in_immutable_packet": false
+  },
+  "external_inputs": "Published general compact29 bound, finite spherical classification and the explicit geometric facts named in the component sources.",
+  "new_scientific_lean_or_tex_jobs": 0,
+  "files": [
+    {
+      "path": "results/arithmetic_full_an_isolated_finite_continuation_packing_20261020.md",
+      "bytes": 9443,
+      "sha256": "9ab34f073ea95bed2040bafe6b8573331721f9b1e75d65172f814637da046810",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/arithmetic_whole_an_central_isolated_pair_obstructions_20261020.md",
+      "bytes": 7794,
+      "sha256": "4768b894b8756e05b0c502c2d6e2cd4785ee3053438508a67e584fa7ee427498",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_a1_a2_farthest_vertex_energy_exclusion_20261020.md",
+      "bytes": 15517,
+      "sha256": "3bcf38496cd0aa7ba922dd13101595a479c0c14937d5c08bb368e2df435707e2",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_a20_actual_projection_four_sevenths_20261020.md",
+      "bytes": 5877,
+      "sha256": "be7fd5091a83a2fbbdce341bfe7e731b8c96adfbbccf3ed3bb716691c07d2d52",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_a21_adjacent_weak_far_m_simple3_packet_20261020.md",
+      "bytes": 10101,
+      "sha256": "1c4437c98d916d558081572dd2ecc12bc75eda1328a53633fe111120ec63dcb7",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_a2_corner_short_edge_capacity_20261020.md",
+      "bytes": 9197,
+      "sha256": "db7016f34053492c4b35b15b181823c7cb952d741654d709fe7a85daa8982048",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_a3_block_energy_and_low_rank_forest_exclusion_20261020.md",
+      "bytes": 15100,
+      "sha256": "70ab9f7e9fad80976b772e09388746db79c7bd161fc856bdc4ae0d38618b5068",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_actual_wall_reciprocal_shadow_20261020.md",
+      "bytes": 6366,
+      "sha256": "c913ec3bd8e0f26a8c679a1ede2b98b251ad3f36efeae60486213ddfa3e8badc",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_an_large_components_arbitrary_spectator_transfer_20261020.md",
+      "bytes": 11752,
+      "sha256": "8d3b999761be7dd46e7990973b3ec4d4a746d4d682b044d53695f4aae405e3e5",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_an_projection_pressure_and_weak_cap_packing_review_20261020.md",
+      "bytes": 7495,
+      "sha256": "8b0a59493f1fa5dc7081e5e70beff2839ac5918bfcd50e089e05ae9b5546e43b",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_b2_matching_corner_drift_exclusion_20261020.md",
+      "bytes": 6298,
+      "sha256": "4170c8c1e4e1641148b2287d8b177d1e09fd9befeacd7cde9ae629b25183fdd2",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_b5_b8_ordinary_component_energy_20261020.md",
+      "bytes": 13890,
+      "sha256": "079f6fca7185f001eedea069505b8276d9bf7a8ff0beb27cd6f57327234dfe56",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_bn_actual_projection_nine_fourteenths_20261020.md",
+      "bytes": 11362,
+      "sha256": "08056719c47080f233c42d4b92c7d3537696956d01dd847639373adf9569c8cd",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_bn_large_components_arbitrary_spectator_transfer_20261020.md",
+      "bytes": 8909,
+      "sha256": "9852635a5271c1a733999fb9bd49cd4170d019ae3f37f2ae8bb4af246ebc79ed",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_classical_foreign_far_packet_strong_20261020.md",
+      "bytes": 4562,
+      "sha256": "3766485d02300a78951e26e7a162086aa4ff74db9dc3aaa0842584ffb5fb1520",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_classical_generic_prefix_energy_20261020.md",
+      "bytes": 9426,
+      "sha256": "f637d7294d17e37581330ca508c914c23a08ce259845614b055e45815d2790ef",
+      "role": "core_proof"
+    },
+    {
+      "path": "results/compact_classical_prefix_energy_and_dimension27_composition_20261020.md",
+      "bytes": 9488,
+      "sha256": "5232d17e565d9da173784bb77a43231bb05bb1c5d0042cb685dd7d9d09d42cf3",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_d8_three_direction_component_energy_20261020.md",
+      "bytes": 7585,
+      "sha256": "7555245ab9ee941efbd3a6f7657a7a103d4c9c22f6ef0a63d1330c66eb9ab860",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dimension24_farthest_forest_composition_20261020.md",
+      "bytes": 6473,
+      "sha256": "7dd4495aacc4344b2433b55a2b11c0fa3f613785483c31441c3a6aed179b986a",
+      "role": "core_proof"
+    },
+    {
+      "path": "results/compact_dimension26_farthest_forest_composition_20261020.md",
+      "bytes": 6303,
+      "sha256": "c7abff117f7e53cbba853e58196c01bb5d3c03b036a7afbc80a93eed003e0b8d",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_actual_projection_nine_fourteenths_20261020.md",
+      "bytes": 8301,
+      "sha256": "99bde3780f9d720d9809f5d8bea6795e4a77fcaacf8ede5871f0f831fb7823e9",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_center_neighbor_common_opposite_energy_20261020.md",
+      "bytes": 8806,
+      "sha256": "e371611c4903ad362654ee0d4656457140cdc5e4374b4e19a2697718c2d679b1",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_common_one_two_native_seven_reduction_20261020.md",
+      "bytes": 5600,
+      "sha256": "ccea4a223a5c0dafc3f83166d19a4d2f5f1f18ae622860b3d2bc5dafd6eac95c",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_common_three_four_farthest_obstruction_20261020.md",
+      "bytes": 6409,
+      "sha256": "ffb9f7f13b8841a32b0abe55aad7bffc10d468d6ae3caf566038efb26803e3c4",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_internal_consecutive_common_opposite_20261020.md",
+      "bytes": 6707,
+      "sha256": "ff1aaa687171eec9ebf2669746bdc37cd753dcbcef62890ebf49be20a791bd11",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_large_components_short_tail_transfer_20261020.md",
+      "bytes": 19271,
+      "sha256": "651a9d047d904f1b6496ba2664df5f313878466f67d011dcda144edef6a5620a",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_long_end_native_eight_plus_energy_20261020.md",
+      "bytes": 4465,
+      "sha256": "f103e5378a6997fc97e10f802502cf882ce7e8b9c59a724567d868a82af8606b",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_low_index_common_pair_inventory_and_relaxation_20261020.md",
+      "bytes": 7912,
+      "sha256": "2bd35ff5bd18599c5f4624128e055c3669373eea88d4b9edf8cb7f830c9a99f3",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_low_index_three_profile_farthest_obstruction_20261020.md",
+      "bytes": 8286,
+      "sha256": "b03a84986519cf9a9c16b1c84461dd0ed52806d9ada505a1066f8f750f345c01",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_native_seven_actual_dual_foot_energy_20261020.md",
+      "bytes": 5266,
+      "sha256": "a39306eb2637acf75959530fb5cf5d37dd77d28efdcf6cf2060708a63620d769",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_dn_uniform_energy_and_chain_relaxation_20261020.md",
+      "bytes": 9531,
+      "sha256": "1bd7c4eb372083973ca059b34121cdf0e3f575945a1552d771d7b09c84617804",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_farthest_rank_four_forest_exclusion_20261020.md",
+      "bytes": 11674,
+      "sha256": "68ad62a619603eb7e6c2acc5689c901dde3f9d0897a7c1580b3deb948f5832b6",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_farthest_spherical_face_projection_pressure_20261020.md",
+      "bytes": 4915,
+      "sha256": "abfcb96b6eb74aefdc6498cda362d81b1d4a1f9c32ad17fe3b464cff26fba565",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_farthest_vertex_energy_obstruction_20261020.md",
+      "bytes": 4893,
+      "sha256": "50c64e5a521d3e4e0f277a8ece02d3a29aa4ae8b71485cf3088211e587f45bff",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_farthest_vertex_mixed_replacement_inequalities_20261020.md",
+      "bytes": 6102,
+      "sha256": "3732b82614e13dfe2f7a3c66ab6c7fe67e517cbaeb77be0ca533f559ddf6ed84",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_farthest_vertex_orthogonal_component_opposite_obstruction_20261020.md",
+      "bytes": 3908,
+      "sha256": "4216d06c2e03fd336898b8dac289b9969fa096c8a1d08bd67ddeb8ab5ec2f23d",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_finite_edge_white_weighted_drift_20261020.md",
+      "bytes": 5623,
+      "sha256": "486ce698db8c705f27ca58c092f30b67e695680fcf2c7a3015641996d586b165",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_forest_ordinary_a_parameter_and_dominant_classical_frontier_20261020.md",
+      "bytes": 9978,
+      "sha256": "dd6f8b0de2d7d0bc835be3eb4e320013aa40792407fb2a747f35bcf04385d5ad",
+      "role": "core_proof"
+    },
+    {
+      "path": "results/compact_large_an_actual_half_uniform_transfer_20261020.md",
+      "bytes": 13632,
+      "sha256": "7351b471ba3b0edaf0a524ccf082010e458b7fedd8d063491a75632223bd70e7",
+      "role": "core_proof"
+    },
+    {
+      "path": "results/compact_large_an_actual_projection_five_sevenths_20261020.md",
+      "bytes": 9655,
+      "sha256": "7a57b66e1b9b68948c6fe14c493527ff3ac0b963144f904ff512ead723e192b0",
+      "role": "core_proof"
+    },
+    {
+      "path": "results/compact_repeated_dihedral_corner_energy_20261020.md",
+      "bytes": 7303,
+      "sha256": "baef1c51a99822cdb1e5930b4f23cfc5aaf9e6a386b1dc602a1c3e7a6fe2642c",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_right_corner_short_edge_capacity_20261020.md",
+      "bytes": 5737,
+      "sha256": "aad3f1d9509d716cab98f228061b88783f7e0c848aa849e3f09351fc49b05771",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_universal_a5_actual_projection_three_eighths_20261020.md",
+      "bytes": 9175,
+      "sha256": "fd6f024d975e525184de05961d4d6943f1b0bc8eef4acc279dde98cbc1bc4456",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_universal_a6_actual_projection_three_sevenths_20261020.md",
+      "bytes": 9711,
+      "sha256": "022c0cc77512576dfc7bed74be372a94956618498c9ed74508aff53c40a50ae2",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_universal_a7_two_end_actual_projection_20261020.md",
+      "bytes": 12427,
+      "sha256": "5ae61f571761f517222bef38f35468462ec8fb9ad9d879850c419a6c316828a5",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_universal_a8_three_foot_actual_projection_20261020.md",
+      "bytes": 11719,
+      "sha256": "0f1b3bbe8bfcaba6f53d717664286a7b19dbaaba0911bba8626a50fe91a8800f",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_universal_b3_b4_d4_f4_component_energy_20261020.md",
+      "bytes": 7461,
+      "sha256": "2eb274288127f1bd2b7df36499bec1da0fedc607d3c7ac8bd7734ef8f80c44db",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_universal_e6_e7_e8_component_energy_20261020.md",
+      "bytes": 9994,
+      "sha256": "acf261d97f6eb1a11a64502e17e079ef7f418b9746fbf85dbdf6915750fe9a18",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_universal_h3_h4_component_energy_20261020.md",
+      "bytes": 5555,
+      "sha256": "3fc546347f0488200e36dbb6407d3a66ebe4e35bc353603936799841747ff0bb",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_universal_small_a_component_energy_20261020.md",
+      "bytes": 17709,
+      "sha256": "801581c4b855289aca7982b2d0f4bb6f5849f151a78f40b86c9d403e84f415e6",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_whole_a21_farthest_vertex_exclusion_candidate_20261020.md",
+      "bytes": 19139,
+      "sha256": "3abe11bb70ce677069279462a91111ed6b8ab8889e3ec9e656ac71c1094200fb",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_whole_an_geometric_a21_plateau_transfer_20261020.md",
+      "bytes": 10640,
+      "sha256": "8a58b7747e1a3d8c9affe7df17038781a62983ddd70ccb670502c6f40b1f9cee",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_whole_b_bulk_weak_packet_and_endpoint_pressure_20261020.md",
+      "bytes": 10176,
+      "sha256": "e5a3c51858bb7b1e392b2828c874387be8d2044d5ae1be583a546b67eaddb54c",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/compact_whole_b_short_tail_extension_20261020.md",
+      "bytes": 8226,
+      "sha256": "b6adc03a5950a60a1e263aeb79869785268f1bb7905e74ec47a784446c989c5c",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/connected_arithmetic_lanner_triangle_rank_barrier_20261020.md",
+      "bytes": 5515,
+      "sha256": "61b8c8003f25399d5066ce400199fcae6cb30f1106b67ceb9cffa6d7fb05fa6f",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/first_type_projection_and_trace_lift_obstructions_20261020.md",
+      "bytes": 6798,
+      "sha256": "91566bd43e57a8edeef496e8da0e8704d677de96e15d38103522834d65848234",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/golden_dn_long_end_five_invariant_lattices_20261020.md",
+      "bytes": 6876,
+      "sha256": "58e8553bd53f00c78aaa336b5798ea83abbe4148c14c8403ad14e1416f5f9f2b",
+      "role": "supporting_proof_or_history"
+    },
+    {
+      "path": "results/review_a21_weak_far_m_packet_root_20261020.md",
+      "bytes": 3152,
+      "sha256": "e2f821ac5cf7e5e4c38f5b7d1b7f311054d6e56c2b506f2eb46e2524e30a2c7c",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_an_weak_cap_packets_root_20261020.md",
+      "bytes": 2333,
+      "sha256": "c6af7acec8cb0534272049f68e6b6e8738ff0c893ab8a4438d5d4a2e46eee879",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_arithmetic_whole_an_central_pairs_root_20261020.md",
+      "bytes": 2583,
+      "sha256": "7aa274398078c10611d30b4783a33dd184405c915a1a7e3bcf67c92320902bf9",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_a1_a2_farthest_energy_batch_guard_20261020.md",
+      "bytes": 5334,
+      "sha256": "7eb8e9c407d2001d66fae494ce2e9d0943fb48fde46e9d1823121fd9dc3f2b1c",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_a1_a2_farthest_energy_root_20261020.md",
+      "bytes": 2526,
+      "sha256": "845d6924b3127c2fe184a80dbd3e84c393fefa8c9bb94311442af537f7f65ac7",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_a20_actual_four_sevenths_root_20261020.md",
+      "bytes": 2310,
+      "sha256": "e8795fb99c70372b8fa81c68af6602271e67044566b4c38f0f895004fe1355f9",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_a20_four_sevenths_batch_guard_20261020.md",
+      "bytes": 7137,
+      "sha256": "d03530bf5be380b5f3edab312e9ed383f040b39bc6d9ecfd41abe47e2265766c",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_a21_adjacent_weak_far_packet_batch_guard_20261020.md",
+      "bytes": 3148,
+      "sha256": "a64d90c7b01fda3de511c9230f8f85646e51701400e197d378e7daf341f58b42",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_a2_corner_short_capacity_root_20261020.md",
+      "bytes": 2302,
+      "sha256": "73879455d35b3b164c1f2d091d3b1a769aacefbb7fffc4a435540fb0fc45961d",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_a3_low_rank_energy_batch_guard_20261020.md",
+      "bytes": 6137,
+      "sha256": "07ac9eb8bb015ce31decb816e2278a56e636453f5b904295760c27f807db7971",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_a3_low_rank_energy_root_20261020.md",
+      "bytes": 2679,
+      "sha256": "d3cdff0e8d2c2a92ba7fa507f1cf3ee566730b135e64a328c71b44c1ca34b2ba",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_actual_wall_reciprocal_shadow_root_20261020.md",
+      "bytes": 1454,
+      "sha256": "fd3ad8927dd0a904141270d8fef0d12dd118d7340518594498041e0bd0c7418b",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_an_arbitrary_spectator_transfer_resource_20261020.md",
+      "bytes": 7112,
+      "sha256": "81119d7ac393387458f85d6d0cff5d4ee17707306691397723f00f6d1e224a9a",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_an_large_component_transfer_root_20261020.md",
+      "bytes": 5362,
+      "sha256": "400c344de254e36ac307c92e4e92d72068653e1069c74e0dbb0c94f6f9581bfb",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_b2_matching_corner_batch_guard_20261020.md",
+      "bytes": 1786,
+      "sha256": "1136c8c32ced76a3201335db0f9212dc8427004079842b859f0d868bee0a6547",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_b5_b8_ordinary_projection_resource_20261020.md",
+      "bytes": 6494,
+      "sha256": "3504c5233d0f9147f9877f50ffe829c2cdca9b1abb3dfa6cde177bb305dbc6d6",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_b5_b8_ordinary_projection_root_20261020.md",
+      "bytes": 5139,
+      "sha256": "57c0022ac7c4cbde12a523faf5bb539d298e7a638070b8895fc859f348f344fa",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_bn_actual_nine_fourteenths_resource_20261020.md",
+      "bytes": 6869,
+      "sha256": "1e043449d566202abb6b35d2ce74bf7e185888e77a52d775a525691be5eeac5f",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_bn_actual_nine_fourteenths_root_20261020.md",
+      "bytes": 5499,
+      "sha256": "5c82e800976a13a9bbd92140d844c958ea44de7e89ad240dbd2eb5550cd0c195",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_bn_arbitrary_spectator_transfer_resource_20261020.md",
+      "bytes": 7916,
+      "sha256": "83b2784b40db2256201f9ebe96c9e3c2cccd6137f4ae0cfc3d02aa00a463e2af",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_bn_large_component_transfer_root_20261020.md",
+      "bytes": 4458,
+      "sha256": "d2688c5557de74e2c8c7907958732f3a55986cd3305bce8c930603b45e0ed21b",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_classical_foreign_far_packet_batch_guard_20261020.md",
+      "bytes": 1904,
+      "sha256": "cc23cd5a1768eb35394a0129b70714632fcf70d644e2fe461de7fe0fe2c17485",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_classical_generic_prefix_batch_guard_20261020.md",
+      "bytes": 3740,
+      "sha256": "402a4704695bffb5f92f06e49a8a5cdd520e92b05db05ee4abbf379b40ee3c94",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_classical_generic_prefix_root_20261020.md",
+      "bytes": 3589,
+      "sha256": "602d8c3ea23e5ce309826bfd38bb44044d2689bb118663b40f1d6ce0baf4b179",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_classical_prefix_and_dimension27_root_20261020.md",
+      "bytes": 4307,
+      "sha256": "044cfb855f8cba60a22e571681db106257d35a3eb64ced2980c31ca3f067ec11",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_classical_prefix_dimension27_resource_20261020.md",
+      "bytes": 6424,
+      "sha256": "4c48f9ec5085e0a65cc24ff38f293e9af1bd8be142be56554227114da85cccfa",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_d8_forest_composition_root_20261020.md",
+      "bytes": 1803,
+      "sha256": "a504404185419ea83f58397ac59b4bdaab92d68064f3ac6d2653ebbb6123c415",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_d8_three_direction_energy_finite57_20261020.md",
+      "bytes": 5976,
+      "sha256": "2c82224411d6ea838ef8bfd3cbf6a250c0c30df5adaa2980fc577a7fe692b690",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dimension24_composition_resource_20261020.md",
+      "bytes": 4389,
+      "sha256": "892cecb326a0c9e0e3847d50ad42bee2f9044a1c6133ba1e41cb2108744cb7de",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dimension24_forest_batch_guard_20261020.md",
+      "bytes": 2824,
+      "sha256": "03e303d95ce5fa6873ad089441583bd2fddf0b1f55da6bf8a248f8a93f9e69ee",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dimension26_composition_resource_20261020.md",
+      "bytes": 3451,
+      "sha256": "a7b30e846410d5329dbd0b5ba292e418e0d2ac444556e5bd9aaf0a8cbb1b6683",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dimension26_forest_batch_guard_20261020.md",
+      "bytes": 2689,
+      "sha256": "10ca85704aa56169f02d3a5129b6fa6b9a9e75f30978af2fa14a1b7ec1904f1b",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_actual_nine_fourteenths_root_20261020.md",
+      "bytes": 3882,
+      "sha256": "93f64fd508bd50497bb8ff9f40a88a6514edbe34eda2c49573986287505ab054",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_actual_projection_nine_fourteenths_batch_guard_20261020.md",
+      "bytes": 4776,
+      "sha256": "f18452292d84c61e2937dece3572665147262db32ee07880b66f2d9674adb099",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_center_neighbor_common_opposite_resource_20261020.md",
+      "bytes": 4189,
+      "sha256": "d46094a76edff45b4c67d12e97871c66d980128f1a58090c7770fd907312a0b3",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_center_neighbor_common_opposite_root_20261020.md",
+      "bytes": 3651,
+      "sha256": "eb4ca49ed550e9496cadddca112bebf01a128e04378a01196ee94786e32ecc18",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_common_one_two_finite57_20261020.md",
+      "bytes": 2773,
+      "sha256": "68214100726214e165c5cac7cb99854fc8ee0fa5980451382836d9e83ad9ad76",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_common_one_two_root_20261020.md",
+      "bytes": 3696,
+      "sha256": "bd5881bd7a203a39b045070de833d69beca9b032ff0df23deb463920b9923085",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_common_pair_inventory_root_20261020.md",
+      "bytes": 4220,
+      "sha256": "a6d3e9737f79619aa23e235a409730236bd766b2f2c4a503e5e5c9f6701ea7fd",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_common_three_four_resource_20261020.md",
+      "bytes": 3608,
+      "sha256": "18ae852cc357c26ebc67e96d8ae5865141e652b5a16c2323d103deebda46b29e",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_common_three_four_root_20261020.md",
+      "bytes": 3061,
+      "sha256": "0e2a0ec077c401734dfa69d22ddc54901003c0ea020133326cef4cb64284733a",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_common_two_three_inventory_resource_20261020.md",
+      "bytes": 4582,
+      "sha256": "1d68725a59e93217e1372263c4b08c0cae7e26b210a4d29fc0019ff225321f9c",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_internal_common_opposite_finite57_20261020.md",
+      "bytes": 2653,
+      "sha256": "8e20045a66f5ec41027ec8c342d323a75995d9b7c106589e0093f15dfa3542ce",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_large_component_short_tail_resource_20261020.md",
+      "bytes": 8228,
+      "sha256": "871b7060c4b02a037c63e6538e27b5b5657b10b2510d415c4208846017cd8c6e",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_large_component_transfer_root_20261020.md",
+      "bytes": 6974,
+      "sha256": "4a661cb12544b2602e0f7a55b2daaa8e1673613c832acc2026796ba0de1dcbce",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_long_end_eight_plus_finite57_20261020.md",
+      "bytes": 2016,
+      "sha256": "d9981d6a65efd63991de4b963c58c95b29107c3def5280917304ec5b96c12cea",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_low_index_three_profile_resource_20261020.md",
+      "bytes": 4168,
+      "sha256": "f0fcb0d4aa69b068f2c5e69e4bbfbe9c5825e1fe7290700482efa00d6c14c615",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_low_index_three_profiles_root_20261020.md",
+      "bytes": 4008,
+      "sha256": "5623d311cce9b9a9178dc65ae17fcef46d268da563e503e31434d824c1ff73f2",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_native_eight_plus_root_20261020.md",
+      "bytes": 1994,
+      "sha256": "9758ed1d6d35361264d6029908da438b9168d896b3458a9085f2c5074791331b",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_native_seven_dual_foot_resource_20261020.md",
+      "bytes": 3656,
+      "sha256": "8c718bd7350f33edd1352b186cf07dc8ceac190b748280bf0b7515159e43be88",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_native_seven_dual_foot_root_20261020.md",
+      "bytes": 2563,
+      "sha256": "9288e2b1421b91cc42f7ae134640a78964525a589b7a5c231c85cfc4c54aeb1d",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_dn_uniform_energy_frontier_root_20261020.md",
+      "bytes": 3653,
+      "sha256": "e7421d647e0bf3f7c687ed3d885a953788bd9d99c5dff2e0d354f3c7f149856f",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_farthest_orthogonal_opposites_root_20261020.md",
+      "bytes": 1470,
+      "sha256": "27370fa44347e90dbaf5da5c2a9f40da70df05671a7bbb768990c11e00ab8959",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_farthest_vertex_energy_root_20261020.md",
+      "bytes": 1824,
+      "sha256": "6f99f7b6597583e9c0e1446f71569b8d98a2059b7e335b77d90babaceda963c0",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_farthest_vertex_orthogonal_component_opposite_finite57_20261020.md",
+      "bytes": 2571,
+      "sha256": "031c9398ed8af55b58ccb2d0ac1894ca37c1d9cc0e79ac5165faf2a8703ce5d1",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_forest_ordinary_a_frontier_resource_20261020.md",
+      "bytes": 6301,
+      "sha256": "0a767ef5a94558640e0cfff57fb15d781d8bf74c68b4f0e171301013e9d2899f",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_forest_ordinary_a_frontier_root_20261020.md",
+      "bytes": 2438,
+      "sha256": "150ed6f401fb1126cb8606a8c5a37c2fe9abba1b1b73d6d8357a0a3de1c209cb",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_large_an_actual_half_root_20261020.md",
+      "bytes": 6548,
+      "sha256": "53556e2c9f30386d2c29fe3fbe99a36d4191d662b38642231462e3c55eaac58d",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_large_an_actual_half_uniform_resource_20261020.md",
+      "bytes": 5870,
+      "sha256": "6008e7508438800fb2c16d6389fb561159d3effbb0c22fcbc42511d4ffa75fef",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_large_an_five_sevenths_batch_guard_20261020.md",
+      "bytes": 4076,
+      "sha256": "0ee81c7e00a0681c811bb311746e797a98c3e4328f049233ae78006d3d5f986c",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_large_an_five_sevenths_root_20261020.md",
+      "bytes": 3671,
+      "sha256": "138f5ce90b3aff303e2eeb062c7824a1a54aa685ca8cb085353583509bd37119",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_repeated_dihedral_energy_batch_guard_20261020.md",
+      "bytes": 5397,
+      "sha256": "1bc23bb2ebd09fb7a3be8bfb5dc7cfc92d58bddb5e454e58fe08673c4695b6b3",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_right_corner_short_edge_capacity_root_20261020.md",
+      "bytes": 2534,
+      "sha256": "1e69bf0d4d96e921139cce9204ba567e1b5ba96af39430b59bbb3cecec859a50",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_universal_a5_a6_projection_resource_20261020.md",
+      "bytes": 7637,
+      "sha256": "767ea637010c0659ece83b570163ac0ac1e41038cf1683f48c05604d315da0ba",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_universal_a5_a6_projection_root_20261020.md",
+      "bytes": 6792,
+      "sha256": "2895af3738dc1cc256462926d3d38c57613c78c068df921348e075ab05d71413",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_universal_a7_two_end_projection_resource_20261020.md",
+      "bytes": 7127,
+      "sha256": "93de419a59dd8f42bd3e5d999a75652cbdf5e788fe0787ca245ca47f2c7e3046",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_universal_a7_two_end_projection_root_20261020.md",
+      "bytes": 3634,
+      "sha256": "408177e9a939ac16cf1b30f74846af59e95b62a44550a1d1c37c30f06e2cd23e",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_universal_a8_three_foot_batch_guard_20261020.md",
+      "bytes": 5810,
+      "sha256": "c7a0a91d342df86687c78a014e5b11af0244c290d63f5e7927927e4081724237",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_universal_a8_three_foot_root_20261020.md",
+      "bytes": 2526,
+      "sha256": "b055e6104e0bc12c414aa70b1c232bf632da56d2732ae707bba0bcfe0f9d4b0b",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_universal_h3_h4_component_energy_finite57_20261020.md",
+      "bytes": 3332,
+      "sha256": "d0c76e37d5b35f81f381afde52a5042f3f9c4363371b60f7a7d9137881b69543",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_whole_a21_farthest_vertex_batch_guard_20261020.md",
+      "bytes": 4886,
+      "sha256": "618e255766d77a00ea4457bf3f5b6d983ebb845bcd8352a259d291503dbf7c3f",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_whole_a21_farthest_vertex_root_20261020.md",
+      "bytes": 3576,
+      "sha256": "4d10550d0989d2d399fcdf99b71fa734070c4fd2b6a31616e40fc12a5d898e0a",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_whole_an_a21_plateau_transfer_resource_20261020.md",
+      "bytes": 5350,
+      "sha256": "0f74574a23694c50f477bbb06dc48e1b88678e527384b4ee44169aabb8fda45a",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_whole_an_plateau_transfer_root_20261020.md",
+      "bytes": 4350,
+      "sha256": "5eea0a0450bda422c0c998ed33b4e4a0ef44af90072ffa93027f3c9d3f45ac55",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_whole_b_bulk_and_high_rank_root_20261020.md",
+      "bytes": 4111,
+      "sha256": "9ee9e93dd9640023757dba4bdcab1f251e56f4f5aa74692ab44a56b702b44768",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_whole_b_bulk_endpoint_finite57_20261020.md",
+      "bytes": 6608,
+      "sha256": "c50a40b07e2dd76f57f1389570c9ee7a4e705513fb93aa9272631b6cd0a513c7",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_whole_b_short_tail_resource_20261020.md",
+      "bytes": 6423,
+      "sha256": "bf667be8e56f4e7800298e2ea083536db1d3509284906fcbd7db94c540b7afe3",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_compact_whole_b_short_tail_root_20261020.md",
+      "bytes": 4742,
+      "sha256": "6c7cffcfff4b8f93c9ebd36dba94763c7c595c9083c151b3263bb724e02bdf7b",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_farthest_mixed_replacement_resource_20261020.md",
+      "bytes": 4977,
+      "sha256": "f869aca8774e6584bc9693187ecb6c298d86d7337b6bbb9894cef0b8748c8d6e",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_farthest_mixed_replacements_root_20261020.md",
+      "bytes": 3374,
+      "sha256": "efa1a2de89eb92feb1438468d1bae6832b256b8cb6580d33e508118485ed22d9",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_farthest_orthogonal_opposite_batch_guard_20261020.md",
+      "bytes": 2838,
+      "sha256": "28abea4db81cbc91a4108f4ee1449f5f8f1061c6da837c7c400ec344e6f67289",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_farthest_rank_four_forest_finite57_20261020.md",
+      "bytes": 3491,
+      "sha256": "9fa74c3a42a9dced98b4c2ce7181902e5ee4f80ef6d270b382952085d3f10473",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_farthest_rank_four_forest_root_20261020.md",
+      "bytes": 3642,
+      "sha256": "252199a7255a196f4a5e968d8cdfb38f2ae7c88d2f07404de8117741b35c5553",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_farthest_spherical_projection_root_20261020.md",
+      "bytes": 2657,
+      "sha256": "df8997bb6c87cffb82a2320d9e8a7376827ab41f428874443add7729db49c769",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_golden_dn_long_end_five_invariant_lattices_resource_20261020.md",
+      "bytes": 5673,
+      "sha256": "0cce7f68bceaeffa83026693fc2086475ef933758e8ff753995c922e1cbc4d4e",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_universal_b3_b4_d4_f4_energy_batch_guard_20261020.md",
+      "bytes": 3313,
+      "sha256": "8d5b0fba92e2a9f26f11d3088af034664eb680bbd7ac1e454e82be070b165558",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_universal_b3_b4_d4_f4_energy_root_20261020.md",
+      "bytes": 1990,
+      "sha256": "fa8cb8a30de754a4a265a8ab6e2063c01413f5b1c037e60f86b116c951367fa4",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_universal_extended_d4_component_energy_root_20261020.md",
+      "bytes": 3463,
+      "sha256": "5b4380bbae650283486134389c2c348854f73839908ffc0a580ff29cff69b96d",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_universal_small_a_energy_batch_guard_20261020.md",
+      "bytes": 3026,
+      "sha256": "623edff9d428283d2199b76fbc7fc79db20f1887df8255e64bfcd4916dd3e159",
+      "role": "written_review"
+    },
+    {
+      "path": "results/review_universal_small_a_energy_root_20261020.md",
+      "bytes": 3207,
+      "sha256": "db0c97cc7e8c36d03053f16cd607864bfa528637b291d3fb3bd5b4c8e28d7aaa",
+      "role": "written_review"
+    },
+    {
+      "path": "scripts/verify_compact_farthest_vertex_packet_20261020.py",
+      "bytes": 2450,
+      "sha256": "388dbd9c90516216fab77071e160083e11154aa3046571acdf369788e2f6290c",
+      "role": "integrity_checker"
+    }
+  ]
+}

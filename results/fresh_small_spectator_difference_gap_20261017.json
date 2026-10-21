@@ -1,0 +1,417 @@
+{
+  "status": "PASS_DISCRETE_SPECTATOR_ENERGY_AT_MOST_THREE_QUARTERS",
+  "sources": {
+    "scripts/fresh_small_spectator_difference_gap_20261017.py": "2ff3b8dc3958d6db445ebc67854f43aadfcae3c41dd124dcf7070fcf2a2dd905",
+    "scripts/fresh_selective_distance9_dimension108_20261017.py": "f5cd7d0181cf9d5f96b10b6d4d6e7654caa3369b18ffa7473a16033f3124c81a",
+    "results/fresh_selective_distance9_dimension108_20261017.json": "e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9",
+    "results/fresh_selective_distance9_dimension108_20261017.md": "05d7d24199f528d6154d1eec0c32ce61bcd759e16f72b1fa5bfe6aa6427e7e57",
+    "scripts/fresh_ideal_distance6_mixed_replacement_20261017.py": "0109f8f9ba4f80d909e9dde449a24c6f9a05e146aa2dd7a67b514c5652b66eaf",
+    "results/fresh_ideal_distance6_mixed_replacement_20261017.json": "182c4b32da3d20acbac8c81bf163f767e30a4be10d857198e40f7e6f2fe1530a",
+    "results/fresh_ideal_distance6_mixed_replacement_20261017.md": "d00644e0e39e2cfc8f2ead5a1aa382026ae080f91a62bdfa5f2e1eb3980c0cee"
+  },
+  "hypotheses": "Z and each separate norm2 extension Z+c,Z+d positive definite; native acute Coxeter contacts; nonnegative contact vectors x,y have disjoint supports.",
+  "possible_energies": [
+    "0",
+    "1/2",
+    "2/3",
+    "3/4",
+    "2 - sqrt(2)",
+    "1 - sqrt(5)/5"
+  ],
+  "literal_patterns": [
+    {
+      "name": "A1_single",
+      "gram": [
+        [
+          "2"
+        ]
+      ],
+      "x": [
+        "1"
+      ],
+      "y": [
+        "0"
+      ],
+      "inverse": [
+        [
+          "1/2"
+        ]
+      ],
+      "energy": "1/2",
+      "positive_pivots": [
+        "2"
+      ],
+      "separate_extension_pivots": [
+        [
+          "2",
+          "3/2"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ],
+      "inverse_difference": [
+        "1/2"
+      ]
+    },
+    {
+      "name": "A2_single",
+      "gram": [
+        [
+          "2",
+          "-1"
+        ],
+        [
+          "-1",
+          "2"
+        ]
+      ],
+      "x": [
+        "1",
+        "0"
+      ],
+      "y": [
+        "0",
+        "0"
+      ],
+      "inverse": [
+        [
+          "2/3",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "2/3"
+        ]
+      ],
+      "energy": "2/3",
+      "positive_pivots": [
+        "2",
+        "3/2"
+      ],
+      "separate_extension_pivots": [
+        [
+          "2",
+          "3/2",
+          "4/3"
+        ],
+        [
+          "2",
+          "3/2",
+          "2"
+        ]
+      ],
+      "inverse_difference": [
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "name": "A3_endpoint_single",
+      "gram": [
+        [
+          "2",
+          "-1",
+          "0"
+        ],
+        [
+          "-1",
+          "2",
+          "-1"
+        ],
+        [
+          "0",
+          "-1",
+          "2"
+        ]
+      ],
+      "x": [
+        "1",
+        "0",
+        "0"
+      ],
+      "y": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inverse": [
+        [
+          "3/4",
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/2",
+          "1",
+          "1/2"
+        ],
+        [
+          "1/4",
+          "1/2",
+          "3/4"
+        ]
+      ],
+      "energy": "3/4",
+      "positive_pivots": [
+        "2",
+        "3/2",
+        "4/3"
+      ],
+      "separate_extension_pivots": [
+        [
+          "2",
+          "3/2",
+          "4/3",
+          "5/4"
+        ],
+        [
+          "2",
+          "3/2",
+          "4/3",
+          "2"
+        ]
+      ],
+      "inverse_difference": [
+        "3/4",
+        "1/2",
+        "1/4"
+      ]
+    },
+    {
+      "name": "A2_adjacent",
+      "gram": [
+        [
+          "2",
+          "-1"
+        ],
+        [
+          "-1",
+          "2"
+        ]
+      ],
+      "x": [
+        "1",
+        "0"
+      ],
+      "y": [
+        "0",
+        "1"
+      ],
+      "inverse": [
+        [
+          "2/3",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "2/3"
+        ]
+      ],
+      "energy": "2/3",
+      "positive_pivots": [
+        "2",
+        "3/2"
+      ],
+      "separate_extension_pivots": [
+        [
+          "2",
+          "3/2",
+          "4/3"
+        ],
+        [
+          "2",
+          "3/2",
+          "4/3"
+        ]
+      ],
+      "inverse_difference": [
+        "1/3",
+        "-1/3"
+      ]
+    },
+    {
+      "name": "A3_adjacent",
+      "gram": [
+        [
+          "2",
+          "-1",
+          "0"
+        ],
+        [
+          "-1",
+          "2",
+          "-1"
+        ],
+        [
+          "0",
+          "-1",
+          "2"
+        ]
+      ],
+      "x": [
+        "1",
+        "0",
+        "0"
+      ],
+      "y": [
+        "0",
+        "1",
+        "0"
+      ],
+      "inverse": [
+        [
+          "3/4",
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/2",
+          "1",
+          "1/2"
+        ],
+        [
+          "1/4",
+          "1/2",
+          "3/4"
+        ]
+      ],
+      "energy": "3/4",
+      "positive_pivots": [
+        "2",
+        "3/2",
+        "4/3"
+      ],
+      "separate_extension_pivots": [
+        [
+          "2",
+          "3/2",
+          "4/3",
+          "5/4"
+        ],
+        [
+          "2",
+          "3/2",
+          "4/3",
+          "1"
+        ]
+      ],
+      "inverse_difference": [
+        "1/4",
+        "-1/2",
+        "-1/4"
+      ]
+    },
+    {
+      "name": "I2_4_adjacent",
+      "gram": [
+        [
+          "2",
+          "-sqrt(2)"
+        ],
+        [
+          "-sqrt(2)",
+          "2"
+        ]
+      ],
+      "x": [
+        "1",
+        "0"
+      ],
+      "y": [
+        "0",
+        "1"
+      ],
+      "inverse": [
+        [
+          "1",
+          "sqrt(2)/2"
+        ],
+        [
+          "sqrt(2)/2",
+          "1"
+        ]
+      ],
+      "energy": "2 - sqrt(2)",
+      "positive_pivots": [
+        "2",
+        "1"
+      ],
+      "separate_extension_pivots": [
+        [
+          "2",
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "1"
+        ]
+      ],
+      "inverse_difference": [
+        "1 - sqrt(2)/2",
+        "-1 + sqrt(2)/2"
+      ]
+    },
+    {
+      "name": "I2_5_adjacent",
+      "gram": [
+        [
+          "2",
+          "-sqrt(5)/2 - 1/2"
+        ],
+        [
+          "-sqrt(5)/2 - 1/2",
+          "2"
+        ]
+      ],
+      "x": [
+        "1",
+        "0"
+      ],
+      "y": [
+        "0",
+        "1"
+      ],
+      "inverse": [
+        [
+          "4/(5 - sqrt(5))",
+          "(-sqrt(5) - 1)/(-5 + sqrt(5))"
+        ],
+        [
+          "(-sqrt(5) - 1)/(-5 + sqrt(5))",
+          "2/(5/2 - sqrt(5)/2)"
+        ]
+      ],
+      "energy": "1 - sqrt(5)/5",
+      "positive_pivots": [
+        "2",
+        "5/4 - sqrt(5)/4"
+      ],
+      "separate_extension_pivots": [
+        [
+          "2",
+          "5/4 - sqrt(5)/4",
+          "1 - sqrt(5)/5"
+        ],
+        [
+          "2",
+          "5/4 - sqrt(5)/4",
+          "1 - sqrt(5)/5"
+        ]
+      ],
+      "inverse_difference": [
+        "-(-sqrt(5) - 1)/(-5 + sqrt(5)) + 4/(5 - sqrt(5))",
+        "-2/(5/2 - sqrt(5)/2) + (-sqrt(5) - 1)/(-5 + sqrt(5))"
+      ]
+    }
+  ],
+  "A2_third_node_energy": "v/(18 - 6*v) + 2/3",
+  "A2_excess_over_three_quarters": "-(v - 1)/(4*(v - 3))",
+  "nonunit_pair_lower_bound": "strictly greater than96/125>3/4",
+  "excluded_cycle14_energy": "4/7",
+  "equality_three_quarters": "Exactly one unit contact at an endpoint of a whole simple A3 component, or one unit contact from each side at adjacent vertices of a whole simple A3 component. All other spectator contacts vanish.",
+  "scope": "Universal small spectator-energy classification under the explicit strict edge and disjoint-support hypotheses. Completeness is proved analytically in the report; finite cases check its exact values and sharpness. No complete face-payment or dimension theorem asserted."
+}

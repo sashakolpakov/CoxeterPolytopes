@@ -1,0 +1,11 @@
+# Independent discriminant-55 pilot review
+
+The independent [checker](../scripts/fresh_h9_beta55_pilot_20261014_review.py) and [certificate](fresh_h9_beta55_pilot_20261014_review.json) reproduce the complete height-20 search: 58 control levels, twelve walls, 23 finite vertices, no cusps and 27 hyperideal extreme rays. The strict spacelike escape is verified exactly, so this prefix has infinite volume. The lattice's reflectivity remains undecided.
+
+The checker imports neither the producer nor its arithmetic helper. It uses the project's separate `Golden` implementation, reconstructs the positive Schur forms from the literal E8 Cartan matrix, reverses the producer's lambda-coordinate order, and uses larger coefficient boxes. Both embeddings, divisibility and the signed binary residual are checked independently. Its enumeration visits 1,838 nodes, compared with the producer's 2,042, and agrees at every control level. All twelve actual-facet witnesses pass. A separate incremental double-description census reproduces all 50 extreme rays from the producer's exhaustive support enumeration.
+
+The finite bounds are derived anew: the positive control is less than 11, its conjugate has absolute value less than 5, and the signed residual has absolute values less than 39 and 8. The checker's coefficient boxes `[-10,10]^2` and `[-26,26]^2` strictly contain these ranges. All accepted candidates are checked for integral coordinates and integral reflection coefficients.
+
+The ring, norm-alphabet and zero-sector arguments are mathematical dependencies, rather than a new computer classification. Reviewing them gives four primitive norm classes: evenness writes the norm as `2b`; primitivity and reflection integrality imply `b | det(G)`; the squarefree determinant ideal has the two prime factors of norms 5 and 11. The already reviewed unit theorem permits the four totally positive representatives. At zero height, a nonunit b would divide every coordinate, contradicting evenness of the norm after division. For norm two in `E8 ⊕ <4>`, writing a vector as `u+φv` gives `u²+v²=2` and `2(u,v)+v²=0`; even positive definiteness forces `v=0` and an ordinary E8 root. There is no additional zero-height binary reflector.
+
+This review establishes the bounded enumeration and its geometry. It does not establish finite volume or nonreflectivity of the full lattice.

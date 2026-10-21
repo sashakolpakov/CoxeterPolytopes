@@ -1,0 +1,208 @@
+{
+  "status": "PASS_INDEPENDENT_LITERAL_TWO_TERM_WEIGHT_MODEL_BARRIER_36",
+  "sources": {
+    "scripts/fresh_sqrt5_two_term_36_barrier_20261016_review.py": "71a39510230ccac1f915c9c84ca45d070970f9e87743447c71a28f07920a48a3",
+    "results/fresh_sqrt5_marked_h4_remainder_free_bonus_20261016.json": "4dfff643bea28aa2cc5cff080997b4a80c757fc91c16aa8f251d71fb9314b222"
+  },
+  "quad_corners": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "components": [
+        "A4",
+        "A4"
+      ],
+      "w_coefficient": 0,
+      "D5_pair_isomorphism": null
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "components": [
+        "A3",
+        "D5"
+      ],
+      "w_coefficient": 1,
+      "D5_pair_isomorphism": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          0
+        ]
+      ]
+    },
+    {
+      "pair": [
+        2,
+        1
+      ],
+      "components": [
+        "A3",
+        "D5"
+      ],
+      "w_coefficient": 1,
+      "D5_pair_isomorphism": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          0
+        ]
+      ]
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "components": [
+        "D4",
+        "D4"
+      ],
+      "w_coefficient": 0,
+      "D5_pair_isomorphism": null
+    }
+  ],
+  "common_spectators": [
+    "marked A1",
+    "A12"
+  ],
+  "D5_pairs": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "distance": 1,
+      "baseline": 1,
+      "w_coefficient": 0
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "distance": 2,
+      "baseline": 1,
+      "w_coefficient": 0
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "distance": 1,
+      "baseline": 1,
+      "w_coefficient": 0
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "distance": 1,
+      "baseline": 1,
+      "w_coefficient": 0
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "distance": 1,
+      "baseline": 1,
+      "w_coefficient": 0
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "distance": 2,
+      "baseline": 1,
+      "w_coefficient": 0
+    },
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "distance": 2,
+      "baseline": 1,
+      "w_coefficient": 0
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "distance": 3,
+      "baseline": 0,
+      "w_coefficient": 1
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "distance": 3,
+      "baseline": 0,
+      "w_coefficient": 1
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "distance": 2,
+      "baseline": 1,
+      "w_coefficient": 0
+    }
+  ],
+  "vertex_forest": [
+    "marked A1",
+    "D5",
+    "D5",
+    "D5",
+    "D5"
+  ],
+  "vertex_baseline": 32,
+  "vertex_w_coefficient": 8,
+  "model_lower_bound": "36",
+  "target": 35,
+  "proof": "The literal prior64 quadrilateral has two connected D5 distance3 black pairs and two disconnected A4/A4 or D4/D4 black pairs. The current family pays only the former, both by the same w, forcing2w>=1. In markedA1+4D5, everyD5 has8 baseline pairs and2copies ofthat same marked-pair orbit, yielding32+8w>=36. The two exact dual rows cancelw andgive the identical bound.",
+  "scope": "Independent review of this specific restricted payment-family obstruction and its literal graphs, assuming the stated baseline, absent A4/D4 cross families and rank>=6 discounts. No claim that the model quad is globally realizable, no full DP/facecoverage audit, and no geometric dimension bound. Adding cross payments or changing D5 baseline escapes this obstruction."
+}

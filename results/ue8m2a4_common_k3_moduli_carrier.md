@@ -1,0 +1,266 @@
+# TOOT: a second K3 period-moduli carrier factory in `H10`
+
+## The bounded inverse-carrier theorem
+
+Put
+
+\[
+ S=U\oplus E_8(-2)\oplus\langle-4\rangle.
+\]
+
+Let `P` be a genuine finite-sided oriented Coxeter polyhedron in `H10`.
+Suppose its facet hyperplanes have an orientation-compatible realization by
+primitive negative vectors of `S`, and every corresponding reflection
+preserves `S`.  Then, after choosing an `S`-marking, `P` is a weak
+full-Picard divisor-reflection carrier on a very general K3 surface in the
+nine-dimensional `S`-polarized period locus.
+
+This is a reusable criterion: it applies to **every genuine finite-sided
+Coxeter polyhedron** passing that integral-`S` gate, not only to the two
+large chambers that led to it.  It is also deliberately bounded.  The
+surface supplies the divisor lattice and hyperbolicity; it does not by itself
+prove the Coxeter, finite-volume, or nef-cone assertions.
+
+The currently certified realization is **period-level, not equation-level**.
+The primitive embedding and the K3 period map prove existence of the
+nine-dimensional locus, but the archive does not supply a common explicit
+Weierstrass, quartic, or other equation family.  Under a marking, an arbitrary
+wall becomes an algebraic divisor class.  No equation, effective
+representative, or irreducible curve for that class is thereby produced.
+
+## Exact wall alphabet from the full discriminant form
+
+The discriminant data are
+
+```text
+rank(S)       = 11
+signature(S)  = (1,10)
+det(S)        = 1024
+A_S           = (Z/2)^8 + Z/4
+q_S           = q_plus(F2^8) + <-1/4>.
+```
+
+The exponent alone gives only an upper bound.  If `r` is primitive and
+`d=div_S(r)`, then `r/d` has exact order `d` in `A_S`, so `d` is `1`, `2`,
+or `4`.  Reflection integrality is equivalent to
+
+\[
+ |r^2|\mid 2d.
+\]
+
+Using only the exponent, evenness, and reflection integrality gives the naive
+six-pair superset
+
+```text
+(-2,1)
+(-2,2), (-4,2)
+(-2,4), (-4,4), (-8,4).
+```
+
+There is an additional elementary constraint before using the discriminant
+quadratic form: `d` divides every pairing `(r,x)`, hence it divides the
+self-pairing `r^2`.  This already rules out `(-2,4)` and leaves the five
+genuine preliminary types
+
+```text
+(-2,1)
+(-2,2), (-4,2)
+(-4,4), (-8,4).
+```
+
+The full quadratic form removes two more.  In the visible decomposition,
+all 1,024 discriminant classes have unique representatives
+
+\[
+ (0,0,b_1/2,\ldots,b_8/2,c/4),
+ \qquad b_i\in\{0,1\},\quad c\in\{0,1,2,3\}.
+\]
+
+The certificate enumerates them exactly.  Their exact-order quadratic-value
+histogram modulo `2Z` is
+
+| exact order | `q mod 2Z` | number of classes |
+|---:|---:|---:|
+| 1 | `0` | 1 |
+| 2 | `0` | 255 |
+| 2 | `1` | 256 |
+| 4 | `3/4` | 240 |
+| 4 | `7/4` | 272 |
+
+But a proposed type requires
+
+\[
+ q(r/d)=r^2/d^2\pmod {2\mathbf Z}.
+\]
+
+Hence `(-2,2)` and `(-8,4)` would require the absent value `3/2`.  For
+completeness, the already impossible naive pair `(-2,4)` would require the
+absent value `15/8` as well, but its first obstruction is `4` not dividing
+`-2`.  The exact primitive negative integral-reflection alphabet is therefore
+
+```text
+(-2, divisibility 1)
+(-4, divisibility 2)
+(-4, divisibility 4).
+```
+
+All three surviving types really occur.  In the standard
+`U+E8(-2)+<-4>` basis, literal witnesses are
+
+```text
+e-f in U                    : (-2, div 1)
+one E8(-2) simple root      : (-4, div 2)
+the generator of <-4>       : (-4, div 4).
+```
+
+The verifier checks primitivity, exact discriminant-class order, reflection
+integrality, and Gram preservation for each witness.  Thus this is an exact
+alphabet, not merely a necessary superset.
+
+Negative square remains essential.  The vector `e+f` in `U` is primitive,
+has square `+2` and divisibility one, and defines an integral lattice
+reflection, but it is not a hyperbolic-mirror normal and lies outside the
+theorem.
+
+## Why the surface exists
+
+There is an explicit primitive embedding
+
+\[
+ S\hookrightarrow \Lambda_{K3}=U^3\oplus E_8(-1)^2:
+\]
+
+- place `U` in the first ambient `U`;
+- embed `E8(-2)` diagonally in the two `E8(-1)` factors; and
+- send the generator of `<-4>` to `e-2f` in a second ambient `U`.
+
+Its orthogonal complement is
+
+\[
+ U\oplus E_8(-2)\oplus\langle4\rangle
+\]
+
+of signature `(2,9)`.  The frozen source checks primitivity by a unit minor,
+the entire embedding matrix, the complement, and the gluing index.  K3 period
+surjectivity then gives the nine-dimensional marked period locus; avoiding
+the countable extra-algebraic hyperplanes makes `NS(X)=S` at a very general
+point.
+
+Consequently every finite integral `S` wall system is simultaneously present
+as divisor classes on a marked very general member.  Different chosen
+Coxeter chambers may require different Weyl re-markings if one asks that
+their interiors meet the ample cone.
+
+## Finite volume, finite index, and the complete reflection group
+
+Let `W(S)` be generated by all primitive negative integral mirror
+reflections of `S`.  A complete Vinberg computation gives its classical
+13-wall `f_2^10` chamber:
+
+```text
+facets             13
+finite vertices    29
+cusps                3
+hyperideal rays      0
+wall types           1*(-2,1) + 11*(-4,2) + 1*(-4,4)
+chi(W(S))           -31/11147673600.
+```
+
+Thus `W(S)` is a nonuniform lattice.  Now suppose `P` is a genuine Coxeter
+polyhedron realized in `S`, and let `Gamma` be its facet-reflection group.
+Primitive reduction gives `Gamma <= W(S)`, while the Poincare polyhedron
+theorem makes `P` a fundamental domain for `Gamma`.  Up to measure-zero
+boundaries, a `Gamma` domain is a disjoint union of
+`[W(S):Gamma]` fundamental `W(S)` chambers.  Therefore
+
+\[
+ \operatorname{vol}(P)<\infty
+ \quad\Longleftrightarrow\quad
+ [W(S):\Gamma]<\infty.
+\]
+
+The genuine-fundamental-polyhedron hypothesis is indispensable; an arbitrary
+finite list of reflecting vectors does not inherit this conclusion.
+
+A finite-index subgroup of a nonuniform lattice contains positive powers of
+parabolic elements and is again nonuniform.  Hence every finite-volume
+`S`-integral Coxeter polyhedron is noncompact.  In particular:
+
+> No compact `H10` Coxeter polytope admits a primitive-negative integral
+> mirror realization in `S`.
+
+This is an exact no-go inside this carrier lattice, not a general
+nonexistence theorem for other lattices, coefficient fields, or abstract
+polytopes.
+
+## Two exact calibrations
+
+The two source chambers verify both directions of the setup.  This is not a
+new abstract-polytope claim.
+
+| chamber | facets | wall types `(-2,1);(-4,2);(-4,4)` | index in `W(S)` | finite vertices | cusps | rank-9 edges |
+|---|---:|---:|---:|---:|---:|---:|
+| `F3-V4-H10-123` | 123 | `10;31;82` | 65,802,240 | 37,451 | 1,732 | 246,610 |
+| `JK-H10-0007` | 84 | `8;33;43` | 16,450,560 | 15,698 | 862 | 107,233 |
+
+Their exact Coxeter Euler characteristics are respectively
+`-527/2880` and `-527/11520`; division by
+`-31/11147673600` gives the displayed indices.  Each chamber separately has
+a complete literal Vinberg audit and an independent exact cone with no
+hyperideal ray.  The period-carrier theorem is not being used as a substitute
+for either volume proof.
+
+The index ratio is four, but no containment between the two displayed
+reflection subgroups is inferred from that numerical fact.
+
+## Exact geometric-promotion boundary
+
+For a chamber separately, a K3 Weyl re-marking can move a generic strict
+interior point into the ample chamber.  K3 Riemann--Roch then selects the
+effective sign of each oriented `(-2)` facet.  Such an effective class can be
+reducible and need not itself be an irreducible nef-wall curve.
+
+Full-nef equality would require every irredundant facet to be a primitive
+`(-2)`-root hyperplane and no other `(-2)`-root hyperplane to meet the chamber
+interior.  An irredundant `(-4,div2)` or `(-4,div4)` facet cannot be a full K3
+nef wall.  Both calibrations contain many such facets, so they remain mixed
+divisor-reflection carriers.
+
+No Picard reflection is asserted to extend as a Hodge isometry or surface
+automorphism.  There is no full-nef, simultaneous ample-marking, explicit
+wall equation, new abstract polytope, or worldwide-priority claim.
+
+## Search consequence
+
+For this period component, the softer algebraic-surface existence problem is
+now compiled into a finite arithmetic gate:
+
+1. realize a proposed `H10` Coxeter chamber integrally in `S` using only the
+   three exact primitive wall types;
+2. find a strict positive-cone interior and verify the oriented Coxeter Gram
+   conditions;
+3. prove that its facet group has finite index in `W(S)`, or run the complete
+   Vinberg finite-volume test; and
+4. only then attempt the stronger effective, irreducible, or full-nef
+   promotion.
+
+Conversely, any candidate needing `(-2,2)`, `(-2,4)`, `(-8,4)`, or another
+primitive type is excluded from this entire nine-dimensional K3 period
+component.  Here `(-2,4)` fails the self-pairing divisibility condition,
+whereas `(-2,2)` and `(-8,4)` fail the full discriminant-form condition.  The
+candidate is not excluded abstractly unless a separate universality theorem
+forces this carrier lattice.
+
+## Reproduction
+
+```bash
+PYTHONPATH=src:. python3 scripts/certify_ue8m2a4_common_k3_moduli_carrier.py --check-archive
+PYTHONPATH=src:. pytest -q tests/test_ue8m2a4_common_k3_moduli_carrier.py
+```
+
+The machine-readable certificate is
+[`ue8m2a4_common_k3_moduli_carrier.json`](../data/enumerations/ue8m2a4_common_k3_moduli_carrier.json).
+
+Frozen payload SHA-256:
+
+`87dc623443c6386bb562f1fa969603768cd04f2f4bcf279f428cf07adfcf552c`

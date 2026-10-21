@@ -1,0 +1,78 @@
+{
+  "status": "PASS_STRICT_SPHINX_AFTER_SELECTED_LEAN_COMPLETION",
+  "scope": "Documentation and relative link existence only; no mathematics,TeX or new Lean execution.",
+  "sphinx_version": "9.1.0",
+  "warnings_as_errors": true,
+  "pages": 8,
+  "relative_links_checked": 233,
+  "issues": [],
+  "source_bindings": [
+    {
+      "path": "docs/site/_templates/sourcelink.html",
+      "bytes": 449,
+      "sha256": "7338714d4bfed0ff329c9385d24a21df18dffa29cdd821880d1a3a697d7442aa"
+    },
+    {
+      "path": "docs/site/conf.py",
+      "bytes": 1082,
+      "sha256": "f4f019514d3253e42f24202ef65ea9783c00c77d6e79188f42908a505cd577ab"
+    },
+    {
+      "path": "docs/site/index.rst",
+      "bytes": 1966,
+      "sha256": "36bfd5762c391889013d112fec39816271ceeb3cf24e82b52cf1ce5883dc170b"
+    },
+    {
+      "path": "docs/site/methods.rst",
+      "bytes": 3563,
+      "sha256": "af62437882c374596144379b84a44d1ccc52bf1c117b28734df47b16f7542ee4"
+    },
+    {
+      "path": "docs/site/papers.rst",
+      "bytes": 4799,
+      "sha256": "8c78105d4e9c4c0e95c92d0afd1f2410f17e2248c774c55a58a2f857355677de"
+    },
+    {
+      "path": "docs/site/reproducibility.rst",
+      "bytes": 5303,
+      "sha256": "3f953ae1523b1218143152b6ac31254596f1ca408b9231f98601ac951467e8cd"
+    },
+    {
+      "path": "docs/site/scope.rst",
+      "bytes": 3198,
+      "sha256": "ad1c8f3bca20fb00ed0457789e56c6171951364d41be809a2530ac8c371e30c6"
+    },
+    {
+      "path": "docs/site/verification.rst",
+      "bytes": 5066,
+      "sha256": "772d52c2ec70ba8baca7b296bc4e4afa4afd5e55d029b8befa8d6ee8ada3f666"
+    }
+  ],
+  "stdout_path": "results/sphinx_publication_after_lean_20261021.txt",
+  "stdout_sha256": "22b9a486f6c816acf97a4b63d9049b6a31f84148110b33eb78905a87980b3093",
+  "watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "/Users/sasha/.venvs/global/bin/python3",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      "docs/site/_build/html"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 93126656,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 142144344064,
+      "ram_available_bytes": 9161441280
+    },
+    "seconds": 2.058
+  },
+  "lean_receipt": "results/lean_publication_completion_20261021/manifest.json",
+  "remote_publication_verified": false
+}

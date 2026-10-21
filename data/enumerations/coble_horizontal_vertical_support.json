@@ -1,0 +1,209 @@
+{
+  "allowed_rows_by_characteristic": {
+    "3": [
+      {
+        "boundary_count": 1,
+        "type": "I"
+      },
+      {
+        "boundary_count": 2,
+        "type": "I"
+      },
+      {
+        "boundary_count": 1,
+        "type": "II"
+      },
+      {
+        "boundary_count": 2,
+        "type": "V"
+      },
+      {
+        "boundary_count": 5,
+        "type": "VI"
+      },
+      {
+        "boundary_count": 2,
+        "type": "MI"
+      },
+      {
+        "boundary_count": 8,
+        "type": "MII"
+      }
+    ],
+    "5": [
+      {
+        "boundary_count": 1,
+        "type": "I"
+      },
+      {
+        "boundary_count": 2,
+        "type": "I"
+      },
+      {
+        "boundary_count": 1,
+        "type": "II"
+      },
+      {
+        "boundary_count": 1,
+        "type": "VI"
+      },
+      {
+        "boundary_count": 1,
+        "type": "VII"
+      }
+    ],
+    "generic_characteristic_zero": [
+      {
+        "boundary_count": 1,
+        "type": "I"
+      },
+      {
+        "boundary_count": 2,
+        "type": "I"
+      },
+      {
+        "boundary_count": 1,
+        "type": "II"
+      }
+    ],
+    "other_odd": [
+      {
+        "boundary_count": 1,
+        "type": "I"
+      },
+      {
+        "boundary_count": 2,
+        "type": "I"
+      },
+      {
+        "boundary_count": 1,
+        "type": "II"
+      }
+    ]
+  },
+  "classified_rows": [
+    {
+      "boundary_count": 1,
+      "characteristic_support": "all_odd",
+      "hyperbolic_dimension": 10,
+      "picard_rank": 11,
+      "type": "I"
+    },
+    {
+      "boundary_count": 2,
+      "characteristic_support": "all_odd",
+      "hyperbolic_dimension": 11,
+      "picard_rank": 12,
+      "type": "I"
+    },
+    {
+      "boundary_count": 1,
+      "characteristic_support": "all_odd",
+      "hyperbolic_dimension": 10,
+      "picard_rank": 11,
+      "type": "II"
+    },
+    {
+      "boundary_count": 2,
+      "characteristic_support": "3",
+      "hyperbolic_dimension": 11,
+      "picard_rank": 12,
+      "type": "V"
+    },
+    {
+      "boundary_count": 1,
+      "characteristic_support": "5",
+      "hyperbolic_dimension": 10,
+      "picard_rank": 11,
+      "type": "VI"
+    },
+    {
+      "boundary_count": 5,
+      "characteristic_support": "3",
+      "hyperbolic_dimension": 14,
+      "picard_rank": 15,
+      "type": "VI"
+    },
+    {
+      "boundary_count": 1,
+      "characteristic_support": "5",
+      "hyperbolic_dimension": 10,
+      "picard_rank": 11,
+      "type": "VII"
+    },
+    {
+      "boundary_count": 2,
+      "characteristic_support": "3",
+      "hyperbolic_dimension": 11,
+      "picard_rank": 12,
+      "type": "MI"
+    },
+    {
+      "boundary_count": 8,
+      "characteristic_support": "3",
+      "hyperbolic_dimension": 17,
+      "picard_rank": 18,
+      "type": "MII"
+    }
+  ],
+  "derived": {
+    "all_boundary_counts": [
+      1,
+      2,
+      5,
+      8
+    ],
+    "all_hyperbolic_dimensions": [
+      10,
+      11,
+      14,
+      17
+    ],
+    "horizontal_boundary_counts": [
+      1,
+      2
+    ],
+    "horizontal_dimension_ceiling": 11,
+    "horizontal_hyperbolic_dimensions": [
+      10,
+      11
+    ],
+    "unclassified_boundary_counts_have_empty_carrier_stack": true,
+    "vertical_only_high_boundary_support": {
+      "5": [
+        3
+      ],
+      "8": [
+        3
+      ]
+    }
+  },
+  "limitations": {
+    "does_not_make_carrier_success_a_surface_free_input_condition": true,
+    "does_not_prove_carrier_nonemptiness_for_raw_D_CobVin": true,
+    "does_not_prove_kondo_classification": true,
+    "strict_flagship_status": "support theorem and target-class correction, not L4"
+  },
+  "schema": "coxeter.coble_horizontal_vertical_support.v1",
+  "scope": {
+    "base": "Spec Z[1/2]",
+    "classification_input": "Kondo nine-class theorem",
+    "classification_is_external": true,
+    "surface_species": "finite-automorphism strong Coble full-nef carriers"
+  },
+  "support_by_boundary_count": {
+    "1": "all_odd",
+    "2": "all_odd",
+    "5": [
+      "3"
+    ],
+    "8": [
+      "3"
+    ]
+  },
+  "theorem": {
+    "design_consequence": "A characteristic-uniform free/evaluation-surjective branch cannot produce the H14 or H17 Coble endpoints.",
+    "horizontal_component": "If a Coble-Vinberg incidence-stack component dominates Spec Z[1/2], its generic characteristic-zero point and exact same-P return force b in {1,2} and dim(P) in {10,11}.",
+    "vertical_component": "For b=5 or b=8 every geometric carrier point is supported over characteristic 3; for b outside {1,2,5,8} the carrier stack is empty."
+  }
+}

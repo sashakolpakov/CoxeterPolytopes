@@ -1,0 +1,117 @@
+{
+  "docker_vm_logical_cpus": 4,
+  "events": [
+    {
+      "action": "pause_lower_priority_jobs",
+      "reason": "reversibly dedicate the four-CPU Docker VM to the four priority rank-five searches",
+      "state_verified_at_utc": "2026-08-12T11:39:54Z",
+      "paused": [
+        {
+          "case": "inert-2-rank5",
+          "container_id": "49a7ac8a718c3d26e17ef79696553046b277a63c7a3eef6998061f163b97b9a6",
+          "container_name": "k7-alvin-inert-2-rank5-1786533446896323000",
+          "docker_cpu_limit": 1.0,
+          "runner_session_id": 44269,
+          "state": "paused"
+        },
+        {
+          "case": "ramified-7-rank6",
+          "container_id": "ef4d9a35035fb7608bcee8115f86f16d6a8c31e533068b5ff248fc0109772b3e",
+          "container_name": "k7-alvin-ramified-7-rank6-1786533577668244000",
+          "docker_cpu_limit": 1.0,
+          "runner_session_id": 63327,
+          "state": "paused"
+        },
+        {
+          "case": "inert-2-rank6",
+          "container_id": "3664e832bfd4d18291c8c5b24fe54f597fbf986fa5e359666cabbdd3e2726696",
+          "container_name": "k7-alvin-inert-2-rank6-1786533574467169000",
+          "docker_cpu_limit": 1.0,
+          "runner_session_id": 46685,
+          "state": "paused"
+        },
+        {
+          "case": "split-13-r8-rank5",
+          "container_id": "be16233eb6aea7454918b507679167633192bb6b691b4057feb4e0dea149b2c0",
+          "container_name": "k7-alvin-split-13-r8-rank5-1786534190283206000",
+          "docker_cpu_limit": 0.75,
+          "runner_session_id": 44242,
+          "state": "paused"
+        },
+        {
+          "case": "split-13-r10-rank5",
+          "container_id": "9aa6c9d9f6b2a6679cc401362f4559d7701a01e64516ce3305618e5642cf2840",
+          "container_name": "k7-alvin-split-13-r10-rank5-1786534192087177000",
+          "docker_cpu_limit": 0.75,
+          "runner_session_id": 58730,
+          "state": "paused"
+        }
+      ],
+      "priority_running": [
+        {
+          "case": "ramified-7-rank5",
+          "container_id": "1f376c77560af3adaac8686a6186e98cb37daabbc37a47e7389f4283998c3507",
+          "container_name": "k7-alvin-ramified-7-rank5-1786533452938613000",
+          "docker_cpu_limit": 1.0,
+          "runner_session_id": 19395,
+          "state": "running"
+        },
+        {
+          "case": "timelike-minus-2theta-rank5",
+          "container_id": "586ee7d4ebc70119b5a3cd5bba360d78db6271759a119259cbff11f3a92ccbdb",
+          "container_name": "k7-alvin-timelike-minus-2theta-rank5-1786533452392217000",
+          "docker_cpu_limit": 1.0,
+          "runner_session_id": 40545,
+          "state": "running"
+        },
+        {
+          "case": "timelike-minus-theta-times-2-minus-theta-rank5",
+          "container_id": "fb54854381f03b39ea256ef2bdf6ce35d7d7b62fb442979ea52776d96e143cb4",
+          "container_name": "k7-alvin-timelike-minus-theta-times-2-minus-theta-rank5-1786533452540265000",
+          "docker_cpu_limit": 1.0,
+          "runner_session_id": 9425,
+          "state": "running"
+        },
+        {
+          "case": "split-13-r7-rank5",
+          "container_id": "191715fca2b29ac2bc7784c0264fb1e553f4fe54ae5ca72ec967e81afd398f1e",
+          "container_name": "k7-alvin-split-13-r7-rank5-1786534186200150000",
+          "docker_cpu_limit": 0.75,
+          "runner_session_id": 33029,
+          "state": "running"
+        }
+      ],
+      "resume_policy": "resume paused jobs when a priority job exits or on explicit coordination; never classify a paused wall-clock interval as computation"
+    },
+    {
+      "action": "pause_remaining_low_dimensional_jobs",
+      "reason": "scope correction prioritizes the compact H22-H29 target from the project note",
+      "state_verified_at_utc": "2026-08-12T11:44:01Z",
+      "newly_paused": [
+        {
+          "case": "ramified-7-rank5",
+          "container_id": "1f376c77560af3adaac8686a6186e98cb37daabbc37a47e7389f4283998c3507",
+          "runner_session_id": 19395
+        },
+        {
+          "case": "timelike-minus-2theta-rank5",
+          "container_id": "586ee7d4ebc70119b5a3cd5bba360d78db6271759a119259cbff11f3a92ccbdb",
+          "runner_session_id": 40545
+        },
+        {
+          "case": "timelike-minus-theta-times-2-minus-theta-rank5",
+          "container_id": "fb54854381f03b39ea256ef2bdf6ce35d7d7b62fb442979ea52776d96e143cb4",
+          "runner_session_id": 9425
+        },
+        {
+          "case": "split-13-r7-rank5",
+          "container_id": "191715fca2b29ac2bc7784c0264fb1e553f4fe54ae5ca72ec967e81afd398f1e",
+          "runner_session_id": 33029
+        }
+      ],
+      "preserved_low_dimensional_state_count": 9,
+      "verified_state": "all nine containers have paused=true, running=true"
+    }
+  ],
+  "schema": "coxeter.k7_alvin.discovery_scheduling.v1"
+}

@@ -1,0 +1,13 @@
+# Scoped review of the 123-facet H9 construction
+
+The [construction](fresh_h9_h5_closure_20261013.md) passes source/formula review and a fresh reconstruction of its five new caps at 160-digit working interval precision. The [saved review](fresh_h9_h5_closure_20261013_review.json) binds the frozen producer, input recipes, predecessor certificates and final 123-wall certificate by hashes. The producer's ordinary saved-result replay also passes.
+
+This review uses the producer's projection and interval routines. It is not a separate arithmetic implementation. The predecessor is first reconstructed at its original precision, and its 80-digit interval endpoints are multiplied by `10^80` to preserve the identical rational enclosures at the new scale. The five new formulas and all subsequent gates are then recomputed with denominator `10^160`, with the golden-ratio interval and radical cache refreshed. Predecessor intervals are not falsely treated as newly accurate to 160 digits. The producer's output write is intercepted during this review, so the frozen 80-digit certificate is unchanged.
+
+The norm and finite-contact equalities follow from the defining inverse-Gram projection identities: `p·E=b`, `z·E=0`, `p·z=0`, and `r=p±sqrt((2−p²)/z²)z`. Nonzero interval pivots and positive radicands certify that these exact expressions exist. Interval overlap is only a consistency check for these equalities. Strict signs establish the branch, common interior point and every unprescribed dotted relation.
+
+The fresh reconstruction reproduces all 600 new pair checks, all 2,560 subsets of each new cap's finite neighbors, the complete 24-choose-5 face census, its 26 actual finite vertices, 42 finite edges and 46 open rays. The exhaustive finite-neighbor gate is sufficient to find any new positive affine diagram: a diagram containing a dotted pair is indefinite, and any affine diagram involving a new cap would otherwise be among those subsets. No new affine case occurs.
+
+The four fixed mutually perpendicular walls define the H5 face. All five inserted normals are perpendicular to them. Each positive-definite five-facet subset is checked by an actual timelike point against every whole-chamber inequality, which prevents counting infeasible local diagram extensions as vertices. The two endpoints of the newly closed edge share four face walls and are feasible and distinct. Their connecting segment is therefore an actual edge.
+
+Both strict spacelike escapes are rechecked: one in H9 and one in the fixed H5 face. They establish infinite volume. The reviewed result is one additional actual finite endpoint with compatible remote cuts, not a compact face or new finite-volume example.

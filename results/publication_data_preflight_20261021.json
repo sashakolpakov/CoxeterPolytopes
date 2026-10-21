@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-10-21T18:08:06.815403+00:00",
+  "scope": "Publication I/O only. No mathematical checker, Lean compile/audit or TeX build is credited. Public assets are not uploaded and commit/push remain held for the pending selected Lean modules.",
+  "status": "TWELVE_SYNTHETIC_TESTS_AND_ONE_REAL_LOCAL_RESTORE_PASS",
+  "sources": [
+    {
+      "path": "tools/prepare_public_data.py",
+      "bytes": 11594,
+      "sha256": "324356567e365ba817ca96a5b05f879e33e8b80bcab621e98f8e9b326136163e"
+    },
+    {
+      "path": "scripts/fetch_public_data.py",
+      "bytes": 10769,
+      "sha256": "2542a70931ab1374fe53213dee23b1ad7220d38953996b8f0abb5fba7a203906"
+    },
+    {
+      "path": "tools/run_publication_io.py",
+      "bytes": 4394,
+      "sha256": "d683e0577b428e768f860586cca923337d0d0c9981c1c1cd5d199623ceff858d"
+    },
+    {
+      "path": "tests/test_public_data_io_20261021.py",
+      "bytes": 10212,
+      "sha256": "bbec106281bd050ad7fdad4be50294f3b2d0cdc7a59cb0b9702f61c0ef432635"
+    },
+    {
+      "path": "tools/audit_public_tree.py",
+      "bytes": 7210,
+      "sha256": "0a25fb8e6981a5e1ed8d77e57a4035a810e719535e4a7055a95c6012c9e71bfd"
+    }
+  ],
+  "source_review": {
+    "path": "results/review_publication_bulk_data_io_source_compact_reviewer_20261021.md",
+    "bytes": 7378,
+    "sha256": "ed8d9663cf91bf2efd6a8a7145dfc94c21bb0610b52be9282596bd89f0a8a6ba"
+  },
+  "source_review_successor_note": "Watchdog successor adds only audit_public_tree.py to its allowlist; final staged-audit source was separately reviewed in agent report (SHA0a25fb8e). The final12test execution is bound to the current source table above.",
+  "runs": [
+    {
+      "output": {
+        "path": "results/publication_data_io_tests_20261021.txt",
+        "bytes": 425,
+        "sha256": "a0ddf1d17aef3550f3042cb98725d24e56886933087c19716672727ffb43b9bb"
+      },
+      "watchdog": {
+        "publication_io_only": true,
+        "command": [
+          "python3",
+          "-B",
+          "tests/test_public_data_io_20261021.py"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "observed_peak_group_rss_bytes": 7258112,
+        "rss_sampling_seconds": 1,
+        "start_resources": {
+          "disk_free_bytes": 148337954816,
+          "ram_available_bytes": 5202771968
+        },
+        "seconds": 1.056
+      }
+    },
+    {
+      "output": {
+        "path": "results/publication_data_restore_sample_20261021.txt",
+        "bytes": 849,
+        "sha256": "de098c0b8d2e8920a660a46b6b99065b2cd1073c3661b4007050b58b729356bf"
+      },
+      "watchdog": {
+        "publication_io_only": true,
+        "command": [
+          "python3",
+          "-B",
+          "scripts/fetch_public_data.py",
+          "--restore",
+          "--from-directory",
+          ".publication/data",
+          "--destination",
+          ".publication/restore-sample",
+          "--path",
+          "results/fresh_sqrt5_rank13_irreducible_quad_parameters_20261017.json"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "observed_peak_group_rss_bytes": 311296,
+        "rss_sampling_seconds": 1,
+        "start_resources": {
+          "disk_free_bytes": 148345847808,
+          "ram_available_bytes": 4959813632
+        },
+        "seconds": 1.045
+      }
+    }
+  ],
+  "bulk_data_manifest": {
+    "path": "repro/public-data-manifest.json",
+    "bytes": 213980,
+    "sha256": "b4373eef8bc086e51fc8d42b98e789bbe9342f4a9fbf85f93288610c4cadcccf"
+  },
+  "bulk_files": 937,
+  "bulk_original_bytes": 17667514956,
+  "bulk_archive_parts": 33,
+  "bulk_archive_bytes": 2178662957,
+  "packer_execution": "Three serial guarded launches: first1part, next3parts, then remaining29parts. All succeeded; final launch completed at439.743s, observed sampled process-group peak40763392B. Every archive was fully decoded against original hashes, with current originals/archives rechecked immediately before manifest emission.",
+  "sample_original": {
+    "path": "results/fresh_sqrt5_rank13_irreducible_quad_parameters_20261017.json",
+    "bytes": 2832867,
+    "sha256": "2ac50f14df01b0f356a2772cdf6bcead34e80e028f49c879e2ccaab36a6425cd"
+  },
+  "sample_restored_bytes_sha256": "2ac50f14df01b0f356a2772cdf6bcead34e80e028f49c879e2ccaab36a6425cd",
+  "sample_asset_retained": true,
+  "remote_availability_verified": false,
+  "new_mathematical_proof_executions": 0,
+  "new_lean_compilations": 0,
+  "new_lean_axiom_audits": 0
+}

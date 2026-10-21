@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "coxeter.raw_adjunction_log_stage0.input.v1",
+  "title": "Raw adjunction/log Stage-0 lattice input",
+  "description": "The complete mathematical input: one integral unimodular Lorentzian Gram matrix and primitive oriented full-span negative wall vectors. Canonical classes, physical scales, boundary markings, surface labels, characteristics, volume claims, and carrier verdicts are forbidden.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "picard_gram",
+    "wall_vectors"
+  ],
+  "properties": {
+    "schema": {
+      "const": "coxeter.raw_adjunction_log_stage0.input.v1"
+    },
+    "picard_gram": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+          "type": "integer"
+        }
+      }
+    },
+    "wall_vectors": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

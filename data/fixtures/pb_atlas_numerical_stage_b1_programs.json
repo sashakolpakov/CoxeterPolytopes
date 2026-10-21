@@ -1,0 +1,1586 @@
+{
+  "invalid_cases": [
+    {
+      "expected_error_substring": "more than two older centres",
+      "fixture_id": "hostile_center_with_three_proximity_parents",
+      "program": {
+        "all_wall_coordinates_in_endpoint_blowup_basis": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            -1,
+            1,
+            0
+          ],
+          [
+            0,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          [
+            3,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "all_wall_endpoint_image_coordinates": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            3
+          ]
+        ],
+        "boundary": [
+          {
+            "anti_bicanonical_weight": 2,
+            "endpoint_blowup_coordinates": [
+              3,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "endpoint_image_coordinates": [
+              3
+            ],
+            "wall_index_zero_based": 4
+          }
+        ],
+        "canonical_coordinates_in_endpoint_blowup_basis": [
+          -3,
+          1,
+          1,
+          1,
+          1
+        ],
+        "contracted_wall_indices_zero_based": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "contraction_trace": [
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 0,
+            "step": 1
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 1,
+            "step": 2
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "source_wall_index_zero_based": 2,
+            "step": 3
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "source_wall_index_zero_based": 3,
+            "step": 4
+          }
+        ],
+        "endpoint_blowup_basis_gram": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "endpoint_kind": "P2",
+        "hirzebruch_e": null,
+        "hirzebruch_minimal": null,
+        "model_basis_in_input_picard_coordinates": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "nef_rays_in_model_basis": [
+          [
+            1
+          ]
+        ],
+        "permutation_invariant_profile_sha256": "759eb4c2112c143a8bdcd210e60878465b12bee1ad7aae42f82f34b2af4d1c8d",
+        "sequential_contraction_order_zero_based": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "stage_B_payload_complete": true,
+        "strict_contracted_wall_gram": [
+          [
+            -1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -3,
+            -1
+          ],
+          [
+            1,
+            0,
+            -1,
+            -4
+          ]
+        ],
+        "total_exceptional_basis_in_input_picard_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "expected_error_substring": "do not intersect immediately before the blowup",
+      "fixture_id": "hostile_satellite_with_disjoint_exceptional_parents",
+      "program": {
+        "all_wall_coordinates_in_endpoint_blowup_basis": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            1
+          ],
+          [
+            3,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "all_wall_endpoint_image_coordinates": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            3
+          ]
+        ],
+        "boundary": [
+          {
+            "anti_bicanonical_weight": 2,
+            "endpoint_blowup_coordinates": [
+              3,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "endpoint_image_coordinates": [
+              3
+            ],
+            "wall_index_zero_based": 5
+          }
+        ],
+        "canonical_coordinates_in_endpoint_blowup_basis": [
+          -3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "contracted_wall_indices_zero_based": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "contraction_trace": [
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 0,
+            "step": 1
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 1,
+            "step": 2
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 2,
+            "step": 3
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "source_wall_index_zero_based": 3,
+            "step": 4
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "source_wall_index_zero_based": 4,
+            "step": 5
+          }
+        ],
+        "endpoint_blowup_basis_gram": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "endpoint_kind": "P2",
+        "hirzebruch_e": null,
+        "hirzebruch_minimal": null,
+        "model_basis_in_input_picard_coordinates": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "nef_rays_in_model_basis": [
+          [
+            1
+          ]
+        ],
+        "permutation_invariant_profile_sha256": "50fb02f689bb2547f86341f19c2ad944370252f06b14904dede6baf1c15839dc",
+        "sequential_contraction_order_zero_based": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stage_B_payload_complete": true,
+        "strict_contracted_wall_gram": [
+          [
+            -1,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            -2,
+            -1,
+            1,
+            0
+          ],
+          [
+            1,
+            -1,
+            -2,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            -2,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            -2
+          ]
+        ],
+        "total_exceptional_basis_in_input_picard_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "mutation_pairs": [
+    {
+      "expected_equal_invariant_profile": true,
+      "left_fixture_id": "free_forest_two_commuting_roots",
+      "right_fixture_id": "same_free_forest_commuted_order"
+    }
+  ],
+  "schema": "coxeter.pb_atlas.numerical_cluster_stage_b1_fixtures.v1",
+  "scope": "arrays-only Stage-A-shaped endpoint programs; no named surface/type fixtures",
+  "valid_cases": [
+    {
+      "expected_center_kind_histogram": {
+        "free": 2,
+        "proper": 2
+      },
+      "fixture_id": "free_forest_two_commuting_roots",
+      "program": {
+        "all_wall_coordinates_in_endpoint_blowup_basis": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            1
+          ],
+          [
+            3,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            2,
+            -1,
+            -1,
+            -1,
+            -2
+          ],
+          [
+            2,
+            -2,
+            -2,
+            0,
+            -1
+          ]
+        ],
+        "all_wall_endpoint_image_coordinates": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            3
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "boundary": [
+          {
+            "anti_bicanonical_weight": 2,
+            "endpoint_blowup_coordinates": [
+              3,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "endpoint_image_coordinates": [
+              3
+            ],
+            "wall_index_zero_based": 4
+          }
+        ],
+        "canonical_coordinates_in_endpoint_blowup_basis": [
+          -3,
+          1,
+          1,
+          1,
+          1
+        ],
+        "contracted_wall_indices_zero_based": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "contraction_trace": [
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 0,
+            "step": 1
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 1,
+            "step": 2
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "source_wall_index_zero_based": 2,
+            "step": 3
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "source_wall_index_zero_based": 3,
+            "step": 4
+          }
+        ],
+        "endpoint_blowup_basis_gram": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "endpoint_kind": "P2",
+        "hirzebruch_e": null,
+        "hirzebruch_minimal": null,
+        "model_basis_in_input_picard_coordinates": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "nef_rays_in_model_basis": [
+          [
+            1
+          ]
+        ],
+        "permutation_invariant_profile_sha256": "1fa8f62de3398e17287aadcac563f40fe4d248b720742333c0c7165ba54e68bf",
+        "sequential_contraction_order_zero_based": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "stage_B_payload_complete": true,
+        "strict_contracted_wall_gram": [
+          [
+            -1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            -2,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            -2
+          ]
+        ],
+        "total_exceptional_basis_in_input_picard_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "expected_center_kind_histogram": {
+        "free": 2,
+        "proper": 2
+      },
+      "fixture_id": "same_free_forest_commuted_order",
+      "program": {
+        "all_wall_coordinates_in_endpoint_blowup_basis": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            3,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            2,
+            -1,
+            -1,
+            -2,
+            -1
+          ],
+          [
+            2,
+            -2,
+            -2,
+            -1,
+            0
+          ]
+        ],
+        "all_wall_endpoint_image_coordinates": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            3
+          ],
+          [
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "boundary": [
+          {
+            "anti_bicanonical_weight": 2,
+            "endpoint_blowup_coordinates": [
+              3,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "endpoint_image_coordinates": [
+              3
+            ],
+            "wall_index_zero_based": 4
+          }
+        ],
+        "canonical_coordinates_in_endpoint_blowup_basis": [
+          -3,
+          1,
+          1,
+          1,
+          1
+        ],
+        "contracted_wall_indices_zero_based": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "contraction_trace": [
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 0,
+            "step": 1
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 1,
+            "step": 2
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "source_wall_index_zero_based": 2,
+            "step": 3
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "source_wall_index_zero_based": 3,
+            "step": 4
+          }
+        ],
+        "endpoint_blowup_basis_gram": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "endpoint_kind": "P2",
+        "hirzebruch_e": null,
+        "hirzebruch_minimal": null,
+        "model_basis_in_input_picard_coordinates": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "nef_rays_in_model_basis": [
+          [
+            1
+          ]
+        ],
+        "permutation_invariant_profile_sha256": "841d2a0957d5f9b938174e97bac7c8ddf58b09f293e4c747f13bceb72fd9cc97",
+        "sequential_contraction_order_zero_based": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "stage_B_payload_complete": true,
+        "strict_contracted_wall_gram": [
+          [
+            -1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            -2,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            -2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "total_exceptional_basis_in_input_picard_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "expected_center_kind_histogram": {
+        "free": 1,
+        "proper": 1,
+        "satellite": 1
+      },
+      "fixture_id": "satellite_center_two_parents",
+      "program": {
+        "all_wall_coordinates_in_endpoint_blowup_basis": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            1,
+            0
+          ],
+          [
+            0,
+            -1,
+            -1,
+            1
+          ],
+          [
+            3,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            3,
+            -1,
+            -1,
+            -2
+          ],
+          [
+            3,
+            -2,
+            -2,
+            -1
+          ]
+        ],
+        "all_wall_endpoint_image_coordinates": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            3
+          ],
+          [
+            3
+          ],
+          [
+            3
+          ]
+        ],
+        "boundary": [
+          {
+            "anti_bicanonical_weight": 2,
+            "endpoint_blowup_coordinates": [
+              3,
+              -1,
+              -1,
+              -1
+            ],
+            "endpoint_image_coordinates": [
+              3
+            ],
+            "wall_index_zero_based": 3
+          }
+        ],
+        "canonical_coordinates_in_endpoint_blowup_basis": [
+          -3,
+          1,
+          1,
+          1
+        ],
+        "contracted_wall_indices_zero_based": [
+          0,
+          1,
+          2
+        ],
+        "contraction_trace": [
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              1,
+              0,
+              0
+            ],
+            "source_wall_index_zero_based": 0,
+            "step": 1
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "source_wall_index_zero_based": 1,
+            "step": 2
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "source_wall_index_zero_based": 2,
+            "step": 3
+          }
+        ],
+        "endpoint_blowup_basis_gram": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "endpoint_kind": "P2",
+        "hirzebruch_e": null,
+        "hirzebruch_minimal": null,
+        "model_basis_in_input_picard_coordinates": [
+          [
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "nef_rays_in_model_basis": [
+          [
+            1
+          ]
+        ],
+        "permutation_invariant_profile_sha256": "2e54c933c3e76ff1ccd99b3303a5d290e972cf64f145fd77951be6150de526f7",
+        "sequential_contraction_order_zero_based": [
+          0,
+          1,
+          2
+        ],
+        "stage_B_payload_complete": true,
+        "strict_contracted_wall_gram": [
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            -2,
+            0
+          ],
+          [
+            1,
+            0,
+            -3
+          ]
+        ],
+        "total_exceptional_basis_in_input_picard_coordinates": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "expected_center_kind_histogram": {
+        "free": 1,
+        "proper": 1
+      },
+      "fixture_id": "ruled_free_center",
+      "program": {
+        "all_wall_coordinates_in_endpoint_blowup_basis": [
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            1
+          ],
+          [
+            2,
+            4,
+            -1,
+            -1
+          ],
+          [
+            1,
+            2,
+            0,
+            -1
+          ]
+        ],
+        "all_wall_endpoint_image_coordinates": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "boundary": [
+          {
+            "anti_bicanonical_weight": 2,
+            "endpoint_blowup_coordinates": [
+              2,
+              4,
+              -1,
+              -1
+            ],
+            "endpoint_image_coordinates": [
+              2,
+              4
+            ],
+            "wall_index_zero_based": 2
+          }
+        ],
+        "canonical_coordinates_in_endpoint_blowup_basis": [
+          -2,
+          -4,
+          1,
+          1
+        ],
+        "contracted_wall_indices_zero_based": [
+          0,
+          1
+        ],
+        "contraction_trace": [
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              1,
+              0
+            ],
+            "source_wall_index_zero_based": 0,
+            "step": 1
+          },
+          {
+            "current_canonical_pairing": -1,
+            "current_square": -1,
+            "current_total_exceptional_in_input_basis": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "source_wall_index_zero_based": 1,
+            "step": 2
+          }
+        ],
+        "endpoint_blowup_basis_gram": [
+          [
+            -2,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "endpoint_kind": "F_e",
+        "hirzebruch_e": 2,
+        "hirzebruch_minimal": true,
+        "model_basis_in_input_picard_coordinates": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "nef_rays_in_model_basis": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "permutation_invariant_profile_sha256": "3960db19543427e82a6a6ad525de3c9953899d4e0db594fa4ee9d9e3553e3f20",
+        "sequential_contraction_order_zero_based": [
+          0,
+          1
+        ],
+        "stage_B_payload_complete": true,
+        "strict_contracted_wall_gram": [
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            -2
+          ]
+        ],
+        "total_exceptional_basis_in_input_picard_coordinates": [
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "created_at": "2026-10-21T18:31:34.246194+00:00",
+  "status": "PASS_TWO_PENDING_SELECTED_KERNELS_AND_SEPARATE_ACTUAL_AXIOM_AUDITS",
+  "modules": [
+    {
+      "module": "CoxeterProofs.RegularIdeal24CellHeightKernel",
+      "source": {
+        "path": "formal/CoxeterProofs/RegularIdeal24CellHeightKernel.lean",
+        "bytes": 4720,
+        "sha256": "633ae6fef8c5d0f0d0cafb2363d99f38e6922405d61c25c0e3a569e7bceaecec"
+      },
+      "status": "COMPILED_AND_SEPARATELY_AXIOM_AUDITED",
+      "actual_axiom_outputs": [
+        {
+          "declaration": "CoxeterProofs.RegularIdeal24CellHeightKernel.opposite_pair_identities",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "CoxeterProofs.RegularIdeal24CellHeightKernel.future_unit_time_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "CoxeterProofs.RegularIdeal24CellHeightKernel.opposite_height_caps_force_center",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "CoxeterProofs.RegularIdeal24CellHeightKernel.center_has_unit_heights",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "CoxeterProofs.RegularIdeal24CellHeightKernel.no_strict_opposite_height_caps",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "requested_and_actual_count": 5,
+      "runs": {
+        "compile": {
+          "ledger": {
+            "path": "results/lean_publication_completion_20261021/CoxeterProofs_RegularIdeal24CellHeightKernel.json",
+            "bytes": 1871,
+            "sha256": "ffff22a543bb020c8a93c53d270c0cff1e0d3346997a50c7c37d81a273f3623c"
+          },
+          "stdout": {
+            "path": "results/lean_publication_completion_20261021/regular24_height_compile_20261021.txt",
+            "bytes": 2071,
+            "sha256": "5766abeb00dda04f953f14d4dd196e4a4c9aada4993fa2d9eba90f4c6e05aae5"
+          },
+          "elapsed_seconds": 1.13,
+          "resources": {
+            "free_disk_gib": 132.43,
+            "available_memory_gib": 8.92
+          }
+        },
+        "axiom_audit": {
+          "ledger": {
+            "path": "results/lean_publication_completion_20261021/CoxeterProofs_RegularIdeal24CellHeightKernel_axiom_audit.json",
+            "bytes": 1790,
+            "sha256": "10f1114de18ca2c226f8cb7c8598adb47051be0357fbe5a5e14b551b3f7511fd"
+          },
+          "stdout": {
+            "path": "results/lean_publication_completion_20261021/regular24_height_axiom_audit_20261021.txt",
+            "bytes": 3784,
+            "sha256": "3f4277854e86b2c0b8d6f82e34547f447d19653228d6a1bece60d89b019fafb7"
+          },
+          "elapsed_seconds": 0.76,
+          "resources": {
+            "free_disk_gib": 132.42,
+            "available_memory_gib": 8.94
+          }
+        }
+      },
+      "warnings": 2,
+      "scope": "Selected conditional internal logic; no actual Coxeter geometric instance or automatic discharge of external/published/script/application premises."
+    },
+    {
+      "module": "CoxeterProofs.ClassicalDimensionComposition",
+      "source": {
+        "path": "formal/CoxeterProofs/ClassicalDimensionComposition.lean",
+        "bytes": 8970,
+        "sha256": "c035f62de642c123ea168a61871bc6d3156113343b3f5301a877844f0062e102"
+      },
+      "status": "COMPILED_AND_SEPARATELY_AXIOM_AUDITED",
+      "actual_axiom_outputs": [
+        {
+          "declaration": "CoxeterProofs.ClassicalDimensionComposition.quartic_norm_contradiction",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "CoxeterProofs.ClassicalDimensionComposition.degree_two_three_four_cases",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "CoxeterProofs.ClassicalDimensionComposition.compact_dimension_at_most_nineteen",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "declaration": "CoxeterProofs.ClassicalDimensionComposition.arithmetic_dimension_at_most_seventeen",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "requested_and_actual_count": 4,
+      "runs": {
+        "compile": {
+          "ledger": {
+            "path": "results/lean_publication_completion_20261021/CoxeterProofs_ClassicalDimensionComposition.json",
+            "bytes": 1526,
+            "sha256": "23880fb4e944a908f596c7cdf37b1900dffc8389ef218607e06c1e3fcb0f0db8"
+          },
+          "stdout": {
+            "path": "results/lean_publication_completion_20261021/classical_dimension_composition_compile_20261021.txt",
+            "bytes": 1725,
+            "sha256": "575b4c52b168f4682c1b3b56ec81b51e4416d4b9366c4d794cb8a752251d4083"
+          },
+          "elapsed_seconds": 0.34,
+          "resources": {
+            "free_disk_gib": 132.42,
+            "available_memory_gib": 8.89
+          }
+        },
+        "axiom_audit": {
+          "ledger": {
+            "path": "results/lean_publication_completion_20261021/CoxeterProofs_ClassicalDimensionComposition_axiom_audit.json",
+            "bytes": 1445,
+            "sha256": "611b2445c02736e5a2f63fd7b57bfc216fada1882bcadd9b11134c1d2ec47578"
+          },
+          "stdout": {
+            "path": "results/lean_publication_completion_20261021/classical_dimension_composition_axiom_audit_20261021.txt",
+            "bytes": 2078,
+            "sha256": "35785938a3bc7baeee251141469cbe7d915897564013389616c3c8583de3ad5a"
+          },
+          "elapsed_seconds": 0.34,
+          "resources": {
+            "free_disk_gib": 132.42,
+            "available_memory_gib": 8.94
+          }
+        }
+      },
+      "warnings": 0,
+      "scope": "Selected conditional internal logic; no actual Coxeter geometric instance or automatic discharge of external/published/script/application premises."
+    }
+  ],
+  "new_compilations": 2,
+  "new_separate_axiom_audits": 2,
+  "actual_audited_declarations": 9,
+  "successful_dependencies_rerun": false,
+  "execution": "Four strictly serial guarded runs;2048MiB/one thread,unchanged40/6GiB start and8/3GiB abort gates. No proof admission was attempted below6GiB.",
+  "remaining_boundary": "Not end-to-end geometric formalization. All geometric/field/script/published premises are documented separately in the two logic maps. Two Regular24 unused-section-variable warnings are preserved; Classical has none. Source headers retain preparation history to preserve compiled source hashes.",
+  "publication_gate": "The two selected Lean compilation/audit prerequisites are now passed. Final documentation/index checks and commit/push remain separate actions.",
+  "six_frozen_papers_unchanged": true
+}

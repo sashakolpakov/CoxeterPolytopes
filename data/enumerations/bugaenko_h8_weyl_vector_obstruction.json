@@ -1,0 +1,112 @@
+{
+  "all_checks_pass": true,
+  "certificate_kind": "generalized_weyl_vector_inconsistency",
+  "certificate_sha256": "b58a500597702a42fb739f03109bd30016ea6ea625df8803335720ab3dde2b61",
+  "checks": {
+    "ambient_signature_rank_matches_dimension": true,
+    "augmented_rank_is_ten": true,
+    "coefficient_rank_is_nine": true,
+    "eleven_normalized_square_two_walls": true,
+    "first_nine_walls_are_a_field_basis": true,
+    "first_nine_weyl_equations_hold": true,
+    "last_two_residuals_equal_and_nonzero": true,
+    "last_two_weyl_equations_fail": true
+  },
+  "conclusion": {
+    "generalized_weyl_vector_exists_over_Q_phi": false,
+    "integral_weyl_vector_exists_over_Z_phi": false,
+    "reason": "the first nine wall equations have a unique solution, while each remaining wall has residual 4-8*phi of field norm -80",
+    "scope": "direct linear-algebra obstruction for the marked Bugaenko H8 chamber; not an application or extension of the integral Z-lattice classification of Gritsenko--Nikulin"
+  },
+  "field": {
+    "integer_ring": "Z[phi]",
+    "name": "Q(phi)",
+    "relation": "phi^2=phi+1"
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "dimension": 8,
+    "facet_count": 11,
+    "path": "data/known_examples/bugaenko_compact_h8.json",
+    "sha256": "c17ac49e443918e61e541c9de35c7f29da9120e22bd9883678cc8091a2f4fc5c",
+    "status": "verified"
+  },
+  "system": {
+    "ambient_rank": 9,
+    "augmented_rank": 10,
+    "coefficient_rank": 9,
+    "equation": "(rho,r_i)=-r_i^2/2=-1 for every normalized wall",
+    "required_pairing": {
+      "a": "-1",
+      "b": "0"
+    },
+    "root_norms": [
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"},
+      {"a": "2", "b": "0"}
+    ],
+    "wall_count": 11
+  },
+  "unique_nine_wall_candidate": {
+    "common_nonzero_residual": {
+      "a": "4",
+      "b": "-8"
+    },
+    "common_residual_field_norm": "-80",
+    "coordinates_in_archived_ambient_basis": [
+      {"a": "8", "b": "25/2"},
+      {"a": "26", "b": "40"},
+      {"a": "36", "b": "64"},
+      {"a": "51", "b": "80"},
+      {"a": "75", "b": "120"},
+      {"a": "62", "b": "96"},
+      {"a": "48", "b": "72"},
+      {"a": "33", "b": "48"},
+      {"a": "17", "b": "24"}
+    ],
+    "failing_wall_indices_zero_based": [9, 10],
+    "pairings_with_all_eleven_walls": [
+      {"a": "-1", "b": "0"},
+      {"a": "-1", "b": "0"},
+      {"a": "-1", "b": "0"},
+      {"a": "-1", "b": "0"},
+      {"a": "-1", "b": "0"},
+      {"a": "-1", "b": "0"},
+      {"a": "-1", "b": "0"},
+      {"a": "-1", "b": "0"},
+      {"a": "-1", "b": "0"},
+      {"a": "3", "b": "-8"},
+      {"a": "3", "b": "-8"}
+    ],
+    "pivot_root_coordinate_determinant": {
+      "a": "-3",
+      "b": "2"
+    },
+    "pivot_wall_indices_zero_based": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "residuals_pairing_plus_one": [
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "4", "b": "-8"},
+      {"a": "4", "b": "-8"}
+    ],
+    "square": {
+      "a": "7/2",
+      "b": "-65"
+    }
+  }
+}

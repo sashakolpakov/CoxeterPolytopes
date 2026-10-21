@@ -1,0 +1,805 @@
+{
+  "status": "PASS_COMPLETE_SECTION_FINITE_ANGLE_GATE_ALGEBRA",
+  "sources": {
+    "data/enumerations/borcherds_d4_h21_og10_carrier_obstruction.json": "dc9053322bf54cedde15fcfc5080666ebd79e64feb065b071880dce6ff1552ca",
+    "scripts/fresh_h20_crystallographic_angle_gate_20261014.py": "c8b43994fc9564ba45b9e3220363a313f03cfa758f7887416c280f8a91a1a347",
+    "results/fresh_h20_coupled_h3_obstruction_20261014.json": "6afd0958dc3ab67405553763495c9f7fd4f4b2571a5a40b2139b889fea75bd8c",
+    "results/fresh_h20_dihedral_edge_sections_20261014.json": "907f31429d6428d59e93c036969013c1cde2853a26b73c69bbfe4e2263ba8cf6",
+    "results/fresh_h20_dihedral_edge_sections_20261014_m5.json": "da5b5dd00c6a191dea026ab558ba0a8f416d85995566035699116d06cb3d18af",
+    "results/fresh_h20_h4_face_closure_20261014.json": "baa55dbd1194c658117b300e9d7e8417b182c3ff1a144a912085112d6b7bb981"
+  },
+  "one_contact_boundary_catalog": {
+    "(2, 2, -1)": [
+      [
+        2,
+        -1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        4,
+        -2
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "(2, 4, -2)": [
+      [
+        2,
+        -1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "(4, 2, -2)": [
+      [
+        2,
+        0
+      ],
+      [
+        4,
+        -2
+      ]
+    ],
+    "(4, 4, -2)": [
+      [
+        2,
+        -2
+      ],
+      [
+        2,
+        0
+      ]
+    ]
+  },
+  "two_contact_orthogonal_modified_boundary_catalog": {
+    "(2, 2)": [
+      [
+        2,
+        -1,
+        -1
+      ]
+    ],
+    "(2, 4)": [
+      [
+        2,
+        -1,
+        -2
+      ],
+      [
+        4,
+        -2,
+        -2
+      ]
+    ]
+  },
+  "positive_definite_source_triangles": 0,
+  "uniform_pair_tables": [
+    {
+      "name": "one_contact_long_A2_m_ge7",
+      "q_interval": [
+        "1/3",
+        "3/8"
+      ],
+      "rows": [
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              -2
+            ]
+          ],
+          "old_pairing": -1,
+          "new_pairing": "-1",
+          "norms": [
+            "2",
+            "2 - 4*q"
+          ],
+          "verdict": "SPECIAL_FINITE_RATIO",
+          "squared_cosine": "-1/(8*q - 4)"
+        },
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              -2
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "0",
+          "norms": [
+            "2",
+            "2 - 4*q"
+          ],
+          "verdict": "RIGHT_TO_UNCHANGED_SOURCE_ROOT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              -2
+            ],
+            [
+              2,
+              -2
+            ]
+          ],
+          "old_pairing": -1,
+          "new_pairing": "-4*q - 1",
+          "norms": [
+            "2 - 4*q",
+            "2 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              -2
+            ],
+            [
+              2,
+              -2
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "-4*q",
+          "norms": [
+            "2 - 4*q",
+            "2 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        }
+      ]
+    },
+    {
+      "name": "one_contact_B2_short_anchor_m_ge7",
+      "q_interval": [
+        "1",
+        "4/3"
+      ],
+      "rows": [
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": -1,
+          "new_pairing": "-1",
+          "norms": [
+            "2",
+            "2 - q"
+          ],
+          "verdict": "SPECIAL_FINITE_RATIO",
+          "squared_cosine": "-1/(2*q - 4)"
+        },
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "0",
+          "norms": [
+            "2",
+            "2 - q"
+          ],
+          "verdict": "RIGHT_TO_UNCHANGED_SOURCE_ROOT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": -1,
+          "new_pairing": "-q - 1",
+          "norms": [
+            "2 - q",
+            "2 - q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "-q",
+          "norms": [
+            "2 - q",
+            "2 - q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        }
+      ]
+    },
+    {
+      "name": "one_contact_B2_long_anchor_m_ge7",
+      "q_interval": [
+        "1/2",
+        "2/3"
+      ],
+      "rows": [
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -2,
+          "new_pairing": "-2",
+          "norms": [
+            "2",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "0",
+          "norms": [
+            "2",
+            "4 - 4*q"
+          ],
+          "verdict": "RIGHT_TO_UNCHANGED_SOURCE_ROOT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              -2
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -8,
+          "new_pairing": "-4*q - 8",
+          "norms": [
+            "4 - 4*q",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              -2
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -6,
+          "new_pairing": "-4*q - 6",
+          "norms": [
+            "4 - 4*q",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              -2
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -4,
+          "new_pairing": "-4*q - 4",
+          "norms": [
+            "4 - 4*q",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              -2
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -2,
+          "new_pairing": "-4*q - 2",
+          "norms": [
+            "4 - 4*q",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        }
+      ]
+    },
+    {
+      "name": "two_contact_short_orthogonal_pair",
+      "q_interval": [
+        "1",
+        "6/5"
+      ],
+      "rows": [
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": -1,
+          "new_pairing": "-1",
+          "norms": [
+            "2",
+            "2 - q"
+          ],
+          "verdict": "SPECIAL_FINITE_RATIO",
+          "squared_cosine": "-1/(2*q - 4)"
+        },
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "0",
+          "norms": [
+            "2",
+            "2 - q"
+          ],
+          "verdict": "RIGHT_TO_UNCHANGED_SOURCE_ROOT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": -2,
+          "new_pairing": "-2",
+          "norms": [
+            "4",
+            "2 - q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "0",
+          "norms": [
+            "4",
+            "2 - q"
+          ],
+          "verdict": "RIGHT_TO_UNCHANGED_SOURCE_ROOT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": -1,
+          "new_pairing": "-q - 1",
+          "norms": [
+            "2 - q",
+            "2 - q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "-q",
+          "norms": [
+            "2 - q",
+            "2 - q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        }
+      ]
+    },
+    {
+      "name": "two_contact_mixed_orthogonal_pair_ratio1",
+      "q_interval": [
+        "3/4",
+        "1"
+      ],
+      "rows": [
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -2,
+          "new_pairing": "-2",
+          "norms": [
+            "2",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "0",
+          "norms": [
+            "2",
+            "4 - 4*q"
+          ],
+          "verdict": "RIGHT_TO_UNCHANGED_SOURCE_ROOT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              -2
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -8,
+          "new_pairing": "-4*q - 8",
+          "norms": [
+            "4 - 4*q",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              -2
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -6,
+          "new_pairing": "-4*q - 6",
+          "norms": [
+            "4 - 4*q",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              -2
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -4,
+          "new_pairing": "-4*q - 4",
+          "norms": [
+            "4 - 4*q",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              4,
+              -2
+            ],
+            [
+              4,
+              -2
+            ]
+          ],
+          "old_pairing": -2,
+          "new_pairing": "-4*q - 2",
+          "norms": [
+            "4 - 4*q",
+            "4 - 4*q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        }
+      ]
+    },
+    {
+      "name": "two_contact_mixed_orthogonal_pair_ratio2",
+      "q_interval": [
+        "3/2",
+        "2"
+      ],
+      "rows": [
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": -1,
+          "new_pairing": "-1",
+          "norms": [
+            "2",
+            "2 - q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "0",
+          "norms": [
+            "2",
+            "2 - q"
+          ],
+          "verdict": "RIGHT_TO_UNCHANGED_SOURCE_ROOT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": -1,
+          "new_pairing": "-q - 1",
+          "norms": [
+            "2 - q",
+            "2 - q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        },
+        {
+          "types": [
+            [
+              2,
+              -1
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "old_pairing": 0,
+          "new_pairing": "-q",
+          "norms": [
+            "2 - q",
+            "2 - q"
+          ],
+          "verdict": "STRICTLY_DIVERGENT",
+          "squared_cosine": null
+        }
+      ]
+    }
+  ],
+  "long_A2_m5_table": [
+    {
+      "types": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      "old_pairing": -1,
+      "verdict": "STRICTLY_DIVERGENT"
+    },
+    {
+      "types": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      "old_pairing": 0,
+      "verdict": "RIGHT_TO_UNCHANGED_SOURCE_ROOT"
+    },
+    {
+      "types": [
+        [
+          2,
+          -2
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      "old_pairing": -1,
+      "verdict": "STRICTLY_DIVERGENT"
+    },
+    {
+      "types": [
+        [
+          2,
+          -2
+        ],
+        [
+          2,
+          -2
+        ]
+      ],
+      "old_pairing": 0,
+      "verdict": "STRICTLY_DIVERGENT"
+    }
+  ],
+  "B2_short_anchor_ratio": "(2*C - 1)/(6*C - 4)",
+  "allowed_actual_finite_ridge_labels": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "scope": "Any finite-volume Coxeter H20 hyperplane section of the literal210-wall source. Angle labels only; neither arithmeticity nor existence is asserted."
+}

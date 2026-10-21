@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://coxeter-polytopes.local/schemas/chamber-certificate.schema.json",
+  "title": "Exact hyperbolic reflection chamber certificate",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "certificate_kind",
+    "field",
+    "dimension",
+    "lattice_gram",
+    "simple_roots",
+    "wall_gram",
+    "coxeter_relations",
+    "completeness",
+    "geometry"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "certificate_kind": {
+      "enum": ["compact_reflective", "cofinite_noncompact"]
+    },
+    "field": {"enum": ["Q", "Q(sqrt(5))"]},
+    "dimension": {"type": "integer", "minimum": 2},
+    "lattice_gram": {"$ref": "#/$defs/matrix"},
+    "simple_roots": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/vector"},
+      "minItems": 1
+    },
+    "wall_gram": {"$ref": "#/$defs/matrix"},
+    "coxeter_relations": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {"type": "integer", "minimum": 1},
+            {"enum": ["parallel", "ultraparallel"]}
+          ]
+        }
+      }
+    },
+    "completeness": {
+      "type": "object",
+      "required": ["method", "evidence"],
+      "properties": {
+        "method": {"type": "string", "minLength": 1},
+        "evidence": {"type": "object"}
+      },
+      "additionalProperties": false
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["nonempty", "interior_point", "vertices", "cusps"],
+      "properties": {
+        "nonempty": {"const": true},
+        "interior_point": {"$ref": "#/$defs/vector"},
+        "vertices": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {"type": "integer", "minimum": 0},
+            "uniqueItems": true
+          }
+        },
+        "cusps": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {"type": "integer", "minimum": 0},
+            "uniqueItems": true
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "golden": {"$ref": "golden-element.schema.json"},
+    "vector": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/golden"}
+    },
+    "matrix": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/vector"}
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,115 @@
+{
+  "status": "PASS_INDEPENDENT_E8_FACE_MATRIX_PROJECTION_AND_COMPLETION_SCOPE_REVIEW",
+  "sources": {
+    "results/fresh_h20_contact_closure_20261014_replacement.json": "979f8b10b4c4d5596f0837f1e7a94ff0d15b8799aefd5ffdda0553b0138da38a",
+    "results/fresh_h20_contact_closure_20261014_e8_face.json": "c28e47f5b51457bf9e7204b9b086e68b948d5eb555249feceecb5c81846d5d32",
+    "results/fresh_h20_contact_closure_20261014_h12_replacement.json": "873facedefb24909d24b909ac3c5d35fbc48933d806a7c56e2044e01798d8e97",
+    "results/fresh_h20_contact_closure_20261014_h12_transfer.json": "e405302cecadce7e9a06fe3515e011d00be55a320fcbcb0144f16f48c8ea5d86",
+    "results/fresh_h12_a12_source_20261014.json": "24f8df3db476dce2b0d03b7ec9b8e62adf0ecfadf759c94b25d9b6d1490deb67",
+    "scripts/fresh_h20_contact_closure_20261014_e8_face_review.py": "61d2b0c08c23e5e9550a8a7e899544670ba9cd8f8ab5c4e7e6315bd9ebc123ec",
+    "scripts/fresh_h20_contact_closure_20261014_e8_face.py": "4cf841fcbd4374dcc63257f879c8eab8761d6e26abf0b9897c42056c9173deaa",
+    "scripts/fresh_h20_contact_closure_20261014_h12_replacement.py": "663f4c4816543c28f93a0f48395272e0915d84900a0649c2d831558aba5db56b"
+  },
+  "E8_arm_lengths": [
+    1,
+    2,
+    4
+  ],
+  "E8_determinant": 1,
+  "E8_inverse": [
+    [
+      "2",
+      "3",
+      "4",
+      "5",
+      "3",
+      "6",
+      "4",
+      "2"
+    ],
+    [
+      "3",
+      "6",
+      "8",
+      "10",
+      "6",
+      "12",
+      "8",
+      "4"
+    ],
+    [
+      "4",
+      "8",
+      "12",
+      "15",
+      "9",
+      "18",
+      "12",
+      "6"
+    ],
+    [
+      "5",
+      "10",
+      "15",
+      "20",
+      "12",
+      "24",
+      "16",
+      "8"
+    ],
+    [
+      "3",
+      "6",
+      "9",
+      "12",
+      "8",
+      "15",
+      "10",
+      "5"
+    ],
+    [
+      "6",
+      "12",
+      "18",
+      "24",
+      "15",
+      "30",
+      "20",
+      "10"
+    ],
+    [
+      "4",
+      "8",
+      "12",
+      "16",
+      "10",
+      "20",
+      "14",
+      "7"
+    ],
+    [
+      "2",
+      "4",
+      "6",
+      "8",
+      "5",
+      "10",
+      "7",
+      "4"
+    ]
+  ],
+  "minimum_inverse_diagonal": 2,
+  "strict_timelike_redundant_projections": 56,
+  "retained_after_wall0_deletion": 55,
+  "A12_determinant": 13,
+  "face_form_determinant": -1,
+  "reconstructed_reverse_cap_norms": [
+    2,
+    1
+  ],
+  "source_gram_entries_checked": 196,
+  "strict_escape_inequalities_checked": 77,
+  "intrinsic_source_ray_norms_rechecked": 37,
+  "further_orthogonal_cap_gate": "The literal B12 inequalities force x1>=...>=x12>=0; the norm2 root at source index12 forces t>=x1+x2+x3. A nonzero acute vector has t>0, so the inherited complete t1 slice forces nonpositive norm. No additional spacelike E8-orthogonal acute normal exists after the14 source walls are retained.",
+  "scope": "Separate Fraction multiquadratic arithmetic and SymPy matrix inversion; no producer arithmetic imports. Reconstructs E8 Gram/inverse and strict face point, all56 nonorthogonal projection norms, the A12 form, the two reverse caps and the14-root H12 Gram isometry. Rechecks the77-wall strict escape. It does not duplicate2926 ambient pair classifications, all35 finite-vertex checks or the separate H12 source volume census."
+}

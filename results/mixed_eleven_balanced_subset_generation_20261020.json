@@ -1,0 +1,21 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/check_mixed_eleven_balanced_and_subset_rows_20261020.py",
+    "--write"
+  ],
+  "elapsed_seconds": 0.141,
+  "peak_process_tree_rss_bytes": 54738944,
+  "initial_resources": {
+    "free_disk_gib": 181.11,
+    "available_memory_gib": 6.54
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 826,
+  "stdout": "{\"schema\": 1, \"status\": \"PASS_EXACT_RATIONAL_ROWS\", \"balanced\": {\"integer_corner_rows\": [3960, 2160, 972, 288, 0, 0, 180, 432, 648, 720, 540, 0], \"strict_lower\": \"3722B>159195f+2794E\", \"proposed_upper_excess_gap\": \"5/3722\"}, \"subsets\": {\"7\": {\"intervals_checked\": 1498, \"intervals_empty\": 2, \"worst_left_numerator\": 2848, \"denominator\": 1100, \"least_gap\": \"538281598620859972/2230643985876527375\", \"strict\": true}, \"8\": {\"intervals_checked\": 1386, \"intervals_empty\": 14, \"worst_left_numerator\": 3092, \"denominator\": 1100, \"least_gap\": \"2560002092535983191639/41885809107605342881050\", \"strict\": true}}, \"full_eleven\": {\"positive_part_mean_upper\": \"273313374321407/611561341462500\", \"target\": \"2493/5500\", \"strict_gap\": \"972675704467/152890335365625\"}, \"scope\": \"Partial structured-subset estimates; no dimension-ten theorem\"}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "e403456a9f880af672407173e51b18e4e3b03b3cb474cdb1030ce54ba381f830",
+  "lock_owner": "wrapper"
+}

@@ -1,0 +1,59 @@
+diff --git a/configure.ac b/configure.ac
+index 08efb20..f77524a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -341,6 +341,11 @@ case $host in
+ 	AC_DEFINE(X86_64BITS,1,
+ 		  [Define this if the OS is a 64 bits one])
+ 	;;
++aarch64-*-linux*)
++	AC_DEFINE(IX86_LINUX,1,
++          [Define this on Linux systems using posix_memalign])
++	AM_CONDITIONAL([IS_CYGWIN_COND],[false])
++	;;
+ i?86-*-cygwin*)
+ 	AC_DEFINE(IX86_CYGWIN,1,
+           [Define this if your system is a cygwin-based ix86 or compatible])
+diff --git a/gaol/gaol_fpu_fenv.h b/gaol/gaol_fpu_fenv.h
+index ab8fac1..64bb738 100644
+--- a/gaol/gaol_fpu_fenv.h
++++ b/gaol/gaol_fpu_fenv.h
+@@ -41,8 +41,10 @@
+ // Mask 0x0a7f: 53 bits precision, all exceptions masked, rounding to +oo
+ // FIXME: Using an hexadecimal constant is not portable!
+ #define GAOL_FPU_MASK 0x0a3f
+ 
+-#if IX86_LINUX
++#if defined(__aarch64__)
++/* ARM uses the portable fenv rounding API below, not an x87 control word. */
++#elif IX86_LINUX
+ #   define CTRLWORD(v) (v).__control_word
+ #elif IX86_MACOSX
+ #   define CTRLWORD(v) (v).__control
+@@ -107,6 +109,18 @@ round_nearest(void)
+   fesetround(FE_TONEAREST);
+ }
+ 
++#if defined(__aarch64__)
++INLINE unsigned short int get_fpu_cw()
++{
++  return 0;
++}
++
++INLINE void reset_fpu_cw(unsigned short int)
++{
++  /* GAOL calls this with GAOL_FPU_MASK during initialization. */
++  fesetround(FE_UPWARD);
++}
++#else
+ INLINE unsigned short int get_fpu_cw()
+ {
+   fenv_t tmp;
+@@ -121,6 +133,7 @@ INLINE void reset_fpu_cw(unsigned short int st)
+   CTRLWORD(tmp) = st;
+   fesetenv(&tmp);
+ }
++#endif
+ 
+   /*!
+     \brief Returns the opposite of the argument

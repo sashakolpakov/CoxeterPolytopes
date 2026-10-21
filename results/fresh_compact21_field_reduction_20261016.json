@@ -1,0 +1,153 @@
+{
+  "status": "PASS_COMPACT_DIMENSION21_REDUCTION_TO_TWO_OPEN_FIELDS",
+  "sources": {
+    "results/fresh_arithmetic_high_label_20261016.json": "493bfe439e6a6f1e3820c849aa078237ab3e9f5b99aacbb413806bbfb15d2fe3",
+    "results/fresh_arithmetic_high_label_20261016_review.json": "c063621833702a810a0ca68a194c8f73b8555d235a7102a9b8263311b577a263",
+    "results/fresh_sqrt2_quad_exhaustion_20261015_review.json": "ea977e5243364fd4324b1edd19b00f193ce50546eaa813cf158541fa0d090270",
+    "results/fresh_sqrt2_weight_bound_20261015_review.json": "443952b2c957c537f6059aa15ec55d4acab551435e4ba2b81c44435b72123c02",
+    "results/fresh_compact_global_bound_20261015_review.json": "6ea30c08076a8b0503354cce524260c147661be0dd87e5afcd3db44068a69ec2",
+    "results/fresh_arithmetic_dimension21_composition_20261016_bound21.json": "451d04e5305c1bf15148e83aa2c35292f78686b9816f81dec73f19af415e80ab",
+    "scripts/fresh_compact21_field_reduction_20261016.py": "c0cf8bed79f85c6f216278b0ebbc7f2c3ae96172f554e82c88ba2327c7d59d3b"
+  },
+  "branches": [
+    {
+      "field": "Q",
+      "dimension": 21,
+      "status": "EXCLUDED_PUBLISHED",
+      "reason": "Meyer isotropy in rank>=5 rules out compact rational simplest-type arithmetic lattices in dimension>=4."
+    },
+    {
+      "field": "Q(sqrt2)",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_sqrt2_quad_exhaustion_20261015_review",
+        "fresh_sqrt2_weight_bound_20261015_review"
+      ]
+    },
+    {
+      "field": "Q(sqrt3)",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_arithmetic_high_label_20261016",
+        "fresh_arithmetic_high_label_20261016_review"
+      ]
+    },
+    {
+      "field": "Q(sqrt5)",
+      "dimension": 21,
+      "status": "OPEN",
+      "reason": "Not covered by the new field hypothesis or existing bound20 certificates."
+    },
+    {
+      "field": "Q(sqrt6)",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_arithmetic_high_label_20261016",
+        "fresh_arithmetic_high_label_20261016_review"
+      ]
+    },
+    {
+      "field": "Q(sqrt2,sqrt3)",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_arithmetic_high_label_20261016",
+        "fresh_arithmetic_high_label_20261016_review"
+      ]
+    },
+    {
+      "field": "Q(sqrt2,sqrt5)",
+      "dimension": 21,
+      "status": "OPEN",
+      "reason": "Not covered by the new field hypothesis or existing bound20 certificates."
+    },
+    {
+      "field": "K7",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_compact_global_bound_20261015_review"
+      ]
+    },
+    {
+      "field": "K9",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_arithmetic_high_label_20261016",
+        "fresh_arithmetic_high_label_20261016_review"
+      ]
+    },
+    {
+      "field": "K11",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_arithmetic_high_label_20261016",
+        "fresh_arithmetic_high_label_20261016_review"
+      ]
+    },
+    {
+      "field": "K15",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_arithmetic_high_label_20261016",
+        "fresh_arithmetic_high_label_20261016_review"
+      ]
+    },
+    {
+      "field": "K16",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_arithmetic_high_label_20261016",
+        "fresh_arithmetic_high_label_20261016_review"
+      ]
+    },
+    {
+      "field": "K20",
+      "dimension": 21,
+      "status": "EXCLUDED_RESEARCH_CANDIDATE",
+      "upper_bound": 20,
+      "evidence": [
+        "fresh_arithmetic_high_label_20261016",
+        "fresh_arithmetic_high_label_20261016_review"
+      ]
+    }
+  ],
+  "remaining_fields": [
+    "Q(sqrt5)",
+    "Q(sqrt2,sqrt5)"
+  ],
+  "dimension21_excluded": false,
+  "compact_arithmetic_upper_bound_unchanged": 21,
+  "new_field_bound20_candidates": 8,
+  "recursive_manifest_count": 96,
+  "source_reference_count": 1136,
+  "published_inputs": [
+    {
+      "result": "Dimension>=14 arithmetic field list, including Q; compact rational case removed separately.",
+      "source": "Vinberg1984; Nikulin0708.3991 introduction and Section3",
+      "url": "https://arxiv.org/pdf/0708.3991"
+    },
+    {
+      "result": "Arithmetic reflection lattices are of simplest type; rational isotropy prevents cocompactness in dimension>=4.",
+      "source": "Vinberg simplest-type criterion; Meyer theorem; arithmetic compactness criterion",
+      "url": "https://arxiv.org/pdf/1506.03111"
+    }
+  ],
+  "scope": "Dependency and logical-coverage composition of internally reviewed research proof candidates with published inputs. Not a new compact upper bound20, not independent reruns of inherited large enumerations, not external validation or priority."
+}

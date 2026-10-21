@@ -1,0 +1,210 @@
+# Hostile audit: the direct full-NS rational bound is \(\dim P\le11\)
+
+**Verdict (2026-08-10): PASS.**  The theorem in
+[the owner report](rational_direct_full_ns_n11_dimension_theorem.md) is a
+valid project-native dimension bound under its literal hypotheses:
+
+\[
+ \boxed{\rho(S)-1\le11.}
+\]
+
+No reflective-lattice classification or surface census enters the proof.
+This audit reconstructed the geometric reductions, the nonsimplicial
+positive-root step, both degree-one adjunction gates, and the two mixed-ray
+obstructions independently.
+
+## 1. Frozen owner inputs
+
+The verdict applies exactly to these bytes:
+
+\[
+\begin{array}{c|l}
+\text{artifact}&\text{SHA-256}\\ \hline
+\text{report}&
+\mathtt{a5dbd6e2fbbd7cd55025f5af324de6b778a196cf4f72cf06903a1dce2e4ae27f}\\
+\text{certifier}&
+\mathtt{23715fc4ed8ab4505cb9925b57b770eba388b48ef74f7f9bf261f5cdb5b576d2}\\
+\text{archive}&
+\mathtt{faea105582a7973363688f49710251e26269d861da5fb3bd13c629171b9ebbed}\\
+\text{tests}&
+\mathtt{db92c6f9078f19b7e48dc084c4c36d90ecd81c2de907b144fec54e17a11dd987}.
+\end{array}
+\]
+
+The final scope is important.  The full Mori cone is rational polyhedral,
+but only its **negative** extremal rays are required to have the complete
+smooth-rational \((-1),(-2),(-4)\) alphabet.  Square-zero tangent rays are
+allowed.  This correction is necessary for the \(\mathbb F_2\) branch,
+whose fibre is isotropic.  The host is the direct full Neron--Severi lattice;
+no adapted half-boundary conclusion is claimed.
+
+## 2. Audit of the geometric reduction
+
+The two minimal-model mirrors are exact.
+
+- Over \(\mathbb F_0\), \(c-d\) has square \(-2\), exchanges the rulings,
+  fixes every total exceptional coordinate, and has a mirror through an
+  ample class.  Adjoining its reflection contradicts maximality.
+- On \(\mathbb F_e\), the final strict negative section has primitive class
+  \(s-\sum_{i\in I}e_i\), square \(-(e+t)\), and pairs one with \(f\).
+  Its reflection sends \(f\) to
+  \(f+2\widetilde s/(e+t)\).  Full-lattice integrality leaves only
+  \(e=2,t=0\).
+
+Thus the base is \(\mathbf P^2\) or \(\mathbb F_2\), and no \(\mathbb F_2\)
+centre lies on the negative section.
+
+The relative-ample equalization argument for incomparable valuations puts
+the integral mirror \(e_i-e_j\) through the ample interior.  Reflection
+maximality therefore makes every pair comparable.  A first satellite gives
+an older strict exceptional prime at least two proximate children.  On the
+final surface its square is \(-(k+1)\):
+
+- \(k=2\) gives the forbidden square \(-3\);
+- \(k=3\) gives a primitive square-\(-4\) class, whose reflection is
+  nonintegral in the unimodular full lattice;
+- \(k\ge4\) leaves the stipulated negative alphabet.
+
+Hence the chain is free, with strict exceptional primes
+\(e_i-e_{i+1}\) and \(e_m\).  This also proves the monotonicity of all
+hidden-curve multiplicities used later.
+
+## 3. Audit of the nonsimplicial root lift
+
+This was the delicate step.  For each physical facet, use its primitive
+root \(r_i\): it is the curve for squares \(-1,-2\), and half the curve for
+an integral square-\(-4\) facet.  The Cartan integers
+
+\[
+             a_{ij}={2(r_j.r_i)\over r_i^2}
+\]
+
+form a symmetrizable generalized Cartan matrix.  On the free root module
+\(Q=\bigoplus_i\mathbb Z\varepsilon_i\), the actions
+
+\[
+       \sigma_i(\varepsilon_j)=\varepsilon_j-a_{ij}\varepsilon_i
+\]
+
+have the same Coxeter matrix as the geometric facet reflections.  Because
+the supplied polyhedron is a fundamental Coxeter chamber, these are words
+in the same Coxeter system \(W\).  The equivariant map
+\(\varepsilon_i\mapsto r_i\) may have a kernel when the chamber is
+nonsimplicial, but the real-root sign lemma is applied before taking that
+quotient.  It therefore supplies a nonnegative integral simple-root
+expansion.
+
+There is also no hidden assumption that an arbitrary geometric reflection
+element is already a formal Coxeter reflection.  At a generic point of its
+mirror, the locally finite chamber tessellation has exactly two adjacent
+chambers; chamber transitivity conjugates that mirror reflection to their
+facet reflection.
+
+Maximality consequently puts the integral reflections in
+
+\[
+ \alpha_0=H-e_1-e_2-e_3,\qquad
+ \delta_0=f-e_1-e_2
+\]
+
+inside \(W\), and the free-root lemma gives their positive integral
+expansions.  When \(m<3\) over the plane or \(m<2\) over \(\mathbb F_2\),
+the final dimension bound is already immediate, so no missing coordinate is
+silently introduced.
+
+## 4. Audit of the degree-one gates
+
+Plane degree \(H.x\) is zero exactly on exceptional roots.  Since
+\(H.\alpha_0=1\), its expansion has one nonexceptional degree-one root.
+The physical \((-1)\) and \((-2)\) possibilities are
+
+\[
+ H-e_1-e_2,\qquad H-e_1-e_2-e_3.
+\]
+
+A half-\((-4)\) possibility would require nonnegative integers \(n_i\) with
+
+\[
+                 \sum n_i^2=2,\qquad\sum n_i=4,
+\]
+
+which is impossible.  The first displayed line root would leave
+\(-e_3\), outside the nonnegative cone generated by the free exceptional
+primes.  Thus \(\alpha_0\) is itself a physical facet.
+
+For \(\mathbb F_2\), the proof correctly uses the ample base class
+\(s+3f\), not the nef class \(s+2f\).  In particular,
+
+\[
+ (s+3f).s=(s+3f).f=1,
+\]
+
+so the negative section is not a concealed degree-zero root.  Degree zero
+means exceptional.  Pushing the positive expansion of \(\delta_0\) down to
+the base forces the unique nonexceptional root to have base class \(f\),
+rather than \(s\).  The two physical possibilities are
+
+\[
+                         f-e_1,\qquad f-e_1-e_2.
+\]
+
+The half-\((-4)\) equations are
+\(\sum n_i^2=1,\ \sum n_i=3\), again impossible, and the first fibre root
+would leave the forbidden exceptional remainder \(-e_2\).  Therefore
+\(\delta_0\) is a physical facet.  Its second centre is fibre-following and
+free: only \(E_1\) is exceptional at that point, so it is not satellite.
+
+## 5. Audit of the depth obstruction
+
+The derived frames meet the exact hypotheses of the first-mixed-ray
+argument.  The independent replay checks
+
+\[
+\begin{aligned}
+ w_{\mathbf P^2}&=7H-3e_1-2e_2-\cdots-2e_{12},\\
+ w_{\mathbb F_2}&=4s+9f-2e_1-\cdots-2e_{11},
+\end{aligned}
+\qquad w^2=-4
+\]
+
+against every standard wall.  Smooth-rational adjunction reduces every
+hidden \((-1)\) and \((-2)\) pairing immediately to a nonnegative quantity.
+For hidden \((-4)\)-curves, the only potentially negative branches are
+
+\[
+ T_{12}=0,\ R=d-\mu_1\in\{0,1,2,3\}
+\]
+
+over the plane and
+
+\[
+ T_{11}=0,\ a\in\{0,1,2,3\}
+\]
+
+over \(\mathbb F_2\).  The independent finite arithmetic replay finds no
+integer solution to the corresponding adjunction, square, proximity, and
+line/fibre inequalities.  Thus a spacelike vector lies in the complete wall
+cone when \(m\ge12\) over \(\mathbf P^2\) or \(m\ge11\) over \(\mathbb F_2\).
+Finite volume excludes both cases:
+
+\[
+ m\le11\quad(\mathbf P^2),\qquad
+ m\le10\quad(\mathbb F_2).
+\]
+
+Since the hyperbolic dimensions are respectively \(m\) and \(m+1\), both
+give \(\dim P\le11\).
+
+## 6. Independent replay
+
+The hostile tests are
+[here](../tests/test_rational_direct_full_ns_n11_dimension_theorem_hostile.py).
+They import no function from the owner certifier.  They pin all four owner
+hashes, reconstruct the satellite and degree-one gates, check the
+\(\mathbb F_2\) section degree explicitly, solve both exceptional remainders,
+rebuild both mixed rays, exhaust the low-pairing \((-4)\) branches, and replay
+the frozen owner archive.
+
+The result is a theorem about the declared direct full-nef carrier class.
+It does not prove that an arbitrary raw arithmetic Coxeter polytope has such
+a carrier, and it does not extend to adapted half-boundary hosts.

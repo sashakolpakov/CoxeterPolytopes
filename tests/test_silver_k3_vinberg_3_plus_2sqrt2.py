@@ -1,0 +1,160 @@
+import json
+from collections import Counter
+
+import pytest
+
+from coxeter_polytopes.exact.matrix import Inertia
+from coxeter_polytopes.exact.silver import SILVER_ZERO, SQRT2, Silver
+from coxeter_polytopes.search.silver_k3_vinberg import (
+    run_silver_k3_vinberg_three_plus_two_sqrt2_extension,
+)
+from scripts.certify_silver_k3_vinberg_3_plus_2sqrt2 import (
+    ARCHIVE,
+    EXPECTED_CERTIFICATE_SHA256,
+    verify_manifest,
+)
+from scripts.independent_silver_k3_vinberg_3_plus_2sqrt2 import (
+    EXPECTED_REPLAY_SHA256,
+    audit_block_silver_three_plus_two_shell,
+)
+
+
+def test_three_plus_two_sqrt2_shell_is_exact_and_adds_60_walls() -> None:
+    extension = run_silver_k3_vinberg_three_plus_two_sqrt2_extension()
+    level = extension.new_level
+
+    assert extension.passes
+    assert extension.completed_through_control_coordinate == 3 + 2 * SQRT2
+    assert extension.next_admissible_control_coordinate == 4 + 2 * SQRT2
+    assert level.target == 43 + 29 * SQRT2
+    assert level.alphabet.values == (
+        SILVER_ZERO,
+        Silver(1),
+        SQRT2,
+        1 + SQRT2,
+        2 + SQRT2,
+        1 + 2 * SQRT2,
+        3 + SQRT2,
+        2 + 2 * SQRT2,
+        3 + 2 * SQRT2,
+        4 + 2 * SQRT2,
+        3 + 3 * SQRT2,
+        4 + 3 * SQRT2,
+        5 + 3 * SQRT2,
+        4 + 4 * SQRT2,
+        6 + 3 * SQRT2,
+        5 + 4 * SQRT2,
+        6 + 4 * SQRT2,
+        7 + 4 * SQRT2,
+    )
+    assert level.visited_by_depth == (
+        1,
+        18,
+        324,
+        1080,
+        2016,
+        2772,
+        20142,
+        66078,
+        47934,
+        16290,
+    )
+    assert level.schur_pruned_by_depth == (
+        0,
+        0,
+        264,
+        968,
+        1862,
+        1653,
+        16471,
+        63415,
+        47029,
+        11339,
+    )
+    assert level.exact_weight_solutions == 138
+    assert level.nonintegral_reconstructions == 0
+    assert level.previous_wall_rejections == 78
+    assert len(level.roots) == 60
+    assert len(extension.roots) == 153
+    assert extension.wall_identity_inertia == Inertia(9, 1, 143)
+    assert extension.wall_conjugate_inertia == Inertia(10, 0, 143)
+
+
+def test_all_60_same_height_roots_survive_simultaneously() -> None:
+    extension = run_silver_k3_vinberg_three_plus_two_sqrt2_extension()
+    cohort = tuple(range(extension.prior_wall_count, len(extension.roots)))
+    pairings = tuple(
+        extension.wall_gram[i][j]
+        for i in cohort
+        for j in cohort
+        if j < i
+    )
+
+    assert cohort == tuple(range(93, 153))
+    assert len(pairings) == 1770
+    assert Counter(pairing.sign(0) for pairing in pairings) == {-1: 1702, 0: 68}
+    assert all(
+        extension.wall_gram[i][j].sign(0) <= 0
+        for i in cohort
+        for j in range(i)
+    )
+
+
+def test_targeted_edge_does_not_gain_its_second_finite_endpoint() -> None:
+    extension = run_silver_k3_vinberg_three_plus_two_sqrt2_extension()
+
+    assert extension.edge_indices == (1, 2, 4, 5, 6, 7, 9, 12)
+    assert extension.finite_endpoint_root_indices == (33,)
+    assert extension.new_finite_endpoint_root_indices == ()
+    assert len(extension.new_root_edge_pairings) == 60
+    assert len(extension.new_root_edge_extension_determinants) == 60
+    assert all(
+        determinant.sign(0) < 0
+        for determinant in extension.new_root_edge_extension_determinants
+    )
+    assert extension.new_root_edge_extension_identity_inertias == (
+        Inertia(8, 1, 0),
+    ) * 60
+    assert extension.new_root_edge_extension_conjugate_inertias == (
+        Inertia(9, 0, 0),
+    ) * 60
+    assert extension.second_endpoint_status == "not_found_through_this_shell"
+    assert extension.stopping_status == "undecidable_incomplete_simple_roots"
+
+
+def test_block_factorized_replay_matches_production_root_sets() -> None:
+    audit = audit_block_silver_three_plus_two_shell()
+
+    assert audit.passes
+    assert audit.exact_weight_solutions == 138
+    assert audit.nonintegral_reconstructions == 0
+    assert audit.rejected_root_count == 78
+    assert len(audit.accepted_roots) == 60
+    assert audit.same_height_negative_pair_count == 1702
+    assert audit.same_height_zero_pair_count == 68
+    assert audit.production_accepted_root_set_matches
+    assert audit.production_rejection_witness_set_matches
+    assert audit.replay_sha256 == EXPECTED_REPLAY_SHA256
+
+
+def test_three_plus_two_sqrt2_certificate_is_frozen() -> None:
+    manifest = json.loads(ARCHIVE.read_text(encoding="utf-8"))
+
+    assert verify_manifest(manifest) == {
+        "certificate_sha256": EXPECTED_CERTIFICATE_SHA256,
+        "exact_weight_solutions": 138,
+        "accepted_root_count": 60,
+        "wall_count": 153,
+        "known_finite_endpoint_root_indices": [33],
+        "independent_replay_sha256": EXPECTED_REPLAY_SHA256,
+        "next_admissible_control_coordinate": {"a": "4", "b": "2"},
+        "stopping_status": "undecidable_incomplete_simple_roots",
+    }
+
+
+def test_three_plus_two_sqrt2_certificate_rejects_mutation() -> None:
+    manifest = json.loads(ARCHIVE.read_text(encoding="utf-8"))
+    manifest["new_level"]["accepted_root_count"] = 59
+
+    with pytest.raises(ValueError, match="does not reproduce"):
+        verify_manifest(manifest)

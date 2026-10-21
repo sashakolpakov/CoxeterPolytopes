@@ -1,0 +1,47 @@
+{"status": "KERNEL_COMPILED", "module": "CoxeterProofs.OmittedPrefixReferenceKernel", "inputs": {"source_sha256": "5d0065cc3596328985f8306e4ef9b478ed45ca04f7d916564d82a93219aa61b5", "dependency_olean_sha256": {"CoxeterProofs.RightAngledSharpDimensions": "f2bd3858fee23605e95212d21784afcc8f6a66f148e11f524ea3cbeb077d7f91", "CoxeterProofs.RightAngledCubicScalarKernel": "8d06c91e92439233c0469782bd382f5cb87fc7056488800e40298bf4e00c781c", "CoxeterProofs.RightAngledProjectionHeightKernel": "b2e265c8445767735f7ea149cfcf8344df074229bf62bafe158b0b482d7ef2a3", "CoxeterProofs.SummedActualFootKernel": "4010db9c32b04e5abad9938d2e61dc72ba3eb93cf4092c4b3b5b74f3ecb8a468"}, "compiler": {"lean-toolchain": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273", "lakefile.toml": "73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7", "lake-manifest.json": "31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395", "compiler_files": {"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554", "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib": "c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c", "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib": "e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a", "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib": "be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182"}, "environment": {"ELAN_TOOLCHAIN": "", "LEAN_PATH": "", "LEAN_SRC_PATH": ""}}, "memory_cap_mib": 2048, "threads": 1}, "stdout_sha256": "77dc4da844a171085f7dcc5cf0b85c573fca7cd3e3b8bb2a448d70ff0235e09b", "output_bytes": 2241, "elapsed_seconds": 0.74, "resources": {"free_disk_gib": 157.55, "available_memory_gib": 6.41}, "olean_sha256": "9c4498618d9d742a9311bcd018bfd404c858803b0c842ff10193c2404f130d2c"}
+CoxeterProofs/OmittedPrefixReferenceKernel.lean:75:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.OmittedPrefixReferenceKernel.two_slope_averaging_energy`:
+  [LE R]
+  [LT R]
+  [Std.IsLinearOrder R]
+  [Std.LawfulOrderLT R]
+  [OrderedRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CoxeterProofs/OmittedPrefixReferenceKernel.lean:90:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.OmittedPrefixReferenceKernel.three_slope_averaging_energy`:
+  [LE R]
+  [LT R]
+  [Std.IsLinearOrder R]
+  [Std.LawfulOrderLT R]
+  [OrderedRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'CoxeterProofs.OmittedPrefixReferenceKernel.supported_reference_pressure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.OmittedPrefixReferenceKernel.supported_reference_energy_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.OmittedPrefixReferenceKernel.omitted_reference_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.OmittedPrefixReferenceKernel.two_slope_averaging_energy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.OmittedPrefixReferenceKernel.two_slope_averaging_nonincrease' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.OmittedPrefixReferenceKernel.three_slope_averaging_energy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.OmittedPrefixReferenceKernel.three_slope_averaging_nonincrease' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.OmittedPrefixReferenceKernel.nonflat_graft_square' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+{"status": "KERNEL_AXIOM_AUDIT", "module": "CoxeterProofs.OmittedPrefixReferenceKernel", "inputs": {"source_sha256": "5d0065cc3596328985f8306e4ef9b478ed45ca04f7d916564d82a93219aa61b5", "dependency_olean_sha256": {"CoxeterProofs.RightAngledSharpDimensions": "f2bd3858fee23605e95212d21784afcc8f6a66f148e11f524ea3cbeb077d7f91", "CoxeterProofs.RightAngledCubicScalarKernel": "8d06c91e92439233c0469782bd382f5cb87fc7056488800e40298bf4e00c781c", "CoxeterProofs.RightAngledProjectionHeightKernel": "b2e265c8445767735f7ea149cfcf8344df074229bf62bafe158b0b482d7ef2a3", "CoxeterProofs.SummedActualFootKernel": "4010db9c32b04e5abad9938d2e61dc72ba3eb93cf4092c4b3b5b74f3ecb8a468"}, "compiler": {"lean-toolchain": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273", "lakefile.toml": "73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7", "lake-manifest.json": "31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395", "compiler_files": {"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554", "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib": "c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c", "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib": "e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a", "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib": "be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182"}, "environment": {"ELAN_TOOLCHAIN": "", "LEAN_PATH": "", "LEAN_SRC_PATH": ""}}, "memory_cap_mib": 2048, "threads": 1}, "stdout_sha256": "77dc4da844a171085f7dcc5cf0b85c573fca7cd3e3b8bb2a448d70ff0235e09b", "output_bytes": 2241, "elapsed_seconds": 0.52, "resources": {"free_disk_gib": 157.55, "available_memory_gib": 6.4}}
+{"status": "PASS_SEQUENTIAL_MODULE_CHECK", "newly_capped_modules": ["CoxeterProofs.OmittedPrefixReferenceKernel"], "legacy_cached_uncapped_modules": [], "all_dependencies_have_capped_ledger": true}

@@ -1,0 +1,13 @@
+{
+  "status": "FAIL_REPLAY_JSON_REPRESENTATION",
+  "command": [
+    "scripts/check_a15_inner_unit_a1_absence_retention_20261018.py",
+    "--verify"
+  ],
+  "exit_code": 1,
+  "source_sha256": "68f40d6e8bdcb0e945545b24f16ea7f63b61b23d8769fa08f163d1b55a634e11",
+  "source_archive": "results/a15_inner_unit_a1_absence_retention_initial_checker_20261019.py",
+  "certificate": "results/a15_inner_unit_a1_absence_retention_20261018.json",
+  "reason": "Native tuples in marked images serialize as JSON arrays; direct equality against JSON-loaded lists failed. Geometric reconstruction completed before the representation comparison.",
+  "repair": "Canonicalize the in-memory result through JSON before writing/comparing and publish a distinct v2 certificate. Preserve initial evidence."
+}

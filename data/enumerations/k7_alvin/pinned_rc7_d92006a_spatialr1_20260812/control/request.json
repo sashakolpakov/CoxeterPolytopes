@@ -1,0 +1,51 @@
+{
+  "case": "control",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "k7-alvin-control-1786533152662484000",
+    "--network=none",
+    "--volume",
+    "/Users/sasha/CoxeterPolytopes/data/enumerations/k7_alvin/pinned_rc7_d92006a_spatialr1_20260812/control/output:/opt/AlVin/build/output",
+    "coxeter-alvin:rc7-spatial-r1-d92006a",
+    "-k",
+    "rc7",
+    "-qf",
+    "[-1,0,0],1,1,1,1",
+    "-ip",
+    "-noimage"
+  ],
+  "contains_maxv": false,
+  "context_sha256": {
+    "Dockerfile": "76ef258efe1020da9ce0f90095b40390827d18c9c6f9c307bfb6849dcd23f2c7",
+    "alvin-aarch64.patch": "7b24d5d38405bd868b818ad83e0a4a571b2237aae2a81c29f1c56e407ba088d7",
+    "alvin-norm-powers.patch": "0d5d8026d5524917e1f73d1b22c3278d3729716ecbbb685cf3c2152e7182cfc1",
+    "alvin-rc7-angle14.patch": "fa44d59e382a9ce8eeabe127b5bf0de162486c2b57eb3a909e9d0d3c0f0e652d",
+    "alvin-rc7-exact-bounds.patch": "3fa1dbfd7d37a2de167aeb9136fb29886f80fce765624a1e9bc910f5686dab85",
+    "alvin-rc7-fraction-conjugation.patch": "853e52a3bbb4ff45b11749ec682cecbcfc75366fa95bfde1b316a96042ded67c",
+    "alvin-rc7-spatial-r1.patch": "884ba9f1c25edb74a89e7566ce5ce676001ea9073ed08239e208b77f7977d6be",
+    "gaol-aarch64.patch": "012f42d0f67e3e43bf905d36a987998081d4c656906ad26093cec5465bf4396c",
+    "vendor.sha256": "eb47c91d5c675726440074a9cec0656be2f7a628a387c69ad5c4973f2a50646a"
+  },
+  "docker_cpu_limit": null,
+  "expected_alvin_commit": "d92006a842cb4668e7c89e8c8e2d30337e4b0f26",
+  "expected_facets": 8,
+  "external_timeout_seconds": null,
+  "image": {
+    "alvin_commit": "d92006a842cb4668e7c89e8c8e2d30337e4b0f26",
+    "architecture": "arm64",
+    "created": "2026-08-12T13:10:02.922552114+02:00",
+    "id": "sha256:b995880fcd16c6940af225e0c6e5d8734be495f434d8e66640774a4714252896",
+    "os": "linux",
+    "repo_digests": [
+      "coxeter-alvin@sha256:b995880fcd16c6940af225e0c6e5d8734be495f434d8e66640774a4714252896"
+    ]
+  },
+  "kind": "regression",
+  "qf": "[-1,0,0],1,1,1,1",
+  "runner_sha256": "1d5f116ee24a0c6a528400102ee0ecaf0bc5542f4538006d450fd8cbc7b2c763",
+  "schema": "coxeter.k7_alvin.live_request.v1",
+  "started_at_utc": "2026-08-12T11:12:32.662594+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "recorded_utc": "2026-10-21T15:26:09.009428+00:00",
+  "status": "REFUSED_BEFORE_LEAN_CHILD_AT_UNCHANGED_RESOURCE_ADMISSION",
+  "command": [
+    "python3",
+    "-B",
+    "scripts/run_lean_batches_signal_safe_20261018.py",
+    "CoxeterProofs.RegularIdeal24CellHeightKernel"
+  ],
+  "source": {
+    "path": "formal/CoxeterProofs/RegularIdeal24CellHeightKernel.lean",
+    "sha256": "633ae6fef8c5d0f0d0cafb2363d99f38e6922405d61c25c0e3a569e7bceaecec",
+    "bytes": 4720
+  },
+  "exit_code": 1,
+  "tool_chunk_id": "19d422",
+  "terminal_error": "Resource gate: disk=143.7GiB memory=4.9GiB; require 40/6GiB",
+  "admission_disk_memory_gib": [
+    40,
+    6
+  ],
+  "abort_disk_memory_gib": [
+    8,
+    3
+  ],
+  "lean_children_started": 0,
+  "compile_success": false,
+  "actual_axiom_outputs": 0,
+  "compile_ledger_absent": true,
+  "axiom_audit_ledger_absent": true,
+  "owned_temporary_proof_work_absent": true,
+  "monitor_disabled": false,
+  "gates_lowered": false,
+  "scope": "Admission attempt only; no Lean compiler, fixture, scientific worker or TeX child ran. The existing source/map remain UNCOMPILED and unchanged."
+}

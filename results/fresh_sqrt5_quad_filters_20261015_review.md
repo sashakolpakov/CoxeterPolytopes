@@ -1,0 +1,15 @@
+# Independent radical-gauge and principal-core review
+
+**PASS.** The [separate checker](../scripts/fresh_sqrt5_quad_filters_20261015_review.py) and [certificate](fresh_sqrt5_quad_filters_20261015_review.json) reconstruct every one of the 1,180 principal-core decisions in the [primary filter certificate](fresh_sqrt5_quad_filters_20261015.json). They reproduce 617 two-negative-direction rejections, 89 cyclic-field rejections and 78 conjugate-positivity rejections. The remaining 362 finite-contact cores pass these necessary tests; 34 dotted-parameter cores are deliberately unfiltered.
+
+The implementation imports no producer or project arithmetic. It uses rational pairs in the basis \(1,\sqrt5\), rather than the producer's \(1,\phi\) basis. Disjoint-set parity constraints independently reconstruct the vertex squareclasses. Each of 8,374 nonright matrix entries is reconstructed by taking an exact quadratic-field square root of its required square; the producer's radical-exponent formula is not reused. Independent Gaussian congruence gives full physical and conjugate inertias, and a separately computed inverse of the corner block gives both Schur residuals. Every saved residual entry, determinant, sign and passing scaled Gram agrees exactly.
+
+The gauge reduction is valid because the classes of \(2,3,\phi+2\) are independent in \(K^*/K^{*2}\), as established in the independently reviewed catalogue. A nonright edge of class \(e_{ij}\) admits vertex classes \(c_i\) with \(c_i+c_j=e_{ij}\) precisely when every cycle product lies in K. Put \(R_i=\prod_b\sqrt{d_b}^{(c_i)_b}>0\). Replacing each root by \(R_i\) times that root gives diagonal \(2R_i^2\) and off-diagonal entries in K. Both conjugates of each \(d_b\in\{2,3,\phi+2\}\) are positive, so this rescaling preserves physical inertia and also converts the conjugate test by a real invertible diagonal congruence. Different radical-sign embeddings only change root signs. There is no loss from avoiding a degree-sixteen arithmetic implementation.
+
+Each chosen corner is positive definite in both embeddings. Physically this is an input of the union enumeration; the independent replay checks it again. For its conjugate, each finite forest can be sign-switched to an acute diagram, and the absolute 5- and 10-contact magnitudes decrease while the other magnitudes stay unchanged. The full test is consequently equivalent to the two-by-two Schur test. Its two physical diagonals are strictly negative because adjoining either opposite black root contains its selected Lannér piece. A positive residual determinant therefore gives two negative directions. In the other embedding, the two diagonal signs and determinant give the complete positive-semidefinite test; the replay also verifies the full inertia directly.
+
+Generation and saved replay pass, with source/data hashes, syntax and report links checked. The finite union enumeration is a separately reviewed input. No arbitrary external-white classification, dotted-distance exclusion, full-star completion or new dimension bound follows from this filter alone.
+
+```sh
+python3 scripts/fresh_sqrt5_quad_filters_20261015_review.py --verify
+```

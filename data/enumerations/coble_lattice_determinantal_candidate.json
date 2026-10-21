@@ -1,0 +1,266 @@
+{
+  "all_checks_pass": true,
+  "calibrations": {
+    "H10_30": {
+      "accepted_component": "c=-1",
+      "boundary_profile": [
+        6
+      ],
+      "carrier_and_exact_return": true,
+      "discarded_component": "c=1 collides two raw-derived centers",
+      "generated_equation": "c^2-1=0 after clearing the Laurent denominator",
+      "raw_program": "seven proper plus three first-near points; nine root lines and three exceptional roots",
+      "support": "horizontal over Q"
+    },
+    "H11_26": {
+      "accepted_component": "a=b!=0",
+      "boundary_profile": [
+        5,
+        1
+      ],
+      "carrier_and_exact_return": true,
+      "discarded_component": "a=-b gives line times conic squared",
+      "generated_equation": "a^2-b^2=0 from a 23x21 quintic jet matrix",
+      "raw_program": "four proximity chains of lengths 3,2,3,3; seven exceptional roots and three root lines",
+      "support": "horizontal over Q"
+    },
+    "H14_60": {
+      "boundary_profile": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "carrier_and_exact_return": true,
+      "generated_equations_include": [
+        "lambda+1=0",
+        "lambda-2=0"
+      ],
+      "integer_support_identity": "(lambda+1)-(lambda-2)=3",
+      "raw_program": "P-derived complete four-point polar/chord design",
+      "support": "vertical at characteristic 3"
+    },
+    "H17_48": {
+      "boundary_profile": "ruled 4+4 fibers, not a plane partition",
+      "carrier_and_exact_return": true,
+      "generated_equations_include": [
+        "lambda+1=0",
+        "2*lambda-1=0"
+      ],
+      "integer_support_identity": "2*(lambda+1)-(2*lambda-1)=3",
+      "raw_program": "P-derived complete four-point graph-projectivity design",
+      "support": "vertical at characteristic 3"
+    }
+  },
+  "checks": {
+    "H14_and_H17_are_explicitly_vertical_three": true,
+    "all_support_postprofile_count_5": true,
+    "candidate_not_mislabeled_as_arbitrary_input_theorem": true,
+    "compact_scope_empty": true,
+    "horizontal_postprofile_count_4": true,
+    "plane_preprofile_count_11": true,
+    "positive_terminal_plane_profiles_3": true,
+    "profile_level_AG_delta_is_nonzero": true,
+    "two_distinct_horizontal_controls": true
+  },
+  "compactness": "every returned rational Coble surface has a primitive nef isotropic ruling class; all these chambers are finite-volume noncompact, and the candidate makes no compact claim",
+  "lattice_ideal_realization_lemma": {
+    "does_not_cover": "arbitrary non-binomial incidence schemes or externally witnessed Hilbert points",
+    "proof_kernel": "a saturated lattice ideal is the prime ideal of a subtorus translate over the algebraic closure; a nonzero regular function has proper zero locus in that irreducible torus; finitely many generated bad functions therefore leave a nonempty open",
+    "statement": "Let A=Z[1/2N][t1^+-1,...,tr^+-1].  If the saturated compiler ideal is I_L+(p), where L is a saturated exponent sublattice, p is 0 or an odd prime, and the compiler-generated avoidance product is nonzero in A/(I_L+(p)), then the branch has a geometric point over Qbar for p=0 or over Fbar_p for p>0.  Rank-one kernel and Jacobian identities then construct the declared curves on a dense open."
+  },
+  "membership_safety": {
+    "allowed_and_required": "the compiler itself constructs symbolic evaluation/Fitting/Jacobian matrices from raw divisor and proximity data, factors their lattice ideals, and proves the relevant minors/discriminants nonzero",
+    "forbidden": "a supplied coordinate point, surface equation, Hilbert witness, Kondo type or output Gram cannot be part of C membership",
+    "why_not_witness_defined": "membership quantifies over no externally supplied coordinates; it applies one fixed symbolic algorithm to all raw contraction branches"
+  },
+  "name": "C_LatDet candidate: canonical lattice-determinantal Coble programs",
+  "plane_profile_pushback": {
+    "all_support_post_AG": [
+      [
+        6
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "counting_level": "boundary-profile strata, not P-isometry classes and not an actual-polytope census",
+    "delta": {
+      "post": 5,
+      "pre": 11,
+      "removed": 6
+    },
+    "eliminated_by_AG_boundary_count": [
+      [
+        4,
+        1,
+        1
+      ],
+      [
+        3,
+        2,
+        1
+      ],
+      [
+        3,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "horizontal_post_AG": [
+      [
+        6
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "pre_AG_partitions_of_6": [
+      [
+        6
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        1,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        2,
+        1
+      ],
+      [
+        3,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "qualification": "this is a genuine theorem-shaped AG profile delta once the classwide canonicalizer is proved; it is not yet a counted nonzero delta among enumerated P isometry classes",
+    "vertical_characteristic_three_high_profile": [
+      [
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "schema": "coxeter.coble_lattice_determinantal_candidate.v1",
+  "sources": {
+    "data/enumerations/coble_four_point_constructible_incidence.json": "0c0d2ae6a1c37b723d3804b8f856fcee931d9eb96d39a08116586766985f06c7",
+    "data/enumerations/coble_horizontal_vertical_support.json": "b32a7805a7dd8106968e6751ebc72dc117f09c6bf032cf556c33456fd153a662",
+    "data/enumerations/coble_type_i_two_boundary_plane_inverse.json": "be531c3c7083b124c7516a7bcb91db365c9d1279492e218d9f31da821f874a98",
+    "data/enumerations/coble_type_ii_b3_plane_inverse.json": "a8f49be994ae9bf70eae73378f4f006417be91ae827fee0a73707932f6ceac71"
+  },
+  "status": "two horizontal and two vertical exact calibrations plus a uniform lattice-ideal realization lemma; the arbitrary-input contraction-to-program canonicalizer and jointly exhaustive grammar are still open, so this is a theorem target, not strict L4",
+  "status_date": "2026-08-09",
+  "tuple": {
+    "AG": "Kondo applies only after construction and exact return: horizontal components have b in {1,2}; vertical characteristic-three components may have b in {1,2,5,8}",
+    "C": "raw marked P in D_CobVin; enumerate every numerical P2/F_e contraction; derive proximity, root-curve and boundary programs; accept only a fixed lattice-determinantal grammar whose Laurent incidence/Fitting ideal and every bad polynomial are generated canonically from raw P",
+    "Car": "on a saturated prime lattice-ideal component, the algebraic torus is nonempty over the geometric support field; compiler-generated rank-one kernels and nonzero discriminants construct every boundary and root seed",
+    "iff": "the existing all-contraction D_CobVin theorem is necessary and sufficient for an exact strong-Coble carrier and returns literally the same P; the candidate grammar supplies a sufficient nonempty branch",
+    "positives": [
+      "H10/30 horizontal profile [6]",
+      "H11/26 horizontal profile [5,1]",
+      "H14/60 vertical characteristic-three profile [2,1,1,1,1]",
+      "H17/48 vertical characteristic-three ruled 4+4-fiber branch"
+    ],
+    "post": "plane profiles fall from 11 to five: [6],[5,1],[4,2],[3,3],[2,1,1,1,1]; the horizontal sublocus contains only the first four",
+    "pre": "before AG, a plane branch only forces a partition of six; all 11 degree partitions are allowed by the P-derived anti-bicanonical numerical identity",
+    "theorem": "conditional on completing the arbitrary-input canonicalizer: every plane C_LatDet polytope is finite-volume noncompact in H10,H11,or H14; H14 is necessarily vertical in characteristic 3; there are no plane members with 3,4,or 6 boundary components",
+    "uncovered": [
+      "arbitrary-input contraction/dependency canonicalizer for the fixed grammar",
+      "proof that every accepted raw program reduces to the declared lattice-ideal modules",
+      "H10/22 horizontal program",
+      "H11/36 and H11/206 plane-program routing",
+      "all D_CobVin inputs outside the grammar",
+      "every compact polytope"
+    ]
+  }
+}

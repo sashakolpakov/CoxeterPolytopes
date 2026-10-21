@@ -1,0 +1,267 @@
+{
+  "all_checks_pass": true,
+  "arithmetic_packet": {
+    "all_cyclic_products_are_algebraic_integers": true,
+    "coefficient_field": "Q(sqrt(3))",
+    "coefficient_minimal_polynomial_coefficients": [
+      1,
+      0,
+      -3
+    ],
+    "graph_is_tree": true,
+    "ground_field": "Q",
+    "nonzero_two_cycle_products": [
+      1,
+      1,
+      3
+    ],
+    "v_arithmetic_nonidentity_ground_field_embedding_condition": "vacuous because ground field is Q"
+  },
+  "checks": {
+    "affine_null_vector_is_exact": true,
+    "all_vertex_deletions_are_negative_semidefinite": true,
+    "cyclic_products_generate_Q": true,
+    "full_determinant_is_minus_one": true,
+    "full_inertia_is_one_positive_three_negative": true,
+    "marked_u_is_one_and_less_than_two": true,
+    "minimal_indefinite_but_not_lanner": true,
+    "node_1_deletion_is_affine": true,
+    "nodes_2_and_3_are_finite_endpoint_deletions": true
+  },
+  "diagram": {
+    "coxeter_chain": [
+      3,
+      3,
+      6
+    ],
+    "determinant": -1,
+    "gram_matrix": [
+      [
+        "-2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "-2",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "-2",
+        "sqrt(3)"
+      ],
+      [
+        "0",
+        "0",
+        "sqrt(3)",
+        "-2"
+      ]
+    ],
+    "gram_normalization": "diagonal -2; edge entry 2*cos(pi/m)",
+    "inertia": {
+      "negative": 3,
+      "positive": 1,
+      "zero": 0
+    },
+    "ldl_pivots": [
+      "-2",
+      "-3/2",
+      "-4/3",
+      "1/4"
+    ],
+    "leading_principal_determinants": [
+      "-2",
+      "3",
+      "-4",
+      "-1"
+    ],
+    "vertex_deletions": {
+      "1": {
+        "charpoly_coefficients": [
+          1,
+          6,
+          8,
+          0
+        ],
+        "determinant": 0,
+        "inertia": {
+          "negative": 2,
+          "positive": 0,
+          "zero": 1
+        },
+        "matrix": [
+          [
+            "-2",
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "-2",
+            "sqrt(3)"
+          ],
+          [
+            "0",
+            "sqrt(3)",
+            "-2"
+          ]
+        ],
+        "negative_definite": false,
+        "negative_semidefinite": true,
+        "primitive_null_vector": [
+          "1",
+          "2",
+          "sqrt(3)"
+        ],
+        "rank": 2,
+        "type": "affine_[3,6]"
+      },
+      "2": {
+        "charpoly_coefficients": [
+          1,
+          6,
+          9,
+          2
+        ],
+        "determinant": -2,
+        "inertia": {
+          "negative": 3,
+          "positive": 0,
+          "zero": 0
+        },
+        "matrix": [
+          [
+            "-2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-2",
+            "sqrt(3)"
+          ],
+          [
+            "0",
+            "sqrt(3)",
+            "-2"
+          ]
+        ],
+        "negative_definite": true,
+        "negative_semidefinite": true,
+        "rank": 3,
+        "type": "elliptic"
+      },
+      "3": {
+        "charpoly_coefficients": [
+          1,
+          6,
+          11,
+          6
+        ],
+        "determinant": -6,
+        "inertia": {
+          "negative": 3,
+          "positive": 0,
+          "zero": 0
+        },
+        "matrix": [
+          [
+            "-2",
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "-2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-2"
+          ]
+        ],
+        "negative_definite": true,
+        "negative_semidefinite": true,
+        "rank": 3,
+        "type": "elliptic"
+      },
+      "4": {
+        "charpoly_coefficients": [
+          1,
+          6,
+          10,
+          4
+        ],
+        "determinant": -4,
+        "inertia": {
+          "negative": 3,
+          "positive": 0,
+          "zero": 0
+        },
+        "matrix": [
+          [
+            "-2",
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "-2",
+            "1"
+          ],
+          [
+            "0",
+            "1",
+            "-2"
+          ]
+        ],
+        "negative_definite": true,
+        "negative_semidefinite": true,
+        "rank": 3,
+        "type": "elliptic"
+      }
+    }
+  },
+  "geometric_verdict": {
+    "counterexample_scope": "the printed implication, not the proposition's repaired field-set conclusion",
+    "finite_vertices": 3,
+    "finite_volume": true,
+    "ideal_vertices": 1,
+    "lanner": false,
+    "minimal_indefinite": true,
+    "quasi_lanner": true
+  },
+  "marked_finite_edge": {
+    "both_endpoint_deletions_negative_definite": true,
+    "endpoint_exclusive_nodes": [
+      2,
+      3
+    ],
+    "u": 1,
+    "u_less_than_2": true
+  },
+  "methodological_scope": {
+    "not_proved_here": "the five-shape enumeration, N(14), or any global dimension theorem",
+    "proved_here": "an exact four-node counterexample and its field-preserving repair",
+    "role_of_nikulin": "hostile regression target, not a project dependency"
+  },
+  "repair": {
+    "downstream_field_sets_change": false,
+    "quasi_lanner_branch": "finite-volume noncompact arithmetic simplex, hence ground field Q",
+    "reason": "Q already belongs to FL^4 and FT",
+    "replacement": "minimal hyperbolic subgraph is Lanner or quasi-Lanner"
+  },
+  "schema": "coxeter.nikulin_336_quasilanner_counterexample.v1",
+  "source": {
+    "arxiv": "0708.3991v2",
+    "location": "Proposition 3, printed pages 8--9, u<2 branch",
+    "paper": "V. V. Nikulin, On ground fields of arithmetic hyperbolic reflection groups",
+    "source_pdf_sha256": "bf5e66703c20245ab229b199aa464b3955f3645716d7ae1b967566cadce082d0"
+  },
+  "status": "exact_counterexample_to_lanner_sentence_field_conclusion_repairable"
+}

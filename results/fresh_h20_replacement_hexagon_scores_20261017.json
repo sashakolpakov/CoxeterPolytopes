@@ -1,0 +1,79 @@
+{
+  "status": "REPRODUCIBLE_NUMERICAL_FIXED_CHART_IDEAL_SCORES",
+  "sources": {
+    "scripts/fresh_h20_replacement_hexagon_scores_20261017.py": "49a45380edc861e0788de9ae31b3f1f4942d9d13012e46c87ced011c21cae0a2",
+    "scripts/fresh_h20_opposite_prism_cap_20261017.py": "be6e65532e527848f378c1c3f40bb2abf66a5c93d43dd8c3cb1b6560ea348b27",
+    "results/fresh_h20_prism_replacement_20261017.json": "264acedb06d0e25d94391951be685f12da7c00184f1dbcc4b1692a070dd5f88e",
+    "results/fresh_h20_replaced_old_edge_profiles_20261017.json": "1c7a2edabf2b66378b595634f75ee3532f3dec8da2035a12c9c46d4d4af228ac",
+    "results/fresh_h20_h4_edge_continuation_20261017.json": "913b71b5aea41964f4e2741ce0131ebfbbcc627d2803bce63e47260eeda1c8e2",
+    "results/fresh_h20_two_wall_replacement_cluster_20261017.json": "972da07ea0c4d2c41170b4096326f42d45c43ea471bbbd33f7f26c06d32d13c9",
+    "results/fresh_h20_h4_hexagon_closure_20261017.json": "2ec792dbd29bb18d804942c300874360d57d5f1ec05e64f938b0abe63988bb88"
+  },
+  "sample_rule": "Unsmoothed scipy Sobol(2,scramble=False),2^19 points mapped to the uniform unit2-sphere by z=2u0-1 and longitude2pi*u1.",
+  "scores": [
+    {
+      "stage": "original168",
+      "actual_wall_count": 168,
+      "tested_spacelike_halfspaces": 11,
+      "surviving_ideal_samples": 95833,
+      "sample_count": 524288,
+      "fraction": 0.1827869415283203,
+      "mask_sha256": "e07a5ca895a880e0394c351b6424eb41cfe7c2c16fcb970609761fc0b7820e8a"
+    },
+    {
+      "stage": "one_wall_replacement168",
+      "actual_wall_count": 168,
+      "tested_spacelike_halfspaces": 11,
+      "surviving_ideal_samples": 95833,
+      "sample_count": 524288,
+      "fraction": 0.1827869415283203,
+      "mask_sha256": "e07a5ca895a880e0394c351b6424eb41cfe7c2c16fcb970609761fc0b7820e8a"
+    },
+    {
+      "stage": "nonright_T_seed168",
+      "actual_wall_count": 168,
+      "tested_spacelike_halfspaces": 12,
+      "surviving_ideal_samples": 81967,
+      "sample_count": 524288,
+      "fraction": 0.1563396453857422,
+      "mask_sha256": "29dc273a4a7600558e5440bb0241a7af186ea35b4798ac535a1fae2035016ba4"
+    },
+    {
+      "stage": "four_new_roots170",
+      "actual_wall_count": 170,
+      "tested_spacelike_halfspaces": 14,
+      "surviving_ideal_samples": 60290,
+      "sample_count": 524288,
+      "fraction": 0.11499404907226562,
+      "mask_sha256": "edd99d56dcb5d156bc65c3d5ea58e6bfcdb8d806e98e41b234552ef0ff8b8a9f"
+    },
+    {
+      "stage": "hexagon_final_label2",
+      "actual_wall_count": 171,
+      "tested_spacelike_halfspaces": 15,
+      "surviving_ideal_samples": 56712,
+      "sample_count": 524288,
+      "fraction": 0.1081695556640625,
+      "mask_sha256": "ac8d5bae568373d4a5ac87cfa00207cf90a1806474e1b92e97349f88861b7b11"
+    },
+    {
+      "stage": "hexagon_final_label3",
+      "actual_wall_count": 171,
+      "tested_spacelike_halfspaces": 15,
+      "surviving_ideal_samples": 57693,
+      "sample_count": 524288,
+      "fraction": 0.11004066467285156,
+      "mask_sha256": "b88bc7d615d3ee6b257efcf6723ba8287bcadceeb5b8a2382ba931003925c7d8"
+    },
+    {
+      "stage": "hexagon_final_label4",
+      "actual_wall_count": 171,
+      "tested_spacelike_halfspaces": 15,
+      "surviving_ideal_samples": 57979,
+      "sample_count": 524288,
+      "fraction": 0.11058616638183594,
+      "mask_sha256": "3f6bd8a0470ccf3e3419428d52f022faf24573c5075f6f683d3fb5dbb43f8325"
+    }
+  ],
+  "scope": "One deterministic numerical angular-boundary score in the same fixed target-H3 Lorentz chart. No certified area, probability error bar, hyperbolic volume, exact negative or continuous-family completeness claim. All three final labels are alternatives, not simultaneous additions."
+}

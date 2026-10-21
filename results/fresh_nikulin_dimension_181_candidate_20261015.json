@@ -1,0 +1,65 @@
+{
+  "status": "PASS_REVIEWED_DEPENDENCIES_AND_CASE_SPLIT_FOR_DIMENSION_181_CANDIDATE",
+  "sources": {
+    "scripts/fresh_nikulin_dimension_181_candidate_20261015.py": "41856f2e4c6f226e7b47c56b63bd10cd26028d7d5876547d043fc478f9ad81c9",
+    "results/fresh_nikulin_dimension_181_candidate_20261015.md": "fb5938e5c9a0132a6c8a548d46d9178d99666b041d9a56e62f25917538662731",
+    "scripts/fresh_nikulin_dimension_189_candidate_20261015.py": "76fb3971044c23bc22533e5c305b5baa15082292bbd3307908d11031bc0dd6b4",
+    "results/fresh_nikulin_dimension_189_candidate_20261015.json": "01198217c5a72ca4d5112915beabf99d44c350afbfbc2cef08d282263e46215d",
+    "results/fresh_nikulin_dimension_189_candidate_20261015.md": "af414d020971f879f07c8c29cd65efe5fbb00e234348e941b81ed8cc6c7343e6",
+    "scripts/fresh_nikulin_avoid_node_20261015.py": "d0d516df4ea1eae5ab7c739208dd6049c8a6e3ac5c6c40338f72dd5151626a75",
+    "results/fresh_nikulin_avoid_node_20261015.json": "cb6920e5154ac2fa0ad977976779361bc846416295f37956e16b7fee65c59181",
+    "results/fresh_nikulin_avoid_node_20261015.md": "9573209316bc3069fa14289a6b1143f3f5edfe445c2348f5ead22426cfa7810d",
+    "scripts/fresh_nikulin_avoid_node_20261015_review.py": "c26000555f51b3150d7128e7fb4b2f69ef404ce62d9b89e239b690bba974edeb",
+    "results/fresh_nikulin_avoid_node_20261015_review.json": "98a46caa8979ebd521278e521f876696849e203e589c18d057b9fd098a9d824d",
+    "results/fresh_nikulin_avoid_node_20261015_review.md": "166f4a37e37704290875c4aeddf3000e94ad6e04826aba30033979485bde3ec7",
+    "scripts/fresh_nikulin_narrow_20261015_compact_facet.py": "819ccae418e3269889a6181c37cec9fab1dcca34cf03e31f0bfcdd9103dd4967",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.json": "18136efb0c36029e5be53be7ca06b1608efeec94d96c7d891ec23aa1b1ef0a3b",
+    "results/fresh_nikulin_narrow_20261015_compact_facet.md": "540390f627681fb27912c2349b593cad1b5b84917e1608d15f34bf2c801e7f13"
+  },
+  "recursive_manifests_checked": 15,
+  "recursive_source_files_checked": 40,
+  "candidate_statement": "Every finite-sided finite-volume real hyperbolic Coxeter polytope has dimension at most181.",
+  "arithmetic_assumption": false,
+  "review_status": "PASS_INDEPENDENT_AVOID_NODE_RATIONAL_ENERGY_AND_PROOF_REVIEW",
+  "chosen_narrow_facet_cases": [
+    {
+      "case": "contains an ideal vertex",
+      "ambient_dimension_at_most": 181,
+      "primary": "fresh_nikulin_avoid_node_20261015",
+      "independent_review": "fresh_nikulin_avoid_node_20261015_review"
+    },
+    {
+      "case": "has only finite vertices, hence is compact",
+      "ambient_dimension_at_most": 143,
+      "primary": "fresh_nikulin_narrow_20261015_compact_facet",
+      "independent_review": "fresh_dimension225_hostile_20261015"
+    }
+  ],
+  "energy_identity": "-x.y=(sum sigma_a*tau_a*E_a)/2-q-1/q",
+  "cost_accounting": {
+    "total_schur_cost_at_most": 4,
+    "loss_per_cost": 2,
+    "narrow_factor_extra_loss_at_most": "2/9"
+  },
+  "negative_pairing_lower_bound": "M*((n-1)-55)/9, M>=1",
+  "first_excluded_dimension": 182,
+  "norm_two_narrow_threshold": 14,
+  "frozen_baseline": "fresh_nikulin_dimension_189_candidate_20261015",
+  "historical_pending_review_sentence": "The primary avoid-node report was frozen before its independent review; that pending-review statement describes the earlier checkpoint. The final review is bound here.",
+  "literature_status": "Nikulin ICM1986 printed659 announces n<300. This is an explicit reviewed research proof candidate, without publication-priority or current-best assertion.",
+  "primary_sources": [
+    {
+      "url": "https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1986.1/ICM1986.1.ocr.pdf",
+      "pages": "printed655 TheoremA; printed657-659 method and announcement"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=im&paperid=1484&what=fullteng",
+      "pages": "printed407-408, section2 Propositions1-2; quasi-Lanner extraction/order10"
+    },
+    {
+      "url": "https://www.mathnet.ru/php/getFT.phtml?jrnid=mmo&option_lang=rus&paperid=444&what=fullt",
+      "pages": "printed70-71 h-vector; printed77 Proposition10 spherical distance-pair bound"
+    }
+  ],
+  "scope": "No producer arithmetic imported. This checker binds frozen proofs and independent reviews, validates recursive hashes, and checks the scalar/case combination. Published classifications and geometric arguments are mathematical dependencies, not a formal proof-assistant development."
+}

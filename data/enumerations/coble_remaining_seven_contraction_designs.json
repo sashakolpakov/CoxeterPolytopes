@@ -1,0 +1,425 @@
+{
+  "CI4_final_status": {
+    "nonzero_standard_free_extension_found": false,
+    "rating": "retain the exact two-member core calibration at L3; do not claim an extension theorem",
+    "reason": "all seven ranks are below both complete CI4 cores; extensions cannot lower rank",
+    "same_core_found_in_remaining_seven": false
+  },
+  "all_checks_pass": true,
+  "checks": {
+    "CI4_has_no_nonzero_extension_member_among_seven": true,
+    "MI_constructed_without_surface_label": true,
+    "MI_exact_same_P_handoff": true,
+    "MI_raw_design_is_Mobius_3": true,
+    "VII_finite_design_recovered_not_promoted": true,
+    "VI_finite_design_recovered_not_promoted": true,
+    "all_seven_excluded_from_CI4_by_rank": true,
+    "exactly_seven_rows_audited": true,
+    "four_sequential_censuses_frozen": true
+  },
+  "different_finite_design_candidates": {
+    "one_boundary_72": {
+      "all_frames_have_one_profile": true,
+      "center_split": "4 special plus 6 conic points",
+      "conic_design": "one conic through all six ordinary points and three conics through all four special points plus the pairs of the fifth matching",
+      "line_design": "four perfect matchings of K6, one at each special point",
+      "plane_frame_count": 5,
+      "quartic_design": "four quartics, each double at three of the four special points",
+      "remaining_gate": "an explicit geometrically integral simultaneous quartic/sextic certificate and same-P handoff; no surface-existence theorem is imported",
+      "root_plane_profile": {
+        "degree_1_multiplicities_1,1,1": 12,
+        "degree_2_multiplicities_1,1,1,1,1,1": 4,
+        "degree_4_multiplicities_1,1,1,1,1,1,2,2,2": 4
+      },
+      "status": "finite_P1_F5_candidate_recovered_but_not_promoted"
+    },
+    "one_boundary_78": {
+      "conic_design": "ten six-edge cuts delta(A), one for each two-subset A of K5",
+      "line_design": "ten triangle triples; the Desargues 10_3 configuration",
+      "plane_frame_count": 1,
+      "point_design": "ten edges of K5",
+      "remaining_gate": "a label-free geometrically integral sextic-boundary and simultaneous curve certificate; the published Hessian surface is not imported here",
+      "root_plane_profile": {
+        "degree_1_multiplicities_1,1,1": 10,
+        "degree_2_multiplicities_1,1,1,1,1,1": 10
+      },
+      "status": "finite_design_recovered_but_not_promoted_to_a_realization_theorem"
+    }
+  },
+  "direction": "RAW_POLYTOPE_TO_CONTRACTION_DESIGN_TO_SURFACE_TO_SAME_POLYTOPE",
+  "label_policy": "only lattice Grams and primitive wall vectors are read by the extractor; archive/type labels are used solely to name the seven output slots",
+  "lineage": {
+    "project_new_scope": "label-free recovery from the raw 206-wall datum, recognition as the Mobius 3-(10,4,1) design, the q-family rigidity formulation, and exact same-P directional compiler; the F9 geometry itself is not claimed new",
+    "published_geometry": "Kondo, Coble surfaces with finite automorphism group, Example 4.17, publishes the characteristic-three P1xP1/F9 construction, ten points, and thirty (1,1) curves; it credits Katsura-Kondo section 4 and Mukai-Ohashi"
+  },
+  "mobius_plane_factory_rigidity_theorem": {
+    "construction": "on P1xP1 take the two q-Frobenius graphs and blow up their q^2+1 transverse F_(q^2)-rational intersections; F_q-sublines give the q(q^2+1) unique smooth (1,1) circle curves",
+    "design": "3-(q^2+1,q+1,1) Mobius plane",
+    "formulas": {
+      "B_plus_Bprime": "-2K+(q-3)(F+G)",
+      "B_square": "-(q-1)^2",
+      "K_dot_circle": "q-3",
+      "circle_square": "1-q"
+    },
+    "necessary_and_sufficient_rigidity": "the two boundaries are disjoint (-4)-curves summing to -2K and every circle is an adjunction-compatible (-2)-root if and only if q=3",
+    "sample_exact_arithmetic": {
+      "2": {
+        "Coble_root_package": false,
+        "boundary_square": -1,
+        "boundary_sum_minus_minus2K_coefficient": -1,
+        "canonical_circle_pairing": -1,
+        "center_count": 5,
+        "circle_count": 10,
+        "circle_square": -1
+      },
+      "3": {
+        "Coble_root_package": true,
+        "boundary_square": -4,
+        "boundary_sum_minus_minus2K_coefficient": 0,
+        "canonical_circle_pairing": 0,
+        "center_count": 10,
+        "circle_count": 30,
+        "circle_square": -2
+      },
+      "4": {
+        "Coble_root_package": false,
+        "boundary_square": -9,
+        "boundary_sum_minus_minus2K_coefficient": 1,
+        "canonical_circle_pairing": 1,
+        "center_count": 17,
+        "circle_count": 68,
+        "circle_square": -3
+      },
+      "5": {
+        "Coble_root_package": false,
+        "boundary_square": -16,
+        "boundary_sum_minus_minus2K_coefficient": 2,
+        "canonical_circle_pairing": 2,
+        "center_count": 26,
+        "circle_count": 130,
+        "circle_square": -4
+      },
+      "7": {
+        "Coble_root_package": false,
+        "boundary_square": -36,
+        "boundary_sum_minus_minus2K_coefficient": 4,
+        "canonical_circle_pairing": 4,
+        "center_count": 50,
+        "circle_count": 350,
+        "circle_square": -6
+      },
+      "8": {
+        "Coble_root_package": false,
+        "boundary_square": -49,
+        "boundary_sum_minus_minus2K_coefficient": 5,
+        "canonical_circle_pairing": 5,
+        "center_count": 65,
+        "circle_count": 520,
+        "circle_square": -7
+      },
+      "9": {
+        "Coble_root_package": false,
+        "boundary_square": -64,
+        "boundary_sum_minus_minus2K_coefficient": 6,
+        "canonical_circle_pairing": 6,
+        "center_count": 82,
+        "circle_count": 738,
+        "circle_square": -8
+      }
+    }
+  },
+  "new_structural_positive": {
+    "current_level": "structural P-first L3 calibration; not a broad L4 theorem or a new abstract polytope/nonexistence bound",
+    "definition": "a D_CobVin branch whose intrinsic two-boundary crossing contraction is U and whose root-center hypergraph is the Mobius 3-(10,4,1) design",
+    "exact_return": "general D_CobVin same-P theorem",
+    "name": "D_CobVin^Mob3",
+    "not_a_named_row_disjunction": true,
+    "uniform_nonemptiness": "the q-Frobenius graph construction realizes the entire Mobius design, while the divisor formulas force q=3 for a Coble root package"
+  },
+  "optional_full_contraction_replay": {
+    "command": "python3 scripts/certify_coble_remaining_seven_contraction_designs.py --full-contractions --check-archive",
+    "requested": false,
+    "results": {}
+  },
+  "schema": "coxeter.coble_remaining_seven_contraction_designs.v1",
+  "seven_row_outcome": {
+    "one_boundary_22": {
+      "CI4_membership": false,
+      "CI4_obstruction": "rank obstruction: the polar/chord core needs Picard rank at least 15 and the grid core at least 18; standard-free extensions can only add centers",
+      "boundary_count": 1,
+      "endpoint_degree_signature_count": 16,
+      "endpoint_verdict": "many sequential blowdowns and multiple degree signatures; no canonical finite projective design is selected by the current numerical extractor",
+      "exhaustive_sequential_P2_targets": 74,
+      "hyperbolic_dimension": 10,
+      "lattice_rank": 11,
+      "max_pairwise_disjoint_minus_one_count": 4,
+      "maximal_disjoint_clique_size_histogram": {
+        "3": 4,
+        "4": 2
+      },
+      "minus_one_boundary_profile_histogram": {
+        "1": 9
+      },
+      "nonboundary_minus_one_count": 9,
+      "primitive_wall_norm_histogram": {
+        "-1": 10,
+        "-2": 12
+      },
+      "root_count": 12,
+      "simultaneous_full_P2_frame_count": 0,
+      "simultaneous_full_P2_profile_types": {},
+      "wall_count": 22
+    },
+    "one_boundary_30": {
+      "CI4_membership": false,
+      "CI4_obstruction": "rank obstruction: the polar/chord core needs Picard rank at least 15 and the grid core at least 18; standard-free extensions can only add centers",
+      "boundary_count": 1,
+      "endpoint_degree_signature_count": 28,
+      "endpoint_verdict": "many sequential blowdowns and multiple degree signatures; no canonical finite projective design is selected by the current numerical extractor",
+      "exhaustive_sequential_P2_targets": 573,
+      "hyperbolic_dimension": 10,
+      "lattice_rank": 11,
+      "max_pairwise_disjoint_minus_one_count": 7,
+      "maximal_disjoint_clique_size_histogram": {
+        "4": 4,
+        "5": 6,
+        "7": 1
+      },
+      "minus_one_boundary_profile_histogram": {
+        "1": 17
+      },
+      "nonboundary_minus_one_count": 17,
+      "primitive_wall_norm_histogram": {
+        "-1": 18,
+        "-2": 12
+      },
+      "root_count": 12,
+      "simultaneous_full_P2_frame_count": 0,
+      "simultaneous_full_P2_profile_types": {},
+      "wall_count": 30
+    },
+    "one_boundary_72": {
+      "CI4_membership": false,
+      "CI4_obstruction": "rank obstruction: the polar/chord core needs Picard rank at least 15 and the grid core at least 18; standard-free extensions can only add centers",
+      "boundary_count": 1,
+      "hyperbolic_dimension": 10,
+      "lattice_rank": 11,
+      "max_pairwise_disjoint_minus_one_count": 10,
+      "maximal_disjoint_clique_size_histogram": {
+        "10": 5,
+        "7": 80,
+        "9": 25
+      },
+      "minus_one_boundary_profile_histogram": {
+        "1": 51
+      },
+      "nonboundary_minus_one_count": 51,
+      "primitive_wall_norm_histogram": {
+        "-1": 52,
+        "-2": 20
+      },
+      "root_count": 20,
+      "simultaneous_full_P2_frame_count": 5,
+      "simultaneous_full_P2_profile_types": {
+        "{\"degree_1_multiplicities_1,1,1\": 12, \"degree_2_multiplicities_1,1,1,1,1,1\": 4, \"degree_4_multiplicities_1,1,1,1,1,1,2,2,2\": 4}": 5
+      },
+      "wall_count": 72
+    },
+    "one_boundary_78": {
+      "CI4_membership": false,
+      "CI4_obstruction": "rank obstruction: the polar/chord core needs Picard rank at least 15 and the grid core at least 18; standard-free extensions can only add centers",
+      "boundary_count": 1,
+      "hyperbolic_dimension": 10,
+      "lattice_rank": 11,
+      "max_pairwise_disjoint_minus_one_count": 10,
+      "maximal_disjoint_clique_size_histogram": {
+        "10": 1,
+        "7": 20,
+        "8": 60,
+        "9": 55
+      },
+      "minus_one_boundary_profile_histogram": {
+        "1": 57
+      },
+      "nonboundary_minus_one_count": 57,
+      "primitive_wall_norm_histogram": {
+        "-1": 58,
+        "-2": 20
+      },
+      "root_count": 20,
+      "simultaneous_full_P2_frame_count": 1,
+      "simultaneous_full_P2_profile_types": {
+        "{\"degree_1_multiplicities_1,1,1\": 10, \"degree_2_multiplicities_1,1,1,1,1,1\": 10}": 1
+      },
+      "wall_count": 78
+    },
+    "two_boundary_206": {
+      "CI4_membership": false,
+      "CI4_obstruction": "rank obstruction: the polar/chord core needs Picard rank at least 15 and the grid core at least 18; standard-free extensions can only add centers",
+      "boundary_count": 2,
+      "hyperbolic_dimension": 11,
+      "lattice_rank": 12,
+      "max_pairwise_disjoint_minus_one_count": 11,
+      "maximal_disjoint_clique_size_histogram": {
+        "10": 2243,
+        "11": 154,
+        "7": 72
+      },
+      "minus_one_boundary_profile_histogram": {
+        "0,2": 164,
+        "1,1": 10
+      },
+      "nonboundary_minus_one_count": 174,
+      "primitive_wall_norm_histogram": {
+        "-1": 174,
+        "-2": 30,
+        "-4": 2
+      },
+      "root_count": 30,
+      "simultaneous_full_P2_frame_count": 154,
+      "simultaneous_full_P2_profile_types": {
+        "{\"degree_1_multiplicities_1,1,1\": 10, \"degree_2_multiplicities_1,1,1,1,1,1\": 10, \"degree_3_multiplicities_1,1,1,1,1,1,1,2\": 10}": 144,
+        "{\"degree_1_multiplicities_1,1,1\": 12, \"degree_2_multiplicities_1,1,1,1,1,1\": 18}": 10
+      },
+      "wall_count": 206
+    },
+    "two_boundary_26": {
+      "CI4_membership": false,
+      "CI4_obstruction": "rank obstruction: the polar/chord core needs Picard rank at least 15 and the grid core at least 18; standard-free extensions can only add centers",
+      "boundary_count": 2,
+      "endpoint_degree_signature_count": 9,
+      "endpoint_verdict": "many sequential blowdowns and multiple degree signatures; no canonical finite projective design is selected by the current numerical extractor",
+      "exhaustive_sequential_P2_targets": 52,
+      "hyperbolic_dimension": 11,
+      "lattice_rank": 12,
+      "max_pairwise_disjoint_minus_one_count": 4,
+      "maximal_disjoint_clique_size_histogram": {
+        "3": 12,
+        "4": 4
+      },
+      "minus_one_boundary_profile_histogram": {
+        "0,2": 12,
+        "1,1": 2
+      },
+      "nonboundary_minus_one_count": 14,
+      "primitive_wall_norm_histogram": {
+        "-1": 14,
+        "-2": 10,
+        "-4": 2
+      },
+      "root_count": 10,
+      "simultaneous_full_P2_frame_count": 0,
+      "simultaneous_full_P2_profile_types": {},
+      "wall_count": 26
+    },
+    "two_boundary_36": {
+      "CI4_membership": false,
+      "CI4_obstruction": "rank obstruction: the polar/chord core needs Picard rank at least 15 and the grid core at least 18; standard-free extensions can only add centers",
+      "boundary_count": 2,
+      "endpoint_degree_signature_count": 28,
+      "endpoint_verdict": "many sequential blowdowns and multiple degree signatures; no canonical finite projective design is selected by the current numerical extractor",
+      "exhaustive_sequential_P2_targets": 890,
+      "hyperbolic_dimension": 11,
+      "lattice_rank": 12,
+      "max_pairwise_disjoint_minus_one_count": 7,
+      "maximal_disjoint_clique_size_histogram": {
+        "5": 4,
+        "6": 3,
+        "7": 10
+      },
+      "minus_one_boundary_profile_histogram": {
+        "0,2": 14,
+        "1,1": 4
+      },
+      "nonboundary_minus_one_count": 18,
+      "primitive_wall_norm_histogram": {
+        "-1": 18,
+        "-2": 16,
+        "-4": 2
+      },
+      "root_count": 16,
+      "simultaneous_full_P2_frame_count": 0,
+      "simultaneous_full_P2_profile_types": {},
+      "wall_count": 36
+    }
+  },
+  "sources": {
+    "data/enumerations/coble_one_boundary_full_ns_h10.json": {
+      "sha256": "1e90fcd5f9b1ba8538937b91d2f26ea401f6952e8484a597624939edaf2a873e"
+    },
+    "data/enumerations/coble_type_i_two_boundary_full_ns_h11.json": {
+      "sha256": "bcfa2de1e96bf4f41282345a64f8ee6f3a75e715287bab4962d7082584b4d985"
+    },
+    "data/enumerations/coble_type_mi_full_ns_h11.json": {
+      "sha256": "5431030fab49d0a19c4ecd32765bbf1a3a9db256a2e37a15b7d92355df1d6976"
+    },
+    "data/enumerations/coble_type_v_two_boundary_full_ns_h11.json": {
+      "sha256": "72f841e01817e1182c36b41d8101d35ba58a9d38ffa92d67fa8ccf4507d20fb8"
+    },
+    "data/enumerations/coble_type_vi_char5_one_boundary_full_ns_h10.json": {
+      "sha256": "2f58973a6e7305032588681cdec0f2186d9ce640207a72eeecadb6397a0bfffc"
+    },
+    "data/enumerations/coble_type_vii_char5_one_boundary_full_ns_h10.json": {
+      "sha256": "a528ca8c70f2af325d93404634afd0f9fd9800bfc9f979716051c32abee21242"
+    }
+  },
+  "status_date": "2026-08-09",
+  "two_boundary_206_mobius_core": {
+    "exact_return_handoff": {
+      "automatic_integral_cusp_lift_count": 164,
+      "constructed_actual_root_count": 30,
+      "directional_upgrade": "POLYTOPE_TO_SURFACE_TO_SAME_P",
+      "returned_wall_count": 206,
+      "theorem": "general D_CobVin Vinberg/root-exhaustion/Halphen same-P theorem"
+    },
+    "finite_geometry": {
+      "F9_graph_evaluation_rank_histogram": {
+        "3": 30,
+        "4": 180
+      },
+      "PGL2_F9_order": 720,
+      "PGammaL2_F9_order": 1440,
+      "all_thirty_unique_smooth_1_1_curves": true,
+      "canonical_design_parameters": "3-(10,4,1)",
+      "canonical_model": "Mobius/inversive plane of order 3 on P1(F9)",
+      "raw_to_canonical_incidence_isomorphism_exists": true
+    },
+    "raw_extraction": {
+      "boundary_count": 2,
+      "contracted_endpoint_gram": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "crossing_curves_pairwise_disjoint": true,
+      "crossing_minus_one_count": 10,
+      "determinant_one_NS_basis": true,
+      "four_centers_per_root": true,
+      "raw_design_parameters": "3-(10,4,1)",
+      "root_count": 30,
+      "surface_labels_read": false
+    },
+    "strong_Coble_numerics": {
+      "anti_bicanonical_uniqueness_proof": "a (4,4) divisor double at all ten centers meets either Frobenius boundary in at least 20 points although the intersection number is 16, so it contains that boundary; the residual (3,1) divisor through ten points is the other boundary because its self-intersection is 6",
+      "anti_canonical_O_2_2_evaluation_rank": 9,
+      "anti_canonical_kernel_dimension": 0,
+      "boundary_classes": "(1,3)-sum(E_i) and (3,1)-sum(E_i)",
+      "boundary_gram": [
+        [
+          -4,
+          0
+        ],
+        [
+          0,
+          -4
+        ]
+      ],
+      "boundary_sum_equals_minus_2K": true
+    }
+  }
+}

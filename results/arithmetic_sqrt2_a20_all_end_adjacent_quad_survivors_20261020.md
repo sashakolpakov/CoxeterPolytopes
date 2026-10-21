@@ -1,0 +1,230 @@
+# Two arithmetic all-A20 quadrilateral survivors over Q(sqrt2)
+
+20 October 2026. **Exact local countermodels, submitted for independent
+review.** This note complements, and does not change, the triangle-only
+theorem in `arithmetic_sqrt2_a20_end_adjacent_triangle_transfer_20261020.md`,
+SHA256 `be7307f5a82085a6039f21f4746dacc6c68e9d028465cb1839270a452ae3142d`.
+No scientific computation, enumeration, optimizer, Lean or build ran.
+
+The models below are actual compact quadrilateral faces of explicitly
+realized arithmetic local Coxeter chambers in H20. No finite-volume or
+compact completion of either whole chamber is proved. Consequently this
+is a counterexample to an implication from the stated LOCAL hypotheses
+to quadrilateral payment, not a counterexample supplied by a completed
+compact arithmetic20-polytope. There is no new dimension claim.
+
+## 1. Complete Gram data and the four finite corners
+
+Put K=Q(sqrt2), let s=sqrt2 at its positive embedding, and use square-one
+outward roots. Take an entire old A20 vertex with its path ordered
+
+    a--b--v1--v2--...--v18.
+
+Every displayed simple bond has unit product -1/2. Write W for the
+complete white A18 on v1,...,v18. Add two more roots c,d with exactly
+these additional nonzero products:
+
+    a.c=-x,  b.c=-1/2;
+    a.d=-1/2,  b.d=-y,  c.d=-1/2,  d.v18=-1/2.
+
+Thus c is perpendicular to all W, and d is perpendicular to v1,...,v17.
+All unspecified products of distinct roots are zero. The following are
+two separate choices:
+
+|Model|x|y|
+|---|---|---|
+|S1|(1+s)/2|(5+4s)/2|
+|S2|1+s|(1+s)/2|
+
+In both models x>1 and y>1, and
+
+    (x-1)(y-1/2)=1.                                      (1)
+
+The black sides are cyclically a,b,c,d. Their two opposite pairs are
+dotted ambient walls. All four adjacent black pairs give precisely
+the following entire rank20 positive diagrams:
+
+|Corner|Entire finite path|Marked role|
+|---|---|---|
+|W+a+b|a--b--v1--...--v18|endpoint/second node|
+|W+b+c|c--b--v1--...--v18|endpoint/second node|
+|W+c+d|c--d--v18--...--v1|endpoint/second node|
+|W+d+a|a--d--v18--...--v1|endpoint/second node|
+
+All are A20. No proper embedded factor or outside white root is being
+discarded: W has exactly18 roots, so each listed corner has all20
+walls of its finite vertex. Section4 proves these are actual vertices
+and bound the asserted compact quadrilateral.
+
+## 2. Full physical and conjugate signatures
+
+For the unit A18 Gram matrix,
+
+    (G_W^-1)_ij = 2 min(i,j)(19-max(i,j))/19.
+
+Project the four black roots orthogonally off W. Set
+
+    t=10/19,  h=1/38,  so t-h=1/2.
+
+The projected roots a,c still have square1; b,d have square t.
+The only changed black product is
+
+    b_bar.d_bar=-(y+h).
+
+In the order a,b,c,d their complete projected Gram matrix is
+
+    [ 1     -1/2    -x      -1/2   ]
+    [-1/2    t      -1/2   -(y+h)  ]
+    [-x     -1/2     1      -1/2   ]
+    [-1/2  -(y+h)   -1/2     t     ].
+
+Using the normalized symmetric combinations (a+c)/sqrt2,(b+d)/sqrt2,
+and the antisymmetric combinations (a-c)/sqrt2,(b-d)/sqrt2, this splits
+orthogonally into
+
+    Pplus  = [1-x, -1; -1, 1/2-y],
+    Pminus = diag(1+x, t+y+h).
+
+Equation(1) says det(Pplus)=0. At the physical embedding both diagonal
+entries of Pplus are negative, so it has one negative and one zero
+eigenvalue. Pminus is positive definite. Restoring the positive18-space
+W gives the full22-root signature
+
+    (20 positive, 1 negative, 1 zero).                    (2)
+
+Thus the roots have a realization in a Lorentz21-space, as required
+for H20.
+
+Under the other K embedding, s becomes -s. For BOTH models x' and y'
+belong to (-1/2,0): use 1<s<3/2 in the displayed formulas. Pplus is
+then positive semidefinite of rank1. Pminus is positive definite,
+since 1+x'>0 and t+h+y'>t+h-1/2=h+h>0. The full conjugate signature is
+
+    (21 positive, 1 zero).                               (3)
+
+The endpoint inverse entries also show
+
+    projection_W(b+d) = -sum(j=1,...,18) vj.
+
+The null row of Pplus therefore gives the complete vector relation
+
+    a+c = (x-1)(b+d+sum(j=1,...,18) vj).                 (4)
+
+All its22 coefficients are nonzero in both embeddings. By(3), the
+unique conjugate kernel consequently has full support. Every proper
+principal conjugate Gram matrix is positive definite: a vector in its
+kernel, extended by zeros, would contradict this full support. Its
+determinant is nonzero, hence also nonzero at the physical embedding.
+In particular neither model can be rejected by finding an affine
+proper principal subdiagram. The full kernel itself has mixed signs
+physically, consistently with the strict interior in Section4.
+
+## 3. Integral reflectors and the actual arithmetic field
+
+Multiply every Gram entry by2, giving all roots square2. The old simple
+entries and all other new finite entries are -1. The exceptional entries
+are
+
+    S1: a.c=-(1+s),     b.d=-(5+4s);
+    S2: a.c=-(2+2s),    b.d=-(1+s).
+
+Every entry is in O_K=Z[sqrt2]. The square-two Cartan entries are therefore
+integral. The K-module generated by the22 realized roots is a full
+integral lattice in their21-dimensional K-span, preserved by each root
+reflection. One may choose any21 of the roots as a K-basis. Its Gram
+has signature(20,1) physically and is positive definite conjugately,
+by(2),(3) and the full-support relation. These are the usual local
+admissibility conditions for a simplest-type arithmetic ambient form.
+
+The cyclic field is exactly K, rather than a rational subfield. For
+example the actual two-cycle 4x^2 equals3+2s in S1, or12+8s in S2.
+This also distinguishes integral Gram entries from an unjustified
+assumption that every normalized wall entry belongs to a given cyclic
+field: here all normalized entries have been supplied explicitly.
+
+An arithmetic ambient lattice and integral reflections do not prove
+that the subgroup generated by these22 reflections has finite index,
+or that its chamber has finite volume. Neither assertion is used.
+
+## 4. An actual compact quadrilateral, not just four formal corners
+
+Work first in the Lorentz3-space W-perpendicular. The vector
+
+    B=b_bar+d_bar
+
+has square2(1/2-y)<0. Its products with a_bar,c_bar are both -1,
+and with b_bar,d_bar are both1/2-y<0. Choose its future direction.
+After normalization B is a strict timelike interior point of the
+intersection of the four black halfspaces.
+
+Every adjacent projected pair has Gram matrix, up to interchanging
+its roots,
+
+    [1,-1/2; -1/2,t],     determinant t-1/4=21/76>0.
+
+Its inverse has positive entries. Given the strict interior point z,
+project z orthogonally onto the complement of either adjacent pair.
+Since the two products of z with that pair are negative, this operation
+adds positive multiples of its two outward roots. The resulting vector
+is future timelike, has zero product with that pair, and has strictly
+negative product with each other black root by acuteness. Its square
+is z^2 minus a positive quadratic form. Thus each of the four claimed
+intersections is an actual finite vertex of the four-halfspace region.
+
+For completeness this also rules out an unbounded alternative region.
+In the Klein affine plane centered at the direction of B, equation(4)
+implies that the spatial parts of a,c are opposite; those of b,d are
+opposite as well. The two directions are independent, since the
+projected Gram has rank3. The four inequalities therefore bound an
+ordinary Euclidean parallelogram centered at the interior point.
+Its four vertices are exactly the adjacent-pair intersections just
+proved finite. They lie strictly inside the Klein ball; their convex
+hull does too. The hyperbolic quadrilateral is consequently compact.
+
+Its intrinsic angles are all theta with
+
+    cos(theta)=(1/2)/sqrt(t)=sqrt(19/40).
+
+No unsupported requirement that this two-face itself be a Coxeter
+polygon is imposed. The ambient finite bonds have angle pi/3.
+
+Returning to H20, every white product is zero throughout this face.
+A small perturbation of its strict black interior into all18 white
+halfspaces gives a strict full-dimensional interior. At each of its
+four vertices the active20 roots have the positive A20 Gram already
+listed, while the other two black inequalities are strict. Hence
+these are actual simple finite vertices of the22-wall chamber, and
+every displayed wall is an actual facet. Their common-white face is
+exactly the compact quadrilateral above. This supplies actual local
+wall geometry, not merely an abstract Gram matrix of corner diagrams.
+
+## 5. The exact payment obstruction and its limits
+
+The established Q(sqrt2) charge gives each marked corner in the table
+one unit, and gives no whole F4/D5/E6/E7/E8 correction at an A20 vertex.
+The simultaneous end-ADJACENT debit from the triangle note deletes
+all FOUR of those corner payments. Its new receiving coupons apply
+only to actual T4/T8 triangles with an entire I2 corner, so no such
+coupon occurs on this all-A20 quadrilateral. Its modified payment
+is therefore0, whereas a quadrilateral requires at least1.
+
+Thus the local geometric/arithmetic hypotheses proved here cannot
+by themselves justify an all-face extension of that triangle theorem.
+A global compact completion or a global exclusion of these local
+chambers remains unproved. In particular this note does not assert
+that the refund fails on a known compact arithmetic20-polytope.
+
+If a prospective diagram-invariant rule retains the same weight rho
+at every entire A20 end-adjacent marked angle and aims to handle
+these local chambers without another activated payment, it must have
+4rho>=1. Retaining1/4 at both ends gives A20 cost
+
+    37-2(1-1/4)=71/2=35.5.
+
+This is a bound on that specified local payment strategy, not a new
+dimension lower bound or a universal obstruction to all funded rules.
+A joint rule deleting other units, activating a different payment at
+the actual A20 corners, or proving a global incompatibility would
+require a fresh complete consumer and capacity proof. None is supplied
+here. The two explicit models are not claimed to exhaust A18-white
+quadrilaterals over Q(sqrt2).

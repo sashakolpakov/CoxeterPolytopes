@@ -1,0 +1,489 @@
+{
+  "certificate_sha256": "f9a3dd87824110249815aca2abaae8348aba0bfd8c439732aafe141494a7e700",
+  "claim": "Under the compact H9/14 missing-face reductions, all four Dehn--Sommerville schedules for record 47 are exhaustive. Three are impossible and the a=0 schedule has exactly one residual incidence orbit, equal to the previously selected record-47 nerve. The frozen, principal-block-re-audited unrestricted label obstruction for that nerve therefore excludes the whole graph shadow from compact Coxeter realizability.",
+  "independent_hostile_replay": {
+    "a0_enumeration_path_count": 744,
+    "a0_exact_mask_clutter_count": 618,
+    "a0_s4_s8_canonical_facet_count_histogram": {
+      "58": 3,
+      "60": 9,
+      "61": 15,
+      "62": 12,
+      "63": 6,
+      "64": 49,
+      "65": 16,
+      "66": 11,
+      "67": 29,
+      "68": 26,
+      "69": 1,
+      "70": 21,
+      "71": 9,
+      "72": 9,
+      "73": 3,
+      "74": 3,
+      "75": 3,
+      "76": 9,
+      "79": 3,
+      "82": 3,
+      "83": 6,
+      "90": 1
+    },
+    "a0_s4_s8_canonical_state_count": 247,
+    "path": "scripts/independent_h9_14_record47_all_completions_audit.py",
+    "source_sha256": "a1ae094764e8214dbe7b5f0ac9fbc81481ce5d307fde1332fd19ce3b7c50c010",
+    "summary_sha256": "67dff778d408b831c2dd499a634caa7c3af816bcdecfe59e01ffbd9dc44ac6fa",
+    "whole_shadow_compact_coxeter_excluded": true
+  },
+  "kind": "h9_14_record47_whole_shadow_compact_coxeter_no_go",
+  "nonclaims": [
+    "No finite-volume noncompact chamber is excluded.",
+    "No ideal-vertex or maximal-parabolic census is performed.",
+    "No other H9/14 graph shadow is excluded by this certificate.",
+    "Arbitrary ordinary completions with minimal nonfaces above the compact Coxeter order bound are not classified.",
+    "The selected label obstruction is chained as a frozen theorem; its expensive label census is not recomputed here."
+  ],
+  "proof_dependencies": [
+    "Burcroff's no-missing-triples theorem for compact H9/14 nerves",
+    "every compact Coxeter missing face is Lanner of order at most five",
+    "Dehn--Sommerville equations for the simplicial polar boundary",
+    "strict generalized-lower-bound inequalities in every vertex link",
+    "Macaulay inequalities in every vertex link",
+    "facet complements are the blocker of the full minimal-nonface clutter",
+    "Perron--Frobenius monotonicity, the principal-submatrix interlacing lemma, full order-120 support normalization, and exact inertia in the frozen unrestricted selected-nerve label theorem"
+  ],
+  "proof_sources": [
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record47_all_completions.py",
+      "sha256": "0791be424314c68f8a54538438d2b9f81e6af3763514df59f4badef66cd17a32"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record47.py",
+      "sha256": "34029313b902c6c8e0c14761e07876e6c4e0197c52b3c32d588af570fd8dc7fa"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/facet_completion.py",
+      "sha256": "5f2d078cfe400b39f3e194352f7a0c6d3bd8cb6bb8e7cee37be159e8766d9400"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/simplicial_homology.py",
+      "sha256": "547f51b58c1146aac80c6e08910754bf93ace5fa808dae5a342da7e042958110"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/local_link.py",
+      "sha256": "8f8169edab8b87aff682785667c2a8eab5c52b92a7c68cef130aeec4d3ae807d"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/missing_edges.py",
+      "sha256": "231e85fa98e27e864f997cd4ebe59136707f6aa8dd2d8136b80cff543dfbfbb8"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record92.py",
+      "sha256": "6b165e2a9e3ed120949c10784e42786364a7197014bc57da6b2b0a1cb30e1e29"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/nerve_support.py",
+      "sha256": "aad8fb25c2f9a56e45121fa1d1cbbdedfdff8ba1f67e379be74eed73940ad2a2"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_selected_nerve_coxeter_no_go.py",
+      "sha256": "c87e4239ef69beabf97856c64d876e6e5369dbc47c83f89cfc490c01db7507ec"
+    },
+    {
+      "path": "scripts/certify_h9_14_selected_nerve_coxeter_no_go.py",
+      "sha256": "62d0f779125e03f0cce8d190867caeedc68118ff950254b21b0226204da9ad11"
+    },
+    {
+      "path": "scripts/independent_h9_14_selected_nerve_coxeter_no_go_audit.py",
+      "sha256": "a748c165657bebcb05f9389e09ece1059aaeac02c4265d2103deb33f1e5c5b3e"
+    },
+    {
+      "path": "scripts/independent_h9_14_record47_all_completions_audit.py",
+      "sha256": "a1ae094764e8214dbe7b5f0ac9fbc81481ce5d307fde1332fd19ce3b7c50c010"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "scope": {
+    "all_four_dehn_sommerville_schedules_covered": true,
+    "compact_only": true,
+    "exact_residual_incidence_orbits": 1,
+    "finite_volume_noncompact_chamber_excluded": false,
+    "global_lorentzian_gram_values_reenumerated_here": false,
+    "record_index": 47,
+    "whole_graph_shadow_compact_coxeter_excluded": true
+  },
+  "support_source": {
+    "file_sha256": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d",
+    "graph6": "M?????????O?o?g?_",
+    "path": "data/enumerations/h9_14_nerve_support.json",
+    "second_layer_survivor_index": 47
+  },
+  "theorem": {
+    "dimension": 9,
+    "facet_count": 14,
+    "finite_volume_noncompact_chamber_excluded": false,
+    "record_index": 47,
+    "whole_graph_shadow_compact_coxeter_excluded": true
+  },
+  "unique_completion_chain": {
+    "certificate_sha256": "960ef6564c6b8013caf0989c95a46cc8401c846d32d47c66c057091340301546",
+    "face_vector": [
+      14,
+      85,
+      300,
+      690,
+      1088,
+      1190,
+      880,
+      405,
+      90
+    ],
+    "facet_complement_sha256": "8306d9c6c39a90aae519bd5ae587743b3737371f9efbe01ebd3757105b0b56ed",
+    "facet_count": 90,
+    "file_sha256": "163da338e18d9ce8d81d1957244b9b948839b949302ee09aaf27f858fbe2c357",
+    "packed_face_table_sha256": "4d07f78cba8551c9d0fe9fc4d6041f3df8ae35c5017e9942e10005686c628aba",
+    "passes_connected_homology_audit": true,
+    "path": "data/enumerations/h9_14_record47_selection.json",
+    "projection_sha256": "1ab77b30b626e8f784d11004c1d4fd5b0f8651057369f9e50c5d0a09115fc227",
+    "unique_census_row_equals_selected_nerve": true
+  },
+  "unrestricted_compact_label_chain": {
+    "aggregate_kind": "h9_14_seven_selected_nerve_compact_coxeter_no_go_reaudited",
+    "certificate_sha256": "c2dfcbfc03dc5dbae34938ab32f3a1c1111fd729d7844fd76d04dfc6cfa44de8",
+    "exceptional_block_inertias": [
+      [
+        8,
+        2,
+        0
+      ],
+      [
+        8,
+        2,
+        0
+      ]
+    ],
+    "file_sha256": "028bbc8e266145e59fa1ee9f9796a6e2c241f4a4f09637bd73f98bced9908629",
+    "left_support": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "normalizing_support_symmetry_orders": [
+      120
+    ],
+    "path": "data/enumerations/h9_14_selected_nerve_coxeter_no_go.json",
+    "principal_block_lemma": "Entries incident to nodes outside a principal submatrix do not change that submatrix or its inertia. Hence an outside dotted or Lanner component cannot mediate away two negative directions already present in the selected block.",
+    "rank_nine_vertex_count": 90,
+    "raw_two_edge_trial_count": 1890000,
+    "record47_projection_sha256": "25011251a6cf2df9547012a3461a5ae77154bb454a0ad041a0cf462badbaa196",
+    "right_supports": [
+      [
+        1,
+        2,
+        8,
+        9,
+        10
+      ],
+      [
+        1,
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        2,
+        8,
+        9,
+        10,
+        11
+      ]
+    ],
+    "scope_reaudit_status": "hostile_false_alarm_rejected_by_principal_block_proof",
+    "scope_upgrade": "the re-audited certificate is selected-nerve-only; its fixed principal-block obstruction is unrestricted by interlacing, and the exhaustive census proves that its nerve is the only residual incidence candidate compatible with the compact missing-face, Dehn--Sommerville, and link necessities",
+    "selected_nerve_only_in_chained_certificate": true,
+    "single_edge_test_count_per_gate": [
+      52500,
+      52500,
+      52500
+    ],
+    "support_gate_count": 3,
+    "two_edge_passing_count": 0,
+    "unrestricted_compact_coxeter_no_go": true
+  },
+  "whole_shadow_incidence_census": {
+    "a0_audit": {
+      "active_row_configuration_count": 78,
+      "active_vertices": [
+        0,
+        1,
+        2,
+        11,
+        12,
+        13
+      ],
+      "canonical_quotient_orbit_count": 247,
+      "column_distribution_problem_count": 32,
+      "column_distribution_problem_count_scope": "diagnostic for this deterministic recursion order, not a mathematical quotient invariant",
+      "enumeration_and_quotient": "78 partially row-sorted active configurations and S8 isolate-column multiplicities give 744 lossless paths. Exact-mask deduplication gives 618 states. Canonicalization over all 24 row permutations and the isolate-column multiset gives 247 S4-row x S8-isolate orbits. No active-graph automorphism quotient is used.",
+      "enumeration_path_count": 744,
+      "exact_mask_facet_count_histogram": {
+        "58": 3,
+        "60": 30,
+        "61": 45,
+        "62": 27,
+        "63": 9,
+        "64": 161,
+        "65": 30,
+        "66": 27,
+        "67": 57,
+        "68": 106,
+        "69": 1,
+        "70": 39,
+        "71": 18,
+        "72": 24,
+        "73": 3,
+        "74": 6,
+        "75": 6,
+        "76": 9,
+        "79": 6,
+        "82": 3,
+        "83": 7,
+        "90": 1
+      },
+      "exact_mask_state_count": 618,
+      "exact_mask_transcript_sha256": "ab285a0f421ec7e86b75088b869b74e839baf0d787bd612ea38a274aea746b8f",
+      "independent_active_mask_count": 8,
+      "isolated_vertices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimal_graph_covers": [
+        [
+          0,
+          2,
+          12
+        ],
+        [
+          0,
+          1,
+          13
+        ],
+        [
+          0,
+          12,
+          13
+        ],
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "path_facet_count_histogram": {
+        "58": 3,
+        "60": 30,
+        "61": 45,
+        "62": 27,
+        "63": 12,
+        "64": 195,
+        "65": 30,
+        "66": 27,
+        "67": 87,
+        "68": 144,
+        "69": 1,
+        "70": 48,
+        "71": 18,
+        "72": 31,
+        "73": 3,
+        "74": 6,
+        "75": 6,
+        "76": 12,
+        "79": 6,
+        "82": 3,
+        "83": 9,
+        "90": 1
+      },
+      "path_multiplicity_per_quotient_orbit_histogram": {
+        "1": 47,
+        "12": 7,
+        "2": 123,
+        "24": 2,
+        "3": 29,
+        "4": 1,
+        "6": 38
+      },
+      "path_transcript_sha256": "33d1820fec2a111c75049ad08757d48ef0e222ca19ec57aa6f99c167a258b1b2",
+      "quotient_facet_count_histogram": {
+        "58": 3,
+        "60": 9,
+        "61": 15,
+        "62": 12,
+        "63": 6,
+        "64": 49,
+        "65": 16,
+        "66": 11,
+        "67": 29,
+        "68": 26,
+        "69": 1,
+        "70": 21,
+        "71": 9,
+        "72": 9,
+        "73": 3,
+        "74": 3,
+        "75": 3,
+        "76": 9,
+        "79": 3,
+        "82": 3,
+        "83": 6,
+        "90": 1
+      },
+      "quotient_transcript_sha256": "6f175b31b17bc8411ed841fd6f88537dc9676b3886b67366eda8755b64ef7d6d",
+      "repeated_row_path_count": 18,
+      "small_transversal_path_count": 0,
+      "target_exact_mask_state_count": 1,
+      "target_facet_count": 90,
+      "target_path_count": 1,
+      "target_quotient_orbit_count": 1,
+      "unique_target_equals_selected_record47_nerve": true,
+      "unique_target_missing_fives": [
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          8,
+          9,
+          10
+        ],
+        [
+          1,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          2,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "verified": true
+    },
+    "a1_audit": {
+      "aggregate_a5_feasible_count": 0,
+      "branch_excluded": true,
+      "gate_histogram": [
+        {
+          "additional_a5_count": 2,
+          "aggregate_additional_a5_feasible": false,
+          "forced_a5_shadow_size": 8,
+          "multiplicity": 84,
+          "strict_vertex_link_g_positive": false
+        },
+        {
+          "additional_a5_count": 1,
+          "aggregate_additional_a5_feasible": false,
+          "forced_a5_shadow_size": 9,
+          "multiplicity": 168,
+          "strict_vertex_link_g_positive": false
+        },
+        {
+          "additional_a5_count": 0,
+          "aggregate_additional_a5_feasible": false,
+          "forced_a5_shadow_size": 10,
+          "multiplicity": 70,
+          "strict_vertex_link_g_positive": false
+        }
+      ],
+      "independent_a4_count": 690,
+      "interval_feasible_a4_count": 322,
+      "strict_shadow_feasible_count": 0,
+      "verified": true
+    },
+    "decoded_edges": [
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        2,
+        13
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "exact_residual_incidence_orbit_count_under_compact_necessities": 1,
+    "graph6": "M?????????O?o?g?_",
+    "record_index": 47,
+    "schedule_audit": {
+      "excluded_missing_four_counts": [
+        2,
+        3
+      ],
+      "rows": [
+        {
+          "facet_count": 90,
+          "independent_five_nonface_count": 4,
+          "missing_four_count": 0,
+          "summed_vertex_link_g4": 24
+        },
+        {
+          "facet_count": 88,
+          "independent_five_nonface_count": 10,
+          "missing_four_count": 1,
+          "summed_vertex_link_g4": 18
+        },
+        {
+          "facet_count": 86,
+          "independent_five_nonface_count": 16,
+          "missing_four_count": 2,
+          "summed_vertex_link_g4": 12
+        },
+        {
+          "facet_count": 84,
+          "independent_five_nonface_count": 22,
+          "missing_four_count": 3,
+          "summed_vertex_link_g4": 6
+        }
+      ],
+      "strict_sum_required": 14,
+      "surviving_missing_four_counts": [
+        0,
+        1
+      ],
+      "verified": true
+    },
+    "verified": true,
+    "whole_shadow_incidence_census_complete": true
+  }
+}

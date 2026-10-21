@@ -1,0 +1,121 @@
+{
+  "adapted_wall_audit": {
+    "W3_used_for_AG_nefness": true,
+    "W3_used_for_host_integrality": false,
+    "adapted_pairing_half_boundary_diagonal": "-2",
+    "adapted_pairing_half_boundary_off_diagonal": "0",
+    "boundary_reflection_coefficients_integral": true,
+    "boundary_root_norm": "-2",
+    "half_boundary_with_lattice_is_integral": true,
+    "minus_one_reflection_coefficients_integral": true,
+    "minus_one_root_norm": "-2",
+    "minus_two_half_boundary_coefficient": "0",
+    "minus_two_lattice_coefficients_integral": true,
+    "minus_two_root_norm": "-4",
+    "missing_W2_control_coefficient": "1/2",
+    "missing_W2_control_is_nonintegral": true
+  },
+  "ag_rank_elimination": {
+    "endpoint_claim": "rho=26 survives the inequalities only at b=16",
+    "endpoint_is_eliminated_as_nonexistent": false,
+    "maximum_feasible_rank": 26,
+    "no_feasible_rank_27_through_horizon": true,
+    "rank_26_boundary_counts": [
+      16
+    ],
+    "rank_27_boundary_counts": [],
+    "symbolic_elimination": "7(rho-10)<=4rho+8, hence 3rho<=78"
+  },
+  "all_checks_pass": true,
+  "chamber_orbit_audit": {
+    "A2_complete_chamber_count": 6,
+    "A2_complete_orbit_size": 6,
+    "A2_incomplete_orbit_size": 2,
+    "complete_arrangement_transitive": true,
+    "selected_subarrangement_need_not_be_transitive": true
+  },
+  "field_audit": {
+    "all_entries_and_cycles_rational": true,
+    "cartan_matrix": [
+      [
+        "2",
+        "-1",
+        "0"
+      ],
+      [
+        "-1/2",
+        "2",
+        "-1"
+      ],
+      [
+        "0",
+        "-2",
+        "2"
+      ]
+    ],
+    "minimal_Vinberg_field": "Q",
+    "sample_cyclic_products": [
+      "1/2",
+      "2",
+      "0"
+    ],
+    "surface_field_of_definition_claimed": false
+  },
+  "finite_host_audit": {
+    "coarse_total": 5515561289142524504797715176506813442521589215285286,
+    "coarse_total_expected": 5515561289142524504797715176506813442521589215285286,
+    "overcount_includes_isometric_duplicates": true,
+    "overcount_includes_nonintegral_hosts": true,
+    "rank_2_picard_types": 2,
+    "rank_3_through_26_picard_types_each": 1,
+    "recurrence": "[n h]_2=[n-1 h]_2+2^(n-h)[n-1 h-1]_2",
+    "small_literal_counts": [
+      2,
+      5,
+      16,
+      67,
+      374
+    ],
+    "small_recurrence_counts": [
+      2,
+      5,
+      16,
+      67,
+      374
+    ],
+    "small_totally_isotropic_counts": [
+      1,
+      2,
+      4,
+      11,
+      31
+    ]
+  },
+  "maximality_modes": {
+    "absolute_discrete_reflection_maximality_saturates": true,
+    "arithmetic_reason": "W and O+(M) are finite-covolume lattices with W<=O+(M), so every intermediate discrete overgroup has finite index and is arithmetic",
+    "arithmetic_reflection_maximality_saturates": true,
+    "host_relative_reflection_maximality_saturates": true,
+    "known_effective_walls_alone_saturate": false,
+    "lattice_maximality_alone_saturates": false
+  },
+  "owner_hashes": {
+    "data/enumerations/rational_wrong_log_maximal_finiteness.json": "cf95f1f7ba6d3ed3f60a521419f817874ccb55f3b27d0a0ecde2fb5c0e8c16d7",
+    "results/rational_wrong_log_reflection_maximal_finiteness.md": "a682712bf212aa79c15547aeba0f59c279612d07bd428df7c5fd9d5339cf2768",
+    "scripts/certify_rational_wrong_log_maximal_finiteness.py": "22d551ca0ead5d362c6ca194a8d60aa3257958f806498da38bae6cfcac430f3d",
+    "tests/test_rational_wrong_log_maximal_finiteness.py": "10ced3cc9b611724d8b172c2a3b5cec5f839dfc2cd20b70d72b10cdbe0efb20f"
+  },
+  "owner_pins_match": true,
+  "schema": "coxeter.rational_wrong_log_maximal_finiteness.hostile_audit.v1",
+  "scope": {
+    "carrier_relative": true,
+    "finite_sided_finite_volume_required": true,
+    "hostile_incidence_bound_claimed": false,
+    "literal_complete_full_nef_required": true,
+    "raw_carrier_surjectivity_claimed": false,
+    "reflective_lattice_classification_avoided": true,
+    "surface_classification_avoided": false,
+    "terminating_reflectivity_census_claimed": false
+  },
+  "verdict": "PASS after TeX repair and scope clarification"
+}

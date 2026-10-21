@@ -1,0 +1,461 @@
+{
+  "linear_rank_theorem": {
+    "dimension_consequence": "n <= floor(B/d)-1 <= B-1",
+    "facet_degree_consequence": "if sum H.D_i <= D then f <= D and n <= D-1",
+    "faithful_packet_inequality": "d*(n+1) <= rank(H_Z) <= B",
+    "interval_generator_consequence": "d <= 23^t; d <= 23 if one coordinate is primitive",
+    "root_trace_rank": "d*(n+1)"
+  },
+  "open_global_gate": "A uniform bounded cohomological descent must inject the full restriction-of-scalars root module into one global packet with an independently certified rank/cell ceiling; four-node type finiteness alone cannot supply this.",
+  "schema": "integral_packet_dimension_bridge_exact_v1",
+  "star_counterfamily": {
+    "all_four_node_principal_submatrices_negative_definite": true,
+    "at_most_four_node_types": [
+      {
+        "inertia_positive_negative_zero": [
+          0,
+          1,
+          0
+        ],
+        "kind": "edgeless",
+        "order": 1
+      },
+      {
+        "inertia_positive_negative_zero": [
+          0,
+          2,
+          0
+        ],
+        "kind": "edgeless",
+        "order": 2
+      },
+      {
+        "inertia_positive_negative_zero": [
+          0,
+          3,
+          0
+        ],
+        "kind": "edgeless",
+        "order": 3
+      },
+      {
+        "inertia_positive_negative_zero": [
+          0,
+          4,
+          0
+        ],
+        "kind": "edgeless",
+        "order": 4
+      },
+      {
+        "inertia_positive_negative_zero": [
+          0,
+          2,
+          0
+        ],
+        "kind": "star",
+        "order": 2,
+        "star_leaves": 1
+      },
+      {
+        "inertia_positive_negative_zero": [
+          0,
+          3,
+          0
+        ],
+        "kind": "star",
+        "order": 3,
+        "star_leaves": 2
+      },
+      {
+        "inertia_positive_negative_zero": [
+          0,
+          4,
+          0
+        ],
+        "kind": "star",
+        "order": 4,
+        "star_leaves": 3
+      }
+    ],
+    "characteristic_polynomial": "(lambda+2)^(m-1)*((lambda+2)^2-m)",
+    "entry_alphabet": [
+      -2,
+      0,
+      1
+    ],
+    "formula": "G_m=-2*I+Adjacency(K_{1,m})",
+    "global_vertex_deletion_gate": [
+      {
+        "delete_center_inertia": [
+          0,
+          5,
+          0
+        ],
+        "delete_leaf_inertia": [
+          0,
+          4,
+          1
+        ],
+        "finite_or_ideal_vertex_deletion_gate": true,
+        "leaves": 5
+      },
+      {
+        "delete_center_inertia": [
+          0,
+          6,
+          0
+        ],
+        "delete_leaf_inertia": [
+          1,
+          5,
+          0
+        ],
+        "finite_or_ideal_vertex_deletion_gate": false,
+        "leaves": 6
+      },
+      {
+        "delete_center_inertia": [
+          0,
+          7,
+          0
+        ],
+        "delete_leaf_inertia": [
+          1,
+          6,
+          0
+        ],
+        "finite_or_ideal_vertex_deletion_gate": false,
+        "leaves": 7
+      },
+      {
+        "delete_center_inertia": [
+          0,
+          8,
+          0
+        ],
+        "delete_leaf_inertia": [
+          1,
+          7,
+          0
+        ],
+        "finite_or_ideal_vertex_deletion_gate": false,
+        "leaves": 8
+      },
+      {
+        "delete_center_inertia": [
+          0,
+          9,
+          0
+        ],
+        "delete_leaf_inertia": [
+          1,
+          8,
+          0
+        ],
+        "finite_or_ideal_vertex_deletion_gate": false,
+        "leaves": 9
+      },
+      {
+        "delete_center_inertia": [
+          0,
+          10,
+          0
+        ],
+        "delete_leaf_inertia": [
+          1,
+          9,
+          0
+        ],
+        "finite_or_ideal_vertex_deletion_gate": false,
+        "leaves": 10
+      },
+      {
+        "delete_center_inertia": [
+          0,
+          11,
+          0
+        ],
+        "delete_leaf_inertia": [
+          1,
+          10,
+          0
+        ],
+        "finite_or_ideal_vertex_deletion_gate": false,
+        "leaves": 11
+      },
+      {
+        "delete_center_inertia": [
+          0,
+          12,
+          0
+        ],
+        "delete_leaf_inertia": [
+          1,
+          11,
+          0
+        ],
+        "finite_or_ideal_vertex_deletion_gate": false,
+        "leaves": 12
+      }
+    ],
+    "lorentzian_for_all_m_at_least_5": true,
+    "samples": [
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          4,
+          3
+        ],
+        "inertia_positive_negative_zero": [
+          0,
+          2,
+          0
+        ],
+        "leaves": 1,
+        "order": 2,
+        "rank": 2
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          6,
+          10,
+          4
+        ],
+        "inertia_positive_negative_zero": [
+          0,
+          3,
+          0
+        ],
+        "leaves": 2,
+        "order": 3,
+        "rank": 3
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          8,
+          21,
+          20,
+          4
+        ],
+        "inertia_positive_negative_zero": [
+          0,
+          4,
+          0
+        ],
+        "leaves": 3,
+        "order": 4,
+        "rank": 4
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          10,
+          36,
+          56,
+          32,
+          0
+        ],
+        "inertia_positive_negative_zero": [
+          0,
+          4,
+          1
+        ],
+        "leaves": 4,
+        "order": 5,
+        "rank": 4
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          12,
+          55,
+          120,
+          120,
+          32,
+          -16
+        ],
+        "inertia_positive_negative_zero": [
+          1,
+          5,
+          0
+        ],
+        "leaves": 5,
+        "order": 6,
+        "rank": 6
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          14,
+          78,
+          220,
+          320,
+          192,
+          -32,
+          -64
+        ],
+        "inertia_positive_negative_zero": [
+          1,
+          6,
+          0
+        ],
+        "leaves": 6,
+        "order": 7,
+        "rank": 7
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          16,
+          105,
+          364,
+          700,
+          672,
+          112,
+          -320,
+          -192
+        ],
+        "inertia_positive_negative_zero": [
+          1,
+          7,
+          0
+        ],
+        "leaves": 7,
+        "order": 8,
+        "rank": 8
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          18,
+          136,
+          560,
+          1344,
+          1792,
+          896,
+          -768,
+          -1280,
+          -512
+        ],
+        "inertia_positive_negative_zero": [
+          1,
+          8,
+          0
+        ],
+        "leaves": 8,
+        "order": 9,
+        "rank": 9
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          20,
+          171,
+          816,
+          2352,
+          4032,
+          3360,
+          -768,
+          -4608,
+          -4096,
+          -1280
+        ],
+        "inertia_positive_negative_zero": [
+          1,
+          9,
+          0
+        ],
+        "leaves": 9,
+        "order": 10,
+        "rank": 10
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          22,
+          210,
+          1140,
+          3840,
+          8064,
+          9408,
+          1920,
+          -11520,
+          -17920,
+          -11776,
+          -3072
+        ],
+        "inertia_positive_negative_zero": [
+          1,
+          10,
+          0
+        ],
+        "leaves": 10,
+        "order": 11,
+        "rank": 11
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          24,
+          253,
+          1540,
+          5940,
+          14784,
+          22176,
+          12672,
+          -21120,
+          -56320,
+          -59136,
+          -31744,
+          -7168
+        ],
+        "inertia_positive_negative_zero": [
+          1,
+          11,
+          0
+        ],
+        "leaves": 11,
+        "order": 12,
+        "rank": 12
+      },
+      {
+        "characteristic_coefficients_descending": [
+          1,
+          26,
+          300,
+          2024,
+          8800,
+          25344,
+          46464,
+          42240,
+          -25344,
+          -140800,
+          -214016,
+          -178176,
+          -81920,
+          -16384
+        ],
+        "inertia_positive_negative_zero": [
+          1,
+          12,
+          0
+        ],
+        "leaves": 12,
+        "order": 13,
+        "rank": 13
+      }
+    ],
+    "scope": "Lorentzian Coxeter Grams; only m=5 passes every vertex-deletion elliptic/parabolic gate, and no polytope/maximality promotion is used",
+    "unbounded_rank": "rank(G_m)=m+1 for m>=5"
+  },
+  "surface_counterfamily": {
+    "conclusion": "fixed surface dimension and bounded individual curve degree do not bound global cohomological rank",
+    "every_at_most_four_exceptional_curve_packet": "a principal submatrix of -I_4",
+    "exceptional_curve_intersection_matrix": "-I_r",
+    "picard_rank": "r+1",
+    "surface": "Bl_{p_1,...,p_r}(P^2)"
+  }
+}

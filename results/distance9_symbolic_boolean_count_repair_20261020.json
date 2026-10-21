@@ -1,0 +1,51 @@
+{
+  "as_of": "2026-10-20",
+  "status": "EXACT_BOOLEAN_COUNT_FIX_REVIEWED;CURRENT_RUNTIME_DEFERRED_BEFORE_CHILD",
+  "issue": "Python sum of SymPy relational booleans raised BooleanAtom TypeError in join_domain rejection counting.",
+  "failure_ledger": "results/finite57_distance9_partitioned_replay_runtime_20261020.json",
+  "correction": "Count one integer for each true comparison, preserving the exact same predicate and complete4442-row domain.",
+  "mathematical_decision_changed": false,
+  "archives": [
+    {
+      "path": "manuscripts/source_archives/check_selective_distance9_batches_20261020_before_symbolic_boolean_count_20261020.py.gz",
+      "archive_sha256": "f03c16a32e87ba92b734c052373040a6d33d2503ab72f6e6f4e5d59d095b25b9",
+      "decoded_sha256": "d9ab46e4404ed8dc02b0166f220cb0e63bc62eb42beaf68a5a7823fa65f84745",
+      "decoded_bytes": 31694
+    },
+    {
+      "path": "manuscripts/source_archives/check_distance9_array_scanner_fixtures_20261020_before_symbolic_boolean_count_20261020.py.gz",
+      "archive_sha256": "e9895cdce0cc0ab5972035cb83a72b429a035487fb6e4265eb5c141a8d2b3277",
+      "decoded_sha256": "abc3b918ef3ca3cdfde029c4947ae6d25c7c18b2761ba40d3031ce0bcf3ee20f",
+      "decoded_bytes": 14700
+    },
+    {
+      "path": "manuscripts/source_archives/check_partitioned_replay_coverage_20261020_before_symbolic_boolean_count_20261020.py.gz",
+      "archive_sha256": "2b8e1a5c50cc257451d105a8781df2e4fd195810feaabe525fc78d36b8bdbd75",
+      "decoded_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf",
+      "decoded_bytes": 21015
+    }
+  ],
+  "current_sources": [
+    {
+      "path": "scripts/check_selective_distance9_batches_20261020.py",
+      "sha256": "126d5fe3588cfbb56009bff1f748dbab2154582e3df814feff50b32003cf023b"
+    },
+    {
+      "path": "scripts/check_distance9_array_scanner_fixtures_20261020.py",
+      "sha256": "1f0bf6d952d536a0eb7316c088d8dceb23c52687c8e7fdc2536547b5371cf09b"
+    },
+    {
+      "path": "scripts/check_partitioned_replay_coverage_20261020.py",
+      "sha256": "41f3c82b86ad05aa0877a34cf4718f92d5253e72fe669c083dd161a22c4342c6"
+    }
+  ],
+  "source_review": "results/review_distance9_symbolic_boolean_count_fix_finite57_20261020.md",
+  "source_review_sha256": "3e9b97f2a0f09072e45deb5cc0dd4b74967f98b0ec6e59e550b9aad73d9f736f",
+  "source_equivalence_status": "PASS_EXACT_ONE_LINE_SAME_PREDICATE",
+  "current_coverage_validator_self_test": "PASS_14_MUTATIONS",
+  "current_d13_coverage": "PASS19_OF19_UNCHANGED",
+  "current_scanner_fixture": "DEFERRED_BEFORE_LAUNCH_AT5.8GiB",
+  "mathematical_pilots_current_source": "PENDING",
+  "latest_current_fixture_gate": "5.9GiB available RAM, below6GiB floor; no scanner/math child launched.",
+  "current_source_coverage": "ZERO_OF2196_UNITS;OLD_SOURCE_METADATA_PASS_CORRECTLY_REJECTED"
+}

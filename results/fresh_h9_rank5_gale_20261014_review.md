@@ -1,0 +1,19 @@
+# Narrow review of the direct rank-five Gale package
+
+**2026-10-14 — PASS.** Source/proof review of the [core](../scripts/fresh_h9_rank5_gale_20261014_core.py), [independent audit](../scripts/fresh_h9_rank5_gale_20261014_independent.py) and [terminal certificate](../scripts/fresh_h9_rank5_gale_20261014_certificate.py) found no mathematical issue. The terminal saved replay passed freshly. A [small separate Fraction checker](../scripts/fresh_h9_rank5_gale_20261014_review.py), with [bound output](fresh_h9_rank5_gale_20261014_review.json), independently verifies the explicit fifteen-point rational realization and all 310 supporting functionals for case 0. It does not repeat the 1,063-case census.
+
+The uniform Gale argument is sound. Every five-row minor is nonzero, so the minimal dependences have six rows. Alternating cofactors enumerate those dependences with the correct signs. Summing the positive dependences that cover all labels supplies a strictly positive kernel vector. Positive row scaling then makes the constant vector lie in the transpose kernel, which has dimension ten. This gives an affine configuration of dimension nine. Positive circuits correspond precisely to supporting facets through their complements. Uniformity forces these facets to have nine affinely independent vertices. Coverage by those simplex facets ensures that all fifteen labels are actual polytope vertices.
+
+The explicit primal construction correctly uses the transpose-kernel basis with its last ten rows equal to the identity. Each row sums to one, so dropping the last coordinate gives affine coordinates. The saved supporting functionals evaluate to zero precisely on their nine-vertex facets and strictly positively on the other six points. The separate small check confirms affine rank nine for the whole configuration and rank eight for each facet. This certifies Euclidean polytopal realizability, not a hyperbolic Coxeter metric.
+
+The link-factor exclusion has the required direction. For stellar subdivision at a face F with at least two vertices, the new vertex link is `boundary(F) * link(F)`. Its minimal-nonface clutter therefore contains F as a member disjoint from every other member. The producer explicitly forms each vertex link and tests for this condition. The separate all-case audit obtains the link clutter independently by minimalizing the sets `M minus {v}` from the whole complex, removes singleton ghost vertices, and checks the same condition. This algebraic link formula is correct. Absence of the condition at every vertex excludes standard single-face truncations of simple parents, including arbitrary proper-face codimensions that add a facet. It does not exclude nonsimple-parent surgeries or other incidence operations.
+
+The producer's native determinant bound is valid before evaluation: every Leibniz product is bounded by `2048^5`, and the sum of 120 absolute terms is below `2^63`. Positive-kernel accumulation converts coefficients to Python integers. The full independent audit uses integer Bareiss determinants, avoiding dependence on this native implementation.
+
+The recorded obstruction applications also have the right scope: the complete induced clutter must match the imported pattern, while a two-block application requires exactly the two disjoint minimal nonfaces on its support. Their inherited proof libraries remain dependencies. The terminal package reports 902 literal-pattern and 161 two-block exclusions, with no new full-label search or metric fit. The review confirms this scope; it does not re-prove the imported diagram libraries.
+
+The result closes the saved 1,063 proposals. It neither classifies all fifteen-facet nerves nor supplies a compact H9 example. Distinct canonical keys rely on the existing canonicalization routine; the exclusions themselves do not require pairwise nonisomorphism.
+
+```sh
+python3 scripts/fresh_h9_rank5_gale_20261014_review.py --verify
+```

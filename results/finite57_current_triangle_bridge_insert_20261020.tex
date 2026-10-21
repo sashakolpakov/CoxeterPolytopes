@@ -1,0 +1,104 @@
+% Supporting insertion, not a separate manuscript.
+% Place immediately after the heading ``Triangles and their four exceptional
+% markings'' in app:routing, before the historical minimal-core census.
+\begin{lemma}[The reduced small affine pairs are absent from triangles]
+\label{lem:current-affine-triangle-exclusions}
+No actual triangular two-face has an ideal corner whose varying affine
+factor and marked pair are one of the following:
+\begin{enumerate}
+\item a cycle of order ten, marked at antipodal nodes;
+\item a cycle of order eleven, marked at distance five;
+\item $\widetilde D_9$ of order ten, marked at leaves of opposite forks.
+\end{enumerate}
+This assertion allows arbitrary additional supporting roots and other
+factors of the cusp.
+\end{lemma}
+\begin{proof}
+Let $a,b$ be the two marked roots at the ideal corner, let $F$ be its
+varying affine factor, and let $c$ be the third side root of the
+triangle. Normalize every root to square two. All nodes of
+$F\setminus\{a,b\}$ support the triangle. The other two actual
+corner diagrams are positive semidefinite, so both principal sets
+$(F\setminus\{a\})+c$ and $(F\setminus\{b\})+c$ are positive
+semidefinite.
+
+For either positive-definite deleted-factor matrix $B$, put
+$p_j=-(c,r_j)\ge0$. Schur complementation gives
+\[
+ p^TB^{-1}p\le2.
+\]
+The inverse is entrywise nonnegative, and every nonzero native contact
+has magnitude at least one. Consequently a position with
+$(B^{-1})_{jj}>2$ cannot be contacted. This is a necessary condition
+on a principal submatrix; extra supporting roots cannot repair its
+failure.
+
+Number a cycle of order $m$ by $0,\ldots,m-1$, and take $a=0,b=5$.
+Deleting a node gives $A_{m-1}$, whose inverse diagonal at path
+position $k$ is $k(m-k)/m$. For $m=10,11$, all positions at least
+three steps from both path ends have diagonal at least
+$21/10,24/11$, respectively, both greater than two. The two
+deleted-factor tests therefore give these possible contact sets:
+\[
+\begin{array}{c|c|c}
+ m&\text{after deleting }0&\text{after deleting }5\\\hline
+ 10&\{1,2,8,9\}&\{3,4,6,7\}\\
+ 11&\{1,2,9,10\}&\{3,4,6,7\}.
+\end{array}
+\]
+In each row the sets are disjoint. Contact to either removed mark
+is forbidden by the other deletion: the relevant diagonal is
+$5/2$ at order ten and $30/11$ at order eleven. Thus $c$ is
+orthogonal to every root of $F$.
+
+For the last case number $F$ as the spine $0,\ldots,5$, with
+leaves $6,7$ at $0$ and $8,9$ at $5$, and take $a=6,b=8$.
+Each deletion is finite $D_9$. After deleting $6$, its only
+inverse diagonals at most two occur at the long endpoint $7$
+and its neighbor $0$, with values one and two. After deleting
+$8$, they occur at $9,5$ with the same values. The short-leaf
+diagonals are $9/4$, and all other diagonals exceed two.
+Hence the possible contact sets are $\{0,7\}$ and $\{5,9\}$,
+which are disjoint. The other deletion also forbids contact to
+each removed mark, again by its short-leaf diagonal $9/4$.
+Thus $c$ is orthogonal to all of $F$ in this case as well.
+
+Let $\nu=\sum_{j\in F}\delta_jr_j$, with every $\delta_j>0$,
+be the positive affine-kernel combination. It is a nonzero future
+null vector representing the actual ideal corner: nonzeroness
+follows by pairing with a strict interior point. The third side
+of a nondegenerate actual triangle does not contain that corner,
+so $-(c,\nu)>0$. The orthogonality just proved instead gives
+$(c,\nu)=0$, a contradiction. Rotation and reflection cover all
+cycle pairs, and fork interchange and spine reversal cover all
+four opposite-fork pairs. The argument has used no restriction
+on spectator rank or on the other cusp factors.
+\end{proof}
+
+We now compare the inherited triangle witnesses with the actual weights
+of Appendix~\ref{app:weights}. The two cycle orbits above are the only
+current reductions of ideal paths of length at most five. The reduced
+order-ten $D$ orbit has distance seven and is also absent from
+triangles by the lemma. Every other printed replacement in affine
+$B,C,D$ of orders ten through seventeen has distance at least eight.
+For larger orders the selected length-six or length-seven feature
+paths retain their units: their branch or nonsimple-bond witness
+persists within five steps of a mark. Such a witness cannot lie in
+an affine $A$ cycle. Every affine factor of order at most nine still
+pays a unit on every pair.
+
+The four alternate witnesses below have an additional protection.
+Their fixed simple leaf with a degree-two neighbor excludes every
+classical affine factor, while exceptional affine factors have order
+at most nine and retain full units. If the marked component is
+finite, the protected leaf is at distances $2,1,0,0$ from a mark
+in the four displayed cases. It remains a whole-component endpoint,
+so the deep finite deletions, which require both marks to be at
+least six steps from every finite feature, do not remove the unit.
+The other selected finite length-six or length-seven witnesses
+already have a persistent branch or nonsimple feature within five
+steps. The sparse finite replacements in ranks twelve through
+seventeen are all longer than these selected paths. Thus the
+two-unit triangle argument below applies to the current rule,
+rather than assuming that every historical short ideal pair
+still has weight one.

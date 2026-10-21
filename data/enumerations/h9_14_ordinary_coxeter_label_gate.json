@@ -1,0 +1,107 @@
+{
+  "certificate_sha256": "9c3943ea538733020bc09f34c0150cdf6a7d66af743d5643a32ac6033057f4ea",
+  "claim": "All five known ordinary-polytopal H9/14 nerves admit exact full-domain factor-supported Coxeter label families satisfying every finite-vertex and Lanner-minimal-nonface constraint.  Every member of all five families is globally non-Lorentzian, so a genuine candidate requires cross-factor non-right coupling.  The unrestricted minimum counts are 4,2,1,1,1 for records 30,42,43,44,47.",
+  "counts": {
+    "full_nerve_symmetry_orbits": 6210,
+    "globally_unsat_sparse_families": 5,
+    "locally_sat_sparse_families": 5,
+    "ordinary_polytopal_nerves": 5,
+    "sparse_labelled_solutions": 46540944
+  },
+  "detailed_certificates": [
+    {
+      "embedded_certificate_sha256": "743bb6f42588a35dc59293d19e7d27e762ce7ae392497504bc652cd026c6167a",
+      "file_sha256": "99952e1e1edde6c17dc32f08a865ee51dbc6f26c8da63f44eb21fb3f6d72209e",
+      "path": "data/enumerations/h9_14_product_coxeter_labels.json",
+      "records": [
+        30,
+        42
+      ]
+    },
+    {
+      "embedded_certificate_sha256": "4362c36bc471c9dfd9b414fb4ba0439880a66b5fec0310466e7d1119dddc2c63",
+      "file_sha256": "888890bf919b27745286044ea20257f2f745f8bf54ab6cd9eb2bc4234f235033",
+      "path": "data/enumerations/h9_14_sparse_coxeter_labels.json",
+      "records": [
+        43,
+        44,
+        47
+      ]
+    }
+  ],
+  "finite_label_domain": {
+    "golden_only": false,
+    "labels": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "larger_label_exclusion": "Burcroff Lemma 10.10 excludes multi-multiple edges m>=6 for a compact 9-polytope with 14 facets."
+  },
+  "kind": "h9_14_five_ordinary_nerve_coxeter_label_gate",
+  "proof_summary": {
+    "global": "Orthogonal Lanner-bearing blocks force negative index at least two; record 30 has inertia exactly (9,5,0).  More generally, minimal-nonface components give unrestricted cross-edge lower bounds 4,2,1,1,1.",
+    "local": "Complete finite Coxeter classification, exhaustive order-4/5 Lanner generation over {2,3,4,5}, exact placement-table joins, and all 498 rank-nine vertex replays.",
+    "symmetry": "Full minimal-nonface-hypergraph automorphism groups and exact orbit traversal; complete only within each stated sparse ansatz."
+  },
+  "records": [
+    {
+      "forced_next_clause": "at least 4 cross-component non-right meeting edges",
+      "full_nerve_symmetry_orbits": 45,
+      "local_discrete_status": "sat",
+      "rank_nine_vertices_checked": 128,
+      "record_index": 30,
+      "sparse_global_gram_status": "unsat",
+      "sparse_labelled_solutions": 11664,
+      "unrestricted_minimum_cross_component_nonright_edges": 4
+    },
+    {
+      "forced_next_clause": "at least 2 cross-component non-right meeting edges",
+      "full_nerve_symmetry_orbits": 6120,
+      "local_discrete_status": "sat",
+      "rank_nine_vertices_checked": 100,
+      "record_index": 42,
+      "sparse_global_gram_status": "unsat",
+      "sparse_labelled_solutions": 46448640,
+      "unrestricted_minimum_cross_component_nonright_edges": 2
+    },
+    {
+      "forced_next_clause": "at least one non-right edge between the isolated simplex Lanner factor and the residual factor",
+      "full_nerve_symmetry_orbits": 15,
+      "local_discrete_status": "sat",
+      "rank_nine_vertices_checked": 90,
+      "record_index": 43,
+      "sparse_global_gram_status": "unsat",
+      "sparse_labelled_solutions": 12600,
+      "unrestricted_minimum_cross_component_nonright_edges": 1
+    },
+    {
+      "forced_next_clause": "at least one non-right edge between the isolated simplex Lanner factor and the residual factor",
+      "full_nerve_symmetry_orbits": 25,
+      "local_discrete_status": "sat",
+      "rank_nine_vertices_checked": 90,
+      "record_index": 44,
+      "sparse_global_gram_status": "unsat",
+      "sparse_labelled_solutions": 60480,
+      "unrestricted_minimum_cross_component_nonright_edges": 1
+    },
+    {
+      "forced_next_clause": "at least one non-right edge between the isolated simplex Lanner factor and the residual factor",
+      "full_nerve_symmetry_orbits": 5,
+      "local_discrete_status": "sat",
+      "rank_nine_vertices_checked": 90,
+      "record_index": 47,
+      "sparse_global_gram_status": "unsat",
+      "sparse_labelled_solutions": 7560,
+      "unrestricted_minimum_cross_component_nonright_edges": 1
+    }
+  ],
+  "schema_version": "1.0.0",
+  "scope": {
+    "dotted_gram_variables": "open",
+    "new_hyperbolic_coxeter_polytope": false,
+    "rank_10_inertia_9_1_4": "open",
+    "unrestricted_cross_coupled_label_csp": "open"
+  }
+}

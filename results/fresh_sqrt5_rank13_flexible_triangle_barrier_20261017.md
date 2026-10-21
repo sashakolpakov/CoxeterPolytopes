@@ -1,0 +1,7 @@
+# Exact obstruction using only determinant-flexible triangles
+
+The [fresh extraction](../scripts/fresh_sqrt5_rank13_flexible_triangle_barrier_20261017.py) retains only the 2,998 triangle rows whose fourteen-root diagrams have an odd-sized connected component in the [discriminant census](fresh_sqrt5_rank13_triangle_discriminant_gate_20261017.md). Its [saved rational dual](fresh_sqrt5_rank13_flexible_triangle_barrier_20261017.json) has 465 positive whole-forest multipliers and lower bound **28068746269440/2302464541063 > 12**. Generation and fresh saved replay check every nonnegative multiplier and every dual column inequality against the complete 78-pair budgets.
+
+An odd component can be rescaled by any totally positive K scalar without changing its normalized diagram or reflection Cartan coefficients. Therefore every displayed local triangle can individually match any determinant squareclass with the required two real signatures. The exact obstruction persists without any fixed-discriminant row: partitioning by ambient determinant alone cannot yield a budget-twelve corner-local rule on this witnessed domain.
+
+This does not establish a shared full quadratic form, common Hasse invariants, simultaneous global incidence, or a compact ambient realization. The conclusion is restricted to the stated nonnegative whole-forest corner-payment method. Higher-dimensional simplex incidence is tested separately.

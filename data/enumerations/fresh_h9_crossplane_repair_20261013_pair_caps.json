@@ -1,0 +1,202 @@
+{
+  "status": "EXACT_ORTHOGONAL_PAIR_REPAIR",
+  "source": "data/enumerations/fresh_h9_remote_next_20261013_bridge_caps.json",
+  "source_sha256": "37e64e06f86168ade3f6b3a507436c43c5cc0aec2d5ba7648bddfe3b67e313a6",
+  "constraints": [
+    [
+      "seed1",
+      2
+    ],
+    [
+      "seed2",
+      2
+    ],
+    [
+      "seed3",
+      5
+    ],
+    [
+      "seed4",
+      3
+    ],
+    [
+      "seed6",
+      3
+    ],
+    [
+      "seed8",
+      5
+    ],
+    [
+      "wall17",
+      2
+    ],
+    [
+      "nextH4",
+      5
+    ]
+  ],
+  "difference_pairing": 2,
+  "targets": [
+    [
+      {
+        "a": "22297834583/100000000000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "449283643/125000000000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "31109772813/200000000000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "137899486717/500000000000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "342129547527/1000000000000",
+        "b": "0"
+      }
+    ],
+    [
+      {
+        "a": "22297834583/100000000000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "449283643/125000000000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "31109772813/200000000000",
+        "b": "0"
+      },
+      {
+        "a": "137899486717/500000000000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "1/100000",
+        "b": "0"
+      },
+      {
+        "a": "342129547527/1000000000000",
+        "b": "0"
+      }
+    ]
+  ],
+  "definition": {
+    "D": "seed6-seed7, norm4",
+    "A": "The eight listed old normals followed by D.",
+    "u": "sum_i (Gram(A)^-1 p)_i A_i, p ending in2",
+    "v": "common center minus its projection onto span(A)",
+    "r": "u + branch*sqrt((2-u\u00b2)/v\u00b2)*v",
+    "s": "r-D; norm2 and r.s=0 exactly"
+  },
+  "scope": "Bounded adaptive metric-equation search, with a prescribed orthogonal reflection coupling. No exhaustive family claim.",
+  "branch": -1,
+  "escape": [
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "18626129093/125000000000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "22796250173/500000000000",
+      "b": "0"
+    },
+    {
+      "a": "32538055053/125000000000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "1/100000",
+      "b": "0"
+    },
+    {
+      "a": "267423461553/1000000000000",
+      "b": "0"
+    },
+    {
+      "a": "106146086637/500000000000",
+      "b": "0"
+    },
+    {
+      "a": "65438391659/1000000000000",
+      "b": "0"
+    }
+  ],
+  "numerical_geometry": {
+    "proposal": 0,
+    "caps": 2,
+    "surviving_old_spacelike_vertices": 55757,
+    "largest_surviving_old_norm": 0.04754253948026001,
+    "vertices": 65406,
+    "spacelike_vertices": 65384,
+    "maximum_norm": 0.04754253948026001,
+    "new_escape_active": [
+      0,
+      2,
+      5,
+      6,
+      16,
+      17,
+      43,
+      45,
+      58,
+      84
+    ],
+    "new_finite_vertices_numeric": 0,
+    "source": "data/enumerations/fresh_h9_crossplane_repair_20261013_geometry_scout.json",
+    "source_sha256": "ca39b31d25014e4ca5670e3b5ab87676e79a5aed103f6e5d5da5f92d5e3f3421"
+  }
+}

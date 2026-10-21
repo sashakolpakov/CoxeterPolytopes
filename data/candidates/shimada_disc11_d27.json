@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status_date": "2026-08-04",
+  "analysis_id": "shimada_disc11_physical_D27_eigensection",
+  "status": "exact_local_section_and_internal_first_star_verified",
+  "source": {
+    "member": "threediscs/disc11.txt",
+    "sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68"
+  },
+  "physical_state": {
+    "entry": {"representative": 86, "orbit": 24, "member": 0},
+    "representative": 27,
+    "state_sha256": "a58b37537a1856b35d640442a3ea69d8dc6fa998190c236a1c066c7263a8e783",
+    "physical_wall_rows_sha256": "d4ecdae87f5bdf7e8c59de6d68fc88e605c3ea34e20c8bbe75abf8221c4a79e2",
+    "physical_wall_set_sha256": "8272b57f633c4a6d3a0474cf53a5c5e279b897d7a1d3d9e513d988bb88935735",
+    "restricted_rows_sha256": "6445047372ce254d4e1b5cff128ab540cf5c884b036e39ce157eb178860bc568"
+  },
+  "local_section": {
+    "ambient_primitive_walls": 33,
+    "positive_proportional_classes": 24,
+    "irredundant_facets": 12,
+    "root_facets": 8,
+    "internal_facets": 4,
+    "root_facet_classes": [
+      [[1, 0], [6, 0]],
+      [[2, 0], [9, 0]],
+      [[4, 0], [17, 0]],
+      [[5, 0], [12, 0]],
+      [[7, 0], [16, 0]],
+      [[8, 0], [10, 0]],
+      [[11, 0], [15, 0]],
+      [[13, 0], [18, 0]]
+    ],
+    "internal_facet_classes": [
+      [[19, 0], [31, 0]],
+      [[20, 0]],
+      [[21, 0]],
+      [[23, 0]]
+    ],
+    "exact_face_witnesses": 12,
+    "exact_positive_redundancy_dependences": 12
+  },
+  "root_filter": {
+    "ambient_minus_two_walls": 19,
+    "integral_field_roots": 18,
+    "shell_distribution": {"2": 9, "4 - 2*phi": 9},
+    "field_span_rank": 9,
+    "unique_non_field_root_wall": [14, 0]
+  },
+  "internal_first_star": {
+    "simple": [
+      {"wall": [20, 0], "target_representative": 86, "same_physical_D86": true},
+      {
+        "wall": [21, 0],
+        "target_representative": 14,
+        "same_physical_D14_as_from_D55": true
+      },
+      {"wall": [23, 0], "target_representative": 61, "target_wall_count": 32}
+    ],
+    "simultaneous_facet": [[19, 0], [31, 0]],
+    "paths": [
+      [[19, 0], [24, 0], [20, 1], [26, 0]],
+      [[31, 0], [25, 0], [24, 0], [16, 1]]
+    ],
+    "representative_sequences": [
+      [27, 11, 11, 74, 27],
+      [27, 74, 11, 11, 27]
+    ],
+    "same_physical_endpoint": true,
+    "endpoint_is_distinct_physical_D27": true,
+    "endpoint_state_sha256": "5864d28f2ba531a1c60bc7d9e66864c80df7b978fefee5470939197f363e9000",
+    "endpoint_physical_wall_set_sha256": "2008055693fd68ed2a0c5ac7778e18edda27c83be5d71c56dbea7b92168b663b"
+  },
+  "scope": "complete_local_D27_section_and_internal_first_star_not_global_eigen_nef_completeness",
+  "report": "results/shimada_disc11_d27.md",
+  "verifier": "scripts/analyze_shimada_disc11_d27.py",
+  "tests": "tests/test_shimada_disc11_d27.py"
+}

@@ -1,0 +1,910 @@
+{
+  "as_of": "2026-10-20",
+  "scope": "Metadata/receipt validation only; no mathematical producer or replay is executed.",
+  "verifier": "scripts/check_partitioned_replay_coverage_20261020.py",
+  "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+  "observations": [
+    {
+      "argv": [
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "status": "PASS_COVERAGE_ORACLE_SELF_TEST_ONLY",
+      "adversarial_mutations": 14,
+      "synthetic": true,
+      "actual_mathematical_coverage": false,
+      "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+    },
+    {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json"
+      ],
+      "exit_code": 1,
+      "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+      "ledger_sha256": "986bfe4425b33e8d4369eae5831e0a950fe3d66896e0f7c0e23d9e1961924a09",
+      "required_batches": 19,
+      "covered_batches": 5,
+      "missing": [
+        "support",
+        "rank15",
+        "one-sided",
+        "quiet",
+        "literal",
+        "later-0",
+        "later-1",
+        "later-2",
+        "later-3",
+        "newer",
+        "variants",
+        "d12",
+        "universal",
+        "finite"
+      ],
+      "current_parser_contract_pass_records": 1,
+      "records_examined": 9,
+      "ignored_records": 3,
+      "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+    },
+    {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json"
+      ],
+      "exit_code": 1,
+      "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+      "ledger_sha256": "879eb35926ce578b7ce11f0ad7fd562f1ecbc29a59d93094b0cd7b756e258833",
+      "covered_batches": 10,
+      "missing": [
+        "later-0",
+        "later-1",
+        "later-2",
+        "later-3",
+        "newer",
+        "variants",
+        "d12",
+        "universal",
+        "finite"
+      ],
+      "required_batches": 19,
+      "current_parser_contract_pass_records": 1,
+      "records_examined": 16,
+      "ignored_records": 5,
+      "actual_output": {
+        "accepted_records": {
+          "d13": 11
+        },
+        "complete": false,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 10,
+          "missing": [
+            "later-0",
+            "later-1",
+            "later-2",
+            "later-3",
+            "newer",
+            "variants",
+            "d12",
+            "universal",
+            "finite"
+          ],
+          "required_batches": 19
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 4
+        },
+        "ignored_records": 5,
+        "ledger_files": 1,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 16,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+      },
+      "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+    },
+    {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json"
+      ],
+      "exit_code": 0,
+      "status": "PASS_RECORDED_PARTITION_COVERAGE",
+      "ledger_sha256": "d7d659653878ad31dc1f85120fb6a92446df5acb607f34a0034744b95610cef3",
+      "covered_batches": 19,
+      "missing": [],
+      "required_batches": 19,
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20
+        },
+        "complete": true,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 4
+        },
+        "ignored_records": 5,
+        "ledger_files": 1,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 25,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "PASS_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+      },
+      "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+    },
+    {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json"
+      ],
+      "exit_code": 0,
+      "status": "PASS_RECORDED_PARTITION_COVERAGE",
+      "ledger_sha256": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+      "covered_batches": 19,
+      "missing": [],
+      "required_batches": 19,
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20
+        },
+        "complete": true,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 4
+        },
+        "ignored_records": 5,
+        "ledger_files": 1,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 25,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "PASS_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+      },
+      "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+    },
+    {
+      "argv": [
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "status": "PASS_COVERAGE_ORACLE_SELF_TEST_ONLY",
+      "verifier_sha256": "41f3c82b86ad05aa0877a34cf4718f92d5253e72fe669c083dd161a22c4342c6",
+      "actual_output": {
+        "adversarial_mutations": 14,
+        "mathematical_execution_or_actual_coverage": false,
+        "status": "PASS_COVERAGE_ORACLE_SELF_TEST_ONLY",
+        "synthetic": true
+      }
+    },
+    {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json"
+      ],
+      "exit_code": 0,
+      "status": "PASS_RECORDED_PARTITION_COVERAGE",
+      "verifier_sha256": "41f3c82b86ad05aa0877a34cf4718f92d5253e72fe669c083dd161a22c4342c6",
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20
+        },
+        "complete": true,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 4
+        },
+        "ignored_records": 5,
+        "ledger_files": 1,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 25,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "PASS_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "41f3c82b86ad05aa0877a34cf4718f92d5253e72fe669c083dd161a22c4342c6"
+      },
+      "ledger_sha256": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+      "covered_batches": 19
+    },
+    {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json",
+        "--distance9-ledger",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json"
+      ],
+      "exit_code": 1,
+      "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+      "verifier_sha256": "41f3c82b86ad05aa0877a34cf4718f92d5253e72fe669c083dd161a22c4342c6",
+      "ledger_bindings": [
+        {
+          "path": "results/finite57_d13_batched_replay_runtime_20261020.json",
+          "sha256": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6"
+        },
+        {
+          "path": "results/finite57_distance9_partitioned_replay_runtime_20261020.json",
+          "sha256": "266d6a4d49f40d3afcd31345cee1133eac161a324d24ae0845df948a67f7bbe7"
+        }
+      ],
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20
+        },
+        "complete": false,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "distance9": {
+          "covered_units": {
+            "disjoint": 0,
+            "domains": 0,
+            "inertia": 0,
+            "isolation": 0,
+            "metadata": 0,
+            "overlap-domain": 0,
+            "overlaps": 0,
+            "profiles": 0
+          },
+          "missing": {
+            "disjoint": [
+              [
+                0,
+                384
+              ]
+            ],
+            "domains": [
+              [
+                0,
+                1
+              ]
+            ],
+            "inertia": [
+              [
+                0,
+                85
+              ]
+            ],
+            "isolation": [
+              [
+                0,
+                949
+              ]
+            ],
+            "metadata": [
+              [
+                0,
+                1
+              ]
+            ],
+            "overlap-domain": [
+              [
+                0,
+                384
+              ]
+            ],
+            "overlaps": [
+              [
+                0,
+                384
+              ]
+            ],
+            "profiles": [
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "required_domains": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          }
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 6,
+          "stale distance9 source": 1
+        },
+        "ignored_records": 8,
+        "ledger_files": 2,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 28,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "41f3c82b86ad05aa0877a34cf4718f92d5253e72fe669c083dd161a22c4342c6"
+      }
+    },
+    {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json",
+        "--distance9-ledger",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json"
+      ],
+      "exit_code": 1,
+      "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20
+        },
+        "complete": false,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "distance9": {
+          "covered_units": {
+            "disjoint": 0,
+            "domains": 0,
+            "inertia": 0,
+            "isolation": 0,
+            "metadata": 0,
+            "overlap-domain": 0,
+            "overlaps": 0,
+            "profiles": 0
+          },
+          "missing": {
+            "disjoint": [
+              [
+                0,
+                384
+              ]
+            ],
+            "domains": [
+              [
+                0,
+                1
+              ]
+            ],
+            "inertia": [
+              [
+                0,
+                85
+              ]
+            ],
+            "isolation": [
+              [
+                0,
+                949
+              ]
+            ],
+            "metadata": [
+              [
+                0,
+                1
+              ]
+            ],
+            "overlap-domain": [
+              [
+                0,
+                384
+              ]
+            ],
+            "overlaps": [
+              [
+                0,
+                384
+              ]
+            ],
+            "profiles": [
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          "required_domains": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          }
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 8,
+          "stale distance9 source": 2
+        },
+        "ignored_records": 11,
+        "ledger_files": 2,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 31,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e"
+      },
+      "input_ledger_hashes": {
+        "results/finite57_d13_batched_replay_runtime_20261020.json": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json": "aed2cd749dbc555738a00bf543e9ec76cac4eabbb91d97bb941aaeefb24591ae"
+      },
+      "scope": "Actual metadata validation only, not mathematical replay."
+    },
+    {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json"
+      ],
+      "exit_code": 0,
+      "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+      "ledger_sha256": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+      "required_batches": 19,
+      "covered_batches": 19,
+      "status": "PASS_RECORDED_PARTITION_COVERAGE",
+      "evidence": "Root actual tool output 34ffcd, 2026-10-20; metadata-only receipt validation."
+    },
+    {
+      "as_of_utc": "2026-10-20T19:29:14.364763+00:00",
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json",
+        "--distance9-ledger",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json"
+      ],
+      "exit_code": 1,
+      "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20,
+          "distance9": 5
+        },
+        "complete": false,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "distance9": {
+          "covered_units": {
+            "disjoint": 0,
+            "domains": 1,
+            "inertia": 0,
+            "isolation": 0,
+            "metadata": 1,
+            "overlap-domain": 68,
+            "overlaps": 0,
+            "profiles": 8
+          },
+          "missing": {
+            "disjoint": [
+              [
+                0,
+                384
+              ]
+            ],
+            "inertia": [
+              [
+                0,
+                85
+              ]
+            ],
+            "isolation": [
+              [
+                0,
+                949
+              ]
+            ],
+            "overlap-domain": [
+              [
+                64,
+                348
+              ],
+              [
+                352,
+                384
+              ]
+            ],
+            "overlaps": [
+              [
+                0,
+                384
+              ]
+            ]
+          },
+          "required_domains": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          }
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 9,
+          "stale distance9 source": 2
+        },
+        "ignored_records": 12,
+        "ledger_files": 2,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 37,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e"
+      },
+      "input_ledger_hashes": {
+        "results/finite57_d13_batched_replay_runtime_20261020.json": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json": "aea8d8a35c52506ca2e8bac88b0cdde65038ec30c6c54afbef20d5ce825615c3"
+      }
+    },
+    {
+      "as_of_utc": "2026-10-20T19:57:09.134610+00:00",
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json",
+        "--distance9-ledger",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json"
+      ],
+      "exit_code": 1,
+      "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20,
+          "distance9": 20
+        },
+        "complete": false,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "distance9": {
+          "covered_units": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 0,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 0,
+            "profiles": 8
+          },
+          "missing": {
+            "isolation": [
+              [
+                0,
+                949
+              ]
+            ],
+            "overlaps": [
+              [
+                0,
+                384
+              ]
+            ]
+          },
+          "required_domains": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          }
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 12,
+          "stale distance9 source": 2
+        },
+        "ignored_records": 15,
+        "ledger_files": 2,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 55,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e"
+      },
+      "input_ledger_hashes": {
+        "results/finite57_d13_batched_replay_runtime_20261020.json": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json": "1be6a0957f38eb3bb91425fb90c717ccc30fcdabc72572fc8e1d8e228a9cb043"
+      }
+    },
+    {
+      "as_of_utc": "2026-10-20T20:06:25.018250+00:00",
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json",
+        "--distance9-ledger",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json"
+      ],
+      "exit_code": 1,
+      "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20,
+          "distance9": 24
+        },
+        "complete": false,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "distance9": {
+          "covered_units": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 0,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 97,
+            "profiles": 8
+          },
+          "missing": {
+            "isolation": [
+              [
+                0,
+                949
+              ]
+            ],
+            "overlaps": [
+              [
+                96,
+                356
+              ],
+              [
+                357,
+                384
+              ]
+            ]
+          },
+          "required_domains": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          }
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 13,
+          "stale distance9 source": 2
+        },
+        "ignored_records": 16,
+        "ledger_files": 2,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 60,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e"
+      },
+      "input_ledger_hashes": {
+        "results/finite57_d13_batched_replay_runtime_20261020.json": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json": "8e4327aea226c849fcc667017bb53785f122b32d492b5b4363caedf862c3c75a"
+      }
+    },
+    {
+      "as_of_utc": "2026-10-20T20:25:30.686859+00:00",
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json",
+        "--distance9-ledger",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json"
+      ],
+      "exit_code": 0,
+      "status": "PASS_RECORDED_PARTITION_COVERAGE",
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20,
+          "distance9": 56
+        },
+        "complete": true,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "distance9": {
+          "covered_units": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          },
+          "missing": {},
+          "required_domains": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          }
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 14,
+          "stale distance9 source": 2
+        },
+        "ignored_records": 17,
+        "ledger_files": 2,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 93,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "PASS_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e"
+      },
+      "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+      "ledger_bindings": {
+        "results/finite57_d13_batched_replay_runtime_20261020.json": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json": "ab1cdf21ddbe1b64a5a3255bb36e50d3badaa1914f056ee05c351d5082d24f7e"
+      }
+    },
+    {
+      "as_of_utc": "2026-10-20T20:30:41.557916+00:00",
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json",
+        "--distance9-ledger",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json"
+      ],
+      "exit_code": 0,
+      "status": "PASS_RECORDED_PARTITION_COVERAGE",
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20,
+          "distance9": 56
+        },
+        "complete": true,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "distance9": {
+          "covered_units": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          },
+          "missing": {},
+          "required_domains": {
+            "disjoint": 384,
+            "domains": 1,
+            "inertia": 85,
+            "isolation": 949,
+            "metadata": 1,
+            "overlap-domain": 384,
+            "overlaps": 384,
+            "profiles": 8
+          }
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 14,
+          "stale distance9 source": 2
+        },
+        "ignored_records": 17,
+        "ledger_files": 2,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 93,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "PASS_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e"
+      },
+      "verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+      "ledger_bindings": {
+        "results/finite57_d13_batched_replay_runtime_20261020.json": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json": "1228a4a7c487c9b39d0b3d2daabac5c01127f068131003b268c79381ce7118bd"
+      },
+      "scope": "Fresh receipt validation after root metadata checkpoint update; no mathematical rerun."
+    }
+  ],
+  "resources": "Read-only bounded metadata input; no scientific, TeX or Lean child. Existing scientific resource gates remain unchanged.",
+  "provenance_limit": "Unsigned local execution ledgers are not authenticated attestations.",
+  "latest_d13_covered_batches": 19,
+  "latest_status": "PASS_RECORDED_PARTITION_COVERAGE",
+  "previous_verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf",
+  "latest_d13_status": "PASS19_OF19",
+  "latest_combined_status": "PASS_RECORDED_PARTITION_COVERAGE",
+  "latest_distance9_covered_units": {
+    "disjoint": 384,
+    "domains": 1,
+    "inertia": 85,
+    "isolation": 949,
+    "metadata": 1,
+    "overlap-domain": 384,
+    "overlaps": 384,
+    "profiles": 8
+  },
+  "verifier_header_history": [
+    {
+      "verifier_sha256": "41f3c82b86ad05aa0877a34cf4718f92d5253e72fe669c083dd161a22c4342c6"
+    }
+  ],
+  "summary_checkpoint_history": [
+    {
+      "latest_status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+      "latest_combined_status": "INCOMPLETE_RECORDED_PARTITION_COVERAGE",
+      "latest_distance9_covered_units": {
+        "disjoint": 384,
+        "domains": 1,
+        "inertia": 85,
+        "isolation": 0,
+        "metadata": 1,
+        "overlap-domain": 384,
+        "overlaps": 97,
+        "profiles": 8
+      },
+      "latest_d13_status": "PASS19_OF19",
+      "latest_d13_covered_batches": 19
+    }
+  ],
+  "summary_reconciled_utc": "2026-10-20T20:59:08.830995+00:00",
+  "summary_reconciliation_scope": "Top summary now agrees with last existing actual observation; observation arrays and replay ledgers unchanged. No mathematical replay.",
+  "previous_summary_receipt_archive": "formal/source_archives/partitioned_replay_coverage_validation_before_summary_reconcile_20261020.json.gz",
+  "previous_summary_receipt_decoded_sha256": "b9c3a2c7c37819da5346a445c6fd580ff916a5acfd379eb7210e7bf97bc999b1"
+}

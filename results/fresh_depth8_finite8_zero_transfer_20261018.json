@@ -1,0 +1,6031 @@
+{
+  "status": "PASS_DEPTH8_FINITE8_ZERO_LOCAL_TRANSFER",
+  "sources": {
+    "scripts/fresh_depth8_finite8_zero_transfer_20261018.py": "83eccb523ab7e35725a5f310acce3532565d81929590014e54872562116f8e94",
+    "scripts/fresh_depth11_finite8_zero_transfer_20261018.py": "023060a1833715dd55280343089b75734a84c4beeb575be6b76911465375f9e4",
+    "results/fresh_depth11_finite8_zero_transfer_20261018.json": "09ba03c16ae2b494927e7a12b44ad255f12527dc4bb6c27cb3b4286b36a32e1a",
+    "results/fresh_depth11_finite8_zero_transfer_20261018.md": "227854073503670aa463389504902c51e63907c33f6c25b8f93a259fb17b051d",
+    "scripts/fresh_universal_deep_finite8_corridor_20261018.py": "b8978dcd9020aeec8aee70882cae90dc74d6276fd8573e83e0d0ff25aec943d1",
+    "results/fresh_universal_deep_finite8_corridor_20261018.json": "90942f47112d1605cc4525588cf4df84254dc2362d4408505629c08430860958",
+    "results/fresh_universal_deep_finite8_corridor_20261018.md": "c59423d9073aef0c03aa4f9fa60967b59ded752f360c24355283cad3a44d8219",
+    "scripts/fresh_deep_finite8_cycle_interface_20261017.py": "670276e555fb996314d07e93db136bcf7421cb00129aceaeb058351c527fbcf2",
+    "results/fresh_deep_finite8_cycle_interface_20261017.json": "eb05b89ba26f07b2f8020fefaeff7ed28354fd46f63c134d2aeb94e2cba58825",
+    "results/fresh_deep_finite8_cycle_interface_20261017.md": "15087e6a21bd5acd1410848354df10682720e72f962c9772375aefd5538aa7ef",
+    "scripts/fresh_distance8_ideal_corner_replacement_20261017.py": "858a000e6d3ed04fe19604c04b977c385cfe79dcc3001c4815bfd82bd73ab813",
+    "results/fresh_distance8_ideal_corner_replacement_20261017.json": "dc51b741b002d6596277f102fc79997f7a4be3c479369eec973e1e5d680e4057",
+    "results/fresh_distance8_ideal_corner_replacement_20261017.md": "83b6c9eb437a0eb39ac3caf1fbd482fba313cae120824b311006100273d1417a",
+    "scripts/fresh_finite8_cycle_replacement_20261017.py": "19040307bff6b0975aaf10627b964c04a8d294db479aedcb3910cf45144283e8",
+    "results/fresh_finite8_cycle_replacement_20261017.json": "3d5d36b40034c51815602dd4fc51a3e4096f36627246157f1317bc6d34acb286",
+    "results/fresh_finite8_cycle_replacement_20261017.md": "33a5320dacc54b69623dcde3eccc717f28bcf24dbe37e42c6ce0e91ab3dd0ee3",
+    "scripts/fresh_finite8_ideal5_local_replacement_20261017.py": "ed654349c1f60f61f59034bb833bdd30861c12bdf8f64ce1237c332e41cf855f",
+    "results/fresh_finite8_ideal5_local_replacement_20261017.json": "a0bd5dcd4e89bc645298bc0bb90378b7ca1e1a70d4c3bc64bc27ba9da5d66fad",
+    "results/fresh_finite8_ideal5_local_replacement_20261017.md": "3ea61aed17df260b3dcf2f480abbd1b00069477b2958d06eac7719d0659f3fe9",
+    "scripts/fresh_deep_finite8_dimension64_20261018.py": "d5409efe47afccaa7850361bff19dc85ba2344b0825bf3ca46278fcc62cecea6",
+    "results/fresh_deep_finite8_dimension64_20261018.json": "f10d5bbd5e60f89d18d128d58c93530aeae9fbef191a3bd3da4c9aba219cf57d",
+    "results/fresh_deep_finite8_dimension64_20261018.md": "75a3177e5cbfff3b8e2967306bbea26b5419280865920cedbf77ac26acd62267",
+    "scripts/fresh_finite7_ideal5_triangle_payments_20261017.py": "fd07f2b1e2549112cd3250f7d05f20e42aad778109c70918c92ef6e127654dfa",
+    "results/fresh_finite7_ideal5_triangle_payments_20261017.json": "0c3fca4551a2c58ac06ba0503647d33e121b240968615df72032547aac3a9b9b",
+    "results/fresh_finite7_ideal5_triangle_payments_20261017.md": "00d3f334ffefc3b926edfdbe7b319a7f6792d83e23fe94511ede7dc60b71bf75",
+    "scripts/fresh_cycle11_half_pair_transfer_20261018.py": "ac1cd88faa5fe3df0664b39bce935acb750e1c7ba98463cc74acc97c2c55bfa6",
+    "results/fresh_cycle11_half_pair_transfer_20261018.json": "d4933c0bc0b0c03bebd1ac97c063f411876a000c246ce2b8470f0fbedf9fd2ea",
+    "results/fresh_cycle11_half_pair_transfer_20261018.md": "ec117a499ddad7cf8e87426e467d54cde295c0956428b2a8bbda5140abcdecd5",
+    "scripts/fresh_order11_bcd_half_pair_transfer_20261018.py": "feda6c54852b8544bed370a5934795eb031dc437788778a11686f25aa4311fa5",
+    "results/fresh_order11_bcd_half_pair_transfer_20261018.json": "24729797636fa9e783d0e5e8092c500de8cd0d2cb21e698322a48cb47eebf733",
+    "results/fresh_order11_bcd_half_pair_transfer_20261018.md": "7e59403fa47e5195b089b558554c000448ad803d805bd60095244d1ac62be3b7",
+    "scripts/fresh_order11_order17_dimension63_20261018.py": "52755fa17a007531fe1faab3f5d66de100c8c7561bfa90296d8a552a719cd0af",
+    "results/fresh_order11_order17_dimension63_20261018.json": "9e0048c6b26c09aa4328bca71a051cd284bb3e2eddc92c535f783276650c8d84",
+    "results/fresh_order11_order17_dimension63_20261018.md": "1aaa4f9c0578b4c7d1b2dedd48fbadd7f723095ded0fe28dfdfdd95626e2784d",
+    "scripts/fresh_sparse_coupon_order11_13_dimension62_20261018.py": "d5b0c1fb656a0b07e49ba36626615993a2078fbf096afb26af8e1bf3db83f2bc",
+    "results/fresh_sparse_coupon_order11_13_dimension62_20261018.json": "a0777309342ed7307e89755557fd2966040fe24565cf12fbe345800de2a954ce",
+    "results/fresh_sparse_coupon_order11_13_dimension62_20261018.md": "b7a9a249bd15f5db1b6937e3a957964d5158fb67ea7f6177ccaad1f1274f1dac",
+    "scripts/fresh_order17_e6_unit_coupon_zero_transfer_20261018.py": "060ba2522ab988532ac198ab2edf66e8b380e68450f8dee5ccf59f44bf86d09b",
+    "results/fresh_order17_e6_unit_coupon_zero_transfer_20261018.json": "e6c9bb5d5820880f413cfadf7998330f91040077968d822d498471be0bda4d0b",
+    "results/fresh_order17_e6_unit_coupon_zero_transfer_20261018.md": "d315bd51a5ba55323c5565fc1a8ceeb358e527e2c438879dafcfc4aca4f0ac62",
+    "scripts/fresh_order14_ambient62_ideal_margin_closure_20261018.py": "7fd1aec0954be3bb6ed0d6b345b0e28b49a44f2b14befb9eeea524367f35c9ff",
+    "results/fresh_order14_ambient62_ideal_margin_closure_20261018.json": "2efca42d91ab1c78aec1986f8357f244328e262409d955b4fa90ace0c14a32d2",
+    "results/fresh_order14_ambient62_ideal_margin_closure_20261018.md": "50f8336ade6489b2330c6076a3b9af5b2b12995d069a483ec5eec9ecc3df1b4b",
+    "scripts/fresh_rank15_rank16_dimension61_20261018.py": "1fb62545f788cdb718024d89f667c0fa1364c6b691b4860e66a9a2b3dcbab4e6",
+    "results/fresh_rank15_rank16_dimension61_20261018.json": "78a434efd06f27d9642f4115107971ddf443e4e574f9dd9971d1303aaa8dc589",
+    "results/fresh_rank15_rank16_dimension61_20261018.md": "ce1a00a2eccd0c913aa14bd70bd60f80bc89ec0f6eeeba0e406c69a21a4b6587"
+  },
+  "retained_contact": {
+    "feature_depth": 8,
+    "retained_outward_whites": 6,
+    "minimal_indefinite_order_bound": 10,
+    "B_order_at_most": 9,
+    "edge_gates": [
+      {
+        "outward_distance": 3,
+        "inverse_diagonal": "2"
+      },
+      {
+        "outward_distance": 4,
+        "inverse_diagonal": "20/9"
+      },
+      {
+        "outward_distance": 5,
+        "inverse_diagonal": "20/9"
+      },
+      {
+        "outward_distance": 6,
+        "inverse_diagonal": "2"
+      }
+    ],
+    "strict_PD_excludes_equality": true,
+    "contact7_inverse": "14/9",
+    "contact8_inverse": "8/9",
+    "contact7_nonsimple_projection_lower": "28/9",
+    "contact8_label5_projection_strict_lower": "20/9",
+    "simultaneous7_and8_projection_lower": "4",
+    "disconnected_K_minus_c_extra_white_gate": "20/9",
+    "complete_missed_retained_contact_cases": [
+      {
+        "only_contact": 8,
+        "B_order": 9,
+        "extra_white": false,
+        "contact_label": [
+          3,
+          4
+        ],
+        "finite_outcomes": [
+          "A10",
+          "B10"
+        ]
+      },
+      {
+        "only_contact": 7,
+        "B_order": 9,
+        "ninth_B_node": "one inward step",
+        "contact_label": [
+          3
+        ],
+        "finite_outcomes": [
+          "A10"
+        ]
+      },
+      {
+        "only_contact": 7,
+        "B_order": 9,
+        "ninth_B_node": "outward step8",
+        "contact_label": [
+          3
+        ],
+        "finite_outcomes": [
+          "D10"
+        ]
+      },
+      {
+        "only_contact": 7,
+        "B_order": 8,
+        "extra_white": false,
+        "contact_label": [
+          3
+        ],
+        "finite_outcomes": [
+          "A9"
+        ]
+      },
+      {
+        "only_contact": 7,
+        "B_order": 8,
+        "extra_white": true,
+        "extra_white_contacts_only": "c",
+        "extra_bond_label": [
+          3,
+          4
+        ],
+        "finite_outcomes": [
+          "A10",
+          "B10"
+        ]
+      }
+    ],
+    "excluded_finite_matrices": [
+      {
+        "kind": "A",
+        "order": 9,
+        "rational_congruence_gram": [
+          [
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2"
+          ]
+        ],
+        "positive_pivots": [
+          "2",
+          "3/2",
+          "4/3",
+          "5/4",
+          "6/5",
+          "7/6",
+          "8/7",
+          "9/8",
+          "10/9"
+        ],
+        "determinant": "10"
+      },
+      {
+        "kind": "A",
+        "order": 10,
+        "rational_congruence_gram": [
+          [
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2"
+          ]
+        ],
+        "positive_pivots": [
+          "2",
+          "3/2",
+          "4/3",
+          "5/4",
+          "6/5",
+          "7/6",
+          "8/7",
+          "9/8",
+          "10/9",
+          "11/10"
+        ],
+        "determinant": "11"
+      },
+      {
+        "kind": "B",
+        "order": 10,
+        "rational_congruence_gram": [
+          [
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-2"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-2",
+            "4"
+          ]
+        ],
+        "positive_pivots": [
+          "2",
+          "3/2",
+          "4/3",
+          "5/4",
+          "6/5",
+          "7/6",
+          "8/7",
+          "9/8",
+          "10/9",
+          "2/5"
+        ],
+        "determinant": "4"
+      },
+      {
+        "kind": "D",
+        "order": 10,
+        "rational_congruence_gram": [
+          [
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "-1",
+            "-1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1",
+            "0",
+            "2"
+          ]
+        ],
+        "positive_pivots": [
+          "2",
+          "3/2",
+          "4/3",
+          "5/4",
+          "6/5",
+          "7/6",
+          "8/7",
+          "9/8",
+          "10/9",
+          "2/5"
+        ],
+        "determinant": "4"
+      }
+    ]
+  },
+  "corridor": {
+    "path_order": 21,
+    "marked_positions": [
+      6,
+      14
+    ],
+    "left_support": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "right_support": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "inverse_checks": [
+      {
+        "order": 8,
+        "inverse_product_entries": 64,
+        "leading_determinants": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      {
+        "order": 21,
+        "inverse_product_entries": 441,
+        "leading_determinants": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ]
+      }
+    ],
+    "block_factor": "17/352",
+    "residual_blocks": [
+      {
+        "side": "left",
+        "i": 4,
+        "j": 4,
+        "factors": [
+          5,
+          5
+        ],
+        "inverse_entry": "85/22",
+        "residual_entry": "85/32"
+      },
+      {
+        "side": "left",
+        "i": 4,
+        "j": 5,
+        "factors": [
+          5,
+          6
+        ],
+        "inverse_entry": "40/11",
+        "residual_entry": "35/16"
+      },
+      {
+        "side": "left",
+        "i": 4,
+        "j": 6,
+        "factors": [
+          5,
+          7
+        ],
+        "inverse_entry": "75/22",
+        "residual_entry": "55/32"
+      },
+      {
+        "side": "left",
+        "i": 4,
+        "j": 7,
+        "factors": [
+          5,
+          8
+        ],
+        "inverse_entry": "35/11",
+        "residual_entry": "5/4"
+      },
+      {
+        "side": "left",
+        "i": 5,
+        "j": 4,
+        "factors": [
+          6,
+          5
+        ],
+        "inverse_entry": "40/11",
+        "residual_entry": "35/16"
+      },
+      {
+        "side": "left",
+        "i": 5,
+        "j": 5,
+        "factors": [
+          6,
+          6
+        ],
+        "inverse_entry": "48/11",
+        "residual_entry": "21/8"
+      },
+      {
+        "side": "left",
+        "i": 5,
+        "j": 6,
+        "factors": [
+          6,
+          7
+        ],
+        "inverse_entry": "45/11",
+        "residual_entry": "33/16"
+      },
+      {
+        "side": "left",
+        "i": 5,
+        "j": 7,
+        "factors": [
+          6,
+          8
+        ],
+        "inverse_entry": "42/11",
+        "residual_entry": "3/2"
+      },
+      {
+        "side": "left",
+        "i": 6,
+        "j": 4,
+        "factors": [
+          7,
+          5
+        ],
+        "inverse_entry": "75/22",
+        "residual_entry": "55/32"
+      },
+      {
+        "side": "left",
+        "i": 6,
+        "j": 5,
+        "factors": [
+          7,
+          6
+        ],
+        "inverse_entry": "45/11",
+        "residual_entry": "33/16"
+      },
+      {
+        "side": "left",
+        "i": 6,
+        "j": 6,
+        "factors": [
+          7,
+          7
+        ],
+        "inverse_entry": "105/22",
+        "residual_entry": "77/32"
+      },
+      {
+        "side": "left",
+        "i": 6,
+        "j": 7,
+        "factors": [
+          7,
+          8
+        ],
+        "inverse_entry": "49/11",
+        "residual_entry": "7/4"
+      },
+      {
+        "side": "left",
+        "i": 7,
+        "j": 4,
+        "factors": [
+          8,
+          5
+        ],
+        "inverse_entry": "35/11",
+        "residual_entry": "5/4"
+      },
+      {
+        "side": "left",
+        "i": 7,
+        "j": 5,
+        "factors": [
+          8,
+          6
+        ],
+        "inverse_entry": "42/11",
+        "residual_entry": "3/2"
+      },
+      {
+        "side": "left",
+        "i": 7,
+        "j": 6,
+        "factors": [
+          8,
+          7
+        ],
+        "inverse_entry": "49/11",
+        "residual_entry": "7/4"
+      },
+      {
+        "side": "left",
+        "i": 7,
+        "j": 7,
+        "factors": [
+          8,
+          8
+        ],
+        "inverse_entry": "56/11",
+        "residual_entry": "2"
+      },
+      {
+        "side": "right",
+        "i": 13,
+        "j": 13,
+        "factors": [
+          8,
+          8
+        ],
+        "inverse_entry": "56/11",
+        "residual_entry": "2"
+      },
+      {
+        "side": "right",
+        "i": 13,
+        "j": 14,
+        "factors": [
+          8,
+          7
+        ],
+        "inverse_entry": "49/11",
+        "residual_entry": "7/4"
+      },
+      {
+        "side": "right",
+        "i": 13,
+        "j": 15,
+        "factors": [
+          8,
+          6
+        ],
+        "inverse_entry": "42/11",
+        "residual_entry": "3/2"
+      },
+      {
+        "side": "right",
+        "i": 13,
+        "j": 16,
+        "factors": [
+          8,
+          5
+        ],
+        "inverse_entry": "35/11",
+        "residual_entry": "5/4"
+      },
+      {
+        "side": "right",
+        "i": 14,
+        "j": 13,
+        "factors": [
+          7,
+          8
+        ],
+        "inverse_entry": "49/11",
+        "residual_entry": "7/4"
+      },
+      {
+        "side": "right",
+        "i": 14,
+        "j": 14,
+        "factors": [
+          7,
+          7
+        ],
+        "inverse_entry": "105/22",
+        "residual_entry": "77/32"
+      },
+      {
+        "side": "right",
+        "i": 14,
+        "j": 15,
+        "factors": [
+          7,
+          6
+        ],
+        "inverse_entry": "45/11",
+        "residual_entry": "33/16"
+      },
+      {
+        "side": "right",
+        "i": 14,
+        "j": 16,
+        "factors": [
+          7,
+          5
+        ],
+        "inverse_entry": "75/22",
+        "residual_entry": "55/32"
+      },
+      {
+        "side": "right",
+        "i": 15,
+        "j": 13,
+        "factors": [
+          6,
+          8
+        ],
+        "inverse_entry": "42/11",
+        "residual_entry": "3/2"
+      },
+      {
+        "side": "right",
+        "i": 15,
+        "j": 14,
+        "factors": [
+          6,
+          7
+        ],
+        "inverse_entry": "45/11",
+        "residual_entry": "33/16"
+      },
+      {
+        "side": "right",
+        "i": 15,
+        "j": 15,
+        "factors": [
+          6,
+          6
+        ],
+        "inverse_entry": "48/11",
+        "residual_entry": "21/8"
+      },
+      {
+        "side": "right",
+        "i": 15,
+        "j": 16,
+        "factors": [
+          6,
+          5
+        ],
+        "inverse_entry": "40/11",
+        "residual_entry": "35/16"
+      },
+      {
+        "side": "right",
+        "i": 16,
+        "j": 13,
+        "factors": [
+          5,
+          8
+        ],
+        "inverse_entry": "35/11",
+        "residual_entry": "5/4"
+      },
+      {
+        "side": "right",
+        "i": 16,
+        "j": 14,
+        "factors": [
+          5,
+          7
+        ],
+        "inverse_entry": "75/22",
+        "residual_entry": "55/32"
+      },
+      {
+        "side": "right",
+        "i": 16,
+        "j": 15,
+        "factors": [
+          5,
+          6
+        ],
+        "inverse_entry": "40/11",
+        "residual_entry": "35/16"
+      },
+      {
+        "side": "right",
+        "i": 16,
+        "j": 16,
+        "factors": [
+          5,
+          5
+        ],
+        "inverse_entry": "85/22",
+        "residual_entry": "85/32"
+      }
+    ],
+    "cross_factorizations": [
+      {
+        "i": 4,
+        "j": 13,
+        "factors": [
+          5,
+          8
+        ],
+        "entry": "20/11"
+      },
+      {
+        "i": 4,
+        "j": 14,
+        "factors": [
+          5,
+          7
+        ],
+        "entry": "35/22"
+      },
+      {
+        "i": 4,
+        "j": 15,
+        "factors": [
+          5,
+          6
+        ],
+        "entry": "15/11"
+      },
+      {
+        "i": 4,
+        "j": 16,
+        "factors": [
+          5,
+          5
+        ],
+        "entry": "25/22"
+      },
+      {
+        "i": 5,
+        "j": 13,
+        "factors": [
+          6,
+          8
+        ],
+        "entry": "24/11"
+      },
+      {
+        "i": 5,
+        "j": 14,
+        "factors": [
+          6,
+          7
+        ],
+        "entry": "21/11"
+      },
+      {
+        "i": 5,
+        "j": 15,
+        "factors": [
+          6,
+          6
+        ],
+        "entry": "18/11"
+      },
+      {
+        "i": 5,
+        "j": 16,
+        "factors": [
+          6,
+          5
+        ],
+        "entry": "15/11"
+      },
+      {
+        "i": 6,
+        "j": 13,
+        "factors": [
+          7,
+          8
+        ],
+        "entry": "28/11"
+      },
+      {
+        "i": 6,
+        "j": 14,
+        "factors": [
+          7,
+          7
+        ],
+        "entry": "49/22"
+      },
+      {
+        "i": 6,
+        "j": 15,
+        "factors": [
+          7,
+          6
+        ],
+        "entry": "21/11"
+      },
+      {
+        "i": 6,
+        "j": 16,
+        "factors": [
+          7,
+          5
+        ],
+        "entry": "35/22"
+      },
+      {
+        "i": 7,
+        "j": 13,
+        "factors": [
+          8,
+          8
+        ],
+        "entry": "32/11"
+      },
+      {
+        "i": 7,
+        "j": 14,
+        "factors": [
+          8,
+          7
+        ],
+        "entry": "28/11"
+      },
+      {
+        "i": 7,
+        "j": 15,
+        "factors": [
+          8,
+          6
+        ],
+        "entry": "24/11"
+      },
+      {
+        "i": 7,
+        "j": 16,
+        "factors": [
+          8,
+          5
+        ],
+        "entry": "20/11"
+      }
+    ],
+    "inequalities": [
+      "q-2 >= alpha*U^2",
+      "r-2 >= alpha*V^2",
+      "s=U*V/22"
+    ],
+    "determinant_coefficient": "3/11264",
+    "minimum_U": 5,
+    "minimum_V": 5,
+    "strict_determinant_lower_bound": "1875/11264"
+  },
+  "inherited_normalized_profiles": [
+    {
+      "name": "isolated",
+      "position": [
+        0,
+        0
+      ],
+      "normalized_moments": [
+        "0",
+        "0",
+        "2"
+      ]
+    },
+    {
+      "name": "end3_0",
+      "position": [
+        1,
+        0
+      ],
+      "normalized_moments": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "end3_1",
+      "position": [
+        0,
+        1
+      ],
+      "normalized_moments": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "name": "end4_0",
+      "position": [
+        1,
+        0
+      ],
+      "normalized_moments": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "end4_1",
+      "position": [
+        0,
+        1
+      ],
+      "normalized_moments": [
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "name": "next3_0",
+      "position": [
+        2,
+        0
+      ],
+      "normalized_moments": [
+        "2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "next3_1",
+      "position": [
+        0,
+        2
+      ],
+      "normalized_moments": [
+        "0",
+        "2",
+        "0"
+      ]
+    },
+    {
+      "name": "both_ends3",
+      "position": [
+        1,
+        1
+      ],
+      "normalized_moments": [
+        "1/2",
+        "1/2",
+        "0"
+      ]
+    }
+  ],
+  "protected_cycle_cases": [
+    {
+      "arcs": [
+        6,
+        8
+      ],
+      "fixed_leaf_distance": 5
+    },
+    {
+      "arcs": [
+        7,
+        8
+      ],
+      "fixed_leaf_distance": 6
+    },
+    {
+      "arcs": [
+        8,
+        8
+      ],
+      "fixed_leaf_distance": 7
+    }
+  ],
+  "cycle_regions": [
+    {
+      "P": 8,
+      "Q_lower": 9,
+      "all_Q_at_least": false,
+      "classifications": [
+        {
+          "name": "isolated",
+          "classification": "unrestricted",
+          "distance": null
+        },
+        {
+          "name": "end3_0",
+          "classification": "changed_deep8_requires_neighbor",
+          "distance": 8
+        },
+        {
+          "name": "end3_1",
+          "classification": "old_leaf9_requires_neighbor",
+          "distance": 9
+        },
+        {
+          "name": "end4_0",
+          "classification": "retained_nondeep_finite_unit",
+          "distance": 8
+        },
+        {
+          "name": "end4_1",
+          "classification": "retained_sealed_leaf9_unit",
+          "distance": 9
+        },
+        {
+          "name": "next3_0",
+          "classification": "retained_nondeep_finite_unit",
+          "distance": 7
+        },
+        {
+          "name": "next3_1",
+          "classification": "retained_nondeep_finite_unit",
+          "distance": 8
+        },
+        {
+          "name": "both_ends3",
+          "classification": "unrestricted",
+          "distance": null
+        }
+      ],
+      "retained_profiles": [
+        "isolated",
+        "end3_0",
+        "end3_1",
+        "both_ends3"
+      ],
+      "ordered_pairs": [
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "2"
+          ],
+          "minimum": "1/18"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "2",
+            "1/2"
+          ],
+          "minimum": "7/48"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "2",
+            "1/2"
+          ],
+          "minimum": "25/144"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "0"
+          ],
+          "minimum": "7/24"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "2"
+          ],
+          "minimum": "7/48"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "1"
+          ],
+          "minimum": "13/144"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "1"
+          ],
+          "minimum": "25/144"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "0"
+          ],
+          "minimum": "55/144"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "2"
+          ],
+          "minimum": "25/144"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "1"
+          ],
+          "minimum": "25/144"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "1"
+          ],
+          "minimum": "7/48"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "0"
+          ],
+          "minimum": "59/144"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "2"
+          ],
+          "minimum": "7/24"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "0",
+            "1/2"
+          ],
+          "minimum": "55/144"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "0",
+            "1/2"
+          ],
+          "minimum": "59/144"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "19/36"
+        }
+      ],
+      "rectangle_values": [
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1/18",
+          "correction": "0",
+          "determinant_lower_bound": "1/18"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1/2",
+          "correction": "17/144",
+          "determinant_lower_bound": "89/144"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "7/48"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "19/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "31/48"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1/18",
+          "correction": "17/144",
+          "determinant_lower_bound": "25/144"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "55/72",
+          "correction": "0",
+          "determinant_lower_bound": "55/72"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "7/24",
+          "correction": "0",
+          "determinant_lower_bound": "7/24"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/2",
+          "correction": "17/144",
+          "determinant_lower_bound": "89/144"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "7/48"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/2",
+          "correction": "0",
+          "determinant_lower_bound": "1/2"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/2",
+          "correction": "17/144",
+          "determinant_lower_bound": "89/144"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "-1/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "13/144"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/2",
+          "correction": "17/144",
+          "determinant_lower_bound": "89/144"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/18",
+          "correction": "17/144",
+          "determinant_lower_bound": "25/144"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "55/72",
+          "correction": "0",
+          "determinant_lower_bound": "55/72"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/2",
+          "correction": "17/144",
+          "determinant_lower_bound": "89/144"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/72",
+          "correction": "17/144",
+          "determinant_lower_bound": "55/144"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "31/48"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/18",
+          "correction": "17/144",
+          "determinant_lower_bound": "25/144"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/2",
+          "correction": "0",
+          "determinant_lower_bound": "1/2"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "31/48"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/18",
+          "correction": "17/144",
+          "determinant_lower_bound": "25/144"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "31/48"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "7/48"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "55/72",
+          "correction": "0",
+          "determinant_lower_bound": "55/72"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "19/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "31/48"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "7/24",
+          "correction": "17/144",
+          "determinant_lower_bound": "59/144"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "55/72",
+          "correction": "0",
+          "determinant_lower_bound": "55/72"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "7/24",
+          "correction": "0",
+          "determinant_lower_bound": "7/24"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1/2",
+          "correction": "17/144",
+          "determinant_lower_bound": "89/144"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "55/72",
+          "correction": "0",
+          "determinant_lower_bound": "55/72"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "19/72",
+          "correction": "17/144",
+          "determinant_lower_bound": "55/144"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "19/36",
+          "correction": "17/144",
+          "determinant_lower_bound": "31/48"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "55/72",
+          "correction": "0",
+          "determinant_lower_bound": "55/72"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "7/24",
+          "correction": "17/144",
+          "determinant_lower_bound": "59/144"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "55/72",
+          "correction": "0",
+          "determinant_lower_bound": "55/72"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "55/72",
+          "correction": "0",
+          "determinant_lower_bound": "55/72"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "19/36",
+          "correction": "0",
+          "determinant_lower_bound": "19/36"
+        }
+      ],
+      "minimum": "1/18"
+    },
+    {
+      "P": 8,
+      "Q_lower": 10,
+      "all_Q_at_least": false,
+      "classifications": [
+        {
+          "name": "isolated",
+          "classification": "unrestricted",
+          "distance": null
+        },
+        {
+          "name": "end3_0",
+          "classification": "changed_deep8_requires_neighbor",
+          "distance": 8
+        },
+        {
+          "name": "end3_1",
+          "classification": "unrestricted",
+          "distance": 10
+        },
+        {
+          "name": "end4_0",
+          "classification": "retained_nondeep_finite_unit",
+          "distance": 8
+        },
+        {
+          "name": "end4_1",
+          "classification": "unrestricted",
+          "distance": 10
+        },
+        {
+          "name": "next3_0",
+          "classification": "retained_nondeep_finite_unit",
+          "distance": 7
+        },
+        {
+          "name": "next3_1",
+          "classification": "retained_sealed_leaf9_unit",
+          "distance": 9
+        },
+        {
+          "name": "both_ends3",
+          "classification": "unrestricted",
+          "distance": null
+        }
+      ],
+      "retained_profiles": [
+        "isolated",
+        "end3_0",
+        "end3_1",
+        "end4_1",
+        "both_ends3"
+      ],
+      "ordered_pairs": [
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "2"
+          ],
+          "minimum": "1/10"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "2",
+            "1/2"
+          ],
+          "minimum": "7/40"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "1"
+          ],
+          "minimum": "9/80"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "0"
+          ],
+          "minimum": "27/80"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "0"
+          ],
+          "minimum": "13/40"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "2"
+          ],
+          "minimum": "7/40"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "1"
+          ],
+          "minimum": "9/80"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "1"
+          ],
+          "minimum": "17/80"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "0"
+          ],
+          "minimum": "7/16"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "0"
+          ],
+          "minimum": "2/5"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "2"
+          ],
+          "minimum": "9/80"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "1",
+            "1/2"
+          ],
+          "minimum": "17/80"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "1"
+          ],
+          "minimum": "1/10"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "0"
+          ],
+          "minimum": "13/40"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "0"
+          ],
+          "minimum": "27/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "2"
+          ],
+          "minimum": "27/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "0",
+            "1/2"
+          ],
+          "minimum": "7/16"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "1"
+          ],
+          "minimum": "13/40"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "11/20"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "9/16"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "2"
+          ],
+          "minimum": "13/40"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "0",
+            "1/2"
+          ],
+          "minimum": "2/5"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "1"
+          ],
+          "minimum": "27/80"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "9/16"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "11/20"
+        }
+      ],
+      "rectangle_values": [
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1/10",
+          "correction": "0",
+          "determinant_lower_bound": "1/10"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1/16",
+          "correction": "9/80",
+          "determinant_lower_bound": "7/40"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/80",
+          "correction": "0",
+          "determinant_lower_bound": "9/80"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "27/80",
+          "correction": "0",
+          "determinant_lower_bound": "27/80"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/40",
+          "correction": "0",
+          "determinant_lower_bound": "13/40"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/16",
+          "correction": "9/80",
+          "determinant_lower_bound": "7/40"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "41/80",
+          "correction": "0",
+          "determinant_lower_bound": "41/80"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "0",
+          "correction": "9/80",
+          "determinant_lower_bound": "9/80"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/10",
+          "correction": "9/80",
+          "determinant_lower_bound": "17/80"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "13/40",
+          "correction": "9/80",
+          "determinant_lower_bound": "7/16"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "23/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "2/5"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/80",
+          "correction": "0",
+          "determinant_lower_bound": "9/80"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1/10",
+          "correction": "9/80",
+          "determinant_lower_bound": "17/80"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1/10",
+          "correction": "0",
+          "determinant_lower_bound": "1/10"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/40",
+          "correction": "0",
+          "determinant_lower_bound": "13/40"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "27/80",
+          "correction": "0",
+          "determinant_lower_bound": "27/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "27/80",
+          "correction": "0",
+          "determinant_lower_bound": "27/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "13/40",
+          "correction": "9/80",
+          "determinant_lower_bound": "7/16"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/40",
+          "correction": "0",
+          "determinant_lower_bound": "13/40"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/40",
+          "correction": "0",
+          "determinant_lower_bound": "13/40"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "41/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "5/8"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "23/80",
+          "correction": "9/80",
+          "determinant_lower_bound": "2/5"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "27/80",
+          "correction": "0",
+          "determinant_lower_bound": "27/80"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "63/80",
+          "correction": "0",
+          "determinant_lower_bound": "63/80"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "9/16",
+          "correction": "0",
+          "determinant_lower_bound": "9/16"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/40",
+          "correction": "0",
+          "determinant_lower_bound": "31/40"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "11/20",
+          "correction": "0",
+          "determinant_lower_bound": "11/20"
+        }
+      ],
+      "minimum": "1/10"
+    },
+    {
+      "P": 8,
+      "Q_lower": 11,
+      "all_Q_at_least": true,
+      "classifications": [
+        {
+          "name": "isolated",
+          "classification": "unrestricted",
+          "distance": null
+        },
+        {
+          "name": "end3_0",
+          "classification": "changed_deep8_requires_neighbor",
+          "distance": 8
+        },
+        {
+          "name": "end3_1",
+          "classification": "unrestricted",
+          "distance": 11
+        },
+        {
+          "name": "end4_0",
+          "classification": "retained_nondeep_finite_unit",
+          "distance": 8
+        },
+        {
+          "name": "end4_1",
+          "classification": "unrestricted",
+          "distance": 11
+        },
+        {
+          "name": "next3_0",
+          "classification": "retained_nondeep_finite_unit",
+          "distance": 7
+        },
+        {
+          "name": "next3_1",
+          "classification": "unrestricted",
+          "distance": 10
+        },
+        {
+          "name": "both_ends3",
+          "classification": "unrestricted",
+          "distance": null
+        }
+      ],
+      "retained_profiles": [
+        "isolated",
+        "end3_0",
+        "end3_1",
+        "end4_1",
+        "next3_1",
+        "both_ends3"
+      ],
+      "ordered_pairs": [
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "2"
+          ],
+          "minimum": "3/22"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "2",
+            "1/2"
+          ],
+          "minimum": "35/176"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "1"
+          ],
+          "minimum": "7/44"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "0"
+          ],
+          "minimum": "3/8"
+        },
+        {
+          "c": "isolated",
+          "d": "next3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "0"
+          ],
+          "minimum": "7/44"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "2",
+            "0"
+          ],
+          "minimum": "31/88"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "2"
+          ],
+          "minimum": "35/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "1"
+          ],
+          "minimum": "23/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "1"
+          ],
+          "minimum": "43/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "0"
+          ],
+          "minimum": "81/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "next3_1",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "0"
+          ],
+          "minimum": "47/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "fixed_cauchy_side": "c",
+          "corrected_normalized_constants": [
+            "1/2",
+            "0"
+          ],
+          "minimum": "73/176"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "2"
+          ],
+          "minimum": "7/44"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "1",
+            "1/2"
+          ],
+          "minimum": "43/176"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "1"
+          ],
+          "minimum": "7/44"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "0"
+          ],
+          "minimum": "3/8"
+        },
+        {
+          "c": "end3_1",
+          "d": "next3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "0"
+          ],
+          "minimum": "3/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "1",
+            "0"
+          ],
+          "minimum": "3/8"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "2"
+          ],
+          "minimum": "3/8"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "0",
+            "1/2"
+          ],
+          "minimum": "81/176"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "1"
+          ],
+          "minimum": "3/8"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "13/22"
+        },
+        {
+          "c": "end4_1",
+          "d": "next3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "31/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "2"
+          ],
+          "minimum": "7/44"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "0",
+            "1/2"
+          ],
+          "minimum": "47/176"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "1"
+          ],
+          "minimum": "3/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "31/88"
+        },
+        {
+          "c": "next3_1",
+          "d": "next3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "1/11"
+        },
+        {
+          "c": "next3_1",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "3/8"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "2"
+          ],
+          "minimum": "31/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "fixed_cauchy_side": "d",
+          "corrected_normalized_constants": [
+            "0",
+            "1/2"
+          ],
+          "minimum": "73/176"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "1"
+          ],
+          "minimum": "3/8"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "13/22"
+        },
+        {
+          "c": "both_ends3",
+          "d": "next3_1",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "3/8"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "fixed_cauchy_side": null,
+          "corrected_normalized_constants": [
+            "0",
+            "0"
+          ],
+          "minimum": "25/44"
+        }
+      ],
+      "rectangle_values": [
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "isolated",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/22",
+          "correction": "0",
+          "determinant_lower_bound": "3/22"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1/11",
+          "correction": "19/176",
+          "determinant_lower_bound": "35/176"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "isolated",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "7/44",
+          "correction": "0",
+          "determinant_lower_bound": "7/44"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "isolated",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/8",
+          "correction": "0",
+          "determinant_lower_bound": "3/8"
+        },
+        {
+          "c": "isolated",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "isolated",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "isolated",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "7/44",
+          "correction": "0",
+          "determinant_lower_bound": "7/44"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "isolated",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/88",
+          "correction": "0",
+          "determinant_lower_bound": "31/88"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/11",
+          "correction": "19/176",
+          "determinant_lower_bound": "35/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "23/44",
+          "correction": "0",
+          "determinant_lower_bound": "23/44"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "23/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "3/22",
+          "correction": "19/176",
+          "determinant_lower_bound": "43/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "31/88",
+          "correction": "19/176",
+          "determinant_lower_bound": "81/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_0",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "7/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "47/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "end3_0",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "c",
+          "raw": "27/88",
+          "correction": "19/176",
+          "determinant_lower_bound": "73/176"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "7/44",
+          "correction": "0",
+          "determinant_lower_bound": "7/44"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "3/22",
+          "correction": "19/176",
+          "determinant_lower_bound": "43/176"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "7/44",
+          "correction": "0",
+          "determinant_lower_bound": "7/44"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/8",
+          "correction": "0",
+          "determinant_lower_bound": "3/8"
+        },
+        {
+          "c": "end3_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/22",
+          "correction": "0",
+          "determinant_lower_bound": "3/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/8",
+          "correction": "0",
+          "determinant_lower_bound": "3/8"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/8",
+          "correction": "0",
+          "determinant_lower_bound": "3/8"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "31/88",
+          "correction": "19/176",
+          "determinant_lower_bound": "81/176"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/8",
+          "correction": "0",
+          "determinant_lower_bound": "3/8"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end4_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "end4_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/88",
+          "correction": "0",
+          "determinant_lower_bound": "31/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "end4_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "next3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "next3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "7/44",
+          "correction": "0",
+          "determinant_lower_bound": "7/44"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "7/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "47/176"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/22",
+          "correction": "0",
+          "determinant_lower_bound": "3/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "next3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "next3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/88",
+          "correction": "0",
+          "determinant_lower_bound": "31/88"
+        },
+        {
+          "c": "next3_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "next3_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1/11",
+          "correction": "0",
+          "determinant_lower_bound": "1/11"
+        },
+        {
+          "c": "next3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "next3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "next3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "next3_1",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/8",
+          "correction": "0",
+          "determinant_lower_bound": "3/8"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "isolated",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "31/88",
+          "correction": "0",
+          "determinant_lower_bound": "31/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "23/44",
+          "correction": "19/176",
+          "determinant_lower_bound": "111/176"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_0",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": "d",
+          "raw": "27/88",
+          "correction": "19/176",
+          "determinant_lower_bound": "73/176"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/8",
+          "correction": "0",
+          "determinant_lower_bound": "3/8"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "71/88",
+          "correction": "0",
+          "determinant_lower_bound": "71/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "end4_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "both_ends3",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "13/22",
+          "correction": "0",
+          "determinant_lower_bound": "13/22"
+        },
+        {
+          "c": "both_ends3",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "next3_1",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "3/8",
+          "correction": "0",
+          "determinant_lower_bound": "3/8"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "1",
+          "correction": "0",
+          "determinant_lower_bound": "1"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            0,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            0
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "69/88",
+          "correction": "0",
+          "determinant_lower_bound": "69/88"
+        },
+        {
+          "c": "both_ends3",
+          "d": "both_ends3",
+          "upper_reciprocals": [
+            1,
+            1
+          ],
+          "fixed_cauchy_side": null,
+          "raw": "25/44",
+          "correction": "0",
+          "determinant_lower_bound": "25/44"
+        }
+      ],
+      "minimum": "1/11"
+    }
+  ],
+  "cycle_ordered_pairs": 77,
+  "cycle_rectangle_values": 308,
+  "current_baseline": "fresh_rank15_rank16_dimension61_20261018",
+  "feature_depth": 8,
+  "finite_distance": 8,
+  "new_weight": "0",
+  "previous_feature_depth": 11,
+  "triangle_minimum": 2,
+  "quadrilateral_minimum": 1,
+  "ideal_weights_unchanged": true,
+  "all_other_finite_weights_and_coupons_unchanged": true,
+  "local_theorem": "In the completed dimension61 simultaneous rule delete precisely all remaining whole finite A/B/D distance8 payments whose marks both have feature depth>=8. Every triangle still receives>=2 and every quadrilateral>=1.",
+  "scope": "Written universal local theorem and exact matrix/profile inequalities. No new finite budget, ideal reduction, global dimension bound or finite-volume example. Published classification and inherited actual-face geometry remain explicit inputs."
+}

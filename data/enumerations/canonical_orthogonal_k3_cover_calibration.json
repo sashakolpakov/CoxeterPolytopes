@@ -1,0 +1,224 @@
+{
+  "schema": "coxeter.canonical_orthogonal_k3_cover_calibration.v1",
+  "status_date": "2026-08-10",
+  "scope": "Exact weakest canonical-orthogonal rank hypothesis, the strong-Coble K3-cover class theorem, and frozen carrier calibrations. This is not a universal polytope-to-surface theorem.",
+  "rank_theorem": {
+    "minimal_hypothesis": "A positive-similarity injection of the full restriction-of-scalars trace space T into Num(X)_Q with image contained in K_X^perp, for one minimal smooth projective surface X.",
+    "trace_rank": "d*(n+1)",
+    "complex_ceiling": 20,
+    "positive_characteristic_ceiling": 22,
+    "operator_relations_required": false,
+    "operator_faithfulness_required": false,
+    "effectivity_required": false,
+    "root_spanning_K_fixing_isometries_are_only_a_sufficient_certificate": true
+  },
+  "strong_coble_cover_theorem": {
+    "characteristic_excluded": 2,
+    "boundary_components_symbol": "b",
+    "surface_picard_rank": "10+b",
+    "full_nef_hyperbolic_dimension": "9+b",
+    "cover": "The double cover branched over the smooth disjoint divisor B in |-2K_S| is a smooth K3 surface.",
+    "embedded_lattice": "2*<Pic(S),B_1/2,...,B_b/2>",
+    "embedded_rank": "10+b",
+    "canonical_cover_cohomological_boundary_ceiling": {
+      "complex": 10,
+      "positive_characteristic_not_2": 12
+    },
+    "canonical_cover_cohomological_dimension_ceiling": {
+      "complex": 19,
+      "positive_characteristic_not_2": 21
+    },
+    "best_known_classwide_boundary_ceiling": 10,
+    "best_known_classwide_dimension_ceiling": 19,
+    "best_known_classwide_bound_source": "Kondo, Coble surfaces with finite automorphism group, Section 3, citing Dolgachev--Kondo, Corollary 9.1.5",
+    "uses_finite_automorphism_classification": false
+  },
+  "action_levels": {
+    "A": "actual surface automorphism",
+    "M_coherent": "a coherent faithful Coxeter representation in the global complex-K3 monodromy group",
+    "M_generatorwise": "each simple reflection has a global complex-K3 monodromy lift, but the chosen lifts are not certified to satisfy all Coxeter relations on the orthogonal complement",
+    "C": "an algebraic divisor correspondence induces the required pairing isometry",
+    "I": "only an abstract integral Neron-Severi isometry is certified",
+    "none": "no action lift is needed for rank because K is numerically trivial"
+  },
+  "theoretical_sources": {
+    "kondo_coble_2021": {
+      "arxiv": "2102.00591",
+      "claims_used": [
+        "strong Coble means rational with a unique reduced disjoint anti-bicanonical boundary",
+        "the canonical double cover in characteristic not 2 is a K3 surface",
+        "every strong Coble surface has at most 10 boundary components",
+        "the finite-automorphism locus has exactly nine classes and maximal boundary count 8",
+        "the positive-characteristic Type-VI and Type-MII covering K3 surfaces are supersingular"
+      ]
+    },
+    "huybrechts_k3_lectures": {
+      "doi": "10.1017/CBO9781316594193",
+      "location": "Chapter 7, Proposition 5.5",
+      "claim_used": "Mon(X)=O^+(H^2(X,Z)), so every (-2)-reflection is a global complex-K3 monodromy element"
+    },
+    "surface_classification_input": {
+      "machine_verified": false,
+      "claim_used": "a minimal surface with numerically trivial canonical class is of Kodaira dimension zero, with the numerical-rank ceilings stated in the theorem"
+    }
+  },
+  "rows": [
+    {
+      "id": "wehler_h2_3",
+      "characteristic": 0,
+      "n": 2,
+      "facets": 3,
+      "field": "Q",
+      "d": 1,
+      "trace_rank": 3,
+      "minimal_carrier": "complex K3",
+      "carrier_rank_or_embedded_rank": 3,
+      "canonical_orthogonality": "automatic because K_X=0",
+      "action_level": "A",
+      "global_complex_k3_monodromy_membership": "coherent_via_actual_automorphisms",
+      "explicit_family_loops_archived": false,
+      "actual_automorphisms": true,
+      "algebraic_correspondences": "graphs of the three deck involutions"
+    },
+    {
+      "id": "bugaenko_h8_11",
+      "characteristic": 0,
+      "n": 8,
+      "facets": 11,
+      "field": "Q(sqrt(5))",
+      "d": 2,
+      "trace_rank": 18,
+      "minimal_carrier": "complex K3 with NS equal to the rank-18 trace lattice",
+      "carrier_rank_or_embedded_rank": 18,
+      "canonical_orthogonality": "automatic because K_X=0",
+      "action_level": "M_coherent",
+      "global_complex_k3_monodromy_membership": "each field reflection is the product of two orthogonal (-2)-root reflections; the extensions are the identity on NS-perp",
+      "explicit_family_loops_archived": false,
+      "actual_automorphisms": false,
+      "algebraic_correspondences": "products of integral divisor-root reflection correspondences"
+    },
+    {
+      "id": "coble_type_ii_h10_30",
+      "characteristic": 0,
+      "n": 10,
+      "facets": 30,
+      "field": "Q",
+      "d": 1,
+      "trace_rank": 11,
+      "boundary_components": 1,
+      "minimal_carrier": "canonical complex K3 double cover",
+      "carrier_rank_or_embedded_rank": 11,
+      "canonical_orthogonality": "automatic because K_X=0",
+      "action_level": "M_generatorwise",
+      "global_complex_k3_monodromy_membership": "each facet reflection has a root or paired-root Picard-Lefschetz lift",
+      "explicit_family_loops_archived": false,
+      "coherent_coxeter_monodromy_representation_certified": false,
+      "actual_automorphisms": false,
+      "algebraic_correspondences": "integral root or paired-root divisor correspondences on the cover"
+    },
+    {
+      "id": "coble_type_i_h11_26",
+      "characteristic": 0,
+      "n": 11,
+      "facets": 26,
+      "field": "Q",
+      "d": 1,
+      "trace_rank": 12,
+      "boundary_components": 2,
+      "minimal_carrier": "canonical complex K3 double cover",
+      "carrier_rank_or_embedded_rank": 12,
+      "canonical_orthogonality": "automatic because K_X=0",
+      "action_level": "M_generatorwise",
+      "global_complex_k3_monodromy_membership": "each facet reflection has a root or paired-root Picard-Lefschetz lift",
+      "explicit_family_loops_archived": false,
+      "coherent_coxeter_monodromy_representation_certified": false,
+      "actual_automorphisms": false,
+      "algebraic_correspondences": "integral root or paired-root divisor correspondences on the cover"
+    },
+    {
+      "id": "coble_type_vi_char3_h14_60",
+      "characteristic": 3,
+      "n": 14,
+      "facets": 60,
+      "field": "Q",
+      "d": 1,
+      "trace_rank": 15,
+      "boundary_components": 5,
+      "minimal_carrier": "supersingular K3 canonical double cover",
+      "carrier_rank_or_embedded_rank": 15,
+      "ambient_k3_picard_rank": 22,
+      "canonical_orthogonality": "automatic because K_X=0",
+      "action_level": "C",
+      "positive_characteristic_monodromy_certified": false,
+      "actual_automorphisms": false,
+      "algebraic_correspondences": "integral root or paired-root divisor correspondences on the cover"
+    },
+    {
+      "id": "coble_type_mii_char3_h17_48",
+      "characteristic": 3,
+      "n": 17,
+      "facets": 48,
+      "field": "Q",
+      "d": 1,
+      "trace_rank": 18,
+      "boundary_components": 8,
+      "minimal_carrier": "supersingular K3 canonical double cover",
+      "carrier_rank_or_embedded_rank": 18,
+      "ambient_k3_picard_rank": 22,
+      "canonical_orthogonality": "automatic because K_X=0",
+      "action_level": "C",
+      "positive_characteristic_monodromy_certified": false,
+      "actual_automorphisms": false,
+      "algebraic_correspondences": "integral root or paired-root divisor correspondences on the cover"
+    },
+    {
+      "id": "seven_complex_enriques_full_nef_h9",
+      "characteristic": 0,
+      "n": 9,
+      "facets": [12, 12, 20, 20, 20, 20, 20],
+      "field": "Q",
+      "d": 1,
+      "trace_rank": 10,
+      "row_count": 7,
+      "minimal_carrier": "complex Enriques surface; alternatively its etale K3 cover",
+      "carrier_rank_or_embedded_rank": 10,
+      "canonical_orthogonality": "automatic because K_Y is numerically trivial",
+      "action_level": "M_generatorwise",
+      "global_complex_k3_monodromy_membership": "a nodal wall lifts to two disjoint (-2)-roots and the product of their reflections restricts to the Enriques wall reflection",
+      "explicit_family_loops_archived": false,
+      "coherent_coxeter_monodromy_representation_certified": false,
+      "actual_automorphisms": false,
+      "algebraic_correspondences": "paired-root divisor correspondences on the K3 cover"
+    }
+  ],
+  "summary": {
+    "row_groups": 7,
+    "individual_carriers_counting_seven_enriques_types": 13,
+    "all_rows_pass_canonical_orthogonal_rank_hypothesis": true,
+    "all_rows_have_algebraic_correspondence_lifts": true,
+    "complex_rows_with_coherent_group_action": [
+      "wehler_h2_3",
+      "bugaenko_h8_11"
+    ],
+    "complex_rows_with_only_generatorwise_monodromy_lifts": [
+      "coble_type_ii_h10_30",
+      "coble_type_i_h11_26",
+      "seven_complex_enriques_full_nef_h9"
+    ],
+    "positive_characteristic_rows_with_no_certified_monodromy": [
+      "coble_type_vi_char3_h14_60",
+      "coble_type_mii_char3_h17_48"
+    ],
+    "universal_raw_coxeter_to_carrier_compiler": false
+  },
+  "source_pins": {
+    "data/trace_lattices/bugaenko_k3_eigen_nef.json": "e77bb81bcc738f4f542676748dbcf09418cab830da579a600fd1e309f03de782",
+    "data/enumerations/coble_type_ii_b3_plane_inverse.json": "a8f49be994ae9bf70eae73378f4f006417be91ae827fee0a73707932f6ceac71",
+    "data/enumerations/coble_type_i_two_boundary_full_ns_h11.json": "bcfa2de1e96bf4f41282345a64f8ee6f3a75e715287bab4962d7082584b4d985",
+    "data/enumerations/coble_type_vi_char3_five_boundary_full_ns_h14.json": "8247ad85f7970d3bf1f08fe15517b70376409c17cc2784b8f14b129aaecc2ede",
+    "data/enumerations/coble_type_mii_full_ns_h17.json": "6ed6fba936c362e02793375fa3adfea0279d312c853a8bb4bab30c23b4b8c79c",
+    "data/known_examples/enriques_finite_automorphism_nef_chambers.json": "245715b7352219a7ed1bfc34a43b5b37921e289d39829df51015c347b97072bc",
+    "scripts/certify_project_native_minimal_surface_bound.py": "4c73aea494590b9a7fc5f2b769f36d439ed38fcf56c707395562568c3adb2a08",
+    "results/project_native_minimal_surface_automorphism_dimension_bound.md": "9acd7e4bfadd9c47354df0007819b6215c5fbe8bc1fd17bfd2ea3ad76810f663"
+  }
+}

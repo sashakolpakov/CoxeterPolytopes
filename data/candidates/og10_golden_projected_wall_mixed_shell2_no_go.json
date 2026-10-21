@@ -1,0 +1,137 @@
+{
+  "box": {
+    "A_and_C_integral_coefficient_interval": [
+      -30,
+      30
+    ],
+    "b_shell_bound_cli_value": 2,
+    "b_square_values": [
+      2,
+      4
+    ],
+    "conjugate_E8_gate": "0 < (w')^2 < 2",
+    "cut_gate": "ell(interior)*ell(v61)<0",
+    "signature_gate": "0 < q=2*p^2 < 4 and q' < 4"
+  },
+  "candidate_id": "og10_golden_projected_wall_mixed_e8_shell2_no_go",
+  "certificate_kind": "exact_replayable_finite_box_no_go",
+  "certificate_payload_sha256": "9c696c3d540fe5570b2f1becd05fb24b5bd334d614e527d5c682440b5987196f",
+  "checks": {
+    "all_signature_and_separation_tests_are_exact": true,
+    "archived_vectors_match_fixed_slice": true,
+    "pinned_counts_and_hashes_match": {
+      "b_vector_count": true,
+      "eligible_w_count": true,
+      "eligible_w_records_hash": true,
+      "eligible_w_square_class_count": true,
+      "independent_sign_partition_has_no_opposite_or_zero_pair": true,
+      "no_cutting_covectors": true,
+      "signature_parameter_pair_count": true,
+      "wall_records_hash": true,
+      "wall_test_count": true
+    },
+    "production_and_independent_records_are_literally_equal": true
+  },
+  "commands": [
+    "PYTHONPATH=src:. python3 scripts/certify_og10_golden_projected_wall_mixed_shell2.py --recompute",
+    "python3 scripts/independent_og10_golden_projected_wall_mixed_shell2.py --compare-certificate data/candidates/og10_golden_projected_wall_mixed_shell2_no_go.json",
+    "PYTHONPATH=src:. python3 scripts/certify_og10_golden_projected_wall_mixed_shell2.py --verify-certificate"
+  ],
+  "comparison": {
+    "hashes_are_checksums_after_literal_equality_not_substitutes_for_it": true,
+    "literal_coefficient_record_count": 46899,
+    "literal_coefficient_record_equality_before_hash": true,
+    "literal_eligible_record_count": 186720,
+    "literal_eligible_record_equality_before_hash": true,
+    "literal_wall_record_count": 827520,
+    "literal_wall_record_equality_before_hash": true,
+    "summary_field_agreement": {
+      "b_vector_count": true,
+      "canonical_wall_records_sha256": true,
+      "cutting_covector_count": true,
+      "cutting_records": true,
+      "eligible_w_count": true,
+      "eligible_w_records_sha256": true,
+      "eligible_w_square_class_count": true,
+      "exact_wall_test_count": true,
+      "signature_admissible_parameter_pair_count_summed_over_w_square_classes": true
+    }
+  },
+  "completeness": {
+    "independent": "Parallelogram gives a^2<4+8*(phi')^2<8; E8 evenness reduces a to theta-pinned shells 0,2,4,6, whose full Cartesian product with b-shells 2,4 is filtered exactly.",
+    "production": "For each of all theta-pinned E8 b-vectors with b^2<=4, exact prefix Schur complements enumerate every integral a with (a+phi'*b)^2<2."
+  },
+  "conclusion": "No covector in the exact mixed-E8 b^2<=4, coefficient-bound-30 box separates the archived invariant interior from v61.",
+  "family": "w=a+phi*b with a,b in E8",
+  "field": "Q(sqrt(5))",
+  "fixed_lattice": "F=<-2*phi>+E8+<2>",
+  "independent_replay": {
+    "a_vector_count": 9121,
+    "b_vector_count": 2400,
+    "canonical_wall_records_sha256": "20184b175d5b937270f6a2da8d8336ded7e42427b785aa43f7121d532c4c8312",
+    "coefficient_bound": 30,
+    "cutting_covector_count": 0,
+    "cutting_records": [],
+    "eligible_w_a_square_histogram": {
+      "0": 2400,
+      "2": 43920,
+      "4": 140400
+    },
+    "eligible_w_b_square_histogram": {
+      "2": 13920,
+      "4": 172800
+    },
+    "eligible_w_count": 186720,
+    "eligible_w_records_sha256": "1f139312ef48ed4d97b2a6ab3fceddf594b48ad1a884ab842718ef6704fdbf36",
+    "eligible_w_square_class_count": 6,
+    "exact_wall_test_count": 827520,
+    "imports_project_code": false,
+    "necessity_bound": "a^2<4+8*(phi')^2<8; E8 even, hence a^2 in {0,2,4,6}",
+    "raw_a_b_pair_count": 21890400,
+    "replay": "standalone_E8_Weyl_shell_Cartesian_product",
+    "separation_sign_histogram": {
+      "-1,-1": 413760,
+      "1,1": 413760
+    },
+    "signature_admissible_parameter_pair_count_summed_over_w_square_classes": 128,
+    "theta_pinned_shell_counts": {
+      "2": 240,
+      "4": 2160,
+      "6": 6720
+    }
+  },
+  "production_audit": {
+    "b_vector_count": 2400,
+    "canonical_wall_records_sha256": "20184b175d5b937270f6a2da8d8336ded7e42427b785aa43f7121d532c4c8312",
+    "cutting_covector_count": 0,
+    "cutting_records": [],
+    "eligible_w_count": 186720,
+    "eligible_w_records_sha256": "1f139312ef48ed4d97b2a6ab3fceddf594b48ad1a884ab842718ef6704fdbf36",
+    "eligible_w_square_class_count": 6,
+    "exact_wall_test_count": 827520,
+    "family": "mixed_E8",
+    "parameters": {
+      "b_nonzero": true,
+      "b_shell_max": 2,
+      "b_shell_min": 1,
+      "coefficient_bound": 30,
+      "conjugate_square_gate": "0 < w'^2 < 2"
+    },
+    "signature_admissible_parameter_pair_count_summed_over_w_square_classes": 128
+  },
+  "ring": "Z[phi]",
+  "schema_version": "1.0.0",
+  "scope": "Finite-box theorem only. It does not cover b^2>4, coefficients outside [-30,30], other fixed carriers, a relaxed reflection involution, or multi-root/rank-two coupling; it is neither a global OG10 obstruction nor a new hyperbolic Coxeter example.",
+  "source_sha256": {
+    "certifier": "9962fb253c22bf098f90524049e0e94a5e8567b8b35135fd684ba28d073c87b7",
+    "independent_replay": "76db57564b9b0d98c0ab97a4941f4ad660a458cd516cdd860b9124d58a937eca",
+    "production_dependencies": {
+      "e8_lattice": "53c404b413667cedfbe3106096717e1d35055eb6c69d52e082009602bba498f7",
+      "e8_root_enumerator": "433e5fe7c4270f86764ad682410866c64692bab2ca49191552df5e4333cc02ac",
+      "fixed_slice_certificate": "b80f6438ed2cc0de45314fb440d855dc9774bbfa7081d142c458edfe313259a6",
+      "golden_arithmetic": "fc9dde7ad0024b5f08f0a42af51d859a794ef6fd0b803bfb8f9aebe192425eb0",
+      "schur_enumerator": "ec16ec3c8937d25837407da1e7f6a3eb7734b42f4333efd9e32a2a1932658a79",
+      "search_and_audit_script": "cb7192a9d94ad2b976082c6367cd41e614e9e0696a9b13d418acca416c39575a"
+    }
+  }
+}

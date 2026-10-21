@@ -1,0 +1,11 @@
+# Review of the B2 finite closure calculation
+
+The [closure proof and scope](fresh_h20_b2_edge_sections_20261014.md), [eight-recipe producer](../scripts/fresh_h20_b2_edge_sections_20261014.py), and [selected-family exact checker](../scripts/fresh_h20_b2_edge_sections_20261014_exact.py) were reviewed. The finite reduction uses finite volume, not compactness: a finite-volume H18 face needs an additional facet beyond its eighteen initial boundaries. At a finite point of that facet the rank-three spherical extension is B2+A1 or one of the two B3 attachments. The three extension equations and their eight admissible literal contacts agree with this classification.
+
+The extra wall has a nonzero restriction to the two-dimensional edge plane, since otherwise it contains the full source edge and belongs to its active set. A linear condition on a nonzero-norm Lorentzian hyperbola has at most two solutions. Thus no continuous exceptional component is omitted from the selected-family exact enumerations.
+
+The recursive quadratic-tower sign routine compares signed squares and does not assume the outer radical is independent. The numerical coordinates in the recipe packet choose a proposed bad-ridge witness only; all subsequent signs, actual incidences, and the forbidden angle are checked exactly. A bad proposal would fail an assertion rather than certify a root by numerical closeness. The counts 1,062 and 288 have different meanings: the former counts exhaustive transverse recipes with multiplicity, while the latter counts saved numerical representatives. Exact projective deduplication is not claimed.
+
+The complete broad scout remains numerical. Exact checks of its 237 saved endpoint remainders do not certify floating-point enumeration completeness or the other 870,063 numerical defects. The report states this limitation explicitly. This review is a source and mathematical review, not a second implementation of the selected-family arithmetic.
+
+A fresh root-agent replay of the eight-recipe producer passed with all eight contacts. The selected-family and remainder replays were performed by their producer agent; this review does not claim an additional independent arithmetic run of those larger certificates.

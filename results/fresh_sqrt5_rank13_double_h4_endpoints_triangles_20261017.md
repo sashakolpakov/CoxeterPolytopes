@@ -1,0 +1,9 @@
+# Three double-H4 endpoint and triangle domains
+
+Generation and a fresh complete saved reconstruction both pass. The [source](../scripts/fresh_sqrt5_rank13_double_h4_endpoints_triangles_20261017.py) and [exact data](fresh_sqrt5_rank13_double_h4_endpoints_triangles_20261017.json) use a fresh namespace and preserve the earlier [four-target census](fresh_sqrt5_rank13_compensating_endpoints_triangles_20261017.md).
+
+The targets are `D5+2H4`, `A1+D4+2H4`, and `A1+A4+2H4`. The selected endpoint set is all 578 rank-13 ADE/H3/H4/I2(5) forests with the old baseline at least 12. Every new-root contact subset allowed by the finite classification is tested: degree at most three, only 3-bonds at degree three, and at most one 5-bond at degree two. This gives 17,277 contact tests, 718 accepted endpoints, 4,308 finite framing tests, and 1,395 triangle occurrences. The three target counts are respectively 275, 522, and 598. There are 1,322 all-selected triangles.
+
+All fixed normalized products lie in Q(sqrt5). The exact two-place Schur test is inherited unchanged from the frozen four-target source. A fixed nonzero path forces the framing product itself into the field; without that path its square suffices. The complete finite label list is 2, 3, 4, 5, 6, 10. Every possible released second root is checked against the full finite classification, including third corners outside the selected set.
+
+This is complete for the stated three starting forests and selected endpoint set. It is not complete rank-13 face coverage, a simultaneous realization assertion, or a dimension bound. In particular the ADE-only exclusion of all-selected triangles does not apply here. The separate [payment separation](fresh_sqrt5_rank13_double_h4_triangle_separation_20261017.md) reconstructs an actual unpaid compact local triangle.

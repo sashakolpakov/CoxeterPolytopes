@@ -1,0 +1,14 @@
+diff --git a/rcyclotomic7integer_alvin.cpp b/rcyclotomic7integer_alvin.cpp
+--- a/rcyclotomic7integer_alvin.cpp
++++ b/rcyclotomic7integer_alvin.cpp
+@@ -432,6 +432,10 @@ int RCyclotomic7Integer_AlVin::addVector_iFindWeight(
+       rciDenominator->isEqualTo(4))
+     return 7;
+ 
++  if (rciNumerator->iC == array<mpz_class, 3>({-2, -2, -3}) &&
++      rciDenominator->isEqualTo(4))
++    return 14;
++
+   return -2;
+ }
+ 

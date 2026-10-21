@@ -1,0 +1,102 @@
+{
+  "status": "PASS_DIMENSION65_LARGE_FINITE_COMPONENT_OBSTRUCTION",
+  "sources": {
+    "scripts/fresh_dimension65_large_finite_component_obstruction_20261017.py": "593a161893115f3e7b5c18cf672116e6c23cbedb08909f38a8a436316c9f5869",
+    "scripts/fresh_finite_d16_d17_long_pair_half_transfer_20261017.py": "16685ad1169ee4c699512dfe69a578da8cf4437f4c49dcb5cfa24619cf51a045",
+    "results/fresh_finite_d16_d17_long_pair_half_transfer_20261017.json": "c883a7afadcaeed4340ebcdaa160c9058da223f7a39fd27597e2b7e51c872428",
+    "results/fresh_finite_d16_d17_long_pair_half_transfer_20261017.md": "7c40f186263891499f92a8faef3fd04cd26af68d664eb94cf89acced2c414f54",
+    "scripts/fresh_d16_d17_d14_coupon_forest_budget_20261017.py": "b69a37086bebb081fc007d5e994f91298cf13ded2c6ced98b704a9e599c40739",
+    "results/fresh_d16_d17_d14_coupon_forest_budget_20261017.json": "c3ac67cd54274fafcf62ccb2052dbff4eb0617c3f1b48a785f0e17e4c2435a69",
+    "results/fresh_d16_d17_d14_coupon_forest_budget_20261017.md": "2c109ca38bb38e69a9b28d971040e2029358a671bb1c961da35138ee321ad45d",
+    "scripts/fresh_ambient65_ideal_margin_closure_20261017.py": "c4986c75386aced60a8a6694d84a06a001eba5bf810314306c3bfa4c9c49b8af",
+    "results/fresh_ambient65_ideal_margin_closure_20261017.json": "dfa915b49a20dc05eae5a52e332ac1392f84eef4406c7ab848ea37a4b87487d0",
+    "results/fresh_ambient65_ideal_margin_closure_20261017.md": "e12fe1f2cd7aa36b8966e4310b765bd91b8adb1022ac31a1b9995bbca25d2541",
+    "scripts/fresh_ambient65_ideal_margin_closure_20261017_review.py": "57c48da1baf10b9b61ec366e51de85e004887b14a5f8a172bf4f2354c1ab530f",
+    "results/fresh_ambient65_ideal_margin_closure_20261017_review.json": "1ff68c1f8d70811adc20aa86bc52e7000ca0c2a9e1bc031d8802052ec4e31329",
+    "results/fresh_ambient65_ideal_margin_closure_20261017_review.md": "1ff042db6cec0e79a7e107747f69372af5b9f93d87d23349dafbdaced9a635e1",
+    "scripts/fresh_ideal5_weighted_dimension65_20261017.py": "3ef42c2011537f68234e43b41da3815714316caf8f2d1f083f1187866348ad1f",
+    "results/fresh_ideal5_weighted_dimension65_20261017.json": "0554c033d38ceeeacf9ad60ce2f6a155d646ebe2568b6331ef995314027e15be",
+    "results/fresh_ideal5_weighted_dimension65_20261017.md": "f9f2e6c5ae9baf977d37d296978a1ca523b2c63ef8e2519b5d420c7788edcabf"
+  },
+  "checked_input_bindings": 193,
+  "ambient_dimension": 65,
+  "large_finite_vertex_definition": "A finite vertex with at least one irreducible finite Coxeter component of rank>=18.",
+  "small_finite_vertex_definition": "A finite vertex all of whose irreducible finite Coxeter components have rank<=17.",
+  "local_component_costs": {
+    "A16": 116,
+    "B16": 104,
+    "D16": 118,
+    "D17": 125
+  },
+  "new_coupon": {
+    "weight": "1/2",
+    "small_components": [
+      "whole A1",
+      "whole A2"
+    ],
+    "small_mark": "any node",
+    "large_component": "whole D14",
+    "large_mark": "the unique long-arm neighbor of its fork center",
+    "canonical_D14_node": 10,
+    "added_A1_D14_cost": "1/2",
+    "added_A2_D14_cost": "1"
+  },
+  "finite_curvature": "480",
+  "arbitrary_finite_budget": "487",
+  "small_component_finite_budget": "479",
+  "exact_finite_budget_rows": {
+    "arbitrary": {
+      "dimension": 65,
+      "doubled_cost": 974,
+      "forest": [
+        "D65"
+      ],
+      "curvature": "480",
+      "slack": "-7"
+    },
+    "small_components": {
+      "dimension": 65,
+      "doubled_cost": 958,
+      "forest": [
+        "D16",
+        "D16",
+        "D16",
+        "D17"
+      ],
+      "curvature": "480",
+      "slack": "1"
+    }
+  },
+  "inherited_complete_ideal_profiles": 1650,
+  "inherited_normalized_ideal_margin": "61/1936",
+  "inherited_absolute_ideal_margin": "445/23",
+  "scalar_rows_sha256": "fb91d6c93b5f85231d13356e1de173ff1d0678e921de779b719ccfcc79e0235c",
+  "strengthened_global_constant": "5280",
+  "lower_minus_upper_coefficients": {
+    "v_L": "-7",
+    "v_S": "1",
+    "v_i": "445/23",
+    "constant": "5280"
+  },
+  "necessary_inequality": "7*v_L >= v_S + 5280 + (445/23)*v_i",
+  "equivalent_integer_inequality": "161*v_L >= 23*v_S + 121440 + 445*v_i",
+  "finite_count_thresholds": [
+    {
+      "ideal_vertex_lower_bound": 0,
+      "small_finite_vertex_lower_bound": 0,
+      "rational_large_finite_lower_bound": "5280/7",
+      "integer_large_finite_lower_bound": 755
+    },
+    {
+      "ideal_vertex_lower_bound": 1,
+      "small_finite_vertex_lower_bound": 0,
+      "rational_large_finite_lower_bound": "121885/161",
+      "integer_large_finite_lower_bound": 758
+    }
+  ],
+  "minimum_large_finite_vertices": 755,
+  "minimum_large_finite_vertices_if_any_ideal": 758,
+  "dimension_ceiling_if_every_finite_vertex_has_components_at_most17": 64,
+  "unrestricted_dimension_ceiling": 65,
+  "scope": "Exact composition only. The frozen local theorem supplies geometric coverage for the finite budget; current ideal payments are unchanged. Scalar rows are hash-bound to their independent reconstruction, not rerun. Complete geometric censuses, finite Bellman verification, all-rank concentration and the strengthened extremum argument are inherited proved inputs. No new unrestricted bound or chamber construction."
+}

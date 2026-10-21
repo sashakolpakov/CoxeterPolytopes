@@ -1,0 +1,118 @@
+{
+  "all_checks_pass": true,
+  "complete_source_stock": {
+    "ample_pairings": [
+      2,
+      3,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6,
+      6,
+      7,
+      7,
+      7,
+      7
+    ],
+    "ample_square": 20,
+    "genuine_ample_stabilizer": "Aut(X_0,a_0), order 1440",
+    "neron_severi_determinant": -36,
+    "neron_severi_rank": 20,
+    "surface": "X_0",
+    "transcendental_gram": [
+      [
+        6,
+        0
+      ],
+      [
+        0,
+        6
+      ]
+    ],
+    "wall_count": 3278,
+    "wall_norms": [
+      "-2",
+      "-3/2",
+      "-4/3",
+      "-1",
+      "-5/6",
+      "-5/6",
+      "-2/3",
+      "-2/3",
+      "-1/3",
+      "-1/6",
+      "-1/6",
+      "-1/6",
+      "-1/6"
+    ],
+    "wall_orbit_sizes": [
+      60,
+      40,
+      180,
+      10,
+      144,
+      144,
+      240,
+      360,
+      180,
+      240,
+      240,
+      720,
+      720
+    ]
+  },
+  "conclusion": "checkpoint only; X_0 remains the next unmined complete stock",
+  "exact_int64_audit": {
+    "below_signed_int64_limit": true,
+    "maximum_matrix_entry_absolute": 2232,
+    "single_product_entry_absolute_bound": 99636480
+  },
+  "high_source_group_census": {
+    "fixed_rank_histogram": {
+      "10": 46,
+      "12": 45,
+      "2": 144,
+      "20": 1,
+      "4": 584,
+      "6": 450,
+      "8": 170
+    },
+    "high_closed_V4_common_fixed_rank_histogram": {
+      "8": 30
+    },
+    "high_closed_V4_count": 30,
+    "only_C2_can_be_a_proper_fixed_rank_at_least_11_subgroup": true,
+    "proof": "Every element of a subgroup with common fixed rank at least 11 must be one of the 45 rank-12 involutions.  They form one class by the order-32 centralizer.  Two distinct high elements whose product is high generate one of the 30 exhaustively enumerated V4 groups, all of common fixed rank 8.  Hence the unique high C2 class is the only proper source-group candidate above H9.",
+    "unique_high_class": {
+      "cardinality": 45,
+      "centralizer_order": 32,
+      "fixed_rank": 12,
+      "hyperbolic_dimension": 11,
+      "representative_zero_based": 3
+    }
+  },
+  "id": "SHIMADA-AUT3SINGK3-X0-HIGH-SOURCE-GROUP-CHECKPOINT",
+  "pending_gates": {
+    "Coxeter_pair_angle_gate": "pending",
+    "Vinberg_volume_gate": "not authorized before a Coxeter survivor",
+    "exact_irredundancy": "pending",
+    "full_abstract_oriented_weighted_wall_group": "pending",
+    "restriction_of_all_3278_walls": "pending"
+  },
+  "schema": "coxeter.shimada.aut3singk3.x0.high_source_group_checkpoint.v1",
+  "sources": {
+    "paper_tex_sha256": "e2b37de790fc7b9d46d7d434ba28b17951ddc3fa8d795c034daa03ecad559e22",
+    "paper_url": "https://arxiv.org/abs/1412.6904",
+    "supplement_file_sha256": {
+      "AutXa.txt": "d0844407e8c041177655b99b2d6af064a9077a93fa73dba33cd7a07f41111e80",
+      "GramS.txt": "b9c829e2253bdb62312d0484e622804d40b5bcf7ca6e2f1a96487d5729c84c00",
+      "Isom.txt": "3b2914f2047296522818e93be68ce5eba177e09a410bd2a4e4eb07034f4426d2",
+      "ample.txt": "33e29f7c6d2fc1cdb63fd10e07a5cc3192f1378c3cbceca362edbc1497b498ee",
+      "walls.txt": "d9e63603667d69c71f760b3f73a887391d324c24c0c04103e14c3f0e2480eb55"
+    },
+    "supplement_zip_sha256": "b3b943ba22a87615142a23f036351ac340c1ad4630ad720af1fe8df55e99723e",
+    "supplement_zip_url": "https://www.math.sci.hiroshima-u.ac.jp/shimada/preprints/Aut3SingK3s/compdata/compdata.zip"
+  }
+}

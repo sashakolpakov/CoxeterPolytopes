@@ -1,0 +1,31 @@
+{
+  "status": "RESOURCE_GATE_DEFERRED_BEFORE_RENDER_CHILD",
+  "free_disk_gib_observed": 154.4,
+  "available_memory_gib_observed": 5.5,
+  "required_disk_gib": 40,
+  "required_memory_gib": 6,
+  "command": [
+    "python3",
+    "-B",
+    "scripts/run_bounded_research_check_20261018.py",
+    "--ledger",
+    "results/compact_arithmetic20_field_figure_render_execution_20261021.json",
+    "--parent-lock",
+    "--",
+    "scripts/_arithmetic_field_figure_render_20261021.py"
+  ],
+  "render_child_started": false,
+  "helper_sha256": "b613ed0fc8887e23582d088ee23c898345f23cc517bfeba5141782743502504a",
+  "helper_source": "\"\"\"Owned disposable rendering helper; exact source retained in visual receipt.\"\"\"\nfrom pathlib import Path\nimport subprocess\n\nroot = Path(__file__).resolve().parents[1]\npreview = Path('/private/tmp/coxeter_arithmetic20_field_figure_20261021.png')\nassert not preview.exists()\nsubprocess.run([\n    '/opt/homebrew/bin/gs', '-q', '-dSAFER', '-dBATCH', '-dNOPAUSE',\n    '-sDEVICE=png16m', '-r110', '-dFirstPage=15', '-dLastPage=15',\n    '-sOutputFile=' + str(preview),\n    str(root/'manuscripts/build/compact_arithmetic_dimension_bound.pdf'),\n], check=True, timeout=50)\nassert preview.is_file()\nprint('PASS_PDF_PAGE_RENDER page=15; visual inspection still required')\n",
+  "scope": "Visual rendering only; final21-page zero-warning PDF already compiled successfully.",
+  "subsequent_preflight_refusal": {
+    "preceding_readonly_available_memory_gib": 6.28,
+    "runner_available_memory_gib": 5.8,
+    "free_disk_gib": 154.4,
+    "render_child_started": false,
+    "reason": "RAM changed between metadata observation and unchanged runner admission; no render child launched."
+  },
+  "owned_disposable_helper_removed": true,
+  "helper_source_preserved_in_this_record": true,
+  "preview_created": false
+}

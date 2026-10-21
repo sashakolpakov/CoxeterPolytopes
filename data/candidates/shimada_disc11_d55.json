@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status_date": "2026-08-04",
+  "analysis_id": "shimada_disc11_physical_D55_eigensection",
+  "status": "exact_local_section_and_internal_first_star_verified",
+  "source": {
+    "member": "threediscs/disc11.txt",
+    "sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68"
+  },
+  "physical_state": {
+    "entry": {"representative": 86, "orbit": 20, "member": 0},
+    "representative": 55,
+    "state_sha256": "f9164f790643d027483fae91f1fccf21e7b04a372a0c7c38675ffa23edfbdf0a",
+    "physical_wall_rows_sha256": "3aafb6ae4a58df9712b4edfd0bddbecc858cc859bb4a08ace14e674562819103",
+    "physical_wall_set_sha256": "90b630a04c3e6fa81ed2a9130abe387afe761b96965cc6345321e3727d9de245",
+    "restricted_rows_sha256": "fa14c05fe1f69a18f4974cfb27a69dc1d14967408970e6eda311ff4c47ec8344"
+  },
+  "local_section": {
+    "ambient_primitive_walls": 41,
+    "positive_proportional_classes": 33,
+    "irredundant_facets": 11,
+    "root_facets": 7,
+    "internal_facets": 4,
+    "root_facet_classes": [
+      [[0, 1], [6, 0]],
+      [[1, 0], [3, 0]],
+      [[1, 1], [8, 1]],
+      [[4, 0], [5, 0]],
+      [[4, 1], [7, 1]],
+      [[7, 0], [8, 0]],
+      [[9, 0], [10, 0]]
+    ],
+    "internal_facet_classes": [[[12, 1]], [[13, 1]], [[14, 0]], [[16, 1]]],
+    "exact_face_witnesses": 11,
+    "exact_positive_redundancy_dependences": 22
+  },
+  "root_filter": {
+    "ambient_minus_two_walls": 18,
+    "integral_field_roots": 17,
+    "shell_distribution": {"2": 8, "4 - 2*phi": 9},
+    "field_span_rank": 10,
+    "unique_non_field_root_wall": [3, 1]
+  },
+  "internal_first_star": [
+    {"wall": [12, 1], "target_representative": 20, "target_wall_count": 52},
+    {"wall": [13, 1], "target_representative": 14, "target_wall_count": 40},
+    {"wall": [14, 0], "target_representative": 16, "target_wall_count": 39},
+    {
+      "wall": [16, 1],
+      "target_representative": 86,
+      "target_wall_count": 35,
+      "same_physical_D86_wall_set": true
+    }
+  ],
+  "scope": "complete_local_D55_section_and_internal_first_star_not_global_eigen_nef_completeness",
+  "report": "results/shimada_disc11_d55.md",
+  "verifier": "scripts/analyze_shimada_disc11_d55.py",
+  "tests": "tests/test_shimada_disc11_d55.py"
+}

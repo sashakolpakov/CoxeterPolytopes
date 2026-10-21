@@ -1,0 +1,4384 @@
+{
+  "certificate_sha256": "4ebb69e2415ff97c37d62bd8347a2e44b19288cd2d3afa3893b9d0bd763227f8",
+  "certifier_source": {
+    "path": "scripts/certify_h9_14_record35_all_completions.py",
+    "sha256_excluding_outer_freeze_assignments": "4dc1ecdf0a7f3c6f0e2fe08099437d398abbc4e68602189d49cbcd3aa59969da"
+  },
+  "claim": "Under the compact H9/14 missing-face reductions, all five Dehn--Sommerville schedules for record 35 are exhaustive. Strict vertex-link positivity removes a=3,4; complete missing-four and forced-shadow censuses remove a=2 and leave one a=1 incidence orbit. A lossless all-cap-feasible-independent-active-row census leaves three a=0 incidence orbits passing the full necessary topology audit. Complete Lanner-placement joins reject all eighteen a=0 facet-count targets, while a monotonicity and exact-index-two gate rejects the a=1 orbit. Hence the whole graph shadow is not compact Coxeter.",
+  "independent_hostile_replay": {
+    "a0_exact_target_family_count": 18,
+    "a0_full_topology_audit_sha256": "91d011fd973600707e2c85e8ea750f53b3a448120b9c502dd088b758e1b03fbf",
+    "a0_topology_valid_orbit_count": 3,
+    "a0_total_distribution_path_count": 375582,
+    "a1_exact_witness_inertias": [
+      [
+        8,
+        2,
+        0
+      ],
+      [
+        8,
+        2,
+        0
+      ]
+    ],
+    "a1_full_topology_audit_sha256": "5069d53d0fad1d042a13a3c2ef2fc14e68bcaa9bad3d187db52a84aaa747fc52",
+    "a1_label_three_passing_count": 5040,
+    "a1_label_three_test_count": 1058400,
+    "complete_active_row_scope": "all independent active subsets allowed by exact incidence caps; no singleton-row normalization",
+    "exact_topology_valid_residual_incidence_orbit_count": 4,
+    "finite_volume_noncompact_chamber_excluded": false,
+    "independent_active_mask_size_histogram": {
+      "0": 1,
+      "1": 5,
+      "2": 8,
+      "3": 4
+    },
+    "independent_active_masks": [
+      0,
+      1,
+      2,
+      4,
+      2048,
+      4096,
+      3,
+      5,
+      4097,
+      6,
+      2050,
+      2052,
+      4100,
+      6144,
+      7,
+      4101,
+      2054,
+      6148
+    ],
+    "independent_active_triples": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        12
+      ],
+      [
+        1,
+        2,
+        11
+      ],
+      [
+        2,
+        11,
+        12
+      ]
+    ],
+    "path": "scripts/independent_h9_14_record35_all_completions_audit.py",
+    "source_sha256": "c7d8832cae97339f5da23249c2f6e0f5530fc567f67aaeb468eab3b549dd6cfc",
+    "summary_sha256": "b01b632d01569c847194a8fb592eca4e91b0cc9865e00d296d029147b3e25332",
+    "whole_graph_shadow_compact_coxeter_excluded": true
+  },
+  "kind": "h9_14_record35_whole_shadow_compact_coxeter_no_go",
+  "nonclaims": [
+    "No finite-volume noncompact chamber is excluded.",
+    "No ideal-vertex or maximal-parabolic census is performed.",
+    "No other H9/14 graph shadow is excluded by this certificate.",
+    "The mod-two all-link homology audit is not a PL-sphere certificate and does not detect odd torsion or simple connectivity.",
+    "Arbitrary ordinary completions with minimal nonfaces above the compact Coxeter order bound are not classified."
+  ],
+  "proof_dependencies": [
+    "Burcroff's no-missing-triples theorem for compact H9/14 nerves",
+    "every compact Coxeter missing face is Lanner of order at most five",
+    "Dehn--Sommerville equations for the simplicial polar boundary",
+    "strict generalized-lower-bound and Macaulay inequalities in every vertex link",
+    "facet complements are the blocker of the full minimal-nonface clutter",
+    "complete enumeration of every independent active row subset allowed by the exact incidence caps and exact isolate-column multiplicities",
+    "complete Lanner placement joins tested on all actual vertices",
+    "Perron--Frobenius monotonicity, Cauchy interlacing, and exact negative-index-two principal blocks"
+  ],
+  "proof_sources": [
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record35_all_completions.py",
+      "sha256": "e9737ec26db5078a9d275eda115fae0ffe386317f0be4c5fb84cd7f5f0a8b8c1"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record35.py",
+      "sha256": "56e1fc359420463a3f6771035f058961cb83d49c5295dc4493019cea723f80cd"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/facet_completion.py",
+      "sha256": "5f2d078cfe400b39f3e194352f7a0c6d3bd8cb6bb8e7cee37be159e8766d9400"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/simplicial_homology.py",
+      "sha256": "547f51b58c1146aac80c6e08910754bf93ace5fa808dae5a342da7e042958110"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_coxeter_labels.py",
+      "sha256": "53d7e82a66d3cbb3b091109a6b79ffbdab271d15c9d098f1862a56355f126c43"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_selected_nerve_coxeter_no_go.py",
+      "sha256": "c87e4239ef69beabf97856c64d876e6e5369dbc47c83f89cfc490c01db7507ec"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record46.py",
+      "sha256": "20795d1fee8acdbeecbb112bf62d514e1294471cd252ce78c8885047f88177e2"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record92.py",
+      "sha256": "6b165e2a9e3ed120949c10784e42786364a7197014bc57da6b2b0a1cb30e1e29"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/local_link.py",
+      "sha256": "8f8169edab8b87aff682785667c2a8eab5c52b92a7c68cef130aeec4d3ae807d"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/missing_edges.py",
+      "sha256": "231e85fa98e27e864f997cd4ebe59136707f6aa8dd2d8136b80cff543dfbfbb8"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/nerve_support.py",
+      "sha256": "aad8fb25c2f9a56e45121fa1d1cbbdedfdff8ba1f67e379be74eed73940ad2a2"
+    },
+    {
+      "path": "scripts/independent_h9_14_record35_all_completions_audit.py",
+      "sha256": "c7d8832cae97339f5da23249c2f6e0f5530fc567f67aaeb468eab3b549dd6cfc"
+    },
+    {
+      "path": "tests/test_h9_14_record35_all_completions.py",
+      "sha256": "2e734577f73fc3db7650b43c28e4c1d98660b4cd2e0a6caa0a807e6b1df10c9a"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "scope": {
+    "a0_topology_valid_residual_orbits": 3,
+    "a1_topology_valid_residual_orbits": 1,
+    "all_five_dehn_sommerville_schedules_covered": true,
+    "compact_only": true,
+    "exact_topology_count_independently_replayed": true,
+    "exact_topology_valid_residual_incidence_orbits": 4,
+    "finite_volume_noncompact_chamber_excluded": false,
+    "ideal_or_parabolic_faces_enumerated": false,
+    "record_index": 35,
+    "topology_audit_is_necessary_not_a_PL_sphere_certificate": true,
+    "whole_graph_shadow_compact_coxeter_excluded": true
+  },
+  "support_source": {
+    "dehn_sommerville_schedule_sha256": "2a82b987b9b5aad35d2dbeb87a500b8ac1b6f1f5df48dee9aaa1488a5f2fbd45",
+    "file_sha256": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d",
+    "graph6": "M?????????O?O?w??",
+    "missing_edges": [
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        2,
+        13
+      ]
+    ],
+    "path": "data/enumerations/h9_14_nerve_support.json",
+    "ridge_support_core_count": 226,
+    "ridge_support_core_sha256": "6db0c02b286dccc4fe220932bc324ba86c6318bb48ab946838a55d8760f9ecc1",
+    "second_layer_survivor_index": 35
+  },
+  "theorem": {
+    "dimension": 9,
+    "facet_count": 14,
+    "finite_volume_noncompact_chamber_excluded": false,
+    "record_index": 35,
+    "whole_graph_shadow_compact_coxeter_excluded": true
+  },
+  "whole_shadow_production_audit": {
+    "a0_audit": {
+      "all_target_orbit_count_under_full_graph_x_S8_x_S5": 11,
+      "exact_unordered_target_family_count": 18,
+      "facet_count_histogram_on_blocker_valid_paths": {
+        "55": 24,
+        "56": 19,
+        "57": 3,
+        "58": 24,
+        "59": 221,
+        "60": 353,
+        "61": 376,
+        "62": 481,
+        "63": 1774,
+        "64": 2309,
+        "65": 4227,
+        "66": 3745,
+        "67": 7783,
+        "68": 8663,
+        "69": 14670,
+        "70": 14401,
+        "71": 23384,
+        "72": 15333,
+        "73": 33537,
+        "74": 21698,
+        "75": 38739,
+        "76": 20383,
+        "77": 38475,
+        "78": 19441,
+        "79": 26231,
+        "80": 16437,
+        "81": 18124,
+        "82": 7453,
+        "83": 10677,
+        "84": 4225,
+        "85": 5406,
+        "86": 2309,
+        "87": 1625,
+        "88": 1606,
+        "89": 1473,
+        "90": 655,
+        "91": 396,
+        "92": 437,
+        "93": 406,
+        "94": 186,
+        "95": 294,
+        "96": 85,
+        "97": 45,
+        "98": 169,
+        "100": 1,
+        "101": 9,
+        "102": 20,
+        "105": 11
+      },
+      "full_active_graph_automorphism_count": 2,
+      "label_transcript_sha256": "136879027cfc033d6eb91625d616d34b47a35b2aba955db40f5663dc50e336b2",
+      "lossless_enumeration_scope": {
+        "active_row_configuration_count": 1221,
+        "active_row_statement": "all independent active subsets allowed by the exact incidence caps are admitted in every A5 row; rows are an unordered multiset. No singleton-active-row normalization is imposed",
+        "active_vertices": [
+          0,
+          1,
+          2,
+          11,
+          12,
+          13
+        ],
+        "blocker_valid_path_count": 368343,
+        "column_distribution_problem_count": 235,
+        "independent_active_mask_count": 18,
+        "independent_active_mask_size_histogram": {
+          "0": 1,
+          "1": 5,
+          "2": 8,
+          "3": 4
+        },
+        "independent_active_masks": [
+          [],
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            11
+          ],
+          [
+            12
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            12
+          ],
+          [
+            1,
+            2,
+            11
+          ],
+          [
+            2,
+            11,
+            12
+          ]
+        ],
+        "isolate_column_statement": "the eight isolate columns are an exact multiplicity vector, hence a complete quotient by S8",
+        "isolated_vertices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "path_transcript_sha256": "28bedd57cb11f4217fb1e68ff661f1a95c6cc6626efe7277a902ae3aba671fe1",
+        "repeated_row_path_count": 7239,
+        "small_transversal_path_count": 0,
+        "total_distribution_path_count": 375582
+      },
+      "minimal_graph_covers": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          13
+        ],
+        [
+          1,
+          11,
+          13
+        ],
+        [
+          0,
+          12,
+          13
+        ],
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "scheduled_facet_count": 102,
+      "scheduled_target_path_count": 20,
+      "target_family_audits": [
+        {
+          "facet_complement_sha256": "d90a8000ce33ed5bab07dccecf11e1695f228d0ead640446588cb2714fb965bf",
+          "family_index": 0,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": true,
+            "all_links_have_spherical_euler_characteristic": true,
+            "all_ridge_degrees_two": true,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 1,
+            "dual_graph_connected": true,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": true,
+            "passes_selection_model": true,
+            "ridge_degree_histogram": {
+              "2": 459
+            },
+            "strict_local_g_constraints_hold": true
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              0,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": true
+        },
+        {
+          "facet_complement_sha256": "df61890e17a7805eef15ee8f05cfbe91eae4183cb9d91479a4ea7d53dc745662",
+          "family_index": 1,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": true,
+            "all_links_have_spherical_euler_characteristic": true,
+            "all_ridge_degrees_two": true,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 1,
+            "dual_graph_connected": true,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": true,
+            "passes_selection_model": true,
+            "ridge_degree_histogram": {
+              "2": 459
+            },
+            "strict_local_g_constraints_hold": true
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              0,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": true
+        },
+        {
+          "facet_complement_sha256": "b469fa6ff9a95e65d7cff3b30dea9613c742d7bac834bf5d0ae07897c7115aa2",
+          "family_index": 2,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": true,
+            "all_links_have_spherical_euler_characteristic": true,
+            "all_ridge_degrees_two": true,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 1,
+            "dual_graph_connected": true,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": true,
+            "passes_selection_model": true,
+            "ridge_degree_histogram": {
+              "2": 459
+            },
+            "strict_local_g_constraints_hold": true
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              11
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "topology_valid": true
+        },
+        {
+          "facet_complement_sha256": "e6ca1a4e94be5475032283373f728ed7a55669c6efa445782b9f5c6d1b7c8f89",
+          "family_index": 3,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": true,
+            "all_links_have_spherical_euler_characteristic": true,
+            "all_ridge_degrees_two": true,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 1,
+            "dual_graph_connected": true,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": true,
+            "passes_selection_model": true,
+            "ridge_degree_histogram": {
+              "2": 459
+            },
+            "strict_local_g_constraints_hold": true
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": true
+        },
+        {
+          "facet_complement_sha256": "2597f30043e406217bc8e631cb1ea59c57333fad2db86d0a02bfa2c6a1d69cfe",
+          "family_index": 4,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": true,
+            "all_links_have_spherical_euler_characteristic": true,
+            "all_ridge_degrees_two": true,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 1,
+            "dual_graph_connected": true,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": true,
+            "passes_selection_model": true,
+            "ridge_degree_histogram": {
+              "2": 459
+            },
+            "strict_local_g_constraints_hold": true
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              11
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "topology_valid": true
+        },
+        {
+          "facet_complement_sha256": "c12bc64a6f35b9b6beac885940e93e6f8227fbfb65f752c190e1774543da7600",
+          "family_index": 5,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 24,
+              "2": 411,
+              "3": 24
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              11
+            ],
+            [
+              1,
+              2,
+              9,
+              10,
+              11
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "f3a966c2ecf3b046de71a44ee94306d4f814440318d20ae71b64010a813dc859",
+          "family_index": 6,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 24,
+              "2": 411,
+              "3": 24
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              11
+            ],
+            [
+              1,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "7583a3d3bb3edb1d207e175203171af0048576d1d2018f4ae75c809d3c0c6068",
+          "family_index": 7,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 24,
+              "2": 411,
+              "3": 24
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              4,
+              5,
+              6,
+              7,
+              12
+            ],
+            [
+              0,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "781f4d641e06d1689b2d068c2bfe11e34e4464f107868412e2ecc317a356f507",
+          "family_index": 8,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 8,
+              "2": 443,
+              "3": 8
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "e83424b90d7d0da222b55faad4f4df366a9fc8f6c09a7709ebdf0c0763c8218e",
+          "family_index": 9,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 32,
+              "2": 395,
+              "3": 32
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              7,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "20ada1b6f224f1871a3e69753a8e76a33392da554f38054d2bec800c9cb29c46",
+          "family_index": 10,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 8,
+              "2": 443,
+              "3": 8
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "005cd5d9976771a75bb0b8eebc5b58b1049232e2f45a7d7d6793d8dd34f87f87",
+          "family_index": 11,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 8,
+              "2": 443,
+              "3": 8
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "9ab541414d55b8f6b0c8e357fc720a500538add574e0ef45f7e12dec4af3aacb",
+          "family_index": 12,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 8,
+              "2": 443,
+              "3": 8
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              6,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "0e2e0698f7060ba72fcadd86c6d157d2458758fd5b6b57f15f6abfd460e989e8",
+          "family_index": 13,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 8,
+              "2": 443,
+              "3": 8
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              6,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "f99a3e7b6bda1225d68a73bb06715386a224f87c52f4ce407ba17c8f43888168",
+          "family_index": 14,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 32,
+              "2": 395,
+              "3": 32
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              8
+            ],
+            [
+              0,
+              2,
+              7,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              7,
+              9,
+              10
+            ],
+            [
+              7,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "aef408c69f5ce7ad8941ebfad2d949ac13a2259b96763a4798a1eedb26f2595a",
+          "family_index": 15,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 3,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 38,
+              "2": 383,
+              "3": 38
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              7,
+              8
+            ],
+            [
+              0,
+              2,
+              6,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              6,
+              9,
+              10
+            ],
+            [
+              7,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "2bffcbb189eaa3b4b4ccd4da7ae9061dfca497d3cd2f24ed093c9259e1adbc28",
+          "family_index": 16,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 24,
+              "2": 411,
+              "3": 24
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              2,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              1,
+              3,
+              4,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              9,
+              10,
+              11
+            ],
+            [
+              5,
+              6,
+              7,
+              8,
+              12
+            ],
+            [
+              0,
+              2,
+              9,
+              10,
+              12
+            ]
+          ],
+          "topology_valid": false
+        },
+        {
+          "facet_complement_sha256": "b84fb978f9fbfc558608c7b6c36cbb24f0c08135e02b7c839f0967a75f05b623",
+          "family_index": 17,
+          "global_selection_audit": {
+            "all_links_are_mod2_homology_spheres": false,
+            "all_links_have_spherical_euler_characteristic": false,
+            "all_ridge_degrees_two": false,
+            "covers_all_independent_triples": true,
+            "dual_component_count": 2,
+            "dual_graph_connected": false,
+            "face_vector": [
+              14,
+              86,
+              309,
+              726,
+              1171,
+              1309,
+              986,
+              459,
+              102
+            ],
+            "facet_count": 102,
+            "largest_minimal_nonface_order": 5,
+            "local_macaulay_constraints_hold": true,
+            "matches_dehn_sommerville_schedule": true,
+            "missing_four_count": 0,
+            "passes_connected_homology_audit": false,
+            "passes_selection_model": false,
+            "ridge_degree_histogram": {
+              "1": 24,
+              "2": 411,
+              "3": 24
+            },
+            "strict_local_g_constraints_hold": false
+          },
+          "minimal_transversal_size_histogram": {
+            "5": 102
+          },
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              9
+            ],
+            [
+              0,
+              2,
+              7,
+              8,
+              10
+            ],
+            [
+              1,
+              2,
+              7,
+              8,
+              10
+            ],
+            [
+              7,
+              8,
+              10,
+              11,
+              12
+            ],
+            [
+              2,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "topology_valid": false
+        }
+      ],
+      "target_family_sha256": "a3678a721ea0e69b1fa82381eaa4625e996c826c06f52c168d94f20a962671d1",
+      "topology_orbit_key_sha256": "0c32eb0c8c308a1b9eb6f7359e8d06a62238f0afe1868b8a550de00beb86f92b",
+      "topology_valid_family_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "topology_valid_orbit_count_under_full_graph_x_S8_x_S5": 3,
+      "unrestricted_label_audits_for_all_18_targets": [
+        {
+          "family_index": 0,
+          "missing_fives": [
+            [
+              0,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "6653a78154113ed28fa8257d896c11e11f809876790ce5d7dba23a73f5082cc7",
+              "raw_extension_count": 420,
+              "support": [
+                0,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "8bad258bca95f7a4b51e88253ffac9d49a8b95807bf18462a6fcf1092142907f",
+              "raw_extension_count": 176400,
+              "support": [
+                1,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 13,
+                "5": 12,
+                "6": 4
+              },
+              "compatible_extension_count": 384,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 40320,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 2
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 1,
+          "missing_fives": [
+            [
+              0,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "6653a78154113ed28fa8257d896c11e11f809876790ce5d7dba23a73f5082cc7",
+              "raw_extension_count": 420,
+              "support": [
+                0,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "7482b764be8f427b50625d5ae17d81f6416fd1b4dc8ef4650341735112e41a39",
+              "raw_extension_count": 176400,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 21
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "cfb85936fad7e3988147dd24eb609ee1eb6b5af71e3d9bbaa2a64ecb32fa407d",
+              "raw_extension_count": 40320,
+              "support": [
+                2,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 20,
+                "8": 41
+              },
+              "compatible_extension_count": 4608,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 2304,
+              "passing_state_sha256": "c208694c3a31e07e521c04490456b50241f68e9c4299fd46f175d8d4cfffe98a",
+              "raw_extension_count": 483840,
+              "support": [
+                2,
+                8,
+                9,
+                10,
+                11
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 61,
+                "9": 36
+              },
+              "compatible_extension_count": 7488,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 967680,
+              "support": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 4
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 2,
+          "missing_fives": [
+            [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              11
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "641402ab0d4acedf29d4c5ad2c6b85772507e7a915b9e9d16e1078aa7ed0fe8e",
+              "raw_extension_count": 420,
+              "support": [
+                1,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "4b8df170b1c5dbedb349c167d3f2aac8eea421fdd6ca6531eb00f647000bcf15",
+              "raw_extension_count": 176400,
+              "support": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 13,
+                "5": 12,
+                "6": 4
+              },
+              "compatible_extension_count": 384,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 40320,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                11
+              ],
+              "support_index": 3
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 3,
+          "missing_fives": [
+            [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "641402ab0d4acedf29d4c5ad2c6b85772507e7a915b9e9d16e1078aa7ed0fe8e",
+              "raw_extension_count": 420,
+              "support": [
+                1,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "92c628d2d624e71ac0b81974cc9c30d2bde654481a543d06f9760893842da9af",
+              "raw_extension_count": 176400,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 21
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "dac75c3928c01fa0b7b0b64581d438a8247c4fafc269f2b549294c7900b9b193",
+              "raw_extension_count": 40320,
+              "support": [
+                2,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 20,
+                "8": 41
+              },
+              "compatible_extension_count": 4608,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 2304,
+              "passing_state_sha256": "4fbd2dbaa5617fcbef38c5bbdedc481c6659295b901a2cc9dca6c0218bb3acc3",
+              "raw_extension_count": 483840,
+              "support": [
+                2,
+                8,
+                9,
+                10,
+                12
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 61,
+                "9": 36
+              },
+              "compatible_extension_count": 7488,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 967680,
+              "support": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 4
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 4,
+          "missing_fives": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              11
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "f2d44f4340bf7631f4e925617ff15b691e510cee66e7a07c739aa7089d094696",
+              "raw_extension_count": 420,
+              "support": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "20c534535de6c43d58efa44e14c5ac5308ae942468cb77a0e444c773f7733af6",
+              "raw_extension_count": 176400,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                11
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 36,
+                "8": 21
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "d30bb661866f1dd91fd1d9445a6cc5c970e9ab6c4abd77c05e22aaa246b42bfb",
+              "raw_extension_count": 40320,
+              "support": [
+                2,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 20,
+                "8": 41
+              },
+              "compatible_extension_count": 4608,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 2304,
+              "passing_state_sha256": "410f0cf4adc69568b77cf653ff8c8083d5e202d7cd84928d69464372e07f778f",
+              "raw_extension_count": 483840,
+              "support": [
+                0,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 61,
+                "9": 36
+              },
+              "compatible_extension_count": 9216,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 967680,
+              "support": [
+                7,
+                8,
+                9,
+                10,
+                12
+              ],
+              "support_index": 4
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 5,
+          "missing_fives": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              11
+            ],
+            [
+              1,
+              2,
+              9,
+              10,
+              11
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "f2d44f4340bf7631f4e925617ff15b691e510cee66e7a07c739aa7089d094696",
+              "raw_extension_count": 420,
+              "support": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "20c534535de6c43d58efa44e14c5ac5308ae942468cb77a0e444c773f7733af6",
+              "raw_extension_count": 176400,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                11
+              ],
+              "support_index": 2
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "5": 18,
+                "6": 27,
+                "7": 21
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 40320,
+              "support": [
+                1,
+                2,
+                9,
+                10,
+                11
+              ],
+              "support_index": 3
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 6,
+          "missing_fives": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              5,
+              6,
+              11
+            ],
+            [
+              1,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "f2d44f4340bf7631f4e925617ff15b691e510cee66e7a07c739aa7089d094696",
+              "raw_extension_count": 420,
+              "support": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "20c534535de6c43d58efa44e14c5ac5308ae942468cb77a0e444c773f7733af6",
+              "raw_extension_count": 176400,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                11
+              ],
+              "support_index": 2
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 27,
+                "7": 36,
+                "8": 21
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "3fc6c93bd4e29df569ec2fed5f02ce50b7ac8005fd86b651a6ca8aabab945189",
+              "raw_extension_count": 40320,
+              "support": [
+                1,
+                8,
+                9,
+                10,
+                11
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 20,
+                "8": 41,
+                "9": 41
+              },
+              "compatible_extension_count": 29088,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 483840,
+              "support": [
+                0,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 7,
+          "missing_fives": [
+            [
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              8,
+              9,
+              10
+            ],
+            [
+              3,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              4,
+              5,
+              6,
+              7,
+              12
+            ],
+            [
+              0,
+              8,
+              9,
+              10,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "0371d04dfdfc18496a09bca7a610112d9762bc48f88529f1f966869c9e3c68b5",
+              "raw_extension_count": 420,
+              "support": [
+                2,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "224dba0d9666b30660cbb2d460ef03afc188c5f75322615cabf450642a0ca375",
+              "raw_extension_count": 176400,
+              "support": [
+                4,
+                5,
+                6,
+                7,
+                12
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 27,
+                "7": 36,
+                "8": 21
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "45286af5938599d3980145e8419c10a88d164e157449478505b0ec80314f562e",
+              "raw_extension_count": 40320,
+              "support": [
+                0,
+                8,
+                9,
+                10,
+                12
+              ],
+              "support_index": 4
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 20,
+                "8": 41,
+                "9": 41
+              },
+              "compatible_extension_count": 29088,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 483840,
+              "support": [
+                1,
+                3,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 8,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "7f619fbdd0a667bf788f3f0b15a5821553a20d4a37bba576b62ee04dd7d64b4e",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 1
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "4c6a4f51dda29d5df55b9389262d51aa8fb9eaa461cf6e48092b0072e1176965",
+              "raw_extension_count": 176400,
+              "support": [
+                2,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 21
+              },
+              "compatible_extension_count": 3744,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "9d8aae2b8bbde01ad8d45d919d8c537268a7ba0b0a3c88efa62bf2b633c44037",
+              "raw_extension_count": 483840,
+              "support": [
+                0,
+                2,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 41,
+                "9": 20
+              },
+              "compatible_extension_count": 4608,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 483840,
+              "support": [
+                1,
+                2,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 9,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              7,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "7f619fbdd0a667bf788f3f0b15a5821553a20d4a37bba576b62ee04dd7d64b4e",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "5": 10,
+                "6": 25,
+                "7": 20,
+                "8": 1
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "4195355434e29186ac81ecd54c093b4915601fcb5f827e4be7e050b804967b70",
+              "raw_extension_count": 176400,
+              "support": [
+                7,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 35,
+                "8": 21
+              },
+              "compatible_extension_count": 3744,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "5e854b5fdbfb684a785ef583225145a9a5c5cf07117b75e2a524158ef9932627",
+              "raw_extension_count": 483840,
+              "support": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 4
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 56,
+                "9": 41
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 144,
+              "passing_state_sha256": "61212e3f485811676d62f70bcb4a739bef2d348f373eb0e4b56869d27fc2ffe2",
+              "raw_extension_count": 483840,
+              "support": [
+                0,
+                2,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 21,
+                "9": 81
+              },
+              "compatible_extension_count": 336,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 60480,
+              "support": [
+                1,
+                2,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 10,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "7f619fbdd0a667bf788f3f0b15a5821553a20d4a37bba576b62ee04dd7d64b4e",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 1
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "4c6a4f51dda29d5df55b9389262d51aa8fb9eaa461cf6e48092b0072e1176965",
+              "raw_extension_count": 176400,
+              "support": [
+                2,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 21
+              },
+              "compatible_extension_count": 3744,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "9d8aae2b8bbde01ad8d45d919d8c537268a7ba0b0a3c88efa62bf2b633c44037",
+              "raw_extension_count": 483840,
+              "support": [
+                0,
+                2,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 20,
+                "8": 41
+              },
+              "compatible_extension_count": 4608,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 2304,
+              "passing_state_sha256": "9a0f19e5cd435aca751c988ec61a8cb05cbb77884103da6ac5734e99b1e0ba24",
+              "raw_extension_count": 483840,
+              "support": [
+                2,
+                8,
+                9,
+                10,
+                11
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 61,
+                "9": 36
+              },
+              "compatible_extension_count": 7488,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 967680,
+              "support": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 4
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 11,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              2,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "7f619fbdd0a667bf788f3f0b15a5821553a20d4a37bba576b62ee04dd7d64b4e",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 1
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "4c6a4f51dda29d5df55b9389262d51aa8fb9eaa461cf6e48092b0072e1176965",
+              "raw_extension_count": 176400,
+              "support": [
+                2,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 20,
+                "8": 21
+              },
+              "compatible_extension_count": 3744,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "17de88d4d5d0b706ae6984e8254af17552eddcc528bbb2c9f0fe0db09ec52d8f",
+              "raw_extension_count": 483840,
+              "support": [
+                1,
+                2,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 20,
+                "8": 41
+              },
+              "compatible_extension_count": 4608,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 2304,
+              "passing_state_sha256": "18f9f3feca1aba141f7f0dc3fb6ebf30e4315eb0d2674016ce1705fa63aefd4f",
+              "raw_extension_count": 483840,
+              "support": [
+                2,
+                8,
+                9,
+                10,
+                12
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 61,
+                "9": 36
+              },
+              "compatible_extension_count": 7488,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 967680,
+              "support": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 4
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 12,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              6,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 1,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "7f619fbdd0a667bf788f3f0b15a5821553a20d4a37bba576b62ee04dd7d64b4e",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 21
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "f49fe8b8a72e42a78a8cbfe3d073832cafbcba467b1c2433e0f3977bf6af82c4",
+              "raw_extension_count": 176400,
+              "support": [
+                2,
+                6,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 21
+              },
+              "compatible_extension_count": 3744,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 483840,
+              "support": [
+                2,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 13,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              6,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              2,
+              8,
+              9,
+              10,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 1,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "7f619fbdd0a667bf788f3f0b15a5821553a20d4a37bba576b62ee04dd7d64b4e",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 21
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "f49fe8b8a72e42a78a8cbfe3d073832cafbcba467b1c2433e0f3977bf6af82c4",
+              "raw_extension_count": 176400,
+              "support": [
+                2,
+                6,
+                8,
+                9,
+                10
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 21
+              },
+              "compatible_extension_count": 3744,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 483840,
+              "support": [
+                2,
+                7,
+                8,
+                9,
+                10
+              ],
+              "support_index": 2
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 14,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              8
+            ],
+            [
+              0,
+              2,
+              7,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              7,
+              9,
+              10
+            ],
+            [
+              7,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "c93dd4976180f7b92e238fbba6634955327d2b13336ba0249c7c277ccd3f7834",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                8
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "5": 10,
+                "6": 25,
+                "7": 20,
+                "8": 1
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "fc387995b4334a0a7400fdc0b8bab2cfc7406a85479c9d970f91fa56d8038862",
+              "raw_extension_count": 176400,
+              "support": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 4
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "6": 15,
+                "7": 35,
+                "8": 21
+              },
+              "compatible_extension_count": 3744,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "35ecdd2febdcdf0170c058707e0f1ec60ec608c9894e2631a48d16712134c41b",
+              "raw_extension_count": 483840,
+              "support": [
+                7,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 56,
+                "9": 41
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 144,
+              "passing_state_sha256": "4044adba4584749e77aeaedea5591d33a5b14d4a45ceaaf2ec16d26749f9ff97",
+              "raw_extension_count": 483840,
+              "support": [
+                0,
+                2,
+                7,
+                9,
+                10
+              ],
+              "support_index": 1
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "8": 21,
+                "9": 81
+              },
+              "compatible_extension_count": 336,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 60480,
+              "support": [
+                1,
+                2,
+                7,
+                9,
+                10
+              ],
+              "support_index": 2
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 15,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              7,
+              8
+            ],
+            [
+              0,
+              2,
+              6,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              6,
+              9,
+              10
+            ],
+            [
+              7,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 1,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "f2ae2aed44bdd8a3f72c1d65c618da82fae0f48e4d6992d6d0cd5637f1ede413",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                7,
+                8
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "5": 10,
+                "6": 25,
+                "7": 21
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "31eebf58ebc5336e1ca890ba69529f0c52af4f2090d3f0f096ee024cf9a70037",
+              "raw_extension_count": 176400,
+              "support": [
+                7,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "5": 10,
+                "6": 25,
+                "7": 21
+              },
+              "compatible_extension_count": 3744,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 483840,
+              "support": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 4
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 16,
+          "missing_fives": [
+            [
+              2,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              1,
+              3,
+              4,
+              9,
+              10
+            ],
+            [
+              3,
+              4,
+              9,
+              10,
+              11
+            ],
+            [
+              5,
+              6,
+              7,
+              8,
+              12
+            ],
+            [
+              0,
+              2,
+              9,
+              10,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "3": 4,
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "209df024e4eb0d18e2456ea181d7c2f2c34c40a0bfbf4e9b6cec17b8ff857540",
+              "raw_extension_count": 420,
+              "support": [
+                2,
+                5,
+                6,
+                7,
+                8
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 9,
+                "5": 4
+              },
+              "compatible_extension_count": 1332,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 96,
+              "passing_state_sha256": "58c36b4d75fca5051efc8d711d6d036447ca7da15e4501bc7465af89737ac20f",
+              "raw_extension_count": 176400,
+              "support": [
+                5,
+                6,
+                7,
+                8,
+                12
+              ],
+              "support_index": 3
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "5": 18,
+                "6": 27,
+                "7": 21
+              },
+              "compatible_extension_count": 40320,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 40320,
+              "support": [
+                0,
+                2,
+                9,
+                10,
+                12
+              ],
+              "support_index": 4
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        },
+        {
+          "family_index": 17,
+          "missing_fives": [
+            [
+              3,
+              4,
+              5,
+              6,
+              9
+            ],
+            [
+              0,
+              2,
+              7,
+              8,
+              10
+            ],
+            [
+              1,
+              2,
+              7,
+              8,
+              10
+            ],
+            [
+              7,
+              8,
+              10,
+              11,
+              12
+            ],
+            [
+              2,
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "monotonicity_scope": "all unassigned meeting pairs are initially label 2; any label 3, 4, or 5 increases the nonnegative cosine adjacency entrywise and cannot repair a non-elliptic principal vertex",
+          "rank_nine_vertex_count": 102,
+          "stages": [
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "4": 5
+              },
+              "compatible_extension_count": 420,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 420,
+              "passing_state_sha256": "7c708834c209346bb29de95637dd801c02ca097c0cc03ede39684e5296dc231a",
+              "raw_extension_count": 420,
+              "support": [
+                3,
+                4,
+                5,
+                6,
+                9
+              ],
+              "support_index": 0
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "5": 10,
+                "6": 30,
+                "7": 20,
+                "8": 1
+              },
+              "compatible_extension_count": 176400,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 1152,
+              "passing_state_sha256": "e239967e8bb001c52043db1469336ffd918427acd436db5e77725a673b522e60",
+              "raw_extension_count": 176400,
+              "support": [
+                2,
+                9,
+                10,
+                11,
+                12
+              ],
+              "support_index": 4
+            },
+            {
+              "actual_vertex_restriction_size_histogram": {
+                "7": 20,
+                "8": 55,
+                "9": 17
+              },
+              "compatible_extension_count": 28152,
+              "complete_lanner_placement_count": 420,
+              "passing_state_count": 0,
+              "passing_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "raw_extension_count": 483840,
+              "support": [
+                7,
+                8,
+                10,
+                11,
+                12
+              ],
+              "support_index": 3
+            }
+          ],
+          "unrestricted_compact_coxeter_no_go": true
+        }
+      ],
+      "verified": true
+    },
+    "a1_residual_incidence_audit": {
+      "all_links_are_mod2_homology_spheres": true,
+      "all_links_have_spherical_euler_characteristic": true,
+      "all_ridge_degrees_two": true,
+      "covers_all_independent_triples": true,
+      "dual_component_count": 1,
+      "dual_graph_connected": true,
+      "face_vector": [
+        14,
+        86,
+        309,
+        725,
+        1165,
+        1295,
+        970,
+        450,
+        100
+      ],
+      "facet_complement_sha256": "d04c86f39df6f4b1b58e5df70d4b2fd26924e801db82fa189a979e1cf8a3daf7",
+      "facet_count": 100,
+      "largest_minimal_nonface_order": 5,
+      "local_macaulay_constraints_hold": true,
+      "matches_dehn_sommerville_schedule": true,
+      "minimal_transversal_size_histogram": {
+        "5": 100
+      },
+      "missing_four_count": 1,
+      "passes_connected_homology_audit": true,
+      "passes_selection_model": true,
+      "ridge_degree_histogram": {
+        "2": 450
+      },
+      "strict_local_g_constraints_hold": true
+    },
+    "a1_unrestricted_label_audit": {
+      "block_actual_vertex_restriction_size_histogram": {
+        "7": 20,
+        "8": 55,
+        "9": 15
+      },
+      "complete_placement_counts": {
+        "disjoint_order_five": 420,
+        "order_four": 108,
+        "overlapping_order_five": 420
+      },
+      "coverage_argument": "Every full locally elliptic state can be weakened by changing all but one cross edge to label 2 and the retained edge to label 3. Exactly 5,040 sparse states admit one such edge and no sparse state admits two. Labels 4 and 5 admit none. Every exceptional edge joins the R and B A5 supports, whose exact ten-node principal Gram has negative index two. Labels on the two internal unforced pairs involve facet 2 outside that principal block and cannot change its inertia",
+      "cross_pair_count": 30,
+      "exact_index_two_witnesses": [
+        {
+          "inertia": [
+            8,
+            2,
+            0
+          ],
+          "leading_principal_minors": [
+            "2",
+            "4",
+            "8",
+            "6 - 2*sqrt(5)",
+            "4 - 2*sqrt(5)",
+            "9/2 - 5*sqrt(5)/2",
+            "9 - 5*sqrt(5)",
+            "18 - 10*sqrt(5)",
+            "26 - 12*sqrt(5)",
+            "25/2 - 11*sqrt(5)/2"
+          ],
+          "multiplicity_per_support_gate": 4320,
+          "name": "A5_A5_type_1_1",
+          "signs": "++++-----+",
+          "twice_gram_facet_order": [
+            3,
+            4,
+            5,
+            11,
+            12,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "inertia": [
+            8,
+            2,
+            0
+          ],
+          "leading_principal_minors": [
+            "2",
+            "4",
+            "5 - sqrt(5)",
+            "7/2 - 3*sqrt(5)/2",
+            "4 - 2*sqrt(5)",
+            "9/2 - 5*sqrt(5)/2",
+            "9 - 5*sqrt(5)",
+            "9 - 5*sqrt(5)",
+            "1 - sqrt(5)",
+            "-23/2 - 8*sqrt(2) + 11*sqrt(5)/2 + 4*sqrt(10)"
+          ],
+          "multiplicity_per_support_gate": 720,
+          "name": "A5_A5_type_4_1",
+          "signs": "++++-----+",
+          "twice_gram_facet_order": [
+            10,
+            9,
+            8,
+            7,
+            6,
+            12,
+            11,
+            5,
+            4,
+            3
+          ]
+        }
+      ],
+      "exceptional_A5_A5_class_histogram": {
+        "A5_A5_type_1_1": 4320,
+        "A5_A5_type_4_1": 720
+      },
+      "first_bad_restriction_size_histogram": {
+        "7": 705600,
+        "8": 346320,
+        "9": 1440
+      },
+      "label_three_passing_count": 5040,
+      "label_three_test_count": 1058400,
+      "overlapping_cluster": {
+        "actual_vertex_passing_state_count": 84,
+        "compatible_join_count": 1542,
+        "unforced_internal_pairs": [
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            12
+          ]
+        ]
+      },
+      "passing_R_endpoint_histogram": {
+        "11": 2520,
+        "12": 2520
+      },
+      "passing_edges_per_sparse_state_histogram": {
+        "1": 5040
+      },
+      "rank_nine_vertex_count": 100,
+      "residual_minimal_nonfaces": {
+        "disjoint_missing_five": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_four": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "overlapping_missing_five": [
+          3,
+          4,
+          5,
+          11,
+          12
+        ]
+      },
+      "sparse_block_failure_count": 0,
+      "sparse_block_state_count": 35280,
+      "stronger_single_edge_survivors": {
+        "4": 0,
+        "5": 0
+      },
+      "transcript_sha256": "45b32fb880ba66a77202682b5db5532a0ba055017274ceb44e99a3e35cc2804e",
+      "unrestricted_compact_coxeter_no_go": true
+    },
+    "decoded_edges": [
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        2,
+        13
+      ]
+    ],
+    "exact_topology_valid_residual_incidence_orbit_count": 4,
+    "finite_volume_noncompact_chamber_excluded": false,
+    "graph6": "M?????????O?O?w??",
+    "positive_branch_audit": {
+      "a1": {
+        "exact_residual_incidence_orbit_count": 1,
+        "full_graph_x_S8_orbit_size_histogram": {
+          "56": 2
+        },
+        "representative_completion_censuses": [
+          {
+            "additional_minimal_five_count": 2,
+            "facet_count_histogram_after_no_small_transversal": {
+              "100": 1
+            },
+            "forced_five_shadow_count": 9,
+            "individually_cap_feasible_A5_candidate_count": 252,
+            "no_transversal_of_order_at_most_four_count": 1,
+            "raw_unordered_addition_family_count": 31626,
+            "representative_missing_fours": [
+              [
+                2,
+                3,
+                4,
+                5
+              ]
+            ],
+            "scheduled_target_additions": [
+              [
+                [
+                  3,
+                  4,
+                  5,
+                  11,
+                  12
+                ],
+                [
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ]
+              ]
+            ],
+            "scheduled_target_count": 1,
+            "vertex_cap_feasible_addition_count": 5626
+          },
+          {
+            "additional_minimal_five_count": 3,
+            "facet_count_histogram_after_no_small_transversal": {
+              "71": 90,
+              "73": 120,
+              "75": 480,
+              "77": 150
+            },
+            "forced_five_shadow_count": 8,
+            "individually_cap_feasible_A5_candidate_count": 462,
+            "no_transversal_of_order_at_most_four_count": 840,
+            "raw_unordered_addition_family_count": 16328620,
+            "representative_missing_fours": [
+              [
+                2,
+                3,
+                4,
+                11
+              ]
+            ],
+            "scheduled_target_additions": [],
+            "scheduled_target_count": 0,
+            "vertex_cap_feasible_addition_count": 1794605
+          }
+        ],
+        "shadow_gate_histogram": [
+          {
+            "additional_five_count": 3,
+            "aggregate": false,
+            "forced_shadow_count": 8,
+            "multiplicity": 196,
+            "strict": false
+          },
+          {
+            "additional_five_count": 2,
+            "aggregate": false,
+            "forced_shadow_count": 9,
+            "multiplicity": 112,
+            "strict": false
+          },
+          {
+            "additional_five_count": 1,
+            "aggregate": false,
+            "forced_shadow_count": 10,
+            "multiplicity": 70,
+            "strict": false
+          },
+          {
+            "additional_five_count": 3,
+            "aggregate": true,
+            "forced_shadow_count": 8,
+            "multiplicity": 56,
+            "strict": true
+          },
+          {
+            "additional_five_count": 2,
+            "aggregate": true,
+            "forced_shadow_count": 9,
+            "multiplicity": 56,
+            "strict": true
+          }
+        ],
+        "viable_A4_count": 112
+      },
+      "a2": {
+        "all_unordered_distinct_A4_pairs": 119805,
+        "branch_excluded": true,
+        "family_interval_feasible_pairs": 111699,
+        "forced_shadow_size_histogram": {
+          "15": 224,
+          "16": 24864,
+          "17": 42756,
+          "18": 30520,
+          "19": 11480,
+          "20": 1855
+        },
+        "full_graph_x_S8_x_S2_orbit_size_histogram": {
+          "28": 1
+        },
+        "representative_completion_census": {
+          "additional_minimal_five_count": 2,
+          "facet_count_histogram_after_no_small_transversal": {},
+          "forced_five_shadow_count": 15,
+          "individually_cap_feasible_A5_candidate_count": 56,
+          "no_transversal_of_order_at_most_four_count": 0,
+          "raw_unordered_addition_family_count": 1540,
+          "representative_missing_fours": [
+            [
+              2,
+              3,
+              4,
+              11
+            ],
+            [
+              2,
+              3,
+              4,
+              12
+            ]
+          ],
+          "scheduled_target_additions": [],
+          "scheduled_target_count": 0,
+          "vertex_cap_feasible_addition_count": 540
+        },
+        "strict_aggregate_viable_pair_count": 28
+      },
+      "individually_interval_feasible_A4_count": 490,
+      "verified": true
+    },
+    "record_index": 35,
+    "schedule_audit": {
+      "excluded_missing_four_counts": [
+        3,
+        4
+      ],
+      "rows": [
+        {
+          "facet_count": 102,
+          "missing_four_count": 0,
+          "summed_vertex_link_g4": 30,
+          "total_missing_five_sets": 5
+        },
+        {
+          "facet_count": 100,
+          "missing_four_count": 1,
+          "summed_vertex_link_g4": 24,
+          "total_missing_five_sets": 11
+        },
+        {
+          "facet_count": 98,
+          "missing_four_count": 2,
+          "summed_vertex_link_g4": 18,
+          "total_missing_five_sets": 17
+        },
+        {
+          "facet_count": 96,
+          "missing_four_count": 3,
+          "summed_vertex_link_g4": 12,
+          "total_missing_five_sets": 23
+        },
+        {
+          "facet_count": 94,
+          "missing_four_count": 4,
+          "summed_vertex_link_g4": 6,
+          "total_missing_five_sets": 29
+        }
+      ],
+      "strict_link_sum_required": 14,
+      "surviving_missing_four_counts": [
+        0,
+        1,
+        2
+      ],
+      "verified": true
+    },
+    "verified": true,
+    "whole_graph_shadow_compact_coxeter_excluded": true
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "coxeter.k7_alvin.interruption.v1",
+  "recorded_at_utc": "2026-08-12T14:23:03Z",
+  "reason": "user_redirected_to_algebraic_carrier_finiteness_question",
+  "classification": "interrupted_inconclusive",
+  "negative_result": false,
+  "image": {
+    "tag": "coxeter-alvin:rc7-spatial-r1-d92006a",
+    "id": "sha256:b995880fcd16c6940af225e0c6e5d8734be495f434d8e66640774a4714252896",
+    "alvin_commit": "d92006a842cb4668e7c89e8c8e2d30337e4b0f26"
+  },
+  "stop": {
+    "method": "runner KeyboardInterrupt path followed by docker stop --time 10",
+    "containers_absent_after_stop": true,
+    "containers_were_run_with_rm": true,
+    "no_relaunch_performed": true
+  },
+  "cases": {
+    "ramified-7-h22": {
+      "started_at_utc": "2026-08-12T11:48:37.343256+00:00",
+      "finished_at_utc": "2026-08-12T14:20:16.433263+00:00",
+      "elapsed_seconds": 9099.03149199998,
+      "return_code": 137,
+      "externally_stopped": "runner_interrupted",
+      "complete_termination": false,
+      "algorithm_ended_marker": false,
+      "acceptance_passes": false,
+      "semantic_qf_gate": true,
+      "flushed_prefix": {
+        "root_count": 61,
+        "first_root": "e1",
+        "last_root": "e61",
+        "indices_contiguous": true,
+        "ends_with_newline": true,
+        "stdout_bytes": 6758,
+        "stdout_sha256": "220a00954cba89a17ce5fca6dfc4148f2f1b2220649589922a7c6042dbd52e94",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "graph": null,
+      "independent_verifier": null,
+      "output_artifacts": [],
+      "files": {
+        "request": {
+          "path": "ramified-7-h22/request.json",
+          "sha256": "a7e9b491ed885aeacf3469902c0b780cc3e436ffab950d0d251427d39a25931d"
+        },
+        "result": {
+          "path": "ramified-7-h22/result.json",
+          "sha256": "fab956a311ffe3a9645ef24527f2f94589516f3ddc2032dbe9138c735933fe31"
+        },
+        "stdout": "ramified-7-h22/stdout.txt",
+        "stderr": "ramified-7-h22/stderr.txt"
+      }
+    },
+    "inert-2-h22": {
+      "started_at_utc": "2026-08-12T11:48:45.580055+00:00",
+      "finished_at_utc": "2026-08-12T14:20:16.445334+00:00",
+      "elapsed_seconds": 9090.807181792014,
+      "return_code": 137,
+      "externally_stopped": "runner_interrupted",
+      "complete_termination": false,
+      "algorithm_ended_marker": false,
+      "acceptance_passes": false,
+      "semantic_qf_gate": true,
+      "flushed_prefix": {
+        "root_count": 60,
+        "first_root": "e1",
+        "last_root": "e60",
+        "indices_contiguous": true,
+        "ends_with_newline": true,
+        "stdout_bytes": 6534,
+        "stdout_sha256": "dd408b2ac3b580da8cd6004f61ba822f67e5c97a9667d50cdd796cef7ebbe76c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "graph": null,
+      "independent_verifier": null,
+      "output_artifacts": [],
+      "files": {
+        "request": {
+          "path": "inert-2-h22/request.json",
+          "sha256": "f2343634e8940a1e1e0dc0f31ba8605b4c22285fd2c855a76ddac0c3cc7bc719"
+        },
+        "result": {
+          "path": "inert-2-h22/result.json",
+          "sha256": "866af9ff01ea7505eaa0b0bdc8fa957443573d02dec0988ef2bedf0febd3d6f8"
+        },
+        "stdout": "inert-2-h22/stdout.txt",
+        "stderr": "inert-2-h22/stderr.txt"
+      }
+    }
+  },
+  "resume_assessment": {
+    "archived_stdout_is_a_prefix_not_a_checkpoint": true,
+    "current_alvin_argument_parser_has_checkpoint_or_root_import": false,
+    "cheapest_safe_strategy": "restart each case from the original qf under a fresh archive root using the same immutable repaired image; do not overwrite these interrupted records",
+    "optional_runner_only_improvement": "replace the 64-KiB blocking pipe read with a read1-style available-byte read before a future restart so live root prefixes are archived while the engine runs",
+    "engine_patch_required_for_true_resume": true,
+    "engine_patch_warning": "a root-import/checkpoint patch would require new exact regressions and equal-height packet validation, so it is not the cheapest safe path"
+  },
+  "interpretation": "Both runs were actively computing before the requested stop. Their incomplete prefixes neither prove reflectivity nor non-reflectivity, compactness nor noncompactness, finite volume nor infinite volume."
+}

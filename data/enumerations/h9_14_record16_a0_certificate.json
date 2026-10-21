@@ -1,0 +1,437 @@
+{
+  "a0_analytic_audit": {
+    "a0_support_consequence": "strict vertex-link g4 at vertices 12 and 13 forces every additional minimal five-face onto W={0,...,11}",
+    "base_vertex_link_g3": [
+      4,
+      4,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      1,
+      1
+    ],
+    "base_vertex_link_g4": [
+      5,
+      5,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      1,
+      1
+    ],
+    "blocker_type_audit": {
+      "every_graph_cover_classified_once": true,
+      "forbidden_y_01i_five_sets": 10,
+      "graph_cover_five_sets": 310,
+      "paired_z_variables": 45,
+      "verified": true,
+      "y_type_five_sets": 220,
+      "z_type_five_sets": 90
+    },
+    "cauchy_bound": "s|y| <= 12es - 4e^2 = 9s^2 - (2e-3s)^2, hence |y| <= 9s",
+    "conclusion": "every possible complete-bipartite z cut contradicts the required facet count; the a=0 schedule is impossible",
+    "cut_cases": [
+      {
+        "cauchy_y_upper_bound": 90,
+        "contradiction_gap": 20,
+        "excluded": true,
+        "larger_cut_side": 10,
+        "required_y_count": 110,
+        "smaller_cut_side": 0,
+        "z_edge_count": 0
+      },
+      {
+        "cauchy_y_upper_bound": 81,
+        "contradiction_gap": 11,
+        "excluded": true,
+        "larger_cut_side": 9,
+        "required_y_count": 92,
+        "smaller_cut_side": 1,
+        "z_edge_count": 9
+      },
+      {
+        "cauchy_y_upper_bound": 72,
+        "contradiction_gap": 6,
+        "excluded": true,
+        "larger_cut_side": 8,
+        "required_y_count": 78,
+        "smaller_cut_side": 2,
+        "z_edge_count": 16
+      },
+      {
+        "cauchy_y_upper_bound": 63,
+        "contradiction_gap": 5,
+        "excluded": true,
+        "larger_cut_side": 7,
+        "required_y_count": 68,
+        "smaller_cut_side": 3,
+        "z_edge_count": 21
+      },
+      {
+        "cauchy_y_upper_bound": 54,
+        "contradiction_gap": 8,
+        "excluded": true,
+        "larger_cut_side": 6,
+        "required_y_count": 62,
+        "smaller_cut_side": 4,
+        "z_edge_count": 24
+      },
+      {
+        "cauchy_y_upper_bound": 45,
+        "contradiction_gap": 15,
+        "excluded": true,
+        "larger_cut_side": 5,
+        "required_y_count": 60,
+        "smaller_cut_side": 5,
+        "z_edge_count": 25
+      }
+    ],
+    "graph6": "M???????????o?o?_",
+    "minimal_graph_cover_masks": [
+      4099,
+      8195,
+      12288
+    ],
+    "minimal_graph_cover_vertices": [
+      [
+        0,
+        1,
+        12
+      ],
+      [
+        0,
+        1,
+        13
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "missing_edges": [
+      [
+        0,
+        12
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "missing_five_count": 8,
+    "missing_four_count": 0,
+    "ridge_system": {
+      "nonempty_ridge_groups": 735,
+      "one_special_three_isolate_groups": 240,
+      "total_six_sets": 3003,
+      "two_special_groups": 495,
+      "two_special_groups_with_doubled_z": 45,
+      "verified": true,
+      "y_facet_six_set_incidences": 1980,
+      "z_facet_six_set_incidences": 810
+    },
+    "symbolic_facet_variables": {
+      "facet_count_equation": "|y| + 2|z| = 110",
+      "facets_per_y_variable": 1,
+      "facets_per_z_variable": 2,
+      "y_triples": 220,
+      "z_isolate_pairs": 45
+    },
+    "target_facet_count": 110,
+    "truth_tables": {
+      "induced_2k2_ridge_allowed": false,
+      "induced_2k2_y_count_on_four_set": 4,
+      "q_01ij_truth_table": [
+        {
+          "ridge_allowed": true,
+          "ridge_degree": 0,
+          "y_0ij": 0,
+          "y_1ij": 0,
+          "z": 0
+        },
+        {
+          "ridge_allowed": false,
+          "ridge_degree": 1,
+          "y_0ij": 0,
+          "y_1ij": 1,
+          "z": 0
+        },
+        {
+          "ridge_allowed": false,
+          "ridge_degree": 1,
+          "y_0ij": 1,
+          "y_1ij": 0,
+          "z": 0
+        },
+        {
+          "ridge_allowed": true,
+          "ridge_degree": 2,
+          "y_0ij": 1,
+          "y_1ij": 1,
+          "z": 0
+        },
+        {
+          "ridge_allowed": true,
+          "ridge_degree": 2,
+          "y_0ij": 0,
+          "y_1ij": 0,
+          "z": 1
+        },
+        {
+          "ridge_allowed": false,
+          "ridge_degree": 3,
+          "y_0ij": 0,
+          "y_1ij": 1,
+          "z": 1
+        },
+        {
+          "ridge_allowed": false,
+          "ridge_degree": 3,
+          "y_0ij": 1,
+          "y_1ij": 0,
+          "z": 1
+        },
+        {
+          "ridge_allowed": false,
+          "ridge_degree": 4,
+          "y_0ij": 1,
+          "y_1ij": 1,
+          "z": 1
+        }
+      ],
+      "two_cut_side_edges_induce_2k2": true,
+      "x_triangle_truth_table": [
+        {
+          "ridge_allowed": true,
+          "ridge_degree": 0,
+          "x_edge_count": 0,
+          "y_on_isolate_triple": 0
+        },
+        {
+          "ridge_allowed": true,
+          "ridge_degree": 2,
+          "x_edge_count": 1,
+          "y_on_isolate_triple": 1
+        },
+        {
+          "ridge_allowed": true,
+          "ridge_degree": 2,
+          "x_edge_count": 2,
+          "y_on_isolate_triple": 0
+        },
+        {
+          "ridge_allowed": false,
+          "ridge_degree": 4,
+          "x_edge_count": 3,
+          "y_on_isolate_triple": 1
+        }
+      ],
+      "z_triangle_edge_counts_allowed": [
+        0,
+        2
+      ],
+      "z_triangle_truth_table": [
+        {
+          "edge_count": 0,
+          "edge_mask": 0,
+          "ridge_allowed": true
+        },
+        {
+          "edge_count": 1,
+          "edge_mask": 1,
+          "ridge_allowed": false
+        },
+        {
+          "edge_count": 1,
+          "edge_mask": 2,
+          "ridge_allowed": false
+        },
+        {
+          "edge_count": 2,
+          "edge_mask": 3,
+          "ridge_allowed": true
+        },
+        {
+          "edge_count": 1,
+          "edge_mask": 4,
+          "ridge_allowed": false
+        },
+        {
+          "edge_count": 2,
+          "edge_mask": 5,
+          "ridge_allowed": true
+        },
+        {
+          "edge_count": 2,
+          "edge_mask": 6,
+          "ridge_allowed": true
+        },
+        {
+          "edge_count": 3,
+          "edge_mask": 7,
+          "ridge_allowed": false
+        }
+      ]
+    },
+    "two_graph_count_formula": "|y| = 12e - sum(d_i^2)",
+    "verified": true,
+    "z_cut_exhaustive_replay": {
+      "all_solutions_complete_bipartite": true,
+      "distinct_solution_count": 512,
+      "edge_count_histogram": {
+        "0": 1,
+        "16": 45,
+        "21": 120,
+        "24": 210,
+        "25": 126,
+        "9": 10
+      },
+      "seed_count": 512,
+      "seed_edge_count": 9
+    }
+  },
+  "backend_corroboration": {
+    "assertion_count": 13260,
+    "backend": "z3",
+    "backend_version": "4.16.0",
+    "elapsed_seconds": 61.449423499998375,
+    "path": "data/enumerations/h9_14_facet_completion.json",
+    "reason_unknown": "timeout",
+    "sha256": "2d329439e5baeffb574932ff7bbab2dd78daf706b2917a0674bdc9f01a2f5123",
+    "status": "unknown",
+    "trusted_for_proof": false
+  },
+  "certificate_sha256": "883e2bff979d1c6681950c4e2027b1c5a5fdb5856b09542af56a166a63975965",
+  "claim": "The a=0 Dehn--Sommerville branch of H9/14 survivor record 16 cannot be the nerve of a compact hyperbolic Coxeter 9-polytope.",
+  "excluded_missing_four_counts": [
+    0,
+    5,
+    6
+  ],
+  "frontier_effect": {
+    "current_global_partition": {
+      "certified_explicit_ordinary_polytopal": 7,
+      "independently_certified_impossible": 121,
+      "theorem_undecided": 14,
+      "total_graph_shadows": 142
+    },
+    "graph_shadow_partition_changed": false,
+    "record16_schedule_count_after": 4,
+    "record16_schedule_count_before": 5
+  },
+  "graph6": "M???????????o?o?_",
+  "kind": "h9_14_record16_a0_analytic_exclusion",
+  "nonclaims": [
+    "Record 16 as a whole is not excluded; branches a=1,2,3,4 remain.",
+    "The archived bounded Z3 timeout contributes no logical step.",
+    "No Coxeter labels or Lorentzian Gram matrices are classified.",
+    "This is not a general compact H9/14 non-existence theorem."
+  ],
+  "proof_backend": "exact blocker duality, complete symbolic ridge incidence, Boolean truth tables, and a Cauchy--Schwarz bound; no SAT/SMT or exhaustive missing-five census",
+  "proof_dependencies": [
+    "Burcroff's no-missing-triples theorem for compact H9/14 nerves",
+    "every compact Coxeter missing face is Lanner of order at most five",
+    "strict generalized lower-bound inequalities in every vertex link",
+    "Dehn--Sommerville face-vector schedules",
+    "facets are complementary to the inclusion-minimal transversals of the complete minimal-nonface clutter",
+    "every ridge of a simplicial sphere has degree exactly two",
+    "Cauchy--Schwarz for the degree sequence of a finite graph"
+  ],
+  "proof_sources": [
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record16.py",
+      "sha256": "fd2d02c223d683d9e72ad2e6e72edd9d928c6b0a4fe2525dc254b3b5bab8e564"
+    }
+  ],
+  "record_index": 16,
+  "remaining_missing_four_counts": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "schedule_table": [
+    {
+      "facet_count": 110,
+      "missing_five_count_offset": 8,
+      "missing_four_count": 0,
+      "summed_vertex_link_g4": 42
+    },
+    {
+      "facet_count": 108,
+      "missing_five_count_offset": 14,
+      "missing_four_count": 1,
+      "summed_vertex_link_g4": 36
+    },
+    {
+      "facet_count": 106,
+      "missing_five_count_offset": 20,
+      "missing_four_count": 2,
+      "summed_vertex_link_g4": 30
+    },
+    {
+      "facet_count": 104,
+      "missing_five_count_offset": 26,
+      "missing_four_count": 3,
+      "summed_vertex_link_g4": 24
+    },
+    {
+      "facet_count": 102,
+      "missing_five_count_offset": 32,
+      "missing_four_count": 4,
+      "summed_vertex_link_g4": 18
+    },
+    {
+      "facet_count": 100,
+      "missing_five_count_offset": 38,
+      "missing_four_count": 5,
+      "summed_vertex_link_g4": 12
+    },
+    {
+      "facet_count": 98,
+      "missing_five_count_offset": 44,
+      "missing_four_count": 6,
+      "summed_vertex_link_g4": 6
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "data/enumerations/h9_14_nerve_support.json",
+    "second_layer_survivor_index": 16,
+    "sha256": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d"
+  },
+  "strict_link_g4_exclusion": {
+    "excluded": {
+      "5": 12,
+      "6": 6
+    },
+    "required_sum": 14
+  },
+  "theorem_status": "certified_branch_unsat"
+}

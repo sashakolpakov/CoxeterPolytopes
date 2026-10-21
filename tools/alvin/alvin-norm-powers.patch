@@ -1,0 +1,30 @@
+diff --git a/rcyclotomic7integer_alvin.cpp b/rcyclotomic7integer_alvin.cpp
+--- a/rcyclotomic7integer_alvin.cpp
++++ b/rcyclotomic7integer_alvin.cpp
+@@ -471,5 +471,5 @@ void RCyclotomic7Integer_AlVin::findPossibleNorms2() {
+ 
+   // Powers of two
+-  vector<unsigned int> pow2({1});
++  vector<unsigned int> pow2(iFactorsCount, 1);
+   for (unsigned int i(1); i < iFactorsCount; i++)
+     pow2[i] = pow2[i - 1] * 2;
+diff --git a/quadraticinteger_alvin.cpp b/quadraticinteger_alvin.cpp
+--- a/quadraticinteger_alvin.cpp
++++ b/quadraticinteger_alvin.cpp
+@@ -104,5 +104,5 @@ void QuadraticInteger_AlVin::findPossibleNorms2() {
+ 
+   // Powers of two
+-  vector<unsigned int> pow2({1});
++  vector<unsigned int> pow2(iFactorsCount, 1);
+   for (unsigned int i(1); i < iFactorsCount; i++)
+     pow2[i] = pow2[i - 1] * 2;
+diff --git a/rationalinteger_alvin.cpp b/rationalinteger_alvin.cpp
+--- a/rationalinteger_alvin.cpp
++++ b/rationalinteger_alvin.cpp
+@@ -121,5 +121,5 @@ void RationalInteger_AlVin::findPossibleNorms2() {
+ 
+   // Powers of two
+-  vector<unsigned int> pow2({1});
++  vector<unsigned int> pow2(iPrimeNumbersCount, 1);
+   for (unsigned int i(1); i < iPrimeNumbersCount; i++)
+     pow2[i] = pow2[i - 1] * 2;

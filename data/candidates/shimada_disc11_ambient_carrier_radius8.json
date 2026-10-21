@@ -1,0 +1,114 @@
+{
+  "analysis_id": "shimada_disc11_exact_ambient_carrier_radius8",
+  "schema_version": "0.1.0",
+  "status_date": "2026-08-05",
+  "verified": true,
+  "source_sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68",
+  "algorithm": "ambient_carrier_closed_phaseI_KKT_v1",
+  "carrier_definition": "decorated physical Shimada chambers whose closed golden eigensection contains a future-timelike point; cross every auxiliary ambient wall member and never a _minustwo wall",
+  "complete_ambient_carrier_radius": 8,
+  "complete_layer_counts": {
+    "0": 1,
+    "1": 4,
+    "2": 7,
+    "3": 12,
+    "4": 17,
+    "5": 23,
+    "6": 28,
+    "7": 36,
+    "8": 47
+  },
+  "states_in_complete_carrier_ball": 175,
+  "queued_radius9_frontier_states": 65,
+  "auxiliary_ambient_wall_crossings_tested": 4572,
+  "retained_crossings": 874,
+  "rejected_crossings": 3698,
+  "root_boundary_wall_members_not_crossed": 3486,
+  "state_records_sha256": "3b4e5379a3bac0ce8535fc24aebff3c7b73bb3a4df13f204b92ee5dcbc58062f",
+  "queue_records_sha256": "ce10f96ca06b190ba4d8dd86103e8bbf1976ee1a415e3f7e0ebb4cb83f3b5adf",
+  "edge_records_sha256": "18ac41c6802a5761a80cb198f7877ca6aa51e6addcfd13c6df3cfd15f1124b08",
+  "checkpoint_payload_sha256": "08089ebf8498f87b4674a454f9e072aa620ca00ee571f73df21b63bd3a6347ad",
+  "checkpoint_file_sha256": "04ad5e761c6ee7e579264aeb7909e807fa471fba5cdd0dd5347ed4dfedf3a58f",
+  "checkpoint_file_size_bytes": 123929116,
+  "centralizer_decision": {
+    "D68_representative_stabilizer_order": 2,
+    "D68_return_candidates_tested": 4,
+    "D68_return_records_sha256": "f7017aca8c10636741179a308121bd8067391b7c1fb33f2e72caf5be1631fe30",
+    "centralizing_automorphisms_in_complete_carrier_ball": 2,
+    "known_V4_elements_seen": [
+      "A",
+      "identity"
+    ],
+    "known_V4_elements_not_seen": [
+      "B_minus",
+      "B_plus"
+    ],
+    "only_identity_and_A_in_complete_carrier_ball": true,
+    "any_centralizer_element_other_than_identity_or_A_requires_ambient_carrier_distance_at_least": 9,
+    "missing_known_V4_elements_require_ambient_carrier_distance_at_least": 9,
+    "centralizing_set_in_complete_carrier_ball_is_exactly_known_V4": false,
+    "new_centralizer_beyond_known_V4_requires_ambient_carrier_distance_at_least": null,
+    "carrier_queue_closed": false,
+    "infinite_order_return_found": false,
+    "decision_status": "pending_larger_exact_ambient_carrier_ball",
+    "return_records": [
+      {
+        "ambient_carrier_distance": 0,
+        "commutes_with_tau": false,
+        "matrix_sha256": "a5d1361080e827ffa2d07a9a79eeca420b5bbe15317688bc9e6cea486d33c3d5",
+        "characteristic_polynomial": "(lambda - 1)**12*(lambda + 1)**8"
+      },
+      {
+        "ambient_carrier_distance": 0,
+        "commutes_with_tau": true,
+        "known_element": "identity",
+        "matrix_sha256": "8817db0b345cc277b1b2e649062c98d9a923e6a5159c08ff8b075a3947d0d259",
+        "field_row_action_sha256": "78bf7acaea940cb099d777196f2d59205933658de26a01498eb1cf8105856bae",
+        "exact_order": 1
+      },
+      {
+        "ambient_carrier_distance": 4,
+        "commutes_with_tau": false,
+        "matrix_sha256": "eae4b12df90e8a03cac23c85c9ddfe45bb9149e7025fee4aed3fbbfb9c1efe40",
+        "characteristic_polynomial": "(lambda - 1)**10*(lambda + 1)**10"
+      },
+      {
+        "ambient_carrier_distance": 4,
+        "commutes_with_tau": true,
+        "known_element": "A",
+        "matrix_sha256": "1944304c8501f25118eaee6304aaf4038e690199a6e1a19847b2258645a65b4d",
+        "field_row_action_sha256": "5b6e9046cbbaf4cbffaf954c98a0332b169e3d246b851af9adeb43a8468cdefe",
+        "exact_order": 2
+      }
+    ]
+  },
+  "D35_regression": {
+    "source": {
+      "representative": 35,
+      "ambient_carrier_depth": 4,
+      "physical_state_sha256": "69782e666dacd063973e126a43a9cdbacc0d2124e152efc053c3403688653c6d"
+    },
+    "shared_prefix": [
+      {
+        "ambient_wall": [26, 0],
+        "target_representative": 162,
+        "target_depth": 5,
+        "target_physical_state_sha256": "70d929897537cb5f93400d81f1207b45af1c46352e01a288edc4bb50d8b4eeb2"
+      },
+      {
+        "ambient_wall": [22, 0],
+        "target_representative": 137,
+        "target_depth": 6,
+        "target_physical_state_sha256": "6546aa34711a8fb1f334b132526f4b6100acc4c753ac7e297862a43e25d51bda"
+      }
+    ],
+    "long_branch_last_step": {
+      "ambient_wall": [24, 0],
+      "target_representative": 122,
+      "target_depth": 7,
+      "target_physical_state_sha256": "9fa7a82af850497441dd366fcead7b2987662b9b59e6b54ee306d306bc72e7ec"
+    },
+    "both_branches_occur_in_the_radius8_BFS": true
+  },
+  "scope": "complete exact ambient-carrier metric ball through radius 8; not queue closure, not a full centralizer classification, and not a finite-volume or compactness decision"
+}

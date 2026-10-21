@@ -1,0 +1,10 @@
+{%- if show_source and has_source and sourcename %}
+<div class="sourcelink">
+  <h3>{{ _('This Page') }}</h3>
+  <ul class="this-page-menu">
+    <li><a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('Show Source') }}</a></li>
+    <li><a href="{{ source_repository|e }}/blob/{{ source_branch|e }}/{{ source_directory|e }}/{{ pagename|e }}.rst" rel="nofollow">{{ _('Source on GitHub') }}</a></li>
+  </ul>
+</div>
+{%- endif %}
+

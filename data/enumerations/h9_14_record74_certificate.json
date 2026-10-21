@@ -1,0 +1,264 @@
+{
+  "audit_source": {
+    "path": "src/coxeter_polytopes/combinatorics/h9_14_record74.py",
+    "sha256": "52ebfc3b79d68fc669f8b17d5fd1bd46c0a45f718e1fb56f05e23b06f6af8f70"
+  },
+  "backend_corroboration": {
+    "assertion_count": 11276,
+    "backend": "z3",
+    "backend_version": "4.16.0",
+    "elapsed_seconds": 42.54655724999975,
+    "path": "data/enumerations/h9_14_facet_completion.json",
+    "reason_unknown": "timeout",
+    "sha256": "2d329439e5baeffb574932ff7bbab2dd78daf706b2917a0674bdc9f01a2f5123",
+    "status": "unknown",
+    "trusted_for_proof": false
+  },
+  "certificate_sha256": "0a8812c4dbade45cabe3c544c968d265581e4d3f0fdd6b48673ff7847148ceb4",
+  "claim": "H9/14 survivor record 74 cannot be the nerve of a compact hyperbolic Coxeter 9-polytope.",
+  "graph6": "M?????????O?_@_@_",
+  "kind": "h9_14_record74_solver_independent_exclusion",
+  "nonclaims": [
+    "This excludes one graph shadow, not all compact H9/14 nerves.",
+    "The archived bounded Z3 timeout contributes no logical step.",
+    "No enumeration of A5 families or SAT/SMT backend is required.",
+    "This is not a general non-existence theorem in dimension 9."
+  ],
+  "proof": {
+    "a0": {
+      "active_a5_count_rejected_by_strict_g4": 840,
+      "every_active_a5_forces_nonpositive_g4": true,
+      "facet_divisor": 4,
+      "five_cover_classes": {
+        "four_active_plus_one_isolate": 10,
+        "four_active_survivors_when_A5_intersection_empty": 0,
+        "multiplicity_per_isolate_pair": 4,
+        "three_active_plus_two_isolates": 180
+      },
+      "five_transversal_formula": "4 * tau_2(A5 family)",
+      "forced_minimal_a5_count": 4,
+      "local_support": "all A5s lie in the ten isolated vertices",
+      "locally_allowed_a5_count": 252,
+      "required_facet_count": 90,
+      "required_facet_residue": 2,
+      "small_transversal_gate": "the four A5s must have empty total intersection"
+    },
+    "a1": {
+      "a4_orbit_count": 2,
+      "a4_types": [
+        {
+          "active_vertex_count": 0,
+          "independent_five_shadow_size": 10,
+          "isolate_vertex_count": 4,
+          "locally_impossible": true,
+          "orbit_multiplicity": 210,
+          "representative_mask": 30,
+          "representative_vertices": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "strict_g3_zero_vertices": [],
+          "strict_g4_zero_vertices_before_additional_a5": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "active_vertex_count": 1,
+          "independent_five_shadow_size": 7,
+          "isolate_vertex_count": 3,
+          "locally_impossible": true,
+          "orbit_multiplicity": 480,
+          "representative_mask": 15,
+          "representative_vertices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "strict_g3_zero_vertices": [
+            0
+          ],
+          "strict_g4_zero_vertices_before_additional_a5": [
+            0
+          ]
+        }
+      ],
+      "active_vertex_a4_incidence_interval": [
+        0,
+        0
+      ],
+      "additional_minimal_a5_count_after_isolate_a4": 0,
+      "conclusion": "every A4 orbit violates strict vertex-link g3 or g4 before any additional minimal A5 is selected; the isolate-only orbit also has an explicit four-transversal",
+      "independent_a4_count": 690,
+      "isolate_a4_shadow_size": 10,
+      "scheduled_missing_five_count": 10,
+      "small_transversal_witness": "any minimal three-cover C of K4 union any q in the isolate-only A4"
+    },
+    "active_vertices": [
+      0,
+      11,
+      12,
+      13
+    ],
+    "base_vertex_link_g3": [
+      1,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      1,
+      1,
+      1
+    ],
+    "base_vertex_link_g4": [
+      1,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      1,
+      1,
+      1
+    ],
+    "excluded_high_a_branches": [
+      {
+        "missing_four_count": 2,
+        "required_minimum": 14,
+        "summed_vertex_link_g4": 12
+      },
+      {
+        "missing_four_count": 3,
+        "required_minimum": 14,
+        "summed_vertex_link_g4": 6
+      }
+    ],
+    "graph6": "M?????????O?_@_@_",
+    "isolated_vertices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "minimal_graph_cover_masks": [
+      6145,
+      10241,
+      12289,
+      14336
+    ],
+    "minimal_graph_cover_vertices": [
+      [
+        0,
+        11,
+        12
+      ],
+      [
+        0,
+        11,
+        13
+      ],
+      [
+        0,
+        12,
+        13
+      ],
+      [
+        11,
+        12,
+        13
+      ]
+    ],
+    "missing_edges": [
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "schedule_link_g4_sums": [
+      {
+        "missing_four_count": 0,
+        "summed_vertex_link_g4": 24
+      },
+      {
+        "missing_four_count": 1,
+        "summed_vertex_link_g4": 18
+      },
+      {
+        "missing_four_count": 2,
+        "summed_vertex_link_g4": 12
+      },
+      {
+        "missing_four_count": 3,
+        "summed_vertex_link_g4": 6
+      }
+    ],
+    "verified": true
+  },
+  "proof_backend": "exact local g-vectors and blocker divisibility",
+  "proof_dependencies": [
+    "every compact Coxeter missing face is Lanner of order at most five",
+    "strict generalized lower-bound inequalities in nonsimplex links",
+    "Dehn--Sommerville face-vector schedules",
+    "maximal faces are complementary to inclusion-minimal transversals of the complete minimal-nonface clutter"
+  ],
+  "record_index": 74,
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "data/enumerations/h9_14_nerve_support.json",
+    "second_layer_survivor_index": 74,
+    "sha256": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d"
+  },
+  "theorem_status": "certified_unsat",
+  "updated_theorem_partition": {
+    "certified_explicit_witness": 2,
+    "independently_certified_impossible": 118,
+    "theorem_undecided": 22,
+    "total_graph_shadows": 142
+  }
+}

@@ -1,0 +1,1232 @@
+{
+  "status": "COMPLETE_CURRENT_SOURCE_DISTANCE9_REPLAY;ALL2196_UNITS_ACTUAL_PASS",
+  "scope": "Bounded exact alternative replay of the frozen108-range certificate. Every unit of all8domains is required.",
+  "worker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+  "required_domains": {
+    "metadata": 1,
+    "domains": 1,
+    "overlap-domain": 384,
+    "disjoint": 384,
+    "inertia": 85,
+    "overlaps": 384,
+    "isolation": 949,
+    "profiles": 8
+  },
+  "jobs": [
+    {
+      "id": "distance9_metadata_0_1",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "One measured pilot interval in the complete8phase domain; complete replay requires every phase index.",
+      "exit_code": 0,
+      "elapsed_seconds": 14.295,
+      "stdout_sha256": "131a5236105608c3f3fadbd3db3bb05b7ce18fdae7caa7c7e2bcee8388a3b2f0",
+      "stdout_bytes": 1039,
+      "source_sha256": "d9ab46e4404ed8dc02b0166f220cb0e63bc62eb42beaf68a5a7823fa65f84745",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"metadata\", \"source\": \"d9ab46e4404ed8dc02b0166f220cb0e63bc62eb42beaf68a5a7823fa65f84745\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 1}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"metadata\", \"--start\", \"0\", \"--stop\", \"1\"], \"elapsed_seconds\": 14.24, \"peak_process_tree_rss_bytes\": 133562368, \"initial_resources\": {\"free_disk_gib\": 171.22, \"available_memory_gib\": 6.27}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 427, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"d9ab46e4404ed8dc02b0166f220cb0e63bc62eb42beaf68a5a7823fa65f84745\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9_domains_0_1",
+      "kind": "script",
+      "status": "FAILED",
+      "coverage": "One measured pilot interval in the complete8phase domain; complete replay requires every phase index.",
+      "exit_code": 1,
+      "elapsed_seconds": 1.954,
+      "stdout_sha256": "0f60cb4acc0b5d23a0b1a9162cd286d9260ea6f1920aa5fdfab127f877cfb95b",
+      "stdout_bytes": 1765,
+      "source_sha256": "d9ab46e4404ed8dc02b0166f220cb0e63bc62eb42beaf68a5a7823fa65f84745",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 96, in main\n    assert child.wait() == 0, output[-7000:].decode(errors='replace')\n           ^^^^^^^^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"<string>\", line 13, in <module>\n    runpy.run_path(sys.argv[0], run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 294, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/sasha/CoxeterPolytopes/scripts/check_selective_distance9_batches_20261020.py\", line 668, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/check_selective_distance9_batches_20261020.py\", line 643, in main\n    domains(old, grams, contexts, ports)\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/check_selective_distance9_batches_20261020.py\", line 377, in domains\n    joins, good, types = join_domain(old, grams, ports)\n                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/check_selective_distance9_batches_20261020.py\", line 227, in join_domain\n    assert len(rows) == 4442 and sum(x*y >= 1 for _, _, x, y in rows) == 1103\n                                 ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sasha/.venvs/global/lib/python3.14/site-packages/sympy/logic/boolalg.py\", line 249, in _noop\n    raise TypeError('BooleanAtom not allowed in this context.')\nTypeError: BooleanAtom not allowed in this context.\n\n"
+    },
+    {
+      "id": "distance9_current_scanner_fixtures",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "Current scanner fixture or measured interval only; complete108range replay requires every index of all8phases.",
+      "exit_code": 1,
+      "elapsed_seconds": 0.058,
+      "stdout_sha256": "a5764144d6a07a505508f4cc6cf57cd0c8532bd8a822f0b12b914a342993fed8",
+      "stdout_bytes": 675,
+      "source_sha256": "1f0bf6d952d536a0eb7316c088d8dceb23c52687c8e7fdc2536547b5371cf09b",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=171.2GiB memory=5.8GiB; require 40/6GiB\n"
+    },
+    {
+      "id": "distance9-metadata-0-1-3",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "metadata [0,1) only",
+      "exit_code": 0,
+      "elapsed_seconds": 13.832,
+      "stdout_sha256": "4ea646ad49cd867089059cb82f697a67b8d43907c0baf96a3487f61867af5780",
+      "stdout_bytes": 1040,
+      "source_sha256": "126d5fe3588cfbb56009bff1f748dbab2154582e3df814feff50b32003cf023b",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"metadata\", \"source\": \"126d5fe3588cfbb56009bff1f748dbab2154582e3df814feff50b32003cf023b\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 1}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"metadata\", \"--start\", \"0\", \"--stop\", \"1\"], \"elapsed_seconds\": 13.778, \"peak_process_tree_rss_bytes\": 134905856, \"initial_resources\": {\"free_disk_gib\": 171.09, \"available_memory_gib\": 6.14}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 427, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"126d5fe3588cfbb56009bff1f748dbab2154582e3df814feff50b32003cf023b\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-domains-0-1-4",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "domains [0,1) only",
+      "exit_code": 1,
+      "elapsed_seconds": 0.047,
+      "stdout_sha256": "4619b4c945e2eff20a5cdac8427965cf03d520e0094dd2ceb747d08824242d16",
+      "stdout_bytes": 675,
+      "source_sha256": "126d5fe3588cfbb56009bff1f748dbab2154582e3df814feff50b32003cf023b",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=171.1GiB memory=5.7GiB; require 40/6GiB\n"
+    },
+    {
+      "id": "distance9-domains-0-1-5",
+      "kind": "script",
+      "status": "FAILED",
+      "coverage": "domains [0,1) only",
+      "exit_code": 1,
+      "elapsed_seconds": 2.709,
+      "stdout_sha256": "cfbc350cdb28769a0c960f1b38640fb0dd69c69d7fc02bddd0cb9245b764ab26",
+      "stdout_bytes": 1661,
+      "source_sha256": "126d5fe3588cfbb56009bff1f748dbab2154582e3df814feff50b32003cf023b",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 96, in main\n    assert child.wait() == 0, output[-7000:].decode(errors='replace')\n           ^^^^^^^^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"<string>\", line 13, in <module>\n    runpy.run_path(sys.argv[0], run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 294, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/sasha/CoxeterPolytopes/scripts/check_selective_distance9_batches_20261020.py\", line 668, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/check_selective_distance9_batches_20261020.py\", line 643, in main\n    domains(old, grams, contexts, ports)\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/check_selective_distance9_batches_20261020.py\", line 382, in domains\n    equal(actual_keys, [(row['left'], row['right']) for row in expected], 'ordered join domain')\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/check_selective_distance9_batches_20261020.py\", line 92, in equal\n    assert json.loads(json.dumps(actual)) == expected, ('output differs', label)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('output differs', 'ordered join domain')\n\n"
+    },
+    {
+      "id": "distance9-metadata-0-1-6",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "metadata [0,1) only",
+      "exit_code": 0,
+      "elapsed_seconds": 13.792,
+      "stdout_sha256": "520aef1e430a2ba590610fd866ae6ecb488ab549e2359ec2248ea118bebcf7ef",
+      "stdout_bytes": 1040,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"metadata\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 1}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"metadata\", \"--start\", \"0\", \"--stop\", \"1\"], \"elapsed_seconds\": 13.743, \"peak_process_tree_rss_bytes\": 134627328, \"initial_resources\": {\"free_disk_gib\": 172.04, \"available_memory_gib\": 6.16}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 427, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-domains-0-1-7",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "domains [0,1) only",
+      "exit_code": 0,
+      "elapsed_seconds": 5.369,
+      "stdout_sha256": "ece02d7b847c86710b6c30e4a185799f406be3aace05dc4c163ac8e2542b2140",
+      "stdout_bytes": 1037,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"domains\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 1}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"domains\", \"--start\", \"0\", \"--stop\", \"1\"], \"elapsed_seconds\": 5.319, \"peak_process_tree_rss_bytes\": 146587648, \"initial_resources\": {\"free_disk_gib\": 172.04, \"available_memory_gib\": 6.11}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 426, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "status": "PASS_BOUNDED_RESEARCH_CHECK",
+      "command": [
+        "scripts/check_selective_distance9_batches_20261020.py",
+        "--verify",
+        "--phase",
+        "profiles",
+        "--start",
+        "0",
+        "--stop",
+        "8"
+      ],
+      "elapsed_seconds": 2.052,
+      "peak_process_tree_rss_bytes": 130007040,
+      "initial_resources": {
+        "free_disk_gib": 172.04,
+        "available_memory_gib": 6.1
+      },
+      "wall_limit_seconds": 59,
+      "rss_limit_bytes": 1073741824,
+      "threads": 1,
+      "stdout_bytes": 427,
+      "stdout": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"profiles\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 8}\n",
+      "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "checker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "lock_owner": "wrapper"
+    },
+    {
+      "status": "PASS_BOUNDED_RESEARCH_CHECK",
+      "command": [
+        "scripts/check_selective_distance9_batches_20261020.py",
+        "--verify",
+        "--phase",
+        "overlap-domain",
+        "--start",
+        "348",
+        "--stop",
+        "352"
+      ],
+      "elapsed_seconds": 1.857,
+      "peak_process_tree_rss_bytes": 134414336,
+      "initial_resources": {
+        "free_disk_gib": 172.04,
+        "available_memory_gib": 6.19
+      },
+      "wall_limit_seconds": 59,
+      "rss_limit_bytes": 1073741824,
+      "threads": 1,
+      "stdout_bytes": 437,
+      "stdout": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"overlap-domain\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 348, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 352}\n",
+      "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "checker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "lock_owner": "wrapper"
+    },
+    {
+      "id": "distance9-overlap-domain-0-64-10",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlap-domain [0,64) only",
+      "exit_code": 0,
+      "elapsed_seconds": 1.954,
+      "stdout_sha256": "8ffc65e91f03652f9d729591e82ce3eff31ffd8dacd5f67180cee0a4bf822ff8",
+      "stdout_bytes": 1053,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"overlap-domain\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 64}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlap-domain\", \"--start\", \"0\", \"--stop\", \"64\"], \"elapsed_seconds\": 1.904, \"peak_process_tree_rss_bytes\": 133545984, \"initial_resources\": {\"free_disk_gib\": 172.06, \"available_memory_gib\": 6.14}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 434, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlap-domain-64-348-11",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "overlap-domain [64,348) only",
+      "exit_code": 1,
+      "elapsed_seconds": 0.047,
+      "stdout_sha256": "69196634d03754ab27b10e67fde9640c8097c22c8a368377c7213302432df2e5",
+      "stdout_bytes": 675,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=172.1GiB memory=5.6GiB; require 40/6GiB\n"
+    },
+    {
+      "id": "distance9-overlap-domain-64-348-12",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlap-domain [64,348) only",
+      "exit_code": 0,
+      "elapsed_seconds": 2.187,
+      "stdout_sha256": "d9bf203dafc9e90d679cc832b1f767aa13726dfe46b7b4ae0517eb43a49b5c5a",
+      "stdout_bytes": 1057,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"overlap-domain\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 64, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 348}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlap-domain\", \"--start\", \"64\", \"--stop\", \"348\"], \"elapsed_seconds\": 2.137, \"peak_process_tree_rss_bytes\": 159432704, \"initial_resources\": {\"free_disk_gib\": 171.98, \"available_memory_gib\": 6.02}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 436, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlap-domain-352-384-13",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "overlap-domain [352,384) only",
+      "exit_code": 1,
+      "elapsed_seconds": 0.045,
+      "stdout_sha256": "72f8c17a1f5d6964bd016826b14bb4a66543e993cf5338fb640383dc4596c909",
+      "stdout_bytes": 675,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=172.0GiB memory=5.9GiB; require 40/6GiB\n"
+    },
+    {
+      "id": "distance9-overlap-domain-352-384-14",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlap-domain [352,384) only",
+      "exit_code": 0,
+      "elapsed_seconds": 1.928,
+      "stdout_sha256": "32c66291d8122afd848a2607e787972f9889eec61872b7c0ae096d55a6443f5f",
+      "stdout_bytes": 1059,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"overlap-domain\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 352, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 384}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlap-domain\", \"--start\", \"352\", \"--stop\", \"384\"], \"elapsed_seconds\": 1.879, \"peak_process_tree_rss_bytes\": 136593408, \"initial_resources\": {\"free_disk_gib\": 171.97, \"available_memory_gib\": 6.02}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 437, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "status": "PASS_BOUNDED_RESEARCH_CHECK",
+      "command": [
+        "scripts/check_selective_distance9_batches_20261020.py",
+        "--verify",
+        "--phase",
+        "disjoint",
+        "--start",
+        "348",
+        "--stop",
+        "352"
+      ],
+      "elapsed_seconds": 5.979,
+      "peak_process_tree_rss_bytes": 138346496,
+      "initial_resources": {
+        "free_disk_gib": 171.98,
+        "available_memory_gib": 6.03
+      },
+      "wall_limit_seconds": 59,
+      "rss_limit_bytes": 1073741824,
+      "threads": 1,
+      "stdout_bytes": 431,
+      "stdout": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 348, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 352}\n",
+      "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "checker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "lock_owner": "wrapper"
+    },
+    {
+      "id": "distance9-disjoint-0-32-16",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [0,32) only",
+      "exit_code": 0,
+      "elapsed_seconds": 2.713,
+      "stdout_sha256": "3bcfde58b798e0ff71d30910aed44b58e814a254b6cab8ca52fe43f200af1ca8",
+      "stdout_bytes": 1040,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 32}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"0\", \"--stop\", \"32\"], \"elapsed_seconds\": 2.66, \"peak_process_tree_rss_bytes\": 135315456, \"initial_resources\": {\"free_disk_gib\": 171.98, \"available_memory_gib\": 7.83}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 428, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "status": "PASS_BOUNDED_RESEARCH_CHECK",
+      "command": [
+        "scripts/check_selective_distance9_batches_20261020.py",
+        "--verify",
+        "--phase",
+        "inertia",
+        "--start",
+        "80",
+        "--stop",
+        "85"
+      ],
+      "elapsed_seconds": 1.67,
+      "peak_process_tree_rss_bytes": 135053312,
+      "initial_resources": {
+        "free_disk_gib": 171.96,
+        "available_memory_gib": 6.37
+      },
+      "wall_limit_seconds": 59,
+      "rss_limit_bytes": 1073741824,
+      "threads": 1,
+      "stdout_bytes": 428,
+      "stdout": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"inertia\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 80, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 85}\n",
+      "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "checker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "lock_owner": "wrapper"
+    },
+    {
+      "id": "distance9-disjoint-32-96-18",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "disjoint [32,96) only",
+      "exit_code": 1,
+      "elapsed_seconds": 0.046,
+      "stdout_sha256": "d1f8e184c8dbe84b7390752b7941c26036cfc72f31f176d46421620067db5d62",
+      "stdout_bytes": 675,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=172.0GiB memory=6.0GiB; require 40/6GiB\n"
+    },
+    {
+      "id": "distance9-disjoint-32-96-19",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [32,96) only",
+      "exit_code": 0,
+      "elapsed_seconds": 3.362,
+      "stdout_sha256": "68059b03a5e45bd8a646c449a24bde6aa4de4133caaaacbfefe386850e18f278",
+      "stdout_bytes": 1043,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 32, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 96}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"32\", \"--stop\", \"96\"], \"elapsed_seconds\": 3.312, \"peak_process_tree_rss_bytes\": 136069120, \"initial_resources\": {\"free_disk_gib\": 171.94, \"available_memory_gib\": 6.77}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 429, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-disjoint-96-160-20",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [96,160) only",
+      "exit_code": 0,
+      "elapsed_seconds": 3.355,
+      "stdout_sha256": "cc318e05f0e83ffbd3daec0c18f9a1026de56d9a0dd28cde745967e74b12bfc5",
+      "stdout_bytes": 1045,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 96, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 160}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"96\", \"--stop\", \"160\"], \"elapsed_seconds\": 3.306, \"peak_process_tree_rss_bytes\": 136626176, \"initial_resources\": {\"free_disk_gib\": 171.94, \"available_memory_gib\": 6.77}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 430, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-disjoint-160-224-21",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [160,224) only",
+      "exit_code": 0,
+      "elapsed_seconds": 4.985,
+      "stdout_sha256": "628b77a9413d32b4b46f46aeb4e2c813a654c54c04ae806528d810867327ee9f",
+      "stdout_bytes": 1047,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 160, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 224}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"160\", \"--stop\", \"224\"], \"elapsed_seconds\": 4.935, \"peak_process_tree_rss_bytes\": 137412608, \"initial_resources\": {\"free_disk_gib\": 171.94, \"available_memory_gib\": 6.77}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 431, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-disjoint-224-288-22",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [224,288) only",
+      "exit_code": 0,
+      "elapsed_seconds": 6.966,
+      "stdout_sha256": "39a9d5866f4004318c653824d7c272430a9e71dc146630a2449ed2867d5d3e21",
+      "stdout_bytes": 1047,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 224, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 288}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"224\", \"--stop\", \"288\"], \"elapsed_seconds\": 6.916, \"peak_process_tree_rss_bytes\": 137904128, \"initial_resources\": {\"free_disk_gib\": 171.94, \"available_memory_gib\": 6.77}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 431, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-disjoint-288-348-23",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [288,348) only",
+      "exit_code": 0,
+      "elapsed_seconds": 5.214,
+      "stdout_sha256": "9a97e3bb560cc51066344e9325c237de048ac94194d0c562783a3c0ea5579c49",
+      "stdout_bytes": 1047,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 288, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 348}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"288\", \"--stop\", \"348\"], \"elapsed_seconds\": 5.164, \"peak_process_tree_rss_bytes\": 137314304, \"initial_resources\": {\"free_disk_gib\": 171.94, \"available_memory_gib\": 6.76}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 431, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-disjoint-352-360-24",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [352,360) only",
+      "exit_code": 0,
+      "elapsed_seconds": 11.256,
+      "stdout_sha256": "d523d9c91e2d97b7834856d807fda131768764b185bdcba63f7a54b0f2cdfeea",
+      "stdout_bytes": 1048,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 352, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 360}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"352\", \"--stop\", \"360\"], \"elapsed_seconds\": 11.203, \"peak_process_tree_rss_bytes\": 140787712, \"initial_resources\": {\"free_disk_gib\": 171.93, \"available_memory_gib\": 6.54}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 431, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-disjoint-360-368-25",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [360,368) only",
+      "exit_code": 0,
+      "elapsed_seconds": 9.316,
+      "stdout_sha256": "75bbf948182d28a9c9bdf73d8f029035a456aa195882ba43d15ec10f9f73db9a",
+      "stdout_bytes": 1046,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 360, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 368}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"360\", \"--stop\", \"368\"], \"elapsed_seconds\": 9.26, \"peak_process_tree_rss_bytes\": 137478144, \"initial_resources\": {\"free_disk_gib\": 171.93, \"available_memory_gib\": 6.43}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 431, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-disjoint-368-376-26",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [368,376) only",
+      "exit_code": 0,
+      "elapsed_seconds": 6.68,
+      "stdout_sha256": "d96bd02e236df37631dd1e978f6d40e0a3abe845fa838673127dd4ea34d7775f",
+      "stdout_bytes": 1047,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 368, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 376}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"368\", \"--stop\", \"376\"], \"elapsed_seconds\": 6.584, \"peak_process_tree_rss_bytes\": 136069120, \"initial_resources\": {\"free_disk_gib\": 171.93, \"available_memory_gib\": 6.44}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 431, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-disjoint-376-384-27",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "disjoint [376,384) only",
+      "exit_code": 0,
+      "elapsed_seconds": 5.305,
+      "stdout_sha256": "564ea3a640b05b1a201febf36bd2a5ee452c51b6066bfc10f4381ffd9550867e",
+      "stdout_bytes": 1047,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"disjoint\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 376, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 384}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"disjoint\", \"--start\", \"376\", \"--stop\", \"384\"], \"elapsed_seconds\": 5.167, \"peak_process_tree_rss_bytes\": 135708672, \"initial_resources\": {\"free_disk_gib\": 171.93, \"available_memory_gib\": 6.43}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 431, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-inertia-0-80-28",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "inertia [0,80) only",
+      "exit_code": 1,
+      "elapsed_seconds": 0.097,
+      "stdout_sha256": "d643d643ebef8fc30f0d61427565ac18e84fdccad67370f226d8ad0dbfcf4d98",
+      "stdout_bytes": 675,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=171.9GiB memory=6.0GiB; require 40/6GiB\n"
+    },
+    {
+      "id": "distance9-inertia-0-80-29",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "inertia [0,80) only",
+      "exit_code": 0,
+      "elapsed_seconds": 5.26,
+      "stdout_sha256": "0619373365e0c6de894d9da636edc472cd70fd7e4beb6267371e47982f276d20",
+      "stdout_bytes": 1039,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"inertia\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 80}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"inertia\", \"--start\", \"0\", \"--stop\", \"80\"], \"elapsed_seconds\": 5.184, \"peak_process_tree_rss_bytes\": 137871360, \"initial_resources\": {\"free_disk_gib\": 171.92, \"available_memory_gib\": 6.18}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 427, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "status": "PASS_BOUNDED_RESEARCH_CHECK",
+      "command": [
+        "scripts/check_selective_distance9_batches_20261020.py",
+        "--verify",
+        "--phase",
+        "overlaps",
+        "--start",
+        "356",
+        "--stop",
+        "357"
+      ],
+      "elapsed_seconds": 35.723,
+      "peak_process_tree_rss_bytes": 139264000,
+      "initial_resources": {
+        "free_disk_gib": 171.83,
+        "available_memory_gib": 7.3
+      },
+      "wall_limit_seconds": 59,
+      "rss_limit_bytes": 1073741824,
+      "threads": 1,
+      "stdout_bytes": 469,
+      "stdout": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 1669, \"generated\": 40524}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 356, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 357}\n",
+      "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "checker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "lock_owner": "wrapper"
+    },
+    {
+      "id": "distance9-overlaps-0-32-31",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [0,32) only",
+      "exit_code": 0,
+      "elapsed_seconds": 6.361,
+      "stdout_sha256": "ad35a6636882a486ea942fd7a9019432d7ec790b11f67ba61cd19de1760d2873",
+      "stdout_bytes": 1074,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 24, \"generated\": 24}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 32}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"0\", \"--stop\", \"32\"], \"elapsed_seconds\": 6.235, \"peak_process_tree_rss_bytes\": 132595712, \"initial_resources\": {\"free_disk_gib\": 171.65, \"available_memory_gib\": 6.33}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 461, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-32-64-32",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [32,64) only",
+      "exit_code": 0,
+      "elapsed_seconds": 6.863,
+      "stdout_sha256": "5f78eeef6677ba99f2f36dc1ee884258ec54b56fb3c698634674ca16cf5b8e57",
+      "stdout_bytes": 1076,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 64, \"generated\": 74}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 32, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 64}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"32\", \"--stop\", \"64\"], \"elapsed_seconds\": 6.691, \"peak_process_tree_rss_bytes\": 134971392, \"initial_resources\": {\"free_disk_gib\": 171.65, \"available_memory_gib\": 6.27}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 462, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-64-96-33",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [64,96) only",
+      "exit_code": 0,
+      "elapsed_seconds": 5.887,
+      "stdout_sha256": "24e1b4868cd514cec17de55dbb100350aebed2d383fed312ad15e8d567ad8fb9",
+      "stdout_bytes": 1078,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 130, \"generated\": 218}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 64, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 96}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"64\", \"--stop\", \"96\"], \"elapsed_seconds\": 5.773, \"peak_process_tree_rss_bytes\": 134266880, \"initial_resources\": {\"free_disk_gib\": 171.65, \"available_memory_gib\": 6.31}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 464, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-96-128-34",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "overlaps [96,128) only",
+      "exit_code": 1,
+      "elapsed_seconds": 0.097,
+      "stdout_sha256": "5b2eaafe2be95c34f38e50702606225efade4c5be436ce5a7690ebf7dc9d2bdc",
+      "stdout_bytes": 675,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=171.6GiB memory=6.0GiB; require 40/6GiB\n"
+    },
+    {
+      "status": "PASS_BOUNDED_RESEARCH_CHECK",
+      "command": [
+        "scripts/check_selective_distance9_batches_20261020.py",
+        "--verify",
+        "--phase",
+        "isolation",
+        "--start",
+        "934",
+        "--stop",
+        "935"
+      ],
+      "elapsed_seconds": 9.296,
+      "peak_process_tree_rss_bytes": 136953856,
+      "initial_resources": {
+        "free_disk_gib": 171.56,
+        "available_memory_gib": 6.86
+      },
+      "wall_limit_seconds": 59,
+      "rss_limit_bytes": 1073741824,
+      "threads": 1,
+      "stdout_bytes": 432,
+      "stdout": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 934, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 935}\n",
+      "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "checker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "lock_owner": "wrapper"
+    },
+    {
+      "id": "distance9-overlaps-96-128-36",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "overlaps [96,128) only",
+      "exit_code": 1,
+      "elapsed_seconds": 1.642,
+      "stdout_sha256": "7c20606f53ab8718076e09697e2390d4bbc8f8cb5e9d22fa8192f1ae5ebb740d",
+      "stdout_bytes": 675,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=171.6GiB memory=4.5GiB; require 40/6GiB\n"
+    },
+    {
+      "id": "distance9-overlaps-96-128-37",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [96,128) only",
+      "exit_code": 0,
+      "elapsed_seconds": 2.201,
+      "stdout_sha256": "ed88341ef4be49a8e50bfd7f3f8300bd0a7dac98c86e4d6396807a4698d2d150",
+      "stdout_bytes": 1080,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 92, \"generated\": 114}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 96, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 128}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"96\", \"--stop\", \"128\"], \"elapsed_seconds\": 2.151, \"peak_process_tree_rss_bytes\": 134201344, \"initial_resources\": {\"free_disk_gib\": 162.73, \"available_memory_gib\": 11.16}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 464, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-128-160-38",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [128,160) only",
+      "exit_code": 0,
+      "elapsed_seconds": 2.31,
+      "stdout_sha256": "9aa7c972260092560049027587421c4fc873adf08c0f3830efe4ba005a6e52ac",
+      "stdout_bytes": 1084,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 684, \"generated\": 2767}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 128, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 160}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"128\", \"--stop\", \"160\"], \"elapsed_seconds\": 2.259, \"peak_process_tree_rss_bytes\": 135544832, \"initial_resources\": {\"free_disk_gib\": 162.73, \"available_memory_gib\": 11.21}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 467, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-160-192-39",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [160,192) only",
+      "exit_code": 0,
+      "elapsed_seconds": 3.871,
+      "stdout_sha256": "f719d084a4d535bd516dc5228cc231b8ed5f93a902f0ccac05b806a533f05ca0",
+      "stdout_bytes": 1082,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 432, \"generated\": 850}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 160, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 192}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"160\", \"--stop\", \"192\"], \"elapsed_seconds\": 3.82, \"peak_process_tree_rss_bytes\": 135430144, \"initial_resources\": {\"free_disk_gib\": 162.73, \"available_memory_gib\": 11.12}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 466, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-192-224-40",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [192,224) only",
+      "exit_code": 0,
+      "elapsed_seconds": 2.173,
+      "stdout_sha256": "293b9a41db1aca1ab7a287f38ef284b97e34c10faa8df43782cf35efa65bbf85",
+      "stdout_bytes": 1084,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 842, \"generated\": 4308}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 192, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 224}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"192\", \"--stop\", \"224\"], \"elapsed_seconds\": 2.119, \"peak_process_tree_rss_bytes\": 136445952, \"initial_resources\": {\"free_disk_gib\": 162.73, \"available_memory_gib\": 11.07}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 467, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-224-256-41",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [224,256) only",
+      "exit_code": 0,
+      "elapsed_seconds": 2.142,
+      "stdout_sha256": "db34b876576fd7685a4e4a92e3861294de4b3457398130cee2ac921d325ec443",
+      "stdout_bytes": 1085,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 2324, \"generated\": 39114}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 224, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 256}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"224\", \"--stop\", \"256\"], \"elapsed_seconds\": 2.09, \"peak_process_tree_rss_bytes\": 139689984, \"initial_resources\": {\"free_disk_gib\": 162.73, \"available_memory_gib\": 11.06}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 469, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-256-288-42",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [256,288) only",
+      "exit_code": 0,
+      "elapsed_seconds": 8.27,
+      "stdout_sha256": "236e3bac2fba6b1cb930e5b66640b994682d48de09d70562a1b370d12daf57b3",
+      "stdout_bytes": 1085,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 1328, \"generated\": 4354}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 256, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 288}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"256\", \"--stop\", \"288\"], \"elapsed_seconds\": 8.218, \"peak_process_tree_rss_bytes\": 137216000, \"initial_resources\": {\"free_disk_gib\": 162.73, \"available_memory_gib\": 11.09}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 468, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-288-320-43",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [288,320) only",
+      "exit_code": 0,
+      "elapsed_seconds": 3.269,
+      "stdout_sha256": "7e3125c73f4eb185b45127521f2e43d83484b6a5a9c6d7ee2e798d7e1ab38964",
+      "stdout_bytes": 1086,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 3305, \"generated\": 55482}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 288, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 320}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"288\", \"--stop\", \"320\"], \"elapsed_seconds\": 3.218, \"peak_process_tree_rss_bytes\": 142344192, \"initial_resources\": {\"free_disk_gib\": 162.73, \"available_memory_gib\": 11.06}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 469, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-320-348-44",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [320,348) only",
+      "exit_code": 0,
+      "elapsed_seconds": 3.395,
+      "stdout_sha256": "1eef285f06cf3475783dd9e12d3903d91140f32c9adf8855156b31417642f8b0",
+      "stdout_bytes": 1086,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 3145, \"generated\": 52023}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 320, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 348}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"320\", \"--stop\", \"348\"], \"elapsed_seconds\": 3.344, \"peak_process_tree_rss_bytes\": 139771904, \"initial_resources\": {\"free_disk_gib\": 162.71, \"available_memory_gib\": 10.99}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 469, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-348-352-45",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [348,352) only",
+      "exit_code": 0,
+      "elapsed_seconds": 11.385,
+      "stdout_sha256": "31faf3ab412ea1a2cc7f56efe743fb5b7ae01090022222f8ad97100f1e192866",
+      "stdout_bytes": 1086,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 1570, \"generated\": 10177}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 348, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 352}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"348\", \"--stop\", \"352\"], \"elapsed_seconds\": 11.327, \"peak_process_tree_rss_bytes\": 137887744, \"initial_resources\": {\"free_disk_gib\": 163.7, \"available_memory_gib\": 10.53}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 469, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-352-356-46",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [352,356) only",
+      "exit_code": 0,
+      "elapsed_seconds": 2.426,
+      "stdout_sha256": "2219c6db0dd8fc529c092beafbac71e0a0082274e2e957afb2b4b66b0a3025bc",
+      "stdout_bytes": 1080,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 32, \"generated\": 42}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 352, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 356}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"352\", \"--stop\", \"356\"], \"elapsed_seconds\": 2.374, \"peak_process_tree_rss_bytes\": 134447104, \"initial_resources\": {\"free_disk_gib\": 163.7, \"available_memory_gib\": 10.41}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 464, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-357-360-47",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [357,360) only",
+      "exit_code": 0,
+      "elapsed_seconds": 10.213,
+      "stdout_sha256": "5ba94ff3f0b0aee6eb1b3c6da36df1dcce1035910c4ade97147ab3122a4f94f1",
+      "stdout_bytes": 1086,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 1839, \"generated\": 41162}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 357, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 360}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"357\", \"--stop\", \"360\"], \"elapsed_seconds\": 10.159, \"peak_process_tree_rss_bytes\": 136019968, \"initial_resources\": {\"free_disk_gib\": 163.7, \"available_memory_gib\": 10.36}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 469, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-360-368-48",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [360,368) only",
+      "exit_code": 0,
+      "elapsed_seconds": 10.278,
+      "stdout_sha256": "7d412c8067186d83af07b9d713a95cd55d53559ec3ef2caa09ee02f58e61b19f",
+      "stdout_bytes": 1085,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 1851, \"generated\": 40925}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 360, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 368}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"360\", \"--stop\", \"368\"], \"elapsed_seconds\": 10.227, \"peak_process_tree_rss_bytes\": 138100736, \"initial_resources\": {\"free_disk_gib\": 163.7, \"available_memory_gib\": 10.4}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 469, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-overlaps-368-384-49",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "overlaps [368,384) only",
+      "exit_code": 0,
+      "elapsed_seconds": 4.763,
+      "stdout_sha256": "fd450a48040ac94956167294fc1d5ef2687a046c617ba8127d022493e9abf5fc",
+      "stdout_bytes": 1085,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {\"consistent\": 1387, \"generated\": 20158}, \"phase\": \"overlaps\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 368, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 384}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"overlaps\", \"--start\", \"368\", \"--stop\", \"384\"], \"elapsed_seconds\": 4.709, \"peak_process_tree_rss_bytes\": 135528448, \"initial_resources\": {\"free_disk_gib\": 163.7, \"available_memory_gib\": 10.25}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 469, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "status": "PASS_BOUNDED_RESEARCH_CHECK",
+      "command": [
+        "scripts/check_selective_distance9_batches_20261020.py",
+        "--verify",
+        "--phase",
+        "isolation",
+        "--start",
+        "935",
+        "--stop",
+        "943"
+      ],
+      "elapsed_seconds": 3.76,
+      "peak_process_tree_rss_bytes": 134643712,
+      "initial_resources": {
+        "free_disk_gib": 163.7,
+        "available_memory_gib": 10.14
+      },
+      "wall_limit_seconds": 59,
+      "rss_limit_bytes": 1073741824,
+      "threads": 1,
+      "stdout_bytes": 432,
+      "stdout": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 935, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 943}\n",
+      "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "checker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "lock_owner": "wrapper"
+    },
+    {
+      "id": "distance9-isolation-0-32-51",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [0,32) only",
+      "exit_code": 0,
+      "elapsed_seconds": 4.468,
+      "stdout_sha256": "84e63aa0f468b5c54d6220df0c11b533fc75bb48c66487227e372ef4657ddea7",
+      "stdout_bytes": 1044,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 0, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 32}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"0\", \"--stop\", \"32\"], \"elapsed_seconds\": 4.411, \"peak_process_tree_rss_bytes\": 135053312, \"initial_resources\": {\"free_disk_gib\": 163.68, \"available_memory_gib\": 10.05}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 429, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-32-96-52",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [32,96) only",
+      "exit_code": 0,
+      "elapsed_seconds": 7.483,
+      "stdout_sha256": "3fce9398f6aaa4a6924dfdb34166f4e469ba101f1d41a879dc6660d685c6eb2c",
+      "stdout_bytes": 1044,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 32, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 96}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"32\", \"--stop\", \"96\"], \"elapsed_seconds\": 7.43, \"peak_process_tree_rss_bytes\": 135905280, \"initial_resources\": {\"free_disk_gib\": 163.68, \"available_memory_gib\": 9.91}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 430, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-96-160-53",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [96,160) only",
+      "exit_code": 0,
+      "elapsed_seconds": 6.999,
+      "stdout_sha256": "7af91ca9753991f39b871b94bf257cbfbadedefa2bc842bd8574e0638d57b5ce",
+      "stdout_bytes": 1047,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 96, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 160}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"96\", \"--stop\", \"160\"], \"elapsed_seconds\": 6.945, \"peak_process_tree_rss_bytes\": 134905856, \"initial_resources\": {\"free_disk_gib\": 163.68, \"available_memory_gib\": 9.98}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 431, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-160-224-54",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [160,224) only",
+      "exit_code": 0,
+      "elapsed_seconds": 6.792,
+      "stdout_sha256": "4d5cd900610be28d12e5ac038d3be53d702fdc26026e934a4c911882fa315a6f",
+      "stdout_bytes": 1049,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 160, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 224}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"160\", \"--stop\", \"224\"], \"elapsed_seconds\": 6.738, \"peak_process_tree_rss_bytes\": 135839744, \"initial_resources\": {\"free_disk_gib\": 163.68, \"available_memory_gib\": 9.87}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-224-288-55",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [224,288) only",
+      "exit_code": 0,
+      "elapsed_seconds": 10.095,
+      "stdout_sha256": "6f5636c7225365dc6da26bfd46520d331c1f4e995acb2b333b6a6a337e272e71",
+      "stdout_bytes": 1050,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 224, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 288}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"224\", \"--stop\", \"288\"], \"elapsed_seconds\": 10.041, \"peak_process_tree_rss_bytes\": 135593984, \"initial_resources\": {\"free_disk_gib\": 163.67, \"available_memory_gib\": 9.88}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-288-352-56",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [288,352) only",
+      "exit_code": 0,
+      "elapsed_seconds": 8.055,
+      "stdout_sha256": "b1638695ae345996da2b32a09a3a4d2cdda004ade7a1bd14454dd22d66f8ae7f",
+      "stdout_bytes": 1049,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 288, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 352}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"288\", \"--stop\", \"352\"], \"elapsed_seconds\": 8.001, \"peak_process_tree_rss_bytes\": 135561216, \"initial_resources\": {\"free_disk_gib\": 163.66, \"available_memory_gib\": 9.86}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-352-416-57",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [352,416) only",
+      "exit_code": 0,
+      "elapsed_seconds": 8.417,
+      "stdout_sha256": "e650e1c4412a0831cb2c507cdf9a925fd692be3cbfb3e3a866d907db9ee1549a",
+      "stdout_bytes": 1049,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 352, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 416}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"352\", \"--stop\", \"416\"], \"elapsed_seconds\": 8.363, \"peak_process_tree_rss_bytes\": 134004736, \"initial_resources\": {\"free_disk_gib\": 163.65, \"available_memory_gib\": 9.84}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-416-480-58",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [416,480) only",
+      "exit_code": 0,
+      "elapsed_seconds": 11.579,
+      "stdout_sha256": "0eff295395945798b49204de01f0f2833e5a2a29b51770c144c01597cb2620f5",
+      "stdout_bytes": 1049,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 416, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 480}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"416\", \"--stop\", \"480\"], \"elapsed_seconds\": 11.524, \"peak_process_tree_rss_bytes\": 135069696, \"initial_resources\": {\"free_disk_gib\": 163.63, \"available_memory_gib\": 9.7}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-480-544-59",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [480,544) only",
+      "exit_code": 0,
+      "elapsed_seconds": 10.883,
+      "stdout_sha256": "fe2577c61f4ad07853a1d4b436166f5bac9c7893db645698aa411ef9caa47615",
+      "stdout_bytes": 1050,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 480, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 544}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"480\", \"--stop\", \"544\"], \"elapsed_seconds\": 10.823, \"peak_process_tree_rss_bytes\": 135036928, \"initial_resources\": {\"free_disk_gib\": 163.59, \"available_memory_gib\": 9.61}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-544-608-60",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [544,608) only",
+      "exit_code": 0,
+      "elapsed_seconds": 13.95,
+      "stdout_sha256": "b2c4d12c4a49dc5fc16b30c7a1420d8962aa40d149a01a231de9cc27145daa6d",
+      "stdout_bytes": 1050,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 544, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 608}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"544\", \"--stop\", \"608\"], \"elapsed_seconds\": 13.892, \"peak_process_tree_rss_bytes\": 134348800, \"initial_resources\": {\"free_disk_gib\": 163.56, \"available_memory_gib\": 9.65}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-608-672-61",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [608,672) only",
+      "exit_code": 0,
+      "elapsed_seconds": 11.767,
+      "stdout_sha256": "273a6993d3999c280d17c632b5c04c14d5d2d1986b16a51a275e80fdb7d6a110",
+      "stdout_bytes": 1050,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 608, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 672}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"608\", \"--stop\", \"672\"], \"elapsed_seconds\": 11.704, \"peak_process_tree_rss_bytes\": 133283840, \"initial_resources\": {\"free_disk_gib\": 163.51, \"available_memory_gib\": 9.57}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-672-736-62",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [672,736) only",
+      "exit_code": 0,
+      "elapsed_seconds": 10.664,
+      "stdout_sha256": "2e802cd879546dda98e1ac2be68bbcbc0b92302533f62671a5a416f2b3b03ffd",
+      "stdout_bytes": 1050,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 672, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 736}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"672\", \"--stop\", \"736\"], \"elapsed_seconds\": 10.598, \"peak_process_tree_rss_bytes\": 134660096, \"initial_resources\": {\"free_disk_gib\": 163.48, \"available_memory_gib\": 9.54}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-736-800-63",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [736,800) only",
+      "exit_code": 0,
+      "elapsed_seconds": 16.077,
+      "stdout_sha256": "6ea59af389a8bf448f88a8c72823a1d73fa28c1fd38d02b9e00d448a021aa078",
+      "stdout_bytes": 1050,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 736, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 800}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"736\", \"--stop\", \"800\"], \"elapsed_seconds\": 16.001, \"peak_process_tree_rss_bytes\": 134103040, \"initial_resources\": {\"free_disk_gib\": 163.46, \"available_memory_gib\": 9.42}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-800-864-64",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [800,864) only",
+      "exit_code": 0,
+      "elapsed_seconds": 13.015,
+      "stdout_sha256": "d6fb21a7013d00cb3d907cf8b652202fa51c8eba29fe880791b29af398d3707c",
+      "stdout_bytes": 1050,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 800, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 864}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"800\", \"--stop\", \"864\"], \"elapsed_seconds\": 12.934, \"peak_process_tree_rss_bytes\": 134725632, \"initial_resources\": {\"free_disk_gib\": 163.43, \"available_memory_gib\": 9.39}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-864-928-65",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [864,928) only",
+      "exit_code": 0,
+      "elapsed_seconds": 8.289,
+      "stdout_sha256": "23545097f20f7fe00c59a99adb9ae1be4690f6ad4f0f373f0ef2145cda42ebd9",
+      "stdout_bytes": 1048,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 864, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 928}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"864\", \"--stop\", \"928\"], \"elapsed_seconds\": 8.224, \"peak_process_tree_rss_bytes\": 134758400, \"initial_resources\": {\"free_disk_gib\": 163.4, \"available_memory_gib\": 9.51}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-928-934-66",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [928,934) only",
+      "exit_code": 0,
+      "elapsed_seconds": 3.08,
+      "stdout_sha256": "a565365d1ae0814ef6988d2e007f7001342f2c76737796510ee3b9dc89ee79e6",
+      "stdout_bytes": 1049,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 928, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 934}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"928\", \"--stop\", \"934\"], \"elapsed_seconds\": 3.025, \"peak_process_tree_rss_bytes\": 134512640, \"initial_resources\": {\"free_disk_gib\": 163.39, \"available_memory_gib\": 9.62}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "distance9-isolation-943-949-67",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "isolation [943,949) only",
+      "exit_code": 0,
+      "elapsed_seconds": 3.688,
+      "stdout_sha256": "2b18447b41fb9e1db08fa3f682ae0b3c87a36fa28919fdcbf8385e00cf8f9089",
+      "stdout_bytes": 1047,
+      "source_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"certificate\": \"e7c6d1a1e56d8788e7d7a7d02bd5dd71837e3a3aef4ae768c1efc0a187bcacd9\", \"complete_phase_domains\": {\"disjoint\": 384, \"domains\": 1, \"inertia\": 85, \"isolation\": 949, \"metadata\": 1, \"overlap-domain\": 384, \"overlaps\": 384, \"profiles\": 8}, \"detail\": {}, \"phase\": \"isolation\", \"source\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"start\": 943, \"status\": \"PASS_DISTANCE9_REPLAY_PARTITION\", \"stop\": 949}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_selective_distance9_batches_20261020.py\", \"--verify\", \"--phase\", \"isolation\", \"--start\", \"943\", \"--stop\", \"949\"], \"elapsed_seconds\": 3.63, \"peak_process_tree_rss_bytes\": 134955008, \"initial_resources\": {\"free_disk_gib\": 163.39, \"available_memory_gib\": 9.6}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 432, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843\", \"lock_owner\": \"wrapper\"}\n"
+    }
+  ],
+  "previous_worker_sha256": "d9ab46e4404ed8dc02b0166f220cb0e63bc62eb42beaf68a5a7823fa65f84745",
+  "admission_watches": [
+    {
+      "scope": "Admission watch only;unchangedwrapperfloor6GiB",
+      "coordinator_cushion_gib": 6.4,
+      "maximum_watch_seconds": 45,
+      "observations": [
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 6.01
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 6.22
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 5.93
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 5.72
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 5.06
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 5.35
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 5.57
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 5.55
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 5.52
+        },
+        {
+          "free_disk_gib": 171.16,
+          "available_memory_gib": 5.4
+        }
+      ],
+      "status": "DEFERRED_WITHOUT_WORKER"
+    },
+    {
+      "coordinator_cushion_gib": 6.15,
+      "observations": [
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 5.9
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 5.92
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 5.91
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 6.01
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 6.04
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 6.03
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 6.03
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 6.0
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 6.02
+        },
+        {
+          "free_disk_gib": 171.13,
+          "available_memory_gib": 6.01
+        }
+      ],
+      "status": "DEFERRED_WITHOUT_WORKER"
+    }
+  ],
+  "distance9_resume": {
+    "status": "COMPLETE_RECORDED_CURRENT_COVERAGE",
+    "coordinator_sha256": "cb776f5931e24f8541c9b8321123dde563c3dbb6cd1e3240cdceeb386e500541",
+    "coverage_verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+    "widths": {
+      "metadata": 1,
+      "domains": 1,
+      "overlap-domain": 8,
+      "disjoint": 8,
+      "inertia": 8,
+      "overlaps": 4,
+      "isolation": 8,
+      "profiles": 8
+    }
+  },
+  "worker_header_history": [
+    {
+      "worker_sha256": "126d5fe3588cfbb56009bff1f748dbab2154582e3df814feff50b32003cf023b",
+      "ledger_sha256_before_header_update": "28e8d04e47a57b348ce802b8c0d22aa99aec82d84dd417ebd66ae85743c1db95",
+      "scope": "Historical source; retained jobs carry their own actual source hashes."
+    }
+  ],
+  "current_source_readiness": {
+    "as_of_utc": "2026-10-20T20:26:06.294572+00:00",
+    "scope": "Root terminal checkpoint; original successful/failed/deferred jobs unchanged.",
+    "worker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+    "coverage_verifier_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+    "coverage_snapshot": {
+      "required_domains": {
+        "metadata": 1,
+        "domains": 1,
+        "overlap-domain": 384,
+        "disjoint": 384,
+        "inertia": 85,
+        "overlaps": 384,
+        "isolation": 949,
+        "profiles": 8
+      },
+      "covered_units": {
+        "metadata": 1,
+        "domains": 1,
+        "overlap-domain": 384,
+        "disjoint": 384,
+        "inertia": 85,
+        "overlaps": 384,
+        "isolation": 949,
+        "profiles": 8
+      },
+      "missing": {}
+    },
+    "actual_current_source_pass_records": 56,
+    "wrapper_elapsed_seconds_total": 388.008,
+    "max_process_tree_rss_bytes": 159432704,
+    "full_manuscript_runtime_pass": false
+  },
+  "direct_pilot_receipts": [
+    {
+      "path": "results/finite57_distance9_profiles_0_8_pilot_20261020.json",
+      "sha256": "3d96e1f421365231c7628aef0fc651148fcc62923b2698757aa9c307abbc511e"
+    },
+    {
+      "path": "results/finite57_distance9_overlap_domain_348_352_pilot_20261020.json",
+      "sha256": "53735ef38b7cfebfb5336510c2ce14bc776f2d7f918abb65bd9eb0424cd698b1"
+    },
+    {
+      "path": "results/finite57_distance9_disjoint_348_352_pilot_20261020.json",
+      "sha256": "1d7347221498c1e6c05a4b165e423cc49b7378682a2620a72725282a61cf12ba"
+    },
+    {
+      "path": "results/finite57_distance9_inertia_80_85_pilot_20261020.json",
+      "sha256": "d5cdafb575ba64536e016ad11d4db4341efb45094c825b775112dcdb0ea7595c"
+    },
+    {
+      "path": "results/finite57_distance9_overlaps_356_357_pilot_20261020.json",
+      "sha256": "96cb9654725db7692ff2ba35b1cf679e65cf6d2799d40921647ce4740585f3b1"
+    },
+    "results/finite57_distance9_isolation_934_935_pilot_20261020.json",
+    "results/finite57_distance9_isolation_935_943_pilot_20261020.json"
+  ],
+  "admission_watch_observations": [
+    {
+      "as_of_utc": "2026-10-20T19:57:09.134610+00:00",
+      "scope": "Latest two heavy-overlap admission watches only; no scientific child started.",
+      "terminal_exit_codes": [
+        75,
+        75
+      ],
+      "terminal_available_memory_gib": [
+        5.22,
+        5.3
+      ],
+      "coordinator_cushion_gib": 6.15,
+      "maximum_watch_seconds_each": 45
+    },
+    {
+      "as_of_utc": "2026-10-20T20:06:25.018250+00:00",
+      "phase": "isolation",
+      "interval": [
+        934,
+        935
+      ],
+      "maximum_watch_seconds": 45,
+      "terminal_exit_code": 75,
+      "scientific_child_started": false,
+      "terminal_available_memory_gib": 5.92
+    }
+  ],
+  "root_checkpoint_history": [
+    {
+      "status": "PARTIAL_CURRENT_SOURCE_REPLAY;SIX_PHASES_COMPLETE;OVERLAPS97_OF384;ISOLATION_PENDING",
+      "current_source_readiness": {
+        "worker_sha256": "f5f0b47084135f8bb1886a37e0478d1f6b8c9c4327499f986a8ec9e173ecd843",
+        "fixture_sha256": "f6fd1267462f1c95632998125aef419f939803d08aaaf3ba307feaa273701ff2",
+        "coverage_sha256": "456abc2bfe92262412106ebd6f94b07e48d01757cd1c76d8cef952c8bf3d3b0e",
+        "coordinator_sha256": "cb776f5931e24f8541c9b8321123dde563c3dbb6cd1e3240cdceeb386e500541",
+        "source_review": "results/review_distance9_json_key_representation_batch_guard_20261020.md",
+        "current_fixture_executed": true,
+        "latest_fixture_admission_watch": {
+          "maximum_seconds": 45,
+          "terminal_exit_code": 75,
+          "worker_started": false,
+          "free_disk_gib": 172.04,
+          "available_memory_gib": 5.89
+        },
+        "previous_fixture_actual_pass": "results/distance9_current_scanner_fixture_execution_20261020.json",
+        "scope": "Header/readiness update only; no execution or coverage credit.",
+        "current_fixture_execution_ledger": "results/distance9_json_key_lists_scanner_fixture_execution_20261020.json",
+        "coverage_snapshot": {
+          "as_of_utc": "2026-10-20T20:06:25.018250+00:00",
+          "covered_units": 960,
+          "required_units": 2196,
+          "scope": "Root checkpoint; recompute coverage from jobs after later batches."
+        }
+      }
+    }
+  ]
+}

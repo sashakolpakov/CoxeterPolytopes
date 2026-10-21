@@ -1,0 +1,5273 @@
+{
+  "all_checks_pass": true,
+  "all_integer_Z3_collision_audit": {
+    "all_Z3_identities_are_exactly_the_12_BBB_facets_in_each_branch": true,
+    "all_Z3_identity_branch_histogram": {
+      "000": 12,
+      "001": 12,
+      "010": 12,
+      "011": 12,
+      "100": 12,
+      "101": 12,
+      "110": 12,
+      "111": 12
+    },
+    "all_Z3_identity_count": 96,
+    "all_exact_checks_pass": true,
+    "bounded_parameter_scan_used": false,
+    "checks": {
+      "all_1232_nonfixed_branch_sources_have_rank_three_mod_null": true,
+      "all_440896_ordered_signed_side_equations_covered": true,
+      "all_Z3_identity_count_is_96": true,
+      "all_Z3_identity_set_is_exactly_12_BBB_times_8_branches": true,
+      "finite_collision_count_is_462": true,
+      "finite_collision_set_is_exactly_pattern_stabilizers": true,
+      "finite_collisions_are_positive_self_only": true,
+      "no_bounded_Z3_box_scan_used": true,
+      "no_negative_or_cross_facet_collision": true
+    },
+    "cross_facet_collision_count": 0,
+    "domain": "all (z1,z2,z3) in Z^3, all eight reflection branches, both root signs, and all 166x166 ordered nonendpoint seed-facet pairs",
+    "finite_solution_branch_exponent_histogram": {
+      "branch=000;z=(0, 0, 0)": 154,
+      "branch=001;z=(-1, 0, 0)": 30,
+      "branch=001;z=(0, 0, 0)": 30,
+      "branch=010;z=(0, -1, 0)": 30,
+      "branch=010;z=(0, 0, 0)": 30,
+      "branch=011;z=(-1, -1, 0)": 9,
+      "branch=011;z=(-1, 0, 0)": 9,
+      "branch=011;z=(0, -1, 0)": 9,
+      "branch=011;z=(0, 0, 0)": 9,
+      "branch=100;z=(0, 0, -1)": 30,
+      "branch=100;z=(0, 0, 0)": 30,
+      "branch=101;z=(-1, 0, -1)": 9,
+      "branch=101;z=(-1, 0, 0)": 9,
+      "branch=101;z=(0, 0, -1)": 9,
+      "branch=101;z=(0, 0, 0)": 9,
+      "branch=110;z=(0, -1, -1)": 9,
+      "branch=110;z=(0, -1, 0)": 9,
+      "branch=110;z=(0, 0, -1)": 9,
+      "branch=110;z=(0, 0, 0)": 9,
+      "branch=111;z=(-1, -1, -1)": 3,
+      "branch=111;z=(-1, -1, 0)": 2,
+      "branch=111;z=(-1, 0, -1)": 2,
+      "branch=111;z=(-1, 0, 0)": 3,
+      "branch=111;z=(0, -1, -1)": 2,
+      "branch=111;z=(0, -1, 0)": 3,
+      "branch=111;z=(0, 0, -1)": 3,
+      "branch=111;z=(0, 0, 0)": 2
+    },
+    "finite_solution_branch_histogram": {
+      "000": 154,
+      "001": 60,
+      "010": 60,
+      "011": 36,
+      "100": 60,
+      "101": 36,
+      "110": 36,
+      "111": 20
+    },
+    "finite_solution_count": 462,
+    "finite_solutions_are_exactly_positive_self_stabilizers": true,
+    "full_vector_candidate_count": 10620,
+    "integral_candidate_count": 10620,
+    "method": "the three commuting translations satisfy Ki^3=0 and Ki*Kj=0 for i!=j; for every moving branch/source, [K1v,K2v,K3v,u] has rank 4, so quotienting by the common null line gives the unique rational candidate (z1,z2,z3), whose integrality and all 13 coordinates are then checked exactly",
+    "moving_branch_source_count": 1232,
+    "negative_root_collision_count": 0,
+    "ordered_signed_equation_count": 440896,
+    "quotient_affine_rank_histogram": {
+      "4": 1232
+    }
+  },
+  "bounded_coxiter_corpus_replay": {
+    "all_exact_checks_pass": true,
+    "checks": {
+      "every_886N_plus_55_header_is_absent_for_N_at_least_1": true,
+      "index_two_H12_histogram_is_pinned": true,
+      "index_two_file_count_is_2959": true,
+      "ordinary_H12_histogram_is_pinned": true,
+      "ordinary_file_count_is_1214": true
+    },
+    "commit": "b800be48d8240fbabd2d1c9542e61054584ad7fe",
+    "evidence_grade": "B1: bounded same-header absence only",
+    "family_minimum_facet_count": 172,
+    "index_two_H12_facet_histogram": {
+      "18": 1,
+      "20": 1,
+      "25": 1,
+      "35": 1
+    },
+    "index_two_file_count": 2959,
+    "index_two_member": "CoxIter-master/graphs/testing_index2.tar.gz",
+    "index_two_tar_gz_sha256": "3330ca41fb3e047123ace718f08542bc1dd0019b35922d4fa836a217647e7036",
+    "literal_family_headers_absent": true,
+    "literal_seed_or_descendant_headers_absent": true,
+    "minimum_nonseed_descendant_facet_count": 296,
+    "ordinary_H12_facet_histogram": {
+      "13": 6,
+      "14": 3,
+      "16": 1,
+      "18": 1
+    },
+    "ordinary_file_count": 1214,
+    "repository": "https://github.com/rgugl/CoxIter",
+    "scope_warning": "These two pinned CoxIter lanes are not a publication-complete denominator; literal header absence is not worldwide novelty.",
+    "worldwide_priority": "open",
+    "zip_sha256": "ae04648b291c1e5f3d0e47d666c846dc805b244469a20486bca59674b4d171c3"
+  },
+  "checks": {
+    "all_Z3_collision_proof_green": true,
+    "both_D_infinity_cubed_structures_green": true,
+    "bounded_CoxIter_header_replay_green": true,
+    "closed_formula_symbolic_proof_green": true,
+    "direct_240_boundary_reconstructions_green": true,
+    "exact_124_wall_doubling_stock_green": true,
+    "finite_volume_noncompact_carrier_gate_green": true,
+    "full_Picard_lattice_core_persistence_green": true,
+    "raw_hostile_seed_reconstruction_green": true,
+    "scoped_product_graph_exhaustion_green": true,
+    "side_pattern_census_green": true,
+    "six_endpoint_orbit_proof_green": true,
+    "two_configuration_symmetry_orbit_green": true,
+    "worldwide_priority_explicitly_open": true
+  },
+  "claim_boundary": {
+    "full_nef_claimed": false,
+    "new_project_family": true,
+    "scoped_product_maximum_not_arbitrary_redoubling_classification": true,
+    "surface_automorphism_claimed": false,
+    "weak_full_Picard_divisor_carrier": true,
+    "worldwide_priority": "open"
+  },
+  "direct_grid_reconstructions": {
+    "all_exact_checks_pass": true,
+    "checks": {
+      "all_240_direct_boundaries_match_phase_refined_formula": true,
+      "all_27_parameter_triples_in_1_to_3_cubed_checked": true,
+      "all_eight_phases_checked_for_every_parameter_triple": true,
+      "phase_blind_formula_regression_blocked_at_2_2_2": true,
+      "three_additional_larger_parameter_triples_checked": true
+    },
+    "rows": [
+      {
+        "even_phase_expected_facet_count": 172,
+        "odd_phase_expected_facet_count": 172,
+        "parameters": [
+          1,
+          1,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "3090786fef0fd1fdfb3f7a91a0a9ec7cee50b6e55c810f8682c37b12badf01e4",
+            "facet_count": 172,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "3090786fef0fd1fdfb3f7a91a0a9ec7cee50b6e55c810f8682c37b12badf01e4",
+            "facet_count": 172,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "3090786fef0fd1fdfb3f7a91a0a9ec7cee50b6e55c810f8682c37b12badf01e4",
+            "facet_count": 172,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "3090786fef0fd1fdfb3f7a91a0a9ec7cee50b6e55c810f8682c37b12badf01e4",
+            "facet_count": 172,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "3090786fef0fd1fdfb3f7a91a0a9ec7cee50b6e55c810f8682c37b12badf01e4",
+            "facet_count": 172,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "3090786fef0fd1fdfb3f7a91a0a9ec7cee50b6e55c810f8682c37b12badf01e4",
+            "facet_count": 172,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "3090786fef0fd1fdfb3f7a91a0a9ec7cee50b6e55c810f8682c37b12badf01e4",
+            "facet_count": 172,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "3090786fef0fd1fdfb3f7a91a0a9ec7cee50b6e55c810f8682c37b12badf01e4",
+            "facet_count": 172,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 1
+      },
+      {
+        "even_phase_expected_facet_count": 296,
+        "odd_phase_expected_facet_count": 296,
+        "parameters": [
+          1,
+          1,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "1487100f743f52a810f65b1734520c9cce2a08297ab9d8b1b255d3c7545f7a07",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "7d93e34da7a699d6bccc03cf7cec531c95375f0cd62a1a75a9c165e4829541fe",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "1487100f743f52a810f65b1734520c9cce2a08297ab9d8b1b255d3c7545f7a07",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "7d93e34da7a699d6bccc03cf7cec531c95375f0cd62a1a75a9c165e4829541fe",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "1487100f743f52a810f65b1734520c9cce2a08297ab9d8b1b255d3c7545f7a07",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "7d93e34da7a699d6bccc03cf7cec531c95375f0cd62a1a75a9c165e4829541fe",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "1487100f743f52a810f65b1734520c9cce2a08297ab9d8b1b255d3c7545f7a07",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "7d93e34da7a699d6bccc03cf7cec531c95375f0cd62a1a75a9c165e4829541fe",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 2
+      },
+      {
+        "even_phase_expected_facet_count": 420,
+        "odd_phase_expected_facet_count": 420,
+        "parameters": [
+          1,
+          1,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "fe10b7db9ce066db1881011c45995ec2bb364303040b6d18b31232eedf334c73",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e40a959e384963f3b9f63b70a887b437418659848f08ecc275833e1a79db6cef",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "fe10b7db9ce066db1881011c45995ec2bb364303040b6d18b31232eedf334c73",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e40a959e384963f3b9f63b70a887b437418659848f08ecc275833e1a79db6cef",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "fe10b7db9ce066db1881011c45995ec2bb364303040b6d18b31232eedf334c73",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e40a959e384963f3b9f63b70a887b437418659848f08ecc275833e1a79db6cef",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "fe10b7db9ce066db1881011c45995ec2bb364303040b6d18b31232eedf334c73",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e40a959e384963f3b9f63b70a887b437418659848f08ecc275833e1a79db6cef",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 3
+      },
+      {
+        "even_phase_expected_facet_count": 296,
+        "odd_phase_expected_facet_count": 296,
+        "parameters": [
+          1,
+          2,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "a5195f569c93e9d7b21849d109787545379f450805aec40eb8eee1b79ff361b4",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "a5195f569c93e9d7b21849d109787545379f450805aec40eb8eee1b79ff361b4",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e5f3edb16c2d9e35a192f28d907f092e683ac3a81b5c01df851c01e2585f021c",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e5f3edb16c2d9e35a192f28d907f092e683ac3a81b5c01df851c01e2585f021c",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "a5195f569c93e9d7b21849d109787545379f450805aec40eb8eee1b79ff361b4",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "a5195f569c93e9d7b21849d109787545379f450805aec40eb8eee1b79ff361b4",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e5f3edb16c2d9e35a192f28d907f092e683ac3a81b5c01df851c01e2585f021c",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e5f3edb16c2d9e35a192f28d907f092e683ac3a81b5c01df851c01e2585f021c",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 2
+      },
+      {
+        "even_phase_expected_facet_count": 523,
+        "odd_phase_expected_facet_count": 523,
+        "parameters": [
+          1,
+          2,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "50a68c2b33198906933d3118dcfda74962396f8eb10f0e7a0fe132875324489d",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "310120c642caa255b1d1d497b6e7f157b2b1f309c64b84b2efe7b2805860ba6f",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "0885ee0961b18ddc85186e0f62aa593bcbf2eb64d25ea228a3aff0621b44454f",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "bf0dc2f48e20f6b1c52633a81cbc2267685cdd57ea475531bb5607146495469c",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "50a68c2b33198906933d3118dcfda74962396f8eb10f0e7a0fe132875324489d",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "310120c642caa255b1d1d497b6e7f157b2b1f309c64b84b2efe7b2805860ba6f",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "0885ee0961b18ddc85186e0f62aa593bcbf2eb64d25ea228a3aff0621b44454f",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "bf0dc2f48e20f6b1c52633a81cbc2267685cdd57ea475531bb5607146495469c",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 4
+      },
+      {
+        "even_phase_expected_facet_count": 750,
+        "odd_phase_expected_facet_count": 750,
+        "parameters": [
+          1,
+          2,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "9ef7e0bc9f0e449500d27af96e0f16dc152153086cb33dc324935690f81f0e64",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "5ede68c19a70be17b5270c56877dce0407bfe51845b0cd39e82895e5efb813ac",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e2cb075254f97173f0327528b728fa479cd979440a107daa06117bdebe17d589",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "d111e7f6205c015aa5f5e4e112d090c6a855f00eb0877f9b6a57bf04d703192e",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "9ef7e0bc9f0e449500d27af96e0f16dc152153086cb33dc324935690f81f0e64",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "5ede68c19a70be17b5270c56877dce0407bfe51845b0cd39e82895e5efb813ac",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e2cb075254f97173f0327528b728fa479cd979440a107daa06117bdebe17d589",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "d111e7f6205c015aa5f5e4e112d090c6a855f00eb0877f9b6a57bf04d703192e",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 6
+      },
+      {
+        "even_phase_expected_facet_count": 420,
+        "odd_phase_expected_facet_count": 420,
+        "parameters": [
+          1,
+          3,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "d5359d91f3d39c760bbd2d788317af13bf23e50b30da28969847148e675d1563",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "d5359d91f3d39c760bbd2d788317af13bf23e50b30da28969847148e675d1563",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "40e63091177ef920e7ad3c1e09931761ad53f347c565bdfdbd5e58de0dcef598",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "40e63091177ef920e7ad3c1e09931761ad53f347c565bdfdbd5e58de0dcef598",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "d5359d91f3d39c760bbd2d788317af13bf23e50b30da28969847148e675d1563",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "d5359d91f3d39c760bbd2d788317af13bf23e50b30da28969847148e675d1563",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "40e63091177ef920e7ad3c1e09931761ad53f347c565bdfdbd5e58de0dcef598",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "40e63091177ef920e7ad3c1e09931761ad53f347c565bdfdbd5e58de0dcef598",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 3
+      },
+      {
+        "even_phase_expected_facet_count": 750,
+        "odd_phase_expected_facet_count": 750,
+        "parameters": [
+          1,
+          3,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "5864ffed3ebf683715eaad12873bffc2f8c229f079fe64d3515b098effd3a3cf",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "cec1b7203440d66af25ea88490eebf2a2bc3314bc93d890a522639d0a4ba0c3a",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e483b48b9cc6f6fbeef8c6a17e8eb22b2c519ac48ec62989ef810a9153236765",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "f53882117e930166cb0cb1c3ff3541830f29356cad61ccb76809cd37feb588d5",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "5864ffed3ebf683715eaad12873bffc2f8c229f079fe64d3515b098effd3a3cf",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "cec1b7203440d66af25ea88490eebf2a2bc3314bc93d890a522639d0a4ba0c3a",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e483b48b9cc6f6fbeef8c6a17e8eb22b2c519ac48ec62989ef810a9153236765",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "f53882117e930166cb0cb1c3ff3541830f29356cad61ccb76809cd37feb588d5",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 6
+      },
+      {
+        "even_phase_expected_facet_count": 1080,
+        "odd_phase_expected_facet_count": 1080,
+        "parameters": [
+          1,
+          3,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "9f2a824d1d9327cf9cfda8efddcd728b43960bdd0d778dbcbe007f0b9ba3879d",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "9cc1f5d8485507898c77efbf619eedc467637210cfe53fcc81ca9e3b294b080e",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "d5abbf62a9b4e78eb4a94d61a3377996ac4501a433f56abb59e41ddc917eda98",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "782ee83d48a2579fa9c70c40d37bb395228de5f04ce9cc51c993c94f9d4a272e",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "9f2a824d1d9327cf9cfda8efddcd728b43960bdd0d778dbcbe007f0b9ba3879d",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "9cc1f5d8485507898c77efbf619eedc467637210cfe53fcc81ca9e3b294b080e",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "d5abbf62a9b4e78eb4a94d61a3377996ac4501a433f56abb59e41ddc917eda98",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "782ee83d48a2579fa9c70c40d37bb395228de5f04ce9cc51c993c94f9d4a272e",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 9
+      },
+      {
+        "even_phase_expected_facet_count": 296,
+        "odd_phase_expected_facet_count": 296,
+        "parameters": [
+          2,
+          1,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "e4f7cd9904a622b87cafceaa895906decbc8aae21a23bb57a430ff077494b048",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e4f7cd9904a622b87cafceaa895906decbc8aae21a23bb57a430ff077494b048",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e4f7cd9904a622b87cafceaa895906decbc8aae21a23bb57a430ff077494b048",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e4f7cd9904a622b87cafceaa895906decbc8aae21a23bb57a430ff077494b048",
+            "facet_count": 296,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "1662a30ccee2dad6825aa29a315606fb4e64357c7a408664d6465ab8ebe012e6",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "1662a30ccee2dad6825aa29a315606fb4e64357c7a408664d6465ab8ebe012e6",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "1662a30ccee2dad6825aa29a315606fb4e64357c7a408664d6465ab8ebe012e6",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "1662a30ccee2dad6825aa29a315606fb4e64357c7a408664d6465ab8ebe012e6",
+            "facet_count": 296,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 2
+      },
+      {
+        "even_phase_expected_facet_count": 523,
+        "odd_phase_expected_facet_count": 523,
+        "parameters": [
+          2,
+          1,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "91648a94efe3817edba6ecd10d50082d26c70c2de85519dd88aa7932f67f637e",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "aeef08d773cd9b0f03cafac6db05523876f5acd0ff3eb2e0db375ad188dfd5ea",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "91648a94efe3817edba6ecd10d50082d26c70c2de85519dd88aa7932f67f637e",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "aeef08d773cd9b0f03cafac6db05523876f5acd0ff3eb2e0db375ad188dfd5ea",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "a38345c4f1302c58c373d24a14d964f8acb23649d3fd0c6bae80d7df7aee8e04",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "8acddad07dbdf83bb7d51a09c045cca442336c02da7e2ee599cdcddc41de4500",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "a38345c4f1302c58c373d24a14d964f8acb23649d3fd0c6bae80d7df7aee8e04",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "8acddad07dbdf83bb7d51a09c045cca442336c02da7e2ee599cdcddc41de4500",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 4
+      },
+      {
+        "even_phase_expected_facet_count": 750,
+        "odd_phase_expected_facet_count": 750,
+        "parameters": [
+          2,
+          1,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "ff54c64747e1a5647400c7523d344b2753c93901157e95249b8b0e79e5cc2a92",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "87f23a7534c748b9a794c9a28150577940ffd6a5bdd597850ef33276e92d4c15",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "ff54c64747e1a5647400c7523d344b2753c93901157e95249b8b0e79e5cc2a92",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "87f23a7534c748b9a794c9a28150577940ffd6a5bdd597850ef33276e92d4c15",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "6b3898c84e6e1db6d4809951cec17ff2dd462a93ae558f6379316f9ecc10097e",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "7aacf0d020135ec30208b7d44ebc6f92f09d190d87734dd6d559e10661d1383f",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "6b3898c84e6e1db6d4809951cec17ff2dd462a93ae558f6379316f9ecc10097e",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "7aacf0d020135ec30208b7d44ebc6f92f09d190d87734dd6d559e10661d1383f",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 6
+      },
+      {
+        "even_phase_expected_facet_count": 523,
+        "odd_phase_expected_facet_count": 523,
+        "parameters": [
+          2,
+          2,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "389b9f16eb0fbb5af18a104d81b699349f157768ebafaa298d717b5008a20eda",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "389b9f16eb0fbb5af18a104d81b699349f157768ebafaa298d717b5008a20eda",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "b9b3b44afc4cbce4716640dfe7f9002f821c8011dbd3d10b217fd8e63dd259b2",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "b9b3b44afc4cbce4716640dfe7f9002f821c8011dbd3d10b217fd8e63dd259b2",
+            "facet_count": 523,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "834a64145f74a5aa4c41b559a4168dd3233dd39f25b620a2927d213c2a7237f6",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "834a64145f74a5aa4c41b559a4168dd3233dd39f25b620a2927d213c2a7237f6",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "d66bc65258c876d8cf49a7a9915f1c40dd61309cda9b083ec8501eae29114a79",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "d66bc65258c876d8cf49a7a9915f1c40dd61309cda9b083ec8501eae29114a79",
+            "facet_count": 523,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 4
+      },
+      {
+        "even_phase_expected_facet_count": 941,
+        "odd_phase_expected_facet_count": 942,
+        "parameters": [
+          2,
+          2,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "5c9e6b4a8a0d40c70f1a237374f4426d131c57a80b7bfc02c43797977ef5b197",
+            "facet_count": 941,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "54cfd5f257635003328f06c0bbea9f0492e170a12476a8b72cd00fb14a2c4ac9",
+            "facet_count": 942,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "cdae34a652108bb636fda1d1809bf053b28cf8dfc385789d4c997e28cd8015b0",
+            "facet_count": 942,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "7613009610dca04107942edf105563a106d07ec50f308cfa7f9eddd8158acc06",
+            "facet_count": 941,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "9de98ff89bad4050f3363e3ef067beae2a8ad91e72e8d66a8b029c2e9e402322",
+            "facet_count": 942,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "24d90d5bbeea8c9aed11e2d943a0b7fdb25da7f7f7e10260cea044c405cced0d",
+            "facet_count": 941,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "8013b808f38480992266e80250ad517d883395f9f43d2cb035bc0b795856e782",
+            "facet_count": 941,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "a9d80fb9eb9b96ebfb864dcbe3cf2e52d0d6744cde171fc8e7b21ed266606520",
+            "facet_count": 942,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 8
+      },
+      {
+        "even_phase_expected_facet_count": 1360,
+        "odd_phase_expected_facet_count": 1360,
+        "parameters": [
+          2,
+          2,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "0ae4a3a782bfa696febf3e5d8032a938f4e8e77f9c067f8f58d60eb0d0a977a0",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "ad2f1641037793dd26b582cd78100526bab6215ce7ea879d4553f3b9e42bece1",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "bed403590df8897f3e26caacfcc30a76d4e54174f964891eeb4c3f005a35a5d4",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "4e1fd54f8bf832cc100927da92d47a115102cbe856dfc4550774944dc8c6b33a",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "8d191bf5b0c1888bb2589d2259eea78c323268078d4da04a47e689d1cbfb88fb",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "8a3b05f41beb8e5613c97264c165427363322ea25d33655b9d3775ffceef9dbe",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "37424cf257a5daf9c34f60b0d59900af8c4388a4b368b7987d2cdc0c117eb6a9",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "5468e2cb14b27ad255b24f717c4fa05fd120ad9ce6d252db7a716bbfece55fcc",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 12
+      },
+      {
+        "even_phase_expected_facet_count": 750,
+        "odd_phase_expected_facet_count": 750,
+        "parameters": [
+          2,
+          3,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "42f14e9e9d56659316b7714d4bcab9c950d8e580b8b612fb943900a9833457ff",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "42f14e9e9d56659316b7714d4bcab9c950d8e580b8b612fb943900a9833457ff",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "2a91dff5a6b4f77e8874403293e723101e5076f6f00159fd70ce13cdfe9918d2",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "2a91dff5a6b4f77e8874403293e723101e5076f6f00159fd70ce13cdfe9918d2",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "bdea2fafbdd5d0b03285564b8769de807ce1052bc1eabfccf7e1f753c9768a6f",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "bdea2fafbdd5d0b03285564b8769de807ce1052bc1eabfccf7e1f753c9768a6f",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "27b02bdb70274fd0c9a758b481bcd62062ec57924ec8a8932ff0655222c0b7bf",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "27b02bdb70274fd0c9a758b481bcd62062ec57924ec8a8932ff0655222c0b7bf",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 6
+      },
+      {
+        "even_phase_expected_facet_count": 1360,
+        "odd_phase_expected_facet_count": 1360,
+        "parameters": [
+          2,
+          3,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "777a5c41b68b895cfc76689d529d98e6d1ca4b4b56ec054f9c80d79694928f62",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "93a8e7a9f06b36139f16b1ec9a45ac154b2bcdf958b0d4efbcd1403e8744bb75",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "79e8fed9f49430f7e4bc116b02d6b9fe4b54a872a3c2b75a5ff3715ba7021572",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "9bc11adb512a883b06919bc40485036dd67547321b2e700d7fd90ce30db171bd",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "1f59f94947755abad087890d5ade61fb14b5bcdf800b9619516ef90f86f22d39",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e25bde25dafdce7ddaef177275e6ad2433120a168811656b84be6e1871eae9c4",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "4673ddbce649c0e91be2aa30b53937dc3e94efecc7b8bdf5270e2cd4c2efea2e",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "a40bad8e02afa52c4c2530e639bd1d094d194c80a62cac84b96eae451138895c",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 12
+      },
+      {
+        "even_phase_expected_facet_count": 1970,
+        "odd_phase_expected_facet_count": 1970,
+        "parameters": [
+          2,
+          3,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "951210d30fca06dda5670f888e826edf638ae10b46b9dbfb5656da1289706b16",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "76289b0894ffe332d5fe1c9b77b71f5ed1db42c00ac1f4a7787e2ac9a9006f05",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "c3fe5fcb4e93ff446356e70f05338ba3af8b8fe9fa2d6375a93a0bbcc8e909d3",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "7548e945c5020e1e83db06144aed6b17548e659b89cf85937353cfa79100c8f6",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "40c9ce2db410c702fea5da322fb2f262876cec64d7a7951612d9e44968d62162",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "187e2fd4db909053c988cf76c8aa2916880bb97cedfa3eb64a672f737f35cd68",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "7e4b5aa4fa34b328764e99f8eb9a84b67e9dcdb61f91a558c6e2d1bb62dad2c9",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "a2cbb34aa4edb3e0d578d356d5d8a37a0b28f113caf607b1c85c4015202fdf38",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 18
+      },
+      {
+        "even_phase_expected_facet_count": 420,
+        "odd_phase_expected_facet_count": 420,
+        "parameters": [
+          3,
+          1,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "6be919bbe91e49190fcdaf6d931a4e9c58261f77354672d670aacfdb80c9a08c",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "6be919bbe91e49190fcdaf6d931a4e9c58261f77354672d670aacfdb80c9a08c",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "6be919bbe91e49190fcdaf6d931a4e9c58261f77354672d670aacfdb80c9a08c",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "6be919bbe91e49190fcdaf6d931a4e9c58261f77354672d670aacfdb80c9a08c",
+            "facet_count": 420,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e81649657e4799b2f2d362058bf6d6de1601085c2f52c7eaf0b9994d3e8ab4cd",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e81649657e4799b2f2d362058bf6d6de1601085c2f52c7eaf0b9994d3e8ab4cd",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e81649657e4799b2f2d362058bf6d6de1601085c2f52c7eaf0b9994d3e8ab4cd",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e81649657e4799b2f2d362058bf6d6de1601085c2f52c7eaf0b9994d3e8ab4cd",
+            "facet_count": 420,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 3
+      },
+      {
+        "even_phase_expected_facet_count": 750,
+        "odd_phase_expected_facet_count": 750,
+        "parameters": [
+          3,
+          1,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "bbb9914887a5d6829ea73b8536175076ffc8bf371a284045be67a8d8355be708",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "7c863e2137a69adfc480fa5f555daecc7f59ad0176e7398b65756bbfba35bcac",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "bbb9914887a5d6829ea73b8536175076ffc8bf371a284045be67a8d8355be708",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "7c863e2137a69adfc480fa5f555daecc7f59ad0176e7398b65756bbfba35bcac",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "944beb71cae3891c36f1f25e34398671b44d1439b4ce80f9e7ec146a7ef5d10f",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "2c29673a29bc797cc3f30b64b26899f00624703dd0faa746a8fa240e0291e13c",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "944beb71cae3891c36f1f25e34398671b44d1439b4ce80f9e7ec146a7ef5d10f",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "2c29673a29bc797cc3f30b64b26899f00624703dd0faa746a8fa240e0291e13c",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 6
+      },
+      {
+        "even_phase_expected_facet_count": 1080,
+        "odd_phase_expected_facet_count": 1080,
+        "parameters": [
+          3,
+          1,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "2bbdb57c335a62bdace5e6d40cae15ed6d8b8b97fa10fc7a403502fca64de860",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "b0d18ee81d5420acaf18c84d6edcbbe21f6f43c05cb975c3f22bde10733f5c91",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "2bbdb57c335a62bdace5e6d40cae15ed6d8b8b97fa10fc7a403502fca64de860",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "b0d18ee81d5420acaf18c84d6edcbbe21f6f43c05cb975c3f22bde10733f5c91",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e6d86ef9cedd4454871d31e899d6ab5ca094971e542b97897ed81375087fcaf5",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "ff94d141511c72e6b670ca52f84e730cf2d2082caef79489a30c475b9fadd649",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e6d86ef9cedd4454871d31e899d6ab5ca094971e542b97897ed81375087fcaf5",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "ff94d141511c72e6b670ca52f84e730cf2d2082caef79489a30c475b9fadd649",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 9
+      },
+      {
+        "even_phase_expected_facet_count": 750,
+        "odd_phase_expected_facet_count": 750,
+        "parameters": [
+          3,
+          2,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "c01df56f5e5a8c778c16076f1dfe5400ecb835c162199c8b0201a63e0dd7bb15",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "c01df56f5e5a8c778c16076f1dfe5400ecb835c162199c8b0201a63e0dd7bb15",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "4841e1dac0f68f81b1f99cafc68e9d1d7b88179ece7db41e479792c70c7c8477",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "4841e1dac0f68f81b1f99cafc68e9d1d7b88179ece7db41e479792c70c7c8477",
+            "facet_count": 750,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "4170dd74a6b2ab09974be6c64fce19c67748dc0389ba00167df9dab8d9b4056b",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "4170dd74a6b2ab09974be6c64fce19c67748dc0389ba00167df9dab8d9b4056b",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "ec268d6289b2641823e6e81f140be211d057ca15b3e39e15746ce95c07f6c862",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "ec268d6289b2641823e6e81f140be211d057ca15b3e39e15746ce95c07f6c862",
+            "facet_count": 750,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 6
+      },
+      {
+        "even_phase_expected_facet_count": 1360,
+        "odd_phase_expected_facet_count": 1360,
+        "parameters": [
+          3,
+          2,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "f2c5bfafe21e45bee47435f8d249240805dfe0fa0a2ef35c082d6c393ac843c0",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "2f215975cbb38c850374c193df4670458cae848d4aad2b60ca6f43e781eace8a",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "e6512a31809b5c2b167b50f4eca008e0963302364f993ad08502cb83ebf106bc",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "662b541deaf62c46e016f5425e383b1b319a2bbff3bf8f39d0cc2eb23ba5bdae",
+            "facet_count": 1360,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "0cfcd1258bcc2530ceb6ba3c2a98e92994ff41d7b43924ca6dff52b5ce09fd04",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "8d0573cc08d53826be43d3a85625b33e08943be46ff9081940cf3c98641ac305",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "508c1bfbfbc4b21052c65a13bf7b0edcd137d1581169c167389445c8328808c8",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "36283837c5f35404fb0fa373407a8a278dd58d7ca941a722bdb11047bd6ab536",
+            "facet_count": 1360,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 12
+      },
+      {
+        "even_phase_expected_facet_count": 1970,
+        "odd_phase_expected_facet_count": 1970,
+        "parameters": [
+          3,
+          2,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "b2f1b8f3d5156b08374f82fcd1d6a3a4be1be13e3e64707ce0c3f6b18c6da4b3",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "b67df327294ce854d6121fd0a452f3135bb7f77ac5214af5fc2a66876ecb0699",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "3e9a66b3ed82651a226a28a2b36e5f7752d91636dd9a3486e974b0b27714d976",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "99a6eb8c0e2e24f9a515d375785d67c190e5bd29ac8d4fe04a06922aa3a675a9",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "1e74297c41005f25c94f929e4895b8e981e458b608cf98def9bb826802698ec5",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "bfc2d065dcb45c0b8bc5763c70a65ec98fe2e316c6d0b12eddf9246a7010c5ae",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "9a8ea5ad0946ad0c938d8cde62de66c7d0b8943635cc07f830118855ff88a219",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "9a81e20a0da774008255c54d8f502f47a22c21795c1c0ff19092cb97971f18bc",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 18
+      },
+      {
+        "even_phase_expected_facet_count": 1080,
+        "odd_phase_expected_facet_count": 1080,
+        "parameters": [
+          3,
+          3,
+          1
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "8d293ea732d0c7669173bd883e5cde63ab11be035f86cd3133d8fa747921c3fb",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "8d293ea732d0c7669173bd883e5cde63ab11be035f86cd3133d8fa747921c3fb",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "ad168d9cf7253a4a21cfcedd96f4b7e6f364505cfea4f42e124303440f81400e",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "ad168d9cf7253a4a21cfcedd96f4b7e6f364505cfea4f42e124303440f81400e",
+            "facet_count": 1080,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "79356500e6af7ee5b5c4e3705ad82368a0bbc93ebefe4c905adf58b1d55d7e9e",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "79356500e6af7ee5b5c4e3705ad82368a0bbc93ebefe4c905adf58b1d55d7e9e",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "ce4f5d701e436cfcc70d178a911baadee0e495eddc03ce56fb62b00d1c81a208",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "ce4f5d701e436cfcc70d178a911baadee0e495eddc03ce56fb62b00d1c81a208",
+            "facet_count": 1080,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 9
+      },
+      {
+        "even_phase_expected_facet_count": 1970,
+        "odd_phase_expected_facet_count": 1970,
+        "parameters": [
+          3,
+          3,
+          2
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "edd88d8bdab00c013e990657f12ccdaf6f29e33627a74cac61f6eb8fe292b970",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "087f9395a76708f20e94769a2c82c6c16b10f8fd34b60e1ee1a78f9ccbb6a47d",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "fa1eaeb32efed44827939c17b47aeda4ccc313a685cc11c6b373588b96669478",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "c1d5345be806e976a7c349ccdc03081e9733ef286d0092f02d16f4268fe13c25",
+            "facet_count": 1970,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "2662c0e4203db029240944d1f7396d7d0f3d044776f9fe94762dd1f15953fcd0",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "9db78e9708e8833ddab0e25f05789c711359eacc19f10f99c4dab87c86358ee0",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "3ebdbaff0e7c043c823aa6ab460c923290b34a9dc2e7431600514770500431df",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "3781cd3f84951aa30c866154a69b11024133d1734c39b82329ab82da56593b61",
+            "facet_count": 1970,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 18
+      },
+      {
+        "even_phase_expected_facet_count": 2860,
+        "odd_phase_expected_facet_count": 2860,
+        "parameters": [
+          3,
+          3,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "16bb6209ed107e5bae72d4fa798666702b8fa5f303a65e2bd9e9d2747d78e960",
+            "facet_count": 2860,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "8e1e63fe824b2dd18c855e4577115f72009b5535f8f2c879630907c8ef01f40e",
+            "facet_count": 2860,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "5f21df22928c5dc8b0be407fa4c46b78747cf094a6ee713bd28c43c54831cbbc",
+            "facet_count": 2860,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "84c999b7d70fc4d408eefb857e2a80f028b9b9952304f129988e69b884700b9e",
+            "facet_count": 2860,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "7e1eccfd0b7859aabe7a3e94c51e7c3d1243d7e19fd7881351aec1d017e9daa5",
+            "facet_count": 2860,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "788d7db993334d8c700d71f16bb4e9e5c93ffb4711bd3771aa3da6dd49ecdfa9",
+            "facet_count": 2860,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "f56d18c89f09472bca32e67adc56370f4457fd0c4c151f8949b4d61d5b16b6f7",
+            "facet_count": 2860,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "0fae6dddbfd13eec810d8e1d860cf2ab8f51531262db742882fb15f595caf9f3",
+            "facet_count": 2860,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 27
+      },
+      {
+        "even_phase_expected_facet_count": 6458,
+        "odd_phase_expected_facet_count": 6459,
+        "parameters": [
+          4,
+          4,
+          4
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "288b3781bea3e004c34fbc1a1d6f719703defefde8a737aa9bafe97e64d87dfa",
+            "facet_count": 6458,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "9b4353b28ee947fffae05a3b9889329f3bb488471141b33810f1f9fdafe182db",
+            "facet_count": 6459,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "730d6085cb304170a1721995bf5daa68d02a29e57b8455ee6ef3290ab8483e63",
+            "facet_count": 6459,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "5e2a2bf088f1f0a9bfa301bc014fd8022086c9c62cb0a9d602898490cdaa6198",
+            "facet_count": 6458,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "c49c0fac673cf9fed7068e04a2686aae042468cb9352cede16938361b6a29015",
+            "facet_count": 6459,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "25816a486a1210110d026f3c7198e31b9ee33eaa4c1744f46991171574071181",
+            "facet_count": 6458,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "77d43f6796bbc77e77874ca247191a81b63ef8770718fa4cd4fb731287461aff",
+            "facet_count": 6458,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "de3ab633a3a75355f404f7c92f166555728321010990134e84da0adce974ddfd",
+            "facet_count": 6459,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 64
+      },
+      {
+        "even_phase_expected_facet_count": 2580,
+        "odd_phase_expected_facet_count": 2580,
+        "parameters": [
+          2,
+          3,
+          4
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "e837ef205f220e815d9fc49b09b9bd2e79f35822ce44b17890b82b2b9717ed29",
+            "facet_count": 2580,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "1d82d3cd08d4e2b1c78e2e654c79779f903e526b9e556a1ca3859813cc75b194",
+            "facet_count": 2580,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "06de2abe5f21fe76f3097cedd36125010c20e75332f575b8626bc82c7ec61da0",
+            "facet_count": 2580,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "689978f78811b7ae917f5deb52212341aca72e8fc29297209fc40dca86f8ae6a",
+            "facet_count": 2580,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "9f66b3f7d550c5775c76b1c4cd0849d793377c9b3ed059953ef23770de98124a",
+            "facet_count": 2580,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "cb965656ee768c3e164fcb1da18b346da6d79daa2947ea9333a910a4a4b03219",
+            "facet_count": 2580,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "e05f45e8e89e1b760a31e6693218b768d4c814251e7e1cd4e32997f0e232805c",
+            "facet_count": 2580,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "ece3fe67bd0bbf597033dc64cc5ca6d1246286491c4eba9cd12a5dc12bd28020",
+            "facet_count": 2580,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 24
+      },
+      {
+        "even_phase_expected_facet_count": 3190,
+        "odd_phase_expected_facet_count": 3190,
+        "parameters": [
+          5,
+          2,
+          3
+        ],
+        "phase_reconstructions": [
+          {
+            "boundary_root_coordinate_sha256": "f49b97e639cd2f6ca2766396dd2700bbcbaae74fcfa6213e8e8df5f714b9871a",
+            "facet_count": 3190,
+            "phase_bits": [
+              0,
+              0,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "67bfd5a03106cb021efb99d60a99d6a7c027fd1c24baef28892c2437e98e38ca",
+            "facet_count": 3190,
+            "phase_bits": [
+              0,
+              0,
+              1
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "c546f52b80cb70b8e456a4d70548662f04c41d8120bf86959e495ab959cd5864",
+            "facet_count": 3190,
+            "phase_bits": [
+              0,
+              1,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "301ec2ca95d907f26a54e21a97c167694e9de6b38e7fbc6b6dc4ea2167a8860a",
+            "facet_count": 3190,
+            "phase_bits": [
+              0,
+              1,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "6b0c027cf152dcc554409159ba0f79618d8849bda310ebadd29418116e515c03",
+            "facet_count": 3190,
+            "phase_bits": [
+              1,
+              0,
+              0
+            ],
+            "phase_flip_parity": 1
+          },
+          {
+            "boundary_root_coordinate_sha256": "9a1b0d56e83757e862416572b98348a3eef8d0c6b15f9fc443ed2d5df65ed193",
+            "facet_count": 3190,
+            "phase_bits": [
+              1,
+              0,
+              1
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "14fac5c006b7db333aafa43a882413c9937af03f0ff023f3c2e35612ad7804f1",
+            "facet_count": 3190,
+            "phase_bits": [
+              1,
+              1,
+              0
+            ],
+            "phase_flip_parity": 0
+          },
+          {
+            "boundary_root_coordinate_sha256": "dbf2cbb8877f0a6125265d0f3c59d9b8c7c05bc850b9078863bc6d7a1d664a21",
+            "facet_count": 3190,
+            "phase_bits": [
+              1,
+              1,
+              1
+            ],
+            "phase_flip_parity": 1
+          }
+        ],
+        "seed_chamber_count": 30
+      }
+    ]
+  },
+  "endpoint_orbit_audit": {
+    "all_exact_checks_pass": true,
+    "checks": {
+      "BBB_facets_are_fixed_by_all_six_endpoint_reflections": true,
+      "all_six_endpoint_roots_are_distinct": true,
+      "different_factor_endpoint_orbits_are_distinct_mod_common_null": true,
+      "endpoints_and_BBB_facets_have_zero_common_null_pairing": true,
+      "moving_side_facets_have_nonzero_common_null_pairing": true,
+      "no_endpoint_equals_a_BBB_facet_up_to_sign": true,
+      "three_one_factor_outer_endpoint_equations_are_exact": true
+    },
+    "cross_factor_endpoint_quotient_collision_count": 0,
+    "endpoint_to_BBB_exclusion": "the 12 BBB roots and six endpoint roots are distinct canonical roots; BBB roots are fixed by the whole selected reflection subgroup",
+    "endpoint_to_moving_side_exclusion": "pairing with the common null vector is zero on endpoints and nonzero on every moving side facet",
+    "one_factor_endpoint_equations": [
+      {
+        "equations": {
+          "T^z(right)=plus_or_minus_left": [],
+          "T^z*S_right(left)=plus_or_minus_left": [
+            {
+              "sign": -1,
+              "z": -1
+            }
+          ]
+        },
+        "factor": 1
+      },
+      {
+        "equations": {
+          "T^z(right)=plus_or_minus_left": [],
+          "T^z*S_right(left)=plus_or_minus_left": [
+            {
+              "sign": -1,
+              "z": -1
+            }
+          ]
+        },
+        "factor": 2
+      },
+      {
+        "equations": {
+          "T^z(right)=plus_or_minus_left": [],
+          "T^z*S_right(left)=plus_or_minus_left": [
+            {
+              "sign": -1,
+              "z": -1
+            }
+          ]
+        },
+        "factor": 3
+      }
+    ],
+    "outer_endpoint_count_for_every_finite_box": 6
+  },
+  "formula_audit": {
+    "all_exact_checks_pass": true,
+    "checks": {
+      "all_64_parameter_and_phase_parity_cases_equal_closed_formula": true,
+      "epsilon_phase_convention_is_exact": true,
+      "formula_reproduces_C2_cube_at_2_2_2": true,
+      "formula_reproduces_seed_at_1_1_1": true,
+      "odd_phase_at_2_2_2_has_942_facets": true,
+      "preliminary_phase_blind_formula_fails_at_even_odd_phase": true,
+      "six_outer_endpoints_are_included_in_orbit_sum": true
+    },
+    "epsilon_convention": "let E=0 if N1,N2,N3 are all even and E=1 otherwise; epsilon=E for even phase-flip parity and epsilon=2-E for odd phase-flip parity",
+    "facet_formula": "f(N1,N2,N3)=(177*N1*N2*N3+29*(N1*N2+N1*N3+N2*N3)+13*(N1+N2+N3)+40+epsilon(N,phase))/2",
+    "orbit_weight_formula": "6 + sum_pattern h(pattern)*product_i w_pattern_i(N_i), with w_B=1, w_L=ceil(N/2), w_R=floor(N/2)+1, w_N=N",
+    "sample_values": {
+      "1,1,1": 172,
+      "2,1,1": 296,
+      "2,2,1": 523,
+      "2,2,2": 941,
+      "2,2,2;odd_phase": 942,
+      "3,3,3": 2860,
+      "4,4,4": 6458
+    },
+    "symbolic_parity_identities": [
+      {
+        "epsilon": 0,
+        "parameter_parities": [
+          0,
+          0,
+          0
+        ],
+        "phase_bits": [
+          0,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          0,
+          1
+        ],
+        "phase_bits": [
+          0,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          0
+        ],
+        "phase_bits": [
+          0,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          1
+        ],
+        "phase_bits": [
+          0,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          0
+        ],
+        "phase_bits": [
+          0,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          1
+        ],
+        "phase_bits": [
+          0,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          0
+        ],
+        "phase_bits": [
+          0,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          1
+        ],
+        "phase_bits": [
+          0,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 2,
+        "parameter_parities": [
+          0,
+          0,
+          0
+        ],
+        "phase_bits": [
+          0,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          0,
+          1
+        ],
+        "phase_bits": [
+          0,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          0
+        ],
+        "phase_bits": [
+          0,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          1
+        ],
+        "phase_bits": [
+          0,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          0
+        ],
+        "phase_bits": [
+          0,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          1
+        ],
+        "phase_bits": [
+          0,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          0
+        ],
+        "phase_bits": [
+          0,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          1
+        ],
+        "phase_bits": [
+          0,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 2,
+        "parameter_parities": [
+          0,
+          0,
+          0
+        ],
+        "phase_bits": [
+          0,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          0,
+          1
+        ],
+        "phase_bits": [
+          0,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          0
+        ],
+        "phase_bits": [
+          0,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          1
+        ],
+        "phase_bits": [
+          0,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          0
+        ],
+        "phase_bits": [
+          0,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          1
+        ],
+        "phase_bits": [
+          0,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          0
+        ],
+        "phase_bits": [
+          0,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          1
+        ],
+        "phase_bits": [
+          0,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 0,
+        "parameter_parities": [
+          0,
+          0,
+          0
+        ],
+        "phase_bits": [
+          0,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          0,
+          1
+        ],
+        "phase_bits": [
+          0,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          0
+        ],
+        "phase_bits": [
+          0,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          1
+        ],
+        "phase_bits": [
+          0,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          0
+        ],
+        "phase_bits": [
+          0,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          1
+        ],
+        "phase_bits": [
+          0,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          0
+        ],
+        "phase_bits": [
+          0,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          1
+        ],
+        "phase_bits": [
+          0,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 2,
+        "parameter_parities": [
+          0,
+          0,
+          0
+        ],
+        "phase_bits": [
+          1,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          0,
+          1
+        ],
+        "phase_bits": [
+          1,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          0
+        ],
+        "phase_bits": [
+          1,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          1
+        ],
+        "phase_bits": [
+          1,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          0
+        ],
+        "phase_bits": [
+          1,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          1
+        ],
+        "phase_bits": [
+          1,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          0
+        ],
+        "phase_bits": [
+          1,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          1
+        ],
+        "phase_bits": [
+          1,
+          0,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 0,
+        "parameter_parities": [
+          0,
+          0,
+          0
+        ],
+        "phase_bits": [
+          1,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          0,
+          1
+        ],
+        "phase_bits": [
+          1,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          0
+        ],
+        "phase_bits": [
+          1,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          1
+        ],
+        "phase_bits": [
+          1,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          0
+        ],
+        "phase_bits": [
+          1,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          1
+        ],
+        "phase_bits": [
+          1,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          0
+        ],
+        "phase_bits": [
+          1,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          1
+        ],
+        "phase_bits": [
+          1,
+          0,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 0,
+        "parameter_parities": [
+          0,
+          0,
+          0
+        ],
+        "phase_bits": [
+          1,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          0,
+          1
+        ],
+        "phase_bits": [
+          1,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          0
+        ],
+        "phase_bits": [
+          1,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          1
+        ],
+        "phase_bits": [
+          1,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          0
+        ],
+        "phase_bits": [
+          1,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          1
+        ],
+        "phase_bits": [
+          1,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          0
+        ],
+        "phase_bits": [
+          1,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          1
+        ],
+        "phase_bits": [
+          1,
+          1,
+          0
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 2,
+        "parameter_parities": [
+          0,
+          0,
+          0
+        ],
+        "phase_bits": [
+          1,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          0,
+          1
+        ],
+        "phase_bits": [
+          1,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          0
+        ],
+        "phase_bits": [
+          1,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          0,
+          1,
+          1
+        ],
+        "phase_bits": [
+          1,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          0
+        ],
+        "phase_bits": [
+          1,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          0,
+          1
+        ],
+        "phase_bits": [
+          1,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          0
+        ],
+        "phase_bits": [
+          1,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      },
+      {
+        "epsilon": 1,
+        "parameter_parities": [
+          1,
+          1,
+          1
+        ],
+        "phase_bits": [
+          1,
+          1,
+          1
+        ],
+        "symbolic_difference": "0"
+      }
+    ]
+  },
+  "full_lattice_core_audit": {
+    "all_exact_checks_pass": true,
+    "checks": {
+      "all_eight_phase_cores_have_169_roots": true,
+      "all_eight_phase_cores_span_full_rank_13_lattice": true
+    },
+    "persistence_reason": "every finite box boundary contains the 166 nonendpoint seed roots and one outer endpoint root from each factor; all eight possible 169-root cores have Smith diagonal 1^13",
+    "phase_cores": [
+      {
+        "Smith_diagonal": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "core_root_count": 169,
+        "retained_endpoint_choices": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "Smith_diagonal": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "core_root_count": 169,
+        "retained_endpoint_choices": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "Smith_diagonal": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "core_root_count": 169,
+        "retained_endpoint_choices": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "Smith_diagonal": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "core_root_count": 169,
+        "retained_endpoint_choices": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "Smith_diagonal": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "core_root_count": 169,
+        "retained_endpoint_choices": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "Smith_diagonal": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "core_root_count": 169,
+        "retained_endpoint_choices": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "Smith_diagonal": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "core_root_count": 169,
+        "retained_endpoint_choices": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "Smith_diagonal": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "core_root_count": 169,
+        "retained_endpoint_choices": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "independence": {
+    "exploratory_scout_imported_or_invoked": false,
+    "finite_parameter_interpolation_used": false,
+    "production_path_cube_builder_imported_or_invoked": false,
+    "seed_source": "prior hostile raw Dolgachev--Shimada/fold reconstruction, not a production path/cube builder"
+  },
+  "schema": "coxeter.jacobian_kummer.h12_triple_parallel_family.v1",
+  "scoped_maximum_product_theorem": {
+    "D_infinity_common_cube_rank_histogram": {
+      "0": 452,
+      "1": 240,
+      "2": 438,
+      "3": 8
+    },
+    "D_infinity_cubed_configurations_one_based": [
+      [
+        [
+          48,
+          42
+        ],
+        [
+          51,
+          39
+        ],
+        [
+          56,
+          36
+        ]
+      ],
+      [
+        [
+          58,
+          33
+        ],
+        [
+          59,
+          32
+        ],
+        [
+          60,
+          31
+        ]
+      ]
+    ],
+    "D_infinity_squared_common_cube_rank_histogram": {
+      "1": 6
+    },
+    "all_exact_checks_pass": true,
+    "checks": {
+      "doubling_relation_histogram_is_exact": true,
+      "doubling_stock_size_is_124": true,
+      "exactly_16_maximum_C2_four_cubes": true,
+      "exactly_eight_maximal_D_infinity_times_C2_cubed_configurations": true,
+      "exactly_two_D_infinity_cubed_configurations": true,
+      "maximum_D_infinity_squared_times_cube_rank_is_1": true,
+      "maximum_D_infinity_times_cube_rank_is_3": true,
+      "maximum_mutually_orthogonal_parallel_factor_count_is_3": true,
+      "maximum_orthogonal_cube_rank_is_4": true,
+      "no_D_infinity_four_product": true,
+      "no_cube_factor_orthogonal_to_D_infinity_cubed": true,
+      "parallel_factor_compatibility_edge_count_is_6": true,
+      "parallel_pair_count_is_1138": true
+    },
+    "doubling_relation_histogram": {
+      "m2": 264,
+      "parallel": 1138,
+      "ultraparallel": 6224
+    },
+    "doubling_wall_count": 124,
+    "maximum_C2_four_cube_count": 16,
+    "maximum_C2_four_cubes_one_based": [
+      [
+        31,
+        32,
+        33,
+        61
+      ],
+      [
+        31,
+        32,
+        33,
+        62
+      ],
+      [
+        31,
+        58,
+        59,
+        63
+      ],
+      [
+        31,
+        58,
+        59,
+        68
+      ],
+      [
+        36,
+        39,
+        48,
+        72
+      ],
+      [
+        36,
+        39,
+        48,
+        76
+      ],
+      [
+        36,
+        42,
+        51,
+        71
+      ],
+      [
+        36,
+        42,
+        51,
+        75
+      ],
+      [
+        39,
+        42,
+        56,
+        70
+      ],
+      [
+        39,
+        42,
+        56,
+        74
+      ],
+      [
+        48,
+        51,
+        56,
+        69
+      ],
+      [
+        48,
+        51,
+        56,
+        73
+      ],
+      [
+        32,
+        58,
+        60,
+        64
+      ],
+      [
+        32,
+        58,
+        60,
+        67
+      ],
+      [
+        33,
+        59,
+        60,
+        65
+      ],
+      [
+        33,
+        59,
+        60,
+        66
+      ]
+    ],
+    "maximum_D_infinity_factor_count": 3,
+    "maximum_D_infinity_times_C2_cubed_configurations_one_based": [
+      {
+        "cube": [
+          31,
+          32,
+          33
+        ],
+        "parallel_pair": [
+          62,
+          61
+        ]
+      },
+      {
+        "cube": [
+          33,
+          59,
+          60
+        ],
+        "parallel_pair": [
+          66,
+          65
+        ]
+      },
+      {
+        "cube": [
+          32,
+          58,
+          60
+        ],
+        "parallel_pair": [
+          67,
+          64
+        ]
+      },
+      {
+        "cube": [
+          31,
+          58,
+          59
+        ],
+        "parallel_pair": [
+          68,
+          63
+        ]
+      },
+      {
+        "cube": [
+          48,
+          51,
+          56
+        ],
+        "parallel_pair": [
+          73,
+          69
+        ]
+      },
+      {
+        "cube": [
+          39,
+          42,
+          56
+        ],
+        "parallel_pair": [
+          74,
+          70
+        ]
+      },
+      {
+        "cube": [
+          36,
+          42,
+          51
+        ],
+        "parallel_pair": [
+          75,
+          71
+        ]
+      },
+      {
+        "cube": [
+          36,
+          39,
+          48
+        ],
+        "parallel_pair": [
+          76,
+          72
+        ]
+      }
+    ],
+    "maximum_orthogonal_cube_rank": 4,
+    "parallel_factor_compatibility_edge_count": 6,
+    "parallel_pair_count": 1138,
+    "scope": "exhaustive only for direct products whose D_infinity factors are parallel doubling-wall pairs and whose distinct factors/cube walls are pairwise orthogonal inside this exact 124-wall seed stock",
+    "triple_common_orthogonal_doubling_walls": [
+      [],
+      []
+    ]
+  },
+  "seed": {
+    "dimension": 12,
+    "facet_count": 172,
+    "fixed_determinant": 256,
+    "fixed_rank": 13,
+    "fixed_signature": [
+      1,
+      12,
+      0
+    ],
+    "id": "JK-H12-172",
+    "raw_reconstruction_checks": {
+      "all_172_roots_reconstructed": true,
+      "all_roots_are_primitive_spacelike_and_strictly_oriented": true,
+      "fixed_basis_is_13_by_17": true,
+      "fixed_basis_is_pointwise_fixed": true,
+      "fixed_basis_is_saturated": true,
+      "fixed_lattice_determinant_is_256": true,
+      "fixed_lattice_signature_is_1_12": true,
+      "full_Picard_carrier_certificate_is_green": true,
+      "involution_fixes_published_ample": true,
+      "involution_is_exact_order_two": true,
+      "involution_permutes_all_316_walls": true,
+      "involution_preserves_ambient_gram": true,
+      "primitive_root_rank_is_13": true,
+      "published_ample_is_timelike": true,
+      "raw_root_gram_matches_frozen_fold": true
+    },
+    "root_coordinate_sha256": "a21f3f7f61848ccaa764c946815bfb3c63c09b0372eb376053f4b75c960bba2e"
+  },
+  "side_pattern_census": {
+    "all_exact_checks_pass": true,
+    "checks": {
+      "each_factor_margin_is_B12_L30_R30_N94": true,
+      "exactly_166_nonendpoint_seed_facets": true,
+      "pattern_histogram_is_exact": true,
+      "the_only_patterns_containing_B_are_12_BBB": true
+    },
+    "factor_margins": [
+      {
+        "B": 12,
+        "L": 30,
+        "N": 94,
+        "R": 30
+      },
+      {
+        "B": 12,
+        "L": 30,
+        "N": 94,
+        "R": 30
+      },
+      {
+        "B": 12,
+        "L": 30,
+        "N": 94,
+        "R": 30
+      }
+    ],
+    "pattern_histogram": {
+      "BBB": 12,
+      "LLL": 3,
+      "LLN": 4,
+      "LLR": 2,
+      "LNL": 4,
+      "LNN": 4,
+      "LNR": 4,
+      "LRL": 2,
+      "LRN": 4,
+      "LRR": 3,
+      "NLL": 4,
+      "NLN": 4,
+      "NLR": 4,
+      "NNL": 4,
+      "NNN": 62,
+      "NNR": 4,
+      "NRL": 4,
+      "NRN": 4,
+      "NRR": 4,
+      "RLL": 2,
+      "RLN": 4,
+      "RLR": 3,
+      "RNL": 4,
+      "RNN": 4,
+      "RNR": 4,
+      "RRL": 3,
+      "RRN": 4,
+      "RRR": 2
+    },
+    "pattern_legend": {
+      "B": "orthogonal to both endpoints of this parallel factor",
+      "L": "orthogonal only to its left endpoint",
+      "N": "orthogonal to neither endpoint",
+      "R": "orthogonal only to its right endpoint"
+    },
+    "side_facet_count": 166,
+    "side_record_sha256": "b4a724c692202e88a4ea0779fbf09d822150df242265e76a066a537bbe659643"
+  },
+  "status_date": "2026-08-08",
+  "symmetry_orbit_audit": {
+    "all_exact_checks_pass": true,
+    "checks": {
+      "centralizer_stabilizer_realizes_exactly_even_endpoint_flip_parity": true,
+      "configuration_stabilizer_order_is_384": true,
+      "each_labelled_action_has_16_lifts": true,
+      "every_factor_permutation_is_realized": true,
+      "explicit_exact_word_to_both_configurations": true,
+      "published_chamber_group_order_is_23040": true,
+      "stabilizer_realizes_24_labelled_factor_endpoint_actions": true,
+      "trace_nine_involution_centralizer_order_is_768": true,
+      "two_triple_products_form_one_orbit_with_384_maps_each": true
+    },
+    "configuration_orbit_size": 2,
+    "configuration_stabilizer_order": 384,
+    "explicit_configuration_words": [
+      {
+        "ambient_matrix_sha256": "964d90cc59e5e379ef528a2e8a2f6b1b420e1dec07c02e597ae84fe541583b06",
+        "published_generator_word_one_based": [],
+        "target_configuration_number": 1
+      },
+      {
+        "ambient_matrix_sha256": "c8e8842c6edcc7395869cb30984cfe2b23a43d4f32151fa8e97243b0bae191dd",
+        "published_generator_word_one_based": [
+          2
+        ],
+        "target_configuration_number": 2
+      }
+    ],
+    "involution_centralizer_order": 768,
+    "labelled_factor_endpoint_actions": [
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": []
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          5
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          5,
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          4
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          3
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          4,
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          3,
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          9
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          4,
+          7
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          8,
+          9
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          3,
+          8,
+          7
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          4,
+          9
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          7
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          8,
+          7
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          3,
+          8,
+          9
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          9,
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          4,
+          7,
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          8,
+          9,
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          9,
+          8,
+          7
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          2,
+          4,
+          9,
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          7,
+          8
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          7,
+          8,
+          7
+        ]
+      },
+      {
+        "centralizer_element_count": 16,
+        "factor_images_zero_based_and_endpoint_flip_bits": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "shortest_published_generator_word_one_based": [
+          7,
+          8,
+          9
+        ]
+      }
+    ],
+    "maps_from_representative_to_each_configuration": {
+      "1": 384,
+      "2": 384
+    },
+    "phase_and_parameter_consequence": "the two listed triples are conjugate and all six permutations of the three box parameters are lattice-isometric; the certified chamber centralizer realizes exactly the even endpoint-flip subgroup, producing two phase-parity orbits rather than silently identifying all 48 labelled factor/endpoint actions",
+    "published_chamber_group_order": 23040
+  },
+  "theorem": {
+    "Coxeter_reason": "the index-Ni reflection subgroup of each commuting D_infinity factor has an Ni-chamber interval; their direct product box is a Coxeter fundamental chamber, and the all-Z3 audit gives its exact exterior-wall identifications",
+    "carrier": {
+      "all_exact_checks_pass": true,
+      "carrier_lattice": "U(2)+D5(-1)^2+<-4>",
+      "carrier_moduli_dimension": 7,
+      "carrier_rank": 13,
+      "carrier_signature": [
+        1,
+        12,
+        0
+      ],
+      "checks": {
+        "all_seed_reflections_integral_on_full_carrier": true,
+        "exact_GMP_seed_is_finite_volume_noncompact": true,
+        "full_Picard_K3_carrier_is_green": true,
+        "literal_Vinberg_seed_is_finite_volume_noncompact": true,
+        "seed_walls_span_full_rank_13_Picard_lattice": true
+      },
+      "scope": "weak full-Picard divisor-reflection carrier; no full-nef or surface-automorphism assertion",
+      "seed_classification": "finite_volume_noncompact",
+      "seed_cusps": 6214,
+      "seed_finite_vertices": 113274
+    },
+    "claim_scope": "abstract finite-volume noncompact Coxeter polytopes on a weak full-Picard K3 divisor-reflection carrier; no full-nef or surface-automorphism claim",
+    "compact": false,
+    "epsilon_convention": "let E=0 if N1,N2,N3 are all even and E=1 otherwise; epsilon=E for even phase-flip parity and epsilon=2-E for odd phase-flip parity",
+    "facet_formula": "f(N1,N2,N3)=(177*N1*N2*N3+29*(N1*N2+N1*N3+N2*N3)+13*(N1+N2+N3)+40+epsilon(N,phase))/2",
+    "finite_volume": true,
+    "finite_volume_reason": "the box is the union of exactly N1*N2*N3 interiors-disjoint copies of the independently finite-volume seed chamber",
+    "full_fixed_Picard_lattice_for_every_parameter_triple": true,
+    "hyperbolic_dimension": 12,
+    "noncompact_reason": "the box contains a closed noncompact seed chamber and retains the common ideal direction",
+    "pairwise_nonisometric_when_volume_or_facet_counts_differ": true,
+    "parameter_domain": "all integers N1,N2,N3>=1",
+    "phase_classification": "the certified centralizer has two phase-parity orbits; when all Ni are even their facet counts differ by one, proving the two resulting polytopes nonisometric; when some Ni is odd the counts coincide and no wider isometry identification is claimed here",
+    "phase_parameter": "sigma in {0,1}, the parity of the three endpoint-orientation flips",
+    "primitive_integral_reflection_roots_for_every_parameter_triple": true,
+    "seed_chamber_count_and_reflection_subgroup_index": "N1*N2*N3",
+    "selected_subgroup": "D_infinity^3",
+    "volume": "Vol(P_N1_N2_N3)=N1*N2*N3*Vol(P_seed)"
+  },
+  "triple_parallel_structures": {
+    "all_exact_checks_pass": true,
+    "configurations": [
+      {
+        "all_exact_checks_pass": true,
+        "checks": {
+          "all_six_reflections_are_integral_involutive_isometries": true,
+          "all_six_walls_are_in_exact_doubling_stock": true,
+          "distinct_D_infinity_factors_commute": true,
+          "each_nilpotent_square_image_is_common_null_line": true,
+          "each_translation_has_nilpotent_ranks_2_1_0": true,
+          "mixed_nilpotent_products_vanish": true,
+          "selected_Gram_is_three_orthogonal_parallel_blocks": true,
+          "three_primitive_null_half_sums_are_equal": true,
+          "translations_commute_pairwise": true
+        },
+        "common_primitive_integral_null_direction": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          4,
+          -6,
+          -7,
+          -6,
+          -7,
+          -5,
+          -6,
+          -8
+        ],
+        "configuration_number": 1,
+        "parallel_pairs_one_based": [
+          [
+            48,
+            42
+          ],
+          [
+            51,
+            39
+          ],
+          [
+            56,
+            36
+          ]
+        ],
+        "selected_wall_Gram": [
+          [
+            -4,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            -4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -4,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            -4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -4,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            -4
+          ]
+        ],
+        "translation_ranks": [
+          {
+            "T_minus_I_cubed_is_zero": true,
+            "rank_T_minus_I": 2,
+            "rank_T_minus_I_squared": 1
+          },
+          {
+            "T_minus_I_cubed_is_zero": true,
+            "rank_T_minus_I": 2,
+            "rank_T_minus_I_squared": 1
+          },
+          {
+            "T_minus_I_cubed_is_zero": true,
+            "rank_T_minus_I": 2,
+            "rank_T_minus_I_squared": 1
+          }
+        ]
+      },
+      {
+        "all_exact_checks_pass": true,
+        "checks": {
+          "all_six_reflections_are_integral_involutive_isometries": true,
+          "all_six_walls_are_in_exact_doubling_stock": true,
+          "distinct_D_infinity_factors_commute": true,
+          "each_nilpotent_square_image_is_common_null_line": true,
+          "each_translation_has_nilpotent_ranks_2_1_0": true,
+          "mixed_nilpotent_products_vanish": true,
+          "selected_Gram_is_three_orthogonal_parallel_blocks": true,
+          "three_primitive_null_half_sums_are_equal": true,
+          "translations_commute_pairwise": true
+        },
+        "common_primitive_integral_null_direction": [
+          3,
+          3,
+          3,
+          3,
+          4,
+          2,
+          -5,
+          -6,
+          -5,
+          -7,
+          -6,
+          -7,
+          -9
+        ],
+        "configuration_number": 2,
+        "parallel_pairs_one_based": [
+          [
+            58,
+            33
+          ],
+          [
+            60,
+            31
+          ],
+          [
+            59,
+            32
+          ]
+        ],
+        "selected_wall_Gram": [
+          [
+            -4,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            -4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -4,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            -4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -4,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            -4
+          ]
+        ],
+        "translation_ranks": [
+          {
+            "T_minus_I_cubed_is_zero": true,
+            "rank_T_minus_I": 2,
+            "rank_T_minus_I_squared": 1
+          },
+          {
+            "T_minus_I_cubed_is_zero": true,
+            "rank_T_minus_I": 2,
+            "rank_T_minus_I_squared": 1
+          },
+          {
+            "T_minus_I_cubed_is_zero": true,
+            "rank_T_minus_I": 2,
+            "rank_T_minus_I_squared": 1
+          }
+        ]
+      }
+    ]
+  }
+}

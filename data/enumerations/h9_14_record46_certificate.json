@@ -1,0 +1,381 @@
+{
+  "a0_blocker_census": {
+    "active_assignment_row_count_cells": 15,
+    "blocker_valid_states": 330,
+    "canonical_local_states": 2523,
+    "distinct_row_states_before_row_quotient": 53902,
+    "distinguished_allowed_vertices": [
+      1,
+      11
+    ],
+    "facet_count_histogram": {
+      "48": 1,
+      "51": 1,
+      "52": 4,
+      "54": 2,
+      "55": 5,
+      "56": 7,
+      "57": 2,
+      "58": 16,
+      "59": 1,
+      "60": 24,
+      "61": 8,
+      "62": 14,
+      "63": 10,
+      "64": 54,
+      "65": 8,
+      "66": 22,
+      "67": 23,
+      "68": 38,
+      "69": 6,
+      "70": 23,
+      "71": 5,
+      "72": 22,
+      "73": 7,
+      "74": 5,
+      "75": 1,
+      "76": 8,
+      "77": 2,
+      "79": 2,
+      "80": 3,
+      "81": 1,
+      "82": 2,
+      "83": 3
+    },
+    "forbidden_nonisolated_vertices": [
+      0,
+      12,
+      13
+    ],
+    "full_local_states_before_row_quotient": 55458,
+    "graph6": "M?????????O?o?o?_",
+    "isolated_vertices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "missing_edges": [
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "raw_active_isolate_joins": 55458,
+    "record_index": 46,
+    "required_facet_count": 90,
+    "target_state_count": 0,
+    "target_states": []
+  },
+  "backend_corroboration": {
+    "assertion_count": 11276,
+    "backend": "z3",
+    "backend_version": "4.16.0",
+    "elapsed_seconds": 41.309572207999736,
+    "path": "data/enumerations/h9_14_facet_completion.json",
+    "reason_unknown": "timeout",
+    "sha256": "2d329439e5baeffb574932ff7bbab2dd78daf706b2917a0674bdc9f01a2f5123",
+    "status": "unknown",
+    "trusted_for_proof": false
+  },
+  "certificate_sha256": "5f28acdd31ae4c043e799c4dfb62c63dd4b22f95af7032c6b8af83a5fa04b3f3",
+  "claim": "H9/14 survivor record 46 cannot be the nerve of a compact hyperbolic Coxeter 9-polytope.",
+  "full_census_sha256": "2cbafdc1d17c6690aa1aa92b2c22d943245f23053c203ffc43b64070097a6af0",
+  "graph6": "M?????????O?o?o?_",
+  "kind": "h9_14_record46_solver_independent_exclusion",
+  "nonclaims": [
+    "This excludes one graph shadow, not all compact H9/14 nerves.",
+    "The archived bounded Z3 timeout contributes no logical step.",
+    "No Coxeter labels or Lorentzian Gram matrices are classified.",
+    "This is not a general non-existence theorem in dimension 9."
+  ],
+  "proof_backend": "exact local g-vectors, four-row/16-column-pattern symmetry compression, and blocker enumeration; no SAT/SMT",
+  "proof_dependencies": [
+    "Burcroff's no-missing-triples theorem for compact H9/14 nerves",
+    "every compact Coxeter missing face is Lanner of order at most five",
+    "strict generalized lower-bound and local Macaulay inequalities",
+    "Dehn--Sommerville face-vector schedules",
+    "maximal faces are complementary to inclusion-minimal transversals of the complete minimal-nonface clutter"
+  ],
+  "proof_sources": [
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record46.py",
+      "sha256": "20795d1fee8acdbeecbb112bf62d514e1294471cd252ce78c8885047f88177e2"
+    },
+    {
+      "path": "scripts/enumerate_h9_14_four_a5_blocker.py",
+      "sha256": "ef1c00261ab54558552611369b7086e9669490ffce1a6ce548bd828f9e6c716d"
+    }
+  ],
+  "record_index": 46,
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "data/enumerations/h9_14_nerve_support.json",
+    "second_layer_survivor_index": 46,
+    "sha256": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d"
+  },
+  "structure": {
+    "a0": {
+      "allowed_support_vertices": [
+        1,
+        11,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "forbidden_vertices": [
+        0,
+        12,
+        13
+      ],
+      "individually_allowed_a5_count": 378,
+      "minimal_a5_count": 4,
+      "pair_1_11_a5_incidence_capacity": 0,
+      "required_facet_count": 90
+    },
+    "a1": {
+      "conclusion": "all three interval-feasible A4 types force a nonpositive vertex-link g4 before any additional minimal A5",
+      "independent_a4_count": 690,
+      "interval_feasible_a4_count": 294,
+      "interval_feasible_a4_orbit_count": 3,
+      "shadow_strict_survivor_count": 0,
+      "types": [
+        {
+          "active_vertices": [],
+          "forced_five_shadow_size": 10,
+          "impossible": true,
+          "multiplicity": 126,
+          "nonpositive_g4_vertices": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            12,
+            13
+          ],
+          "representative_mask": 60,
+          "representative_vertices": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "active_vertices": [
+            1
+          ],
+          "forced_five_shadow_size": 8,
+          "impossible": true,
+          "multiplicity": 84,
+          "nonpositive_g4_vertices": [
+            0,
+            1
+          ],
+          "representative_mask": 30,
+          "representative_vertices": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "active_vertices": [
+            11
+          ],
+          "forced_five_shadow_size": 9,
+          "impossible": true,
+          "multiplicity": 84,
+          "nonpositive_g4_vertices": [
+            11,
+            12,
+            13
+          ],
+          "representative_mask": 2076,
+          "representative_vertices": [
+            2,
+            3,
+            4,
+            11
+          ]
+        }
+      ]
+    },
+    "active_vertices": [
+      0,
+      1,
+      11,
+      12,
+      13
+    ],
+    "base_vertex_link_g3": [
+      1,
+      2,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      1,
+      1
+    ],
+    "base_vertex_link_g4": [
+      1,
+      2,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      1,
+      1
+    ],
+    "excluded_high_a_branches": [
+      {
+        "missing_four_count": 2,
+        "required_minimum": 14,
+        "summed_vertex_link_g4": 12
+      },
+      {
+        "missing_four_count": 3,
+        "required_minimum": 14,
+        "summed_vertex_link_g4": 6
+      }
+    ],
+    "graph6": "M?????????O?o?o?_",
+    "isolated_vertices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "minimal_graph_cover_masks": [
+      4099,
+      8195,
+      12289,
+      14336
+    ],
+    "minimal_graph_cover_vertices": [
+      [
+        0,
+        1,
+        12
+      ],
+      [
+        0,
+        1,
+        13
+      ],
+      [
+        0,
+        12,
+        13
+      ],
+      [
+        11,
+        12,
+        13
+      ]
+    ],
+    "missing_edges": [
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "schedule_link_g4_sums": [
+      {
+        "missing_four_count": 0,
+        "summed_vertex_link_g4": 24
+      },
+      {
+        "missing_four_count": 1,
+        "summed_vertex_link_g4": 18
+      },
+      {
+        "missing_four_count": 2,
+        "summed_vertex_link_g4": 12
+      },
+      {
+        "missing_four_count": 3,
+        "summed_vertex_link_g4": 6
+      }
+    ],
+    "verified": true
+  },
+  "theorem_status": "certified_unsat",
+  "updated_theorem_partition": {
+    "certified_explicit_ordinary_polytopal": 2,
+    "independently_certified_impossible": 119,
+    "theorem_undecided": 21,
+    "total_graph_shadows": 142
+  }
+}

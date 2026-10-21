@@ -1,0 +1,402 @@
+{
+  "all_checks_pass": true,
+  "calibrations": {
+    "F3-V4-H10-123": {
+      "classification": "finite_volume_noncompact",
+      "cusps": 1732,
+      "elliptic_rank9_edges": 246610,
+      "facets": 123,
+      "finite_vertices": 37451,
+      "index_in_W_S": 65802240,
+      "rational_euler_characteristic": "-527/2880",
+      "wall_span_index": 2,
+      "wall_types": {
+        "-2,1": 10,
+        "-4,2": 31,
+        "-4,4": 82
+      }
+    },
+    "JK-H10-0007": {
+      "classification": "finite_volume_noncompact",
+      "cusps": 862,
+      "elliptic_rank9_edges": 107233,
+      "facets": 84,
+      "finite_vertices": 15698,
+      "index_in_W_S": 16450560,
+      "rational_euler_characteristic": "-527/11520",
+      "wall_span_index": 2,
+      "wall_types": {
+        "-2,1": 8,
+        "-4,2": 33,
+        "-4,4": 43
+      }
+    }
+  },
+  "checks": {
+    "S_determinant_1024": true,
+    "S_discriminant_group_2x8_plus_4": true,
+    "S_even_rank11_signature_1_10": true,
+    "all_1024_discriminant_classes_enumerated": true,
+    "all_three_surviving_types_have_explicit_witnesses": true,
+    "calibrations_are_green_and_use_exact_alphabet": true,
+    "exact_order_q_histogram": true,
+    "full_discriminant_form_pinned": true,
+    "full_reflection_chamber_is_complete_13_wall_nonuniform": true,
+    "index_source_pins_same_full_chamber_lineage": true,
+    "period_locus_is_nine_dimensional_full_Picard": true,
+    "positive_norm_integral_reflection_out_of_scope": true,
+    "self_pairing_then_full_form_filter_naive_upper_bound_exactly": true,
+    "subgroup_indices_equal_exact_Euler_ratios": true,
+    "subgroup_indices_exact_65802240_and_16450560": true
+  },
+  "full_reflection_group": {
+    "cusps": 3,
+    "finite_vertices": 29,
+    "fundamental_facets": 13,
+    "name": "W(S), the full integral reflection group; classical f_2^10 chamber",
+    "nonuniform": true,
+    "primitive_wall_types": {
+      "square_-2_div_1": 1,
+      "square_-4_div_2": 11,
+      "square_-4_div_4": 1
+    },
+    "proof_of_subgroup_criterion": "For a genuine Coxeter polyhedron, the Poincare polyhedron theorem makes P a fundamental domain of its facet-reflection group Gamma. Primitive reduction puts Gamma in W(S). Modulo measure-zero boundaries, a Gamma domain is a disjoint union of [W(S):Gamma] W(S)-chambers, so its volume is finite iff the index is finite. A finite-index subgroup of nonuniform W(S) contains positive powers of parabolic elements and is nonuniform; hence its Coxeter domain is not compact.",
+    "rational_euler_characteristic": "-31/11147673600"
+  },
+  "lattice": {
+    "alphabet_scope": "This is the exhaustive alphabet for primitive negative hyperbolic-mirror normals in S, not for positive-norm lattice reflections.",
+    "determinant": 1024,
+    "discriminant_exponent": 4,
+    "discriminant_form": "q_plus(F2^8) + <-1/4>",
+    "discriminant_group": "(Z/2)^8 + Z/4",
+    "explicit_negative_type_witnesses": {
+      "minus2_div1": {
+        "coordinates": [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "divisibility": 1,
+        "dual_class_exact_order": 1,
+        "dual_class_q_mod_2": "0",
+        "hyperbolic_mirror_normal": true,
+        "primitive": true,
+        "reflection_integral": true,
+        "reflection_preserves_S": true,
+        "square": -2
+      },
+      "minus4_div2": {
+        "coordinates": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "divisibility": 2,
+        "dual_class_exact_order": 2,
+        "dual_class_q_mod_2": "1",
+        "hyperbolic_mirror_normal": true,
+        "primitive": true,
+        "reflection_integral": true,
+        "reflection_preserves_S": true,
+        "square": -4
+      },
+      "minus4_div4": {
+        "coordinates": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "divisibility": 4,
+        "dual_class_exact_order": 4,
+        "dual_class_q_mod_2": "7/4",
+        "hyperbolic_mirror_normal": true,
+        "primitive": true,
+        "reflection_integral": true,
+        "reflection_preserves_S": true,
+        "square": -4
+      }
+    },
+    "full_discriminant_form_audit": {
+      "after_d_divides_self_pairing_filter": [
+        {
+          "divisibility": 1,
+          "square": -2
+        },
+        {
+          "divisibility": 2,
+          "square": -2
+        },
+        {
+          "divisibility": 2,
+          "square": -4
+        },
+        {
+          "divisibility": 4,
+          "square": -4
+        },
+        {
+          "divisibility": 4,
+          "square": -8
+        }
+      ],
+      "all_representatives_lie_in_S_dual": true,
+      "block_checks": {
+        "orthogonal_block_splitting": true,
+        "visible_E8_half_integral_even_unimodular": true,
+        "visible_U_block_unimodular": true,
+        "visible_last_block_minus_four": true
+      },
+      "candidate_filter": [
+        {
+          "available_q_mod_2_at_exact_order": [
+            "0"
+          ],
+          "discriminant_form_compatible": true,
+          "divisibility": 1,
+          "required_discriminant_q_mod_2": "0",
+          "self_pairing_divisibility_compatible": true,
+          "square": -2,
+          "status": "allowed_and_explicitly_realized",
+          "survives_all_arithmetic_filters": true
+        },
+        {
+          "available_q_mod_2_at_exact_order": [
+            "0",
+            "1"
+          ],
+          "discriminant_form_compatible": false,
+          "divisibility": 2,
+          "required_discriminant_q_mod_2": "3/2",
+          "self_pairing_divisibility_compatible": true,
+          "square": -2,
+          "status": "excluded_by_full_discriminant_form",
+          "survives_all_arithmetic_filters": false
+        },
+        {
+          "available_q_mod_2_at_exact_order": [
+            "0",
+            "1"
+          ],
+          "discriminant_form_compatible": true,
+          "divisibility": 2,
+          "required_discriminant_q_mod_2": "1",
+          "self_pairing_divisibility_compatible": true,
+          "square": -4,
+          "status": "allowed_and_explicitly_realized",
+          "survives_all_arithmetic_filters": true
+        },
+        {
+          "available_q_mod_2_at_exact_order": [
+            "3/4",
+            "7/4"
+          ],
+          "discriminant_form_compatible": false,
+          "divisibility": 4,
+          "required_discriminant_q_mod_2": "15/8",
+          "self_pairing_divisibility_compatible": false,
+          "square": -2,
+          "status": "excluded_by_d_divides_r_square_before_discriminant_form",
+          "survives_all_arithmetic_filters": false
+        },
+        {
+          "available_q_mod_2_at_exact_order": [
+            "3/4",
+            "7/4"
+          ],
+          "discriminant_form_compatible": true,
+          "divisibility": 4,
+          "required_discriminant_q_mod_2": "7/4",
+          "self_pairing_divisibility_compatible": true,
+          "square": -4,
+          "status": "allowed_and_explicitly_realized",
+          "survives_all_arithmetic_filters": true
+        },
+        {
+          "available_q_mod_2_at_exact_order": [
+            "3/4",
+            "7/4"
+          ],
+          "discriminant_form_compatible": false,
+          "divisibility": 4,
+          "required_discriminant_q_mod_2": "3/2",
+          "self_pairing_divisibility_compatible": true,
+          "square": -8,
+          "status": "excluded_by_full_discriminant_form",
+          "survives_all_arithmetic_filters": false
+        }
+      ],
+      "distinct_classes_mod_S": 1024,
+      "exact_order_q_mod_2_histogram": {
+        "order_1_q_0": 1,
+        "order_2_q_0": 255,
+        "order_2_q_1": 256,
+        "order_4_q_3/4": 240,
+        "order_4_q_7/4": 272
+      },
+      "exponent_four_and_reflection_integrality_naive_upper_bound": [
+        {
+          "divisibility": 1,
+          "square": -2
+        },
+        {
+          "divisibility": 2,
+          "square": -2
+        },
+        {
+          "divisibility": 2,
+          "square": -4
+        },
+        {
+          "divisibility": 4,
+          "square": -2
+        },
+        {
+          "divisibility": 4,
+          "square": -4
+        },
+        {
+          "divisibility": 4,
+          "square": -8
+        }
+      ],
+      "proof": "For primitive r with d=div_S(r), r/d has exact order d in A_S, d divides r^2 because r^2 is one of the pairings, and q(r/d)=r^2/d^2 mod 2Z. Reflection integrality is equivalent to |r^2| dividing 2d. The self-pairing divisibility first removes (-2,4); the enumerated exact-order q-values then remove (-2,2) and (-8,4). Explicit primitive vectors realize the three survivors.",
+      "representative_count": 1024,
+      "representative_model": "alpha=(0,0,b_1/2,...,b_8/2,c/4), with b_i in {0,1} and c in {0,1,2,3}"
+    },
+    "name": "S=U+E8(-2)+<-4>",
+    "positive_norm_integral_reflection_boundary_witness": {
+      "coordinates": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "divisibility": 1,
+      "dual_class_exact_order": 1,
+      "dual_class_q_mod_2": "0",
+      "hyperbolic_mirror_normal": false,
+      "primitive": true,
+      "reflection_integral": true,
+      "reflection_preserves_S": true,
+      "square": 2
+    },
+    "primitive_negative_integral_reflection_alphabet": [
+      {
+        "divisibility": 1,
+        "square": -2
+      },
+      {
+        "divisibility": 2,
+        "square": -4
+      },
+      {
+        "divisibility": 4,
+        "square": -4
+      }
+    ],
+    "rank": 11,
+    "signature": [
+      1,
+      10,
+      0
+    ],
+    "smith": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      4
+    ]
+  },
+  "payload_sha256": "87dc623443c6386bb562f1fa969603768cd04f2f4bcf279f428cf07adfcf552c",
+  "period_carrier": {
+    "level": "period-level: the primitive embedding and K3 period surjectivity give the S-polarized locus; no explicit common Weierstrass, quartic, or other equation family is certified",
+    "moduli_dimension": 9,
+    "orthogonal_complement": "U+E8(-2)+<4>",
+    "primitive_K3_embedding": "U is the first ambient U; E8(-2) is diagonal in the two E8(-1) factors; <-4> is generated by e-2f in the second U",
+    "very_general_full_Picard": "NS(X)=S",
+    "wall_scope": "An S-marking makes every transported wall an algebraic divisor class in full NS. Equations, effective representatives, and irreducible curves for arbitrary walls are not supplied."
+  },
+  "promotion_boundary": {
+    "full_nef_criterion": "After chamber-specific Weyl re-marking, full-nef equality requires every irredundant facet to be a primitive (-2)-root hyperplane and no other (-2)-root hyperplane to meet the chamber interior.",
+    "minus_four_obstruction": "An irredundant primitive (-4,div2) or (-4,div4) facet cannot be a full K3 nef wall, although its reflection is integral.",
+    "minus_two_effectivity": "For each chamber separately, a Weyl re-marking can move a generic strict interior point into the ample chamber; K3 Riemann--Roch then makes each oriented (-2) facet effective.",
+    "reducibility": "An effective (-2) divisor class can be reducible and need not itself be an irreducible nef-wall curve.",
+    "volume_gate": "The period carrier alone supplies no volume conclusion. Use a complete Vinberg endpoint/parabolic-neighborhood audit or an independent finite-index proof in W(S)."
+  },
+  "schema": "coxeter.k3.ue8m2a4_common_moduli_carrier.v1",
+  "scope": {
+    "equation_family": "not asserted",
+    "full_nef_for_calibrations": "not asserted",
+    "new_abstract_polytopes": "none",
+    "new_result": "a bounded common period-moduli carrier criterion, exact wall alphabet, and finite-index/compactness boundary for S",
+    "simultaneous_ample_marking": "not asserted; different chambers may require different Weyl markings",
+    "surface_automorphisms": "not asserted",
+    "worldwide_priority": "none"
+  },
+  "sources": {
+    "f3_vinberg_index": {
+      "file_sha256": "684e03ca1c1196c657cc707b80f82ac19f84d9510a408b5e8d9b63271b7272be",
+      "path": "data/enumerations/ss_fermat_quartic_char3_v4_h10_vinberg_certificate.json",
+      "payload_sha256": "5d104aac54ae18f6a54e64683db920227fa803df9c2997e88b9410fd8bf97f42"
+    },
+    "full_reflection_lineage": {
+      "file_sha256": "3cb8b0e9120d13479f9b9e3a32cfb63922e03f41f2f0fc1dc501b0a9f6654c29",
+      "path": "data/enumerations/jacobian_kummer_h10_maximal_reflection_lineage.json",
+      "payload_sha256": "40f44ad15d4e7b2c1d3014bd19d43a178042635e4ddf5a851001e08f48d630d9"
+    },
+    "jk_index": {
+      "file_sha256": "c8b8a6562ae3b99357d293d3e8c9e23d231236bdf2850659ab6f462c4d28e3d8",
+      "path": "data/enumerations/jacobian_kummer_h10_reflection_index.json",
+      "payload_sha256": "46d4f3ce47b5e98c8853139a47d27d3d44d7a8516d02270cfc67ff0c33eaed7d"
+    },
+    "shared_k3_carrier": {
+      "file_sha256": "b84dcc92f82e10cdde6eed98ef2b599c2985f1ec0bbb91c156c166782fe17291",
+      "path": "data/enumerations/f3_v4_jk_h10_shared_k3_carrier.json",
+      "payload_sha256": "39574ca56421155388ec734076cf728a49f81c94bdfcdbc7d472b104e5014f08"
+    }
+  },
+  "theorem": {
+    "common_period_moduli_criterion": "Every genuine finite-sided oriented H10 Coxeter polyhedron admitting an orientation-compatible realization by primitive negative vectors whose reflections preserve S=U+E8(-2)+<-4> is a weak period-level full-Picard divisor carrier, after choosing an S-marking of a very general K3 surface on the nine-dimensional S-polarized period locus.",
+    "compact_no_go_inside_S": "No compact H10 Coxeter polytope admits a primitive-negative integral-mirror realization in S.",
+    "converse_for_this_marked_period_locus": "Every primitive negative Picard vector defining an integral hyperbolic mirror reflection has type (-2,div1), (-4,div2), or (-4,div4). Self-pairing divisibility excludes (-2,div4), and the full discriminant form excludes (-2,div2) and (-8,div4).",
+    "finite_volume_subgroup_criterion": "Let W(S) be generated by every primitive negative integral mirror reflection of S. Its complete 13-wall chamber has finite volume and three cusps. If a genuine Coxeter polyhedron P is the fundamental domain of its facet group Gamma<=W(S), then vol(P) is finite exactly when [W(S):Gamma] is finite, and every finite-volume such P is noncompact."
+  }
+}

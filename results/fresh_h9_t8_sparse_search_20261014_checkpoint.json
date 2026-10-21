@@ -1,0 +1,70 @@
+{
+  "status": "PASS_COMPLETED_T8_NECESSARY_LABEL_EXCLUSION_CHECKPOINT",
+  "sources": {
+    "results/fresh_h9_t8_sparse_search_20261014_case_08.json": "1357bf2e68c3c240fecad404b482162e354d98ea527caec5856e95f0d8587266",
+    "results/fresh_h9_t8_sparse_search_20261014_next_case_08.json": "420d8f2118c72bce159cdae0740ac7a8a105a1906af1c5fef6a68f272a523bb1",
+    "results/fresh_h9_t8_sparse_search_20261014_final_case_08.json": "263000a1c4bb1a9dde8155ade0eac301f9bd3345ae81f13ca6ea86e4fcf25da1",
+    "results/fresh_h9_t8_sparse_search_20261014_outside_case_08.json": "4556b5e1bfd245eca3621b8d63ccae1c88ae65fc91a788e3ee70adbf321b5402",
+    "results/fresh_h9_t8_sparse_search_20261014_all_blocks.json": "27f69518b9156ea7f1f34544b76b15e3ccb3f8445f77887afd506d648e3e2bf2",
+    "results/fresh_h9_t8_sparse_search_20261014_two_high_blocks.json": "7a1cb5c50c5ce260ad8725290a06705bbebc7a54e98119f9ca6114c2c0bd6704",
+    "results/fresh_h9_t8_sparse_search_20261014_bridge_variants.json": "b0727057a2297a20fbbe82d637278cd95c5d6651983bd86df20deabff0e94649",
+    "results/fresh_h9_t8_sparse_search_20261014_twin.json": "994174bfea4cb5fe8c0b45a2c85aab62a0c8bbc4f6801912b11be0642c5ff647",
+    "results/fresh_h9_t8_all_blocks_20261014_review.json": "d2bca545a283d2d2a8d0b23be0b900b6de129c04e0eb0e737e3a3ccb3f5a3983",
+    "results/fresh_h9_t8_sparse_search_20261014_two_high_blocks_review.json": "aa10974bbf86556ec2cea646d711df6adde4562d5593bee2a3735b04c2cbbdfc",
+    "results/fresh_h9_t8_two_high_transfers_20261014_review.json": "14e559855c8dba05221f6eb478c15e1576466687d23395d7463df3591b23d271",
+    "scripts/fresh_h9_t8_sparse_search_20261014_checkpoint.py": "63790f185aaf37cc4eba9c96c0bfc85014cdf124ca23182270cf48b7fb9de1d7"
+  },
+  "source_manifest_count": 32,
+  "checked_unique_source_count": 67,
+  "stages": [
+    {
+      "source": "results/fresh_h9_t8_sparse_search_20261014_case_08.json",
+      "status": "FULL_MANDATORY_BRIDGE_SURVIVOR",
+      "nodes": 1942,
+      "prunes": {
+        "spherical_vertex": 13255,
+        "orthogonal_negative_blocks": 772,
+        "certified_sparse_family_partial": 684
+      }
+    },
+    {
+      "source": "results/fresh_h9_t8_sparse_search_20261014_next_case_08.json",
+      "status": "FULL_MANDATORY_BRIDGE_SURVIVOR",
+      "nodes": 4232,
+      "prunes": {
+        "spherical_vertex": 17144,
+        "orthogonal_negative_blocks": 1518,
+        "certified_sparse_family_partial": 2052
+      }
+    },
+    {
+      "source": "results/fresh_h9_t8_sparse_search_20261014_final_case_08.json",
+      "status": "FULL_MANDATORY_BRIDGE_SURVIVOR",
+      "nodes": 21331,
+      "prunes": {
+        "spherical_vertex": 59401,
+        "orthogonal_negative_blocks": 10060,
+        "certified_all_blocks_sparse_partial": 3420,
+        "certified_two_high_placement_1_partial": 1824,
+        "certified_two_high_placement_0_partial": 3648
+      }
+    },
+    {
+      "source": "results/fresh_h9_t8_sparse_search_20261014_outside_case_08.json",
+      "status": "EXACT_ALL_MANDATORY_LABELS_AND_BRIDGES_EMPTY",
+      "nodes": 59423,
+      "prunes": {
+        "spherical_vertex": 238748,
+        "orthogonal_negative_blocks": 32665,
+        "certified_all_blocks_sparse_partial": 3420,
+        "certified_two_high_placement_1_partial": 3648,
+        "certified_two_high_placement_0_partial": 7296,
+        "certified_all_blocks_sparse_twin_partial": 3420
+      }
+    }
+  ],
+  "complete": true,
+  "node_limit_reached": false,
+  "surviving_assignments": 0,
+  "scope": "The literal 18-facet T-case8 incidence is excluded for compact H9 Coxeter realizations. This terminal checker validates saved search status, all prior survivor exclusions and recursive provenance, not an independent DFS. Full saved DFS replay and the separately implemented all-label proof reviews have distinct roles. No claim about other catalogue incidences or all compact H9."
+}

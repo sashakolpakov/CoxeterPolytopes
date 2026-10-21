@@ -1,0 +1,2529 @@
+{
+  "status": "PASS_EXACT_NARROW_CENTRAL_E8_RETURN_EXCLUSION_AND_FACET_FREQUENCY_BOUND",
+  "sources": {
+    "scripts/fresh_sqrt5_narrow_e8_ports_20261016.py": "77b69a2fad2c62ad502911fe858307d5101ecfcc41c291380e22e8738ba90729",
+    "results/fresh_sqrt5_universal_self_edges_20261016.json": "b53b7ea2703db62eb61348bddc3342f0c1c5ec70057391fa65fbd2554436af72",
+    "scripts/fresh_sqrt5_d4_two_e8_self_edge_20261016.py": "b083337421906996a275bb893b75cee07fba45a06a678223f086a6c41b3f7239",
+    "scripts/fresh_sqrt5_forest_sensitive_weights_20261015_review.py": "a49b53cefb3b60bbea1f5093c121342d16f8e419e54a72a2499dc80e76ee121a"
+  },
+  "recursive_sources": {
+    "manifests_checked": 54,
+    "source_references_checked": 526
+  },
+  "ground_field": "Q(sqrt5)",
+  "scalar_search": {
+    "ring_of_integers": "Z[phi]",
+    "phi_relation": "phi^2=phi+1",
+    "narrow_hypotheses": "-14<g<=0 and0<g_conjugate<2",
+    "complete_coefficient_box": {
+      "a": [
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "b": [
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1
+      ]
+    },
+    "box_proof": "b=(g-g_conjugate)/sqrt5 lies strictly between-8 and0; a=g_conjugate+b/phi lies strictly between-5 and2.",
+    "integrality_proof": "For central returns, the common A1 root has product-1 with both framing roots. Its triangular cyclic product is g. Thus arithmetic cyclic-product integrality implies g belongs to the full ring of integers Z[phi]; this is not inferred from norm-two normalization alone."
+  },
+  "copied_e8_ports": [
+    {
+      "local_E8_root": 0,
+      "inverse_diagonal": [
+        "4",
+        "0"
+      ],
+      "residual": [
+        "1/4",
+        "0"
+      ],
+      "conjugate_interval": [
+        [
+          "3/2",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "complete_narrow_scalar_candidates": [
+        {
+          "g": [
+            "-2",
+            "-6"
+          ],
+          "conjugate": [
+            "-8",
+            "6"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        },
+        {
+          "g": [
+            "0",
+            "-3"
+          ],
+          "conjugate": [
+            "-3",
+            "3"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        },
+        {
+          "g": [
+            "1",
+            "-1"
+          ],
+          "conjugate": [
+            "0",
+            "1"
+          ],
+          "coxeter_allowed": false,
+          "reason": "REJECTED_-1<g<0_IS_NOT_A_COXETER_PRODUCT"
+        }
+      ],
+      "narrow_coxeter_products": 2
+    },
+    {
+      "local_E8_root": 1,
+      "inverse_diagonal": [
+        "14",
+        "0"
+      ],
+      "residual": [
+        "1/14",
+        "0"
+      ],
+      "conjugate_interval": [
+        [
+          "13/7",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "complete_narrow_scalar_candidates": [],
+      "narrow_coxeter_products": 0,
+      "sharp_minimum_absolute_product": [
+        "3",
+        "8"
+      ],
+      "sharp_local_edge": {
+        "g": [
+          "-3",
+          "-8"
+        ],
+        "physical_signature": [
+          8,
+          1
+        ],
+        "conjugate_signature": [
+          9,
+          0
+        ],
+        "endpoint_rays": [
+          [
+            [
+              "-315/76",
+              "49/19"
+            ],
+            [
+              "-809/76",
+              "125/19"
+            ],
+            [
+              "-225/19",
+              "140/19"
+            ],
+            [
+              "-180/19",
+              "112/19"
+            ],
+            [
+              "-135/19",
+              "84/19"
+            ],
+            [
+              "-90/19",
+              "56/19"
+            ],
+            [
+              "-45/19",
+              "28/19"
+            ],
+            [
+              "-225/38",
+              "70/19"
+            ],
+            [
+              "179/76",
+              "-27/19"
+            ]
+          ],
+          [
+            [
+              "-315/76",
+              "49/19"
+            ],
+            [
+              "179/76",
+              "-27/19"
+            ],
+            [
+              "-225/19",
+              "140/19"
+            ],
+            [
+              "-180/19",
+              "112/19"
+            ],
+            [
+              "-135/19",
+              "84/19"
+            ],
+            [
+              "-90/19",
+              "56/19"
+            ],
+            [
+              "-45/19",
+              "28/19"
+            ],
+            [
+              "-225/38",
+              "70/19"
+            ],
+            [
+              "-809/76",
+              "125/19"
+            ]
+          ]
+        ],
+        "endpoint_squares": [
+          [
+            "809/76",
+            "-125/19"
+          ],
+          [
+            "809/76",
+            "-125/19"
+          ]
+        ],
+        "endpoint_mutual_pairing": [
+          "-179/76",
+          "27/19"
+        ],
+        "scope": "Actual finite local edge with the specified endpoint diagrams. No finite-volume or completion claim."
+      }
+    },
+    {
+      "local_E8_root": 2,
+      "inverse_diagonal": [
+        "30",
+        "0"
+      ],
+      "residual": [
+        "1/30",
+        "0"
+      ],
+      "conjugate_interval": [
+        [
+          "29/15",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "complete_narrow_scalar_candidates": [],
+      "narrow_coxeter_products": 0,
+      "sharp_minimum_absolute_product": [
+        "3",
+        "8"
+      ],
+      "sharp_local_edge": {
+        "g": [
+          "-3",
+          "-8"
+        ],
+        "physical_signature": [
+          8,
+          1
+        ],
+        "conjugate_signature": [
+          9,
+          0
+        ],
+        "endpoint_rays": [
+          [
+            [
+              "-485/22",
+              "150/11"
+            ],
+            [
+              "-485/11",
+              "300/11"
+            ],
+            [
+              "-1741/44",
+              "269/11"
+            ],
+            [
+              "-582/11",
+              "360/11"
+            ],
+            [
+              "-873/22",
+              "270/11"
+            ],
+            [
+              "-291/11",
+              "180/11"
+            ],
+            [
+              "-291/22",
+              "90/11"
+            ],
+            [
+              "-1455/44",
+              "225/11"
+            ],
+            [
+              "-1169/44",
+              "181/11"
+            ]
+          ],
+          [
+            [
+              "-485/22",
+              "150/11"
+            ],
+            [
+              "-485/11",
+              "300/11"
+            ],
+            [
+              "-1169/44",
+              "181/11"
+            ],
+            [
+              "-582/11",
+              "360/11"
+            ],
+            [
+              "-873/22",
+              "270/11"
+            ],
+            [
+              "-291/11",
+              "180/11"
+            ],
+            [
+              "-291/22",
+              "90/11"
+            ],
+            [
+              "-1455/44",
+              "225/11"
+            ],
+            [
+              "-1741/44",
+              "269/11"
+            ]
+          ]
+        ],
+        "endpoint_squares": [
+          [
+            "1741/44",
+            "-269/11"
+          ],
+          [
+            "1741/44",
+            "-269/11"
+          ]
+        ],
+        "endpoint_mutual_pairing": [
+          "1169/44",
+          "-181/11"
+        ],
+        "scope": "Actual finite local edge with the specified endpoint diagrams. No finite-volume or completion claim."
+      }
+    },
+    {
+      "local_E8_root": 3,
+      "inverse_diagonal": [
+        "20",
+        "0"
+      ],
+      "residual": [
+        "1/20",
+        "0"
+      ],
+      "conjugate_interval": [
+        [
+          "19/10",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "complete_narrow_scalar_candidates": [],
+      "narrow_coxeter_products": 0,
+      "sharp_minimum_absolute_product": [
+        "3",
+        "8"
+      ],
+      "sharp_local_edge": {
+        "g": [
+          "-3",
+          "-8"
+        ],
+        "physical_signature": [
+          8,
+          1
+        ],
+        "conjugate_signature": [
+          9,
+          0
+        ],
+        "endpoint_rays": [
+          [
+            [
+              "-516/79",
+              "320/79"
+            ],
+            [
+              "-1032/79",
+              "640/79"
+            ],
+            [
+              "-1548/79",
+              "960/79"
+            ],
+            [
+              "-2317/158",
+              "716/79"
+            ],
+            [
+              "-1935/158",
+              "600/79"
+            ],
+            [
+              "-645/79",
+              "400/79"
+            ],
+            [
+              "-645/158",
+              "200/79"
+            ],
+            [
+              "-774/79",
+              "480/79"
+            ],
+            [
+              "-263/158",
+              "84/79"
+            ]
+          ],
+          [
+            [
+              "-516/79",
+              "320/79"
+            ],
+            [
+              "-1032/79",
+              "640/79"
+            ],
+            [
+              "-1548/79",
+              "960/79"
+            ],
+            [
+              "-263/158",
+              "84/79"
+            ],
+            [
+              "-1935/158",
+              "600/79"
+            ],
+            [
+              "-645/79",
+              "400/79"
+            ],
+            [
+              "-645/158",
+              "200/79"
+            ],
+            [
+              "-774/79",
+              "480/79"
+            ],
+            [
+              "-2317/158",
+              "716/79"
+            ]
+          ]
+        ],
+        "endpoint_squares": [
+          [
+            "2317/158",
+            "-716/79"
+          ],
+          [
+            "2317/158",
+            "-716/79"
+          ]
+        ],
+        "endpoint_mutual_pairing": [
+          "263/158",
+          "-84/79"
+        ],
+        "scope": "Actual finite local edge with the specified endpoint diagrams. No finite-volume or completion claim."
+      }
+    },
+    {
+      "local_E8_root": 4,
+      "inverse_diagonal": [
+        "12",
+        "0"
+      ],
+      "residual": [
+        "1/12",
+        "0"
+      ],
+      "conjugate_interval": [
+        [
+          "11/6",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "complete_narrow_scalar_candidates": [
+        {
+          "g": [
+            "0",
+            "-3"
+          ],
+          "conjugate": [
+            "-3",
+            "3"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        }
+      ],
+      "narrow_coxeter_products": 1
+    },
+    {
+      "local_E8_root": 5,
+      "inverse_diagonal": [
+        "6",
+        "0"
+      ],
+      "residual": [
+        "1/6",
+        "0"
+      ],
+      "conjugate_interval": [
+        [
+          "5/3",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "complete_narrow_scalar_candidates": [
+        {
+          "g": [
+            "-2",
+            "-6"
+          ],
+          "conjugate": [
+            "-8",
+            "6"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        },
+        {
+          "g": [
+            "0",
+            "-3"
+          ],
+          "conjugate": [
+            "-3",
+            "3"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        }
+      ],
+      "narrow_coxeter_products": 2
+    },
+    {
+      "local_E8_root": 6,
+      "inverse_diagonal": [
+        "2",
+        "0"
+      ],
+      "residual": [
+        "1/2",
+        "0"
+      ],
+      "conjugate_interval": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "complete_narrow_scalar_candidates": [
+        {
+          "g": [
+            "-2",
+            "-6"
+          ],
+          "conjugate": [
+            "-8",
+            "6"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        },
+        {
+          "g": [
+            "-2",
+            "-5"
+          ],
+          "conjugate": [
+            "-7",
+            "5"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        },
+        {
+          "g": [
+            "-1",
+            "-4"
+          ],
+          "conjugate": [
+            "-5",
+            "4"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        },
+        {
+          "g": [
+            "0",
+            "-3"
+          ],
+          "conjugate": [
+            "-3",
+            "3"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        },
+        {
+          "g": [
+            "0",
+            "-2"
+          ],
+          "conjugate": [
+            "-2",
+            "2"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        },
+        {
+          "g": [
+            "1",
+            "-1"
+          ],
+          "conjugate": [
+            "0",
+            "1"
+          ],
+          "coxeter_allowed": false,
+          "reason": "REJECTED_-1<g<0_IS_NOT_A_COXETER_PRODUCT"
+        }
+      ],
+      "narrow_coxeter_products": 5
+    },
+    {
+      "local_E8_root": 7,
+      "inverse_diagonal": [
+        "8",
+        "0"
+      ],
+      "residual": [
+        "1/8",
+        "0"
+      ],
+      "conjugate_interval": [
+        [
+          "7/4",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "complete_narrow_scalar_candidates": [
+        {
+          "g": [
+            "0",
+            "-3"
+          ],
+          "conjugate": [
+            "-3",
+            "3"
+          ],
+          "coxeter_allowed": true,
+          "reason": "DOTTED_PRODUCT"
+        }
+      ],
+      "narrow_coxeter_products": 1
+    }
+  ],
+  "same_type_reattachments": [
+    {
+      "port": 6,
+      "common_vertex_diagram": [
+        "A1",
+        "A6",
+        "D5",
+        "E8"
+      ],
+      "candidate_attachment_subsets": 1351,
+      "complete_same_type_reattachments": [
+        {
+          "attachments": [
+            5,
+            7
+          ],
+          "copied_attachments": true,
+          "cross_projection": [
+            "27/14",
+            "0"
+          ],
+          "residual": [
+            "1/14",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "13/7",
+              "0"
+            ],
+            [
+              "2",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [],
+          "narrow_actual_edge_witnesses": [],
+          "common_neighbors_for_integral_triangle": [
+            5,
+            7
+          ]
+        },
+        {
+          "attachments": [
+            5,
+            10
+          ],
+          "copied_attachments": false,
+          "cross_projection": [
+            "15/14",
+            "0"
+          ],
+          "residual": [
+            "1/14",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "8/7",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [
+            {
+              "g": [
+                "-2",
+                "-5"
+              ],
+              "conjugate": [
+                "-7",
+                "5"
+              ],
+              "coxeter_allowed": true,
+              "reason": "DOTTED_PRODUCT"
+            }
+          ],
+          "narrow_actual_edge_witnesses": [
+            {
+              "g": [
+                "-2",
+                "-5"
+              ],
+              "physical_signature": [
+                21,
+                1
+              ],
+              "conjugate_signature": [
+                22,
+                0
+              ],
+              "endpoint_rays": [
+                [
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "-4",
+                    "5/2"
+                  ],
+                  [
+                    "-631/58",
+                    "195/29"
+                  ],
+                  [
+                    "-403/29",
+                    "250/29"
+                  ],
+                  [
+                    "-289/29",
+                    "180/29"
+                  ],
+                  [
+                    "-175/29",
+                    "110/29"
+                  ],
+                  [
+                    "-61/29",
+                    "40/29"
+                  ],
+                  [
+                    "-61/58",
+                    "20/29"
+                  ],
+                  [
+                    "-403/58",
+                    "125/29"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "167/58",
+                    "-50/29"
+                  ]
+                ],
+                [
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "-4",
+                    "5/2"
+                  ],
+                  [
+                    "167/58",
+                    "-50/29"
+                  ],
+                  [
+                    "-61/29",
+                    "40/29"
+                  ],
+                  [
+                    "-175/29",
+                    "110/29"
+                  ],
+                  [
+                    "-289/29",
+                    "180/29"
+                  ],
+                  [
+                    "-403/29",
+                    "250/29"
+                  ],
+                  [
+                    "-403/58",
+                    "125/29"
+                  ],
+                  [
+                    "-61/58",
+                    "20/29"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "-631/58",
+                    "195/29"
+                  ]
+                ]
+              ],
+              "endpoint_squares": [
+                [
+                  "631/58",
+                  "-195/29"
+                ],
+                [
+                  "631/58",
+                  "-195/29"
+                ]
+              ],
+              "endpoint_mutual_pairing": [
+                "-167/58",
+                "50/29"
+              ],
+              "scope": "Actual finite local edge with the specified endpoint diagrams. No finite-volume or completion claim."
+            }
+          ],
+          "common_neighbors_for_integral_triangle": [
+            5
+          ]
+        }
+      ],
+      "scope": "All endpoint attachments returning to D5+2E8: every new bond is3 and the new root degree is at most3, so all subsets of the20 common nodes of sizes0..3 are exhausted."
+    },
+    {
+      "port": 7,
+      "common_vertex_diagram": [
+        "A1",
+        "A4",
+        "D5",
+        "E8",
+        "I2(3)"
+      ],
+      "candidate_attachment_subsets": 1351,
+      "complete_same_type_reattachments": [
+        {
+          "attachments": [
+            5,
+            8,
+            12
+          ],
+          "copied_attachments": false,
+          "cross_projection": [
+            "49/30",
+            "0"
+          ],
+          "residual": [
+            "1/30",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "8/5",
+              "0"
+            ],
+            [
+              "5/3",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [
+            {
+              "g": [
+                "1",
+                "-1"
+              ],
+              "conjugate": [
+                "0",
+                "1"
+              ],
+              "coxeter_allowed": false,
+              "reason": "REJECTED_-1<g<0_IS_NOT_A_COXETER_PRODUCT"
+            }
+          ],
+          "narrow_actual_edge_witnesses": [],
+          "common_neighbors_for_integral_triangle": [
+            8,
+            12
+          ]
+        },
+        {
+          "attachments": [
+            5,
+            11,
+            12
+          ],
+          "copied_attachments": false,
+          "cross_projection": [
+            "31/30",
+            "0"
+          ],
+          "residual": [
+            "1/30",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "16/15",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [],
+          "narrow_actual_edge_witnesses": [],
+          "common_neighbors_for_integral_triangle": [
+            12
+          ]
+        },
+        {
+          "attachments": [
+            6,
+            8,
+            12
+          ],
+          "copied_attachments": true,
+          "cross_projection": [
+            "59/30",
+            "0"
+          ],
+          "residual": [
+            "1/30",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "29/15",
+              "0"
+            ],
+            [
+              "2",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [],
+          "narrow_actual_edge_witnesses": [],
+          "common_neighbors_for_integral_triangle": [
+            6,
+            8,
+            12
+          ]
+        },
+        {
+          "attachments": [
+            6,
+            11,
+            12
+          ],
+          "copied_attachments": false,
+          "cross_projection": [
+            "41/30",
+            "0"
+          ],
+          "residual": [
+            "1/30",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "4/3",
+              "0"
+            ],
+            [
+              "7/5",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [],
+          "narrow_actual_edge_witnesses": [],
+          "common_neighbors_for_integral_triangle": [
+            6,
+            12
+          ]
+        }
+      ],
+      "scope": "All endpoint attachments returning to D5+2E8: every new bond is3 and the new root degree is at most3, so all subsets of the20 common nodes of sizes0..3 are exhausted."
+    },
+    {
+      "port": 8,
+      "common_vertex_diagram": [
+        "A3",
+        "A4",
+        "D5",
+        "E8"
+      ],
+      "candidate_attachment_subsets": 1351,
+      "complete_same_type_reattachments": [
+        {
+          "attachments": [
+            6,
+            9
+          ],
+          "copied_attachments": false,
+          "cross_projection": [
+            "31/20",
+            "0"
+          ],
+          "residual": [
+            "1/20",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "3/2",
+              "0"
+            ],
+            [
+              "8/5",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [],
+          "narrow_actual_edge_witnesses": [],
+          "common_neighbors_for_integral_triangle": [
+            9
+          ]
+        },
+        {
+          "attachments": [
+            6,
+            11
+          ],
+          "copied_attachments": false,
+          "cross_projection": [
+            "21/20",
+            "0"
+          ],
+          "residual": [
+            "1/20",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "11/10",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [
+            {
+              "g": [
+                "-2",
+                "-5"
+              ],
+              "conjugate": [
+                "-7",
+                "5"
+              ],
+              "coxeter_allowed": true,
+              "reason": "DOTTED_PRODUCT"
+            }
+          ],
+          "narrow_actual_edge_witnesses": [
+            {
+              "g": [
+                "-2",
+                "-5"
+              ],
+              "physical_signature": [
+                21,
+                1
+              ],
+              "conjugate_signature": [
+                22,
+                0
+              ],
+              "endpoint_rays": [
+                [
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "37/11",
+                    "-45/22"
+                  ],
+                  [
+                    "74/11",
+                    "-45/11"
+                  ],
+                  [
+                    "-250/11",
+                    "155/11"
+                  ],
+                  [
+                    "-449/11",
+                    "555/22"
+                  ],
+                  [
+                    "-493/22",
+                    "305/22"
+                  ],
+                  [
+                    "-4",
+                    "5/2"
+                  ],
+                  [
+                    "317/22",
+                    "-195/22"
+                  ],
+                  [
+                    "-125/11",
+                    "155/22"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "361/11",
+                    "-445/22"
+                  ]
+                ],
+                [
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "-125/11",
+                    "155/22"
+                  ],
+                  [
+                    "-250/11",
+                    "155/11"
+                  ],
+                  [
+                    "74/11",
+                    "-45/11"
+                  ],
+                  [
+                    "361/11",
+                    "-445/22"
+                  ],
+                  [
+                    "317/22",
+                    "-195/22"
+                  ],
+                  [
+                    "-4",
+                    "5/2"
+                  ],
+                  [
+                    "-493/22",
+                    "305/22"
+                  ],
+                  [
+                    "37/11",
+                    "-45/22"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "-449/11",
+                    "555/22"
+                  ]
+                ]
+              ],
+              "endpoint_squares": [
+                [
+                  "449/11",
+                  "-555/22"
+                ],
+                [
+                  "449/11",
+                  "-555/22"
+                ]
+              ],
+              "endpoint_mutual_pairing": [
+                "-361/11",
+                "445/22"
+              ],
+              "scope": "Actual finite local edge with the specified endpoint diagrams. No finite-volume or completion claim."
+            }
+          ],
+          "common_neighbors_for_integral_triangle": []
+        },
+        {
+          "attachments": [
+            7,
+            9
+          ],
+          "copied_attachments": true,
+          "cross_projection": [
+            "39/20",
+            "0"
+          ],
+          "residual": [
+            "1/20",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "19/10",
+              "0"
+            ],
+            [
+              "2",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [],
+          "narrow_actual_edge_witnesses": [],
+          "common_neighbors_for_integral_triangle": [
+            7,
+            9
+          ]
+        },
+        {
+          "attachments": [
+            7,
+            11
+          ],
+          "copied_attachments": false,
+          "cross_projection": [
+            "29/20",
+            "0"
+          ],
+          "residual": [
+            "1/20",
+            "0"
+          ],
+          "conjugate_interval": [
+            [
+              "7/5",
+              "0"
+            ],
+            [
+              "3/2",
+              "0"
+            ]
+          ],
+          "narrow_scalar_candidates": [
+            {
+              "g": [
+                "-1",
+                "-4"
+              ],
+              "conjugate": [
+                "-5",
+                "4"
+              ],
+              "coxeter_allowed": true,
+              "reason": "DOTTED_PRODUCT"
+            }
+          ],
+          "narrow_actual_edge_witnesses": [
+            {
+              "g": [
+                "-1",
+                "-4"
+              ],
+              "physical_signature": [
+                21,
+                1
+              ],
+              "conjugate_signature": [
+                22,
+                0
+              ],
+              "endpoint_rays": [
+                [
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "-4",
+                    "5/2"
+                  ],
+                  [
+                    "-8",
+                    "5"
+                  ],
+                  [
+                    "-12",
+                    "15/2"
+                  ],
+                  [
+                    "-18",
+                    "89/8"
+                  ],
+                  [
+                    "-23/2",
+                    "57/8"
+                  ],
+                  [
+                    "-5",
+                    "25/8"
+                  ],
+                  [
+                    "3/2",
+                    "-7/8"
+                  ],
+                  [
+                    "-6",
+                    "15/4"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "8",
+                    "-39/8"
+                  ]
+                ],
+                [
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "-4",
+                    "5/2"
+                  ],
+                  [
+                    "-8",
+                    "5"
+                  ],
+                  [
+                    "-12",
+                    "15/2"
+                  ],
+                  [
+                    "8",
+                    "-39/8"
+                  ],
+                  [
+                    "3/2",
+                    "-7/8"
+                  ],
+                  [
+                    "-5",
+                    "25/8"
+                  ],
+                  [
+                    "-23/2",
+                    "57/8"
+                  ],
+                  [
+                    "-6",
+                    "15/4"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "-18",
+                    "89/8"
+                  ]
+                ]
+              ],
+              "endpoint_squares": [
+                [
+                  "18",
+                  "-89/8"
+                ],
+                [
+                  "18",
+                  "-89/8"
+                ]
+              ],
+              "endpoint_mutual_pairing": [
+                "-8",
+                "39/8"
+              ],
+              "scope": "Actual finite local edge with the specified endpoint diagrams. No finite-volume or completion claim."
+            }
+          ],
+          "common_neighbors_for_integral_triangle": [
+            7
+          ]
+        }
+      ],
+      "scope": "All endpoint attachments returning to D5+2E8: every new bond is3 and the new root degree is at most3, so all subsets of the20 common nodes of sizes0..3 are exhausted."
+    }
+  ],
+  "central_edge_endpoint_census": {
+    "common_edge_type": [
+      "A1",
+      "A4",
+      "D5",
+      "E8",
+      "I2(3)"
+    ],
+    "finite_component_catalogue_size": 68,
+    "finite_completion_types": 29,
+    "nonreturn_types": 28,
+    "maximum_other_vertex_incidence": 4,
+    "records": [
+      {
+        "vertex_type": [
+          "A1",
+          "A1",
+          "A4",
+          "D5",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            0,
+            "A1",
+            0
+          ],
+          [
+            1,
+            "A1",
+            0
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A3",
+          "A4",
+          "D5",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "A3",
+            0
+          ],
+          [
+            1,
+            "A3",
+            2
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A4",
+          "B3",
+          "D5",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            2,
+            "B3",
+            0
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A4",
+          "D5",
+          "E8",
+          "H3"
+        ],
+        "root_deletion_ports": [
+          [
+            4,
+            "H3",
+            0
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A4",
+          "D6",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            2,
+            "D6",
+            4
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A4",
+          "D8",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            2,
+            "D8",
+            4
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A4",
+          "E6",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            2,
+            "E6",
+            0
+          ],
+          [
+            2,
+            "E6",
+            4
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A4",
+          "E8",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            2,
+            "E8",
+            4
+          ],
+          [
+            3,
+            "E8",
+            4
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A5",
+          "D5",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "A5",
+            0
+          ],
+          [
+            1,
+            "A5",
+            4
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "A7",
+          "D5",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "A7",
+            2
+          ],
+          [
+            1,
+            "A7",
+            4
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "B5",
+          "D5",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "B5",
+            0
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "D10",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "D10",
+            4
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "D5",
+          "D5",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "D5",
+            0
+          ],
+          [
+            1,
+            "D5",
+            4
+          ],
+          [
+            2,
+            "D5",
+            0
+          ],
+          [
+            2,
+            "D5",
+            4
+          ]
+        ],
+        "multiplicity": 4,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A1",
+          "D5",
+          "E7",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            2,
+            "E7",
+            3
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "A4",
+          "D5",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            0,
+            "A4",
+            1
+          ],
+          [
+            0,
+            "A4",
+            2
+          ],
+          [
+            1,
+            "A4",
+            1
+          ],
+          [
+            1,
+            "A4",
+            2
+          ]
+        ],
+        "multiplicity": 4,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "B4",
+          "D5",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "B4",
+            1
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "D5",
+          "E8",
+          "F4"
+        ],
+        "root_deletion_ports": [
+          [
+            3,
+            "F4",
+            1
+          ],
+          [
+            3,
+            "F4",
+            2
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "D5",
+          "E8",
+          "H4"
+        ],
+        "root_deletion_ports": [
+          [
+            3,
+            "H4",
+            1
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "D5",
+          "E8",
+          "I2(10)",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            3,
+            "I2(10)",
+            0
+          ],
+          [
+            3,
+            "I2(10)",
+            1
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "D5",
+          "E8",
+          "I2(3)",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            3,
+            "I2(3)",
+            0
+          ],
+          [
+            3,
+            "I2(3)",
+            1
+          ],
+          [
+            4,
+            "I2(3)",
+            0
+          ],
+          [
+            4,
+            "I2(3)",
+            1
+          ]
+        ],
+        "multiplicity": 4,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "D5",
+          "E8",
+          "I2(3)",
+          "I2(4)"
+        ],
+        "root_deletion_ports": [
+          [
+            4,
+            "I2(4)",
+            0
+          ],
+          [
+            4,
+            "I2(4)",
+            1
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "D5",
+          "E8",
+          "I2(3)",
+          "I2(5)"
+        ],
+        "root_deletion_ports": [
+          [
+            4,
+            "I2(5)",
+            0
+          ],
+          [
+            4,
+            "I2(5)",
+            1
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "D5",
+          "E8",
+          "I2(3)",
+          "I2(6)"
+        ],
+        "root_deletion_ports": [
+          [
+            4,
+            "I2(6)",
+            0
+          ],
+          [
+            4,
+            "I2(6)",
+            1
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "D7",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "D7",
+            4
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A4",
+          "E7",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "E7",
+            4
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "A6",
+          "D5",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            0,
+            "A6",
+            1
+          ],
+          [
+            0,
+            "A6",
+            4
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "B6",
+          "D5",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            0,
+            "B6",
+            1
+          ]
+        ],
+        "multiplicity": 1,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "D5",
+          "E6",
+          "E8",
+          "I2(3)"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "E6",
+            1
+          ],
+          [
+            1,
+            "E6",
+            3
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": false
+      },
+      {
+        "vertex_type": [
+          "D5",
+          "E8",
+          "E8"
+        ],
+        "root_deletion_ports": [
+          [
+            1,
+            "E8",
+            2
+          ],
+          [
+            2,
+            "E8",
+            2
+          ]
+        ],
+        "multiplicity": 2,
+        "excluded_by_central_narrow_return": true
+      }
+    ],
+    "completeness": "The new root belongs to exactly one finite component. Deleting it gives a submultiset of the fixed common components; all other components stay unchanged. Exhausting all rooted finite components through rank21 therefore exhausts every completion type and every incoming port."
+  },
+  "selected_facet_incidence": {
+    "ambient_dimension": 21,
+    "facet_dimension": 20,
+    "exceptional_vertex_type": [
+      "D5",
+      "E8",
+      "E8"
+    ],
+    "central_root_indices": [
+      7,
+      15
+    ],
+    "facet_root_roles": [
+      {
+        "facet_root": 0,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 1,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 2,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 3,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 4,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 5,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 6,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 7,
+        "central_E8_root": true,
+        "central_outgoing_edges_inside_facet": 1
+      },
+      {
+        "facet_root": 8,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 9,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 10,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 11,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 12,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 13,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 14,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 15,
+        "central_E8_root": true,
+        "central_outgoing_edges_inside_facet": 1
+      },
+      {
+        "facet_root": 16,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 17,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 18,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 19,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      },
+      {
+        "facet_root": 20,
+        "central_E8_root": false,
+        "central_outgoing_edges_inside_facet": 2
+      }
+    ],
+    "precise_inequality": "D_central+2*D_other <= sum_{U != D5+2E8} m(U)*V_U",
+    "coarse_inequality": "D_central+2*D_other <=4*O",
+    "resulting_exceptional_fraction_upper_bound": "4/5",
+    "proof": "At a vertex on the selected narrow facet F, every central E8 port except possibly the facet normal gives an edge lying in F. Its framing pair has minimality14. The opposite endpoint cannot again have type D5+2E8. Count these edges at their nonexceptional ends; their common diagram is S, so each endpoint of type U receives at most m(U)<=4. Every edge counted has exactly one exceptional endpoint.",
+    "applicability": "Only vertices and edges of the chosen narrow facet. No constraint on whole-polytope vertex frequencies is asserted. The theorem does not force a selected triangle/quadrilateral to meet these central ports."
+  },
+  "published_inputs": [
+    {
+      "url": "https://arxiv.org/pdf/0708.3991",
+      "location": "Section2; Section4 opening, printed page10; Section4.1, printed pages11-12; Section4.2, printed page14",
+      "used_for": "Arithmetic cyclic-product/conjugate criterion; existence of a narrow facet and minimality14 for its edge chambers; simple-facet average ensuring a triangle or quadrilateral in dimension at least6. The local interval and endpoint-type calculations are new exact deductions."
+    }
+  ],
+  "scope": "An exact copied-port diagnostic, complete same-type central-E8 reattachment exclusion under minimality14, and a conditional narrow-facet incidence theorem for compact arithmetic Q(sqrt5) Coxeter polytopes. No general exclusion of E8 vertices, all arithmetic edges, compact dimension21, or finite-volume examples is asserted."
+}

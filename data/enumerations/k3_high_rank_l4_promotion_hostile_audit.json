@@ -1,0 +1,126 @@
+{
+  "all_checks_pass": true,
+  "artifact_id": "k3_high_rank_l4_promotion_hostile_audit",
+  "checks": {
+    "all_positive_rows_noncompact": true,
+    "essential_surjectivity_to_declared_full_nef_k3_species": true,
+    "literal_finite_volume_for_all_positive_rows": true,
+    "new_polytope_theorem_from_ag_pushback": false,
+    "nineteen_zero_exhaustion_is_independent_ag_native": false,
+    "no_hidden_minus_two_roots_by_complete_arrangement": true,
+    "non_singleton_surface_free_arithmetic_class": true,
+    "oriented_embedding_and_period_for_all_19": true,
+    "raw_carrier_nonemptiness_does_not_detect_finite_volume": true,
+    "same_marked_lattice_and_complete_nef_chamber_return": true,
+    "strict_l4": false
+  },
+  "classification_dependency": {
+    "ahl_theorem_2_11_role": "identifies polyhedral Eff, finite O(N)/W_2(N), and finite Aut",
+    "ahl_theorem_2_12_role": "imports the previously classified hyperbolic lattices and gives the rank counts, including zero at rank 20",
+    "circularity_for_strict_l4": "the property being classified on the surface side is equivalent to the reflective-lattice property, and the actual exhaustion is sourced from the reflective-lattice classification",
+    "literal_vinberg_role": "independently certifies finite volume/noncompactness of the 19 listed chambers, but does not prove the list exhaustive",
+    "roulleau_role": "starts from the Nikulin--Vinberg 118-lattice list and supplies geometric models, curve configurations, and moduli information"
+  },
+  "compact_noncompact_separation": {
+    "compact_finite_volume_locus_rank_11_20": "empty",
+    "compact_reason": "Meyer makes every rank-at-least-five indefinite rational lattice isotropic; a finite-volume complete K3 root chamber therefore has a nef isotropic cusp",
+    "compact_reason_is_ag_native": false,
+    "finite_volume_noncompact_locus": {
+      "hyperbolic_dimensions": [
+        10,
+        18
+      ],
+      "no_H19_type": true,
+      "total_ideal_vertices_in_literal_replays": 1156,
+      "type_count": 19
+    }
+  },
+  "correct_finite_volume_iff": {
+    "correct_statement": "finite volume iff some/every exact-Picard full-nef K3 carrier has finite Aut iff Eff is rational polyhedral iff Cox is finitely generated",
+    "counterexample": {
+      "determinant": 6,
+      "e7_leading_principal_minors": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        2
+      ],
+      "even": true,
+      "exact_picard_k3_carrier_nonempty": true,
+      "finite_volume": false,
+      "finite_volume_reason": "the accepted Nikulin--Vinberg exhaustion says every finite-volume rank-11 member is one of its four rows; this lattice is not one",
+      "full_root_chamber_returns_as_nef": true,
+      "hyperbolic_dimension": 10,
+      "in_nineteen_finite_volume_rows": false,
+      "lattice": "U+E7(-1)+A2(-1)",
+      "logical_use": "counterexample to raw carrier-nonemptiness iff finite volume; not a counterexample to the decorated finite-Aut carrier iff",
+      "primitive_k3_embedding": {
+        "ambient": "3U+2E8(-1)",
+        "coordinate_sublattices_primitive": true,
+        "witness": "one U summand; E7 on first-E8 simple-root nodes [0,1,2,3,4,5,7]; an A2 on second-E8 nodes [0,1]"
+      },
+      "rank": 11,
+      "signature": [
+        1,
+        10
+      ]
+    },
+    "false_shorthand": "finite volume iff the unqualified exact-Picard K3 carrier locus is nonempty"
+  },
+  "missing_l4_gate": {
+    "acceptable_forms": [
+      "an independent geometric classification via surface models, genus-one fibrations, curve configurations, or Cox algebras that derives the finite list",
+      "a broader raw-P class on which AG effectivity/moduli removes or constructs cases not fixed by the input Coxeter classification",
+      "a genuinely new facet/dimension restriction or positive terminal realization obtained only after the AG stage"
+    ],
+    "not_sufficient": [
+      "period existence",
+      "Weyl re-marking",
+      "finite Aut iff finite reflection index",
+      "literal Vinberg verification of the already listed positives",
+      "Roulleau geometric models indexed by the inherited 118-lattice list"
+    ],
+    "required": "an AG-native classification/boundedness theorem for the marked K3 carrier loci that does not invoke the Nikulin--Vinberg 2-reflective lattice exhaustion, followed by a polytope conclusion not already contained in that exhaustion"
+  },
+  "schema": "coxeter.k3_high_rank_l4_promotion_hostile_audit.v1",
+  "source_check": {
+    "all_checks_pass": true,
+    "checked": true,
+    "excerpt_sha256": {
+      "ahl_theorems_2_11_2_12_lines_500_530": "36e6a0bd37abde088da6aaf62f426d5f439fd2a9679c4823cd11b5736e686a5e",
+      "roulleau_introduction_lines_197_218": "8bc2148efbe02d72bd3b153045ebf5a9bd49daf859e41cd288601e2d6c3cf476"
+    },
+    "full_source_sha256": {
+      "ahl_text": "3278ddaf1215222b60206d012575c6b6fb08486128a344168453314af439a91c",
+      "roulleau_tex": "e6eeaaa4a3f375f209762718e8ef9a361b0a95356cc8be2e9f99a6713abf5df3"
+    },
+    "logical_witness": {
+      "ahl": "Theorem 2.12 is explicitly obtained by combining Theorem 2.11 with the prior classification of O(N)/W(N)-finite hyperbolic lattices",
+      "roulleau": "the atlas starts from the Nikulin--Vinberg Picard-lattice classification and then supplies geometric constructions"
+    }
+  },
+  "strict_score": {
+    "AG": "FAIL_INDEPENDENT_EXHAUSTION: period/Torelli, finite-Aut and Cox-ring equivalences are AG, but the 19/0 list is imported from the Nikulin--Vinberg O(N)/W_2(N)-finite lattice list",
+    "C": "PASS: non-singleton arithmetic lattice/chamber class, though primitive K3-lattice embeddability is built into membership",
+    "Car": "PASS for the declared full-nef K3 carrier species: primitive embedding plus periods realizes every ambient member; the nineteen finite-volume rows have one oriented embedding orbit",
+    "Pushback": "FAIL_NEW_THEOREM: the finite list and no-H19 conclusion restate the same reflective-lattice classification; the literal Vinberg replays verify positives but cannot exhaust rank 20",
+    "Return": "PASS for integrally marked data: K3 Weyl transitivity returns the same complete all-minus-two chamber with no hidden roots"
+  },
+  "upstream": {
+    "mathematical_classification_valid": true,
+    "path": "data/enumerations/k3_high_rank_full_root_classification.json",
+    "report_path": "results/k3_high_rank_full_root_classification_transfer.md",
+    "report_sha256": "a3ee75c8624d7a17973983d293100c3c4e8e54f309102bdc371635cd306dfd8a",
+    "sha256": "05e2b4a94cda3d9d6f2aac9e60549a7a5698a1a5b2139a649829fd78e7d53d24"
+  },
+  "verdict": {
+    "best_honest_status": "class-wide marked K3 carrier/return and AG volume dictionary, plus a replayed published high-rank classification; not L4",
+    "not_a_refutation_of_upstream_mathematics": true,
+    "promotion": "rejected",
+    "strict_l4": false,
+    "worldwide_new_abstract_polytopes": 0
+  }
+}

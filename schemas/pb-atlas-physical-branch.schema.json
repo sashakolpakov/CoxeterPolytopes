@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://coxeter-polytopes.local/schemas/pb-atlas-physical-branch.schema.json",
+  "title": "PB-Atlas arrays-only normalized physical Coble branch",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "picard_gram",
+    "wall_vectors",
+    "boundary_indices_zero_based",
+    "boundary_weights",
+    "canonical_class"
+  ],
+  "properties": {
+    "schema": {
+      "const": "coxeter.pb_atlas.physical_coble_branch.v1"
+    },
+    "picard_gram": {
+      "description": "Integral symmetric unimodular Picard intersection matrix of signature (1,rho-1).",
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "array",
+        "items": {"type": "integer"}
+      }
+    },
+    "wall_vectors": {
+      "description": "Primitive effective-oriented wall columns, expressed as row arrays in the chosen Picard basis.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "array",
+        "items": {"type": "integer"}
+      }
+    },
+    "boundary_indices_zero_based": {
+      "description": "Indices of marked anti-bicanonical boundary facet classes.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "integer", "minimum": 0}
+    },
+    "boundary_weights": {
+      "description": "Positive multiplicities satisfying sum(weight_i*B_i)=-2K; this includes weight 2 for a primitive half-boundary.",
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "integer", "minimum": 1}
+    },
+    "canonical_class": {
+      "description": "Integral characteristic canonical vector K in the chosen Picard basis.",
+      "type": "array",
+      "items": {"type": "integer"}
+    }
+  }
+}

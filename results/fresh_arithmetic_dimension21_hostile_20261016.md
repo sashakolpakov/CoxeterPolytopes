@@ -1,0 +1,68 @@
+# Hostile global-scope audit of the arithmetic bound-21 candidate
+
+**No mathematical gap was found in the global transitions audited here.** This is a new adversarial source/proof read of the [bound-21 composition](fresh_arithmetic_dimension21_composition_20261016.md), its [complete Q(√5) coverage](fresh_sqrt5_h3_hub_coverage_20261016.md), and the relevant original geometric and arithmetic statements. It is not a new full attachment-queue or Lannér-catalogue replay. The independent H3 weight reconstruction and prior independent complete queue checks remain explicit dependencies.
+
+The useful new outcome is a separate [eight-field obstruction](fresh_arithmetic_high_label_20261016.md), now with an [independent exact review](fresh_arithmetic_high_label_20261016_review.md). It reduces a possible **compact dimension-21** chamber to the fields Q(√5) and Q(√2,√5), without applying the dimension-22 three-field restriction below its range. It does not exclude either remaining branch.
+
+## Global failure modes checked
+
+**Compactness and simplicity.** The proof uses a compact chamber throughout its face-weight argument. Its Klein-model image is an ordinary bounded convex Euclidean polytope, so the simple-polytope h-vector theorem applies. Compact acute Coxeter chambers are simple; their finite corners have positive-definite Gram matrices. The corresponding whole-chamber diagram contains no affine principal subset. These are the hypotheses in [Vinberg, §3.1–3.2 and Propositions 7–9](https://www.mathnet.ru/php/getFT.phtml?jrnid=mmo&option_lang=rus&paperid=444&what=fullt). They cannot be inferred merely from one compact face of a noncompact chamber. The earlier compact-face counterexample therefore does not contradict this proof, but would invalidate extending this argument unchanged to general noncompact polytopes.
+
+The actual-face step is also valid. For a positive-definite principal Z-Gram B, let H be a strict interior timelike vector and put b=B⁻¹(H·n_i). Entrywise nonnegativity of B⁻¹ gives b≤0. The orthogonal projection H₀=H−Σb_i n_i remains timelike and makes every other wall pairing strictly more negative or unchanged. Thus a positive-definite subset really gives an intersection of facets. A positive affine kernel instead gives a nonzero future null vector satisfying every chamber inequality, contradicting compactness. Opposite extensions of a quadrilateral are therefore genuinely indefinite, not merely non-positive-definite numerical matrices. The argument concerns the ambient chamber; it never assumes that a two-face or facet is itself Coxeter.
+
+**A stronger rank bridge.** The queue's corank-one requirement can be justified without a geometric drawing of the projected polygon. A k-node quadrilateral core has a positive-definite corner on k−2 nodes, and its opposite minimal Lannér subdiagram supplies a negative direction. Therefore its positive index is at least k−2, its negative index is one, and its nullity is at most one. For the complete star in dimension n, k=n+2 while the ambient Lorentz space has dimension n+1. Its nullity is consequently **exactly one**. This proves both the complete-star singularity requirement and the dichotomy between nonsingular proper cores and singular stopping choices.
+
+This also explains why a sealed nonsingular core cannot be repaired by white spectators. If every remaining white root is orthogonal to it, the extra block is positive definite. The direct sum stays nonsingular. If a remaining component touches it, there is a first touching white node, and that node must occur in the complete one-white domain. No long path can avoid its own first contact.
+
+**Kernel and stopping-state completeness.** A principal Lorentz span containing a timelike vector is nondegenerate as a subspace of the ambient Lorentz space. Hence a kernel vector of its Gram matrix is a literal linear relation among its normals. Every later root must respect that relation; a nonnegative relation is impossible because pairing it with a strict interior point is negative. These facts justify the relation/sign gates, rather than treating Gram kernels as harmless numerical degeneracies.
+
+The critical potential omission would be retaining only final sealed singular states. That would lose an actual full star that stops at a singular state which also admits further touching extensions. The completed finite and dotted queues retain **every** singular zero-touch choice, including expanded states and boundary states. The binder directly reevaluates all 2,661 earlier and queue obligations with the new rule. It does not inherit their old numerical payments. The independent final finite replay covers all 5,172 states and 2,070 singular obligations; the dotted queue and its exact arithmetic parameter domain remain separately reviewed dependencies.
+
+**Lower-dimensional reuse of the dimension-29 queue.** A full n-dimensional star has n+2 nodes. Since the original published compact bound gives n≤29 before the search, 31 nodes is a legitimate upper bound. The same complete queue can serve dimension 22: an actual 24-node star is one of its singular stopping choices, and all larger rows are simply infeasible at that dimension. Node counts only increase along attachments. No claim that a nonsingular 24-node core could be a complete dimension-22 star is made. The newer binder recomputes spectator rank as 24−k; it does not reuse the original rank-28/29 spectator metadata.
+
+**Minimal unions and dotted distances.** The use of no-short-path cores is justified by an unchanged nonnegative baseline which already pays any short marked corner. The relevant minimal unions include shared whites and every cross contact; they are not assumed to be complete stars. For the surviving dotted domains, the common Lorentz block already uses the unique negative direction, so its endpoint Schur complement is positive semidefinite in every possible extension. This produces a uniform arithmetic bound on the dotted cyclic invariant. The lattice enumeration is thus a finite exact consequence of arithmetic integrality and both real embeddings, not a scan of sampled distances. The full parameter/attachment reviews, rather than the small bound-21 binder alone, are necessary for this premise.
+
+## Whole-forest and spectator quantifiers
+
+For the dimension-22 rule, a,b,c count **entire** A1, I₂(5),H3 components. The capped values select coefficients only. Actual denominators are a,2b,3c. A1 pairs may target I₂(5) and H3; I₂(5) pairs may target H3; new H3 pairs exclude all three hub types as destinations. This partitions the pair families, avoiding both overlap and missing incoming payments. At fixed exact counts the multiplicities cancel these denominators, so the component dynamic program genuinely maximizes the whole vertex sum.
+
+At a zero-touch k-node core the remaining white block is the same at every corner. The binder enumerates every common triple e,f,g with e+2f+3g≤24−k and residual rank zero or at least two. A2 and A3 realize every such residual rank, and neither introduces an uncounted hub. Internal hub counts may differ among the four corners; the same external triple is added separately to each. It would be invalid to optimize or choose spectators independently at each corner, or to put capped values in the denominators. Neither happens here.
+
+The [independent H3 review](fresh_sqrt5_dimension22_h3_cross_20261016_review.md) reconstructs the literal graph weights, finite-component models and forest dynamic program without producer or optimizer imports. The complete binder extends those payments to every older branch, accounting for 1,634 dimension-feasible rows and 91,726 common spectator triples. Nonnegative bonuses preserve the previous triangle and persistent short/H4 payments. No H3 bonus was retroactively used as a pruning condition in a growing attachment core.
+
+## Strict counting and field transfer
+
+The planar angles at a vertex correspond to unordered pairs of its n incident facets. Triangle and quadrilateral payments give total weight at least 5f₂−binom(n,2)f₀; k-gons with k≥5 need no additional structural assumption because their required value 5−k is nonpositive. For n=22, paired h-vector coefficients have minimum 55. The endpoint terms h₀=h₂₂=1 have strictly larger coefficients, so f₂/f₀>55. The average weight is strictly greater than 44, contradicting the exact maximum 21977/500. Strictness does not require an unproved lower bound on every middle h-entry.
+
+The composition only invokes Vinberg's three compact fields in dimensions **22–29**. This exact boundary is also explicit in [Nikulin's primary account, introduction and §4.1](https://arxiv.org/pdf/0708.3991). Q(√2) and K₇ use their full independently reviewed external-attachment/rank arguments, not just a list of small admissible matrices. The separate noncompact arithmetic bound is not derived from this compact h-vector proof. Arithmetic reflection lattices are of simplest type, so the composition has not omitted an additional type of arithmetic reflection lattice. See [Belolipetsky, Lemma 2.1 and §7](https://arxiv.org/pdf/1506.03111).
+
+The [final small scope checker](fresh_arithmetic_dimension21_scope_check_20261016.md) separately checks the complete field/dimension Cartesian product and literal obligation identities. Its successful sums cannot by themselves establish the geometric premises above; conversely, I found no missing global premise after checking those transitions explicitly.
+
+## What can actually happen next at compact dimension 21
+
+The larger compact field list beginning at dimension 14 has twelve fields. The new distinguished-bond proof excludes eight of them in dimensions at least 21; the existing Q(√2) and K₇ candidates exclude two more. Thus only Q(√5) and F=Q(√2,√5) remain at dimension 21. This is a consequence of the new field theorem and its separate independent review, not of extending the three-field theorem outside its range.
+
+There is a precise simplification for F. [Nikulin, §3.1, Figure 1 and formula (4)](https://arxiv.org/pdf/0708.3991) explicitly gives the ground fields of all arithmetic Lannér diagrams of order at least four as Q,Q(√2),Q(√5). Since a principal Lannér diagram in an arithmetic chamber has the same ground field, **F has only order-two/three Lannér subdiagrams**. This step uses the published arithmetic classification; mere containment of all low-label entries in F would not prove it.
+
+The triangle difficulty is real, not an absent computer case. The cited complete arithmetic list contains (2,5,8) and (4,5,5), both with full ground field F. For (2,5,8), the squared contacts generate √5 and √2; its 8 bond has only one nonright attachment. For (4,5,5), the squared 5 contact supplies √5 and the cyclic product supplies √2. These defeat the new distinguished-bond premise. A complete next F argument must handle their lower-label geometry, dotted opposite pairs and arbitrary white extensions. It cannot infer dimension≤20 merely from the eight-field result.
+
+## Validation and literature limits
+
+This audit is a source-level mathematical challenge, not a second run of every large catalogue. I found no counterexample or unclosed global quantifier in the stated bound-21 candidate. It remains an internally reviewed computer-assisted research proof, not formal verification or external peer review.
+
+A bounded primary-source comparison included the [2026 Mühlherr–Weiss publication, §7](https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/jlms.70379), which still reports the classical published high-dimensional exclusions and the known dimension-21 example. This is not an exhaustive literature-absence or novelty certificate. The example is noncompact; it prevents lowering the all-arithmetic bound below 21 but does not prevent a compact-only improvement.
+
+The earlier finite-queue independent generation and fresh saved replay remain confirmed: session 23308 completed successfully with 5,172 states, 2,070 obligations and no pending frontier. The old dimension-27 prose's broader claim about a fresh replay of the *fast producer* is historical imprecision already clarified in the [previous fresh audit](fresh_arithmetic_dimension23_scope_audit_20261016.md). The producer had generation plus structural database/map checks; the independent reviewer had full generation and fresh replay. No frozen file has been changed.
+
+### Frozen inputs directly read in this audit
+
+| File | SHA-256 |
+|---|---|
+| [Final composition source](../scripts/fresh_arithmetic_dimension21_composition_20261016.py) | `1b7fa8cb98cd0c1f48a54b2b8d940ba4a6143a5f35ac360b6b0edea4123b5ceb` |
+| [Final composition certificate](fresh_arithmetic_dimension21_composition_20261016_bound21.json) | `451d04e5305c1bf15148e83aa2c35292f78686b9816f81dec73f19af415e80ab` |
+| [Coverage source](../scripts/fresh_sqrt5_h3_hub_coverage_20261016.py) | `661585192d0e7f21add453336604905c04509872cad9bd9c66299f58a69f2c52` |
+| [Coverage certificate](fresh_sqrt5_h3_hub_coverage_20261016_bound21.json) | `dcf4be8a774f5f1961df2b3d882bd79a4d9a22c0e236259c26829882a603c9f1` |
+| [Independent H3 source](../scripts/fresh_sqrt5_dimension22_h3_cross_20261016_review.py) | `1d466f25f59fd3df1f0059456bdd464060c85430eb9784d6eff3fa31234dc19a` |
+| [Independent H3 certificate](fresh_sqrt5_dimension22_h3_cross_20261016_review.json) | `576418cd7c12bdcca6896d66e91a73fcabe3578621c4f73d71ae6420e2f0aaa1` |
+
+All mathematical statements above keep their stated compactness, ground-field and reviewed-computation dependencies. The new eight-field package is separate from the frozen bound-21 composition.

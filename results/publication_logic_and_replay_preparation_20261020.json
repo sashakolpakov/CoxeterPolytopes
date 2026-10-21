@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-20",
+  "status": "SOURCE_AND_PLAN_PREPARATION_ONLY",
+  "new_logic_sources": [
+    {
+      "module": "CoxeterProofs.RightAngledCubicScalarKernel",
+      "path": "formal/CoxeterProofs/RightAngledCubicScalarKernel.lean",
+      "sha256": "457a5a93069b7de8e07d2511bfa7194d1c6d29d1cb73919a97551fab99a7298c",
+      "bytes": 13993,
+      "lines": 341,
+      "status": "UNCOMPILED_SOURCE_REVIEWED",
+      "kernel_verified": false,
+      "axiom_print_requests": 6
+    },
+    {
+      "module": "CoxeterProofs.ConcentrationDescent58",
+      "path": "formal/CoxeterProofs/ConcentrationDescent58.lean",
+      "sha256": "0c92c827f077c26a34f393edfa94309ad5d9920fa9aa8fea605d0d970e8f6ba5",
+      "bytes": 7547,
+      "lines": 192,
+      "status": "UNCOMPILED_SOURCE_REVIEWED",
+      "kernel_verified": false,
+      "axiom_print_requests": 6
+    },
+    {
+      "module": "CoxeterProofs.CompactFarthestComposition23",
+      "path": "formal/CoxeterProofs/CompactFarthestComposition23.lean",
+      "sha256": "f69b3da3d6c0283ffd86af8e8b8cd44c531b776853da2c55c2dc647feeb99b6f",
+      "bytes": 11630,
+      "lines": 282,
+      "status": "UNCOMPILED_SOURCE_REVIEWED",
+      "kernel_verified": false,
+      "axiom_print_requests": 5
+    }
+  ],
+  "source_only_reviews": {
+    "RightAngledCubicScalarKernel": [
+      "batch_guard statement/API read",
+      "root mathematical reading"
+    ],
+    "ConcentrationDescent58": [
+      "batch_guard mathematical/API read",
+      "finite57_research mathematical/API read"
+    ],
+    "CompactFarthestComposition23": [
+      "root accounting read and requested premise-scope refinements"
+    ]
+  },
+  "assumptions_map": "docs/publication_logic_formalization_20261020.md",
+  "finite57_full_tail_configuration": "results/finite57_full_replay_tail_configuration_20261020.json",
+  "finite57_full_plan": "results/finite57_full_replay_tail_plan_20261020.json",
+  "configuration_source_review": "PASS31leaves_match_report;26layer_intervals_cover59to163_contiguously;5all_rank_leaves;43total_jobs;8core_jobs",
+  "new_tail_jobs_executed": 0,
+  "new_lean_compilations": 0,
+  "new_tex_builds": 0,
+  "six_current_manuscript_hashes_unchanged": true,
+  "owned_tex_files": 32,
+  "paper_families": 6,
+  "resource_gate": {
+    "status": "DEFERRED_RESOURCE_GATE",
+    "disk_gib": 173.4,
+    "available_ram_gib": 5.4,
+    "required_start_disk_gib": 40,
+    "required_start_ram_gib": 6,
+    "proof_worker_started": false
+  },
+  "verified_coverage_extended": false,
+  "dimension_bounds_changed": false,
+  "temporary_proof_or_tex_outputs_created": false,
+  "bounded_pdf_attempt": {
+    "argv": [
+      "python3",
+      "-B",
+      "scripts/build_illustrated_ra_manuscript_20261018.py",
+      "manuscripts/finite_volume57.tex",
+      "--replace-unfrozen"
+    ],
+    "exit_code": 1,
+    "outcome": "START_GATE_REFUSED_BEFORE_TEX_CHILD",
+    "reason": "Resource gate: disk=173.4GiB memory=5.4GiB; require40/6GiB",
+    "tex_child_started": false,
+    "temporary_build_directory_created": false,
+    "predecessor_pdf_unchanged_sha256": "a96b04efb8083fa1be03753a1cdb5222df1d79b4e07e2fff345ae3a8a3af89bc"
+  }
+}

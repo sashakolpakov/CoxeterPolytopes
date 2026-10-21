@@ -1,0 +1,834 @@
+{
+  "active_sets": {
+    "A": [
+      "B",
+      "L",
+      "D"
+    ],
+    "F": [
+      "R",
+      "U",
+      "C"
+    ],
+    "G": [
+      "B",
+      "R",
+      "C"
+    ],
+    "H": [
+      "B",
+      "U",
+      "C"
+    ],
+    "I1": [
+      "B",
+      "L",
+      "U"
+    ],
+    "I2": [
+      "B",
+      "D",
+      "R"
+    ],
+    "Iinf": [
+      "L",
+      "D",
+      "R",
+      "U"
+    ]
+  },
+  "counts": {
+    "E_fi": 6,
+    "T2": 2,
+    "edges": 11,
+    "exterior": 0,
+    "facets": 6,
+    "finite": 4,
+    "ideal": 3,
+    "vertices": 7
+  },
+  "cusps": [
+    {
+      "active": [
+        "B",
+        "L",
+        "U"
+      ],
+      "link": "bounded Euclidean (2,3,6) triangle",
+      "rank": 2,
+      "vertex": "I1"
+    },
+    {
+      "active": [
+        "B",
+        "D",
+        "R"
+      ],
+      "link": "bounded Euclidean (2,3,6) triangle",
+      "rank": 2,
+      "vertex": "I2"
+    },
+    {
+      "active": [
+        "L",
+        "D",
+        "R",
+        "U"
+      ],
+      "link": "bounded Euclidean rectangle, affine A1 x affine A1",
+      "rank": 2,
+      "vertex": "Iinf"
+    }
+  ],
+  "distinction_from_prior": "The prior T2 square pyramid fails at a simple ideal vertex along an ideal-ideal edge; this example fails at a finite vertex along a finite-ideal edge.",
+  "edges": [
+    [
+      "A",
+      "I1"
+    ],
+    [
+      "A",
+      "I2"
+    ],
+    [
+      "A",
+      "Iinf"
+    ],
+    [
+      "F",
+      "G"
+    ],
+    [
+      "F",
+      "H"
+    ],
+    [
+      "F",
+      "Iinf"
+    ],
+    [
+      "G",
+      "H"
+    ],
+    [
+      "G",
+      "I2"
+    ],
+    [
+      "H",
+      "I1"
+    ],
+    [
+      "I1",
+      "Iinf"
+    ],
+    [
+      "I2",
+      "Iinf"
+    ]
+  ],
+  "faces": {
+    "B": [
+      "A",
+      "G",
+      "H",
+      "I1",
+      "I2"
+    ],
+    "C": [
+      "F",
+      "G",
+      "H"
+    ],
+    "D": [
+      "A",
+      "I2",
+      "Iinf"
+    ],
+    "L": [
+      "A",
+      "I1",
+      "Iinf"
+    ],
+    "R": [
+      "F",
+      "G",
+      "I2",
+      "Iinf"
+    ],
+    "U": [
+      "F",
+      "H",
+      "I1",
+      "Iinf"
+    ]
+  },
+  "facet_witnesses": {
+    "B": [
+      "5",
+      "-1 + 7*sqrt(3)/6",
+      "-1 + 7*sqrt(3)/6",
+      "0"
+    ],
+    "C": [
+      "3",
+      "sqrt(3)",
+      "sqrt(3)",
+      "1/3"
+    ],
+    "D": [
+      "3",
+      "-1/2 + sqrt(3)/2",
+      "-1",
+      "1"
+    ],
+    "L": [
+      "3",
+      "-1",
+      "-1/2 + sqrt(3)/2",
+      "1"
+    ],
+    "R": [
+      "4",
+      "4*sqrt(3)/3",
+      "-1/2 + sqrt(3)/2",
+      "4/3"
+    ],
+    "U": [
+      "4",
+      "-1/2 + sqrt(3)/2",
+      "4*sqrt(3)/3",
+      "4/3"
+    ]
+  },
+  "field": "Q(sqrt2,sqrt3)",
+  "gram": [
+    [
+      "2",
+      "-1",
+      "-1",
+      "-sqrt(3)",
+      "-sqrt(3)",
+      "0"
+    ],
+    [
+      "-1",
+      "2",
+      "0",
+      "-2",
+      "0",
+      "-sqrt(6) - sqrt(2)"
+    ],
+    [
+      "-1",
+      "0",
+      "2",
+      "0",
+      "-2",
+      "-sqrt(6) - sqrt(2)"
+    ],
+    [
+      "-sqrt(3)",
+      "-2",
+      "0",
+      "2",
+      "0",
+      "0"
+    ],
+    [
+      "-sqrt(3)",
+      "0",
+      "-2",
+      "0",
+      "2",
+      "0"
+    ],
+    [
+      "0",
+      "-sqrt(6) - sqrt(2)",
+      "-sqrt(6) - sqrt(2)",
+      "0",
+      "0",
+      "2"
+    ]
+  ],
+  "metric": [
+    -1,
+    1,
+    1,
+    1
+  ],
+  "normal_labels": [
+    "B",
+    "L",
+    "D",
+    "R",
+    "U",
+    "C"
+  ],
+  "normals": [
+    [
+      "0",
+      "0",
+      "0",
+      "-sqrt(2)"
+    ],
+    [
+      "sqrt(2)/2",
+      "-sqrt(2)",
+      "0",
+      "sqrt(2)/2"
+    ],
+    [
+      "sqrt(2)/2",
+      "0",
+      "-sqrt(2)",
+      "sqrt(2)/2"
+    ],
+    [
+      "sqrt(6)/2",
+      "sqrt(2)",
+      "0",
+      "sqrt(6)/2"
+    ],
+    [
+      "sqrt(6)/2",
+      "0",
+      "sqrt(2)",
+      "sqrt(6)/2"
+    ],
+    [
+      "2",
+      "sqrt(3)",
+      "sqrt(3)",
+      "0"
+    ]
+  ],
+  "obstruction": {
+    "finite_vertex": "A",
+    "missing_port_pair": [
+      "I1",
+      "I2"
+    ],
+    "shared_edge": [
+      "A",
+      "Iinf"
+    ],
+    "third_two_face": "B",
+    "third_two_face_sides": 5,
+    "triangles": [
+      "L",
+      "D"
+    ]
+  },
+  "pair_relations": [
+    {
+      "kind": "finite",
+      "label": 3,
+      "pair": [
+        "B",
+        "L"
+      ],
+      "product": "-1"
+    },
+    {
+      "kind": "finite",
+      "label": 3,
+      "pair": [
+        "B",
+        "D"
+      ],
+      "product": "-1"
+    },
+    {
+      "kind": "finite",
+      "label": 6,
+      "pair": [
+        "B",
+        "R"
+      ],
+      "product": "-sqrt(3)"
+    },
+    {
+      "kind": "finite",
+      "label": 6,
+      "pair": [
+        "B",
+        "U"
+      ],
+      "product": "-sqrt(3)"
+    },
+    {
+      "kind": "finite",
+      "label": 2,
+      "pair": [
+        "B",
+        "C"
+      ],
+      "product": "0"
+    },
+    {
+      "kind": "finite",
+      "label": 2,
+      "pair": [
+        "L",
+        "D"
+      ],
+      "product": "0"
+    },
+    {
+      "kind": "parallel",
+      "pair": [
+        "L",
+        "R"
+      ],
+      "product": "-2"
+    },
+    {
+      "kind": "finite",
+      "label": 2,
+      "pair": [
+        "L",
+        "U"
+      ],
+      "product": "0"
+    },
+    {
+      "kind": "dotted",
+      "pair": [
+        "L",
+        "C"
+      ],
+      "product": "-sqrt(6) - sqrt(2)"
+    },
+    {
+      "kind": "finite",
+      "label": 2,
+      "pair": [
+        "D",
+        "R"
+      ],
+      "product": "0"
+    },
+    {
+      "kind": "parallel",
+      "pair": [
+        "D",
+        "U"
+      ],
+      "product": "-2"
+    },
+    {
+      "kind": "dotted",
+      "pair": [
+        "D",
+        "C"
+      ],
+      "product": "-sqrt(6) - sqrt(2)"
+    },
+    {
+      "kind": "finite",
+      "label": 2,
+      "pair": [
+        "R",
+        "U"
+      ],
+      "product": "0"
+    },
+    {
+      "kind": "finite",
+      "label": 2,
+      "pair": [
+        "R",
+        "C"
+      ],
+      "product": "0"
+    },
+    {
+      "kind": "finite",
+      "label": 2,
+      "pair": [
+        "U",
+        "C"
+      ],
+      "product": "0"
+    }
+  ],
+  "scope": "Finite-volume H3 Coxeter example refutes unique simplex-port blocks at a finite vertex for T2; neither proposed numerical T2 inequality is refuted.",
+  "sources": {
+    "results/fresh_multi_ideal_triangle_scope_20261017.md": "d4789b2c2e606db746acb14c5e39add6af4d795e29572235e7dd0ba5040801a9",
+    "scripts/fresh_finite_vertex_t2_port_counterexample_20261017.py": "9586d6e2d90525e8820e7714e7e12dca279de55252d771b8c274a232d0f7531b"
+  },
+  "status": "PASS_EXACT_FINITE_VERTEX_T2_PORT_COUNTEREXAMPLE",
+  "strict_center": [
+    "5/4",
+    "0",
+    "0",
+    "3/4"
+  ],
+  "strict_dual": [
+    "sqrt(2) + 2 + sqrt(6)",
+    "sqrt(3)",
+    "sqrt(3)",
+    "sqrt(6)"
+  ],
+  "triple_trials": [
+    {
+      "active": [
+        0,
+        1,
+        2
+      ],
+      "ray": [
+        "1",
+        "-1/2",
+        "-1/2",
+        "0"
+      ],
+      "status": "feasible",
+      "support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "blockers": [
+        2
+      ],
+      "status": "infeasible",
+      "support": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "active": [
+        0,
+        1,
+        4
+      ],
+      "ray": [
+        "1",
+        "-1/2",
+        "sqrt(3)/2",
+        "0"
+      ],
+      "status": "feasible",
+      "support": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "blockers": [
+        4
+      ],
+      "status": "infeasible",
+      "support": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "active": [
+        0,
+        2,
+        3
+      ],
+      "ray": [
+        "1",
+        "sqrt(3)/2",
+        "-1/2",
+        "0"
+      ],
+      "status": "feasible",
+      "support": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "blockers": [
+        1
+      ],
+      "status": "infeasible",
+      "support": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "blockers": [
+        3
+      ],
+      "status": "infeasible",
+      "support": [
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "blockers": [
+        5
+      ],
+      "status": "infeasible",
+      "support": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "active": [
+        0,
+        3,
+        5
+      ],
+      "ray": [
+        "1",
+        "sqrt(3)/2",
+        "sqrt(3)/6",
+        "0"
+      ],
+      "status": "feasible",
+      "support": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "active": [
+        0,
+        4,
+        5
+      ],
+      "ray": [
+        "1",
+        "sqrt(3)/6",
+        "sqrt(3)/2",
+        "0"
+      ],
+      "status": "feasible",
+      "support": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "active": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "ray": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "status": "feasible",
+      "support": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "active": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "ray": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "status": "feasible",
+      "support": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "blockers": [
+        0
+      ],
+      "status": "infeasible",
+      "support": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "active": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "ray": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "status": "feasible",
+      "support": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "blockers": [
+        4
+      ],
+      "status": "infeasible",
+      "support": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "blockers": [
+        0
+      ],
+      "status": "infeasible",
+      "support": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "active": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "ray": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "status": "feasible",
+      "support": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "blockers": [
+        0
+      ],
+      "status": "infeasible",
+      "support": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "blockers": [
+        3
+      ],
+      "status": "infeasible",
+      "support": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "active": [
+        3,
+        4,
+        5
+      ],
+      "ray": [
+        "1",
+        "sqrt(3)/3",
+        "sqrt(3)/3",
+        "1/3"
+      ],
+      "status": "feasible",
+      "support": [
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "vertex_norms": {
+    "A": "-1/2",
+    "F": "-2/9",
+    "G": "-1/6",
+    "H": "-1/6",
+    "I1": "0",
+    "I2": "0",
+    "Iinf": "0"
+  },
+  "vertices": {
+    "A": [
+      "1",
+      "-1/2",
+      "-1/2",
+      "0"
+    ],
+    "F": [
+      "1",
+      "sqrt(3)/3",
+      "sqrt(3)/3",
+      "1/3"
+    ],
+    "G": [
+      "1",
+      "sqrt(3)/2",
+      "sqrt(3)/6",
+      "0"
+    ],
+    "H": [
+      "1",
+      "sqrt(3)/6",
+      "sqrt(3)/2",
+      "0"
+    ],
+    "I1": [
+      "1",
+      "-1/2",
+      "sqrt(3)/2",
+      "0"
+    ],
+    "I2": [
+      "1",
+      "sqrt(3)/2",
+      "-1/2",
+      "0"
+    ],
+    "Iinf": [
+      "1",
+      "0",
+      "0",
+      "1"
+    ]
+  }
+}

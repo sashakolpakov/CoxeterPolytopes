@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status_date": "2026-08-04",
+  "artifact_id": "k3_quotient_nef_slices",
+  "artifact_status": "source_actions_and_exact_derived_fold_data",
+  "scope": "Automorphism-fixed nef cones of the rank-18 and rank-19 finite-automorphism K3 surfaces",
+  "conventions": {
+    "curve_norm": -2,
+    "nef_inequality": "x.C >= 0",
+    "orbit_normal": "sum of the curve classes in the orbit",
+    "hyperbolic_signature": "one positive and all remaining negative directions"
+  },
+  "sources": [
+    {
+      "id": "Kondo1989",
+      "title": "Algebraic K3 surfaces with finite automorphism groups",
+      "doi": "10.1017/S0027763000001653",
+      "locator": "Sections 4.1 and 4.2, especially Figures 1 and 2"
+    },
+    {
+      "id": "Roulleau2022",
+      "title": "An atlas of K3 surfaces with finite automorphism group",
+      "url": "https://epiga.episciences.org/10377",
+      "locator": "Sections 15.4 and 15.5"
+    }
+  ],
+  "cases": [
+    {
+      "ambient_rho": 18,
+      "ambient_lattice": "U + E8(-1)^2",
+      "source_action": "The unique nontrivial symmetry of Kondo Figure 2, induced by the symplectic involution swapping the two E8 factors",
+      "involution_cycles": [
+        [1, 18], [2, 17], [3, 15], [4, 16], [5, 14],
+        [6, 13], [7, 12], [8, 11], [9], [10, 19]
+      ],
+      "expected": {
+        "fixed_rank": 10,
+        "hyperbolic_dimension": 9,
+        "fixed_lattice": "U + E8(-2)",
+        "facet_count": 10,
+        "redundant_timelike_orbit_count": 0,
+        "finite_vertex_count": 8,
+        "ideal_vertex_count": 2,
+        "total_vertex_count": 10,
+        "facet_gram_determinant": -1024,
+        "facet_gram_inertia": [1, 9, 0],
+        "coxeter_edge_counts": {"3": 8, "4": 1, "infinity": 0},
+        "literal_coxiter_prop_1_10": {
+          "spherical_rank_n_minus_one_count": 45,
+          "spherical_rank_n_count": 8,
+          "parabolic_rank_n_minus_one_count": 2,
+          "extension_histogram": {"2": 45},
+          "endpoint_type_histogram": {"2,0": 28, "1,1": 16, "0,2": 1}
+        }
+      }
+    },
+    {
+      "ambient_rho": 19,
+      "ambient_lattice": "U + E8(-1)^2 + A1(-1)",
+      "source_action": "A transposition in the S3 graph action of Kondo Figure 1, induced by a symplectic involution",
+      "involution_cycles": [
+        [1], [2, 18], [3, 17], [4, 16], [5, 15], [6, 14],
+        [7, 13], [8, 12], [9, 11], [10], [19], [20, 21],
+        [22], [23, 24]
+      ],
+      "expected": {
+        "fixed_rank": 11,
+        "hyperbolic_dimension": 10,
+        "facet_count": 13,
+        "redundant_timelike_orbit_count": 1,
+        "redundant_timelike_orbits": [[23, 24]],
+        "finite_vertex_count": 34,
+        "ideal_vertex_count": 4,
+        "total_vertex_count": 38,
+        "facet_gram_rank": 11,
+        "facet_gram_inertia": [1, 10, 2],
+        "coxeter_edge_counts": {"3": 9, "4": 2, "infinity": 2},
+        "literal_coxiter_prop_1_10": {
+          "spherical_rank_n_minus_one_count": 208,
+          "spherical_rank_n_count": 34,
+          "parabolic_rank_n_minus_one_count": 4,
+          "extension_histogram": {"2": 208},
+          "endpoint_type_histogram": {"2,0": 137, "1,1": 66, "0,2": 5}
+        }
+      }
+    }
+  ],
+  "novelty_statement": "The underlying Coxeter polytopes are not claimed to be new. The exact quotient-nef realization and folding certificate are the result recorded here."
+}

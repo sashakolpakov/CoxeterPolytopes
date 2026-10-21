@@ -1,0 +1,178 @@
+{
+  "baseline_outcome": {
+    "negative_design_filter": "The silver K3 H9 and golden OG10 H10 intrinsic norm-two carriers are eliminated from finite volume by infinite complete-chamber stabilizers, not by finite Vinberg prefixes.",
+    "positive": "Bugaenko H8 is an exact compact K3 eigen-nef realization."
+  },
+  "certificate_sha256": "791ce2e8df4caefce952ae98eb3e6b29010801a7b6fb9446176be02c1da4d7c4",
+  "checks": {
+    "bugaenko_complete_compact_chamber": true,
+    "bugaenko_exact_k3_embedding": true,
+    "bugaenko_period_dimension_two": true,
+    "golden_even_minus_four_shell_exact": true,
+    "golden_even_minus_two_shell_exact": true,
+    "golden_raw_minus_two_shell_exact": true,
+    "k3_quadratic_ceiling_H9": true,
+    "og10_admissible_field_signatures": true,
+    "og10_infinite_stabilizer_obstruction": true,
+    "og10_period_dimension_zero": true,
+    "og10_primitive_carrier": true,
+    "og10_quadratic_ceiling_H10": true,
+    "og10_three_visible_wall_orbits": true,
+    "rank_formula_bugaenko": true,
+    "rank_formula_og10": true,
+    "rank_formula_silver": true,
+    "silver_admissible_field_signatures": true,
+    "silver_infinite_stabilizer_obstruction": true,
+    "silver_period_dimension_zero": true,
+    "silver_primitive_k3_embedding": true
+  },
+  "dimension_ceilings": {
+    "K3_degree_2": 9,
+    "OG10_degree_2": 10,
+    "formula": "floor((b2-2)/[F:Q])-1"
+  },
+  "external_theorem_inputs": [
+    "surjectivity of the marked K3/hyperkahler period map and the projectivity criterion",
+    "K3 Weyl transitivity or a deformation-type-specific Kahler/movable chamber theorem",
+    "boundedness/classification of MBM wall squares for the fixed deformation type",
+    "Borel-Harish-Chandra arithmeticity and the anisotropic compactness criterion",
+    "Vinberg reflection-chamber theory"
+  ],
+  "golden_shell_replay": {
+    "even_square_minus_2": [
+      {
+        "a": "2",
+        "b": "0"
+      },
+      {
+        "a": "4",
+        "b": "-2"
+      }
+    ],
+    "even_square_minus_4": [
+      {
+        "a": "2",
+        "b": "2"
+      },
+      {
+        "a": "4",
+        "b": "0"
+      },
+      {
+        "a": "6",
+        "b": "-2"
+      },
+      {
+        "a": "8",
+        "b": "-4"
+      },
+      {
+        "a": "10",
+        "b": "-6"
+      }
+    ],
+    "raw_square_minus_2": [
+      {
+        "a": "1",
+        "b": "1"
+      },
+      {
+        "a": "2",
+        "b": "0"
+      },
+      {
+        "a": "3",
+        "b": "-1"
+      },
+      {
+        "a": "4",
+        "b": "-2"
+      },
+      {
+        "a": "5",
+        "b": "-3"
+      }
+    ],
+    "trace_scalar": {
+      "a": "-2/5",
+      "b": "-1/5"
+    }
+  },
+  "inputs": {
+    "bugaenko_k3": {
+      "path": "data/trace_lattices/bugaenko_k3_eigen_nef.json",
+      "sha256": "e77bb81bcc738f4f542676748dbcf09418cab830da579a600fd1e309f03de782"
+    },
+    "bugaenko_polytope": {
+      "path": "data/known_examples/bugaenko_compact_h8.json",
+      "sha256": "c17ac49e443918e61e541c9de35c7f29da9120e22bd9883678cc8091a2f4fc5c"
+    },
+    "og10_carrier": {
+      "path": "data/candidates/og10_golden_h10_carrier.json",
+      "sha256": "28ed4662624c36488a6f15407303b92dda0c462bb5f6f4df952812ff401783df"
+    },
+    "og10_stabilizer": {
+      "path": "data/candidates/og10_golden_h9_infinite_stabilizer.json",
+      "sha256": "813f6466a8f26b709f83a9686f8a2b9916d91b35034427cf70ab108f834bffaa"
+    },
+    "og10_walls": {
+      "path": "data/candidates/og10_golden_complete_wall_shells.json",
+      "sha256": "7500765b2f4a3dbcf93b52e28cfdfde47f215eeb1df8c7ee8f766c0ab4902452"
+    },
+    "silver_k3": {
+      "path": "data/candidates/silver_k3_carrier.json",
+      "sha256": "2ad6223e46ef690c7d6d6f1bd60b48518e19ab8d7bf90e3407c5668c6de5d297"
+    },
+    "silver_stabilizer": {
+      "path": "data/candidates/silver_k3_norm2_infinite_stabilizer.json",
+      "sha256": "bf3be8e88a4cfeb72f6923279494951a76d3132b609fc65ebbb40d848a77fec3"
+    }
+  },
+  "kind": "totally_real_eigencarrier_criterion_and_baseline_audit",
+  "rank_ladder": [
+    {
+      "b2": 22,
+      "carrier_type": "K3",
+      "chamber_status": "complete compact 11-facet eigen-nef chamber",
+      "field_degree": 2,
+      "field_rank": 9,
+      "name": "Bugaenko golden H8",
+      "period_dimension": 2,
+      "trace_rank": 18
+    },
+    {
+      "b2": 22,
+      "carrier_type": "K3",
+      "chamber_status": "complete norm-two chamber has infinite volume",
+      "field_degree": 2,
+      "field_rank": 10,
+      "name": "silver H9",
+      "period_dimension": 0,
+      "trace_rank": 20
+    },
+    {
+      "b2": 24,
+      "carrier_type": "OG10",
+      "chamber_status": "complete norm-two movable chamber has infinite volume",
+      "field_degree": 2,
+      "field_rank": 11,
+      "name": "golden H10",
+      "period_dimension": 0,
+      "trace_rank": 22
+    }
+  ],
+  "schema_version": "1.0.0",
+  "theorem_scope": {
+    "finite_shell_reduction": "For each allowed negative Beauville wall square, visibility forces h(delta,delta) into a finite set of totally positive elements cut out by one trace equation.",
+    "not_automatic": [
+      "primitive embedding of an abstract Coxeter Gram without a fixed integral scaling",
+      "MBM/effective-wall membership",
+      "equality with a nef, movable, or Kahler chamber",
+      "Coxeter angles for arbitrary projected walls",
+      "finite-sidedness, finite volume, or compactness"
+    ],
+    "uniformity_obstruction": "An admissible form with every non-distinguished real place definite is F-anisotropic.  For a complete invariant integral reflection arrangement, finite chamber volume is equivalent to compactness and to finiteness of its arithmetic chamber stabilizer.",
+    "weak_full_picard_criterion": "For a fixed admissible trace datum and deformation type, a weak full-Picard eigencarrier exists iff its even trace lattice admits an orientation-compatible primitive embedding in the Beauville lattice."
+  },
+  "verified": true
+}

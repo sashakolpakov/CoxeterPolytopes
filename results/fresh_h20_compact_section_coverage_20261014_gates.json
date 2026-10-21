@@ -1,0 +1,141 @@
+{
+  "status": "PASS_SPARSE_SUPPORT_AND_COMPACT_ORTHOGONAL_SHORT_G2_INPUT",
+  "sources": {
+    "data/enumerations/borcherds_d4_h21_og10_carrier_obstruction.json": "dc9053322bf54cedde15fcfc5080666ebd79e64feb065b071880dce6ff1552ca",
+    "scripts/fresh_h20_compact_section_coverage_20261014_gates.py": "3884f49cb63cbdeed0f9a0105f028bf2b51fb547f98050540bf394d801dd9146"
+  },
+  "orthogonal_short_pairs": 756,
+  "spherical_boundary_table": [
+    {
+      "norm": 2,
+      "pair_a": -1,
+      "pair_b": -1,
+      "count": 420
+    },
+    {
+      "norm": 2,
+      "pair_a": -1,
+      "pair_b": 0,
+      "count": 3360
+    },
+    {
+      "norm": 2,
+      "pair_a": 0,
+      "pair_b": -1,
+      "count": 3360
+    },
+    {
+      "norm": 2,
+      "pair_a": 0,
+      "pair_b": 0,
+      "count": 23100
+    },
+    {
+      "norm": 4,
+      "pair_a": -2,
+      "pair_b": 0,
+      "count": 25200
+    },
+    {
+      "norm": 4,
+      "pair_a": 0,
+      "pair_b": -2,
+      "count": 25200
+    },
+    {
+      "norm": 4,
+      "pair_a": 0,
+      "pair_b": 0,
+      "count": 65520
+    }
+  ],
+  "unique_modified_boundary": [
+    2,
+    -1,
+    -1
+  ],
+  "equal_contact_square": "-6 + 4*sqrt(3)",
+  "modified_norm": "3/2 - sqrt(3)/3",
+  "modified_unchanged_short_cosine_squared": "2*sqrt(3)/23 + 9/23",
+  "strict_forbidden_interval": [
+    "1/2",
+    "5/8"
+  ],
+  "sparse_signed_forest_counts": {
+    "forest_signed_3": 28,
+    "obtuse_cross_pair_3": 18,
+    "same_sign_triangle_3": 7,
+    "forest_signed_4": 304,
+    "same_sign_triangle_4": 190,
+    "obtuse_cross_pair_4": 114
+  },
+  "three_contact_patterns": [
+    {
+      "old_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "mandatory_new_leaf_edge": [
+        1,
+        2
+      ],
+      "at_least_one_old_edge_must_cancel": true
+    },
+    {
+      "old_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "mandatory_new_leaf_edge": [
+        0,
+        2
+      ],
+      "at_least_one_old_edge_must_cancel": true
+    },
+    {
+      "old_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "mandatory_new_leaf_edge": [
+        0,
+        1
+      ],
+      "at_least_one_old_edge_must_cancel": true
+    }
+  ],
+  "scope": "Sparse support <=3 applies at a finite simple section vertex. The compact-only G2 theorem assumes an actual G2 ridge from two old orthogonal norm-two walls. It is not a no-section theorem, does not cover noncompact G2 faces, and does not classify all sparse profiles."
+}

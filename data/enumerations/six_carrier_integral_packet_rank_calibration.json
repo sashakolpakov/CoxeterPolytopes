@@ -1,0 +1,217 @@
+{
+  "schema": "coxeter.six_carrier_integral_packet_rank_calibration.v1",
+  "status_date": "2026-08-10",
+  "scope": "Six already-certified carriers only; rowwise packet bounds are not uniform bounds for general maximal arithmetic chambers.",
+  "gate_semantics": {
+    "B": "rank of one integral packet containing the full restriction-of-scalars trace module",
+    "D": "sum A.D_i for one certified integral ample A and one distinct irreducible facet curve D_i per facet",
+    "C": "maximum absolute pairing/action/facet-coordinate entry in the stated pinned integral packet basis",
+    "t": "number of marked integral interval generators; the empty set generates Q",
+    "instance_pass_does_not_mean_uniform": true
+  },
+  "rows": [
+    {
+      "id": "bugaenko_h8_11",
+      "n": 8,
+      "f": 11,
+      "k": "Q(sqrt(5))",
+      "d": 2,
+      "carrier": {
+        "surface": "Bl_19(P2_Q)",
+        "kind": "chosen weak rational eigencarrier, not a full-nef carrier",
+        "rho": 20,
+        "b2": 20
+      },
+      "trace": {
+        "rank_d_times_n_plus_1": 18,
+        "packet_rank_B": 18,
+        "injection": "genuine rank-18 integral lattice embedding into NS=I_(1,19), with a rank-18 rational divisor-Tate Chow summand",
+        "external_only": false
+      },
+      "complexity": {
+        "packet_coordinate_ceiling_C": 48,
+        "C_basis": "rank-18 standard trace basis; pairing, multiplication by 2phi, and eleven facet vectors",
+        "total_ample_facet_degree_D": null,
+        "D_status": "not applicable to the certified weak carrier: the eleven divisor classes are not certified effective irreducible curves",
+        "monodromy_rank": null,
+        "other_certified_action": "rank-18 Chow action; its integral ambient extension has 40 divisor-product terms and matrix height 9"
+      },
+      "field_gate": {
+        "t": 1,
+        "generator": "alpha=2phi=1+sqrt(5)",
+        "minimal_polynomial": "x^2-2x-4",
+        "distinguished_interval": "1+sqrt(5) in [2,14]",
+        "other_conjugates_interval": "1-sqrt(5) in [-2,1]"
+      },
+      "instance_gates": {"B": "pass", "D": "not_certified", "C": "pass", "t": "pass"}
+    },
+    {
+      "id": "toric_h6_9",
+      "n": 6,
+      "f": 9,
+      "k": "Q",
+      "d": 1,
+      "carrier": {
+        "surface": "smooth toric weak del Pezzo Bl_6(P2)",
+        "kind": "intrinsic full-nef carrier",
+        "rho": 7,
+        "b2": 7
+      },
+      "trace": {
+        "rank_d_times_n_plus_1": 7,
+        "packet_rank_B": 7,
+        "injection": "identity with NS_Q; the nine wall classes span NS integrally",
+        "external_only": false
+      },
+      "complexity": {
+        "packet_coordinate_ceiling_C": 1,
+        "C_basis": "H,E1,...,E6",
+        "total_ample_facet_degree_D": 12,
+        "D_status": "A=7H-2(E1+E2+E3)-(E4+E5+E6), facet degrees (1,1,2)^3",
+        "monodromy_rank": null,
+        "other_certified_action": "W(A2)^3 has order 216 as a simultaneous-resolution marking deck group; it is explicitly not certified as one-pencil monodromy"
+      },
+      "field_gate": {"t": 0, "generator": null, "minimal_polynomial": null},
+      "instance_gates": {"B": "pass", "D": "pass", "C": "pass", "t": "pass"}
+    },
+    {
+      "id": "coble_type_ii_h10_30",
+      "n": 10,
+      "f": 30,
+      "k": "Q",
+      "d": 1,
+      "carrier": {
+        "surface": "ten-point blow-up of P2 over Q; nef return over C",
+        "kind": "intrinsic full-nef strong Coble carrier for the fixed marked input",
+        "rho": 11,
+        "b2": 11
+      },
+      "trace": {
+        "rank_d_times_n_plus_1": 11,
+        "packet_rank_B": 11,
+        "injection": "identity with NS_Q; thirty pinned wall vectors span the odd unimodular lattice integrally",
+        "external_only": false
+      },
+      "complexity": {
+        "packet_coordinate_ceiling_C": 17,
+        "C_basis": "pinned rank-11 odd-unimodular wall basis",
+        "total_ample_facet_degree_D": null,
+        "D_status": "no integral ample class and total degree of all thirty facet curves is archived",
+        "monodromy_rank": null,
+        "other_certified_action": null
+      },
+      "field_gate": {"t": 0, "generator": null, "minimal_polynomial": null},
+      "instance_gates": {"B": "pass", "D": "not_certified", "C": "pass", "t": "pass"}
+    },
+    {
+      "id": "coble_type_i_h11_26",
+      "n": 11,
+      "f": 26,
+      "k": "Q",
+      "d": 1,
+      "carrier": {
+        "surface": "eleven-point blow-up of P2 over Q; complex Coble nef return",
+        "kind": "intrinsic full-nef strong Coble carrier for the fixed marked input",
+        "rho": 12,
+        "b2": 12
+      },
+      "trace": {
+        "rank_d_times_n_plus_1": 12,
+        "packet_rank_B": 12,
+        "injection": "identity with NS_Q; the physical wall vectors have rank 12 and the arithmetic walls span their full lattice",
+        "external_only": false
+      },
+      "complexity": {
+        "packet_coordinate_ceiling_C": 21,
+        "C_basis": "pinned rank-12 full-NS basis",
+        "total_ample_facet_degree_D": null,
+        "D_status": "the archived plane degree is not an ample degree after blow-up, and no total ample facet degree is certified",
+        "monodromy_rank": null,
+        "other_certified_action": null
+      },
+      "field_gate": {"t": 0, "generator": null, "minimal_polynomial": null},
+      "instance_gates": {"B": "pass", "D": "not_certified", "C": "pass", "t": "pass"}
+    },
+    {
+      "id": "coble_type_vi_char3_h14_60",
+      "n": 14,
+      "f": 60,
+      "k": "Q",
+      "d": 1,
+      "carrier": {
+        "surface": "characteristic-three five-boundary Type-VI rational Coble surface",
+        "kind": "intrinsic full-nef carrier",
+        "rho": 15,
+        "b2": 15
+      },
+      "trace": {
+        "rank_d_times_n_plus_1": 15,
+        "packet_rank_B": 15,
+        "injection": "identity with NS_Q=I_(1,14); the sixty physical walls span the full rational root space",
+        "external_only": false
+      },
+      "complexity": {
+        "packet_coordinate_ceiling_C": 8,
+        "C_basis": "pinned rank-15 full-NS basis",
+        "total_ample_facet_degree_D": null,
+        "D_status": "no integral ample class and total degree of all sixty facet curves is archived",
+        "monodromy_rank": null,
+        "other_certified_action": null
+      },
+      "field_gate": {"t": 0, "generator": null, "minimal_polynomial": null},
+      "instance_gates": {"B": "pass", "D": "not_certified", "C": "pass", "t": "pass"}
+    },
+    {
+      "id": "coble_type_mii_char3_h17_48",
+      "n": 17,
+      "f": 48,
+      "k": "Q",
+      "d": 1,
+      "carrier": {
+        "surface": "Bl_16(P1xP1) in characteristic three",
+        "kind": "intrinsic full-nef Type-MII Coble carrier",
+        "rho": 18,
+        "b2": 18
+      },
+      "trace": {
+        "rank_d_times_n_plus_1": 18,
+        "packet_rank_B": 18,
+        "injection": "identity with Pic_Q=I_(1,17); forty-eight physical curves span Pic integrally",
+        "external_only": false
+      },
+      "complexity": {
+        "packet_coordinate_ceiling_C": 1,
+        "C_basis": "F1,F2,E11,...,E44",
+        "total_ample_facet_degree_D": 168,
+        "D_status": "H=5F1+5F2-sum Eij; degrees 1 on 8 boundaries and 16 exceptionals, and 6 on 24 graph curves",
+        "monodromy_rank": null,
+        "other_certified_action": null
+      },
+      "field_gate": {"t": 0, "generator": null, "minimal_polynomial": null},
+      "instance_gates": {"B": "pass", "D": "pass", "C": "pass", "t": "pass"}
+    }
+  ],
+  "sample_summary": {
+    "every_trace_module_genuinely_injected": true,
+    "external_only_row_count": 0,
+    "rows_with_certified_total_ample_facet_degree": ["toric_h6_9", "coble_type_mii_char3_h17_48"],
+    "rows_with_certified_monodromy_rank": [],
+    "descriptive_sample_maxima_not_global_bounds": {"B": 18, "C": 48, "t": 1, "carrier_rho": 20},
+    "uniform_general_maximal_chamber_gates": {"B": "open", "D": "open", "C": "open", "t": "open"},
+    "no_global_dimension_bound_inferred": true
+  },
+  "source_pins": {
+    "data/enumerations/rational_surface_eigencarrier_universality.json": "6d9232d97d41fc8704a1e44f1c35ac52dd18aed72e522a8163a5662b22ce9da2",
+    "scripts/certify_rational_surface_eigencarrier_universality.py": "beb58e41d3d2077381a0c58689c17f3d7d3a3443662d25c47405510ca18aa1e1",
+    "src/coxeter_polytopes/known_examples/bugaenko.py": "bd08aa582cce4ea28cf9212ae3ead602d1f81f87ab9003eaca3316865ef03f5c",
+    "scripts/bugaenko_k3_eigen_nef.py": "e429b97676d63ad00536110569ebc220ac8eaeead505cb385785f3bb52bf3554",
+    "scripts/bugaenko_trace_lattice.py": "1d7900fd72f41a7c1ff346ba17aa8c6170d24db4b7b3504acb79274c4b4c85b3",
+    "data/enumerations/toric_full_nef_coxeter_factory.json": "7bdd361d5d349b10110fa908d65e7508fc17cc653a097afe91be803da064a389",
+    "data/enumerations/coble_type_ii_b3_plane_inverse.json": "a8f49be994ae9bf70eae73378f4f006417be91ae827fee0a73707932f6ceac71",
+    "data/enumerations/coble_one_boundary_full_ns_h10.json": "1e90fcd5f9b1ba8538937b91d2f26ea401f6952e8484a597624939edaf2a873e",
+    "data/enumerations/coble_type_i_two_boundary_plane_inverse.json": "6313b11cc9ba267834231aab2469d99e9d0242f4a95f53280047351f8318da04",
+    "data/enumerations/coble_type_i_two_boundary_full_ns_h11.json": "bcfa2de1e96bf4f41282345a64f8ee6f3a75e715287bab4962d7082584b4d985",
+    "data/enumerations/coble_type_vi_char3_five_boundary_full_ns_h14.json": "8247ad85f7970d3bf1f08fe15517b70376409c17cc2784b8f14b129aaecc2ede",
+    "data/enumerations/coble_type_mii_full_ns_h17.json": "6ed6fba936c362e02793375fa3adfea0279d312c853a8bb4bab30c23b4b8c79c"
+  }
+}

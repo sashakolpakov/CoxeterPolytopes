@@ -1,0 +1,105 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "half_weight_lc_exactly_m_at_most_four": true,
+    "half_weight_point_terms_are_1_4_3_16_0": true,
+    "half_weight_resolution_corrections_are_nonnegative": true,
+    "reduced_resolution_never_creates_negative_defect": true,
+    "universal_crepant_lower_bound_nonnegative": true,
+    "universal_full_exceptional_lower_bound_nonnegative": true
+  },
+  "conclusion": "codimension-two mirror multiplicities do not provide a uniformly negative local BMY contribution: the reduced and every lc weighted resolution correction is nonnegative; half-weight m>=5 is non-lc",
+  "half_weight_dihedral_points": [
+    {
+      "all_relevant_terms_nonnegative": true,
+      "coefficient_sum_A": 1,
+      "crepant_resolution": {
+        "bmy_defect_change": "9/4",
+        "exceptional_coefficient": 0,
+        "log_c1_square_change": 0,
+        "orbifold_c2_change": "3/4"
+      },
+      "dihedral_label_m": 2,
+      "global_bmy_point_term": "1/4",
+      "langer_local_eorb": "1/4",
+      "local_group_order": 4,
+      "log_canonical": true,
+      "reduced_exceptional_resolution": {
+        "bmy_defect_change": "1/4",
+        "exceptional_coefficient": 1,
+        "log_c1_square_change": -1,
+        "orbifold_c2_change": "-1/4"
+      }
+    },
+    {
+      "all_relevant_terms_nonnegative": true,
+      "coefficient_sum_A": "3/2",
+      "crepant_resolution": {
+        "bmy_defect_change": "9/16",
+        "exceptional_coefficient": "1/2",
+        "log_c1_square_change": 0,
+        "orbifold_c2_change": "3/16"
+      },
+      "dihedral_label_m": 3,
+      "global_bmy_point_term": "3/16",
+      "langer_local_eorb": "1/16",
+      "local_group_order": 6,
+      "log_canonical": true,
+      "reduced_exceptional_resolution": {
+        "bmy_defect_change": "1/16",
+        "exceptional_coefficient": 1,
+        "log_c1_square_change": "-1/4",
+        "orbifold_c2_change": "-1/16"
+      }
+    },
+    {
+      "all_relevant_terms_nonnegative": true,
+      "coefficient_sum_A": 2,
+      "crepant_resolution": {
+        "bmy_defect_change": 0,
+        "exceptional_coefficient": 1,
+        "log_c1_square_change": 0,
+        "orbifold_c2_change": 0
+      },
+      "dihedral_label_m": 4,
+      "global_bmy_point_term": 0,
+      "langer_local_eorb": 0,
+      "local_group_order": 8,
+      "log_canonical": true,
+      "reduced_exceptional_resolution": {
+        "bmy_defect_change": 0,
+        "exceptional_coefficient": 1,
+        "log_c1_square_change": 0,
+        "orbifold_c2_change": 0
+      }
+    }
+  ],
+  "natural_dihedral_stack": {
+    "feedback": "absorbed by the orbifold tangent bundle and Hirzebruch proportionality; it is not an additional negative stratum term",
+    "group_order": "2m",
+    "local_group": "I_2(m)",
+    "local_orbifold_mass": "1/(2m)"
+  },
+  "reduced_ordinary_multiple_point_blowups": [
+    {"bmy_defect_change": 0, "branch_count": 2, "log_c1_square_change": 0, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 1, "branch_count": 3, "log_c1_square_change": -1, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 4, "branch_count": 4, "log_c1_square_change": -4, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 9, "branch_count": 5, "log_c1_square_change": -9, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 16, "branch_count": 6, "log_c1_square_change": -16, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 25, "branch_count": 7, "log_c1_square_change": -25, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 36, "branch_count": 8, "log_c1_square_change": -36, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 49, "branch_count": 9, "log_c1_square_change": -49, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 64, "branch_count": 10, "log_c1_square_change": -64, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 81, "branch_count": 11, "log_c1_square_change": -81, "log_c2_change": 0, "nonnegative": true},
+    {"bmy_defect_change": 100, "branch_count": 12, "log_c1_square_change": -100, "log_c2_change": 0, "nonnegative": true}
+  ],
+  "remaining_gate": "a class-uniform noncircular bound for U_det=w*lambda^n/q_min, or a different AG invariant not absorbed by stack proportionality",
+  "schema": "coxeter.compact_mirror_multiple_strata_bmy_no_go.v1",
+  "status_date": "2026-08-09",
+  "universal_weighted_lc_resolution_bounds": {
+    "coefficient_one_exceptional_defect_change_lower_bound": "((2-A)^2)/4",
+    "crepant_exceptional_defect_change_lower_bound": "9*((2-A)^2)/4",
+    "hypotheses": "ordinary branches, 0<=alpha_i<=1, A=sum(alpha_i)<=2",
+    "langer_bound": "e_orb(p)<=((2-A)^2)/4"
+  }
+}

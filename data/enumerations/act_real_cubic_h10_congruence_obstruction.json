@@ -1,0 +1,133 @@
+{
+  "all_checks_pass": true,
+  "bounded_vinberg_corroboration": {
+    "bounded_exact_cdd_observation_2026_08_09": {
+      "extreme_rays": 1680,
+      "finite_timelike": 0,
+      "hyperideal_spacelike": 1680,
+      "ideal_lightlike": 0,
+      "scope": "partial chamber only; corroboration, not the proof",
+      "wall_count": 580
+    },
+    "levels_through_height_three": [
+      {"dominant": 1, "extended": 1, "height": 0, "raw": 2, "walls": 1},
+      {"dominant": 162, "extended": 1, "height": 1, "raw": 180, "walls": 2},
+      {"dominant": 6370, "extended": 17, "height": 2, "raw": 8424, "walls": 19},
+      {"dominant": 86737, "extended": 561, "height": 3, "raw": 129064, "walls": 580}
+    ],
+    "logically_required_for_global_theorem": false,
+    "partial_wall_count": 580,
+    "streamed_Gram_summary": {
+      "minimum_pairing": -17,
+      "norms": [1],
+      "positive_offdiagonal": 0,
+      "zero_offdiagonal_pairs": 0
+    }
+  },
+  "exact_extension_congruence": {
+    "accepted_Q_mod_3_histogram": {"0": 243, "1": 486},
+    "accepted_residue_count": 729,
+    "ambient_residue_count": 177147,
+    "bilinear_identity_on_every_pair": "B(r,s)=x0(r)*x0(s) mod 3",
+    "code_basis_rows_mod_3": [
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0],
+      [0, 2, 1, 0, 1, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 2, 2, 1, 0, 0, 0],
+      [0, 0, 0, 0, 0, 2, 1, 0, 1, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+    ],
+    "code_dimension": 6,
+    "direct_sum_decomposition": "F3*e0 + T4 + T4 + <e9+t>",
+    "equations": [
+      "x1+x3+x4=0",
+      "x2+x3-x4=0",
+      "x5+x7+x8=0",
+      "x6+x7-x8=0",
+      "x9-t=0"
+    ],
+    "independent_linear_constraints_mod_3": [
+      [0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+      [0, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0, 0, 1, 1, 2, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2]
+    ],
+    "quadratic_identity_on_every_codeword": "Q(r)=x0^2 mod 3",
+    "restricted_bilinear_Gram_mod_3": [
+      [1, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0]
+    ],
+    "ring": "E/(3)=F3[epsilon]/(epsilon^2)",
+    "tetracode_weight_histogram": {"0": 1, "3": 8}
+  },
+  "global_finite_volume_theorem": {
+    "Vinberg_first_finite_volume_gate_passes": false,
+    "Vinberg_search_status": "TERMINATED_BY_GLOBAL_CONGRUENCE_OBSTRUCTION",
+    "compact_chamber_exists": false,
+    "contradiction": "the complete extendable root set has no orthogonal pair",
+    "dimension": 10,
+    "finite_vertex_gate": "requires an elliptic rank-10 subdiagram; none exists",
+    "finite_volume_noncompact_chamber_exists": false,
+    "ideal_vertex_gate": "requires a componentwise-affine total rank-9 subdiagram; none exists",
+    "maximum_elliptic_rank": 1,
+    "maximum_parabolic_Coxeter_rank": 1,
+    "new_hyperbolic_example": false,
+    "ridge_angle_gate": "an integral norm-one Coxeter ridge requires B(r,s)=0 (angle pi/2)",
+    "ridge_existence_gate": "every finite-volume 10-polytope has codimension-two faces"
+  },
+  "primitive_reflection_root_gate": {
+    "every_extendable_root_has_norm": 1,
+    "every_extendable_root_has_x0_nonzero_mod_3": true,
+    "integrality_argument": "for primitive r, Q(r) divides every 2*r_i, hence Q(r) divides 2",
+    "norm_two_excluded_by_code_identity": true,
+    "only_possible_positive_norms": [1, 2],
+    "orthogonal_pair_count_in_the_complete_root_set": 0,
+    "orthogonal_pair_proof": "B(r,s)=x0(r)*x0(s) is nonzero mod 3 for any two norm-one roots"
+  },
+  "safe_symmetry_compression": {
+    "basepoint_and_oriented_initial_wall_stabilizer_order": 4608,
+    "completion_failures": [],
+    "every_computed_orbit_is_complete": true,
+    "orbit_representatives": [
+      {"height": 2, "orbit_size": 16, "representative": [-1, -1, -1, 1, 0, 0, 0, 0, 0, -1, 2]},
+      {"height": 3, "orbit_size": 384, "representative": [-1, -2, -1, 0, -1, -1, -1, 1, 0, 0, 3]},
+      {"height": 3, "orbit_size": 48, "representative": [-1, -2, -2, -1, 0, 0, 0, 0, 0, 0, 3]},
+      {"height": 3, "orbit_size": 16, "representative": [-1, -3, 0, 0, 0, 0, 0, 0, 0, 0, 3]},
+      {"height": 3, "orbit_size": 1, "representative": [-1, 0, 0, 0, 0, 0, 0, 0, 0, -3, 3]},
+      {"height": 1, "orbit_size": 1, "representative": [-1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]},
+      {"height": 3, "orbit_size": 64, "representative": [-2, -1, -1, 1, 0, -1, -1, 1, 0, 0, 3]},
+      {"height": 3, "orbit_size": 48, "representative": [-2, -2, -1, 0, -1, 0, 0, 0, 0, 0, 3]},
+      {"height": 2, "orbit_size": 1, "representative": [-2, 0, 0, 0, 0, 0, 0, 0, 0, -1, 2]},
+      {"height": 0, "orbit_size": 1, "representative": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+    ],
+    "stabilizer_structure": "(MonAut(T4) x MonAut(T4)) semidirect C2",
+    "tetracode_monomial_automorphism_order": 48,
+    "wall_orbit_count_through_height_three": 10,
+    "wall_orbit_size_histogram": {"1": 4, "16": 2, "384": 1, "48": 2, "64": 1},
+    "wall_orbits_by_height": {"0": 1, "1": 1, "2": 2, "3": 6}
+  },
+  "schema": "coxeter.act_real_cubic_h10_congruence_obstruction.v1",
+  "scope_and_nonclaims": {
+    "algebro_geometric_leverage_delta": 0,
+    "classification_of_all_ACT_antiunitary_classes": false,
+    "height_four_cdd_permitted": false,
+    "large_cdd_needed": false,
+    "proved_for_all_heights": true,
+    "proved_for_this_explicit_antiunitary_class_only": true,
+    "real_cubic_threefold_component_realization_proved": false
+  },
+  "source_lattice_and_convention": {
+    "ACT_lattice": "(3) + EE8 + EE8 + [[0,theta],[bar(theta),0]]",
+    "Hermitian_convention": "h(x,y)=x^T H conjugate(y), linear in x",
+    "antiunitary_involution": "reverse each EE8 block, swap the final pair, then conjugate",
+    "coordinate_order": ["x0", "T4a_0", "T4a_1", "T4a_2", "T4a_3", "T4b_0", "T4b_1", "T4b_2", "T4b_3", "x9", "t"],
+    "fixed_Z_lattice_Gram": "2*diag(1,1,1,1,1,1,1,1,1,1,-1)",
+    "fixed_lattice_signature": [10, 1]
+  },
+  "status": "PROVED_GLOBAL_INFINITE_COVOLUME_OBSTRUCTION_FOR_THIS_ANTIUNITARY_CLASS"
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-21",
+  "purpose": "Preserve README.md exactly before its public-facing rewrite",
+  "original": {
+    "path": "README.md",
+    "sha256": "8efe7a8c16b406fbc81680a9b3ce1eb3bd5c1d4c0a1cbd357a41e7301d9df92d",
+    "bytes": 14987
+  },
+  "archive": {
+    "path": "results/source_archive/public_readme_20261021/README_before_public_rewrite_20261021.md.gz",
+    "sha256": "239390c802a5c75d90010e41007f765ac7d21e00c3c656f3ddd3753fd1a838de",
+    "bytes": 5944,
+    "compression": "gzip -n"
+  },
+  "verification": {
+    "decoded_bytes_equal_original": true,
+    "method": "gzip -dc archive | cmp - README.md",
+    "exit_code": 0,
+    "performed_before_readme_replacement": true
+  },
+  "scope": "Metadata preservation only; no mathematical checker, import, build, Lean or TeX execution"
+}

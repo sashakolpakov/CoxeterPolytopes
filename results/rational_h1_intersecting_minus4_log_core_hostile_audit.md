@@ -1,0 +1,202 @@
+# Hostile audit of the minimal H1 rank-14 log core
+
+**Verdict (2026-08-10): PASS, with one scope warning repaired in the owner
+note.** The adjoint-core theorem, the sharp rank-14 example, the complete
+Mori alphabet, the standard-host Coxeter arithmetic, the exceptional-tail
+split, and both conditional consequences survive independent reconstruction.
+The note still does not prove an original-rank bound and does not construct
+an unbounded reflection-maximal family.
+
+The audit uses only cohomology, adjunction, explicit blowup coordinates,
+intersection matrices, and the primary source for the cone calculation. It
+does not invoke a reflective-lattice classification, ABSW, Prasad, or a
+polytope census.
+
+## 1. Adjoint-core proof
+
+For
+
+    B₁²=B₂²=-4,   B₁·B₂=2,   Z=B₁+B₂,
+
+adjunction gives
+
+    K·B₁=K·B₂=2,   Z²=-4,   K·Z=4,   p_a(Z)=1.
+
+With two distinct transverse points, Z is the two-component nodal
+genus-one cycle and its dualizing sheaf has degree zero on each rational
+component. The residue section is nowhere zero, so ω_Z is trivial.
+Rationality gives H¹(S,K_S)=0; in fact H⁰(S,K_S)=0 as well, so restriction
+identifies H⁰(S,K_S+Z) with H⁰(Z,ω_Z). The lifted unit has an effective zero
+divisor A disjoint from Z.
+
+The contraction step has no hidden fiber-ray assumption. If A is not nef,
+some irreducible curve E has A·E<0. Effectivity makes E a component and
+forces E²<0. Disjointness from Z gives K·E=A·E<0. Writing E²=-q, adjunction
+reads
+
+    K·E = 2p_a(E)-2+q < 0.
+
+Thus p_a(E)=0 and q=1: E is a smooth rational (-1)-curve disjoint from Z.
+Blowing it down preserves the boundary configuration and decreases Picard
+rank. Repetition terminates with K+Z nef.
+
+On the terminal surface,
+
+    (K+Z)² = (10-ρ_core) + 2·4 - 4 = 14-ρ_core.
+
+Nefness implies nonnegative square, hence ρ_core≤14. This part of the
+owner theorem is rigorous over the stated algebraically closed-field scope.
+
+## 2. SNC, tangency, and contraction scope
+
+The pair matrix and discrepancy system are
+
+    Q = [[-4,2],[2,-4]],   det(Q)=12,
+    Q(a₁,a₂)^t = (2,2)^t,   (a₁,a₂)=(-1,-1).
+
+When the two contacts are distinct and transverse, the exceptional divisor
+is SNC. The displayed resolution is log canonical and not klt. If the
+contacts coalesce to an ordinary tangency, the first blowup has discrepancy
+-1 and creates a triple point; the blowup of that triple point has
+discrepancy -2. The tangential contraction is therefore not log canonical.
+The transverse hypothesis in the owner theorem is substantive.
+
+The original sentence that negative definiteness “therefore” gives a normal
+surface contraction needed a category qualifier. Negative definiteness gives
+the contraction unconditionally over C in Grauert's complex-analytic
+category. An algebraic or projective, Q-Gorenstein contraction must be
+supplied before writing the algebraic discrepancy formula. The owner note
+now says exactly this. Its adjoint-core theorem and equality construction do
+not depend on contracting Z.
+
+The larger connected-boundary-packet argument also checks. Standard-host
+integrality makes every positive boundary intersection even; negative
+definiteness then forces every edge to have physical intersection exactly
+two. For Q=-2(2I-G), write x=(2I-G)⁻¹1. At a vertex minimizing x,
+
+    1 = 2x_v - Σ_{w~v}x_w ≤ (2-deg(v))x_v.
+
+Thus v is a leaf and x_v≥1. Equality can persist only for the two-vertex
+packet. Every connected packet with at least three vertices has some
+discrepancy below -1. No ADE or reflective-lattice list enters.
+
+## 3. Independent reconstruction of Li's equality carrier
+
+The cited primary source is Jennifer Li, *A cone conjecture for log
+Calabi–Yau surfaces*, arXiv:2207.12483v1, Section 5, case n=2. The audited
+source bytes are:
+
+    source archive  20991983ad5b4c4ab8fbd3340f3b438e91068f8e7e81cc851aaad9e2bc85d107
+    main TeX        da8ba69b8f96359f75fa95bfd5da44aa86f28dd98337f4f24030ed86cb0e4892
+
+Li starts on F₂. Let s be the negative section and f a fiber, so
+s²=-2, f²=0, and s·f=1. Her two boundary curves have class s+2f and
+meet twice. Choose q_i on the two boundaries on one common fiber, and take
+p₁=p₂=6 successive boundary blowups. In total-transform exceptional
+coordinates e_{ij}, the sixteen curves asserted in the owner note are
+
+    B_i = s+2f-Σ_{j=1}^6 e_{ij},
+    E_{i,j} = e_{ij}-e_{i,j+1}  (1≤j≤5),
+    E_{i,6} = e_{i,6},
+    F₁ = f-e_{1,1}-e_{2,1},   F₂=s.
+
+Direct multiplication gives
+
+    B_i²=-4,   B₁·B₂=2,
+    E_{i,j}²=-2 (j≤5),   E_{i,6}²=-1,
+    F₁²=F₂²=-2,
+    ρ=2+12=14,   K+B₁+B₂=0.
+
+Thus the physical negative alphabet count is exactly
+
+    2 + 12 + 2  =  two (-4), twelve (-2), two (-1).
+
+Li's displayed basis consists of the twelve exceptional curves and F₁,F₂.
+Her displayed dual basis is an effective combination of those curves and
+the two boundaries. Her elementary dual-basis lemma therefore proves that
+the cone of curves is generated by precisely the listed sixteen rays. Since
+each listed irreducible curve has negative square, every listed ray is
+extremal; distinct negative curves cannot be numerically proportional.
+Consequently this is a complete Mori alphabet, not merely a chosen
+configuration.
+
+There is a harmless notation typo in the v1 TeX: the concluding generator
+line for n=2 writes a singular F, while the immediately preceding basis and
+dual-basis displays explicitly use F₁ and F₂. The owner note correctly uses
+both curves.
+
+## 4. Host lattice, walls, and Coxeter replay
+
+The audit reconstructed the entire host, not only the square counts. In the
+rank-14 Néron–Severi basis, replace e_{1,6},e_{2,6} by B₁/2,B₂/2. This is a
+Z-basis for
+
+    M = <NS(S), B₁/2, B₂/2>,   q_M=2q_NS.
+
+The two half-boundaries give index four over the doubled unimodular
+Néron–Severi lattice. Exact row reduction returns
+
+    |det M| = 2¹⁴ / 4² = 2¹⁰.
+
+The wall-root split is exactly
+
+    4 + 12  =  four q_M-norm (-2), twelve q_M-norm (-4).
+
+All sixteen reflection matrices are integral in the displayed M-basis and
+preserve its Gram matrix. Among the 120 unordered wall pairs, the exact
+Coxeter-order counts are
+
+    order 2: 104,   order 3: 14,   order 4: 2.
+
+There are no unsupported normalized pairings. Together with Li's complete
+cone calculation and extremality of the negative curves, this verifies the
+owner claim that the full nef cone is the literal finite Coxeter chamber
+for the displayed walls. It does not verify or assert reflection maximality.
+
+## 5. Exceptional tail and conditional conclusions
+
+For any composite of m blowdowns disjoint from the boundary, total-transform
+exceptional coordinates give the orthogonal split
+
+    NS(S)=π*NS(S₀) ⊥ <-1>^m,
+    M(S)=M(S₀) ⊥ <-2>^m.
+
+For m successive free blowups, the physical tail classes are
+
+    e₁-e₂, e₂-e₃, …, e_{m-1}-e_m, e_m.
+
+Their q_M-norms are (-4,…,-4,-2). The first reflections swap adjacent
+coordinates and the last changes the sign of e_m. They generate the full
+signed-permutation group W(B_m)=O(<-2>^m). Hence there is no missing pure
+exceptional coordinate reflection; any maximality obstruction must mix the
+tail with the core or use global finite-volume geometry.
+
+Both conditional inequalities are correct:
+
+1. If an integral ample marking has an absolute bound
+   T=Σ_facets H·C, every exceptional component contributes a distinct
+   positive integer, so m≤T and ρ(S)≤14+T.
+2. If an independently certified rank-d(n+1) trace block descends
+   orthogonally through this particular contraction, it embeds in NS(S₀),
+   so d(n+1)≤ρ(S₀)≤14; for the rational field, n≤13.
+
+Neither premise follows from reflection maximality. In a literal full-nef
+carrier the exceptional components are themselves visible facet roots and
+normally have nonzero exceptional projection. The audit therefore confirms
+the owner's exact terminal scope: the note does not prove an original-rank
+bound, does not prove a uniform tail-length bound, and does not construct an
+unbounded reflection-maximal family.
+
+## 6. Reproducibility
+
+The independent total-transform reconstruction, all sixteen host
+reflections, the 120 Coxeter pairings, the pair discrepancy calculation,
+the source hashes, the conditional inequalities, and sampled symbolic
+B_m tails are frozen by:
+
+- scripts/audit_rational_h1_intersecting_minus4_log_core.py
+- data/enumerations/rational_h1_intersecting_minus4_log_core_hostile_audit.json
+- tests/test_rational_h1_intersecting_minus4_log_core_hostile.py
+
+The tail samples are regression checks for the closed formulas above, not
+a census and not the proof.

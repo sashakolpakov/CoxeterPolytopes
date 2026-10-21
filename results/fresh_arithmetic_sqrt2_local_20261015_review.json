@@ -1,0 +1,2557 @@
+{
+  "status": "PASS_INDEPENDENT_SQRT2_E7_E8_TRIANGLE_AND_AMBIENT_SCOPE_REVIEW",
+  "sources": {
+    "scripts/fresh_arithmetic_sqrt2_local_20261015.py": "52b4caab93e7211b4e6dac0a5bf48e71595ca656076021f1538964c281bebbe4",
+    "results/fresh_arithmetic_sqrt2_local_20261015.json": "0175a3323c0e621e9f215c93b9372a9f80be2b1007d4768b5cfaf6c96cc67f7f",
+    "results/fresh_arithmetic_sqrt2_local_20261015.md": "56903969d6add015c3b4aa1de8729a55624fd1b566cef0be62c067b626b3135c",
+    "scripts/fresh_arithmetic_sqrt2_local_20261015_review.py": "8ff0d9deb64063c0c9bb78a959035b34d0451f459ec7acf00ec5a3f2dfb097e2"
+  },
+  "arithmetic": "SymPy QQ(sqrt2) dot products and direct Gram determinants; exact rational interval signs; no producer imports.",
+  "field_guards": {
+    "phi_candidates": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12
+    ],
+    "phi_bound": "phi(m)^2>=m/2, hence m<=32",
+    "crossclass_square_norms": [
+      2,
+      8,
+      18
+    ],
+    "high_path_determinants": [
+      "0",
+      "(1-sqrt(2))/4"
+    ],
+    "ambient_extension_review": "E7 only subcritical singleton3 at node5; extra attached finite trees have rational Schur costs. E8 has no nonzero subcritical profile."
+  },
+  "records": [
+    {
+      "type": "E7",
+      "counts": {
+        "mixed34": {
+          "total": 2187,
+          "hyperbolic": 2184,
+          "conjugate_positive": 17,
+          "with_two_finite_replacements": 8
+        },
+        "pure6": {
+          "total": 128,
+          "hyperbolic": 127,
+          "conjugate_positive": 0,
+          "with_two_finite_replacements": 0
+        },
+        "pure8": {
+          "total": 128,
+          "hyperbolic": 127,
+          "conjugate_positive": 2,
+          "with_two_finite_replacements": 2
+        }
+      },
+      "profile_count": 19,
+      "covered_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "excluded_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "subcritical_nonzero_profiles": [
+        {
+          "kind": "mixed34",
+          "labels": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2
+          ],
+          "cost": [
+            "3/2",
+            "0"
+          ],
+          "relation": "below"
+        },
+        {
+          "kind": "mixed34",
+          "labels": [
+            3,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "cost": [
+            "2",
+            "0"
+          ],
+          "relation": "equal"
+        }
+      ],
+      "direct_gram_determinants": [
+        {
+          "profile": 0,
+          "full_determinant": [
+            "-10",
+            "-8"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-8",
+                "-8"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-12",
+                "-16"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-12",
+                "-24"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "0",
+                "-10"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "8",
+                "0"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-8",
+                "-10"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 1,
+          "full_determinant": [
+            "-28",
+            "-20"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-22",
+                "-16"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-30",
+                "-24"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-12",
+                "-10"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-8",
+                "-6"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-12",
+                "-10"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 2,
+          "full_determinant": [
+            "-25",
+            "-18"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-16",
+                "-12"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-14",
+                "-12"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "6",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "6",
+                "0"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-14",
+                "-12"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-16",
+                "-12"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 3,
+          "full_determinant": [
+            "-27",
+            "-20"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-20",
+                "-16"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-26",
+                "-24"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-18",
+                "-24"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "10",
+                "0"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "6",
+                "0"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-12",
+                "-10"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-18",
+                "-16"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 4,
+          "full_determinant": [
+            "-53",
+            "-38"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-38",
+                "-28"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-46",
+                "-36"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-24",
+                "-24"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "8",
+                "0"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-14",
+                "-12"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-30",
+                "-22"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-20",
+                "-16"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 5,
+          "full_determinant": [
+            "-50",
+            "-36"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-28",
+                "-24"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "12",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "12",
+                "0"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-28",
+                "-24"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-22",
+                "-18"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 6,
+          "full_determinant": [
+            "-65",
+            "-46"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-44",
+                "-32"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-46",
+                "-36"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-6",
+                "-12"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-34",
+                "-26"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 7,
+          "full_determinant": [
+            "-84",
+            "-60"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-54",
+                "-40"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-48",
+                "-40"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "18",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-18",
+                "-18"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-64",
+                "-48"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-58",
+                "-42"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-22",
+                "-18"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 8,
+          "full_determinant": [
+            "-22",
+            "-16"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-10",
+                "-8"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "4",
+                "0"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "8",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-12",
+                "-12"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-20",
+                "-16"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-16",
+                "-12"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "4",
+                "0"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 9,
+          "full_determinant": [
+            "-62",
+            "-44"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-38",
+                "-28"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-28",
+                "-24"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-28",
+                "-24"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-20",
+                "-16"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-36",
+                "-26"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-38",
+                "-28"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 10,
+          "full_determinant": [
+            "-79",
+            "-56"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-44",
+                "-32"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-18",
+                "-16"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "20",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-48",
+                "-42"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-74",
+                "-56"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-58",
+                "-42"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-20",
+                "-16"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 11,
+          "full_determinant": [
+            "-96",
+            "-68"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-56",
+                "-40"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-58",
+                "-42"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-78",
+                "-56"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-58",
+                "-42"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-30",
+                "-22"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 12,
+          "full_determinant": [
+            "-95",
+            "-68"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-54",
+                "-40"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-26",
+                "-24"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "14",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-24",
+                "-24"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-74",
+                "-56"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-66",
+                "-48"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-44",
+                "-34"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 13,
+          "full_determinant": [
+            "-44",
+            "-32"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-20",
+                "-16"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "8",
+                "0"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "16",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-24",
+                "-24"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-40",
+                "-32"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-18",
+                "-16"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 14,
+          "full_determinant": [
+            "-39",
+            "-28"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-10",
+                "-8"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "8",
+                "0"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-12",
+                "-16"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-36",
+                "-30"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-42",
+                "-32"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-30",
+                "-22"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-12",
+                "-10"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 15,
+          "full_determinant": [
+            "-11",
+            "-8"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "4",
+                "0"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-6",
+                "-6"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-10",
+                "-8"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-8",
+                "-6"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 16,
+          "full_determinant": [
+            "-16",
+            "-12"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "12",
+                "0"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "0",
+                "-16"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-12",
+                "-18"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-16",
+                "-16"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-12",
+                "-10"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-8",
+                "-10"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 17,
+          "full_determinant": [
+            "-2",
+            "-3"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "0",
+                "-4"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "4",
+                "-10"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "12",
+                "-18"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "10",
+                "-10"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "8",
+                "-4"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "6",
+                "0"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "2",
+                "-6"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        },
+        {
+          "profile": 18,
+          "full_determinant": [
+            "-4",
+            "-4"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "8",
+                "0"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "12",
+                "-6"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "16",
+                "-16"
+              ],
+              "old_determinant": "24"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "6",
+                "-12"
+              ],
+              "old_determinant": "15"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "0",
+                "-8"
+              ],
+              "old_determinant": "8"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-2",
+                "-4"
+              ],
+              "old_determinant": "3"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "2",
+                "-6"
+              ],
+              "old_determinant": "7"
+            }
+          ]
+        }
+      ],
+      "inverse_diagonal": [
+        "2",
+        "6",
+        "12",
+        "15/2",
+        "4",
+        "3/2",
+        "7/2"
+      ],
+      "inverse_strictly_positive": true
+    },
+    {
+      "type": "E8",
+      "counts": {
+        "mixed34": {
+          "total": 6561,
+          "hyperbolic": 6559,
+          "conjugate_positive": 12,
+          "with_two_finite_replacements": 6
+        },
+        "pure6": {
+          "total": 256,
+          "hyperbolic": 255,
+          "conjugate_positive": 0,
+          "with_two_finite_replacements": 0
+        },
+        "pure8": {
+          "total": 256,
+          "hyperbolic": 255,
+          "conjugate_positive": 1,
+          "with_two_finite_replacements": 1
+        }
+      },
+      "profile_count": 13,
+      "covered_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "excluded_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "subcritical_nonzero_profiles": [
+        {
+          "kind": "mixed34",
+          "labels": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2
+          ],
+          "cost": [
+            "2",
+            "0"
+          ],
+          "relation": "equal"
+        }
+      ],
+      "direct_gram_determinants": [
+        {
+          "profile": 0,
+          "full_determinant": [
+            "-8",
+            "-6"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-8",
+                "-8"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-16",
+                "-20"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-24",
+                "-36"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-10",
+                "-20"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "0",
+                "-8"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "6",
+                "0"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "1",
+                "0"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-10",
+                "-12"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 1,
+          "full_determinant": [
+            "-22",
+            "-16"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-20",
+                "-16"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-36",
+                "-32"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-48",
+                "-48"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-15",
+                "-20"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "8",
+                "0"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "4",
+                "0"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-10",
+                "-8"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-23",
+                "-20"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 2,
+          "full_determinant": [
+            "-48",
+            "-34"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-39",
+                "-28"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-60",
+                "-44"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-63",
+                "-48"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-26",
+                "-20"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "1",
+                "0"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-16",
+                "-12"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-28",
+                "-20"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-26",
+                "-20"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 3,
+          "full_determinant": [
+            "-42",
+            "-30"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-44",
+                "-36"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-36",
+                "-36"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "10",
+                "0"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "9",
+                "0"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-24",
+                "-20"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-27",
+                "-20"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-30",
+                "-24"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 4,
+          "full_determinant": [
+            "-76",
+            "-54"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-55",
+                "-40"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-68",
+                "-52"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-39",
+                "-36"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "9",
+                "0"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-21",
+                "-18"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-60",
+                "-44"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-53",
+                "-38"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-31",
+                "-24"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 5,
+          "full_determinant": [
+            "-82",
+            "-58"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-56",
+                "-40"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-60",
+                "-44"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-12",
+                "-12"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "1",
+                "0"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-50",
+                "-36"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-67",
+                "-48"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-50",
+                "-36"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-44",
+                "-32"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 6,
+          "full_determinant": [
+            "-110",
+            "-78"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-71",
+                "-52"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-64",
+                "-52"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "21",
+                "0"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-24",
+                "-24"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-96",
+                "-72"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-116",
+                "-84"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-84",
+                "-60"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-30",
+                "-24"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 7,
+          "full_determinant": [
+            "-28",
+            "-20"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-13",
+                "-10"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "4",
+                "0"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "10",
+                "0"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-16",
+                "-16"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-30",
+                "-24"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-32",
+                "-24"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-22",
+                "-16"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "4",
+                "0"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 8,
+          "full_determinant": [
+            "-124",
+            "-88"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-71",
+                "-52"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "-36",
+                "-32"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "16",
+                "0"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-32",
+                "-32"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-111",
+                "-84"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-132",
+                "-96"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-95",
+                "-68"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-58",
+                "-44"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 9,
+          "full_determinant": [
+            "-56",
+            "-40"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-26",
+                "-20"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "8",
+                "0"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "20",
+                "0"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-32",
+                "-32"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-60",
+                "-48"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-64",
+                "-48"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-44",
+                "-32"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-23",
+                "-20"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 10,
+          "full_determinant": [
+            "-48",
+            "-34"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "-13",
+                "-10"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "9",
+                "0"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "-15",
+                "-20"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-48",
+                "-40"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-63",
+                "-48"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-60",
+                "-44"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-39",
+                "-28"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "-15",
+                "-12"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 11,
+          "full_determinant": [
+            "-14",
+            "-10"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "1",
+                "0"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "5",
+                "0"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "-8",
+                "-8"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "-15",
+                "-12"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "-16",
+                "-12"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "-11",
+                "-8"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "2",
+                "0"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        },
+        {
+          "profile": 12,
+          "full_determinant": [
+            "-2",
+            "-2"
+          ],
+          "replacements": [
+            {
+              "removed": 0,
+              "determinant": [
+                "0",
+                "-4"
+              ],
+              "old_determinant": "4"
+            },
+            {
+              "removed": 1,
+              "determinant": [
+                "4",
+                "-12"
+              ],
+              "old_determinant": "14"
+            },
+            {
+              "removed": 2,
+              "determinant": [
+                "12",
+                "-24"
+              ],
+              "old_determinant": "30"
+            },
+            {
+              "removed": 3,
+              "determinant": [
+                "10",
+                "-15"
+              ],
+              "old_determinant": "20"
+            },
+            {
+              "removed": 4,
+              "determinant": [
+                "8",
+                "-8"
+              ],
+              "old_determinant": "12"
+            },
+            {
+              "removed": 5,
+              "determinant": [
+                "6",
+                "-3"
+              ],
+              "old_determinant": "6"
+            },
+            {
+              "removed": 6,
+              "determinant": [
+                "4",
+                "0"
+              ],
+              "old_determinant": "2"
+            },
+            {
+              "removed": 7,
+              "determinant": [
+                "2",
+                "-7"
+              ],
+              "old_determinant": "8"
+            }
+          ]
+        }
+      ],
+      "inverse_diagonal": [
+        "4",
+        "14",
+        "30",
+        "20",
+        "12",
+        "6",
+        "2",
+        "8"
+      ],
+      "inverse_strictly_positive": true
+    }
+  ],
+  "totals": {
+    "profiles": 9516,
+    "accepted": 32,
+    "direct_replacement_grams": 237
+  },
+  "scope": "Complete necessary finite-contact profiles, direct local-triangle checks, and proof review of the orthogonal-component extension; no quadrilateral or dimension theorem."
+}

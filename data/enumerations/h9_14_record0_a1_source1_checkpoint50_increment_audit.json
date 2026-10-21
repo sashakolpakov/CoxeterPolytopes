@@ -1,0 +1,112 @@
+{
+  "bounded_checkpoint_status": {
+    "cumulative_orbit_image_clause_count": 367836,
+    "excluded_local_core_orbits": 50,
+    "fixed_source_compact_coxeter_no_go": false,
+    "stopped_reason": "core_cutoff",
+    "terminal_solver_status": "OPTIMAL",
+    "theorem_certificate": false
+  },
+  "checks": {
+    "both_incremental_core_audits_pass": true,
+    "checkpoint_identity_is_record0_a1_source1": true,
+    "checkpoint_remains_OPTIMAL_core_cutoff_not_a_theorem": true,
+    "exactly_50_bounded_core_iterations_are_present": true,
+    "finite_volume_noncompact_is_not_claimed": true,
+    "independent_classical_Lanner_tables_pass": true
+  },
+  "independent_lanner_tables": {
+    "checks": {
+      "order_4_isomorphism_count": true,
+      "order_4_minimal_nonelliptic": true,
+      "order_4_placement_count": true,
+      "order_5_isomorphism_count": true,
+      "order_5_minimal_nonelliptic": true,
+      "order_5_placement_count": true
+    },
+    "orders": {
+      "4": {
+        "all_full_diagrams_nonelliptic": true,
+        "all_proper_subdiagrams_elliptic": true,
+        "classical_isomorphism_type_count": 9,
+        "labelled_placement_count": 108,
+        "placement_code_sha256": "6d785cee58fa5774f5ec921b42fdecccbce727fcf9aa10c657a886d73a8c9a28"
+      },
+      "5": {
+        "all_full_diagrams_nonelliptic": true,
+        "all_proper_subdiagrams_elliptic": true,
+        "classical_isomorphism_type_count": 5,
+        "labelled_placement_count": 420,
+        "placement_code_sha256": "3d28b51a3449e51dc5e95e7a518132ec1b937c29b32d7f320c56e04877a0ceeb"
+      }
+    }
+  },
+  "inputs": {
+    "base_independent_auditor": "scripts/audit_h9_14_record0_a1_source1_checkpoint48_core.py",
+    "base_independent_auditor_sha256": "ad3d8cde9dc9bda1af69b3f748cb19b030890df43a2123a025396f4722d91ef5",
+    "checkpoint": "data/enumerations/h9_14_record0_a1_source1_label_core_cegar_checkpoint_50_more.json",
+    "checkpoint_sha256": "5522deaca61bd37518ea59694263b359d3831db073351b7715366c8835265e9e"
+  },
+  "new_cores": [
+    {
+      "checks": {
+        "actual_and_cut_replays_match_archived_stages_and_die": true,
+        "all_actual_vertices_have_rank_nine": true,
+        "complete_generator_orbit_hash_matches": true,
+        "complete_generator_orbit_size_matches": true,
+        "every_orbit_addition_remains_an_independent_A5": true,
+        "face_cut_has_same_projected_semantics": true,
+        "facet_complements_match_actual_vertices": true,
+        "fixed_A4_occurs_once": true,
+        "independent_state_counts_match": true,
+        "remaining_supports_are_exactly_stored_independent_A5s": true,
+        "representative_digest_matches": true,
+        "stabilizer_order_matches": true
+      },
+      "core_stabilizer_order": 240,
+      "full_source_orbit_sha256": "b8c5321b73ab5716d056369fad95d4b5d62e832c044fe8b637d8feb3b37fd001",
+      "full_source_orbit_size": 1008,
+      "human_core_number": 49,
+      "independent_compatible_extension_counts": [108, 1542, 76, 56],
+      "independent_passing_state_counts": [108, 110, 16, 0],
+      "iteration": 48,
+      "local_actual_vertex_count": 4,
+      "representative_digest": "030da2f5300465070a04f77c382eb641ac82e6dbf1bac2276c56fdbadd29bcae",
+      "solver_branches": 179889,
+      "solver_conflicts": 21602,
+      "solver_wall_time_seconds": 40.141902,
+      "support_profile": "fixed A4 + 3 A5 supports"
+    },
+    {
+      "checks": {
+        "actual_and_cut_replays_match_archived_stages_and_die": true,
+        "all_actual_vertices_have_rank_nine": true,
+        "complete_generator_orbit_hash_matches": true,
+        "complete_generator_orbit_size_matches": true,
+        "every_orbit_addition_remains_an_independent_A5": true,
+        "face_cut_has_same_projected_semantics": true,
+        "facet_complements_match_actual_vertices": true,
+        "fixed_A4_occurs_once": true,
+        "independent_state_counts_match": true,
+        "remaining_supports_are_exactly_stored_independent_A5s": true,
+        "representative_digest_matches": true,
+        "stabilizer_order_matches": true
+      },
+      "core_stabilizer_order": 120,
+      "full_source_orbit_sha256": "5538a6b0026f050a418636cc4543b64c75122a11d11390f4c2e70c8fab9db126",
+      "full_source_orbit_size": 2016,
+      "human_core_number": 50,
+      "independent_compatible_extension_counts": [108, 1542, 1282, 32, 73],
+      "independent_passing_state_counts": [108, 350, 61, 17, 0],
+      "iteration": 49,
+      "local_actual_vertex_count": 2,
+      "representative_digest": "14161bd66d1218225e6c55aab23b50c03cd9fb61dd407857ec7706509def0659",
+      "solver_branches": 1524589,
+      "solver_conflicts": 231472,
+      "solver_wall_time_seconds": 285.209996,
+      "support_profile": "fixed A4 + 4 A5 supports"
+    }
+  ],
+  "schema": "coxeter.h9_14.record0_a1_source1.checkpoint50_increment_audit.v1",
+  "scope": "Independent proof for newly appended iterations 48 and 49 and their complete source-1 orbits. The 50-core checkpoint remains bounded and is not a fixed-source no-go theorem."
+}

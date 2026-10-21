@@ -1,0 +1,26 @@
+MODEL 32054 variables 60763 faceprofiles {'triangle_families': 196, 'triangle_added_nonpath_extensions': 33, 'triangle_marked_contexts': 541151, 'quad_rows': 1979, 'quad_common_contexts': 227408}
+SECONDARY 0 sum 4367.524555685312 cuts 14538 maximum 54.17889915080729 discounts [-0.          0.41666667]
+SECONDARY 1 sum 4436.110595979003 cuts 16300 maximum 61.43502603244076 discounts [-0.          0.54192439]
+SECONDARY 2 sum 4462.124505490349 cuts 17471 maximum 45.3011986560507 discounts [-0.          0.61072284]
+SECONDARY 3 sum 4483.248338407147 cuts 17818 maximum 37.03593177773337 discounts [-0.          0.63848793]
+SECONDARY 4 sum 4493.343965319613 cuts 17929 maximum 36.76247729193478 discounts [-0.          0.63220097]
+SECONDARY 5 sum 4494.27371076791 cuts 17962 maximum 35.24928082123443 discounts [-0.          0.63492488]
+SECONDARY 6 sum 4494.4963828644795 cuts 17968 maximum 35.23064603984297 discounts [-0.          0.63566323]
+SECONDARY 7 sum 4494.496382864473 cuts 17971 maximum 35.057661509964674 discounts [-0.          0.63566323]
+SECONDARY 8 sum 4494.50406452275 cuts 17972 maximum 35.000000000000476 discounts [-0.          0.63592853]
+Traceback (most recent call last):
+  File "/Users/sasha/CoxeterPolytopes/scripts/fresh_sqrt5_marked_h3_center_secondary_20261016.py", line 145, in <module>
+    result=json.loads(json.dumps(run(saved),default=str))
+                                 ~~~^^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/fresh_sqrt5_marked_h3_center_secondary_20261016.py", line 135, in run
+    result=M.run(saved)
+  File "/Users/sasha/CoxeterPolytopes/scripts/fresh_sqrt5_marked_h3_center_cross_20261016.py", line 617, in run
+    cert,steps=solve(obligations)if saved is None else(saved['certificate'],saved['steps'])
+               ~~~~~^^^^^^^^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/fresh_sqrt5_marked_h3_center_secondary_20261016.py", line 120, in solve
+    x,basis_record=exact_basis(h,rows,rhs,n);fronts=M.oracle(x[:M.N],True)
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/fresh_sqrt5_marked_h3_center_secondary_20261016.py", line 68, in exact_basis
+    for j,k in positions.items():x[j]=F(str(solution[k,0]))
+               ~~~~~~~~~~~~~~~^^
+KeyboardInterrupt

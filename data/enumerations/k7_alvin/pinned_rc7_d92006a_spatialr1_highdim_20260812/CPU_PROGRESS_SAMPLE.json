@@ -1,0 +1,54 @@
+{
+  "schema": "coxeter.k7_alvin.cpu_progress.v1",
+  "sample_1_started_at_utc": "2026-08-12T13:55:49.649Z",
+  "sample_2_started_at_utc": "2026-08-12T13:57:14.543Z",
+  "timestamp_span_seconds": 84.894,
+  "requested_minimum_wait_seconds": 60,
+  "clock_ticks_per_second": 100,
+  "method": "Read-only `docker exec NAME cat /proc/1/stat`; fields 14 and 15 are cumulative user and system CPU clock ticks for the AlVin PID 1. No process stream or filesystem was altered.",
+  "cases": {
+    "ramified-7-h22": {
+      "container_id": "808c15ff8342",
+      "sample_1": {
+        "state": "R",
+        "user_ticks": 1304146,
+        "system_ticks": 27390,
+        "thread_count": 4
+      },
+      "sample_2": {
+        "state": "R",
+        "user_ticks": 1318111,
+        "system_ticks": 27720,
+        "thread_count": 4
+      },
+      "user_tick_delta": 13965,
+      "system_tick_delta": 330,
+      "total_tick_delta": 14295,
+      "cpu_seconds_delta": 142.95,
+      "average_cpu_percent_over_timestamp_span": 168.3865,
+      "forward_cpu_progress": true
+    },
+    "inert-2-h22": {
+      "container_id": "73bcfb6f68e0",
+      "sample_1": {
+        "state": "R",
+        "user_ticks": 1378024,
+        "system_ticks": 25172,
+        "thread_count": 4
+      },
+      "sample_2": {
+        "state": "R",
+        "user_ticks": 1393051,
+        "system_ticks": 25475,
+        "thread_count": 4
+      },
+      "user_tick_delta": 15027,
+      "system_tick_delta": 303,
+      "total_tick_delta": 15330,
+      "cpu_seconds_delta": 153.30,
+      "average_cpu_percent_over_timestamp_span": 180.5781,
+      "forward_cpu_progress": true
+    }
+  },
+  "conclusion": "Both H22 AlVin processes accumulated substantially more than 60 CPU-seconds during a sample window containing the requested 60-second wait. They are actively advancing, not sleeping or deadlocked. Both live jobs were left untouched."
+}

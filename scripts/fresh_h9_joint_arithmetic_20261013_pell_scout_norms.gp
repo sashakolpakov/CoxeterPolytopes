@@ -1,0 +1,25 @@
+\\ Finite exploratory norm-solver replay: these are not certificates until Python rechecks them.
+default(parisizemax,1000000000);
+f=y^3-3*y-1;t=Mod(y,f);
+delta=Mod((3520)+(-1390)*y+(-180)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=0 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((3620)+(-1790)*y+(0)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=4 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((5070)+(-1160)*y+(-740)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=7 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((4780)+(-1320)*y+(-560)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=12 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((5850)+(-1500)*y+(-780)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=20 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((5920)+(-1560)*y+(-770)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=21 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((5440)+(-1930)*y+(-440)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=26 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((4750)+(-2800)*y+(220)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=28 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((7600)+(-2170)*y+(-920)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=30 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((5820)+(-3760)*y+(430)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=33 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));
+delta=Mod((6200)+(-3870)*y+(380)*y^2,f);rn=rnfisnorminit(f,x^2-t*delta,1);sol=rnfisnorm(rn,-5*t);a=polcoef(lift(sol[1]),0)/t;b=polcoef(lift(sol[1]),1);
+print("index=35 residual=",sol[2]," x_den=",vector(3,k,denominator(polcoef(lift(a),k-1)))," t_den=",vector(3,k,denominator(polcoef(lift(b),k-1)))," coefficient_text_length=",#Str(lift(a)));

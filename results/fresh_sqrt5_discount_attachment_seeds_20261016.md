@@ -1,0 +1,7 @@
+The [affected-frontier screen](fresh_sqrt5_adjacent_discount_frontier_20261016.md) produces 6,848 literal first-white extensions which can still need payment under the adjacent-3 discount. Exact marked graph isomorphism reduces them to **5,048 states: 3,010 finite and 2,038 symbolic-dotted**.
+
+Every map preserves the four black nodes, both opposite pairs and every edge label. The quotient checks all eight allowed black permutations and all compatible white bijections. A dotted label remains a symbolic distance; the quotient neither solves that parameter nor equates distinct dotted distances. Each original parent/contact recipe has a saved literal bijection to its representative.
+
+The result also exports 37 immediate singular stopping states: the 35 sealed affected cores and the no-further-contact choices for the two singular extensible cores 4446 and 4448. Payment must include every allowed retained-facet mark and common orthogonal spectator. These are useful tests before undertaking a substantially larger attachment queue.
+
+The [script](../scripts/fresh_sqrt5_discount_attachment_seeds_20261016.py) and [result](fresh_sqrt5_discount_attachment_seeds_20261016.json) passed generation and a fresh saved replay. The implementation reuses the frozen separate literal-isomorphism verifier, with no new field-arithmetic filtering. This is a quotient and seed export only: no complete attachment closure, final weight feasibility or dimension bound is asserted.

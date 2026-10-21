@@ -1,0 +1,172 @@
+{
+  "all_checks_pass": true,
+  "archived_divisor_action": {
+    "action_characteristic_polynomial": "(lambda-1)^13*(lambda+1)",
+    "fixed_rank_determinant": [
+      13,
+      16
+    ],
+    "fixed_smith": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      4
+    ],
+    "lattice": "U+E8(-1)+A1(-1)^4",
+    "rank_signature_determinant": [
+      14,
+      [
+        1,
+        13
+      ],
+      -16
+    ]
+  },
+  "brandhorst_hofmann_classification": {
+    "archive_version": "2.1",
+    "citation": "Brandhorst--Hofmann, Finite subgroups of automorphisms of K3 surfaces",
+    "complete_row_count": 79,
+    "doi": "10.5281/zenodo.10410278",
+    "full_external_scan_command": "python3 scripts/certify_roulleau_r14_c2t_pure_order4_obstruction.py --brandhorst-hofmann-zip /path/to/K3Groups.zip --check-archive",
+    "full_external_scan_replay_available": true,
+    "license": "CC-BY-4.0",
+    "member": "K3Groups/results/purely_ns/order04.txt",
+    "member_sha256": "d5a61603c1539278e8411e188656c9417662336ff4282b714e939c40d38c94e8",
+    "surviving_rows": [
+      {
+        "character_r_l_m": [
+          13,
+          3,
+          3
+        ],
+        "classification_id": "0.4.2.9",
+        "fixed_determinant": 64,
+        "fixed_smith": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4,
+          4
+        ],
+        "full_rank_containment_gate": {
+          "containment_possible": false,
+          "det_F_over_det_S": "1/4",
+          "is_nonnegative_integer_square": false,
+          "required_identity": "det(F)=[S:F]^2*det(S)"
+        },
+        "lefschetz_alpha": 2,
+        "multiplicity_in_complete_order4_file": 1,
+        "row_one_based": 24,
+        "row_sha256_with_newline": "17f47b1c67d9fd724b8af3fd15b29a71571213b8fda90b953d8c21dbb06994d0"
+      },
+      {
+        "character_r_l_m": [
+          13,
+          7,
+          1
+        ],
+        "classification_id": "0.4.0.2",
+        "fixed_determinant": 256,
+        "fixed_smith": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4
+        ],
+        "full_rank_containment_gate": {
+          "containment_possible": false,
+          "det_F_over_det_S": "1/16",
+          "is_nonnegative_integer_square": false,
+          "required_identity": "det(F)=[S:F]^2*det(S)"
+        },
+        "lefschetz_alpha": 1,
+        "multiplicity_in_complete_order4_file": 1,
+        "row_one_based": 2,
+        "row_sha256_with_newline": "b4f4f40fb706258e76568063140df8824a5686f63f386d359eebee46d1951e18"
+      }
+    ],
+    "zip_md5": "143047b9cb76f4ad4cb2aadd5959d879",
+    "zip_sha256": "c1272db2c0fe2ae0a788aed7745201fccd2a1337b6c2d85555880c434cab4d7c"
+  },
+  "case_id": "R14-UE8A1x4-C2T-H12-23",
+  "determinant_obstruction": {
+    "archived_fixed_determinant": 16,
+    "both_index_square_tests_fail": true,
+    "classified_fixed_determinants": [
+      64,
+      256
+    ],
+    "logic": "An exact-fixed lift fixes every vector of F and has global fixed rank 13. Thus F is a finite-index sublattice of S(g), so det(F)=[S(g):F]^2 det(S(g))."
+  },
+  "hyperbolic_polytope_handoff": {
+    "bad_edges": 0,
+    "bad_parabolic_neighborhoods": 0,
+    "classification": "finite_volume_noncompact",
+    "cusps": 17,
+    "dimension": 12,
+    "elliptic_edges": 2308,
+    "facets": 23,
+    "finite_vertices": 320,
+    "section_to_odd_unimodular_full_group_index": 8320
+  },
+  "payload_sha256": "2bbb1f7913c56bdaeee9246908dae2e9a58b7dc5288856ac3c3a79a81150da51",
+  "pure_order4_lefschetz_gate": {
+    "fixed_rank_r": 13,
+    "relations": [
+      "r+l+2m=22",
+      "4*alpha=r-l-2"
+    ],
+    "surviving_r_l_m_alpha": [
+      [
+        13,
+        3,
+        3,
+        2
+      ],
+      [
+        13,
+        7,
+        1,
+        1
+      ]
+    ]
+  },
+  "schema": "coxeter.roulleau_r14_c2t.pure_order4_obstruction.v1",
+  "scope": {
+    "abstract_hyperbolic_polytope_invalidated": false,
+    "exact_rank13_fixed_pure_order4_lift_ruled_out": true,
+    "higher_order_lift_ruled_out": false,
+    "pure_order4_lift_with_enlarged_global_fixed_lattice_ruled_out": false,
+    "route_status": "retired_by_complete_classification_and_determinant_gate",
+    "special_period_search_needed": false,
+    "symplectic_square_order4_lift_ruled_out": false
+  },
+  "source_file_sha256": "5c39aa26fc4e2c7f2af5bb08815532ec9cce7b2222279c65f257e383f356f4ef",
+  "theorem": "The archived R14 transposition defining the finite-volume H12/23 section has no purely non-symplectic order-four K3 automorphism lift whose global fixed lattice has rank 13"
+}

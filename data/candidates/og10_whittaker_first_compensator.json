@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1.0",
+  "certificate_kind": "og10_hilbert_whittaker_complete_minimal_off_slice_shell",
+  "status": "verified",
+  "verification_date": "2026-08-05",
+  "field": "Q(sqrt(5))",
+  "ring": "Z[phi]",
+  "discriminant_module": {
+    "decomposition": "O/(1+4*phi) + O/(2) + O/(2)_aux",
+    "order": 176,
+    "coordinates": "(t,x,y) in F_11 x O/(2) x O/(2)",
+    "off_slice_criterion": "y != 0",
+    "sqrt5_Q_mod_O": "t^2*(phi-4)/11 + phi*x^2/4 - phi^2*y^2/4"
+  },
+  "complete_discriminant_enumeration": {
+    "off_slice_class_count": 132,
+    "distinct_index_residue_count_mod_44": 54,
+    "allowed_element_norm_residues_mod_44": [
+      0,
+      11,
+      33
+    ],
+    "excluded_smaller_negative_element_norm_magnitudes": [
+      11,
+      33,
+      44,
+      55,
+      77,
+      88
+    ],
+    "class_number_one_certificate": "Minkowski bound sqrt(5)/2 < 2",
+    "unit_orbit_modulus": 44,
+    "order_of_phi_squared_mod_44": 15
+  },
+  "minimal_shell": {
+    "w_equals_44_sqrt5_m": "-3+9*phi",
+    "w_norm": -99,
+    "index": "(21+3*phi)/220",
+    "index_norm": "9/880",
+    "representative_cosets": [
+      {
+        "t_mod_11": 4,
+        "x_mod_2": "0",
+        "y_mod_2": "1"
+      },
+      {
+        "t_mod_11": 4,
+        "x_mod_2": "phi",
+        "y_mod_2": "phi"
+      }
+    ],
+    "divisor_relevant_unit_orbit_count": 2,
+    "full_phi_orbit_size_including_mu_sign": 30
+  },
+  "poincare_coefficient_matrix": {
+    "indices": [
+      "target_(phi/sqrt5,0)",
+      "minimal_orbit_A",
+      "minimal_orbit_B"
+    ],
+    "size": 3,
+    "similarity_scaling": "s_i=N(m_i)^(5/2)",
+    "nonzero_component_center_multiplicity_upper": 2,
+    "compact_exact_bounds": {
+      "target_diagonal_error_upper": "68/125",
+      "minimal_diagonal_error_upper": "1/31250",
+      "target_minimal_cross_upper": "1/125",
+      "minimal_minimal_cross_upper": "1/31250",
+      "target_row_dominance_margin_lower": "441/1000",
+      "minimal_row_dominance_margin_lower": "124/125"
+    },
+    "verified_conclusion": "strict row diagonal dominance after similarity scaling; matrix invertible"
+  },
+  "bounded_conclusion": "Modulo tautological unit/sign relations, no weakly holomorphic principal part supported on the target and the complete globally minimal norm-9/880 off-slice shell has a nonzero target coefficient.",
+  "nonclaims": [
+    "No completeness is claimed beyond the globally minimal off-slice shell.",
+    "Larger-index and multi-shell compensator kernels are not excluded.",
+    "Reflection index, finite volume, and compactness remain undecided."
+  ],
+  "reproduction": {
+    "command": "PYTHONPATH=src:. python3 scripts/certify_og10_whittaker_first_compensator.py",
+    "test_command": "PYTHONPATH=src:. python3 -m pytest -q tests/test_og10_whittaker_first_compensator.py",
+    "python_flint_requirement": ">=0.9",
+    "arb_precision_bits": 180
+  },
+  "digests": {
+    "executable_sha256": "99e3ec8548de092a018ecbc87dd90ee15588b6ff4a3fae93f6c44f3991ddf954",
+    "report_sha256": "caf49619b7148becaf15639e7f4cbcc6f536a51c151d992e246dcb176c1b6859",
+    "test_sha256": "75fce81ff8d380fb0fb5eed336bab407780a65613265bc691253983456549b63",
+    "certificate_stdout_sha256": "bab78ae8dd3cad5f6416344587de7c2a524a8f2c836e8eb25aff766d9bba0360"
+  }
+}

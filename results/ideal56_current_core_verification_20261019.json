@@ -1,0 +1,82 @@
+{
+  "status": "DEFERRED_RESOURCE_GATE",
+  "manuscript": "ideal6",
+  "mode": "core",
+  "created_utc": "2026-10-19T14:18:51.002512+00:00",
+  "catalogue_sha256": "8a69a17c7bc74cefe2e5d7eb6332ff42e08293b4af23dfa1e4a90467f9c96987",
+  "manuscript_sha256": "782cea54d88970b70e1d6692934f48f5727a46b262bf6b49e342bd9cd68493ad",
+  "runner_sha256": "bdde7a808adb2f5c352e6e9ceb95a660ad02248b8158cac3830d90e0343ec7c8",
+  "jobs": [
+    {
+      "id": "ideal6_carrier",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Exact227-facet,old3859-vertex and3/40-density arithmetic.",
+      "exit_code": 0,
+      "elapsed_seconds": 0.115,
+      "stdout_sha256": "7e5d08366454d4d8e74644a0398955c28bba12c0c3d5a07108369612249e0da9",
+      "stdout_bytes": 721,
+      "source_sha256": "1c67b24b83944ae6cc4e3606458db76246a4317a4dceccfea8c4fb7fafa308a5",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"status\": \"PASS\", \"verify\": true, \"ideal5\": {\"facets\": 56, \"vertices\": 170}, \"ideal6\": {\"facets\": 227, \"vertices\": 3859}, \"mixed_six_fraction\": \"3/40\"}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/fresh_right_angled_ideal6_carrier_propagation_20261018.py\", \"--verify\"], \"elapsed_seconds\": 0.06, \"peak_process_tree_rss_bytes\": 54362112, \"initial_resources\": {\"free_disk_gib\": 187.18, \"available_memory_gib\": 6.15}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 153, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"1c67b24b83944ae6cc4e3606458db76246a4317a4dceccfea8c4fb7fafa308a5\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "ideal6_transport",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "88 rational identity frames and exact sign moments; actual-edge geometry written.",
+      "exit_code": 0,
+      "elapsed_seconds": 0.21,
+      "stdout_sha256": "bb911cd94feda1e8a19fd8eb35bd532a8ff784a651c714a709afdc33b82b75e4",
+      "stdout_bytes": 750,
+      "source_sha256": "9f61df2c5561b0e5a577703b8cab9292fe024fc92f1b949adc080d2d348cc41a",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "{\"status\": \"PASS_IDEAL_RA6_CUSP_TRANSPORT_MODEL_AND_MOMENTS\", \"frames\": 88, \"vertex_lower\": 4425, \"peak_rss_bytes\": 26853376, \"resources\": {\"free_disk_gib\": 187.18, \"available_memory_gib\": 6.14}}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/fresh_ideal_ra6_cusp_transport_20261018.py\", \"--verify\"], \"elapsed_seconds\": 0.158, \"peak_process_tree_rss_bytes\": 55853056, \"initial_resources\": {\"free_disk_gib\": 187.18, \"available_memory_gib\": 6.15}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 196, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"9f61df2c5561b0e5a577703b8cab9292fe024fc92f1b949adc080d2d348cc41a\", \"lock_owner\": \"checker\"}\n"
+    },
+    {
+      "id": "ideal6_sharp",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Exact sharp reciprocal103/132 and4462-vertex arithmetic; maximizer proof written.",
+      "exit_code": 0,
+      "elapsed_seconds": 0.121,
+      "stdout_sha256": "ba600c7574e9810f9e7b51f35462381c0610c36915f970d13bb5ed3e493af8fa",
+      "stdout_bytes": 609,
+      "source_sha256": "4fa86bbf9185ff1eab07ebf557938608f3eef8a585f424b19af82c46d61e1740",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "PASS_IDEAL_RA6_SHARP_RECIPROCAL 103/132 4462 26787840\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/fresh_ideal_ra6_sharp_reciprocal_20261018.py\", \"--verify\"], \"elapsed_seconds\": 0.068, \"peak_process_tree_rss_bytes\": 55672832, \"initial_resources\": {\"free_disk_gib\": 187.18, \"available_memory_gib\": 6.14}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 54, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"4fa86bbf9185ff1eab07ebf557938608f3eef8a585f424b19af82c46d61e1740\", \"lock_owner\": \"checker\"}\n"
+    },
+    {
+      "id": "CoxeterProofs.RightAngledElevenVertexCounts",
+      "kind": "conditional_lean",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "The current successor module compiles and passes its separate printed-axiom audit:37/25,63/211,275,272V>=6039F,6106,47I5<4N5 and248I6<15N6. Actual geometric/count structures and published minimum/average premises are explicit; no full geometric formalization.",
+      "exit_code": 0,
+      "elapsed_seconds": 0.716,
+      "stdout_sha256": "674e52f73b4a88481856d39c72e2a9450dc6509a8ed1a1d6d175800db22043e1",
+      "stdout_bytes": 2755,
+      "source_sha256": "79846f2cf509e7262ca109e0a7ea2b79fa8cc421df772e9b77dc77116823e04d",
+      "execution_runner_sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+      "printed_axiom_audit_requested": true,
+      "output": "'CoxeterProofs.RightAngledElevenVertexCounts.carrier_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CoxeterProofs.RightAngledElevenVertexCounts.ideal5_counts' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CoxeterProofs.RightAngledElevenVertexCounts.sum_ideal5_facet_minima' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CoxeterProofs.RightAngledElevenVertexCounts.ideal6_counts' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CoxeterProofs.RightAngledElevenVertexCounts.exact_rounding' does not depend on any axioms\n'CoxeterProofs.RightAngledElevenVertexCounts.sum_ideal6_facet_minima' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CoxeterProofs.RightAngledElevenVertexCounts.mixed_density' depends on axioms: [propext, Classical.choice, Quot.sound]\n{\"status\": \"KERNEL_AXIOM_AUDIT\", \"module\": \"CoxeterProofs.RightAngledElevenVertexCounts\", \"inputs\": {\"source_sha256\": \"79846f2cf509e7262ca109e0a7ea2b79fa8cc421df772e9b77dc77116823e04d\", \"dependency_olean_sha256\": {\"CoxeterProofs.RightAngledCuspCapacity\": \"4f5039fbf5a2ba936f2309cf1813d75ac18a82cff8b90ed0dc4819a234d59764\", \"CoxeterProofs.RightAngledCuspDefect\": \"2650e92ce92ce42e442d905b9608cc1cba80343726988f33ed01505855f40788\", \"CoxeterProofs.RightAngledCuspPropagation\": \"33891aead69a7bc8c222df1bf7a2cb66562e017eb9704a00aac60488ac959910\"}, \"compiler\": {\"lean-toolchain\": \"2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273\", \"lakefile.toml\": \"73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7\", \"lake-manifest.json\": \"31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395\", \"compiler_files\": {\"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean\": \"1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib\": \"c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib\": \"e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib\": \"be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182\"}, \"environment\": {\"ELAN_TOOLCHAIN\": \"\", \"LEAN_PATH\": \"\", \"LEAN_SRC_PATH\": \"\"}}, \"memory_cap_mib\": 2048, \"threads\": 1}, \"stdout_sha256\": \"167968fe7a9ef428a8cf991e72102874d7d94749be66727fdb211ba44dfc36d9\", \"output_bytes\": 830, \"elapsed_seconds\": 0.49, \"resources\": {\"free_disk_gib\": 187.18, \"available_memory_gib\": 6.11}}\n{\"status\": \"PASS_SEQUENTIAL_MODULE_CHECK\", \"newly_capped_modules\": [], \"legacy_cached_uncapped_modules\": [], \"all_dependencies_have_capped_ledger\": true}\n"
+    },
+    {
+      "id": "ideal6-pdf",
+      "kind": "typesetting",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "Fresh PDF compilation; preserves published PDF and ledger.",
+      "exit_code": 1,
+      "elapsed_seconds": 0.045,
+      "stdout_sha256": "82ef5b613a940ab1ab7a1c221a9602c8c2c1a2919468924c5554be11773bb8b8",
+      "stdout_bytes": 685,
+      "source_sha256": "782cea54d88970b70e1d6692934f48f5727a46b262bf6b49e342bd9cd68493ad",
+      "execution_runner_sha256": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/build_illustrated_ra_manuscript_20261018.py\", line 149, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/build_illustrated_ra_manuscript_20261018.py\", line 75, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=187.2GiB memory=6.0GiB; require 40/6GiB\n"
+    }
+  ],
+  "planned_jobs": 5,
+  "remaining_formal_gaps": "Actual cusp, carrier bridge, eleven-vertex equality exclusion, complete face-list realization and reciprocal transport geometry remain reviewed written internal premises.",
+  "assumption_document": "docs/manuscript_assumptions.md",
+  "assumption_document_sha256": "650d3253bbc2f965c2d1e3b695b2ca90b8864ce9dd131123a1cb0a83072ae83f",
+  "end_to_end_geometric_lean_proof_claimed": false
+}

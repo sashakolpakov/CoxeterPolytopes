@@ -1,0 +1,139 @@
+{
+  "candidate_coordinates": [
+    {"a": "1", "b": "0"},
+    {"a": "0", "b": "1"},
+    {"a": "2", "b": "0"},
+    {"a": "1", "b": "1"},
+    {"a": "2", "b": "1"},
+    {"a": "1", "b": "2"}
+  ],
+  "certificate_sha256": "e644e073dacd4c691821409920c723f8c2edebc2ee7c9d751cb4b2059d0950c2",
+  "claim": "The next admissible control level x=1+2sqrt(2) has exactly four integral norm-equation solutions. Every solution is cut off by an earlier simple wall, so this shell adds no simple root and does not supply the targeted edge's missing endpoint.",
+  "completed_through_control_coordinate": {"a": "1", "b": "2"},
+  "endpoint_completion_criterion": {
+    "finite": "A second accepted simple root r for which the principal Gram matrix on E union {r} is positive definite of rank nine.",
+    "ideal": "A full componentwise-affine zero-neighbourhood of total parabolic rank eight incident to E, checked only against the complete simple-root list.",
+    "terminal": "After simple-root completeness, E must have exactly two distinct finite-or-ideal endpoints; every other elliptic rank-eight edge and every parabolic neighbourhood must pass the same literal Vinberg audit."
+  },
+  "global_diagram_audit": "not_run_for_the_incomplete_34_wall_prefix",
+  "kind": "silver_k3_intrinsic_norm_two_vinberg_empty_shell",
+  "new_level": {
+    "accepted_root_count": 0,
+    "accepted_roots_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "alphabet": {
+      "coefficient_bound": 11,
+      "conjugate_upper": 2,
+      "identity_upper": 9,
+      "values": [
+        {"a": "0", "b": "0"},
+        {"a": "1", "b": "0"},
+        {"a": "1", "b": "1"},
+        {"a": "2", "b": "1"},
+        {"a": "2", "b": "2"},
+        {"a": "3", "b": "2"},
+        {"a": "4", "b": "3"}
+      ]
+    },
+    "control_coordinate": {"a": "1", "b": "2"},
+    "exact_weight_solutions": 4,
+    "height": {"a": "17/2", "b": "13/2"},
+    "nonintegral_reconstructions": 0,
+    "previous_wall_rejection_witnesses": [
+      {
+        "blocking_wall_indices": [9],
+        "root": [
+          {"a": "1", "b": "2"},
+          {"a": "3", "b": "3"},
+          {"a": "7", "b": "3"},
+          {"a": "9", "b": "6"},
+          {"a": "8", "b": "5"},
+          {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"}
+        ]
+      },
+      {
+        "blocking_wall_indices": [9],
+        "root": [
+          {"a": "1", "b": "2"},
+          {"a": "2", "b": "3"},
+          {"a": "6", "b": "2"},
+          {"a": "8", "b": "5"},
+          {"a": "8", "b": "5"},
+          {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"},
+          {"a": "1", "b": "1"}
+        ]
+      },
+      {
+        "blocking_wall_indices": [9],
+        "root": [
+          {"a": "1", "b": "2"},
+          {"a": "2", "b": "3"},
+          {"a": "6", "b": "2"},
+          {"a": "8", "b": "5"},
+          {"a": "8", "b": "5"},
+          {"a": "2", "b": "1"},
+          {"a": "4", "b": "2"},
+          {"a": "3", "b": "3"},
+          {"a": "2", "b": "2"},
+          {"a": "0", "b": "0"}
+        ]
+      },
+      {
+        "blocking_wall_indices": [9],
+        "root": [
+          {"a": "1", "b": "2"},
+          {"a": "2", "b": "3"},
+          {"a": "6", "b": "2"},
+          {"a": "8", "b": "5"},
+          {"a": "8", "b": "5"},
+          {"a": "2", "b": "2"},
+          {"a": "3", "b": "3"},
+          {"a": "4", "b": "2"},
+          {"a": "2", "b": "1"},
+          {"a": "0", "b": "0"}
+        ]
+      }
+    ],
+    "previous_wall_rejections": 4,
+    "schur_pruned_by_depth": [0, 0, 38, 65, 74, 32, 199, 430, 257, 58],
+    "target": {"a": "19", "b": "13"},
+    "visited_by_depth": [1, 7, 49, 77, 84, 70, 266, 469, 273, 112]
+  },
+  "next_admissible_control_coordinate": {"a": "3", "b": "1"},
+  "prior_edge_extension_certificate_sha256": "9538f7d9845b0f31088280438be3843603f9dbbca7da2da450b9cf4c5e314b01",
+  "prior_wall_count": 34,
+  "schema_version": "1.0.0",
+  "scope": {
+    "not_proved": [
+      "A second finite or ideal endpoint for the targeted edge.",
+      "A full parabolic-neighbourhood audit for the incomplete wall prefix.",
+      "Any global Vinberg stopping criterion or simple-root completeness.",
+      "Compactness, finite covolume, or infinite covolume of the eventual chamber.",
+      "Exhaustion of primitive reflective vectors of norms other than two."
+    ],
+    "proved": [
+      "Every norm-two Vinberg candidate at x=1+2sqrt(2) was exhausted exactly.",
+      "All four integral norm-equation solutions are blocked by previously accepted walls.",
+      "No new simple wall, hence no new finite or ideal endpoint data, arises at this shell.",
+      "The next admissible control coordinate is x=3+sqrt(2)."
+    ]
+  },
+  "stopping_status": "undecidable_incomplete_simple_roots",
+  "target_edge_audit": {
+    "edge_indices": [1, 2, 4, 5, 6, 7, 9, 12],
+    "ideal_endpoint_audit_status": "not_run_until_complete_simple_roots",
+    "known_finite_endpoint_root_indices": [33],
+    "new_finite_endpoint_root_indices": [],
+    "second_endpoint_status": "not_found_through_this_shell"
+  },
+  "wall_conjugate_inertia": {"negative": 0, "positive": 10, "zero": 24},
+  "wall_count": 34,
+  "wall_gram_sha256": "207d38059b104cfa038a38d4f480950bfb5d8a3f215aeeb8a9c89060506da1bd",
+  "wall_identity_inertia": {"negative": 1, "positive": 9, "zero": 24}
+}

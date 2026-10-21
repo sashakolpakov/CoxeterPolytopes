@@ -1,0 +1,559 @@
+{
+  "all_checks_pass": true,
+  "artifact_id": "ROULLEAU-R12-BH-K3-LIFTS",
+  "brandhorst_hofmann_provenance": {
+    "article_doi": "10.1017/fms.2023.50",
+    "database_doi": "10.5281/zenodo.10410278",
+    "database_version": "2.1",
+    "external_replay": null,
+    "zip_md5": "143047b9cb76f4ad4cb2aadd5959d879",
+    "zip_sha256": "c1272db2c0fe2ae0a788aed7745201fccd2a1337b6c2d85555880c434cab4d7c"
+  },
+  "checks": {
+    "all_four_action_pairs_integrally_conjugate": true,
+    "all_four_effective_K3_realizations": true,
+    "all_vinberg_audits_green": true,
+    "three_distinct_polytopes_realized": true,
+    "upstream_chambers_green": true
+  },
+  "distinct_polytope_realization_count": 3,
+  "effective_K3_group_realization_count": 4,
+  "finite_positive_filter": {
+    "full_exact_action_hits": [
+      "1.4.4.2"
+    ],
+    "full_generic_NS_target_hits": [
+      "1.2.8.33",
+      "1.2.9.1",
+      "1.4.4.1",
+      "1.4.4.2"
+    ],
+    "full_rank_12_or_13_rows": 92,
+    "full_rows_scanned": 3561,
+    "method": "compute the generic NS as the orthogonal complement of the primitive cyclotomic transcendental lattice inside the exact K3 lattice; match rank/signature/determinant/Smith/full discriminant q; enumerate every finite NS image and its order-2/order-3 subgroups; match fixed q and glue",
+    "pure_exact_action_hits": [
+      "0.4.4.1",
+      "0.4.4.2",
+      "0.4.4.6"
+    ],
+    "pure_generic_NS_target_hits": [
+      "0.2.8.3",
+      "0.2.8.4",
+      "0.2.9.1",
+      "0.2.9.2",
+      "0.2.9.3",
+      "0.4.4.1",
+      "0.4.4.2",
+      "0.4.4.3",
+      "0.4.4.4",
+      "0.4.4.5",
+      "0.4.4.6"
+    ],
+    "pure_rank_12_or_13_rows": 53,
+    "pure_rows_scanned": 587,
+    "rank13_exact_action_hits": []
+  },
+  "full_group_enrichment": {
+    "NS_image": "C2 x C2",
+    "all_checks_pass": true,
+    "checks": {
+      "NS_image_is_V4": true,
+      "common_coinvariant_determinant": true,
+      "common_coinvariant_rootless": true,
+      "common_coinvariant_signature": true,
+      "common_coinvariant_twice_even": true,
+      "common_fixed_determinant": true,
+      "common_fixed_signature": true,
+      "commuting_involutions": true
+    },
+    "common_coinvariant_rank_signature_determinant": [
+      8,
+      [
+        0,
+        8,
+        0
+      ],
+      256
+    ],
+    "common_fixed_rank_signature_determinant": [
+      4,
+      [
+        1,
+        3,
+        0
+      ],
+      -16
+    ],
+    "group": "C4 x C2",
+    "rootless_reason": "the common coinvariant Gram is twice an even negative-definite integral Gram, so every nonzero norm is divisible by four",
+    "small_group_id": [
+      8,
+      2
+    ]
+  },
+  "payload_sha256": "2eb9ef253e6c0c0361588c5e2dc4b5451b7a34214eaca287f851200546edd731",
+  "realizations": [
+    {
+      "all_checks_pass": true,
+      "brandhorst_hofmann": {
+        "Picard_image": "C2",
+        "effective_group": "C4",
+        "generic_NS": "U+E8(-1)+A1(-1)^2",
+        "generic_NS_gram_digest": "4861f2d55261841bf914f3285292f880f99966a7ad7db5b7c3e1c1f6e815187b",
+        "id": "0.4.4.1",
+        "member": "K3Groups/results/purely_ns/order04.txt",
+        "member_sha256": "d5a61603c1539278e8411e188656c9417662336ff4282b714e939c40d38c94e8",
+        "row_one_based": 39,
+        "row_sha256_with_newline": "03ef01ed30b98e3d0fa419cb8275577c90594868fcd3400c48413555b1248452",
+        "selected_Picard_action_order": 2,
+        "transcendental_value": 4
+      },
+      "chamber_transport": {
+        "complete_Roulleau_nef_chamber": true,
+        "conclusion": "after Weyl marking and a chamber symmetry, the effective BH automorphism preserves the archived complete nef chamber and induces exactly the archived wall action",
+        "database_effective_character_supplies_invariant_Kahler_class": true,
+        "fixed_form_and_exhaustive_weighted_chamber_census_identify_archived_class": true,
+        "weyl_group_transitive_on_root_chambers": true
+      },
+      "checks": {
+        "BH_NS_determinant": true,
+        "BH_NS_discriminant_q": true,
+        "BH_NS_signature": true,
+        "BH_NS_smith": true,
+        "BH_action_involution": true,
+        "BH_action_isometry": true,
+        "action_character": true,
+        "fixed_determinant": true,
+        "fixed_q": true,
+        "fixed_rank": true,
+        "fixed_smith": true,
+        "source_NS_determinant": true,
+        "source_NS_signature": true,
+        "source_action_involution": true,
+        "source_action_isometry": true,
+        "vinberg_classification": true,
+        "vinberg_counts": true
+      },
+      "coxeter_polytope": {
+        "Vinberg_bad_audits": 0,
+        "classification": "finite_volume_noncompact",
+        "cusps": 2,
+        "dimension": 10,
+        "elliptic_edges": 99,
+        "facets": 12,
+        "finite_vertices": 17
+      },
+      "exact_action_conjugacy": {
+        "algebraic_coinvariant": "<-4>, primitive of divisibility 2",
+        "algebraic_coinvariant_rootless": true,
+        "all_glue_pairs_carried": true,
+        "coinvariant_discriminant_map": [
+          [
+            "1"
+          ]
+        ],
+        "coinvariant_integral_intertwiner": [
+          [
+            1
+          ]
+        ],
+        "fixed_discriminant_isometry": {
+          "bijective": true,
+          "elements_checked": 4,
+          "matrix_on_nontrivial_smith_coordinates": [
+            [
+              1
+            ]
+          ],
+          "quadratic_form_preserved_mod_2Z": true,
+          "source_invariant_factors": [
+            4
+          ],
+          "target_invariant_factors": [
+            4
+          ]
+        },
+        "full_NS_action_pairs_integrally_conjugate": true,
+        "indefinite_fixed_lattice_rank_at_least_discriminant_length_plus_two": true,
+        "nikulin_discriminant_isometry_lifts_integrally": true,
+        "primitive_glue_order": 2
+      },
+      "novelty_scope": "new project-level genuine K3/complete-nef realization of an already certified chamber; no new abstract polytope or arithmetic commensurability class is claimed",
+      "polytope_id": "R12-E8A1x2-C2-H10-12"
+    },
+    {
+      "all_checks_pass": true,
+      "brandhorst_hofmann": {
+        "Picard_image": "C2",
+        "effective_group": "C4",
+        "generic_NS": "U+D8(-1)+A1(-1)^2",
+        "generic_NS_gram_digest": "ddc093e8ccbb3eda2940b00d964d04aa46bdaf8b5dbf3389d376cb5438bd57a0",
+        "id": "0.4.4.2",
+        "member": "K3Groups/results/purely_ns/order04.txt",
+        "member_sha256": "d5a61603c1539278e8411e188656c9417662336ff4282b714e939c40d38c94e8",
+        "row_one_based": 40,
+        "row_sha256_with_newline": "bbba67834e034344032bbf137a1f2f1499f06f3adac123ce2b580e0bf7614849",
+        "selected_Picard_action_order": 2,
+        "transcendental_value": 4
+      },
+      "chamber_transport": {
+        "complete_Roulleau_nef_chamber": true,
+        "conclusion": "after Weyl marking and a chamber symmetry, the effective BH automorphism preserves the archived complete nef chamber and induces exactly the archived wall action",
+        "database_effective_character_supplies_invariant_Kahler_class": true,
+        "fixed_form_and_exhaustive_weighted_chamber_census_identify_archived_class": true,
+        "weyl_group_transitive_on_root_chambers": true
+      },
+      "checks": {
+        "BH_NS_determinant": true,
+        "BH_NS_discriminant_q": true,
+        "BH_NS_signature": true,
+        "BH_NS_smith": true,
+        "BH_action_involution": true,
+        "BH_action_isometry": true,
+        "action_character": true,
+        "fixed_determinant": true,
+        "fixed_q": true,
+        "fixed_rank": true,
+        "fixed_smith": true,
+        "source_NS_determinant": true,
+        "source_NS_signature": true,
+        "source_action_involution": true,
+        "source_action_isometry": true,
+        "vinberg_classification": true,
+        "vinberg_counts": true
+      },
+      "coxeter_polytope": {
+        "Vinberg_bad_audits": 0,
+        "classification": "finite_volume_noncompact",
+        "cusps": 10,
+        "dimension": 10,
+        "elliptic_edges": 294,
+        "facets": 15,
+        "finite_vertices": 42
+      },
+      "exact_action_conjugacy": {
+        "algebraic_coinvariant": "<-4>, primitive of divisibility 2",
+        "algebraic_coinvariant_rootless": true,
+        "all_glue_pairs_carried": true,
+        "coinvariant_discriminant_map": [
+          [
+            "1"
+          ]
+        ],
+        "coinvariant_integral_intertwiner": [
+          [
+            1
+          ]
+        ],
+        "fixed_discriminant_isometry": {
+          "bijective": true,
+          "elements_checked": 16,
+          "matrix_on_nontrivial_smith_coordinates": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ],
+          "quadratic_form_preserved_mod_2Z": true,
+          "source_invariant_factors": [
+            2,
+            2,
+            4
+          ],
+          "target_invariant_factors": [
+            2,
+            2,
+            4
+          ]
+        },
+        "full_NS_action_pairs_integrally_conjugate": true,
+        "indefinite_fixed_lattice_rank_at_least_discriminant_length_plus_two": true,
+        "nikulin_discriminant_isometry_lifts_integrally": true,
+        "primitive_glue_order": 2
+      },
+      "novelty_scope": "new project-level genuine K3/complete-nef realization of an already certified chamber; no new abstract polytope or arithmetic commensurability class is claimed",
+      "polytope_id": "R12-D8A1x2-C2a-H10-15"
+    },
+    {
+      "all_checks_pass": true,
+      "brandhorst_hofmann": {
+        "Picard_image": "C2",
+        "effective_group": "C4",
+        "generic_NS": "U+D4(-1)^2+A1(-1)^2",
+        "generic_NS_gram_digest": "15ce82f8a64ec56959592e4da0081d5c151d33087a7124c1ebca89a630aa1d04",
+        "id": "0.4.4.6",
+        "member": "K3Groups/results/purely_ns/order04.txt",
+        "member_sha256": "d5a61603c1539278e8411e188656c9417662336ff4282b714e939c40d38c94e8",
+        "row_one_based": 44,
+        "row_sha256_with_newline": "2c5db8537584081dac8e9ddda92022f41a129f32b043063fd8155897449168ff",
+        "selected_Picard_action_order": 2,
+        "transcendental_value": 4
+      },
+      "chamber_transport": {
+        "complete_Roulleau_nef_chamber": true,
+        "conclusion": "after Weyl marking and a chamber symmetry, the effective BH automorphism preserves the archived complete nef chamber and induces exactly the archived wall action",
+        "database_effective_character_supplies_invariant_Kahler_class": true,
+        "fixed_form_and_exhaustive_weighted_chamber_census_identify_archived_class": true,
+        "weyl_group_transitive_on_root_chambers": true
+      },
+      "checks": {
+        "BH_NS_determinant": true,
+        "BH_NS_discriminant_q": true,
+        "BH_NS_signature": true,
+        "BH_NS_smith": true,
+        "BH_action_involution": true,
+        "BH_action_isometry": true,
+        "action_character": true,
+        "fixed_determinant": true,
+        "fixed_q": true,
+        "fixed_rank": true,
+        "fixed_smith": true,
+        "source_NS_determinant": true,
+        "source_NS_signature": true,
+        "source_action_involution": true,
+        "source_action_isometry": true,
+        "vinberg_classification": true,
+        "vinberg_counts": true
+      },
+      "coxeter_polytope": {
+        "Vinberg_bad_audits": 0,
+        "classification": "finite_volume_noncompact",
+        "cusps": 141,
+        "dimension": 10,
+        "elliptic_edges": 4518,
+        "facets": 38,
+        "finite_vertices": 526
+      },
+      "exact_action_conjugacy": {
+        "algebraic_coinvariant": "<-4>, primitive of divisibility 2",
+        "algebraic_coinvariant_rootless": true,
+        "all_glue_pairs_carried": true,
+        "coinvariant_discriminant_map": [
+          [
+            "1"
+          ]
+        ],
+        "coinvariant_integral_intertwiner": [
+          [
+            1
+          ]
+        ],
+        "fixed_discriminant_isometry": {
+          "bijective": true,
+          "elements_checked": 64,
+          "matrix_on_nontrivial_smith_coordinates": [
+            [
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "quadratic_form_preserved_mod_2Z": true,
+          "source_invariant_factors": [
+            2,
+            2,
+            2,
+            2,
+            4
+          ],
+          "target_invariant_factors": [
+            2,
+            2,
+            2,
+            2,
+            4
+          ]
+        },
+        "full_NS_action_pairs_integrally_conjugate": true,
+        "indefinite_fixed_lattice_rank_at_least_discriminant_length_plus_two": true,
+        "nikulin_discriminant_isometry_lifts_integrally": true,
+        "primitive_glue_order": 2
+      },
+      "novelty_scope": "new project-level genuine K3/complete-nef realization of an already certified chamber; no new abstract polytope or arithmetic commensurability class is claimed",
+      "polytope_id": "R12-D4x2A1x2-p67-H10-38"
+    },
+    {
+      "all_checks_pass": true,
+      "brandhorst_hofmann": {
+        "Picard_image": "C2 x C2",
+        "effective_group": "C4 x C2",
+        "generic_NS": "U+D4(-1)^2+A1(-1)^2",
+        "generic_NS_gram_digest": "d0c8f0c0b4a963fd82210023e3a8a543aa543700f69a49274a9a21e6a53030e1",
+        "id": "1.4.4.2",
+        "member": "K3Groups/results/order04.txt",
+        "member_sha256": "828763a2fc6609e7406e22bda835bd32701da8a667134908c22c8c6a6c30a6ca",
+        "row_one_based": 171,
+        "row_sha256_with_newline": "d29436def2b38cb2cd55967b73e064583892ce0742746458fcc74a645f5b51a6",
+        "selected_Picard_action_order": 2,
+        "transcendental_value": 4
+      },
+      "chamber_transport": {
+        "complete_Roulleau_nef_chamber": true,
+        "conclusion": "after Weyl marking and a chamber symmetry, the effective BH automorphism preserves the archived complete nef chamber and induces exactly the archived wall action",
+        "database_effective_character_supplies_invariant_Kahler_class": true,
+        "fixed_form_and_exhaustive_weighted_chamber_census_identify_archived_class": true,
+        "weyl_group_transitive_on_root_chambers": true
+      },
+      "checks": {
+        "BH_NS_determinant": true,
+        "BH_NS_discriminant_q": true,
+        "BH_NS_signature": true,
+        "BH_NS_smith": true,
+        "BH_action_involution": true,
+        "BH_action_isometry": true,
+        "action_character": true,
+        "fixed_determinant": true,
+        "fixed_q": true,
+        "fixed_rank": true,
+        "fixed_smith": true,
+        "source_NS_determinant": true,
+        "source_NS_signature": true,
+        "source_action_involution": true,
+        "source_action_isometry": true,
+        "vinberg_classification": true,
+        "vinberg_counts": true
+      },
+      "coxeter_polytope": {
+        "Vinberg_bad_audits": 0,
+        "classification": "finite_volume_noncompact",
+        "cusps": 141,
+        "dimension": 10,
+        "elliptic_edges": 4518,
+        "facets": 38,
+        "finite_vertices": 526
+      },
+      "exact_action_conjugacy": {
+        "algebraic_coinvariant": "<-4>, primitive of divisibility 2",
+        "algebraic_coinvariant_rootless": true,
+        "all_glue_pairs_carried": true,
+        "coinvariant_discriminant_map": [
+          [
+            "1"
+          ]
+        ],
+        "coinvariant_integral_intertwiner": [
+          [
+            1
+          ]
+        ],
+        "fixed_discriminant_isometry": {
+          "bijective": true,
+          "elements_checked": 64,
+          "matrix_on_nontrivial_smith_coordinates": [
+            [
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              1
+            ]
+          ],
+          "quadratic_form_preserved_mod_2Z": true,
+          "source_invariant_factors": [
+            2,
+            2,
+            2,
+            2,
+            4
+          ],
+          "target_invariant_factors": [
+            2,
+            2,
+            2,
+            2,
+            4
+          ]
+        },
+        "full_NS_action_pairs_integrally_conjugate": true,
+        "indefinite_fixed_lattice_rank_at_least_discriminant_length_plus_two": true,
+        "nikulin_discriminant_isometry_lifts_integrally": true,
+        "primitive_glue_order": 2
+      },
+      "novelty_scope": "new project-level genuine K3/complete-nef realization of an already certified chamber; no new abstract polytope or arithmetic commensurability class is claimed",
+      "polytope_id": "R12-D4x2A1x2-p67-H10-38"
+    }
+  ],
+  "schema": "coxeter.roulleau_rank12.brandhorst_hofmann_k3_lifts.v1",
+  "source_sha256": {
+    "d4": "448bcc47937a2763bbd4ea97466fbc48924dc862e88ba8719e5ab98b0cc4c916",
+    "graph": "51751779daa723e24dcaf27ec5dd69463dc68e662da28751506672defe7cbe63"
+  },
+  "status_separation": {
+    "abstract_polytopes_new": false,
+    "arithmetic_classes_new": false,
+    "generic_NS_equals_archived_complete_nef_lattice": true,
+    "genuine_surface_automorphisms": true,
+    "rank13_positive_hit": false,
+    "rank13_result_role": "finite exact search boundary only"
+  },
+  "theorem": "Three previously diagram-only rank-12 Roulleau folds admit genuine K3-automorphism realizations: H10/12 via BH 0.4.4.1, H10/15 via BH 0.4.4.2, and H10/38 via BH 0.4.4.6.  Full row 1.4.4.2 gives a second C4 x C2 realization of H10/38."
+}

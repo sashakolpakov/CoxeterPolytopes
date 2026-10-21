@@ -1,0 +1,25 @@
+{
+  "status": "PASS_ROOT_GEOMETRIC_PROOF_REVIEW_AND_SAVED_REPLAY",
+  "reviewed_sha256": {
+    "results/fresh_h9_makarov_joint_completion_20261013_coupled_exact.json": "925fd476ec68d8e1ed4f3a49dd314410577301a2d7baef1e0a3e3427a543e6ee",
+    "results/fresh_h9_makarov_joint_20261013_exact.json": "cf1473c23c6cfc6c6a0a9ae2ed935de0d00454909e80b2279887cbbcacce02df",
+    "results/fresh_h9_makarov_joint_completion_20261013_face_bridge.json": "f38488fe00ef16ed8d9049c897518798ab2fc0f6be904dd71161740b98c31530",
+    "results/fresh_h9_makarov_joint_completion_20261013_old_bank_gate.json": "c694a67afebe64a805f6267e9dfe5171ab49a12f08eae509e1fb21475fc90707",
+    "scripts/fresh_h9_makarov_joint_20261013_exact_independent.py": "21e91514c29f7a647facf3fa2f902b7d0d0b4f400323341afc53f8b7d8f49951",
+    "scripts/fresh_h9_makarov_joint_completion_20261013_coupled_exact.py": "c7d58903c444565b49c93a5fc163bb6bd383c50ca52cb6ddf572f3c9f44f1fdc",
+    "scripts/fresh_h9_makarov_joint_completion_20261013_face_bridge.py": "789fa0cb25e478e2ff5e6f870fe43a4a8d8ad0bb719e5d0909f64dc973b8a69a",
+    "scripts/fresh_h9_makarov_joint_completion_20261013_profiles.py": "728d8318a49d6f47d8a73fe381362d0197d079f2dd477238ada22fcda148473a"
+  },
+  "replay_command": "python3 scripts/fresh_h9_makarov_joint_completion_20261013_coupled_exact.py --verify",
+  "replay_result": "PASS",
+  "checks": [
+    "projective norm and normalization identities",
+    "55 exact new pair gates including the unequal norm of oldwall6",
+    "strict common timelike center inherited from frozen27wallsource",
+    "positive-definite7wall support and two mutuallyorthogonal positive directions",
+    "explicit timelike corner with exactly9 incident walls",
+    "positive pairings cutting previous common-bank escape",
+    "strict spacelike escape for all29"
+  ],
+  "scope": "Source/proof review plus producer replay; the separate arithmetic audit is maintained independently. No finite-volume claim."
+}

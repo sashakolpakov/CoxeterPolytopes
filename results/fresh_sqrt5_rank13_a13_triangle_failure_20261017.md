@@ -1,0 +1,11 @@
+# An explicit compact local A13 triangle receives zero payment
+
+The [standalone exact certificate](../scripts/fresh_sqrt5_rank13_a13_triangle_failure_20261017.py) uses fourteen norm-two roots. Roots 0 through 12 form an A13 path with adjacent products -1; root 13 has product -phi with root 1 and zero with all other path roots, where phi=(1+sqrt(5))/2. Every Cartan entry is integral in O_Q(sqrt5).
+
+The [saved arithmetic](fresh_sqrt5_rank13_a13_triangle_failure_20261017.json) verifies physical inertia (13,1), positive definite conjugate form, and determinant **-8-12sqrt(5)**. An independent Schur calculation uses det(A13)=14 and inverse diagonal (A13^-1)_(1,1)=12/7. Exactly three one-root deletions are spherical: deleting 1, 2, or 13 gives `2A1+A11`, `A10+H3`, and `A13`. Thus the maximal simplex extension is this triangle itself, so higher-simplex aggregation cannot combine it with additional triangles.
+
+For each of the three deletions the certificate displays the exact dual ray -G^-1 e_i, checks that it is timelike, and checks all mutual products are negative. Their positive cone on the common eleven-wall subspace is exactly the cone of the three remaining wall inequalities. Its projectivization is therefore a compact triangle. A rational perturbation of the sum of its vertex rays gives an explicit strict timelike center for all fourteen walls. Each wall occurs at a simple finite corner and is an actual facet of this local chamber. The integral Gram and norm-two diagonal give an integral reflection lattice; the conjugate positivity makes the form admissible.
+
+Its determinant lies outside all 57 fixed classes used by the [earlier partial rules](fresh_sqrt5_rank13_discriminant_simplex_lp_20261017.md), as checked by exact Q(sqrt5) square-root tests. The saved unrepresented-class vector assigns variables 3069, 12403, and 12481 payment zero. The triangle therefore receives **0 < 2**. Generation and fresh saved replay verify the signatures, all fourteen deletions, full dual rays, strict center, determinant tests, and exact payment lookup.
+
+This is a genuine local geometric and arithmetic payment counterexample, not a new compact ambient polytope and not an obstruction to every repaired weighting rule. It does not invalidate the earlier rule's certificate on its explicitly smaller domain.

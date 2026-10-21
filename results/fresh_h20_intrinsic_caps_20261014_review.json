@@ -1,0 +1,224 @@
+{
+  "status": "PASS_INTRINSIC_ENDPOINT_ACCEPTED_PROFILE_AND_GEOMETRY_REVIEW",
+  "sources": {
+    "results/fresh_h20_intrinsic_caps_20261014_endpoint.json": "df2da57e4c18e976c3a82219f8fda7a0d2a528fc6c938c21e31faf570d43bb0c",
+    "scripts/fresh_h20_intrinsic_caps_20261014_endpoint.py": "60f26daa1da65c334139158f2bc1445233722a296088bc8ee920d76e102e4d86",
+    "scripts/fresh_h20_intrinsic_caps_20261014_review.py": "fe469d1905ecf52b15ea5be18fd12a4f87b199d12c26d731fc581ba1faa1dda7"
+  },
+  "counts": {
+    "accepted_profiles": 260
+  },
+  "edge_types": [
+    {
+      "type": "outer",
+      "multiplicity": 108,
+      "counts": {
+        "finite": 19,
+        "ideal_PSD": 9
+      },
+      "label5_blocks": [
+        {
+          "profile": 9,
+          "contacts": [
+            [
+              50,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 13,
+          "contacts": [
+            [
+              200,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        }
+      ],
+      "isolated_I2_tails": 0
+    },
+    {
+      "type": "middle",
+      "multiplicity": 108,
+      "counts": {
+        "finite": 54,
+        "ideal_PSD": 14
+      },
+      "label5_blocks": [
+        {
+          "profile": 9,
+          "contacts": [
+            [
+              50,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 13,
+          "contacts": [
+            [
+              200,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 20,
+          "contacts": [
+            [
+              26,
+              5
+            ]
+          ],
+          "block": "I2(5)",
+          "residual": "5/4 - sqrt(5)/4"
+        },
+        {
+          "profile": 43,
+          "contacts": [
+            [
+              50,
+              3
+            ],
+            [
+              26,
+              5
+            ]
+          ],
+          "block": "H4",
+          "residual": "7/12 - sqrt(5)/4"
+        },
+        {
+          "profile": 51,
+          "contacts": [
+            [
+              200,
+              3
+            ],
+            [
+              26,
+              5
+            ]
+          ],
+          "block": "H4",
+          "residual": "7/12 - sqrt(5)/4"
+        }
+      ],
+      "isolated_I2_tails": 1
+    },
+    {
+      "type": "center",
+      "multiplicity": 36,
+      "counts": {
+        "finite": 71,
+        "ideal_PSD": 93
+      },
+      "label5_blocks": [
+        {
+          "profile": 9,
+          "contacts": [
+            [
+              50,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 13,
+          "contacts": [
+            [
+              200,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 17,
+          "contacts": [
+            [
+              24,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 21,
+          "contacts": [
+            [
+              26,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 25,
+          "contacts": [
+            [
+              33,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 29,
+          "contacts": [
+            [
+              34,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 33,
+          "contacts": [
+            [
+              40,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        },
+        {
+          "profile": 37,
+          "contacts": [
+            [
+              45,
+              5
+            ]
+          ],
+          "block": "H3",
+          "residual": "1 - sqrt(5)/3"
+        }
+      ],
+      "isolated_I2_tails": 0
+    }
+  ],
+  "transports": 252,
+  "finite_profiles": 144,
+  "ideal_PSD_profiles": 116,
+  "formal_geometry": "r=p+hV-rho2*D/(2h), p\u00b2+rho2=2; endpoint x=V+rho2*D/(2h\u00b2), x\u00b2=-rho2/h\u00b2; cap-ball pair=(Ri\u00b2+Rj\u00b2-distance\u00b2)/(Ri Rj).",
+  "scope": "Independent arithmetic replay of all260 accepted profiles, all omitted-wall scalar formulas and252 transports; source/proof review of complete support/label enumeration. Does not independently re-enumerate rejected profiles or certify a globally finite-volume cap selection."
+}

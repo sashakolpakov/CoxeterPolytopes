@@ -1,0 +1,157 @@
+{
+  "conclusion": "The production H25000 persistence certificate passes the clean-room replay. The two nonnegative necessary types are empty by the S2 and S3 minimum contradictions, so the H10000 ray remains strict through the stated cutoff.",
+  "critical_reductions": [
+    {
+      "empty": true,
+      "forced_relation": "v=40d",
+      "gate_sublattice": "S2",
+      "gate_sublattice_minimum": 12,
+      "relation_cross": 0,
+      "relation_norm": 0,
+      "short_vector": "u-56d",
+      "short_vector_norm": 4
+    },
+    {
+      "empty": true,
+      "forced_relation": "v=60d",
+      "gate_sublattice": "S3",
+      "gate_sublattice_minimum": 24,
+      "relation_cross": 0,
+      "relation_norm": 0,
+      "short_vector": "u-84d",
+      "short_vector_norm": 6
+    }
+  ],
+  "cutoff_semantics": {
+    "coefficient_box_proof": {
+      "conjugate_embedding_absolute_bound": "<3",
+      "derived_radical_coefficient_bound": "<=396",
+      "derived_rational_coefficient_bound": "<=560",
+      "enumerated_symmetric_coefficient_box": 561,
+      "identity_embedding_absolute_bound": "<1118"
+    },
+    "lower": "strictly greater than the rational field element 10000",
+    "upper": "less than or equal to the rational field element 25000"
+  },
+  "frontier": {
+    "control_count": 301,
+    "controls_by_norm": {
+      "1": 41,
+      "12": 15,
+      "12 + 6*sqrt(2)": 20,
+      "2": 83,
+      "3": 15,
+      "4": 41,
+      "4 + 2*sqrt(2)": 58,
+      "6": 28
+    },
+    "first_control_height": {
+      "a": "5026",
+      "b": "3554"
+    },
+    "last_control_height": {
+      "a": "12477",
+      "b": "8823"
+    },
+    "locally_admissible_extension_count_with_multiplicity": 2663705,
+    "locally_admissible_extensions_by_norm": {
+      "12": 91312,
+      "2": 1592152,
+      "4": 797565,
+      "6": 182676
+    },
+    "nonnegative_type_count": 2,
+    "retained_type_count": 5575,
+    "retained_type_stream_sha256": "21240a46b23221f1c167ffd5c6267c71eb328a57b0a067fa70e488b3955f2e5f",
+    "retained_types_by_norm": {
+      "12": 730,
+      "2": 2046,
+      "4": 2069,
+      "6": 730
+    },
+    "threats": [
+      {
+        "control": {
+          "a": "176",
+          "b": "124"
+        },
+        "gram": [
+          12772,
+          6400,
+          9040
+        ],
+        "height": {
+          "a": "6392",
+          "b": "4520"
+        },
+        "nonnegative_extensions": [
+          {
+            "d_pairings": [
+              226,
+              160
+            ],
+            "extension_determinant": 0,
+            "margin": {
+              "a": "64/87",
+              "b": "-44/87"
+            }
+          }
+        ],
+        "norm": {
+          "a": "4",
+          "b": "0"
+        }
+      },
+      {
+        "control": {
+          "a": "264",
+          "b": "186"
+        },
+        "gram": [
+          28734,
+          14400,
+          20340
+        ],
+        "height": {
+          "a": "9588",
+          "b": "6780"
+        },
+        "nonnegative_extensions": [
+          {
+            "d_pairings": [
+              339,
+              240
+            ],
+            "extension_determinant": 0,
+            "margin": {
+              "a": "32/29",
+              "b": "-22/29"
+            }
+          }
+        ],
+        "norm": {
+          "a": "6",
+          "b": "0"
+        }
+      }
+    ]
+  },
+  "independence": "No project imports. Reuses only the standalone Q(sqrt2), Gram, and ellipse kernel of the independently audited H10000 replay; derives the larger control box and new obstruction reductions locally.",
+  "logical_scope": {
+    "all_binary_Gram_types_reconstructed": true,
+    "all_controls_reconstructed": true,
+    "all_integral_PSD_extensions_enumerated": true,
+    "both_nonnegative_types_empty": true,
+    "bounded_prefix_only": true,
+    "global_nonreflectivity": false,
+    "vinberg_termination": false
+  },
+  "schema_version": "0.1.0",
+  "scope": "Independent exact necessary-superset replay strictly after rational identity height 10000 through inclusive height 25000.",
+  "source": {
+    "all_frontier_counts_and_digest_agree": true,
+    "production_artifact": "data/enumerations/silver_lambda22_h25000_replacement.json",
+    "production_sha256": "0edd9ba4000033b902a44cd4427c74dca016856d6445f7bc691181cd68ac1563"
+  },
+  "verdict": "PASS"
+}

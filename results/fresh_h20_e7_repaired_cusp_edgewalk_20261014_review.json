@@ -1,0 +1,49 @@
+{
+  "status": "PASS_INDEPENDENT_FOUR_SUPPORT_ALL_PARAMETER_ESCAPE_OBSTRUCTION",
+  "sources": {
+    "results/fresh_h20_e7_edge_cusp_repair_20261014_exact.json": "88fac0cc2914ba8072810c3f6b10307c61bbe690384eb301302729797df93634",
+    "results/fresh_h20_e7_repaired_cusp_walk_20261014.json": "bf253413c4dc59525db98c5878852b5c168b635e285cb4f183cc6cfab6f6b35d",
+    "results/fresh_h20_e7_repaired_cusp_edgewalk_20261014_exact.json": "e471542a41246769b732cf4dc392bc44c34a8171f9d12a563123f11646c094ae",
+    "scripts/fresh_h20_e7_repaired_cusp_edgewalk_20261014_review.py": "956860728271abc315b486672306c19ac057036d6e78ca91f6c273bb7963c5c3",
+    "scripts/fresh_h20_e7_replacement_escape_20261014_review.py": "62e7d9da91c4a0a41fe040e383e91b8746ef44bd581d9e94f5ec0389e3a7b8f4"
+  },
+  "counts": {
+    "finite_profiles": 418,
+    "bridge_blockers": 8,
+    "all_label_I2_tails": 15,
+    "tail_minimum_left": 11,
+    "tail_minimum_right": 4
+  },
+  "edges": [
+    {
+      "edge": 1675,
+      "finite_profiles": 115,
+      "all_label_I2_tails": 4,
+      "independent_dual_basis": true,
+      "complete_profile_budget": true
+    },
+    {
+      "edge": 1673,
+      "finite_profiles": 115,
+      "all_label_I2_tails": 4,
+      "independent_dual_basis": true,
+      "complete_profile_budget": true
+    },
+    {
+      "edge": 1677,
+      "finite_profiles": 73,
+      "all_label_I2_tails": 3,
+      "independent_dual_basis": true,
+      "complete_profile_budget": true
+    },
+    {
+      "edge": 1723,
+      "finite_profiles": 115,
+      "all_label_I2_tails": 4,
+      "independent_dual_basis": true,
+      "complete_profile_budget": true
+    }
+  ],
+  "proof": "For every spherical extension, r=p+aW+(q-a^2 W^2)/(2ah)*nu with q=2-p^2>0. Acuteness with N9 and N88 forces r.nu<0, hence a>0. For each old nonshared wall and E, r.x=p.x+B_x*a+C_x*q/a is strictly decreasing: B_x=Z.x/(-2h)<0 and C_x=nu.x/(2h)>=0. At the recorded positive a0 one old wall has r.N>0 and r.E<0. Thus every a violates either acuteness or escape cutting. For isolated I2 tails, exact quadratic bounds establish the same separator for every c=2cos(pi/m) in [sqrt3,2], covering all m>=7.",
+  "scope": "Only the four listed cusp supports and spherical finite-endpoint extensions retaining all95 walls. This proves no such cap cuts the specified strict escape. It does not exclude non-cutting caps, other supports, ideal endpoint extensions, changed wall sets, or the H20 construction route. No finite-volume example is produced."
+}

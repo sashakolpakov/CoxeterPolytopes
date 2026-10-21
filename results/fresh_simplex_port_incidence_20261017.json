@@ -1,0 +1,8876 @@
+{
+  "status": "PASS_EXACT_MAXIMAL_SIMPLEX_PORT_PACKING_VIOLATION",
+  "sources": {
+    "scripts/fresh_simplex_port_incidence_20261017.py": "d217dbd4d859ed54bc02f856eb54c04c84f457ba59b4638f17baa14bbf13d7e3",
+    "scripts/fresh_sqrt5_forest_sensitive_weights_20261015_review.py": "a49b53cefb3b60bbea1f5093c121342d16f8e419e54a72a2499dc80e76ee121a",
+    "scripts/fresh_sqrt5_rank13_full_flexible_simplex_lp_20261017.py": "74d15d77f68c70c160df025badd32d8ea97f96e16f4bdc638668150e1bf42da2",
+    "results/fresh_sqrt5_rank13_full_flexible_simplex_lp_20261017.json": "74e659892cf8958f431256c247456f3fd6cf8126f3d4bb04d0afa844934715af",
+    "results/fresh_sqrt5_rank13_full_triangle_simplex_separation_20261017.json": "e21a488a3254689e93b695bb2e33d1b03e5bfa48f8354c2bac3f9252f3719272",
+    "scripts/fresh_sqrt5_rank13_triangle_simplex_flags_20261017.py": "6bf96c96e7a7c6cc99eed2ae690b41547f53379a6c8613608772cbf0dfbe123b",
+    "results/fresh_sqrt5_rank13_triangle_simplex_flags_20261017.json": "36ca67cc0264a1594e9c188affe43c174d88f5dd6e49995337e470f0ec32e8b2",
+    "results/fresh_sqrt5_rank13_triangle_simplex_flags_20261017.md": "1d8addd578d544aa240b74cec46f0f838e7814dd29cc655d1dc9ea76a8615fb4"
+  },
+  "theorem": {
+    "ambient": "Simple compact acute-angled hyperbolic polytope; in particular a compact Coxeter polytope.",
+    "ports": "A d-simplex face through a vertex selects its d incident edge ports.",
+    "intersection": "Distinct maximal simplex faces have port-set intersection of size at most1, by unique maximal-simplex extension of each triangular two-face.",
+    "clique": "For U of size u and k with2k-u>=2, at most one maximal-simplex port block B with |B|>=k and B subset U occurs.",
+    "orbit_average": "Average the clique indicator over the full labelled-diagram automorphism orbit of U; its total at every vertex remains at most1.",
+    "completeness": "The theorem concerns every maximal simplex, without an observed dimension or label cutoff. The diagnostic tests only the frozen dual and three small (u,k) clique types."
+  },
+  "arithmetic": "Exact Fraction arithmetic; canonical marked-tree graphs from a bound frozen helper. No optimizer and no new spherical or arithmetic-star census.",
+  "counts": {
+    "dual_faces": 346,
+    "positive_vertex_forests": 203,
+    "dual_simplex_dimensions": {
+      "2": 103,
+      "3": 102,
+      "4": 141
+    },
+    "literal_pair_checks": 15834,
+    "tested_cliques": 754754,
+    "violated_forests": 22,
+    "successor_columns": 22,
+    "successor_faces": 10185,
+    "successor_nonzero_coefficients": 45
+  },
+  "old_dual": {
+    "objective_numerator": "60119339441/5000000000",
+    "normalizer": "2100000009539/2100000000000",
+    "bound": "25250122565220/2100000009539",
+    "all_old_pair_capacities_pass": true
+  },
+  "forest_tests": [
+    {
+      "vertex": 2,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "H4"
+      ],
+      "vertex_mass": "70503/70000000000",
+      "block_orbits": 1,
+      "literal_blocks": 21,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "0",
+      "ratio": "0",
+      "pair_capacity_maximum": "70503/70000000000",
+      "violates": false
+    },
+    {
+      "vertex": 45,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_mass": "298569/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 20,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "895707/25000000000",
+      "ratio": "6/5",
+      "pair_capacity_maximum": "298569/10000000000",
+      "violates": true
+    },
+    {
+      "vertex": 58,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "1057547/50000000000",
+      "block_orbits": 3,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "211509/10000000000",
+      "ratio": "1057545/1057547",
+      "pair_capacity_maximum": "1057547/50000000000",
+      "violates": false
+    },
+    {
+      "vertex": 73,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A7"
+      ],
+      "vertex_mass": "27543/625000000",
+      "block_orbits": 2,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "82629/2500000000",
+      "ratio": "3/4",
+      "pair_capacity_maximum": "27543/625000000",
+      "violates": false
+    },
+    {
+      "vertex": 84,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "A6"
+      ],
+      "vertex_mass": "849761/5000000000",
+      "block_orbits": 5,
+      "literal_blocks": 25,
+      "subset": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        9
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "10197129/80000000000",
+      "ratio": "10197129/13596176",
+      "pair_capacity_maximum": "849761/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 91,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "23372209/60000000000",
+      "block_orbits": 3,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "486921/1250000000",
+      "ratio": "23372208/23372209",
+      "pair_capacity_maximum": "23372209/60000000000",
+      "violates": false
+    },
+    {
+      "vertex": 92,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/15000000000",
+      "block_orbits": 1,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "174739/15000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/15000000000",
+      "violates": false
+    },
+    {
+      "vertex": 93,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A4",
+        "A5"
+      ],
+      "vertex_mass": "5309811/5000000000",
+      "block_orbits": 3,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        1,
+        2,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "15929433/20000000000",
+      "ratio": "3/4",
+      "pair_capacity_maximum": "5309811/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 97,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A5",
+        "H4"
+      ],
+      "vertex_mass": "17095153/15000000000",
+      "block_orbits": 5,
+      "literal_blocks": 20,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1070769/625000000",
+      "ratio": "25698456/17095153",
+      "pair_capacity_maximum": "17095153/15000000000",
+      "violates": true
+    },
+    {
+      "vertex": 98,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A5",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "4354427/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2902951/5000000000",
+      "ratio": "5805902/4354427",
+      "pair_capacity_maximum": "4354427/10000000000",
+      "violates": true
+    },
+    {
+      "vertex": 100,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "H3"
+      ],
+      "vertex_mass": "47742103/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "24416537/5000000000",
+      "ratio": "48833074/47742103",
+      "pair_capacity_maximum": "47742103/10000000000",
+      "violates": true
+    },
+    {
+      "vertex": 103,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A7",
+        "I2(5)"
+      ],
+      "vertex_mass": "2279109/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 20,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "2279109/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2279109/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 131,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "4318387/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "7197311/10000000000",
+      "ratio": "7197311/4318387",
+      "pair_capacity_maximum": "4318387/10000000000",
+      "violates": true
+    },
+    {
+      "vertex": 132,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "H3",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "5887129/30000000000",
+      "block_orbits": 1,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "5887129/30000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "5887129/30000000000",
+      "violates": false
+    },
+    {
+      "vertex": 148,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A3",
+        "A3",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 15,
+      "subset": [
+        0,
+        1,
+        2,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "174739/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 154,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A4",
+        "H4"
+      ],
+      "vertex_mass": "1106031/500000000",
+      "block_orbits": 4,
+      "literal_blocks": 16,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1106031/500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "1106031/500000000",
+      "violates": false
+    },
+    {
+      "vertex": 156,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A5",
+        "H3"
+      ],
+      "vertex_mass": "4694361/4000000000",
+      "block_orbits": 7,
+      "literal_blocks": 25,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "4694361/4000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "4694361/4000000000",
+      "violates": false
+    },
+    {
+      "vertex": 159,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_mass": "1992713/10000000000",
+      "block_orbits": 5,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2548381/10000000000",
+      "ratio": "2548381/1992713",
+      "pair_capacity_maximum": "1992713/10000000000",
+      "violates": true
+    },
+    {
+      "vertex": 161,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A8"
+      ],
+      "vertex_mass": "27543/625000000",
+      "block_orbits": 1,
+      "literal_blocks": 2,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "27543/625000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "27543/625000000",
+      "violates": false
+    },
+    {
+      "vertex": 181,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "44914157/20000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "44914157/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "44914157/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 183,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "2264583/2500000000",
+      "block_orbits": 4,
+      "literal_blocks": 17,
+      "subset": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1939969/2500000000",
+      "ratio": "1939969/2264583",
+      "pair_capacity_maximum": "2264583/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 186,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "A3",
+        "H4"
+      ],
+      "vertex_mass": "34811/80000000",
+      "block_orbits": 5,
+      "literal_blocks": 10,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "34811/80000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "34811/80000000",
+      "violates": false
+    },
+    {
+      "vertex": 187,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "A3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "174739/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 188,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "A4",
+        "H3"
+      ],
+      "vertex_mass": "24638287/10000000000",
+      "block_orbits": 6,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "12319143/5000000000",
+      "ratio": "24638286/24638287",
+      "pair_capacity_maximum": "24638287/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 190,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "A5",
+        "I2(5)"
+      ],
+      "vertex_mass": "2803733/2000000000",
+      "block_orbits": 5,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        3,
+        4,
+        5,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "1014193/750000000",
+      "ratio": "8113544/8411199",
+      "pair_capacity_maximum": "2803733/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 191,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "A7"
+      ],
+      "vertex_mass": "2774473/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "2774473/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2774473/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 202,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "124004967/10000000000",
+      "block_orbits": 6,
+      "literal_blocks": 11,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "124004967/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "124004967/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 203,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A3",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "888831/1250000000",
+      "block_orbits": 3,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "888831/1250000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "888831/1250000000",
+      "violates": false
+    },
+    {
+      "vertex": 205,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A4",
+        "A4",
+        "I2(5)"
+      ],
+      "vertex_mass": "5309811/2500000000",
+      "block_orbits": 2,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "42478487/30000000000",
+      "ratio": "42478487/63717732",
+      "pair_capacity_maximum": "5309811/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 206,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A4",
+        "A6"
+      ],
+      "vertex_mass": "5704723/2500000000",
+      "block_orbits": 7,
+      "literal_blocks": 24,
+      "subset": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "5309811/2500000000",
+      "ratio": "5309811/5704723",
+      "pair_capacity_maximum": "5704723/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 215,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A4",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "4814291/500000000",
+      "block_orbits": 5,
+      "literal_blocks": 19,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "4814291/500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "4814291/500000000",
+      "violates": false
+    },
+    {
+      "vertex": 217,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "1469897/312500000",
+      "block_orbits": 7,
+      "literal_blocks": 22,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1469897/312500000",
+      "ratio": "1",
+      "pair_capacity_maximum": "1469897/312500000",
+      "violates": false
+    },
+    {
+      "vertex": 219,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "8159081/30000000000",
+      "block_orbits": 1,
+      "literal_blocks": 9,
+      "subset": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "8159081/30000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "8159081/30000000000",
+      "violates": false
+    },
+    {
+      "vertex": 220,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A5",
+        "A5"
+      ],
+      "vertex_mass": "44917301/40000000000",
+      "block_orbits": 3,
+      "literal_blocks": 19,
+      "subset": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "55536923/60000000000",
+      "ratio": "8544142/10365531",
+      "pair_capacity_maximum": "44917301/40000000000",
+      "violates": false
+    },
+    {
+      "vertex": 224,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A5",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "5609767/500000000",
+      "block_orbits": 9,
+      "literal_blocks": 29,
+      "subset": [
+        0,
+        1,
+        2,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "53818561/5000000000",
+      "ratio": "53818561/56097670",
+      "pair_capacity_maximum": "5609767/500000000",
+      "violates": false
+    },
+    {
+      "vertex": 227,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "D4"
+      ],
+      "vertex_mass": "4794619/30000000000",
+      "block_orbits": 4,
+      "literal_blocks": 13,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "799103/5000000000",
+      "ratio": "4794618/4794619",
+      "pair_capacity_maximum": "4794619/30000000000",
+      "violates": false
+    },
+    {
+      "vertex": 228,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "H4"
+      ],
+      "vertex_mass": "11700823/1250000000",
+      "block_orbits": 7,
+      "literal_blocks": 13,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "11700823/1250000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "11700823/1250000000",
+      "violates": false
+    },
+    {
+      "vertex": 230,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "32560331/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "12112489/4000000000",
+      "ratio": "60562445/65120662",
+      "pair_capacity_maximum": "32560331/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 232,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A7",
+        "H3"
+      ],
+      "vertex_mass": "23993499/2000000000",
+      "block_orbits": 4,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "23993499/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "23993499/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 235,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A8",
+        "I2(5)"
+      ],
+      "vertex_mass": "2279109/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 8,
+      "subset": [
+        0,
+        1,
+        2,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "2279109/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2279109/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 291,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "H3",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "49686901/2500000000",
+      "block_orbits": 7,
+      "literal_blocks": 14,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "198747603/10000000000",
+      "ratio": "198747603/198747604",
+      "pair_capacity_maximum": "49686901/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 294,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "H4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "1469897/625000000",
+      "block_orbits": 3,
+      "literal_blocks": 6,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1469897/625000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "1469897/625000000",
+      "violates": false
+    },
+    {
+      "vertex": 297,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "H4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "5887129/30000000000",
+      "block_orbits": 1,
+      "literal_blocks": 9,
+      "subset": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "5887129/30000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "5887129/30000000000",
+      "violates": false
+    },
+    {
+      "vertex": 322,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A2",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "4694361/2000000000",
+      "block_orbits": 4,
+      "literal_blocks": 10,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "4694361/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "4694361/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 324,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A3",
+        "A3",
+        "A3"
+      ],
+      "vertex_mass": "130181/6000000000",
+      "block_orbits": 4,
+      "literal_blocks": 31,
+      "subset": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "79361/5000000000",
+      "ratio": "476166/650905",
+      "pair_capacity_maximum": "130181/6000000000",
+      "violates": false
+    },
+    {
+      "vertex": 337,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "12027523/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "12027523/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "12027523/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 339,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "7772733/2500000000",
+      "block_orbits": 8,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "64271861/20000000000",
+      "ratio": "64271861/62181864",
+      "pair_capacity_maximum": "7772733/2500000000",
+      "violates": true
+    },
+    {
+      "vertex": 346,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A4",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "51512221/10000000000",
+      "block_orbits": 10,
+      "literal_blocks": 22,
+      "subset": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "51512221/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "51512221/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 349,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A5",
+        "H4"
+      ],
+      "vertex_mass": "11956481/5000000000",
+      "block_orbits": 5,
+      "literal_blocks": 11,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "11956481/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "11956481/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 351,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A5",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "1669477/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 9,
+      "subset": [
+        4,
+        5,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "1669477/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "1669477/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 353,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A6",
+        "H3"
+      ],
+      "vertex_mass": "4694361/2000000000",
+      "block_orbits": 9,
+      "literal_blocks": 17,
+      "subset": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "4694361/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "4694361/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 356,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A7",
+        "I2(5)"
+      ],
+      "vertex_mass": "261587/800000000",
+      "block_orbits": 3,
+      "literal_blocks": 7,
+      "subset": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "261587/800000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "261587/800000000",
+      "violates": false
+    },
+    {
+      "vertex": 390,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "46911/8000000",
+      "block_orbits": 5,
+      "literal_blocks": 19,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "107171663/10000000000",
+      "ratio": "107171663/58638750",
+      "pair_capacity_maximum": "46911/8000000",
+      "violates": true
+    },
+    {
+      "vertex": 392,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "26057389/1250000000",
+      "block_orbits": 8,
+      "literal_blocks": 11,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "208459111/10000000000",
+      "ratio": "208459111/208459112",
+      "pair_capacity_maximum": "26057389/1250000000",
+      "violates": false
+    },
+    {
+      "vertex": 396,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A3",
+        "A3",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/30000000000",
+      "block_orbits": 3,
+      "literal_blocks": 19,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "174739/30000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/30000000000",
+      "violates": false
+    },
+    {
+      "vertex": 397,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A3",
+        "A5"
+      ],
+      "vertex_mass": "58107/5000000000",
+      "block_orbits": 2,
+      "literal_blocks": 6,
+      "subset": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "58107/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "58107/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 401,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "12319143/5000000000",
+      "block_orbits": 3,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "8579961/4000000000",
+      "ratio": "14299935/16425524",
+      "pair_capacity_maximum": "12319143/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 405,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A4",
+        "H4"
+      ],
+      "vertex_mass": "64194777/20000000000",
+      "block_orbits": 8,
+      "literal_blocks": 20,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "8024347/2500000000",
+      "ratio": "64194776/64194777",
+      "pair_capacity_maximum": "64194777/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 407,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "33558387/10000000000",
+      "block_orbits": 5,
+      "literal_blocks": 15,
+      "subset": [
+        0,
+        1,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "33558387/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "33558387/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 409,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A5",
+        "H3"
+      ],
+      "vertex_mass": "42920133/10000000000",
+      "block_orbits": 8,
+      "literal_blocks": 19,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "42920133/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "42920133/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 412,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_mass": "58812809/20000000000",
+      "block_orbits": 8,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "6107203/2000000000",
+      "ratio": "61072030/58812809",
+      "pair_capacity_maximum": "58812809/20000000000",
+      "violates": true
+    },
+    {
+      "vertex": 414,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A8"
+      ],
+      "vertex_mass": "153977/400000000",
+      "block_orbits": 3,
+      "literal_blocks": 5,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "153977/400000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "153977/400000000",
+      "violates": false
+    },
+    {
+      "vertex": 426,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "D4",
+        "H4"
+      ],
+      "vertex_mass": "486921/1250000000",
+      "block_orbits": 6,
+      "literal_blocks": 7,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "486921/1250000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "486921/1250000000",
+      "violates": false
+    },
+    {
+      "vertex": 428,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "D4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "174739/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 440,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "206565937/20000000000",
+      "block_orbits": 5,
+      "literal_blocks": 13,
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "247711697/20000000000",
+      "ratio": "247711697/206565937",
+      "pair_capacity_maximum": "206565937/20000000000",
+      "violates": true
+    },
+    {
+      "vertex": 441,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "460725529/20000000000",
+      "block_orbits": 7,
+      "literal_blocks": 13,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "57590691/2500000000",
+      "ratio": "460725528/460725529",
+      "pair_capacity_maximum": "460725529/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 443,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "53606011/5000000000",
+      "block_orbits": 8,
+      "literal_blocks": 14,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "53606011/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "53606011/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 445,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "888831/5000000000",
+      "block_orbits": 1,
+      "literal_blocks": 6,
+      "subset": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "888831/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "888831/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 447,
+      "forest": [
+        "A1",
+        "A1",
+        "A4",
+        "A4",
+        "H3"
+      ],
+      "vertex_mass": "3383471/1250000000",
+      "block_orbits": 7,
+      "literal_blocks": 26,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "3383471/1250000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "3383471/1250000000",
+      "violates": false
+    },
+    {
+      "vertex": 450,
+      "forest": [
+        "A1",
+        "A1",
+        "A4",
+        "A5",
+        "I2(5)"
+      ],
+      "vertex_mass": "12019149/2500000000",
+      "block_orbits": 7,
+      "literal_blocks": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "12019149/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "12019149/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 452,
+      "forest": [
+        "A1",
+        "A1",
+        "A4",
+        "A7"
+      ],
+      "vertex_mass": "7554433/5000000000",
+      "block_orbits": 5,
+      "literal_blocks": 13,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "7554433/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "7554433/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 459,
+      "forest": [
+        "A1",
+        "A1",
+        "A4",
+        "D4",
+        "H3"
+      ],
+      "vertex_mass": "2447037/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 11,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "2447037/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2447037/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 465,
+      "forest": [
+        "A1",
+        "A1",
+        "A4",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "385101863/10000000000",
+      "block_orbits": 12,
+      "literal_blocks": 19,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "385101863/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "385101863/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 467,
+      "forest": [
+        "A1",
+        "A1",
+        "A4",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "59905479/5000000000",
+      "block_orbits": 6,
+      "literal_blocks": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "55357721/5000000000",
+      "ratio": "55357721/59905479",
+      "pair_capacity_maximum": "59905479/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 468,
+      "forest": [
+        "A1",
+        "A1",
+        "A5",
+        "A6"
+      ],
+      "vertex_mass": "9471223/4000000000",
+      "block_orbits": 5,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        1,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "23678057/10000000000",
+      "ratio": "47356114/47356115",
+      "pair_capacity_maximum": "9471223/4000000000",
+      "violates": false
+    },
+    {
+      "vertex": 475,
+      "forest": [
+        "A1",
+        "A1",
+        "A5",
+        "D4",
+        "I2(5)"
+      ],
+      "vertex_mass": "4354427/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 8,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "4354427/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "4354427/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 479,
+      "forest": [
+        "A1",
+        "A1",
+        "A5",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "20941537/1250000000",
+      "block_orbits": 7,
+      "literal_blocks": 19,
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "20941537/1250000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "20941537/1250000000",
+      "violates": false
+    },
+    {
+      "vertex": 481,
+      "forest": [
+        "A1",
+        "A1",
+        "A5",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "108121791/5000000000",
+      "block_orbits": 9,
+      "literal_blocks": 14,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "49382491/2500000000",
+      "ratio": "98764982/108121791",
+      "pair_capacity_maximum": "108121791/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 484,
+      "forest": [
+        "A1",
+        "A1",
+        "A5",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "168199567/30000000000",
+      "block_orbits": 3,
+      "literal_blocks": 21,
+      "subset": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "53818561/10000000000",
+      "ratio": "161455683/168199567",
+      "pair_capacity_maximum": "168199567/30000000000",
+      "violates": false
+    },
+    {
+      "vertex": 490,
+      "forest": [
+        "A1",
+        "A1",
+        "A6",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "204241359/10000000000",
+      "block_orbits": 8,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "36909421/2000000000",
+      "ratio": "184547105/204241359",
+      "pair_capacity_maximum": "204241359/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 494,
+      "forest": [
+        "A1",
+        "A1",
+        "A7",
+        "D4"
+      ],
+      "vertex_mass": "519353/625000000",
+      "block_orbits": 4,
+      "literal_blocks": 10,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "3323859/4000000000",
+      "ratio": "16619295/16619296",
+      "pair_capacity_maximum": "519353/625000000",
+      "violates": false
+    },
+    {
+      "vertex": 496,
+      "forest": [
+        "A1",
+        "A1",
+        "A7",
+        "H4"
+      ],
+      "vertex_mass": "38934583/2000000000",
+      "block_orbits": 8,
+      "literal_blocks": 13,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "97336457/5000000000",
+      "ratio": "194672914/194672915",
+      "pair_capacity_maximum": "38934583/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 498,
+      "forest": [
+        "A1",
+        "A1",
+        "A7",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "43700691/5000000000",
+      "block_orbits": 5,
+      "literal_blocks": 13,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "174802763/20000000000",
+      "ratio": "174802763/174802764",
+      "pair_capacity_maximum": "43700691/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 501,
+      "forest": [
+        "A1",
+        "A1",
+        "A8",
+        "H3"
+      ],
+      "vertex_mass": "213131201/20000000000",
+      "block_orbits": 5,
+      "literal_blocks": 11,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "213131201/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "213131201/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 549,
+      "forest": [
+        "A1",
+        "A1",
+        "D4",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "2447037/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 5,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2447037/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2447037/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 551,
+      "forest": [
+        "A1",
+        "A1",
+        "D4",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "5887129/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "5887129/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "5887129/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 583,
+      "forest": [
+        "A1",
+        "A1",
+        "H3",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "817547/400000000",
+      "block_orbits": 4,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "817547/400000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "817547/400000000",
+      "violates": false
+    },
+    {
+      "vertex": 584,
+      "forest": [
+        "A1",
+        "A1",
+        "H3",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "747411751/20000000000",
+      "block_orbits": 7,
+      "literal_blocks": 13,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "747411751/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "747411751/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 586,
+      "forest": [
+        "A1",
+        "A1",
+        "H3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "36197861/2500000000",
+      "block_orbits": 7,
+      "literal_blocks": 9,
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "150678571/10000000000",
+      "ratio": "150678571/144791444",
+      "pair_capacity_maximum": "36197861/2500000000",
+      "violates": true
+    },
+    {
+      "vertex": 652,
+      "forest": [
+        "A1",
+        "A2",
+        "A2",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "51512221/20000000000",
+      "block_orbits": 3,
+      "literal_blocks": 11,
+      "subset": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "4811009/2000000000",
+      "ratio": "48110090/51512221",
+      "pair_capacity_maximum": "51512221/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 653,
+      "forest": [
+        "A1",
+        "A2",
+        "A2",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "3584683/20000000000",
+      "block_orbits": 1,
+      "literal_blocks": 2,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "3584683/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "3584683/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 655,
+      "forest": [
+        "A1",
+        "A2",
+        "A2",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "2904663/10000000000",
+      "block_orbits": 1,
+      "literal_blocks": 4,
+      "subset": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "2904663/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2904663/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 659,
+      "forest": [
+        "A1",
+        "A2",
+        "A3",
+        "A3",
+        "D4"
+      ],
+      "vertex_mass": "174739/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 10,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "174739/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 660,
+      "forest": [
+        "A1",
+        "A2",
+        "A3",
+        "A3",
+        "H4"
+      ],
+      "vertex_mass": "162867/2000000000",
+      "block_orbits": 6,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "162867/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "162867/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 682,
+      "forest": [
+        "A1",
+        "A2",
+        "A3",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "29289333/5000000000",
+      "block_orbits": 10,
+      "literal_blocks": 15,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "7322333/1250000000",
+      "ratio": "29289332/29289333",
+      "pair_capacity_maximum": "29289333/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 684,
+      "forest": [
+        "A1",
+        "A2",
+        "A3",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "18453491/5000000000",
+      "block_orbits": 6,
+      "literal_blocks": 17,
+      "subset": [
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "33558387/10000000000",
+      "ratio": "33558387/36906982",
+      "pair_capacity_maximum": "18453491/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 700,
+      "forest": [
+        "A1",
+        "A2",
+        "A4",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "51512221/20000000000",
+      "block_orbits": 6,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2575611/1000000000",
+      "ratio": "51512220/51512221",
+      "pair_capacity_maximum": "51512221/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 702,
+      "forest": [
+        "A1",
+        "A2",
+        "A4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "20561527/10000000000",
+      "block_orbits": 6,
+      "literal_blocks": 9,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "20561527/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "20561527/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 704,
+      "forest": [
+        "A1",
+        "A2",
+        "A4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "955937/2500000000",
+      "block_orbits": 3,
+      "literal_blocks": 9,
+      "subset": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "1768723/5000000000",
+      "ratio": "1768723/1911874",
+      "pair_capacity_maximum": "955937/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 711,
+      "forest": [
+        "A1",
+        "A2",
+        "A5",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "25756111/5000000000",
+      "block_orbits": 7,
+      "literal_blocks": 12,
+      "subset": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "51512221/10000000000",
+      "ratio": "51512221/51512222",
+      "pair_capacity_maximum": "25756111/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 717,
+      "forest": [
+        "A1",
+        "A2",
+        "A6",
+        "H4"
+      ],
+      "vertex_mass": "3584683/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "3584683/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "3584683/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 719,
+      "forest": [
+        "A1",
+        "A2",
+        "A6",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "5497/16000000",
+      "block_orbits": 3,
+      "literal_blocks": 8,
+      "subset": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "5497/16000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "5497/16000000",
+      "violates": false
+    },
+    {
+      "vertex": 722,
+      "forest": [
+        "A1",
+        "A2",
+        "A7",
+        "H3"
+      ],
+      "vertex_mass": "11839029/10000000000",
+      "block_orbits": 5,
+      "literal_blocks": 9,
+      "subset": [
+        1,
+        2,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "11839029/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "11839029/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 725,
+      "forest": [
+        "A1",
+        "A2",
+        "A8",
+        "I2(5)"
+      ],
+      "vertex_mass": "1717813/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 5,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "5497/32000000",
+      "ratio": "3435625/3435626",
+      "pair_capacity_maximum": "1717813/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 760,
+      "forest": [
+        "A1",
+        "A2",
+        "D4",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "1223519/5000000000",
+      "block_orbits": 3,
+      "literal_blocks": 8,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1223519/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "1223519/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 762,
+      "forest": [
+        "A1",
+        "A2",
+        "D4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "2844259/2000000000",
+      "block_orbits": 5,
+      "literal_blocks": 5,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2844259/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2844259/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 764,
+      "forest": [
+        "A1",
+        "A2",
+        "D4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/5000000000",
+      "block_orbits": 2,
+      "literal_blocks": 6,
+      "subset": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "174739/7500000000",
+      "ratio": "2/3",
+      "pair_capacity_maximum": "174739/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 787,
+      "forest": [
+        "A1",
+        "A2",
+        "H3",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "111061691/5000000000",
+      "block_orbits": 9,
+      "literal_blocks": 19,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "111061691/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "111061691/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 789,
+      "forest": [
+        "A1",
+        "A2",
+        "H3",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "55357721/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 7,
+      "subset": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "331711/40000000",
+      "ratio": "82927750/55357721",
+      "pair_capacity_maximum": "55357721/10000000000",
+      "violates": true
+    },
+    {
+      "vertex": 791,
+      "forest": [
+        "A1",
+        "A2",
+        "H4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "444606277/20000000000",
+      "block_orbits": 5,
+      "literal_blocks": 9,
+      "subset": [
+        1,
+        2,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "111151569/5000000000",
+      "ratio": "444606276/444606277",
+      "pair_capacity_maximum": "444606277/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 794,
+      "forest": [
+        "A1",
+        "A2",
+        "H4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "4984639/625000000",
+      "block_orbits": 2,
+      "literal_blocks": 6,
+      "subset": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "4984639/625000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "4984639/625000000",
+      "violates": false
+    },
+    {
+      "vertex": 796,
+      "forest": [
+        "A1",
+        "A3",
+        "A3",
+        "A3",
+        "A3"
+      ],
+      "vertex_mass": "29123/20000000000",
+      "block_orbits": 1,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "29123/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "29123/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 798,
+      "forest": [
+        "A1",
+        "A3",
+        "A3",
+        "A3",
+        "H3"
+      ],
+      "vertex_mass": "139457/6000000000",
+      "block_orbits": 2,
+      "literal_blocks": 9,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "139457/6000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "139457/6000000000",
+      "violates": false
+    },
+    {
+      "vertex": 801,
+      "forest": [
+        "A1",
+        "A3",
+        "A3",
+        "A4",
+        "I2(5)"
+      ],
+      "vertex_mass": "464857/10000000000",
+      "block_orbits": 5,
+      "literal_blocks": 9,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "464857/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "464857/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 803,
+      "forest": [
+        "A1",
+        "A3",
+        "A3",
+        "A6"
+      ],
+      "vertex_mass": "1132457/20000000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1132457/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "1132457/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 809,
+      "forest": [
+        "A1",
+        "A3",
+        "A3",
+        "D4",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "174739/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 813,
+      "forest": [
+        "A1",
+        "A3",
+        "A3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "37260979/20000000000",
+      "block_orbits": 5,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "37260979/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "37260979/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 815,
+      "forest": [
+        "A1",
+        "A3",
+        "A3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "27290007/10000000000",
+      "block_orbits": 6,
+      "literal_blocks": 23,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "27290007/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "27290007/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 817,
+      "forest": [
+        "A1",
+        "A3",
+        "A3",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "11186129/10000000000",
+      "block_orbits": 1,
+      "literal_blocks": 12,
+      "subset": [
+        1,
+        2,
+        3,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "11186129/20000000000",
+      "ratio": "1/2",
+      "pair_capacity_maximum": "11186129/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 824,
+      "forest": [
+        "A1",
+        "A3",
+        "A4",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "39902041/5000000000",
+      "block_orbits": 12,
+      "literal_blocks": 21,
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "39902041/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "39902041/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 830,
+      "forest": [
+        "A1",
+        "A3",
+        "A5",
+        "H4"
+      ],
+      "vertex_mass": "4373607/1250000000",
+      "block_orbits": 5,
+      "literal_blocks": 8,
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "8537541/2000000000",
+      "ratio": "14229235/11662952",
+      "pair_capacity_maximum": "4373607/1250000000",
+      "violates": true
+    },
+    {
+      "vertex": 832,
+      "forest": [
+        "A1",
+        "A3",
+        "A5",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "85863067/20000000000",
+      "block_orbits": 8,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "9791217/2000000000",
+      "ratio": "97912170/85863067",
+      "pair_capacity_maximum": "85863067/20000000000",
+      "violates": true
+    },
+    {
+      "vertex": 835,
+      "forest": [
+        "A1",
+        "A3",
+        "A6",
+        "H3"
+      ],
+      "vertex_mass": "24416537/5000000000",
+      "block_orbits": 8,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "24416537/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "24416537/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 838,
+      "forest": [
+        "A1",
+        "A3",
+        "A7",
+        "I2(5)"
+      ],
+      "vertex_mass": "4187337/2000000000",
+      "block_orbits": 6,
+      "literal_blocks": 9,
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "4187337/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "4187337/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 859,
+      "forest": [
+        "A1",
+        "A3",
+        "D4",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "2844259/2000000000",
+      "block_orbits": 6,
+      "literal_blocks": 9,
+      "subset": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2844259/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2844259/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 875,
+      "forest": [
+        "A1",
+        "A3",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "203808979/30000000000",
+      "block_orbits": 4,
+      "literal_blocks": 13,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "33968163/5000000000",
+      "ratio": "203808978/203808979",
+      "pair_capacity_maximum": "203808979/30000000000",
+      "violates": false
+    },
+    {
+      "vertex": 877,
+      "forest": [
+        "A1",
+        "A3",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "5073073/125000000",
+      "block_orbits": 14,
+      "literal_blocks": 20,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "5073073/125000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "5073073/125000000",
+      "violates": false
+    },
+    {
+      "vertex": 879,
+      "forest": [
+        "A1",
+        "A3",
+        "H3",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "55357721/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 15,
+      "subset": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "23065717/5000000000",
+      "ratio": "46131434/55357721",
+      "pair_capacity_maximum": "55357721/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 885,
+      "forest": [
+        "A1",
+        "A4",
+        "A4",
+        "H4"
+      ],
+      "vertex_mass": "16976843/20000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "16976843/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "16976843/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 887,
+      "forest": [
+        "A1",
+        "A4",
+        "A4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "13865447/20000000000",
+      "block_orbits": 4,
+      "literal_blocks": 15,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "794433/1250000000",
+      "ratio": "12710928/13865447",
+      "pair_capacity_maximum": "13865447/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 889,
+      "forest": [
+        "A1",
+        "A4",
+        "A5",
+        "H3"
+      ],
+      "vertex_mass": "117989/40000000",
+      "block_orbits": 5,
+      "literal_blocks": 9,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "117989/40000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "117989/40000000",
+      "violates": false
+    },
+    {
+      "vertex": 892,
+      "forest": [
+        "A1",
+        "A4",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_mass": "5598109/5000000000",
+      "block_orbits": 7,
+      "literal_blocks": 12,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "15372127/10000000000",
+      "ratio": "15372127/11196218",
+      "pair_capacity_maximum": "5598109/5000000000",
+      "violates": true
+    },
+    {
+      "vertex": 894,
+      "forest": [
+        "A1",
+        "A4",
+        "A8"
+      ],
+      "vertex_mass": "727399/2500000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "727399/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "727399/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 909,
+      "forest": [
+        "A1",
+        "A4",
+        "D4",
+        "H4"
+      ],
+      "vertex_mass": "3024109/2000000000",
+      "block_orbits": 5,
+      "literal_blocks": 7,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "3024109/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "3024109/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 911,
+      "forest": [
+        "A1",
+        "A4",
+        "D4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "16318163/20000000000",
+      "block_orbits": 6,
+      "literal_blocks": 11,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "8159081/10000000000",
+      "ratio": "16318162/16318163",
+      "pair_capacity_maximum": "16318163/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 924,
+      "forest": [
+        "A1",
+        "A4",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "98816507/5000000000",
+      "block_orbits": 10,
+      "literal_blocks": 21,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "197633013/10000000000",
+      "ratio": "197633013/197633014",
+      "pair_capacity_maximum": "98816507/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 926,
+      "forest": [
+        "A1",
+        "A4",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "444606277/20000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "444606277/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "444606277/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 928,
+      "forest": [
+        "A1",
+        "A4",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "49673543/2500000000",
+      "block_orbits": 7,
+      "literal_blocks": 11,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "49673543/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "49673543/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 930,
+      "forest": [
+        "A1",
+        "A4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "13856191/10000000000",
+      "block_orbits": 1,
+      "literal_blocks": 6,
+      "subset": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "13856191/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "13856191/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 933,
+      "forest": [
+        "A1",
+        "A5",
+        "A5",
+        "I2(5)"
+      ],
+      "vertex_mass": "12019149/5000000000",
+      "block_orbits": 3,
+      "literal_blocks": 9,
+      "subset": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "12019149/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "12019149/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 935,
+      "forest": [
+        "A1",
+        "A5",
+        "A7"
+      ],
+      "vertex_mass": "11839029/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 4,
+      "subset": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "11839029/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "11839029/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 944,
+      "forest": [
+        "A1",
+        "A5",
+        "D4",
+        "H3"
+      ],
+      "vertex_mass": "13422883/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "13422883/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "13422883/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 951,
+      "forest": [
+        "A1",
+        "A5",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "141551883/5000000000",
+      "block_orbits": 8,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "300792247/10000000000",
+      "ratio": "300792247/283103766",
+      "pair_capacity_maximum": "141551883/5000000000",
+      "violates": true
+    },
+    {
+      "vertex": 953,
+      "forest": [
+        "A1",
+        "A5",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "35152233/2500000000",
+      "block_orbits": 6,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "73046203/5000000000",
+      "ratio": "73046203/70304466",
+      "pair_capacity_maximum": "35152233/2500000000",
+      "violates": true
+    },
+    {
+      "vertex": 955,
+      "forest": [
+        "A1",
+        "A6",
+        "A6"
+      ],
+      "vertex_mass": "7169367/40000000000",
+      "block_orbits": 3,
+      "literal_blocks": 12,
+      "subset": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "3584683/20000000000",
+      "ratio": "7169366/7169367",
+      "pair_capacity_maximum": "7169367/40000000000",
+      "violates": false
+    },
+    {
+      "vertex": 963,
+      "forest": [
+        "A1",
+        "A6",
+        "D4",
+        "I2(5)"
+      ],
+      "vertex_mass": "2844259/2000000000",
+      "block_orbits": 5,
+      "literal_blocks": 8,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2844259/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "2844259/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 968,
+      "forest": [
+        "A1",
+        "A6",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "71246477/5000000000",
+      "block_orbits": 6,
+      "literal_blocks": 13,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "71246477/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "71246477/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 970,
+      "forest": [
+        "A1",
+        "A6",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "224926197/10000000000",
+      "block_orbits": 6,
+      "literal_blocks": 9,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "224926197/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "224926197/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 973,
+      "forest": [
+        "A1",
+        "A6",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "147675899/15000000000",
+      "block_orbits": 2,
+      "literal_blocks": 9,
+      "subset": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "4527787/500000000",
+      "ratio": "135833610/147675899",
+      "pair_capacity_maximum": "147675899/15000000000",
+      "violates": false
+    },
+    {
+      "vertex": 979,
+      "forest": [
+        "A1",
+        "A7",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "5979571/500000000",
+      "block_orbits": 9,
+      "literal_blocks": 15,
+      "subset": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "1630447/160000000",
+      "ratio": "3135475/3679736",
+      "pair_capacity_maximum": "5979571/500000000",
+      "violates": false
+    },
+    {
+      "vertex": 983,
+      "forest": [
+        "A1",
+        "A8",
+        "D4"
+      ],
+      "vertex_mass": "13422883/20000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "13422883/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "13422883/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 985,
+      "forest": [
+        "A1",
+        "A8",
+        "H4"
+      ],
+      "vertex_mass": "56231549/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 5,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "56231549/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "56231549/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 987,
+      "forest": [
+        "A1",
+        "A8",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "57120159/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 5,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "57120159/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "57120159/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 990,
+      "forest": [
+        "A1",
+        "A9",
+        "H3"
+      ],
+      "vertex_mass": "68680417/20000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "68680417/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "68680417/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1070,
+      "forest": [
+        "A1",
+        "D4",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "64477/80000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "64477/80000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "64477/80000000",
+      "violates": false
+    },
+    {
+      "vertex": 1072,
+      "forest": [
+        "A1",
+        "D4",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "5887129/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 5,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "5887129/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "5887129/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1074,
+      "forest": [
+        "A1",
+        "D4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "110753/800000000",
+      "block_orbits": 1,
+      "literal_blocks": 6,
+      "subset": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "110753/800000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "110753/800000000",
+      "violates": false
+    },
+    {
+      "vertex": 1122,
+      "forest": [
+        "A1",
+        "H3",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "77334657/20000000000",
+      "block_orbits": 2,
+      "literal_blocks": 8,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "77334657/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "77334657/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1124,
+      "forest": [
+        "A1",
+        "H3",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "98816507/5000000000",
+      "block_orbits": 7,
+      "literal_blocks": 13,
+      "subset": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "197633013/10000000000",
+      "ratio": "197633013/197633014",
+      "pair_capacity_maximum": "98816507/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1127,
+      "forest": [
+        "A1",
+        "H4",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "32485427/2500000000",
+      "block_orbits": 1,
+      "literal_blocks": 3,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "32485427/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "32485427/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 1129,
+      "forest": [
+        "A1",
+        "H4",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "75701369/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "75701369/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "75701369/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1132,
+      "forest": [
+        "A1",
+        "H4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "11730139/10000000000",
+      "block_orbits": 1,
+      "literal_blocks": 6,
+      "subset": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "11730139/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "11730139/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1244,
+      "forest": [
+        "A2",
+        "A3",
+        "A3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "139457/2000000000",
+      "block_orbits": 4,
+      "literal_blocks": 6,
+      "subset": [
+        0,
+        1,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "139457/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "139457/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1289,
+      "forest": [
+        "A2",
+        "A3",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "6470257/2000000000",
+      "block_orbits": 3,
+      "literal_blocks": 7,
+      "subset": [
+        0,
+        1,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "6470257/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "6470257/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1291,
+      "forest": [
+        "A2",
+        "A3",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "7698849/5000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "7698849/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "7698849/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1293,
+      "forest": [
+        "A2",
+        "A3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "7698849/5000000000",
+      "block_orbits": 3,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "23096547/10000000000",
+      "ratio": "3/2",
+      "pair_capacity_maximum": "7698849/5000000000",
+      "violates": true
+    },
+    {
+      "vertex": 1418,
+      "forest": [
+        "A2",
+        "H3",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "71246477/15000000000",
+      "block_orbits": 2,
+      "literal_blocks": 7,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "71246477/15000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "71246477/15000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1420,
+      "forest": [
+        "A2",
+        "H3",
+        "H4",
+        "H4"
+      ],
+      "vertex_mass": "8844241/2500000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "8844241/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "8844241/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 1422,
+      "forest": [
+        "A2",
+        "H3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "8844241/2500000000",
+      "block_orbits": 3,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "26532723/5000000000",
+      "ratio": "3/2",
+      "pair_capacity_maximum": "8844241/2500000000",
+      "violates": true
+    },
+    {
+      "vertex": 1428,
+      "forest": [
+        "A3",
+        "A3",
+        "A3",
+        "D4"
+      ],
+      "vertex_mass": "29123/5000000000",
+      "block_orbits": 2,
+      "literal_blocks": 7,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "29123/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "29123/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1429,
+      "forest": [
+        "A3",
+        "A3",
+        "A3",
+        "H4"
+      ],
+      "vertex_mass": "34811/240000000",
+      "block_orbits": 3,
+      "literal_blocks": 5,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "34811/240000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "34811/240000000",
+      "violates": false
+    },
+    {
+      "vertex": 1431,
+      "forest": [
+        "A3",
+        "A3",
+        "A3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "464857/20000000000",
+      "block_orbits": 1,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "464857/60000000000",
+      "ratio": "1/3",
+      "pair_capacity_maximum": "464857/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1433,
+      "forest": [
+        "A3",
+        "A3",
+        "A4",
+        "H3"
+      ],
+      "vertex_mass": "900029/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "900029/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "900029/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1436,
+      "forest": [
+        "A3",
+        "A3",
+        "A5",
+        "I2(5)"
+      ],
+      "vertex_mass": "900029/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 8,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "900029/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "900029/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1438,
+      "forest": [
+        "A3",
+        "A3",
+        "A7"
+      ],
+      "vertex_mass": "900029/20000000000",
+      "block_orbits": 2,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "900029/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "900029/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1451,
+      "forest": [
+        "A3",
+        "A3",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "15500621/2500000000",
+      "block_orbits": 6,
+      "literal_blocks": 10,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "15500621/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "15500621/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 1453,
+      "forest": [
+        "A3",
+        "A3",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "57502339/20000000000",
+      "block_orbits": 3,
+      "literal_blocks": 13,
+      "subset": [
+        0,
+        1,
+        2,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "57502339/40000000000",
+      "ratio": "1/2",
+      "pair_capacity_maximum": "57502339/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1470,
+      "forest": [
+        "A3",
+        "A4",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "64702571/20000000000",
+      "block_orbits": 4,
+      "literal_blocks": 8,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "6470257/2000000000",
+      "ratio": "64702570/64702571",
+      "pair_capacity_maximum": "64702571/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1472,
+      "forest": [
+        "A3",
+        "A4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "23096547/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 5,
+      "subset": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "7698849/2500000000",
+      "ratio": "4/3",
+      "pair_capacity_maximum": "23096547/10000000000",
+      "violates": true
+    },
+    {
+      "vertex": 1475,
+      "forest": [
+        "A3",
+        "A4",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "7698849/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 9,
+      "subset": [
+        3,
+        4,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "9623561/15000000000",
+      "ratio": "19247122/23096547",
+      "pair_capacity_maximum": "7698849/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1482,
+      "forest": [
+        "A3",
+        "A5",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "12220491/2000000000",
+      "block_orbits": 6,
+      "literal_blocks": 10,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "12220491/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "12220491/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1488,
+      "forest": [
+        "A3",
+        "A6",
+        "H4"
+      ],
+      "vertex_mass": "7698849/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 7,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "7698849/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "7698849/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1490,
+      "forest": [
+        "A3",
+        "A6",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "7698849/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 9,
+      "subset": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "7698849/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "7698849/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1493,
+      "forest": [
+        "A3",
+        "A7",
+        "H3"
+      ],
+      "vertex_mass": "12220491/4000000000",
+      "block_orbits": 3,
+      "literal_blocks": 4,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "12220491/4000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "12220491/4000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1496,
+      "forest": [
+        "A3",
+        "A8",
+        "I2(5)"
+      ],
+      "vertex_mass": "7698849/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "7698849/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "7698849/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1527,
+      "forest": [
+        "A3",
+        "D4",
+        "D4",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "174739/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1534,
+      "forest": [
+        "A3",
+        "D4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "174739/2500000000",
+      "block_orbits": 3,
+      "literal_blocks": 3,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "174739/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "174739/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 1561,
+      "forest": [
+        "A3",
+        "H3",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "2185553/125000000",
+      "block_orbits": 5,
+      "literal_blocks": 10,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "174844239/10000000000",
+      "ratio": "174844239/174844240",
+      "pair_capacity_maximum": "2185553/125000000",
+      "violates": false
+    },
+    {
+      "vertex": 1563,
+      "forest": [
+        "A3",
+        "H3",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "71246477/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "71246477/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "71246477/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1565,
+      "forest": [
+        "A3",
+        "H4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "1679561/2000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1679561/2000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "1679561/2000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1619,
+      "forest": [
+        "A4",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "19206113/2000000000",
+      "block_orbits": 5,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "72281739/5000000000",
+      "ratio": "144563478/96030565",
+      "pair_capacity_maximum": "19206113/2000000000",
+      "violates": true
+    },
+    {
+      "vertex": 1621,
+      "forest": [
+        "A4",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "26532723/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 5,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "8844241/1250000000",
+      "ratio": "4/3",
+      "pair_capacity_maximum": "26532723/5000000000",
+      "violates": true
+    },
+    {
+      "vertex": 1624,
+      "forest": [
+        "A4",
+        "H3",
+        "I2(5)",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "8844241/5000000000",
+      "block_orbits": 2,
+      "literal_blocks": 9,
+      "subset": [
+        0,
+        1,
+        7,
+        8,
+        9,
+        10
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "8844241/6000000000",
+      "ratio": "5/6",
+      "pair_capacity_maximum": "8844241/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1663,
+      "forest": [
+        "A5",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "71246477/5000000000",
+      "block_orbits": 6,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "71246477/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "71246477/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1682,
+      "forest": [
+        "A6",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "8844241/2500000000",
+      "block_orbits": 3,
+      "literal_blocks": 5,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "8844241/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "8844241/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 1684,
+      "forest": [
+        "A6",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "8844241/2500000000",
+      "block_orbits": 3,
+      "literal_blocks": 7,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "8844241/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "8844241/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 1698,
+      "forest": [
+        "A7",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "71246477/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "71246477/10000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "71246477/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1708,
+      "forest": [
+        "A8",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "8844241/5000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "8844241/5000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "8844241/5000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1775,
+      "forest": [
+        "D4",
+        "D4",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "5887129/20000000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "5887129/20000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "5887129/20000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1792,
+      "forest": [
+        "D4",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "30658013/15000000000",
+      "block_orbits": 2,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "30658013/15000000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "30658013/15000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1794,
+      "forest": [
+        "D4",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "11774259/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 3,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "5887129/5000000000",
+      "ratio": "11774258/11774259",
+      "pair_capacity_maximum": "11774259/10000000000",
+      "violates": false
+    },
+    {
+      "vertex": 1860,
+      "forest": [
+        "H3",
+        "H3",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "46360207/2500000000",
+      "block_orbits": 3,
+      "literal_blocks": 5,
+      "subset": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "46360207/2500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "46360207/2500000000",
+      "violates": false
+    },
+    {
+      "vertex": 1864,
+      "forest": [
+        "H3",
+        "H4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "1473137/500000000",
+      "block_orbits": 2,
+      "literal_blocks": 3,
+      "subset": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1473137/500000000",
+      "ratio": "1",
+      "pair_capacity_maximum": "1473137/500000000",
+      "violates": false
+    }
+  ],
+  "violations": [
+    {
+      "vertex": 45,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_mass": "298569/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 20,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "895707/25000000000",
+      "ratio": "6/5",
+      "pair_capacity_maximum": "298569/10000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "subset_orbit_size": 5,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              3,
+              4
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "895707/10000000000",
+          "averaged_coefficient": "2/5",
+          "contribution": "895707/25000000000",
+          "origins": [
+            {
+              "face": 636,
+              "star": 720,
+              "omitted": 9,
+              "ports": [
+                8,
+                10,
+                13
+              ],
+              "multiplier": "895707/10000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 97,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A5",
+        "H4"
+      ],
+      "vertex_mass": "17095153/15000000000",
+      "block_orbits": 5,
+      "literal_blocks": 20,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "1070769/625000000",
+      "ratio": "25698456/17095153",
+      "pair_capacity_maximum": "17095153/15000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "1070769/625000000",
+          "averaged_coefficient": "1",
+          "contribution": "1070769/625000000",
+          "origins": [
+            {
+              "face": 858,
+              "star": 1002,
+              "omitted": 2,
+              "ports": [
+                1,
+                3,
+                13
+              ],
+              "multiplier": "1070769/625000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 98,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A5",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "4354427/10000000000",
+      "block_orbits": 2,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2902951/5000000000",
+      "ratio": "5805902/4354427",
+      "pair_capacity_maximum": "4354427/10000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "2902951/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "2902951/5000000000",
+          "origins": [
+            {
+              "face": 7838,
+              "star": 9191,
+              "omitted": 2,
+              "ports": [
+                1,
+                3,
+                13
+              ],
+              "multiplier": "2902951/5000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 100,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "H3"
+      ],
+      "vertex_mass": "47742103/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "24416537/5000000000",
+      "ratio": "48833074/47742103",
+      "pair_capacity_maximum": "47742103/10000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "24416537/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "24416537/5000000000",
+          "origins": [
+            {
+              "face": 254,
+              "star": 332,
+              "omitted": 13,
+              "ports": [
+                0,
+                1,
+                2
+              ],
+              "multiplier": "24416537/5000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 131,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "4318387/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "7197311/10000000000",
+      "ratio": "7197311/4318387",
+      "pair_capacity_maximum": "4318387/10000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "7197311/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "7197311/10000000000",
+          "origins": [
+            {
+              "face": 8184,
+              "star": 9539,
+              "omitted": 2,
+              "ports": [
+                1,
+                3,
+                13
+              ],
+              "multiplier": "7197311/10000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 159,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_mass": "1992713/10000000000",
+      "block_orbits": 5,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "2548381/10000000000",
+      "ratio": "2548381/1992713",
+      "pair_capacity_maximum": "1992713/10000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          4
+        ]
+      ],
+      "subset_orbit_size": 2,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              4
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "2548381/5000000000",
+          "averaged_coefficient": "1/2",
+          "contribution": "2548381/10000000000",
+          "origins": [
+            {
+              "face": 634,
+              "star": 717,
+              "omitted": 9,
+              "ports": [
+                8,
+                10,
+                13
+              ],
+              "multiplier": "2548381/5000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 339,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "7772733/2500000000",
+      "block_orbits": 8,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "64271861/20000000000",
+      "ratio": "64271861/62181864",
+      "pair_capacity_maximum": "7772733/2500000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          4,
+          5,
+          6,
+          11,
+          12
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 2,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              4,
+              5,
+              11,
+              12
+            ],
+            [
+              5,
+              6,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              4,
+              5,
+              11,
+              12
+            ],
+            [
+              5,
+              6,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "1106031/500000000",
+          "averaged_coefficient": "1",
+          "contribution": "1106031/500000000",
+          "origins": [
+            {
+              "face": 262,
+              "star": 340,
+              "omitted": 5,
+              "ports": [
+                0,
+                6,
+                7,
+                13
+              ],
+              "multiplier": "1106031/500000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              4,
+              5,
+              6
+            ]
+          ],
+          "block_orbit_mass": "20030621/10000000000",
+          "averaged_coefficient": "1/2",
+          "contribution": "20030621/20000000000",
+          "origins": [
+            {
+              "face": 438,
+              "star": 519,
+              "omitted": 13,
+              "ports": [
+                0,
+                4,
+                5,
+                6
+              ],
+              "multiplier": "2904663/5000000000"
+            },
+            {
+              "face": 439,
+              "star": 520,
+              "omitted": 13,
+              "ports": [
+                0,
+                4,
+                5,
+                6
+              ],
+              "multiplier": "2844259/2000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 390,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "46911/8000000",
+      "block_orbits": 5,
+      "literal_blocks": 19,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "107171663/10000000000",
+      "ratio": "107171663/58638750",
+      "pair_capacity_maximum": "46911/8000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "46911/8000000",
+          "averaged_coefficient": "1",
+          "contribution": "46911/8000000",
+          "origins": [
+            {
+              "face": 8907,
+              "star": 10619,
+              "omitted": 1,
+              "ports": [
+                2,
+                3,
+                13
+              ],
+              "multiplier": "46911/16000000"
+            },
+            {
+              "face": 8907,
+              "star": 10619,
+              "omitted": 2,
+              "ports": [
+                1,
+                3,
+                13
+              ],
+              "multiplier": "46911/16000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "block_orbit_mass": "48532913/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "48532913/10000000000",
+          "origins": [
+            {
+              "face": 1008,
+              "star": 1208,
+              "omitted": 2,
+              "ports": [
+                1,
+                3,
+                13
+              ],
+              "multiplier": "48532913/10000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 412,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_mass": "58812809/20000000000",
+      "block_orbits": 8,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "6107203/2000000000",
+      "ratio": "61072030/58812809",
+      "pair_capacity_maximum": "58812809/20000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 2,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              2,
+              3,
+              11,
+              12
+            ],
+            [
+              3,
+              4,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              2,
+              3,
+              11,
+              12
+            ],
+            [
+              3,
+              4,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "4341511/2000000000",
+          "averaged_coefficient": "1",
+          "contribution": "4341511/2000000000",
+          "origins": [
+            {
+              "face": 181,
+              "star": 219,
+              "omitted": 3,
+              "ports": [
+                2,
+                4,
+                5,
+                13
+              ],
+              "multiplier": "4341511/2000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              2,
+              3,
+              4
+            ]
+          ],
+          "block_orbit_mass": "441423/250000000",
+          "averaged_coefficient": "1/2",
+          "contribution": "441423/500000000",
+          "origins": [
+            {
+              "face": 536,
+              "star": 618,
+              "omitted": 13,
+              "ports": [
+                0,
+                2,
+                3,
+                4
+              ],
+              "multiplier": "5497/16000000"
+            },
+            {
+              "face": 537,
+              "star": 619,
+              "omitted": 13,
+              "ports": [
+                0,
+                2,
+                3,
+                4
+              ],
+              "multiplier": "2844259/2000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 440,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_mass": "206565937/20000000000",
+      "block_orbits": 5,
+      "literal_blocks": 13,
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "247711697/20000000000",
+      "ratio": "247711697/206565937",
+      "pair_capacity_maximum": "206565937/20000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 2,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              2,
+              3,
+              11,
+              12
+            ],
+            [
+              3,
+              4,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              2,
+              3,
+              11,
+              12
+            ],
+            [
+              3,
+              4,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "96285819/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "96285819/10000000000",
+          "origins": [
+            {
+              "face": 406,
+              "star": 487,
+              "omitted": 11,
+              "ports": [
+                9,
+                10,
+                12,
+                13
+              ],
+              "multiplier": "96285819/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              2,
+              3,
+              4
+            ]
+          ],
+          "block_orbit_mass": "55140059/10000000000",
+          "averaged_coefficient": "1/2",
+          "contribution": "55140059/20000000000",
+          "origins": [
+            {
+              "face": 943,
+              "star": 1103,
+              "omitted": 4,
+              "ports": [
+                1,
+                2,
+                3,
+                13
+              ],
+              "multiplier": "55140059/10000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 586,
+      "forest": [
+        "A1",
+        "A1",
+        "H3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "36197861/2500000000",
+      "block_orbits": 7,
+      "literal_blocks": 9,
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "150678571/10000000000",
+      "ratio": "150678571/144791444",
+      "pair_capacity_maximum": "36197861/2500000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "138904313/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "138904313/10000000000",
+          "origins": [
+            {
+              "face": 399,
+              "star": 480,
+              "omitted": 5,
+              "ports": [
+                0,
+                3,
+                4,
+                13
+              ],
+              "multiplier": "138904313/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              9,
+              10
+            ],
+            [
+              0,
+              1,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              9,
+              10
+            ],
+            [
+              0,
+              1,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "5887129/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "5887129/5000000000",
+          "origins": [
+            {
+              "face": 685,
+              "star": 771,
+              "omitted": 13,
+              "ports": [
+                0,
+                1,
+                9,
+                10
+              ],
+              "multiplier": "5887129/5000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 789,
+      "forest": [
+        "A1",
+        "A2",
+        "H3",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "55357721/10000000000",
+      "block_orbits": 3,
+      "literal_blocks": 7,
+      "subset": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "331711/40000000",
+      "ratio": "82927750/55357721",
+      "pair_capacity_maximum": "55357721/10000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          1,
+          2,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "27787691/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "27787691/10000000000",
+          "origins": [
+            {
+              "face": 806,
+              "star": 947,
+              "omitted": 11,
+              "ports": [
+                9,
+                10,
+                12,
+                13
+              ],
+              "multiplier": "27787691/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              1,
+              2,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              1,
+              2,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "55140059/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "55140059/10000000000",
+          "origins": [
+            {
+              "face": 943,
+              "star": 1103,
+              "omitted": 3,
+              "ports": [
+                1,
+                2,
+                4,
+                13
+              ],
+              "multiplier": "55140059/10000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 830,
+      "forest": [
+        "A1",
+        "A3",
+        "A5",
+        "H4"
+      ],
+      "vertex_mass": "4373607/1250000000",
+      "block_orbits": 5,
+      "literal_blocks": 8,
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "8537541/2000000000",
+      "ratio": "14229235/11662952",
+      "pair_capacity_maximum": "4373607/1250000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "selected_blocks": [
+            [
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "block_orbit_mass": "27290007/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "27290007/10000000000",
+          "origins": [
+            {
+              "face": 520,
+              "star": 602,
+              "omitted": 0,
+              "ports": [
+                5,
+                6,
+                7,
+                13
+              ],
+              "multiplier": "27290007/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              6,
+              7,
+              8
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              6,
+              7,
+              8
+            ]
+          ],
+          "block_orbit_mass": "7698849/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "7698849/5000000000",
+          "origins": [
+            {
+              "face": 856,
+              "star": 1000,
+              "omitted": 13,
+              "ports": [
+                0,
+                4,
+                5,
+                6
+              ],
+              "multiplier": "7698849/5000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 832,
+      "forest": [
+        "A1",
+        "A3",
+        "A5",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "85863067/20000000000",
+      "block_orbits": 8,
+      "literal_blocks": 18,
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "9791217/2000000000",
+      "ratio": "97912170/85863067",
+      "pair_capacity_maximum": "85863067/20000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "selected_blocks": [
+            [
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "block_orbit_mass": "33558387/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "33558387/10000000000",
+          "origins": [
+            {
+              "face": 562,
+              "star": 644,
+              "omitted": 5,
+              "ports": [
+                6,
+                7,
+                8,
+                13
+              ],
+              "multiplier": "33558387/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              6,
+              7,
+              8
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              6,
+              7,
+              8
+            ]
+          ],
+          "block_orbit_mass": "7698849/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "7698849/5000000000",
+          "origins": [
+            {
+              "face": 864,
+              "star": 1008,
+              "omitted": 13,
+              "ports": [
+                0,
+                4,
+                5,
+                6
+              ],
+              "multiplier": "7698849/5000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 892,
+      "forest": [
+        "A1",
+        "A4",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_mass": "5598109/5000000000",
+      "block_orbits": 7,
+      "literal_blocks": 12,
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "15372127/10000000000",
+      "ratio": "15372127/11196218",
+      "pair_capacity_maximum": "5598109/5000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              3,
+              4
+            ]
+          ],
+          "selected_blocks": [
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              3,
+              4
+            ]
+          ],
+          "block_orbit_mass": "341987/500000000",
+          "averaged_coefficient": "1",
+          "contribution": "341987/500000000",
+          "origins": [
+            {
+              "face": 8262,
+              "star": 9648,
+              "omitted": 1,
+              "ports": [
+                2,
+                4,
+                13
+              ],
+              "multiplier": "341987/1000000000"
+            },
+            {
+              "face": 8262,
+              "star": 9648,
+              "omitted": 13,
+              "ports": [
+                1,
+                2,
+                4
+              ],
+              "multiplier": "341987/1000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              3,
+              4
+            ]
+          ],
+          "selected_blocks": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              3,
+              4
+            ]
+          ],
+          "block_orbit_mass": "2548381/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "2548381/5000000000",
+          "origins": [
+            {
+              "face": 634,
+              "star": 717,
+              "omitted": 8,
+              "ports": [
+                9,
+                10,
+                13
+              ],
+              "multiplier": "2548381/5000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "selected_blocks": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "block_orbit_mass": "5497/16000000",
+          "averaged_coefficient": "1",
+          "contribution": "5497/16000000",
+          "origins": [
+            {
+              "face": 536,
+              "star": 618,
+              "omitted": 0,
+              "ports": [
+                2,
+                3,
+                4,
+                13
+              ],
+              "multiplier": "5497/16000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 951,
+      "forest": [
+        "A1",
+        "A5",
+        "H3",
+        "H4"
+      ],
+      "vertex_mass": "141551883/5000000000",
+      "block_orbits": 8,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "300792247/10000000000",
+      "ratio": "300792247/283103766",
+      "pair_capacity_maximum": "141551883/5000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "selected_blocks": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "block_orbit_mass": "265415283/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "265415283/10000000000",
+          "origins": [
+            {
+              "face": 599,
+              "star": 681,
+              "omitted": 0,
+              "ports": [
+                2,
+                3,
+                4,
+                13
+              ],
+              "multiplier": "265415283/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ]
+          ],
+          "block_orbit_mass": "8844241/2500000000",
+          "averaged_coefficient": "1",
+          "contribution": "8844241/2500000000",
+          "origins": [
+            {
+              "face": 957,
+              "star": 1124,
+              "omitted": 13,
+              "ports": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "multiplier": "8844241/2500000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 953,
+      "forest": [
+        "A1",
+        "A5",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "35152233/2500000000",
+      "block_orbits": 6,
+      "literal_blocks": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "73046203/5000000000",
+      "ratio": "73046203/70304466",
+      "pair_capacity_maximum": "35152233/2500000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "selected_blocks": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "block_orbit_mass": "55357721/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "55357721/5000000000",
+          "origins": [
+            {
+              "face": 687,
+              "star": 774,
+              "omitted": 5,
+              "ports": [
+                6,
+                7,
+                8,
+                13
+              ],
+              "multiplier": "55357721/5000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4,
+              5
+            ]
+          ],
+          "block_orbit_mass": "8844241/2500000000",
+          "averaged_coefficient": "1",
+          "contribution": "8844241/2500000000",
+          "origins": [
+            {
+              "face": 962,
+              "star": 1129,
+              "omitted": 13,
+              "ports": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "multiplier": "8844241/2500000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 1293,
+      "forest": [
+        "A2",
+        "A3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "7698849/5000000000",
+      "block_orbits": 3,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "23096547/10000000000",
+      "ratio": "3/2",
+      "pair_capacity_maximum": "7698849/5000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "7698849/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "7698849/10000000000",
+          "origins": [
+            {
+              "face": 737,
+              "star": 839,
+              "omitted": 8,
+              "ports": [
+                0,
+                6,
+                7,
+                13
+              ],
+              "multiplier": "7698849/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              9,
+              10
+            ],
+            [
+              0,
+              1,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              9,
+              10
+            ],
+            [
+              0,
+              1,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "7698849/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "7698849/5000000000",
+          "origins": [
+            {
+              "face": 835,
+              "star": 979,
+              "omitted": 1,
+              "ports": [
+                0,
+                2,
+                3,
+                13
+              ],
+              "multiplier": "7698849/5000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 1422,
+      "forest": [
+        "A2",
+        "H3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_mass": "8844241/2500000000",
+      "block_orbits": 3,
+      "literal_blocks": 4,
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "26532723/5000000000",
+      "ratio": "3/2",
+      "pair_capacity_maximum": "8844241/2500000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "8844241/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "8844241/5000000000",
+          "origins": [
+            {
+              "face": 803,
+              "star": 944,
+              "omitted": 5,
+              "ports": [
+                0,
+                3,
+                4,
+                13
+              ],
+              "multiplier": "8844241/5000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              9,
+              10
+            ],
+            [
+              0,
+              1,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              9,
+              10
+            ],
+            [
+              0,
+              1,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "8844241/2500000000",
+          "averaged_coefficient": "1",
+          "contribution": "8844241/2500000000",
+          "origins": [
+            {
+              "face": 909,
+              "star": 1053,
+              "omitted": 1,
+              "ports": [
+                0,
+                2,
+                3,
+                13
+              ],
+              "multiplier": "8844241/2500000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 1472,
+      "forest": [
+        "A3",
+        "A4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "23096547/10000000000",
+      "block_orbits": 4,
+      "literal_blocks": 5,
+      "subset": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "7698849/2500000000",
+      "ratio": "4/3",
+      "pair_capacity_maximum": "23096547/10000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          3,
+          4,
+          5,
+          6,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              3,
+              4,
+              11,
+              12
+            ],
+            [
+              5,
+              6,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              3,
+              4,
+              11,
+              12
+            ],
+            [
+              5,
+              6,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "7698849/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "7698849/5000000000",
+          "origins": [
+            {
+              "face": 856,
+              "star": 1000,
+              "omitted": 4,
+              "ports": [
+                0,
+                5,
+                6,
+                13
+              ],
+              "multiplier": "7698849/5000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "selected_blocks": [
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "block_orbit_mass": "7698849/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "7698849/5000000000",
+          "origins": [
+            {
+              "face": 835,
+              "star": 979,
+              "omitted": 0,
+              "ports": [
+                1,
+                2,
+                3,
+                13
+              ],
+              "multiplier": "7698849/5000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 1619,
+      "forest": [
+        "A4",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_mass": "19206113/2000000000",
+      "block_orbits": 5,
+      "literal_blocks": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "packing_mass": "72281739/5000000000",
+      "ratio": "144563478/96030565",
+      "pair_capacity_maximum": "19206113/2000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "24266457/5000000000",
+          "averaged_coefficient": "1",
+          "contribution": "24266457/5000000000",
+          "origins": [
+            {
+              "face": 1143,
+              "star": 1386,
+              "omitted": 0,
+              "ports": [
+                1,
+                3,
+                13
+              ],
+              "multiplier": "24266457/10000000000"
+            },
+            {
+              "face": 1143,
+              "star": 1386,
+              "omitted": 13,
+              "ports": [
+                0,
+                1,
+                3
+              ],
+              "multiplier": "24266457/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "48532913/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "48532913/10000000000",
+          "origins": [
+            {
+              "face": 1008,
+              "star": 1208,
+              "omitted": 1,
+              "ports": [
+                2,
+                3,
+                13
+              ],
+              "multiplier": "48532913/10000000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "47497651/10000000000",
+          "averaged_coefficient": "1",
+          "contribution": "47497651/10000000000",
+          "origins": [
+            {
+              "face": 900,
+              "star": 1044,
+              "omitted": 0,
+              "ports": [
+                1,
+                2,
+                3,
+                13
+              ],
+              "multiplier": "47497651/10000000000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vertex": 1621,
+      "forest": [
+        "A4",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_mass": "26532723/5000000000",
+      "block_orbits": 4,
+      "literal_blocks": 5,
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "packing_mass": "8844241/1250000000",
+      "ratio": "4/3",
+      "pair_capacity_maximum": "26532723/5000000000",
+      "violates": true,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3,
+          11,
+          12
+        ]
+      ],
+      "subset_orbit_size": 1,
+      "terms": [
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              11,
+              12
+            ],
+            [
+              2,
+              3,
+              11,
+              12
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              11,
+              12
+            ],
+            [
+              2,
+              3,
+              11,
+              12
+            ]
+          ],
+          "block_orbit_mass": "8844241/2500000000",
+          "averaged_coefficient": "1",
+          "contribution": "8844241/2500000000",
+          "origins": [
+            {
+              "face": 957,
+              "star": 1124,
+              "omitted": 1,
+              "ports": [
+                0,
+                2,
+                3,
+                13
+              ],
+              "multiplier": "8844241/2500000000"
+            }
+          ]
+        },
+        {
+          "literal_blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "selected_blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "block_orbit_mass": "8844241/2500000000",
+          "averaged_coefficient": "1",
+          "contribution": "8844241/2500000000",
+          "origins": [
+            {
+              "face": 909,
+              "star": 1053,
+              "omitted": 0,
+              "ports": [
+                1,
+                2,
+                3,
+                13
+              ],
+              "multiplier": "8844241/2500000000"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixed_face_mass_consequence": {
+    "minimum_additional_vertex_mass": "7706660539/300000000000",
+    "minimum_total_vertex_mass": "22436944097/21875000000",
+    "demand_per_vertex_at_most": "2104176880435/179495552776",
+    "scope": "Necessary only for realization with these exact fixed face masses. Increasing vertex masses is not asserted sufficient for a realizable distribution."
+  },
+  "successor_columns": [
+    {
+      "index": 0,
+      "vertex": 45,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "face_coefficients": [
+        [
+          636,
+          "2/5"
+        ]
+      ],
+      "fixed_dual_load": "895707/25000000000",
+      "fixed_dual_capacity": "298569/10000000000"
+    },
+    {
+      "index": 1,
+      "vertex": 97,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A5",
+        "H4"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "face_coefficients": [
+        [
+          858,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "1070769/625000000",
+      "fixed_dual_capacity": "17095153/15000000000"
+    },
+    {
+      "index": 2,
+      "vertex": 98,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A5",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "face_coefficients": [
+        [
+          7838,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "2902951/5000000000",
+      "fixed_dual_capacity": "4354427/10000000000"
+    },
+    {
+      "index": 3,
+      "vertex": 100,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "A6",
+        "H3"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "face_coefficients": [
+        [
+          254,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "24416537/5000000000",
+      "fixed_dual_capacity": "47742103/10000000000"
+    },
+    {
+      "index": 4,
+      "vertex": 131,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A1",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "face_coefficients": [
+        [
+          8184,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "7197311/10000000000",
+      "fixed_dual_capacity": "4318387/10000000000"
+    },
+    {
+      "index": 5,
+      "vertex": 159,
+      "forest": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          4
+        ]
+      ],
+      "face_coefficients": [
+        [
+          634,
+          "1/2"
+        ]
+      ],
+      "fixed_dual_load": "2548381/10000000000",
+      "fixed_dual_capacity": "1992713/10000000000"
+    },
+    {
+      "index": 6,
+      "vertex": 339,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "A3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          4,
+          5,
+          6,
+          11,
+          12
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          262,
+          "1"
+        ],
+        [
+          438,
+          "1/2"
+        ],
+        [
+          439,
+          "1/2"
+        ]
+      ],
+      "fixed_dual_load": "64271861/20000000000",
+      "fixed_dual_capacity": "7772733/2500000000"
+    },
+    {
+      "index": 7,
+      "vertex": 390,
+      "forest": [
+        "A1",
+        "A1",
+        "A2",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "face_coefficients": [
+        [
+          1008,
+          "1"
+        ],
+        [
+          8907,
+          "2"
+        ]
+      ],
+      "fixed_dual_load": "107171663/10000000000",
+      "fixed_dual_capacity": "46911/8000000"
+    },
+    {
+      "index": 8,
+      "vertex": 412,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          181,
+          "1"
+        ],
+        [
+          536,
+          "1/2"
+        ],
+        [
+          537,
+          "1/2"
+        ]
+      ],
+      "fixed_dual_load": "6107203/2000000000",
+      "fixed_dual_capacity": "58812809/20000000000"
+    },
+    {
+      "index": 9,
+      "vertex": 440,
+      "forest": [
+        "A1",
+        "A1",
+        "A3",
+        "H3",
+        "H3",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          2,
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          406,
+          "1"
+        ],
+        [
+          943,
+          "1/2"
+        ],
+        [
+          988,
+          "1/2"
+        ]
+      ],
+      "fixed_dual_load": "247711697/20000000000",
+      "fixed_dual_capacity": "206565937/20000000000"
+    },
+    {
+      "index": 10,
+      "vertex": 586,
+      "forest": [
+        "A1",
+        "A1",
+        "H3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          399,
+          "1"
+        ],
+        [
+          685,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "150678571/10000000000",
+      "fixed_dual_capacity": "36197861/2500000000"
+    },
+    {
+      "index": 11,
+      "vertex": 789,
+      "forest": [
+        "A1",
+        "A2",
+        "H3",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          1,
+          2,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          806,
+          "1"
+        ],
+        [
+          943,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "331711/40000000",
+      "fixed_dual_capacity": "55357721/10000000000"
+    },
+    {
+      "index": 12,
+      "vertex": 830,
+      "forest": [
+        "A1",
+        "A3",
+        "A5",
+        "H4"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "face_coefficients": [
+        [
+          520,
+          "1"
+        ],
+        [
+          856,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "8537541/2000000000",
+      "fixed_dual_capacity": "4373607/1250000000"
+    },
+    {
+      "index": 13,
+      "vertex": 832,
+      "forest": [
+        "A1",
+        "A3",
+        "A5",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "face_coefficients": [
+        [
+          562,
+          "1"
+        ],
+        [
+          864,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "9791217/2000000000",
+      "fixed_dual_capacity": "85863067/20000000000"
+    },
+    {
+      "index": 14,
+      "vertex": 892,
+      "forest": [
+        "A1",
+        "A4",
+        "A6",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "face_coefficients": [
+        [
+          536,
+          "1"
+        ],
+        [
+          634,
+          "1"
+        ],
+        [
+          5911,
+          "1"
+        ],
+        [
+          8262,
+          "2"
+        ]
+      ],
+      "fixed_dual_load": "15372127/10000000000",
+      "fixed_dual_capacity": "5598109/5000000000"
+    },
+    {
+      "index": 15,
+      "vertex": 951,
+      "forest": [
+        "A1",
+        "A5",
+        "H3",
+        "H4"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "face_coefficients": [
+        [
+          599,
+          "1"
+        ],
+        [
+          957,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "300792247/10000000000",
+      "fixed_dual_capacity": "141551883/5000000000"
+    },
+    {
+      "index": 16,
+      "vertex": 953,
+      "forest": [
+        "A1",
+        "A5",
+        "H3",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "face_coefficients": [
+        [
+          687,
+          "1"
+        ],
+        [
+          962,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "73046203/5000000000",
+      "fixed_dual_capacity": "35152233/2500000000"
+    },
+    {
+      "index": 17,
+      "vertex": 1293,
+      "forest": [
+        "A2",
+        "A3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          737,
+          "1"
+        ],
+        [
+          835,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "23096547/10000000000",
+      "fixed_dual_capacity": "7698849/5000000000"
+    },
+    {
+      "index": 18,
+      "vertex": 1422,
+      "forest": [
+        "A2",
+        "H3",
+        "H4",
+        "I2(5)",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          803,
+          "1"
+        ],
+        [
+          909,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "26532723/5000000000",
+      "fixed_dual_capacity": "8844241/2500000000"
+    },
+    {
+      "index": 19,
+      "vertex": 1472,
+      "forest": [
+        "A3",
+        "A4",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          3,
+          4,
+          5,
+          6,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          835,
+          "1"
+        ],
+        [
+          856,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "7698849/2500000000",
+      "fixed_dual_capacity": "23096547/10000000000"
+    },
+    {
+      "index": 20,
+      "vertex": 1619,
+      "forest": [
+        "A4",
+        "H3",
+        "H3",
+        "H3"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "minimum_block_size": 3,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "face_coefficients": [
+        [
+          900,
+          "1"
+        ],
+        [
+          1008,
+          "1"
+        ],
+        [
+          1010,
+          "1"
+        ],
+        [
+          1143,
+          "2"
+        ]
+      ],
+      "fixed_dual_load": "72281739/5000000000",
+      "fixed_dual_capacity": "19206113/2000000000"
+    },
+    {
+      "index": 21,
+      "vertex": 1621,
+      "forest": [
+        "A4",
+        "H3",
+        "H4",
+        "I2(5)"
+      ],
+      "vertex_cost": "1",
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "minimum_block_size": 4,
+      "subset_orbit": [
+        [
+          0,
+          1,
+          2,
+          3,
+          11,
+          12
+        ]
+      ],
+      "face_coefficients": [
+        [
+          909,
+          "1"
+        ],
+        [
+          957,
+          "1"
+        ]
+      ],
+      "fixed_dual_load": "8844241/1250000000",
+      "fixed_dual_capacity": "26532723/5000000000"
+    }
+  ],
+  "successor_scope": "Every old face and budget remains. These22 valid clique charges strengthen the partial model; no augmented optimization, feasible rule, complete face coverage or dimension bound is claimed.",
+  "diagnosis": "The frozen dual certifies an obstruction to its pair-charge model, but its face/vertex masses violate actual maximal-simplex incidence. The contradiction is to that hypothetical global incidence distribution, not to the arithmetic validity of any individual local star."
+}

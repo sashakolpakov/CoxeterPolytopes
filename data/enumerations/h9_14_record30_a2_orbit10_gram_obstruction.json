@@ -1,0 +1,346 @@
+{
+  "candidate": {
+    "addition_schedule": 2,
+    "dotted_pairs": [
+      {
+        "pair": [
+          0,
+          11
+        ],
+        "required_inequality": "x < -2",
+        "twice_gram_variable": "x"
+      },
+      {
+        "pair": [
+          1,
+          12
+        ],
+        "required_inequality": "y < -2",
+        "twice_gram_variable": "y"
+      },
+      {
+        "pair": [
+          2,
+          13
+        ],
+        "required_inequality": "z < -2",
+        "twice_gram_variable": "z"
+      }
+    ],
+    "facet_count": 14,
+    "finite_nonright_labels": [
+      {
+        "label": 3,
+        "pair": [
+          0,
+          1
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          0,
+          5
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          2,
+          11
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          3,
+          5
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          3,
+          10
+        ]
+      },
+      {
+        "label": 5,
+        "pair": [
+          4,
+          5
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          6,
+          8
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          6,
+          9
+        ]
+      },
+      {
+        "label": 5,
+        "pair": [
+          7,
+          8
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          8,
+          11
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          9,
+          10
+        ]
+      }
+    ],
+    "higher_lanner_supports": [
+      [
+        0,
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8,
+        11
+      ],
+      [
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "minimal_nonface_masks": [
+      2049,
+      4098,
+      8196,
+      57,
+      2496,
+      1592,
+      1984
+    ],
+    "minimal_nonfaces": [
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        13
+      ],
+      [
+        0,
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8,
+        11
+      ],
+      [
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "positive_A4_orbit_index": 10,
+    "rank_nine_vertex_count": 128,
+    "record_index": 30,
+    "unlisted_meeting_pair_label": 2
+  },
+  "certificate_sha256": "a3b5996c71cc616fb18dd99f6c54befab01196d9b7dfb23b964ceb2d7f7eef17",
+  "claim": "The frozen locally admissible record-30 a=2 orbit-10 labeling, with added m=3 edges (0,1) and (2,11), has no Gram realization in H^9 for any values of its three dotted entries.",
+  "conclusion": {
+    "new_hyperbolic_polytope": false,
+    "reason": "A principal 11-by-11 minor is nonsingular independently of the dotted variables, so the full Gram rank is at least 11. Fourteen wall normals in R^(9,1) have Gram rank at most 10.",
+    "this_exact_labeling_excluded": true
+  },
+  "kind": "h9_14_record30_a2_orbit10_exact_gram_obstruction",
+  "local_replay": {
+    "all_order_four_and_five_minimal_nonfaces_lanner": true,
+    "all_rank_nine_vertex_diagrams_finite": true,
+    "bad_higher_lanner_supports": [],
+    "bad_rank_nine_vertices": [],
+    "warning": "Passing these local tests is necessary but not sufficient; the global Gram-rank test below is decisive."
+  },
+  "metric_obstruction": {
+    "H9_gram_rank_upper_bound": 10,
+    "contains_no_dotted_entry": true,
+    "fixed_principal_nonright_edges": [
+      {
+        "label": 3,
+        "pair": [
+          0,
+          1
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          0,
+          5
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          3,
+          5
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          3,
+          10
+        ]
+      },
+      {
+        "label": 5,
+        "pair": [
+          4,
+          5
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          6,
+          8
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          6,
+          9
+        ]
+      },
+      {
+        "label": 5,
+        "pair": [
+          7,
+          8
+        ]
+      },
+      {
+        "label": 3,
+        "pair": [
+          9,
+          10
+        ]
+      }
+    ],
+    "fixed_principal_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "full_gram_rank_lower_bound": 11,
+    "independent_forest_matching_expansion": {
+      "determinant": "21 - 7*sqrt(5)",
+      "fixed_nonright_graph_is_a_forest": true,
+      "weighted_matching_sums_by_size": [
+        "1",
+        "sqrt(5) + 10",
+        "7*sqrt(5) + 35",
+        "29*sqrt(5)/2 + 99/2",
+        "19*sqrt(5)/2 + 51/2",
+        "3*sqrt(5)/2 + 7/2"
+      ]
+    },
+    "inertia_9_1_4_possible": false,
+    "normalization": "Twice the normalized Gram: diagonal 2 and finite entry -2*cos(pi/m).",
+    "positivity_proof": "3-sqrt(5)>0 because both sides are positive and 3^2=9>5; therefore 7*(3-sqrt(5)) is nonzero.",
+    "principal_determinant": "7*(3 - sqrt(5))",
+    "principal_determinant_expanded": "21 - 7*sqrt(5)",
+    "rank_condition_passes": false,
+    "schur_elimination": {
+      "anchor_determinant": "(1 - 3*sqrt(5))*(7 - 3*sqrt(5))",
+      "anchor_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "identity": "det(G[0..10]) = det(G[0..9]) * residual",
+      "last_pivot_residual": "(42 - 14*sqrt(5))/(2*(-7 + 3*sqrt(5))*(-1 + 3*sqrt(5)))"
+    }
+  },
+  "schema_version": "1.0.0",
+  "scope": {
+    "all_values_of_the_three_dotted_entries": true,
+    "finite_volume_noncompact_statement": false,
+    "other_cross_edge_placements_excluded": false,
+    "other_sparse_terminal_states_excluded": false,
+    "single_sparse_terminal_state": true,
+    "single_two_cross_edge_placement": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        11
+      ]
+    ],
+    "three_or_more_cross_edges_excluded": false,
+    "whole_orbit10_nerve_excluded": false,
+    "whole_record30_a2_schedule_excluded": false
+  }
+}

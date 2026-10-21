@@ -1,0 +1,9 @@
+# Separating the repaired rule on all selected non-ADE triangles
+
+The [source](../scripts/fresh_sqrt5_rank13_all_selected_nonade_separation_20261017.py) evaluates every occurrence in the [complete 363-target catalogue](fresh_sqrt5_rank13_all_selected_nonade_triangles_20261017.md) against the frozen [double-H4-repaired partial rule](fresh_sqrt5_rank13_joint_corner_double_h4_repair_20261017.md). Of 173,434 occurrences, 99,816 have all corner forests in the model, 63,558 are unpaid, and 73,618 involve an absent forest. The minimum known payment is zero. The [literal payment data and geometric witness](fresh_sqrt5_rank13_all_selected_nonade_separation_20261017.json) are saved.
+
+Witness 2 has corner forests `5A1+A4+H4` and twice `3A1+A4+H4+I2(5)`. Its three variables are 196, 27984, and 27984, all with payment zero, whereas a triangle requires two. The witness's norm-two Gram lies in Q(sqrt5), has physical inertia (13,1), positive-definite conjugate, and 196 integral Cartan entries. The three black-root deletions are spherical. The exact inverse-Gram rays are future timelike with pairwise negative products, and an epsilon=1/8 white perturbation of their sum gives a strict timelike center.
+
+The black products identify the common-white feasible cone with nonnegative combinations of the three displayed finite rays, so the face is exactly a compact local triangle. Every wall occurs at a finite simple corner and is an actual local facet. This is a local admissible integral-reflection chamber, not a compact or finite-volume ambient polytope. The witness disproves coverage of the frozen predecessor vector, not its certificate on the stated restricted rows or the existence of a repaired rule.
+
+Generation and a fresh exact saved reconstruction both pass. Source, exact data, and this report are now frozen. The successor adds the entire 173,434-row batch and every new whole-forest budget together.

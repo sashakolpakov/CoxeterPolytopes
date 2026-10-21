@@ -1,0 +1,2697 @@
+{
+  "P_derived_incidence_realization": {
+    "boundary_cluster_multiplicities": {
+      "A": 2,
+      "B": 2,
+      "C": 2,
+      "D": 2,
+      "E": 2,
+      "F": 2,
+      "G": 2,
+      "a": 2,
+      "d": 2,
+      "g": 2
+    },
+    "exceptional_roots": [
+      {
+        "class": "E_A-E_a",
+        "description": "strict transform of the exceptional curve over A",
+        "name": "EA_minus_Ea"
+      },
+      {
+        "class": "E_D-E_d",
+        "description": "strict transform of the exceptional curve over D",
+        "name": "ED_minus_Ed"
+      },
+      {
+        "class": "E_G-E_g",
+        "description": "strict transform of the exceptional curve over G",
+        "name": "EG_minus_Eg"
+      }
+    ],
+    "first_near_points": [
+      {
+        "blowup_chart": "x=1, y=s*t, z=s; near point (s,t)=(0,0)",
+        "direction_line": "AG",
+        "label": "a",
+        "parent": "A"
+      },
+      {
+        "blowup_chart": "y=1, x=s, z=s*t; near point (s,t)=(0,0)",
+        "direction_line": "AD",
+        "label": "d",
+        "parent": "D"
+      },
+      {
+        "blowup_chart": "z=1, x=s*t, y=s; near point (s,t)=(0,0)",
+        "direction_line": "DG",
+        "label": "g",
+        "parent": "G"
+      }
+    ],
+    "incidence_rigidity": {
+      "already_solved_collinearity_determinants": {
+        "ABE": "0",
+        "ACF": "0",
+        "BCG": "0",
+        "BDF": "0",
+        "CDE": "0"
+      },
+      "forced_symbolic_points": {
+        "B": [
+          "1",
+          "1",
+          "1"
+        ],
+        "C": [
+          "1",
+          "1",
+          "c"
+        ],
+        "E": [
+          "1/c",
+          "1",
+          "1"
+        ],
+        "F": [
+          "c",
+          "1",
+          "c"
+        ]
+      },
+      "last_collinearity_determinant": "-(c - 1)*(c + 1)/c",
+      "nondegenerate_parameter_solution": "c=-1; c=1 gives C=B",
+      "normalization": "A=(1:0:0), D=(0:1:0), G=(0:0:1), B=(1:1:1)",
+      "requires_characteristic_not_two": true
+    },
+    "line_arrangement": {
+      "line_count": 9,
+      "line_pair_count": 36,
+      "line_pairs_meeting_at_blown_proper_points": 30,
+      "lines": [
+        {
+          "cluster_support": [
+            "g",
+            "G",
+            "D"
+          ],
+          "equation_coefficients_x_y_z": [
+            1,
+            0,
+            0
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "D": 1,
+            "E": 0,
+            "F": 0,
+            "G": 1,
+            "a": 0,
+            "d": 0,
+            "g": 1
+          },
+          "name": "L_DG",
+          "polynomial": "x",
+          "strict_transform_class": "H-E_g-E_G-E_D"
+        },
+        {
+          "cluster_support": [
+            "a",
+            "A",
+            "G"
+          ],
+          "equation_coefficients_x_y_z": [
+            0,
+            1,
+            0
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 1,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "E": 0,
+            "F": 0,
+            "G": 1,
+            "a": 1,
+            "d": 0,
+            "g": 0
+          },
+          "name": "L_AG",
+          "polynomial": "y",
+          "strict_transform_class": "H-E_a-E_A-E_G"
+        },
+        {
+          "cluster_support": [
+            "d",
+            "D",
+            "A"
+          ],
+          "equation_coefficients_x_y_z": [
+            0,
+            0,
+            1
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 1,
+            "B": 0,
+            "C": 0,
+            "D": 1,
+            "E": 0,
+            "F": 0,
+            "G": 0,
+            "a": 0,
+            "d": 1,
+            "g": 0
+          },
+          "name": "L_AD",
+          "polynomial": "z",
+          "strict_transform_class": "H-E_d-E_D-E_A"
+        },
+        {
+          "cluster_support": [
+            "E",
+            "F",
+            "G"
+          ],
+          "equation_coefficients_x_y_z": [
+            1,
+            1,
+            0
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "E": 1,
+            "F": 1,
+            "G": 1,
+            "a": 0,
+            "d": 0,
+            "g": 0
+          },
+          "name": "L_EFG",
+          "polynomial": "x+y",
+          "strict_transform_class": "H-E_E-E_F-E_G"
+        },
+        {
+          "cluster_support": [
+            "B",
+            "C",
+            "G"
+          ],
+          "equation_coefficients_x_y_z": [
+            1,
+            -1,
+            0
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 0,
+            "B": 1,
+            "C": 1,
+            "D": 0,
+            "E": 0,
+            "F": 0,
+            "G": 1,
+            "a": 0,
+            "d": 0,
+            "g": 0
+          },
+          "name": "L_BCG",
+          "polynomial": "x-y",
+          "strict_transform_class": "H-E_B-E_C-E_G"
+        },
+        {
+          "cluster_support": [
+            "A",
+            "C",
+            "F"
+          ],
+          "equation_coefficients_x_y_z": [
+            0,
+            1,
+            1
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 1,
+            "B": 0,
+            "C": 1,
+            "D": 0,
+            "E": 0,
+            "F": 1,
+            "G": 0,
+            "a": 0,
+            "d": 0,
+            "g": 0
+          },
+          "name": "L_ACF",
+          "polynomial": "y+z",
+          "strict_transform_class": "H-E_A-E_C-E_F"
+        },
+        {
+          "cluster_support": [
+            "A",
+            "B",
+            "E"
+          ],
+          "equation_coefficients_x_y_z": [
+            0,
+            1,
+            -1
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 1,
+            "B": 1,
+            "C": 0,
+            "D": 0,
+            "E": 1,
+            "F": 0,
+            "G": 0,
+            "a": 0,
+            "d": 0,
+            "g": 0
+          },
+          "name": "L_ABE",
+          "polynomial": "y-z",
+          "strict_transform_class": "H-E_A-E_B-E_E"
+        },
+        {
+          "cluster_support": [
+            "C",
+            "D",
+            "E"
+          ],
+          "equation_coefficients_x_y_z": [
+            1,
+            0,
+            1
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 0,
+            "B": 0,
+            "C": 1,
+            "D": 1,
+            "E": 1,
+            "F": 0,
+            "G": 0,
+            "a": 0,
+            "d": 0,
+            "g": 0
+          },
+          "name": "L_CDE",
+          "polynomial": "x+z",
+          "strict_transform_class": "H-E_C-E_D-E_E"
+        },
+        {
+          "cluster_support": [
+            "B",
+            "D",
+            "F"
+          ],
+          "equation_coefficients_x_y_z": [
+            1,
+            0,
+            -1
+          ],
+          "exact_cluster_multiplicities": {
+            "A": 0,
+            "B": 1,
+            "C": 0,
+            "D": 1,
+            "E": 0,
+            "F": 1,
+            "G": 0,
+            "a": 0,
+            "d": 0,
+            "g": 0
+          },
+          "name": "L_BDF",
+          "polynomial": "x-z",
+          "strict_transform_class": "H-E_B-E_D-E_F"
+        }
+      ],
+      "name": "projectivized B3 reflection arrangement",
+      "proper_point_line_counts": {
+        "A": 4,
+        "B": 3,
+        "C": 3,
+        "D": 4,
+        "E": 3,
+        "F": 3,
+        "G": 4
+      },
+      "remaining_distinct_transverse_double_intersections": 6,
+      "remaining_intersection_points": [
+        [
+          "0",
+          "1",
+          "-1"
+        ],
+        [
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "-1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "-1"
+        ],
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    "proper_points": [
+      {
+        "coordinates": [
+          1,
+          0,
+          0
+        ],
+        "label": "A"
+      },
+      {
+        "coordinates": [
+          0,
+          1,
+          0
+        ],
+        "label": "D"
+      },
+      {
+        "coordinates": [
+          0,
+          0,
+          1
+        ],
+        "label": "G"
+      },
+      {
+        "coordinates": [
+          1,
+          1,
+          1
+        ],
+        "label": "B"
+      },
+      {
+        "coordinates": [
+          1,
+          1,
+          -1
+        ],
+        "label": "C"
+      },
+      {
+        "coordinates": [
+          -1,
+          1,
+          1
+        ],
+        "label": "E"
+      },
+      {
+        "coordinates": [
+          -1,
+          1,
+          -1
+        ],
+        "label": "F"
+      }
+    ],
+    "root_inventory": {
+      "exceptional_chain_roots": 3,
+      "exceptional_line_transverse_intersections_after_blowup": 9,
+      "line_line_transverse_intersections_after_blowup": 6,
+      "line_roots": 9,
+      "total_root_pair_intersection_one": 15,
+      "total_root_pair_intersection_zero": 51,
+      "total_smooth_geometrically_integral_rational_minus_two_curves": 12
+    }
+  },
+  "absolute_factor_and_singular_scheme_audit": {
+    "absolute_component_count": 1,
+    "absolute_factor_count_with_unit": 2,
+    "absolute_nonunit_exponent": 1,
+    "absolutely_irreducible": true,
+    "engine": "Singular exact Q-factorization, absfact, saturated Jacobian, radical and primary support",
+    "factor_count_with_unit_over_Q": 2,
+    "irreducible_over_Q": true,
+    "jacobian_mod_radical": 0,
+    "nonunit_exponent_over_Q": 1,
+    "radical_mod_jacobian": 4,
+    "radical_mod_seven_points": 0,
+    "scheme_length_decomposition": "3 A3 tacnodes * 3 + 4 A1 nodes * 1 = 13",
+    "seven_points_mod_radical": 0,
+    "singular_affine_cone_dimension": 1,
+    "singular_minimal_primes": 7,
+    "singular_radical_degree": 7,
+    "singular_scheme_degree": 13,
+    "singular_support_is_exactly_the_seven_proper_points": true
+  },
+  "all_checks_pass": true,
+  "blowup_surface": {
+    "Picard_rank": 11,
+    "base": "P2 over Q",
+    "boundary_class": "B=6H-2sum E_i=-2K",
+    "boundary_square": -4,
+    "canonical_class": "K=-3H+sum_(ten centers) E_i",
+    "defined_over_Q": true,
+    "minus_2K_unique_reduced_boundary": true,
+    "minus_K_empty": true,
+    "operations": "blow up seven proper rational points, then a,d,g in the declared tangent directions",
+    "root_classes": "nine H-E-E-E lines and three E_parent-E_near exceptional roots",
+    "strong_Coble": true
+  },
+  "checks": {
+    "all_thirty_raw_walls_transport_exactly": true,
+    "all_twelve_root_curves_smooth_geometrically_integral": true,
+    "antibicanonical_system_singleton": true,
+    "anticanonical_system_empty": true,
+    "both_endpoint_bases_unimodular": true,
+    "both_endpoint_root_transports_exact": true,
+    "boundary_absolutely_irreducible": true,
+    "declared_blowups_resolve_boundary": true,
+    "exactly_two_clean_7_plus_3_endpoints": true,
+    "incidence_solution_is_rigid_and_nondegenerate": true,
+    "raw_all_contraction_denominator_is_573": true,
+    "root_intersection_gram_counts_match_raw": true,
+    "same_marked_polytope_return": true,
+    "singular_support_exact": true,
+    "strong_Coble": true
+  },
+  "direction": "RAW_H10_30_TO_TWO_INTRINSIC_P2_BRANCHES_TO_RIGID_B3_CLUSTER_TO_STRONG_COBLE_TO_SAME_P",
+  "field_scope": {
+    "classification_and_same_nef_cone_conclusion_used_over": "C",
+    "equations_and_blowups_defined_over": "Q",
+    "excluded_overstatement": "No all-characteristic-not-two claim is made.  In characteristic 3 the coefficient -3 and the displayed node discriminants degenerate.",
+    "geometric_integrality_and_smoothness_certified_over": "Qbar, hence over C"
+  },
+  "inverse_level": {
+    "positive_result": "Every algebraic equation is forced by one of two raw contraction branches, and the exact same marked finite-volume noncompact H10/30 chamber returns.",
+    "rating": "L3_STRICT_SINGLE_RAW_P_INVERSE_REALIZATION_NOT_L4",
+    "why_not_L4": "This is one rigid raw polytope and one known abstract chamber, not a variable P-only class with an exhaustive necessary-and-sufficient carrier theorem."
+  },
+  "lineage": {
+    "abstract_polytope": "the already known D16-D5 H10/30 chamber",
+    "after_construction_classification": "Kondo one-boundary Type II",
+    "distinct_nearby_models": "Kondo Example 4.5 uses a P1xP1 double-cover quotient.  The Hessian Coble surfaces of Allcock-Dolgachev are a different tetrahedral family with infinite automorphism group and ten proper nodes.",
+    "new_project_content": "the strict raw-P derivation of the 7+3 cluster and its identification as the Choi-Lam sextic, followed by an exact strong-Coble and same-H10/30 return; no known Type-II surface equation is imported",
+    "priority_boundary": "new exact realization and cross-identification in this project; no worldwide priority claim for the Choi-Lam/Coble link, no new equation, no new abstract polytope, no new dimension, and not L4",
+    "sextic_equation_lineage": "The forced equation is the Choi-Lam cyclic extremal positive-semidefinite ternary sextic from 1977; the polynomial itself is not new."
+  },
+  "linear_systems": {
+    "antibicanonical_sextics": {
+      "ambient_vector_dimension": 28,
+      "coefficient_vector": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "condition_labels": [
+        "A.proper.derivative_0_0",
+        "A.proper.derivative_0_1",
+        "A.proper.derivative_1_0",
+        "a.near.derivative_0_0",
+        "a.near.derivative_0_1",
+        "a.near.derivative_1_0",
+        "D.proper.derivative_0_0",
+        "D.proper.derivative_0_1",
+        "D.proper.derivative_1_0",
+        "d.near.derivative_0_0",
+        "d.near.derivative_0_1",
+        "d.near.derivative_1_0",
+        "G.proper.derivative_0_0",
+        "G.proper.derivative_0_1",
+        "G.proper.derivative_1_0",
+        "g.near.derivative_0_0",
+        "g.near.derivative_0_1",
+        "g.near.derivative_1_0",
+        "B.proper.derivative_0_0",
+        "B.proper.derivative_0_1",
+        "B.proper.derivative_1_0",
+        "C.proper.derivative_0_0",
+        "C.proper.derivative_0_1",
+        "C.proper.derivative_1_0",
+        "E.proper.derivative_0_0",
+        "E.proper.derivative_0_1",
+        "E.proper.derivative_1_0",
+        "F.proper.derivative_0_0",
+        "F.proper.derivative_0_1",
+        "F.proper.derivative_1_0"
+      ],
+      "condition_rank": 27,
+      "condition_row_count": 30,
+      "kernel_dimension": 1,
+      "polynomial": "x^4*y^2-3*x^2*y^2*z^2+x^2*z^4+y^4*z^2"
+    },
+    "anticanonical_cubics": {
+      "ambient_vector_dimension": 10,
+      "condition_labels": [
+        "A.proper.derivative_0_0",
+        "a.near.derivative_0_0",
+        "D.proper.derivative_0_0",
+        "d.near.derivative_0_0",
+        "G.proper.derivative_0_0",
+        "g.near.derivative_0_0",
+        "B.proper.derivative_0_0",
+        "C.proper.derivative_0_0",
+        "E.proper.derivative_0_0",
+        "F.proper.derivative_0_0"
+      ],
+      "condition_rank": 10,
+      "condition_row_count": 10,
+      "kernel_dimension": 0
+    },
+    "monomial_order": "x^a*y^b*z^(d-a-b), a ascending then b ascending"
+  },
+  "local_boundary_resolution": {
+    "A1_node_count": 4,
+    "A3_tacnode_count": 3,
+    "all_singularities_resolved_by_the_declared_7_plus_3_blowups": true,
+    "delta_sum": 10,
+    "proper_singularity_count": 7,
+    "records": [
+      {
+        "first_blowup_near_multiplicity": 2,
+        "first_blowup_tangent_cone": "s**2 + t**2",
+        "first_blowup_tangent_discriminant": -4,
+        "multiplicity": 2,
+        "point": "A",
+        "singularity": "A3 ordinary tacnode; first blowup gives A1 node; second blowup resolves",
+        "tangent_cone": "u**2",
+        "tangent_discriminant": 0
+      },
+      {
+        "first_blowup_near_multiplicity": 2,
+        "first_blowup_tangent_cone": "s**2 + t**2",
+        "first_blowup_tangent_discriminant": -4,
+        "multiplicity": 2,
+        "point": "D",
+        "singularity": "A3 ordinary tacnode; first blowup gives A1 node; second blowup resolves",
+        "tangent_cone": "v**2",
+        "tangent_discriminant": 0
+      },
+      {
+        "first_blowup_near_multiplicity": 2,
+        "first_blowup_tangent_cone": "s**2 + t**2",
+        "first_blowup_tangent_discriminant": -4,
+        "multiplicity": 2,
+        "point": "G",
+        "singularity": "A3 ordinary tacnode; first blowup gives A1 node; second blowup resolves",
+        "tangent_cone": "u**2",
+        "tangent_discriminant": 0
+      },
+      {
+        "first_blowup_near_multiplicity": null,
+        "first_blowup_tangent_cone": null,
+        "first_blowup_tangent_discriminant": null,
+        "multiplicity": 2,
+        "point": "B",
+        "singularity": "A1 ordinary node; one blowup resolves",
+        "tangent_cone": "4*(u**2 - u*v + v**2)",
+        "tangent_discriminant": -48
+      },
+      {
+        "first_blowup_near_multiplicity": null,
+        "first_blowup_tangent_cone": null,
+        "first_blowup_tangent_discriminant": null,
+        "multiplicity": 2,
+        "point": "C",
+        "singularity": "A1 ordinary node; one blowup resolves",
+        "tangent_cone": "4*(u**2 + u*v + v**2)",
+        "tangent_discriminant": -48
+      },
+      {
+        "first_blowup_near_multiplicity": null,
+        "first_blowup_tangent_cone": null,
+        "first_blowup_tangent_discriminant": null,
+        "multiplicity": 2,
+        "point": "E",
+        "singularity": "A1 ordinary node; one blowup resolves",
+        "tangent_cone": "4*(u**2 - u*v + v**2)",
+        "tangent_discriminant": -48
+      },
+      {
+        "first_blowup_near_multiplicity": null,
+        "first_blowup_tangent_cone": null,
+        "first_blowup_tangent_discriminant": null,
+        "multiplicity": 2,
+        "point": "F",
+        "singularity": "A1 ordinary node; one blowup resolves",
+        "tangent_cone": "4*(u**2 + u*v + v**2)",
+        "tangent_discriminant": -48
+      }
+    ],
+    "strict_boundary_arithmetic_genus": 0,
+    "strict_boundary_geometrically_integral_rational": true,
+    "strict_boundary_self_intersection": -4,
+    "strict_boundary_smooth": true
+  },
+  "raw_polytope_extraction": {
+    "all_sequential_P2_endpoint_count": 573,
+    "both_branches_have_the_same_abstract_7_plus_3_design": true,
+    "branches": [
+      {
+        "all_thirty_raw_wall_coordinates_H_E": [
+          [
+            3,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -2,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            2,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            -1,
+            -1,
+            0,
+            -2,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            2,
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            -1,
+            -1,
+            -2,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "all_thirty_wall_vectors_reconstruct_exactly": true,
+        "all_twelve_raw_roots_equal_canonical_curve_classes": true,
+        "basis_determinant": 1,
+        "basis_gram": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "canonical_class_coordinates_H_E": [
+          -3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "colored_incidence_isomorphism_count": 12,
+        "contracted_wall_set_zero_based": [
+          1,
+          5,
+          9,
+          13,
+          15,
+          17,
+          19,
+          22,
+          26,
+          28
+        ],
+        "exceptional_total_transform_columns_in_raw_basis": [
+          [
+            4,
+            3,
+            6,
+            8,
+            7,
+            6,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            6,
+            8,
+            7,
+            6,
+            5,
+            4,
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            4,
+            6,
+            5,
+            5,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            4,
+            6,
+            5,
+            4,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            6,
+            9,
+            8,
+            7,
+            5,
+            4,
+            2,
+            1,
+            1
+          ],
+          [
+            5,
+            3,
+            7,
+            10,
+            8,
+            7,
+            5,
+            4,
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            4,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            1
+          ],
+          [
+            5,
+            4,
+            8,
+            11,
+            9,
+            8,
+            6,
+            5,
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            5,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            5,
+            3,
+            7,
+            10,
+            9,
+            8,
+            6,
+            5,
+            3,
+            1,
+            1
+          ]
+        ],
+        "lexicographic_valid_contraction_order_zero_based": [
+          13,
+          5,
+          15,
+          17,
+          19,
+          9,
+          22,
+          26,
+          28,
+          1
+        ],
+        "near_center_positions_zero_based": [
+          0,
+          4,
+          8
+        ],
+        "plane_class_in_raw_basis": [
+          13,
+          9,
+          19,
+          27,
+          23,
+          20,
+          15,
+          12,
+          7,
+          3,
+          3
+        ],
+        "primitive_half_boundary_coordinates_H_E": [
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "root_transport": [
+          {
+            "canonical_curve": "EG_minus_Eg",
+            "coordinates_H_E": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              1
+            ],
+            "raw_wall_index_zero_based": 1
+          },
+          {
+            "canonical_curve": "L_EFG",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              -1
+            ],
+            "raw_wall_index_zero_based": 2
+          },
+          {
+            "canonical_curve": "L_AD",
+            "coordinates_H_E": [
+              1,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 3
+          },
+          {
+            "canonical_curve": "L_BCG",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "raw_wall_index_zero_based": 4
+          },
+          {
+            "canonical_curve": "EA_minus_Ea",
+            "coordinates_H_E": [
+              0,
+              -1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 5
+          },
+          {
+            "canonical_curve": "L_ACF",
+            "coordinates_H_E": [
+              1,
+              0,
+              -1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 6
+          },
+          {
+            "canonical_curve": "L_DG",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              -1
+            ],
+            "raw_wall_index_zero_based": 7
+          },
+          {
+            "canonical_curve": "L_ABE",
+            "coordinates_H_E": [
+              1,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 8
+          },
+          {
+            "canonical_curve": "ED_minus_Ed",
+            "coordinates_H_E": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 9
+          },
+          {
+            "canonical_curve": "L_BDF",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              -1,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 10
+          },
+          {
+            "canonical_curve": "L_AG",
+            "coordinates_H_E": [
+              1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "raw_wall_index_zero_based": 11
+          },
+          {
+            "canonical_curve": "L_CDE",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 12
+          }
+        ],
+        "selected_point_labels_in_E_order": [
+          "a",
+          "A",
+          "B",
+          "C",
+          "d",
+          "D",
+          "E",
+          "F",
+          "g",
+          "G"
+        ]
+      },
+      {
+        "all_thirty_raw_wall_coordinates_H_E": [
+          [
+            3,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -2,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            -1,
+            -1,
+            0,
+            -2,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            2,
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            3,
+            -1,
+            -1,
+            -2,
+            0,
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            -1,
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            -1,
+            -1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "all_thirty_wall_vectors_reconstruct_exactly": true,
+        "all_twelve_raw_roots_equal_canonical_curve_classes": true,
+        "basis_determinant": -1,
+        "basis_gram": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        ],
+        "canonical_class_coordinates_H_E": [
+          -3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "colored_incidence_isomorphism_count": 12,
+        "contracted_wall_set_zero_based": [
+          3,
+          7,
+          11,
+          13,
+          15,
+          17,
+          19,
+          22,
+          26,
+          28
+        ],
+        "exceptional_total_transform_columns_in_raw_basis": [
+          [
+            4,
+            3,
+            6,
+            8,
+            7,
+            6,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            6,
+            9,
+            7,
+            6,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            4,
+            6,
+            5,
+            5,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            4,
+            6,
+            5,
+            4,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            6,
+            9,
+            8,
+            7,
+            5,
+            4,
+            2,
+            1,
+            1
+          ],
+          [
+            4,
+            3,
+            6,
+            9,
+            8,
+            7,
+            5,
+            4,
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            4,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            1
+          ],
+          [
+            5,
+            4,
+            8,
+            11,
+            9,
+            8,
+            6,
+            5,
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            5,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            3,
+            5,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            1
+          ]
+        ],
+        "lexicographic_valid_contraction_order_zero_based": [
+          13,
+          11,
+          15,
+          17,
+          19,
+          3,
+          22,
+          26,
+          28,
+          7
+        ],
+        "near_center_positions_zero_based": [
+          0,
+          4,
+          8
+        ],
+        "plane_class_in_raw_basis": [
+          12,
+          9,
+          18,
+          26,
+          22,
+          19,
+          14,
+          11,
+          7,
+          3,
+          3
+        ],
+        "primitive_half_boundary_coordinates_H_E": [
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "root_transport": [
+          {
+            "canonical_curve": "L_AD",
+            "coordinates_H_E": [
+              1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              -1
+            ],
+            "raw_wall_index_zero_based": 1
+          },
+          {
+            "canonical_curve": "L_EFG",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              -1,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 2
+          },
+          {
+            "canonical_curve": "EG_minus_Eg",
+            "coordinates_H_E": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 3
+          },
+          {
+            "canonical_curve": "L_BCG",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 4
+          },
+          {
+            "canonical_curve": "L_AG",
+            "coordinates_H_E": [
+              1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 5
+          },
+          {
+            "canonical_curve": "L_CDE",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -1
+            ],
+            "raw_wall_index_zero_based": 6
+          },
+          {
+            "canonical_curve": "ED_minus_Ed",
+            "coordinates_H_E": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              1
+            ],
+            "raw_wall_index_zero_based": 7
+          },
+          {
+            "canonical_curve": "L_BDF",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1
+            ],
+            "raw_wall_index_zero_based": 8
+          },
+          {
+            "canonical_curve": "L_DG",
+            "coordinates_H_E": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "raw_wall_index_zero_based": 9
+          },
+          {
+            "canonical_curve": "L_ABE",
+            "coordinates_H_E": [
+              1,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 10
+          },
+          {
+            "canonical_curve": "EA_minus_Ea",
+            "coordinates_H_E": [
+              0,
+              -1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 11
+          },
+          {
+            "canonical_curve": "L_ACF",
+            "coordinates_H_E": [
+              1,
+              0,
+              -1,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0
+            ],
+            "raw_wall_index_zero_based": 12
+          }
+        ],
+        "selected_point_labels_in_E_order": [
+          "a",
+          "A",
+          "B",
+          "C",
+          "g",
+          "G",
+          "F",
+          "E",
+          "d",
+          "D"
+        ]
+      }
+    ],
+    "endpoint_degree_signature_count": 28,
+    "input_policy": {
+      "does_not_read": [
+        "surface name",
+        "Kondo type",
+        "known plane points",
+        "known sextic",
+        "stored contraction"
+      ],
+      "reads": [
+        "integral lattice Gram",
+        "thirty primitive wall vectors"
+      ]
+    },
+    "raw_rank": 11,
+    "raw_root_count": 12,
+    "raw_wall_count": 30,
+    "selected_endpoint_count": 2,
+    "selected_signature": {
+      "contracted_original_norm_histogram": {
+        "-1": 7,
+        "-2": 3
+      },
+      "half_boundary_degree": 3,
+      "root_degree_histogram": {
+        "0": 3,
+        "1": 9
+      }
+    }
+  },
+  "root_boundary_disjointness": {
+    "geometric": "The boundary is absolutely irreducible of degree six and hence contains no root line; all strict curves are distinct effective irreducibles on the smooth blowup. Nonnegative local intersection plus total intersection zero makes every root disjoint from the strict boundary.",
+    "numerical": "B.C=(-2K).C=0 for every one of the twelve roots",
+    "root_root_transversality": "Six line pairs meet at unblown ordinary double intersections; each of the three exceptional roots meets the three nonselected tangent directions over its parent. These fifteen intersections are transverse and every other root pair is disjoint."
+  },
+  "same_polytope_return": {
+    "exact_same_marked_H10_30": true,
+    "finite_volume": true,
+    "general_theorem_handoff": "The twelve explicitly constructed roots are the complete raw CM root seed. D_CobVin gives finite volume and finite reflection index; Kondo root exhaustion excludes hidden roots; the one-boundary Halphen cusp theorem realizes exactly the seventeen raw E=f-b walls and excludes every hidden (-1)-curve.",
+    "independent_CM_root_cone_gate": {
+      "all_seventeen_cusps_equal_the_raw_E_plus_b_classes": true,
+      "finite_rays": 38,
+      "hyperideal_rays": 0,
+      "ideal_rays": 17,
+      "root_gram_is_Kondo_Type_II": true,
+      "root_span_index_in_E10": 2,
+      "unique_E10_saturation_up_to_diagram_automorphism": true
+    },
+    "independent_raw_cone_gate": {
+      "all_thirty_facets_irredundant": true,
+      "bad_edges": 0,
+      "bad_parabolic_neighborhoods": 0,
+      "connected_affine_neighborhoods": 436,
+      "elliptic_edges": 10030,
+      "finite_vertices": 1333,
+      "hyperideal_vertices": 0,
+      "ideal_vertices": 207,
+      "reflection_index_in_W_P10": 12142080
+    },
+    "noncompact": true,
+    "returned_wall_inventory": {
+      "automatic_cusp_lift_minus_one_curves": 17,
+      "explicit_minus_two_roots": 12,
+      "primitive_half_boundary_b_minus_K": 1,
+      "total_facets": 30
+    }
+  },
+  "schema": "coxeter.coble_type_ii_b3_plane_inverse.v1",
+  "sources": {
+    "Choi_Lam_sextic_lineage": "https://doi.org/10.1007/BF01360024",
+    "Kondo_classification_and_return": "https://arxiv.org/abs/2102.00591",
+    "distinct_Hessian_Coble_family": "https://doi.org/10.5802/ahl.57",
+    "general_inverse_return": "results/coble_vinberg_incidence_inverse_transfer.md",
+    "independent_full_cone": "data/enumerations/coble_one_boundary_full_ns_h10.json",
+    "independent_raw_Coble_recognizer": "data/enumerations/polytope_first_coble_h10_hostile_audit.json"
+  },
+  "status": "PROVED_STRICT_RAW_P_FIRST_B3_PLANE_REALIZATION_AND_SAME_H10_30_RETURN",
+  "status_date": "2026-08-09"
+}

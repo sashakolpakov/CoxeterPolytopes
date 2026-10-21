@@ -1,0 +1,166 @@
+{
+  "all_checks_pass": true,
+  "artifact_id": "ue8x2_inose_h17_family",
+  "checks": {
+    "discriminant_factorization": true,
+    "fiber_euler_sum": true,
+    "four_simple_nonzero_I1": true,
+    "infinity_is_II_star": true,
+    "j_function": true,
+    "ns_even_unimodular": true,
+    "ns_rank_signature": true,
+    "open_witness_discriminant": true,
+    "open_witness_factorization": true,
+    "parameter_recovery": true,
+    "residual_discriminant_factorization": true,
+    "source_volume_cross_pin": true,
+    "vinberg_decision": true,
+    "vinberg_edges_complete": true,
+    "vinberg_full_audit_digest": true,
+    "vinberg_parabolics_complete": true,
+    "vinberg_vertices": true,
+    "volume_source_hash": true,
+    "wall_case_identity": true,
+    "wall_gram_exact": true,
+    "wall_source_hash": true,
+    "zero_is_II_star": true
+  },
+  "claim_scope": "new project-level equation-to-complete-nef realization of a known K3 chamber and known abstract finite-volume Coxeter polytope",
+  "complete_nef_handoff": {
+    "full_rank_basis_determinant": -1,
+    "source_artifact": "data/known_examples/k3_high_rank_nef_chambers.json",
+    "source_sha256": "0dcc7ec9c10f3437cd39713cd0d6036dc4fa8ad0c978ffdad4c2b34748269120",
+    "transport_argument": "for NS isometric to U+E8(-1)^2, the nef cone is a Weyl chamber in the positive cone; Weyl transport identifies it with the published complete 19-wall chamber",
+    "wall_analysis": {
+      "all_checks_pass": true,
+      "basis_determinant": -1,
+      "checks": {
+        "absolute_discriminant": true,
+        "all_wall_norms_minus_two": true,
+        "basis_determinant": true,
+        "basis_size": true,
+        "hyperbolic_dimension": true,
+        "rank": true,
+        "signature": true,
+        "symmetric": true
+      },
+      "inertia": [
+        1,
+        17,
+        1
+      ],
+      "rank": 18,
+      "rho": 18,
+      "wall_count": 19
+    },
+    "wall_count": 19,
+    "wall_gram_rank_inertia": [
+      18,
+      [
+        1,
+        17,
+        1
+      ]
+    ]
+  },
+  "family": {
+    "affine_equation": "y^2 = x^3 - 3*A*t^4*x + t^5*(t^2 - 2*B*t + 1)",
+    "c4": "144*A*t**4",
+    "discriminant": "-432*t**10*(-4*A**3*t**2 + 4*B**2*t**2 - 4*B*t**3 - 4*B*t + t**4 + 2*t**2 + 1)",
+    "fiber_euler_sum": 24,
+    "fibers": [
+      {
+        "euler": 10,
+        "kodaira": "II*",
+        "place": "t=0",
+        "root_lattice": "E8(-1)",
+        "valuations_a4_a6_c4_delta": [
+          4,
+          5,
+          4,
+          10
+        ]
+      },
+      {
+        "euler_each": 1,
+        "kodaira": "I1",
+        "multiplicity": 4,
+        "place": "four roots of R(t)",
+        "root_lattice": null
+      },
+      {
+        "euler": 10,
+        "kodaira": "II*",
+        "place": "t=infinity",
+        "root_lattice": "E8(-1)",
+        "valuations_a4_a6_c4_delta": [
+          4,
+          5,
+          4,
+          10
+        ]
+      }
+    ],
+    "j": "-6912*A**3*t**2/(-4*A**3*t**2 + 4*B**2*t**2 - 4*B*t**3 - 4*B*t + t**4 + 2*t**2 + 1)",
+    "open_nonempty_witness": {
+      "A": 1,
+      "B": 3,
+      "residual": "(t**2 - 8*t + 1)*(t**2 - 4*t + 1)",
+      "residual_discriminant": 184320
+    },
+    "parameter_open": "A*(A^3-(B+1)^2)*(A^3-(B-1)^2) != 0",
+    "residual_discriminant": "4096*A**6*(A**3 - B**2 - 2*B - 1)*(A**3 - B**2 + 2*B - 1)",
+    "residual_quartic": "-4*A**3*t**2 + 4*B**2*t**2 - 4*B*t**3 - 4*B*t + t**4 + 2*t**2 + 1"
+  },
+  "lineage": {
+    "equation": "classical Inose pencil",
+    "equation_source": "https://arxiv.org/abs/math/0612396",
+    "priority_boundary": "neither the Inose equation nor Vinberg's H17/19 chamber is claimed new worldwide; their explicit algebraic matching is the positive realization added here",
+    "published_projective_model": "Double cover of P2 branched over a sextic with an A17 singularity; the wall graph is the classical Vinberg graph",
+    "wall_source_locator": "Roulleau Section 15.4; Kondo Section 4.2, Figure 2"
+  },
+  "neron_severi": {
+    "generic_exactness": {
+      "coefficient_recovery": {
+        "A^3": "(4*B^2+2-[t^2]R)/4",
+        "B": "-[t^3]R/4"
+      },
+      "finite_equivalences": "an ordered-II*-fibration isomorphism has t->lambda*t; comparison of the monic palindromic R gives lambda^4=1 and generically lambda^2=1, hence only B->+/-B and the finite cube-root ambiguity in A; swapping 0 and infinity adds only another finite identification",
+      "forgetful_map": "on a fixed K3, elliptic fibrations and sections are integral divisor classes, so forgetting the marked fibration has zero-dimensional fibers",
+      "parameter_moduli_dimension": 2,
+      "period_argument": "the L-polarized K3 period domain for rank(L)=18 has dimension two; the family has two-dimensional image. The rho>=19 Noether--Lefschetz locus is a countable union of proper curves, so the very general member has rho=18",
+      "scope": "exact for the geometric very general member; (A,B)=(1,3) only witnesses the open and is not asserted to have geometric Picard rank 18"
+    },
+    "rank_signature_determinant": [
+      18,
+      [
+        1,
+        17,
+        0
+      ],
+      -1
+    ],
+    "trivial_lattice_argument": "fiber, zero section, and the nonidentity components of the two II* fibers give U+E8(-1)^2",
+    "unimodular_closure": "the displayed determinant-one lattice is primitive and has no proper integral same-rank overlattice; after rho=18 it is the whole NS, and Shioda--Tate forces Mordell--Weil rank and torsion zero",
+    "very_general_exact_lattice": "U+E8(-1)+E8(-1)"
+  },
+  "payload_sha256": "b02465173f6f73acbc743159aaabd3bc0a6f8784fb4ecbfdd8b95e731494bdaa",
+  "positive_object_id": "R18-UE8x2-NEF-H17-19",
+  "schema_version": 1,
+  "vinberg_handoff": {
+    "bad_edges": 0,
+    "bad_full_parabolic_neighborhoods": 0,
+    "canonical_full_audit_sha256": "6e77968ffeb645ad008cc52bcc4995c9a983d928a88d6a4a34e5dc35ad4d0139",
+    "classification": "finite_volume_noncompact",
+    "connected_affine_neighborhoods": 3,
+    "criterion": "exact_elliptic_edge_endpoint_and_full_parabolic_zero_neighborhood",
+    "elliptic_edges": 729,
+    "facets": 19,
+    "finite_vertices": 80,
+    "hyperbolic_dimension": 17,
+    "ideal_vertices": 2,
+    "simple_roots_complete": true,
+    "source_artifact": "data/known_examples/k3_high_rank_nef_vinberg_volume.json",
+    "source_sha256": "349f58a302c1d274bb25a7e3dff7be18ce12d0924717b52ac7976003d95dbbde"
+  }
+}

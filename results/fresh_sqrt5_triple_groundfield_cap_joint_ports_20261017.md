@@ -1,0 +1,15 @@
+# Complete joint-port scan after triple-A1 and ground-field repair
+
+The final exact incidence witness remains **12.12966051709919>12**. The complete three-, four- and five-port scan finds **no new violation** and makes no further vertex-mass change after the combined cap/local-cover repair. This remains a partial-model obstruction; it does not prove a dimension bound.
+
+The [source](../scripts/fresh_sqrt5_triple_groundfield_cap_joint_ports_20261017.py) and [certificate](fresh_sqrt5_triple_groundfield_cap_joint_ports_20261017.json) bind the [new complete local-cover repair](fresh_sqrt5_triple_groundfield_cap_local_cover_update_20261017.md). That repair retains all1,406 old cap checks, adds93 triple-A1 constraints and555 fixed-ground-field strengthenings, raises34 simplex masses and60 vertex masses, and covers the changed local simplex marginals with3,622 inherited packing terms plus88 singleton terms. All94,722 inherited signed columns and2,054 cap checks pass directly.
+
+This successor keeps the same2,524 positive face masses:2,188 simplex stars and336 actual quadrilateral provenances. It reconstructs every simplex-block contribution and all2,294 literal quadrilateral corner occurrences on their common complete finite-forest orbit domains. No representative is reselected and no coefficient-wise provenance minimum is introduced.
+
+On648 contributing forests, the scan checks all13-choose-k subsets for k=3,4,5, grouped by exact marked-forest isomorphism. The selected families are the strengthened three-port inequality, the four-port inequality and all15 certified five-port facets. Exact intersection histograms allow nonmonotone simplex coefficients. Binomial sum identities check all simplex and quadrilateral multiplicities; saved stream hashes bind the complete domain and load census.
+
+There are51,166 three-port inequalities,106,351 four-port inequalities and2,553,915 five-port inequalities: **2,711,432 exact checks**, all satisfied. Thus the previously certified full nonnegative local simplex-packing family, inherited matrix and all cap constraints remain valid together with these17 joint families. These families do not exhaust all global geometric compatibility conditions.
+
+Generation and a fresh saved replay both terminate with PASS. No local or global optimizer is invoked. The source is a fresh successor of the previously reviewed joint scanner, changing only the input package, status and explicit cap-count/scope assertions. Frozen predecessors are unchanged.
+
+The largest remaining quadrilateral masses belong to the five-dimensional prism family from raw core23. For example Q26448 has mass173158171/10^10 and joins containing simplex rows599 and311; it is tight against row599. The largest vertex mass is at2A1+A4+H3+H4. The remaining A1+A3 and A1+D5 profiles have much smaller positive masses, although exact contact compatibility can still furnish new constraints. This support observation is guidance for further geometric work, not an additional certified inequality in this package.

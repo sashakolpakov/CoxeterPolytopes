@@ -1,0 +1,746 @@
+{
+  "status": "PASS_ORDER11_C_ENDPOINT_ZERO_TRANSFER",
+  "sources": {
+    "scripts/fresh_order11_c_endpoint_zero_transfer_20261018.py": "f4a3d7656e54445e253a78e2751feaa345aea89fd130c3e2e0acab7fb6984391",
+    "scripts/fresh_order11_bcd_half_pair_transfer_20261018.py": "feda6c54852b8544bed370a5934795eb031dc437788778a11686f25aa4311fa5",
+    "results/fresh_order11_bcd_half_pair_transfer_20261018.json": "24729797636fa9e783d0e5e8092c500de8cd0d2cb21e698322a48cb47eebf733",
+    "results/fresh_order11_bcd_half_pair_transfer_20261018.md": "7e59403fa47e5195b089b558554c000448ad803d805bd60095244d1ac62be3b7",
+    "scripts/fresh_order11_order17_dimension63_20261018.py": "52755fa17a007531fe1faab3f5d66de100c8c7561bfa90296d8a552a719cd0af",
+    "results/fresh_order11_order17_dimension63_20261018.json": "9e0048c6b26c09aa4328bca71a051cd284bb3e2eddc92c535f783276650c8d84",
+    "results/fresh_order11_order17_dimension63_20261018.md": "1aaa4f9c0578b4c7d1b2dedd48fbadd7f723095ded0fe28dfdfdd95626e2784d",
+    "results/fresh_cusp_factor_payment_framework_20261017.md": "c65cfc5a4409a8cc83fcf0a083a6c1a7a29bb7bc7d649c11435773877e70ccab",
+    "results/fresh_finite7_ideal5_triangle_payments_20261017.md": "00d3f334ffefc3b926edfdbe7b319a7f6792d83e23fe94511ede7dc60b71bf75"
+  },
+  "target_gram": [
+    [
+      "2",
+      "-sqrt(2)",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-sqrt(2)",
+      "2",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-1",
+      "2",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-1",
+      "2",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1",
+      "2",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "2",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "2",
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "2",
+      "-1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "2",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1",
+      "2",
+      "-sqrt(2)"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-sqrt(2)",
+      "2"
+    ]
+  ],
+  "positive_kernel": [
+    "sqrt(2)/2",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "sqrt(2)/2"
+  ],
+  "complete_profiles": [
+    {
+      "profile": "isolated",
+      "height": "sqrt(2)*t/2",
+      "moment": "0",
+      "c0": "2",
+      "contact_minimum": 1,
+      "maximum_cost": 4,
+      "exact_cost": "4/t**2",
+      "upper_gap": "4*u*(u + 2)/(u + 1)**2",
+      "upper_gap_numerator_coefficients": [
+        "4",
+        "8",
+        "0"
+      ],
+      "upper_gap_denominator_coefficients": [
+        "1",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "profile": "end3",
+      "height": "sqrt(2)*t/2 + 1",
+      "moment": "1",
+      "c0": "1",
+      "contact_minimum": 0,
+      "maximum_cost": 3,
+      "exact_cost": "4*(sqrt(2)*t + 3)/(sqrt(2)*t + 2)**2",
+      "upper_gap": "2*u*(3*u + 4*sqrt(2))/(sqrt(2)*u + 2)**2",
+      "upper_gap_numerator_coefficients": [
+        "6",
+        "8*sqrt(2)",
+        "0"
+      ],
+      "upper_gap_denominator_coefficients": [
+        "2",
+        "4*sqrt(2)",
+        "4"
+      ]
+    },
+    {
+      "profile": "end4",
+      "height": "sqrt(2)*t/2 + sqrt(2)",
+      "moment": "sqrt(2)",
+      "c0": "0",
+      "contact_minimum": 0,
+      "maximum_cost": 2,
+      "exact_cost": "4/(t + 2)",
+      "upper_gap": "2*u/(u + 2)",
+      "upper_gap_numerator_coefficients": [
+        "2",
+        "0"
+      ],
+      "upper_gap_denominator_coefficients": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "profile": "next3",
+      "height": "sqrt(2)*t/2 + 1",
+      "moment": "2",
+      "c0": "0",
+      "contact_minimum": 0,
+      "maximum_cost": 4,
+      "exact_cost": "8/(sqrt(2)*t + 2)",
+      "upper_gap": "4*sqrt(2)*u/(sqrt(2)*u + 2)",
+      "upper_gap_numerator_coefficients": [
+        "4*sqrt(2)",
+        "0"
+      ],
+      "upper_gap_denominator_coefficients": [
+        "sqrt(2)",
+        "2"
+      ]
+    }
+  ],
+  "all_ordered_profile_bounds": [
+    {
+      "left": "isolated",
+      "right": "isolated",
+      "lower_bound": "1/5"
+    },
+    {
+      "left": "isolated",
+      "right": "end3",
+      "lower_bound": "3/10"
+    },
+    {
+      "left": "isolated",
+      "right": "end4",
+      "lower_bound": "2/5"
+    },
+    {
+      "left": "isolated",
+      "right": "next3",
+      "lower_bound": "1/5"
+    },
+    {
+      "left": "end3",
+      "right": "isolated",
+      "lower_bound": "3/10"
+    },
+    {
+      "left": "end3",
+      "right": "end3",
+      "lower_bound": "2/5"
+    },
+    {
+      "left": "end3",
+      "right": "end4",
+      "lower_bound": "1/2"
+    },
+    {
+      "left": "end3",
+      "right": "next3",
+      "lower_bound": "3/10"
+    },
+    {
+      "left": "end4",
+      "right": "isolated",
+      "lower_bound": "2/5"
+    },
+    {
+      "left": "end4",
+      "right": "end3",
+      "lower_bound": "1/2"
+    },
+    {
+      "left": "end4",
+      "right": "end4",
+      "lower_bound": "3/5"
+    },
+    {
+      "left": "end4",
+      "right": "next3",
+      "lower_bound": "2/5"
+    },
+    {
+      "left": "next3",
+      "right": "isolated",
+      "lower_bound": "1/5"
+    },
+    {
+      "left": "next3",
+      "right": "end3",
+      "lower_bound": "3/10"
+    },
+    {
+      "left": "next3",
+      "right": "end4",
+      "lower_bound": "2/5"
+    },
+    {
+      "left": "next3",
+      "right": "next3",
+      "lower_bound": "1/5"
+    }
+  ],
+  "determinant_identity": "-c0/(10*h**2) - d0/(10*k**2) + 1 - m/(5*k) + r/(10*k**2) - l/(5*h) - q/(5*h*k) + p/(10*h**2)",
+  "strict_minimum": "1/5",
+  "changed_pairs": [
+    [
+      0,
+      10
+    ]
+  ],
+  "old_weight": "1/2",
+  "new_weight": "0",
+  "old_cost": "109/2",
+  "new_cost": "54",
+  "weighted_pairs": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        8
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        0,
+        10
+      ],
+      "weight": "0"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        1,
+        5
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        1,
+        6
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        1,
+        7
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        1,
+        8
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        1,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        1,
+        10
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        2,
+        8
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        2,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        2,
+        10
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        3,
+        6
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        3,
+        7
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        3,
+        8
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        3,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        3,
+        10
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        4,
+        6
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        4,
+        7
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        4,
+        8
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        4,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        4,
+        10
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        5,
+        6
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        5,
+        7
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        5,
+        8
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        5,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        5,
+        10
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        6,
+        7
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        6,
+        8
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        6,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        6,
+        10
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        7,
+        8
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        7,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        7,
+        10
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        8,
+        9
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        8,
+        10
+      ],
+      "weight": "1"
+    },
+    {
+      "pair": [
+        9,
+        10
+      ],
+      "weight": "1"
+    }
+  ],
+  "new_order11_costs": {
+    "A": "99/2",
+    "B": "54",
+    "C": "54",
+    "D": "53"
+  },
+  "new_order11_envelope": "54/11",
+  "finite_coupon_increment": "0",
+  "other_weights_unchanged": true,
+  "actual_alternative": "An adjacent black contact or shared spectator coordinate gives a distinct actual corner a retained length1 or2 unit.",
+  "simultaneous_priority": "First handle any changed C endpoint corner by this independent unit alternative. If none exists, all actual weights equal the completed baseline and its whole-face coverage is inherited.",
+  "triangle_minimum": 2,
+  "quadrilateral_minimum": 1,
+  "new_dimension_bound": null,
+  "scope": "Universal local zero transfer using all native profiles and arbitrary supporting spectators. All16 profile-pair bounds are strict; affine alternative halves are never spent. No new finite budget or ambient dimension theorem."
+}

@@ -1,0 +1,70 @@
+{
+  "status": "PASS_BOUNDED_GUIDED_PACKAGE_AND_SEPARATE_TWO_CIRCUIT_REPLAYS",
+  "sources": {
+    "scripts/fresh_h9_obstruction_guided_gale_20261014_certificate.py": "dd7a71e1d18a464f7e63801290ac58746b3c76b6a5690d3952142eea7ea3d956",
+    "scripts/fresh_h9_obstruction_guided_gale_20261014_independent.py": "84f219b74cf87b96e17c1b1e9bc3f70be22f53d3a9db4e76148280accef78b39",
+    "scripts/fresh_h9_rank5_gale_20261014_independent.py": "6360fd269c418d8fd49c8bc3d14917c9ffbe8e5a0c6ce4ec180c5162d848b709",
+    "results/fresh_h9_obstruction_guided_gale_20261014.json": "e580b01a835b5fafc8fac5971665a125f89ae0789f72c382708c134fbe05a8bb",
+    "results/fresh_h9_obstruction_guided_gale_20261014_circuits.json": "aaf1550be2a99c492dd4dc9c567a3fe2385e309bc21b64cf868bf59cb5195acd",
+    "results/fresh_h9_obstruction_guided_gale_20261014_independent.json": "fc69c157d7f6d1794e875e4066b1817a498a3662bb5de26f67f8bad7004af01f",
+    "results/fresh_h9_obstruction_guided_gale_20261014_state.json": "c56cd1a16f0859078dfde82ccfa1a7e677c2bb7ac7988422eea6af5f31b30acb",
+    "results/fresh_h9_obstruction_guided_gale_20261014_circuits_state.json": "cbd426f6f51ffcc37289d7671c4be7adc470fc2192b248f297329ab7090cae3d",
+    "results/fresh_h9_obstruction_guided_gale_20261014_flip_diagnostic.json": "2477f4840bf2562146579e06ec68a3d1dc9715c267acf97bfb4367c326e5869c"
+  },
+  "new_realized_nerves": 74,
+  "prior_keys_avoided": 1063,
+  "exact_exclusions": {
+    "literal_induced_pattern": 70,
+    "two_lanner_blocks": 4
+  },
+  "unresolved_saved_nerves": 0,
+  "full_label_searches": 0,
+  "metric_solves": 0,
+  "separate_incidence_counts": {
+    "five_minors": 222222,
+    "six_circuits": 370370,
+    "vertex_links": 1110,
+    "actual_vertices": 21822,
+    "guidance_witnesses": 1226
+  },
+  "circuit_case_independent_replays": [
+    {
+      "case": 0,
+      "input": "results/fresh_h9_obstruction_guided_gale_20261014_circuits_cases/case_00000.json",
+      "input_sha256": "8c2a825a5d6ea897a0d24b3a3ab6a8255979eee6ec5d202e461dc708cda9f22c",
+      "status": "PASS_SEPARATE_INTEGER_GALE_INCIDENCE_AND_LITERAL_GATE",
+      "vertices": 298,
+      "minimal_nonfaces": 30,
+      "five_minors": 3003,
+      "six_circuits": 5005,
+      "vertex_links": 15,
+      "gate": "literal_induced_pattern",
+      "search_verdict": null,
+      "search_states": 0,
+      "all_guidance_witnesses_rechecked": 18
+    },
+    {
+      "case": 1,
+      "input": "results/fresh_h9_obstruction_guided_gale_20261014_circuits_cases/case_00001.json",
+      "input_sha256": "f2a41b2384a56395bbf9b6b01a1e9a0ad122f8bb6d091255c0daed4df041de84",
+      "status": "PASS_SEPARATE_INTEGER_GALE_INCIDENCE_AND_LITERAL_GATE",
+      "vertices": 308,
+      "minimal_nonfaces": 29,
+      "five_minors": 3003,
+      "six_circuits": 5005,
+      "vertex_links": 15,
+      "gate": "literal_induced_pattern",
+      "search_verdict": null,
+      "search_states": 0,
+      "all_guidance_witnesses_rechecked": 14
+    }
+  ],
+  "best_recognized_support_count": 4,
+  "exact_combinatorial_diagnostic": {
+    "exact_bistellar_recipes": 625,
+    "large_minimal_nonface": 543,
+    "passes_incidence_filters": 82,
+    "exact_literal_obstruction": 82
+  },
+  "scope": "The72 guided-walk cases inherit their completed separate Bareiss/face audit; this command freshly replays both circuit cases and their literal boundary recipes. Inherited local obstruction arithmetic is not repeated. The625 combinatorial flip recipes are a separate exact producer/replay diagnostic, with no realization or independent full-census claim. All searches are bounded."
+}

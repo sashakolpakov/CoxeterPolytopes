@@ -1,0 +1,15 @@
+# Combined triple-A1 and ground-field cap repair
+
+The exact repaired witness has ratio **12.12966051709919>12**, down from12.232719420029884. It satisfies the inherited matrix, all2,054 recorded cap constraints and every nonnegative local simplex-block packing charge at the new masses. This is a partial-model obstruction, not an optimized bound or dimension theorem.
+
+The [source](../scripts/fresh_sqrt5_triple_groundfield_cap_local_cover_update_20261017.py) and [certificate](fresh_sqrt5_triple_groundfield_cap_local_cover_update_20261017.json) combine the [93 triple-A1 constraints](fresh_sqrt5_triple_a1_cap_capacity_20261017.md) with the [fixed-ground-field strengthening of555 constraints](fresh_sqrt5_multispectator_groundfield_cap_capacity_20261017.md). The latter's two-cycle tests require membership in the fixed ground field Q(sqrt5), in addition to integrality. Their [independent79-test review](fresh_sqrt5_spectator_groundfield_gate_20261017.md) is hash-bound.
+
+All1,406 old cap checks are retained, including the weaker original555 constraints. The combined certificate therefore checks851+555+93+555=2,054 literal constraints, with no change of quadrilateral provenance. Each containing-simplex mass is raised only as required by the new signed inequalities. Exactly34 simplex masses increase; all336 actual quadrilateral masses stay fixed. The support remains2,188 simplex stars plus336 quadrilateral rows.
+
+The [previous complete local covers](fresh_sqrt5_multispectator_cap_local_cover_update_20261017.md) supply3,622 literal packing terms. Every term is transported by its complete forest and marked-block canonical key, its literal masks are rechecked for orbit membership and pairwise disjointness, and its old marginal coverage is recounted. At the new masses,88 explicit singleton packings cover every additional marginal. No new forest or block orbit appears: all4,169 block orbits on648 forests are covered. The [previous final joint-port vertex masses](fresh_sqrt5_multispectator_cap_joint_ports_20261017.md) remain lower bounds;60 vertex masses increase.
+
+Simultaneously averaging each whole literal packing over the finite forest's automorphism group preserves disjointness and gives uniform within-orbit marginals. The saved covering mixtures therefore bound **every** nonnegative local simplex charge by its maximum packing cost, at these changed face masses. They do not assert that the abstract packings are simultaneously geometrically realizable.
+
+Every inherited matrix column, including all94,722 signed columns, is directly checked at the final masses. All2,054 cap loads are also directly recounted. The exact objective, normalizer, face and vertex masses, remapping, literal mixtures and required/covered marginals are saved. No local or global optimizer is invoked.
+
+Generation and a fresh saved replay both terminate with PASS. The complete three-, four- and five-port families need a new scan because simplex masses changed; that is a separate successor and is not assumed in this intermediate certificate.

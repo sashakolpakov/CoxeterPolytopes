@@ -1,0 +1,99 @@
+{
+  "certificate_digest": "9c30e26f9466338adac2acf7aa1fc033cdeee201520002baa350bdfb1b362ab5",
+  "evidence": {
+    "independent_counts": {
+      "all_order_lanner_closure_constraints": 6796,
+      "candidate_facet_complements": 754,
+      "face_witness_constraints": 1324,
+      "generator_moved_facet_pair_counts": [
+        201,
+        166,
+        166,
+        166,
+        166,
+        166,
+        166,
+        166,
+        166,
+        165
+      ],
+      "independent_five_sets": 1617,
+      "ridge_zero_or_two_constraints": 1491,
+      "stabilizer_generators": 10
+    },
+    "independent_reconstruction_exact_count_agreement": true,
+    "independent_solver": "Z3",
+    "independent_terminal_status": "unsat",
+    "production_counts": {
+      "all_order_lanner_closure_constraints": 6796,
+      "candidate_facet_complements": 754,
+      "face_witness_constraints": 1324,
+      "generator_moved_facet_pair_counts": [
+        201,
+        166,
+        166,
+        166,
+        166,
+        166,
+        166,
+        166,
+        166,
+        165
+      ],
+      "independent_five_sets": 1617,
+      "ridge_zero_or_two_constraints": 1491,
+      "stabilizer_generators": 10
+    },
+    "production_solver": "OR-Tools CP-SAT, one worker",
+    "production_terminal_status": "INFEASIBLE",
+    "symmetry_slice_lossless_reason": "Every orbit under the finite fixed-source stabilizer has a global lexicographic minimum; that minimum is no larger than its image under each involutory generator."
+  },
+  "fixed_source": {
+    "a1_source_orbit_count": 4,
+    "other_source_orbits_not_closed_by_this_certificate": [
+      0,
+      1,
+      3
+    ],
+    "representative_A4": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "source_orbit_index": 2,
+    "source_stabilizer": "S2({2,3}) x S9({4,...,12}) x S2({0,1})",
+    "source_stabilizer_order": 1451520
+  },
+  "graph6": "M?????????????o??",
+  "kind": "h9_14_record0_a1_source2_compact_incidence_no_go",
+  "proof_scope": "Two independently written exact Boolean models select the 178 rank-nine facet complements for the fixed A4 source. They impose all required faces through rank four, exactly 32 missing independent five-sets, ridge degree zero or two, and closure of every nonface of order at least six by a missing set of order at most five. Both use the lossless generator-lex slice of the fixed-source stabilizer and terminate UNSAT. Thus this one source cannot be the nerve of a compact Coxeter polytope.",
+  "record_index": 0,
+  "schedule": {
+    "a": 1,
+    "missing_independent_five_sets": 32,
+    "scheduled_facet_count": 178
+  },
+  "source_files": {
+    "data/enumerations/h9_14_nerve_support.json": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d",
+    "scripts/explore_h9_14_open_positive_a4.py": "6b4073f53fbbd0d838b747a0cd585cfceccd2826fa5f7180382379d385c21d77",
+    "scripts/explore_h9_14_open_positive_completion.py": "ce2a83136190ebee6c607a039752da624054f2a21af9b3ffaf7d8831470dc09e",
+    "scripts/explore_h9_14_record0_a1_dual_facets.py": "147a1f59212d10d920e399805156e4edc851e1b6af219bab2e601d4a7e2421fa",
+    "scripts/independent_h9_14_record0_a1_dual_z3.py": "5e89d7704ea17eea9d34a52fed06a8848c8f11140f8451002d3bcd2c1de772c1",
+    "src/coxeter_polytopes/combinatorics/missing_edges.py": "231e85fa98e27e864f997cd4ebe59136707f6aa8dd2d8136b80cff543dfbfbb8"
+  },
+  "theorem": {
+    "excluded_a1_source_orbits": [
+      2
+    ],
+    "finite_volume_noncompact_chamber_excluded": false,
+    "fixed_source_compact_incidence_no_go": true,
+    "remaining_a1_source_orbits": [
+      0,
+      1,
+      3
+    ],
+    "whole_record0_a1_schedule_excluded": false,
+    "whole_shadow_compact_coxeter_no_go": false
+  }
+}

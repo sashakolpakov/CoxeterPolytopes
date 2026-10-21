@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coxeter-polytopes"
+version = "0.1.0"
+description = "Exact, certificate-oriented searches for hyperbolic Coxeter polytopes"
+requires-python = ">=3.11"
+dependencies = ["sympy>=1.14"]
+
+[project.optional-dependencies]
+theorem = ["z3-solver==4.16.0.0"]
+modular = ["python-flint>=0.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["slow: exact replay tests that rebuild large frozen certificates"]

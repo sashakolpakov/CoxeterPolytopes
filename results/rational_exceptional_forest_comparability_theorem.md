@@ -1,0 +1,237 @@
+# Exceptional-forest comparability from an ample reflection mirror
+
+**Status (2026-08-10): proved, carrier-relative, and
+classification-free.**  This theorem converts branching in a birational
+exceptional forest into an explicit missing reflection.  It uses the
+relative ample cone and the adapted-host parity, not a reflective-lattice
+census.
+
+## 1. Setup
+
+Let
+
+\[
+                         \pi:S\longrightarrow S_0
+\]
+
+be a birational morphism of smooth projective rational surfaces, factored
+as point blowups.  In orthogonal total-transform coordinates write
+
+\[
+ \operatorname {NS}(S)
+   =\pi^*\operatorname {NS}(S_0)\perp
+     \bigoplus_{v\in V}\mathbf Z e_v,\qquad e_v^2=-1.   \tag{1.1}
+\]
+
+If the centre indexed by \(w\) lies on the strict transform of the
+exceptional divisor indexed by \(v\), say that \(w\) is proximate to \(v\).
+The resulting ancestry relation is the proximity forest.  Two valuations
+are incomparable when neither lies above the other.
+
+Let \(B_1,\ldots,B_b\in\operatorname {NS}(S)\) be half-boundary classes for
+which
+
+\[
+ M=\left\langle\operatorname {NS}(S),
+                   {B_1\over2},\ldots,{B_b\over2}\right\rangle,
+ \qquad q_M=2q_{\operatorname {NS}(S)}                 \tag{1.2}
+\]
+
+is integral.  The case \(b=0\), \(M=\operatorname {NS}(S)\), is included.
+Assume that the literal projectivized complete nef cone is a
+finite-volume Coxeter fundamental chamber \(P\), and that every facet
+reflection preserves \(M\).  Write \(W(P)\) for its facet group.
+
+## 2. Relative ample equalization
+
+### Lemma 2.1
+
+If \(i,j\in V\) are incomparable, there are positive real numbers
+\(\lambda_v\) such that
+
+\[
+\lambda_i=\lambda_j,\qquad
+\lambda_v>\sum_{w\ {\rm proximate\ to}\ v}\lambda_w
+\quad(v\in V).                                         \tag{2.1}
+\]
+
+Consequently, for every ample divisor \(H\) on \(S_0\) and all sufficiently
+small \(t>0\),
+
+\[
+ A_t=\pi^*H-t\sum_v\lambda_v e_v                       \tag{2.2}
+\]
+
+is ample and
+
+\[
+                         A_t.(e_i-e_j)=0.               \tag{2.3}
+\]
+
+### Proof
+
+Introduce positive proximity slacks \(\tau_v\) and solve backwards through
+the blowup order:
+
+\[
+               \lambda_v=\tau_v+
+                 \sum_{w\ {\rm proximate\ to}\ v}\lambda_w. \tag{2.4}
+\]
+
+The descendants of incomparable vertices in a blowup forest are disjoint.
+Indeed exceptional branches which have separated are disjoint, later
+blowups cannot make them meet, and a satellite centre lies only on
+components which already meet.  Thus \(\lambda_i\) does not depend on
+\(\tau_j\), and \(\lambda_j\) does not depend on \(\tau_i\).
+
+Set all other slacks positive and temporarily set
+\(\tau_i=\tau_j=0\).  Let the resulting values at \(i,j\) be \(d_i,d_j\).
+Choose
+
+\[
+ T>\max(d_i,d_j),\qquad
+ \tau_i=T-d_i,\quad\tau_j=T-d_j.                        \tag{2.5}
+\]
+
+Then every slack is positive and (2.4) gives
+\(\lambda_i=\lambda_j=T\), proving (2.1).
+
+The strict exceptional prime indexed by \(v\) has class
+
+\[
+             \overline E_v=e_v-
+                    \sum_{w\ {\rm proximate\ to}\ v}e_w.
+\]
+
+Therefore
+
+\[
+ A_t.\overline E_v
+   =t\left(\lambda_v-
+       \sum_{w\ {\rm proximate\ to}\ v}\lambda_w\right)
+   =t\tau_v>0.                                         \tag{2.6}
+\]
+
+The divisor \(-\sum_v\lambda_v e_v\) is consequently
+\(\pi\)-ample by the relative Kleiman criterion.  Adding a sufficiently
+small positive multiple to \(\pi^*H\) gives the ample divisor (2.2).
+Equation (2.3) follows from orthogonality and
+\(\lambda_i=\lambda_j\). \(\square\)
+
+## 3. The missing-reflection theorem
+
+### Theorem 3.1 (exceptional-forest comparability)
+
+Let \(i,j\) be incomparable exceptional valuations and put
+
+\[
+                              r=e_i-e_j.                 \tag{3.1}
+\]
+
+If
+
+\[
+                         B_\alpha.r\equiv0\pmod2
+                         \quad(1\le\alpha\le b),         \tag{3.2}
+\]
+
+then \(W(P)\) is not reflection-maximal, either absolutely or relative to
+\(O^+(M)\).  It is also not maximal among arithmetic finite-covolume
+reflection groups.
+
+### Proof
+
+The class \(r\) is primitive and
+
+\[
+             r^2=-2,\qquad q_M(r,r)=-4,\qquad
+             s_r(x)=x+(x.r)r.                           \tag{3.3}
+\]
+
+On \(\operatorname {NS}(S)\), this integral reflection swaps \(e_i,e_j\)
+and fixes every other total-transform coordinate.  On a half-boundary,
+
+\[
+ s_r(B_\alpha/2)
+   =B_\alpha/2+{B_\alpha.r\over2}r.                     \tag{3.4}
+\]
+
+Condition (3.2) therefore proves \(s_r(M)=M\).
+
+By Lemma 2.1, the mirror \(r^\perp\) contains an ample class.  Since the
+ample cone is open, this mirror crosses the interior of \(P\).  No
+nonidentity reflection in \(W(P)\) can have a mirror crossing the interior
+of its Coxeter fundamental chamber, so
+
+\[
+                              s_r\notin W(P).            \tag{3.5}
+\]
+
+But
+
+\[
+                      W'=\langle W(P),s_r\rangle
+                         \subset O^+(M)                  \tag{3.6}
+\]
+
+is a discrete group generated by reflections, because the integral
+orthogonal group is discrete.  It properly contains \(W(P)\), proving both
+the relative and absolute failures.  Since \(W(P)\) has finite covolume,
+the discrete overgroup \(W'\) has finite index and is arithmetic in the
+same commensurability class.  This proves the last assertion. \(\square\)
+
+## 4. Exact parity remainder
+
+The evenness in (3.2) is not merely sufficient for this reflection to
+preserve \(M\); it is necessary.  If \(B_\alpha.r\) is odd, (3.4) could lie
+in \(M\) only if \(r/2\in M\).  But integrality of \(M\) would then require
+
+\[
+ q_M(B_\alpha/2,r/2)={B_\alpha.r\over2}\in\mathbf Z,
+\]
+
+a contradiction.  Thus
+
+\[
+ s_r\in O^+(M)
+ \quad\Longleftrightarrow\quad
+ B_\alpha.r\equiv0\pmod2\ \text{for every }\alpha.      \tag{4.1}
+\]
+
+Odd parity removes this particular \(M\)-integral overgroup.  It does
+**not** prove reflection maximality, does not make the mirror geometrically
+supporting, and does not bound the depth of an exceptional chain.  If the
+facet group happens independently to preserve the full Neron--Severi
+lattice, the same \(r\) can still obstruct absolute maximality there.
+Without a common invariant lattice, discreteness of the group obtained by
+adjoining \(s_r\) must be proved separately.
+
+There is nevertheless a global combinatorial consequence.  Give each
+exceptional valuation its boundary-parity color
+
+\[
+ \chi(v)=\bigl(B_1.e_v,\ldots,B_b.e_v\bigr)\bmod2
+          \in\mathbf F_2^b.                             \tag{4.2}
+\]
+
+On a reflection-maximal carrier, incomparable vertices must have different
+colors.  Hence every antichain injects into \(\mathbf F_2^b\), so
+
+\[
+ \boxed{\operatorname {width}(V)\le2^b}.                \tag{4.3}
+\]
+
+By Dilworth, the forest is covered by at most \(2^b\) chains.  In the
+direct full-NS lane \(b=0\), all exceptional valuations are comparable:
+
+\[
+                    \boxed{\text{the exceptional forest is one chain}.} \tag{4.4}
+\]
+
+This is a genuine global consequence of reflection maximality, but it is a
+width theorem, not yet a length or dimension bound.
+
+The exact certificate is
+[here](../scripts/certify_rational_exceptional_forest_comparability.py),
+with its frozen
+[archive](../data/enumerations/rational_exceptional_forest_comparability.json).

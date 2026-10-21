@@ -1,0 +1,506 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref,xurl}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{certificate}[theorem]{Exact certificate}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\HH}{\mathbb H}
+\title{Compact arithmetic hyperbolic Coxeter polytopes:\linebreak
+a dimension bound of 20 and a nine-field refinement}
+\author{Coxeter Polytopes Frontier Project}
+\date{20 October 2026; internally reviewed research manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a computer-assisted exclusion of compact arithmetic hyperbolic
+Coxeter polytopes in dimension21. Earlier internally completed field and
+dimension reductions leave only the actual ground field $\Q(\sqrt5)$.
+The new ingredient is a normalized angle pool between distinct whole
+components of the same spherical type. Its total vertex cost is one
+nonnegative variable, while its local payments use actual component
+multiplicities. Complete contact-star coverage and previously proved
+D5/H4 incidence transfers permit an exact rational angle rule. Every
+allowed finite rank21 vertex forest has charge at most40. Independently
+evaluated native quadrilaterals have payment at least
+$60007431727/60000000000>1$; the inherited triangle payment is at least2.
+A strict $h$-vector inequality forces average vertex charge greater than40,
+a contradiction. With the earlier bound21 and the thirteen-field reduction,
+this gives the internally proved compact arithmetic bound20. Technical
+appendices give the complete compositions of further rank20 charge
+improvements, yielding dimension at most19 in nine specified ground fields.
+Their imported internal local geometric lemmas have explicit statements and
+a source-pinned supplement; the appendices are not a self-contained
+replacement for all their derivations. The argument is not fully
+formalized in Lean or externally refereed, and no compact example
+attaining either bound is asserted.
+\end{abstract}
+
+\section{Statement and scope}
+A Coxeter polytope is a finite-sided convex hyperbolic polytope with facet
+dihedral angles integral submultiples of $\pi$. Arithmeticity refers to
+its reflection lattice and its actual Vinberg ground field. It is not a
+condition on a convenient overfield containing displayed Gram entries.
+\begin{theorem}\label{thm:main}
+Every compact arithmetic hyperbolic Coxeter polytope has dimension at most20.
+\end{theorem}
+Appendices~\ref{app:eight} and~\ref{app:kseven} prove the scoped refinements
+Theorems~\ref{thm:eight19} and~\ref{thm:kseven19}: the dimension is at most19 when the actual
+ground field is one of
+\[
+ \Q(\sqrt3),\ \Q(\sqrt6),\ K_7,\ K_9,\ K_{11},\ K_{15},\ K_{16},\ K_{20},\ K_{24},
+ \qquad K_m=\Q(2\cos(2\pi/m)).
+\]
+Here $K_{24}=\Q(\sqrt2,\sqrt3)$. This is a complete charge-composition
+proof with explicitly identified internal geometric inputs in its
+reproducibility supplement. The all-field theorem remains20; no
+ceiling19 is asserted here for $\Q(\sqrt2)$, $\Q(\sqrt5)$
+or $\Q(\sqrt2,\sqrt5)$.
+
+The earlier eight-field ledger records the preserved eighteen-page
+predecessor. The current combined ledger,
+\path{manuscripts/supplements/compact_arithmetic_nine_field19_sources_20261020.json},
+updates the parent-source pin and adds the cubic-seven appendix while
+preserving every earlier local proof source. The current reproduction
+entry point checks this combined ledger before and after building.
+
+The proof has two inherited reductions and one new golden-field step.
+The completed internal bound21 excludes dimensions at least22, using
+dimension-specific rules through the published compact ceiling29. At
+dimension21 the complete field reduction leaves precisely $\Q(\sqrt5)$.
+We exclude that last branch below. The full new composition inventory is
+\path{results/compact_arithmetic20_universal_composition_20261018.md}; the
+earlier exposition is \path{manuscripts/compact_arithmetic21.tex}.
+
+Published inputs, internal geometric arguments, and finite exact checks
+are distinct. Published assumptions include compact acute simplicity,
+finite/affine and Lann\'er classification, the arithmetic cyclic-product
+criterion and field restrictions, simplest-type reflection arithmeticity,
+rational isotropy, and the nonnegative symmetric $h$-vector theorem
+\cite{Vinberg,Nikulin,Belolipetsky}.
+The supporting-star reduction, whole-component normalization, incidence
+transfers and rational recurrence are internal proofs. Exact scripts
+certify explicitly finite obligations; a numerical optimizer only
+proposes a vector. No claim of external priority or complete proof-assistant
+verification is made.
+
+The noncompact arithmetic bound21 is unchanged. Its dimension21 example
+does not establish compact sharpness. Neither the unrestricted compact
+bound29 nor any nonarithmetic or right-angled bound is altered here.
+
+\section{The strict counting threshold at rank21}
+A planar angle is an incidence $(v,F)$ of a vertex and a two-face. In
+a simple $n$-polytope it corresponds to an unordered pair of incident
+facet normals, marked in the finite vertex diagram.
+\begin{lemma}\label{lem:threshold}
+Suppose nonnegative planar-angle weights on a compact simple21-polytope
+satisfy $\sum_{v\in F}\wt(v,F)\ge5-k$ on every $k$-gonal two-face.
+Then the total vertex charge is at least $40f_0+550$, so its average
+is strictly greater than40.
+\end{lemma}
+\begin{proof}
+Each vertex is on $\binom{21}{2}=210$ two-faces. Double counting gives
+\[
+ \sum_v\wt(v)\ge5f_2-210f_0.
+\]
+For the symmetric nonnegative $h$-vector of the simplicial dual,
+\[
+ f_0=\sum_{i=0}^{21}h_i,\qquad
+ f_2=\sum_{i=0}^{21}\binom{21-i}{2}h_i.
+\]
+Pair $i$ with $21-i$ for $0\le i\le10$. In $5f_2-210f_0$, their
+coefficient on $h_i=h_{21-i}$ is
+\[
+ 5\left[\binom i2+\binom{21-i}{2}\right]-420
+ =80+5(i-10)(i-11)\ge80.
+\]
+The constant80 is their coefficient in $40f_0$. Every extra term is
+nonnegative, and $i=0$ contributes $5\cdot10\cdot11\,h_0=550$ because
+$h_0=1$. Hence $5f_2-210f_0\ge40f_0+550$.
+\end{proof}
+It suffices to pay2 on triangles and1 on quadrilaterals; nonnegativity
+handles $k\ge5$. An upper certificate equal to40 is enough for a
+contradiction. There is no need to manufacture a strict numerical margin.
+
+\section{Complete supporting-star coverage}
+We explain the geometric quantifiers needed for the new local weights.
+Use the Lorentz form of signature $(21,1)$ and spacelike outward facet
+normals $r_i$ with $(r_i,r_j)\le0$ for distinct walls. Chamber inequalities
+are $(x,r_i)\le0$.
+\begin{lemma}\label{lem:projection}
+Every positive-definite principal root set defines an actual face. A
+positive affine principal set is impossible in a compact chamber.
+\end{lemma}
+\begin{proof}
+Let $B$ be the positive-definite principal Gram matrix and $h$ a strict
+interior timelike vector. A positive-definite $Z$-matrix has entrywise
+nonnegative inverse, so $c=B^{-1}((h,r_i))\le0$. The vector
+$h_0=h-\sum_i c_i r_i$ is orthogonal to the chosen roots, has
+\[
+ h_0^2=h^2-((h,r_i))^TB^{-1}((h,r_i))<0,
+\]
+and has strictly negative product with every other facet normal. This
+gives a relative-interior point of the face. For an affine principal set,
+its positive kernel gives a nonzero null vector with nonpositive products
+against every wall. It cannot be zero because pairing its positive
+combination with $h$ is negative. It gives an ideal point, contradicting
+compactness.
+\end{proof}
+
+Let $W$ be the19 supporting roots of a quadrilateral and $b_0,b_1,b_2,b_3$
+its cyclic side roots. Every adjacent extension of $W$ is elliptic.
+Each opposite extension is indefinite by Lemma~\ref{lem:projection}:
+otherwise the corresponding opposite sides would meet on this face.
+Minimal indefinite subdiagrams contain both opposite black roots and
+are Lann\'er pieces. Complete initial union supports retain shared white
+roots, black identifications and every cross contact.
+
+\begin{lemma}\label{lem:corank}
+A $k$-root contact core containing a positive corner of order $k-2$ and a
+negative direction has nullity at most one. A complete quadrilateral
+star has nullity exactly one.
+\end{lemma}
+\begin{proof}
+The positive index is at least $k-2$ and the negative index is one.
+For the full star $k=23$ but the ambient Lorentz dimension is22, so it
+is singular and the nullity is exactly one.
+\end{proof}
+
+\begin{proposition}[Final touching-star principle]\label{prop:coverage}
+For an unpaid actual quadrilateral, the inherited complete finite/dotted
+contact queues contain a final contact representative whose marked
+components are entire. Its remaining supporting components are common
+orthogonal spectators. Singular states that can extend must also remain
+stopping obligations.
+\end{proposition}
+\begin{proof}
+Begin with the actual opposite-pair minimal union. In each white
+component touching the entered core, order unentered vertices starting
+with a contact to that core and continuing along connected white edges.
+Every next root belongs to its complete one-white contact domain.
+Rejected arithmetic, signature or conjugate profiles cannot occur.
+A profile producing persistent basic payment pays the face independently
+of all adjustable bonuses. Otherwise a literal retained child map applies.
+
+At a conditionally sealed state any further touching contact would give
+such persistent payment; hence the unpaid actual face has only orthogonal
+spectators. At an unsealed singular state continue while actual touching
+roots remain. Choose the final such state, rather than an earlier
+embedded singular subcore. Its contact part has corank one after the
+positive spectator block is split off, by Lemma~\ref{lem:corank}. It has
+at most23 roots. The complete queues retain every singular stopping
+state, including expandable and boundary states, within their larger
+geometric root bound. Its marked components are therefore whole in the
+actual corners. The remaining components are orthogonal to the black
+and entered white roots.
+\end{proof}
+The finite contact domains and literal maps in this proposition are exact
+certificate premises with separate internal completeness proofs. The
+golden alphabet is $2,3,4,5,6,10$. Dotted parameters are bounded using
+physical and conjugate positive-semidefinite Schur complements together
+with integral cyclic products, not by sampled distances. The finite
+queue has5172 states and51599 contact profiles; its2070 singular
+obligations include expandable states. The dotted queue has438 states
+and264 singular obligations. Their exact interfaces and all-size proofs
+are listed in the earlier proof map.
+
+The rank21 native iterator combines the prior complete parameter-stress
+inventory with every fitting singular finite-queue state. There are1979
+native faces. For an $N$-root contact row, common spectator rank is
+$23-N$. Enumerate exact external counts $(e,f,g,j)$ of
+$A_1,I_2(5),H_3,A_4$ with
+\[
+ e+2f+3g+4j\le23-N,\qquad
+ 23-N-e-2f-3g-4j\ne1.
+\]
+There is no untracked rank-one type; $A_2,A_3$ realize every residual
+rank at least two. The same spectator forest is used at all four
+corners. This gives102917 cases. Exact component multiplicities determine
+all denominators. A numerical payment from an embedded old subcore is
+not substituted for the actual new angle.
+
+\section{The angle rule and its geometric exceptions}
+Write $q=(a,b,h,d)$ for the exact numbers of entire
+$A_1,I_2(5),H_3,A_4$ components. Old coefficients use the capped selector
+$c=(a,\min(b,2),\min(h,1),\min(d,2))$.
+The fixed baseline on a whole connected component $C$ is
+\[
+ B(C;i,j)=\mathbf1_{\operatorname{dist}_C(i,j)\le2}
+ +\mathbf1_{C=H_4}\mathbf1_{\{\operatorname{dist}_C(i,j)=3\}
+                      \text{ or }\{ij\text{ is the five-edge}\}}.
+\]
+The complete76 minimal triangle markings have baseline at least2.
+Nonnegative connected-orbit bonuses are available on baseline-zero
+marked pairs. Rooted cross bonuses from $A_1,I_2(5),H_3$ use actual
+denominators $a,2b,3h$ and respectively exclude destinations among the
+earlier hub families. This makes these source families disjoint. The
+inherited rooted $A_4$ source bonuses have denominator $4d$ on nonhub
+destinations, and marked pairs in distinct $A_4$ factors have denominator
+$4(d-1)$ with their symmetric rooted-orbit numerator. Summing the latter
+over factor pairs gives $d/8$ times the16 ordered source-root-pair
+coefficients. Thus all old charges are additive over components at fixed
+context, including the $A_4$ pair rule.
+
+\subsection{D5 and H4 incidence transfers}
+These internal geometric lemmas are used with their complete written
+proofs and exact coefficient certificates.
+\begin{proposition}[Previously proved priority rules]\label{prop:priority}
+Let $W$ denote the old total charge and $b$ the old extreme-$E_8$ pair
+bonus. There is a nonnegative angle rule preserving all required
+small-face payments with the following conservative allowances:
+\begin{center}
+\begin{tabular}{ll}\toprule
+Whole vertex forest&Allowance\\\midrule
+$D_5+2E_8$&$W-\min(1,2b)$\\
+$A_1+H_4+2E_8$&$W-t$\\
+$A_1+A_4+2E_8$, $A_5+2E_8$&$W+t$\\
+$A_1+B_4+2E_8$, $B_5+2E_8$&$W+t$\\
+All other forests&$W$\\\bottomrule
+\end{tabular}
+\end{center}
+Here $0\le t\le1$. The two D5 state inequalities must both be imposed.
+\end{proposition}
+\begin{proof}[Proof ingredients and scope]
+At an E8-triangle-active $D_5+2E_8$ vertex delete the D5 fork unit. Its
+fork pair never supports a triangle. The complete eleven endpoint
+patterns and the mixed-pattern exclusion prove that every affected quad
+retains a full ordinary unit, even under simultaneous deletions. In an
+inactive state delete the two extreme E8 bonuses instead. The complete
+consumer theorem retains all possible D5 spectator contacts and proves
+another basic unit survives, also under an active deletion at another
+corner. This gives respectively $W-1$ and $W-2b$, hence the maximum
+$W-\min(1,2b)$.
+
+For the H4 rule delete $t$ from its extra five-edge unit at the target
+forest. Its full triangle domain includes all A1 contacts and handles
+high labels analytically. Exactly four potentially deficient patterns
+remain; restoring $t$ on their actual source angles pays every triangle,
+including simultaneous H4 modifications. Every affected quad keeps an
+ordinary unit. The source angle capacities are one. For the apparent
+two-angle A5 source, two required neighboring H4 walls cannot coexist:
+their projections onto the full old positive vertex space leave a common
+one-dimensional future timelike complement and force scalar product
+$(3-\sqrt5)/3>0$, contrary to acuteness. The two whole E8 factors are
+retained throughout this argument. All longer faces remain nonnegative.
+
+The full normal and field computations, endpoint completeness, consumer
+proofs and simultaneous payment arguments are in the linked D5/H4 packets;
+this proposition does not follow from counting abstract source orbits
+alone. These rules preserve persistent baseline pruning independently
+of the adjustable bonuses and compose with one another. Here persistence
+means that a pruned face still has a proved basic unit payment. It need
+not retain the identical old marked angle: the D5 fork angle is deleted,
+and the complete simultaneous consumer theorem supplies its alternative.
+\end{proof}
+
+\subsection{The new same-hub pools}
+\begin{lemma}\label{lem:pools}
+At a simple finite vertex with $k\ge2$ whole copies of a rank-$r$ type
+$H$, there are $r^2\binom k2$ planar angles whose marked roots lie in
+distinct copies. Assign each the nonnegative addition
+\[
+ \frac{u_H(q)}{r^2\binom k2}.
+\]
+The total new vertex charge is exactly $u_H(q)$. If $k<2$ the family
+contributes zero.
+\end{lemma}
+\begin{proof}
+Choose an unordered pair of components and one of the $r$ roots from
+each. These are distinct unordered marked facet pairs and exhaust the
+family. Summing cancels the denominator. The full tuple $q$ is a vertex
+invariant and is constant throughout this sum.
+\end{proof}
+We use $H=A_1,I_2(5),H_3$. Their per-angle denominators are
+$\binom a2$, $2b(b-1)$ and $9h(h-1)/2$. The three families are disjoint,
+and their nonnegative additions preserve paid triangles and long faces.
+Proposition~\ref{prop:coverage} supplies actual whole components and actual
+counts when these pools pay an otherwise unpaid native quad.
+Its once-only new vertex cost is
+\[
+ \rho(q)=\mathbf1_{a\ge2}u_{A_1}(q)
+        +\mathbf1_{b\ge2}u_{I_2(5)}(q)
+        +\mathbf1_{h\ge2}u_{H_3}(q).
+\]
+All six special forests of Proposition~\ref{prop:priority} have $\rho=0$.
+
+\section{Complete forest maximization and exact certificates}
+The full rank21 alphabet has68 irreducible types:
+\[
+\begin{gathered}
+ A_1,\ldots,A_{21};\quad B_2,\ldots,B_{21};\quad D_4,\ldots,D_{21};\\
+ E_6,E_7,E_8,F_4,H_3,H_4,I_2(5),I_2(6),I_2(10).
+\end{gathered}
+\]
+Fix exact hub counts $q$ and remove the four hub types from the residual
+alphabet. If $w_c(T)$ is the old additive cost of type $T$, define
+\[
+ U_c(0)=0,\qquad
+ U_c(s)=\max_{T}\{U_c(s-\rk T)+w_c(T)\}
+\]
+on reachable ranks; rank one is omitted. Every recurrence choice appends
+an allowed component, and every nonempty multiset has a final component
+to remove. Hence arbitrary repetitions are covered exactly. The ordinary
+budget adds fixed hub cost and $\rho(q)$ once to
+$U_c(21-a-2b-3h-4d)$, never once per residual component.
+
+Two ordinary budget offers are replaced to exclude exactly the physical
+decreased forests. If a residual forest contains an off-target type,
+reserve one such component and fill the remaining rank by $U_c$. The
+pure H4/E8 rank20 possibilities are $5H_4$, $3H_4+E_8$ and $H_4+2E_8$;
+the first two remain unchanged and are imposed explicitly with A1.
+The only pure D5/E8 rank21 solution is $D_5+2E_8$, imposed in both
+states. All four positive sources are also evaluated with $+t$ even if
+they were not ordinary maximizers. No forest is discarded or assigned
+an independently favorable physical state.
+
+\begin{certificate}\label{cert:40}
+The rational vector in
+\path{results/fresh_compact21_self_hub_exact40_reconstruction_20261018.json}
+has these exact properties:
+\begin{enumerate}
+\item All bonuses are nonnegative and
+$t=14030552/21687803\in[0,1]$.
+\item All1979 native faces and102917 common spectator cases have
+quadrilateral payment at least $60007431727/60000000000>1$.
+\item All68 allowed finite types and729 exact hub-count tuples, including
+the priority exceptions, have total vertex allowance at most40.
+The maximum40 is attained by $D_{21}$.
+\end{enumerate}
+\end{certificate}
+The exact engine retains53495 distinct enlarged native inequalities.
+It appends new coefficients before deduplicating; projecting to old
+columns recovers51443 old classes. It reconstructs the510 old support
+rows, but full coverage uses the729 tuples and complete recurrence,
+not just those selected rows. There are243 capped groups and1659
+auxiliary rank states. Numerical auxiliary values are discarded.
+
+The single guarded IPM proposal had numerical objective
+$40.00000000000242$. Rounding every positive value upward to the
+$10^{-10}$ grid gave the checked upper $40+3\cdot10^{-10}$.
+The solver-free final reconstruction changes precisely five coordinates
+to $0,0,0,36,39$ and retains every other rounded coefficient. The three
+zero residues were about $6$--$8\cdot10^{-13}$; the two pool values were
+about $2.42\cdot10^{-12}$ above36 and39. These observations select a
+candidate only. Every final face and forest inequality is evaluated over
+the rationals, so no numerical tolerance is a proof premise.
+
+Independent checker
+\path{scripts/check_compact21_self_hub_primal_independent_20261018.py}
+reconstructs the old orbit coefficients, new selectors, all pool counts,
+and the complete recurrence without importing the new model or producer.
+Fresh execution session59683/chunk7766fb verified the stated minimum
+payment and exact maximum40 over850 final forest offers. Its ledger is
+\path{results/fresh_compact21_self_hub_exact40_independent_check_20261018.json}.
+Source hashes identify the precise checked data; they do not establish
+the geometric completeness propositions.
+
+\begin{proposition}\label{prop:golden}
+No compact arithmetic hyperbolic Coxeter polytope with actual ground field
+$\Q(\sqrt5)$ has dimension21.
+\end{proposition}
+\begin{proof}
+Apply the angle rule to each actual finite vertex forest.
+Proposition~\ref{prop:coverage} and Certificate~\ref{cert:40} pay every
+otherwise unpaid quadrilateral. The baseline triangle theorem and
+Proposition~\ref{prop:priority} pay every triangle. Every other two-face
+needs only nonnegativity. The exact forest certificate bounds each
+actual vertex by40. This contradicts Lemma~\ref{lem:threshold}.
+\end{proof}
+
+\section{The thirteen fields and final composition}
+Let $K_m=\Q(\cos(2\pi/m))$. The dimension-at-least14 field restriction
+\cite{Vinberg,Nikulin}
+and the inherited complete field proofs give the following dimension21
+branches. The shorter list valid only from22 is not used at21.
+\begin{center}
+\begin{tabular}{ll}\toprule
+Actual field&Dimension21 exclusion\\\midrule
+$\Q$&Simplest-type arithmeticity and Meyer isotropy\\
+$\Q(\sqrt2)$&Complete all-white bound20 proof\\
+$K_7$&Complete cubic-seven bound20 proof\\
+$\Q(\sqrt3),\Q(\sqrt6),\Q(\sqrt2,\sqrt3)$&Reviewed high-label theorem\\
+$K_9,K_{11},K_{15},K_{16},K_{20}$&Same theorem, separately bound branches\\
+$\Q(\sqrt2,\sqrt5)$&Separate exact-field F25 proof\\
+$\Q(\sqrt5)$&Proposition~\ref{prop:golden}\\\bottomrule
+\end{tabular}
+\end{center}
+The inherited single-field binder retains all thirteen branches and all
+recursive certificate inputs. In particular its biquadratic F25 proof is
+not applied to the proper subfield $\Q(\sqrt5)$. The rational field is
+excluded because the simplest-type rational indefinite form is isotropic
+in this dimension, so the arithmetic quotient cannot be compact.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The earlier complete compact arithmetic bound21 excludes every dimension
+at least22. At dimension21 the thirteen-branch reduction leaves only
+the golden field. Proposition~\ref{prop:golden} excludes that field as
+well. Hence every compact arithmetic chamber has dimension at most20.
+\end{proof}
+
+\section{Reproducibility and verification boundaries}
+The proof's finite objects are exact field/signature domains, literal
+contact maps, finite-diagram orbit coefficients, native face payments
+and forest maxima. Their explicit source and data pins are carried by
+the rational reconstruction certificate. Reproduction needs no optimizer:
+\begin{verbatim}
+python3 -B \
+  scripts/fresh_compact21_self_hub_exact40_reconstruction_20261018.py \
+  --verify
+python3 -B \
+  scripts/check_compact21_self_hub_primal_independent_20261018.py \
+  --candidate \
+  results/fresh_compact21_self_hub_exact40_reconstruction_20261018.json
+\end{verbatim}
+Run these as separate sequential batches through
+\path{scripts/run_bounded_research_check_20261018.py}, whose live watchdog
+adds the59-second cap,1GiB process-tree RSS limit and disk/RAM gates.
+Each checker owns the shared exclusive lock. The first
+reconstructs the saved candidate and checks every enlarged face and forest;
+the second uses a separate implementation. Large inherited queue replays
+are documented in the bound21 proof map and must also be scheduled in
+bounded sequential batches. New final composition/hash checks bind their
+existing certificates; they do not freshly regenerate those classifications.
+
+The remaining validation boundaries must be explicit. Published
+structural theorems may be assumptions in a formal interface. Internal
+whole-star coverage, incidence priority arguments and exact certificate
+logic must be formalized rather than silently imported as published
+axioms. A Lean theorem assuming all field bounds would certify only the
+last composition. The current result is an internally reviewed
+computer-assisted proof with rational scripts and an independent
+saved-primal evaluation; complete geometric Lean verification and
+external review are separate tasks. No new high-dimensional chamber or
+sharpness assertion follows.
+
+\IfFileExists{manuscripts/appendices/compact_arithmetic_eight_field19.tex}
+ {\input{manuscripts/appendices/compact_arithmetic_eight_field19.tex}}
+ {\input{appendices/compact_arithmetic_eight_field19.tex}}
+
+\IfFileExists{manuscripts/appendices/compact_arithmetic_k7_field19.tex}
+ {\input{manuscripts/appendices/compact_arithmetic_k7_field19.tex}}
+ {\input{appendices/compact_arithmetic_k7_field19.tex}}
+
+\begin{thebibliography}{9}
+\bibitem{Vinberg} E. B. Vinberg, \emph{Absence of crystallographic groups
+of reflections in Lobachevskii spaces of large dimension}, Transactions
+of the Moscow Mathematical Society47 (1984),75--112. Original text:
+\url{https://www.mathnet.ru/php/getFT.phtml?jrnid=mmo&option_lang=rus&paperid=444&what=fullt}.
+\bibitem{Nikulin} V. V. Nikulin, \emph{On ground fields of arithmetic
+hyperbolic reflection groups}, Introduction and Sections2,3,
+\url{https://arxiv.org/abs/0708.3991}.
+\bibitem{Belolipetsky} M. Belolipetsky, \emph{Arithmetic hyperbolic
+reflection groups}, Lemma2.1 and Sections1,7,
+\url{https://arxiv.org/abs/1506.03111}.
+\bibitem{Internal} Exact internal sources, geometric reviews and immutable
+certificate interfaces, listed in
+\path{results/compact_arithmetic20_universal_composition_20261018.md},
+\path{results/fresh_compact21_self_hub_exact40_reconstruction_20261018.md},
+and \path{docs/compact_arithmetic21_proof_map.md}.
+\end{thebibliography}
+\end{document}

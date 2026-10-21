@@ -1,0 +1,42 @@
+{
+  "status": "FAILED",
+  "manuscript": "finite57",
+  "mode": "full",
+  "created_utc": "2026-10-20T17:11:34.418595+00:00",
+  "catalogue_sha256": "c962d7369872b87a7c661036f49dce093aa7f3fe6de2b3afd01494f320d9446a",
+  "manuscript_sha256": "3ea72a6987da112ef7034ab79f3e9e12b2f7e9eead79799dda05f079b234b87c",
+  "runner_sha256": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1",
+  "jobs": [
+    {
+      "id": "finite57",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Final saved interfaces, changed forests,2552 ideal profiles,concentration and377/36/4205 contradiction; inherited geometry is written.",
+      "exit_code": 0,
+      "elapsed_seconds": 0.922,
+      "stdout_sha256": "dbd676334f566dd7b1ecca421d59aeee6251ee0b41f903ba9f4c4bd5c31c27c6",
+      "stdout_bytes": 652,
+      "source_sha256": "9a41aa1d0395087a41692fb1d3a0d2b7f93f667446f4724d5b7920449b6d1795",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "PASS_COMPLETE_D13_CONTEXT_DIMENSION57_COMPOSITION dimension 57 finite 377 surplus 36 constant 4205\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/fresh_d13_context_dimension57_20261018.py\", \"--verify\"], \"elapsed_seconds\": 0.872, \"peak_process_tree_rss_bytes\": 332333056, \"initial_resources\": {\"free_disk_gib\": 171.49, \"available_memory_gib\": 6.77}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 99, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"9a41aa1d0395087a41692fb1d3a0d2b7f93f667446f4724d5b7920449b6d1795\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "finite57_d13",
+      "kind": "script",
+      "status": "FAILED",
+      "coverage": "D13 contact certificates and complete new-positive finite family.",
+      "exit_code": 1,
+      "elapsed_seconds": 2.113,
+      "stdout_sha256": "4225586a0ba6c8c875b7b094b030a80383e92be631625b42e5dc1d21852d3ce0",
+      "stdout_bytes": 387,
+      "source_sha256": "a95ea679854ba907ead8640964a258c3baeb3e998052a3e2e3ff20f230cce486",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 92, in main\n    assert peak < 1024**3, 'Process-tree RSS limit'\n           ^^^^^^^^^^^^^^\nAssertionError: Process-tree RSS limit\n"
+    }
+  ],
+  "planned_jobs": 44,
+  "remaining_formal_gaps": "Actual corner/cusp geometry and domain interpretation, real convex-order/independence yielding the normalized comparison, terminal enumeration correctness and higher-dimensional geometric tails remain explicit written/script inputs. The new concentration module does not formalize that real analytic bridge.",
+  "assumption_document": "docs/manuscript_assumptions.md",
+  "assumption_document_sha256": "58f4276eea135c909d125e97fcf880f4b9e60761a669dbf8e54b543c09b84a83",
+  "end_to_end_geometric_lean_proof_claimed": false
+}

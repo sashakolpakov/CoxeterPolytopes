@@ -1,0 +1,9 @@
+# Independent full-norm height-100 enumeration in the discriminant-55 host
+
+The separate [checker](../scripts/fresh_h9_beta55_vinberg_h100_20261014_review.py) and [certificate](fresh_h9_beta55_vinberg_h100_20261014_review.json) reproduce all **132 control levels and 44 walls**. Natural lambda-coordinate order gives 61,144 nodes, versus the producer's reverse order and 90,454 nodes. Accepted roots and candidate alphabets agree at every level.
+
+No producer or producer-arithmetic helper is imported. The checker uses separate `Golden` arithmetic and rebuilds the positive Schur forms. The four primitive norm classes and complete E8 zero sector are inherited from the reviewed [height-20 argument](fresh_h9_beta55_pilot_20261014_review.md). Its independently derived control box is `[-15,15]^2`: physically `0<x<24` and `|x′|<5`. Its residual box is `[-44,44]^2`: `|l|<86` and `|l′|<8`. The lambda bounds are smaller. Exact filters at both embeddings, divisibility and congruences, signed residual handling and justified earlier-wall pruning cover every candidate in these bounds.
+
+Every one of the 44 facet-interior witnesses and 129 saved finite-corner witnesses is separately checked, including the positive definiteness of each nine-wall incident Gram matrix. The displayed strict spacelike escape also passes. This review does **not** independently re-enumerate the complete exterior cone; that completeness assertion remains in the producer's separate cone checker. It does independently establish the full bounded root prefix and the specific complete corner witnesses needed for the subsequent chamber-symmetry theorem.
+
+A bounded infinite-volume prefix alone does not prove nonreflectivity. The full-lattice conclusion is the separate [symmetry review](fresh_h9_beta55_corner_symmetries_20261014_review.md).

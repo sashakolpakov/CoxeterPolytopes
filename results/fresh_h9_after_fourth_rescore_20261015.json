@@ -1,0 +1,7666 @@
+{
+  "status": "PASS_BOUNDED_NUMERICAL_29_WALL_RESCORE_WITH_EXACT_NONSQUARE_RECIPES",
+  "sources": {
+    "results/fresh_h9_fourth_escape_extension_20261015.json": "f2d02a8e5ac3b97643b18d09154ad03908be001ea3b37ec8a07c133c76883547",
+    "scripts/fresh_h9_fourth_escape_extension_20261015.py": "4685dbdd11dbd7439ea06c01ae8df263f6e26f61436929f873f28dfa60659525",
+    "data/enumerations/fresh_h9_after_third_vertex_free_scout_20261015_bank.json.gz": "8a570271cb9ec1ebee5c3472d3882ab43792f6e0bbe55c03a9139e90827556e9",
+    "results/fresh_h9_after_third_vertex_free_scout_20261015.json": "43d64fc1365f6a4c27277341f409cc8e735868a22fd59e3081c2e5451a390fb0",
+    "scripts/fresh_h9_after_third_vertex_free_scout_20261015.py": "f77987370c887ebf3fc48b6ed53862ca36cfef80993bd77d54b6f917b8bc8098",
+    "scripts/fresh_h9_after_fourth_rescore_20261015.py": "30390a7b66ba7479d92de8d8b9a5c4699ecad91d46079eefcdc65c354e146f0b"
+  },
+  "field": {
+    "base": "Q(sqrt5)",
+    "new_positive_radical_square": [
+      "6",
+      "16/5"
+    ],
+    "encoding": "[[a,b],[c,d]] means a+b sqrt5+(c+d sqrt5)sqrt(RAD)"
+  },
+  "numerical_scope": "Replays only the saved bounded68111proposal bank; inherited old28 gates are numerical. No all-label/all-parameter cap search and no exact new cap.",
+  "arithmetic": "Standalone100-digit mpmath frame reconstruction then binary64 NumPy rescore; separate SymPy algebraic-field nine-contact identities, no project arithmetic imports.",
+  "independent_pairing_basis": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    11
+  ],
+  "transform_outputs": [
+    "norm2-normalized wall28",
+    "current escape",
+    "current strict center"
+  ],
+  "tolerances": {
+    "finite_labels": [
+      2,
+      256
+    ],
+    "finite_angle_fit": 1e-07,
+    "dotted_beyond_minus2": 1e-07,
+    "center_negative": 1e-08,
+    "escape_positive": 1e-07
+  },
+  "inherited_search": {
+    "anchor_labels": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      16,
+      20,
+      24,
+      32,
+      64
+    ],
+    "sampled_dihedral_tail_labels": [
+      6,
+      7,
+      8,
+      10,
+      12,
+      16,
+      24,
+      32,
+      64
+    ]
+  },
+  "bank_size": 68111,
+  "numerically_compatible_count": 67056,
+  "numerical_escape_cutters": 152,
+  "accepted_mask_sha256": "eb440c01a60ed2a7510ce644fa961b1a6b602e3c6687710719e9da04c1e782eb",
+  "cutter_mask_sha256": "e47f2888841c29c05180bde0e6514e7be6194fdb5e8b33d92c86b589749b7e93",
+  "cutters": [
+    {
+      "source_bank_index": 1452,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1127.496229485297,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 4,
+      "center_pairing": -303.6347499355483,
+      "escape_pairing": 0.6082187043981455,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405166665986903,
+      "endpoint_norm": -1.0645026590427875e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1045654141279,
+        0.18047827309495,
+        -303.63474993555
+      ]
+    },
+    {
+      "source_bank_index": 1457,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 563.6914685956936,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 4,
+      "center_pairing": -303.308206407833,
+      "escape_pairing": 0.6074963696698575,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405136427027995,
+      "endpoint_norm": -4.258846359839197e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0973843848054,
+        0.17999712659833,
+        -303.30820640783
+      ]
+    },
+    {
+      "source_bank_index": 1462,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 422.7246629347587,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 4,
+      "center_pairing": -302.9699248708064,
+      "escape_pairing": 0.6067477033585862,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405105055458662,
+      "endpoint_norm": -7.572819344892068e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0899508113731,
+        0.17949831966256,
+        -302.96992487081
+      ]
+    },
+    {
+      "source_bank_index": 1470,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 281.7331985595621,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 4,
+      "center_pairing": -302.005401932542,
+      "escape_pairing": 0.6046110169064396,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4050153518677915,
+      "endpoint_norm": -0.00017048675142161684,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.068787248501,
+        0.17807405055905,
+        -302.00540193254
+      ]
+    },
+    {
+      "source_bank_index": 1479,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 211.2133365928801,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 4,
+      "center_pairing": -300.6600262332365,
+      "escape_pairing": 0.6016255100463584,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404889593048062,
+      "endpoint_norm": -0.000303330084208131,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0393451758521,
+        0.17608228576119,
+        -300.66002623324
+      ]
+    },
+    {
+      "source_bank_index": 1488,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 175.93940019037115,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 4,
+      "center_pairing": -299.3127773180086,
+      "escape_pairing": 0.5986297992028974,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404762914020334,
+      "endpoint_norm": -0.00043714282707796315,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0099543235454,
+        0.17408172265132,
+        -299.31277731801
+      ]
+    },
+    {
+      "source_bank_index": 1304,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1222.7211312413033,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -332.1455965924522,
+      "escape_pairing": 0.648370043358251,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405168174447649,
+      "endpoint_norm": -9.051534553439211e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2825508313222,
+        0.17029636249849,
+        -332.14559659245
+      ]
+    },
+    {
+      "source_bank_index": 1305,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 611.3529165498948,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -331.81469589552,
+      "escape_pairing": 0.6476111771826308,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4051424680885365,
+      "endpoint_norm": -3.6206898911039787e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.275684079095,
+        0.1697820008542,
+        -331.81469589552
+      ]
+    },
+    {
+      "source_bank_index": 1307,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 458.5089193479576,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -331.47189640611526,
+      "escape_pairing": 0.6468246313832946,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405115808440292,
+      "endpoint_norm": -6.436917187890856e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2685763798438,
+        0.16924875310425,
+        -331.47189640612
+      ]
+    },
+    {
+      "source_bank_index": 1315,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 305.66230649964626,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -330.4944684444961,
+      "escape_pairing": 0.6445797464294282,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405039631846289,
+      "endpoint_norm": -0.00014483868117798337,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2483436399563,
+        0.16772610768462,
+        -330.4944684445
+      ]
+    },
+    {
+      "source_bank_index": 1336,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 229.23718620608562,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -329.1310345404723,
+      "escape_pairing": 0.6414428356826174,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404932971593639,
+      "endpoint_norm": -0.00025750814090930163,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2202040827349,
+        0.16559668334079,
+        -329.13103454047
+      ]
+    },
+    {
+      "source_bank_index": 1242,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1275.9901533312748,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -348.0946129274928,
+      "escape_pairing": 0.6708314305798407,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405168874937548,
+      "endpoint_norm": -8.311558209239678e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3821087674789,
+        0.16460133887605,
+        -348.09461292749
+      ]
+    },
+    {
+      "source_bank_index": 1244,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 638.0153856559039,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -347.76155879592903,
+      "escape_pairing": 0.67005450954339,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405145272898573,
+      "endpoint_norm": -3.3243993818210527e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3753973397635,
+        0.16407056137878,
+        -347.76155879593
+      ]
+    },
+    {
+      "source_bank_index": 1246,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 478.5275525332782,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -347.4165269172974,
+      "escape_pairing": 0.6692492469108522,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405120800026711,
+      "endpoint_norm": -5.909625228905924e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3684506599188,
+        0.16352029589689,
+        -347.4165269173
+      ]
+    },
+    {
+      "source_bank_index": 1352,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 191.02425417146512,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -327.7656351696395,
+      "escape_pairing": 0.6382949475010791,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404825690376784,
+      "endpoint_norm": -0.00037083165711804256,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1921223997952,
+        0.16345775744697,
+        -327.76563516964
+      ]
+    },
+    {
+      "source_bank_index": 1251,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 319.049686201999,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -346.43272524907786,
+      "escape_pairing": 0.6669509234249036,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4050508967428454,
+      "endpoint_norm": -0.00013293901413824472,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3486776474132,
+        0.16194906305838,
+        -346.43272524908
+      ]
+    },
+    {
+      "source_bank_index": 1217,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1308.6416611038958,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -357.87063602554304,
+      "escape_pairing": 0.6845994429942658,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405169262664855,
+      "endpoint_norm": -7.90197477273935e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4431309990929,
+        0.16111077846098,
+        -357.87063602554
+      ]
+    },
+    {
+      "source_bank_index": 1218,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 654.3584443022099,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -357.53634869744724,
+      "escape_pairing": 0.6838121825718705,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405146825238404,
+      "endpoint_norm": -3.16041547221424e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4365085202809,
+        0.16057060018012,
+        -357.53634869745
+      ]
+    },
+    {
+      "source_bank_index": 1222,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 490.79832846296347,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -357.1900385635529,
+      "escape_pairing": 0.6829962027712625,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405123562379873,
+      "endpoint_norm": -5.6178207062718144e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4296540393689,
+        0.1600105904273,
+        -357.19003856355
+      ]
+    },
+    {
+      "source_bank_index": 1258,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 239.32168193272182,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -345.06037966936026,
+      "escape_pairing": 0.6637392952652403,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404953082395361,
+      "endpoint_norm": -0.0002362644460998098,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.321180878069,
+        0.15975170409705,
+        -345.06037966936
+      ]
+    },
+    {
+      "source_bank_index": 1371,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 152.81217066252796,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -325.26727313065595,
+      "escape_pairing": 0.6325180883761592,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404628179825999,
+      "endpoint_norm": -0.0005794614452061531,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1409980826253,
+        0.15952712555558,
+        -325.26727313066
+      ]
+    },
+    {
+      "source_bank_index": 1196,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1330.0496480066142,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -364.2802915919499,
+      "escape_pairing": 0.6936265252516596,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405169501527284,
+      "endpoint_norm": -7.649647693952488e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4831394041108,
+        0.15882227781542,
+        -364.28029159195
+      ]
+    },
+    {
+      "source_bank_index": 1225,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 327.2559685926414,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -356.20258821781704,
+      "escape_pairing": 0.6806672879853474,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405057129000645,
+      "endpoint_norm": -0.00012635556318096874,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4101442013498,
+        0.15841154334601,
+        -356.20258821782
+      ]
+    },
+    {
+      "source_bank_index": 1200,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 665.0738472367356,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -363.94522861788806,
+      "escape_pairing": 0.6928327616460401,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405147781515093,
+      "endpoint_norm": -3.059397629545657e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4765728716595,
+        0.15827618670584,
+        -363.94522861789
+      ]
+    },
+    {
+      "source_bank_index": 1202,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 498.8437697645583,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -363.5981145563198,
+      "escape_pairing": 0.6920100415422621,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405125263951921,
+      "endpoint_norm": -5.438073019048417e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.469776377032,
+        0.15771004852994,
+        -363.59811455632
+      ]
+    },
+    {
+      "source_bank_index": 1266,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 199.46509696228958,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -343.6860315635432,
+      "escape_pairing": 0.6605163789577578,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404854772255105,
+      "endpoint_norm": -0.0003401120149764125,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2937446560462,
+        0.15754456107899,
+        -343.68603156354
+      ]
+    },
+    {
+      "source_bank_index": 1181,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1344.8255969980742,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -368.7042819497482,
+      "escape_pairing": 0.6998571158357842,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405169659780266,
+      "endpoint_norm": -7.482474001729855e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5107531165067,
+        0.15724277654363,
+        -368.70428194975
+      ]
+    },
+    {
+      "source_bank_index": 1186,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 672.4697245192924,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -368.3686980397554,
+      "escape_pairing": 0.6990589845908609,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4051484150515225,
+      "endpoint_norm": -2.9924729705310682e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5042241585041,
+        0.15669271428604,
+        -368.36869803976
+      ]
+    },
+    {
+      "source_bank_index": 1392,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 133.7076978668416,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -323.1582542305235,
+      "escape_pairing": 0.6276241452433965,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404460230094989,
+      "endpoint_norm": -0.0007568611687216453,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.098105457593,
+        0.15619175803105,
+        -323.15825423052
+      ]
+    },
+    {
+      "source_bank_index": 1233,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 245.50360722405986,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -354.82514326904897,
+      "escape_pairing": 0.6774129056147228,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404964204205963,
+      "endpoint_norm": -0.00022451608671136825,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3830152430346,
+        0.1561753113716,
+        -354.82514326905
+      ]
+    },
+    {
+      "source_bank_index": 1187,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 504.39683481044744,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -368.0210440736026,
+      "escape_pairing": 0.6982317378104944,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405126391205734,
+      "endpoint_norm": -5.318994129188681e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4974666065103,
+        0.15612246036214,
+        -368.0210440736
+      ]
+    },
+    {
+      "source_bank_index": 1166,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1355.4441732238224,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -371.88353449483293,
+      "escape_pairing": 0.7043346782955103,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405169770325208,
+      "endpoint_norm": -7.3656976464775425e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5305972272405,
+        0.15610770380048,
+        -371.88353449483
+      ]
+    },
+    {
+      "source_bank_index": 1207,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 332.6365843037139,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -362.60836979477665,
+      "escape_pairing": 0.6896618898789066,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405060967338146,
+      "endpoint_norm": -0.00012230092882870025,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4504320323182,
+        0.15609351088171,
+        -362.60836979478
+      ]
+    },
+    {
+      "source_bank_index": 1169,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 677.7847054591081,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -371.5475832415603,
+      "escape_pairing": 0.7035334671652285,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405148857586424,
+      "endpoint_norm": -2.9457250670272828e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5240947652433,
+        0.15555484124741,
+        -371.54758324156
+      ]
+    },
+    {
+      "source_bank_index": 1155,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1363.3273167468328,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -374.24378520345516,
+      "escape_pairing": 0.707658792120641,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405169850727651,
+      "endpoint_norm": -7.280762920558459e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5453292336682,
+        0.155265045063,
+        -374.24378520345
+      ]
+    },
+    {
+      "source_bank_index": 1173,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 508.3875058329543,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -371.19954856871504,
+      "escape_pairing": 0.7027030284577647,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405127178589015,
+      "endpoint_norm": -5.2358178826761304e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.517364673141,
+        0.15498168515735,
+        -371.19954856871
+      ]
+    },
+    {
+      "source_bank_index": 1157,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 681.7305106913045,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -373.9075649427015,
+      "escape_pairing": 0.7068553255735645,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405149179448612,
+      "endpoint_norm": -2.9117246223897553e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5388461748397,
+        0.15471013183833,
+        -373.9075649427
+      ]
+    },
+    {
+      "source_bank_index": 1148,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1369.338266792282,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -376.0434921614812,
+      "escape_pairing": 0.7101934559957149,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4051699111042275,
+      "endpoint_norm": -7.216982917057635e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5565624327519,
+        0.15462251767574,
+        -376.04349216148
+      ]
+    },
+    {
+      "source_bank_index": 1193,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 336.3503947777967,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -367.0297585651282,
+      "escape_pairing": 0.6958706681922517,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405063509872579,
+      "endpoint_norm": -0.0001196151169162718,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4782333939206,
+        0.15449417744209,
+        -367.02975856513
+      ]
+    },
+    {
+      "source_bank_index": 1162,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 511.3501580912302,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -373.55925148287207,
+      "escape_pairing": 0.7060225494558421,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405127751253677,
+      "endpoint_norm": -5.175323707407031e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5321361912893,
+        0.15413485052651,
+        -373.55925148287
+      ]
+    },
+    {
+      "source_bank_index": 1151,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 684.739217792014,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -375.70706886431213,
+      "escape_pairing": 0.7093882871475005,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405149421141188,
+      "endpoint_norm": -2.8861930262635838e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5500940186829,
+        0.15406605668365,
+        -375.70706886431
+      ]
+    },
+    {
+      "source_bank_index": 1238,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 204.6396673869725,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -353.44567717758946,
+      "escape_pairing": 0.674147079010753,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404870848870902,
+      "endpoint_norm": -0.0003231299748285288,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3559481748319,
+        0.15392915342427,
+        -353.44567717759
+      ]
+    },
+    {
+      "source_bank_index": 1213,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 249.55701288351133,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -361.2277190126798,
+      "escape_pairing": 0.6863806291095839,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404971052305644,
+      "endpoint_norm": -0.00021728218821026601,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4235343066994,
+        0.15383284051117,
+        -361.22771901268
+      ]
+    },
+    {
+      "source_bank_index": 1153,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 513.6092065627054,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -375.3585449905817,
+      "escape_pairing": 0.7085537468742086,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405128181272647,
+      "endpoint_norm": -5.129898091560392e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5433992120205,
+        0.1534891713651,
+        -375.35854499058
+      ]
+    },
+    {
+      "source_bank_index": 1283,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 159.62001537555633,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -341.1712332637182,
+      "escape_pairing": 0.6546017146737144,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4046739729522155,
+      "endpoint_norm": -0.0005310908795657099,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2438058655467,
+        0.15348863388609,
+        -341.17123326372
+      ]
+    },
+    {
+      "source_bank_index": 1178,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 339.01931875700393,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -370.2071766929966,
+      "escape_pairing": 0.7003328505020258,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405065285690783,
+      "endpoint_norm": -0.0001177392267677213,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4982098188442,
+        0.15334512074843,
+        -370.207176693
+      ]
+    },
+    {
+      "source_bank_index": 1135,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1383.2231630871809,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -380.20069562712956,
+      "escape_pairing": 0.7160483767874505,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405170047573326,
+      "endpoint_norm": -7.072821055942313e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5825101997861,
+        0.15313834006479,
+        -380.20069562713
+      ]
+    },
+    {
+      "source_bank_index": 1137,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 691.6891448813999,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -379.8638100827706,
+      "escape_pairing": 0.7152393323590072,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405149967428128,
+      "endpoint_norm": -2.8284850957405183e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5760751270212,
+        0.15257835531498,
+        -379.86381008277
+      ]
+    },
+    {
+      "source_bank_index": 1168,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 341.00072396677785,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -372.5660841104178,
+      "escape_pairing": 0.7036457018837402,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405066577175046,
+      "endpoint_norm": -0.00011637496370209277,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5130387151643,
+        0.15249222196441,
+        -372.56608411042
+      ]
+    },
+    {
+      "source_bank_index": 1128,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1389.6734898809386,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -382.1319537409007,
+      "escape_pairing": 0.718768328737415,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405170109583937,
+      "endpoint_norm": -7.007314906548601e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5945643353689,
+        0.15244886327734,
+        -382.1319537409
+      ]
+    },
+    {
+      "source_bank_index": 1201,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 252.35480012298675,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -365.6469553626014,
+      "escape_pairing": 0.6925713610653842,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40497558782188,
+      "endpoint_norm": -0.00021249115204158286,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4514909196603,
+        0.15221709894993,
+        -365.6469553626
+      ]
+    },
+    {
+      "source_bank_index": 1123,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1393.1836423748698,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -383.18290982802114,
+      "escape_pairing": 0.7202484798040093,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405170142967699,
+      "endpoint_norm": -6.9720493005576145e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.6011239586138,
+        0.15207366454517,
+        -383.18290982802
+      ]
+    },
+    {
+      "source_bank_index": 1140,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 518.8274788200395,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -379.5148071776626,
+      "escape_pairing": 0.7144007757832322,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40512915320598,
+      "endpoint_norm": -5.027226632581261e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5694148722852,
+        0.15199781829113,
+        -379.51480717766
+      ]
+    },
+    {
+      "source_bank_index": 1131,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 694.9177887552056,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -381.7948566021492,
+      "escape_pairing": 0.7179575102559065,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405150215652282,
+      "endpoint_norm": -2.8022635222946235e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5881445246395,
+        0.15188726552178,
+        -381.79485660215
+      ]
+    },
+    {
+      "source_bank_index": 1160,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 342.51156892788816,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -374.3647772394251,
+      "escape_pairing": 0.7061718655974576,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405067546922871,
+      "endpoint_norm": -0.00011535056765454854,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5243450404507,
+        0.15184196605459,
+        -374.36477723942
+      ]
+    },
+    {
+      "source_bank_index": 1119,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1396.6782324594203,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -384.22920642718753,
+      "escape_pairing": 0.7217220698443152,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405170175953737,
+      "endpoint_norm": -6.9372038389303725e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.6076544843882,
+        0.1517001308021,
+        -384.22920642719
+      ]
+    },
+    {
+      "source_bank_index": 1220,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 208.03264932518093,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -359.84503636349575,
+      "escape_pairing": 0.6830878341912661,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404880745446577,
+      "endpoint_norm": -0.00031267600937257,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3966992447301,
+        0.15156216241452,
+        -359.8450363635
+      ]
+    },
+    {
+      "source_bank_index": 1125,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 696.6747606087288,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -382.8456983675294,
+      "escape_pairing": 0.7194367028243505,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405150349283893,
+      "endpoint_norm": -2.7881471231783195e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5947123937667,
+        0.15151119530326,
+        -382.84569836753
+      ]
+    },
+    {
+      "source_bank_index": 1116,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1400.0521567055016,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -385.2393750825801,
+      "escape_pairing": 0.7231447790229101,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405170207566717,
+      "endpoint_norm": -6.903808834390901e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.6139595013197,
+        0.15133949636463,
+        -385.23937508258
+      ]
+    },
+    {
+      "source_bank_index": 1133,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 521.2516734181713,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -381.4456344252036,
+      "escape_pairing": 0.7171171152577095,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405129594828192,
+      "endpoint_norm": -4.980575282909072e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5815000857034,
+        0.15130505696622,
+        -381.4456344252
+      ]
+    },
+    {
+      "source_bank_index": 1122,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 698.4239439580467,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -383.8918817232546,
+      "escape_pairing": 0.7209093434071984,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4051504813225835,
+      "endpoint_norm": -2.7741989947038803e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.6012510876469,
+        0.15113679829384,
+        -383.89188172325
+      ]
+    },
+    {
+      "source_bank_index": 1417,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 114.60651920199315,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 5,
+      "center_pairing": -319.93640376344877,
+      "escape_pairing": 0.6201165823180116,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404201507687883,
+      "endpoint_norm": -0.0010301319525920505,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0330578722982,
+        0.15106527302253,
+        -319.93640376345
+      ]
+    },
+    {
+      "source_bank_index": 1190,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 254.3654469570026,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -368.822856013371,
+      "escape_pairing": 0.6970208205195718,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404978755290065,
+      "endpoint_norm": -0.00020914523440573873,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4715767982845,
+        0.15105647437277,
+        -368.82285601337
+      ]
+    },
+    {
+      "source_bank_index": 1130,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 522.5708792064817,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -382.4963577222706,
+      "escape_pairing": 0.7185953145622418,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405129832573424,
+      "endpoint_norm": -4.955460747746443e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5880764997998,
+        0.15092808365161,
+        -382.49635772227
+      ]
+    },
+    {
+      "source_bank_index": 1118,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 700.112730224249,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -384.9019415823986,
+      "escape_pairing": 0.722331140414559,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405150607864292,
+      "endpoint_norm": -2.7608315487981372e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.6075639519141,
+        0.15077533449141,
+        -384.9019415824
+      ]
+    },
+    {
+      "source_bank_index": 1124,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 523.8842379309248,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -383.542423728099,
+      "escape_pairing": 0.7200669712582213,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4051300674830625,
+      "endpoint_norm": -4.930645753420393e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5946236579795,
+        0.15055279207189,
+        -383.5424237281
+      ]
+    },
+    {
+      "source_bank_index": 1144,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 346.0015535371194,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -378.51967266253587,
+      "escape_pairing": 0.7120074352623014,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4050697386320685,
+      "endpoint_norm": -0.00011303534844664398,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5504592836689,
+        0.15034019399875,
+        -378.51967266254
+      ]
+    },
+    {
+      "source_bank_index": 1179,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 255.8581595272684,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -371.18065234472704,
+      "escape_pairing": 0.700324356315856,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404981058692014,
+      "endpoint_norm": -0.0002067120619013707,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4864858358348,
+        0.15019510566575,
+        -371.18065234473
+      ]
+    },
+    {
+      "source_bank_index": 1120,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 525.1522488532103,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -384.55237084674815,
+      "escape_pairing": 0.7214878230249344,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405130292611533,
+      "endpoint_norm": -4.9068640050276e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.6009446540757,
+        0.15019046883711,
+        -384.55237084675
+      ]
+    },
+    {
+      "source_bank_index": 1298,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 139.70609857681288,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -339.0482776403813,
+      "escape_pairing": 0.649590923044971,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404520434312882,
+      "endpoint_norm": -0.0006932699875608073,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2019184787021,
+        0.1500470252917,
+        -339.04827764038
+      ]
+    },
+    {
+      "source_bank_index": 1208,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 210.37462886683906,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -364.2621135205789,
+      "escape_pairing": 0.6892604630081862,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40488729895509,
+      "endpoint_norm": -0.00030575338867633306,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.424811597535,
+        0.14992996110491,
+        -364.26211352058
+      ]
+    },
+    {
+      "source_bank_index": 1248,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 163.79383141905075,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -350.92148544560786,
+      "escape_pairing": 0.668153658163672,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4046992688451665,
+      "endpoint_norm": -0.0005043710737320239,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.306686920693,
+        0.14980161913497,
+        -350.92148544561
+      ]
+    },
+    {
+      "source_bank_index": 1138,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 347.62286588236555,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -380.4498743186499,
+      "escape_pairing": 0.7147185296432034,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405070734432218,
+      "endpoint_norm": -0.00011198343142559963,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5625896202041,
+        0.14964266372625,
+        -380.44987431865
+      ]
+    },
+    {
+      "source_bank_index": 1172,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 256.996376932483,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -372.9785069648686,
+      "escape_pairing": 0.7028434897902269,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404982788168984,
+      "endpoint_norm": -0.000204885147959466,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4978526417033,
+        0.14953845771689,
+        -372.97850696487
+      ]
+    },
+    {
+      "source_bank_index": 1134,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 348.5051590777564,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -381.5002596289877,
+      "escape_pairing": 0.7161938951940326,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40507127050147,
+      "endpoint_norm": -0.00011141715270301944,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5691904128552,
+        0.14926311390416,
+        -381.50025962899
+      ]
+    },
+    {
+      "source_bank_index": 1132,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 349.38354336941285,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -382.54599084454986,
+      "escape_pairing": 0.717662744936148,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405071800166616,
+      "endpoint_norm": -0.00011085763893303735,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5757617190326,
+        0.14888527018391,
+        -382.54599084455
+      ]
+    },
+    {
+      "source_bank_index": 1195,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 212.0577249192283,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -367.43649212752604,
+      "escape_pairing": 0.6936971613183909,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404891875237279,
+      "endpoint_norm": -0.000300919353096063,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4450072592517,
+        0.14875773383164,
+        -367.43649212753
+      ]
+    },
+    {
+      "source_bank_index": 1126,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          16
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 350.231600256585,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -383.5556163285093,
+      "escape_pairing": 0.7190809000481869,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405072307767834,
+      "endpoint_norm": -0.00011032143243427939,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5821059142314,
+        0.14852049509492,
+        -383.55561632851
+      ]
+    },
+    {
+      "source_bank_index": 1152,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 259.6256291328043,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -377.13149368722094,
+      "escape_pairing": 0.7086630564958663,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404986696614996,
+      "endpoint_norm": -0.00020075650226036856,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.524104557089,
+        0.14802213543948,
+        -377.13149368722
+      ]
+    },
+    {
+      "source_bank_index": 1191,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 213.30727202456958,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -369.7931741385585,
+      "escape_pairing": 0.696991354412525,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404895202880639,
+      "endpoint_norm": -0.0002974042822030398,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4599966713151,
+        0.14788787054656,
+        -369.79317413856
+      ]
+    },
+    {
+      "source_bank_index": 1234,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 166.53074348980516,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -357.3149436222315,
+      "escape_pairing": 0.6770449380084615,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404714833771524,
+      "endpoint_norm": -0.0004879299408750981,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3478636229145,
+        0.14738964412646,
+        -357.31494362223
+      ]
+    },
+    {
+      "source_bank_index": 1145,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 260.84708799469956,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -379.0608217758688,
+      "escape_pairing": 0.711366826698548,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404988472267558,
+      "endpoint_norm": -0.00019888080958274656,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5362979029387,
+        0.14731794587263,
+        -379.06082177587
+      ]
+    },
+    {
+      "source_bank_index": 1184,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 214.26007723719803,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -371.59018787047097,
+      "escape_pairing": 0.6995034376984541,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404897701251634,
+      "endpoint_norm": -0.000294765190747448,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4714241293862,
+        0.14722481242051,
+        -371.59018787047
+      ]
+    },
+    {
+      "source_bank_index": 1142,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 261.5117896059477,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -380.11073514645153,
+      "escape_pairing": 0.7128382354045902,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404989428117155,
+      "endpoint_norm": -0.0001978711072849748,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5429327360065,
+        0.14693479840539,
+        -380.11073514645
+      ]
+    },
+    {
+      "source_bank_index": 1141,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 262.1735480764874,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -381.15599889967655,
+      "escape_pairing": 0.7143031658415544,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404990372521724,
+      "endpoint_norm": -0.00019687349468133775,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5495377596499,
+        0.14655339117183,
+        -381.15599889968
+      ]
+    },
+    {
+      "source_bank_index": 1261,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 143.38390941446323,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -348.7905719295611,
+      "escape_pairing": 0.6630761458445142,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404553669651189,
+      "endpoint_norm": -0.0006581646426093712,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2653735265672,
+        0.14629934670858,
+        -348.79057192956
+      ]
+    },
+    {
+      "source_bank_index": 1136,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          12
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 262.81246008342936,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -382.16517530346323,
+      "escape_pairing": 0.7157175557684796,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404991277561445,
+      "endpoint_norm": -0.00019591746461555815,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5559143464328,
+        0.14618519269863,
+        -382.16517530346
+      ]
+    },
+    {
+      "source_bank_index": 1219,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 168.4199318618335,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -361.72806071286277,
+      "escape_pairing": 0.6831843647733572,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404725137880624,
+      "endpoint_norm": -0.00047704575389406756,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3762616102953,
+        0.14572725482428,
+        -361.72806071286
+      ]
+    },
+    {
+      "source_bank_index": 1163,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 216.461049643073,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -375.74126067365734,
+      "escape_pairing": 0.7053069576926326,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40490334686487,
+      "endpoint_norm": -0.00028880158519939414,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4978140933366,
+        0.14569390014107,
+        -375.74126067366
+      ]
+    },
+    {
+      "source_bank_index": 1154,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 217.48355279215866,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -377.6697128984327,
+      "escape_pairing": 0.708003384463526,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404905911521632,
+      "endpoint_norm": -0.00028609247097977075,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5100706141377,
+        0.14498303377412,
+        -377.66971289843
+      ]
+    },
+    {
+      "source_bank_index": 1331,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 119.80362686325324,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -335.8050290852109,
+      "escape_pairing": 0.6419039539296131,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404284278522707,
+      "endpoint_norm": -0.0009427079816513029,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1384143103913,
+        0.14475742046381,
+        -335.80502908521
+      ]
+    },
+    {
+      "source_bank_index": 1149,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 218.03998749190444,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -378.7191531127248,
+      "escape_pairing": 0.7094708261250838,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40490729204417,
+      "endpoint_norm": -0.00028463418835622534,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5167395753692,
+        0.14459627938797,
+        -378.71915311272
+      ]
+    },
+    {
+      "source_bank_index": 1212,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 169.77765049999675,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -364.89964836487246,
+      "escape_pairing": 0.687597663114859,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4047323317575255,
+      "endpoint_norm": -0.0004694468816857089,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3966585800556,
+        0.14453375181538,
+        -364.89964836487
+      ]
+    },
+    {
+      "source_bank_index": 1147,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 218.59395990927337,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -379.76394821529925,
+      "escape_pairing": 0.7109318272938224,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40490865599878,
+      "endpoint_norm": -0.00028319340656723924,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5233784021904,
+        0.14421129958245,
+        -379.7639482153
+      ]
+    },
+    {
+      "source_bank_index": 1241,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 145.79567096130356,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -355.1790335708177,
+      "escape_pairing": 0.6719255336581431,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404574112031149,
+      "endpoint_norm": -0.0006365719691476812,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3069106225544,
+        0.1438492825987,
+        -355.17903357082
+      ]
+    },
+    {
+      "source_bank_index": 1143,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          10
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 219.12880844360373,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -380.7726744129815,
+      "escape_pairing": 0.7123424425955782,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404909963065203,
+      "endpoint_norm": -0.0002818127170058915,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.5297874617692,
+        0.14383966914196,
+        -380.77267441298
+      ]
+    },
+    {
+      "source_bank_index": 1204,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 170.7856485664614,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -367.25428734792297,
+      "escape_pairing": 0.6908747270213479,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404737562037246,
+      "endpoint_norm": -0.0004639221463720311,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.411795353139,
+        0.14364831431853,
+        -367.25428734792
+      ]
+    },
+    {
+      "source_bank_index": 1197,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 171.55427577160862,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -369.0497595325306,
+      "escape_pairing": 0.6933738856418867,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4047414884769305,
+      "endpoint_norm": -0.0004597746520418333,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4233340010641,
+        0.14297350481934,
+        -369.04975953253
+      ]
+    },
+    {
+      "source_bank_index": 1231,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 147.46046240817384,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -359.5887987337518,
+      "escape_pairing": 0.6780368571376187,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404587641701345,
+      "endpoint_norm": -0.0006222809459899281,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3355503802333,
+        0.14216134120804,
+        -359.58879873375
+      ]
+    },
+    {
+      "source_bank_index": 1185,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 173.32982460860924,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -373.1973241902556,
+      "escape_pairing": 0.6991479925871854,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404750359792107,
+      "endpoint_norm": -0.0004504038812882527,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4499770031019,
+        0.14141584958737,
+        -373.19732419026
+      ]
+    },
+    {
+      "source_bank_index": 1223,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 148.6569324508693,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -362.75802459572304,
+      "escape_pairing": 0.6824303537215789,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4045970859132355,
+      "endpoint_norm": -0.0006123052635862436,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3561177029168,
+        0.14094983403153,
+        -362.75802459572
+      ]
+    },
+    {
+      "source_bank_index": 1281,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 122.9904858740051,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -345.5351178373214,
+      "escape_pairing": 0.6552868428714583,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4043299263575495,
+      "endpoint_norm": -0.0008944934746160094,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2027497281815,
+        0.14091669782024,
+        -345.53511783732
+      ]
+    },
+    {
+      "source_bank_index": 1174,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 174.15470140924765,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -375.12417123037056,
+      "escape_pairing": 0.701830961143362,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40475438918761,
+      "endpoint_norm": -0.0004461476262904718,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4623493038389,
+        0.14069274673319,
+        -375.12417123037
+      ]
+    },
+    {
+      "source_bank_index": 1170,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 174.6035932640722,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -376.1727443606332,
+      "escape_pairing": 0.7032911329852326,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404756558000372,
+      "endpoint_norm": -0.00044385670582380854,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4690808067429,
+        0.14029938247658,
+        -376.17274436063
+      ]
+    },
+    {
+      "source_bank_index": 1215,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 149.54522712422545,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -365.1109350039457,
+      "escape_pairing": 0.6856929248835498,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404603951449063,
+      "endpoint_norm": -0.0006050533623214172,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3713791559125,
+        0.14005121943155,
+        -365.11093500395
+      ]
+    },
+    {
+      "source_bank_index": 1165,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 175.05050093530735,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -377.2166806800009,
+      "escape_pairing": 0.7047449339301731,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404758700674144,
+      "endpoint_norm": -0.0004415933952541806,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4757815765088,
+        0.13990785607863,
+        -377.21668068
+      ]
+    },
+    {
+      "source_bank_index": 1161,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          8
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 175.48198282108652,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -378.22458193463984,
+      "escape_pairing": 0.7061486327313667,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404760753877164,
+      "endpoint_norm": -0.0004394245921068851,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.482250138184,
+        0.13952993701274,
+        -378.22458193464
+      ]
+    },
+    {
+      "source_bank_index": 1211,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 150.22258318936468,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -366.90510307552853,
+      "escape_pairing": 0.6881811495389589,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404609105027672,
+      "endpoint_norm": -0.0005996097554077373,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3830118678579,
+        0.13936646854505,
+        -366.90510307553
+      ]
+    },
+    {
+      "source_bank_index": 1256,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 125.0804316439611,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -351.9159208054086,
+      "escape_pairing": 0.6640720187158948,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40435798674989,
+      "endpoint_norm": -0.0008648551407484106,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2448392345613,
+        0.13840825085958,
+        -351.91592080541
+      ]
+    },
+    {
+      "source_bank_index": 1194,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 151.78731308597747,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -371.0497004602027,
+      "escape_pairing": 0.6939303782264299,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40462074741856,
+      "endpoint_norm": -0.0005873121487454114,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4098688955414,
+        0.1377861934864,
+        -371.0497004602
+      ]
+    },
+    {
+      "source_bank_index": 1192,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 152.5142577361799,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -372.9751900460573,
+      "escape_pairing": 0.6966019655930447,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404626034759254,
+      "endpoint_norm": -0.0005817272373036531,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4223391077345,
+        0.13705274261923,
+        -372.97519004606
+      ]
+    },
+    {
+      "source_bank_index": 1243,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 126.52313719994567,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -356.32055025688,
+      "escape_pairing": 0.6701402832817795,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404376551199654,
+      "endpoint_norm": -0.0008452466706900807,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2738494246013,
+        0.1366811594139,
+        -356.32055025688
+      ]
+    },
+    {
+      "source_bank_index": 1189,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 152.90985804799175,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -374.0230299758539,
+      "escape_pairing": 0.698055990123924,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404628880477894,
+      "endpoint_norm": -0.0005787213601333718,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4291234954592,
+        0.13665378910029,
+        -374.02302997585
+      ]
+    },
+    {
+      "source_bank_index": 1183,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 153.3037114043208,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -375.0662401590751,
+      "escape_pairing": 0.6995037029866555,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404631691774935,
+      "endpoint_norm": -0.0005757518405151707,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4358766405052,
+        0.13625672729205,
+        -375.06624015907
+      ]
+    },
+    {
+      "source_bank_index": 1385,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 99.92361045078201,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 6,
+      "center_pairing": -330.49960367647327,
+      "escape_pairing": 0.6292437026069294,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403893876706177,
+      "endpoint_norm": -0.001355047151590849,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0358375452234,
+        0.13601917810273,
+        -330.49960367647
+      ]
+    },
+    {
+      "source_bank_index": 1177,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          7
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 153.68397180458928,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -376.07344393321284,
+      "escape_pairing": 0.7009015539607569,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404634385565394,
+      "endpoint_norm": -0.0005729064396438055,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4423955105654,
+        0.13587349126079,
+        -376.07344393321
+      ]
+    },
+    {
+      "source_bank_index": 1237,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 127.56002399077238,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -359.48615848848874,
+      "escape_pairing": 0.6745034488718139,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404389506438765,
+      "endpoint_norm": -0.0008315628262156594,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2946776823795,
+        0.13544207467024,
+        -359.48615848849
+      ]
+    },
+    {
+      "source_bank_index": 1232,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 128.32985399954663,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -361.8364217222388,
+      "escape_pairing": 0.677743825551539,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4043989225463624,
+      "endpoint_norm": -0.0008216171373822689,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.310130072716,
+        0.13452328038785,
+        -361.83642172224
+      ]
+    },
+    {
+      "source_bank_index": 1227,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 128.91688480555598,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -363.62859295156835,
+      "escape_pairing": 0.6802153082504223,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404405989697475,
+      "endpoint_norm": -0.0008141525055660459,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3219068143632,
+        0.13382330736814,
+        -363.62859295157
+      ]
+    },
+    {
+      "source_bank_index": 1214,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 130.27298502421263,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -367.76864785720744,
+      "escape_pairing": 0.6859264518130412,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40442195182841,
+      "endpoint_norm": -0.0007972925795849406,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3490914853045,
+        0.13220840452609,
+        -367.76864785721
+      ]
+    },
+    {
+      "source_bank_index": 1328,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 102.62803925210592,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 7,
+      "center_pairing": -340.2096060699872,
+      "escape_pairing": 0.6424581831820964,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40396059108196,
+      "endpoint_norm": -0.0012845857603669408,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1016217666108,
+        0.13202533508823,
+        -340.20960606999
+      ]
+    },
+    {
+      "source_bank_index": 1210,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 130.90301657885416,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -369.69205982353714,
+      "escape_pairing": 0.6885806199690453,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404429199486748,
+      "endpoint_norm": -0.0007896372605649127,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3617115535616,
+        0.13145911575226,
+        -369.69205982354
+      ]
+    },
+    {
+      "source_bank_index": 1206,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 131.24588042665494,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -370.73877768923677,
+      "escape_pairing": 0.6900252368723078,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404433099890964,
+      "endpoint_norm": -0.0007855174658439878,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3685768743481,
+        0.13105160862368,
+        -370.73877768924
+      ]
+    },
+    {
+      "source_bank_index": 1203,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 131.5872324515321,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -371.78087670143265,
+      "escape_pairing": 0.6914636334372848,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404436952851105,
+      "endpoint_norm": -0.0007814477813750109,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3754101667524,
+        0.13064607624478,
+        -371.78087670143
+      ]
+    },
+    {
+      "source_bank_index": 1199,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          6
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 131.91680559869377,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -372.7870132319081,
+      "escape_pairing": 0.692852536410127,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4044406445172,
+      "endpoint_norm": -0.0007775484612499994,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.3820060157458,
+        0.13025470450568,
+        -372.78701323191
+      ]
+    },
+    {
+      "source_bank_index": 1292,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 104.40179439206005,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 8,
+      "center_pairing": -346.5778184655715,
+      "escape_pairing": 0.6511377969486392,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404001560391988,
+      "endpoint_norm": -0.0012413150436900722,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1446194150336,
+        0.12942090890254,
+        -346.57781846557
+      ]
+    },
+    {
+      "source_bank_index": 1275,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 105.62631307771572,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 9,
+      "center_pairing": -350.97401072515066,
+      "escape_pairing": 0.6571353222762939,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40402864764813,
+      "endpoint_norm": -0.0012127060382338684,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1742381690352,
+        0.12762949987804,
+        -350.97401072515
+      ]
+    },
+    {
+      "source_bank_index": 1263,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 106.50642660033125,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -354.1336785188633,
+      "escape_pairing": 0.6614486819525963,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404047542105806,
+      "endpoint_norm": -0.001192750027167122,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1954949030727,
+        0.12634513056727,
+        -354.13367851886
+      ]
+    },
+    {
+      "source_bank_index": 1254,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 107.15988225660635,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -356.47959634232643,
+      "escape_pairing": 0.6646526257743965,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404061270542887,
+      "endpoint_norm": -0.0011782502439592335,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2112607223478,
+        0.12539321077675,
+        -356.47959634233
+      ]
+    },
+    {
+      "source_bank_index": 1249,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 107.65818403809752,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -358.2684905197275,
+      "escape_pairing": 0.6670966329624686,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404071571806805,
+      "endpoint_norm": -0.0011673701726944152,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2232738335988,
+        0.12466825645421,
+        -358.26849051973
+      ]
+    },
+    {
+      "source_bank_index": 1240,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 108.80934939395657,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -362.4010933217658,
+      "escape_pairing": 0.6727452964797525,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4040948308002985,
+      "endpoint_norm": -0.0011428042386629755,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2509960153313,
+        0.12299654546238,
+        -362.40109332177
+      ]
+    },
+    {
+      "source_bank_index": 1236,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 109.34418784465943,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -364.32109810190616,
+      "escape_pairing": 0.6753708980512079,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404105388010258,
+      "endpoint_norm": -0.0011316537816052907,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2638618396116,
+        0.12222128335891,
+        -364.32109810191
+      ]
+    },
+    {
+      "source_bank_index": 1235,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 109.63525214198391,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -365.36597616253334,
+      "escape_pairing": 0.6768000896315693,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40411106854334,
+      "endpoint_norm": -0.00112565403160092,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2708598632069,
+        0.12179975120764,
+        -365.36597616253
+      ]
+    },
+    {
+      "source_bank_index": 1230,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 109.92503623547371,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -366.40625345266636,
+      "escape_pairing": 0.6782232124855018,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.404116679329351,
+      "endpoint_norm": -0.0011197279428731832,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2778245541157,
+        0.12138033165468,
+        -366.40625345267
+      ]
+    },
+    {
+      "source_bank_index": 1228,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 110.20482390101019,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -367.4106404866185,
+      "escape_pairing": 0.6795974473018143,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40412205462671,
+      "endpoint_norm": -0.0011140505714046789,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.2845465920767,
+        0.12097562332421,
+        -367.41064048662
+      ]
+    },
+    {
+      "source_bank_index": 1354,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 85.54524721283269,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 10,
+      "center_pairing": -344.5176480565096,
+      "escape_pairing": 0.6377111697117095,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403426453016447,
+      "endpoint_norm": -0.0018487031222846895,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.021636563164,
+        0.1097191040573,
+        -344.51764805651
+      ]
+    },
+    {
+      "source_bank_index": 1338,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 86.08633296536605,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 11,
+      "center_pairing": -346.85572270967236,
+      "escape_pairing": 0.6408493547005437,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403448383402875,
+      "endpoint_norm": -0.0018255427864675156,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0379681003761,
+        0.10870739497547,
+        -346.85572270967
+      ]
+    },
+    {
+      "source_bank_index": 1326,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 86.49896393539917,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 12,
+      "center_pairing": -348.6387047630569,
+      "escape_pairing": 0.6432437933645623,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403464831659038,
+      "endpoint_norm": -0.0018081719900533422,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.050407645642,
+        0.10793737192541,
+        -348.63870476306
+      ]
+    },
+    {
+      "source_bank_index": 1301,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 87.45227417196718,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 16,
+      "center_pairing": -352.75787201530005,
+      "escape_pairing": 0.6487798103319219,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403501946195823,
+      "endpoint_norm": -0.001768975630723979,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.079098916559,
+        0.10616324036002,
+        -352.7578720153
+      ]
+    },
+    {
+      "source_bank_index": 1291,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 87.89521564336917,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 20,
+      "center_pairing": -354.6717379864147,
+      "escape_pairing": 0.6513539428032714,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403518781514035,
+      "endpoint_norm": -0.00175119591369155,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0924075253568,
+        0.10534118148597,
+        -354.67173798641
+      ]
+    },
+    {
+      "source_bank_index": 1289,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 88.13627595660822,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 24,
+      "center_pairing": -355.7133022931203,
+      "escape_pairing": 0.6527553511553875,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403527837280596,
+      "endpoint_norm": -0.0017416321329273288,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.0996445658241,
+        0.10489438824881,
+        -355.71330229312
+      ]
+    },
+    {
+      "source_bank_index": 1284,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 88.37628102142364,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 32,
+      "center_pairing": -356.75029913798966,
+      "escape_pairing": 0.6541509700480526,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403536779900757,
+      "endpoint_norm": -0.0017321878326250761,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1068458710936,
+        0.10444996152528,
+        -356.75029913799
+      ]
+    },
+    {
+      "source_bank_index": 1280,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 88.60801155538053,
+      "method": "finite_anchor",
+      "anchor": 3,
+      "anchor_label": 64,
+      "center_pairing": -357.75153647870525,
+      "escape_pairing": 0.6554987971563204,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.403545345362167,
+      "endpoint_norm": -0.001723141837278508,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1137950924373,
+        0.10402124276034,
+        -357.75153647871
+      ]
+    },
+    {
+      "source_bank_index": 1437,
+      "face_id": 1,
+      "support": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 85.60642754083727,
+      "method": "finite_anchor",
+      "anchor": 2,
+      "anchor_label": 3,
+      "center_pairing": -328.1571315841205,
+      "escape_pairing": 0.6149417763289599,
+      "cuts_escape": true,
+      "endpoint_parameter": -1.9652396594968868,
+      "endpoint_norm": -0.0004737492715704006,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.576471085409,
+        0.088531108268486,
+        -328.15713158412
+      ]
+    },
+    {
+      "source_bank_index": 1515,
+      "face_id": 1,
+      "support": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 50.85696892546827,
+      "method": "finite_anchor",
+      "anchor": 2,
+      "anchor_label": 3,
+      "center_pairing": -318.3713830258848,
+      "escape_pairing": 0.589781310933774,
+      "cuts_escape": true,
+      "endpoint_parameter": -1.964256582742656,
+      "endpoint_norm": -0.00134166197635055,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.4148542967321,
+        0.070611303313324,
+        -318.37138302588
+      ]
+    },
+    {
+      "source_bank_index": 1596,
+      "face_id": 1,
+      "support": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          3
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 32.9817401810269,
+      "method": "finite_anchor",
+      "anchor": 2,
+      "anchor_label": 3,
+      "center_pairing": -298.2156744159559,
+      "escape_pairing": 0.53639663851675,
+      "cuts_escape": true,
+      "endpoint_parameter": -1.9621651436971423,
+      "endpoint_norm": -0.0031866514678957625,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -2.1057860020137,
+        0.032145914691541,
+        -298.21567441596
+      ]
+    },
+    {
+      "source_bank_index": 1106,
+      "face_id": 1,
+      "support": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          5
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 108.51676915735332,
+      "method": "finite_anchor",
+      "anchor": 2,
+      "anchor_label": 4,
+      "center_pairing": -426.0175364016498,
+      "escape_pairing": 0.7375523661745238,
+      "cuts_escape": true,
+      "endpoint_parameter": -1.9654422273120746,
+      "endpoint_norm": -0.00029485761633885055,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -3.5369952517818,
+        0.021386362781817,
+        -426.01753640165
+      ]
+    },
+    {
+      "source_bank_index": 1461,
+      "face_id": 3,
+      "support": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 63.92347525168417,
+      "method": "finite_anchor",
+      "anchor": 0,
+      "anchor_label": 3,
+      "center_pairing": -350.9239992367244,
+      "escape_pairing": 0.607086003460266,
+      "cuts_escape": true,
+      "endpoint_parameter": -1.8496157006290415,
+      "endpoint_norm": -0.0006708678161728709,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -3.1850800345787,
+        0.005939110587058,
+        -350.92399923672
+      ]
+    },
+    {
+      "source_bank_index": 230,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          64
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 2802.3556844688724,
+      "method": "all_dotted_sample",
+      "center_pairing": -805.0944099043686,
+      "escape_pairing": 1.314516240636824,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.405175111743517,
+      "endpoint_norm": -1.7231814335438855e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -5.2339123772376,
+        0.0015098542759933,
+        -805.09440990437
+      ]
+    },
+    {
+      "source_bank_index": 233,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          32
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1401.3523635189651,
+      "method": "all_dotted_sample",
+      "center_pairing": -804.3073138278887,
+      "escape_pairing": 1.3129121832028998,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.40517021968848,
+      "endpoint_norm": -6.891003767162118e-06,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -5.2264754042283,
+        0.00092648447582659,
+        -804.30731382789
+      ]
+    },
+    {
+      "source_bank_index": 1150,
+      "face_id": 1,
+      "support": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          4
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 64.95519766637526,
+      "method": "finite_anchor",
+      "anchor": 2,
+      "anchor_label": 4,
+      "center_pairing": -415.87617279399393,
+      "escape_pairing": 0.709410347435488,
+      "cuts_escape": true,
+      "endpoint_parameter": -1.9648444553349051,
+      "endpoint_norm": -0.000822708828021379,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -3.4010285260732,
+        0.00075566784562128,
+        -415.87617279399
+      ]
+    },
+    {
+      "source_bank_index": 235,
+      "face_id": 0,
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "contacts": [
+        [
+          27,
+          24
+        ]
+      ],
+      "orientation": -1,
+      "exponential_parameter": 1051.1506236183277,
+      "method": "all_dotted_sample",
+      "center_pairing": -803.4919132340839,
+      "escape_pairing": 1.3112502988531864,
+      "cuts_escape": true,
+      "endpoint_parameter": -6.4051651490372645,
+      "endpoint_norm": -1.2247485657201906e-05,
+      "finite_neighbors": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "new_pairings": [
+        -5.2187741970475,
+        0.0003220300550177,
+        -803.49191323408
+      ]
+    }
+  ],
+  "exact_nine_contact_recipes": [
+    {
+      "source_bank_index": 1596,
+      "source_face": 1,
+      "support": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "anchor": 2,
+      "anchor_label": 3,
+      "support_contact_label": 3,
+      "nine_finite_contacts": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          27,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "free_coordinate": 9,
+      "kernel_v": [
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-5/8",
+            "-21/40"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-13/4",
+            "-23/20"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-5",
+            "-9/5"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-13/2",
+            "-23/10"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-39/4",
+            "-69/20"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-8",
+            "-14/5"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-6",
+            "-21/10"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-4",
+            "-7/5"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-2",
+            "-7/10"
+          ]
+        ],
+        [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      "particular_p": [
+        [
+          [
+            "75/2",
+            "33/2"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "120",
+            "54"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "186",
+            "84"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "240",
+            "108"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "359",
+            "162"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "292",
+            "132"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "219",
+            "99"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "146",
+            "66"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "73",
+            "33"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "-1"
+          ]
+        ]
+      ],
+      "kernel_norm": [
+        [
+          "-1/2",
+          "3/10"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "particular_norm": [
+        [
+          "-6",
+          "-4"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "orthogonality": "p.v=0",
+      "delta": [
+        [
+          "50",
+          "22"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "F_norm_delta": "80",
+      "F_norm_delta_over_RAD": "-100/19",
+      "square_in_K": false,
+      "numerically_matching_branch": -1,
+      "branch_pairing_max_error": 3.9790393202566e-13,
+      "normal_recipe": "p + branch*sqrt(delta)*v; norm2 exactly, extension-field Coxeter/endpoint checks NOT certified"
+    },
+    {
+      "source_bank_index": 1437,
+      "source_face": 1,
+      "support": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        10,
+        27
+      ],
+      "anchor": 2,
+      "anchor_label": 3,
+      "support_contact_label": 5,
+      "nine_finite_contacts": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          27,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "free_coordinate": 9,
+      "kernel_v": [
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-5/8",
+            "-21/40"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-13/4",
+            "-23/20"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-5",
+            "-9/5"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-13/2",
+            "-23/10"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-39/4",
+            "-69/20"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-8",
+            "-14/5"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-6",
+            "-21/10"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-4",
+            "-7/5"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-2",
+            "-7/10"
+          ]
+        ],
+        [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      "particular_p": [
+        [
+          [
+            "323/8",
+            "145/8"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "131",
+            "117/2"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "203",
+            "91"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "262",
+            "117"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "392",
+            "351/2"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "319",
+            "143"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "957/4",
+            "429/4"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "319/2",
+            "143/2"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "319/4",
+            "143/4"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-7/4",
+            "-3/4"
+          ]
+        ]
+      ],
+      "kernel_norm": [
+        [
+          "-1/2",
+          "3/10"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "particular_norm": [
+        [
+          "-9",
+          "-9/2"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "orthogonality": "p.v=0",
+      "delta": [
+        [
+          "245/4",
+          "111/4"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "F_norm_delta": "-395/4",
+      "F_norm_delta_over_RAD": "1975/304",
+      "square_in_K": false,
+      "numerically_matching_branch": -1,
+      "branch_pairing_max_error": 5.1159076974727e-13,
+      "normal_recipe": "p + branch*sqrt(delta)*v; norm2 exactly, extension-field Coxeter/endpoint checks NOT certified"
+    }
+  ],
+  "exact_scope": "Nine linear contacts, norm2 quadratic recipes, and nonsquareness in the inherited quartic field are exact. The required quadratic extension is not an obstruction to geometric existence. Full new-wall pair gates, actual endpoints and a coherent finite-volume completion remain unproved."
+}

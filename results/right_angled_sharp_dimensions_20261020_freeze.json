@@ -1,0 +1,262 @@
+{
+  "status": "PASS_SHARP_RIGHT_ANGLED_DIMENSIONS_PACKAGE",
+  "date": "2026-10-20",
+  "theorems": {
+    "all_finite_volume_right_angled_dimension_at_most": 8,
+    "entirely_ideal_right_angled_dimension_at_most": 4,
+    "both_match_published_examples": true
+  },
+  "manuscript": {
+    "tex": "manuscripts/right_angled_sharp_dimension_bounds.tex",
+    "pdf": "manuscripts/build/right_angled_sharp_dimension_bounds.pdf",
+    "pages": 5,
+    "warnings": 0,
+    "visually_reviewed_figures": 1
+  },
+  "verification": {
+    "written_root_and_two_independent_full_reviews": true,
+    "exact_sos_generation_and_separate_replay": true,
+    "all_four_core_jobs_pass": true,
+    "conditional_lean_compilation_and_twelve_theorem_axiom_audit_pass": true,
+    "lean_axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "sorryAx": false,
+    "end_to_end_geometric_lean_proof_claimed": false
+  },
+  "explicit_inputs": [
+    "All-wall acuteness and actual finite-volume/right-angle face inheritance",
+    "Dufour universal6-dimensional facet minimum27, precisely stated inAlexandrov2023\u00a74",
+    "Musin four-dimensional kissing bound24, ideal branch only",
+    "Kolpakov ideal4facetminimum24andmetric24cellrigidity, ideal branch only",
+    "Actual Lorentz projection, radialcodes, universal realtensorSOS/strict endpoint and realGrampositivity remain writtenLeaninterfaces",
+    "PublishedPV8example andregularideal24cell establishsharpness"
+  ],
+  "reproduce": "python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core --pdf",
+  "core_time_snapshots_preserved": true,
+  "mutable_formal_runner_ledgers_pinned": false,
+  "immutable_compile_and_audit_copies_preserved": true,
+  "files": [
+    {
+      "path": "manuscripts/right_angled_sharp_dimension_bounds.tex",
+      "bytes": 15449,
+      "sha256": "3c3ddd8540593004bcd5fb57832afc77ffc639268e66cb0ab29302b286654310"
+    },
+    {
+      "path": "manuscripts/build/right_angled_sharp_dimension_bounds.pdf",
+      "bytes": 207718,
+      "sha256": "3f769dc4f35404fcaf6aead34f9f6adde83fc6fdbd29a2e458f6642d2b2d1150"
+    },
+    {
+      "path": "formal/CoxeterProofs/RightAngledSharpDimensions.lean",
+      "bytes": 12758,
+      "sha256": "e1844d73a3f07de6cc512e514b948dafef4253e272b3f98de36148543554e323"
+    },
+    {
+      "path": "formal/lean-toolchain",
+      "bytes": 25,
+      "sha256": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273"
+    },
+    {
+      "path": "formal/lakefile.toml",
+      "bytes": 113,
+      "sha256": "73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7"
+    },
+    {
+      "path": "formal/lake-manifest.json",
+      "bytes": 145,
+      "sha256": "31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395"
+    },
+    {
+      "path": "scripts/check_right_angled_sharp_dimension_sos_20261020.py",
+      "bytes": 7217,
+      "sha256": "bd0ed1c4c1b7e18a219a2a8aca2b178dbe1d559d7e9ec90ad609150aedf8b2c3"
+    },
+    {
+      "path": "scripts/check_ideal_right_angled_dimension4_model_20261020.py",
+      "bytes": 3612,
+      "sha256": "bb506ec1ee98dee1429d6e668553af40316ebdeda6b59b82bbf03b8f3a6dc261"
+    },
+    {
+      "path": "scripts/verify_manuscript.py",
+      "bytes": 12151,
+      "sha256": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1"
+    },
+    {
+      "path": "scripts/run_bounded_research_check_20261018.py",
+      "bytes": 5703,
+      "sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132"
+    },
+    {
+      "path": "scripts/build_illustrated_ra_manuscript_20261018.py",
+      "bytes": 6606,
+      "sha256": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15"
+    },
+    {
+      "path": "scripts/run_lean_batches_signal_safe_20261018.py",
+      "bytes": 1234,
+      "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d"
+    },
+    {
+      "path": "scripts/run_lean_batches_20261018.py",
+      "bytes": 14192,
+      "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c"
+    },
+    {
+      "path": "results/right_angled_dimension8_descending_height_proof_20261020.md",
+      "bytes": 7280,
+      "sha256": "9470fa1fa3a973a12c412fbc1257537655536dba4ffc4e9ac23c320615babdbe"
+    },
+    {
+      "path": "results/review_right_angled_dimension8_descent_root_20261020.md",
+      "bytes": 4273,
+      "sha256": "9537cdf8b0a063ccfb76748492ae28d02b4e58c2e85be7bb666b52bf3e6ebe0d"
+    },
+    {
+      "path": "results/review_right_angled_dimension8_descent_finite57_20261020.md",
+      "bytes": 6116,
+      "sha256": "ebf44d2fd121a386d54bc6f60b370d9c218b6e26ca3f4225c377025dc0de529a"
+    },
+    {
+      "path": "results/review_right_angled_dimension8_descending_height_batch_guard_20261020.md",
+      "bytes": 6271,
+      "sha256": "5ab3cc583f37df60153494647acc260f06e6977ec93fa20d3fb6ddb93710737a"
+    },
+    {
+      "path": "results/review_right_angled_sharp_dimensions_manuscript_root_20261020.md",
+      "bytes": 4162,
+      "sha256": "0df7d263db82cc04fdf7fd5ba05bb2aaf453a6e136c4ff2490bf0536f5088a10"
+    },
+    {
+      "path": "results/review_right_angled_sharp_dimension_bounds_finite57_20261020.md",
+      "bytes": 6994,
+      "sha256": "f05703bf727e96408ae018939ffcecaceda27bd9239b1fdeec7e4fef2d0a5d4c"
+    },
+    {
+      "path": "results/review_right_angled_sharp_dimensions_translation_batch_guard_20261020.md",
+      "bytes": 5527,
+      "sha256": "ab5725a8544e9a76bce698fdc2addacf56a82986392cbf35d75e067f7a00f5af"
+    },
+    {
+      "path": "results/review_right_angled_sharp_final_sources_root_20261020.md",
+      "bytes": 4089,
+      "sha256": "07561610e82aa651b31a67ffe8355c839651917e9117f979622fac8bfea57239"
+    },
+    {
+      "path": "results/review_right_angled_sharp_dimensions_lean_interface_finite57_20261020.md",
+      "bytes": 3058,
+      "sha256": "698736dd5b7c03c6a734fbedf59d2dcc3084aa0336327c27981597c0d2ce936e"
+    },
+    {
+      "path": "results/review_right_angled_sharp_dimension_sos_worker_root_20261020.md",
+      "bytes": 2372,
+      "sha256": "9832c3fb904992215e1c7f8b0914e315f7bcfad291988594f7c1e87fee5b98a3"
+    },
+    {
+      "path": "results/review_right_angled_sharp_dimension_sos_resource_20261020.md",
+      "bytes": 2874,
+      "sha256": "6e79dc698a04d46a839492f6edf420a0e91d41c960824135234e44113dfde193"
+    },
+    {
+      "path": "results/right_angled_sharp_dimension_sos_20261020.json",
+      "bytes": 1610,
+      "sha256": "3be4dc597c00c8b96198fb95cd362612316da858606e1c5789511e3ad4655b46"
+    },
+    {
+      "path": "results/right_angled_sharp_sos_generation_20261020.json",
+      "bytes": 742,
+      "sha256": "90ed11994d52144b0aa0ee7b441ed75226e776451b80c5df157588d3e832f194"
+    },
+    {
+      "path": "results/ideal_right_angled_dimension4_model_check_20261020.json",
+      "bytes": 1040,
+      "sha256": "89263f26b64cfc5bcecdcdd311dfa2806167862cf5826a048fcca6194ab93ede"
+    },
+    {
+      "path": "results/right_angled_sharp_core_verification_20261020.json",
+      "bytes": 10962,
+      "sha256": "24573813c46aef2a50146fd4db61e0efb3616a697a599af27dcde8abc9e4ea31"
+    },
+    {
+      "path": "results/right_angled_sharp_dimension_bounds_build_20261018.json",
+      "bytes": 878,
+      "sha256": "5d4d3006cc59520718963fa95a591876e7e6dff9aab5ee5e3456cf501b6a0dac"
+    },
+    {
+      "path": "results/right_angled_sharp_dimensions_figure_visual_review_20261020.json",
+      "bytes": 582,
+      "sha256": "8583a67831ab2d230e96abd4547815ba38c36f82b76a78e56772e2c693fbdf70"
+    },
+    {
+      "path": "results/right_angled_sharp_dimensions_figure_render_20261020.json",
+      "bytes": 1110,
+      "sha256": "8e5cf66637a3b286fc327a149f5190aa2f002dd874c7ebf5aa69d249d831e902"
+    },
+    {
+      "path": "results/right_angled_sharp_lean_compile_20261020.json",
+      "bytes": 1523,
+      "sha256": "e8ce17219350a1cb01290e1d03f3467a50fbc0a72cee0917e50bac958ecb63f1"
+    },
+    {
+      "path": "results/right_angled_sharp_lean_axiom_audit_20261020.json",
+      "bytes": 1443,
+      "sha256": "6158a46269fe471f53e5fd4961841d4091a1708e6c379641f0b5feda3038f671"
+    },
+    {
+      "path": "results/right_angled_sharp_lean_axiom_summary_20261020.json",
+      "bytes": 1593,
+      "sha256": "6ea8786054b110ca2241589e4d8396ca0aebd95280fcc85accc9d18b9b5c347d"
+    },
+    {
+      "path": "results/right_angled_sharp_core_input_snapshots_20261020.json",
+      "bytes": 574,
+      "sha256": "e7f0b1d0edceeac383e593c487d302c0af781db66253d0d563bb02f7971f55c6"
+    },
+    {
+      "path": "results/right_angled_sharp_final_catalogue_entry_20261020.json",
+      "bytes": 4610,
+      "sha256": "449b6b4a93abdc35f2ac49facd0791d4093aaddd93d91fbee2dced86561842a0"
+    },
+    {
+      "path": "results/right_angled_sharp_final_resource_and_cleanup_20261020.json",
+      "bytes": 714,
+      "sha256": "f991c0b22c957b6be17a629cf548ec9a139532a6431936d453af4ea87751395f"
+    },
+    {
+      "path": "results/right_angled_sharp_first_layout_archives_20261020.json",
+      "bytes": 1022,
+      "sha256": "af8dc48f315ed058a3ddfd7b7d6fe3f9f3dd4bcf35217d4333d0da615127c456"
+    },
+    {
+      "path": "manuscripts/source_archives/right_angled_sharp_catalogue_20261020.json.gz",
+      "bytes": 18064,
+      "sha256": "24f2407744ec810a941e26602956b385a9086d714dfec4ff54f78872880644de"
+    },
+    {
+      "path": "manuscripts/source_archives/right_angled_sharp_assumptions_20261020.md.gz",
+      "bytes": 11334,
+      "sha256": "628ef27b2718dd8c47368ba074233c874cbd824cc9e5769cc0913a569ce338c8"
+    },
+    {
+      "path": "manuscripts/source_archives/right_angled_sharp_dimension_bounds.tex.first_layout_20261020.gz",
+      "bytes": 6156,
+      "sha256": "5378834cff2d39d2846f04256b8b4de6e5bbcc0978cdddf4e9bcce9cbd3c3b64"
+    },
+    {
+      "path": "manuscripts/source_archives/right_angled_sharp_dimension_bounds.pdf.first_layout_20261020.gz",
+      "bytes": 202381,
+      "sha256": "b35f6050fafa95f77b4b49bac69697d3104634c46755521d8ae1c148b86a7ab8"
+    },
+    {
+      "path": "manuscripts/source_archives/right_angled_sharp_dimension_bounds_build_20261018.json.first_layout_20261020.gz",
+      "bytes": 657,
+      "sha256": "50e6f115ad173f1401b55a7b816bad0a73e09d16a5dafd53773a9d5fd6bec3d3"
+    },
+    {
+      "path": "docs/right_angled_sharp_dimensions_proof_map_20261020.md",
+      "bytes": 9142,
+      "sha256": "d485f9c5bf6be253f4b585716c6f4b4ef6eaa3143193dfb5826e105078cbc273"
+    }
+  ]
+}

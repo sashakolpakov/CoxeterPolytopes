@@ -1,0 +1,38 @@
+{
+  "status": "PASS_SEPARATE_ARITHMETIC_REPLAY_OF_COMPLETE_CASES",
+  "sources": {
+    "results/fresh_h9_bugaenko_closure_20261014_search_524_525.json": "62b0bd1425889cd6ae972575b21600ddad68f9012709e8ba66a3609f551b7208",
+    "results/fresh_h9_bugaenko_surgery_20261014_incidence.json": "99984b34dc331217c858f4ced958e5e1a4371485dea9b4c62f4ad543108999b1",
+    "scripts/fresh_h9_bugaenko_closure_20261014_search_audit.py": "7754c70f5d43dfe3116ed2dafc385e589ca31f332e62dd195d4a71df861cd6d0",
+    "scripts/fresh_h9_bugaenko_closure_20261014_search.py": "942b43b4117f67a358588ee54951ccbe76e46ea759c749a9f78db884c3fb403c",
+    "scripts/fresh_h9_bugaenko_closure_20261014.py": "d67930f2fb26b3a7db4b1d331c859e3d11e0a62d2f50d041edd79e1ddb6f8545",
+    "scripts/fresh_h9_bugaenko_surgery_20261014_rank_independent.py": "de14ae8f49400d5026f7eada32d63b45afd5b451889b003733991e6cca01900d"
+  },
+  "input": "results/fresh_h9_bugaenko_closure_20261014_search_524_525.json",
+  "range": [
+    524,
+    525
+  ],
+  "complete_cases_checked": 1,
+  "records": [
+    {
+      "case": 524,
+      "evaluated_states": 1206,
+      "visits": 2666,
+      "verdict": "EXACT_COMPLETE_OBSTRUCTION"
+    }
+  ],
+  "finite_classifier_cache": [
+    1133180,
+    3007,
+    null,
+    3007
+  ],
+  "modular_determinant_cache": [
+    0,
+    0,
+    null,
+    0
+  ],
+  "scope": "The finite Coxeter diagram classifier is separately implemented and the modular determinant uses SymPy finite-field arithmetic. The DFS traversal, canonical-state construction, incidence catalog and Lanner tables are reused and source-bound. Limited cases are deliberately not counted as exclusions; this is not a second independently written search."
+}

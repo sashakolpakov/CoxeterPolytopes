@@ -1,0 +1,220 @@
+{
+  "basis": {
+    "determinant_field_norm": -1,
+    "determinant_up_to_sign": "phi-1",
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "candidate_id": "og10_golden_h10_carrier",
+  "certificate_kind": "exact_bounded_OG10_golden_prefix_stabilizer",
+  "checks": {
+    "all_height_zero_diagram_extensions_are_field_isometries": true,
+    "all_roots_have_field_norm_two": true,
+    "archived_prefixes_are_nested_171_321_457": true,
+    "binary_translation_characteristic_polynomial_t2_minus_3phi_t_plus_1": true,
+    "binary_translation_has_expected_block": true,
+    "binary_translation_is_infinite_order": true,
+    "binary_translation_is_integral_isometry": true,
+    "binary_translation_retains_only_nine_archived_walls": true,
+    "every_prefix_has_unique_exact_gram_row_multisets": true,
+    "first_eleven_roots_form_a_Z_phi_basis": true,
+    "height_zero_diagram_group_has_order_two": true,
+    "isolated_A1_swap_has_no_integral_extension": true,
+    "p_has_norm_minus_2_minus_8phi_and_height_zero_orthogonal": true,
+    "selected_p_ray_height_zero_stabilizer_is_identity": true
+  },
+  "conclusion": "the_setwise_stabilizer_in_O(H_OG,Z[phi])_of_each_archived_oriented_wall_prefix_is_trivial;_this_is_a_bounded_prefix_theorem_and_does_not_compute_the_stabilizer_of_the_unfinished_infinite_wall_chamber",
+  "height_zero": {
+    "diagram_automorphisms": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      [
+        9,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        0
+      ]
+    ],
+    "extension_checks": [
+      {
+        "diagram_permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "integral_over_Z_phi": true,
+        "isometry_over_Q_phi": true,
+        "p_sign": 1,
+        "preserves_selected_p_ray": true
+      },
+      {
+        "diagram_permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "integral_over_Z_phi": true,
+        "isometry_over_Q_phi": true,
+        "p_sign": -1,
+        "preserves_selected_p_ray": false
+      },
+      {
+        "diagram_permutation": [
+          9,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0
+        ],
+        "integral_over_Z_phi": false,
+        "isometry_over_Q_phi": true,
+        "p_sign": 1,
+        "preserves_selected_p_ray": true
+      },
+      {
+        "diagram_permutation": [
+          9,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0
+        ],
+        "integral_over_Z_phi": false,
+        "isometry_over_Q_phi": true,
+        "p_sign": -1,
+        "preserves_selected_p_ray": false
+      }
+    ],
+    "integral_time_reversing_involution_characteristic_polynomial": "(t+1)*(t-1)^10"
+  },
+  "infinite_order_candidate": {
+    "binary_matrix": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    ],
+    "characteristic_polynomial_over_Z": "(t-1)^18*(t^4-3*t^3-7*t^2-3*t+1)",
+    "characteristic_polynomial_over_Z_phi": "(t-1)^9*(t^2-3*phi*t+1)",
+    "construction": "reflection(root_0) o reflection(root_10)",
+    "identity_embedding_spectral_radius_decimal": "4.638515763465525",
+    "retained_oriented_wall_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "retained_unoriented_wall_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "stabilizes_457_wall_prefix": false
+  },
+  "prefixes": [
+    {
+      "artifact": "data/candidates/og10_golden_vinberg_bound8.json",
+      "distinct_exact_gram_row_multisets": 171,
+      "largest_fingerprint_multiplicity": 1,
+      "ordered_fingerprint_sha256": "bc67833ef2f38bdfd43c5b2febbd5b18104e413d6d69eb83a71433e3be353e6b",
+      "oriented_wall_set_stabilizer": "identity",
+      "wall_count": 171
+    },
+    {
+      "artifact": "data/candidates/og10_golden_vinberg_through_2_plus_4phi.json",
+      "distinct_exact_gram_row_multisets": 321,
+      "largest_fingerprint_multiplicity": 1,
+      "ordered_fingerprint_sha256": "f3d4c2c468abefd0404afd758e4886365b5f79b76f783fe5aef5fb79b0a08268",
+      "oriented_wall_set_stabilizer": "identity",
+      "wall_count": 321
+    },
+    {
+      "artifact": "data/candidates/og10_golden_vinberg_through_3_plus_4phi.json",
+      "distinct_exact_gram_row_multisets": 457,
+      "largest_fingerprint_multiplicity": 1,
+      "ordered_fingerprint_sha256": "0358ead0c3e9457ef1ba68b3c8f67cdb2b542dbfe79af94609aacc7602b2ccbf",
+      "oriented_wall_set_stabilizer": "identity",
+      "wall_count": 457
+    }
+  ],
+  "schema_version": "0.1.0",
+  "verified": true
+}

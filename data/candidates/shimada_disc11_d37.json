@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status_date": "2026-08-04",
+  "analysis_id": "shimada_disc11_physical_D37_eigensection",
+  "status": "exact_branch_choice_local_section_and_internal_first_star_verified",
+  "source_sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68",
+  "branch_selection": {
+    "D84_root_facets": 6,
+    "D37_root_facets": 9,
+    "selected": 37,
+    "D84_certificate": "six exact root-face witnesses and six exact redundant-root dependences"
+  },
+  "physical_state": {
+    "entry": {"representative": 61, "wall": [23, 0]},
+    "representative": 37,
+    "state_sha256": "05cd8cd6b937051b00917a0ea7eef69ce0108b0a11e18a7cddde065376a9008e",
+    "physical_wall_set_sha256": "0998d5e9845d9cce86a9b8d8c41a828aa50c42a01efb9b8bc57a324b68fe536c"
+  },
+  "local_section": {
+    "ambient_primitive_walls": 31,
+    "positive_proportional_classes": 22,
+    "irredundant_facets": 11,
+    "root_facets": 9,
+    "internal_facets": 2,
+    "exact_face_witnesses": 11,
+    "exact_positive_redundancy_dependences": 11
+  },
+  "root_filter": {
+    "ambient_minus_two_walls": 20,
+    "integral_field_roots": 19,
+    "shell_distribution": {"2": 9, "4 - 2*phi": 10},
+    "field_span_rank": 10,
+    "unique_non_field_root_wall": [11, 0],
+    "field_root_nonfacet_wall": [10, 0]
+  },
+  "internal_first_star": [
+    {"wall": [20, 0], "target": 61, "same_physical_D61": true},
+    {"wall": [21, 0], "target": 22, "new_physical_state": true}
+  ],
+  "report": "results/shimada_disc11_d37.md",
+  "verifier": "scripts/analyze_shimada_disc11_d37.py",
+  "tests": "tests/test_shimada_disc11_d37.py"
+}

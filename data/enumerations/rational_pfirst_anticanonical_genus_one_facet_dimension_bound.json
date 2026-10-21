@@ -1,0 +1,97 @@
+{
+  "all_checks_pass": true,
+  "exact_returns": [
+    {
+      "F_square": -1,
+      "K_dot_F": 1,
+      "anticanonical_facet": [
+        3,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "arithmetic_genus": 1,
+      "complete_nef_cone_certified": true,
+      "facet_count": 12,
+      "finite_vertices": 17,
+      "hyperideal_rays": 0,
+      "ideal_vertices": 2,
+      "known_chamber": "Vinberg P10, 12 facets, finite-volume noncompact",
+      "lattice": "I_(1,10) with basis H,E1,...,E10",
+      "n": 10,
+      "reflection_integral": true,
+      "rho": 11,
+      "smooth_genus_one_in_source_construction": true,
+      "surface": "blow up a smooth plane cubic successively at 10 infinitely-near points along the cubic above a flex"
+    },
+    {
+      "F_square": -2,
+      "K_dot_F": 2,
+      "anticanonical_facet": [
+        3,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "arithmetic_genus": 1,
+      "complete_nef_cone_certified": true,
+      "facet_count": 13,
+      "finite_vertices": 26,
+      "hyperideal_rays": 0,
+      "ideal_vertices": 2,
+      "known_chamber": "Vinberg P11, 13 facets, finite-volume noncompact",
+      "lattice": "I_(1,11) with basis H,E1,...,E11",
+      "n": 11,
+      "reflection_integral": true,
+      "rho": 12,
+      "smooth_genus_one_in_source_construction": true,
+      "surface": "blow up a smooth plane cubic successively at 11 infinitely-near points along the cubic above a flex"
+    }
+  ],
+  "schema": "rational-pfirst-anticanonical-genus-one-facet-dimension-bound-v1",
+  "scope": {
+    "facet_is_literal_curve_class_not_only_same_hyperplane": true,
+    "genus_means_arithmetic_genus_one; endpoint cubics are smooth": true,
+    "not_claimed": [
+      "every rational full-nef chamber has an anticanonical facet",
+      "a bound for facets proportional to -K with nonprimitive curve class",
+      "a bound for adapted (-4) boundary facets B=2b",
+      "classification of all chambers in dimensions 10 and 11"
+    ]
+  },
+  "source_archive": "data/enumerations/other_algebraic_reservoirs_certificate.json",
+  "source_archive_sha256": "bb02c9fdf14d3370e97ffd2bb89a3a7801f8bd578fe73972810b2ddc4e58882e",
+  "status": "PASS_SHARP_ANTICANONICAL_FACET_BOUND_N_LE_11",
+  "theorem": {
+    "bound": "n<=11",
+    "classification_inputs": [],
+    "deduction": [
+      "NS(S) is unimodular and K_S is primitive",
+      "F^2 is a negative divisor of 2",
+      "F^2=K_S^2 is -1 or -2",
+      "rho(S)=11 or 12",
+      "hyperbolic nef dimension n=rho-1 is 10 or 11"
+    ],
+    "hypotheses": [
+      "S smooth projective rational with rho(S)>=3",
+      "F=-K_S is a reduced irreducible negative curve defining a genuine full-nef facet",
+      "reflection in F-perp preserves NS(S)"
+    ],
+    "sharp": true
+  }
+}

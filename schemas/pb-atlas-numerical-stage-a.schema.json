@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://coxeter-polytopes.local/schemas/pb-atlas-numerical-stage-a.schema.json",
+  "title": "PB-Atlas numerical all-contraction Stage-A certificate",
+  "type": "object",
+  "required": [
+    "schema",
+    "scope",
+    "input",
+    "validation",
+    "symmetry_quotient",
+    "contraction_level_census",
+    "hirzebruch_endpoint_orbits",
+    "hirzebruch_labelled_histogram",
+    "P2_endpoint_orbits",
+    "P2_labelled_count",
+    "stage_B_contract",
+    "all_checks_pass"
+  ],
+  "properties": {
+    "schema": {
+      "const": "coxeter.pb_atlas.numerical_contraction_stage_a.v1"
+    },
+    "scope": {"type": "string"},
+    "input": {
+      "type": "object",
+      "required": [
+        "rank",
+        "wall_count",
+        "boundary_count",
+        "boundary_indices_zero_based",
+        "boundary_weights",
+        "array_payload_sha256",
+        "only_arrays_entered_recognizer"
+      ]
+    },
+    "validation": {"type": "object"},
+    "symmetry_quotient": {
+      "type": "object",
+      "required": [
+        "full_marked_wall_gram_automorphism_group_order",
+        "automorphism_permutations_zero_based",
+        "canonical_mask_cache_size",
+        "exactness"
+      ]
+    },
+    "contraction_level_census": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "depth",
+          "orbit_count",
+          "labelled_frame_count",
+          "transition_orbit_count"
+        ],
+        "properties": {
+          "depth": {"type": "integer", "minimum": 0},
+          "orbit_count": {"type": "integer", "minimum": 0},
+          "labelled_frame_count": {"type": "integer", "minimum": 0},
+          "transition_orbit_count": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "hirzebruch_endpoint_orbits": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/endpointOrbit"}
+    },
+    "hirzebruch_labelled_histogram": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "P2_endpoint_orbits": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/endpointOrbit"}
+    },
+    "P2_labelled_count": {"type": "integer", "minimum": 0},
+    "stage_B_contract": {"type": "object"},
+    "all_checks_pass": {"const": true}
+  },
+  "$defs": {
+    "mask": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]+$"
+    },
+    "integerMatrix": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {"type": "integer"}
+      }
+    },
+    "endpointOrbit": {
+      "type": "object",
+      "required": ["representative_mask", "orbit_size", "member_masks", "program"],
+      "properties": {
+        "representative_mask": {"$ref": "#/$defs/mask"},
+        "orbit_size": {"type": "integer", "minimum": 1},
+        "member_masks": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/mask"}
+        },
+        "program": {"$ref": "#/$defs/endpointProgram"}
+      }
+    },
+    "endpointProgram": {
+      "type": "object",
+      "required": [
+        "endpoint_kind",
+        "hirzebruch_e",
+        "hirzebruch_minimal",
+        "contracted_wall_indices_zero_based",
+        "sequential_contraction_order_zero_based",
+        "strict_contracted_wall_gram",
+        "model_basis_in_input_picard_coordinates",
+        "total_exceptional_basis_in_input_picard_coordinates",
+        "endpoint_blowup_basis_gram",
+        "canonical_coordinates_in_endpoint_blowup_basis",
+        "nef_rays_in_model_basis",
+        "all_wall_coordinates_in_endpoint_blowup_basis",
+        "all_wall_endpoint_image_coordinates",
+        "boundary",
+        "contraction_trace",
+        "permutation_invariant_profile_sha256",
+        "stage_B_payload_complete"
+      ],
+      "properties": {
+        "endpoint_kind": {"enum": ["P2", "F_e"]},
+        "hirzebruch_e": {"type": ["integer", "null"], "minimum": 0},
+        "hirzebruch_minimal": {"type": ["boolean", "null"]},
+        "contracted_wall_indices_zero_based": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "integer", "minimum": 0}
+        },
+        "sequential_contraction_order_zero_based": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "integer", "minimum": 0}
+        },
+        "strict_contracted_wall_gram": {"$ref": "#/$defs/integerMatrix"},
+        "model_basis_in_input_picard_coordinates": {"$ref": "#/$defs/integerMatrix"},
+        "total_exceptional_basis_in_input_picard_coordinates": {"$ref": "#/$defs/integerMatrix"},
+        "endpoint_blowup_basis_gram": {"$ref": "#/$defs/integerMatrix"},
+        "canonical_coordinates_in_endpoint_blowup_basis": {
+          "type": "array",
+          "items": {"type": "integer"}
+        },
+        "nef_rays_in_model_basis": {"$ref": "#/$defs/integerMatrix"},
+        "all_wall_coordinates_in_endpoint_blowup_basis": {"$ref": "#/$defs/integerMatrix"},
+        "all_wall_endpoint_image_coordinates": {"$ref": "#/$defs/integerMatrix"},
+        "boundary": {"type": "array"},
+        "contraction_trace": {"type": "array"},
+        "permutation_invariant_profile_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "stage_B_payload_complete": {"const": true}
+      }
+    }
+  }
+}

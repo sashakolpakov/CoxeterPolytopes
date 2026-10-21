@@ -1,0 +1,6825 @@
+{
+  "all_checks_pass": true,
+  "claim_boundary": {
+    "full_nef_cone_claim": false,
+    "h13_abstract_source": "Tumarkin 2004, already in the pinned CoxIter corpus",
+    "new_abstract_polytopes": false,
+    "new_project_lineage_interpretation": true,
+    "precise_cone_claim": "Cremona fundamental sector of the K-negative nef-effective cone",
+    "reason_not_L4": "the surface theorem supplies the cone, while the Coxeter angle test itself selects 10,11,13; no independent AG classification pushes back to a new theorem on an a-priori polytope class",
+    "reflection_integral_on_NS_in_H13": false,
+    "strict_inverse_L4": false
+  },
+  "coxiter_snapshot": {
+    "commit": "b800be48d8240fbabd2d1c9542e61054584ad7fe",
+    "records": {
+      "10": {
+        "relative_path": "graphs/group units qf/10-1,1,1,1,1,1,1,1,1,1,1.coxiter",
+        "sha256": "a8e8618529200271e4be249442ec283c65f222372ece8d1910476433f57ce43e"
+      },
+      "11": {
+        "relative_path": "graphs/group units qf/11-1,1,1,1,1,1,1,1,1,1,1,1.coxiter",
+        "sha256": "fbec0cc4d22509b42f8aa2b692b3cd568745c8f869b05f564f30b21a9372534b"
+      },
+      "13": {
+        "relative_path": "graphs/Tumarkin pyramids n+2/13-tum04_13_01.coxiter",
+        "sha256": "d1de070e5aa7cc90292f21424625ee8ef7dfbe718d004fb8434cc8beee0b35c8"
+      }
+    },
+    "repository": "https://github.com/rgugliel/CoxIter"
+  },
+  "exact_arithmetic_replay": {
+    "all_n_ge_10_coxeter_criterion": [
+      10,
+      11,
+      13
+    ],
+    "criterion_proof_partition": {
+      "n=10": "theta=0 (parallel)",
+      "n=11": "theta=pi/4",
+      "n=12": "pi/4 < theta < pi/3, hence theta is not pi/m",
+      "n=13": "theta=pi/3",
+      "n>=14": "pi/3 < theta < pi/2, hence theta is not pi/m"
+    },
+    "general_terminal_angle": "cos(theta_n)^2 = 1/(n-9)",
+    "packages": {
+      "10": {
+        "algebraic_cone": "Nef^e(S_n) intersect {D.K_S <= 0}, modulo the Cremona action",
+        "all_checks_pass": true,
+        "checks": {
+          "all_facets_irredundant": true,
+          "ambient_signature": true,
+          "canonical_reflection_integral_iff_n_minus_9_divides_2": true,
+          "exact_ray_formula": true,
+          "finite_volume_from_no_hyperideal_rays": true,
+          "physical_walls_span_NS_index_one": true,
+          "terminal_pairing_exact": true,
+          "wall_gram_inertia": true,
+          "wall_rank": true
+        },
+        "coxeter_edges": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            3,
+            4,
+            3
+          ],
+          [
+            3,
+            11,
+            3
+          ],
+          [
+            4,
+            5,
+            3
+          ],
+          [
+            5,
+            6,
+            3
+          ],
+          [
+            6,
+            7,
+            3
+          ],
+          [
+            7,
+            8,
+            3
+          ],
+          [
+            8,
+            9,
+            3
+          ],
+          [
+            9,
+            10,
+            4
+          ],
+          [
+            10,
+            12,
+            0
+          ]
+        ],
+        "dimension": 10,
+        "facet_count": 12,
+        "facet_support_ranks": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "is_coxeter": true,
+        "labels": [
+          "E1-E2",
+          "E2-E3",
+          "E3-E4",
+          "E4-E5",
+          "E5-E6",
+          "E6-E7",
+          "E7-E8",
+          "E8-E9",
+          "E9-E10",
+          "E10",
+          "H-E1-E2-E3",
+          "-K=3H-E1-...-En"
+        ],
+        "lineage": {
+          "coxiter_relative_path": "graphs/group units qf/10-1,1,1,1,1,1,1,1,1,1,1.coxiter",
+          "coxiter_sha256": "a8e8618529200271e4be249442ec283c65f222372ece8d1910476433f57ce43e",
+          "exact_weighted_graph_isomorphism": true,
+          "name": "Vinberg P10 / odd-unimodular full chamber"
+        },
+        "physical_divisor_columns": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ]
+        ],
+        "physical_gram": [
+          [
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1
+          ]
+        ],
+        "ray_census": {
+          "finite": 17,
+          "hyperideal": 0,
+          "ideal": 2,
+          "primitive_rays": [
+            {
+              "square": 0,
+              "vector": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                2,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 0,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 3,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 5,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                7,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                10,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 18,
+              "vector": [
+                14,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4
+              ]
+            },
+            {
+              "square": 20,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                18,
+                -6,
+                -6,
+                -6,
+                -6,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5
+              ]
+            },
+            {
+              "square": 42,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6
+              ]
+            }
+          ],
+          "total": 19
+        },
+        "reflection_rows": [
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E1-E2"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E3-E4"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E4-E5"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E5-E6"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E6-E7"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E7-E8"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E8-E9"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E9-E10"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -1,
+            "wall": "E10"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "H-E1-E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -1,
+            "wall": "-K=3H-E1-...-En"
+          }
+        ],
+        "surface": "blow-up S_10 of P2 at 10 very general points",
+        "terminal_cosine_squared": "1",
+        "terminal_relation": "infinity",
+        "wall_norm_histogram": {
+          "-1": 2,
+          "-2": 10
+        }
+      },
+      "11": {
+        "algebraic_cone": "Nef^e(S_n) intersect {D.K_S <= 0}, modulo the Cremona action",
+        "all_checks_pass": true,
+        "checks": {
+          "all_facets_irredundant": true,
+          "ambient_signature": true,
+          "canonical_reflection_integral_iff_n_minus_9_divides_2": true,
+          "exact_ray_formula": true,
+          "finite_volume_from_no_hyperideal_rays": true,
+          "physical_walls_span_NS_index_one": true,
+          "terminal_pairing_exact": true,
+          "wall_gram_inertia": true,
+          "wall_rank": true
+        },
+        "coxeter_edges": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            3,
+            4,
+            3
+          ],
+          [
+            3,
+            12,
+            3
+          ],
+          [
+            4,
+            5,
+            3
+          ],
+          [
+            5,
+            6,
+            3
+          ],
+          [
+            6,
+            7,
+            3
+          ],
+          [
+            7,
+            8,
+            3
+          ],
+          [
+            8,
+            9,
+            3
+          ],
+          [
+            9,
+            10,
+            3
+          ],
+          [
+            10,
+            11,
+            4
+          ],
+          [
+            11,
+            13,
+            4
+          ]
+        ],
+        "dimension": 11,
+        "facet_count": 13,
+        "facet_support_ranks": [
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        "is_coxeter": true,
+        "labels": [
+          "E1-E2",
+          "E2-E3",
+          "E3-E4",
+          "E4-E5",
+          "E5-E6",
+          "E6-E7",
+          "E7-E8",
+          "E8-E9",
+          "E9-E10",
+          "E10-E11",
+          "E11",
+          "H-E1-E2-E3",
+          "-K=3H-E1-...-En"
+        ],
+        "lineage": {
+          "coxiter_relative_path": "graphs/group units qf/11-1,1,1,1,1,1,1,1,1,1,1,1.coxiter",
+          "coxiter_sha256": "fbec0cc4d22509b42f8aa2b692b3cd568745c8f869b05f564f30b21a9372534b",
+          "exact_weighted_graph_isomorphism": true,
+          "name": "Vinberg P11 / odd-unimodular full chamber"
+        },
+        "physical_divisor_columns": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ]
+        ],
+        "physical_gram": [
+          [
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2
+          ]
+        ],
+        "ray_census": {
+          "finite": 26,
+          "hyperideal": 0,
+          "ideal": 2,
+          "primitive_rays": [
+            {
+              "square": 0,
+              "vector": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                2,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 0,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 3,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 5,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                4,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                7,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                8,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                10,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0
+              ]
+            },
+            {
+              "square": 22,
+              "vector": [
+                11,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3,
+                0
+              ]
+            },
+            {
+              "square": 24,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 18,
+              "vector": [
+                14,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 20,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                18,
+                -6,
+                -6,
+                -6,
+                -6,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0
+              ]
+            },
+            {
+              "square": 70,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5
+              ]
+            },
+            {
+              "square": 42,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                0
+              ]
+            }
+          ],
+          "total": 28
+        },
+        "reflection_rows": [
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E1-E2"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E3-E4"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E4-E5"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E5-E6"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E6-E7"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E7-E8"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E8-E9"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E9-E10"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E10-E11"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -1,
+            "wall": "E11"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "H-E1-E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "-K=3H-E1-...-En"
+          }
+        ],
+        "surface": "blow-up S_11 of P2 at 11 very general points",
+        "terminal_cosine_squared": "1/2",
+        "terminal_relation": 4,
+        "wall_norm_histogram": {
+          "-1": 1,
+          "-2": 12
+        }
+      },
+      "12": {
+        "algebraic_cone": "Nef^e(S_n) intersect {D.K_S <= 0}, modulo the Cremona action",
+        "all_checks_pass": true,
+        "checks": {
+          "all_facets_irredundant": true,
+          "ambient_signature": true,
+          "canonical_reflection_integral_iff_n_minus_9_divides_2": true,
+          "exact_ray_formula": true,
+          "finite_volume_from_no_hyperideal_rays": true,
+          "physical_walls_span_NS_index_one": true,
+          "terminal_pairing_exact": true,
+          "wall_gram_inertia": true,
+          "wall_rank": true
+        },
+        "dimension": 12,
+        "facet_count": 14,
+        "facet_support_ranks": [
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "is_coxeter": false,
+        "labels": [
+          "E1-E2",
+          "E2-E3",
+          "E3-E4",
+          "E4-E5",
+          "E5-E6",
+          "E6-E7",
+          "E7-E8",
+          "E8-E9",
+          "E9-E10",
+          "E10-E11",
+          "E11-E12",
+          "E12",
+          "H-E1-E2-E3",
+          "-K=3H-E1-...-En"
+        ],
+        "physical_divisor_columns": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ]
+        ],
+        "physical_gram": [
+          [
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -3
+          ]
+        ],
+        "ray_census": {
+          "finite": 35,
+          "hyperideal": 0,
+          "ideal": 2,
+          "primitive_rays": [
+            {
+              "square": 0,
+              "vector": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                2,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 0,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 3,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 5,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                4,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                7,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                8,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -5,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0
+              ]
+            },
+            {
+              "square": 18,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                10,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 22,
+              "vector": [
+                11,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 24,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0
+              ]
+            },
+            {
+              "square": 18,
+              "vector": [
+                14,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0
+              ]
+            },
+            {
+              "square": 20,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 66,
+              "vector": [
+                18,
+                -7,
+                -7,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                18,
+                -6,
+                -6,
+                -6,
+                -6,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 84,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4
+              ]
+            },
+            {
+              "square": 70,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0
+              ]
+            },
+            {
+              "square": 42,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 120,
+              "vector": [
+                24,
+                -8,
+                -8,
+                -8,
+                -8,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5
+              ]
+            }
+          ],
+          "total": 37
+        },
+        "reflection_rows": [
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E1-E2"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E3-E4"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E4-E5"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E5-E6"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E6-E7"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E7-E8"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E8-E9"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E9-E10"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E10-E11"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E11-E12"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -1,
+            "wall": "E12"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "H-E1-E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": false,
+            "isometry": true,
+            "square": -3,
+            "wall": "-K=3H-E1-...-En"
+          }
+        ],
+        "surface": "blow-up S_12 of P2 at 12 very general points",
+        "terminal_cosine_squared": "1/3",
+        "terminal_relation": null,
+        "wall_norm_histogram": {
+          "-1": 1,
+          "-2": 12,
+          "-3": 1
+        }
+      },
+      "13": {
+        "algebraic_cone": "Nef^e(S_n) intersect {D.K_S <= 0}, modulo the Cremona action",
+        "all_checks_pass": true,
+        "checks": {
+          "all_facets_irredundant": true,
+          "ambient_signature": true,
+          "canonical_reflection_integral_iff_n_minus_9_divides_2": true,
+          "exact_ray_formula": true,
+          "finite_volume_from_no_hyperideal_rays": true,
+          "physical_walls_span_NS_index_one": true,
+          "terminal_pairing_exact": true,
+          "wall_gram_inertia": true,
+          "wall_rank": true
+        },
+        "coxeter_edges": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            3,
+            4,
+            3
+          ],
+          [
+            3,
+            14,
+            3
+          ],
+          [
+            4,
+            5,
+            3
+          ],
+          [
+            5,
+            6,
+            3
+          ],
+          [
+            6,
+            7,
+            3
+          ],
+          [
+            7,
+            8,
+            3
+          ],
+          [
+            8,
+            9,
+            3
+          ],
+          [
+            9,
+            10,
+            3
+          ],
+          [
+            10,
+            11,
+            3
+          ],
+          [
+            11,
+            12,
+            3
+          ],
+          [
+            12,
+            13,
+            4
+          ],
+          [
+            13,
+            15,
+            3
+          ]
+        ],
+        "dimension": 13,
+        "facet_count": 15,
+        "facet_support_ranks": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "is_coxeter": true,
+        "labels": [
+          "E1-E2",
+          "E2-E3",
+          "E3-E4",
+          "E4-E5",
+          "E5-E6",
+          "E6-E7",
+          "E7-E8",
+          "E8-E9",
+          "E9-E10",
+          "E10-E11",
+          "E11-E12",
+          "E12-E13",
+          "E13",
+          "H-E1-E2-E3",
+          "-K=3H-E1-...-En"
+        ],
+        "lineage": {
+          "coxiter_relative_path": "graphs/Tumarkin pyramids n+2/13-tum04_13_01.coxiter",
+          "coxiter_sha256": "d1de070e5aa7cc90292f21424625ee8ef7dfbe718d004fb8434cc8beee0b35c8",
+          "exact_weighted_graph_isomorphism": true,
+          "name": "Tumarkin 13-tum04_13_01"
+        },
+        "physical_divisor_columns": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ]
+        ],
+        "physical_gram": [
+          [
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -4
+          ]
+        ],
+        "ray_census": {
+          "finite": 44,
+          "hyperideal": 0,
+          "ideal": 2,
+          "primitive_rays": [
+            {
+              "square": 0,
+              "vector": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                2,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 0,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 3,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 5,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                4,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                5,
+                -3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                5,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 8,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                7,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                8,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -5,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -1,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 18,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                10,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 22,
+              "vector": [
+                11,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 24,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 52,
+              "vector": [
+                13,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 18,
+              "vector": [
+                14,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 20,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 20,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 60,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 66,
+              "vector": [
+                18,
+                -7,
+                -7,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                18,
+                -6,
+                -6,
+                -6,
+                -6,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 84,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 84,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0
+              ]
+            },
+            {
+              "square": 70,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 42,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 120,
+              "vector": [
+                24,
+                -8,
+                -8,
+                -8,
+                -8,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0
+              ]
+            },
+            {
+              "square": 180,
+              "vector": [
+                27,
+                -9,
+                -9,
+                -9,
+                -9,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5
+              ]
+            }
+          ],
+          "total": 46
+        },
+        "reflection_rows": [
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E1-E2"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E3-E4"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E4-E5"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E5-E6"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E6-E7"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E7-E8"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E8-E9"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E9-E10"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E10-E11"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E11-E12"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E12-E13"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -1,
+            "wall": "E13"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "H-E1-E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": false,
+            "isometry": true,
+            "square": -4,
+            "wall": "-K=3H-E1-...-En"
+          }
+        ],
+        "surface": "blow-up S_13 of P2 at 13 very general points",
+        "terminal_cosine_squared": "1/4",
+        "terminal_relation": 3,
+        "wall_norm_histogram": {
+          "-1": 1,
+          "-2": 13,
+          "-4": 1
+        }
+      },
+      "14": {
+        "algebraic_cone": "Nef^e(S_n) intersect {D.K_S <= 0}, modulo the Cremona action",
+        "all_checks_pass": true,
+        "checks": {
+          "all_facets_irredundant": true,
+          "ambient_signature": true,
+          "canonical_reflection_integral_iff_n_minus_9_divides_2": true,
+          "exact_ray_formula": true,
+          "finite_volume_from_no_hyperideal_rays": true,
+          "physical_walls_span_NS_index_one": true,
+          "terminal_pairing_exact": true,
+          "wall_gram_inertia": true,
+          "wall_rank": true
+        },
+        "dimension": 14,
+        "facet_count": 16,
+        "facet_support_ranks": [
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14
+        ],
+        "is_coxeter": false,
+        "labels": [
+          "E1-E2",
+          "E2-E3",
+          "E3-E4",
+          "E4-E5",
+          "E5-E6",
+          "E6-E7",
+          "E7-E8",
+          "E8-E9",
+          "E9-E10",
+          "E10-E11",
+          "E11-E12",
+          "E12-E13",
+          "E13-E14",
+          "E14",
+          "H-E1-E2-E3",
+          "-K=3H-E1-...-En"
+        ],
+        "physical_divisor_columns": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            1,
+            0,
+            -1
+          ]
+        ],
+        "physical_gram": [
+          [
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -2,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -5
+          ]
+        ],
+        "ray_census": {
+          "finite": 53,
+          "hyperideal": 0,
+          "ideal": 2,
+          "primitive_rays": [
+            {
+              "square": 0,
+              "vector": [
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                2,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 0,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 1,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 3,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 5,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                3,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                4,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                4,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                5,
+                -3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                5,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 2,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 8,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                6,
+                -2,
+                -2,
+                -2,
+                -2,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 4,
+              "vector": [
+                7,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                8,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -5,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 6,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 18,
+              "vector": [
+                9,
+                -3,
+                -3,
+                -3,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 10,
+              "vector": [
+                10,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 20,
+              "vector": [
+                11,
+                -7,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 22,
+              "vector": [
+                11,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -1,
+                -1,
+                -1,
+                -1,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 12,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 24,
+              "vector": [
+                12,
+                -4,
+                -4,
+                -4,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 52,
+              "vector": [
+                13,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0
+              ]
+            },
+            {
+              "square": 18,
+              "vector": [
+                14,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 70,
+              "vector": [
+                14,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 20,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                0
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 20,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 60,
+              "vector": [
+                15,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0
+              ]
+            },
+            {
+              "square": 66,
+              "vector": [
+                18,
+                -7,
+                -7,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                18,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            },
+            {
+              "square": 30,
+              "vector": [
+                18,
+                -6,
+                -6,
+                -6,
+                -6,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 70,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            },
+            {
+              "square": 84,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                0
+              ]
+            },
+            {
+              "square": 84,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -7,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 70,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -7,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 42,
+              "vector": [
+                21,
+                -7,
+                -7,
+                -7,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 130,
+              "vector": [
+                22,
+                -9,
+                -9,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4
+              ]
+            },
+            {
+              "square": 120,
+              "vector": [
+                24,
+                -8,
+                -8,
+                -8,
+                -8,
+                -8,
+                -8,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3
+              ]
+            },
+            {
+              "square": 120,
+              "vector": [
+                24,
+                -8,
+                -8,
+                -8,
+                -8,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0,
+                0
+              ]
+            },
+            {
+              "square": 180,
+              "vector": [
+                27,
+                -9,
+                -9,
+                -9,
+                -9,
+                -9,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4,
+                -4
+              ]
+            },
+            {
+              "square": 180,
+              "vector": [
+                27,
+                -9,
+                -9,
+                -9,
+                -9,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                0
+              ]
+            },
+            {
+              "square": 330,
+              "vector": [
+                33,
+                -11,
+                -11,
+                -11,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6,
+                -6
+              ]
+            }
+          ],
+          "total": 55
+        },
+        "reflection_rows": [
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E1-E2"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E3-E4"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E4-E5"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E5-E6"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E6-E7"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E7-E8"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E8-E9"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E9-E10"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E10-E11"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E11-E12"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E12-E13"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "E13-E14"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -1,
+            "wall": "E14"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": true,
+            "isometry": true,
+            "square": -2,
+            "wall": "H-E1-E2-E3"
+          },
+          {
+            "determinant": -1,
+            "integral_on_NS": false,
+            "isometry": true,
+            "square": -5,
+            "wall": "-K=3H-E1-...-En"
+          }
+        ],
+        "surface": "blow-up S_14 of P2 at 14 very general points",
+        "terminal_cosine_squared": "1/5",
+        "terminal_relation": null,
+        "wall_norm_histogram": {
+          "-1": 1,
+          "-2": 14,
+          "-5": 1
+        }
+      }
+    },
+    "tested_dimensions": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  "h13_lineage_separation": {
+    "durso": {
+      "name": "Tumarkin 13-tum04_13_01",
+      "ray_split": [
+        44,
+        2,
+        0
+      ]
+    },
+    "project_existing": {
+      "edges": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          5,
+          6,
+          3
+        ],
+        [
+          6,
+          7,
+          3
+        ],
+        [
+          7,
+          8,
+          3
+        ],
+        [
+          8,
+          9,
+          3
+        ],
+        [
+          9,
+          10,
+          3
+        ],
+        [
+          10,
+          11,
+          3
+        ],
+        [
+          11,
+          12,
+          3
+        ],
+        [
+          12,
+          13,
+          4
+        ],
+        [
+          11,
+          14,
+          3
+        ],
+        [
+          3,
+          15,
+          3
+        ]
+      ],
+      "name": "Vinberg P13 / Tumarkin 13-tum04_13_02",
+      "ray_split": [
+        43,
+        3,
+        0
+      ],
+      "relative_path": "graphs/Tumarkin pyramids n+2/13-tum04_13_02.coxiter",
+      "sha256": "871d05dd8911ee8f2ef3ca305753e3dcc1e7c7d1489f9a2fa005f45e6ce5b8d1"
+    },
+    "ray_splits_different": true,
+    "weighted_graphs_nonisomorphic": true
+  },
+  "schema": "durso_cremona_nef_coxeter_transfer_v1",
+  "source": {
+    "arxiv": "https://arxiv.org/abs/2412.15460",
+    "author": "Luize D'Urso",
+    "pdf_sha256": "f5b48d32f67c789a843e98aed1f05664cb35ff2526b8ef2606d41946c9399b39",
+    "title": "On the Nef cones of blowups of the projective plane",
+    "used_results": [
+      "Theorem 1.6",
+      "Proposition 6.1",
+      "Theorem 6.2",
+      "Proposition 6.3"
+    ],
+    "version": "v2",
+    "version_date": "2025-07-09"
+  },
+  "source_theorem_import": {
+    "independently_replayed_here": false,
+    "statement": "For every n>=10 the displayed cone is a finite-volume fundamental domain for the Cremona action on the K-negative nef-effective cone; it is Coxeter exactly for n=10,11,13."
+  }
+}

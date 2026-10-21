@@ -1,0 +1,107 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "all_27648_assignments_independently_generated": true,
+    "direct_orbits_match_component_stabilizer_formula": true,
+    "exact_characteristic_polynomial_Sturm_inertia_matches_all_18_production_orbits": true,
+    "positive_DFS_gauge_gives_18_complete_switching_orbits": true,
+    "rank_10_all_four_sheet_choices_force_integral_saturation_minus_two_root": true,
+    "rank_10_generated_lattice_is_E8_minus2_plus_two_minus4": true,
+    "rank_10_is_eliminated_by_L2_not_left_as_a_period_candidate": true,
+    "unique_rank_9_geometric_orbit_is_the_only_Type_I_anti_Gram_survivor": true,
+    "unique_rank_9_orbit_equals_geometric_package": true
+  },
+  "final_theorem": "For the Type-I 12A wall system, the 27,648 two-sheet anti-Grams reduce, after negative-semidefiniteness, half-sum glue, and saturated rootlessness, to the unique rank-nine geometric orbit up to independent sheet swaps.",
+  "independent_exact_inertia": {
+    "engine": "factorized exact characteristic polynomial plus Sturm root counts",
+    "rank_9_equals_geometric_package": true,
+    "raw_assignment_histogram": {
+      "p0_n10_z2": 512,
+      "p0_n9_z3": 1024,
+      "p1_n10_z1": 9216,
+      "p1_n11_z0": 512,
+      "p1_n9_z2": 2048,
+      "p2_n10_z0": 14336
+    },
+    "switch_orbit_histogram": {
+      "p0_n10_z2": 1,
+      "p0_n9_z3": 1,
+      "p1_n10_z1": 7,
+      "p1_n11_z0": 1,
+      "p1_n9_z2": 1,
+      "p2_n10_z0": 7
+    },
+    "unique_rank_10_nonpositive_orbit_before_L2": true,
+    "unique_rank_9_nonpositive_orbit": true
+  },
+  "independent_switching_census": {
+    "all_direct_orbits_replayed": true,
+    "canonical_gauge": "positive sorted depth-first spanning-forest edges",
+    "canonical_key_set_sha256": "4c2aa7b194a13dbb2e556874293751935825d576abda0ba36d91a66716cb5138",
+    "different_from_production_gauge": true,
+    "orbit_count": 18,
+    "orbit_size_histogram": {
+      "1024": 6,
+      "2048": 10,
+      "512": 2
+    },
+    "raw_assignment_count": 27648
+  },
+  "pinned_inputs": {
+    "explicit_package": "d9313e37687e355c9ca8f86d1ee11d74f0810a8c6906a0443f5377d2481fece7",
+    "production": "df864bed625d1411c7db46d7bbb500606ccb011297e420de8272e512ab2e22ea",
+    "shimada": "218c8188e467bde29369cdeda3771d767c3f70105d8fb56def8d698b90e75a6c"
+  },
+  "rank_ten_hostile_killer": {
+    "L2_rootlessness_fails": true,
+    "conclusion": "rank-ten orbit eliminated before embedding/period/L4",
+    "downstairs_root_half_sum": [
+      4,
+      2,
+      4,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "downstairs_root_sum": [
+      8,
+      4,
+      8,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2
+    ],
+    "e_is_anti_invariant": true,
+    "e_lies_in_saturation_of_anti_span": true,
+    "formula": "e=(eps_11*delta_11+eps_12*delta_12)/2=b_11^eps_11+b_12^eps_12-(u_11+u_12)/2",
+    "generated_lattice_before_saturation": "E8(-2)+<-4>+<-4>",
+    "generated_lattice_determinant_absolute": 4096,
+    "generated_lattice_rootless_by_norm_divisibility": true,
+    "integrality_source": "half-sum glue plus (r_11+r_12)/2 integral",
+    "orthogonal_wall_pair_one_based": [
+      11,
+      12
+    ],
+    "square_for_all_sheet_signs": {
+      "+1,+1": -2,
+      "+1,-1": -2,
+      "-1,+1": -2,
+      "-1,-1": -2
+    }
+  },
+  "remaining_scope": {
+    "new_polytope_or_surface_claimed": false,
+    "rank_ten_branch_survives": false,
+    "still_not_a_downstairs_construction_of_the_rank_nine_embedding_glue_period_L4_package": true
+  },
+  "schema": "enriques_type_i_downstairs_anti_gram_census_hostile_audit_v1",
+  "verdict": "PASS/FREEZE (strengthened: rank ten eliminated)"
+}

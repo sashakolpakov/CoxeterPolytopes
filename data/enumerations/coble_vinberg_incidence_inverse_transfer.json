@@ -1,0 +1,146 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "all_five_upstream_archives_green": true,
+    "both_returns_are_finite_volume_noncompact": true,
+    "surface_free_denominator_has_two_distinct_positive_ranks": true,
+    "type_mii_CM_is_causal_and_cusp_complete": true,
+    "type_mii_all_branch_grid_incidence_only_in_char3": true,
+    "type_mii_boundary_and_root_stock": true,
+    "type_mii_canonical_cover_is_supersingular_sigma_one": true,
+    "type_vi_CM_is_causal_and_vinberg_complete": true,
+    "type_vi_all_cusp_lifts_regenerate_raw_walls": true,
+    "type_vi_boundary_and_root_stock": true,
+    "type_vi_incidence_branch_exists_only_in_char3": true
+  },
+  "classification_pushback": {
+    "positive_high_dimensional_calibrations": [
+      {
+        "CM_cusp_count": 57,
+        "CM_root_count": 20,
+        "boundary_count": 5,
+        "exact_return": "27845 finite + 1027 ideal + 0 hyperideal rays",
+        "incidence_characteristics_not_two": [
+          3
+        ],
+        "raw_id": "H14/60",
+        "single_boundary_lift_count": 35
+      },
+      {
+        "CM_cusp_count": 202,
+        "CM_root_count": 40,
+        "boundary_count": 8,
+        "exact_return": "190808 finite + 5244 ideal + 0 hyperideal rays",
+        "incidence_characteristics_not_two": [
+          3
+        ],
+        "raw_id": "H17/48",
+        "single_boundary_lift_count": 0
+      }
+    ],
+    "published_input": "Kondo's exhaustive classification of finite-automorphism strong Coble surfaces in characteristic not two",
+    "theorem_on_every_compiler_positive_input_not_every_denominator_input": {
+      "H14_and_H17_characteristic": 3,
+      "boundary_counts": [
+        1,
+        2,
+        5,
+        8
+      ],
+      "hyperbolic_dimensions": [
+        10,
+        11,
+        14,
+        17
+      ],
+      "no_members_in_dimensions": "12, 13, 15, 16, or above 17"
+    }
+  },
+  "direction": "POLYTOPE_TO_SURFACE_TO_EXACT_SAME_POLYTOPE",
+  "finite_all_branch_compiler": {
+    "branches": "For every numerical boundary frame, enumerate every sequence of input classes which becomes a smooth (-1)-class under the exact blowdown update, ending at P2 or a Hirzebruch surface. Rank drops at every step.",
+    "incidence_space": "Reverse each sequence as a universal iterated point blow-up; relative Hilbert schemes parameterize one smooth geometrically irreducible curve in every numerical wall class. Impose the marked incidences, h ample, disjoint reduced boundaries summing to -2K, h0(-K)=0, and h0(-2K)=1. This is a finite union of finite-type locally closed stacks over Spec Z[1/2].",
+    "name": "C_CobVin(P,h)",
+    "necessity": "On an exact carrier, the strict transform on the original surface of every curve in a minimal-model contraction has negative square; strong-Coble negativity and exact nefness put it among the input facets, so one enumerated branch contains every exact carrier.",
+    "termination": "There are finitely many frames, finitely many input classes, and at most rank(N) contractions per branch. Hilbert/flattening and saturated-ideal algorithms decide geometric nonemptiness and its constructible characteristic image."
+  },
+  "five_part_score": {
+    "AG_classification_applies": "pass after a geometric branch exists",
+    "C_surface_free_class": "pass",
+    "Car_finite_exhaustive_carrier_enumeration": "pass",
+    "Car_overall_under_strict_contract": "fail",
+    "Car_realized_branch_for_every_P_in_C": "fail: geometric nonemptiness is not forced on all of D_CobVin",
+    "Pushback_new_theorem_on_all_inputs": "fail: only the compiler-positive/carrier locus is classified; raw D_CobVin conditions do not yet force incidence-stack nonemptiness",
+    "Return_exact_same_P": "pass for every geometric compiler branch",
+    "rating": "carrier-relative L3 exact-return criterion; strict programme L2-L3, not L4, because Car/essential-surjectivity fails only at class-wide incidence nonemptiness"
+  },
+  "pinned_inputs": {
+    "blowdown_bridge": {
+      "path": "data/enumerations/coble_polytope_first_blowdown_incidence_bridge.json",
+      "sha256": "08d40b33637fe4d332dc2e62a368bee401c0eda385baa3f823dde3285a15dfdd"
+    },
+    "type_mii_full": {
+      "path": "data/enumerations/coble_type_mii_full_ns_h17.json",
+      "sha256": "6ed6fba936c362e02793375fa3adfea0279d312c853a8bb4bab30c23b4b8c79c"
+    },
+    "type_mii_hostile": {
+      "path": "data/enumerations/coble_type_mii_h17_hostile_audit.json",
+      "sha256": "124a299740c6a82c7ab543ce9236c1ad38d6e988e637a0d173cbe2203756c25f"
+    },
+    "type_vi_full": {
+      "path": "data/enumerations/coble_type_vi_char3_five_boundary_full_ns_h14.json",
+      "sha256": "8247ad85f7970d3bf1f08fe15517b70376409c17cc2784b8f14b129aaecc2ede"
+    },
+    "type_vi_raw": {
+      "path": "data/enumerations/polytope_first_coble_type_vi_h14.json",
+      "sha256": "b1dfafffd87ff281d73c3517f18033ca7d89852e9a3e0dd39a035f890ddf26fb"
+    }
+  },
+  "promotion_and_return_theorem": {
+    "canonical_K3_corollary": "The double cover branched along the reconstructed reduced -2K divisor is a smooth K3 with its deck involution. In characteristic three its crystalline period and period-preserving involution exist geometrically; no abstract crystalline Torelli guess is required.",
+    "intrinsic_iff": "For every (P,h) in D_CobVin and every algebraically closed field of characteristic not two, P has an exact marked strong-Coble full-nef carrier taking h to an ample class if and only if C_CobVin(P,h) has a geometric point over that field.",
+    "minus_one_exhaustion": "Adjunction gives total boundary incidence two. A hidden (1,1) (-1)-curve gives a hidden effective irreducible CM root. A hidden (2) curve gives the primitive nef isotropic class f=E+B_i/2, hence an ideal extreme ray. Primitivity follows from the Halphen index-at-most-two theorem and the primitive fiber multiplicity vector (2,1) on 2E+B_i. The denominator's complete integral cusp-lift regeneration already lists it.",
+    "root_exhaustion": "A compiler point makes every numerical CM root an effective irreducible root: a listed (-2) curve is irreducible, while the negative-definite support of 2E+B_i/2+B_j/2 forces a listed two-boundary (-1) root to have no proper effective root below it. Its raw Vinberg certificate makes W(Gamma) finite index in O(CM); hence W(S) is finite index, Aut(S) is finite, and Kondo's Proposition Vinberg2 says Gamma is the complete effective irreducible root set.",
+    "same_P": "The unique anti-bicanonical boundary, complete root stock, and all single-boundary cusp lifts exhaust every negative curve. Therefore the marked nef cone is literally the oriented input chamber P."
+  },
+  "schema": "coble-vinberg-incidence-inverse-transfer-v1",
+  "scope": {
+    "compactness": "Every geometric branch is noncompact: pull back a ruling from a minimal Hirzebruch model (or from the penultimate F1 before a P2 model) to obtain a primitive nef isotropic ray. Finite volume is a separate raw Vinberg/cone hypothesis and is never inferred from finite sidedness or from the existence of a cusp.",
+    "exact_L4_missing_gate": "Find a surface-free P-only subdenominator containing more than a prelisted answer set on which the raw numerical conditions force at least one incidence stack to be nonempty. Without that theorem, Kondo pushback classifies only R_CobVin={P:C_CobVin(P) nonempty}.",
+    "new_project_theorem": "the all-branch incidence iff, uniform Kondo--Vinberg/cusp hidden-wall closure, and exact same-P return on every compiler-positive branch",
+    "not_claimed": [
+      "a new abstract H14 or H17 Coxeter polytope",
+      "a compact-polytope theorem",
+      "a theorem for raw wall systems outside D_CobVin",
+      "a standalone lattice-only crystalline Torelli compiler",
+      "a generic executable enumerator for all unsupplied wall matrices"
+    ],
+    "published_ingredients": [
+      "Vinberg's finite-index criterion",
+      "Dolgachev--Kondo finite-index implies finite Aut",
+      "Kondo Proposition Vinberg2",
+      "Kondo's primitive-isotropic/fibration and Halphen results",
+      "Kondo's nine-class theorem"
+    ]
+  },
+  "status_date": "2026-08-09",
+  "surface_free_denominator": {
+    "definition": [
+      "an oriented finite-volume integral Coxeter wall datum with a strict integral interior vector h",
+      "all numerical Coble boundary frames and odd-unimodular de-scalings are exhaustively enumerated",
+      "for each branch K=-sum(B_i)/2 is characteristic, rank(N)=10+b, and every wall has the boundary/adjunction alphabet",
+      "the numerical CM roots reconstructed from (-2) candidates and two-boundary (-1) candidates pass a literal Vinberg finite-index certificate",
+      "the remaining numerical walls are exactly all integral primitive CM-cusp/single-boundary lifts"
+    ],
+    "known_distinct_positive_inputs": 2,
+    "name": "D_CobVin",
+    "not_a_hypothesis": [
+      "a surface or an effective curve",
+      "a Kondo type or one of the nine classified diagrams",
+      "a characteristic",
+      "a K3 lattice, crystalline period, or involution",
+      "equality with a nef cone",
+      "the bound b in {1,2,5,8}"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "DEFERRED_BEFORE_CHILD_LAUNCH_RESOURCE_GATE",
+  "date": "2026-10-21",
+  "command": ["python3", "-B", "scripts/run_bounded_research_check_20261018.py", "--parent-lock", "--ledger", "results/a18_quadratic_anchor_field_screen_execution_20261021.json", "--", "scripts/check_a18_quadratic_anchor_field_screen_20261021.py", "--out", "results/a18_quadratic_anchor_field_screen_20261021.json"],
+  "observed_process_exit_code": 1,
+  "observed_gate_message": "Resource gate: disk=156.0GiB memory=5.3GiB; require 40/6GiB",
+  "failed_at": "safe.resources(), wrapper line59, before ps preflight, lock acquisition and subprocess.Popen",
+  "scientific_child_started": false,
+  "mathematical_result": null,
+  "output_and_success_receipt_created_by_this_attempt": false,
+  "checker_sha256": "048221c82d0821c59784d32c858f76864ff7cd3025ef3bafdccf79a34789ff39",
+  "proof_sha256": "cbdaf7b6240b0da96d7017d4982255d96edc4a71949a4d2964c2243824d8577e",
+  "retry_rule": "A fresh preflight must pass the unchanged40GiB disk/6GiB memory gate; no process was left running. Preserve this deferral even if a later launch succeeds."
+}

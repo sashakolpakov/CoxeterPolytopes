@@ -1,0 +1,241 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref,xurl}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\title{Five-dimensional attachment and incidence constraints\linebreak for right-angled hyperbolic polytopes}
+\author{Coxeter Polytopes Frontier Project}
+\date{18 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Every finite-volume entirely ideal right-angled hyperbolic four-polytope
+occurs as an actual facet of a finite-faced infinite-volume right-angled
+chamber in hyperbolic five-space. All its original cusps can simultaneously
+have bounded rectangular four-box links. An exact positive-carrier example
+has 457 genuine facets and 258 such cusps. This removes a possible
+one-layer obstruction, without solving finite-volume completion.
+Separately, the internally proved carrier and second-volume equality
+theorems imply that an entirely ideal right-angled five-polytope needs at
+least 56 facets. Published Nikulin--Khovanskii inequalities then restrict
+the fraction of entirely ideal five-faces in dimensions nine to twelve;
+in dimensions eleven and twelve it is strictly less than one tenth.
+These are necessary constraints, not new dimension exclusions.
+\end{abstract}
+
+\section{A universal attachment with genuine facets}
+Use the Lorentz metric of signature $(4,1)$ on the old vector space.
+Let $Q\subset\mathbb H^4$ be a finite-volume entirely ideal right-angled
+polytope. Choose a strict interior vector $p=(1,0,0,0,0)$ and normalize
+its ideal vertices as $v=(1,x)$. Write $m_i$ for its outward unit facet
+normals, so $m_{i0}>0$. Extend the vector space by an orthogonal unit
+spacelike vector $n$.
+
+\begin{theorem}
+For sufficiently large $L>1$, the halfspaces with outward normals
+\[
+ n,\quad m_i,\quad h_v=Lv-n
+\]
+define a full-dimensional right-angled chamber in $\mathbb H^5$ with
+exactly $1+f_3(Q)+f_0(Q)$ genuine facets. Its intersection with $n^\perp$
+is exactly $Q$, and every original ideal vertex has a bounded rectangular
+four-box cusp link. The chamber has infinite volume.
+\end{theorem}
+\begin{proof}
+Put
+\[
+ a=\min_{\ip{v}{m_i}<0}(-\ip{v}{m_i})>0,
+ \qquad b=\min_{v\ne w}(-\ip{v}{w})>0.
+\]
+Choose $L>1$ with $La>1$ and $L^2b>2$. Then
+\[
+ h_v^2=1,\quad \ip{n}{h_v}=-1,\quad
+ \ip{h_v}{m_i}\in\{0\}\cup(-\infty,-1),\quad
+ \ip{h_v}{h_w}=1+L^2\ip{v}{w}<-1\quad(v\ne w).
+\]
+All wall pairs are orthogonal, asymptotic or ultraparallel, and
+$p-n/2$ is a strict future timelike interior vector.
+
+On $n^\perp$, the old inequalities define $Q$ and every new inequality is
+strict at each finite point of $Q$: future timelike and future null
+vectors have negative Lorentz product. Thus $Q$ is the actual $n$ facet,
+with relative-interior witness $p$.
+
+For an old facet choose a finite relative-interior vector $q$ in $Q$.
+For sufficiently small $\epsilon>0$, $q-\epsilon n$ is timelike, lies on
+that old wall, and has strictly negative product with all other walls.
+For a new wall use
+\[
+ x_v=v+\frac{p-Ln}{L^2}.
+\]
+It is future timelike with $x_v^2=-L^{-2}-L^{-4}$, and
+\[
+ \begin{aligned}
+ \ip{x_v}{h_v}&=0,& \ip{x_v}{n}&=-L^{-1},\\
+ \ip{x_v}{m_i}&=\ip{v}{m_i}-m_{i0}/L^2<0,&
+ \ip{x_v}{h_w}&=L\ip{v}{w}<0\quad(w\ne v).
+ \end{aligned}
+\]
+Every listed wall is consequently genuine.
+
+At each old ideal vertex $v$, precisely eight walls meet: $n,h_v$ and
+the six old incident walls. The old walls form three orthogonal opposite
+pairs whose sums are positive multiples of $v$; the new pair has sum
+$n+h_v=Lv$. The eight normals have rank five. The horospherical
+intersection is therefore a bounded rectangular four-box, while all
+remaining inequalities are strict near this cusp.
+
+Finally, $u=p-n$ is future null and
+\[
+ \ip{u}{n}=-1,\qquad \ip{u}{m_i}=-m_{i0}<0,
+ \qquad \ip{u}{h_v}=1-L<0.
+\]
+An open ideal spherical patch around its direction and an inward collar
+satisfy all inequalities. The Klein volume density diverges along such
+a collar, so the chamber has infinite volume.
+\end{proof}
+
+The new opposite normals have the necessary form, rather than being a
+choice of unrelated local diagrams. The six old cusp normals span a
+rank-four subspace with null radical $\mathbb Rv$; its orthogonal
+complement in the old Lorentz space is $\mathbb Rv$. A unit normal
+opposite $n$ and orthogonal to all six must therefore be
+$\lambda_vv-n$. Its inequality is strict on the interior of $Q$ only
+when $\lambda_v>0$. The theorem chooses these parameters simultaneously.
+
+For the frozen sixteen-cell positive-carrier example,
+\[
+ f_0(Q)=258,\quad f_3(Q)=198,\quad \kappa(Q)=6,
+ \quad a=1/25,\quad b=1/1150.
+\]
+The rational choice $L=48$ works. The exact certificate checks all
+104,196 wall pairs, all 457 strict facet-interior witnesses, all 258
+complete cusp links, the strict center and the open ideal escape.
+No final cone census is needed for these claims. The coordinates are
+rational in standard Lorentz space; no finite-covolume arithmetic-group
+claim is made. Additional walls may cut the escape, so finite-volume
+completion remains open.
+
+\section{A necessary 56-facet bound in the ideal five-dimensional case}
+For an ideal right-angled four-polytope define
+\[
+ \Delta(Q)=f_0(Q)-f_3(Q),\qquad
+ \kappa(Q)=3f_0(Q)-4f_3(Q)+24.
+\]
+The separate internal carrier theorem proves the facet identity
+$\sum_Q\kappa(Q)=48$ for an ideal right-angled five-polytope. The separate
+internal second-volume and equality classification implies that
+$\kappa(Q)>0$ forces $\Delta(Q)\ge5$. These geometric theorems are
+dependencies, not conclusions of the rational calculation below.
+
+\begin{theorem}
+Every finite-volume entirely ideal right-angled hyperbolic five-polytope
+has at least 56 facets.
+\end{theorem}
+\begin{proof}
+Choose a positive-$\kappa$ four-facet $Q$. Kolpakov's published facet
+minimum and equality theorem \cite{Kolpakov} gives $f_3(Q)\ge24$, with
+equality only for the regular 24-cell. That cell has $\kappa=0$, so
+$f_3(Q)\ge25$ and $f_0(Q)=f_3(Q)+\Delta(Q)\ge30$.
+
+There are $f_3(Q)$ distinct ridge-neighbor facets of the ambient
+five-polytope. At each of the $f_0(Q)$ cusps of $Q$, the rectangular
+four-box link supplies a unique ambient facet opposite $Q$.
+Its hyperplane is asymptotic to the hyperplane of $Q$ at precisely that
+ideal point. It cannot recur at a different cusp, nor equal an orthogonal
+ridge neighbor. Counting $Q$ itself gives
+\[
+ f_4(P)\ge1+f_3(Q)+f_0(Q)\ge56.
+\]
+\end{proof}
+
+\section{Published inputs and mixed-dimensional consequences}
+A finite-volume right-angled polytope is simple at edges; all its faces
+are finite-volume and right-angled. We use the published
+Nikulin--Khovanskii strict average inequality
+\[
+ U(n,k,l)=\binom{n-l}{n-k}
+ \frac{\binom{\lfloor n/2\rfloor}{l}+\binom{\lceil n/2\rceil}{l}}
+ {\binom{\lfloor n/2\rfloor}{k}+\binom{\lceil n/2\rceil}{k}},
+ \qquad
+ \frac1{f_k}\sum_{E\in\Omega_k}f_l(E)<U(n,k,l),
+\]
+for $0\le l<k\le\lceil n/2\rceil$. We use only $k=5$, $l=1,4$,
+$n=9,10,11,12$. Alexandrov \cite{Alexandrov} and Egorov
+\cite{Egorov} state the formula and hypotheses explicitly.
+We also use Dufour's published noncompact bound
+$f_4(P^5)\ge1+\nu_4=16$, and the published absence of compact
+right-angled five-polytopes. The latter removes any compact exception.
+The original Dufour full article was not accessible for independent
+proof review; its statements are reported explicitly in the cited
+primary preprints. No equality classification from that article is assumed.
+
+Let $F=f_5(P)$ and let $I$ count the entirely ideal five-faces. Every
+five-face has at least 16 facets, and the ideal ones have at least 56.
+Thus
+\[
+ 16F+40I\le\sum_{E\in\Omega_5(P)}f_4(E)<U(n,5,4)F.
+\]
+Writing $c=1-(U(n,5,4)-16)/40$, we obtain $F-I>cF$.
+Every nonideal five-face contains a finite vertex, and each finite
+vertex belongs to $\binom n5$ five-faces. Hence
+\[
+ \binom n5v_f\ge F-I>cF.
+\]
+An edge is contained in $\binom{n-1}{4}$ five-faces and
+$2f_1=nv_f+2^{n-1}v_i$. Here $2^{n-1}$ is the number of vertices of
+the ideal rectangular-box link, not its number of facets. Applying the
+edge average inequality gives
+\[
+ F>a v_f+b v_i,\qquad
+ a=\frac{n\binom{n-1}{4}}{2U(n,5,1)},\quad
+ b=\frac{2^{n-2}\binom{n-1}{4}}{U(n,5,1)}.
+\]
+Since $\binom n5-ca>0$, elimination proves
+\[
+ v_f>\frac{cb}{\binom n5-ca}v_i.
+\]
+The exact values are
+\begin{center}
+\begin{tabular}{ccccc}\toprule
+$n$&$U(n,5,4)$&$I/F<$&$F>$&$v_f/v_i>$\\\midrule
+9&30&$7/20$&$v_f/2+128v_i/9$&$3328/45243$\\
+10&30&$7/20$&$v_f+256v_i/5$&$3328/25135$\\
+11&20&$1/10$&$7v_f/2+3584v_i/11$&$3072/4807$\\
+12&20&$1/10$&$6v_f+1024v_i$&$512/437$\\\bottomrule
+\end{tabular}
+\end{center}
+The ratio notation presumes $v_i>0$; the displayed linear inequality
+also applies when $v_i=0$. In dimension twelve the necessary relation is
+$437v_f>512v_i$. A boundary with at least one tenth of its five-faces
+entirely ideal is forbidden in dimensions eleven and twelve. These
+conclusions neither exclude the dimensions nor assert optimality among
+all published vertex bounds.
+
+\section{Proof and computation status}
+The universal attachment has a full independent internal mathematical
+review of its proof, producer and standalone checker. Exact generation,
+fresh replay and the standalone checker passed. The density proof has
+two independent full internal mathematical reviews, with precise scopes
+recorded in its companion report. Its script checks rational
+consequences of explicit internal and published geometric premises.
+Neither script is an end-to-end formal proof of the geometry.
+See \path{docs/right_angled_five_dimensional_constraints_reproduce.md}
+for immutable inputs, commands and the internal/external lemma map.
+
+\begin{thebibliography}{9}
+\bibitem{Kolpakov} A. Kolpakov, \emph{On the optimality of the ideal
+right-angled 24-cell}, Algebraic \& Geometric Topology 12 (2012),
+1941--1960. \url{https://doi.org/10.2140/agt.2012.12.1941}.
+\bibitem{Alexandrov} S. Alexandrov, \emph{On ideal vertices of right-angled
+hyperbolic polyhedra}, 2023 preprint.
+\url{https://arxiv.org/abs/2303.09533}.
+\bibitem{Egorov} A. Egorov, \emph{On lower bounds for the number of ideal
+and finite vertices of right-angled hyperbolic polyhedra in dimensions
+from 5 to 12}, 2026 preprint. \url{https://arxiv.org/abs/2603.29925}.
+\end{thebibliography}
+\end{document}

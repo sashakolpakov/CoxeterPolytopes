@@ -1,0 +1,394 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://coxeter-polytopes.local/schemas/pfirst-weak-log-semiampleness.schema.json",
+  "title": "Finite P-first weak-log semiampleness certificate",
+  "type": "object",
+  "required": [
+    "schema",
+    "status",
+    "sources",
+    "theorem",
+    "pb_atlas_adapter",
+    "checker_control",
+    "calibration",
+    "scope",
+    "content_sha256_without_this_field"
+  ],
+  "properties": {
+    "schema": {
+      "const": "coxeter.pb_atlas.pfirst_weak_log_semiampleness.v1"
+    },
+    "status": {"const": "PASS"},
+    "sources": {
+      "type": "object",
+      "required": [
+        "stage_B1_schema",
+        "stage_B1_core",
+        "stage_B2a_schema",
+        "stage_B2a_core",
+        "weak_log_exact_return",
+        "weak_log_exact_return_hostile_audit"
+      ],
+      "properties": {
+        "stage_B1_schema": {"$ref": "#/$defs/sourcePin"},
+        "stage_B1_core": {"$ref": "#/$defs/sourcePin"},
+        "stage_B2a_schema": {"$ref": "#/$defs/sourcePin"},
+        "stage_B2a_core": {"$ref": "#/$defs/sourcePin"},
+        "weak_log_exact_return": {"$ref": "#/$defs/sourcePin"},
+        "weak_log_exact_return_hostile_audit": {"$ref": "#/$defs/sourcePin"}
+      },
+      "additionalProperties": false
+    },
+    "theorem": {
+      "type": "object",
+      "required": [
+        "input",
+        "localized_identity",
+        "identity_implies",
+        "converse_for_fixed_sections_and_cover",
+        "no_wall_inequality_used_to_infer_nefness"
+      ],
+      "properties": {
+        "input": {"type": "string"},
+        "localized_identity": {
+          "const": "g^N=sum_j(q_j f_j)+sum_l(r_l I_l)"
+        },
+        "identity_implies": {
+          "type": "array",
+          "minItems": 4,
+          "items": {"type": "string"}
+        },
+        "converse_for_fixed_sections_and_cover": {"const": true},
+        "no_wall_inequality_used_to_infer_nefness": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "pb_atlas_adapter": {
+      "type": "object",
+      "required": [
+        "accepted_stage_B1_schema",
+        "accepted_stage_B2a_schema",
+        "adapter_contract_specified",
+        "arbitrary_B1_B2a_adapter_implemented_end_to_end",
+        "generic_localized_unit_checker_implemented",
+        "F4_toric_cover_and_section_provider_implemented",
+        "B1_fields_consumed",
+        "B2a_fields_consumed",
+        "required_section_checks",
+        "required_cover_checks",
+        "chart_ring_contract",
+        "unit_certificate_contract",
+        "current_B2a_is_P2_only",
+        "ruled_packets_require_a_ruled_chart_provider",
+        "F4_calibration_uses_the_exact_toric_ruled_provider"
+      ],
+      "properties": {
+        "accepted_stage_B1_schema": {
+          "const": "coxeter.pb_atlas.numerical_cluster_stage_b1.v1"
+        },
+        "accepted_stage_B2a_schema": {
+          "const": "coxeter.pb_atlas.cluster_chart_stage_b2a.v1"
+        },
+        "adapter_contract_specified": {"const": true},
+        "arbitrary_B1_B2a_adapter_implemented_end_to_end": {"const": false},
+        "generic_localized_unit_checker_implemented": {"const": true},
+        "F4_toric_cover_and_section_provider_implemented": {"const": true},
+        "B1_fields_consumed": {"$ref": "#/$defs/stringArray"},
+        "B2a_fields_consumed": {"$ref": "#/$defs/stringArray"},
+        "required_section_checks": {"$ref": "#/$defs/stringArray"},
+        "required_cover_checks": {"$ref": "#/$defs/stringArray"},
+        "chart_ring_contract": {"type": "string"},
+        "unit_certificate_contract": {"type": "string"},
+        "current_B2a_is_P2_only": {"const": true},
+        "ruled_packets_require_a_ruled_chart_provider": {"const": true},
+        "F4_calibration_uses_the_exact_toric_ruled_provider": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "checker_control": {
+      "type": "object",
+      "required": ["localized_nonconstant_bezout_identity", "identity_verified"],
+      "properties": {
+        "localized_nonconstant_bezout_identity": {
+          "$ref": "#/$defs/localizedUnitIdentity"
+        },
+        "identity_verified": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "calibration": {"$ref": "#/$defs/f4Calibration"},
+    "scope": {
+      "type": "object",
+      "required": [
+        "incidence_nonemptiness_proved",
+        "facet_effectivity_or_irreducibility_proved",
+        "boundary_disjointness_or_smoothness_proved",
+        "reflection_maximality_proved",
+        "raw_surface_free_exhaustivity_proved",
+        "what_is_closed"
+      ],
+      "properties": {
+        "incidence_nonemptiness_proved": {"const": false},
+        "facet_effectivity_or_irreducibility_proved": {"const": false},
+        "boundary_disjointness_or_smoothness_proved": {"const": false},
+        "reflection_maximality_proved": {"const": false},
+        "raw_surface_free_exhaustivity_proved": {"const": false},
+        "what_is_closed": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "content_sha256_without_this_field": {"$ref": "#/$defs/sha256"}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sourcePin": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "additionalProperties": false
+    },
+    "stringArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "integerVector2": {
+      "type": "array",
+      "prefixItems": [{"type": "integer"}, {"type": "integer"}],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "polynomial": {
+      "type": "object",
+      "required": ["terms"],
+      "properties": {
+        "terms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["coefficient", "exponents"],
+            "properties": {
+              "coefficient": {
+                "type": "string",
+                "pattern": "^-?[0-9]+(/[1-9][0-9]*)?$"
+              },
+              "exponents": {
+                "type": "array",
+                "items": {"type": "integer", "minimum": 0}
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "sectionNumerator": {
+      "type": "object",
+      "required": [
+        "section_id",
+        "numerator",
+        "denominator_localizer_powers"
+      ],
+      "properties": {
+        "section_id": {"type": "string", "minLength": 1},
+        "numerator": {"$ref": "#/$defs/polynomial"},
+        "denominator_localizer_powers": {
+          "type": "array",
+          "items": {"type": "integer", "minimum": 0}
+        }
+      },
+      "additionalProperties": false
+    },
+    "localizedUnitIdentity": {
+      "type": "object",
+      "required": [
+        "chart_id",
+        "variables",
+        "relations",
+        "localizers",
+        "section_numerators",
+        "unit_identity"
+      ],
+      "properties": {
+        "chart_id": {"type": "string", "minLength": 1},
+        "variables": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        },
+        "relations": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/polynomial"}
+        },
+        "localizers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/polynomial"}
+        },
+        "section_numerators": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/sectionNumerator"}
+        },
+        "unit_identity": {
+          "type": "object",
+          "required": [
+            "saturation_exponent",
+            "relation_multipliers",
+            "section_multipliers"
+          ],
+          "properties": {
+            "saturation_exponent": {"type": "integer", "minimum": 0},
+            "relation_multipliers": {
+              "type": "array",
+              "items": {"$ref": "#/$defs/polynomial"}
+            },
+            "section_multipliers": {
+              "type": "array",
+              "minItems": 1,
+              "items": {"$ref": "#/$defs/polynomial"}
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "f4Calibration": {
+      "type": "object",
+      "required": [
+        "name",
+        "ground_field",
+        "base_fan_before_blowup",
+        "star_subdivision",
+        "blown_up_fan",
+        "class_calculation",
+        "toric_divisor_2D",
+        "conclusion"
+      ],
+      "properties": {
+        "name": {"const": "Bl_p(F4)_positive_section_torus_fixed_point"},
+        "ground_field": {"const": "Q"},
+        "base_fan_before_blowup": {"type": "object"},
+        "star_subdivision": {"type": "object"},
+        "blown_up_fan": {
+          "type": "object",
+          "required": ["cyclic_rays", "maximal_cones", "smooth_complete_affine_cover"],
+          "properties": {
+            "cyclic_rays": {
+              "type": "array",
+              "minItems": 5,
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "required": ["id", "vector", "divisor_coefficient_in_2D"],
+                "properties": {
+                  "id": {"type": "string"},
+                  "vector": {"$ref": "#/$defs/integerVector2"},
+                  "divisor_coefficient_in_2D": {"type": "integer"}
+                },
+                "additionalProperties": false
+              }
+            },
+            "maximal_cones": {
+              "type": "array",
+              "minItems": 5,
+              "maxItems": 5,
+              "items": {
+                "type": "array",
+                "items": {"type": "string"},
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "smooth_complete_affine_cover": {
+              "type": "array",
+              "minItems": 5,
+              "maxItems": 5,
+              "items": {"type": "object"}
+            }
+          },
+          "additionalProperties": false
+        },
+        "class_calculation": {"type": "object"},
+        "toric_divisor_2D": {
+          "type": "object",
+          "required": [
+            "ray_coefficients_in_cyclic_order",
+            "polytope_inequalities",
+            "returned_global_sections",
+            "local_generation"
+          ],
+          "properties": {
+            "ray_coefficients_in_cyclic_order": {
+              "type": "array",
+              "minItems": 5,
+              "maxItems": 5,
+              "items": {"type": "integer"}
+            },
+            "polytope_inequalities": {"$ref": "#/$defs/stringArray"},
+            "returned_global_sections": {
+              "type": "array",
+              "minItems": 4,
+              "items": {"type": "object"}
+            },
+            "local_generation": {
+              "type": "array",
+              "minItems": 5,
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "required": [
+                  "chart_id",
+                  "trivialization_cartier_datum",
+                  "regular_local_character_differences",
+                  "chosen_unit_section_id",
+                  "chosen_local_representative",
+                  "localized_unit_certificate"
+                ],
+                "properties": {
+                  "chart_id": {"type": "string"},
+                  "trivialization_cartier_datum": {"$ref": "#/$defs/integerVector2"},
+                  "regular_local_character_differences": {"type": "object"},
+                  "chosen_unit_section_id": {"type": "string"},
+                  "chosen_local_representative": {"const": "1"},
+                  "localized_unit_certificate": {
+                    "$ref": "#/$defs/localizedUnitIdentity"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "conclusion": {
+          "type": "object",
+          "required": [
+            "2D_is_toric_basepoint_free",
+            "D_is_nef",
+            "weak_log_exact_return_still_requires_effective_facets_and_maximality"
+          ],
+          "properties": {
+            "2D_is_toric_basepoint_free": {"const": true},
+            "D_is_nef": {"const": true},
+            "weak_log_exact_return_still_requires_effective_facets_and_maximality": {
+              "const": true
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

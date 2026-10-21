@@ -1,0 +1,27 @@
+{
+  "status": "FAILED_LEAN_ELABORATION_NO_OBJECT_PUBLISHED",
+  "module": "CoxeterProofs.SummedActualFootKernel",
+  "source_sha256": "f4dcb86bc2fe13d310fa22d030ae6b5f4f99cbb30376e0127cb7873601e3d3ec",
+  "source_archive": "formal/source_archives/SummedActualFootKernel_before_sum_linearity_elaboration_fix_20261021.lean.gz",
+  "source_archive_sha256": "1675908400e23d99f8768a5859bdc83d40a736e87d0db8df0a2eb469695fd6e3",
+  "failure_stdout": "results/SummedActualFootKernel_compile_attempt1_failure_stdout_20261021.txt",
+  "failure_stdout_sha256": "0b7780d22fe027d4c60fad6833f7aad298bfe423ad3f2c7bf1ee97fbcb500333",
+  "failure_stdout_bytes": 2023,
+  "default_sandbox_attempt": "ps watchdog denied before child spawn; retried with approved process-monitor access",
+  "bounded_command": [
+    "python3",
+    "-B",
+    "scripts/run_bounded_research_check_20261018.py",
+    "--ledger",
+    "results/summed_actual_foot_compile_execution_attempt1_20261021.json",
+    "--",
+    "scripts/run_lean_batches_signal_safe_20261018.py",
+    "CoxeterProofs.SummedActualFootKernel"
+  ],
+  "outer_execution_seconds_from_tool": 0.822621417,
+  "peak_rss_bytes": null,
+  "peak_rss_limitation": "Unchanged outer wrapper writes execution ledger only on success; failure peak is not retained. Its live59s/1GiB watchdog remained enabled.",
+  "error": "Line293: entries LHS split by sumN_add while target remained an unsplit sum.",
+  "failed_axiom_output_contains_sorryAx": true,
+  "axiom_audit_not_started": true
+}

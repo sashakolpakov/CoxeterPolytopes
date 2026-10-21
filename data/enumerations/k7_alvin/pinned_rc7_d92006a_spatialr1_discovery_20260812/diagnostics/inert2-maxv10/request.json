@@ -1,0 +1,29 @@
+{
+  "case": "inert-2-rank5-prefix-10",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "k7-inert2-prefix-fixture",
+    "--network=none",
+    "--cpus",
+    "1",
+    "coxeter-alvin:rc7-spatial-r1-d92006a",
+    "-k",
+    "rc7",
+    "-qf",
+    "[-1,0,0],1,1,1,[-2,-2,-2]",
+    "-ip",
+    "-noimage",
+    "-debug",
+    "-maxv",
+    "10"
+  ],
+  "diagnostic_scope": "bounded ten-wall prefix only; not a discovery run and not evidence of termination or finite volume",
+  "image_id": "sha256:b995880fcd16c6940af225e0c6e5d8734be495f434d8e66640774a4714252896",
+  "image_tag": "coxeter-alvin:rc7-spatial-r1-d92006a",
+  "pinned_alvin_commit": "d92006a842cb4668e7c89e8c8e2d30337e4b0f26",
+  "qf_requested": "[-1,0,0],1,1,1,[-2,-2,-2]",
+  "schema": "coxeter.k7_alvin.bounded_prefix_request.v1"
+}

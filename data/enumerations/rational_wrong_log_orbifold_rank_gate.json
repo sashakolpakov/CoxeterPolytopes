@@ -1,0 +1,142 @@
+{
+  "F4_control": {
+    "D_square": "8",
+    "K_plus_half_B_pairings": {
+      "B": "0",
+      "E": "-1",
+      "G": "-1/2"
+    },
+    "boundary_count": 1,
+    "orbifold_c2": "13/4",
+    "passes": true,
+    "rho": 3
+  },
+  "all_checks_pass": true,
+  "elementary_pairing_table_D_equals_minus_K_plus_half_B": {
+    "boundary_disjoint": "0",
+    "boundary_meets_boundary_twice": "-1",
+    "exceptional_boundary_degree_0": "1",
+    "exceptional_boundary_degree_1": "1/2",
+    "exceptional_boundary_degree_2": "0",
+    "exceptional_boundary_degree_3": "-1/2",
+    "root_boundary_degree_0": "0",
+    "root_boundary_degree_2": "-1"
+  },
+  "geometric_hostile_controls": [
+    {
+      "actual": [-4, -4, 2, 2, 2],
+      "expected": [-4, -4, 2, 2, 2],
+      "id": "H1_boundary_boundary",
+      "intersection": 2,
+      "left": {
+        "bidegree": [1, 1],
+        "canonical_degree": 2,
+        "private_blowups": 6,
+        "self_square": -4
+      },
+      "passes": true,
+      "right": {
+        "bidegree": [1, 1],
+        "canonical_degree": 2,
+        "private_blowups": 6,
+        "self_square": -4
+      }
+    },
+    {
+      "actual": [-4, -2, 2, 2, 0],
+      "expected": [-4, -2, 2, 2, 0],
+      "id": "H2_boundary_root",
+      "intersection": 2,
+      "left": {
+        "bidegree": [1, 1],
+        "canonical_degree": 2,
+        "private_blowups": 6,
+        "self_square": -4
+      },
+      "passes": true,
+      "right": {
+        "bidegree": [1, 1],
+        "canonical_degree": 0,
+        "private_blowups": 4,
+        "self_square": -2
+      }
+    },
+    {
+      "actual": [-4, -1, 3, 2, -1],
+      "expected": [-4, -1, 3, 2, -1],
+      "id": "H3_boundary_exceptional",
+      "intersection": 3,
+      "left": {
+        "bidegree": [1, 1],
+        "canonical_degree": 2,
+        "private_blowups": 6,
+        "self_square": -4
+      },
+      "passes": true,
+      "right": {
+        "bidegree": [1, 2],
+        "canonical_degree": -1,
+        "private_blowups": 5,
+        "self_square": -1
+      }
+    },
+    {
+      "aggregate_boundary_degree": 3,
+      "boundary_components": [
+        {
+          "bidegree": [1, 0],
+          "canonical_degree": 2,
+          "private_blowups": 4,
+          "self_square": -4
+        },
+        {
+          "bidegree": [1, 0],
+          "canonical_degree": 2,
+          "private_blowups": 4,
+          "self_square": -4
+        },
+        {
+          "bidegree": [1, 0],
+          "canonical_degree": 2,
+          "private_blowups": 4,
+          "self_square": -4
+        }
+      ],
+      "boundary_pairwise_intersection": 0,
+      "component_boundary_degrees": [1, 1, 1],
+      "exceptional": {
+        "bidegree": [0, 1],
+        "canonical_degree": -1,
+        "private_blowups": 1,
+        "self_square": -1
+      },
+      "forced_exceptional_coefficient_lower_bound": "2",
+      "id": "H3_distributed_boundary_exceptional",
+      "passes": true,
+      "sum_squared_degrees": 3
+    }
+  ],
+  "primary_source_pins": {
+    "arxiv_id": "2607.18699v1",
+    "pdf_sha256": "2739f4489b0a4cf0722141ea1954f871fae65269c8aec63c02f66bfad398c501",
+    "source_tar_sha256": "a18775cdb3f99507da702375c03e983760c894ab9ddd36eaebc9ee96910e8442",
+    "tex_sha256": "6cb03d24e199e4524ed0e2cec4e7bce6371c2aee09f910bde9deb4a297877517",
+    "theorem": "Iwai-Jinnouchi-Zhang Theorem 1.3"
+  },
+  "rank_sieve": {
+    "conditions": [
+      "10-rho+b >= 0",
+      "4*(rho+2)-7*b >= 0"
+    ],
+    "extremal_integer_pairs": [[26, 16]],
+    "maximum_hyperbolic_dimension": 25,
+    "maximum_picard_rank": 26,
+    "symbolic_elimination": "7*(rho-10)<=4*rho+8, hence 3*rho<=78"
+  },
+  "schema_version": 2,
+  "supported_boundary_obstructions": {
+    "H1_at_intersection_2": "a_i+a_j>=2 contradicts a_i,a_j<1",
+    "H2_at_intersection_2": "a_B>=1 contradicts a_B<1",
+    "H3_aggregate_degree_at_least_3": "(1-Q/4)*a_E>=T/2-1; T>=3 forces a_E>=2 or impossibility"
+  }
+}

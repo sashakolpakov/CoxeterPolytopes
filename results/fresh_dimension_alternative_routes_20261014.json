@@ -1,0 +1,161 @@
+{
+  "status": "PASS_H3_FACE_LIFT_ORTHOGONALITY_GATE",
+  "sources": {
+    "scripts/fresh_dimension_alternative_routes_20261014.py": "4eacc92537500292bb640320c4146167c8b577cd2f1f8da0711085a990338cba"
+  },
+  "H3_gram": [
+    [
+      "2",
+      "-sqrt(5)/2 - 1/2",
+      "0"
+    ],
+    [
+      "-sqrt(5)/2 - 1/2",
+      "2",
+      "-1"
+    ],
+    [
+      "0",
+      "-1",
+      "2"
+    ]
+  ],
+  "H3_inverse": [
+    [
+      "3*sqrt(5)/4 + 9/4",
+      "2 + sqrt(5)",
+      "1 + sqrt(5)/2"
+    ],
+    [
+      "2 + sqrt(5)",
+      "sqrt(5) + 3",
+      "sqrt(5)/2 + 3/2"
+    ],
+    [
+      "1 + sqrt(5)/2",
+      "sqrt(5)/2 + 3/2",
+      "sqrt(5)/4 + 5/4"
+    ]
+  ],
+  "positive_residual": "3/4 - sqrt(5)/4",
+  "sole_nonorthogonal_face_profile": {
+    "pairings": [
+      0,
+      0,
+      -1
+    ],
+    "label": 3,
+    "residual_square": "3/4 - sqrt(5)/4"
+  },
+  "all_label_proof": "Positive inverse: two nonzero contacts or any contact at positions0,1 costs more than2. At position2 every label>=4 costs at least2*J22>2. Hence only terminal label3 can induce a face facet.",
+  "special_to_orthogonal_squared_cosine_lower": "sqrt(5)/2 + 3/2",
+  "special_to_special_cosine_lower": "2*sqrt(5) + 5",
+  "source_nonright_edges": [
+    [
+      1,
+      2,
+      5
+    ],
+    [
+      2,
+      3,
+      3
+    ],
+    [
+      3,
+      4,
+      3
+    ],
+    [
+      4,
+      5,
+      3
+    ],
+    [
+      5,
+      6,
+      3
+    ],
+    [
+      9,
+      10,
+      5
+    ],
+    [
+      2,
+      7,
+      4
+    ],
+    [
+      2,
+      8,
+      4
+    ],
+    [
+      5,
+      9,
+      3
+    ],
+    [
+      6,
+      10,
+      5
+    ]
+  ],
+  "source_every_facet_nonright_neighbor": {
+    "1": [
+      1,
+      2,
+      5
+    ],
+    "2": [
+      1,
+      2,
+      5
+    ],
+    "3": [
+      2,
+      3,
+      3
+    ],
+    "4": [
+      3,
+      4,
+      3
+    ],
+    "5": [
+      4,
+      5,
+      3
+    ],
+    "6": [
+      5,
+      6,
+      3
+    ],
+    "7": [
+      2,
+      7,
+      4
+    ],
+    "8": [
+      2,
+      8,
+      4
+    ],
+    "9": [
+      9,
+      10,
+      5
+    ],
+    "10": [
+      9,
+      10,
+      5
+    ]
+  },
+  "conclusion": "Every facet of an H3-supported Coxeter face is orthogonal to H3 if its intrinsic chamber has no facet whose meeting neighbors are all right. In particular this holds for the displayed known compact H6 ten-facet source.",
+  "scope": "Excludes changing H3 contacts of source-face facets while preserving this intrinsic source. Does not exclude outer caps disjoint from the face, changed intrinsic metrics, other sources, or a compact H9 completion.",
+  "primary_source": "https://arxiv.org/pdf/2201.03437, Figure5 and Section8",
+  "machine_readable_diagram_source": "https://raw.githubusercontent.com/johnamcleod/10-facets-6-d-polytopes/main/verify_polytope.py"
+}

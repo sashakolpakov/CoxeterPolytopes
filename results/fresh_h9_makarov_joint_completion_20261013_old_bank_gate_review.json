@@ -1,0 +1,27 @@
+{
+  "status": "PASS_SCOPED_PROOF_REVIEW_AND_SAVED_PRODUCER_REPLAY",
+  "reviewer": "root",
+  "reviewed_sha256": {
+    "scripts/fresh_h9_makarov_joint_completion_20261013_old_bank_gate.py": "9682c66cc306c4f74c4d7c7660c70c915a6394230b0f159340a4a3c96da9e9ee",
+    "results/fresh_h9_makarov_joint_completion_20261013_old_bank_gate.json": "c694a67afebe64a805f6267e9dfe5171ab49a12f08eae509e1fb21475fc90707",
+    "results/fresh_h9_makarov_joint_completion_20261013_old_bank_gate.md": "6f5cdbafcb419795db782cdfa1b822c60a4e3623342a2bf5a45fc834ee4e5884",
+    "results/fresh_h9_makarov_joint_20261013_exact.json": "cf1473c23c6cfc6c6a0a9ae2ed935de0d00454909e80b2279887cbbcacce02df",
+    "results/fresh_h9_makarov_joint_20261013.json": "e902f216db9c4f948b6030d293056c87c83e3fa9b15113e0ab7b30fc09e936b4",
+    "results/fresh_h9_makarov_joint_20261013_profiles.json": "cf26e8e3957d1c22173fcaebb1789af1e06626469676b6011338c1961691f002",
+    "scripts/fresh_h9_split_multiple_edge_escape_20261013.py": "45c27cfad81f03269e0dc0f03be51df44cd9a60b88a4c7547d2fc0f04a9a44a8",
+    "scripts/fresh_h9_split_leaf_3034_safe_graph_20261013.py": "5f320a5b17a6a4e515c179e8abed24cb540199adffadb28ff4c453d729105e13",
+    "scripts/fresh_h9_makarov_face_extension_20261013.py": "2135abd59a7acea1cf4901fe0e91a4bf878a9413d8d7eff4b4022f6806186d3a"
+  },
+  "saved_replay": {
+    "command": "python3 scripts/fresh_h9_makarov_joint_completion_20261013_old_bank_gate.py --verify",
+    "result": "PASS",
+    "literal_recipes": 25101,
+    "gate_counts": {
+      "misses_escape": 24152,
+      "positive": 553,
+      "finite_angle_gap": 396
+    }
+  },
+  "independence": "Mathematical/code review plus exact producer replay. This is not an independently implemented reconstruction of all25101 roots.",
+  "scope": "Only the literal roots in their certified rational branch boxes, retaining all27 existing facets. Other normals and replacements remain open."
+}

@@ -1,0 +1,512 @@
+{
+  "all_checks_pass": true,
+  "artebani_sarti_lineage": {
+    "generic_even_odd_model": "Artebani--Sarti Example 6.3: y^2=x^3+a(t)x+b(t), a even, b odd, with (x,y,t)->(-x,iy,-t)",
+    "node_specialization": "their Example 7.2 explains that two nodes exchanged by the base involution insert A1^2 into S(sigma^2)",
+    "novelty_scope": "a new explicit equation-to-Coxeter realization in this project; no worldwide priority for the underlying order-4 K3 family or the abstract Coxeter polytope is claimed",
+    "our_fiber_root_specialization": "degree truncation ord_infinity(a4)>=4, ord_infinity(a6)=5 inserts II*/E8 at infinity, while the imposed double discriminant root at s=1 inserts the exchanged I2/I2 pair",
+    "primary_source": "https://arxiv.org/abs/1102.4436"
+  },
+  "brandhorst_hofmann_handoff": {
+    "all_glue_pairs_carried": true,
+    "article": "https://doi.org/10.1017/fms.2023.50",
+    "database": "https://doi.org/10.5281/zenodo.10410278",
+    "existing_certificate_sha256": "2eec79845fe3cce424a4fab321a93d142afb4f580edfd44141bc7525612208aa",
+    "external_replay": null,
+    "full_NS_action_pairs_integrally_conjugate": true,
+    "id": "0.4.4.1",
+    "row_one_based": 39,
+    "row_sha256_with_newline": "03ef01ed30b98e3d0fa419cb8275577c90594868fcd3400c48413555b1248452",
+    "same_fixed_coinvariant_glue_action": true
+  },
+  "chamber_handoff": {
+    "complete_Roulleau_nef_chamber": true,
+    "conclusion": "after Weyl marking and a chamber symmetry, the effective BH automorphism preserves the archived complete nef chamber and induces exactly the archived wall action",
+    "database_effective_character_supplies_invariant_Kahler_class": true,
+    "fixed_form_and_exhaustive_weighted_chamber_census_identify_archived_class": true,
+    "weyl_group_transitive_on_root_chambers": true
+  },
+  "checks": {
+    "a1_swap_isometry": true,
+    "a1_swap_order_two": true,
+    "base_normalization_has_finite_stabilizer": true,
+    "coinvariant_is_minus_four": true,
+    "coinvariant_rootless": true,
+    "fiber_euler_sum_is_24": true,
+    "fixed_euler_characteristics": true,
+    "fixed_lattice_determinant": true,
+    "fixed_lattice_signature": true,
+    "fixed_lattice_smith": true,
+    "full_characteristic": true,
+    "i2_leading_coefficient": true,
+    "ns_action_isometry": true,
+    "ns_action_order_two": true,
+    "ns_characteristic": true,
+    "ns_determinant": true,
+    "ns_signature": true,
+    "ns_smith": true,
+    "parameter_recovery_is_identity": true,
+    "parameter_recovery_jacobian_is_identity": true,
+    "primitive_glue_index_two": true,
+    "reduced_discriminant_has_i2_pair": true,
+    "residual_discriminant_degree_five": true,
+    "source_all_checks_pass": true,
+    "source_all_glue_carried": true,
+    "source_bh_id": true,
+    "source_complete_nef_chamber": true,
+    "source_effective_group": true,
+    "source_full_action_conjugacy": true,
+    "source_generic_ns": true,
+    "source_picard_image": true,
+    "source_same_coinvariant": true,
+    "trivial_lattice_rank_is_12": true,
+    "vinberg_finite_volume": true,
+    "vinberg_no_bad_audits": true,
+    "weierstrass_normalization_has_finite_stabilizer": true,
+    "witness_no_fiber_at_t_zero": true,
+    "witness_residual_quintic": true,
+    "witness_residual_squarefree": true
+  },
+  "cohomology_and_fixed_loci": {
+    "bh_generator_fingerprint": {
+      "database_tuple": [
+        [
+          8
+        ],
+        2,
+        0,
+        1
+      ],
+      "euler": 12,
+      "meaning": "8 isolated points and 2 rational curves"
+    },
+    "bh_square_fingerprint": {
+      "database_tuple": [
+        [],
+        5,
+        1,
+        4
+      ],
+      "euler": 4,
+      "meaning": "5 rational curves and one genus-4 curve"
+    },
+    "fixed_euler_powers_1_2_3": {
+      "1": 12,
+      "2": 4,
+      "3": 12
+    },
+    "full_characteristic": "(lambda - 1)**11*(lambda + 1)*(lambda**2 + 1)**5",
+    "generic_transcendental_rank": 10,
+    "h2_traces_powers_1_2_3": {
+      "1": 10,
+      "2": 2,
+      "3": 10
+    },
+    "transcendental_characteristic": "(lambda^2+1)^5"
+  },
+  "family": {
+    "A": "A(s)=-3+alpha*(s-1)+beta*(s-1)^2",
+    "C": "C(s)=2-(alpha+1)*(s-1)+gamma*(s-1)^2+delta*(s-1)^3",
+    "affine_equation": "y^2=x^3+A(t^2)*x+t*C(t^2)",
+    "automorphism": "sigma(x,y,t)=(-x,i*y,-t)",
+    "fibers": [
+      {
+        "euler": 10,
+        "kodaira": "II*",
+        "ord_a4_at_least": 4,
+        "ord_a6": 5,
+        "ord_discriminant": 10,
+        "place": "t=infinity",
+        "root_lattice": "E8(-1)",
+        "root_rank": 8
+      },
+      {
+        "euler_each": 2,
+        "kodaira": "I2",
+        "multiplicity": 2,
+        "ord_discriminant": 2,
+        "place": "t=+1 and t=-1",
+        "root_lattice_each": "A1(-1)",
+        "root_rank_each": 1
+      },
+      {
+        "euler_each": 1,
+        "kodaira": "I1",
+        "multiplicity": 10,
+        "ord_discriminant": 1,
+        "place": "ten roots above the five roots of Q(s)",
+        "root_rank": 0
+      }
+    ],
+    "full_discriminant": "Delta(t)=-16*D(t^2)",
+    "global_order": 4,
+    "holomorphic_two_form": "dt wedge dx/y",
+    "i2_open_coefficient": "-9*(alpha**2 + 6*alpha - 12*beta - 12*gamma + 9)",
+    "nonempty_open_witness": {
+      "Q_over_27_at_s_zero": -4,
+      "Q_over_27_discriminant": 283904,
+      "Q_over_27_in_u_equals_s_minus_1": "u**5 + u**4 - 2*u**3 + 2*u**2 + 5*u - 3",
+      "parameters": {
+        "alpha": 0,
+        "beta": 0,
+        "delta": 1,
+        "gamma": 0
+      }
+    },
+    "parameter_open": "delta is nonzero; the displayed I2 coefficient is nonzero; Q is squarefree, has no root s=0, and shares no root with A; these are nonempty Zariski-open conditions",
+    "reduced_discriminant": "D(s)=4*A(s)^3+27*s*C(s)^2=(s-1)^2*Q(s)",
+    "residual_Q_degree": 5,
+    "square": "sigma^2(x,y,t)=(x,-y,t)",
+    "two_form_multiplier": "-i (a primitive fourth root)"
+  },
+  "hyperbolic_handoff": {
+    "abstract_polytope_novelty": "known; this is a new explicit algebraic realization in the project",
+    "audit_digest_schema": "canonical_json_v1_finite_vertices_ideal_components_edges_parabolic_audits",
+    "bad_audits": 0,
+    "canonical_full_audit_sha256": "d20267d1d38090f54d650d20d88d71448aa0393686cf64705e9780f91c37bd5a",
+    "classification": "finite_volume_noncompact",
+    "cusps": 2,
+    "dimension": 10,
+    "elliptic_edges": 99,
+    "facets": 12,
+    "finite_vertices": 17,
+    "polytope_id": "R12-E8A1x2-C2-H10-12"
+  },
+  "neron_severi": {
+    "fiber_and_zero_section": "U",
+    "generic_exactness": {
+      "argument": "The recovery Jacobian is the 4 by 4 identity, the normalized coordinate stabilizer is finite, and the marked-to-unmarked forgetful map has zero-dimensional fibers by the integral F,O class argument.  Thus the four normalized coefficients give four K3 moduli.  Since sigma is primitive order 4 and sigma^2 is the identity on the displayed lattice, T is a Q(i)-module, so rank(T) and rho are even.  Since rho>=12, a strict jump would have rho>=14 and rank(T)<=8, whose primitive-eigenvalue period ball has dimension at most 3.  This contradicts the four-dimensional family.  Hence very general rho=12.",
+      "marked_to_unmarked_zero_dimensional": {
+        "automorphisms": "H^0(X,T_X)=0 for a K3 surface, so Aut(X) is discrete; no positive-dimensional forgetful fiber remains",
+        "fiber_dimension": 0,
+        "integral_classes": "a marked elliptic fibration and section determine integral classes F,O in NS with F^2=0, O^2=-2, and F.O=1; these classes are locally constant",
+        "uniqueness": "for fixed F,O, the pencil |F| and section O recover the fibration up to PGL2; the displayed base and short-Weierstrass normalizations leave only the finite stabilizer above"
+      },
+      "normalizations": "the unique II* fiber fixes infinity; base scaling puts the exchanged I2 pair at +/-1; Weierstrass homothety normalizes the nodal cubic to A(1)=-3,C(1)=2",
+      "normalized_coordinate_stabilizer": {
+        "base": "commuting with t->-t and fixing the unique II* fiber leaves t->c*t; preserving {+1,-1} gives c^2=1",
+        "finite": true,
+        "weierstrass": "preserving A(1)=-3 and C(1)=2 gives lambda^4=lambda^6=1, hence lambda^2=1"
+      },
+      "parameter_moduli_dimension": 4,
+      "parameter_recovery": {
+        "jacobian_determinant": 1,
+        "observables": [
+          "A'(1)",
+          "A''(1)/2",
+          "C''(1)/2",
+          "C'''(1)/6"
+        ],
+        "recovered_parameters": [
+          "alpha",
+          "beta",
+          "gamma",
+          "delta"
+        ],
+        "symbolic_jacobian": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "scope": "exact for the geometric generic/very general member; no particular rational parameter quadruple is Picard-certified here"
+    },
+    "gram": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2
+      ]
+    ],
+    "lower_bound_lattice": "U+E8(-1)+A1(-1)^2",
+    "mordell_weil_very_general": {
+      "rank": 0,
+      "reason": "Shioda--Tate after exact rho=12; the no-overlattice argument rules out a torsion saturation",
+      "torsion": "trivial"
+    },
+    "primitive_at_rank_12": "an index-two even overlattice would be even unimodular of signature (1,11), impossible since 1-11 is not divisible by 8",
+    "rank_signature_determinant": [
+      12,
+      [
+        1,
+        11,
+        0
+      ],
+      -4
+    ],
+    "reducible_fiber_roots": "E8(-1)+A1(-1)^2",
+    "smith": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  "payload_sha256": "65a9a423a9d593294cde87e282b7b386433c47bc1d170d399c38c3ab26645904",
+  "picard_action": {
+    "a1_swap": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "a1x2_gram": [
+      [
+        -2,
+        0
+      ],
+      [
+        0,
+        -2
+      ]
+    ],
+    "characteristic_polynomial": "(lambda - 1)**11*(lambda + 1)",
+    "coinvariant": {
+      "class": "<-4>",
+      "divisibility_in_NS": 2,
+      "generator": "R_+ - R_-",
+      "gram": [
+        [
+          -4
+        ]
+      ],
+      "rootless": true
+    },
+    "description": "identity on U+E8(-1); sigma exchanges the fibers t=+1 and t=-1 and hence swaps their two A1 root components",
+    "fixed_lattice": {
+      "a1_diagonal_gram": [
+        [
+          -4
+        ]
+      ],
+      "class": "U+E8(-1)+<-4>",
+      "determinant": 4,
+      "discriminant_q_histogram": {
+        "0": 1,
+        "1": 1,
+        "7/4": 2
+      },
+      "rank": 11,
+      "signature": [
+        1,
+        10,
+        0
+      ],
+      "smith": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ]
+    },
+    "primitive_glue": {
+      "description": "with f=R_++R_- and c=R_+-R_-, the original A1^2 is obtained from <f>+<c> by adjoining (f+c)/2=R_+",
+      "index": 2
+    }
+  },
+  "schema": "ue8a1x2-order4-weierstrass-family-v1",
+  "theorem": "On a nonempty Zariski-open set of (alpha,beta,gamma,delta), the very general minimal resolution of y^2=x^3+A(t^2)x+t*C(t^2) has NS=U+E8(-1)+A1(-1)^2.  The primitive order-four automorphism (x,y,t)->(-x,i*y,-t) exchanges the two I2 root components, realizes BH 0.4.4.1, and therefore explicitly realizes the archived finite-volume noncompact H10/12 Coxeter section."
+}

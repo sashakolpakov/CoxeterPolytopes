@@ -1,0 +1,32 @@
+{
+  "claim": "bounded exact first-six-wall regression only",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--network=none",
+    "coxeter-alvin:rc7-spatial-r1-d92006a",
+    "-k",
+    "rc7",
+    "-qf",
+    "[-1,0,0],1,1,1,[-3,-2,-2]",
+    "-noimage",
+    "-maxv",
+    "6",
+    "-debug"
+  ],
+  "contains_maxv": true,
+  "expected_alvin_commit": "d92006a842cb4668e7c89e8c8e2d30337e4b0f26",
+  "image": {
+    "alvin_commit": "d92006a842cb4668e7c89e8c8e2d30337e4b0f26",
+    "architecture": "arm64",
+    "created": "2026-08-12T13:10:02.922552114+02:00",
+    "id": "sha256:b995880fcd16c6940af225e0c6e5d8734be495f434d8e66640774a4714252896",
+    "os": "linux"
+  },
+  "max_vectors": 6,
+  "qf": "[-1,0,0],1,1,1,[-3,-2,-2]",
+  "runner_sha256": "e201ed271a208a28655424b79b93941f067b9288145017777485f63c2fe5f7ab",
+  "schema": "coxeter.k7_alvin.p7_prefix_request.v1",
+  "started_at_utc": "2026-08-12T11:16:54.890177+00:00"
+}

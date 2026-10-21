@@ -1,0 +1,13 @@
+{
+  "status": "ADMISSION_REFUSED_BEFORE_AUDIT_CHILD",
+  "module": "CoxeterProofs.TwoFootPaidKernel",
+  "source_sha256": "ff40c49823d399777d3f93ae869d1ee3beaa33aca616d85487b2fd27ba5f1e65",
+  "reason": "Below unchanged6GiB available-memory admission gate; compiled object retained, no new axiom-audit coverage.",
+  "tool_result": {
+    "chunk_id": "701806",
+    "wall_time_seconds": 0.014498958,
+    "exit_code": 1,
+    "original_token_count": 290,
+    "output": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py\", line 48, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py\", line 44, in main\n    base.main()\n    ~~~~~~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 337, in main\n    batch(args.module, audit=True)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 279, in batch\n    result = guarded_run(command)\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 220, in guarded_run\n    before, parent = resources(), os.getppid()\n                     ~~~~~~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=153.6GiB memory=5.7GiB; require 40/6GiB\n"
+  }
+}

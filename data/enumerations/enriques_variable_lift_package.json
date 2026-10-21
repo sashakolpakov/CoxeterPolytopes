@@ -1,0 +1,381 @@
+{
+  "canonical_simultaneous_lift_obstruction": {
+    "all_seven_canonical_simultaneous_lifts_obstructed": true,
+    "all_seven_wall_systems_span_L10": true,
+    "interpretation": "Individual liftability is not simultaneous liftability; viable Enriques realizations require nontrivial two-sheet intersection/glue data not contained in the downstairs Gram matrix.",
+    "statement": "If the downstairs roots span L10 over Q, putting every lift on one fixed sheet gives delta Gram 2*Gram(R), of signature (1,9); its orthogonal complement in T has signature (1,1), so it cannot contain the positive two-plane required by a K3 period."
+  },
+  "downstairs_lattice_M": {
+    "description": "L10 = U + E8(-1)",
+    "determinant": -1,
+    "inertia": {
+      "negative": 9,
+      "positive": 1,
+      "zero": 0
+    },
+    "rank": 10
+  },
+  "fixed_K3_cover_model": {
+    "ambient": {
+      "description": "Lambda = U + M + M, M = L10",
+      "determinant": -1,
+      "inertia": {
+        "negative": 19,
+        "positive": 3,
+        "zero": 0
+      },
+      "rank": 22,
+      "tau_formula": "tau(u,x,y)=(-u,y,x)",
+      "tau_is_involutive_isometry": true
+    },
+    "anti_invariant_lattice_T": {
+      "absolute_discriminant": 1024,
+      "description": "T = {(u,x,-x)} isometric to U + M(2)",
+      "inertia": {
+        "negative": 10,
+        "positive": 2,
+        "zero": 0
+      },
+      "primitive_embedding_smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "rank": 12
+    },
+    "glue": {
+      "S_perp_T": true,
+      "half_sum_formula": "(s_i+t_i)/2=(0,e_i,0)",
+      "index_of_S_plus_T_in_Lambda": 1024,
+      "quotient": "(Z/2Z)^10",
+      "ten_half_sum_generators_integral": true
+    },
+    "invariant_lattice_S": {
+      "absolute_discriminant": 1024,
+      "description": "S = {(0,x,x)} isometric to M(2)",
+      "inertia": {
+        "negative": 9,
+        "positive": 1,
+        "zero": 0
+      },
+      "primitive_embedding_smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "rank": 10
+    }
+  },
+  "general_lift_identities": {
+    "anti_invariant_choice": "delta_i in T, delta_i^2=-4",
+    "consequences": "b_i^2=tau(b_i)^2=-2 and b_i.tau(b_i)=0",
+    "exchanged_pair": "tau(b_i)=(v_i-delta_i)/2",
+    "glue_gate": "b_i=(v_i+delta_i)/2 lies in Lambda",
+    "invariant_pullback": "v_i=(0,r_i,r_i) in S, v_i^2=-4",
+    "nonnegative_curve_distribution": {
+      "m=0": [
+        0
+      ],
+      "m=1": [
+        -2,
+        2
+      ],
+      "m=2": [
+        -4,
+        0,
+        4
+      ]
+    },
+    "two_wall_formula": "if m=r_i.r_j, a=b_i.b_j, c=b_i.tau(b_j), then a+c=m and delta_i.delta_j=2(a-c)=2(2a-m)"
+  },
+  "raw_input": {
+    "path": "data/external/shimada_l10l26note/L10L26compdata2.txt",
+    "sha256": "218c8188e467bde29369cdeda3771d767c3f70105d8fb56def8d698b90e75a6c"
+  },
+  "schema": "enriques_variable_lift_package_v1",
+  "scope": {
+    "finite_certificate": "fixed K3-cover lattice, lift identities, and canonical simultaneous-lift obstruction",
+    "not_certified_by_this_json": [
+      "existence of a noncanonical anti-invariant lift package",
+      "period-map surjectivity",
+      "effectivity or irreducibility of lift roots",
+      "full-nef cone equality"
+    ]
+  },
+  "types": [
+    {
+      "all_downstairs_walls_primitive_minus_two_roots": true,
+      "canonical_lift": {
+        "all_individual_pairs_are_disjoint_exchanged_minus_two_classes": true,
+        "b_i_dot_b_j_equals_downstairs_configuration": true,
+        "b_i_dot_tau_b_j_is_zero": true,
+        "delta_gram_equals_twice_downstairs_configuration": true,
+        "delta_gram_inertia": {
+          "negative": 9,
+          "positive": 1,
+          "zero": 2
+        },
+        "delta_span_rank": 10,
+        "delta_span_signature": {
+          "negative": 9,
+          "positive": 1
+        },
+        "formula": "b_i=(0,r_i,0), tau(b_i)=(0,0,r_i)",
+        "orthogonal_complement_in_T_inertia": {
+          "negative": 1,
+          "positive": 1,
+          "zero": 0
+        },
+        "positive_directions_left_for_period_plane": 1,
+        "required_positive_directions_for_K3_period_plane": 2,
+        "simultaneous_period_exists": false
+      },
+      "downstairs_intersection_histogram": {
+        "0": 53,
+        "1": 10,
+        "2": 3
+      },
+      "facet_count": 12,
+      "nikulin_kondo_type": "I",
+      "raw_shimada_record": "12A",
+      "wall_rank": 10
+    },
+    {
+      "all_downstairs_walls_primitive_minus_two_roots": true,
+      "canonical_lift": {
+        "all_individual_pairs_are_disjoint_exchanged_minus_two_classes": true,
+        "b_i_dot_b_j_equals_downstairs_configuration": true,
+        "b_i_dot_tau_b_j_is_zero": true,
+        "delta_gram_equals_twice_downstairs_configuration": true,
+        "delta_gram_inertia": {
+          "negative": 9,
+          "positive": 1,
+          "zero": 2
+        },
+        "delta_span_rank": 10,
+        "delta_span_signature": {
+          "negative": 9,
+          "positive": 1
+        },
+        "formula": "b_i=(0,r_i,0), tau(b_i)=(0,0,r_i)",
+        "orthogonal_complement_in_T_inertia": {
+          "negative": 1,
+          "positive": 1,
+          "zero": 0
+        },
+        "positive_directions_left_for_period_plane": 1,
+        "required_positive_directions_for_K3_period_plane": 2,
+        "simultaneous_period_exists": false
+      },
+      "downstairs_intersection_histogram": {
+        "0": 51,
+        "1": 15
+      },
+      "facet_count": 12,
+      "nikulin_kondo_type": "II",
+      "raw_shimada_record": "12B",
+      "wall_rank": 10
+    },
+    {
+      "all_downstairs_walls_primitive_minus_two_roots": true,
+      "canonical_lift": {
+        "all_individual_pairs_are_disjoint_exchanged_minus_two_classes": true,
+        "b_i_dot_b_j_equals_downstairs_configuration": true,
+        "b_i_dot_tau_b_j_is_zero": true,
+        "delta_gram_equals_twice_downstairs_configuration": true,
+        "delta_gram_inertia": {
+          "negative": 9,
+          "positive": 1,
+          "zero": 10
+        },
+        "delta_span_rank": 10,
+        "delta_span_signature": {
+          "negative": 9,
+          "positive": 1
+        },
+        "formula": "b_i=(0,r_i,0), tau(b_i)=(0,0,r_i)",
+        "orthogonal_complement_in_T_inertia": {
+          "negative": 1,
+          "positive": 1,
+          "zero": 0
+        },
+        "positive_directions_left_for_period_plane": 1,
+        "required_positive_directions_for_K3_period_plane": 2,
+        "simultaneous_period_exists": false
+      },
+      "downstairs_intersection_histogram": {
+        "0": 138,
+        "1": 16,
+        "2": 36
+      },
+      "facet_count": 20,
+      "nikulin_kondo_type": "III",
+      "raw_shimada_record": "20B",
+      "wall_rank": 10
+    },
+    {
+      "all_downstairs_walls_primitive_minus_two_roots": true,
+      "canonical_lift": {
+        "all_individual_pairs_are_disjoint_exchanged_minus_two_classes": true,
+        "b_i_dot_b_j_equals_downstairs_configuration": true,
+        "b_i_dot_tau_b_j_is_zero": true,
+        "delta_gram_equals_twice_downstairs_configuration": true,
+        "delta_gram_inertia": {
+          "negative": 9,
+          "positive": 1,
+          "zero": 10
+        },
+        "delta_span_rank": 10,
+        "delta_span_signature": {
+          "negative": 9,
+          "positive": 1
+        },
+        "formula": "b_i=(0,r_i,0), tau(b_i)=(0,0,r_i)",
+        "orthogonal_complement_in_T_inertia": {
+          "negative": 1,
+          "positive": 1,
+          "zero": 0
+        },
+        "positive_directions_left_for_period_plane": 1,
+        "required_positive_directions_for_K3_period_plane": 2,
+        "simultaneous_period_exists": false
+      },
+      "downstairs_intersection_histogram": {
+        "0": 140,
+        "1": 40,
+        "2": 10
+      },
+      "facet_count": 20,
+      "nikulin_kondo_type": "IV",
+      "raw_shimada_record": "20F",
+      "wall_rank": 10
+    },
+    {
+      "all_downstairs_walls_primitive_minus_two_roots": true,
+      "canonical_lift": {
+        "all_individual_pairs_are_disjoint_exchanged_minus_two_classes": true,
+        "b_i_dot_b_j_equals_downstairs_configuration": true,
+        "b_i_dot_tau_b_j_is_zero": true,
+        "delta_gram_equals_twice_downstairs_configuration": true,
+        "delta_gram_inertia": {
+          "negative": 9,
+          "positive": 1,
+          "zero": 10
+        },
+        "delta_span_rank": 10,
+        "delta_span_signature": {
+          "negative": 9,
+          "positive": 1
+        },
+        "formula": "b_i=(0,r_i,0), tau(b_i)=(0,0,r_i)",
+        "orthogonal_complement_in_T_inertia": {
+          "negative": 1,
+          "positive": 1,
+          "zero": 0
+        },
+        "positive_directions_left_for_period_plane": 1,
+        "required_positive_directions_for_K3_period_plane": 2,
+        "simultaneous_period_exists": false
+      },
+      "downstairs_intersection_histogram": {
+        "0": 135,
+        "1": 24,
+        "2": 31
+      },
+      "facet_count": 20,
+      "nikulin_kondo_type": "V",
+      "raw_shimada_record": "20A",
+      "wall_rank": 10
+    },
+    {
+      "all_downstairs_walls_primitive_minus_two_roots": true,
+      "canonical_lift": {
+        "all_individual_pairs_are_disjoint_exchanged_minus_two_classes": true,
+        "b_i_dot_b_j_equals_downstairs_configuration": true,
+        "b_i_dot_tau_b_j_is_zero": true,
+        "delta_gram_equals_twice_downstairs_configuration": true,
+        "delta_gram_inertia": {
+          "negative": 9,
+          "positive": 1,
+          "zero": 10
+        },
+        "delta_span_rank": 10,
+        "delta_span_signature": {
+          "negative": 9,
+          "positive": 1
+        },
+        "formula": "b_i=(0,r_i,0), tau(b_i)=(0,0,r_i)",
+        "orthogonal_complement_in_T_inertia": {
+          "negative": 1,
+          "positive": 1,
+          "zero": 0
+        },
+        "positive_directions_left_for_period_plane": 1,
+        "required_positive_directions_for_K3_period_plane": 2,
+        "simultaneous_period_exists": false
+      },
+      "downstairs_intersection_histogram": {
+        "0": 135,
+        "1": 45,
+        "2": 10
+      },
+      "facet_count": 20,
+      "nikulin_kondo_type": "VI",
+      "raw_shimada_record": "20E",
+      "wall_rank": 10
+    },
+    {
+      "all_downstairs_walls_primitive_minus_two_roots": true,
+      "canonical_lift": {
+        "all_individual_pairs_are_disjoint_exchanged_minus_two_classes": true,
+        "b_i_dot_b_j_equals_downstairs_configuration": true,
+        "b_i_dot_tau_b_j_is_zero": true,
+        "delta_gram_equals_twice_downstairs_configuration": true,
+        "delta_gram_inertia": {
+          "negative": 9,
+          "positive": 1,
+          "zero": 10
+        },
+        "delta_span_rank": 10,
+        "delta_span_signature": {
+          "negative": 9,
+          "positive": 1
+        },
+        "formula": "b_i=(0,r_i,0), tau(b_i)=(0,0,r_i)",
+        "orthogonal_complement_in_T_inertia": {
+          "negative": 1,
+          "positive": 1,
+          "zero": 0
+        },
+        "positive_directions_left_for_period_plane": 1,
+        "required_positive_directions_for_K3_period_plane": 2,
+        "simultaneous_period_exists": false
+      },
+      "downstairs_intersection_histogram": {
+        "0": 135,
+        "1": 30,
+        "2": 25
+      },
+      "facet_count": 20,
+      "nikulin_kondo_type": "VII",
+      "raw_shimada_record": "20C",
+      "wall_rank": 10
+    }
+  ]
+}

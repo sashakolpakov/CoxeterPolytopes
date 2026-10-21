@@ -1,0 +1,744 @@
+{
+  "status": "PASS_NO_ALL_RIGHT_FACET_AFTER_ANY_FINITE_LEGITIMATE_DOUBLINGS",
+  "sources": {
+    "results/fresh_dimension_alternative_routes_20261014.json": "3b98b17a6c63568d10c2a723b620e11887d21ade593effb4ad8d584f70a6c826",
+    "scripts/fresh_dimension_alternative_routes_20261014_doubling_gate.py": "95f2376c60a843ee04671ec8a574c72ec04c29663c12f95d11ec0b9240576216"
+  },
+  "initial_diagram": {
+    "facets": 10,
+    "pair_counts": {
+      "2": 32,
+      "3": 5,
+      "4": 2,
+      "5": 3,
+      "dotted": 3
+    },
+    "odd_facets": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      9
+    ],
+    "doubling_facets": [
+      6,
+      7
+    ],
+    "witnesses": [
+      {
+        "facet": 0,
+        "kind": "odd",
+        "neighbor": 1,
+        "label": 5
+      },
+      {
+        "facet": 1,
+        "kind": "odd",
+        "neighbor": 0,
+        "label": 5
+      },
+      {
+        "facet": 2,
+        "kind": "odd",
+        "neighbor": 1,
+        "label": 3
+      },
+      {
+        "facet": 3,
+        "kind": "odd",
+        "neighbor": 2,
+        "label": 3
+      },
+      {
+        "facet": 4,
+        "kind": "odd",
+        "neighbor": 3,
+        "label": 3
+      },
+      {
+        "facet": 5,
+        "kind": "odd",
+        "neighbor": 4,
+        "label": 3
+      },
+      {
+        "facet": 6,
+        "kind": "nonright_to_odd",
+        "neighbor": 1,
+        "label": 4
+      },
+      {
+        "facet": 7,
+        "kind": "nonright_to_odd",
+        "neighbor": 1,
+        "label": 4
+      },
+      {
+        "facet": 8,
+        "kind": "odd",
+        "neighbor": 4,
+        "label": 3
+      },
+      {
+        "facet": 9,
+        "kind": "odd",
+        "neighbor": 5,
+        "label": 5
+      }
+    ]
+  },
+  "first_doubles": [
+    {
+      "doubling_original_facet": 7,
+      "facets": [
+        {
+          "source": 1,
+          "reflected": false
+        },
+        {
+          "source": 2,
+          "reflected": false
+        },
+        {
+          "source": 3,
+          "reflected": false
+        },
+        {
+          "source": 4,
+          "reflected": false
+        },
+        {
+          "source": 5,
+          "reflected": false
+        },
+        {
+          "source": 6,
+          "reflected": false
+        },
+        {
+          "source": 8,
+          "reflected": false
+        },
+        {
+          "source": 9,
+          "reflected": false
+        },
+        {
+          "source": 10,
+          "reflected": false
+        },
+        {
+          "source": 2,
+          "reflected": true
+        },
+        {
+          "source": 6,
+          "reflected": true
+        },
+        {
+          "source": 8,
+          "reflected": true
+        }
+      ],
+      "exact_gram": [
+        [
+          "1",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "0"
+        ],
+        [
+          "-sqrt(5)/4 - 1/4",
+          "1",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "-sqrt(2)/2",
+          "0",
+          "0",
+          "0",
+          "-2*sqrt(5) - 4",
+          "-8*sqrt(10) - 35*sqrt(2)/2"
+        ],
+        [
+          "0",
+          "-1/2",
+          "1",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1/2",
+          "1",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "1",
+          "-1/2",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "1",
+          "0",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "-2*sqrt(5) - 4",
+          "-16*sqrt(5) - 35",
+          "-148*sqrt(2) - 66*sqrt(10)"
+        ],
+        [
+          "0",
+          "-sqrt(2)/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "-sqrt(10) - 2*sqrt(2)",
+          "0",
+          "-8*sqrt(10) - 35*sqrt(2)/2",
+          "-148*sqrt(2) - 66*sqrt(10)",
+          "-1217 - 544*sqrt(5)"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "-sqrt(10) - 2*sqrt(2)",
+          "1",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "0",
+          "-sqrt(10) - 2*sqrt(2)"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "1",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "0"
+        ],
+        [
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "-2*sqrt(5) - 4",
+          "-8*sqrt(10) - 35*sqrt(2)/2",
+          "0",
+          "0",
+          "1",
+          "0",
+          "-sqrt(2)/2"
+        ],
+        [
+          "0",
+          "-2*sqrt(5) - 4",
+          "0",
+          "0",
+          "-1/2",
+          "-16*sqrt(5) - 35",
+          "-148*sqrt(2) - 66*sqrt(10)",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-8*sqrt(10) - 35*sqrt(2)/2",
+          "0",
+          "0",
+          "0",
+          "-148*sqrt(2) - 66*sqrt(10)",
+          "-1217 - 544*sqrt(5)",
+          "-sqrt(10) - 2*sqrt(2)",
+          "0",
+          "-sqrt(2)/2",
+          "0",
+          "1"
+        ]
+      ],
+      "checks": {
+        "facets": 12,
+        "pair_counts": {
+          "2": 42,
+          "3": 7,
+          "4": 2,
+          "5": 5,
+          "dotted": 10
+        },
+        "odd_facets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "doubling_facets": [
+          6,
+          11
+        ],
+        "witnesses": [
+          {
+            "facet": 0,
+            "kind": "odd",
+            "neighbor": 1,
+            "label": 5
+          },
+          {
+            "facet": 1,
+            "kind": "odd",
+            "neighbor": 0,
+            "label": 5
+          },
+          {
+            "facet": 2,
+            "kind": "odd",
+            "neighbor": 1,
+            "label": 3
+          },
+          {
+            "facet": 3,
+            "kind": "odd",
+            "neighbor": 2,
+            "label": 3
+          },
+          {
+            "facet": 4,
+            "kind": "odd",
+            "neighbor": 3,
+            "label": 3
+          },
+          {
+            "facet": 5,
+            "kind": "odd",
+            "neighbor": 4,
+            "label": 3
+          },
+          {
+            "facet": 6,
+            "kind": "nonright_to_odd",
+            "neighbor": 1,
+            "label": 4
+          },
+          {
+            "facet": 7,
+            "kind": "odd",
+            "neighbor": 4,
+            "label": 3
+          },
+          {
+            "facet": 8,
+            "kind": "odd",
+            "neighbor": 5,
+            "label": 5
+          },
+          {
+            "facet": 9,
+            "kind": "odd",
+            "neighbor": 0,
+            "label": 5
+          },
+          {
+            "facet": 10,
+            "kind": "odd",
+            "neighbor": 4,
+            "label": 3
+          },
+          {
+            "facet": 11,
+            "kind": "nonright_to_odd",
+            "neighbor": 9,
+            "label": 4
+          }
+        ]
+      }
+    },
+    {
+      "doubling_original_facet": 8,
+      "facets": [
+        {
+          "source": 1,
+          "reflected": false
+        },
+        {
+          "source": 2,
+          "reflected": false
+        },
+        {
+          "source": 3,
+          "reflected": false
+        },
+        {
+          "source": 4,
+          "reflected": false
+        },
+        {
+          "source": 5,
+          "reflected": false
+        },
+        {
+          "source": 6,
+          "reflected": false
+        },
+        {
+          "source": 7,
+          "reflected": false
+        },
+        {
+          "source": 9,
+          "reflected": false
+        },
+        {
+          "source": 10,
+          "reflected": false
+        },
+        {
+          "source": 2,
+          "reflected": true
+        },
+        {
+          "source": 7,
+          "reflected": true
+        },
+        {
+          "source": 9,
+          "reflected": true
+        }
+      ],
+      "exact_gram": [
+        [
+          "1",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "0"
+        ],
+        [
+          "-sqrt(5)/4 - 1/4",
+          "1",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "-sqrt(2)/2",
+          "0",
+          "0",
+          "0",
+          "-8*sqrt(10) - 35*sqrt(2)/2",
+          "-2*sqrt(5) - 4"
+        ],
+        [
+          "0",
+          "-1/2",
+          "1",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1/2",
+          "1",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "1",
+          "-1/2",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "-1/2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "1",
+          "-sqrt(10) - 2*sqrt(2)",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "-sqrt(10) - 2*sqrt(2)",
+          "0"
+        ],
+        [
+          "0",
+          "-sqrt(2)/2",
+          "0",
+          "0",
+          "0",
+          "-sqrt(10) - 2*sqrt(2)",
+          "1",
+          "0",
+          "0",
+          "-8*sqrt(10) - 35*sqrt(2)/2",
+          "-1217 - 544*sqrt(5)",
+          "-148*sqrt(2) - 66*sqrt(10)"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1",
+          "-sqrt(5)/4 - 1/4",
+          "-2*sqrt(5) - 4",
+          "-148*sqrt(2) - 66*sqrt(10)",
+          "-16*sqrt(5) - 35"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "-sqrt(5)/4 - 1/4",
+          "1",
+          "0",
+          "0",
+          "-sqrt(5)/4 - 1/4"
+        ],
+        [
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "-8*sqrt(10) - 35*sqrt(2)/2",
+          "-2*sqrt(5) - 4",
+          "0",
+          "1",
+          "-sqrt(2)/2",
+          "0"
+        ],
+        [
+          "0",
+          "-8*sqrt(10) - 35*sqrt(2)/2",
+          "0",
+          "0",
+          "0",
+          "-sqrt(10) - 2*sqrt(2)",
+          "-1217 - 544*sqrt(5)",
+          "-148*sqrt(2) - 66*sqrt(10)",
+          "0",
+          "-sqrt(2)/2",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-2*sqrt(5) - 4",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "-148*sqrt(2) - 66*sqrt(10)",
+          "-16*sqrt(5) - 35",
+          "-sqrt(5)/4 - 1/4",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "checks": {
+        "facets": 12,
+        "pair_counts": {
+          "2": 42,
+          "3": 7,
+          "4": 2,
+          "5": 5,
+          "dotted": 10
+        },
+        "odd_facets": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          11
+        ],
+        "doubling_facets": [
+          6,
+          10
+        ],
+        "witnesses": [
+          {
+            "facet": 0,
+            "kind": "odd",
+            "neighbor": 1,
+            "label": 5
+          },
+          {
+            "facet": 1,
+            "kind": "odd",
+            "neighbor": 0,
+            "label": 5
+          },
+          {
+            "facet": 2,
+            "kind": "odd",
+            "neighbor": 1,
+            "label": 3
+          },
+          {
+            "facet": 3,
+            "kind": "odd",
+            "neighbor": 2,
+            "label": 3
+          },
+          {
+            "facet": 4,
+            "kind": "odd",
+            "neighbor": 3,
+            "label": 3
+          },
+          {
+            "facet": 5,
+            "kind": "odd",
+            "neighbor": 4,
+            "label": 3
+          },
+          {
+            "facet": 6,
+            "kind": "nonright_to_odd",
+            "neighbor": 1,
+            "label": 4
+          },
+          {
+            "facet": 7,
+            "kind": "odd",
+            "neighbor": 4,
+            "label": 3
+          },
+          {
+            "facet": 8,
+            "kind": "odd",
+            "neighbor": 5,
+            "label": 5
+          },
+          {
+            "facet": 9,
+            "kind": "odd",
+            "neighbor": 0,
+            "label": 5
+          },
+          {
+            "facet": 10,
+            "kind": "nonright_to_odd",
+            "neighbor": 9,
+            "label": 4
+          },
+          {
+            "facet": 11,
+            "kind": "odd",
+            "neighbor": 4,
+            "label": 3
+          }
+        ]
+      }
+    }
+  ],
+  "invariant": "Every facet has an odd finite-angle neighbor, or a nonright finite-angle neighbor that itself has an odd finite-angle neighbor.",
+  "theorem": "This invariant is preserved by doubling across any wall all of whose meeting labels are even. No all-right facet can therefore occur after a finite sequence.",
+  "scope": "Known compact H6 ten-facet source and any finite sequence of legitimate single-wall Coxeter doublings. No claim about general gluing, non-doubling reflection subgroups, rolling, source angle surgery, or all compact H9 constructions."
+}

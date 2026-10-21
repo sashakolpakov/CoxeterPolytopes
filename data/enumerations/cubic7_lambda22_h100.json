@@ -1,0 +1,4661 @@
+{
+  "cone_status": {
+    "compactness_test_applicable": false,
+    "finite_volume_test_applicable": false,
+    "height_zero_wall_count": 0,
+    "hyperideal_extreme_ray_test_applicable": false,
+    "polyhedral_chamber_closed": false,
+    "positive_wall_count_through_H100": 0,
+    "reason": "No reflecting wall occurs in the certified prefix, so there is no positive-dimensional wall cone on which to run an extreme-ray closure test."
+  },
+  "field": "Q(theta), theta^3+theta^2-2theta-1=0",
+  "frontier": {
+    "all_controls_at_height_at_most_100_exhausted": true,
+    "last_control": {
+      "display": "6 + 9*theta + 3*theta^2",
+      "exact": {
+        "a": "6",
+        "b": "9",
+        "c": "3"
+      },
+      "signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    "last_control_height": {
+      "display": "15 + 87/2*theta + 39/2*theta^2",
+      "exact": {
+        "a": "15",
+        "b": "87/2",
+        "c": "39/2"
+      },
+      "signs": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    "last_control_norm": {
+      "display": "6",
+      "exact": {
+        "a": "6",
+        "b": "0",
+        "c": "0"
+      },
+      "signs": [
+        1,
+        1,
+        1
+      ]
+    },
+    "last_spatial_square_target": {
+      "display": "96 + 261*theta + 117*theta^2",
+      "exact": {
+        "a": "96",
+        "b": "261",
+        "c": "117"
+      },
+      "signs": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "height_bound": 100,
+  "height_zero": {
+    "norm_class_audits": [
+      {
+        "coefficient_trace_lattice_minimum": 12,
+        "necessary_gram_type_count": 0,
+        "norm": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 1,
+        "target_trace": 3
+      },
+      {
+        "coefficient_trace_lattice_minimum": 12,
+        "necessary_gram_type_count": 0,
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 1,
+        "target_trace": 6
+      },
+      {
+        "coefficient_trace_lattice_minimum": 36,
+        "necessary_gram_type_count": 0,
+        "norm": {
+          "display": "4",
+          "exact": {
+            "a": "4",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 2,
+        "target_trace": 12
+      },
+      {
+        "coefficient_trace_lattice_minimum": 72,
+        "necessary_gram_type_count": 0,
+        "norm": {
+          "display": "3",
+          "exact": {
+            "a": "3",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 3,
+        "target_trace": 9
+      },
+      {
+        "coefficient_trace_lattice_minimum": 72,
+        "necessary_gram_type_count": 0,
+        "norm": {
+          "display": "6",
+          "exact": {
+            "a": "6",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 3,
+        "target_trace": 18
+      },
+      {
+        "coefficient_trace_lattice_minimum": 288,
+        "necessary_gram_type_count": 0,
+        "norm": {
+          "display": "12",
+          "exact": {
+            "a": "12",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 6,
+        "target_trace": 36
+      }
+    ],
+    "reflecting_wall_count": 0,
+    "statement": "For every complete norm class, the exact trace target is below the PARI-certified trace minimum of the required pairing-radical lattice."
+  },
+  "hyperbolic_dimension": 22,
+  "pari_qfminim_replay": {
+    "command_shape": "qfminim(M) with signed count r[1], minimum r[2], and representative matrix r[3]",
+    "coordinate_order_for_trace": "three 22-coordinate blocks u,v,w; Gram=TraceGram tensor ordinaryGram",
+    "engine": "                  GP/PARI CALCULATOR Version 2.17.4 (released)",
+    "radical_lattices": [
+      {
+        "basis_determinant": 1,
+        "definition": "N_1={y in Lambda22 : (y,Lambda22) subset 1Z}",
+        "index": 1,
+        "ordinary": {
+          "kissing_number": 49896,
+          "minimum": 4,
+          "representatives_mod_sign": 24948,
+          "vector_stream_bytes": 2798502,
+          "vector_stream_sha256": "9b752381c953619264cf7eb1aba9b73480e6de94553a68db65eec8bfda30f428"
+        },
+        "ordinary_rank": 22,
+        "pairing_modulus": 1,
+        "trace_over_OK": {
+          "kissing_number": 49896,
+          "minimum": 12,
+          "representatives_mod_sign": 24948,
+          "vector_stream_bytes": 6091638,
+          "vector_stream_sha256": "68f28fe35482a24842236914e18161c8bcd7fbc325db3f7efec9f6cee64bb0d7"
+        },
+        "trace_rank": 66
+      },
+      {
+        "basis_determinant": 1048576,
+        "definition": "N_2={y in Lambda22 : (y,Lambda22) subset 2Z}",
+        "index": 1048576,
+        "ordinary": {
+          "kissing_number": 8448,
+          "minimum": 12,
+          "representatives_mod_sign": 4224,
+          "vector_stream_bytes": 460105,
+          "vector_stream_sha256": "7e1a12da7f909431322b7d18ec7fb04b0823d94262ddc352a7f357b8a98de35d"
+        },
+        "ordinary_rank": 22,
+        "pairing_modulus": 2,
+        "trace_over_OK": {
+          "kissing_number": 8448,
+          "minimum": 36,
+          "representatives_mod_sign": 4224,
+          "vector_stream_bytes": 1017673,
+          "vector_stream_sha256": "85033270f30c8cadb7d4721a31845746c55a395e06d59d526003f9310da963ee"
+        },
+        "trace_rank": 66
+      },
+      {
+        "basis_determinant": 10460353203,
+        "definition": "N_3={y in Lambda22 : (y,Lambda22) subset 3Z}",
+        "index": 10460353203,
+        "ordinary": {
+          "kissing_number": 1782,
+          "minimum": 24,
+          "representatives_mod_sign": 891,
+          "vector_stream_bytes": 100647,
+          "vector_stream_sha256": "5444d0e47077d2c0d102cc997e74303a09df6dbc9e94b45b56a9aef9012fd1fd"
+        },
+        "ordinary_rank": 22,
+        "pairing_modulus": 3,
+        "trace_over_OK": {
+          "kissing_number": 1782,
+          "minimum": 72,
+          "representatives_mod_sign": 891,
+          "vector_stream_bytes": 218259,
+          "vector_stream_sha256": "896e61ddda939787709edd6927179a929360cb2e3c3935cf9168cc48dfed8884"
+        },
+        "trace_rank": 66
+      },
+      {
+        "basis_determinant": 10968475320188928,
+        "definition": "N_6={y in Lambda22 : (y,Lambda22) subset 6Z}",
+        "index": 10968475320188928,
+        "ordinary": {
+          "kissing_number": 1782,
+          "minimum": 96,
+          "representatives_mod_sign": 891,
+          "vector_stream_bytes": 100791,
+          "vector_stream_sha256": "80136af8b02b3aedc70110d897fdc6d47f6e278e214c73316105129161028be5"
+        },
+        "ordinary_rank": 22,
+        "pairing_modulus": 6,
+        "trace_over_OK": {
+          "kissing_number": 1782,
+          "minimum": 288,
+          "representatives_mod_sign": 891,
+          "vector_stream_bytes": 218403,
+          "vector_stream_sha256": "0fc0d0fd3366b45f35689e1066e2efdf03f6bea25c8dfbe3023bc083fb602ebd"
+        },
+        "trace_rank": 66
+      }
+    ],
+    "shell_orbit_assumption": false
+  },
+  "positive_prefix": {
+    "accepted_positive_wall_count": 0,
+    "ambient_gram_type_count": 89,
+    "ambient_gram_type_rank_histogram": {
+      "1": 3,
+      "2": 6,
+      "3": 80
+    },
+    "control_count": 30,
+    "control_counts_by_norm": [
+      {
+        "count": 5,
+        "norm": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "count": 16,
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "count": 5,
+        "norm": {
+          "display": "4",
+          "exact": {
+            "a": "4",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "count": 1,
+        "norm": {
+          "display": "3",
+          "exact": {
+            "a": "3",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "count": 2,
+        "norm": {
+          "display": "6",
+          "exact": {
+            "a": "6",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "count": 1,
+        "norm": {
+          "display": "12",
+          "exact": {
+            "a": "12",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "control_levels": [
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "1/2*theta",
+          "exact": {
+            "a": "0",
+            "b": "1/2",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "2 + 1*theta",
+          "exact": {
+            "a": "2",
+            "b": "1",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 5
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "-1 + 1*theta + 1*theta^2",
+          "exact": {
+            "a": "-1",
+            "b": "1",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            -1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "1*theta + 1/2*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "1",
+            "c": "1/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "2 + 2*theta + 1*theta^2",
+          "exact": {
+            "a": "2",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 9
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "1 + 1*theta",
+          "exact": {
+            "a": "1",
+            "b": "1",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "1/2 + 3/2*theta + 1/2*theta^2",
+          "exact": {
+            "a": "1/2",
+            "b": "3/2",
+            "c": "1/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "3 + 3*theta + 1*theta^2",
+          "exact": {
+            "a": "3",
+            "b": "3",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 11
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "-1 + 1*theta + 1*theta^2",
+          "exact": {
+            "a": "-1",
+            "b": "1",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            -1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "2*theta + 1*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "1 + 2*theta + 1*theta^2",
+          "exact": {
+            "a": "1",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 6
+      },
+      {
+        "ambient_minimum_four_gram_types": [
+          {
+            "rank": 1,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              4,
+              0,
+              4,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "-2 + 2*theta + 2*theta^2",
+          "exact": {
+            "a": "-2",
+            "b": "2",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            -1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1048576,
+          "coefficient_lattice_minimum": 12,
+          "pairing_modulus": 2
+        },
+        "height": {
+          "display": "2*theta + 1*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "4",
+          "exact": {
+            "a": "4",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [
+          {
+            "rank": 1,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              4,
+              0,
+              4,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "spatial_square_target": {
+          "display": "4 + 8*theta + 4*theta^2",
+          "exact": {
+            "a": "4",
+            "b": "8",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 24
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "2 + 1*theta",
+          "exact": {
+            "a": "2",
+            "b": "1",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "1/2 + 3*theta + 3/2*theta^2",
+          "exact": {
+            "a": "1/2",
+            "b": "3",
+            "c": "3/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "3 + 6*theta + 3*theta^2",
+          "exact": {
+            "a": "3",
+            "b": "6",
+            "c": "3"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 18
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "2*theta + 1*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "3/2 + 9/2*theta + 2*theta^2",
+          "exact": {
+            "a": "3/2",
+            "b": "9/2",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "5 + 9*theta + 4*theta^2",
+          "exact": {
+            "a": "5",
+            "b": "9",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 26
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "1 + 2*theta + 1*theta^2",
+          "exact": {
+            "a": "1",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "5/2 + 7*theta + 3*theta^2",
+          "exact": {
+            "a": "5/2",
+            "b": "7",
+            "c": "3"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "7 + 14*theta + 6*theta^2",
+          "exact": {
+            "a": "7",
+            "b": "14",
+            "c": "6"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 37
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "3 + 2*theta",
+          "exact": {
+            "a": "3",
+            "b": "2",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "2 + 17/2*theta + 4*theta^2",
+          "exact": {
+            "a": "2",
+            "b": "17/2",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "6 + 17*theta + 8*theta^2",
+          "exact": {
+            "a": "6",
+            "b": "17",
+            "c": "8"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 41
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "2*theta + 1*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "3 + 9*theta + 4*theta^2",
+          "exact": {
+            "a": "3",
+            "b": "9",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "4 + 9*theta + 4*theta^2",
+          "exact": {
+            "a": "4",
+            "b": "9",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 23
+      },
+      {
+        "ambient_minimum_four_gram_types": [
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              16,
+              4,
+              4,
+              2,
+              8,
+              0
+            ]
+          },
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              20,
+              4,
+              4,
+              0,
+              8,
+              0
+            ]
+          }
+        ],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "4*theta + 2*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "4",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1048576,
+          "coefficient_lattice_minimum": 12,
+          "pairing_modulus": 2
+        },
+        "height": {
+          "display": "3 + 9*theta + 4*theta^2",
+          "exact": {
+            "a": "3",
+            "b": "9",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "4",
+          "exact": {
+            "a": "4",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              16,
+              4,
+              4,
+              2,
+              8,
+              0
+            ]
+          },
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              20,
+              4,
+              4,
+              0,
+              8,
+              0
+            ]
+          }
+        ],
+        "spatial_square_target": {
+          "display": "16 + 36*theta + 16*theta^2",
+          "exact": {
+            "a": "16",
+            "b": "36",
+            "c": "16"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 92
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "-1 + 3*theta + 2*theta^2",
+          "exact": {
+            "a": "-1",
+            "b": "3",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            -1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "5/2 + 19/2*theta + 9/2*theta^2",
+          "exact": {
+            "a": "5/2",
+            "b": "19/2",
+            "c": "9/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "7 + 19*theta + 9*theta^2",
+          "exact": {
+            "a": "7",
+            "b": "19",
+            "c": "9"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 47
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "6*theta + 3*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "6",
+            "c": "3"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 10460353203,
+          "coefficient_lattice_minimum": 24,
+          "pairing_modulus": 3
+        },
+        "height": {
+          "display": "9/2 + 27/2*theta + 6*theta^2",
+          "exact": {
+            "a": "9/2",
+            "b": "27/2",
+            "c": "6"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "6",
+          "exact": {
+            "a": "6",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "33 + 81*theta + 36*theta^2",
+          "exact": {
+            "a": "33",
+            "b": "81",
+            "c": "36"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 198
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "1 + 2*theta + 1*theta^2",
+          "exact": {
+            "a": "1",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "5 + 14*theta + 6*theta^2",
+          "exact": {
+            "a": "5",
+            "b": "14",
+            "c": "6"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "6 + 14*theta + 6*theta^2",
+          "exact": {
+            "a": "6",
+            "b": "14",
+            "c": "6"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 34
+      },
+      {
+        "ambient_minimum_four_gram_types": [
+          {
+            "rank": 1,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              0,
+              32,
+              8,
+              0,
+              0,
+              16,
+              0
+            ]
+          }
+        ],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "2 + 4*theta + 2*theta^2",
+          "exact": {
+            "a": "2",
+            "b": "4",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1048576,
+          "coefficient_lattice_minimum": 12,
+          "pairing_modulus": 2
+        },
+        "height": {
+          "display": "5 + 14*theta + 6*theta^2",
+          "exact": {
+            "a": "5",
+            "b": "14",
+            "c": "6"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "4",
+          "exact": {
+            "a": "4",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [
+          {
+            "rank": 1,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              0,
+              32,
+              8,
+              0,
+              0,
+              16,
+              0
+            ]
+          }
+        ],
+        "spatial_square_target": {
+          "display": "24 + 56*theta + 24*theta^2",
+          "exact": {
+            "a": "24",
+            "b": "56",
+            "c": "24"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 136
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "2 + 3*theta + 1*theta^2",
+          "exact": {
+            "a": "2",
+            "b": "3",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "5 + 29/2*theta + 13/2*theta^2",
+          "exact": {
+            "a": "5",
+            "b": "29/2",
+            "c": "13/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "12 + 29*theta + 13*theta^2",
+          "exact": {
+            "a": "12",
+            "b": "29",
+            "c": "13"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 72
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "4*theta + 2*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "4",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "6 + 18*theta + 8*theta^2",
+          "exact": {
+            "a": "6",
+            "b": "18",
+            "c": "8"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "14 + 36*theta + 16*theta^2",
+          "exact": {
+            "a": "14",
+            "b": "36",
+            "c": "16"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 86
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "3 + 3*theta + 1*theta^2",
+          "exact": {
+            "a": "3",
+            "b": "3",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "6 + 19*theta + 17/2*theta^2",
+          "exact": {
+            "a": "6",
+            "b": "19",
+            "c": "17/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "14 + 38*theta + 17*theta^2",
+          "exact": {
+            "a": "14",
+            "b": "38",
+            "c": "17"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 89
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "1 + 4*theta + 2*theta^2",
+          "exact": {
+            "a": "1",
+            "b": "4",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            -1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "8 + 45/2*theta + 10*theta^2",
+          "exact": {
+            "a": "8",
+            "b": "45/2",
+            "c": "10"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "18 + 45*theta + 20*theta^2",
+          "exact": {
+            "a": "18",
+            "b": "45",
+            "c": "20"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 109
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "3 + 4*theta + 1*theta^2",
+          "exact": {
+            "a": "3",
+            "b": "4",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "17/2 + 25*theta + 11*theta^2",
+          "exact": {
+            "a": "17/2",
+            "b": "25",
+            "c": "11"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "19 + 50*theta + 22*theta^2",
+          "exact": {
+            "a": "19",
+            "b": "50",
+            "c": "22"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 117
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "6*theta + 3*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "6",
+            "c": "3"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 10460353203,
+          "coefficient_lattice_minimum": 24,
+          "pairing_modulus": 3
+        },
+        "height": {
+          "display": "9 + 27*theta + 12*theta^2",
+          "exact": {
+            "a": "9",
+            "b": "27",
+            "c": "12"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "3",
+          "exact": {
+            "a": "3",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "30 + 81*theta + 36*theta^2",
+          "exact": {
+            "a": "30",
+            "b": "81",
+            "c": "36"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 189
+      },
+      {
+        "ambient_minimum_four_gram_types": [
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              10,
+              152,
+              36,
+              34,
+              15,
+              73,
+              74
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              10,
+              156,
+              34,
+              35,
+              15,
+              72,
+              50
+            ]
+          },
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              12,
+              144,
+              36,
+              36,
+              18,
+              72,
+              0
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              12,
+              148,
+              36,
+              36,
+              16,
+              72,
+              128
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              12,
+              152,
+              34,
+              37,
+              16,
+              71,
+              130
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              12,
+              156,
+              32,
+              38,
+              16,
+              70,
+              80
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              14,
+              144,
+              36,
+              38,
+              17,
+              71,
+              134
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              14,
+              148,
+              34,
+              39,
+              17,
+              70,
+              182
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              14,
+              152,
+              32,
+              40,
+              17,
+              69,
+              154
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              16,
+              140,
+              36,
+              40,
+              18,
+              70,
+              80
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              16,
+              144,
+              34,
+              41,
+              18,
+              69,
+              194
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              16,
+              148,
+              32,
+              42,
+              18,
+              68,
+              208
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              16,
+              150,
+              32,
+              42,
+              17,
+              68,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              16,
+              152,
+              30,
+              43,
+              18,
+              67,
+              134
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              16,
+              154,
+              30,
+              43,
+              17,
+              67,
+              74
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              18,
+              140,
+              34,
+              43,
+              19,
+              68,
+              154
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              18,
+              144,
+              32,
+              44,
+              19,
+              67,
+              230
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              18,
+              146,
+              32,
+              44,
+              18,
+              67,
+              166
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              18,
+              148,
+              30,
+              45,
+              19,
+              66,
+              194
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              18,
+              150,
+              30,
+              45,
+              18,
+              66,
+              162
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              20,
+              136,
+              34,
+              45,
+              20,
+              67,
+              50
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              20,
+              140,
+              32,
+              46,
+              20,
+              66,
+              208
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              20,
+              142,
+              32,
+              46,
+              19,
+              66,
+              154
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              20,
+              144,
+              30,
+              47,
+              20,
+              65,
+              230
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              20,
+              146,
+              30,
+              47,
+              19,
+              65,
+              214
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              20,
+              148,
+              28,
+              48,
+              20,
+              64,
+              128
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              20,
+              150,
+              28,
+              48,
+              19,
+              64,
+              154
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              20,
+              152,
+              28,
+              48,
+              18,
+              64,
+              32
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              22,
+              136,
+              32,
+              48,
+              21,
+              65,
+              130
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              22,
+              138,
+              32,
+              48,
+              20,
+              65,
+              74
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              22,
+              140,
+              30,
+              49,
+              21,
+              64,
+              230
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              22,
+              142,
+              30,
+              49,
+              20,
+              64,
+              218
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              22,
+              144,
+              28,
+              50,
+              21,
+              63,
+              182
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              22,
+              146,
+              28,
+              50,
+              20,
+              63,
+              218
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              22,
+              148,
+              28,
+              50,
+              19,
+              63,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              24,
+              136,
+              30,
+              51,
+              22,
+              63,
+              182
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              24,
+              138,
+              30,
+              51,
+              21,
+              63,
+              162
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              24,
+              140,
+              28,
+              52,
+              22,
+              62,
+              208
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              24,
+              142,
+              28,
+              52,
+              21,
+              62,
+              242
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              24,
+              144,
+              26,
+              53,
+              22,
+              61,
+              74
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              24,
+              144,
+              28,
+              52,
+              20,
+              62,
+              160
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              24,
+              146,
+              26,
+              53,
+              21,
+              61,
+              166
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              24,
+              148,
+              26,
+              53,
+              20,
+              61,
+              134
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              26,
+              132,
+              30,
+              53,
+              23,
+              62,
+              74
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              26,
+              136,
+              28,
+              54,
+              23,
+              61,
+              194
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              26,
+              138,
+              28,
+              54,
+              22,
+              61,
+              214
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              26,
+              140,
+              26,
+              55,
+              23,
+              60,
+              130
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              26,
+              140,
+              28,
+              54,
+              21,
+              61,
+              134
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              26,
+              142,
+              26,
+              55,
+              22,
+              60,
+              214
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              26,
+              144,
+              26,
+              55,
+              21,
+              60,
+              190
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              132,
+              28,
+              56,
+              24,
+              60,
+              128
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              134,
+              28,
+              56,
+              23,
+              60,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              136,
+              26,
+              57,
+              24,
+              59,
+              154
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              136,
+              28,
+              56,
+              22,
+              60,
+              32
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              138,
+              26,
+              57,
+              23,
+              59,
+              218
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              140,
+              26,
+              57,
+              22,
+              59,
+              190
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              142,
+              24,
+              58,
+              23,
+              58,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              144,
+              24,
+              58,
+              22,
+              58,
+              160
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              28,
+              146,
+              24,
+              58,
+              21,
+              58,
+              86
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              30,
+              132,
+              26,
+              59,
+              25,
+              58,
+              134
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              30,
+              134,
+              26,
+              59,
+              24,
+              58,
+              166
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              30,
+              136,
+              24,
+              60,
+              25,
+              57,
+              50
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              30,
+              136,
+              26,
+              59,
+              23,
+              58,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              30,
+              138,
+              24,
+              60,
+              24,
+              57,
+              162
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              30,
+              140,
+              24,
+              60,
+              23,
+              57,
+              190
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              30,
+              142,
+              24,
+              60,
+              22,
+              57,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              32,
+              132,
+              24,
+              62,
+              26,
+              56,
+              80
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              32,
+              134,
+              24,
+              62,
+              25,
+              56,
+              154
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              32,
+              136,
+              24,
+              62,
+              24,
+              56,
+              160
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              32,
+              138,
+              24,
+              62,
+              23,
+              56,
+              86
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              32,
+              140,
+              22,
+              63,
+              24,
+              55,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              32,
+              142,
+              22,
+              63,
+              23,
+              55,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              34,
+              134,
+              22,
+              65,
+              26,
+              54,
+              74
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              34,
+              136,
+              22,
+              65,
+              25,
+              54,
+              134
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              34,
+              138,
+              22,
+              65,
+              24,
+              54,
+              122
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              36,
+              136,
+              20,
+              68,
+              26,
+              52,
+              32
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              36,
+              138,
+              20,
+              68,
+              25,
+              52,
+              86
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              36,
+              140,
+              20,
+              68,
+              24,
+              52,
+              64
+            ]
+          }
+        ],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "12*theta + 6*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "12",
+            "c": "6"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 10968475320188928,
+          "coefficient_lattice_minimum": 96,
+          "pairing_modulus": 6
+        },
+        "height": {
+          "display": "9 + 27*theta + 12*theta^2",
+          "exact": {
+            "a": "9",
+            "b": "27",
+            "c": "12"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "12",
+          "exact": {
+            "a": "12",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              12,
+              144,
+              36,
+              36,
+              18,
+              72,
+              0
+            ]
+          }
+        ],
+        "spatial_square_target": {
+          "display": "120 + 324*theta + 144*theta^2",
+          "exact": {
+            "a": "120",
+            "b": "324",
+            "c": "144"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 756
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "2 + 3*theta + 1*theta^2",
+          "exact": {
+            "a": "2",
+            "b": "3",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "10 + 29*theta + 13*theta^2",
+          "exact": {
+            "a": "10",
+            "b": "29",
+            "c": "13"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "11 + 29*theta + 13*theta^2",
+          "exact": {
+            "a": "11",
+            "b": "29",
+            "c": "13"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 69
+      },
+      {
+        "ambient_minimum_four_gram_types": [
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              52,
+              16,
+              10,
+              4,
+              28,
+              0
+            ]
+          },
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              8,
+              48,
+              12,
+              16,
+              8,
+              24,
+              0
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              8,
+              52,
+              12,
+              16,
+              6,
+              24,
+              48
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              10,
+              52,
+              10,
+              19,
+              7,
+              22,
+              54
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              12,
+              52,
+              8,
+              22,
+              8,
+              20,
+              32
+            ]
+          },
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              16,
+              44,
+              8,
+              26,
+              10,
+              18,
+              0
+            ]
+          }
+        ],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "4 + 6*theta + 2*theta^2",
+          "exact": {
+            "a": "4",
+            "b": "6",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1048576,
+          "coefficient_lattice_minimum": 12,
+          "pairing_modulus": 2
+        },
+        "height": {
+          "display": "10 + 29*theta + 13*theta^2",
+          "exact": {
+            "a": "10",
+            "b": "29",
+            "c": "13"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "4",
+          "exact": {
+            "a": "4",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              52,
+              16,
+              10,
+              4,
+              28,
+              0
+            ]
+          },
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              8,
+              48,
+              12,
+              16,
+              8,
+              24,
+              0
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              8,
+              52,
+              12,
+              16,
+              6,
+              24,
+              48
+            ]
+          },
+          {
+            "rank": 3,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              12,
+              52,
+              8,
+              22,
+              8,
+              20,
+              32
+            ]
+          },
+          {
+            "rank": 2,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              16,
+              44,
+              8,
+              26,
+              10,
+              18,
+              0
+            ]
+          }
+        ],
+        "spatial_square_target": {
+          "display": "44 + 116*theta + 52*theta^2",
+          "exact": {
+            "a": "44",
+            "b": "116",
+            "c": "52"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 276
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "5*theta + 3*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "5",
+            "c": "3"
+          },
+          "signs": [
+            1,
+            -1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "11 + 65/2*theta + 29/2*theta^2",
+          "exact": {
+            "a": "11",
+            "b": "65/2",
+            "c": "29/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "24 + 65*theta + 29*theta^2",
+          "exact": {
+            "a": "24",
+            "b": "65",
+            "c": "29"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 152
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "2 + 5*theta + 2*theta^2",
+          "exact": {
+            "a": "2",
+            "b": "5",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "25/2 + 35*theta + 31/2*theta^2",
+          "exact": {
+            "a": "25/2",
+            "b": "35",
+            "c": "31/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "27 + 70*theta + 31*theta^2",
+          "exact": {
+            "a": "27",
+            "b": "70",
+            "c": "31"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 166
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "4*theta + 2*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "4",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "12 + 36*theta + 16*theta^2",
+          "exact": {
+            "a": "12",
+            "b": "36",
+            "c": "16"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "13 + 36*theta + 16*theta^2",
+          "exact": {
+            "a": "13",
+            "b": "36",
+            "c": "16"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 83
+      },
+      {
+        "ambient_minimum_four_gram_types": [
+          {
+            "rank": 1,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              64,
+              16,
+              16,
+              8,
+              32,
+              0
+            ]
+          }
+        ],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "8*theta + 4*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "8",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1048576,
+          "coefficient_lattice_minimum": 12,
+          "pairing_modulus": 2
+        },
+        "height": {
+          "display": "12 + 36*theta + 16*theta^2",
+          "exact": {
+            "a": "12",
+            "b": "36",
+            "c": "16"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "4",
+          "exact": {
+            "a": "4",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [
+          {
+            "rank": 1,
+            "tuple_U_V_W_uv_uw_vw_det": [
+              4,
+              64,
+              16,
+              16,
+              8,
+              32,
+              0
+            ]
+          }
+        ],
+        "spatial_square_target": {
+          "display": "52 + 144*theta + 64*theta^2",
+          "exact": {
+            "a": "52",
+            "b": "144",
+            "c": "64"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 332
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "3 + 5*theta + 2*theta^2",
+          "exact": {
+            "a": "3",
+            "b": "5",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 1,
+          "coefficient_lattice_minimum": 4,
+          "pairing_modulus": 1
+        },
+        "height": {
+          "display": "29/2 + 83/2*theta + 37/2*theta^2",
+          "exact": {
+            "a": "29/2",
+            "b": "83/2",
+            "c": "37/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "31 + 83*theta + 37*theta^2",
+          "exact": {
+            "a": "31",
+            "b": "83",
+            "c": "37"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 195
+      },
+      {
+        "ambient_minimum_four_gram_types": [],
+        "candidate_root_count": 0,
+        "control": {
+          "display": "6 + 9*theta + 3*theta^2",
+          "exact": {
+            "a": "6",
+            "b": "9",
+            "c": "3"
+          },
+          "signs": [
+            1,
+            1,
+            -1
+          ]
+        },
+        "fully_gated_gram_types": [],
+        "gate": {
+          "coefficient_lattice_index": 10460353203,
+          "coefficient_lattice_minimum": 24,
+          "pairing_modulus": 3
+        },
+        "height": {
+          "display": "15 + 87/2*theta + 39/2*theta^2",
+          "exact": {
+            "a": "15",
+            "b": "87/2",
+            "c": "39/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norm": {
+          "display": "6",
+          "exact": {
+            "a": "6",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_congruence_gram_types": [],
+        "spatial_square_target": {
+          "display": "96 + 261*theta + 117*theta^2",
+          "exact": {
+            "a": "96",
+            "b": "261",
+            "c": "117"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "target_trace": 612
+      }
+    ],
+    "distinct_height_count": 24,
+    "fully_gated_gram_type_count": 0,
+    "height_packets": [
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "1/2*theta",
+          "exact": {
+            "a": "0",
+            "b": "1/2",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "1*theta + 1/2*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "1",
+            "c": "1/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "1/2 + 3/2*theta + 1/2*theta^2",
+          "exact": {
+            "a": "1/2",
+            "b": "3/2",
+            "c": "1/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 2,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "2*theta + 1*theta^2",
+          "exact": {
+            "a": "0",
+            "b": "2",
+            "c": "1"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "1",
+            "exact": {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "display": "4",
+            "exact": {
+              "a": "4",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "1/2 + 3*theta + 3/2*theta^2",
+          "exact": {
+            "a": "1/2",
+            "b": "3",
+            "c": "3/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "3/2 + 9/2*theta + 2*theta^2",
+          "exact": {
+            "a": "3/2",
+            "b": "9/2",
+            "c": "2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "5/2 + 7*theta + 3*theta^2",
+          "exact": {
+            "a": "5/2",
+            "b": "7",
+            "c": "3"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "2 + 17/2*theta + 4*theta^2",
+          "exact": {
+            "a": "2",
+            "b": "17/2",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 2,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "3 + 9*theta + 4*theta^2",
+          "exact": {
+            "a": "3",
+            "b": "9",
+            "c": "4"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "1",
+            "exact": {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "display": "4",
+            "exact": {
+              "a": "4",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "5/2 + 19/2*theta + 9/2*theta^2",
+          "exact": {
+            "a": "5/2",
+            "b": "19/2",
+            "c": "9/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "9/2 + 27/2*theta + 6*theta^2",
+          "exact": {
+            "a": "9/2",
+            "b": "27/2",
+            "c": "6"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "6",
+            "exact": {
+              "a": "6",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 2,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "5 + 14*theta + 6*theta^2",
+          "exact": {
+            "a": "5",
+            "b": "14",
+            "c": "6"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "1",
+            "exact": {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "display": "4",
+            "exact": {
+              "a": "4",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "5 + 29/2*theta + 13/2*theta^2",
+          "exact": {
+            "a": "5",
+            "b": "29/2",
+            "c": "13/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "6 + 18*theta + 8*theta^2",
+          "exact": {
+            "a": "6",
+            "b": "18",
+            "c": "8"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "6 + 19*theta + 17/2*theta^2",
+          "exact": {
+            "a": "6",
+            "b": "19",
+            "c": "17/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "8 + 45/2*theta + 10*theta^2",
+          "exact": {
+            "a": "8",
+            "b": "45/2",
+            "c": "10"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "17/2 + 25*theta + 11*theta^2",
+          "exact": {
+            "a": "17/2",
+            "b": "25",
+            "c": "11"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 2,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "9 + 27*theta + 12*theta^2",
+          "exact": {
+            "a": "9",
+            "b": "27",
+            "c": "12"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "3",
+            "exact": {
+              "a": "3",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "display": "12",
+            "exact": {
+              "a": "12",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 2,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "10 + 29*theta + 13*theta^2",
+          "exact": {
+            "a": "10",
+            "b": "29",
+            "c": "13"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "1",
+            "exact": {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "display": "4",
+            "exact": {
+              "a": "4",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "11 + 65/2*theta + 29/2*theta^2",
+          "exact": {
+            "a": "11",
+            "b": "65/2",
+            "c": "29/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "25/2 + 35*theta + 31/2*theta^2",
+          "exact": {
+            "a": "25/2",
+            "b": "35",
+            "c": "31/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 2,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "12 + 36*theta + 16*theta^2",
+          "exact": {
+            "a": "12",
+            "b": "36",
+            "c": "16"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "1",
+            "exact": {
+              "a": "1",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "display": "4",
+            "exact": {
+              "a": "4",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "29/2 + 83/2*theta + 37/2*theta^2",
+          "exact": {
+            "a": "29/2",
+            "b": "83/2",
+            "c": "37/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "2",
+            "exact": {
+              "a": "2",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "accepted_wall_count": 0,
+        "control_count": 1,
+        "fully_gated_gram_type_count": 0,
+        "height": {
+          "display": "15 + 87/2*theta + 39/2*theta^2",
+          "exact": {
+            "a": "15",
+            "b": "87/2",
+            "c": "39/2"
+          },
+          "signs": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        "norms": [
+          {
+            "display": "6",
+            "exact": {
+              "a": "6",
+              "b": "0",
+              "c": "0"
+            },
+            "signs": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "pairing_congruence_gram_type_count": 11,
+    "pairing_congruence_rank_histogram": {
+      "1": 3,
+      "2": 6,
+      "3": 2
+    }
+  },
+  "schema": "coxeter.cubic7.lambda22_h100.v1",
+  "scope": "Exact necessary-and-realized Vinberg prefix only through H<=100 for <-theta> + Lambda22 at the distinguished embedding. It proves no reflecting wall in this bounded prefix. It makes no finite-volume, compactness, reflectivity, or global nonreflectivity conclusion.",
+  "seed": {
+    "admissible_at_distinguished_place": true,
+    "canonical_mirror_norms": [
+      {
+        "display": "1",
+        "exact": {
+          "a": "1",
+          "b": "0",
+          "c": "0"
+        },
+        "signs": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "display": "2",
+        "exact": {
+          "a": "2",
+          "b": "0",
+          "c": "0"
+        },
+        "signs": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "display": "4",
+        "exact": {
+          "a": "4",
+          "b": "0",
+          "c": "0"
+        },
+        "signs": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "display": "3",
+        "exact": {
+          "a": "3",
+          "b": "0",
+          "c": "0"
+        },
+        "signs": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "display": "6",
+        "exact": {
+          "a": "6",
+          "b": "0",
+          "c": "0"
+        },
+        "signs": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "display": "12",
+        "exact": {
+          "a": "12",
+          "b": "0",
+          "c": "0"
+        },
+        "signs": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "complete_local_norm_proof": "For primitive r=(x,y), put I=(theta*x,(y,Lambda22)). Reflection integrality gives (q(r))|2I. Away from the inert primes (2),(3), local unimodularity and primitivity force v(q)=0. The Smith diagonal 1^20,2,6 has exponent one at both discriminant primes. At (3), this gives v_3(q)<=1. At (2), an odd x makes q odd by evenness; when x is even and y is primitive, v_2((y,Lambda22))<=1 and the factor 2 in 2I permits v_2(q)<=2. Thus v_2(q) is 0,1,2 and v_3(q) is 0,1. Class number one and U^+=U^2 leave the six complete canonical norms 1,2,4,3,6,12.",
+    "norm_gates": [
+      {
+        "coefficient_lattice_index": 1,
+        "coefficient_lattice_minimum": 4,
+        "norm": {
+          "display": "1",
+          "exact": {
+            "a": "1",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 1
+      },
+      {
+        "coefficient_lattice_index": 1,
+        "coefficient_lattice_minimum": 4,
+        "norm": {
+          "display": "2",
+          "exact": {
+            "a": "2",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 1
+      },
+      {
+        "coefficient_lattice_index": 1048576,
+        "coefficient_lattice_minimum": 12,
+        "norm": {
+          "display": "4",
+          "exact": {
+            "a": "4",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 2
+      },
+      {
+        "coefficient_lattice_index": 10460353203,
+        "coefficient_lattice_minimum": 24,
+        "norm": {
+          "display": "3",
+          "exact": {
+            "a": "3",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 3
+      },
+      {
+        "coefficient_lattice_index": 10460353203,
+        "coefficient_lattice_minimum": 24,
+        "norm": {
+          "display": "6",
+          "exact": {
+            "a": "6",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 3
+      },
+      {
+        "coefficient_lattice_index": 10968475320188928,
+        "coefficient_lattice_minimum": 96,
+        "norm": {
+          "display": "12",
+          "exact": {
+            "a": "12",
+            "b": "0",
+            "c": "0"
+          },
+          "signs": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pairing_modulus": 6
+      }
+    ],
+    "seed_id": "cubic7-H22-Lambda22-a-theta",
+    "support": "unit coefficient; spatial discriminant primes (2),(3)",
+    "timelike_coefficient": {
+      "display": "1*theta",
+      "exact": {
+        "a": "0",
+        "b": "1",
+        "c": "0"
+      },
+      "signs": [
+        1,
+        -1,
+        -1
+      ]
+    }
+  },
+  "spatial_lattice": {
+    "catalogue_and_exact_matrix_invariants": {
+      "determinant": 12,
+      "even": true,
+      "integral": true,
+      "kissing_number": 49896,
+      "minimum": 4,
+      "smith_invariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        6
+      ]
+    },
+    "catalogue_source": "https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/LAMBDA22.html",
+    "name": "Lambda22 laminated lattice",
+    "normalized_full_gram_stream_sha256": "53e1adff6866521330edfeb17d79e9813398c9f3dc73503713761e4153f46495",
+    "rank": 22,
+    "retrieved_utc_date": "2026-08-12",
+    "rootless": true,
+    "source_html_sha256": "b4e4f08d2c4a4926599b6551ab852b578877f7c3cbebbfed57ea8b8924e3aab4",
+    "source_pins_match": true,
+    "vendored_gram_file_sha256": "4f3dbdc96e7aead7fae09a834abdbe2d5319620ece24656720f13184dd85b2f1",
+    "vendored_gram_path": "data/lattices/lambda22_nebe_sloane_gram.txt"
+  }
+}

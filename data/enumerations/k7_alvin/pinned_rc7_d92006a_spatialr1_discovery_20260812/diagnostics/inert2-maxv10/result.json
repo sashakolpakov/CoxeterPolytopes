@@ -1,0 +1,39 @@
+{
+  "alvin_declared_termination": false,
+  "backend_height_bound": 100,
+  "canonical_norm_histogram": {
+    "1": 1,
+    "2": 9
+  },
+  "checks": {
+    "all_live_norms_in_exact_local_norm_manifest": true,
+    "exact_backend_prefix_match_modulo_same_height_packet_order": true,
+    "live_norm_four_count_is_zero": true,
+    "no_unknown_weight_error": true,
+    "ten_live_roots_parsed": true
+  },
+  "completed_at_utc": "2026-08-12T11:24:54Z",
+  "exact_backend_prefix_order_comparison": {
+    "equal_positions": [1, 2, 3, 4, 5, 8, 9, 10],
+    "same_height_unordered_packet": [6, 7]
+  },
+  "fixture_path": "tests/fixtures/cubic7_alvin/inert2_v3_maxv10.alvin.txt",
+  "fixture_sha256": "ad2a05eb834a8b45e65d63a473e26cd16ca7cdc37d48e0fb2479d5955768710d",
+  "live_root_count": 10,
+  "passes": true,
+  "return_code": 0,
+  "schema": "coxeter.k7_alvin.bounded_prefix_result.v1",
+  "scope": {
+    "bounded_by_maxv": 10,
+    "complete_termination_claimed": false,
+    "finite_volume_claimed": false,
+    "purpose": "exact live/backend enumeration-prefix regression"
+  },
+  "stdout_path": "stdout.txt",
+  "stdout_sha256": "ad2a05eb834a8b45e65d63a473e26cd16ca7cdc37d48e0fb2479d5955768710d",
+  "test": "tests/test_cubic7_nonunimodular_seed_search.py::test_v3_alvin_inert2_ten_wall_diagnostic_matches_exact_l2_prefix",
+  "v3_patch_sha256": {
+    "alvin-rc7-fraction-conjugation.patch": "853e52a3bbb4ff45b11749ec682cecbcfc75366fa95bfde1b316a96042ded67c",
+    "alvin-rc7-spatial-r1.patch": "884ba9f1c25edb74a89e7566ce5ce676001ea9073ed08239e208b77f7977d6be"
+  }
+}

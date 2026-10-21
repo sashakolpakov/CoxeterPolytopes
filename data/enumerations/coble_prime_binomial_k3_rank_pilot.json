@@ -1,0 +1,142 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "PB_Atlas_is_open": true,
+    "actual_generic_recognizer_is_thin_below_k3_ceiling": true,
+    "candidate_builder_accepts_no_raw_datum": true,
+    "candidate_has_no_arbitrary_input_option": true,
+    "candidate_reads_four_hardwired_sources": true,
+    "four_separately_routed_controls_exist": true,
+    "good_and_bad_factors_are_hardcoded": true,
+    "no_recognized_pre_AG_b_value_exceeds_complex_K3_bound": true,
+    "prime_binomial_alone_has_two_exact_false_positives": true,
+    "strict_L4_not_claimed": true
+  },
+  "conditional_payoff_after_PB_Atlas": {
+    "complex": {
+      "max_boundary_count": 10,
+      "max_dimension": 19
+    },
+    "earned_today": false,
+    "positive_characteristic_not_2": {
+      "max_boundary_count": 12,
+      "max_dimension": 21
+    },
+    "uses_classification": false
+  },
+  "missing_lemma": {
+    "id": "PB-Atlas",
+    "proved": false,
+    "statement": "from an arbitrary raw Gram/wall/contraction branch, canonically generate all incidence, collision, Jacobian, irreducibility and Hilbert equations and prove that every primitive-binomial regular open is exactly a nonempty atlas of the required strong-Coble incidence stratum"
+  },
+  "only_current_generic_raw_class": {
+    "K3_rank_pushback_removes_recognized_members": 0,
+    "boundary_counts": [
+      1,
+      2,
+      5,
+      8
+    ],
+    "dimensions": [
+      10,
+      11,
+      14,
+      17
+    ],
+    "name": "C_FG",
+    "nonthin_delta": false
+  },
+  "operational_audit": {
+    "candidate_build_certificate_arity": 0,
+    "candidate_cli_options": [
+      "--check-output",
+      "--write"
+    ],
+    "candidate_hardcodes_accepted_component": true,
+    "candidate_hardcodes_discarded_component": true,
+    "candidate_hardwired_source_constants": [
+      "CI4",
+      "H10",
+      "H11",
+      "HV"
+    ],
+    "candidate_has_arbitrary_input_option": false,
+    "generic_recognizer_boundary_counts": [
+      1,
+      2,
+      5,
+      8
+    ],
+    "generic_recognizer_dimensions": [
+      10,
+      11,
+      14,
+      17
+    ],
+    "generic_recognizer_has_input_option": true
+  },
+  "prime_binomial_false_positives": [
+    {
+      "component": "c=1",
+      "failure": "c=1 collides two raw-derived centers",
+      "prime_binomial": true,
+      "row": "H10_30",
+      "saturated_exponent_lattice": true
+    },
+    {
+      "component": "a=-b",
+      "failure": "a=-b gives line times conic squared",
+      "prime_binomial": true,
+      "row": "H11_26",
+      "saturated_exponent_lattice": true
+    }
+  ],
+  "schema": "coxeter.coble_prime_binomial_k3_rank_l4_pilot.v2",
+  "separately_routed_controls": [
+    {
+      "boundary_count": 1,
+      "cover_embedded_rank": 11,
+      "dimension": 10,
+      "id": "H10_30",
+      "row_specific_program": "seven proper plus three first-near points; nine root lines and three exceptional roots",
+      "support": "horizontal over Q",
+      "within_conditional_k3_ceiling": true
+    },
+    {
+      "boundary_count": 2,
+      "cover_embedded_rank": 12,
+      "dimension": 11,
+      "id": "H11_26",
+      "row_specific_program": "four proximity chains of lengths 3,2,3,3; seven exceptional roots and three root lines",
+      "support": "horizontal over Q",
+      "within_conditional_k3_ceiling": true
+    },
+    {
+      "boundary_count": 5,
+      "cover_embedded_rank": 15,
+      "dimension": 14,
+      "id": "H14_60",
+      "row_specific_program": "P-derived complete four-point polar/chord design",
+      "support": "vertical at characteristic 3",
+      "within_conditional_k3_ceiling": true
+    },
+    {
+      "boundary_count": 8,
+      "cover_embedded_rank": 18,
+      "dimension": 17,
+      "id": "H17_48",
+      "row_specific_program": "P-derived complete four-point graph-projectivity design",
+      "support": "vertical at characteristic 3",
+      "within_conditional_k3_ceiling": true
+    }
+  ],
+  "status": "FAIL_NO_SHARED_RAW_RECOGNIZER; PB-Atlas is the one exact missing lemma",
+  "status_date": "2026-08-10",
+  "verdict": {
+    "four_rows_pass_one_invariant_raw_prime_binomial_recognizer": false,
+    "four_rows_share_prime_binomial_outputs_after_separate_routing": true,
+    "pre_AG_allowed_b_values_wider_than_K3_bound_proved": false,
+    "reason": "the candidate executable has no raw-input path, reads four named source archives, and hardcodes accepted/discarded factors; the only generic raw recognizer covers a different rigid five-core class",
+    "strict_L4": false
+  }
+}

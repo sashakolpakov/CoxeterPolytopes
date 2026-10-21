@@ -1,0 +1,220 @@
+{
+  "status": "PASS_EXACT_ALL_LABEL_FIELD_GATE_NO_NEW_CAP_CERTIFICATION",
+  "sources": {
+    "results/fresh_h9_after_fourth_rescore_20261015.json": "2129ae178537cc8cb151cf759adce09819b0bbd3cd0682efb45fa6a474003f09",
+    "scripts/fresh_h9_octic_angle_20261015.py": "f379fa25ded8f0adb6938c9422dfd7ae5319cd9c9265c1ae6a3dd565c5facee8"
+  },
+  "field_encoding": "[a,b] means a+b*sqrt5",
+  "D": [
+    "6",
+    "16/5"
+  ],
+  "delta3": [
+    "50",
+    "22"
+  ],
+  "delta5": [
+    "245/4",
+    "111/4"
+  ],
+  "physical_radicand_signs": [
+    1,
+    1,
+    1
+  ],
+  "conjugate_radicand_signs": [
+    -1,
+    1,
+    -1
+  ],
+  "seven_squareclass_independence_checks": [
+    {
+      "mask": 1,
+      "radicand": [
+        "6",
+        "16/5"
+      ],
+      "norm": "-76/5",
+      "norm_is_rational_square": false
+    },
+    {
+      "mask": 2,
+      "radicand": [
+        "50",
+        "22"
+      ],
+      "norm": "80",
+      "norm_is_rational_square": false
+    },
+    {
+      "mask": 3,
+      "radicand": [
+        "652",
+        "292"
+      ],
+      "norm": "-1216",
+      "norm_is_rational_square": false
+    },
+    {
+      "mask": 4,
+      "radicand": [
+        "245/4",
+        "111/4"
+      ],
+      "norm": "-395/4",
+      "norm_is_rational_square": false
+    },
+    {
+      "mask": 5,
+      "radicand": [
+        "1623/2",
+        "725/2"
+      ],
+      "norm": "1501",
+      "norm_is_rational_square": false
+    },
+    {
+      "mask": 6,
+      "radicand": [
+        "6115",
+        "2735"
+      ],
+      "norm": "-7900",
+      "norm_is_rational_square": false
+    },
+    {
+      "mask": 7,
+      "radicand": [
+        "80450",
+        "35978"
+      ],
+      "norm": "120080",
+      "norm_is_rational_square": false
+    }
+  ],
+  "quartic_nongalois_checks": [
+    {
+      "radicand_name": "R5",
+      "norm": "1501",
+      "norm_over_5": "1501/5",
+      "norm_is_square_in_F": false
+    },
+    {
+      "radicand_name": "delta3_R5",
+      "norm": "120080",
+      "norm_over_5": "24016",
+      "norm_is_square_in_F": false
+    }
+  ],
+  "identities": {
+    "delta3": "phi^4*(10+2sqrt5)",
+    "R5": [
+      "1623/2",
+      "725/2"
+    ],
+    "conductor15_over_conductor20": [
+      "9/2",
+      "-3/2"
+    ]
+  },
+  "maximum_totally_real_fields": {
+    "L3": "F(sqrt(delta3)) = Q(zeta20+zeta20^-1)",
+    "L5": "F(sqrt(D*delta5))",
+    "compositum": "F(sqrt(delta3),sqrt(D*delta5))"
+  },
+  "finite_label_candidates_by_degree": {
+    "1": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "2": [
+      5,
+      8,
+      10,
+      12
+    ],
+    "4": [
+      15,
+      16,
+      20,
+      24,
+      30
+    ],
+    "8": [
+      17,
+      32,
+      34,
+      40,
+      48,
+      60
+    ]
+  },
+  "complete_finite_alphabets": {
+    "old": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      10
+    ],
+    "delta3": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      10,
+      20
+    ],
+    "delta5": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      10
+    ],
+    "mutual_compositum": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      10,
+      20
+    ]
+  },
+  "cartan_two_cycle_formula": "A=4*(r.s)^2/(r^2*s^2)=4*cos(pi/m)^2; also require r.s<=0",
+  "common_cycle_values": {
+    "2": [
+      "0",
+      "0"
+    ],
+    "3": [
+      "1",
+      "0"
+    ],
+    "4": [
+      "2",
+      "0"
+    ],
+    "5": [
+      "3/2",
+      "1/2"
+    ],
+    "6": [
+      "3",
+      "0"
+    ],
+    "10": [
+      "5/2",
+      "1/2"
+    ]
+  },
+  "label20_cycle": "2 + sqrt(delta3)/(2*phi^2)",
+  "parallel_cycle": 4,
+  "scope": "Complete necessary field alphabet, with every listed value present. Actual pair compatibility, signs, facet incidence and finite volume are separate geometric checks. No arithmetic-lattice hypothesis."
+}

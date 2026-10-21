@@ -1,0 +1,1465 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-20",
+  "status": "PROJECTION_HEIGHT_SELECTED;ACTUAL_METADATA_PLANS_ONLY_NOT_FULL_RUNTIME_PASS",
+  "catalogue": "manuscripts/catalogue.json",
+  "catalogue_sha256": "9e8199f39a1b7dbfcbabea8b9a3b201a05aa5b05fe7ab5ee8937c6a076e06a52",
+  "planner": "scripts/verify_manuscript.py",
+  "planner_sha256": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1",
+  "logic_verification_receipt": "results/publication_logic_verification_20261020.json",
+  "logic_verification_receipt_sha256": "3ad2df7d5dd21aca466a2dc54c42f5c7c63a912a0a1b42762ad27f75f1e09f6c",
+  "verified_logic_kernels": 5,
+  "actual_axiom_declarations": 44,
+  "new_verified_module": {
+    "module": "CoxeterProofs.RightAngledProjectionHeightKernel",
+    "source": "formal/CoxeterProofs/RightAngledProjectionHeightKernel.lean",
+    "source_sha256": "2fac8028e432a2104a58e423c65fc38c9e214fed5f52210e408aabe3f15f0e90",
+    "source_bytes": 12333,
+    "status": "KERNEL_COMPILED_AND_PRINTED_AXIOMS_REVIEWED",
+    "compile_ledger": "formal/.proof-batches/CoxeterProofs_RightAngledProjectionHeightKernel.json",
+    "compile_ledger_sha256": "b7d81c1ede501d4435ac1eef8caab2b8b5c1237610ef927dd6ffc212a97b12a9",
+    "axiom_audit_ledger": "formal/.proof-batches/CoxeterProofs_RightAngledProjectionHeightKernel_axiom_audit.json",
+    "axiom_audit_ledger_sha256": "ed45d59c6c583f17fb2e8fe209bf6b89003dcf34126da8ab57cdbe23fbc50558",
+    "actual_axiom_summary": "results/RightAngledProjectionHeightKernel_axiom_summary_20261020.json",
+    "actual_axiom_summary_sha256": "c9f6c5f1e325fbf6c87a31c89483d74886049b6cb0e0cb2668dac940fcfc8443",
+    "audited_declarations": 8,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "sorryAx": false,
+    "olean": "formal/.lake/build/lib/lean/CoxeterProofs/RightAngledProjectionHeightKernel.olean",
+    "olean_sha256": "b2e265c8445767735f7ea149cfcf8344df074229bf62bafe158b0b482d7ef2a3",
+    "compile_seconds": 3.47,
+    "axiom_audit_seconds": 3.15,
+    "memory_cap_mib": 2048,
+    "threads": 1,
+    "project_local_imports": [
+      "CoxeterProofs.RightAngledCubicScalarKernel"
+    ],
+    "dependency_olean_sha256": {
+      "CoxeterProofs.RightAngledSharpDimensions": "f2bd3858fee23605e95212d21784afcc8f6a66f148e11f524ea3cbeb077d7f91",
+      "CoxeterProofs.RightAngledCubicScalarKernel": "8d06c91e92439233c0469782bd382f5cb87fc7056488800e40298bf4e00c781c"
+    },
+    "source_review": "results/review_right_angled_projection_height_kernel_resource_20261020.md",
+    "source_review_sha256": "9f834b48bcb75a79d69c5e8001f9fa24d3cbee93d5287017953da353777e2292",
+    "scope": "Finite-coordinate Lorentz projection identities and strict wall signs, cleared maximal-height recurrence, arbitrary finite descent and scalar radial gap. Positive normalizers, actual incidence/future-sheet interpretation, wall/ridge completeness, face inheritance and radial/tensor realization remain inputs."
+  },
+  "metadata_plan_commands": {
+    "finite57": {
+      "core": [
+        "/Users/sasha/.venvs/global/bin/python3",
+        "-B",
+        "scripts/verify_manuscript.py",
+        "finite57",
+        "--plan",
+        "--mode",
+        "core",
+        "--pdf"
+      ],
+      "full": [
+        "/Users/sasha/.venvs/global/bin/python3",
+        "-B",
+        "scripts/verify_manuscript.py",
+        "finite57",
+        "--plan",
+        "--mode",
+        "full",
+        "--pdf"
+      ]
+    },
+    "right_angled_sharp": {
+      "core": [
+        "/Users/sasha/.venvs/global/bin/python3",
+        "-B",
+        "scripts/verify_manuscript.py",
+        "right_angled_sharp",
+        "--plan",
+        "--mode",
+        "core",
+        "--pdf"
+      ],
+      "full": [
+        "/Users/sasha/.venvs/global/bin/python3",
+        "-B",
+        "scripts/verify_manuscript.py",
+        "right_angled_sharp",
+        "--plan",
+        "--mode",
+        "full",
+        "--pdf"
+      ]
+    }
+  },
+  "counts": {
+    "finite57": {
+      "core": {
+        "jobs_including_pdf": 10,
+        "jobs_without_pdf": 9,
+        "by_kind_including_pdf": {
+          "script": 1,
+          "conditional_lean": 8,
+          "typesetting": 1
+        }
+      },
+      "full": {
+        "jobs_including_pdf": 64,
+        "jobs_without_pdf": 63,
+        "by_kind_including_pdf": {
+          "script": 55,
+          "conditional_lean": 8,
+          "typesetting": 1
+        }
+      }
+    },
+    "right_angled_sharp": {
+      "core": {
+        "jobs_including_pdf": 6,
+        "jobs_without_pdf": 5,
+        "by_kind_including_pdf": {
+          "script": 2,
+          "conditional_lean": 3,
+          "typesetting": 1
+        }
+      },
+      "full": {
+        "jobs_including_pdf": 6,
+        "jobs_without_pdf": 5,
+        "by_kind_including_pdf": {
+          "script": 2,
+          "conditional_lean": 3,
+          "typesetting": 1
+        }
+      }
+    }
+  },
+  "plans": {
+    "finite57": {
+      "core": {
+        "status": "PLAN_ONLY_NOT_VERIFIED",
+        "manuscript": "finite57",
+        "jobs": [
+          {
+            "id": "finite57",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_d13_context_dimension57_20261018.py",
+              "--verify"
+            ],
+            "coverage": "Final saved interfaces, changed forests,2552 ideal profiles,concentration and377/36/4205 contradiction; inherited geometry is written.",
+            "source": "scripts/fresh_d13_context_dimension57_20261018.py"
+          },
+          {
+            "id": "CoxeterProofs.GuardedRank58",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.GuardedRank58"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/GuardedRank58.lean"
+          },
+          {
+            "id": "CoxeterProofs.Concentration58",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.Concentration58"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/Concentration58.lean"
+          },
+          {
+            "id": "CoxeterProofs.ContextCover59",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ContextCover59"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ContextCover59.lean"
+          },
+          {
+            "id": "CoxeterProofs.ShapeCurvatureArithmetic",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ShapeCurvatureArithmetic"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ShapeCurvatureArithmetic.lean"
+          },
+          {
+            "id": "CoxeterProofs.ManuscriptDataBounds",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ManuscriptDataBounds"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ManuscriptDataBounds.lean"
+          },
+          {
+            "id": "CoxeterProofs.ManuscriptFinite57",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ManuscriptFinite57",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ManuscriptFinite57.lean"
+          },
+          {
+            "id": "CoxeterProofs.ConcentrationDescent58",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ConcentrationDescent58",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ConcentrationDescent58.lean"
+          },
+          {
+            "id": "CoxeterProofs.ResidualBellmanCertificate",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ResidualBellmanCertificate",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ResidualBellmanCertificate.lean"
+          },
+          {
+            "id": "finite57-pdf",
+            "kind": "typesetting",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/build_illustrated_ra_manuscript_20261018.py",
+              "manuscripts/finite_volume57.tex",
+              "--check-only"
+            ],
+            "coverage": "Fresh PDF compilation; preserves published PDF and ledger.",
+            "source": "manuscripts/finite_volume57.tex"
+          }
+        ],
+        "remaining_formal_gaps": "Actual corner/cusp geometry and domain interpretation, real convex-order/independence yielding the normalized comparison, terminal enumeration correctness and higher-dimensional geometric tails remain explicit written/script inputs. The new concentration module does not formalize that real analytic bridge. Bellman leaves the complete allowed residual alphabet, interaction-free context split and concrete memo-table obligations as application inputs."
+      },
+      "full": {
+        "status": "PLAN_ONLY_NOT_VERIFIED",
+        "manuscript": "finite57",
+        "jobs": [
+          {
+            "id": "finite57",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_d13_context_dimension57_20261018.py",
+              "--verify"
+            ],
+            "coverage": "Final saved interfaces, changed forests,2552 ideal profiles,concentration and377/36/4205 contradiction; inherited geometry is written.",
+            "source": "scripts/fresh_d13_context_dimension57_20261018.py"
+          },
+          {
+            "id": "finite57_d13_parser_contract",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_json_projection_contract_20261020.py",
+              "--verify"
+            ],
+            "coverage": "Parser contract only:19 exact valid projections,15 required rejections and1 frozen-certificate projection. No mathematical D13 replay or full manuscript claim.",
+            "source": "scripts/check_d13_json_projection_contract_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_pins_0",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "pins-0"
+            ],
+            "coverage": "Original input PASS statuses and nested source maps, stems slice1/4 (41 of161). Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_pins_1",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "pins-1"
+            ],
+            "coverage": "Original input PASS statuses and nested source maps, stems slice2/4 (41 of161). Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_pins_2",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "pins-2"
+            ],
+            "coverage": "Original input PASS statuses and nested source maps, stems slice3/4 (41 of161). Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_pins_3",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "pins-3"
+            ],
+            "coverage": "Original input PASS statuses and nested source maps, stems slice4/4 (38 of161). Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_metadata",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "metadata"
+            ],
+            "coverage": "Original13 top-level and9 interface key domains, constant fields, ambient/changed-pair/scope metadata. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_support",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "support"
+            ],
+            "coverage": "Complete801-pattern/862-map selected support,33 affected contexts/76 maps, and every selected-proof field. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_rank15",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "rank15"
+            ],
+            "coverage": "Complete original rank15 inverse/native-contact classification and differences. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_one_sided",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "one-sided"
+            ],
+            "coverage": "Both original physical30-root one-sided whole models and all their corners. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_quiet",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "quiet"
+            ],
+            "coverage": "All24 original quiet repairs. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_literal",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "literal"
+            ],
+            "coverage": "Complete original216-configuration literal corner rows and exact original literal-input selectors. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_later_0",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "later-0"
+            ],
+            "coverage": "Original22-source/564-row later interface, source slice1/4 (6 sources), preserving complete rows/order. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_later_1",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "later-1"
+            ],
+            "coverage": "Original22-source/564-row later interface, source slice2/4 (6 sources), preserving complete rows/order. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_later_2",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "later-2"
+            ],
+            "coverage": "Original22-source/564-row later interface, source slice3/4 (6 sources), preserving complete rows/order. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_later_3",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "later-3"
+            ],
+            "coverage": "Original22-source/564-row later interface, source slice4/4 (4 sources), preserving complete rows/order. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_newer",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "newer"
+            ],
+            "coverage": "All8 original newer proof collections and every current corner row. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_variants",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "variants"
+            ],
+            "coverage": "Every field of all24 original D14 variants. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_d12",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "d12"
+            ],
+            "coverage": "Complete280+52 original positive D12 domains, full original walks and all D13 output rows. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_universal",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "universal"
+            ],
+            "coverage": "Complete original universal-output inventory; written arbitrary-support geometry remains a separate premise. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_d13_batch_finite",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_d13_transfer_batches_20261020.py",
+              "--verify",
+              "--batch",
+              "finite"
+            ],
+            "coverage": "Original8 obstruction forests,6 increasing forests and exact final finite closure; not a new unrestricted forest DP. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+            "source": "scripts/check_d13_transfer_batches_20261020.py"
+          },
+          {
+            "id": "finite57_b13",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_b13_endpoint_retention_20261018.py",
+              "--verify"
+            ],
+            "coverage": "B13 existing-coupon retention and changed contexts.",
+            "source": "scripts/fresh_b13_endpoint_retention_20261018.py"
+          },
+          {
+            "id": "finite57_frontier",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_d17_a16_coupled_ambient58_frontier_20261018.py",
+              "--verify"
+            ],
+            "coverage": "Historical complete ambient58 forest and ideal frontier; substantial inherited data.",
+            "source": "scripts/fresh_d17_a16_coupled_ambient58_frontier_20261018.py"
+          },
+          {
+            "id": "finite57_low8",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_order10_low8_ambient58_frontier_20261018.py",
+              "--verify"
+            ],
+            "coverage": "Historical low8 envelope and concentration frontier; substantial inherited data.",
+            "source": "scripts/fresh_order10_low8_ambient58_frontier_20261018.py"
+          },
+          {
+            "id": "finite57_tail58",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_a15_d15_dimension58_20261018.py",
+              "--verify"
+            ],
+            "coverage": "59; endpoint, saved finite/ideal domains and scalar identities; not a Bellman rebuild. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_a15_d15_dimension58_20261018.py"
+          },
+          {
+            "id": "finite57_tail59",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_depth6_dimension59_20261018.py",
+              "--verify"
+            ],
+            "coverage": "60; saved finite interfaces, terminal domain and exact row arithmetic. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_depth6_dimension59_20261018.py"
+          },
+          {
+            "id": "finite57_tail60",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_order11_order16_dimension60_20261018.py",
+              "--verify"
+            ],
+            "coverage": "61; terminal-domain reconstruction and saved-row scalar checks. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_order11_order16_dimension60_20261018.py"
+          },
+          {
+            "id": "finite57_tail61",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_rank15_rank16_dimension61_20261018.py",
+              "--verify"
+            ],
+            "coverage": "62; local/count interfaces and scalar inequalities. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_rank15_rank16_dimension61_20261018.py"
+          },
+          {
+            "id": "finite57_tail62",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_sparse_coupon_order11_13_dimension62_20261018.py",
+              "--verify"
+            ],
+            "coverage": "63; changed marked rules and finite/ideal scalar composition. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_sparse_coupon_order11_13_dimension62_20261018.py"
+          },
+          {
+            "id": "finite57_tail63",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_order11_order17_dimension63_20261018.py",
+              "--verify"
+            ],
+            "coverage": "64; changed marked rules and scalar composition. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_order11_order17_dimension63_20261018.py"
+          },
+          {
+            "id": "finite57_tail64",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_deep_finite8_dimension64_20261018.py",
+              "--verify"
+            ],
+            "coverage": "65; deep-corridor interfaces and scalar composition. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_deep_finite8_dimension64_20261018.py"
+          },
+          {
+            "id": "finite57_tail65",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_weighted_dimension65_20261017.py",
+              "--verify"
+            ],
+            "coverage": "66; local interfaces and reduced ideal scalar rows. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_weighted_dimension65_20261017.py"
+          },
+          {
+            "id": "finite57_tail66",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_weighted_dimension66_20261017.py",
+              "--verify"
+            ],
+            "coverage": "67\u201368; complete reduced profiles and finite scalar comparison. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_weighted_dimension66_20261017.py"
+          },
+          {
+            "id": "finite57_tail68",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_weighted_dimension68_20261017.py",
+              "--verify"
+            ],
+            "coverage": "69; 2,060 reduced profiles and local/table interfaces. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_weighted_dimension68_20261017.py"
+          },
+          {
+            "id": "finite57_tail69",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_weighted_dimension69_20261017.py",
+              "--verify"
+            ],
+            "coverage": "70; local interfaces and scalar comparison. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_weighted_dimension69_20261017.py"
+          },
+          {
+            "id": "finite57_tail70",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_weighted_dimension70_20261017.py",
+              "--verify"
+            ],
+            "coverage": "71; local interfaces and scalar comparison. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_weighted_dimension70_20261017.py"
+          },
+          {
+            "id": "finite57_tail71",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_weighted_dimension71_20261017.py",
+              "--verify"
+            ],
+            "coverage": "72\u201374; reduced ideal domains and scalar comparisons. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_weighted_dimension71_20261017.py"
+          },
+          {
+            "id": "finite57_tail74",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_piecewise_dimension74_20261017.py",
+              "--verify"
+            ],
+            "coverage": "75; piecewise profile calculation. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_piecewise_dimension74_20261017.py"
+          },
+          {
+            "id": "finite57_tail75",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_piecewise_dimension75_20261017.py",
+              "--verify"
+            ],
+            "coverage": "76\u201377; piecewise profile calculations. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_piecewise_dimension75_20261017.py"
+          },
+          {
+            "id": "finite57_tail77",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal5_piecewise_dimension77_20261017.py",
+              "--verify"
+            ],
+            "coverage": "78\u201380; piecewise profile calculations. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal5_piecewise_dimension77_20261017.py"
+          },
+          {
+            "id": "finite57_tail80",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal6_piecewise_dimension80_20261017.py",
+              "--verify"
+            ],
+            "coverage": "81\u201386; piecewise profile calculations. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal6_piecewise_dimension80_20261017.py"
+          },
+          {
+            "id": "finite57_tail86",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_order16_piecewise_dimension86_20261017.py",
+              "--verify"
+            ],
+            "coverage": "87\u201391; piecewise profile calculations. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_order16_piecewise_dimension86_20261017.py"
+          },
+          {
+            "id": "finite57_tail91",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_ideal7_cross_dimension91_20261017.py",
+              "--verify"
+            ],
+            "coverage": "92\u201397; piecewise profile calculations. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_ideal7_cross_dimension91_20261017.py"
+          },
+          {
+            "id": "finite57_tail97",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_distance8_ideal_dimension97_20261017.py",
+              "--verify"
+            ],
+            "coverage": "98\u2013108; complete scalar rows and inherited replacement interfaces. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_distance8_ideal_dimension97_20261017.py"
+          },
+          {
+            "id": "finite57_tail108",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_selective_distance9_dimension108_20261017.py",
+              "--verify"
+            ],
+            "coverage": "109\u2013116; exact joins/overlaps/controlled extensions and scalar rows. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_selective_distance9_dimension108_20261017.py"
+          },
+          {
+            "id": "finite57_tail116",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_selective_distance10_dimension116_20261017.py",
+              "--verify"
+            ],
+            "coverage": "117\u2013126; exact local/domain and scalar checks. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_selective_distance10_dimension116_20261017.py"
+          },
+          {
+            "id": "finite57_tail126",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_selective_distance11_dimension126_20261017.py",
+              "--verify"
+            ],
+            "coverage": "127\u2013136; exact local/domain and scalar checks. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_selective_distance11_dimension126_20261017.py"
+          },
+          {
+            "id": "finite57_tail136",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_selective_distance12_dimension136_20261017.py",
+              "--verify"
+            ],
+            "coverage": "137\u2013146; exact local/domain and scalar checks. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_selective_distance12_dimension136_20261017.py"
+          },
+          {
+            "id": "finite57_tail146",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_selective_distance13_dimension146_20261017.py",
+              "--verify"
+            ],
+            "coverage": "147\u2013156; exact local/domain and scalar checks. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_selective_distance13_dimension146_20261017.py"
+          },
+          {
+            "id": "finite57_tail156",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_distance14_unrestricted_dimension156_20261017.py",
+              "--verify"
+            ],
+            "coverage": "157\u2013163; local obstruction matrices and concentrated-profile rows. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_distance14_unrestricted_dimension156_20261017.py"
+          },
+          {
+            "id": "finite57_narrow_unit",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_nikulin_unit_charge_20261015_review.py",
+              "--verify"
+            ],
+            "coverage": "Independent original4/3 support and symbolic classical-coordinate checks. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_nikulin_unit_charge_20261015_review.py"
+          },
+          {
+            "id": "finite57_narrow_defects",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_nikulin_defect_frontier_20261015_review.py",
+              "--verify"
+            ],
+            "coverage": "Independent full pre-residual exceptional failure classification, widened KKT/cycle and classical cases. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_nikulin_defect_frontier_20261015_review.py"
+          },
+          {
+            "id": "finite57_narrow_residual",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_nikulin_two_budget_frontier_20261015_review.py",
+              "--verify"
+            ],
+            "coverage": "Independent91 models, complete support domains,3630 convex certificates, ordered packing and symbolic tails. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_nikulin_two_budget_frontier_20261015_review.py"
+          },
+          {
+            "id": "finite57_narrow_compact",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_nikulin_narrow_20261015_compact_facet.py",
+              "--verify"
+            ],
+            "coverage": "Compact-facet scalar identities/polynomial tails; geometry remains written. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_nikulin_narrow_20261015_compact_facet.py"
+          },
+          {
+            "id": "finite57_narrow_binder",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/fresh_nikulin_two_budget_frontier_20261015_dimension163.py",
+              "--verify"
+            ],
+            "coverage": "Final164+ case split, thresholds, explicit inherited premises and recursive byte bindings. Exact selected-certificate replay; inherited geometry/classification and saved ancestor interfaces remain explicit.",
+            "source": "scripts/fresh_nikulin_two_budget_frontier_20261015_dimension163.py"
+          },
+          {
+            "id": "CoxeterProofs.GuardedRank58",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.GuardedRank58"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/GuardedRank58.lean"
+          },
+          {
+            "id": "CoxeterProofs.Concentration58",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.Concentration58"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/Concentration58.lean"
+          },
+          {
+            "id": "CoxeterProofs.ContextCover59",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ContextCover59"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ContextCover59.lean"
+          },
+          {
+            "id": "CoxeterProofs.ShapeCurvatureArithmetic",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ShapeCurvatureArithmetic"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ShapeCurvatureArithmetic.lean"
+          },
+          {
+            "id": "CoxeterProofs.ManuscriptDataBounds",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ManuscriptDataBounds"
+            ],
+            "printed_axiom_audit_requested": false,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ManuscriptDataBounds.lean"
+          },
+          {
+            "id": "CoxeterProofs.ManuscriptFinite57",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ManuscriptFinite57",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ManuscriptFinite57.lean"
+          },
+          {
+            "id": "CoxeterProofs.ConcentrationDescent58",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ConcentrationDescent58",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ConcentrationDescent58.lean"
+          },
+          {
+            "id": "CoxeterProofs.ResidualBellmanCertificate",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.ResidualBellmanCertificate",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "GuardedRank58 legacy kernels plus fresh ManuscriptFinite57 conditional composition: exact finite offers, terminal ideal gaps, actual domination, internal4205 correction and the earlier58 tail imply the ceiling57. Fresh printed-axiom audit passed. The new ConcentrationDescent58 module additionally checks mass/potential/product laws,1596-step termination, exact terminal/sorted rank57 domain recognition and denominator-cleared absolute-surplus lifting, with ten actual axiom prints. ResidualBellmanCertificate additionally derives list upper bounds, attainment, exact maxima, both unreachability characterizations, permutation invariance and a rank58 witness-length bound from local transitions and tight predecessors; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/ResidualBellmanCertificate.lean"
+          },
+          {
+            "id": "finite57-pdf",
+            "kind": "typesetting",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/build_illustrated_ra_manuscript_20261018.py",
+              "manuscripts/finite_volume57.tex",
+              "--check-only"
+            ],
+            "coverage": "Fresh PDF compilation; preserves published PDF and ledger.",
+            "source": "manuscripts/finite_volume57.tex"
+          }
+        ],
+        "remaining_formal_gaps": "Actual corner/cusp geometry and domain interpretation, real convex-order/independence yielding the normalized comparison, terminal enumeration correctness and higher-dimensional geometric tails remain explicit written/script inputs. The new concentration module does not formalize that real analytic bridge. Bellman leaves the complete allowed residual alphabet, interaction-free context split and concrete memo-table obligations as application inputs."
+      }
+    },
+    "right_angled_sharp": {
+      "core": {
+        "status": "PLAN_ONLY_NOT_VERIFIED",
+        "manuscript": "right_angled_sharp",
+        "jobs": [
+          {
+            "id": "ideal_dimension4_model",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_ideal_right_angled_dimension4_model_20261020.py"
+            ],
+            "coverage": "Exact24 standard unit normals,276Gram pairs,12opposite pairs,24displayed null vertices/cubical cusp links,actualfacet witnesses and scalar identity. No external theorem or universalgeometry proof.",
+            "source": "scripts/check_ideal_right_angled_dimension4_model_20261020.py"
+          },
+          {
+            "id": "right_angled_sharp_sos",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_right_angled_sharp_dimension_sos_20261020.py",
+              "--verify"
+            ],
+            "coverage": "Exact12-variable polynomial identities for36rank2/216rank3 tensor contractions, explicit unit-ideal remainders, factor/positive coefficients, ratio27 and4-vector endpoint. No geometry/code enumeration.",
+            "source": "scripts/check_right_angled_sharp_dimension_sos_20261020.py"
+          },
+          {
+            "id": "CoxeterProofs.RightAngledSharpDimensions",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.RightAngledSharpDimensions",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "CappedStd-onlycompilationand12-theoremaxiomauditPASS. Exactcubic/Gramcoefficients;count27-to26endpoint;3actualprojectionsteps;independentuniversal8andideal4implications. RightAngledCubicScalarKernel now derives coordinate Gram positivity, the cubic SOS/count and strict endpoint, then constructs the older interface; ten actual axiom prints pass. RightAngledProjectionHeightKernel now derives the raw/normalized coordinate projection, strict all-other-wall signs, exact orthogonal heights, maximal squared recurrence, finite j*a_j<1 descent and scalar radial gap; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/RightAngledSharpDimensions.lean"
+          },
+          {
+            "id": "CoxeterProofs.RightAngledCubicScalarKernel",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.RightAngledCubicScalarKernel",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "CappedStd-onlycompilationand12-theoremaxiomauditPASS. Exactcubic/Gramcoefficients;count27-to26endpoint;3actualprojectionsteps;independentuniversal8andideal4implications. RightAngledCubicScalarKernel now derives coordinate Gram positivity, the cubic SOS/count and strict endpoint, then constructs the older interface; ten actual axiom prints pass. RightAngledProjectionHeightKernel now derives the raw/normalized coordinate projection, strict all-other-wall signs, exact orthogonal heights, maximal squared recurrence, finite j*a_j<1 descent and scalar radial gap; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/RightAngledCubicScalarKernel.lean"
+          },
+          {
+            "id": "CoxeterProofs.RightAngledProjectionHeightKernel",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.RightAngledProjectionHeightKernel",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "CappedStd-onlycompilationand12-theoremaxiomauditPASS. Exactcubic/Gramcoefficients;count27-to26endpoint;3actualprojectionsteps;independentuniversal8andideal4implications. RightAngledCubicScalarKernel now derives coordinate Gram positivity, the cubic SOS/count and strict endpoint, then constructs the older interface; ten actual axiom prints pass. RightAngledProjectionHeightKernel now derives the raw/normalized coordinate projection, strict all-other-wall signs, exact orthogonal heights, maximal squared recurrence, finite j*a_j<1 descent and scalar radial gap; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/RightAngledProjectionHeightKernel.lean"
+          },
+          {
+            "id": "right_angled_sharp-pdf",
+            "kind": "typesetting",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/build_illustrated_ra_manuscript_20261018.py",
+              "manuscripts/right_angled_sharp_dimension_bounds.tex",
+              "--check-only"
+            ],
+            "coverage": "Fresh PDF compilation; preserves published PDF and ledger.",
+            "source": "manuscripts/right_angled_sharp_dimension_bounds.tex"
+          }
+        ],
+        "remaining_formal_gaps": "Actual finite unit-wall/interior realization, positive-normalizer existence, future-sheet and actual-facet interpretation, orthogonal ridge-neighbor completeness, face inheritance, actual radial coordinate/tensor realization and its two pointwise contraction identities, and published Dufour/Musin/Kolpakov facts remain inputs. Projection signs/norms, scalar height descent and radial gaps are derived from primitive coordinate hypotheses in the new kernel; the abstract geometry records are not yet instantiated. No end-to-end real geometry."
+      },
+      "full": {
+        "status": "PLAN_ONLY_NOT_VERIFIED",
+        "manuscript": "right_angled_sharp",
+        "jobs": [
+          {
+            "id": "ideal_dimension4_model",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_ideal_right_angled_dimension4_model_20261020.py"
+            ],
+            "coverage": "Exact24 standard unit normals,276Gram pairs,12opposite pairs,24displayed null vertices/cubical cusp links,actualfacet witnesses and scalar identity. No external theorem or universalgeometry proof.",
+            "source": "scripts/check_ideal_right_angled_dimension4_model_20261020.py"
+          },
+          {
+            "id": "right_angled_sharp_sos",
+            "kind": "script",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py",
+              "--parent-lock",
+              "--",
+              "scripts/check_right_angled_sharp_dimension_sos_20261020.py",
+              "--verify"
+            ],
+            "coverage": "Exact12-variable polynomial identities for36rank2/216rank3 tensor contractions, explicit unit-ideal remainders, factor/positive coefficients, ratio27 and4-vector endpoint. No geometry/code enumeration.",
+            "source": "scripts/check_right_angled_sharp_dimension_sos_20261020.py"
+          },
+          {
+            "id": "CoxeterProofs.RightAngledSharpDimensions",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.RightAngledSharpDimensions",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "CappedStd-onlycompilationand12-theoremaxiomauditPASS. Exactcubic/Gramcoefficients;count27-to26endpoint;3actualprojectionsteps;independentuniversal8andideal4implications. RightAngledCubicScalarKernel now derives coordinate Gram positivity, the cubic SOS/count and strict endpoint, then constructs the older interface; ten actual axiom prints pass. RightAngledProjectionHeightKernel now derives the raw/normalized coordinate projection, strict all-other-wall signs, exact orthogonal heights, maximal squared recurrence, finite j*a_j<1 descent and scalar radial gap; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/RightAngledSharpDimensions.lean"
+          },
+          {
+            "id": "CoxeterProofs.RightAngledCubicScalarKernel",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.RightAngledCubicScalarKernel",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "CappedStd-onlycompilationand12-theoremaxiomauditPASS. Exactcubic/Gramcoefficients;count27-to26endpoint;3actualprojectionsteps;independentuniversal8andideal4implications. RightAngledCubicScalarKernel now derives coordinate Gram positivity, the cubic SOS/count and strict endpoint, then constructs the older interface; ten actual axiom prints pass. RightAngledProjectionHeightKernel now derives the raw/normalized coordinate projection, strict all-other-wall signs, exact orthogonal heights, maximal squared recurrence, finite j*a_j<1 descent and scalar radial gap; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/RightAngledCubicScalarKernel.lean"
+          },
+          {
+            "id": "CoxeterProofs.RightAngledProjectionHeightKernel",
+            "kind": "conditional_lean",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py",
+              "CoxeterProofs.RightAngledProjectionHeightKernel",
+              "--audit-axioms"
+            ],
+            "printed_axiom_audit_requested": true,
+            "coverage": "CappedStd-onlycompilationand12-theoremaxiomauditPASS. Exactcubic/Gramcoefficients;count27-to26endpoint;3actualprojectionsteps;independentuniversal8andideal4implications. RightAngledCubicScalarKernel now derives coordinate Gram positivity, the cubic SOS/count and strict endpoint, then constructs the older interface; ten actual axiom prints pass. RightAngledProjectionHeightKernel now derives the raw/normalized coordinate projection, strict all-other-wall signs, exact orthogonal heights, maximal squared recurrence, finite j*a_j<1 descent and scalar radial gap; eight actual axiom prints pass.",
+            "source": "formal/CoxeterProofs/RightAngledProjectionHeightKernel.lean"
+          },
+          {
+            "id": "right_angled_sharp-pdf",
+            "kind": "typesetting",
+            "command": [
+              "/Users/sasha/.venvs/global/bin/python3",
+              "-B",
+              "/Users/sasha/CoxeterPolytopes/scripts/build_illustrated_ra_manuscript_20261018.py",
+              "manuscripts/right_angled_sharp_dimension_bounds.tex",
+              "--check-only"
+            ],
+            "coverage": "Fresh PDF compilation; preserves published PDF and ledger.",
+            "source": "manuscripts/right_angled_sharp_dimension_bounds.tex"
+          }
+        ],
+        "remaining_formal_gaps": "Actual finite unit-wall/interior realization, positive-normalizer existence, future-sheet and actual-facet interpretation, orthogonal ridge-neighbor completeness, face inheritance, actual radial coordinate/tensor realization and its two pointwise contraction identities, and published Dufour/Musin/Kolpakov facts remain inputs. Projection signs/norms, scalar height descent and radial gaps are derived from primitive coordinate hypotheses in the new kernel; the abstract geometry records are not yet instantiated. No end-to-end real geometry."
+      }
+    }
+  },
+  "historical_bellman_finite57_plan": "results/finite57_bellman_verification_plan_20261020.json",
+  "historical_bellman_finite57_plan_sha256": "a62bcc92cc14e3a95bd370f8cfd604615bdb714eba0a5e8e8ca069bb6112443a",
+  "pre_projection_catalogue_archive": "manuscripts/source_archives/catalogue_before_projection_height_kernel_20261020.json.gz",
+  "pre_projection_logic_receipt_archive": "formal/source_archives/publication_logic_verification_before_projection_height_kernel_20261020.json.gz",
+  "scientific_checker_jobs_started": 0,
+  "lean_or_tex_jobs_started": 0,
+  "full_manuscript_runtime_pass_claimed": false,
+  "scope": "Actual core/full --plan --pdf outputs for finite57 and sharpRA only. The new kernel compilation and eight actual prints are separately evidenced by the linked receipt. Current plans do not rerun scientific checks or establish full runtime coverage; historical plans remain unchanged."
+}

@@ -1,0 +1,85 @@
+{
+  "status": "PARTIAL_FORMALIZATION_FULL_GEOMETRIC_THEOREMS_PENDING",
+  "toolchain": "leanprover/lean4:v4.32.2",
+  "custom_lean_axioms_declared": [],
+  "allowed_foundational_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "published_external_inputs": [
+    {
+      "id": "kolpakov_2012_volume_and_minimum",
+      "statement": "Ideal right-angled H4 volume formula and unique 24-cell minimum",
+      "source": "https://msp.org/agt/2012/12-4/agt-v12-n4-p03-s.pdf",
+      "location": "Lemmas1-2 and Theorem3",
+      "lean_assumption_status": "not yet imported into a geometric model"
+    },
+    {
+      "id": "kolpakov_2012_antiprism_and_small_facets",
+      "statement": "Ideal right-angled H3 k-face bound with antiprism equality; complete admissible nine-vertex facet classification",
+      "source": "https://msp.org/agt/2012/12-4/agt-v12-n4-p03-s.pdf",
+      "location": "Proposition5 and Section4.3/Figure6",
+      "lean_assumption_status": "geometric facet-case reduction pending"
+    },
+    {
+      "id": "vinberg_compact_and_field_restriction",
+      "statement": "Compact ceiling29 and the allowed compact arithmetic fields in dimensions22-29",
+      "source": "https://www.mathnet.ru/eng/mmo444",
+      "lean_assumption_status": "conditional field-composition arguments only"
+    },
+    {
+      "id": "published_polytope_and_diagram_inputs",
+      "statement": "The precise h-vector, acute-face and finite/affine/minimal-indefinite classification inputs listed in the result-specific lemma maps",
+      "lean_assumption_status": "must be individually specified before end-to-end claims"
+    },
+    {
+      "id": "kolpakov_ten_vertex_octathedrite",
+      "statement": "Among ideal right-angled three-dimensional polyhedra with only triangular and quadrilateral faces and at most ten vertices, the complete admissible list is the ideal octahedron, square antiprism, nine-vertex doubled octahedron and unique ten-vertex octahedrite. The latter has four quadrilateral faces whose edge-adjacency graph consists of two disjoint edges.",
+      "source": "https://msp.org/agt/2012/12-4/agt-v12-n4-p03-s.pdf",
+      "location": "Section4.3, Figures6–7, pp1951–1952; list here restricted to faces of sizes3 and4",
+      "lean_assumption_status": "primary source checked; explicit geometric interface pending"
+    },
+    {
+      "id": "nikulin_khovanskii_simple_at_edges",
+      "statement": "Strict average l-face count in k-faces for a polytope simple at edges, 0≤l<k≤ceil(n/2), with the exact binomial expression stated in the density proof",
+      "source": "https://arxiv.org/html/2303.09533v1#S6",
+      "location": "Alexandrov2023 Proposition6.1; Egorov2026 Theorem2.1 states the range",
+      "lean_assumption_status": "exact arithmetic consequences formalized; geometric theorem not yet imported"
+    },
+    {
+      "id": "andrasfai_erdos_sos_1974_four_color_threshold",
+      "statement": "A finite K5-free graph of order n and minimum degree greater than8n/11 is four-colorable",
+      "source": "https://real.mtak.hu/110445/1/1974-18.pdf",
+      "location": "Theorem1.1, parameter r=5, p207",
+      "lean_assumption_status": "explicit published input to restricted ideal RA5 octahedral-block theorem; formal interface pending"
+    },
+    {
+      "id": "dufour_ra_facet_recurrence",
+      "statement": "For finite-volume noncompact right-angled n-polytopes, facets≥1+nu_(n-1), nu4=15 and nu5≥26; compact right-angled polytopes do not exist in dimension≥5",
+      "source": "https://arxiv.org/html/2603.29925v1#S2",
+      "location": "Egorov2026 Lemma2.3, with Alexandrov2023 Propositions6.4–6.5 and Theorem1.1; original Dufour proof inaccessible",
+      "lean_assumption_status": "linear consequences formalized from explicit facet-count premises; geometric inputs pending"
+    }
+  ],
+  "internal_obligations_not_permitted_as_external_axioms": [
+    "New actual-face local payment transfers and all their routing/termination arguments",
+    "Complete supporting-white/attachment search and singular stopping-state coverage",
+    "Geometric partition/injections for the opposite-cusp defect inequality",
+    "Antiprism and doubled-octahedron cusp-shape calculations",
+    "Every complete finite and ideal certificate and the interpretation of its entries",
+    "The internally new field-specific compact arithmetic bounds",
+    "The internally new global finite-volume dimension inequalities",
+    "Bridge from abstract formal data to actual hyperbolic Coxeter polytopes"
+  ],
+  "complete_theorem_status": {
+    "finite_volume_dimension58": "internally proved; Lean coverage partial",
+    "compact_arithmetic_dimension21": "internally proved; Lean coverage partial",
+    "ideal_ra4_second_distinct_volume": "internally proved; Lean coverage partial",
+    "ideal_ra4_second_volume_structure": "internally proved; three independent mathematical reviews; Lean geometric proof pending",
+    "finite_volume_dimension57": "internally proved; two independent full composition reviews; Lean coverage partial",
+    "compact29_triangle_incidence": "internally proved; two independent mathematical source/report/helper reviews; geometric Lean proof pending",
+    "restricted_ideal_ra5_cusp_compatibility": "internally proved under the explicit three-type facet spectrum; scalar count consequences in Lean; geometry pending",
+    "restricted_ideal_ra5_octahedral_blocks": "written geometric proof plus exact local data and coloring replay; new counts36/84; no Lean verification"
+  }
+}

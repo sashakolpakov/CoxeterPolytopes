@@ -1,0 +1,104 @@
+{
+  "schema_version": "0.1.0",
+  "candidate_id": "coupled_discriminant11",
+  "analysis_id": "shimada_disc11_rm_filter",
+  "source": {
+    "author": "Ichiro Shimada",
+    "archive_url": "https://www.math.sci.hiroshima-u.ac.jp/shimada/preprints/AlgoAutK3/threediscs.zip",
+    "member": "threediscs/disc11.txt",
+    "member_sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68"
+  },
+  "surface_match": {
+    "transcendental_lattice": [[2, 1], [1, 6]],
+    "matches_coupled_discriminant11": true,
+    "basis_change_verified": true
+  },
+  "published_data": {
+    "induced_chambers": 1098,
+    "maximum_level": 13,
+    "automorphism_generators": 767,
+    "minus_two_curve_representatives": 347
+  },
+  "rm_filter": {
+    "positive_at_both_real_places": 17,
+    "field_integral_reflection_roots": 17,
+    "shell_distribution": {
+      "2": 8,
+      "4-2*phi": 9
+    },
+    "field_span_rank": 9,
+    "pair_sign_distribution": {
+      "negative": 28,
+      "zero": 100,
+      "positive": 8
+    }
+  },
+  "one_generator_step": {
+    "distinct_effective_minus_two_classes": 2567,
+    "field_integral_reflection_roots": 17,
+    "field_span_rank": 9,
+    "displayed_generators_centralizing_phi": 0
+  },
+  "fixed_marking_eigen_nef_obstruction": {
+    "verified": true,
+    "conclusion": "identity eigenspace positive cone has empty intersection with the nef cone",
+    "trace_scalar": {"a": "-2/5", "b": "-1/5"},
+    "control_vector": [
+      {"a": "1", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"},
+      {"a": "0", "b": "0"}
+    ],
+    "control_norm": {"a": "2/5", "b": "6/5"},
+    "effective_walls": [
+      {
+        "source_index_zero_based": 16,
+        "field_coordinates": [
+          {"a": "1", "b": "1"},
+          {"a": "-1", "b": "2"},
+          {"a": "0", "b": "0"}, {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"}, {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"}, {"a": "0", "b": "0"},
+          {"a": "0", "b": "0"}, {"a": "0", "b": "0"}
+        ],
+        "field_norm": {"a": "6", "b": "-4"},
+        "eigenspace_norm": {"a": "-8/5", "b": "6/5"},
+        "pairing_with_control": {"a": "8/5", "b": "9/5"},
+        "trace_square": "-2"
+      },
+      {
+        "source_index_zero_based": 18,
+        "field_coordinates": [
+          {"a": "-3", "b": "-1"},
+          {"a": "1", "b": "-3"},
+          {"a": "-2", "b": "0"}, {"a": "-4", "b": "0"},
+          {"a": "-6", "b": "0"}, {"a": "-5", "b": "0"},
+          {"a": "-4", "b": "0"}, {"a": "-3", "b": "0"},
+          {"a": "-2", "b": "0"}, {"a": "-3", "b": "0"}
+        ],
+        "field_norm": {"a": "8", "b": "-6"},
+        "eigenspace_norm": {"a": "-2", "b": "2"},
+        "pairing_with_control": {"a": "-11/5", "b": "-18/5"},
+        "trace_square": "-2"
+      }
+    ],
+    "proof": "the two timelike effective walls have opposite time orientation, so reverse Lorentzian Cauchy-Schwarz makes one nef inequality negative in each positive-cone component",
+    "orientation_source": "Shimada2015 Algorithm 6.1 and Proposition 6.3(3)"
+  },
+  "status": "fixed_marking_eigen_nef_empty",
+  "generator": "scripts/analyze_shimada_disc11.py",
+  "nonclaims": [
+    "The 347 representatives are not a complete set after fixing the RM marking",
+    "One automorphism-generator step is not a complete orbit",
+    "No displayed generator centralizing phi does not imply that the group centralizer is trivial",
+    "The fixed-marking obstruction does not apply to conjugates; one explicit conjugate now has a nonempty ample section",
+    "Conjugate markings have not been exhaustively classified",
+    "Abstract reflectivity of the field lattice is not decided"
+  ]
+}

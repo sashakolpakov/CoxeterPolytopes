@@ -1,0 +1,944 @@
+{
+  "all_checks_pass": true,
+  "brandhorst_hofmann": {
+    "article": "Finite subgroups of automorphisms of K3 surfaces",
+    "article_doi": "10.1017/fms.2023.50",
+    "database_doi": "10.5281/zenodo.10410278",
+    "database_version": "2.1",
+    "external_replay_command": "python3 scripts/certify_roulleau_ue8d4_generic_ns_k3_automorphisms.py --brandhorst-hofmann-zip /path/to/K3Groups.zip --check-archive",
+    "license": "CC-BY-4.0",
+    "readme_member": "K3Groups/readme.txt",
+    "readme_semantics_pinned": "each purely_ns line is a moduli space of pairs (X,G) and an effective character with respect to an effective subgroup",
+    "readme_sha256": "588cfbaed63ade81f8c34ef256240ca26ece3f69074417b5f301f31c418bb9e9",
+    "zip_md5": "143047b9cb76f4ad4cb2aadd5959d879",
+    "zip_sha256": "c1272db2c0fe2ae0a788aed7745201fccd2a1337b6c2d85555880c434cab4d7c"
+  },
+  "cases": [
+    {
+      "brandhorst_hofmann_row": {
+        "automorphism_order": 6,
+        "database_semantics": "one moduli space of effective characters parametrizing pairs (X,G), as stated in the pinned database README",
+        "generic_picard_lattice": {
+          "action_digest": "2adeb56426c8bddffbfccf5c22a3413d92c6f37fe229e9694818ee280f548cf9",
+          "discriminant_q_histogram_mod_2Z": {
+            "0": 1,
+            "1": 3
+          },
+          "gram_digest": "1e97b94f50ac272a897006ffd419af6d2bb2d4b8909e8364041e410f3431782e",
+          "isometry_class": "U+E8(-1)+D4(-1)",
+          "rank_signature_determinant": [
+            14,
+            [
+              1,
+              13,
+              0
+            ],
+            -4
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "generic_transcendental_lattice": {
+          "characteristic_polynomial": "(lambda**2 - lambda + 1)**4",
+          "gram_digest": "c4c0fdd31752d2907ed9a66b370f7b01f1fc19eced6caaa7d82675c32a657f3b",
+          "rank_signature_determinant": [
+            8,
+            [
+              2,
+              6,
+              0
+            ],
+            4
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "id": "0.6.3.1",
+        "member": "K3Groups/results/purely_ns/order06.txt",
+        "member_row_count": 150,
+        "member_sha256": "45074265c680c21efafe549b03e34cfde10467f10e2a6cd73ef3a9eb19401f63",
+        "row_one_based": 57,
+        "row_sha256_with_newline": "aacb4c5b6aa9e9f622921803a076c4b0baa0ff40a19d3f4cfd377325bd56b344"
+      },
+      "exact_picard_action_match": {
+        "all_algebraic_checks": {
+          "action_characteristic": true,
+          "action_isometry": true,
+          "action_order": true,
+          "coinvariant_action": true,
+          "coinvariant_canonical": true,
+          "coinvariant_gram": true,
+          "coinvariant_rootless": true,
+          "fixed_determinant": true,
+          "fixed_rank": true,
+          "fixed_signature": true,
+          "fixed_smith": true,
+          "frozen_matrix_digests": true,
+          "ns_determinant": true,
+          "ns_even": true,
+          "ns_signature": true,
+          "ns_smith": true,
+          "transcendental_determinant": true,
+          "transcendental_signature": true,
+          "transcendental_smith": true
+        },
+        "archived_type_id": "R14_UE8D4_C3_S3",
+        "coinvariant_lattice": {
+          "action_in_bh_basis": [
+            [
+              -2,
+              -3
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "canonical_change_of_basis": [
+            [
+              -1,
+              -2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "class": "A2(-2)",
+          "gram_in_bh_basis": [
+            [
+              -12,
+              6
+            ],
+            [
+              6,
+              -4
+            ]
+          ],
+          "rootless": true,
+          "rootless_reason": "the canonical Gram is twice an even negative-definite integral Gram, so every nonzero norm is at most -4"
+        },
+        "discriminant_form_and_action": {
+          "archived": {
+            "action_matrix_mod_2": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "group": "(Z/2)^2",
+            "half_vector_basis_rows": [
+              [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ]
+            ],
+            "nonzero_action_cycle_lengths": [
+              3
+            ],
+            "q_histogram_mod_2Z": {
+              "0": 1,
+              "1": 3
+            },
+            "table": [
+              {
+                "coordinates": [
+                  0,
+                  0
+                ],
+                "image_coordinates": [
+                  0,
+                  0
+                ],
+                "q_mod_2Z": 0
+              },
+              {
+                "coordinates": [
+                  0,
+                  1
+                ],
+                "image_coordinates": [
+                  1,
+                  1
+                ],
+                "q_mod_2Z": 1
+              },
+              {
+                "coordinates": [
+                  1,
+                  0
+                ],
+                "image_coordinates": [
+                  0,
+                  1
+                ],
+                "q_mod_2Z": 1
+              },
+              {
+                "coordinates": [
+                  1,
+                  1
+                ],
+                "image_coordinates": [
+                  1,
+                  0
+                ],
+                "q_mod_2Z": 1
+              }
+            ]
+          },
+          "basis_conjugator_archived_to_bh": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "brandhorst_hofmann": {
+            "action_matrix_mod_2": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "group": "(Z/2)^2",
+            "half_vector_basis_rows": [
+              [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+              ]
+            ],
+            "nonzero_action_cycle_lengths": [
+              3
+            ],
+            "q_histogram_mod_2Z": {
+              "0": 1,
+              "1": 3
+            },
+            "table": [
+              {
+                "coordinates": [
+                  0,
+                  0
+                ],
+                "image_coordinates": [
+                  0,
+                  0
+                ],
+                "q_mod_2Z": 0
+              },
+              {
+                "coordinates": [
+                  0,
+                  1
+                ],
+                "image_coordinates": [
+                  1,
+                  0
+                ],
+                "q_mod_2Z": 1
+              },
+              {
+                "coordinates": [
+                  1,
+                  0
+                ],
+                "image_coordinates": [
+                  1,
+                  1
+                ],
+                "q_mod_2Z": 1
+              },
+              {
+                "coordinates": [
+                  1,
+                  1
+                ],
+                "image_coordinates": [
+                  0,
+                  1
+                ],
+                "q_mod_2Z": 1
+              }
+            ]
+          },
+          "same_q_action_class": true
+        },
+        "equivariant_orthogonal_decomposition": {
+          "actions_conjugate_integrally": true,
+          "archived": "II_(1,9) [identity] + D4(-1) [diagram action]",
+          "archived_block_basis_determinant": 1,
+          "bh_block_basis_determinant": 1,
+          "brandhorst_hofmann": "U+E8(-1) [identity] + D4(-1) [same diagram action]",
+          "classification_used": "the even unimodular lattice of signature (1,9) is unique, namely U+E8(-1)",
+          "d4_action": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "d4_gram": [
+            [
+              -2,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -2,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              -2,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              -2
+            ]
+          ]
+        },
+        "fixed_lattice": {
+          "determinant": -3,
+          "rank": 12,
+          "signature": [
+            1,
+            11,
+            0
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ]
+        },
+        "picard_action_order": 3,
+        "picard_characteristic_polynomial": "(lambda - 1)**12*(lambda**2 + lambda + 1)"
+      },
+      "hyperbolic_polytope": {
+        "bad_edges": 0,
+        "canonical_vinberg_audit_sha256": "52818c7f1c2e8813d49b0b7f9cdc3af956d823b2fddd2bb302b177e59632d80f",
+        "classification": "finite_volume_noncompact",
+        "cusps": 1,
+        "dimension": 11,
+        "elliptic_edges": 162,
+        "facets": 13,
+        "finite_vertices": 27,
+        "full_reflection_chamber_index": 1,
+        "parabolic_neighborhood_audits": 2
+      },
+      "kahler_and_torelli": {
+        "algebraic_coinvariant_is_rootless": true,
+        "chamber_transport": "transport the BH invariant Kahler chamber to the complete 15-wall chamber by a (-2)-Weyl element; Weyl reflections act trivially on the discriminant, and the chamber S3 acts faithfully on its three nonzero discriminant classes, so a final chamber symmetry conjugates to the archived generator",
+        "database_row_is_effective_genuine_automorphism_moduli": true,
+        "generic_picard_is_exactly_rank_14": true,
+        "global_order_vs_picard_order": [
+          6,
+          3
+        ],
+        "strong_torelli_conclusion": "after this marking the genuine BH automorphism preserves the Roulleau nef chamber and induces the archived fold"
+      },
+      "name": "order6_triality",
+      "scope": {
+        "generic_ns_on_the_bh_automorphism_locus": true,
+        "new_abstract_coxeter_polytope_claimed": false,
+        "new_positive_k3_automorphism_realization_in_this_project": true,
+        "original_general_roulleau_surface_action_claimed": false,
+        "worldwide_priority_claimed": false
+      },
+      "theorem": "Brandhorst--Hofmann 0.6.3.1 gives a genuine order-6 K3 automorphism whose Picard action realizes R14_UE8D4_C3_S3 and its finite-volume H11/13 Coxeter section"
+    },
+    {
+      "brandhorst_hofmann_row": {
+        "automorphism_order": 16,
+        "database_semantics": "one moduli space of effective characters parametrizing pairs (X,G), as stated in the pinned database README",
+        "generic_picard_lattice": {
+          "action_digest": "9258ac7cf8f7e40d11e1368cd7f288b065aaab17b84a2961f6d795b56a824754",
+          "discriminant_q_histogram_mod_2Z": {
+            "0": 1,
+            "1": 3
+          },
+          "gram_digest": "3a814211e13c52c671cfa34867ee8d3fe3c209246788a223df671c6ea6dd0746",
+          "isometry_class": "U+E8(-1)+D4(-1)",
+          "rank_signature_determinant": [
+            14,
+            [
+              1,
+              13,
+              0
+            ],
+            -4
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "generic_transcendental_lattice": {
+          "characteristic_polynomial": "lambda**8 + 1",
+          "gram_digest": "6a293432179a50a1c8e66c5fb23ade0ba63bd1d8dea6ae8129c2e3750694b4d5",
+          "rank_signature_determinant": [
+            8,
+            [
+              2,
+              6,
+              0
+            ],
+            4
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "id": "0.16.0.1",
+        "member": "K3Groups/results/purely_ns/order16.txt",
+        "member_row_count": 7,
+        "member_sha256": "2c8a58d846eb6b563a62b958bd665680790598b829d99723da463d9fa6e315ea",
+        "row_one_based": 1,
+        "row_sha256_with_newline": "22f66c944bc0bdaa0cfdfc0ba1e3f935c2ba6593eff91cec36fc57bd41199c18"
+      },
+      "exact_picard_action_match": {
+        "all_algebraic_checks": {
+          "action_characteristic": true,
+          "action_isometry": true,
+          "action_order": true,
+          "coinvariant_action": true,
+          "coinvariant_canonical": true,
+          "coinvariant_gram": true,
+          "coinvariant_rootless": true,
+          "fixed_determinant": true,
+          "fixed_rank": true,
+          "fixed_signature": true,
+          "fixed_smith": true,
+          "frozen_matrix_digests": true,
+          "ns_determinant": true,
+          "ns_even": true,
+          "ns_signature": true,
+          "ns_smith": true,
+          "transcendental_determinant": true,
+          "transcendental_signature": true,
+          "transcendental_smith": true
+        },
+        "archived_type_id": "R14_UE8D4_C2",
+        "coinvariant_lattice": {
+          "action_in_bh_basis": [
+            [
+              -1
+            ]
+          ],
+          "canonical_change_of_basis": [
+            [
+              1
+            ]
+          ],
+          "class": "<-4>",
+          "gram_in_bh_basis": [
+            [
+              -4
+            ]
+          ],
+          "rootless": true,
+          "rootless_reason": "the canonical Gram is twice an even negative-definite integral Gram, so every nonzero norm is at most -4"
+        },
+        "discriminant_form_and_action": {
+          "archived": {
+            "action_matrix_mod_2": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "group": "(Z/2)^2",
+            "half_vector_basis_rows": [
+              [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ]
+            ],
+            "nonzero_action_cycle_lengths": [
+              1,
+              2
+            ],
+            "q_histogram_mod_2Z": {
+              "0": 1,
+              "1": 3
+            },
+            "table": [
+              {
+                "coordinates": [
+                  0,
+                  0
+                ],
+                "image_coordinates": [
+                  0,
+                  0
+                ],
+                "q_mod_2Z": 0
+              },
+              {
+                "coordinates": [
+                  0,
+                  1
+                ],
+                "image_coordinates": [
+                  1,
+                  1
+                ],
+                "q_mod_2Z": 1
+              },
+              {
+                "coordinates": [
+                  1,
+                  0
+                ],
+                "image_coordinates": [
+                  1,
+                  0
+                ],
+                "q_mod_2Z": 1
+              },
+              {
+                "coordinates": [
+                  1,
+                  1
+                ],
+                "image_coordinates": [
+                  0,
+                  1
+                ],
+                "q_mod_2Z": 1
+              }
+            ]
+          },
+          "basis_conjugator_archived_to_bh": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "brandhorst_hofmann": {
+            "action_matrix_mod_2": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "group": "(Z/2)^2",
+            "half_vector_basis_rows": [
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0
+              ]
+            ],
+            "nonzero_action_cycle_lengths": [
+              1,
+              2
+            ],
+            "q_histogram_mod_2Z": {
+              "0": 1,
+              "1": 3
+            },
+            "table": [
+              {
+                "coordinates": [
+                  0,
+                  0
+                ],
+                "image_coordinates": [
+                  0,
+                  0
+                ],
+                "q_mod_2Z": 0
+              },
+              {
+                "coordinates": [
+                  0,
+                  1
+                ],
+                "image_coordinates": [
+                  1,
+                  0
+                ],
+                "q_mod_2Z": 1
+              },
+              {
+                "coordinates": [
+                  1,
+                  0
+                ],
+                "image_coordinates": [
+                  0,
+                  1
+                ],
+                "q_mod_2Z": 1
+              },
+              {
+                "coordinates": [
+                  1,
+                  1
+                ],
+                "image_coordinates": [
+                  1,
+                  1
+                ],
+                "q_mod_2Z": 1
+              }
+            ]
+          },
+          "same_q_action_class": true
+        },
+        "equivariant_orthogonal_decomposition": {
+          "actions_conjugate_integrally": true,
+          "archived": "II_(1,9) [identity] + D4(-1) [diagram action]",
+          "archived_block_basis_determinant": 1,
+          "bh_block_basis_determinant": -1,
+          "brandhorst_hofmann": "U+E8(-1) [identity] + D4(-1) [same diagram action]",
+          "classification_used": "the even unimodular lattice of signature (1,9) is unique, namely U+E8(-1)",
+          "d4_action": [
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          "d4_gram": [
+            [
+              -2,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              -2,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              -2,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              -2
+            ]
+          ]
+        },
+        "fixed_lattice": {
+          "determinant": 4,
+          "rank": 13,
+          "signature": [
+            1,
+            12,
+            0
+          ],
+          "smith": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4
+          ]
+        },
+        "picard_action_order": 2,
+        "picard_characteristic_polynomial": "(lambda - 1)**13*(lambda + 1)"
+      },
+      "hyperbolic_polytope": {
+        "bad_edges": 0,
+        "canonical_vinberg_audit_sha256": "9a50c14e82ac368380003ce60ac6fff706fec5a02125d71de69d32eb8c1af9c8",
+        "classification": "finite_volume_noncompact",
+        "cusps": 2,
+        "dimension": 12,
+        "elliptic_edges": 234,
+        "facets": 14,
+        "finite_vertices": 35,
+        "full_reflection_chamber_index": 1,
+        "parabolic_neighborhood_audits": 3
+      },
+      "kahler_and_torelli": {
+        "algebraic_coinvariant_is_rootless": true,
+        "chamber_transport": "transport the BH invariant Kahler chamber to the complete 15-wall chamber by a (-2)-Weyl element; Weyl reflections act trivially on the discriminant, and the chamber S3 acts faithfully on its three nonzero discriminant classes, so a final chamber symmetry conjugates to the archived generator",
+        "database_row_is_effective_genuine_automorphism_moduli": true,
+        "generic_picard_is_exactly_rank_14": true,
+        "global_order_vs_picard_order": [
+          16,
+          2
+        ],
+        "strong_torelli_conclusion": "after this marking the genuine BH automorphism preserves the Roulleau nef chamber and induces the archived fold"
+      },
+      "name": "order16_transposition",
+      "scope": {
+        "generic_ns_on_the_bh_automorphism_locus": true,
+        "new_abstract_coxeter_polytope_claimed": false,
+        "new_positive_k3_automorphism_realization_in_this_project": true,
+        "original_general_roulleau_surface_action_claimed": false,
+        "worldwide_priority_claimed": false
+      },
+      "theorem": "Brandhorst--Hofmann 0.16.0.1 gives a genuine order-16 K3 automorphism whose Picard action realizes R14_UE8D4_C2 and its finite-volume H12/14 Coxeter section"
+    }
+  ],
+  "chamber_transport_criterion": {
+    "complete_15_wall_neron_severi_chamber": true,
+    "conclusion": "every effective BH action of either nontrivial conjugacy class can be marked so that its Kahler chamber is the archived chamber and its wall action is the archived C2 or C3 generator",
+    "diagram_action_on_discriminant_is_faithful": true,
+    "discriminant_orthogonal_group": "GL(2,2)=S3",
+    "weighted_diagram_group": "S3",
+    "weyl_reflections_act_trivially_on_discriminant": true
+  },
+  "payload_sha256": "cb00f8aef304bdb9eb3740729b8bc758da7f55d1547db3a1a7d9fca2ccd12f0c",
+  "schema": "coxeter.roulleau_ue8d4.generic_ns_k3_automorphisms.v1",
+  "source_file_sha256": "de41f13f9b47fa2c1e82bbd9255da74667694658e5acac2461054bb5d2996f04",
+  "summary": {
+    "compact": 0,
+    "dimensions": [
+      11,
+      12
+    ],
+    "finite_volume_noncompact": 2,
+    "genuine_k3_automorphism_realizations": 2,
+    "new_abstract_polytope_claims": 0
+  },
+  "theorem": "Two Roulleau U+E8+D4 folds previously recorded only as divisor-lattice symmetries have genuine K3-automorphism realizations: H11/13 via BH 0.6.3.1 and H12/14 via BH 0.16.0.1"
+}

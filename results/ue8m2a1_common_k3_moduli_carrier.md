@@ -1,0 +1,198 @@
+# TOOT: one K3 moduli family is a certified carrier factory in `H10`
+
+## The criterion
+
+Put
+
+\[
+ F=U\oplus E_8(-2)\oplus\langle-2\rangle .
+\]
+
+Let `P` be a finite-sided oriented rational Coxeter datum in `H10`.  Suppose
+there is an orientation-compatible integral realization of its facet mirrors
+by primitive negative vectors of `F`, and every displayed reflection preserves
+`F`.  Then `P` has a weak equation-level full-Picard K3 carrier on a very
+general member of the explicit nine-parameter family
+
+\[
+ X:\quad y^2=x^3+A(s^2)x+B(s^2),
+\]
+
+where
+
+\[
+\begin{aligned}
+A(t)&=-3+a_1t+a_2t^2+a_3t^3+a_4t^4,\\
+B(t)&=2+(1-a_1)t+b_2t^2+b_3t^3+b_4t^4+b_5t^5+b_6t^6.
+\end{aligned}
+\]
+
+On the certified nonempty parameter open, a very general member has
+
+\[
+ \operatorname{NS}(X)=F.
+\]
+
+Thus the equation family is not attached only to the three chambers already
+found.  It is a carrier factory for **every genuine finite-sided Coxeter
+polyhedron** that passes the primitive-negative, oriented integral-`F`
+realization gate.  Finite volume is deliberately not part of this implication:
+it must be proved either from the resulting Gram matrix by the complete
+Vinberg endpoint and parabolic-neighbourhood criteria or by an independent
+finite-index proof in the full reflection group described below.
+
+## Exhaustive wall alphabet
+
+There is a sharp converse restriction on negative vectors defining
+hyperbolic mirrors in this family.  The discriminant group of `F` has Smith
+invariants
+
+```text
+1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+```
+
+so its exponent is two.  If `r` is primitive and
+`d=div_F(r)`, then `r/d` has exact order `d` in `A_F`; hence `d` is one or
+two.  Since `F` is even, write `r^2=-2k`.  The reflection
+
+\[
+ s_r(x)=x-\frac{2(x,r)}{r^2}r
+\]
+
+is integral exactly when `2k` divides `2d`.  Therefore the exhaustive
+arithmetic alphabet of primitive integral reflection vectors is
+
+```text
+(-2, divisibility 1)
+(-2, divisibility 2)
+(-4, divisibility 2).
+```
+
+Conversely, any primitive negative vector in `F` having one of these three
+pairs has an integral hyperbolic reflection.  The certificate now gives a
+literal vector of each type in the standard `F` basis and checks primitivity,
+divisibility, exact discriminant-class order, reflection integrality, and Gram
+preservation.
+
+The word “negative” is essential.  In the `U` summand, `e+f` is primitive of
+square `+2` and divisibility one, and its lattice reflection is integral.  It
+does not define a hyperbolic mirror and is therefore outside this wall
+alphabet.  The theorem does not classify positive-norm lattice reflections.
+
+## Proof of the carrier statement
+
+The lattice `F` embeds primitively in
+`Lambda_K3=U^3+E8(-1)^2`: put its `U` in one ambient `U`, put `E8(-2)`
+diagonally in the two `E8(-1)` factors, and represent the final `(-2)` class
+by `e-f` in a second ambient `U`.  The explicit embedding has Smith diagonal
+`1^11`; its complement is `U+E8(-2)+<2>`.
+
+K3 period surjectivity therefore gives a nine-dimensional moduli space of
+marked projective K3 surfaces with very-general Picard lattice exactly `F`.
+The displayed quadratic-base-change family has nine independent normalized
+parameters, a certified nonempty open, and dominates this `(11,9,1)` moduli
+component.  Hence its very-general member supplies all classes in any fixed
+integral `F` realization.  Transporting the chosen positive cone and
+halfspaces through the marking makes the Coxeter datum a literal divisor-
+reflection subsystem.
+
+This argument works for any finite collection of `F`-realized chambers at
+once.  A single marked very-general surface contains all their divisor
+classes.  “Equation-level” here refers to the ambient K3 surface: an arbitrary
+transported wall is an algebraic divisor class under the marking, but the
+theorem does not produce an equation, effective representative, or
+irreducible curve for that individual class.  Separate chambers may moreover
+require different Weyl re-markings when one asks for their chosen interiors
+to meet the ample cone.
+
+## Three finite-volume calibrations
+
+The current exact instances are all known finite-volume noncompact
+polytopes, now placed on the same equation family.
+
+| chamber | facets | primitive mirror types `(-2,1);(-2,2);(-4,2)` | index in `W(F)` | finite vertices | cusps | rank-9 edges |
+|---|---:|---:|---:|---:|---:|---:|
+| `K3-S3-C2-H10-13` | 13 | `2;2;9` | 1 | 34 | 4 | 208 |
+| `A15_11-C2-H10-21` | 21 | `4;7;10` | 6,720 | 607 | 50 | 4,159 |
+| `X2-RAT-C2-H10-37` | 37 | `6;21;10` | 241,920 | 3,236 | 261 | 24,350 |
+
+All three primitive wall sets span `F` with index one.  Every row has its own
+complete Vinberg replay with zero bad edges and complete parabolic
+neighbourhoods; the common-family argument is not used as a volume proof.
+
+## Finite volume, finite index, and the compact no-go inside `F`
+
+Let `W(F)` denote the hyperbolic group generated by all primitive **negative**
+integral mirror reflections of `F`.  Its complete 13-wall chamber above has
+finite volume and four cusps, so `W(F)` is a nonuniform lattice.
+
+Now let `P` be a genuine Coxeter polyhedron realized in `F`, and let `Gamma`
+be the group generated by its facet reflections.  Primitive reduction puts
+every generator in `W(F)`.  The Coxeter--Poincare theorem makes `P` a
+fundamental domain for `Gamma`.  Up to measure-zero boundaries, a `Gamma`
+fundamental domain is a union of `[W(F):Gamma]` fundamental chambers of
+`W(F)`.  Consequently
+
+\[
+ \operatorname{vol}(P)<\infty
+ \quad\Longleftrightarrow\quad
+ [W(F):\Gamma]<\infty.
+\]
+
+The fundamental-domain hypothesis is important: this statement is about
+genuine Coxeter polyhedra, not arbitrary finite collections of integral
+reflection vectors.
+
+A finite-index subgroup of a nonuniform lattice is again nonuniform: it
+contains a positive power of every parabolic element.  Therefore every
+finite-volume `F`-integral Coxeter chamber has cusps.  In particular, no
+compact `H10` Coxeter polytope can have a primitive-negative integral mirror
+realization in `F`.  This is an exact carrier-specific no-go, not a no-go for
+other lattices or coefficient fields.
+
+## Exact geometric promotion boundary
+
+For each chamber separately, choose a generic point in its strict interior
+and compose the marking with a K3 Weyl element taking the ambient root chamber
+containing that point to the ample chamber.  Every oriented `(-2)` facet then
+pairs positively with an ample class, so K3 Riemann--Roch makes that sign
+effective.  It may still be reducible.
+
+Full-nef equality is much stricter.  After the same chamber-specific Weyl
+re-marking, it holds exactly when every irredundant facet is a primitive
+`(-2)`-root hyperplane and no other `(-2)`-root hyperplane meets the chamber
+interior.  An irredundant primitive
+`(-4,divisibility 2)` facet can never be a full K3 nef wall.  Consequently the
+three mixed calibrations are full-Picard divisor carriers, not full nef cones.
+No Picard reflection is claimed to be a surface automorphism.
+
+## Why this advances the inverse-carrier program
+
+For this moduli component, surface existence and deformation are now compiled
+away.  Discovery reduces to exact arithmetic and polyhedral gates:
+
+1. realize a candidate chamber integrally in `F` using only the three allowed
+   primitive mirror types;
+2. find a strict oriented positive point;
+3. check the Coxeter Gram matrix and integral reflections; and
+4. run the complete Vinberg finite-volume/compactness test, or prove finite
+   index independently in `W(F)`.
+
+Conversely, a candidate requiring any fourth primitive reflection type is
+excluded from this entire nine-dimensional K3 moduli component.  This is a
+carrier obstruction, not a no-go for the abstract polytope unless a separate
+forward-universality theorem forces that component.
+
+## Reproduction
+
+```bash
+PYTHONPATH=.:src python3 scripts/certify_ue8m2a1_common_k3_moduli_carrier.py --check-archive
+PYTHONPATH=.:src pytest -q tests/test_ue8m2a1_common_k3_moduli_carrier.py
+```
+
+The machine-readable certificate is
+[`ue8m2a1_common_k3_moduli_carrier.json`](../data/enumerations/ue8m2a1_common_k3_moduli_carrier.json).
+
+Frozen payload SHA-256:
+
+`608f81a0fdd709134206e6cfe9e8a7de1338231b03f9ffc6e0e36c8c8e97c09a`

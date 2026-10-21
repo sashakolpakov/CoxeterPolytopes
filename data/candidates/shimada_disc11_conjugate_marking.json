@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.1.0",
+  "candidate_id": "coupled_discriminant11",
+  "analysis_id": "shimada_disc11_conjugate_marking_D68",
+  "source": {
+    "author": "Ichiro Shimada",
+    "member": "threediscs/disc11.txt",
+    "member_sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68"
+  },
+  "conjugate_marking": {
+    "ambient_chamber": 68,
+    "row_isometry_determinant": 1,
+    "row_isometry_verified": true,
+    "discriminant_action_trivial": true,
+    "defining_induced_chamber_walls": 28,
+    "positive_eigen_witness_square": {"a": "-2474", "b": "2688"},
+    "minimum_defining_wall_pairing": {"a": "1", "b": "0"},
+    "identity_eigenspace_meets_chamber_interior": true
+  },
+  "local_D68_minus_two_filter": {
+    "ambient_minus_two_walls": 17,
+    "positive_at_both_real_places": 17,
+    "field_integral_reflection_roots": 17,
+    "shell_distribution": {
+      "2": 9,
+      "4-2*phi": 8
+    },
+    "field_span_rank": 9,
+    "pair_sign_distribution": {
+      "negative": 30,
+      "zero": 98,
+      "positive": 8
+    },
+    "restricted_root_facets": {
+      "ambient_roots_on_facets": 16,
+      "distinct_facets": 8,
+      "paired_orbits": [1, 2, 3, 4, 5, 6, 7, 8],
+      "redundant_wall_labels": [[0, 0]],
+      "exact_face_witnesses_verified": true,
+      "orbit_zero_positive_dependence_verified": true
+    }
+  },
+  "local_D68_complete_section": {
+    "ambient_primitive_walls": 28,
+    "distinct_restricted_halfspaces": 19,
+    "irredundant_restricted_facets": 11,
+    "root_facets": 8,
+    "internal_borcherds_facets": 3,
+    "internal_wall_classes": [
+      [[9, 0], [16, 0]],
+      [[11, 1]],
+      [[14, 0]]
+    ],
+    "exact_positive_face_witnesses": 11,
+    "exact_positive_redundancy_dependences": 8,
+    "verified": true
+  },
+  "first_star_traversal": {
+    "wall_11_member_1": {
+      "neighbor_representative": 86,
+      "neighbor_primitive_walls": 35,
+      "exact_timelike_interior_witness": true
+    },
+    "wall_14": {
+      "neighbor_representative": 181,
+      "neighbor_primitive_walls": 26,
+      "exact_timelike_interior_witness": true
+    },
+    "simultaneous_wall_9_16": {
+      "representative_path": [68, 10, 10, 69, 68],
+      "wall_path": [[9, 0], [12, 0], [8, 1], [15, 0]],
+      "opposite_side_exact_timelike_interior_witness": true,
+      "transport_is_NS_isometry": true,
+      "transport_is_involution": true,
+      "transport_centralizes_conjugated_phi_action": true,
+      "restricted_fixed_rank": 9,
+      "restricted_negative_rank": 1,
+      "restricted_action_negates_internal_wall_normal": true,
+      "interpretation": "enhanced K3 automorphism reflection across the internal eigen-wall"
+    },
+    "verified_against_external_atlas": true,
+    "verifier": "scripts/analyze_shimada_disc11_eigen_nef.py"
+  },
+  "conjugated_published_B_filter": {
+    "minus_two_curve_representatives": 347,
+    "trace_minus_two_verified": 347,
+    "positive_at_both_real_places": 18,
+    "field_integral_reflection_roots": 18,
+    "shell_distribution": {
+      "2": 9,
+      "4-2*phi": 9
+    },
+    "field_span_rank": 10,
+    "pair_sign_distribution": {
+      "negative": 31,
+      "zero": 114,
+      "positive": 8
+    },
+    "surviving_zero_based_indices": [
+      0, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 18, 19, 28, 31
+    ],
+    "all_effective_pairings_with_ample_witness_positive": true,
+    "minimum_effective_pairing": {"a": "1", "b": "0"}
+  },
+  "status": "conjugate_marking_first_star_traversed_global_wall_completeness_undecided",
+  "generator": "scripts/shimada_disc11_conjugate.py",
+  "regression": "tests/test_shimada_disc11_conjugate.py",
+  "nonclaims": [
+    "The 18 published representatives are not a complete restricted wall set",
+    "The eight local root facets are not yet the complete global eigen-nef chamber",
+    "The 18 roots are not asserted to be one outward-oriented Coxeter simple system",
+    "Finite volume, compactness, and Coxeter completeness are undecided",
+    "One centralizing reflection is certified, but the full enhanced automorphism centralizer has not been computed"
+  ]
+}

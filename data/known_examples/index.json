@@ -1,0 +1,168 @@
+{
+  "schema_version": "0.1.0",
+  "status_date": "2026-08-09",
+  "examples": [
+    {
+      "id": "bugaenko_compact_h6_index_two_double_p6_10",
+      "dimension": 6,
+      "compactness": "compact",
+      "facet_count": 10,
+      "lattice_description": "Bugaenko golden arithmetic chamber; mixed norm-2/norm-4 crystallographic root Gram over Z[phi]",
+      "primary_sources": [
+        "Bugaenko1984",
+        "Burcroff2022",
+        "Mcleod2026P610"
+      ],
+      "artifact_status": "known_existence_exact_gram_and_index_two_lineage_verified;_2026_uniqueness_claim_not_accepted",
+      "derived_artifacts": [
+        {
+          "path": "data/known_examples/p6_10_exact_certificate.json",
+          "status": "exact_reproducible_known_example_certificate",
+          "description": "Sparse exact Gram over Q(sqrt(2),sqrt(5)), rank/inertia/kernel, mixed Z[phi] scaling, f-vector/Euler data, and hashed index-two lineage; compactness is accepted from pinned source/CoxIter status and uniqueness is explicitly unaccepted"
+        },
+        {
+          "path": "results/p6_10_bugaenko_double_lineage_and_classification_audit.md",
+          "status": "source_pinned_lineage_and_proof_audit",
+          "description": "Exact ten-wall Gram, compact invariants, hashed CoxIter index-two lineage, invalid facet-filter counterexample, mixed-root carrier opportunity, and hidden-parent-wall gate"
+        }
+      ],
+      "missing": [
+        "valid_exhaustive_uniqueness_proof_over_all_387_combinatorial_types",
+        "primitive_trace_lattice_and_K3_embedding_certificate",
+        "complete_hidden_parent_wall_and_projected_root_audit"
+      ]
+    },
+    {
+      "id": "bugaenko_compact_h8",
+      "dimension": 8,
+      "compactness": "compact",
+      "facet_count": 11,
+      "lattice_description": "<-2 phi> + E8 over Z[phi]",
+      "primary_source": "Bugaenko1992",
+      "artifact_status": "verified",
+      "derived_artifacts": [
+        {
+          "path": "data/known_examples/bugaenko_compact_h8.json",
+          "status": "verified",
+          "description": "Eleven roots, exact Coxeter matrix, strict interior point, all 41 finite vertices, and exact Vinberg completion"
+        },
+        {
+          "path": "data/known_examples/bugaenko_vinberg_transcript.json",
+          "status": "verified",
+          "description": "Exhaustive exact height transcript from the lattice and control vector"
+        },
+        {
+          "path": "data/trace_lattices/bugaenko_l8_trace.json",
+          "status": "exact_normalization_audited",
+          "description": "Even rank-18 trace lattice and primitive K3 embedding certificate"
+        },
+        {
+          "path": "data/trace_lattices/bugaenko_k3_eigen_nef.json",
+          "status": "verified_existential_marked_K3_realization",
+          "description": "Five-shell reduction, all 320 restricted K3 mirrors meeting the closed chamber, and Weyl-conjugate eigen-nef realization"
+        }
+      ],
+      "missing": [
+        "direct_transcription_check_against_access_gated_primary_chapter"
+      ]
+    },
+    {
+      "id": "k3_high_rank_nef_chambers_rho15_19",
+      "dimension_range": [14, 18],
+      "compactness": "finite_volume_noncompact",
+      "facet_counts_by_dimension": {
+        "14": 21,
+        "15": 19,
+        "16": 19,
+        "17": 19,
+        "18": 24
+      },
+      "lattice_description": "Full K3 nef chambers for U+E8+D4+A1 through U+E8+E8+A1",
+      "primary_sources": ["Kondo1989", "Roulleau2022"],
+      "artifact_status": "source_audited_gram_verified",
+      "derived_artifacts": [
+        {
+          "path": "data/known_examples/k3_high_rank_nef_chambers.json",
+          "status": "source_audited_gram_verified",
+          "description": "Complete wall intersection graphs, exact bases, provenance, rank-15 redraw correction, rank-20 K3 boundary, and a derived rank-19 Inose equation"
+        },
+        {
+          "path": "results/k3_high_rank_nef_chambers.md",
+          "status": "theorem_and_source_audit",
+          "description": "Finite-volume/Cox-ring theorem, five high-rank models, exact Gram audit, and conservative novelty statement"
+        }
+      ],
+      "missing": [
+        "root coordinates in fixed canonical U+ADE bases",
+        "independent exhaustive Vinberg reconstruction from each canonical lattice",
+        "numerical hyperbolic covolumes"
+      ]
+    },
+    {
+      "id": "enriques_finite_automorphism_full_nef_h9",
+      "dimension": 9,
+      "compactness": "finite_volume_noncompact",
+      "type_count": 7,
+      "facet_counts_by_type": {
+        "I": 12,
+        "II": 12,
+        "III": 20,
+        "IV": 20,
+        "V": 20,
+        "VI": 20,
+        "VII": 20
+      },
+      "lattice_description": "Num(Y)=U+E8(-1) for finite-automorphism complex Enriques surfaces",
+      "primary_sources": ["Kondo1986", "Martin2019", "Shimada2019Configurations"],
+      "artifact_status": "source_audited_full_nef_and_dual_exact_volume_verified",
+      "derived_artifacts": [
+        {
+          "path": "data/known_examples/enriques_finite_automorphism_nef_chambers.json",
+          "status": "verified",
+          "description": "All seven exact L10 wall lists and matrices, surface-to-polytope transfer statement, GMP cone census, and literal Vinberg audits"
+        },
+        {
+          "path": "data/enumerations/enriques_finite_automorphism_nef_chamber_rays.jsonl.gz",
+          "status": "verified",
+          "description": "All 2,508 exact projective cone rays with full facet incidence and Lorentz type"
+        },
+        {
+          "path": "results/enriques_finite_automorphism_nef_transfer_theorem.md",
+          "status": "theorem_and_source_audit",
+          "description": "Exactly seven full-nef H9 images, all finite-volume noncompact, with a scoped surface-free converse criterion"
+        },
+        {
+          "path": "data/enumerations/enriques_finite_aut_nef_chambers_hostile_audit.json",
+          "status": "independently_verified",
+          "description": "No-import replay from Shimada raw arrays: all 2,508 rays, time sheets, irredundancy, literal Vinberg gates, and the precise 20C/20D equality boundary"
+        },
+        {
+          "path": "results/enriques_finite_aut_nef_chambers_hostile_audit.md",
+          "status": "hostile_audit",
+          "description": "Independent parser and exact cone/Vinberg reconstruction; full replay 3 passed in 123.76 seconds"
+        }
+      ],
+      "missing": [
+        "numerical hyperbolic covolumes",
+        "worldwide priority audit for the explicit face and cusp censuses",
+        "extension from the finite seven-matrix lookup class to a broad surface-realization criterion"
+      ]
+    },
+    {
+      "id": "borcherds_cofinite_h21",
+      "dimension": 21,
+      "compactness": "finite_volume_noncompact",
+      "facet_count": 210,
+      "lattice_description": "U + D20, equivalently the even sublattice of I_{21,1}",
+      "primary_source": "Borcherds1987",
+      "artifact_status": "source_audit_required",
+      "missing": [
+        "source_page_locator",
+        "simple_root_coordinates",
+        "wall_gram_matrix",
+        "coxeter_diagram",
+        "cusp_certificate"
+      ]
+    }
+  ]
+}

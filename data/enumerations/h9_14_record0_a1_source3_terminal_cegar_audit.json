@@ -1,0 +1,2742 @@
+{
+  "all_checks_pass": true,
+  "base_model": {
+    "additional_A5_count": 24,
+    "checks": {
+      "base_model_counts_match_checkpoint": true,
+      "checkpoint_identity_matches_fixed_quantifier": true,
+      "fixed_A4_shadow_has_8_fives": true,
+      "generator_blocks_give_full_source_group_order_483840": true,
+      "graph6_edges_are_exactly_0_13_and_1_13": true,
+      "graph6_order_is_14": true,
+      "lex_slice_is_lossless": true,
+      "remaining_additional_A5_count_is_24": true,
+      "schedule_has_178_vertices_and_32_missing_fives": true,
+      "ten_generators_preserve_the_full_fixed_source_model": true
+    },
+    "counts": {
+      "candidate_facet_complements": 824,
+      "face_witness_constraints": 1324,
+      "lanner_order_constraints": 7051,
+      "ridge_constraints": 1547
+    },
+    "forced_A5_shadow_count": 8,
+    "scheduled_rank_nine_vertex_count": 178,
+    "source_group": {
+      "generator_count": 10,
+      "lex_generator_moved_pair_counts": [
+        201,
+        201,
+        186,
+        186,
+        186,
+        186,
+        186,
+        186,
+        186,
+        165
+      ],
+      "lossless_lex_reason": "the global lexicographic minimum of every full source orbit satisfies x <= g(x) for each installed generator",
+      "order": 483840,
+      "structure": "S3 x S8 x C2"
+    },
+    "total_missing_independent_five_count": 32
+  },
+  "checks": {
+    "all_local_cores_and_full_orbits_green": true,
+    "checkpoint_terminal_status_agrees": true,
+    "finite_volume_noncompact_not_checked": true,
+    "independent_base_model_green": true,
+    "independent_lanner_and_elliptic_tables_green": true,
+    "pinned_checkpoint_hash_verified": true,
+    "pinned_ortools_version_verified": true,
+    "pinned_support_hash_verified": true,
+    "terminal_cp_sat_status_is_INFEASIBLE": true
+  },
+  "decision": {
+    "excluded_local_core_orbit_count": 41,
+    "fixed_source_compact_coxeter_no_go": true,
+    "installed_full_source_core_image_count": 427140,
+    "scope": "Record 0, a=1, source orbit 3 only; compact incidence/labels. Finite-volume noncompact cases and all other H9/14 sources remain open.",
+    "terminal_solver_status": "INFEASIBLE"
+  },
+  "independence": {
+    "exploratory_CEGAR_driver_imported": false,
+    "exploratory_core_extractor_imported": false,
+    "exploratory_dual_builder_imported": false,
+    "method": "direct graph6/schedule reconstruction, independent classical finite/Lanner classifier, generator-orbit BFS, fresh CP-SAT model"
+  },
+  "local_label_logic": {
+    "core_count": 41,
+    "core_summaries": [
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "6bf8999d2758d486faccf01a000ab9851cb2e4cbf9980c3bcf99bbb7ea0fd9fd",
+        "iteration": 0,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.1530642499565147,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 16,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 56,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "6bf8999d2758d486faccf01a000ab9851cb2e4cbf9980c3bcf99bbb7ea0fd9fd",
+        "iteration": 1,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.16197950002970174,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 16,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 56,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 2,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 192,
+        "face_restriction_count": 3,
+        "full_source_core_orbit_size": 2520,
+        "full_source_orbit_sha256": "f25bc866b644d18b297616bc71b0978e39172f6a130bf3b146941087fb41909f",
+        "iteration": 2,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.1547595000010915,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 3,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 3630,
+            "passing_state_count": 0,
+            "restriction_count": 3,
+            "support_index": 2
+          }
+        ],
+        "support_count": 3,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 3,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "6baf997c88f32ad680548b2ea6446a1893f226fd36115fa9ce38e2c1ced1d0bf",
+        "iteration": 3,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.12587437499314547,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 3,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 56,
+            "restriction_count": 3,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 196,
+            "passing_state_count": 0,
+            "restriction_count": 3,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 6,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "cf9894b07b0d74808494e59a7db39c238c58c7eafc4725be4f55d7b0720b953d",
+        "iteration": 4,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.19291145802708343,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 185,
+            "restriction_count": 6,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 590,
+            "passing_state_count": 18,
+            "restriction_count": 6,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 66,
+            "passing_state_count": 0,
+            "restriction_count": 6,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 4,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 48,
+        "face_restriction_count": 3,
+        "full_source_core_orbit_size": 10080,
+        "full_source_orbit_sha256": "175f3b8414cd1a1dade25667a43f5ff60dcb82ec5bcf89ac10739a7bfc39e895",
+        "iteration": 5,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.8040937500190921,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 3,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 394,
+            "passing_state_count": 62,
+            "restriction_count": 3,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 212,
+            "passing_state_count": 20,
+            "restriction_count": 3,
+            "support_index": 3
+          },
+          {
+            "compatible_extension_count": 60,
+            "passing_state_count": 0,
+            "restriction_count": 3,
+            "support_index": 4
+          }
+        ],
+        "support_count": 5,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "00a10e65a5826535a49648205de7f4d6b21dcb1d2b9774f35e7621b1878a4a2d",
+        "iteration": 6,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.15074766596080735,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 970,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 3040,
+            "passing_state_count": 118,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 396,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 5760,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 84,
+        "full_source_orbit_sha256": "807e39336fd4eb8f4e1069216f4605665dc1cba105caf02e0c3a48c32c0483ff",
+        "iteration": 7,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.005916499998420477,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 4858,
+            "passing_state_count": 320,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 1280,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "0a28e789c781169053a478950f080e86d45cf1a5ee88573b5a1324bc6f6df60d",
+        "iteration": 8,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.18753404100425541,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 5,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 622,
+            "restriction_count": 5,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1966,
+            "passing_state_count": 88,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 292,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "76365574dad78faec57ee2813feaf801d0231caad846f665adb005d6ae512672",
+        "iteration": 9,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.1730503750150092,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 5,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 622,
+            "restriction_count": 5,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1966,
+            "passing_state_count": 238,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 554,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 480,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 1008,
+        "full_source_orbit_sha256": "768561bad0d38d597d85420da27184204658b4287120010af96b8957c7c149ff",
+        "iteration": 10,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.06844483298482373,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 4858,
+            "passing_state_count": 320,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 1280,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 4,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 2,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "b69a71901c2e94ed72c3f4219f14317fc8faa2cd8c8f5ac408d2f1c793ea7867",
+        "iteration": 11,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.1251705419854261,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 2,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 4858,
+            "passing_state_count": 720,
+            "restriction_count": 2,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 292,
+            "passing_state_count": 88,
+            "restriction_count": 2,
+            "support_index": 3
+          },
+          {
+            "compatible_extension_count": 282,
+            "passing_state_count": 0,
+            "restriction_count": 2,
+            "support_index": 4
+          }
+        ],
+        "support_count": 5,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "6bf8999d2758d486faccf01a000ab9851cb2e4cbf9980c3bcf99bbb7ea0fd9fd",
+        "iteration": 12,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.14307308400748298,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 16,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 56,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 3,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "82bb36a061bce6dc3dadc861c0a1f12c9690c3076f9eac88685505e8a4e1dd01",
+        "iteration": 13,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.12687533302232623,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 3,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 88,
+            "restriction_count": 3,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 300,
+            "passing_state_count": 0,
+            "restriction_count": 3,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 96,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 5040,
+        "full_source_orbit_sha256": "0e04459b98a145ab3ae2afa787497c8a292484d301a53b3e2bc9c2e5e90bdf06",
+        "iteration": 14,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.4322732499567792,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 5,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 5,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 354,
+            "passing_state_count": 20,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 392,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 120,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 4032,
+        "full_source_orbit_sha256": "cfb3f3dbd5c359f5dc237c8631651eb946c765ae8ed8091c0654b605dc37dfff",
+        "iteration": 15,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.30802924995077774,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 354,
+            "passing_state_count": 20,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 68,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 24,
+        "face_restriction_count": 3,
+        "full_source_core_orbit_size": 20160,
+        "full_source_orbit_sha256": "25499c4f425b0a24d9d9caad32a553c87c749786d622f2561475a5989b5905b3",
+        "iteration": 16,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 1.5310581250232644,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 3,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 56,
+            "restriction_count": 3,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 2011,
+            "passing_state_count": 0,
+            "restriction_count": 3,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "6bf8999d2758d486faccf01a000ab9851cb2e4cbf9980c3bcf99bbb7ea0fd9fd",
+        "iteration": 17,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.2099610409932211,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 16,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 56,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "d22db2a065c51a8069351b9e10475f5e866493493db183972fa4570b9ac107d2",
+        "iteration": 18,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.18179829203290865,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 185,
+            "restriction_count": 5,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 590,
+            "passing_state_count": 18,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 60,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 192,
+        "face_restriction_count": 2,
+        "full_source_core_orbit_size": 2520,
+        "full_source_orbit_sha256": "b1819dd45c8816efeb9b88205db8736c9f1e6cdc23663fa0ce80d859d052f19b",
+        "iteration": 19,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.1635182080208324,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 2,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 394,
+            "passing_state_count": 62,
+            "restriction_count": 2,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 632,
+            "passing_state_count": 0,
+            "restriction_count": 2,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 24,
+        "face_restriction_count": 6,
+        "full_source_core_orbit_size": 20160,
+        "full_source_orbit_sha256": "05c2cc6fc3e5fc198f9c848ccdb66de5277570cebd2f2107c41988120401b1a5",
+        "iteration": 20,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 2.0042390410089865,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 5,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 622,
+            "restriction_count": 6,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1966,
+            "passing_state_count": 390,
+            "restriction_count": 6,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 13130,
+            "passing_state_count": 0,
+            "restriction_count": 6,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 96,
+        "face_restriction_count": 6,
+        "full_source_core_orbit_size": 5040,
+        "full_source_orbit_sha256": "14c682e3a91aaed34f7937cd7c3082c52cafae5489ab83813eb7913980402f5a",
+        "iteration": 21,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.4991526249796152,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 592,
+            "restriction_count": 6,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1904,
+            "passing_state_count": 44,
+            "restriction_count": 6,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 1140,
+            "passing_state_count": 0,
+            "restriction_count": 6,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 480,
+        "face_restriction_count": 6,
+        "full_source_core_orbit_size": 1008,
+        "full_source_orbit_sha256": "9f955235c1e45af0f78aded2877c70cfbcf3efeefbcd639819bee4e2b8176e1b",
+        "iteration": 22,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.09099400002742186,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 5,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 6,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 4858,
+            "passing_state_count": 624,
+            "restriction_count": 6,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 3292,
+            "passing_state_count": 0,
+            "restriction_count": 6,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 48,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 10080,
+        "full_source_orbit_sha256": "344dcac43ec70882358b969ac3f4192245c2c9a1d8851fd753258c7a2e9a91c9",
+        "iteration": 23,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.9369645830010995,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 104,
+            "restriction_count": 5,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 332,
+            "passing_state_count": 10,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 34,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 1440,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 336,
+        "full_source_orbit_sha256": "5be5b1af272311ff2654097f2aca228dcfb0174c80a0d54b30b63ed3ba1d0c16",
+        "iteration": 24,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.024549958994612098,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 970,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 3112,
+            "passing_state_count": 160,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 522,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 24,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 20160,
+        "full_source_orbit_sha256": "ebe4749cdf4552a843e7d9d438a51d97c2aaa6b54a837857b852a725f1d43041",
+        "iteration": 25,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 1.9660165829700418,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 5,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 5,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 394,
+            "passing_state_count": 42,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 1464,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 4,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 24,
+        "face_restriction_count": 2,
+        "full_source_core_orbit_size": 20160,
+        "full_source_orbit_sha256": "57f262635880ddfa8ec2c82d212a8e8fb00b0e81977e60caa97a2b56b8f3f4e4",
+        "iteration": 26,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 1.3621406669844873,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 2,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 5016,
+            "passing_state_count": 784,
+            "restriction_count": 2,
+            "support_index": 3
+          },
+          {
+            "compatible_extension_count": 3844,
+            "passing_state_count": 88,
+            "restriction_count": 2,
+            "support_index": 4
+          },
+          {
+            "compatible_extension_count": 460,
+            "passing_state_count": 0,
+            "restriction_count": 2,
+            "support_index": 1
+          }
+        ],
+        "support_count": 5,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 5,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 6,
+        "face_restriction_count": 2,
+        "full_source_core_orbit_size": 80640,
+        "full_source_orbit_sha256": "e92ab9e12bdcd02098704c8863d551a94c96bf3290d55baeb5ed6d31f86e5614",
+        "iteration": 27,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 6.381397042016033,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 2,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 5016,
+            "passing_state_count": 784,
+            "restriction_count": 2,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 3844,
+            "passing_state_count": 88,
+            "restriction_count": 2,
+            "support_index": 3
+          },
+          {
+            "compatible_extension_count": 44,
+            "passing_state_count": 22,
+            "restriction_count": 2,
+            "support_index": 4
+          },
+          {
+            "compatible_extension_count": 902,
+            "passing_state_count": 0,
+            "restriction_count": 2,
+            "support_index": 5
+          }
+        ],
+        "support_count": 6,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 5,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 6,
+        "face_restriction_count": 2,
+        "full_source_core_orbit_size": 80640,
+        "full_source_orbit_sha256": "32e10cbbcc2d231cbe72bc93e054073ca24459bcdf1b24364c26311ab6406bc1",
+        "iteration": 28,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 6.264058957982343,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 2,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 5016,
+            "passing_state_count": 1673,
+            "restriction_count": 2,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 6234,
+            "passing_state_count": 360,
+            "restriction_count": 2,
+            "support_index": 3
+          },
+          {
+            "compatible_extension_count": 217,
+            "passing_state_count": 57,
+            "restriction_count": 2,
+            "support_index": 4
+          },
+          {
+            "compatible_extension_count": 269,
+            "passing_state_count": 0,
+            "restriction_count": 2,
+            "support_index": 5
+          }
+        ],
+        "support_count": 6,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 24,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 20160,
+        "full_source_orbit_sha256": "51d31a17b9b3a80d931ce4a4a36888eae69ad62186ee654144babc29b04062e7",
+        "iteration": 29,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 1.6876179589889944,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 354,
+            "passing_state_count": 20,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 710,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 48,
+        "face_restriction_count": 3,
+        "full_source_core_orbit_size": 10080,
+        "full_source_orbit_sha256": "bb574520f8700d2aa870721f5a9b502d096c30460f6568d51cc4b5e447e865d3",
+        "iteration": 30,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.7322039999999106,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 3,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 4858,
+            "passing_state_count": 440,
+            "restriction_count": 3,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 11954,
+            "passing_state_count": 0,
+            "restriction_count": 3,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "5a2bc9ff30d9ecb71f8d25741666206b52fae82a4660e71ef25bcc32d1a37bdd",
+        "iteration": 31,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.1705656250123866,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 5,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 489,
+            "restriction_count": 5,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1551,
+            "passing_state_count": 98,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 1032,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 4,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 24,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 20160,
+        "full_source_orbit_sha256": "35083b78402338f6029c8cf4205998f737096e558994d779de85efb422a70699",
+        "iteration": 32,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 1.9610832090256736,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 4858,
+            "passing_state_count": 440,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 1446,
+            "passing_state_count": 72,
+            "restriction_count": 5,
+            "support_index": 3
+          },
+          {
+            "compatible_extension_count": 254,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 4
+          }
+        ],
+        "support_count": 5,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 24,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 20160,
+        "full_source_orbit_sha256": "7446dd1d7872c796194d962ac47a622424e565c45536c4099ac2e6e012792864",
+        "iteration": 33,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 1.7041673749918118,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 354,
+            "passing_state_count": 20,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 710,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 5,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 48,
+        "face_restriction_count": 2,
+        "full_source_core_orbit_size": 10080,
+        "full_source_orbit_sha256": "de21b21e1d15dbfe86a47664af669fdf6599add10d2261e9a0a861c2fa5941bc",
+        "iteration": 34,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.7847069579875097,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 2,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 354,
+            "passing_state_count": 149,
+            "restriction_count": 2,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 533,
+            "passing_state_count": 286,
+            "restriction_count": 2,
+            "support_index": 3
+          },
+          {
+            "compatible_extension_count": 73,
+            "passing_state_count": 71,
+            "restriction_count": 2,
+            "support_index": 4
+          },
+          {
+            "compatible_extension_count": 224,
+            "passing_state_count": 0,
+            "restriction_count": 2,
+            "support_index": 5
+          }
+        ],
+        "support_count": 6,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 48,
+        "face_restriction_count": 5,
+        "full_source_core_orbit_size": 10080,
+        "full_source_orbit_sha256": "8c0844b55f67c319dc9a71d1d3d127ab49391415a44d0f17a0b5899e88e4f9be",
+        "iteration": 35,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.9174145419965498,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 4,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 256,
+            "restriction_count": 5,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 812,
+            "passing_state_count": 33,
+            "restriction_count": 5,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 112,
+            "passing_state_count": 0,
+            "restriction_count": 5,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 1440,
+        "face_restriction_count": 3,
+        "full_source_core_orbit_size": 336,
+        "full_source_orbit_sha256": "793b911bdbc6532fd862fdacddd6424eab24933b0c89caf56b123ca32f2f09d8",
+        "iteration": 36,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.020784250053111464,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 2,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 3,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 56,
+            "restriction_count": 3,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 0,
+            "passing_state_count": 0,
+            "restriction_count": 3,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "c9e4d4bd44d42e587c66961802466167479bca122367d0a6dd75a3c0328ace91",
+        "iteration": 37,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.15061583300121129,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 16,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 56,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 3,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 4,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "885412c425ca656bab8f0e4ef7e3f7afd4a3a68c7c8be6f2c6571362410d6073",
+        "iteration": 38,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.14581554202595726,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 3,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 350,
+            "restriction_count": 4,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 1144,
+            "passing_state_count": 16,
+            "restriction_count": 4,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 52,
+            "passing_state_count": 0,
+            "restriction_count": 4,
+            "support_index": 3
+          }
+        ],
+        "support_count": 4,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 2,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 240,
+        "face_restriction_count": 6,
+        "full_source_core_orbit_size": 2016,
+        "full_source_orbit_sha256": "41f8dde6b1d09442eb0dafa9f9f6545bc45b47826727226d7f4944a901f6cee1",
+        "iteration": 39,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 0.17206437495769933,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 5,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 110,
+            "restriction_count": 6,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 3630,
+            "passing_state_count": 0,
+            "restriction_count": 6,
+            "support_index": 2
+          }
+        ],
+        "support_count": 3,
+        "terminal_sparse_label_state_count": 0
+      },
+      {
+        "additional_A5_count": 5,
+        "all_checks_pass": true,
+        "core_stabilizer_order": 24,
+        "face_restriction_count": 2,
+        "full_source_core_orbit_size": 20160,
+        "full_source_orbit_sha256": "cfa0781a564c229b242c9c19d8fbce4e67bbe1f59e59496893ae4bb68f1b01bd",
+        "iteration": 40,
+        "local_checks": {
+          "actual_vertex_label_state_count_is_zero": true,
+          "actual_vertex_replay_matches_checkpoint_stages": true,
+          "all_actual_vertices_have_order_nine": true,
+          "all_additions_are_independent_order_five": true,
+          "all_other_supports_are_exactly_stored_additions": true,
+          "cut_semantics_replay_matches_checkpoint_stages": true,
+          "fixed_A4_is_present_once": true,
+          "installed_cut_label_state_count_is_zero": true,
+          "iteration_number_is_sequential": true,
+          "no_core_addition_is_forced_shadow": true,
+          "stored_core_counts_match": true,
+          "stored_cut_restrictions_project_to_actual_restrictions": true,
+          "stored_facet_complements_match_actual_vertices": true,
+          "stored_terminal_state_count_is_zero": true
+        },
+        "orbit_checks": {
+          "every_image_addition_remains_in_missing_five_ground": true,
+          "every_image_clause_has_a_literal": true,
+          "orbit_size_divides_full_source_group": true,
+          "orbit_size_matches_checkpoint": true,
+          "stabilizer_order_matches_checkpoint": true
+        },
+        "orbit_rebuild_wall_time_seconds": 1.4996280840132385,
+        "replay_stages": [
+          {
+            "compatible_extension_count": 108,
+            "passing_state_count": 108,
+            "restriction_count": 1,
+            "support_index": 0
+          },
+          {
+            "compatible_extension_count": 1542,
+            "passing_state_count": 1542,
+            "restriction_count": 2,
+            "support_index": 1
+          },
+          {
+            "compatible_extension_count": 4858,
+            "passing_state_count": 624,
+            "restriction_count": 2,
+            "support_index": 2
+          },
+          {
+            "compatible_extension_count": 2036,
+            "passing_state_count": 562,
+            "restriction_count": 2,
+            "support_index": 3
+          },
+          {
+            "compatible_extension_count": 99,
+            "passing_state_count": 50,
+            "restriction_count": 2,
+            "support_index": 4
+          },
+          {
+            "compatible_extension_count": 218,
+            "passing_state_count": 0,
+            "restriction_count": 2,
+            "support_index": 5
+          }
+        ],
+        "support_count": 6,
+        "terminal_sparse_label_state_count": 0
+      }
+    ],
+    "finite_label_alphabet": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "lanner_tables": {
+      "checks": {
+        "order_4_isomorphism_count": true,
+        "order_4_minimal_nonelliptic": true,
+        "order_4_placement_count": true,
+        "order_5_isomorphism_count": true,
+        "order_5_minimal_nonelliptic": true,
+        "order_5_placement_count": true
+      },
+      "orders": {
+        "4": {
+          "all_full_diagrams_nonelliptic": true,
+          "all_proper_subdiagrams_elliptic": true,
+          "classical_isomorphism_type_count": 9,
+          "labelled_placement_count": 108,
+          "placement_code_sha256": "6d785cee58fa5774f5ec921b42fdecccbce727fcf9aa10c657a886d73a8c9a28"
+        },
+        "5": {
+          "all_full_diagrams_nonelliptic": true,
+          "all_proper_subdiagrams_elliptic": true,
+          "classical_isomorphism_type_count": 5,
+          "labelled_placement_count": 420,
+          "placement_code_sha256": "3d28b51a3449e51dc5e95e7a518132ec1b937c29b32d7f320c56e04877a0ceeb"
+        }
+      }
+    },
+    "unassigned_pair_rule": "set to 2; increasing a cosine adjacency entry cannot turn a nonelliptic restriction elliptic"
+  },
+  "pinned_inputs": {
+    "nerve_support_schedule": {
+      "path": "data/enumerations/h9_14_nerve_support.json",
+      "sha256": "8121f869c182b1780f3d812d34823f1579a5c37b085a4a8ecc313ea94937c47d"
+    },
+    "ortools_version": "9.15.6755",
+    "terminal_checkpoint": {
+      "path": "data/enumerations/h9_14_record0_a1_source3_label_core_cegar_checkpoint_44_more.json",
+      "sha256": "f0b38d563b0b532f39af73203e40050cfe65314f3db50894cac84e4a7f27ef7a"
+    }
+  },
+  "schema": "coxeter.h9_14.record0_a1_source3.terminal_cegar_audit.v1",
+  "status_date": "2026-08-08",
+  "terminal_model": {
+    "checks": {
+      "checkpoint_declares_41_excluded_core_orbits": true,
+      "every_cut_is_lossless_for_compact_labels": true,
+      "every_full_source_orbit_rebuilt_exactly": true,
+      "every_local_core_is_a_complete_label_contradiction": true,
+      "exactly_41_local_cores_replayed": true,
+      "installed_orbit_image_clause_count_is_427140": true
+    },
+    "combined_core_orbit_digest_sha256": "6ae8f2b9d0f75d46627f1c1f9ad4130a7321cc145c1e6a815e7d0e14ab9da1fc",
+    "cut_arity_histogram": {
+      "5": 5040,
+      "6": 56784,
+      "7": 261492,
+      "8": 55440,
+      "9": 48384
+    },
+    "face_variable_count": 2866,
+    "installed_clause_count": 427140,
+    "terminal_model_constraint_count": 458793,
+    "terminal_model_constraint_type_histogram": {
+      "bool_or": 437124,
+      "linear": 20122,
+      "table": 1547
+    },
+    "terminal_model_proto_sha256": "7485e42496c5f9f8f03cedde468a9f7180b98c9ee92ab6f86a23e68a0b735ec3",
+    "terminal_model_serialized_byte_count": 36743797,
+    "terminal_model_variable_count": 10602
+  },
+  "terminal_solver": {
+    "boolean_propagation_count": 932148310,
+    "branch_count": 2783503,
+    "conflict_count": 704576,
+    "deterministic_time": 751.3559517222194,
+    "external_wall_time_seconds": 565.5631411669892,
+    "infeasible": true,
+    "integer_propagation_count": 54841428,
+    "num_search_workers": 1,
+    "random_seed": 0,
+    "solver_wall_time_seconds": 565.535626,
+    "status": "INFEASIBLE",
+    "time_limit_seconds": null
+  },
+  "theorem": {
+    "compact_only": true,
+    "finite_volume_noncompact_checked": false,
+    "graph6": "M?????????????o??",
+    "not_global_H9_14": true,
+    "quantifier": "one fixed Record-0/a=1 source orbit only",
+    "record_index": 0,
+    "representative_A4": [
+      2,
+      3,
+      4,
+      13
+    ],
+    "schedule_a": 1,
+    "source_orbit_index": 3,
+    "statement": "There is no compact H9 Coxeter polytope with 14 facets whose missing-edge graph is Record 0, whose Dehn--Sommerville schedule has a=1, and whose unique missing A4 belongs to fixed source orbit 3 represented by {2,3,4,13}."
+  },
+  "total_replay_wall_time_seconds": 640.8433322500205
+}

@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "status": "REVIEWABLE_PROPOSAL_ONLY_NOT_APPLIED",
+  "created_date": "2026-10-20",
+  "scope": "Replace the primary finite57 selection of one eager D13 replay by the reviewed complete19-part equivalent replay plus one parser-contract fixture. No catalogue/docs mutation or planned-job execution.",
+  "catalogue": {
+    "path": "manuscripts/catalogue.json",
+    "sha256_before": "9f285fabd63007476144996463e4a2e8809fc6bf1feeccfa636b9a11b897e3ca",
+    "manuscript_id": "finite57",
+    "manuscript_index": 0,
+    "selection_json_pointer": "/manuscripts/0/verification",
+    "proposed_full_catalogue_sha256_if_applied_with_indent2_newline": "5a3d7825fa1bf6182fd6d9878b9447d8ac4b1fb7ec6e6675c026eb97db1f998e"
+  },
+  "delta": {
+    "remove_from_selected_verification_only": [
+      "finite57_d13"
+    ],
+    "preserve_original_check_object": {
+      "id": "finite57_d13",
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/fresh_d13_three_rank15_context_transfer_20261018.py",
+        "--verify"
+      ],
+      "owns_lock": false,
+      "tier": "full",
+      "coverage": "D13 contact certificates and complete new-positive finite family."
+    },
+    "checks_to_add": {
+      "finite57_d13_parser_contract": {
+        "id": "finite57_d13_parser_contract",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_json_projection_contract_20261020.py",
+          "--verify"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Parser contract only:19 exact valid projections,15 required rejections and1 frozen-certificate projection. No mathematical D13 replay or full manuscript claim.",
+        "expected_status": "PASS_D13_JSON_PROJECTION_CONTRACT"
+      },
+      "finite57_d13_batch_pins_0": {
+        "id": "finite57_d13_batch_pins_0",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "pins-0"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original input PASS statuses and nested source maps, stems slice1/4 (41 of161). Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH pins-0"
+      },
+      "finite57_d13_batch_pins_1": {
+        "id": "finite57_d13_batch_pins_1",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "pins-1"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original input PASS statuses and nested source maps, stems slice2/4 (41 of161). Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH pins-1"
+      },
+      "finite57_d13_batch_pins_2": {
+        "id": "finite57_d13_batch_pins_2",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "pins-2"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original input PASS statuses and nested source maps, stems slice3/4 (41 of161). Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH pins-2"
+      },
+      "finite57_d13_batch_pins_3": {
+        "id": "finite57_d13_batch_pins_3",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "pins-3"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original input PASS statuses and nested source maps, stems slice4/4 (38 of161). Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH pins-3"
+      },
+      "finite57_d13_batch_metadata": {
+        "id": "finite57_d13_batch_metadata",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "metadata"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original13 top-level and9 interface key domains, constant fields, ambient/changed-pair/scope metadata. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH metadata"
+      },
+      "finite57_d13_batch_support": {
+        "id": "finite57_d13_batch_support",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "support"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Complete801-pattern/862-map selected support,33 affected contexts/76 maps, and every selected-proof field. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH support"
+      },
+      "finite57_d13_batch_rank15": {
+        "id": "finite57_d13_batch_rank15",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "rank15"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Complete original rank15 inverse/native-contact classification and differences. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH rank15"
+      },
+      "finite57_d13_batch_one_sided": {
+        "id": "finite57_d13_batch_one_sided",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "one-sided"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Both original physical30-root one-sided whole models and all their corners. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH one-sided"
+      },
+      "finite57_d13_batch_quiet": {
+        "id": "finite57_d13_batch_quiet",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "quiet"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "All24 original quiet repairs. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH quiet"
+      },
+      "finite57_d13_batch_literal": {
+        "id": "finite57_d13_batch_literal",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "literal"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Complete original216-configuration literal corner rows and exact original literal-input selectors. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH literal"
+      },
+      "finite57_d13_batch_later_0": {
+        "id": "finite57_d13_batch_later_0",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "later-0"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original22-source/564-row later interface, source slice1/4 (6 sources), preserving complete rows/order. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH later-0"
+      },
+      "finite57_d13_batch_later_1": {
+        "id": "finite57_d13_batch_later_1",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "later-1"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original22-source/564-row later interface, source slice2/4 (6 sources), preserving complete rows/order. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH later-1"
+      },
+      "finite57_d13_batch_later_2": {
+        "id": "finite57_d13_batch_later_2",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "later-2"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original22-source/564-row later interface, source slice3/4 (6 sources), preserving complete rows/order. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH later-2"
+      },
+      "finite57_d13_batch_later_3": {
+        "id": "finite57_d13_batch_later_3",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "later-3"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original22-source/564-row later interface, source slice4/4 (4 sources), preserving complete rows/order. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH later-3"
+      },
+      "finite57_d13_batch_newer": {
+        "id": "finite57_d13_batch_newer",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "newer"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "All8 original newer proof collections and every current corner row. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH newer"
+      },
+      "finite57_d13_batch_variants": {
+        "id": "finite57_d13_batch_variants",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "variants"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Every field of all24 original D14 variants. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH variants"
+      },
+      "finite57_d13_batch_d12": {
+        "id": "finite57_d13_batch_d12",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "d12"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Complete280+52 original positive D12 domains, full original walks and all D13 output rows. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH d12"
+      },
+      "finite57_d13_batch_universal": {
+        "id": "finite57_d13_batch_universal",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "universal"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Complete original universal-output inventory; written arbitrary-support geometry remains a separate premise. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH universal"
+      },
+      "finite57_d13_batch_finite": {
+        "id": "finite57_d13_batch_finite",
+        "argv": [
+          "python3",
+          "-B",
+          "scripts/check_d13_transfer_batches_20261020.py",
+          "--verify",
+          "--batch",
+          "finite"
+        ],
+        "owns_lock": false,
+        "tier": "full",
+        "coverage": "Original8 obstruction forests,6 increasing forests and exact final finite closure; not a new unrestricted forest DP. Every batch binds all484 outer pins and unchanged saved certificate before/after; complete equivalence requires all19 named batches.",
+        "expected_status": "PASS_D13_FROZEN_TRANSFER_REPLAY_BATCH finite"
+      }
+    },
+    "selected_verification_before": [
+      "finite57",
+      "finite57_d13",
+      "finite57_b13",
+      "finite57_frontier",
+      "finite57_low8",
+      "finite57_tail58",
+      "finite57_tail59",
+      "finite57_tail60",
+      "finite57_tail61",
+      "finite57_tail62",
+      "finite57_tail63",
+      "finite57_tail64",
+      "finite57_tail65",
+      "finite57_tail66",
+      "finite57_tail68",
+      "finite57_tail69",
+      "finite57_tail70",
+      "finite57_tail71",
+      "finite57_tail74",
+      "finite57_tail75",
+      "finite57_tail77",
+      "finite57_tail80",
+      "finite57_tail86",
+      "finite57_tail91",
+      "finite57_tail97",
+      "finite57_tail108",
+      "finite57_tail116",
+      "finite57_tail126",
+      "finite57_tail136",
+      "finite57_tail146",
+      "finite57_tail156",
+      "finite57_narrow_unit",
+      "finite57_narrow_defects",
+      "finite57_narrow_residual",
+      "finite57_narrow_compact",
+      "finite57_narrow_binder"
+    ],
+    "selected_verification_after": [
+      "finite57",
+      "finite57_d13_parser_contract",
+      "finite57_d13_batch_pins_0",
+      "finite57_d13_batch_pins_1",
+      "finite57_d13_batch_pins_2",
+      "finite57_d13_batch_pins_3",
+      "finite57_d13_batch_metadata",
+      "finite57_d13_batch_support",
+      "finite57_d13_batch_rank15",
+      "finite57_d13_batch_one_sided",
+      "finite57_d13_batch_quiet",
+      "finite57_d13_batch_literal",
+      "finite57_d13_batch_later_0",
+      "finite57_d13_batch_later_1",
+      "finite57_d13_batch_later_2",
+      "finite57_d13_batch_later_3",
+      "finite57_d13_batch_newer",
+      "finite57_d13_batch_variants",
+      "finite57_d13_batch_d12",
+      "finite57_d13_batch_universal",
+      "finite57_d13_batch_finite",
+      "finite57_b13",
+      "finite57_frontier",
+      "finite57_low8",
+      "finite57_tail58",
+      "finite57_tail59",
+      "finite57_tail60",
+      "finite57_tail61",
+      "finite57_tail62",
+      "finite57_tail63",
+      "finite57_tail64",
+      "finite57_tail65",
+      "finite57_tail66",
+      "finite57_tail68",
+      "finite57_tail69",
+      "finite57_tail70",
+      "finite57_tail71",
+      "finite57_tail74",
+      "finite57_tail75",
+      "finite57_tail77",
+      "finite57_tail80",
+      "finite57_tail86",
+      "finite57_tail91",
+      "finite57_tail97",
+      "finite57_tail108",
+      "finite57_tail116",
+      "finite57_tail126",
+      "finite57_tail136",
+      "finite57_tail146",
+      "finite57_tail156",
+      "finite57_narrow_unit",
+      "finite57_narrow_defects",
+      "finite57_narrow_residual",
+      "finite57_narrow_compact",
+      "finite57_narrow_binder"
+    ],
+    "insertion_order": "Replace the old selected ID in place with parser fixture first, then all19 BATCHES in worker order. Do not remove the original registry object or modify any other manuscript selection."
+  },
+  "preserved_source_evidence": [
+    {
+      "path": "scripts/fresh_d13_three_rank15_context_transfer_20261018.py",
+      "sha256": "a95ea679854ba907ead8640964a258c3baeb3e998052a3e2e3ff20f230cce486"
+    },
+    {
+      "path": "results/fresh_d13_three_rank15_context_transfer_20261018.json",
+      "sha256": "2c7d615cd38123bef20cffad68de8ab30baa91826c147a6bb084892590e8ca86"
+    },
+    {
+      "path": "results/finite57_full_replay_tail_plan_20261020.json",
+      "sha256": "d1b967ecc3bb3884952804e583fad9dadc2e328caf4a18f17211fc367a628397"
+    },
+    {
+      "path": "results/finite57_publication_full_replay_20261020.json",
+      "sha256": "9f086b3a1ccd967c20a0656cae2b96ec334d654fc1766d65f5938c30b0a25dd0"
+    },
+    {
+      "path": "results/review_d13_transfer_batches_batch_guard_20261020.md",
+      "sha256": "e6696d70857064a06bafb7e7fcede2f6d687d78a39e64c2822b78dae0695b8e3"
+    },
+    {
+      "path": "scripts/check_d13_transfer_batches_20261020.py",
+      "sha256": "be8a42d1d3687204af4d559c6bd8a28779dbfac68aeccdd95d41a7172645d555"
+    },
+    {
+      "path": "scripts/check_d13_json_projection_contract_20261020.py",
+      "sha256": "2f6b63daa564b1689215d105d215bd2fb707f5873b95604cf19b8be90509de94"
+    },
+    {
+      "path": "scripts/run_bounded_research_check_20261018.py",
+      "sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132"
+    },
+    {
+      "path": "scripts/verify_manuscript.py",
+      "sha256": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1"
+    }
+  ],
+  "mathematical_equivalence": {
+    "source_review": "results/review_d13_transfer_batches_batch_guard_20261020.md",
+    "source_review_sha256": "e6696d70857064a06bafb7e7fcede2f6d687d78a39e64c2822b78dae0695b8e3",
+    "required_batches": [
+      "pins-0",
+      "pins-1",
+      "pins-2",
+      "pins-3",
+      "metadata",
+      "support",
+      "rank15",
+      "one-sided",
+      "quiet",
+      "literal",
+      "later-0",
+      "later-1",
+      "later-2",
+      "later-3",
+      "newer",
+      "variants",
+      "d12",
+      "universal",
+      "finite"
+    ],
+    "obligations": "Conjunction of13 original top-level fields, all9 interface fields, all161 input statuses/nested source maps, all484 outer pins, and unchanged original mathematical routines/output comparisons. A single named batch is not a full D13 pass.",
+    "parser_fixture_role": "Separate test of the projection mechanism; does not replace any of the19 mathematical parts. Included at full tier for reproducibility."
+  },
+  "recorded_execution_evidence": {
+    "runtime_ledger": "results/finite57_d13_batched_replay_runtime_20261020.json",
+    "runtime_ledger_sha256": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+    "coverage_validation": "results/partitioned_replay_coverage_validation_20261020.json",
+    "latest_observation": {
+      "argv": [
+        "--verify",
+        "--d13-ledger",
+        "results/finite57_d13_batched_replay_runtime_20261020.json"
+      ],
+      "exit_code": 0,
+      "status": "PASS_RECORDED_PARTITION_COVERAGE",
+      "ledger_sha256": "f86f50053bb0917123fbf49102c5bc033ccbf99b1173eb0eba80aab08a4230f6",
+      "covered_batches": 19,
+      "missing": [],
+      "required_batches": 19,
+      "actual_output": {
+        "accepted_records": {
+          "d13": 20
+        },
+        "complete": true,
+        "current_parser_contract_pass_records": 1,
+        "d13": {
+          "covered_batches": 19,
+          "missing": [],
+          "required_batches": 19
+        },
+        "ignored_reasons": {
+          "D13 argv/domain mismatch": 1,
+          "not a successful script record": 4
+        },
+        "ignored_records": 5,
+        "ledger_files": 1,
+        "provenance_limit": "Unsigned local ledgers are not authenticated execution attestations.",
+        "records_examined": 25,
+        "scope": "Recorded current-source execution/name/interval coverage only; no mathematical replay.",
+        "status": "PASS_RECORDED_PARTITION_COVERAGE",
+        "verifier_sha256": "01a716a75e8cd40bb998552860845e1433539eaf8643ee8a3e5edbfb94a14faf"
+      }
+    },
+    "warning": "The runtime top-level COVERAGE_VALIDATION_PENDING label is stale; the later separately bound validator observation is authoritative for recorded coverage. Historical failures/deferred/stale/direct-wrapper nonmatching records are preserved, not silently counted.",
+    "coverage_validation_snapshot_sha256": "d598b3e44df779b9b34ea2feb54eb128020265b3d0f9b7b1d4883ee575e0907a",
+    "coverage_snapshot_provenance": "This copied observation was produced by coverage-verifier01a716a7. It is historical D13 receipt evidence, not a required current checker pin or an added selected job. Root reports the later41f3c82b successor changes only its distance9 worker pin; refresh recorded coverage metadata after root reruns it. The D13be8 worker,19-name domain, original certificate and catalogue replacement are unchanged."
+  },
+  "plan_only": {
+    "planner": "scripts/verify_manuscript.py",
+    "planner_sha256": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1",
+    "method": "Read and compile only the existing local()/plan_for() function definitions via AST, then call plan_for on an in-memory proposed catalogue. main(), run_job(), worker modules, Lean, TeX, subprocess jobs and scientific computations are not loaded or invoked.",
+    "core_unchanged": true,
+    "full_with_pdf_delta": "44 to63: replace1 by19 mathematical parts and add1 parser fixture, delta+19. Without the optional fixture it would be62; this proposal includes it.",
+    "counts": {
+      "core_without_pdf": {
+        "before": {
+          "total": 8,
+          "by_kind": {
+            "script": 1,
+            "conditional_lean": 7
+          }
+        },
+        "after": {
+          "total": 8,
+          "by_kind": {
+            "script": 1,
+            "conditional_lean": 7
+          }
+        },
+        "delta": 0
+      },
+      "core_with_pdf": {
+        "before": {
+          "total": 9,
+          "by_kind": {
+            "script": 1,
+            "conditional_lean": 7,
+            "typesetting": 1
+          }
+        },
+        "after": {
+          "total": 9,
+          "by_kind": {
+            "script": 1,
+            "conditional_lean": 7,
+            "typesetting": 1
+          }
+        },
+        "delta": 0
+      },
+      "full_without_pdf": {
+        "before": {
+          "total": 43,
+          "by_kind": {
+            "script": 36,
+            "conditional_lean": 7
+          }
+        },
+        "after": {
+          "total": 62,
+          "by_kind": {
+            "script": 55,
+            "conditional_lean": 7
+          }
+        },
+        "delta": 19
+      },
+      "full_with_pdf": {
+        "before": {
+          "total": 44,
+          "by_kind": {
+            "script": 36,
+            "conditional_lean": 7,
+            "typesetting": 1
+          }
+        },
+        "after": {
+          "total": 63,
+          "by_kind": {
+            "script": 55,
+            "conditional_lean": 7,
+            "typesetting": 1
+          }
+        },
+        "delta": 19
+      },
+      "scripts_without_pdf": {
+        "before": {
+          "total": 1,
+          "by_kind": {
+            "script": 1
+          }
+        },
+        "after": {
+          "total": 1,
+          "by_kind": {
+            "script": 1
+          }
+        },
+        "delta": 0
+      },
+      "logic_without_pdf": {
+        "before": {
+          "total": 7,
+          "by_kind": {
+            "conditional_lean": 7
+          }
+        },
+        "after": {
+          "total": 7,
+          "by_kind": {
+            "conditional_lean": 7
+          }
+        },
+        "delta": 0
+      }
+    },
+    "all20_added_jobs_checked_script_kind_with_parent_lock": true,
+    "command_templates": {
+      "batch": [
+        "python3",
+        "-B",
+        "scripts/run_bounded_research_check_20261018.py",
+        "--parent-lock",
+        "--",
+        "scripts/check_d13_transfer_batches_20261020.py",
+        "--verify",
+        "--batch",
+        "<exact named batch from checks_to_add>"
+      ],
+      "parser": [
+        "python3",
+        "-B",
+        "scripts/run_bounded_research_check_20261018.py",
+        "--parent-lock",
+        "--",
+        "scripts/check_d13_json_projection_contract_20261020.py",
+        "--verify"
+      ]
+    }
+  },
+  "application_preconditions": [
+    "Canonical catalogue SHA must still match sha256_before; otherwise rebase this reviewable delta.",
+    "Every proposed ID must be absent; retain finite57_d13 unchanged in the check registry.",
+    "Only the primary finite57 verification list changes; atlas/historical selections and44-job plan/failure ledger remain byte-stable.",
+    "Root owns merge, metadata/doc updates and any future bounded execution; this proposal does not claim a successful fresh63-job full verification."
+  ],
+  "remaining_scope_limits": [
+    "Recorded coverage is validation of unsigned local receipts, not authenticated attestation.",
+    "Original/current written arbitrary-support geometry, local-to-global rule identification and all other manuscript checks retain their existing scope.",
+    "The other full-tier replay failures or pending checks are not resolved by replacing D13."
+  ]
+}

@@ -1,0 +1,634 @@
+{
+  "certificate_sha256": "5ae3eb4bb3dabeb0438fc56e8c92a228d88220a9e946040fc5f55a650e933437",
+  "claim": "The exact ordinary-polytopal selected H9/14 record-17 nerve is not the nerve of a compact hyperbolic Coxeter polytope.",
+  "inputs": [
+    {
+      "path": "data/enumerations/h9_14_record17_polytopality.json",
+      "sha256": "dee419e2267386b2d19e3ea638d6137e0cfe9f399da31dc930a3d473aff4bc03"
+    }
+  ],
+  "kind": "h9_14_record17_selected_nerve_compact_coxeter_no_go",
+  "proof": {
+    "compact_inputs": [
+      "Every order-five missing face of a compact Coxeter polytope supports a Lanner diagram.",
+      "Every actual rank-nine vertex diagram is elliptic.",
+      "The complete classical order-five Lanner table has 420 labelled placements."
+    ],
+    "exhaustive_gate": "Join all placements on the three supports with common core {3,4,5,6}; the compatible-state counts are 420, 1332, and 4620. Exact finite-Coxeter classification leaves 80 states after rank-five restrictions and zero after the four rank-six restrictions arising in actual vertices.",
+    "unrestricted_step": "The decisive seven-facet union has no dotted pair. In normalized Gram form G=I-A, all unforced entries are zero in the sparse shadow, and every finite non-right label increases A entrywise. Perron-Frobenius monotonicity cannot restore ellipticity."
+  },
+  "schema_version": 1,
+  "scope": {
+    "compact_coxeter_realization_exists": false,
+    "finite_volume_noncompact_chamber_excluded": false,
+    "global_dotted_gram_values_enumerated": false,
+    "record_index": 17,
+    "selected_nerve_only": true,
+    "whole_graph_shadow_excluded": false,
+    "why_no_global_gram_search_is_needed": "The contradiction is already a finite actual-vertex obstruction before dotted Gram entries occur."
+  },
+  "sources": [
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record17_coxeter_labels.py",
+      "sha256": "0ca53c8feeb16159b436876e97c64ae45ac84498d2c679b8768e8c5d86abd1e4"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record17_polytopality.py",
+      "sha256": "00722328898ff4b0fe7cdf1efade2264300680cf8abccdbbc55388215efd9aae"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record35_coxeter_labels.py",
+      "sha256": "08b5ab7df518c1bee33b9c6255fb282eb477bd4298164c79674d70bc31ea7345"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_coxeter_labels.py",
+      "sha256": "53d7e82a66d3cbb3b091109a6b79ffbdab271d15c9d098f1862a56355f126c43"
+    },
+    {
+      "path": "src/coxeter_polytopes/combinatorics/h9_14_record35.py",
+      "sha256": "56e1fc359420463a3f6771035f058961cb83d49c5295dc4493019cea723f80cd"
+    },
+    {
+      "path": "scripts/independent_h9_14_record17_coxeter_labels_audit.py",
+      "sha256": "f64caaca55f31e824ea2df5e6d770c8b08b77cf19282bf36cb8a09bde24f262d"
+    }
+  ],
+  "theorem": {
+    "decisive_common_four_core_gate": {
+      "actual_vertex_restrictions": [
+        [
+          1,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          3,
+          4,
+          6
+        ],
+        [
+          1,
+          3,
+          5,
+          6
+        ],
+        [
+          1,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          5,
+          6
+        ],
+        [
+          2,
+          4,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          6
+        ],
+        [
+          0,
+          1,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          3,
+          4,
+          6
+        ],
+        [
+          0,
+          1,
+          3,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          2,
+          3,
+          4,
+          6
+        ],
+        [
+          0,
+          2,
+          3,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6
+        ]
+      ],
+      "common_core": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "core_extension_count_histogram": {
+        "1": 36,
+        "2": 30,
+        "3": 40,
+        "4": 51
+      },
+      "cumulative_restriction_stages": [
+        {
+          "cumulative_passing_state_count": 4620,
+          "order": 4,
+          "restriction_count": 9,
+          "restrictions": [
+            [
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "cumulative_passing_state_count": 80,
+          "order": 5,
+          "restriction_count": 16,
+          "restrictions": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              1,
+              2,
+              4,
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "cumulative_passing_state_count": 0,
+          "order": 6,
+          "restriction_count": 4,
+          "restrictions": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ]
+          ]
+        }
+      ],
+      "join_counts": [
+        420,
+        1332,
+        4620
+      ],
+      "last_nonempty_partition_orbit_representative_nonright_labels": [],
+      "last_nonempty_partition_orbit_size_histogram": {},
+      "last_nonempty_stage_order": 5,
+      "natural_S3_x_S4_symmetry_preserves_restrictions": false,
+      "outer_facets": [
+        0,
+        1,
+        2
+      ],
+      "reuse_scope": "The no-go is valid only for a nerve whose supplied actual vertex list contains these restrictions; no abstract support pattern alone is asserted to be obstructed.",
+      "sparse_shadow_passing_state_count": 0,
+      "supports": [
+        [
+          0,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "unrestricted_external_label_no_go": true
+    },
+    "dimension": 9,
+    "dotted_pairs_in_decisive_cluster_union": [],
+    "facet_count": 14,
+    "lanner_placements_per_support": 420,
+    "meeting_pair_count": 86,
+    "minimal_nonfaces": {
+      "dotted_pairs": [
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "order_five_lanner_supports": [
+        [
+          0,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          0,
+          7,
+          8,
+          9,
+          10
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          11
+        ],
+        [
+          1,
+          2,
+          9,
+          10,
+          11
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ]
+    },
+    "rank_nine_vertex_count": 110,
+    "scope": {
+      "compact_only": true,
+      "finite_volume_noncompact_excluded": false,
+      "other_completions_of_graph_shadow_excluded": false,
+      "selected_nerve_only": true
+    },
+    "unrestricted_compact_coxeter_no_go": {
+      "gram_search_needed": false,
+      "local_obstruction": "All 4,620 compatible placements on the three common-core Lanner supports fail ellipticity on at least one actual rank-nine vertex restriction; 80 survive through rank five and zero survive the four rank-six restrictions.",
+      "monotonicity": "For G=I-A, changing any remaining m=2 meeting pair to m>=3 increases the symmetric nonnegative matrix A entrywise, so Perron--Frobenius monotonicity cannot turn a non-elliptic principal diagram into an elliptic one.",
+      "proved": true
+    },
+    "verified": true
+  }
+}

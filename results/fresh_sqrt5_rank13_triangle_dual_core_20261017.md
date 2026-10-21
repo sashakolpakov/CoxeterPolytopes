@@ -1,0 +1,7 @@
+# Exact small triangle-support obstruction
+
+The [fresh source](../scripts/fresh_sqrt5_rank13_triangle_dual_core_20261017.py) extracts the 280 triangle rows used by the [full selected non-ADE model's exact dual](fresh_sqrt5_rank13_joint_corner_all_nonade_repair_20261017.md). All 78 unordered root pairs of each of its 74 whole vertex forests are retained, giving 2,787 free nonnegative payment variables. Original row, variable, and vertex indices are recorded explicitly.
+
+The [saved exact certificates](fresh_sqrt5_rank13_triangle_dual_core_20261017.json) give a feasible budget **38635255328/2857142857** and an unminimized dual lower bound **1622680723536/120000000059**, approximately 13.52233936. The latter is strictly above the dimension-13 target 12. Generation and a fresh saved reconstruction both passed; replay checks every rational dual column inequality and complete vertex budget. The sparse dual verifier treats every omitted column as zero load and verifies all positive loads, exactly matching the full dual formula.
+
+This certificate is a lower bound for a stated local payment model, not a geometric nonexistence theorem. In particular, it neither proves simultaneous global realizability of these local triangles nor exceeds the dimension-14 target 14. The separate [active-support recovery](fresh_sqrt5_rank13_active_triangle_dual_20261017.md) supplies the stronger bound needed for that latter method comparison.

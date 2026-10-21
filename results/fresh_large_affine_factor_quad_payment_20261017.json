@@ -1,0 +1,212 @@
+{
+  "status": "PASS_LARGE_AFFINE_FACTOR_QUADRILATERAL_SCALAR_CHECKS",
+  "sources": {
+    "scripts/fresh_large_affine_factor_quad_payment_20261017.py": "bea95558030a515d9c139da0d2848651f5b377b7c5c9fed89029f90d6424dccb",
+    "results/fresh_simple_cusp_affine_tree_completion_20261017.md": "e13155b010fb64b9157848249a607deb593de255774749f4757681d5ef2038c4",
+    "results/fresh_simple_cusp_affine_tree_short_ends_20261017.md": "8400694a494c598964b90001890b76f116c85fbbebb3c057204fafb9b376ebf2",
+    "results/fresh_simple_cusp_affine_a_quadrilateral_20261017.md": "d3f14e0624e18fd7fb2f1cf07644bbc245aaeadf74a944a8547b94c5f95b46a0",
+    "results/fresh_cusp_factor_payment_framework_20261017.json": "c55a84924abce529ce88697b611f991a2b9ae7c5c9e1e20f6948abf88239bcd9",
+    "results/fresh_cusp_spectator_role_payments_20261017.json": "23aad22ad3ac4bd4e597f76106269cb86e6ceb96662e20ae18a65a70854dff33",
+    "results/fresh_simple_finite_quad_vinberg_transfer_20261017.md": "18b650b94447f00678fd343ac13a93e98893fa56b1f827b1db83f3e24624cdf8"
+  },
+  "generic_margins": {
+    "two_main_marks_P4": "3 - 2*sqrt(2)",
+    "double_terminal_and_main_P6": "5/4 - 2*sqrt(2)/3",
+    "fork_leaf_and_main_R6": "1 - 2*sqrt(2)/3",
+    "two_terminals_R17": "9/17",
+    "endpoint4_below_next": "-8 + 6*sqrt(2)",
+    "D2_double_join_below_old14over9": "-22/9 + 2*sqrt(2)"
+  },
+  "E8_allowed_d_inverse_diagonal": "4",
+  "new_E8_profile_checks": [
+    {
+      "profile": "outer_leaf3_other",
+      "C": "5/4",
+      "E": "1/4",
+      "height_offset": "1/2",
+      "umax": "-2/7 + 4*sqrt(2)/7",
+      "polynomial": "-5*u**2/16 - u*v/8 - v**2/16 - v + 1",
+      "minimum": "8*sqrt(2)/147 + 44/441"
+    },
+    {
+      "profile": "outer_leaf3_same",
+      "C": "5/4",
+      "E": "3/4",
+      "height_offset": "1/2",
+      "umax": "-2/7 + 4*sqrt(2)/7",
+      "polynomial": "-5*u**2/16 - 3*u*v/8 - v**2/16 - v + 1",
+      "minimum": "65/441 - 2*sqrt(2)/49"
+    },
+    {
+      "profile": "outer_center3",
+      "C": "1",
+      "E": "1/2",
+      "height_offset": "1",
+      "umax": "-1 + sqrt(2)",
+      "polynomial": "-u**2/4 - u*v/4 - v**2/16 - v + 1",
+      "minimum": "-5/18 + sqrt(2)/3"
+    },
+    {
+      "profile": "outer_leaf4_other",
+      "C": "1/2",
+      "E": "sqrt(2)/4",
+      "height_offset": "sqrt(2)/2",
+      "umax": "2 - sqrt(2)",
+      "polynomial": "-u**2/8 - sqrt(2)*u*v/8 - v**2/16 - v + 1",
+      "minimum": "-5/18 + sqrt(2)/3"
+    },
+    {
+      "profile": "inner_endpoint4",
+      "B": "sqrt(2)/4",
+      "C": "1/2",
+      "E": "0",
+      "umax": "-1 + sqrt(2)",
+      "polynomial": "sqrt(2)*u*v/4 - sqrt(2)*u/2 - v**2/16 - v + 1",
+      "rectangle_corner_values": [
+        "1",
+        "11/36",
+        "sqrt(2)/2",
+        "-13/36 + sqrt(2)/3"
+      ]
+    },
+    {
+      "profile": "inner_second3",
+      "B": "0.5",
+      "C": "1.0",
+      "E": "0",
+      "umax": "-1 + sqrt(2)",
+      "polynomial": "0.5*u*v - 1.0*u - v**2/16 - v + 1",
+      "rectangle_corner_values": [
+        "1",
+        "11/36",
+        "2 - sqrt(2)",
+        "0.972222222222222 - 0.666666666666667*sqrt(2)"
+      ]
+    }
+  ],
+  "small_affine_witnesses": [
+    {
+      "name": "D4_center_leaf",
+      "gram": [
+        [
+          "2",
+          "-1",
+          "-1",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "2"
+        ]
+      ],
+      "kernel": [
+        "2",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "name": "B4_doubled_leaf_arm",
+      "gram": [
+        [
+          "2",
+          "-1",
+          "-1",
+          "-1",
+          "0"
+        ],
+        [
+          "-1",
+          "2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "2",
+          "-sqrt(2)"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-sqrt(2)",
+          "2"
+        ]
+      ],
+      "kernel": [
+        "sqrt(2)",
+        "sqrt(2)/2",
+        "sqrt(2)/2",
+        "sqrt(2)",
+        "1"
+      ]
+    }
+  ],
+  "available_simple_arm_identities": [
+    {
+      "inner_shift": 0,
+      "left": "r - 1",
+      "right": "m - r - 2",
+      "sum": "m-3",
+      "near_end_exceptions": [
+        1,
+        2
+      ]
+    },
+    {
+      "inner_shift": 1,
+      "left": "r",
+      "right": "m - r - 3",
+      "sum": "m-3",
+      "near_end_exceptions": [
+        1
+      ]
+    },
+    {
+      "inner_shift": 2,
+      "left": "r + 1",
+      "right": "m - r - 4",
+      "sum": "m-3",
+      "near_end_exceptions": []
+    }
+  ],
+  "scope": "Quadrilaterals with a classical affine corner factor of order>=18, assuming no connected affine subdiagram of order<=9. Arbitrary acute PSD spectators are allowed. The all-finite-corner transfer and any ambient dimension conclusion remain separate."
+}

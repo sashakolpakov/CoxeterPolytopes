@@ -1,0 +1,13 @@
+# Dihedral section obstruction: source and proof review
+
+The frozen [producer](../scripts/fresh_h20_dihedral_edge_sections_20261014.py) and [certificate](fresh_h20_dihedral_edge_sections_20261014.json) passed a fresh saved-result replay. I separately read the source and the complete argument in the [main report](fresh_h20_dihedral_edge_sections_20261014.md). No mathematical or scope issue was found. [Review metadata](fresh_h20_dihedral_edge_sections_20261014_review.json) binds the source and certificate hashes.
+
+The normalization is consistent: with the changed A2-root pairing equal to one, its projected norm is `2-1/q`, and the other root retains norm two and pairing `-1`. Thus `q=2C/(4C-1)`, where `C=cos²(pi/m)`. For `m>=7` the uniform open interval `2/3<q<3/4` is valid. The source pairing and integrality checks justify the four facet types used in the table; all modified pairings remain nonpositive.
+
+The face argument uses actual faces of a hypothetical finite-volume Coxeter section. The initial I2(m) block is spherical, with a strict finite point. For `m>=7`, its absence from larger connected finite or affine diagrams forces orthogonal boundaries and excludes ideal vertices of the face. This makes the face compact. No conclusion is drawn from a projected pair of redundant inequalities.
+
+The uniform pair table has exactly one exceptional possible nonright contact: a modified long root with an unchanged long root of old pairing `-2`. Substituting the section parameter gives `cos(2pi/m) cos(2pi/n)=1/2`. The monotonicity argument and exact cubic bounds cover every integer `m,n>=7`; they leave only `(8,8)`, not an untested large-label tail.
+
+The exceptional case is handled rather than discarded. Its compact I2(8) subface has only right neighbors of the modified long facet. The literal old long-long pairing table has no zero entry, so these neighbors are unchanged short source roots. In the other cases a compact face with unchanged rational root boundaries follows one dimension earlier. The normals span that face's Lorentz space, and the old integral reflections preserve its full-rank intersection lattice. Consequently the Meyer obstruction applies to an actual invariant rational lattice of rank at least 17. Rational coordinates alone would not establish that conclusion; the source checks the stronger integrality premise.
+
+The result remains restricted to the specified one-contact A2 sections, all real transverse positions, and labels `m>=7`. Labels 4, 5, and 6, multiple active contact profiles, changed ambient chambers, and subdivision are not excluded. This review combines mathematical/source review with replay of the author's exact checker; it is not a second implementation of all arithmetic.

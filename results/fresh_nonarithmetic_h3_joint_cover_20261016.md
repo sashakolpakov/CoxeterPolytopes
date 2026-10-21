@@ -1,0 +1,7 @@
+The bounded H3 closure search found no compact-face proposal. It retained the six numerical trial sides and reconstructed 4,329 repair normals with anchor labels 2 through 10. Every repair passed the numerical Coxeter gates against all 61 retained normals, including the two exact caps in the reviewed 55-wall chamber.
+
+The search imposed all pairwise compatibility constraints, then required the selected caps to cut actual ideal points of the trial face. The first two compatible selections left 13 and 9 exterior rays respectively; the second also had two unresolved near-null rays. Those rays supplied further ideal samples. With 28 samples, HiGHS reported the finite binary model infeasible.
+
+This is a numerical diagnostic, not an exact obstruction, an all-label theorem, or a finite-volume claim. Contact and cone decisions use explicit numerical tolerances. The six trial sides themselves remain proposals. The result suggests that this particular repair bank is too narrow; it does not exclude a different coherent closure.
+
+The [script](../scripts/fresh_nonarithmetic_h3_joint_cover_20261016.py) and [saved result](fresh_nonarithmetic_h3_joint_cover_20261016.json) bind their inputs by SHA-256. Generation and a fresh `--verify` replay passed with identical outputs. The underlying 55-wall geometry has a separate [independent complete-cone review](fresh_nonarithmetic_nonright_s6_20261016_cone_review.md).

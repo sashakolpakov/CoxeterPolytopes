@@ -1,0 +1,108 @@
+{
+  "status": "PASS_LORENTZ_INERTIA_VERSUS_RANK_LEDGER",
+  "sources": {
+    "results/fresh_h9_star_zero_20261014_own_three.json": "5ce63d22b3556e84a6ee15b8fc171707d13a74d33716d2bd9819f240f0f33482",
+    "results/fresh_h9_star_zero_20261014_own_three_review.json": "8a87d79e972ef1db5cbd26231f5f71260d0cda0a619a51d32dd9fb2e4340e11b",
+    "results/fresh_h9_star_shared_high_20261014.json": "bdb8189d8e6e1c01fc5cf31b496bc77a20b3468b3fd9c0e9dc1686abff3f5c10",
+    "results/fresh_h9_star_shared_high_20261014_review.json": "2b6d626e404d789723114d7779b7708a5bfa16991bd82f73553fde1b52420f54",
+    "results/fresh_h9_star_opposite_high_20261014.json": "a0963e94fec00478e4c076bf6224dbd4391cbcb00ba38b7b0e928028b2c8aac5",
+    "results/fresh_h9_star_opposite_high_20261014_review.json": "aa6d233a500e7b235d1d6a50a6bc695a273384cf00ff983faaef63fb8a8ee801",
+    "results/fresh_h9_star_third34_20261014.json": "80b51dba2131f760494a6ef4b90bd3f3b2816a47fcca2cb8d88885ce21160991",
+    "results/fresh_h9_star_third34_20261014_review.json": "fe66bae1115b866124310415819407ad3f5db3786d8e94318fa584d7f7dc7161",
+    "results/fresh_h9_star_single_third_20261014.json": "5c91bceb2b160c6cec38dbf914cbcda639f8a99f1ce7a1ecb23c620b0df86c39",
+    "results/fresh_h9_star_single_third_20261014_review.json": "b7b3bc6004370e0fc4d698f11553e837a8ba9929baa41ae39616219adb83ef01",
+    "results/fresh_h9_star_single_third_opposite_20261015.json": "d76b87f0e0c988bbb4804702540c672ed3ed1e466ee345de7492a3b0c347a8d0",
+    "results/fresh_h9_star_single_third_opposite_20261015_review.json": "4556c407b9752d76f5a95ee252f61bb14ed6ca047ef095317ccd9ac9e02c27cf",
+    "results/fresh_h9_star_third_four_20261015.json": "0152dfdf72a970d66d634300878ea422e3857775f74ba3a65dc10387d7bca39a",
+    "results/fresh_h9_star_third_four_20261015_review.json": "b5cc407d96ee0469fdd26d619b13751a49250fe8286dbca86036027779364c5a",
+    "scripts/fresh_h9_lorentz_inertia_20261015.py": "ddb0e31e5050437885099cc99bda72c289e9d809cce4f7d04a5ced78331c9997"
+  },
+  "lemma": {
+    "positive_support_rank": 8,
+    "schur_residual_size": 3,
+    "positive_determinant_negative_diagonal": "Exactly two negative residual eigenvalues; impossible in every Lorentz space.",
+    "negative_determinant_indefinite_two_minor": "Exactly one negative and two positive residual eigenvalues; full Gram signature(10,1), requiring ambient hyperbolic dimension>=10.",
+    "two_by_two": "Two negative diagonals and positive determinant give a negative-definite plane in every dimension."
+  },
+  "ledger": [
+    {
+      "source": "fresh_h9_star_zero_20261014_own_three",
+      "positive_regions": 20824,
+      "negative_regions": 1128,
+      "negative_anchor_minors": 784,
+      "negative_diagonal_reason": "own pi3/pi3 cost=1/[2(1-c)]>1 for c>=cos(pi/4)",
+      "universal_inertia": 20824,
+      "rank_only": 1128,
+      "negative_region_signature": [
+        10,
+        1
+      ],
+      "scope": "The sixteen finite internal4/5 banks only; their separate high-block reductions are not recounted."
+    },
+    {
+      "source": "fresh_h9_star_shared_high_20261014",
+      "universal_inertia": 7392,
+      "universal_actual_face_failures": 448,
+      "rank_only": 0,
+      "negative_diagonal_reason": "1-D/4-F<0, D>4,F>=0",
+      "scope": "The frozen first-three internal4/5 coefficient cases, before separately proved high-block reductions."
+    },
+    {
+      "source": "fresh_h9_star_opposite_high_20261014",
+      "universal_inertia": 43428,
+      "universal_actual_face_failures": 3612,
+      "rank_only": 0,
+      "negative_diagonal_reason": "1-D/4-F<0, D>4,F>=0",
+      "scope": "The frozen first-three internal4/5 coefficient cases, before separately proved high-block reductions."
+    },
+    {
+      "source": "fresh_h9_star_third34_20261014",
+      "universal_negative_planes": 6,
+      "positive_coefficients": 66,
+      "rank_only": 0,
+      "negative_diagonal_reason": "1-X<0 and 2-2mu-Y_last-F-F_middle<0 with X>1,Y_last>7/2"
+    },
+    {
+      "source": "fresh_h9_star_single_third_20261014",
+      "universal_inertia": 11,
+      "positive_coefficients": 78,
+      "rank_only": 0,
+      "negative_diagonal_reason": "1-D/4<0 with D>100/19"
+    },
+    {
+      "source": "fresh_h9_star_single_third_opposite_20261015",
+      "universal_inertia": 15,
+      "rank_only": 1,
+      "negative_diagonal_reason": "1-D/4<0 with D>100/19",
+      "negative_region_signature": [
+        10,
+        1
+      ],
+      "negative_exception": "Owner4,third5,last7; foreign at third-right owner root; only the other third-anchor contact pi3."
+    },
+    {
+      "source": "fresh_h9_star_third_four_20261015",
+      "universal_no_foreign": "All patterns and every owner>=5",
+      "universal_foreign_inertia": 8,
+      "rank_only": 1,
+      "negative_diagonal_reason": "1-D/4<0 with D>100/19",
+      "negative_region_signature": [
+        10,
+        1
+      ],
+      "independent_review": "generation and saved replay PASS",
+      "negative_exception": "Owner5,third4,last7; opposite anchors, foreign at third-right root; only other third-anchor contact pi3."
+    }
+  ],
+  "negative_exception_anchor_minor": {
+    "formula": "1-F+D*(F/4-7/16)",
+    "F_interval": [
+      "1/2",
+      "1"
+    ],
+    "D_lower": "100/19",
+    "strict_upper": "-37/76"
+  },
+  "arithmetic_scope": "Separate Fraction signs of saved exact coefficients and determinant values; inherited producer/review bindings. No recensus of the original matrices or literal face guards.",
+  "global_scope": "Conditional local forbidden configurations only. No proof that dimension or face averaging forces these configurations. No new upper dimension bound, compact polytope or finite-volume construction."
+}

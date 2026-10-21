@@ -1,0 +1,13 @@
+# Finite continuation after replacing150: two more closed facets, but no cross-bridge
+
+Generation and a fresh saved replay pass. This is a **bounded numerical diagnostic** on the right-T triangular replacement20 and continuation14 from the [replacement census](fresh_h20_replacement150_triangles_20261017.md). The retained branch has174 actual walls and23 finite target-H3 vertices. It retains the previously closed facets and closes145, while leaving10 open edges.
+
+Five prescribed finite-adjacency continuations are tested using their complete fixed finite-Dynkin endpoint profiles, singleton labels3 through12, anchor labels2 through6, and both real norm-completion branches. Among7,050 real branches,5,562 violate old finite-vertex strictness,1,067 fail the additional spherical-corner condition, and222 fail native Coxeter gates. The199 survivors all lie on the152/172 family and close152. Their complete numerical target ledgers have25 finite/9 exterior vertices and10 open edges. Candidate112, right toT and176 with contactsπ/3 to152 andπ/4 to172, attains maximum squared radius1.0354125853001426. Candidate121 attains the same maximum with contactsπ/5 to152,π/3 to172 andπ/3 to176.
+
+The maximum is attained at the unchanged exterior intersection160/174/176. Other exterior regions remain. Thus the smaller radius does not certify a nearly ideal cusp, nor does closing152 close the whole exterior component.
+
+A separate cross-bridge test takes all67 right-T survivors and prescribes a further endpoint cap on173/174, with a finite label2 through6 to the survivor. Its full fixed endpoint catalogue and singleton labels3 through12 give70,350 real branches. Exactly70,250 violate old finite-vertex persistence; the remaining100 fail native Coxeter gates. None survives. This is a bounded contact-domain result, not an all-label or all-real obstruction.
+
+Twenty-four first-stage near-solutions fail only wall171. Removing171 is tested separately: deletion alone gives20 finite/10 exterior vertices and maximum squared radius1.6476990110964116; adding each near-solution gives22 finite/10 exterior vertices with the same maximum and10 open edges. That deletion is therefore not selected for promotion.
+
+The [source](../scripts/fresh_h20_replacement150_continuation_20261017.py) and [data](fresh_h20_replacement150_continuation_20261017.json) retain the endpoint catalogues, every accepted continuation and whole-face ledger, all100 cross-bridge trials passing old-vertex strictness, and the171 deletion comparisons. All native products include the T-projection offsets. The geometry is numerical and inherits the exact171 branch only as its starting input. No new exact chamber, complete ideal-link analysis, or finite-volume claim is made.

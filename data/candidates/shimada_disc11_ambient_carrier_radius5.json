@@ -1,0 +1,93 @@
+{
+  "analysis_id": "shimada_disc11_exact_ambient_carrier_radius5",
+  "schema_version": "0.1.0",
+  "status_date": "2026-08-05",
+  "verified": true,
+  "source_sha256": "fa39e5b59f4a4b2b1b7fe7632e5737d1734ee3eb7e7023ae26bf2b83387afb68",
+  "algorithm": "ambient_carrier_closed_phaseI_KKT_v1",
+  "carrier_definition": "decorated physical Shimada chambers whose closed golden eigensection contains a future-timelike point; cross every auxiliary ambient wall member and never a _minustwo wall",
+  "complete_ambient_carrier_radius": 5,
+  "complete_layer_counts": {
+    "0": 1,
+    "1": 4,
+    "2": 7,
+    "3": 12,
+    "4": 17,
+    "5": 23
+  },
+  "states_in_complete_carrier_ball": 64,
+  "queued_radius6_frontier_states": 28,
+  "auxiliary_ambient_wall_crossings_tested": 1408,
+  "retained_crossings": 288,
+  "rejected_crossings": 1120,
+  "root_boundary_wall_members_not_crossed": 1241,
+  "state_records_sha256": "808181d1e65b1a38345113589f0e5a629e2773cdf4b4acb9cd77b19b74eeaa06",
+  "queue_records_sha256": "03d16053d512618a570533acc506ab92fc73b66f4f939166a2b7b02b248b2195",
+  "edge_records_sha256": "f42cc58440920276ae2c74592db504def0d458570837665788a0e4f63e842ae2",
+  "checkpoint_payload_sha256": "5acf4f75113915133d63221db13e38d2ff5a0b0063e2c51f0918f88806cd09c9",
+  "centralizer_decision": {
+    "D68_representative_stabilizer_order": 2,
+    "D68_return_candidates_tested": 4,
+    "D68_return_records_sha256": "f7017aca8c10636741179a308121bd8067391b7c1fb33f2e72caf5be1631fe30",
+    "centralizing_automorphisms_in_complete_carrier_ball": 2,
+    "known_V4_elements_seen": [
+      "A",
+      "identity"
+    ],
+    "known_V4_elements_not_seen": [
+      "B_minus",
+      "B_plus"
+    ],
+    "only_identity_and_A_in_complete_carrier_ball": true,
+    "any_centralizer_element_other_than_identity_or_A_requires_ambient_carrier_distance_at_least": 6,
+    "missing_known_V4_elements_require_ambient_carrier_distance_at_least": 6,
+    "centralizing_set_in_complete_carrier_ball_is_exactly_known_V4": false,
+    "new_centralizer_beyond_known_V4_requires_ambient_carrier_distance_at_least": null,
+    "carrier_queue_closed": false,
+    "infinite_order_return_found": false,
+    "decision_status": "pending_larger_exact_ambient_carrier_ball",
+    "return_records": [
+      {
+        "ambient_carrier_distance": 0,
+        "commutes_with_tau": false,
+        "matrix_sha256": "a5d1361080e827ffa2d07a9a79eeca420b5bbe15317688bc9e6cea486d33c3d5",
+        "characteristic_polynomial": "(lambda - 1)**12*(lambda + 1)**8"
+      },
+      {
+        "ambient_carrier_distance": 0,
+        "commutes_with_tau": true,
+        "known_element": "identity",
+        "matrix_sha256": "8817db0b345cc277b1b2e649062c98d9a923e6a5159c08ff8b075a3947d0d259",
+        "field_row_action_sha256": "78bf7acaea940cb099d777196f2d59205933658de26a01498eb1cf8105856bae",
+        "exact_order": 1
+      },
+      {
+        "ambient_carrier_distance": 4,
+        "commutes_with_tau": false,
+        "matrix_sha256": "eae4b12df90e8a03cac23c85c9ddfe45bb9149e7025fee4aed3fbbfb9c1efe40",
+        "characteristic_polynomial": "(lambda - 1)**10*(lambda + 1)**10"
+      },
+      {
+        "ambient_carrier_distance": 4,
+        "commutes_with_tau": true,
+        "known_element": "A",
+        "matrix_sha256": "1944304c8501f25118eaee6304aaf4038e690199a6e1a19847b2258645a65b4d",
+        "field_row_action_sha256": "5b6e9046cbbaf4cbffaf954c98a0332b169e3d246b851af9adeb43a8468cdefe",
+        "exact_order": 2
+      }
+    ]
+  },
+  "D35_regression": {
+    "source_physical_state_sha256": "69782e666dacd063973e126a43a9cdbacc0d2124e152efc053c3403688653c6d",
+    "ambient_paths": [
+      [[26, 0], [22, 0], [24, 0]],
+      [[26, 0], [22, 0]]
+    ],
+    "distinct_target_physical_state_sha256": [
+      "9fa7a82af850497441dd366fcead7b2987662b9b59e6b54ee306d306bc72e7ec",
+      "6546aa34711a8fb1f334b132526f4b6100acc4c753ac7e297862a43e25d51bda"
+    ],
+    "both_branches_retained": true
+  },
+  "scope": "complete exact ambient-carrier metric ball through radius 5; not queue closure, not a full centralizer classification, and not a finite-volume or compactness decision"
+}

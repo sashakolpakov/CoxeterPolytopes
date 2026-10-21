@@ -1,0 +1,197 @@
+{
+  "archived_vectors": {
+    "interior_scale": 400,
+    "interior_scaled": [
+      [
+        601,
+        199
+      ],
+      [
+        184,
+        0
+      ],
+      [
+        364,
+        0
+      ],
+      [
+        540,
+        0
+      ],
+      [
+        440,
+        0
+      ],
+      [
+        336,
+        0
+      ],
+      [
+        228,
+        0
+      ],
+      [
+        116,
+        0
+      ],
+      [
+        272,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "ray_scale": 13,
+    "ray_scaled": [
+      [
+        13,
+        0
+      ],
+      [
+        0,
+        26
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        0,
+        78
+      ],
+      [
+        0,
+        64
+      ],
+      [
+        0,
+        48
+      ],
+      [
+        0,
+        32
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "audit": {
+    "combined_audit_sha256": "e13ef11274acfe60eada6beead349fe46dbc7397de27329fd2dfa0ee4cc8dcd9",
+    "families": {
+      "mixed_E8_first_b_shell": {
+        "b_vector_count": 240,
+        "canonical_wall_records_sha256": "16e0ec6587237eb2f5ccdacdfca1073e3961554df68fccf368be54633734a8e1",
+        "cutting_covector_count": 0,
+        "cutting_records": [],
+        "eligible_w_count": 13920,
+        "eligible_w_records_sha256": "2bc894783b8e1b2c7dfd334e83223bde23eeaab447f22c3a1b065f7cb96cec0d",
+        "eligible_w_square_class_count": 3,
+        "exact_wall_test_count": 15360,
+        "family": "mixed_E8",
+        "parameters": {
+          "b_nonzero": true,
+          "b_shell_max": 1,
+          "b_shell_min": 1,
+          "coefficient_bound": 30,
+          "conjugate_square_gate": "0 < w'^2 < 2"
+        },
+        "signature_admissible_parameter_pair_count_summed_over_w_square_classes": 64
+      },
+      "scalar_unit_E8": {
+        "canonical_wall_records_sha256": "2d7d9cb1324b85d422c9c3329223da109baaea8c318af495eb765a2adc6c978e",
+        "cutting_covector_count": 0,
+        "cutting_records": [],
+        "e8_shell_counts": {
+          "2": 240,
+          "4": 2160,
+          "6": 6720,
+          "8": 17520
+        },
+        "e8_vector_count": 26640,
+        "exact_wall_test_count": 2706240,
+        "family": "scalar_unit_E8",
+        "parameters": {
+          "coefficient_bound": 30,
+          "e8_shell_max": 4,
+          "e8_shell_min": 1,
+          "unit_power_max": 8,
+          "unit_power_min": 1
+        },
+        "signature_admissible_parameter_pair_count_summed_over_power_and_shell": 480
+      },
+      "zero_E8": {
+        "canonical_wall_records_sha256": "a280d1b9a34b4cb14e0ecf38411b4388ebd0aa0d559a1240152509bbca595b94",
+        "cutting_covector_count": 0,
+        "cutting_records": [],
+        "exact_wall_test_count": 66,
+        "family": "zero_E8",
+        "parameters": {
+          "coefficient_bound": 30,
+          "w": "0"
+        },
+        "signature_admissible_parameter_pair_count": 66
+      }
+    }
+  },
+  "candidate_id": "og10_golden_inverse_projected_wall_box_no_go",
+  "carrier_gram": "H(ell)=[[F,ell],[ell^t,2]]",
+  "certificate_kind": "exact_replayable_inverse_designed_projected_root_no_go",
+  "certificate_payload_sha256": "48a4549d543b7f89cb69543d4656a739d5c3ca08abe8b077ffbd93af77fbfa97",
+  "checks": {
+    "adjoined_e_is_norm_two": true,
+    "all_three_frozen_families_have_zero_cutting_covectors": true,
+    "archived_vectors_match_fixed_slice_source": true,
+    "involution_integrality_is_automatic": true,
+    "mixed_E8_sphere_recursion_is_exact": true,
+    "scalar_E8_shells_are_pinned_by_theta_series_counts": true,
+    "separation_comparisons_are_exact": true,
+    "signature_comparisons_are_exact": true
+  },
+  "commands": [
+    "PYTHONPATH=src:. python3 scripts/search_og10_golden_projected_wall.py --coefficient-bound 30 --unit-power-bound 8 --e8-shell-bound 4",
+    "PYTHONPATH=src:. python3 scripts/search_og10_golden_projected_wall.py --coefficient-bound 30 --mixed-e8-b-shell-bound 1",
+    "PYTHONPATH=src:. python3 scripts/search_og10_golden_projected_wall.py --write-certificate",
+    "PYTHONPATH=src:. python3 scripts/search_og10_golden_projected_wall.py --verify-certificate"
+  ],
+  "conclusion": "No carrier in the three exactly frozen boxes cuts the archived v61 escape ray.",
+  "coordinate_convention": "ell=(A,E8*w,C) in (x,E8_1,...,E8_8,u)",
+  "cut_gate": "ell(interior)*ell(v61)<0",
+  "exploratory_not_certified": {
+    "mixed_b_shell_bound_2": {
+      "observed_b_vector_count": 2400,
+      "observed_cutting_covector_count": 0,
+      "observed_eligible_w_count": 186720,
+      "observed_wall_test_count_at_coefficient_bound_30": 827520,
+      "status": "earlier floating candidate generation with exact leaf/sign checks only; excluded from theorem and certificate digest"
+    }
+  },
+  "field": "Q(sqrt(5))",
+  "fixed_lattice": "F=<-2*phi>+E8+<2>",
+  "integrality": "2*F^-1*ell=(-A/phi,2*w,C) is integral",
+  "involution": "J|F=id; J(e)=2*F^-1*ell-e",
+  "ring": "Z[phi]",
+  "schema_version": "0.2.0",
+  "scope": "Rigorous finite-box no-go, not a global non-existence theorem; the obstruction occurs before trace-lattice and primitive-OG10 embedding filters.",
+  "signature_gate": "0<q<4 and q'<4",
+  "source_sha256": {
+    "e8_lattice": "53c404b413667cedfbe3106096717e1d35055eb6c69d52e082009602bba498f7",
+    "e8_root_enumerator": "433e5fe7c4270f86764ad682410866c64692bab2ca49191552df5e4333cc02ac",
+    "fixed_slice_certificate": "b80f6438ed2cc0de45314fb440d855dc9774bbfa7081d142c458edfe313259a6",
+    "golden_arithmetic": "fc9dde7ad0024b5f08f0a42af51d859a794ef6fd0b803bfb8f9aebe192425eb0",
+    "schur_enumerator": "ec16ec3c8937d25837407da1e7f6a3eb7734b42f4333efd9e32a2a1932658a79",
+    "search_and_audit_script": "cb7192a9d94ad2b976082c6367cd41e614e9e0696a9b13d418acca416c39575a"
+  },
+  "twice_projected_square": "q=2*p^2=-A^2/phi+C^2+2*w^2"
+}

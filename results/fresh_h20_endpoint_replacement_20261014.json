@@ -1,0 +1,109 @@
+{
+  "status": "PASS_EXACT_CONTINUOUS_RADIAL_AND_FACE_HIERARCHY_ESCAPE",
+  "sources": {
+    "scripts/fresh_h20_endpoint_replacement_20261014.py": "78abb25f8f5cfa5197fae1d87fdf315012839ba30dcfc0911f0a093cec9be448",
+    "results/fresh_h20_balanced_integer_exact_20261014.json": "a32c62f99f5b968dec74f8c4a24c3fdf4c054d523e3a1ed2f4ae1a48b8578b3c"
+  },
+  "arithmetic": "stdlib Fraction; no project imports",
+  "parameter_interval": [
+    "16",
+    "49/3"
+  ],
+  "metric_root_polynomial": "(4-4sqrt5)r\u00b2+(49sqrt5-539)r+8232=0, unique positive root",
+  "endpoint_radius_squared": "r",
+  "edge_radius_squared": "n(n-1)/2-r",
+  "triangle_center": "(r*z0+(n\u00b2-2r)*z1+r*z2)/n\u00b2",
+  "triangle_radius_squared": "4r\u00b2/n\u00b2-r",
+  "literal_counts": {
+    "vertices": 392,
+    "nearest_edges": 1176,
+    "consecutive_triangles": 1176,
+    "old_middle_and_motif": 395
+  },
+  "exact_contact_identities": "Triangle cap right to middle endpoint and both neighboring edge caps; A6 adjacent triangle cosine is the pi/5 polynomial ratio.",
+  "common_escape": {
+    "spatial": [
+      "0",
+      "99/20",
+      "198/25",
+      "891/100",
+      "198/25",
+      "99/20",
+      "0",
+      "99/20",
+      "198/25",
+      "891/100",
+      "198/25",
+      "99/20",
+      "693/100",
+      "297/25",
+      "297/20",
+      "396/25",
+      "297/20",
+      "297/25",
+      "693/100"
+    ],
+    "spatial_square": "754677/5000",
+    "D": "749677/10000",
+    "U": 1,
+    "norm": 1,
+    "source_face_vertices": [
+      0,
+      56,
+      8,
+      64
+    ],
+    "inward_scale": "99/100",
+    "minimum_seed_gap": "1/100",
+    "minimum_ball_powers": {
+      "central": "734677/5000",
+      "endpoint_r_in_interval": "385231/15000",
+      "all_real_vertex_radial": "15428063/480000",
+      "all_nearest_edge_caps": "80077/5000",
+      "all_consecutive_triangle_caps": "381731/15000",
+      "old_three_motif_and_392_middle": "295677/5000"
+    },
+    "attainers": {
+      "central": null,
+      "endpoint_r_in_interval": {
+        "vertex": 0,
+        "r": "49/3"
+      },
+      "all_real_vertex_radial": {
+        "vertex": 0
+      },
+      "all_nearest_edge_caps": {
+        "factor": 0,
+        "vertices": [
+          0,
+          56
+        ],
+        "r": "16"
+      },
+      "all_consecutive_triangle_caps": {
+        "factor": 0,
+        "vertices": [
+          0,
+          56,
+          112
+        ],
+        "r": "49/3"
+      },
+      "old_three_motif_and_392_middle": {
+        "wall": 418
+      }
+    }
+  },
+  "simpler_radial_escape": {
+    "midpoint_vertices": [
+      0,
+      56
+    ],
+    "inward_scale": "99/100",
+    "endpoint_radius_squared_upper_bound": 21,
+    "radial_power_lower_bound": "1407119/76800",
+    "endpoint_power_lower_bound": "7/400",
+    "usable_spacelike_norm": "1/100"
+  },
+  "scope": "A common strict escape excludes every finite compatible selection from this continuous family, including optional deletions. It does not exclude arbitrary mixed-factor face caps or differently positioned single-factor caps. Numerical full-family Coxeter compatibility at the metric root is a separate scout, not certified here."
+}

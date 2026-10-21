@@ -1,0 +1,852 @@
+{
+  "algebro_geometric_corollary": {
+    "base_models": {
+      "43": "the dual stacking sequence realized by toric corner cuts of a large integral Delzant tetrahedron, including the final cut at the new vertex {u,11,12}",
+      "44": "an integral Delzant hexagon, for example the moment polygon of the blow-up of P^2 at its three torus fixed points",
+      "47": "the dual stacking sequence realized by toric corner cuts at {u,1,2}, {u,2,11}, and {u,1,11}"
+    },
+    "carrier_caveat": "The labelled incidence complex is canonical for the toric boundary pair (X,D), or for a distinguished toric presentation; the abstract variety or abstract graded Chow ring alone need not recover the boundary labels.",
+    "chow_ring": "A^*(X) is Z[x_0,...,x_13]/(I_lin + I_SR), where I_SR is generated exactly by the six quadratic and four quintic squarefree monomials of the archived minimal nonfaces.",
+    "claim": "For each record there is a smooth projective toric 9-fold X of Picard rank five whose reduced toric boundary D is SNC, satisfies K_X + D = 0, and has dual intersection complex equal to the target nerve.",
+    "delzant_wedge": "With a primitive integral slack ell_F, use 0 <= t <= ell_F(x). The new primitive inward normals are e_{d+1} and (a_F,-1); together with the old normals they form a lattice basis at every new vertex. Primitive coefficient one is essential: replacing ell_F by k ell_F can introduce index k.",
+    "divisor_encoding": "The fourteen torus-invariant prime divisors correspond to facets. A set has nonempty intersection exactly when its rays span a fan cone, equivalently when the corresponding moment-polytope facets have a common face. Thus Dual(D) is the nerve.",
+    "picard_rank": 5,
+    "polarized_toric_dictionary": {
+      "compactness": "An ample toric divisor H has a compact moment polytope Q; ordinary polytope compactness is projectivity plus the choice of polarization.",
+      "coxeter_caveat": "These ordinary volumes and relation spaces do not supply the rank-ten Lorentzian Coxeter form, angle labels, or hyperbolic chamber volume.",
+      "facet_intersection": "H^8 D_i = 8! times the lattice-normalized volume of the facet corresponding to D_i.",
+      "gale_rank": "Pic(X)_R = R^14/M_R has dimension five; quotienting by the polarization/support class has dimension four, equal to the Gale rank 14-9-1.",
+      "invariant_measure": "The moment-map pushforward of symplectic volume is the Duistermaat--Heckman/Lebesgue measure on Q.",
+      "top_intersection": "H^9 = 9! times the lattice-normalized volume of Q."
+    },
+    "product": "After the facet wedges, take the product with a Delzant 4-simplex. The result has dimension nine and fourteen facets."
+  },
+  "audits": [
+    {
+      "base_description": "boundary of an explicit three-times stacked tetrahedron",
+      "base_face_vector": [
+        7,
+        15,
+        10
+      ],
+      "base_facets": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          14
+        ],
+        [
+          0,
+          2,
+          14
+        ],
+        [
+          1,
+          2,
+          11
+        ],
+        [
+          1,
+          11,
+          14
+        ],
+        [
+          2,
+          11,
+          12
+        ],
+        [
+          2,
+          12,
+          14
+        ],
+        [
+          11,
+          12,
+          13
+        ],
+        [
+          11,
+          13,
+          14
+        ],
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "base_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ]
+        ],
+        "3": [
+          [
+            1,
+            2,
+            14
+          ],
+          [
+            2,
+            11,
+            14
+          ],
+          [
+            11,
+            12,
+            14
+          ]
+        ]
+      },
+      "base_polytope_dimension": 3,
+      "base_vertices": [
+        0,
+        1,
+        2,
+        11,
+        12,
+        13,
+        14
+      ],
+      "clone_multiplicity": 3,
+      "clone_vertex": 14,
+      "clone_vertices": [
+        8,
+        9,
+        10
+      ],
+      "exact_nonface_match": true,
+      "expanded_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ]
+        ],
+        "5": [
+          [
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          [
+            2,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          [
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        ]
+      },
+      "graph6": "M?????????O?o?w??",
+      "multiwedge_factor_dimension": 5,
+      "ordinary_polytopal": true,
+      "product_facet_count": 14,
+      "product_with_simplex_dimension": 9,
+      "record_index": 43,
+      "simplex_join_vertices": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simplicial_wedge_count": 2,
+      "stacking_steps": [
+        {
+          "new_vertex": 12,
+          "replaced_facet": [
+            2,
+            11,
+            14
+          ]
+        },
+        {
+          "new_vertex": 0,
+          "replaced_facet": [
+            1,
+            2,
+            14
+          ]
+        },
+        {
+          "new_vertex": 13,
+          "replaced_facet": [
+            11,
+            12,
+            14
+          ]
+        }
+      ],
+      "target_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            13
+          ]
+        ],
+        "5": [
+          [
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          [
+            2,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          [
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        ]
+      }
+    },
+    {
+      "base_description": "boundary cycle of a hexagon",
+      "base_face_vector": [
+        6,
+        6
+      ],
+      "base_facets": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "base_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            1,
+            14
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            11,
+            14
+          ],
+          [
+            12,
+            14
+          ]
+        ]
+      },
+      "base_polytope_dimension": 2,
+      "base_vertices": [
+        0,
+        1,
+        11,
+        12,
+        13,
+        14
+      ],
+      "clone_multiplicity": 4,
+      "clone_vertex": 14,
+      "clone_vertices": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "exact_nonface_match": true,
+      "expanded_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            11,
+            13
+          ]
+        ],
+        "5": [
+          [
+            1,
+            7,
+            8,
+            9,
+            10
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            7,
+            8,
+            9,
+            10,
+            12
+          ]
+        ]
+      },
+      "graph6": "M?????????O?o?o@?",
+      "multiwedge_factor_dimension": 5,
+      "ordinary_polytopal": true,
+      "product_facet_count": 14,
+      "product_with_simplex_dimension": 9,
+      "record_index": 44,
+      "simplex_join_vertices": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "simplicial_wedge_count": 3,
+      "stacking_steps": [],
+      "target_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            11,
+            13
+          ]
+        ],
+        "5": [
+          [
+            1,
+            7,
+            8,
+            9,
+            10
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            7,
+            8,
+            9,
+            10,
+            12
+          ]
+        ]
+      }
+    },
+    {
+      "base_description": "boundary of an explicit three-times stacked tetrahedron",
+      "base_face_vector": [
+        7,
+        15,
+        10
+      ],
+      "base_facets": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          14
+        ],
+        [
+          0,
+          2,
+          14
+        ],
+        [
+          1,
+          2,
+          11
+        ],
+        [
+          1,
+          11,
+          13
+        ],
+        [
+          1,
+          13,
+          14
+        ],
+        [
+          2,
+          11,
+          12
+        ],
+        [
+          2,
+          12,
+          14
+        ],
+        [
+          11,
+          12,
+          14
+        ],
+        [
+          11,
+          13,
+          14
+        ]
+      ],
+      "base_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "3": [
+          [
+            1,
+            2,
+            14
+          ],
+          [
+            1,
+            11,
+            14
+          ],
+          [
+            2,
+            11,
+            14
+          ]
+        ]
+      },
+      "base_polytope_dimension": 3,
+      "base_vertices": [
+        0,
+        1,
+        2,
+        11,
+        12,
+        13,
+        14
+      ],
+      "clone_multiplicity": 3,
+      "clone_vertex": 14,
+      "clone_vertices": [
+        8,
+        9,
+        10
+      ],
+      "exact_nonface_match": true,
+      "expanded_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "5": [
+          [
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          [
+            1,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            2,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "graph6": "M?????????O?o?g?_",
+      "multiwedge_factor_dimension": 5,
+      "ordinary_polytopal": true,
+      "product_facet_count": 14,
+      "product_with_simplex_dimension": 9,
+      "record_index": 47,
+      "simplex_join_vertices": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "simplicial_wedge_count": 2,
+      "stacking_steps": [
+        {
+          "new_vertex": 0,
+          "replaced_facet": [
+            1,
+            2,
+            14
+          ]
+        },
+        {
+          "new_vertex": 12,
+          "replaced_facet": [
+            2,
+            11,
+            14
+          ]
+        },
+        {
+          "new_vertex": 13,
+          "replaced_facet": [
+            1,
+            11,
+            14
+          ]
+        }
+      ],
+      "target_minimal_nonfaces_by_size": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "5": [
+          [
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          [
+            1,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            2,
+            8,
+            9,
+            10,
+            11
+          ],
+          [
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ]
+      }
+    }
+  ],
+  "certificate_sha256": "d5efd409cf5d5a5a62e9784f8c9e71eebb5a08ee20e8ea7f1d05e894d305a183",
+  "claim": "H9/14 records 43, 44, and 47 are nerves of ordinary convex simple 9-polytopes with 14 facets.",
+  "construction": "For each record, the nerve is the join of the boundary of a 4-simplex with a simplicial multiwedge of a small polytopal sphere. Dually, take the product of a 4-simplex with successive facet wedges of the dual base simple polytope.",
+  "kind": "h9_14_multiwedge_ordinary_polytopality",
+  "nonclaims": [
+    "No Coxeter labels are supplied.",
+    "No Lorentzian Coxeter Gram matrix is supplied.",
+    "Ordinary polytopality does not imply hyperbolic Coxeter realizability.",
+    "The toric divisor intersection ring does not by itself encode Coxeter angles."
+  ],
+  "proof_lemma": {
+    "primary_reference": "S. Choi and H. Park, Wedge Operations and Torus Symmetries, Tohoku Math. J. 68 (2016), Proposition 2.2(3) and Lemma 2.3",
+    "statement": "A facet wedge of a simple convex polytope is again simple and convex, and its dual boundary is the simplicial wedge. Iteration realizes every positive integral multiwedge. Joins of simplicial polytope boundaries are polytopal.",
+    "url": "https://www.jstage.jst.go.jp/article/tmj/68/1/68_1458248864/_pdf"
+  },
+  "proof_source": {
+    "path": "src/coxeter_polytopes/combinatorics/h9_14_multiwedge.py",
+    "sha256": "73340ddd489e9b6f07fecd6fd562082806d9163d8c5b7b3155d820339812f0ce"
+  },
+  "schema_version": "1.0.0",
+  "selection_provenance": [
+    {
+      "embedded_certificate_sha256": "af521ed4e7476c95945df9b770f36a343dcf3fc79dabed557aaab0fd97a671a3",
+      "file_sha256": "2c6463598ab4ae2073b54fc8a9345ab099acba0492c786ba163d0ad5d29d3c66",
+      "path": "data/enumerations/h9_14_record43_selection.json",
+      "record_index": 43
+    },
+    {
+      "embedded_certificate_sha256": "e66e493d0c68f7ae28ffe03e63f96209276a8d83a5ceb27c498f35b42c4a1867",
+      "file_sha256": "8110d99a901f9102906117943c23a34c6c2d434b17c8f92f9f6e015d25c81fff",
+      "path": "data/enumerations/h9_14_record44_selection.json",
+      "record_index": 44
+    },
+    {
+      "embedded_certificate_sha256": "960ef6564c6b8013caf0989c95a46cc8401c846d32d47c66c057091340301546",
+      "file_sha256": "163da338e18d9ce8d81d1957244b9b948839b949302ee09aaf27f858fbe2c357",
+      "path": "data/enumerations/h9_14_record47_selection.json",
+      "record_index": 47
+    }
+  ],
+  "updated_theorem_partition": {
+    "certified_explicit_ordinary_polytopal": 5,
+    "independently_certified_impossible": 119,
+    "theorem_undecided": 18,
+    "total_graph_shadows": 142
+  }
+}
