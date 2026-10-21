@@ -104,3 +104,14 @@ The :download:`assumption register <../manuscript_assumptions.md>` and each
 paper's map identify what remains outside the formal kernels. No complete
 geometric Lean proof of the six papers is claimed.
 
+The additional ``EndpointTriangleNormKernel`` now has a bounded compile
+and a separate actual **ten-declaration axiom audit PASS**. The
+:download:`receipt <../../results/lean_endpoint_triangle_verification_20261021/manifest.json>`
+binds the final source, individual ledgers and actual output; only standard
+axioms occur, with no ``sorryAx``. Two unused-section-variable warnings are
+retained. Both failed tactic predecessors have zero verification credit.
+The :download:`logic map <../endpoint_triangle_norm_kernel_logic_20261021.md>`
+separates derived cycle cancellation, the integral Bezout expression and
+finite norm inequalities from actual endpoint geometry, cyclic integrality
+and field-norm interpretation. It does not formalize a whole geometric paper.
+

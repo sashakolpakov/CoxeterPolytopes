@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-21T19:47:23.614741+00:00",
+  "status": "PASS_STRICT_SPHINX_AND_LOCAL_TARGET_EXISTENCE",
+  "scope": "Documentation only; no mathematical checker or remote deploy in this build.",
+  "stdout": {
+    "path": "results/endpoint_publication_sphinx_stdout_20261021.txt",
+    "sha256": "c7ccff450b38854513c1eac8bc51307f75154a9fc218c78a11e166d8a4af4c44",
+    "bytes": 5674
+  },
+  "watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/site_endpoint_20261021"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 99368960,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 144546250752,
+      "ram_available_bytes": 7066107904
+    },
+    "seconds": 2.046
+  },
+  "html_pages": 8,
+  "existing_local_targets_checked": 235,
+  "missing_local_targets": [],
+  "owned_generated_site_removed_after_check": ".publication/site_endpoint_20261021",
+  "preserved_papers": "Six frozen sources and final PDFs unchanged. No caches, compiled objects or generated site should enter Git."
+}

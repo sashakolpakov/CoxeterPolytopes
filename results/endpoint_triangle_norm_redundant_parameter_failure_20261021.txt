@@ -1,0 +1,35 @@
+CoxeterProofs/EndpointTriangleNormKernel.lean:40:14: error: redundant parameter `scaled`, `grind` uses local hypotheses automatically
+CoxeterProofs/EndpointTriangleNormKernel.lean:43:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.EndpointTriangleNormKernel.bezout_triangle_identity`:
+  [LE R]
+  [LT R]
+  [Std.IsLinearOrder R]
+  [Std.LawfulOrderLT R]
+  [OrderedRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'CoxeterProofs.EndpointTriangleNormKernel.cycle_expansion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.bezout_triangle_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.physical_I_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.conjugate_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.physical_extended_cap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.product_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.norm_small_factor_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.expanding_pair_contracts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.norm_expanding_factor_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.rational_positive_bounded_product_not_multiple' depends on axioms: [propext,
+ Quot.sound]

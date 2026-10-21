@@ -1,0 +1,162 @@
+{
+  "created_utc": "2026-10-21T19:45:10.069384+00:00",
+  "status": "PASS_ONE_BOUNDED_COMPILE_AND_SEPARATE_ACTUAL_AXIOM_AUDIT",
+  "module": "CoxeterProofs.EndpointTriangleNormKernel",
+  "source": {
+    "path": "formal/CoxeterProofs/EndpointTriangleNormKernel.lean",
+    "sha256": "ce2ad70b636880d68e0e99f345f82b8db3c7bd7197636ea9c93c0d23d98df1a4",
+    "bytes": 6715
+  },
+  "actual_declarations": [
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.cycle_expansion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.bezout_triangle_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.physical_I_cap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.conjugate_cap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.physical_extended_cap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.product_cap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.norm_small_factor_impossible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.expanding_pair_contracts",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.norm_expanding_factor_impossible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "CoxeterProofs.EndpointTriangleNormKernel.rational_positive_bounded_product_not_multiple",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "requested_and_actual_count": 10,
+  "runs": {
+    "compile": {
+      "ledger": {
+        "path": "results/lean_endpoint_triangle_verification_20261021/CoxeterProofs_EndpointTriangleNormKernel.json",
+        "sha256": "d9e320fa1578516fa01a41b9648cd52dee99bf76f1f178bef7afc27aab574357",
+        "bytes": 1524
+      },
+      "outer_stdout": {
+        "path": "results/endpoint_triangle_norm_final_compile_stdout_20261021.txt",
+        "sha256": "1819339edd4e537280880b077e2399efb61d02c7909bc6ff96ab2018fa83ca1f",
+        "bytes": 1720
+      },
+      "elapsed_seconds": 0.88,
+      "resources": {
+        "free_disk_gib": 134.63,
+        "available_memory_gib": 6.28
+      }
+    },
+    "axiom_audit": {
+      "ledger": {
+        "path": "results/lean_endpoint_triangle_verification_20261021/CoxeterProofs_EndpointTriangleNormKernel_axiom_audit.json",
+        "sha256": "9b21501438c1e61e2e8d041ca03d8d5de6635c84ff9a3521b0a8ef6520400ad4",
+        "bytes": 1443
+      },
+      "outer_stdout": {
+        "path": "results/endpoint_triangle_norm_final_axiom_audit_stdout_20261021.txt",
+        "sha256": "07d23171f8017632b852ad59343f92030ecd558a5b561aad63bd8339c0dcf626",
+        "bytes": 3981
+      },
+      "elapsed_seconds": 0.77,
+      "resources": {
+        "free_disk_gib": 134.63,
+        "available_memory_gib": 6.57
+      }
+    }
+  },
+  "actual_child_output": {
+    "path": "results/lean_endpoint_triangle_verification_20261021/actual_child_axiom_output_20261021.txt",
+    "sha256": "3f6974bd724ad8fb47c6e5ed1ced5191d55b4b2f7705cd70130cf855185f49ae",
+    "bytes": 2384
+  },
+  "child_output_note": "Actual separate audit stdout prefix; its bytes/hash equal both child-output fingerprints recorded by the successful compile and audit. Compile runner prints its ledger rather than duplicating the child output.",
+  "warnings": {
+    "count": 2,
+    "kind": "Unused ordered section variables in cycle_expansion and bezout_triangle_identity; retained, no linter suppression."
+  },
+  "failed_predecessors": [
+    {
+      "path": "results/endpoint_triangle_norm_initial_failure_preservation_20261021.json",
+      "sha256": "dfe7283a1576bb9af9ef3864cd05049d199edce3f4d483874636072e0ffe2f7c",
+      "bytes": 1070
+    },
+    {
+      "path": "results/endpoint_triangle_norm_redundant_parameter_failure_preservation_20261021.json",
+      "sha256": "5d2781b1eff51753b67ebf4183201f02a120672c62d413acc216a0ae4a260f64",
+      "bytes": 1023
+    }
+  ],
+  "scope": "Conditional internal algebra, conjugate inequalities and finite norm products. Actual walls, cyclic integrality, actual field embeddings/norm identification and geometric coverage remain external. No ambient dimension theorem or whole-paper geometric formalization.",
+  "source_review": {
+    "path": "results/review_endpoint_triangle_norm_kernel_source_foundations_20261021.md",
+    "sha256": "d8318de0c4b89cf40685b073cf1f9fef0e92e700c86b1e0dce78914fa4bc63af",
+    "bytes": 7521
+  },
+  "explicit_cancellation_delta_review": {
+    "path": "results/review_endpoint_triangle_explicit_cancellation_delta_foundations_20261021.md",
+    "sha256": "d92a00ae36c3852bde3d299a75cda710faff652e3b5f2985476c6a27ae4be290",
+    "bytes": 3012
+  },
+  "execution_discipline": "One module; no local dependencies; compile and audit strictly serial. Existing 2048MiB/one-thread,40GiB/6GiB admission and8GiB/3GiB abort gates unchanged. Two failed attempts preserved with zero verification credit. Temporary work removed by runner; object stays ignored."
+}

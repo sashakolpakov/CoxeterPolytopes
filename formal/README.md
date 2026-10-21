@@ -49,6 +49,19 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`EndpointTriangleNormKernel` has bounded compilation and a separate actual
+ten-declaration axiom audit PASS. Its
+[receipt](../results/lean_endpoint_triangle_verification_20261021/manifest.json)
+binds the final source, both serial ledgers and actual output; only standard
+axioms occur, with no `sorryAx`. It proves cycle cancellation, the explicit
+integral Bezout expression, physical/conjugate inequalities, finite norm
+product contradictions and the rational positive-integer case. The
+[logic map](../docs/endpoint_triangle_norm_kernel_logic_20261021.md) leaves
+actual walls, cyclic integrality, field-norm interpretation and geometric
+classification as application inputs. Two failed tactic predecessors have
+zero verification credit and remain preserved. Two unused-section-variable
+warnings are retained; no successful old module was rerun.
+
 The selected `RegularIdeal24CellHeightKernel` and
 `ClassicalDimensionComposition` now each have bounded compilation and a
 separate actual printed-axiom audit PASS. The

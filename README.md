@@ -84,6 +84,13 @@ field interpretation and script premises still explicit. They discharge
 the two selected compilation/audit prerequisites, not complete geometric
 formalization or remote publication.
 
+The additional [endpoint triangle kernel](docs/endpoint_triangle_norm_kernel_logic_20261021.md)
+now has bounded compilation and a separate **ten-declaration** axiom audit
+PASS. It derives cycle cancellation, an integral Bezout witness and finite
+norm contradictions. Its [receipt](results/lean_endpoint_triangle_verification_20261021/manifest.json)
+records the final source, actual output and preserved failed attempts;
+geometric and number-field application inputs remain explicit.
+
 ## Large research inputs
 
 Large scientific inputs are packaged separately from Git. The

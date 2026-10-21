@@ -1,0 +1,82 @@
+# Endpoint triangle: formal logic and external inputs
+
+The source is `formal/CoxeterProofs/EndpointTriangleNormKernel.lean`.
+Bounded compilation and the separate actual axiom audit both PASS. The
+[receipt](../results/lean_endpoint_triangle_verification_20261021/manifest.json)
+binds source `ce2ad70b`, both actual run ledgers and all ten declarations.
+Only `propext`, `Classical.choice` and `Quot.sound` occur; no `sorryAx`.
+Two unused-section-variable warnings remain. Two failed predecessor attempts
+are preserved and earn no verification credit. The original source review
+and two exact-delta reviews cover the final unchanged theorem statements.
+
+This kernel isolates the algebraic obstruction used in the written
+[A16 plus short A1 argument](../results/arithmetic17_a16_isolated_i_endpoint_triangle_exclusion_20261021.md)
+and its [ordinary A1 extension](../results/arithmetic17_a16_every_rank_one_endpoint_triangle_exclusion_20261021.md).
+It does not prove either geometric theorem by itself.
+
+## What the kernel derives
+
+The first identity expands `lambda = A*a - b*r`, using `a² = h`,
+`r² = 1+h` and `17*A² = 8*U + 17*b² - 17`. With
+`rho = 4*lambda² + 8*b*r*lambda + 4*b²` and `v = 4*h`, it proves
+`17*rho = (8*U - 17)*v`. The next theorem proves the Bezout identity
+
+```
+17 * (15*rho - (7*U - 15)*v) = U*v.
+```
+
+Consequently, when `U`, `v` and `rho` belong to a ring of integers,
+the displayed ring expression supplies an integral witness for `U*v/17`.
+This consequence uses the external identification of that ring with a
+subring of the field; the Lean theorem itself is a polynomial identity.
+
+Three ordered-ring lemmas derive the physical bound `0 < theta < 1`,
+the conjugate bound `-1/2 < theta < 0`, and the extended physical bound
+`0 < theta < 7/5`, from their explicit inequalities and `17*theta = U*v`.
+No division or numerical approximation is hidden in these statements.
+
+The remaining lemmas prove finite product bounds by induction, the
+contradiction between a positive factor smaller than one and an integral
+norm of absolute value at least one, and contraction of a physical factor
+smaller than `7/5` by a conjugate factor smaller than `1/2`. Every remaining
+embedding factor occurs in the finite product. For degree one, the final
+natural-number theorem rules out `17 | a*b` when `1 ≤ a ≤ 8` and
+`1 ≤ b ≤ 2`.
+
+## What remains external
+
+The application must supply actual endpoint walls and their normalization;
+the cyclic products giving integral `U`, `v` and `rho`; the totally real
+field and its embeddings; positivity and conjugate Schur bounds; and the
+identification of the finite product with the absolute field norm of a
+nonzero algebraic integer. The lower bound one for that norm is an explicit
+theorem parameter, not a newly declared Lean axiom.
+
+The geometric reference energy, same-vector endpoint payments, complete
+finite-white classification, auxiliary-point feasibility against every wall,
+and the final acute-angle contradiction remain written mathematics. This
+kernel contains no forest enumeration and proves no ambient dimension bound.
+The ordinary-A1 extension has separate full written reviews and root
+[acceptance](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json).
+That written acceptance is distinct from compiling this conditional kernel.
+
+## Reproduction
+
+From the repository root, run strictly serially:
+
+```sh
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.EndpointTriangleNormKernel
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.EndpointTriangleNormKernel --audit-axioms
+```
+
+The existing runner retains its shared lock, 2,048 MiB/one-thread cap,
+admission and abort gates, provenance checks and temporary-output cleanup.
+It imports only `Std`; no successful local dependency needs rebuilding.
+The ten actual axiom outputs must be read separately from the application
+assumptions listed above.
+
+The initial, pending-execution version of this map is byte-preserved in
+`results/source_archive/endpoint_triangle_norm_logic_map_before_execution_20261021.md.txt`
+(SHA-256 `c9beffd99c3d4b963573dad65fcfb28637b4d85de215c187a2e6b6886fef4a75`).
+The full source review binds that edition; the final status is supported
+by the actual receipt. No successful dependency or old module was rerun.

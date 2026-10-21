@@ -16,10 +16,12 @@ records those reviews. The [global-bound checkpoint](../results/compact19_arithm
 records compact nineteen and arithmetic seventeen; the
 [previous research checkpoint](../results/compact19_arithmetic17_fresh_frontiers_and_paid_endpoint_acceptance_20261021.json)
 supplies the fresh necessary forests. The
-[latest research checkpoint](../results/a_family_and_prime79_frontier_continuations_acceptance_20261021.json)
-accepts further A-family exclusions and five construction-model eliminations,
-with full root and other-author mathematical reviews. It does not lower
-either global ceiling. The six-paper writing milestone is complete;
+[previous A-family checkpoint](../results/a_family_and_prime79_frontier_continuations_acceptance_20261021.json)
+accepts further exclusions and five construction-model eliminations. The
+[latest endpoint checkpoint](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
+adds reviewed A17/A18 and arithmetic A15/A16 exclusions, with full root
+and other-author mathematical reviews, plus one actually executed norm79
+interval. It does not lower either global ceiling. The six-paper writing milestone is complete;
 research has resumed within the existing paper families.
 
 ## Dimension comparison
@@ -93,6 +95,14 @@ remains historical evidence. Each map separates derived logic from actual
 geometry, external/script inputs and field-norm bridges. Those premises are
 not discharged by an ordinary axiom print or by this conditional compilation.
 
+The new [endpoint triangle kernel](endpoint_triangle_norm_kernel_logic_20261021.md)
+also has bounded compilation and a separate actual ten-declaration audit
+PASS. Its [receipt](../results/lean_endpoint_triangle_verification_20261021/manifest.json)
+records the successful final source and both failed tactic predecessors,
+which earn no credit. It derives cycle cancellation, the integral Bezout
+expression and norm-product logic; actual fields, cyclic integrality and
+endpoint geometry remain explicit application premises.
+
 ## Recent dimension proofs and next work
 
 The previous general dimension-twenty frontier is now closed. Its whole
@@ -155,16 +165,26 @@ paid simultaneously in one reference. Finally, a new
 [A15 half-loss proof](../results/arithmetic17_a15_typed_seven_half_loss_field_strip_exclusion_20261021.md)
 uses three explicit integral-basis exclusions in the actual cubic-seven
 field to remove both A15+typed7 forests. The held all-field A15 theorem
-also removes two ordinary A1 spectators. A15 therefore retains only
+also removes two ordinary A1 spectators. A15 at that checkpoint retained only
 an ordinary irreducible T2. None of these exclusions assumes a universal
 ordinary-dihedral energy greater than one sixth.
+
+The latest [endpoint proofs](../results/review_endpoint_continuations_and_prime79_runtime_root_20261021.md)
+exclude that ordinary-T2 arithmetic A15 case, both ordinary and short
+A1 beside arithmetic A16, and every general A17 rank-two companion.
+The new general A18 component bound is greater than .91 with arbitrary
+finite spectators; it removes its ordinary A1 companion, leaving actual I.
+The arithmetic A16 extension first proves that its small-energy rank-one
+opposite is isolated, then extends the triangle norm argument to its
+larger height interval. It covers every actual field, including the rational
+case, without using Meyer. These supporting proofs belong in the existing
+two compact paper families and have separate full source-bound reviews.
 
 The complete reduced necessary lists are now:
 
 | General compact nineteen: dominant | Entire remaining spectator alternatives |
 | --- | --- |
-| A17 | ordinary T2 or either typed7 |
-| A18 | ordinary A1 or actual I |
+| A18 | actual I |
 | A19 | none |
 | B18 | I |
 | B19 | none |
@@ -176,8 +196,6 @@ The complete reduced necessary lists are now:
 | --- | --- |
 | A11 | I+(A5 or D5) |
 | A14 | ordinary T3, ordinary T2+A1, or I+T2 |
-| A15 | ordinary T2 |
-| A16 | ordinary A1 or actual I |
 | A17 | none |
 | B15 | either typed7 |
 | B16 | I |
@@ -187,11 +205,11 @@ The complete reduced necessary lists are now:
 | D17 | none |
 
 Here T2 and T3 are irreducible ordinary components, and I/typed7 retain
-their actual-wall definitions. There are eight and eleven grouped rows,
-respectively. These necessary lists make no realization claim. All four
-new sources have full root and other-author mathematical reviews at their
-stated boundaries; the [root review](../results/review_a16_lower_a_arithmetic17_and_prime79_root_20261021.md)
-also gives the complete subtraction from the previous lists.
+their actual-wall definitions. There are seven and nine grouped rows,
+respectively. These necessary lists make no realization claim. The
+[latest checkpoint](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
+binds all new full reviews and the exact subtraction from the previous
+eight/eleven-row lists. It preserves the six printed paper editions.
 The bounds still leave gaps of eleven and nine above the known compact
 example dimension eight. No new polytope example has been found.
 
@@ -213,33 +231,22 @@ internal theorem, not a new bound or an accepted change to the frozen
 payment tables. It leaves the other affine families and the costly
 finite forests unresolved.
 
-A [norm79 construction continuation](../results/compact_h9_nonunit_coupling_prime79_full_base_and_first_transverse_20261021.md)
-has a full Bugaenko base and actual E7+I2(5) and D9 corners in a distinct
-literal golden module. Its fifteen known walls still admit a spacelike
-escape. The reviewed [next-edge contract](../results/compact_h9_prime79_a7_c_finite_upper_and_complete_interval_contract_20261021.md)
-now proves a finite mirror upper and a complete nine-model domain of at
-most 38,784 scalar trials. Its [exact checker and algorithm specification](../results/compact_h9_prime79_a7_c_interval_checker_spec_20261021.md)
-have full root and outside-author source reviews, but no fixture or census
-has run. New [manual next-edge restrictions](../results/compact_h9_prime79_next_edge_geometric_continuation_candidate_20261021.md)
-prove that every one of the nine possible first-simple models has dotted
-contact with the released wall. The E8 extension at old node3 cannot be
-first, because an integral bisector reflection cuts earlier. If the actual
-full first germ is the E8 extension at node5, an explicit integral period
-proves this literal chamber has infinite volume. That is conditional on
-the actual germ, not an observed enumeration result. A new
-[all-height continuation](../results/compact_h9_prime79_seven_model_continuation_candidate_20261021.md)
-now excludes c-only3 by a congruence modulo three and all four A8/D8
-models by explicit integral positive-root decompositions. It strengthens
-E8 at node3 to absence of every forward integral model. The decompositions
-exclude facets of the **full integral reflection arrangement**, not facets
-of arbitrary reflection subgroups omitting the summand mirrors. Only the
-two A9 bridge models or the conditional E8-at-node5 germ remain. Thus a
-finite-volume chamber for this literal module would have to take an A9
-bridge first; neither bridge has been observed. The old ultraparallel wall
-supplies no transverse-edge upper, so the next finite contract requires a
-different proved upper.
-The minimum, all ties and full germ remain unexecuted; these local corners
-and the finite upper are not a finite-volume example.
+The [norm79 construction](../results/compact_h9_nonunit_coupling_prime79_full_base_and_first_transverse_20261021.md)
+now has one completed bounded [interval census](../results/prime79_a7_c_interval_execution_20261021.json).
+Its [algorithm specification](../results/compact_h9_prime79_a7_c_interval_checker_spec_20261021.md)
+and complete first-simple domain have full source reviews. The actual run
+covered 38,784 scalar trials in 1.956 seconds at about 55 MiB peak process-tree
+RSS. Its [certificate](../results/prime79_a7_c_interval_20261021.jsonl) has two
+integral mirrors and a unique earliest A9-7 simple germ, conditional on the
+pinned actual base, classification and local-finiteness inputs.
+
+The observed controls are U=16+25φ and z=259+416φ. They are nondivisible
+by √5, so the reviewed [integral reversal criterion](../results/compact_h9_prime79_a9_bridge_integral_reversal_and_next_edge_candidate_20261021.md)
+does not supply a chamber reversal here. A divisible-branch period proof
+cannot be applied to this observed corner. The [next end-edge upper/domain](../results/compact_h9_prime79_actual_a9_end_edge_upper_and_complete_contract_candidate_20261021.md)
+and [new checker contract](../results/compact_h9_prime79_actual_a9_end_interval_checker_spec_20261021.md)
+are preserved preparations, still unreviewed and unexecuted. No period,
+host exclusion, finite-volume completion or new polytope follows.
 
 ## Ideal and compact right-angled four-volume
 

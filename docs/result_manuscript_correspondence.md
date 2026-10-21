@@ -45,16 +45,21 @@ coherently rather than append chapters for successive increments.
 The [architecture guide](paper_architecture.md) gives that division and
 the intended order of exposition.
 
-The [latest reviewed research batch](../results/a_family_and_prime79_frontier_continuations_acceptance_20261021.json)
+The [earlier reviewed research batch](../results/a_family_and_prime79_frontier_continuations_acceptance_20261021.json)
 removes the general nineteen A16 family, every arithmetic seventeen A12
 family, its A11+typed7 branch, and the typed7/two-ordinary-A1 A15 branches.
 These belong to the same farthest-point/arithmetic paper families. The
-reduced necessary lists have eight and eleven grouped rows; the global
+reduced necessary lists then had eight and eleven grouped rows; the global
 ceilings remain nineteen/seventeen, and the PDFs still prove twenty-three/
 twenty. The new cubic-field half-loss argument is a case-specific refinement
 after the common actual-vector geometry; it is not another dimension paper.
-The construction continuation concerns one literal full reflection
-arrangement and leaves two A9 bridge possibilities, with no new example.
+The [latest endpoint batch](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
+closes the general A17 row, the ordinary-A1 choice beside general A18,
+and the arithmetic A15/A16 rows. The remaining necessary lists have seven
+and nine grouped rows. These are further supporting arguments within the
+same two compact papers, without a new global ceiling or another manuscript.
+One bounded construction interval now records the actual A9-7 corner at
+its explicit geometric input boundary; no new polytope is claimed.
 
 The ideal RA4 paper already follows the requested sequence: the published
 minimum, the universal gap and equality reduction, the restricted
@@ -91,6 +96,12 @@ five-/four-declaration axiom audits. The
 records the sources and output; actual geometry and field/script bridges
 remain explicit premises.
 
+The additional [endpoint triangle kernel](endpoint_triangle_norm_kernel_logic_20261021.md)
+has a bounded compile and separate ten-declaration audit
+[PASS](../results/lean_endpoint_triangle_verification_20261021/manifest.json).
+It supplies internal algebra and norm logic for the latest arithmetic
+endpoint arguments, retaining their actual geometric and field interfaces.
+
 ## Preserved material
 
 The parked [eight-field](../manuscripts/appendices/compact_arithmetic_eight_field19.tex)
@@ -104,4 +115,5 @@ and remain indexed in the catalogue. The
 [completed-audit checkpoint](../results/six_paper_completed_audits_and_restricted_continuations_20261021.json)
 binds the earlier status-page versions, full reviews and unchanged papers.
 Current guide bytes and their exact predecessor recovery are bound by the
-[latest research checkpoint](../results/a_family_and_prime79_frontier_continuations_acceptance_20261021.json).
+[earlier research checkpoint](../results/a_family_and_prime79_frontier_continuations_acceptance_20261021.json)
+at its recorded edition; later guide revisions are preserved by Git history.

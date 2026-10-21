@@ -1,0 +1,150 @@
+CoxeterProofs/EndpointTriangleNormKernel.lean:36:2: error: `grind` failed
+case grind
+R : Type u
+inst : CommRing R
+inst_1 : LE R
+inst_2 : LT R
+inst_3 : Std.IsLinearOrder R
+inst_4 : Std.LawfulOrderLT R
+inst_5 : OrderedRing R
+A a b r lam U h rho v : R
+a_square : a ^ 2 = h
+r_square : r ^ 2 = 1 + h
+time_square : 17 * A ^ 2 = 8 * U + 17 * b ^ 2 - 17
+lambda_identity : lam = A * a - b * r
+cycle_identity : rho = 4 * lam ^ 2 + 8 * b * r * lam + 4 * b ^ 2
+v_identity : v = 4 * h
+first : A ^ 2 * a ^ 2 = A ^ 2 * h
+second : b ^ 2 * r ^ 2 = b ^ 2 * (1 + h)
+third : 4 * h * (17 * A ^ 2) = 4 * h * (8 * U + 17 * b ^ 2 - 17)
+h_1 : ¬17 * rho = (8 * U - 17) * v
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] Std.IsLinearOrder R
+    [prop] Std.LawfulOrderLT R
+    [prop] OrderedRing R
+    [prop] a ^ 2 = h
+    [prop] r ^ 2 = 1 + h
+    [prop] 17 * A ^ 2 = 8 * U + 17 * b ^ 2 - 17
+    [prop] lam = A * a - b * r
+    [prop] rho = 4 * lam ^ 2 + 8 * b * r * lam + 4 * b ^ 2
+    [prop] v = 4 * h
+    [prop] A ^ 2 * a ^ 2 = A ^ 2 * h
+    [prop] b ^ 2 * r ^ 2 = b ^ 2 * (1 + h)
+    [prop] 4 * h * (17 * A ^ 2) = 4 * h * (8 * U + 17 * b ^ 2 - 17)
+    [prop] ¬17 * rho = (8 * U - 17) * v
+  [eqc] True propositions
+    [prop] Std.IsLinearOrder R
+    [prop] Std.IsPreorder R
+    [prop] Std.LawfulOrderLT R
+    [prop] OrderedRing R
+  [eqc] False propositions
+    [prop] 17 * rho = (8 * U - 17) * v
+  [eqc] Equivalence classes
+    [eqc] {lam, A * a - b * r}
+    [eqc] {h, a ^ 2}
+    [eqc] {rho, 4 * lam ^ 2 + 8 * b * r * lam + 4 * b ^ 2}
+    [eqc] {v, 4 * h}
+    [eqc] {1 + h, r ^ 2}
+    [eqc] {h * A ^ 2, a ^ 2 * A ^ 2}
+    [eqc] {17 * A ^ 2, 8 * U + 17 * b ^ 2 - 17}
+    [eqc] {4 * h * (17 * A ^ 2), 4 * h * (8 * U + 17 * b ^ 2 - 17)}
+    [eqc] {A ^ 2 * h, A ^ 2 * a ^ 2}
+    [eqc] {b ^ 2 * (1 + h), b ^ 2 * r ^ 2}
+    [eqc] {-1 • (h * A ^ 2), -1 • (a ^ 2 * A ^ 2)}
+    [eqc] {1 • (h * A ^ 2), 1 • (a ^ 2 * A ^ 2)}
+  [ematch] E-matching patterns
+    [thm] Nat.pow_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+  [linarith] Linarith assignment for `R`
+    [assign] A := 2
+    [assign] a := 3
+    [assign] b := 4
+    [assign] r := 5
+    [assign] lam := 0
+    [assign] U := 17/8
+    [assign] h := 0
+    [assign] rho := 0
+    [assign] v := 0
+    [assign] 「A ^ 2」 := 0
+    [assign] 「a ^ 2」 := 0
+    [assign] 「b ^ 2」 := 0
+    [assign] 「r ^ 2」 := 1
+    [assign] 「lam ^ 2」 := -1/4
+  [ring] Ring `R`
+    [basis] Basis
+      [_] 2176 * (U * b ^ 4) + -4352 * (U * b ^ 2 * lam ^ 2) + 2176 * (U * lam ^ 4) + -4624 * (b ^ 2 * lam ^ 2 * rho) +
+                              -4624 * b ^ 4 +
+                            9248 * (b ^ 2 * lam ^ 2) +
+                          -4624 * lam ^ 4 +
+                        -1088 * (U * b ^ 2 * rho) +
+                      -1088 * (U * lam ^ 2 * rho) +
+                    2312 * (b ^ 2 * rho) +
+                  2312 * (lam ^ 2 * rho) +
+                136 * (U * rho ^ 2) +
+              -289 * rho ^ 2 =
+            0
+      [_] 272 * (b ^ 2 * lam ^ 2 * v) + -272 * b ^ 4 + 544 * (b ^ 2 * lam ^ 2) + -272 * lam ^ 4 + 136 * (b ^ 2 * rho) +
+                136 * (lam ^ 2 * rho) +
+              -17 * rho ^ 2 =
+            0
+      [_] 68 * (r * A * lam ^ 2) + 68 * (a * b * lam ^ 2) + 32 * (a * U * b) + 68 * (A * b * lam) +
+                  -17 * (r * A * rho) +
+                17 * (a * b * rho) +
+              -68 * (a * b) =
+            0
+      [_] 136 * (a * lam ^ 3) + -68 * (A * lam ^ 2 * v) + 68 * (A * b ^ 2) + 64 * (a * U * lam) + -68 * (A * lam ^ 2) +
+                  34 * (a * lam * rho) +
+                -136 * (a * lam) +
+              -17 * (A * rho) =
+            0
+      [_] 8 * (r * lam ^ 3) + 4 * (b * lam ^ 2 * v) + -4 * b ^ 3 + 12 * (b * lam ^ 2) + -2 * (r * lam * rho) + b * rho =
+            0
+      [_] r * A * lam * v + a * b * lam * v + -1 * (a * r * rho) + A * b * v = 0
+      [_] 32 * (a * r * U) + -68 * (r * A * lam) + -68 * (a * b * lam) + -68 * (a * r) + -68 * (A * b) = 0
+      [_] 4 * (a * r * b) + 4 * (a * lam) + -1 * (A * v) = 0
+      [_] 17 * (r * A * b) + -17 * (a * b ^ 2) + -8 * (a * U) + 17 * (A * lam) + 17 * a = 0
+      [_] 4 * (a * b ^ 2) + -4 * (a * lam ^ 2) + 2 * (A * lam * v) + -1 * (a * rho) = 0
+      [_] 4 * (r * b ^ 2) + 4 * (r * lam ^ 2) + 2 * (b * lam * v) + 8 * (b * lam) + -1 * (r * rho) = 0
+      [_] 4 * (a * r * lam) + -1 * (r * A * v) + a * b * v + 4 * (a * b) = 0
+      [_] 8 * (r * b * lam) + 4 * b ^ 2 + 4 * lam ^ 2 + -1 * rho = 0
+      [_] 4 * a ^ 2 + -1 * v = 0
+      [_] 4 * r ^ 2 + -1 * v + -4 = 0
+      [_] a * A + -1 * (r * b) + -1 * lam = 0
+      [_] 17 * A ^ 2 + -17 * b ^ 2 + -8 * U + 17 = 0
+      [_] 32 * (U * v) + -68 * rho + -68 * v = 0
+      [_] 4 * h + -1 * v = 0
+    [diseqs] Disequalities
+      [_] ¬-8 * (U * v) + 17 * rho + 17 * v = 0
+CoxeterProofs/EndpointTriangleNormKernel.lean:39:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.EndpointTriangleNormKernel.bezout_triangle_identity`:
+  [LE R]
+  [LT R]
+  [Std.IsLinearOrder R]
+  [Std.LawfulOrderLT R]
+  [OrderedRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'CoxeterProofs.EndpointTriangleNormKernel.cycle_expansion' depends on axioms: [sorryAx]
+'CoxeterProofs.EndpointTriangleNormKernel.bezout_triangle_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.physical_I_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.conjugate_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.physical_extended_cap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.product_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.norm_small_factor_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.expanding_pair_contracts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.norm_expanding_factor_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.EndpointTriangleNormKernel.rational_positive_bounded_product_not_multiple' depends on axioms: [propext,
+ Quot.sound]
