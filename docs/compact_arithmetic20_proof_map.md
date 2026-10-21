@@ -2,7 +2,7 @@
 
 The current [manuscript](../manuscripts/compact_arithmetic_dimension_bound.tex)
 states the compact arithmetic ceiling20. This map concerns that printed
-scope; the later reviewed written first-type bound18 is not silently
+scope; the later reviewed written arithmetic Coxeter bound17 is not silently
 substituted for its theorem.
 The older21 package remains an essential preserved proof input. The
 noncompact arithmetic ceiling21 and combined finite-volume arithmetic
@@ -18,7 +18,7 @@ companion inputs: the eight-field distinguished-bond obstruction and the
 exact-Q(sqrt2,sqrt5) obstruction. It proves the ground-field determinant
 argument, arbitrary-white principal Schur obstruction and actual angle
 payments, and states the84-triple calculation as an explicit terminating,
-complete exact algorithm with its output. No later18 argument is imported.
+complete exact algorithm with its output. No later bound17 argument is imported.
 
 **SOURCE_COMPLETE; CURRENT_PDF_COMPILED.** The complete translation
 and final field composition pass the

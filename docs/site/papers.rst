@@ -25,7 +25,8 @@ Compact arithmetic: dimension at most 20
 
 The 21-page universal arithmetic edition includes the two necessary internal
 field-closure proofs that were formerly cited from supporting notes. Its
-arithmetic scope uses the stated reflection/first-type criterion. The parked
+quadratic-form model is automatic for arithmetic reflection lattices;
+first type is not an extra restriction on this result. The parked
 field-specific refinements are excluded from this edition and preserved
 separately.
 
@@ -46,7 +47,7 @@ It does not assume arithmeticity.
 * Verification ID: ``compact_farthest_bounds``.
 
 Later reviewed written proofs give general compact dimension at most 19 and
-compact arithmetic first-type dimension at most 17. Their
+compact arithmetic Coxeter dimension at most 17. Their
 :download:`global composition <../../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md>`
 is supporting research. Those bounds are not theorems of the current 23 and 20
 PDFs. A future integration belongs in these same two paper families.

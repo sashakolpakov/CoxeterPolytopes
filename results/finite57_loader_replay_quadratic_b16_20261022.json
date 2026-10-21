@@ -1,0 +1,70 @@
+{
+  "worker_sha256": "9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15",
+  "fixed_pins": {
+    "scripts/fresh_b13_endpoint_retention_20261018.py": "5d0a782872fbb8270fea1706d95bfbf072d46c8f8a99cdae9a62330ac9cb9d53",
+    "results/fresh_b13_endpoint_retention_20261018.json": "2bb463c567b393d7c95f211f8199c013bc0c34716a4dc98c98251fad7db2b2da",
+    "scripts/fresh_d17_a16_coupled_ambient58_frontier_20261018.py": "7b3f966491b8780e68b64ad6a92a805708c94a1915c14a6085a78c25e20f4d1c",
+    "results/fresh_d17_a16_coupled_ambient58_frontier_20261018.json": "0fb359b3b07d6fbabb31adbf611d769f41ebe855075076301975e086055b1223",
+    "scripts/check_d13_transfer_batches_20261020.py": "be8a42d1d3687204af4d559c6bd8a28779dbfac68aeccdd95d41a7172645d555",
+    "scripts/run_bounded_research_check_20261018.py": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+    "scripts/verify_manuscript.py": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1",
+    "scripts/build_illustrated_ra_manuscript_20261018.py": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15",
+    "scripts/run_lean_batches_signal_safe_20261018.py": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+    "scripts/run_lean_batches_20261018.py": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c"
+  },
+  "jobs": [
+    {
+      "id": "parser",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Only parser; complete equivalence requires all named batches",
+      "exit_code": 0,
+      "elapsed_seconds": 0.197,
+      "stdout_sha256": "ce71a4b2e15ada1112d80fb6153615316c4ad3a314bc631af4b2a3bc922a0c77",
+      "stdout_bytes": 1229,
+      "source_sha256": "9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "PASS_FINITE57_LOADER_BATCH {\"batch\": \"parser\", \"complete_producer_replay_requires_all\": [\"parser\", \"b13:pins-0\", \"b13:pins-1\", \"b13:pins-2\", \"b13:pins-3\", \"b13:metadata\", \"b13:support\", \"b13:repairs\", \"b13:literal\", \"b13:later-0\", \"b13:later-1\", \"b13:later-2\", \"b13:later-3\", \"b13:newer\", \"b13:variants\", \"b13:d12\", \"b13:universal\", \"frontier:pins-0\", \"frontier:pins-1\", \"frontier:pins-2\", \"frontier:pins-3\", \"frontier:metadata\", \"frontier:cover\", \"frontier:increasing\", \"frontier:complement\"], \"details\": {\"mathematical_replay\": false, \"rejected\": 3, \"valid\": 3}, \"worker_sha256\": \"9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15\"}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_finite57_b13_frontier_batches_20261021.py\", \"--verify\", \"--batch\", \"parser\"], \"elapsed_seconds\": 0.139, \"peak_process_tree_rss_bytes\": 60080128, \"initial_resources\": {\"free_disk_gib\": 155.4, \"available_memory_gib\": 6.14}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 650, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "b13:pins-0",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Only b13:pins-0; complete equivalence requires all named batches",
+      "exit_code": 0,
+      "elapsed_seconds": 14.238,
+      "stdout_sha256": "75083f0dcb2ba7e489c293e0d122018b019f91a8320acee49ed7d328cd9a1200",
+      "stdout_bytes": 1206,
+      "source_sha256": "9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "PASS_FINITE57_LOADER_BATCH {\"batch\": \"b13:pins-0\", \"complete_producer_replay_requires_all\": [\"parser\", \"b13:pins-0\", \"b13:pins-1\", \"b13:pins-2\", \"b13:pins-3\", \"b13:metadata\", \"b13:support\", \"b13:repairs\", \"b13:literal\", \"b13:later-0\", \"b13:later-1\", \"b13:later-2\", \"b13:later-3\", \"b13:newer\", \"b13:variants\", \"b13:d12\", \"b13:universal\", \"frontier:pins-0\", \"frontier:pins-1\", \"frontier:pins-2\", \"frontier:pins-3\", \"frontier:metadata\", \"frontier:cover\", \"frontier:increasing\", \"frontier:complement\"], \"details\": {\"nested_pin_group\": 0}, \"worker_sha256\": \"9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15\"}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_finite57_b13_frontier_batches_20261021.py\", \"--verify\", \"--batch\", \"b13:pins-0\"], \"elapsed_seconds\": 14.154, \"peak_process_tree_rss_bytes\": 150093824, \"initial_resources\": {\"free_disk_gib\": 153.04, \"available_memory_gib\": 6.61}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 620, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15\", \"lock_owner\": \"wrapper\"}\n"
+    },
+    {
+      "id": "b13:pins-1",
+      "kind": "script",
+      "status": "DEFERRED_RESOURCE_GATE",
+      "coverage": "Only b13:pins-1; complete equivalence requires all named batches",
+      "exit_code": 1,
+      "elapsed_seconds": 0.073,
+      "stdout_sha256": "1a81d26c90d134a3c101aa01cf30d1bc158251e262c8df3bdf6df1023e94be4c",
+      "stdout_bytes": 675,
+      "source_sha256": "9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "failure_tail": "Traceback (most recent call last):\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py\", line 59, in main\n    before = safe.resources()\n  File \"/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py\", line 53, in resources\n    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '\n                       f'memory={memory/GIB:.1f}GiB; '\n                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')\nRuntimeError: Resource gate: disk=153.0GiB memory=4.6GiB; require 40/6GiB\n"
+    },
+    {
+      "id": "b13:pins-1",
+      "kind": "script",
+      "status": "PASS_DECLARED_SCOPE",
+      "coverage": "Only b13:pins-1; complete equivalence requires all named batches",
+      "exit_code": 0,
+      "elapsed_seconds": 20.462,
+      "stdout_sha256": "62230cac5ecfeb5dcb6256ef8ac93aad2bd37ab5df41c22cd8230bfca72293e2",
+      "stdout_bytes": 1206,
+      "source_sha256": "9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15",
+      "execution_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+      "output": "PASS_FINITE57_LOADER_BATCH {\"batch\": \"b13:pins-1\", \"complete_producer_replay_requires_all\": [\"parser\", \"b13:pins-0\", \"b13:pins-1\", \"b13:pins-2\", \"b13:pins-3\", \"b13:metadata\", \"b13:support\", \"b13:repairs\", \"b13:literal\", \"b13:later-0\", \"b13:later-1\", \"b13:later-2\", \"b13:later-3\", \"b13:newer\", \"b13:variants\", \"b13:d12\", \"b13:universal\", \"frontier:pins-0\", \"frontier:pins-1\", \"frontier:pins-2\", \"frontier:pins-3\", \"frontier:metadata\", \"frontier:cover\", \"frontier:increasing\", \"frontier:complement\"], \"details\": {\"nested_pin_group\": 1}, \"worker_sha256\": \"9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15\"}\n{\"status\": \"PASS_BOUNDED_RESEARCH_CHECK\", \"command\": [\"scripts/check_finite57_b13_frontier_batches_20261021.py\", \"--verify\", \"--batch\", \"b13:pins-1\"], \"elapsed_seconds\": 20.269, \"peak_process_tree_rss_bytes\": 130203648, \"initial_resources\": {\"free_disk_gib\": 134.64, \"available_memory_gib\": 6.24}, \"wall_limit_seconds\": 59, \"rss_limit_bytes\": 1073741824, \"threads\": 1, \"stdout_bytes\": 620, \"runner_sha256\": \"4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132\", \"checker_sha256\": \"9052f571ed8642e7fa15d02cf6727e10362e8b1d51ebd3d4a12f9953e551eb15\", \"lock_owner\": \"wrapper\"}\n"
+    }
+  ],
+  "status": "INCOMPLETE"
+}

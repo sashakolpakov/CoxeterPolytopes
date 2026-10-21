@@ -1,6 +1,6 @@
 # Six papers, with separation by proof method
 
-21 October 2026. There are **six current papers**, complete at their stated input boundaries, with matching PDFs. The arithmetic20 paper now supplies its two formerly Markdown-only nongolden field proofs and a shared six-root figure: its current PDF is21 pages with zero warnings. Its17-page predecessor is preserved. The other five editions are unchanged. The 33 TeX files under `manuscripts/` include their predecessors,
+21 October 2026. There are **six current papers**, written, compiled and internally reviewed at their stated input boundaries, with matching PDFs. This does not mean complete computational replay or full geometric Lean verification. The arithmetic20 paper now supplies its two formerly Markdown-only nongolden field proofs and a shared six-root figure: its current PDF is21 pages with zero warnings. Its17-page predecessor is preserved. The other five editions are unchanged. The 33 TeX files under `manuscripts/` include their predecessors,
 supporting notes, three generated atlases and input fragments. A third-party
 TeX source under `data/external/` is outside that count. The
 [catalogue](../manuscripts/catalogue.json) records the individual roles.
@@ -27,11 +27,10 @@ an earlier research report. Their substantially different geometric
 reductions justify two papers for now. The compact farthest-vertex method
 is a different proof and deserves its own paper.
 
-The current written compact bounds are now20 in general and18 in the
-arithmetic first-type case over all admissible fields. The
-[general20 composition](../results/compact20_and_all_field_arithmetic19_global_composition_candidate_20261021.md)
-and [arithmetic18 composition](../results/compact_arithmetic_dimension18_global_composition_20261021.md),
-with their full root/outside-author reviews, do not change the source/PDF stages
+The current written compact bounds are nineteen in general and seventeen
+for arithmetic Coxeter polytopes over every actual admissible field. The
+[global composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md),
+with its full root/outside-author reviews, does not change the source/PDF stages
 listed above:23/general and20/arithmetic. Integrate into the SAME two
 paper families. The prior [compact21 integration plan](../results/compact21_existing_manuscript_integration_plan_20261021.md)
 remains useful historical source mapping, but its terminal target is
@@ -43,24 +42,25 @@ dual interpolation and the summed-foot inequality once, with explicit
 scope. The general proof then separates into ordinary components,
 large-A paired pressures and B/D prefix/terminal pressures. Its final
 rank ledger must include every spectator debit and the complete whole
-D21 closure. The arithmetic proof adds a visibly marked hypothesis at
+D20 closure. The arithmetic proof adds a visibly marked hypothesis at
 the point where cyclic integrality and nonphysical conjugate positivity
 restrict the possible caps. Norm/trace bounds and time-line square
-classes then give the stronger packing and A16/A17 results, followed by
-whole D20 and D19 exclusions. The D19 actual-field reduction is
-rank-specific; it supplies no quadraticity statement at rank18.
+classes then give the stronger packing and A-component results. The
+terminal whole-D18 proof needs its own actual-field reduction and complete
+degree-two, degree-three and degree-four arguments. A field reduction
+proved at a higher rank cannot silently replace these rank-specific steps.
 A shared geometric theorem may be cited with a precise companion-proof
 reference; it must not silently become an external established fact.
 
 The arithmetic source's existing angle-payment20 proof is a different
 method. Its complete reviewed edition must be preserved when preparing
-the stronger18 successor. Do not retain its full old proof and then
+the stronger seventeen successor. Do not retain its full old proof and then
 append an unrelated long research dump. The new arithmetic exposition
-should explain the first-type criterion, cap inventory, packing and
+should explain the automatic admissible quadratic-form model, cap inventory, packing and
 same-vector final rank argument in that order. All small algebraic
 lists need stated completeness proofs; the new handwritten rational
 and quadratic-field tables are not unexplained script outputs. Current
-Lean accounting for23/20 must never be advertised as verification of20/18.
+Lean accounting for23/20 must never be advertised as verification of19/17.
 
 ## Order of exposition
 

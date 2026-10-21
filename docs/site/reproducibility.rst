@@ -11,7 +11,7 @@ no proof child. Use the paper IDs on :doc:`papers`.
 
 The second command is an inventory only. **Keep** ``--plan`` on finite57's full
 selection until the two eager loaders have complete bounded replacements and
-the catalogue has been updated. The current replacement has 2 of 25 actual
+the catalogue has been updated. The current replacement has 3 of 25 actual
 PASS units; a partial ledger is not a successful full replay.
 
 Data and environment

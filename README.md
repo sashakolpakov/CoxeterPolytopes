@@ -14,15 +14,18 @@ The repository is [sashakolpakov/CoxeterPolytopes](https://github.com/sashakolpa
 
 ## Papers
 
-All six editions are complete at their stated published-input,
-companion-theorem and finite-data boundaries, with matching PDFs.
+All six editions are **written, compiled and internally reviewed**, with
+matching PDFs. This describes manuscript preparation at the stated
+published-input, companion-theorem and finite-data boundaries. It does
+not mean complete computational replay, external refereeing or full
+geometric verification in Lean; the remaining obligations are listed below.
 
 | Paper | Result in the PDF | Read | Source |
 | --- | --- | --- | --- |
 | General finite volume | Dimension at most **57** | [PDF, 48 pages](manuscripts/build/finite_volume57.pdf) | [TeX](manuscripts/finite_volume57.tex) |
 | Sharp right-angled dimensions | At most **8** in finite volume and **4** if entirely ideal; both sharp | [PDF, 5 pages](manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf) | [TeX](manuscripts/right_angled_sharp_dimension_bounds_publication.tex) |
 | General compact | Dimension at most **23** | [PDF, 36 pages](manuscripts/build/compact_farthest_vertex_bounds.pdf) | [TeX](manuscripts/compact_farthest_vertex_bounds.tex) |
-| Compact arithmetic, first type | Dimension at most **20** | [PDF, 21 pages](manuscripts/build/compact_arithmetic_dimension_bound.pdf) | [TeX](manuscripts/compact_arithmetic_dimension_bound.tex) |
+| Compact arithmetic Coxeter | Dimension at most **20** | [PDF, 21 pages](manuscripts/build/compact_arithmetic_dimension_bound.pdf) | [TeX](manuscripts/compact_arithmetic_dimension_bound.tex) |
 | Ideal right-angled four-volume and structure | Published minimum, second volume and its unique double, restricted 24-cell chains | [PDF, 17 pages](manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf) | [TeX](manuscripts/ideal_ra4_volume_and_structure_publication.tex) |
 | Compact right-angled four-volume constraints | Facet capacity, excess inequalities and recognition results | [PDF, 14 pages](manuscripts/build/compact_ra4_volume_constraints.pdf) | [TeX](manuscripts/compact_ra4_volume_constraints.tex) |
 
@@ -31,19 +34,28 @@ of essential proof and algorithm appendices. Each paper’s proof map is
 linked from the [reader’s index](manuscripts/README.md).
 
 Later internally reviewed written proofs lower the general compact
-ceiling to **19** and the compact arithmetic first-type ceiling to **17**
+ceiling to **19** and the compact arithmetic Coxeter ceiling to **17**
 over every actual admissible field. Those stronger proofs are supporting
 research in the same two paper families; they are **not yet theorems of
 the PDFs stating 23 and 20**. The [global composition](results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md)
 and [comparison guide](docs/current_bounds_and_verification.md) give their
 precise hypotheses and review records. General finite volume remains 57.
 
-The [latest accepted supporting batch](results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
-also excludes general B18+actual-I and arithmetic A11+actual-I+(A5 or D5).
-Five general nineteen and seven arithmetic seventeen groups remain
-necessary possibilities; these are not realized examples. The batch's
-[result and evidence map](results/publication_b18_a11_batch_evidence_map_20261021.md)
-separates these exclusions from three restricted geometric continuations.
+The admissible quadratic-form model, also called arithmetic of first or
+simplest type, is automatic for arithmetic hyperbolic reflection lattices.
+It is not an additional restriction on the arithmetic Coxeter results.
+The [external-input register](docs/manuscript_assumptions.md#arithmetic-reflection-groups-and-the-quadratic-form-model)
+records this published reduction and its references.
+
+The [latest accepted supporting batch](results/whole_b19_exclusion_acceptance_20261022.json)
+closes arithmetic B16+I and B15 with either actual typed-seven defect.
+Five arithmetic seventeen groups remain. The complete B19 exclusion
+leaves two general nineteen groups: whole A19 and D19. Its proof first
+reduces the last long wall to two possibilities, then excludes each by
+an actual-wall comparison and one legally paid prefix reference.
+These are necessary possibilities, not realized examples. Complete
+arguments and source-bound reviews are linked in the receipt; global
+ceilings remain unchanged.
 
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled
@@ -57,6 +69,15 @@ of infinite order. The [proof](results/compact_h9_prime79_two_actual_d9_germ_per
 has full internal reviews and separate exact execution records. Its actual-germ
 and arithmetic-covolume inputs are explicit; no field, form-class, other
 lattice or infinite-family exclusion follows.
+
+The distinct golden norm239 lattice now has three reviewed actual edges:
+its unique first binary edge reaches a full finite E8+A1 germ, and
+the next transverse edge reaches E7+I2(5), and the following edge reaches
+E7+A2. The [third-edge proof](results/compact_h9_prime239_second_h2_edge_first_wall_and_e7_a2_germ_candidate_20261022.md)
+states the complete finite algorithm and its actual output. Its twenty
+bounded units and separate combination check all passed. These are
+construction steps within the full reflection arrangement; chamber
+completion and finite volume remain open.
 
 ## What “verified” means here
 
@@ -76,7 +97,7 @@ The repository keeps four kinds of evidence separate:
 
 For finite57, matching bounded records cover **111 of 113 selected script
 commands**. Two legacy eager loaders still need replacement in the full
-selection; their reviewed 25-unit replacement has **2 of 25 actual PASS
+selection; their reviewed 25-unit replacement has **3 of 25 actual PASS
 records**. There is no combined full-manuscript runtime PASS. See the
 [finite57 reproduction guide](docs/finite_volume57_reproduce.md).
 
@@ -112,6 +133,14 @@ using only standard axioms and no `sorryAx`. It verifies the conditional
 second-orbit cutoff and restricted Schur/rank algebra. Actual finite-order
 averaging, chamber/lattice geometry and arithmetic interpretation remain
 written inputs; it is not a complete geometric formalization.
+
+Two further small kernels now have bounded compilation and separate actual
+axiom audits: [D18 centre scalars](results/lean_d18_centre_verification_20261022/manifest.json)
+has **five declarations**, and [cubic B16 logic](results/lean_cubic_b16_short_cap_verification_20261022/manifest.json)
+has **six**. Only standard axioms occur. Their field, geometric and actual
+reference-applicability premises remain explicit; the preparation headers
+are preserved as historical source bytes. Each audit retains one harmless
+unused-variable warning.
 
 ## Large research inputs
 

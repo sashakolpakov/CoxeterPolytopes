@@ -25,7 +25,7 @@ The :doc:`verification status <verification>` keeps those distinctions explicit.
    * - General compact
      - 23
      - 19; supporting proof, not in the 23 PDF
-   * - Compact arithmetic, first type
+   * - Compact arithmetic Coxeter
      - 20
      - 17 over every actual admissible field; not in the 20 PDF
    * - Right-angled finite volume
@@ -39,13 +39,16 @@ The other two papers concern ideal and compact right-angled polytopes in
 dimension four. The compact volume minimum and second-volume problems remain
 open. No new higher-dimensional example is claimed here.
 
-The latest supporting written batch excludes one more general compact
-forest and one more arithmetic forest, leaving five necessary groups in
-dimension nineteen and seven in dimension seventeen. This does not lower
+The latest supporting written batches exclude arithmetic B16+I and B15
+with either actual typed-seven defect, and the entire general B19 forest,
+leaving two necessary groups
+in dimension nineteen and five in dimension seventeen. This does not lower
 either ceiling. Its `acceptance and full review bindings
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/b18_a11_and_restricted_continuations_acceptance_20261021.json>`_
-separate those exclusions from restricted cusp, local-tail and lattice
-construction results. The six compiled editions remain unchanged.
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/whole_b19_exclusion_acceptance_20261022.json>`_
+also record the complete B19 exclusion, a third actual norm239
+edge with full E7+A2 germ, and eleven actual Lean declarations in two
+small conditional kernels. Chamber completion remains open. The six compiled editions
+remain unchanged.
 
 .. toctree::
    :maxdepth: 2

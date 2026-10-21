@@ -39,8 +39,11 @@ PASS (0.139s,60,080,128B) in the
 The [post-finishing successor ledger](../results/finite57_loader_replay_post_finishing_20261021.json)
 reuses that preserved parser receipt and adds the actual `b13:pins-0`
 PASS:14.154s and150,093,824B. The next unit was refused at4.6GiB available
-RAM before a child started. Two of25 units have runtime PASS records;
-23 remain without one. This prepared replacement is not yet the
+RAM before a child started. The [next successor ledger](../results/finite57_loader_replay_quadratic_b16_20261022.json)
+preserves all those records and adds the actual `b13:pins-1` PASS:
+20.269s and130,203,648B, after admission at6.24GiB available RAM.
+Three of25 units have runtime PASS records;22 remain without one.
+The next unit is `b13:pins-2`. This prepared replacement is not yet the
 catalogue selection, and neither producer has a new complete runtime PASS.
 Its exact conjunction and assumptions are in the
 [replacement contract](finite_volume57_lemma_map.md#prepared-bounded-b13-and-actual-frontier-replacement).

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py", line 48, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_signal_safe_20261018.py", line 44, in main
+    base.main()
+    ~~~~~~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py", line 334, in main
+    batch(module)
+    ~~~~~^^^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py", line 279, in batch
+    result = guarded_run(command)
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py", line 220, in guarded_run
+    before, parent = resources(), os.getppid()
+                     ~~~~~~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py", line 53, in resources
+    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '
+                       f'memory={memory/GIB:.1f}GiB; '
+                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')
+RuntimeError: Resource gate: disk=134.7GiB memory=5.9GiB; require 40/6GiB

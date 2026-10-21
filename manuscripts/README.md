@@ -1,7 +1,9 @@
 # Six papers: reading and verification
 
-These are the six TeX papers prepared for audit. All six sources are
-complete at their stated input boundaries, with matching compiled PDFs.
+These are the six TeX papers prepared for audit. All six are **written,
+compiled and internally reviewed**, with matching PDFs at their stated
+input boundaries. This is a manuscript status, not a claim of complete
+computational replay, external refereeing or full geometric Lean verification.
 The arithmetic paper now includes two necessary field proofs previously
 cited only from research notes; its completed 21-page PDF replaces the
 preserved 17-page predecessor. The other 27 TeX files are preserved predecessors,
@@ -104,11 +106,11 @@ some transitive finite-data inputs remain assumed. The new
 [bounded low8 replay](../results/finite57_audit_edition_low8_bounded_replay_20261021.json)
 passes all2,552 cusp profiles. Matching bounded records now cover111/113
 selected script commands. The two eager commands still await replacement
-in the selection. Their reviewed25-unit bounded replacement now has two
-actual PASS records (parser and the first B13 pin group); the next unit
-was resource-deferred before launch. The
-[successor ledger](../results/finite57_loader_replay_post_finishing_20261021.json)
-preserves that partial status; it is not a complete replay. These
+in the selection. Their reviewed25-unit bounded replacement now has three
+actual PASS records (parser and the first two B13 pin groups). The
+[successor ledger](../results/finite57_loader_replay_quadratic_b16_20261022.json)
+preserves the earlier resource refusal and records the later successful
+second pin group; it is not a complete replay. These
 execution boundaries do not alter the stated theorem.
 The sharp right-angled
 package has exact algebra/model checks and selected conditional Lean

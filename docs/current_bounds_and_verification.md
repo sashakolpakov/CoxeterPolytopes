@@ -1,7 +1,9 @@
 # Dimension bounds and verification
 
-Updated 21 October 2026. There are six finished TeX papers, each with a
-matching PDF. Parked arithmetic refinements are excluded and preserved.
+Updated 22 October 2026. There are six TeX papers, each **written,
+compiled and internally reviewed**, with a matching PDF. This manuscript
+status does not imply complete replay or full geometric Lean verification.
+Parked arithmetic refinements are excluded and preserved.
 Fresh internal mathematical audits found no blocker at the stated
 published-input and finite-data boundaries. This is not external
 refereeing or complete geometric formalization.
@@ -24,10 +26,27 @@ and other-author mathematical reviews, plus one actually executed norm79
 interval. The [previous acceptance](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
 adds the last general A18 companion exclusion, all arithmetic A14 cases,
 and literal norm79 nonreflectivity with separate script and Lean records.
-The [latest acceptance](../results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
+The [previous acceptance](../results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
 excludes general B18+actual-I and arithmetic A11+actual-I+(A5 or D5),
-leaving five and seven necessary groups. It also accepts three restricted
-continuations, with their limits described below. These batches do not
+leaving five and seven necessary groups at that checkpoint. The
+[previous acceptance](../results/d18_exclusion_b16_reduction_and_prime239_first_edge_acceptance_20261021.json)
+also excludes general D18+actual-I, narrows the arithmetic B16+I short
+opposite, and accepts a restricted quadrilateral theorem and the literal
+norm239 first binary edge, leaving four and seven necessary groups.
+The [previous acceptance](../results/d17_typed7_cubic_b16_and_prime239_transverse_acceptance_20261022.json)
+excludes general D17 with either actual typed-seven defect and the
+entire cubic short-cap branch of arithmetic B16+I, and accepts the next
+norm239 transverse edge with full E7+I2(5) germ. The next
+[accepted batch](../results/quadratic_b16_b19_and_rank_transfer_acceptance_20261022.json)
+closes the quadratic branch and hence the whole B16+I row. The
+[previous acceptance](../results/b15_b19_short4_and_prime239_e7_a2_acceptance_20261022.json)
+also excludes B15 with either actual typed-seven defect, leaving three
+general and five arithmetic necessary groups at that checkpoint. It narrows B19 to one
+last-long wall, accepts the third norm239 edge and records eleven actual
+Lean declarations in two new conditional kernels. The
+[latest acceptance](../results/whole_b19_exclusion_acceptance_20261022.json)
+closes the last B19 wall and hence the whole B19 forest, leaving only
+whole A19 and D19 in general dimension nineteen. These batches do not
 lower a global ceiling. The six-paper writing milestone is complete;
 research has resumed within the existing paper families.
 
@@ -40,9 +59,9 @@ The repository columns report internally reviewed written arguments.
 | --- | ---: | ---: | ---: | --- |
 | Arbitrary finite-volume Coxeter | 21 | 995, Prokhorov | 57 | [57](../manuscripts/build/finite_volume57.pdf), 48 pages |
 | Arbitrary compact Coxeter | 8 | 29, Vinberg | 19 | [23](../manuscripts/build/compact_farthest_vertex_bounds.pdf), 36 pages |
-| Compact arithmetic Coxeter, first type | 8 | 29, Vinberg | 17 | [20](../manuscripts/build/compact_arithmetic_dimension_bound.pdf), 21 pages |
+| Compact arithmetic Coxeter | 8 | 29, Vinberg | 17 | [20](../manuscripts/build/compact_arithmetic_dimension_bound.pdf), 21 pages |
 | Noncompact arithmetic Coxeter | 21 | 21, Esselmann | 21, published and sharp | No separate new paper |
-| Arithmetic compact or noncompact, with the first-type reflection criterion | 21 | 29 overall | 21, sharp as a union | Compact argument plus published noncompact theorem |
+| Arithmetic Coxeter, compact or noncompact | 21 | 29 overall | 21, sharp as a union | Compact argument plus published noncompact theorem |
 | Compact right-angled | 4 | 4, Potyagailo–Vinberg | 4, published and sharp | Background in the right-angled paper |
 | Entirely ideal right-angled | 4 | 6, Kolpakov | 4, sharp | [4](../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf), same 5-page paper |
 | Right-angled with mixed finite/ideal vertices | 8 | 12, Dufour | 8, sharp | [8](../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf), same 5-page paper |
@@ -54,8 +73,15 @@ Noncompact arithmetic dimension twenty is excluded by the published
 classification; its sharp ceiling twenty-one must not be confused with
 the compact arithmetic problem.
 
+The admissible quadratic-form model is automatic for arithmetic hyperbolic
+reflection lattices: the terms first type and simplest type impose no
+additional restriction here. The
+[external-input register](manuscript_assumptions.md#arithmetic-reflection-groups-and-the-quadratic-form-model)
+states the published reduction used to enter that model. Historical
+source labels retain their original wording and hash bindings.
+
 The new [global composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md)
-proves compact nineteen and arithmetic first-type seventeen. It has
+proves compact nineteen and arithmetic Coxeter seventeen. It has
 full root verification and two outside-author composition reviews:
 [foundations](../results/review_compact19_arithmetic17_global_composition_foundations_reviewer_20261021.md)
 and [second review](../results/review_compact_dimension19_arithmetic17_global_composition_second_full_scope_20261021.md).
@@ -70,7 +96,7 @@ seventeen results belong in those same two paper families when integrated.
 
 | Paper | Written audit | Reproduction and formal boundary |
 | --- | --- | --- |
-| Finite volume 57 | [Fresh full composition audit](../results/review_finite57_geometric_composition_new_audit_20261021.md); no blocker at named finite-input boundaries | Matching bounded records cover 111/113 selected script commands. The reviewed 25-unit replacement for two eager commands has **2 PASS, 23 without PASS**. There is no combined 123-job full replay or complete transitive regeneration. Conditional Lean checks selected counting, table and scalar implications. |
+| Finite volume 57 | [Fresh full composition audit](../results/review_finite57_geometric_composition_new_audit_20261021.md); no blocker at named finite-input boundaries | Matching bounded records cover 111/113 selected script commands. The reviewed 25-unit replacement for two eager commands has **3 PASS, 22 without PASS**. There is no combined 123-job full replay or complete transitive regeneration. Conditional Lean checks selected counting, table and scalar implications. |
 | Sharp right-angled 8/ideal 4 | Fresh [geometry](../results/review_sharp_ra_geometric_foundations_adversarial_20261021.md) and [tensor/equality](../results/review_sharp_ra_tensor_ideal_equality_adversarial_20261021.md) audits | Exact core checks and selected conditional Lean have actual successful runs. Coordinate projection, height and cubic identities are formalized; published bounds and actual geometric interfaces remain explicit premises. |
 | Compact arithmetic PDF 20 | Full exposition/field-closure reviews and [completed internal-field proof review](../results/review_compact_arithmetic20_internal_field_translation_foundations_20261021.md) | Its matching 21-page build has zero warnings. Accounting and finite checks keep their declared scopes; this is not formal verification of the later seventeen theorem. |
 | General compact PDF 23 | [Full source review](../results/review_compact_farthest23_full_batch_guard_20261020.md), with source-bound editorial delta review | Matching 36-page build has zero warnings. The compiled accounting kernel retains twenty-three; actual geometric inequalities and later nineteen remain outside that kernel. |
@@ -79,9 +105,10 @@ seventeen results belong in those same two paper families when integrated.
 
 The finite57 [reproduction guide](finite_volume57_reproduce.md) records
 all completed bounded replacements and the still-unintegrated loader.
-Its immutable [partial successor ledger](../results/finite57_loader_replay_post_finishing_20261021.json)
-preserves the parser and first B13 pin-group PASS, and the next group’s
-resource refusal before a child started. Resume in a new ledger; never
+Its immutable [partial successor ledger](../results/finite57_loader_replay_quadratic_b16_20261022.json)
+preserves the parser and first two B13 pin-group PASS records, including
+the second group's earlier resource refusal before its later successful run.
+Resume with `b13:pins-2` in a new ledger; never
 replace this partial receipt with a completion claim.
 
 Recent actual Lean additions include the
@@ -118,6 +145,15 @@ zero credit. It derives the second-orbit cutoff, the golden comparison,
 and restricted large-D Schur/rank implications. Actual averaging/Cauchy
 realization, full wall germs, original-lattice preservation, arithmetic
 covolume and Gram/rank interpretation remain written application inputs.
+
+Two further small kernels now have actual bounded compilation and separate
+axiom-audit PASS records: [D18 centre scalars](../results/lean_d18_centre_verification_20261022/manifest.json)
+has five declarations, and [cubic B16 arithmetic/energy logic](../results/lean_cubic_b16_short_cap_verification_20261022/manifest.json)
+has six. Only standard axioms occur; neither uses `sorryAx`. Each has one
+preserved unused-variable warning. Their unchanged source headers and logic
+maps retain their original preparation status; these execution receipts
+record the later successful verification. Actual geometry, arithmetic-field
+and exhaustive-cap applicability remain explicit premises.
 
 ## Recent dimension proofs and next work
 
@@ -218,35 +254,76 @@ The complete reduced necessary lists are now:
 | General compact nineteen: dominant | Entire remaining spectator alternatives |
 | --- | --- |
 | A19 | none |
-| B19 | none |
-| D17 | either typed7 |
-| D18 | I |
 | D19 | none |
 
-| Arithmetic first-type seventeen: dominant | Entire remaining spectator alternatives |
+| Arithmetic Coxeter seventeen: dominant | Entire remaining spectator alternatives |
 | --- | --- |
 | A17 | none |
-| B15 | either typed7 |
-| B16 | I |
 | B17 | none |
 | D15 | either typed7 |
 | D16 | ordinary A1 or actual I |
 | D17 | none |
 
 Here T2 and T3 are irreducible ordinary components, and I/typed7 retain
-their actual-wall definitions. There are five and seven grouped rows,
+their actual-wall definitions. There are two and five grouped rows,
 respectively. These necessary lists make no realization claim. The
-[latest checkpoint](../results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
-binds the full reviews and exact subtraction of the B18 and A11 rows
-from the preceding six/eight-row lists. It preserves the six printed editions.
+[latest checkpoint](../results/whole_b19_exclusion_acceptance_20261022.json)
+binds the full reviews and subtraction of exactly whole B19. The previous
+batches removed arithmetic B15+either typed7 and B16+I. Earlier batches removed general
+D18+I and D17+either typed7. All other necessary groups and the six
+printed editions are preserved.
 The bounds still leave gaps of eleven and nine above the known compact
 example dimension eight. No new polytope example has been found.
 
-For the remaining D18+I row, a new
-[local tail proof](../results/compact_d18_isolated_i_fresh_tail_and_stronger_joint_barrier_20261021.md)
-establishes a stronger rank-free I barrier and complete pure-helper
-coverage through index fifteen. It leaves the center/forks and whole
-forest exclusion open; that row remains in the table.
+The [complete D18+I proof](../results/compact19_d18_isolated_i_complete_centre_and_head_exclusion_candidate_20261021.md)
+extends the earlier local tail proof through every center and head case.
+A continuous all-label inequality and a shifted mixed-I payment close
+the tight center rows. Every point uses actual D18 normals, including
+both forks; no virtual short normal is introduced. The row is now closed.
+
+The [complete D17+typed7 proof](../results/compact19_d17_typed_seven_fresh_centre_exclusion_candidate_20261021.md)
+recomputes every tail and centre case at rank seventeen. Its two actual
+rank-two defects have different foreign-contact lists, but both pay
+energy greater than .09. Pure component pressures and one final paid
+reference exclude both alternatives. Whole A19 and D19 remain after
+the later B19 exclusion below.
+
+For the now-excluded arithmetic B16+I row, the
+[short-opposite reduction](../results/arithmetic17_b16_actual_i_short_opposite_isolation_and_degree_restriction_20261021.md)
+excludes all six nonisolated white roles. A surviving short cap must be
+isolated and dotted. The new
+[cubic polynomial argument](../results/arithmetic17_b16_isolated_cubic_cap_unique_polynomial_candidate_20261021.md)
+forces a unique cubic field and integral basis. The complete
+[actual-I strip and energy proof](../results/arithmetic17_b16_isolated_cubic_cap_actual_i_strip_exclusion_candidate_20261021.md)
+then excludes that entire cubic branch. The complete
+[quadratic proof](../results/arithmetic17_b16_quadratic_short_cap_actual_i_and_head_exclusion_candidate_20261022.md)
+derives all fourteen short-cap and sixteen actual-I possibilities,
+excludes positive foreign contacts and treats every actual long head.
+Its minimum final norm estimate is1.00026. Full root and outside-author
+reviews accept the whole-row exclusion. No relative I-root length class
+or unexecuted field census is assumed.
+
+The [B15+typed7 proof](../results/arithmetic17_b15_typed_seven_long_head_exclusion_candidate_20261022.md)
+instead avoids the short opposite. The actual defect forces the cubic-seven
+field and energy greater than.09; a fresh prefix reference and complete
+pure/mixed long-head analysis give total norm at least1.00069125. Both
+typed defects are excluded, with their different actual-wall definitions
+retained. This has full root and other-author reviews.
+
+The [complete B19 two-wall reduction](../results/compact_whole_b19_two_terminal_wall_reduction_foundations_20261022.md)
+and its [short4 exclusion](../results/compact_whole_b19_short_four_terminal_fresh_index17_exclusion_foundations_20261022.md)
+first leave only last-long own3/short3, with an isolated native5 long head.
+The latter proof audits every cap at one newly improved index17 floor,
+pools the terminal slopes to preserve concavity, and uses the same cap's
+actual short19 endpoint. Its single-vector total is1.00017135845.
+The [final short3 proof](../results/compact_whole_b19_short_three_terminal_fresh_index17_exclusion_foundations_20261022.md)
+audits every cap at a new single-index loss.50. It retains the possible
+orthogonal dotted cap, uses actual mutual-product gaps for every other
+role, and pools the last slopes before lifting the endpoint. One original
+reference gives total1.00111946. Full root and other-author reviews
+accept the corrected proof and its conjunction with the two-wall reduction.
+Both alternatives are excluded, so the whole B19 group is now removed.
+This leaves whole A19 and D19, without lowering the global ceiling19.
 
 For finite volume, the [complete Context662 composition](../results/finite57_complete_context662_source_composition_20261021.md)
 finances this one selected producer over all whole-parent domains.
@@ -276,6 +353,14 @@ Its complete reserved surpluses are 74 and 280. This is a restricted
 replacement allocation, with no reduction of the formal maximum 372
 or the dimension ceiling 57.
 
+A [new actual-quadrilateral restriction](../results/finite57_heavy_rank_transfer_quadrilateral_local_discharge_20261021.md)
+shows that the specified long-leaf transfer between two charge372
+forests forces a third corner of charge at most357.125. The
+[stronger six-orientation proof](../results/finite57_rank_transfer_all_active_attachments_gap_exclusion_candidate_20261022.md)
+lowers that charge to353.640625 under exactly the same actual-face
+hypotheses, with complete root and other-author reviews. A global
+routing and multiplicity bound is still missing; the maximum372 remains.
+
 The [literal norm79 host](../results/compact_h9_nonunit_coupling_prime79_full_base_and_first_transverse_20261021.md)
 is now proved nonreflective at its accepted actual-germ and admissible-arithmetic
 boundaries. The earlier 38,784-trial interval found the asymmetric A9-7
@@ -300,8 +385,23 @@ The [good-prime odd golden-glue extension](../results/golden_odd_glue_full_base_
 proves that a broader literal lattice family has the entire actual
 Bugaenko base. An all-divisor collar and the explicitly inherited analytic
 upper bound give a finite necessary host reduction, which was not run.
-The distinct norm239 lattice has this starting geometry; its next actual
-edge and finite-volume completion remain open. This is not a new example.
+The distinct norm239 lattice has this starting geometry. Its
+[first binary edge](../results/compact_h9_prime239_full_base_and_first_binary_edge_candidate_20261021.md)
+is proved by complete six/five-row hand enumeration, with unique norm2
+mirror and full finite E8+A1 germ. The
+[next transverse edge](../results/compact_h9_prime239_first_e7_golden_transverse_edge_candidate_20261021.md)
+now has a complete five-profile first-simple-wall proof and full finite
+E7+I2(5) endpoint. The [third-edge proof](../results/compact_h9_prime239_second_h2_edge_first_wall_and_e7_a2_germ_candidate_20261022.md)
+identifies a unique original norm2 mirror and full E7+A2 endpoint.
+Its complete finite algorithm and actual325,636 scalar trials are
+documented as mathematical statements. All twenty units and the separate
+combine have actual bounded PASS records in the
+[runtime manifest](../results/prime239_folded_second_edge_runtime_manifest_20261022.json).
+The largest unit took6.579s and used57,950,208B. The full new firstness
+and geometric composition have root and outside-author reviews.
+Original dyadic glue is retained throughout.
+Further chamber completion and finite volume remain open; this is not
+a new example.
 
 ## Ideal and compact right-angled four-volume
 

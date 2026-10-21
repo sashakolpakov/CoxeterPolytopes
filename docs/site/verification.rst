@@ -124,14 +124,36 @@ separates the second-orbit cutoff and restricted Schur/rank algebra from
 actual averaging/Cauchy realization, complete wall germs, original-lattice
 preservation, arithmetic covolume and Gram/rank interpretation.
 
+Two further small Std-only kernels have actual bounded compilation and
+separate axiom-audit PASS records: ``D18CentreScalarKernel`` has five
+declarations (:download:`receipt <../../results/lean_d18_centre_verification_20261022/manifest.json>`),
+and ``CubicB16ShortCapKernel`` has six
+(:download:`receipt <../../results/lean_cubic_b16_short_cap_verification_20261022/manifest.json>`).
+Only standard axioms occur; neither uses ``sorryAx``. The successful
+compilations were reused for their separate audits. Each retains one
+unused-variable warning. Their preparation headers are historical;
+actual geometry, fields, exhaustive coverage and funded-reference
+applicability remain explicit premises.
+
 Latest supporting research
 --------------------------
 
-The :download:`accepted supporting batch <../../results/a14_a18_and_prime79_period_acceptance_20261021.json>`
-removes the remaining general A18 companion and all arithmetic A14 families.
-Six general nineteen and eight arithmetic seventeen groups remain necessary;
-the ceilings and the six printed papers are unchanged. Its restricted
-homogeneous large-D quadrilateral obstruction does not lower charge372.
+The :download:`latest accepted supporting batch <../../results/whole_b19_exclusion_acceptance_20261022.json>`
+completes arithmetic B16+I and B15+either actual typed-seven exclusions,
+and the complete general whole-B19 exclusion, leaving two general nineteen
+and five arithmetic seventeen groups. The global
+ceilings and six printed papers remain unchanged. A restricted
+third-corner estimate is now353.640625, but no complete global allocation
+lowers charge372 or dimension57.
+
+The norm239 construction has three accepted actual edges, ending at
+E8+A1, E7+I2(5) and E7+A2. Its third edge has a complete written
+finite-domain/algorithm proof and twenty actual bounded units plus a
+separate combination check. The
+:download:`runtime manifest <../../results/prime239_folded_second_edge_runtime_manifest_20261022.json>`
+binds every execution and output; firstness and full-germ composition
+have separate complete written reviews. Chamber completion, finite
+volume and a new polytope example remain unproved.
 
 For the literal norm79 construction host, the accepted END0 run checked
 810,436 scalar trials and six profiles, finding six integral mirrors and

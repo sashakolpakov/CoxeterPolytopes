@@ -1,0 +1,123 @@
+{
+  "created_utc": "2026-10-21T23:07:41.182215+00:00",
+  "status": "PASS_COMPILED_AND_SEPARATE_ACTUAL_AXIOM_AUDIT",
+  "module": "CoxeterProofs.CubicB16ShortCapKernel",
+  "source": {
+    "path": "formal/CoxeterProofs/CubicB16ShortCapKernel.lean",
+    "sha256": "ce8b53cafa9cd18a1520545618bb854578d0e740a1c2c23a811fa16ac0901d74",
+    "bytes": 6324
+  },
+  "logic_map": {
+    "path": "docs/cubic_b16_short_cap_kernel_logic_20261022.md",
+    "sha256": "4f680190280224617a239cc9e3ab5f6e5c1f91c0121c9e55a48e03ad6a490181",
+    "bytes": 7034
+  },
+  "source_reviews": [
+    {
+      "path": "results/review_cubic_b16_short_cap_kernel_source_root_20261022.md",
+      "sha256": "3f4468efd5f8c2db3502163a28b0d453ca6b6195ade9bc2159da76b9b0ea224a",
+      "bytes": 3010
+    },
+    {
+      "path": "results/review_cubic_b16_short_cap_kernel_source_replay_reviewer_20261022.md",
+      "sha256": "11420058d6e116d07bf489008aa3c030de045ac590b35f1053c08ebd1463158d",
+      "bytes": 5276
+    }
+  ],
+  "compile_ledger": {
+    "path": "results/lean_cubic_b16_short_cap_verification_20261022/compile_ledger.json",
+    "sha256": "a4d47e0f1a52672625b5c82f840f7526a3a852c099e9809e98706995bf80378d",
+    "bytes": 1520
+  },
+  "actual_axiom_audit_ledger": {
+    "path": "results/lean_cubic_b16_short_cap_verification_20261022/axiom_audit_ledger.json",
+    "sha256": "ae0ed08af8df39e432309bbbe65fbd117421b4b29c36e5d96dc42e6264f990af",
+    "bytes": 1440
+  },
+  "compile_stdout": {
+    "path": "results/lean_cubic_b16_short_cap_verification_20261022/compile.stdout",
+    "sha256": "725154a916259822a9df0e654b0fc7db2b626bf35920fd8ae7643a7e8b441e42",
+    "bytes": 1712
+  },
+  "actual_axiom_audit_stdout": {
+    "path": "results/lean_cubic_b16_short_cap_verification_20261022/axiom_audit.stdout",
+    "sha256": "5630ea67386e39160aa233ad1849077c4ddd9386fd5555859df809a28551565f",
+    "bytes": 2636
+  },
+  "extracted_actual_axiom_output": {
+    "path": "results/lean_cubic_b16_short_cap_verification_20261022/actual_axiom_output.txt",
+    "sha256": "85a3b3541b64f60bd6d632202c7523c6439c7f3cc9fbc922e5bcef9b4d98546b",
+    "bytes": 1042
+  },
+  "actual_declaration_count": 6,
+  "actual_declarations": [
+    {
+      "name": "CoxeterProofs.CubicB16ShortCapKernel.cubic_coefficients_unique",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.CubicB16ShortCapKernel.i_strip_coefficients_unique",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.CubicB16ShortCapKernel.i_height_lower_from_unit",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.CubicB16ShortCapKernel.i_energy_lower_from_height",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.CubicB16ShortCapKernel.paid_reference_norm_margin",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.CubicB16ShortCapKernel.cubic_short_cap_contradiction",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "standard_axioms_only": true,
+  "sorryAx": false,
+  "audit_repeated_compilation": false,
+  "one_module_2048_mib_one_thread": true,
+  "warnings_preserved": 1,
+  "source_headers_and_logic_maps_keep_their_preparation_status_bytes": true,
+  "scope": "Conditional internal integer/ordered-ring deductions at explicit premises. Geometry, actual arithmetic fields/root brackets, complete cap enumeration and actual paid-reference applicability are not discharged. Axiom prints do not inventory theorem parameters.",
+  "runners": [
+    {
+      "path": "scripts/run_lean_batches_signal_safe_20261018.py",
+      "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+      "bytes": 1234
+    },
+    {
+      "path": "scripts/run_lean_batches_20261018.py",
+      "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c",
+      "bytes": 14192
+    }
+  ],
+  "owned_temporary_batch_object_absent": true
+}

@@ -18,7 +18,7 @@ refinements remain excluded and preserved.
 | Result | Primary manuscript and PDF | Main technique and point where cases separate | Verification scope |
 | --- | --- | --- | --- |
 | General finite-volume Coxeter dimension ≤57 | [TeX](../manuscripts/finite_volume57.tex), [48-page PDF](../manuscripts/build/finite_volume57.pdf) | One corner-payment rule and global incidence curvature. Separate finite spherical forests from affine cusp links; then handle dimension 58 and the complete higher-dimensional tail. Twelve main pages, 36 essential proof/algorithm appendices. | [Proof map](finite_volume57_lemma_map.md), [reproduction guide](finite_volume57_reproduce.md), [fresh composition audit](../results/review_finite57_geometric_composition_new_audit_20261021.md). Partial bounded replay and selected conditional Lean; no complete 123-job replay. |
-| Compact arithmetic first-type dimension ≤20 in this PDF; later reviewed written ceiling17 | [TeX](../manuscripts/compact_arithmetic_dimension_bound.tex), [21-page PDF](../manuscripts/build/compact_arithmetic_dimension_bound.pdf) | Angle payments with arithmetic restrictions: actual-field reduction precedes the golden branch and exact charge maximum. The two required nongolden proofs are now included. The later seventeen proof uses farthest-point geometry, arithmetic cycles and exhaustive low-degree norm arguments. | [PDF proof map](compact_arithmetic20_proof_map.md), [later seventeen composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md). Full written source and composition reviews; seventeen is not yet in this PDF or verified by its old accounting kernel. |
+| Compact arithmetic Coxeter dimension ≤20 in this PDF; later reviewed written ceiling17 | [TeX](../manuscripts/compact_arithmetic_dimension_bound.tex), [21-page PDF](../manuscripts/build/compact_arithmetic_dimension_bound.pdf) | Angle payments with arithmetic restrictions: actual-field reduction precedes the golden branch and exact charge maximum. The two required nongolden proofs are now included. The later seventeen proof uses farthest-point geometry, arithmetic cycles and exhaustive low-degree norm arguments. | [PDF proof map](compact_arithmetic20_proof_map.md), [later seventeen composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md). Full written source and composition reviews; seventeen is not yet in this PDF or verified by its old accounting kernel. |
 | General compact dimension ≤23 in this PDF; later reviewed written ceiling19 | [TeX](../manuscripts/compact_farthest_vertex_bounds.tex), [36-page PDF](../manuscripts/build/compact_farthest_vertex_bounds.pdf) | One actual farthest vector supplies the norm budget. Ordinary components separate from large-A paired pressures and B/D coordinate-prefix arguments, followed by the terminal forest ledger. | [Proof map](compact_farthest_vertex_bounds_proof_map_20261020.md), [general nineteen composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md). Full written source and composition reviews; compiled accounting retains twenty-three. |
 | Right-angled dimension ≤8 universally and ≤4 if entirely ideal; both sharp | [TeX](../manuscripts/right_angled_sharp_dimension_bounds_publication.tex), [5-page PDF](../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf) | Shared finite projection and height comparison. The universal branch uses a cubic tensor spherical-code argument; the ideal branch uses the explicitly named Musin/Kolpakov inputs. | [Proof/reproduction map](right_angled_sharp_dimensions_publication_proof_map_20261021.md), fresh [geometry](../results/review_sharp_ra_geometric_foundations_adversarial_20261021.md) and [tensor/equality](../results/review_sharp_ra_tensor_ideal_equality_adversarial_20261021.md) audits. Exact core runs and selected conditional Lean pass; actual geometry remains external. |
 | Ideal RA4 minimum, second volume and unique double; restricted 24-cell chains | [TeX](../manuscripts/ideal_ra4_volume_and_structure_publication.tex), [17-page PDF](../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf) | Defect counting proves the gap and equality spectrum first. Actual sections, cutting, metric recognition and gluing then prove the restricted Oct/D chain theorem and identify the second-volume double. | [Proof map](ideal_ra4_volume_and_structure_proof_map.md), [fresh full audit](../results/review_ideal_ra4_volume_structure_fresh_adversarial_20261021.md). Published minimum is an input. Exact model checks and conditional Lean do not replace the universal geometric proof. |
@@ -67,7 +67,7 @@ premises and separate END0 and two-map execution records. This is a
 literal-module nonreflectivity result, not a field/form-class exclusion,
 new example or additional manuscript; an END8 search is unnecessary.
 
-The [latest written batch](../results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
+The [previous written batch](../results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
 excludes general B18+actual-I and arithmetic A11+actual-I+(A5 or D5),
 leaving five and seven necessary groups. These stay within the same two
 compact paper families. Its
@@ -77,6 +77,49 @@ the full D16 cusp allocation to finite57, and the good-prime odd-glue
 reduction to the construction lane. None is a new manuscript, lower global
 ceiling, realized example or newly executed Lean proof. The unchanged six
 editions retain their stated results and page counts.
+
+The [previous accepted batch](../results/d18_exclusion_b16_reduction_and_prime239_first_edge_acceptance_20261021.json)
+adds the complete general D18+I exclusion, leaving four general19 and
+seven arithmetic17 groups. Its B16 short-opposite reduction refines an
+open arithmetic group rather than removing it. These belong in the two
+existing compact paper families. The restricted cheap-third-corner
+quadrilateral belongs in finite57, and the norm239 first edge belongs
+in the construction lane. All four have complete source-bound written
+reviews; none is an additional manuscript, new global ceiling or example.
+
+The [previous accepted batch](../results/d17_typed7_cubic_b16_and_prime239_transverse_acceptance_20261022.json)
+closes general D17+either actual typed7, leaving only whole A19, B19
+and D19 at nineteen. This is the same general compact prefix/actual-point
+method. Its arithmetic B16+I cubic exclusion adds a complete integral-basis
+strip after the common actual-field reduction, within the arithmetic
+paper family. At that checkpoint the quadratic branch and all seven
+arithmetic groups remained open. The next norm239 edge belongs in construction research,
+not a seventh manuscript. These results have complete source-bound
+written reviews, with no new scientific runtime or Lean credit.
+
+The next [accepted batch](../results/quadratic_b16_b19_and_rank_transfer_acceptance_20261022.json)
+closes that quadratic branch and hence the entire arithmetic B16+I
+forest. The [latest batch](../results/b15_b19_short4_and_prime239_e7_a2_acceptance_20261022.json)
+also excludes B15 with either actual typed7, leaving five arithmetic
+groups. The relative-length cancellation, invariant cycles and complete
+same-field strips belong in the arithmetic compact paper. Its B15
+argument instead uses the actual cubic-seven field and long-head feet.
+
+The necessary B19 reduction and exclusion of its short4 terminal wall
+belong in general compact geometry. The common method is the original
+vector prefix reference; the new branch audits a smaller loss at one
+index and pools slopes before raising its floor. The
+[final accepted short3 exclusion](../results/whole_b19_exclusion_acceptance_20261022.json)
+then closes the whole B19 forest through a fresh loss.50 audit at that
+same index. These are parts of one coherent general compact argument,
+not separate manuscripts. Whole A19 and D19 remain.
+The stronger353.640625 restricted third-corner bound belongs
+in finite57, with the global allocation still open. None adds a manuscript.
+
+The third norm239 edge belongs in construction research. Its proof states
+the complete finite domain, algorithm, termination and firstness argument,
+then the actual twenty-unit output and direct original-coordinate check.
+It proves a full E7+A2 germ, not chamber completion or a polytope example.
 
 The ideal RA4 paper already follows the requested sequence: the published
 minimum, the universal gap and equality reduction, the restricted
@@ -94,11 +137,12 @@ a list of filenames or a saved PASS cannot establish coverage.
 The [computational proof contract](computational_proof_contract.md)
 and each paper’s proof map record those obligations.
 
-Finite57’s 25-unit loader replacement is reviewed but has only two actual
-PASS records, with the next unit refused for RAM before launch. Its old
+Finite57’s 25-unit loader replacement is reviewed but has only three actual
+PASS records. The second B13 pin group passed after its preserved earlier
+RAM refusal. Its old
 full selection remains an inventory until the replacement is completed
 and integrated. Do not run its eager commands as though the entire plan
-were memory-safe. The [partial ledger](../results/finite57_loader_replay_post_finishing_20261021.json)
+were memory-safe. The [partial ledger](../results/finite57_loader_replay_quadratic_b16_20261022.json)
 is immutable; resume in a new ledger. There is no combined full-replay claim.
 
 Selected Lean kernels prove internal implications with external theorem,

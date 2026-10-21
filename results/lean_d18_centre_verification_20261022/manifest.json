@@ -1,0 +1,125 @@
+{
+  "created_utc": "2026-10-21T23:07:41.179031+00:00",
+  "status": "PASS_COMPILED_AND_SEPARATE_ACTUAL_AXIOM_AUDIT",
+  "module": "CoxeterProofs.D18CentreScalarKernel",
+  "source": {
+    "path": "formal/CoxeterProofs/D18CentreScalarKernel.lean",
+    "sha256": "998ae907c17886fd0c72a7bce74ce36126d128b6e51453966982025410cc9eb6",
+    "bytes": 3568
+  },
+  "logic_map": {
+    "path": "docs/d18_centre_scalar_kernel_logic_20261021.md",
+    "sha256": "dc257720eb80b1fef4f6562698a09524dfc621deea13600920fe2b5e3f6cf846",
+    "bytes": 4538
+  },
+  "source_reviews": [
+    {
+      "path": "results/review_d18_centre_scalar_kernel_source_root_20261021.md",
+      "sha256": "0d5cfe8fcfc0ede5204bcf2e6d66ae194b7d486b6919881c8a5febca113213d4",
+      "bytes": 2704
+    },
+    {
+      "path": "results/review_d18_centre_scalar_kernel_source_full_scope_compact_reviewer_20261021.md",
+      "sha256": "1b3fea43e4d17578203c83b5061767cb1583f8c242055c713bdf454b92ae85a3",
+      "bytes": 5386
+    }
+  ],
+  "compile_ledger": {
+    "path": "results/lean_d18_centre_verification_20261022/compile_ledger.json",
+    "sha256": "b90d1034856a4bec74df5552ac04a376691fa458f79edb014618a493e8059afa",
+    "bytes": 1518
+  },
+  "actual_axiom_audit_ledger": {
+    "path": "results/lean_d18_centre_verification_20261022/axiom_audit_ledger.json",
+    "sha256": "86da50ee0a38f6f6a9ed05a36f7680048e5002d1a66340bca0a45116c2de054c",
+    "bytes": 1436
+  },
+  "compile_stdout": {
+    "path": "results/lean_d18_centre_verification_20261022/compile_after_resource_recovery.stdout",
+    "sha256": "81149bc9d7e2de78ece783030ad778e0a6eb0718eee34b5757cf9ac27424925e",
+    "bytes": 1709
+  },
+  "actual_axiom_audit_stdout": {
+    "path": "results/lean_d18_centre_verification_20261022/axiom_audit.stdout",
+    "sha256": "62534cf59648d189065bab7717fbf50558459c51216072d1e05b2518f11dce69",
+    "bytes": 2726
+  },
+  "extracted_actual_axiom_output": {
+    "path": "results/lean_d18_centre_verification_20261022/actual_axiom_output.txt",
+    "sha256": "d10ca88f24c00e1304ed790d28b7f84ac47e78f641195e2660ec0873c24e7fca",
+    "bytes": 1136
+  },
+  "actual_declaration_count": 5,
+  "actual_declarations": [
+    {
+      "name": "CoxeterProofs.D18CentreScalarKernel.quadratic_completion",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.D18CentreScalarKernel.quadratic_positive",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.D18CentreScalarKernel.continuous_scalar_lower_bound",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.D18CentreScalarKernel.k10_margin",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "CoxeterProofs.D18CentreScalarKernel.k11_margin",
+      "actual_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "standard_axioms_only": true,
+  "sorryAx": false,
+  "audit_repeated_compilation": false,
+  "one_module_2048_mib_one_thread": true,
+  "warnings_preserved": 1,
+  "source_headers_and_logic_maps_keep_their_preparation_status_bytes": true,
+  "scope": "Conditional internal integer/ordered-ring deductions at explicit premises. Geometry, actual arithmetic fields/root brackets, complete cap enumeration and actual paid-reference applicability are not discharged. Axiom prints do not inventory theorem parameters.",
+  "runners": [
+    {
+      "path": "scripts/run_lean_batches_signal_safe_20261018.py",
+      "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+      "bytes": 1234
+    },
+    {
+      "path": "scripts/run_lean_batches_20261018.py",
+      "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c",
+      "bytes": 14192
+    }
+  ],
+  "owned_temporary_batch_object_absent": true,
+  "preserved_prelaunch_refusal": {
+    "path": "results/lean_d18_centre_verification_20261022/prelaunch_resource_refusal.json",
+    "sha256": "56a7eaa841d606f14ecab30eeb9ae29274d7a4b6e0f0a05f4e43c7f1c30ae744",
+    "bytes": 728
+  },
+  "preserved_refusal_stdout": {
+    "path": "results/lean_d18_centre_verification_20261022/compile.stdout",
+    "sha256": "acee2a8b8f8a4d0c94fc9c56ed96bb1cf647400e1cd5a9c5af32e647873c8108",
+    "bytes": 1123
+  }
+}

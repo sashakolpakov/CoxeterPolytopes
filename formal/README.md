@@ -49,6 +49,19 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`D18CentreScalarKernel` now has bounded compilation and a separate actual
+five-declaration axiom audit [PASS](../results/lean_d18_centre_verification_20261022/manifest.json).
+`CubicB16ShortCapKernel` likewise has six actual audited declarations and
+its own [PASS receipt](../results/lean_cubic_b16_short_cap_verification_20261022/manifest.json).
+Each imports only Std, uses standard axioms and has no `sorryAx`. Both
+audit runs reused the successful compilation without rebuilding it; one
+unused-variable/section warning per module is preserved. Their source
+headers and [D18](../docs/d18_centre_scalar_kernel_logic_20261021.md)/[B16](../docs/cubic_b16_short_cap_kernel_logic_20261022.md)
+logic maps keep the preparation-stage bytes. These later receipts record
+the successful verification. Actual feasible-point geometry, field/basis
+and radical bounds, complete cap coverage and the funded-reference bridge
+remain explicit application premises.
+
 `LorentzObstructionKernel` has bounded compilation and a separate actual
 seven-declaration axiom audit
 [PASS](../results/lean_lorentz_obstruction_verification_20261021/manifest.json).

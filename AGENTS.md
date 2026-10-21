@@ -18,7 +18,7 @@ literature, field or enumeration inputs. The logic maps list those premises;
 printed axioms do not enumerate theorem parameters.
 
 Finite57 has matching records for111 of113 selected script commands. Its
-bounded replacement has only2 of25 actual PASS units. Keep the full catalogue
+bounded replacement has only3 of25 actual PASS units. Keep the full catalogue
 selection in plan mode until the remaining eager loaders have complete bounded
 replacements. No full-manuscript runtime PASS or transitive regeneration is
 claimed. Preserve failures and deferrals; never credit a plan as execution.
