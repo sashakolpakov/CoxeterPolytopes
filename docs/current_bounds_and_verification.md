@@ -21,10 +21,14 @@ accepts further exclusions and five construction-model eliminations. The
 [previous endpoint checkpoint](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
 adds reviewed A17/A18 and arithmetic A15/A16 exclusions, with full root
 and other-author mathematical reviews, plus one actually executed norm79
-interval. The [latest acceptance](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
+interval. The [previous acceptance](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
 adds the last general A18 companion exclusion, all arithmetic A14 cases,
 and literal norm79 nonreflectivity with separate script and Lean records.
-Neither batch lowers a global ceiling. The six-paper writing milestone is complete;
+The [latest acceptance](../results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
+excludes general B18+actual-I and arithmetic A11+actual-I+(A5 or D5),
+leaving five and seven necessary groups. It also accepts three restricted
+continuations, with their limits described below. These batches do not
+lower a global ceiling. The six-paper writing milestone is complete;
 research has resumed within the existing paper families.
 
 ## Dimension comparison
@@ -199,12 +203,21 @@ over every actual field, and a stronger bound in the actual-I case.
 It excludes all three remaining A14 spectator alternatives. Its same-vector
 couplings do not assume that every ordinary T2 has energy greater than 1/6.
 
+The new [B18+actual-I proof](../results/compact19_b18_isolated_i_full_endpoint_foot_exclusion_candidate_20261021.md)
+closes its entire general row through a fresh short-tail classification
+and paid head/I pressures. The new
+[A11+actual-I proof](../results/arithmetic17_a11_actual_i_quadratic_time_modulus_exclusion_20261021.md)
+keeps all three near4 classes that survive at this smaller rank. Actual
+quadratic-field two-cycles then force an integral norm both below eight
+and divisible by 144. Together with its simultaneous foot estimate this
+excludes both remaining A11 companions over every actual field. Both
+proofs have full root and outside-author reviews in the latest receipt.
+
 The complete reduced necessary lists are now:
 
 | General compact nineteen: dominant | Entire remaining spectator alternatives |
 | --- | --- |
 | A19 | none |
-| B18 | I |
 | B19 | none |
 | D17 | either typed7 |
 | D18 | I |
@@ -212,7 +225,6 @@ The complete reduced necessary lists are now:
 
 | Arithmetic first-type seventeen: dominant | Entire remaining spectator alternatives |
 | --- | --- |
-| A11 | I+(A5 or D5) |
 | A17 | none |
 | B15 | either typed7 |
 | B16 | I |
@@ -222,13 +234,19 @@ The complete reduced necessary lists are now:
 | D17 | none |
 
 Here T2 and T3 are irreducible ordinary components, and I/typed7 retain
-their actual-wall definitions. There are six and eight grouped rows,
+their actual-wall definitions. There are five and seven grouped rows,
 respectively. These necessary lists make no realization claim. The
-[latest checkpoint](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
-binds the full reviews and exact subtraction of the A18 and A14 rows
-from the preceding seven/nine-row lists. It preserves the six printed editions.
+[latest checkpoint](../results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
+binds the full reviews and exact subtraction of the B18 and A11 rows
+from the preceding six/eight-row lists. It preserves the six printed editions.
 The bounds still leave gaps of eleven and nine above the known compact
 example dimension eight. No new polytope example has been found.
+
+For the remaining D18+I row, a new
+[local tail proof](../results/compact_d18_isolated_i_fresh_tail_and_stronger_joint_barrier_20261021.md)
+establishes a stronger rank-free I barrier and complete pure-helper
+coverage through index fifteen. It leaves the center/forks and whole
+forest exclusion open; that row remains in the table.
 
 For finite volume, the [complete Context662 composition](../results/finite57_complete_context662_source_composition_20261021.md)
 finances this one selected producer over all whole-parent domains.
@@ -251,6 +269,13 @@ internal theorem, not a new bound or an accepted change to the frozen
 payment tables. It leaves the other affine families and the costly
 finite forests unresolved.
 
+The new [full D16 source-orbit proof](../results/finite57_d16_full_orbit_priority_with_retained_context662_credits_20261021.md)
+pays all 136 pairs in the varying D16 factor at its specified whole cusp
+types, while retaining the previous selected finite-recipient cap.
+Its complete reserved surpluses are 74 and 280. This is a restricted
+replacement allocation, with no reduction of the formal maximum 372
+or the dimension ceiling 57.
+
 The [literal norm79 host](../results/compact_h9_nonunit_coupling_prime79_full_base_and_first_transverse_20261021.md)
 is now proved nonreflective at its accepted actual-germ and admissible-arithmetic
 boundaries. The earlier 38,784-trial interval found the asymmetric A9-7
@@ -270,6 +295,13 @@ root census. The [acceptance receipt](../results/a14_a18_and_prime79_period_acce
 binds both actual runs and full written reviews. END8 was refused before a
 child and is unnecessary for this conclusion. No new example, field-wide,
 form-class, other-lattice or infinite-family exclusion follows.
+
+The [good-prime odd golden-glue extension](../results/golden_odd_glue_full_base_and_discriminant_reduction_20261021.md)
+proves that a broader literal lattice family has the entire actual
+Bugaenko base. An all-divisor collar and the explicitly inherited analytic
+upper bound give a finite necessary host reduction, which was not run.
+The distinct norm239 lattice has this starting geometry; its next actual
+edge and finite-volume completion remain open. This is not a new example.
 
 ## Ideal and compact right-angled four-volume
 

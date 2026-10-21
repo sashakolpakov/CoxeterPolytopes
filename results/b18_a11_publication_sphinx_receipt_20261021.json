@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-10-21T21:08:31.196588+00:00",
+  "status": "PASS_STRICT_SPHINX_AND_LOCAL_TARGET_EXISTENCE",
+  "scope": "Documentation only; no mathematical checker, external link fetch, fragment validation or remote deploy in this build.",
+  "stdout": {
+    "path": "results/b18_a11_publication_sphinx_stdout_20261021.txt",
+    "sha256": "c2867a85c5c828fa00bffa802d53ba145d436171146fd9d64db7c52bdb3dee13",
+    "bytes": 5987
+  },
+  "watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/site_b18_a11_20261021"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 102809600,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 144351817728,
+      "ram_available_bytes": 7243005952
+    },
+    "seconds": 2.039
+  },
+  "html_pages": 8,
+  "existing_repository_targets_checked": 7,
+  "existing_generated_local_targets_checked": 66,
+  "markdown_pages_checked": [
+    "README.md",
+    "docs/current_bounds_and_verification.md",
+    "docs/result_manuscript_correspondence.md",
+    "formal/README.md",
+    "docs/lorentz_obstruction_kernel_logic_20261021.md",
+    "results/publication_b18_a11_batch_evidence_map_20261021.md"
+  ],
+  "existing_markdown_local_targets_checked": 113,
+  "missing_local_targets": [],
+  "owned_generated_site_removed_after_check": ".publication/site_b18_a11_20261021",
+  "owned_generated_bytes_removed": 4205375,
+  "preserved_papers": "All six frozen source/PDF/build triples unchanged. Generated site, compiler objects and caches stay outside Git."
+}

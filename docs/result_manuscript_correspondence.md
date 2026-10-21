@@ -55,9 +55,9 @@ twenty. The new cubic-field half-loss argument is a case-specific refinement
 after the common actual-vector geometry; it is not another dimension paper.
 The [previous endpoint batch](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
 closes the general A17 row, the ordinary-A1 choice beside general A18,
-and the arithmetic A15/A16 rows. The [latest accepted batch](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
+and the arithmetic A15/A16 rows. The [previous accepted batch](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
 also closes the last general A18 companion and every arithmetic A14 case,
-leaving six and eight necessary groups. The ceilings remain nineteen and
+leaving six and eight necessary groups at that checkpoint. The ceilings remain nineteen and
 seventeen, and the six printed editions are unchanged. Its restricted
 large-D quadrilateral theorem supplies no charge372 improvement.
 
@@ -66,6 +66,17 @@ period between two full actual D9 germs, with explicit geometric/arithmetic
 premises and separate END0 and two-map execution records. This is a
 literal-module nonreflectivity result, not a field/form-class exclusion,
 new example or additional manuscript; an END8 search is unnecessary.
+
+The [latest written batch](../results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
+excludes general B18+actual-I and arithmetic A11+actual-I+(A5 or D5),
+leaving five and seven necessary groups. These stay within the same two
+compact paper families. Its
+[five-result evidence map](../results/publication_b18_a11_batch_evidence_map_20261021.md)
+also assigns the local D18+I tail argument to general compact geometry,
+the full D16 cusp allocation to finite57, and the good-prime odd-glue
+reduction to the construction lane. None is a new manuscript, lower global
+ceiling, realized example or newly executed Lean proof. The unchanged six
+editions retain their stated results and page counts.
 
 The ideal RA4 paper already follows the requested sequence: the published
 minimum, the universal gap and equality reduction, the restricted

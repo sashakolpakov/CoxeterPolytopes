@@ -39,6 +39,14 @@ The other two papers concern ideal and compact right-angled polytopes in
 dimension four. The compact volume minimum and second-volume problems remain
 open. No new higher-dimensional example is claimed here.
 
+The latest supporting written batch excludes one more general compact
+forest and one more arithmetic forest, leaving five necessary groups in
+dimension nineteen and seven in dimension seventeen. This does not lower
+either ceiling. Its `acceptance and full review bindings
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/b18_a11_and_restricted_continuations_acceptance_20261021.json>`_
+separate those exclusions from restricted cusp, local-tail and lattice
+construction results. The six compiled editions remain unchanged.
+
 .. toctree::
    :maxdepth: 2
    :caption: Read and reproduce

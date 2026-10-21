@@ -38,10 +38,12 @@ the PDFs stating 23 and 20**. The [global composition](results/compact_dimension
 and [comparison guide](docs/current_bounds_and_verification.md) give their
 precise hypotheses and review records. General finite volume remains 57.
 
-The [latest accepted supporting batch](results/a14_a18_and_prime79_period_acceptance_20261021.json)
-removes the general A18+actual-I family and all three arithmetic A14
-families. Six general nineteen and eight arithmetic seventeen groups
-remain necessary possibilities; these are not realized examples.
+The [latest accepted supporting batch](results/b18_a11_and_restricted_continuations_acceptance_20261021.json)
+also excludes general B18+actual-I and arithmetic A11+actual-I+(A5 or D5).
+Five general nineteen and seven arithmetic seventeen groups remain
+necessary possibilities; these are not realized examples. The batch's
+[result and evidence map](results/publication_b18_a11_batch_evidence_map_20261021.md)
+separates these exclusions from three restricted geometric continuations.
 
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled
