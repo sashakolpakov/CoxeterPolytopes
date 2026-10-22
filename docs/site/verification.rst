@@ -150,21 +150,28 @@ global19 tail, this proves the general compact ceiling18. The fresh
 has eleven grouped necessary families; the later A15 theorem excludes its
 ordinary A3 and ordinary T2+A1 spectators. The remaining rows are not examples.
 
-Four arithmetic seventeen groups remain: whole A17, whole B17, D16+actual-I
-and whole D17. The D16+I restrictions make both forks D-isolated and dotted.
-The accepted quartic exclusion and new
-:download:`complete cubic exclusion <../../results/review_arithmetic17_d16_cubic_fork_pair_exclusion_and_quadratic_frontier_root_acceptance_20261022.md>`
-now force its ACTUAL field to be quadratic. The cubic proof derives
-OLD-I orthogonality, then combines two actual Cartan cycles and a complete
-norm8 polynomial strip. That contact conclusion is not transferred to the
-remaining quadratic branch. Its OLD-I/I-opposite contacts and the entire
-forest remain open; no arithmetic16 theorem follows.
+Three arithmetic seventeen groups remain: whole A17, whole B17 and whole
+D17. The new
+:download:`complete D16+actual-I composition <../../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md>`
+combines the ACTUAL field-degree reduction with complete quadratic, cubic
+and quartic contradictions. The quadratic proof derives its own contact
+restrictions and retains unequal fork parameters; cubic orthogonality is
+not transferred. The ENTIRE forest is excluded, with
+:download:`full outside composition review <../../results/review_arithmetic17_d16_actual_i_complete_exclusion_composition_full_scope_compact_reviewer_20261022.md>`
+and :download:`root acceptance <../../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md>`.
+No arithmetic16 theorem follows.
 These are complete reviewed written arguments at their explicit inputs.
 The later compact18 final composition has its own conditional Lean receipt;
 its geometric premises remain external. The six printed papers are unchanged.
 
-Finite57's selected third-corner improvements still lack complete global
-actual-face coverage/allocation. Charge372 and dimension57 remain unchanged.
+The new
+:download:`finite57 all-heavy-hexagon theorem <../../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md>`
+has :download:`full outside review <../../results/review_finite57_heavy_hexagon_nonadjacent_cusp_financing_full_scope_foundations_reviewer_20261022.md>`
+and root acceptance above. Actual nonadjacent cusps receive each remaining
+heavy deficit8, respecting complete arrival multiplicities and all prior
+compatible debts; the tight receiving margin is exactly1/2. This covers
+the entire stated hexagon domain, but other faces and costly forests still
+lack complete global coverage/allocation. Dimension57 remains unchanged.
 
 The norm239 construction has reviewed actual edges through E8+A1,
 E7+I2(5), E7+A2 and E7+2A1. The fourth edge has a complete written

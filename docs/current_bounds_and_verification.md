@@ -72,22 +72,26 @@ The subsequent [A15 component theorem](../results/review_a15_general18_and_cubic
 excludes its ordinary A3 and ordinary T2+A1 spectators. Its actual I+T2
 and OLD-I2(7)/NEW-isolated3 plus A1 alternatives remain.
 
-Four arithmetic seventeen groups remain: whole A17, whole B17,
-D16+actual-I and whole D17. The new
-[accepted D16+I reduction](../results/review_arithmetic17_d16_all_nonisolated_forks_and_quartic_units_root_acceptance_20261022.md)
-excludes every nonisolated fork: both forks are now isolated within D16
-and dotted. The subsequent
-[complete quartic exclusion](../results/review_arithmetic17_d16_quartic_norm_unit_exclusion_root_acceptance_20261022.md)
-uses norm-two/unit constraints and nine polynomials to exclude degree4.
-The subsequent [joint-fork proof](../results/review_arithmetic17_d16_cubic_old_i_three_contact_exclusion_root_acceptance_20261022.md)
-first forces OLD-I orthogonality for both cubic forks. The new
-[complete cubic exclusion](../results/review_arithmetic17_d16_cubic_fork_pair_exclusion_and_quadratic_frontier_root_acceptance_20261022.md)
-then combines actual two/five Cartan cycles, a complete norm8 polynomial
-strip and integral closure to contradict the entire degree3 branch.
-Consequently the ACTUAL field is now **quadratic only**. Both forks remain
-D-isolated and dotted; their quadratic OLD-I and I-opposite contacts are
-unresolved. Cubic zero-contact conclusions are not transferred to degree2.
-The forest remains open and the arithmetic ceiling stays17.
+Three arithmetic seventeen groups remain: whole A17, whole B17 and whole
+D17. The new [complete D16+actual-I composition](../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
+has [full outside review](../results/review_arithmetic17_d16_actual_i_complete_exclusion_composition_full_scope_compact_reviewer_20261022.md)
+and [root acceptance](../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md).
+The actual-field reduction leaves exactly degrees2,3,4; the separate
+quadratic, cubic and quartic theorems exclude all three for the same
+actual farthest vertex. The quadratic argument derives its own contact
+restrictions, retains unequal fork parameters and does not transfer
+cubic zero-contact conclusions. Thus the ENTIRE D16+actual-I forest is
+excluded, rather than merely reduced to quadratic fields. The remaining
+three families are necessary possibilities, not realized examples; the
+arithmetic ceiling stays17.
+
+The new [all-heavy-hexagon financing theorem](../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md)
+also has full outside review and root acceptance in the same record.
+Two actual nonadjacent cusps receive the remaining heavy-vertex deficits;
+actual-face multiplicity bounds respect every prior compatible debit.
+The tight receiving margin is exactly1/2. This covers its complete
+all-heavy-hexagon domain only; other faces and costly forests remain
+open, so general finite volume stays57.
 
 Norm239 is nonreflective. The distinct norm379 host has an actually checked first
 transverse E7+I2(5) germ and now an
@@ -389,8 +393,9 @@ a continuous radical estimate and one jointly paid reference finish the
 complete exclusion. The [ordinary D16+A1 proof](../results/arithmetic17_d16_nonshort_rank_one_centre_and_head_exclusion_candidate_20261022.md)
 uses the ACTUAL nonshort edge length, not a bare A1 diagram. Its tight
 mixed head and centre share one spectator coefficient. The final total
-exceeds1.0084. Both have full root and other-author reviews; actual-I at
-D16 remains open, and the arithmetic ceiling remains17.
+exceeds1.0084. Both have full root and other-author reviews. At that
+checkpoint actual-I at D16 remained open; it is now excluded by the
+complete all-degree theorem above. The arithmetic ceiling remains17.
 
 For general A19, a [two-weak-end theorem](../results/compact_whole_a19_two_weak_ends_exact_cross_paid_feet_candidate_20261022.md)
 excludes simultaneous weak central indices5 and15 using both actual feet,

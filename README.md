@@ -54,22 +54,26 @@ continuous dotted interval. Together with the complete dimension-nineteen
 forest exclusions and the independent higher-dimensional tail, this
 proves the **global compact ceiling of eighteen**, without arithmeticity.
 It has full source-bound internal branch and composition reviews. The next
-general frontier is dimension eighteen. Four arithmetic seventeen groups
-remain: whole A17, whole B17, D16+actual-I and whole D17. These are
-necessary possibilities, not realized examples.
+general frontier is dimension eighteen. Three arithmetic seventeen groups
+remain: whole A17, whole B17 and whole D17. These are necessary
+possibilities, not realized examples.
 
-The [new arithmetic D16+I reduction](results/review_arithmetic17_d16_all_nonisolated_forks_and_quartic_units_root_acceptance_20261022.md)
-excludes every nonisolated fork. The
-[quartic exclusion](results/review_arithmetic17_d16_quartic_norm_unit_exclusion_root_acceptance_20261022.md)
-and new [complete cubic exclusion](results/review_arithmetic17_d16_cubic_fork_pair_exclusion_and_quadratic_frontier_root_acceptance_20261022.md)
-now force the actual field to be **quadratic**. The two D-isolated dotted
-forks, their contacts with the old isolated-I wall and its opposite,
-and the entire quadratic forest remain unresolved; seventeen is unchanged. The
+The [complete arithmetic D16+I exclusion](results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
+now has [full outside review and root acceptance](results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md).
+The actual-field reduction and separate quadratic, cubic and quartic
+contradictions exhaust that entire forest. Its removal leaves the three
+whole families above; the arithmetic ceiling remains seventeen. The
 [compact eighteen logic kernel](docs/compact_dimension_eighteen_composition_logic_20261022.md)
 now has [bounded compilation and a separate five-declaration axiom audit PASS](results/lean_compact18_composition_verification_20261022/manifest.json),
 with no `sorryAx`. It checks the final composition under23 named written
 theorems and supplies no geometric instance. The first failed elaboration
 and its repaired, independently reviewed successor are preserved.
+
+A new [finite-volume financing theorem](results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md)
+uses two actual nonadjacent cusps to cover the heavy vertices on every
+hexagon in its stated all-heavy domain. Its complete geometry, receiving
+multiplicities and prior debts have full internal review and root acceptance.
+Other faces and costly forests remain open; no dimension56 bound follows.
 
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled

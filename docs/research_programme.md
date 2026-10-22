@@ -28,9 +28,9 @@ frozen PDF editions.
 
 |Lane|Known examples / current ceiling|Active work|Owner|
 |---|---|---|---|
-|General finite-volume Coxeter|21 / 57|Improve the global payment/curvature obstruction. New selected transfers still need complete actual-face coverage and simultaneous allocation.|finite57_composition_audit with root|
+|General finite-volume Coxeter|21 / 57|The complete all-heavy-hexagon domain is now financed at actual nonadjacent cusps. Cover the remaining short faces and costly forests with one compatible global rule.|finite57_composition_audit with root|
 |General compact Coxeter|8 / 18|Complete dimension18 necessary forests have eleven groups; the A15 ordinary rank-three branches are now closed. Pursue further energy/correlation exclusions and compact H9 construction.|root with parallel mathematical reviewers|
-|Compact arithmetic Coxeter|8 / 17|Four necessary groups remain. Quartic and cubic D16+actual-I branches are excluded; its actual field is quadratic, with D-isolated dotted forks. OLD-I/I-opposite contacts and the entire forest remain open.|sharp_ra_foundations_audit with root and independent review|
+|Compact arithmetic Coxeter|8 / 17|Entire D16+actual-I is excluded by complete quadratic/cubic/quartic arguments. Only whole A17, B17 and D17 remain as necessary grouped families; pursue their actual geometry and arithmetic cycles.|sharp_ra_foundations_audit with root and independent review|
 |Entirely ideal right-angled|4 / 4|Sharp internal theorem; preserve its verified package, stop ideal5/6 searches.|Completed, monitored by root|
 |Mixed-vertex right-angled|8 / 8|Sharp internal universal finite-volume theorem; preserve its package, stop right-angled9 searches.|Completed, monitored by root|
 |Ideal right-angled dimension4 volume|Second value and unique double24-cell structure internally proved|Preserve the unified17-page paper. Its chain theorem remains restricted; no universal garland classification follows.|root|
@@ -48,6 +48,9 @@ separate actual five-declaration axiom audit, under23 named written premises.
 Its geometric instance is still external. The
 [current comparison guide](current_bounds_and_verification.md) records
 accepted sources, runtime evidence and exact open boundaries.
+The [latest written acceptance](../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md)
+binds the complete arithmetic D16+actual-I exclusion and selected finite57
+hexagon financing. Neither lowers a global ceiling by itself.
 
 ## Earlier mathematical checkpoints
 

@@ -36,12 +36,19 @@ then uses the independent previous global19 tail. This belongs in the same
 compact paper. The historical checkpoint notes below explain inherited
 proof dependencies; their former surviving lists are not current frontiers.
 
-In the arithmetic seventeen research, the complete quartic and
-[new cubic exclusion](../results/review_arithmetic17_d16_cubic_fork_pair_exclusion_and_quadratic_frontier_root_acceptance_20261022.md)
-leave only actual quadratic fields for D16+actual-I. Its two actual fork
-walls remain D-isolated and dotted; quadratic OLD-I and I-opposite contacts
-are not removed. This is supporting arithmetic geometry in the same paper
-family, not an entire-forest exclusion or a lower global ceiling.
+In the arithmetic seventeen research, the
+[complete D16+actual-I exclusion](../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
+now combines the actual-degree reduction with complete quadratic, cubic
+and quartic contradictions. Its [full review and root acceptance](../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md)
+remove that ENTIRE forest, leaving only whole A17, B17 and D17. This belongs
+in the same arithmetic paper family; the global ceiling remains17.
+
+The same acceptance records a new
+[all-heavy-hexagon financing theorem](../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md):
+actual nonadjacent cusps receive the heavy-vertex deficits with complete
+preimage counts and prior-debt accounting. This is supporting research
+for the finite-volume paper. Other face configurations and costly forests
+remain open, so it does not yet replace57 by56 or add a manuscript.
 
 The six-paper writing milestone is complete. The latest
 [completion confirmation](../results/six_paper_completion_confirmation_20261021.json)
@@ -121,8 +128,9 @@ argument instead uses the actual cubic-seven field and long-head feet.
 The [previous batch](../results/d15_d16_and_norm239_progress_acceptance_20261022.json)
 also excludes D15+either actual typed7 and the ordinary nonshort D16+A1
 branch. Its common method is the original-vector prefix reference with
-actual head/centre feet and shared spectator funding. Four arithmetic
-rows remain, including D16+actual-I. This belongs in the arithmetic
+actual head/centre feet and shared spectator funding. At that checkpoint
+four arithmetic rows remained, including the now-excluded D16+actual-I.
+This belongs in the arithmetic
 compact paper; it adds no manuscript and lowers no global ceiling.
 The [previous A19 batch](../results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json)
 closes the zero-weak-end case too: the three A19 cases now exclude the
