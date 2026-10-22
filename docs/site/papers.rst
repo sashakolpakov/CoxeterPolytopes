@@ -46,10 +46,12 @@ It does not assume arithmeticity.
 * :download:`Proof map <../compact_farthest_vertex_bounds_proof_map_20261020.md>`
 * Verification ID: ``compact_farthest_bounds``.
 
-Later reviewed written proofs give general compact dimension at most 19 and
+Later reviewed written proofs give general compact dimension at most 18 and
 compact arithmetic Coxeter dimension at most 17. Their
-:download:`global composition <../../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md>`
-is supporting research. Those bounds are not theorems of the current 23 and 20
+:download:`compact eighteen composition <../../results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md>`
+and
+:download:`arithmetic seventeen composition <../../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md>`
+are supporting research. Those bounds are not theorems of the current 23 and 20
 PDFs. A future integration belongs in these same two paper families.
 
 Sharp right-angled dimensions

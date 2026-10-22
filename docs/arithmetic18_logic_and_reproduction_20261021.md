@@ -1,6 +1,12 @@
 # Compact arithmetic dimension eighteen: proof and verification
 
-The new result is dimension at most18 for compact arithmetic first-type
+This is the historical eighteen-proof checkpoint. The current reviewed
+ceilings are general compact18 and arithmetic17; the
+[current comparison guide](current_bounds_and_verification.md) gives the
+later proofs and actual verification status. The table below records
+this older batch, not the current frontier.
+
+The result in this batch is dimension at most18 for compact arithmetic
 hyperbolic Coxeter polytopes, over every actual admissible field. The
 [written dimension proof](../results/compact_arithmetic_dimension18_global_composition_20261021.md)
 and its [full internal composition review](../results/review_compact_arithmetic_dimension18_global_composition_full_scope_outside_author_20261021.md)
@@ -8,9 +14,9 @@ state the exact inherited and computed inputs. This is a computer-assisted
 written proof with full internal reviews; external refereeing and geometric
 Lean verification remain separate.
 
-| Class | Current repository ceiling | Change in this batch |
+| Class | Ceiling at this checkpoint | Change in this batch |
 |---|---:|---|
-| Compact arithmetic, first type |18|19 to18, all actual admissible fields|
+| Compact arithmetic Coxeter |18|19 to18, all actual admissible fields|
 | Arbitrary compact Coxeter |20|unchanged|
 | Arbitrary finite-volume Coxeter |57|unchanged|
 | Noncompact arithmetic |21|published; unchanged|
@@ -51,8 +57,11 @@ the original normalization. The output is deliberately not called empty,
 and no surviving formal model is asserted to be a polytope.
 
 The dimension composition checks all fork cases, rather than extrapolating
-a restricted lemma. It gives18 only for the stated compact first-type
-class. The quadratic-field theorem proved along the way concerns the
+a restricted lemma. It gives18 for compact arithmetic Coxeter polytopes.
+The quadratic-form model is automatic for arithmetic reflection lattices;
+it imposes no further type restriction. See the
+[external-input register](manuscript_assumptions.md#arithmetic-reflection-groups-and-the-quadratic-form-model).
+The quadratic-field theorem proved along the way concerns the
 hypothetical whole-D19 configuration; it must not be imported unchanged
 into a new dimension18 analysis.
 

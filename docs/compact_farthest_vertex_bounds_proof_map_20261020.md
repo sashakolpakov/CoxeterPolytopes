@@ -34,14 +34,41 @@ RSS. Temporary build files were removed. The preceding source/PDF pair
 `2718192d…` / `39e665d8…` is byte-preserved under
 `results/source_archives/six_papers_before_editorial_freeze_20261021/`.
 
-Later research has a reviewed written general ceiling of 20 and an
-all-field first-type arithmetic ceiling of 19. Their
-[complete composition and acceptance](../results/compact20_arithmetic19_written_acceptance_20261021.json)
-are separate from this finished 23 edition. Neither stronger conclusion
-is supplied by the old accounting kernel or by this PDF. Integration
+Later research now has a reviewed written general ceiling of18 and an
+all-field arithmetic Coxeter ceiling of17. The
+[compact eighteen proof](../results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md)
+and its [acceptance](../results/compact_dimension18_global_written_acceptance_20261022.json)
+are separate from this finished23 edition. The earlier
+[twenty/nineteen checkpoint](../results/compact20_arithmetic19_written_acceptance_20261021.json)
+is preserved history. Neither stronger conclusion is supplied by the old
+accounting kernel or by this PDF. The later
+[compact18 composition kernel](compact_dimension_eighteen_composition_logic_20261022.md)
+now has a [bounded compile and separate five-declaration axiom audit PASS](../results/lean_compact18_composition_verification_20261022/manifest.json).
+Its23 named written premises remain external, with no geometric instance.
+Integration
 will replace the argument in the same paper, rather than append a
 sequence of increment chapters. Earlier research frontiers are history,
 not unresolved cases of the printed 23 proof.
+
+The common idea is a geometric budget contradiction. Choose a strict
+interior point and a farthest vertex p. Comparing p with actual feasible
+points and adjacent vertices forces projection inequalities for ONE
+vector x of squared norm below1. Orthogonal diagram components spend
+that norm budget. Within a component, a reference vector w combines
+the available pressures; the elementary inequality
+`||x||^2 >= 2<w,x>-||w||^2` turns a legally weighted combination into
+a contradiction when its lower bound reaches1. Every overlap and
+negative coefficient must be paid from an available original pressure.
+
+The Coxeter diagram supplies the finite case split, while its angles
+and actual neighboring geometry supply the quantitative inequalities.
+Linear dependence data alone would lose this information. For the new
+eighteen proof, the complete dimension-nineteen frontier is exhausted,
+ending with six long-head cases for whole D19. The hardest branch
+retains a continuous head/centre correlation and then uses an actual
+adjacent vertex to obtain one further pressure on the original x.
+The independent earlier global19 tail supplies all dimensions above19;
+no inheritance of existence through lower-dimensional faces is assumed.
 
 ## The argument and its sources
 

@@ -44,7 +44,7 @@ Preserved research is not an extra paper
 The parked field-specific arithmetic refinements, predecessors, literal-host
 construction investigations, and supporting finite-transfer notes remain
 preserved. They are excluded from the current universal arithmetic 20 edition
-unless explicitly named as an input there. Later reviewed 19/17 results are
+unless explicitly named as an input there. Later reviewed 18/17 results are
 separate written proof records; they do not relabel the compiled 23/20 PDFs.
 
 What remains open

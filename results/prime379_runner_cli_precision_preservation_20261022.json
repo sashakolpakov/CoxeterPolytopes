@@ -1,0 +1,46 @@
+{
+  "status": "BYTE_VERIFIED_PREDECESSORS_AND_SOURCE_ONLY_PRECISION_SUCCESSORS",
+  "scope": "SPEC removes only the extra python3 token after the runner separator; worker changes only its SPEC SHA pin. Worker computational body is unchanged; no worker import, plan, test, compilation or execution.",
+  "records": [
+    {
+      "path": "scripts/check_compact_h9_prime379_quarter_folded_transverse_batches_20261022.py",
+      "predecessor": {
+        "bytes": 31135,
+        "sha256": "ba7daed92ff74be451c1145de8b57052cb76127d6db8a8c4a2095b4623cd74fa"
+      },
+      "archive": {
+        "path": "results/source_archive/prime379_before_runner_cli_precision_20261022/check_compact_h9_prime379_quarter_folded_transverse_batches_20261022.py.gz",
+        "bytes": 9458,
+        "sha256": "76076c67b7cdc90a2989c666acdb497b8fb30aa99e4b5ed8c95f50117909365d",
+        "decoded_bytes": 31135,
+        "decoded_sha256": "ba7daed92ff74be451c1145de8b57052cb76127d6db8a8c4a2095b4623cd74fa",
+        "round_trip_equal": true
+      },
+      "successor": {
+        "bytes": 31135,
+        "sha256": "e6310c0a345d682b7769a4d6d7feb9dedd52b3229582c67858300900a426b7cd"
+      },
+      "exact_diff": "--- preserved/scripts/check_compact_h9_prime379_quarter_folded_transverse_batches_20261022.py\n+++ scripts/check_compact_h9_prime379_quarter_folded_transverse_batches_20261022.py\n@@ -20,7 +20,7 @@\n SELF = Path(__file__).resolve()\n SPEC = \"results/compact_h9_prime379_quarter_folded_transverse_checker_spec_20261022.md\"\n PINS = {\n-    SPEC: \"4e77dedb72ad27acafd4ccbdda4770e9470f19b0e4fe0c04f9566a44685f41f7\",\n+    SPEC: \"deaa343294d09e35ab89cc48d84eba1ddfb9ad5f337940c5c01fa49422d98c10\",\n     \"results/compact_h9_prime379_first_binary_edge_and_quarter_folded_transverse_domain_candidate_20261022.md\":\n         \"7e7ffd616d0e025aeaff84abae1c9fcfb7d930c8a3879a7bb43734f308cacd3a\",\n     \"results/review_prime379_first_binary_and_quarter_folded_domain_root_acceptance_20261022.md\":\n"
+    },
+    {
+      "path": "results/compact_h9_prime379_quarter_folded_transverse_checker_spec_20261022.md",
+      "predecessor": {
+        "bytes": 9534,
+        "sha256": "4e77dedb72ad27acafd4ccbdda4770e9470f19b0e4fe0c04f9566a44685f41f7"
+      },
+      "archive": {
+        "path": "results/source_archive/prime379_before_runner_cli_precision_20261022/compact_h9_prime379_quarter_folded_transverse_checker_spec_20261022.md.gz",
+        "bytes": 4444,
+        "sha256": "991ef7acda15260f7eeecba4bda69a89dd3d88f2c56c3a5964913fa6f742b3d7",
+        "decoded_bytes": 9534,
+        "decoded_sha256": "4e77dedb72ad27acafd4ccbdda4770e9470f19b0e4fe0c04f9566a44685f41f7",
+        "round_trip_equal": true
+      },
+      "successor": {
+        "bytes": 9526,
+        "sha256": "deaa343294d09e35ab89cc48d84eba1ddfb9ad5f337940c5c01fa49422d98c10"
+      },
+      "exact_diff": "--- preserved/results/compact_h9_prime379_quarter_folded_transverse_checker_spec_20261022.md\n+++ results/compact_h9_prime379_quarter_folded_transverse_checker_spec_20261022.md\n@@ -47,7 +47,7 @@\n No command below has been run. A standalone `--plan` is metadata only, but preparation does not authorize even that execution. Each unit requires a NEW direct `results/*.json` destination and the existing owner environment supplied by the unchanged bounded runner. Root alone may eventually run, serially, after both full source reviews:\n \n ```sh\n-python3 scripts/run_bounded_research_check_20261018.py --parent-lock --ledger results/prime379_transverse_norm2_orthogonal_execution_20261022.json -- python3 scripts/check_compact_h9_prime379_quarter_folded_transverse_batches_20261022.py --profile norm2_orthogonal --output results/prime379_transverse_norm2_orthogonal_20261022.json\n+python3 scripts/run_bounded_research_check_20261018.py --parent-lock --ledger results/prime379_transverse_norm2_orthogonal_execution_20261022.json -- scripts/check_compact_h9_prime379_quarter_folded_transverse_batches_20261022.py --profile norm2_orthogonal --output results/prime379_transverse_norm2_orthogonal_20261022.json\n ```\n \n Repeat with distinct new outputs/ledgers for `norm2_simple`, `norm2_golden`, `norm2_e8`, `norm2b_orthogonal`. Then use the same capped wrapper for `--combine`, with exactly five repeated `--part results/NAME.json RECORDED_SHA256` arguments and a NEW `--output`. The combine does not rerun the scalar domains. Its source, part SHA values, stdout, actual operational ledgers and before/after bindings must be kept distinct.\n"
+    }
+  ]
+}

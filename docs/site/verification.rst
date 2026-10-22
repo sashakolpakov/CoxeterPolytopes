@@ -10,7 +10,7 @@ Written proofs and PDF editions
 
 All six delivered papers have matching source/PDF/build records and internal
 mathematical reviews at their stated input boundaries. The compact PDFs still
-prove 23 and 20; the later written 19 and 17 proofs have their own source and
+prove 23 and 20; the later written 18 and 17 proofs have their own source and
 review records. Neither status is external refereeing.
 
 Finite57: complete bounded replacements, explicit input boundary
@@ -141,18 +141,30 @@ applicability remain explicit premises.
 Latest supporting research
 --------------------------
 
-The :download:`latest accepted supporting batch <../../results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json>`
-excludes whole A19 by the exhaustive zero/one/two weak central-end cases.
-Only whole D19 remains in general dimension nineteen; four arithmetic
-seventeen groups remain. The global ceilings and six printed papers
-are unchanged. D19's remaining long heads are native5,7,8,9 or dotted.
-Under native5, both fork cosines are at most10 and every isolated fork
-opposite must be dotted. The stronger isolated-centre result assumes
-the exact specified symmetric dotted pair; it is not unconditional.
-The batch adds manual mathematical proofs and reviews, with no new
-scientific, Lean or TeX execution. The restricted
-third-corner estimate353.640625 still lacks a complete global allocation;
-charge372 and dimension57 remain unchanged.
+The :download:`compact18 acceptance <../../results/compact_dimension18_global_written_acceptance_20261022.json>`
+excludes all six remaining whole-D19 long-head classes, including the
+entire continuous dotted interval. Every row of the complete dimension19
+farthest-forest frontier is closed. Together with the independent previous
+global19 tail, this proves the general compact ceiling18. The fresh
+:download:`dimension18 frontier <../../results/compact_dimension18_complete_forest_frontier_candidate_20261022.md>`
+has eleven grouped necessary families; the later A15 theorem excludes its
+ordinary A3 and ordinary T2+A1 spectators. The remaining rows are not examples.
+
+Four arithmetic seventeen groups remain: whole A17, whole B17, D16+actual-I
+and whole D17. The D16+I restrictions make both forks D-isolated and dotted.
+The accepted quartic exclusion and new
+:download:`complete cubic exclusion <../../results/review_arithmetic17_d16_cubic_fork_pair_exclusion_and_quadratic_frontier_root_acceptance_20261022.md>`
+now force its ACTUAL field to be quadratic. The cubic proof derives
+OLD-I orthogonality, then combines two actual Cartan cycles and a complete
+norm8 polynomial strip. That contact conclusion is not transferred to the
+remaining quadratic branch. Its OLD-I/I-opposite contacts and the entire
+forest remain open; no arithmetic16 theorem follows.
+These are complete reviewed written arguments at their explicit inputs.
+The later compact18 final composition has its own conditional Lean receipt;
+its geometric premises remain external. The six printed papers are unchanged.
+
+Finite57's selected third-corner improvements still lack complete global
+actual-face coverage/allocation. Charge372 and dimension57 remain unchanged.
 
 The norm239 construction has reviewed actual edges through E8+A1,
 E7+I2(5), E7+A2 and E7+2A1. The fourth edge has a complete written
@@ -168,12 +180,16 @@ infinite-order chamber symmetry and nonreflectivity of this literal
 module. The earlier edge runs are inherited inputs; no fresh matrix
 checker or Lean run is claimed. No field/form-class exclusion follows.
 
-The distinct norm379 host has a
-:download:`reviewed first binary edge and finite transverse domain <../../results/compact_h9_prime379_first_binary_edge_and_quarter_folded_transverse_domain_candidate_20261022.md>`.
-Its six hand-sized binary rows prove actual firstness. Original quarter
-glue and eleven nearest phases give a complete five-profile overlist
-of at most24,552 scalar pairs. This is a proved domain, not an executed
-count: no transverse worker, further germ or polytope is certified.
+The distinct norm379 host has an accepted first binary edge and subsequent
+full E7+I2(5) and E7+2A1 finite germs. The
+:download:`third-edge acceptance <../../results/review_prime379_third_edge_and_e7_two_a1_germ_root_acceptance_20261022.md>`
+binds its complete new original-module domain, full mathematical/code reviews,
+five NEW profile runs and separate actual combine. All55 selectors passed,
+visiting21,835 scalar occurrences and identifying one global minimum with
+one complete supported cone; the isolated wall has norm2b. The earlier
+admission refusal is preserved with zero execution credit. Finite volume,
+reflectivity and other outgoing edges remain open. No polytope example or
+chamber period follows from these local edges.
 
 For the literal norm79 construction host, the accepted END0 run checked
 810,436 scalar trials and six profiles, finding six integral mirrors and
@@ -191,3 +207,15 @@ Its :download:`logic map <../d15_typed_seven_centre_kernel_logic_20261022.md>`
 separates derived continuous radical/funded margins from actual geometry,
 classification and application inputs. Successful output has no ``sorryAx``;
 the failed tactic predecessor is preserved with zero credit.
+
+``CompactDimensionEighteenComposition`` now also has bounded compilation
+and a separate actual **five-declaration axiom audit PASS**. Its
+:download:`receipt <../../results/lean_compact18_composition_verification_20261022/manifest.json>`
+binds the repaired source, full source reviews, actual ledgers and output.
+The Boolean lemma and three whole-family implications are axiom-free;
+the final Nat-order implication uses only ``propext`` and ``Quot.sound``.
+No successful output uses ``sorryAx``. The first failed elaboration and
+byte-preserved predecessor are retained with zero credit. No previously
+successful module was recompiled. This kernel assumes23 named written
+theorems, including actual geometric coverage and energy inequalities;
+it constructs no geometric instance and does not formalize those premises.

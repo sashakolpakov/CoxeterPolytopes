@@ -1,0 +1,25 @@
+{
+  "status": "prepared_source_precision_successor_pending_full_root_and_outside_review",
+  "date": "2026-10-22",
+  "source_path": "results/compact_whole_d19_native_nine_head_complete_exclusion_foundations_20261022.md",
+  "predecessor": {
+    "sha256": "2a4acc06b2c2300badbdebd9ad5e5e9f80ab69886413245a23e5e0c1a106efbc",
+    "bytes": 20390,
+    "decoded_archive_path": "results/source_archive/compact_d19_native9_before_general_nonflat_payment_notation_20261022.md.gz"
+  },
+  "archive": {
+    "path": "results/source_archive/compact_d19_native9_before_general_nonflat_payment_notation_20261022.md.gz",
+    "sha256": "a0cc0b1923a31c3cd514e91845f52f9689ee36a8aa859a12f4246b44fd2b871e",
+    "bytes": 9090,
+    "decoded_sha256": "2a4acc06b2c2300badbdebd9ad5e5e9f80ab69886413245a23e5e0c1a106efbc",
+    "decoded_bytes": 20390,
+    "byte_exact_roundtrip": true
+  },
+  "successor": {
+    "sha256": "30c055cc50079e14fa3ed1cdc353a636554939bae45f51ba9ad7bf7f0f8cb00e",
+    "bytes": 20677,
+    "lines": 422
+  },
+  "scope": "One general nonflat-payment notation paragraph only. R_star=K+norm_squared(V-P_K); all existing residual norms, crosses, numerical constants and theorem statements unchanged. No execution or theorem acceptance.",
+  "exact_unified_diff": "--- preserved_2a4acc06\n+++ nonflat_payment_successor\n@@ -154,9 +154,16 @@\n \n     16G-R>41.467.                                (10)\n \n-More generally subtract16*w_H.(V-P_K) from the left side of(10).\n-This records every nonzero overlap instead of inventing a pressure on a\n-residual by subtracting two unrelated lower bounds.\n+For arbitrary, possibly NONFLAT V, put\n+\n+    B=w_H.(V-P_K), R_star=K+||V-P_K||^2.\n+\n+The general completed-square bound is\n+`||x||^2>L_K+[16*(G-B)-R_star-16fK+K]/64`, so it suffices that\n+`16*(G-B)-R_star>41.467`. For flat V, B0 and R_star=V^2 recover(9)–(10).\n+The nonflat rows in Section8 use their explicitly computed residual\n+norms R_star and head overlaps B, rather than substituting the full V^2.\n+No pressure on a residual is inferred by subtracting unrelated lower bounds.\n \n ## 4. Both actual fork edges have C_f<10\n \n"
+}

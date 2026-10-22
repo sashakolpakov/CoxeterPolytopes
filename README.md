@@ -34,10 +34,11 @@ of essential proof and algorithm appendices. Each paper’s proof map is
 linked from the [reader’s index](manuscripts/README.md).
 
 Later internally reviewed written proofs lower the general compact
-ceiling to **19** and the compact arithmetic Coxeter ceiling to **17**
+ceiling to **18** and the compact arithmetic Coxeter ceiling to **17**
 over every actual admissible field. Those stronger proofs are supporting
 research in the same two paper families; they are **not yet theorems of
-the PDFs stating 23 and 20**. The [global composition](results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md)
+the PDFs stating 23 and 20**. The [compact eighteen composition](results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md),
+[arithmetic seventeen composition](results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md)
 and [comparison guide](docs/current_bounds_and_verification.md) give their
 precise hypotheses and review records. General finite volume remains 57.
 
@@ -47,16 +48,28 @@ It is not an additional restriction on the arithmetic Coxeter results.
 The [external-input register](docs/manuscript_assumptions.md#arithmetic-reflection-groups-and-the-quadratic-form-model)
 records this published reduction and its references.
 
-The [latest accepted supporting batch](results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json)
-excludes whole A19 by treating all three central-end cases, leaving
-**whole D19 alone** in general dimension nineteen. Its remaining long
-heads have labels 5, 7, 8, 9 or are dotted. Further restricted fork
-results apply under a native-five head. Four arithmetic seventeen
-groups remain: whole A17, whole B17, D16+actual-I and whole D17;
-the earlier D15 and ordinary nonshort D16+A1 exclusions are preserved.
-These are necessary possibilities, not realized examples. Complete
-arguments and source-bound reviews are linked in the receipt; global
-ceilings remain unchanged.
+The [latest compact acceptance](results/compact_dimension18_global_written_acceptance_20261022.json)
+excludes all six remaining D19 long-head classes, including the entire
+continuous dotted interval. Together with the complete dimension-nineteen
+forest exclusions and the independent higher-dimensional tail, this
+proves the **global compact ceiling of eighteen**, without arithmeticity.
+It has full source-bound internal branch and composition reviews. The next
+general frontier is dimension eighteen. Four arithmetic seventeen groups
+remain: whole A17, whole B17, D16+actual-I and whole D17. These are
+necessary possibilities, not realized examples.
+
+The [new arithmetic D16+I reduction](results/review_arithmetic17_d16_all_nonisolated_forks_and_quartic_units_root_acceptance_20261022.md)
+excludes every nonisolated fork. The
+[quartic exclusion](results/review_arithmetic17_d16_quartic_norm_unit_exclusion_root_acceptance_20261022.md)
+and new [complete cubic exclusion](results/review_arithmetic17_d16_cubic_fork_pair_exclusion_and_quadratic_frontier_root_acceptance_20261022.md)
+now force the actual field to be **quadratic**. The two D-isolated dotted
+forks, their contacts with the old isolated-I wall and its opposite,
+and the entire quadratic forest remain unresolved; seventeen is unchanged. The
+[compact eighteen logic kernel](docs/compact_dimension_eighteen_composition_logic_20261022.md)
+now has [bounded compilation and a separate five-declaration axiom audit PASS](results/lean_compact18_composition_verification_20261022/manifest.json),
+with no `sorryAx`. It checks the final composition under23 named written
+theorems and supplies no geometric instance. The first failed elaboration
+and its repaired, independently reviewed successor are preserved.
 
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled
@@ -85,10 +98,14 @@ chamber symmetry has infinite order. This conclusion concerns that
 module only and is a written geometric proof, with the five earlier
 edge computations as inherited inputs; no new checker or Lean run is claimed.
 
-A different norm379 host has a reviewed first binary edge and a
-[complete prospective transverse domain](results/compact_h9_prime379_first_binary_edge_and_quarter_folded_transverse_domain_candidate_20261022.md)
-of at most 24,552 scalar pairs. That bound is proved on paper; no
-transverse worker has run, and no new polytope example is claimed.
+A different norm379 host now has a
+[reviewed first transverse edge and full E7+I2(5) germ](results/review_prime379_first_transverse_wall_full_germ_root_acceptance_20261022.md).
+All five profiles and the separate combination passed:55 selectors and
+21,835 actual scalar rows. Its subsequent
+[released-m edge now has a fully reviewed E7+2A1 germ](results/review_prime379_third_edge_and_e7_two_a1_germ_root_acceptance_20261022.md),
+with one isolated norm2b wall. Five new profile runs and a separate combine
+passed; the earlier RAM refusal is preserved with zero execution credit.
+Reflectivity and finite volume remain open; no new polytope example is claimed.
 
 ## What “verified” means here
 

@@ -7,37 +7,34 @@ theorems may be assumed, but new internal lemmas must not be hidden as
 external assumptions. No new dimension example or bound is declared merely
 because a script or a conditional Lean theorem compiles.
 
-The current user priority is to finish the six existing TeX papers,
-starting with finite-volume57 and sharp right-angled8/ideal4, before
-further dimension research. The parked arithmetic19 refinements are to
-be excluded from the current universal20 paper and preserved separately.
-Completed texts then receive manuscript audits and selected conditional
-Lean formalization. No paper is created for each bound increment.
-Lean verification follows settled mathematics in serial, memory-capped
-batches. Disk below20GiB
+The six existing TeX editions are written, compiled and internally reviewed.
+Their current PDF theorems are57/23/20 and sharp right-angled8/ideal4;
+later reviewed supporting proofs give general compact18 and arithmetic17.
+Research now prioritizes further bound improvements and new examples.
+Improvements belong in the same paper families, organized by method.
+The parked field-specific arithmetic19 refinements stay excluded from the
+current universal20 paper and preserved separately. Lean verification follows
+settled mathematics in serial, memory-capped batches. Disk below20GiB
 triggers a cleanup agent; unused proof-build files are removed after each
 batch. The exact gates and workflow are in [AGENTS.md](../AGENTS.md).
 
 ## Research lanes
 
-The table records the mathematical frontiers. New searches in these
-lanes are currently deferred in favor of finishing their existing
-manuscripts. Root coordinates the six texts; batch_guard supplies
-finite57 algorithm statements, finite57_research supplies its geometric
-proof spine, and resource_cleanup prepares the universal arithmetic20
-exposition and preservation of the excluded refinements. Already-held
-proof candidates retain their separate review status and do not change
-the published manuscript bounds during this preparation phase.
+The table records current mathematical frontiers. Parallel agents prepare
+and review written mathematics; root alone launches resource-admitted jobs.
+Candidate improvements require full source-bound review and root acceptance
+before changing a bound. Supporting proofs do not silently revise the six
+frozen PDF editions.
 
 |Lane|Known examples / current ceiling|Active work|Owner|
 |---|---|---|---|
-|General finite-volume Coxeter|21 / 57|Seek a major global improvement; incremental57-to56 charge work is deferred.|root|
-|General compact Coxeter|8 / 23|New internally reviewed written theorem. Uniform A and generic B/D projections first give24; stronger A20 and the coupled D23/short-A1 proof close both former24 frontiers. Seek further exclusions or compact H9. The broader E8-plus-binary family remains open apart from closed literal members.|resource_cleanup and root; finite57_research also pursues arithmetic restrictions|
-|Compact arithmetic Coxeter|8 / 20|Seek a substantially stronger uniform obstruction. The completed nine-field19 refinement is parked.|batch_guard with root|
+|General finite-volume Coxeter|21 / 57|Improve the global payment/curvature obstruction. New selected transfers still need complete actual-face coverage and simultaneous allocation.|finite57_composition_audit with root|
+|General compact Coxeter|8 / 18|Complete dimension18 necessary forests have eleven groups; the A15 ordinary rank-three branches are now closed. Pursue further energy/correlation exclusions and compact H9 construction.|root with parallel mathematical reviewers|
+|Compact arithmetic Coxeter|8 / 17|Four necessary groups remain. Quartic and cubic D16+actual-I branches are excluded; its actual field is quadratic, with D-isolated dotted forks. OLD-I/I-opposite contacts and the entire forest remain open.|sharp_ra_foundations_audit with root and independent review|
 |Entirely ideal right-angled|4 / 4|Sharp internal theorem; preserve its verified package, stop ideal5/6 searches.|Completed, monitored by root|
 |Mixed-vertex right-angled|8 / 8|Sharp internal universal finite-volume theorem; preserve its package, stop right-angled9 searches.|Completed, monitored by root|
-|Ideal right-angled dimension4 volume|Second value and unique double24-cell structure internally proved|Preserve the unified16-page paper. Compact120-cell minimum/second-volume questions remain a separate open lane.|root|
-|Compact right-angled dimension4 volume|Universal minimum and second-volume structure remain open|Reviewed uniform-neighbor block theorem, center-cut cost, irregular-facet count and regular-inball comparison. Global containment/excess hypotheses remain unproved; supporting notes only.|resource_cleanup with root, alternating with exact-check preparation|
+|Ideal right-angled dimension4 volume|Second value and unique double24-cell structure internally proved|Preserve the unified17-page paper. Its chain theorem remains restricted; no universal garland classification follows.|root|
+|Compact right-angled dimension4 volume|Universal minimum and second-volume structure remain open|Preserve the14-page constraints paper; global containment/excess hypotheses remain unproved.|root, assigned in rotation|
 |Proof translation|All new internal proofs need complete packages|TeX, plain-data export, kernel-checked certificate lemmas and proof-obligation audit|root with all lane owners|
 
 These lanes operate concurrently within the four active-agent slots. A
@@ -45,6 +42,18 @@ single agent may carry related subproblems and independent computations;
 the programme does not pretend that every row has an additional agent or
 that every row already has an improved theorem. Sharp arithmetic noncompact
 21 and compact right-angled4 remain reference/calibration classes.
+
+The compact18 final composition now has bounded Lean compilation and a
+separate actual five-declaration axiom audit, under23 named written premises.
+Its geometric instance is still external. The
+[current comparison guide](current_bounds_and_verification.md) records
+accepted sources, runtime evidence and exact open boundaries.
+
+## Earlier mathematical checkpoints
+
+The developments below preserve earlier proof stages and their references.
+Intermediate ceilings, active-agent names and then-open cases in this
+history are superseded by the current frontier table above.
 
 The [binary-extension and collar audit](../results/bugaenko_facet_binary_extension_and_collar_audit_20261020.md)
 reduces arithmetic H9 polytopes with a metric Bugaenko facet to two
@@ -268,7 +277,7 @@ ceiling. No complete A/B exclusion is claimed.
 
 The [whole-D_n long-end5 interface](../results/golden_dn_long_end_five_invariant_lattices_20261020.md)
 now excludes that actual isolated contact for EVERY compatible lattice
-in compact arithmetic first-type dimension n>=8. Fourfold matrix units,
+in compact arithmetic Coxeter dimension n>=8. Fourfold matrix units,
 the complete two-layer residue classification (including odd-dimensional
 deep lifts), and intrinsic norm recovery transfer the explicit published
 golden cutoff. The full [outside-author review](../results/review_golden_dn_long_end_five_invariant_lattices_resource_20261020.md)
@@ -347,7 +356,7 @@ family; no uniform dimension ceiling or class exclusion follows.
 The silver obstruction now extends beyond one integral model: a
 [complete invariant-lattice classification](../results/silver_b_vertex_invariant_lattice_flags_and_even_neighbor_20261020.md)
 and its even-neighbor facet argument exclude isolated native8 contacts
-at nodes1 and3 of a whole B_n vertex in compact arithmetic first-type
+at nodes1 and3 of a whole B_n vertex in compact arithmetic Coxeter
 dimension n>=9. Both [node1](../results/silver_long_end_eight_arithmetic_vertex_exclusion_20261020.md)
 and [node3](../results/silver_b_node_three_triple_cap_lattice_extension_20261020.md)
 have full root and [outside-author composition review](../results/review_silver_b_invariant_lattices_and_star_applications_resource_20261020.md).

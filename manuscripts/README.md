@@ -44,9 +44,10 @@ Musin/Kolpakov inputs for entirely ideal dimension four.
 
 The compact arithmetic and general compact PDFs retain the 20 and 23
 theorems requested for this finishing phase. Later reviewed written
-research now gives 17 and 19, respectively. The
-[complete new composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md)
-and its full internal source/composition reviews do not turn those stronger
+research now gives 17 and 18, respectively. The
+[arithmetic seventeen composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md),
+[general eighteen composition](../results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md)
+and their full internal source/composition reviews do not turn those stronger
 statements into theorems of the older PDFs.
 Any integration belongs in these same two papers, with one coherent
 argument rather than chapters for successive increments. The

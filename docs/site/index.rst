@@ -24,7 +24,7 @@ The :doc:`verification status <verification>` keeps those distinctions explicit.
      - 57
    * - General compact
      - 23
-     - 19; supporting proof, not in the 23 PDF
+     - 18; supporting proof, not in the 23 PDF
    * - Compact arithmetic Coxeter
      - 20
      - 17 over every actual admissible field; not in the 20 PDF
@@ -39,17 +39,22 @@ The other two papers concern ideal and compact right-angled polytopes in
 dimension four. The compact volume minimum and second-volume problems remain
 open. No new higher-dimensional example is claimed here.
 
-The latest supporting written batch excludes whole A19 through all three
-central-end cases. Only whole D19 remains in general dimension nineteen;
-four arithmetic seventeen groups remain. The `acceptance and full review bindings
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json>`_
-keep these necessary forests separate from global dimension bounds.
+The latest supporting written proof excludes the last whole D19 family
+through all six long-head classes, completing the dimension-nineteen frontier
+and proving global compact dimension at most18. Its `acceptance and full review bindings
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/compact_dimension18_global_written_acceptance_20261022.json>`_
+record the complete manual argument. Four arithmetic seventeen groups remain;
+the D16+actual-I branch now requires a quadratic actual field after complete
+quartic and cubic exclusions. The entire quadratic forest remains open.
 The literal norm239 construction lattice is now proved nonreflective
 by an original integral infinite-order chamber period. A distinct norm379
-host has a reviewed first binary edge and a complete prospective transverse
-domain; no transverse worker or new example is claimed.
-A new six-declaration D15 conditional Lean kernel passed compilation and a
-separate actual axiom audit. The six compiled paper editions are unchanged.
+host now has reviewed E7+I2(5) and subsequent E7+2A1 full finite germs,
+each with five actual profile runs and a separate combine. The earlier
+RAM refusal is preserved with zero execution credit.
+No new polytope example is claimed.
+The compact18 conditional composition now has bounded compilation and a
+separate five-declaration actual axiom audit under23 named written premises.
+The six compiled paper editions are unchanged.
 
 .. toctree::
    :maxdepth: 2

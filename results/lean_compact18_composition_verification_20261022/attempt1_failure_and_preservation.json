@@ -1,0 +1,24 @@
+{
+  "status": "FAILED_ELABORATION_PRESERVED",
+  "inputs": [
+    {
+      "path": "formal/CoxeterProofs/CompactDimensionEighteenComposition.lean",
+      "sha256": "bbba41ed5241d786472028c8bef02b136e68ed163d663678915b17fcb846d60b",
+      "bytes": 10034,
+      "archive": "results/source_archives/compact18_composition_before_explicit_written_include_20261022/CompactDimensionEighteenComposition.lean.gz",
+      "archive_sha256": "f5e3bb3a4191c6d0b73ed5b3f8b6ce1e746161736d093fe59f47aa6e303915ef",
+      "round_trip": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "docs/compact_dimension_eighteen_composition_logic_20261022.md",
+      "sha256": "f3cee03d983904e0b6ffb33e6569540d3071a21bda8e078d96fdcb391f71b12b",
+      "bytes": 11188,
+      "archive": "results/source_archives/compact18_composition_before_explicit_written_include_20261022/compact_dimension_eighteen_composition_logic_20261022.md.gz",
+      "archive_sha256": "2501351327b252d137115b6fc0e4293abb8a9d1fe7e98abd9e846289b911e0eb",
+      "round_trip": "BYTE_IDENTICAL"
+    }
+  ],
+  "diagnosis": "Lean omitted section hypotheses used only in theorem bodies; four derived theorem bodies could not access written and its weak-flag dependencies. No successful object or actual separate axiom audit.",
+  "failure_output_sha256": "4c9ecf0a83d46e9ebc0a0aec17b2cc3791428cc05ec0baeff6455f89c2da729f",
+  "note": "Printed sorryAx belongs to failed elaboration placeholders, not successful accepted declarations."
+}
