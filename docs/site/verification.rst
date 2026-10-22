@@ -157,7 +157,8 @@ excludes its two actual typed-seven cases and completes that entire row.
 Both new endpoint pressures concern one original vector; the reference
 pays their separate anchor costs and their residuals are orthogonal.
 These are full written mathematical reviews, not new Lean or checker runs.
-Nine general18 groups remain; the ceiling stays18 and these rows are not examples.
+At that checkpoint nine general18 groups remained; the later closures below
+leave six. The ceiling stays18 and these rows are not examples.
 
 The arithmetic dimension-seventeen frontier is now closed, including
 whole A17. The predecessor exclusions and final census below yield the
@@ -278,14 +279,38 @@ general18 row consumers are excluded. The later
 :download:`complete D16 typed-seven acceptance <../../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md>`
 binds a full different-author mathematical review of all fresh tail/head/
 centre cases, signed forks and a shared funded vector. It closes both
-actual N7/O7 forests, leaving seven groups after A12/A15/A16. These new
-geometric arguments add no worker or Lean execution and do not prove global17.
+actual N7/O7 forests. The new
+:download:`complete B16 typed-seven acceptance <../../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md>`
+binds the complete fresh B15/B3/B2 lists, actual A16 endpoint and legal
+joint head/endpoint budget. It closes both B16 variants, leaving six groups
+after A12/A15/A16/D16. The
+:download:`A17 ordinary rank-one acceptance <../../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md>`
+narrows A17 to actual I, leaving both D17 rank-one alternatives untouched.
+The group count remains six. The separate
+:download:`general18 frontier logic map <../general_eighteen_frontier_refinement_logic_20261023.md>`
+now has :download:`bounded compilation and a separate six-declaration audit PASS <../../results/lean_general18_six_group_frontier_verification_20261023/manifest.json>`.
+Four actual prints use only ``propext``; two are axiom-free, and none uses
+``sorryAx``. Compilation took5.88s and the audit1.31s; five unused-simp
+warnings are retained. The nine written premises are explicit, with no
+geometric instance or global17 theorem.
 
 The new :download:`glued E7/A2 ambient-edge acceptance <../../results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md>`
 binds complete written proofs and different-author reviews of actual edges,
 full germs and a complete compact quadrilateral. The last intrinsic angle
 is arccos(1/sqrt3), computed from projected normals. No arbitrary Coxeter-face
 inheritance, finite nine-dimensional chamber, period or new example is assumed.
+The later :download:`U-edge acceptance <../../results/review_glued_e7_a2_released_e2_actual_a5_bridge_root_acceptance_20261023.md>`
+and :download:`F-edge acceptance <../../results/review_glued_e7_a2_v_e2_actual_d4_edge_root_acceptance_20261023.md>`
+bind full source/outside reviews and root checks of every finite profile,
+original-module congruence and both-embedding closed strip. They prove actual
+firstness and full H3+A5+A1 and H3+D4+A1+[2b] corners. The later upper
+mirrors T and P2 are nonactual. No new execution, period or example follows.
+The :download:`complete H3+D4 face acceptance <../../results/review_glued_e7_a2_complete_right_hexagon_root_acceptance_20261023.md>`
+binds both closed first-edge strips, the full original orthogonal root
+arrangement and finite chamber-preserving face normalizers. They give the
+whole compact right-angled hexagon of area pi. The normalizers fail original
+ambient integrality; this supplies no ambient period or finite-volume
+nine-dimensional chamber.
 
 The new
 :download:`finite57 all-heavy-hexagon theorem <../../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md>`
@@ -304,6 +329,13 @@ have complete source multiplicities and compatible full8 loads. The smallest
 remaining curvature is3,485. It covers only isolated parallel short-fork
 opposites, leaving other contacts and costly forests open. No new checker,
 Lean execution, universal finite cap364 or dimension56 theorem is claimed.
+The later :download:`merged short-fork matching acceptance <../../results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md>`
+has full different-author review of all whole-component ports, the finite
+Hall matching and paired deletion of obsolete partial transfers. It covers
+remaining heavy sources with a private eligible receiver or at least two
+merging neighbors. The prior partial pentagon rule is retained, with
+receiving caps358 and361.5. Zero-neighbor and sole-shared-receiver cases
+remain open; there is no global56 or new execution claim.
 
 The norm239 construction has reviewed actual edges through E8+A1,
 E7+I2(5), E7+A2 and E7+2A1. The fourth edge has a complete written

@@ -1,6 +1,6 @@
 # Dimension bounds and verification
 
-Updated 22 October 2026. There are six TeX papers, each **written,
+Updated 23 October 2026. There are six TeX papers, each **written,
 compiled and internally reviewed**, with a matching PDF. This manuscript
 status does not imply complete replay or full geometric Lean verification.
 Parked arithmetic refinements are excluded and preserved.
@@ -83,10 +83,19 @@ arithmeticity. Its fresh N13 native-angle obstruction and one paid actual
 helper close both remaining A12 families. The later
 [complete nonarithmetic D16 typed-seven exclusion](../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md)
 closes both actual N7/O7 forests at D16. Fresh tail/head/centre geometry
-and one jointly funded budget give a final norm above1.03339. **Seven
-general18 groups remain**: A17, whole A18, B16, B17, whole B18, D17 and
-whole D18, with exact spectators in that acceptance. The ceiling stays18.
-This new geometric proof has written review credit, not Lean credit.
+and one jointly funded budget give a final norm above1.03339. The new
+[complete B16 typed-seven exclusion](../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md)
+then uses the actual short normal, a neighboring A16 endpoint and one legal
+head/endpoint reference to force norm above1.01488. **Six general18 groups
+remain**. The [A17 ordinary rank-one exclusion](../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md)
+narrows their exact list to A17+actual I; whole A18; B17+actual I; whole
+B18; D17 with an ordinary nonshort A1 or actual I; and whole D18.
+The ceiling stays18. The [conditional general18 frontier kernel](general_eighteen_frontier_refinement_logic_20261023.md)
+has a [bounded compile and separate six-declaration actual audit PASS](../results/lean_general18_six_group_frontier_verification_20261023/manifest.json):
+four prints use only `propext`, two are axiom-free, and none uses `sorryAx`.
+Its nine written premises and actual geometry remain external; five
+unused-simp warnings are retained. It supplies no geometric instance or
+global17 theorem.
 
 The arithmetic dimension-seventeen frontier is now completely closed,
 including whole A17. The predecessor exclusions and final closure below
@@ -272,8 +281,17 @@ The distinct [glued golden E7/A2 host](../results/review_glued_e7_a2_second_ambi
 has accepted actual first edges and full E7+two-A1, D6+three-A1 and D6+A3
 germs. Convexity identifies complete compact triangle and quadrilateral
 faces; intrinsic projected normals give the quadrilateral's last angle
-arccos(1/sqrt3), rather than its ambient A3 angle. Finite nine-dimensional
+arccos(1/sqrt3), rather than its ambient A3 angle. The later complete
+[U-edge proof](../results/review_glued_e7_a2_released_e2_actual_a5_bridge_root_acceptance_20261023.md)
+and [F-edge proof](../results/review_glued_e7_a2_v_e2_actual_d4_edge_root_acceptance_20261023.md)
+give full H3+A5+A1 and H3+D4+A1+[2b] corners. Original-module
+conditions and both embeddings exhaust every possible first wall; proposed
+later mirrors T and P2 are proved nonactual. Finite nine-dimensional
 chamber volume and an original integral period both remain unresolved.
+The [complete H3+D4 face acceptance](../results/review_glued_e7_a2_complete_right_hexagon_root_acceptance_20261023.md)
+proves a whole compact right-angled hexagon of area pi. Its two auxiliary
+face normalizers fail original ambient integrality; they provide no
+ambient period, finite-volume chamber or example.
 
 The literal composite551 host is now also
 [nonreflective](../results/review_composite551_binary_release_and_literal_nonreflectivity_root_acceptance_20261022.md).
@@ -295,9 +313,14 @@ adds a new complete selected domain to the finite57 search. The actual
 null pair forces a whole affine-A1 cusp factor. Seven complete receiving
 families, actual-source multiplicity bounds and compatible full8 priorities
 leave minimum curvature3,485 after every incoming load. The literal
-large-A cycle charge5 is essential in one family. Finite>=5, dotted and
-nonisolated short-fork contacts and other costly forests remain open;
-there is no universal364 finite cap or dimension56 conclusion.
+large-A cycle charge5 is essential in one family. The later
+[merged short-fork matching theorem](../results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md)
+finances the complete selected set of remaining heavy sources having a
+private eligible finite receiver or at least two merging neighbors.
+Whole-component port bounds and a finite Hall matching retain the prior
+partial pentagon rule, with receiving caps358 and361.5. Zero-neighbor,
+sole-shared-receiver, isolated finite>=5/dotted and other costly cases
+remain open; there is no universal364 cap or dimension56 conclusion.
 
 ## Dimension comparison
 

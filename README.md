@@ -45,8 +45,15 @@ precise hypotheses and review records. General finite volume remains 57.
 At exact compact dimension18, the [universal A12 energy above13/20](results/review_compact_a12_point65_and_general18_eight_groups_root_acceptance_20261022.md)
 closes its entire row without arithmeticity and with arbitrary finite
 spectators. The later [complete D16 typed-seven exclusion](results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md)
-also closes that whole row, leaving **seven necessary groups** after the
-earlier A15/A16 closures. At arithmetic dimension16, the [complete D14 exclusion](results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md)
+also closes that whole row. The [complete B16 exclusion](results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md)
+uses an actual neighboring A16 endpoint and one jointly funded vector to
+close both typed-seven cases, leaving **six necessary groups** after
+A12/A15/A16/D16. The [A17 ordinary rank-one exclusion](results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md)
+narrows A17 to actual I; D17 retains both ordinary and actual-I spectators,
+so the group count stays six. The [conditional general18 frontier kernel](docs/general_eighteen_frontier_refinement_logic_20261023.md)
+has a [bounded compile and separate six-declaration audit PASS](results/lean_general18_six_group_frontier_verification_20261023/manifest.json)
+under nine explicit written premises, with no geometric instance or global17
+conclusion. At arithmetic dimension16, the [complete D14 exclusion](results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md)
 combines ordinary-dihedral and both actual typed-seven cases, leaving
 **thirteen groups**. These are reviewed written refinements, not new global
 ceilings or examples.
@@ -162,6 +169,11 @@ cusps. All seven receiving families have positive remaining curvature,
 with minimum3,485 after their full loads. Other short-fork contacts and
 costly forests remain open; this does not prove dimension56.
 
+The [merged short-fork matching theorem](results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md)
+adds full8 financing for remaining heavy sources with a private eligible
+receiver or at least two merging neighbors. It retains the earlier partial
+pentagon rule; complete coverage and dimension56 remain open.
+
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled
 120-cell minimum and second-volume problems remain open. Preserved
@@ -205,8 +217,15 @@ The new [glued golden E7/A2 module](results/review_glued_e7_a2_original_module_f
 has accepted actual first edges and a complete triangle face. Its
 [ambient continuation](results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md)
 reaches full D6+three-A1 and D6+A3 corners and identifies a complete compact
-quadrilateral, with its intrinsic angles computed by projection. Finite
-nine-dimensional chamber volume remains unresolved; this is not a new example.
+quadrilateral, with its intrinsic angles computed by projection. The later
+[actual U edge](results/review_glued_e7_a2_released_e2_actual_a5_bridge_root_acceptance_20261023.md)
+and [actual F edge](results/review_glued_e7_a2_v_e2_actual_d4_edge_root_acceptance_20261023.md)
+reach full H3+A5+A1 and H3+D4+A1+[2b] corners. Complete first-wall
+proofs show the proposed later mirrors T and P2 are nonactual. Finite
+nine-dimensional chamber volume remains unresolved. The accepted
+[complete H3+D4 face](results/review_glued_e7_a2_complete_right_hexagon_root_acceptance_20261023.md)
+is a compact right-angled hexagon of area pi. Its finite face symmetries
+are not ambient lattice periods; no new example is claimed.
 
 The distinct determinant-norm551=19*29 host is now also
 [proved nonreflective](results/review_composite551_binary_release_and_literal_nonreflectivity_root_acceptance_20261022.md).

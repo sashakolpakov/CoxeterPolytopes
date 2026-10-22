@@ -28,8 +28,8 @@ frozen PDF editions.
 
 |Lane|Known examples / current ceiling|Active work|Owner|
 |---|---|---|---|
-|General finite-volume Coxeter|21 / 57|All-heavy hexagons and selected isolated3/4/parallel short-fork domains have compatible full8 financing. The new parallel theorem covers seven cusp families. Cover the remaining contacts, short faces and costly forests with one global rule.|root with parallel mathematical reviewers|
-|General compact Coxeter|8 / 18|Seven necessary dimension18 groups remain after complete A12/A15/A16 and D16-typed7 exclusions. Pursue further same-vector energy exclusions. A distinct glued golden H9 host has accepted actual triangle/quadrilateral faces and ambient edges; finite chamber volume is open. No new example is claimed.|root with parallel mathematical reviewers|
+|General finite-volume Coxeter|21 / 57|Selected cusp rules and merged short-fork matching have compatible full8 financing. Matching covers private-receiver or at-least-two-neighbor sources and retains partial pentagon transfers. Complete coverage of remaining contacts, short faces and costly forests is open.|root with parallel mathematical reviewers|
+|General compact Coxeter|8 / 18|Six necessary dimension18 groups remain; A17 retains only actual I, while D17 retains both rank-one cases. Pursue further same-vector exclusions. The glued golden H9 host has accepted triangle/quadrilateral faces and a whole right hexagon of area pi; ambient finite volume is open. No new example is claimed.|root with parallel mathematical reviewers|
 |Compact arithmetic Coxeter|8 / 16|Thirteen necessary dimension16 groups remain after six whole-group exclusions and one A14 subcase. Pursue remaining actual forests using coupled wall pressures. The existing global16 Lean compile/separate three-declaration audit PASS under27 external inputs is unchanged. The new frontier kernel now has a bounded compile/separate six-declaration audit PASS under nine written interfaces; failed/refused predecessors remain preserved.|root with independent mathematical review|
 |Entirely ideal right-angled|4 / 4|Sharp internal theorem; preserve its verified package, stop ideal5/6 searches.|Completed, monitored by root|
 |Mixed-vertex right-angled|8 / 8|Sharp internal universal finite-volume theorem; preserve its package, stop right-angled9 searches.|Completed, monitored by root|
@@ -85,14 +85,33 @@ proves energy above13/20 with arbitrary finite spectators and closes the
 entire A12 row too. The subsequent
 [complete D16 typed-seven proof](../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md)
 closes both actual defects without arithmeticity, retaining every allowed
-foreign contact and continuous dotted interval. Seven rows remain open;
-no global17 follows, and this geometric proof adds no Lean execution.
+foreign contact and continuous dotted interval. The later
+[complete B16 typed-seven exclusion](../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md)
+uses fresh B2 geometry and an actual A16 endpoint to close both variants.
+The [A17 ordinary rank-one exclusion](../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md)
+leaves actual I there; D17 retains ordinary nonshort A1 or actual I.
+Six rows remain open. The [conditional general18 refinement](general_eighteen_frontier_refinement_logic_20261023.md)
+now has a [bounded compile and separate six-declaration audit PASS](../results/lean_general18_six_group_frontier_verification_20261023/manifest.json)
+under nine written premises. Geometry remains external; no instance or
+global17 theorem follows.
+
+The [finite57 merged short-fork matching](../results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md)
+adds full8 financing for the complete private-receiver or two-neighbor
+selected domain, with the prior partial pentagon transfers retained.
+Zero-neighbor and sole-shared-receiver cases remain open, so this gives
+no global56 bound.
 
 The distinct [glued E7/A2 construction](../results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md)
 now has complete accepted actual triangle/quadrilateral faces and ambient
-edges through full E7+two-A1, D6+three-A1 and D6+A3 corners. Further ambient
-edges are under investigation. Neither a finite chamber nor a period has
-been established for this module.
+edges through full E7+two-A1, D6+three-A1 and D6+A3 corners. The accepted
+[U continuation](../results/review_glued_e7_a2_released_e2_actual_a5_bridge_root_acceptance_20261023.md)
+and [F continuation](../results/review_glued_e7_a2_v_e2_actual_d4_edge_root_acceptance_20261023.md)
+reach H3+A5+A1 and H3+D4+A1+[2b]. Both have complete original-module
+firstness proofs; the later upper mirrors T and P2 are nonactual. Further
+ambient edges are under investigation. The [complete H3+D4 face](../results/review_glued_e7_a2_complete_right_hexagon_root_acceptance_20261023.md)
+is a compact right-angled hexagon of area pi; its finite face normalizers
+are not ambient lattice symmetries. Neither ambient finite volume nor a
+period has been established for this module.
 
 Construction work now [closes the literal composite551 host](../results/review_composite551_binary_release_and_literal_nonreflectivity_root_acceptance_20261022.md).
 The authenticated seven-profile transverse execution and separate combine

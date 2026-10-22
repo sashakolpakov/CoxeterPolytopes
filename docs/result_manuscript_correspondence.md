@@ -1,6 +1,6 @@
 # Results and manuscripts
 
-Updated 22 October 2026. There are **six current papers**, with finished
+Updated 23 October 2026. There are **six current papers**, with finished
 TeX sources and matching PDFs. The other repository-owned TeX files are
 predecessors, supporting notes, input fragments or generated atlases.
 They are not additional proposed papers. The
@@ -28,6 +28,9 @@ The later [parallel short-fork financing theorem](../results/review_finite57_iso
 also belongs in the finite-volume paper's local-to-global argument. It
 adds seven actual receiving cusp families with compatible full8 transfers;
 it neither changes the PDF's57 theorem nor supplies global coverage for56.
+The accepted [merged short-fork matching](../results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md)
+adds the private-receiver or two-neighbor selected domain, retaining the
+partial pentagon rule. It belongs in the same paper and does not prove56.
 
 A written review is an internal audit at declared premises. It is not
 external refereeing, an independent reproduction of every finite input,
@@ -50,8 +53,16 @@ spectators and no arithmeticity. It closes the entire A12 row, leaving
 eight general18 groups after the earlier A15/A16 closures. The later
 [complete D16 typed-seven proof](../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md)
 combines fresh tails, a native-angle head gap and adaptive centre pressures
-in one funded vector, leaving seven groups. All belong in the same general
-compact paper; the new D16 proof has written review, not Lean credit.
+in one funded vector. The later
+[complete B16 typed-seven proof](../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md)
+adds fresh short-end geometry and an actual neighboring A16 endpoint,
+leaving six groups. All belong in the same general compact paper; these
+geometric proofs remain written inputs. The [A17 ordinary exclusion](../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md)
+retains only actual I there, while D17 retains ordinary nonshort A1 or
+actual I; the group count stays six. Their [conditional frontier logic](general_eighteen_frontier_refinement_logic_20261023.md)
+has a [bounded compile and separate six-declaration audit PASS](../results/lean_general18_six_group_frontier_verification_20261023/manifest.json)
+under nine explicit written premises, without a geometric instance or
+global17 conclusion.
 The general component
 [dihedral floor above3/19](../results/review_compact_ordinary_dihedral_three_nineteenths_root_acceptance_20261022.md)
 belongs with its ordinary component estimates. Its arithmetic D14 consumer
@@ -281,6 +292,15 @@ and the arithmetic index/covolume argument close that literal module.
 The intermediate corner is not mislabeled E8, and the manual continuation
 claims no new checker execution. No example or commensurability-class
 exclusion follows, and these construction notes add no manuscript family.
+
+The glued golden host's [U edge](../results/review_glued_e7_a2_released_e2_actual_a5_bridge_root_acceptance_20261023.md)
+and [F edge](../results/review_glued_e7_a2_v_e2_actual_d4_edge_root_acceptance_20261023.md)
+are construction research, with full H3+A5+A1 and H3+D4+A1+[2b] corners.
+Complete firstness excludes the later upper mirrors T and P2 as actual
+facets. The [complete H3+D4 face acceptance](../results/review_glued_e7_a2_complete_right_hexagon_root_acceptance_20261023.md)
+adds a whole compact right-angled hexagon of area pi. Its finite face
+normalizers are not ambient lattice maps. These notes add no paper
+family, ambient finite-volume chamber, period or example.
 
 The ideal RA4 paper already follows the requested sequence: the published
 minimum, the universal gap and equality reduction, the restricted

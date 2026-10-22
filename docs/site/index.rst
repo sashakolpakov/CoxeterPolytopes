@@ -39,6 +39,9 @@ The finite-volume search also has a new
 :download:`isolated parallel short-fork theorem <../../results/review_finite57_isolated_parallel_short_fork_financing_root_acceptance_20261022.md>`:
 seven actual receiving cusp families finance the full selected transfers,
 with minimum remaining curvature3,485. Global coverage for56 remains open.
+The accepted :download:`merged short-fork matching <../../results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md>`
+adds sources with a private eligible receiver or at least two merging
+neighbors, retaining the partial pentagon rule. It does not prove56.
 
 The other two papers concern ideal and compact right-angled polytopes in
 dimension four. The compact volume minimum and second-volume problems remain
@@ -97,9 +100,16 @@ closes both actual typed-seven alternatives without arithmeticity. The new
 proves energy above13/20 with arbitrary finite spectators and closes its
 whole row too. The later
 :download:`complete D16 typed-seven exclusion <../../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md>`
-closes both actual N7/O7 forests without arithmeticity, leaving **seven
-necessary groups** after the earlier A15/A16 exclusions. This new geometric
-proof has written review credit, not Lean credit.
+closes both actual N7/O7 forests without arithmeticity. The new
+:download:`complete B16 typed-seven exclusion <../../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md>`
+uses an actual neighboring A16 endpoint and one funded head/endpoint
+reference to leave **six necessary groups** after A12/A15/A16/D16.
+The :download:`A17 ordinary rank-one exclusion <../../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md>`
+leaves actual I there; D17 retains both rank-one cases. The count stays six.
+The :download:`conditional general18 frontier kernel <../general_eighteen_frontier_refinement_logic_20261023.md>`
+has a :download:`bounded compile and separate six-declaration audit PASS <../../results/lean_general18_six_group_frontier_verification_20261023/manifest.json>`
+under nine written premises. Actual geometry remains external; no instance
+or global17 theorem is supplied.
 The :download:`ordinary dihedral floor above3/19 <../../results/review_compact_ordinary_dihedral_three_nineteenths_root_acceptance_20261022.md>`
 closes arithmetic dimension16's ordinary D14 spectator. The
 :download:`complete D14 acceptance <../../results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md>`
@@ -124,8 +134,15 @@ predecessors remain preserved. Global ceilings remain57/18/16.
 The distinct
 :download:`glued golden E7/A2 construction <../../results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md>`
 has accepted actual edges, full finite germs and complete compact triangle
-and quadrilateral faces. Finite nine-dimensional chamber volume remains
-unresolved; no new polytope example is claimed.
+and quadrilateral faces. The later
+:download:`actual U edge <../../results/review_glued_e7_a2_released_e2_actual_a5_bridge_root_acceptance_20261023.md>`
+and :download:`actual F edge <../../results/review_glued_e7_a2_v_e2_actual_d4_edge_root_acceptance_20261023.md>`
+reach full H3+A5+A1 and H3+D4+A1+[2b] corners. Their complete first-wall
+proofs also show the later mirrors T and P2 are nonactual. Finite
+nine-dimensional chamber volume remains unresolved. The accepted
+:download:`whole H3+D4 face <../../results/review_glued_e7_a2_complete_right_hexagon_root_acceptance_20261023.md>`
+is a compact right-angled hexagon of area pi. Its finite face symmetries
+are not ambient periods; no new polytope example is claimed.
 
 The literal norm239 and norm379 construction lattices are proved
 nonreflective by original integral infinite-order chamber periods.

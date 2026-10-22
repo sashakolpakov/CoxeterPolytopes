@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-23",
+  "scope": "Preserved actual incomplete local Sphinx attempt; NO build PASS or mathematical verification.",
+  "stdout": {
+    "path": "results/general18_six_group_strict_sphinx_20261023.stdout",
+    "bytes": 8625,
+    "sha256": "90a9ea324bac24f535a2a5f57a2f6425ad98b61f3bad0a0b3657fd325b468ed3"
+  },
+  "guard": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/general18_six_site_20261023"
+    ],
+    "exit_code": -15,
+    "stop_reason": "Command '['ps', '-axo', 'pgid=,rss=']' timed out after 10 seconds",
+    "observed_peak_group_rss_bytes": 103907328,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 113593806848,
+      "ram_available_bytes": 6399082496
+    },
+    "seconds": 52.116
+  },
+  "owned_partial_tree": ".publication/general18_six_site_20261023",
+  "owned_partial_files": 76,
+  "owned_partial_bytes": 4434102,
+  "cleanup": "Only this owned partial generated tree removed after recording; sources, stdout and all evidence preserved.",
+  "retry_policy": "Same unchanged guard/resource floors, fresh owned output, no monitoring bypass."
+}
