@@ -141,12 +141,16 @@ applicability remain explicit premises.
 Latest supporting research
 --------------------------
 
-The :download:`latest accepted supporting batch <../../results/d15_d16_and_norm239_progress_acceptance_20261022.json>`
-also excludes arithmetic D15 with either actual typed-seven defect and
-the ordinary nonshort D16+A1 branch. Two general nineteen groups and four
-arithmetic seventeen groups remain. The global ceilings and six printed
-papers are unchanged. Restricted A19 endpoint and D19 head reductions
-are supporting theorems, not whole-forest exclusions. The restricted
+The :download:`latest accepted supporting batch <../../results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json>`
+excludes whole A19 by the exhaustive zero/one/two weak central-end cases.
+Only whole D19 remains in general dimension nineteen; four arithmetic
+seventeen groups remain. The global ceilings and six printed papers
+are unchanged. D19's remaining long heads are native5,7,8,9 or dotted.
+Under native5, both fork cosines are at most10 and every isolated fork
+opposite must be dotted. The stronger isolated-centre result assumes
+the exact specified symmetric dotted pair; it is not unconditional.
+The batch adds manual mathematical proofs and reviews, with no new
+scientific, Lean or TeX execution. The restricted
 third-corner estimate353.640625 still lacks a complete global allocation;
 charge372 and dimension57 remain unchanged.
 
@@ -156,8 +160,20 @@ finite-domain proof and twenty actual bounded units plus a separate combine.
 The further fifteen-unit batch and separate combine also passed. Its
 :download:`fifth-edge proof <../../results/compact_h9_prime239_fifth_edge_and_e8_long_a1_germ_candidate_20261022.md>`
 has full mathematical/runtime review and root acceptance: the full germ
-is E8+A1 with the actual isolated norm2b root. Chamber completion, finite volume and a new
-polytope example remain unproved.
+is E8+A1 with the actual isolated norm2b root. The subsequent
+:download:`original-module period proof <../../results/compact_h9_prime239_original_base_to_fifth_e8_long_a1_period_candidate_20261022.md>`
+has full internal mathematical review and root acceptance. It proves
+integrality, future preservation and a full outward-germ map, then an
+infinite-order chamber symmetry and nonreflectivity of this literal
+module. The earlier edge runs are inherited inputs; no fresh matrix
+checker or Lean run is claimed. No field/form-class exclusion follows.
+
+The distinct norm379 host has a
+:download:`reviewed first binary edge and finite transverse domain <../../results/compact_h9_prime379_first_binary_edge_and_quarter_folded_transverse_domain_candidate_20261022.md>`.
+Its six hand-sized binary rows prove actual firstness. Original quarter
+glue and eleven nearest phases give a complete five-profile overlist
+of at most24,552 scalar pairs. This is a proved domain, not an executed
+count: no transverse worker, further germ or polytope is certified.
 
 For the literal norm79 construction host, the accepted END0 run checked
 810,436 scalar trials and six profiles, finding six integral mirrors and

@@ -47,13 +47,13 @@ It is not an additional restriction on the arithmetic Coxeter results.
 The [external-input register](docs/manuscript_assumptions.md#arithmetic-reflection-groups-and-the-quadratic-form-model)
 records this published reduction and its references.
 
-The [latest accepted supporting batch](results/d15_d16_and_norm239_progress_acceptance_20261022.json)
-also closes arithmetic D15 with either actual typed-seven defect and
-the ordinary nonshort branch of D16+A1. Four arithmetic seventeen
-groups remain: whole A17, whole B17, D16+actual-I and whole D17.
-The complete B19 exclusion leaves two general nineteen groups: whole
-A19 and D19. Further reviewed reductions restrict their endpoint and
-head possibilities.
+The [latest accepted supporting batch](results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json)
+excludes whole A19 by treating all three central-end cases, leaving
+**whole D19 alone** in general dimension nineteen. Its remaining long
+heads have labels 5, 7, 8, 9 or are dotted. Further restricted fork
+results apply under a native-five head. Four arithmetic seventeen
+groups remain: whole A17, whole B17, D16+actual-I and whole D17;
+the earlier D15 and ordinary nonshort D16+A1 exclusions are preserved.
 These are necessary possibilities, not realized examples. Complete
 arguments and source-bound reviews are linked in the receipt; global
 ceilings remain unchanged.
@@ -78,9 +78,17 @@ states its complete finite algorithm and actual twenty-unit output.
 The [fifth-edge proof](results/compact_h9_prime239_fifth_edge_and_e8_long_a1_germ_candidate_20261022.md)
 reaches E8+A1 with an isolated square2b root; all fifteen units and the
 separate combine passed, followed by full mathematical/runtime review.
-These are
-construction steps within the full reflection arrangement; chamber
-completion and finite volume remain open.
+The subsequent [original-module period proof](results/compact_h9_prime239_original_base_to_fifth_e8_long_a1_period_candidate_20261022.md)
+and its [root acceptance](results/review_prime239_original_base_fifth_germ_period_root_acceptance_20261022.md)
+now prove this literal lattice **nonreflective**: an integral future
+chamber symmetry has infinite order. This conclusion concerns that
+module only and is a written geometric proof, with the five earlier
+edge computations as inherited inputs; no new checker or Lean run is claimed.
+
+A different norm379 host has a reviewed first binary edge and a
+[complete prospective transverse domain](results/compact_h9_prime379_first_binary_edge_and_quarter_folded_transverse_domain_candidate_20261022.md)
+of at most 24,552 scalar pairs. That bound is proved on paper; no
+transverse worker has run, and no new polytope example is claimed.
 
 ## What “verified” means here
 

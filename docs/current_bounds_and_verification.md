@@ -47,12 +47,25 @@ Lean declarations in two new conditional kernels. The
 [previous acceptance](../results/whole_b19_exclusion_acceptance_20261022.json)
 closes the last B19 wall and hence the whole B19 forest, leaving only
 whole A19 and D19 in general dimension nineteen. These batches do not
-lower a global ceiling. The [latest acceptance](../results/d15_d16_and_norm239_progress_acceptance_20261022.json)
+lower a global ceiling. The [previous acceptance](../results/d15_d16_and_norm239_progress_acceptance_20261022.json)
 also excludes arithmetic D15+either actual typed7 and the ordinary nonshort
 D16+A1 branch, leaving four grouped arithmetic rows. It records additional
 restricted general A19/D19 proofs, new norm239 actual-edge evidence and
 complete bounded finite57 loader integration. The six-paper writing
 milestone is complete; research continues within the existing families.
+
+The [latest accepted batch](../results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json)
+excludes the last whole-A19 case. Its exhaustive zero/one/two weak-end
+composition leaves **whole D19 alone** in general dimension nineteen.
+Within D19, finite long heads of label at least ten are excluded;
+native5,7,8,9 and dotted remain. Restricted native5 fork results do
+not close that head branch. The four arithmetic seventeen groups
+remain unchanged. The literal norm239 construction lattice is now
+proved nonreflective, while a distinct norm379 host has a reviewed
+first binary edge and a proved prospective finite transverse domain.
+This batch consists of written proofs and full internal mathematical
+reviews; it adds no scientific, Lean or TeX execution and changes no
+global ceiling or finished PDF.
 
 ## Dimension comparison
 
@@ -264,7 +277,6 @@ The complete reduced necessary lists are now:
 
 | General compact nineteen: dominant | Entire remaining spectator alternatives |
 | --- | --- |
-| A19 | none |
 | D19 | none |
 
 | Arithmetic Coxeter seventeen: dominant | Entire remaining spectator alternatives |
@@ -275,10 +287,11 @@ The complete reduced necessary lists are now:
 | D17 | none |
 
 Here T2 and T3 are irreducible ordinary components, and I/typed7 retain
-their actual-wall definitions. There are two and four grouped rows,
+their actual-wall definitions. There are one and four grouped rows,
 respectively. These necessary lists make no realization claim. The
-[latest checkpoint](../results/d15_d16_and_norm239_progress_acceptance_20261022.json)
-binds the complete D15 exclusion and ordinary-only D16 subtraction.
+[latest checkpoint](../results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json)
+binds the whole-A19 exclusion and inherits the complete D15 exclusion
+and ordinary-only D16 subtraction.
 Previous batches removed whole B19, arithmetic B15+either typed7 and B16+I. Earlier batches removed general
 D18+I and D17+either typed7. All other necessary groups and the six
 printed editions are preserved.
@@ -295,8 +308,8 @@ The [complete D17+typed7 proof](../results/compact19_d17_typed_seven_fresh_centr
 recomputes every tail and centre case at rank seventeen. Its two actual
 rank-two defects have different foreign-contact lists, but both pay
 energy greater than .09. Pure component pressures and one final paid
-reference exclude both alternatives. Whole A19 and D19 remain after
-the later B19 exclusion below.
+reference exclude both alternatives. At the later B19 checkpoint below,
+whole A19 and D19 remained; the subsequent A19 composition leaves D19.
 
 For the now-excluded arithmetic B16+I row, the
 [short-opposite reduction](../results/arithmetic17_b16_actual_i_short_opposite_isolation_and_degree_restriction_20261021.md)
@@ -337,9 +350,13 @@ their exact nonzero cross term and both anchor payments. The
 leaves only isolated native5, finite>=7 or dotted heads. The [one-weak-end proof](../results/compact_whole_a19_one_weak_end_joint_isolated_endpoint_candidate_20261022.md)
 also excludes exactly one weak central end. It classifies every actual
 endpoint, proves at least one is isolated, and pays unequal-block foot
-cross terms at both anchors. Together the two A19 proofs require both
-central indices5 and15 to be strong at loss.61. The remaining zero-weak
-branch and whole D19 are open; none is a whole-forest exclusion.
+cross terms at both anchors. Together these two A19 proofs require both
+central indices5 and15 to be strong at loss.61. The new
+[zero-weak-end proof](../results/compact_whole_a19_zero_weak_ends_endpoint_foot_exclusion_candidate_20261022.md)
+excludes that last case using actual endpoint feet, complete finite and
+continuous dotted intervals, and separate primitive anchor payments.
+The [accepted three-case conjunction](../results/review_compact_whole_a19_zero_weak_ends_and_whole_family_root_acceptance_20261022.md)
+therefore excludes whole A19. Whole D19 remains open.
 The [D19 pooled-reference proof](../results/compact_whole_d19_old_strong_five_head_independent_pooled_reference_foundations_20261022.md)
 also establishes the old-.61 strong5 floor without a head hypothesis.
 Its dotted case uses the weak upper bound with a negative coefficient
@@ -347,6 +364,18 @@ and the chamber inequality with a positive coefficient in one explicit
 rational vector of norm greater than1.00008039. The late15/16 floors
 used in that contradiction are conditional on assumed weak5; they are
 not new unconditional individual floors.
+
+The [finite-head continuation](../results/compact_whole_d19_finite_long_head_at_least_ten_exclusion_foundations_20261022.md)
+excludes every head label at least ten, leaving native5,7,8,9 or
+dotted. Its new late-floor bootstrap is conditional on that finite-head
+case. Under native5, the
+[restricted fork theorem](../results/compact_whole_d19_native_five_head_fork_constraints_foundations_20261022.md)
+proves both fork cosines at most ten and excludes every isolated finite
+fork opposite. Its stronger isolated-centre conclusion requires the
+exact specified symmetric dotted pair. The
+[root acceptance](../results/review_compact_whole_d19_native_five_fork_constraints_root_acceptance_20261022.md)
+records a prose erratum: the illustrative relaxation's prefix floors
+are at indices5..17 only. No complete D19 exclusion is asserted.
 
 The [complete B19 two-wall reduction](../results/compact_whole_b19_two_terminal_wall_reduction_foundations_20261022.md)
 and its [short4 exclusion](../results/compact_whole_b19_short_four_terminal_fresh_index17_exclusion_foundations_20261022.md)
@@ -361,7 +390,8 @@ role, and pools the last slopes before lifting the endpoint. One original
 reference gives total1.00111946. Full root and other-author reviews
 accept the corrected proof and its conjunction with the two-wall reduction.
 Both alternatives are excluded, so the whole B19 group is now removed.
-This leaves whole A19 and D19, without lowering the global ceiling19.
+At that checkpoint whole A19 and D19 remained, without lowering the
+global ceiling19. The later complete A19 argument leaves D19 alone.
 
 For finite volume, the [complete Context662 composition](../results/finite57_complete_context662_source_composition_20261021.md)
 finances this one selected producer over all whole-parent domains.
@@ -445,8 +475,22 @@ units and the separate combination check passed; the
 binds45,620 actual scalar rows. A further15-unit released-S computation
 and separate combination have also passed. The [fifth-edge proof](../results/compact_h9_prime239_fifth_edge_and_e8_long_a1_germ_candidate_20261022.md)
 identifies the full E8+A1 germ with its original square2b spectator;
-its full mathematical/runtime review and root acceptance are complete. Further chamber
-completion and finite volume remain open; this is not a new example.
+its full mathematical/runtime review and root acceptance are complete.
+The subsequent [original-module period proof](../results/compact_h9_prime239_original_base_to_fifth_e8_long_a1_period_candidate_20261022.md)
+maps the entire outward base germ to that fifth germ by an integral
+future isometry of infinite order. Full mathematical reviews and
+[root acceptance](../results/review_prime239_original_base_fifth_germ_period_root_acceptance_20261022.md)
+establish nonreflectivity of this literal norm239 module by the
+inherited arithmetic index/covolume theorem. This supplies no new
+example, field/form-class exclusion or new checker execution.
+
+The distinct [norm379 host](../results/compact_h9_prime379_first_binary_edge_and_quarter_folded_transverse_domain_candidate_20261022.md)
+now has a reviewed first actual binary edge, proved by three short and
+three long scalar rows. The next transverse domain keeps original
+index-two glue and quarter-integral signed boosts. Five profiles and
+eleven nearest phases give a complete overlist of at most24,552
+scalar pairs, each with at most two time roots. No transverse worker
+has been prepared or run; further germs and reflectivity remain open.
 
 ## Ideal and compact right-angled four-volume
 

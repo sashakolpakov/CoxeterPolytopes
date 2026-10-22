@@ -39,14 +39,15 @@ The other two papers concern ideal and compact right-angled polytopes in
 dimension four. The compact volume minimum and second-volume problems remain
 open. No new higher-dimensional example is claimed here.
 
-The latest supporting written batch also excludes arithmetic D15 with
-either actual typed-seven defect and the ordinary nonshort D16+A1 branch.
-Two necessary general nineteen groups and four arithmetic seventeen groups
-remain. The `acceptance and full review bindings
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/d15_d16_and_norm239_progress_acceptance_20261022.json>`_
-keep restricted A19/D19 progress separate from global bounds. Norm239 now
-has five reviewed actual edges, with its fifth full germ E8+A1 retaining
-the isolated norm2b root; finite volume and chamber completion remain open.
+The latest supporting written batch excludes whole A19 through all three
+central-end cases. Only whole D19 remains in general dimension nineteen;
+four arithmetic seventeen groups remain. The `acceptance and full review bindings
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json>`_
+keep these necessary forests separate from global dimension bounds.
+The literal norm239 construction lattice is now proved nonreflective
+by an original integral infinite-order chamber period. A distinct norm379
+host has a reviewed first binary edge and a complete prospective transverse
+domain; no transverse worker or new example is claimed.
 A new six-declaration D15 conditional Lean kernel passed compilation and a
 separate actual axiom audit. The six compiled paper editions are unchanged.
 

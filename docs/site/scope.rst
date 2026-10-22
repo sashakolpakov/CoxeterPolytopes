@@ -25,10 +25,12 @@ Finite data and formal boundaries
 ---------------------------------
 
 Finite57 retains named inherited finite tables and companion propositions.
-Its selected replay does not regenerate every ancestor census. The two
-pending loader replacements affect safe current replay; they do not justify
-calling a partial run complete. The public-data manifest binds the bulk inputs
-separately from the source tree.
+Its selected replay does not regenerate every ancestor census. Both bounded
+loader replacements now have all25 actual PASS units and are integrated
+into the primary catalogue. Together with inherited matching records, there
+is separate evidence for136 script selections, but no combined146-job
+full-manuscript runtime PASS. The public-data manifest binds the bulk
+inputs separately from the source tree.
 
 Lean kernels assume the geometric and script interfaces specified in their
 maps, then prove internal implications from them. Actual wall/face incidence,
@@ -56,8 +58,9 @@ What remains open
   four-polytopes.
 * Extending the restricted ideal RA4 chain theorem to arbitrary ideal
   right-angled four-polytopes, if such an extension holds.
-* Completing finite57's bounded loader replay and integrating it into the
-  selected plan.
+* Regenerating finite57's remaining inherited inputs, if a complete
+  transitive reproduction is required; the bounded loader replacement
+  itself is complete and integrated.
 * Formalizing the actual geometric and arithmetic interfaces beyond the
   selected compiled kernels and their explicit premises.
 

@@ -105,16 +105,17 @@ groups. The relative-length cancellation, invariant cycles and complete
 same-field strips belong in the arithmetic compact paper. Its B15
 argument instead uses the actual cubic-seven field and long-head feet.
 
-The [latest batch](../results/d15_d16_and_norm239_progress_acceptance_20261022.json)
+The [previous batch](../results/d15_d16_and_norm239_progress_acceptance_20261022.json)
 also excludes D15+either actual typed7 and the ordinary nonshort D16+A1
 branch. Its common method is the original-vector prefix reference with
 actual head/centre feet and shared spectator funding. Four arithmetic
 rows remain, including D16+actual-I. This belongs in the arithmetic
 compact paper; it adds no manuscript and lowers no global ceiling.
-The restricted A19 two-weak-end and one-weak-end exclusions require both
-central ends strong; the remaining zero-weak branch stays open. These
-joint-foot proofs and the D19 head-isolation theorem belong in the existing
-general compact argument.
+The [latest batch](../results/whole_a19_exclusion_and_construction_progress_acceptance_20261022.json)
+closes the zero-weak-end case too: the three A19 cases now exclude the
+whole forest. These joint-foot proofs and the D19 head reductions belong
+in the existing general compact argument, whose dimension ceiling
+remains nineteen. Only D19 remains in its necessary nineteen list.
 The D19 old-.61 strong5 proof adds an explicit rational supporting
 vector using an actual foot, a weak upper bound and the chamber sign.
 It supplies no whole-D19 contradiction or unconditional late floors.
@@ -126,7 +127,8 @@ index and pools slopes before raising its floor. The
 [final accepted short3 exclusion](../results/whole_b19_exclusion_acceptance_20261022.json)
 then closes the whole B19 forest through a fresh loss.50 audit at that
 same index. These are parts of one coherent general compact argument,
-not separate manuscripts. Whole A19 and D19 remain.
+not separate manuscripts. Whole A19 and D19 remained at that checkpoint;
+the later three-case A19 composition leaves D19 alone.
 The stronger353.640625 restricted third-corner bound belongs
 in finite57, with the global allocation still open. None adds a manuscript.
 
@@ -138,8 +140,20 @@ It proves a full E7+A2 germ, not chamber completion or a polytope example.
 The fourth and fifth norm239 edges likewise remain construction research.
 Their complete finite-domain proofs have separate actual20-unit and15-unit
 executions, separate combiners and full mathematical/runtime reviews.
-The fifth full germ is E8+A1 with the actual norm2b spectator. A repeated
-diagram is not a proved lattice period or a finite-volume example.
+The fifth full germ is E8+A1 with the actual norm2b spectator. The
+subsequent accepted original-module isometry proof maps the FULL
+outward base germ to that full fifth germ, proves integrality and
+future preservation, and gives an infinite-order chamber symmetry.
+The arithmetic index/covolume theorem then proves this literal
+norm239 lattice nonreflective. This is construction research, with
+no field/form-class exclusion or new example.
+
+The distinct norm379 first binary edge and prospective finite
+transverse domain also belong in construction research. The proof
+keeps the original index-two glue, quarter-integral signed boosts,
+all five profiles and eleven nearest phases. Its 24,552 scalar-pair
+overlist is a proved finite domain, not an executed count or a new
+transverse edge. Neither construction note adds a manuscript family.
 
 The ideal RA4 paper already follows the requested sequence: the published
 minimum, the universal gap and equality reduction, the restricted
