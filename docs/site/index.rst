@@ -43,19 +43,29 @@ The latest supporting written proof excludes the last whole D19 family
 through all six long-head classes, completing the dimension-nineteen frontier
 and proving global compact dimension at most18. Its `acceptance and full review bindings
 <https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/compact_dimension18_global_written_acceptance_20261022.json>`_
-record the complete manual argument. Three arithmetic seventeen groups remain:
-whole A17, B17 and D17. The entire D16+actual-I forest is now excluded by
+record the complete manual argument. Two arithmetic seventeen groups remain:
+whole A17 and B17. The entire D16+actual-I forest is excluded by
 the actual-degree reduction and complete quadratic, cubic and quartic
 contradictions. Its `full review and root acceptance
 <https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md>`_
 also record complete selected-domain financing for finite57 all-heavy
 hexagons at actual nonadjacent cusps. Neither result lowers a global
-ceiling by itself.
-The literal norm239 construction lattice is now proved nonreflective
-by an original integral infinite-order chamber period. A distinct norm379
-host now has reviewed E7+I2(5) and subsequent E7+2A1 full finite germs,
-each with five actual profile runs and a separate combine. The earlier
-RAM refusal is preserved with zero execution credit.
+ceiling by itself. The later `whole-D17 exclusion
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_arithmetic17_whole_d17_complete_exclusion_root_acceptance_20261022.md>`_
+uses complete field reductions and a36-field/120-pair exact census. Its
+two survivors both violate the same legally funded head/fork norm budget.
+All four actual bounded units passed. A scalar Lean kernel compiled and
+passed a separate four-declaration audit; geometry, complete enumeration
+and paid-reference applicability remain explicit written inputs. The
+arithmetic ceiling stays17.
+The literal norm239 and norm379 construction lattices are proved
+nonreflective by original integral infinite-order chamber periods.
+The norm379 fourth edge reaches a full E8 corner with an isolated long
+wall. Its `complete proof and acceptance
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_prime379_fourth_germ_original_period_root_acceptance_20261022.md>`_
+bind five actual profile runs and a separate combine, all15 selectors
+and294 scalar rows. The earlier RAM refusal remains preserved with zero
+execution credit. These conclusions concern the two original lattices only.
 No new polytope example is claimed.
 The compact18 conditional composition now has bounded compilation and a
 separate five-declaration actual axiom audit under23 named written premises.

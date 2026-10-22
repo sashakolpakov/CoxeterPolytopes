@@ -1,0 +1,37 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/check_d17_one_isolated_quadratic_fork_20261022.py",
+    "--expected-source-sha256",
+    "73c44f9435269b21c859acf8b35bfb85927c43f5d4daf4e37cb18ab86d81d5ed",
+    "combine",
+    "--part",
+    "results/d17_one_isolated_quadratic_fork_batch0_20261022.jsonl",
+    "--part-sha256",
+    "beaeb3cd97b5bf50ae78b198f852553d9010507de81eda6b35a595948c1109e4",
+    "--part",
+    "results/d17_one_isolated_quadratic_fork_batch1_20261022.jsonl",
+    "--part-sha256",
+    "4266586f7b63f5bacee970891e6b0416554638d0cbac3ba37d931469f97d3f58",
+    "--part",
+    "results/d17_one_isolated_quadratic_fork_batch2_20261022.jsonl",
+    "--part-sha256",
+    "1ac954eef55ce16e21f85a1040cb5fff5eaea9f69022c72cafff9d673fc39ae6",
+    "--output",
+    "results/d17_one_isolated_quadratic_fork_combine_20261022.jsonl"
+  ],
+  "elapsed_seconds": 0.077,
+  "peak_process_tree_rss_bytes": 57327616,
+  "initial_resources": {
+    "free_disk_gib": 114.17,
+    "available_memory_gib": 8.25
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 541,
+  "stdout": "{\"U_total\": 77, \"W_total\": 41, \"arithmetic_fixtures\": [\"exact_signs\", \"zero\", \"rational_square\", \"pure_radical\", \"rational_nonsquare\", \"negative\", \"both_mixed_norm_signs\", \"full_integer_bases\"], \"batches\": 3, \"fields\": 36, \"kind\": \"summary\", \"pair_tests\": 120, \"rejects\": {\"L_nonintegral\": 0, \"g_nonintegral\": 0, \"nonphysical_cycle_outside_open_interval\": 0, \"parallel_or_nonnative_product\": 0, \"time_not_field_square\": 118}, \"scope\": \"necessary_one_isolated_quadratic_dotted_fork_only\", \"status\": \"PASS\", \"survivors\": 2, \"unit\": \"combine\"}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "73c44f9435269b21c859acf8b35bfb85927c43f5d4daf4e37cb18ab86d81d5ed",
+  "lock_owner": "wrapper"
+}

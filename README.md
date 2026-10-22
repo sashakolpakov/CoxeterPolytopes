@@ -54,26 +54,48 @@ continuous dotted interval. Together with the complete dimension-nineteen
 forest exclusions and the independent higher-dimensional tail, this
 proves the **global compact ceiling of eighteen**, without arithmeticity.
 It has full source-bound internal branch and composition reviews. The next
-general frontier is dimension eighteen. Three arithmetic seventeen groups
-remain: whole A17, whole B17 and whole D17. These are necessary
+general frontier is dimension eighteen. Two arithmetic seventeen groups
+remain: whole A17 and whole B17. These are necessary
 possibilities, not realized examples.
 
 The [complete arithmetic D16+I exclusion](results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
 now has [full outside review and root acceptance](results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md).
 The actual-field reduction and separate quadratic, cubic and quartic
-contradictions exhaust that entire forest. Its removal leaves the three
-whole families above; the arithmetic ceiling remains seventeen. The
+contradictions exhaust that entire forest. At that stage its removal left
+three whole families; the later D17 exclusion below leaves two. The
+arithmetic ceiling remains seventeen. The
 [compact eighteen logic kernel](docs/compact_dimension_eighteen_composition_logic_20261022.md)
 now has [bounded compilation and a separate five-declaration axiom audit PASS](results/lean_compact18_composition_verification_20261022/manifest.json),
 with no `sorryAx`. It checks the final composition under23 named written
 theorems and supplies no geometric instance. The first failed elaboration
 and its repaired, independently reviewed successor are preserved.
 
+The [whole D17 exclusion](results/review_arithmetic17_whole_d17_complete_exclusion_root_acceptance_20261022.md)
+now combines complete field reductions with an exact36-field census.
+Its120 pairs leave two necessary configurations; both violate one
+simultaneously funded metric budget, forcing squared norm greater than
+1.00184 where it must be below1. The four actual census units and full
+written composition have separate source-bound reviews. This removes a
+forest family, with the global arithmetic ceiling still17. The
+[new scalar Lean kernel](results/lean_classical17_census_verification_20261022/manifest.json)
+also passed a bounded compilation and separate four-declaration audit.
+It checks the numerical implications under explicit geometric/reference
+premises; the enumeration and actual geometry remain written inputs. Within B17,
+the [accepted short-edge reduction](results/review_arithmetic17_whole_b17_short_cap_field_root_acceptance_20261022.md)
+leaves actual degree2 or3 and eight possible nonisolated quadratic cap
+models; it does not yet exclude that family.
+
 A new [finite-volume financing theorem](results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md)
 uses two actual nonadjacent cusps to cover the heavy vertices on every
 hexagon in its stated all-heavy domain. Its complete geometry, receiving
 multiplicities and prior debts have full internal review and root acceptance.
 Other faces and costly forests remain open; no dimension56 bound follows.
+
+The [two-/three-heavy pentagon theorem](results/review_finite57_two_or_three_heavy_pentagon_union_root_acceptance_20261022.md)
+also now finances its complete selected domain, using a hyperbolic-line
+inequality and bounded actual receiver multiplicities. It replaces the
+older three-heavy allocation on overlap. One-heavy pentagons and complete
+global coverage remain open; the finite-volume ceiling is still57.
 
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled
@@ -102,14 +124,17 @@ chamber symmetry has infinite order. This conclusion concerns that
 module only and is a written geometric proof, with the five earlier
 edge computations as inherited inputs; no new checker or Lean run is claimed.
 
-A different norm379 host now has a
-[reviewed first transverse edge and full E7+I2(5) germ](results/review_prime379_first_transverse_wall_full_germ_root_acceptance_20261022.md).
-All five profiles and the separate combination passed:55 selectors and
-21,835 actual scalar rows. Its subsequent
-[released-m edge now has a fully reviewed E7+2A1 germ](results/review_prime379_third_edge_and_e7_two_a1_germ_root_acceptance_20261022.md),
-with one isolated norm2b wall. Five new profile runs and a separate combine
-passed; the earlier RAM refusal is preserved with zero execution credit.
-Reflectivity and finite volume remain open; no new polytope example is claimed.
+The literal norm379 host is also now
+[proved nonreflective](results/review_prime379_fourth_germ_original_period_root_acceptance_20261022.md).
+Its fourth edge reaches a full E8 corner with an isolated norm2b wall.
+Five profile runs and a separate combination checked all15 selectors and294
+scalar rows. The original integral map between the two full E8 corners has
+trace2947015+4768360phi, proving infinite order and infinite chamber volume.
+The proof has complete source-bound mathematical/runtime reviews; the
+[execution manifest](results/prime379_fourth_released_r_runtime_manifest_20261022.json)
+records1.006seconds total and under61MB maximum sampled process-tree RSS.
+This excludes that original lattice only. No new example or field-wide
+nonreflectivity theorem follows; the earlier RAM refusal remains preserved.
 
 ## What “verified” means here
 

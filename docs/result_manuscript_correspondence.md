@@ -40,8 +40,17 @@ In the arithmetic seventeen research, the
 [complete D16+actual-I exclusion](../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
 now combines the actual-degree reduction with complete quadratic, cubic
 and quartic contradictions. Its [full review and root acceptance](../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md)
-remove that ENTIRE forest, leaving only whole A17, B17 and D17. This belongs
-in the same arithmetic paper family; the global ceiling remains17.
+remove that ENTIRE forest. The later
+[whole-D17 composition](../results/arithmetic17_whole_d17_complete_quadratic_census_and_coupled_energy_exclusion_candidate_20261022.md)
+and its [full review/root acceptance](../results/review_arithmetic17_whole_d17_complete_exclusion_root_acceptance_20261022.md)
+now exclude whole D17 as well, leaving only whole A17 and B17. Its
+complete36-field/120-pair census retains two configurations; the common
+head/fork metric budget excludes both. Four actual guarded units passed;
+a [new scalar kernel](../results/lean_classical17_census_verification_20261022/manifest.json)
+also compiled and passed a separate four-declaration audit. Geometry,
+complete enumeration and paid-reference applicability remain written
+premises. These belong in the
+same arithmetic paper family, whose global ceiling remains17 and PDF20.
 
 The same acceptance records a new
 [all-heavy-hexagon financing theorem](../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md):
@@ -49,6 +58,11 @@ actual nonadjacent cusps receive the heavy-vertex deficits with complete
 preimage counts and prior-debt accounting. This is supporting research
 for the finite-volume paper. Other face configurations and costly forests
 remain open, so it does not yet replace57 by56 or add a manuscript.
+The [later pentagon union](../results/review_finite57_two_or_three_heavy_pentagon_union_root_acceptance_20261022.md)
+covers its complete two-/three-heavy zero-payment domain with actual
+receivers and bounded multiplicities, replacing its three-heavy predecessor
+on overlap. It belongs in the same finite-volume family; one-heavy cases
+and complete global coverage remain open.
 
 The six-paper writing milestone is complete. The latest
 [completion confirmation](../results/six_paper_completion_confirmation_20261021.json)
@@ -179,8 +193,15 @@ cover21,835 scalar rows and identify a full E7+I2(5) germ. The next
 now has a fully reviewed mathematical/runtime proof of the full E7+2A1 germ.
 Five NEW profiles and their separate combine passed; its isolated wall
 has norm2b. The earlier admission refusal is preserved with zero execution
-credit. These are construction notes in the existing research lane,
-with no added manuscript family, finite-volume conclusion or polytope example.
+credit. The later
+[fourth-edge/original-period proof](../results/compact_h9_prime379_fourth_edge_e8_long_corner_and_original_period_candidate_20261022.md)
+has complete [review and root acceptance](../results/review_prime379_fourth_germ_original_period_root_acceptance_20261022.md).
+It reaches a full E8+long germ, uses six actual bounded units, and proves
+an original integral chamber symmetry has infinite order. Thus this literal
+norm379 host is nonreflective. These are construction notes in the existing
+research lane, with no added manuscript family, new example or form-class
+exclusion. The new geometry is written and internally reviewed; no new
+geometric Lean verification is claimed.
 
 The ideal RA4 paper already follows the requested sequence: the published
 minimum, the universal gap and equality reduction, the restricted

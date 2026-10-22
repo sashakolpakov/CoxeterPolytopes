@@ -72,8 +72,8 @@ The subsequent [A15 component theorem](../results/review_a15_general18_and_cubic
 excludes its ordinary A3 and ordinary T2+A1 spectators. Its actual I+T2
 and OLD-I2(7)/NEW-isolated3 plus A1 alternatives remain.
 
-Three arithmetic seventeen groups remain: whole A17, whole B17 and whole
-D17. The new [complete D16+actual-I composition](../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
+Two arithmetic seventeen groups remain: whole A17 and whole B17.
+The [complete D16+actual-I composition](../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
 has [full outside review](../results/review_arithmetic17_d16_actual_i_complete_exclusion_composition_full_scope_compact_reviewer_20261022.md)
 and [root acceptance](../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md).
 The actual-field reduction leaves exactly degrees2,3,4; the separate
@@ -82,8 +82,35 @@ actual farthest vertex. The quadratic argument derives its own contact
 restrictions, retains unequal fork parameters and does not transfer
 cubic zero-contact conclusions. Thus the ENTIRE D16+actual-I forest is
 excluded, rather than merely reduced to quadratic fields. The remaining
-three families are necessary possibilities, not realized examples; the
-arithmetic ceiling stays17.
+remaining families are necessary possibilities, not realized examples;
+the arithmetic ceiling stays17.
+
+The [new whole-D17 exclusion](../results/arithmetic17_whole_d17_complete_quadratic_census_and_coupled_energy_exclusion_candidate_20261022.md)
+has [full outside review and root acceptance](../results/review_arithmetic17_whole_d17_complete_exclusion_root_acceptance_20261022.md).
+Complete cubic exclusion and quadratic fork isolation reduce the actual
+configuration to an exact census over all36 possible quadratic fields.
+Three bounded batches and a separate combine test120 pairs and retain
+exactly two, over sqrt13 andsqrt17. An actual head point and one actual
+fork endpoint then force the SAME original vector's squared norm above
+1.00184, contradicting its norm below1. The
+[runtime manifest](../results/d17_one_isolated_quadratic_fork_runtime_manifest_20261022.json)
+records all four actual units,0.287seconds total and57,327,616bytes
+maximum sampled process-tree RSS. The algorithm, its halting/completeness
+proof and the written geometric closure have distinct reviews. This is
+an entire family exclusion, not merely a low-degree field reduction.
+Its [scalar kernel](../results/lean_classical17_census_verification_20261022/manifest.json)
+has bounded compilation and a separate four-declaration axiom audit PASS.
+The [logic map](classical_seventeen_census_kernel_logic_20261022.md) keeps
+actual geometry, the exhaustive census and the legal paid-reference
+inequality outside Lean. This verifies the strict scalar implications;
+there is no full geometric formalization or arithmetic16 conclusion.
+
+The [accepted B17 short-cap theorem](../results/review_arithmetic17_whole_b17_short_cap_field_root_acceptance_20261022.md)
+proves actual short-edge cosh length below15 and actual field degree2
+or3. All nonisolated caps lie in eight explicit quadratic models; a
+cubic cap must be isolated dotted. It uses its own B17 normalization
+and bound900/17, with no D17 fork conclusion transferred. Whole B17
+and A17 remain open at this checkpoint.
 
 The new [all-heavy-hexagon financing theorem](../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md)
 also has full outside review and root acceptance in the same record.
@@ -91,11 +118,19 @@ Two actual nonadjacent cusps receive the remaining heavy-vertex deficits;
 actual-face multiplicity bounds respect every prior compatible debit.
 The tight receiving margin is exactly1/2. This covers its complete
 all-heavy-hexagon domain only; other faces and costly forests remain
-open, so general finite volume stays57.
+open, so general finite volume stays57. The later
+[two-/three-heavy pentagon union](../results/review_finite57_two_or_three_heavy_pentagon_union_root_acceptance_20261022.md)
+has full outside review and root acceptance. A hyperbolic-line inequality
+forces an actual receiving corner; complete5/10 face-preimage bounds
+keep its charge at most350/353.5. The union replaces the older three-heavy
+allocation on overlap. One-heavy pentagons and complete heavy-source
+coverage remain open; no new global bound follows.
 
-Norm239 is nonreflective. The distinct norm379 host has an actually checked first
-transverse E7+I2(5) germ and now an
-[accepted next edge with full E7+2A1 germ](../results/review_prime379_third_edge_and_e7_two_a1_germ_root_acceptance_20261022.md).
+Norm239 and the distinct norm379 host are nonreflective. The norm379
+[fourth-edge and original-period acceptance](../results/review_prime379_fourth_germ_original_period_root_acceptance_20261022.md)
+binds a complete actual E8+long germ, six guarded units and an original
+integral infinite-order chamber symmetry. These are literal-lattice
+exclusions; no new example or form-class exclusion is claimed.
 Its five NEW profiles and separate combine passed; a new isolated wall has
 norm2b. The earlier4.1GiB admission refusal is retained with zero execution
 credit. Reflectivity and finite volume remain open; resource limits are unchanged.
@@ -551,7 +586,20 @@ Its [new runtime manifest](../results/prime379_third_released_m_runtime_manifest
 binds five successful profile units and a separate combine, covering55 selectors
 and21,835 scalar occurrences with one global minimum and one supported cone.
 The isolated new wall has norm2b. Its earlier admission refusal is preserved
-with zero execution credit. No new example or finite-volume conclusion follows.
+with zero execution credit. The subsequent
+[fourth-edge/period proof](../results/compact_h9_prime379_fourth_edge_e8_long_corner_and_original_period_candidate_20261022.md)
+now reaches a full E8 corner at rational parameter1. Its five profile units
+and separate combine cover15 selectors and294 scalar rows, with two tied
+roots in one supported cone. The
+[actual runtime manifest](../results/prime379_fourth_released_r_runtime_manifest_20261022.json)
+records1.006seconds total and60,522,496bytes maximum sampled process-tree RSS.
+The accepted even-binary module recognition supplies an original integral
+future chamber symmetry with trace2947015+4768360phi>10. Its infinite order
+and the arithmetic index/covolume theorem prove this literal host
+nonreflective and its full reflection chamber infinite-volume. The complete
+[outside review and root acceptance](../results/review_prime379_fourth_germ_original_period_root_acceptance_20261022.md)
+retain actual firstness, full germs, all original coordinates and explicit
+arithmetic inputs. No new example, class-wide exclusion or Lean run follows.
 
 ## Ideal and compact right-angled four-volume
 

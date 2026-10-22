@@ -49,6 +49,17 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`ClassicalSeventeenCensusKernel` has bounded compilation and a SEPARATE
+actual four-declaration axiom audit
+[PASS](../results/lean_classical17_census_verification_20261022/manifest.json).
+It derives the strict head gain, fork square comparison and1.00184
+same-vector scalar contradiction. Its
+[logic map](../docs/classical_seventeen_census_kernel_logic_20261022.md)
+keeps actual geometry, field reductions, complete census, radical
+interpretation and the legal paid-reference inequality explicit outside
+Lean. Only standard axioms occur; this is not the complete D17 geometry.
+The audit reused the new compilation, and no old module was rebuilt.
+
 `D15TypedSevenCentreKernel` has bounded compilation and a separate actual
 six-declaration axiom audit
 [PASS](../results/lean_d15_typed_seven_centre_verification_20261022/manifest.json).

@@ -150,8 +150,7 @@ global19 tail, this proves the general compact ceiling18. The fresh
 has eleven grouped necessary families; the later A15 theorem excludes its
 ordinary A3 and ordinary T2+A1 spectators. The remaining rows are not examples.
 
-Three arithmetic seventeen groups remain: whole A17, whole B17 and whole
-D17. The new
+Two arithmetic seventeen groups remain: whole A17 and whole B17. The
 :download:`complete D16+actual-I composition <../../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md>`
 combines the ACTUAL field-degree reduction with complete quadratic, cubic
 and quartic contradictions. The quadratic proof derives its own contact
@@ -159,7 +158,19 @@ restrictions and retains unequal fork parameters; cubic orthogonality is
 not transferred. The ENTIRE forest is excluded, with
 :download:`full outside composition review <../../results/review_arithmetic17_d16_actual_i_complete_exclusion_composition_full_scope_compact_reviewer_20261022.md>`
 and :download:`root acceptance <../../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md>`.
-No arithmetic16 theorem follows.
+The later
+:download:`whole-D17 composition <../../results/arithmetic17_whole_d17_complete_quadratic_census_and_coupled_energy_exclusion_candidate_20261022.md>`
+has :download:`full review and root acceptance <../../results/review_arithmetic17_whole_d17_complete_exclusion_root_acceptance_20261022.md>`.
+It excludes every actual field degree, using a complete36-field quadratic
+census and one simultaneous head/fork norm contradiction for its two
+survivors. The :download:`actual execution manifest <../../results/d17_one_isolated_quadratic_fork_runtime_manifest_20261022.json>`
+binds three disjoint batches and a separate combine. The new
+:download:`scalar Lean receipt <../../results/lean_classical17_census_verification_20261022/manifest.json>`
+records bounded compilation and a separate four-declaration actual audit.
+Its :download:`logic map <../classical_seventeen_census_kernel_logic_20261022.md>`
+keeps geometry, the complete census and legal paid-reference applicability
+outside Lean. Neither this scalar kernel nor the older kernels supply a
+complete geometric formalization. No arithmetic16 theorem follows.
 These are complete reviewed written arguments at their explicit inputs.
 The later compact18 final composition has its own conditional Lean receipt;
 its geometric premises remain external. The six printed papers are unchanged.
@@ -194,9 +205,18 @@ binds its complete new original-module domain, full mathematical/code reviews,
 five NEW profile runs and separate actual combine. All55 selectors passed,
 visiting21,835 scalar occurrences and identifying one global minimum with
 one complete supported cone; the isolated wall has norm2b. The earlier
-admission refusal is preserved with zero execution credit. Finite volume,
-reflectivity and other outgoing edges remain open. No polytope example or
-chamber period follows from these local edges.
+admission refusal is preserved with zero execution credit. The later
+:download:`fourth-edge/original-period proof <../../results/compact_h9_prime379_fourth_edge_e8_long_corner_and_original_period_candidate_20261022.md>`
+has :download:`full outside review and root acceptance <../../results/review_prime379_fourth_germ_original_period_root_acceptance_20261022.md>`.
+Five profile units and a separate combine cover15 selectors and294 scalar
+rows, with two minimum roots in one full E8+long cone at rational parameter1.
+The :download:`runtime manifest <../../results/prime379_fourth_released_r_runtime_manifest_20261022.json>`
+binds all six actual capped runs. The original integral future map has
+trace2947015+4768360phi>10 and preserves the same full chamber. Infinite
+order and the arithmetic index/covolume theorem therefore prove this
+literal norm379 lattice nonreflective. This is a written geometric proof
+with actual finite execution, not a new example, form-class exclusion or
+new geometric Lean verification.
 
 For the literal norm79 construction host, the accepted END0 run checked
 810,436 scalar trials and six profiles, finding six integral mirrors and

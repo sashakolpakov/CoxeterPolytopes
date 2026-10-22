@@ -30,7 +30,7 @@ frozen PDF editions.
 |---|---|---|---|
 |General finite-volume Coxeter|21 / 57|The complete all-heavy-hexagon domain is now financed at actual nonadjacent cusps. Cover the remaining short faces and costly forests with one compatible global rule.|finite57_composition_audit with root|
 |General compact Coxeter|8 / 18|Complete dimension18 necessary forests have eleven groups; the A15 ordinary rank-three branches are now closed. Pursue further energy/correlation exclusions and compact H9 construction.|root with parallel mathematical reviewers|
-|Compact arithmetic Coxeter|8 / 17|Entire D16+actual-I is excluded by complete quadratic/cubic/quartic arguments. Only whole A17, B17 and D17 remain as necessary grouped families; pursue their actual geometry and arithmetic cycles.|sharp_ra_foundations_audit with root and independent review|
+|Compact arithmetic Coxeter|8 / 17|Entire D16+actual-I and whole D17 are excluded. The latter uses a complete36-field census and one coupled metric budget. Only whole A17 and B17 remain; B17's accepted short-cap theorem gives actual degree2/3. Pursue their actual geometry and arithmetic cycles.|sharp_ra_foundations_audit and finite57_composition_audit with root and independent review|
 |Entirely ideal right-angled|4 / 4|Sharp internal theorem; preserve its verified package, stop ideal5/6 searches.|Completed, monitored by root|
 |Mixed-vertex right-angled|8 / 8|Sharp internal universal finite-volume theorem; preserve its package, stop right-angled9 searches.|Completed, monitored by root|
 |Ideal right-angled dimension4 volume|Second value and unique double24-cell structure internally proved|Preserve the unified17-page paper. Its chain theorem remains restricted; no universal garland classification follows.|root|
