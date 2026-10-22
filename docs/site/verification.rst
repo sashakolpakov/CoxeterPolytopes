@@ -13,34 +13,37 @@ mathematical reviews at their stated input boundaries. The compact PDFs still
 prove 23 and 20; the later written 19 and 17 proofs have their own source and
 review records. Neither status is external refereeing.
 
-Finite57: partial replay, explicit input boundary
--------------------------------------------------
+Finite57: complete bounded replacements, explicit input boundary
+----------------------------------------------------------------
 
-The current full selection has **123 jobs: 113 script checks, nine conditional
-Lean roots, and one PDF build**. Its core has eleven jobs: the endpoint check,
-the same nine Lean roots, and the PDF build.
+The current full selection has **146 jobs:136 script checks, nine conditional
+Lean roots and one PDF build**. Core 11 is unchanged. The actual
+:download:`current plan <../../results/finite57_bounded_loader_catalogue_full_plan_20261022.json>`
+is inventory evidence; it launches no proof child.
 
-Matching bounded records have been identified for 111 of the 113 selected
-script commands. Completed bounded replacements include D13's 19 parts,
-distance nine's 2,196 units in 56 batches, and the low8 check of 2,552 profiles.
-These are preserved executions, not new runs performed to prepare this site.
+Completed bounded replacements include D13's19 parts, distance nine's2,196
+units in56 batches, the low8 check of2,552 profiles, and now **all 25 distinct
+B13/frontier units**. The latter replace both eager commands in the primary
+catalogue: one parser,16 B13 and eight frontier units. Their
+:download:`complete runtime ledger <../../results/finite57_loader_replay_d15_continuation_20261022.json>`
+and :download:`integration receipt <../../results/finite57_complete_loader_catalogue_integration_20261022.json>`
+bind exact commands, current sources and separate actual execution records.
+The earlier RAM refusal is preserved and is not counted as a success.
 
-The selected B13 and actual finite-frontier commands still use eager loaders.
-Their reviewed 25-unit bounded replacement has **2 actual PASS units and
-23 units without PASS**. The next unit was refused by the resource gate before
-a child started. The replacement is not yet the catalogue selection.
+The 25 wrappers total254.693 seconds; the largest used37.343 seconds and
+the maximum sampled process-tree RSS was259,096,576 bytes. Every individual
+job retained the unchanged cap, lock and resource gates. The complete
+producer-equivalence argument has source-bound reviews; a parser or a saved
+PASS string alone would not establish that conjunction.
 
-.. warning::
-
-   The full finite57 command is a plan for inspection, not a safe complete
-   execution recipe yet. No combined 123-job runtime PASS or full transitive
-   regeneration is claimed. Completing and integrating the two loader
-   replacements remains an execution obligation.
-
-Some native censuses and earlier finite tables remain explicit inherited
-finite-data propositions. Their geometric coverage is a separate written
-argument. See the :download:`reproduction guide <../finite_volume57_reproduce.md>`
-and the :download:`partial loader ledger <../../results/finite57_loader_replay_post_finishing_20261021.json>`.
+With inherited matching records for 111 unchanged commands, separate evidence
+covers the current 136 script selections. **There is no combined146-job runtime
+PASS or full transitive regeneration.** Some native censuses and earlier
+finite tables remain explicit inherited propositions; their geometric
+coverage remains a separate written argument. The
+:download:`reproduction guide <../finite_volume57_reproduce.md>` records
+current commands and these precise boundaries. Original eager commands and
+partial predecessor ledgers remain historical evidence.
 
 Other selected checks
 ---------------------
@@ -138,22 +141,23 @@ applicability remain explicit premises.
 Latest supporting research
 --------------------------
 
-The :download:`latest accepted supporting batch <../../results/whole_b19_exclusion_acceptance_20261022.json>`
-completes arithmetic B16+I and B15+either actual typed-seven exclusions,
-and the complete general whole-B19 exclusion, leaving two general nineteen
-and five arithmetic seventeen groups. The global
-ceilings and six printed papers remain unchanged. A restricted
-third-corner estimate is now353.640625, but no complete global allocation
-lowers charge372 or dimension57.
+The :download:`latest accepted supporting batch <../../results/d15_d16_and_norm239_progress_acceptance_20261022.json>`
+also excludes arithmetic D15 with either actual typed-seven defect and
+the ordinary nonshort D16+A1 branch. Two general nineteen groups and four
+arithmetic seventeen groups remain. The global ceilings and six printed
+papers are unchanged. Restricted A19 endpoint and D19 head reductions
+are supporting theorems, not whole-forest exclusions. The restricted
+third-corner estimate353.640625 still lacks a complete global allocation;
+charge372 and dimension57 remain unchanged.
 
-The norm239 construction has three accepted actual edges, ending at
-E8+A1, E7+I2(5) and E7+A2. Its third edge has a complete written
-finite-domain/algorithm proof and twenty actual bounded units plus a
-separate combination check. The
-:download:`runtime manifest <../../results/prime239_folded_second_edge_runtime_manifest_20261022.json>`
-binds every execution and output; firstness and full-germ composition
-have separate complete written reviews. Chamber completion, finite
-volume and a new polytope example remain unproved.
+The norm239 construction has reviewed actual edges through E8+A1,
+E7+I2(5), E7+A2 and E7+2A1. The fourth edge has a complete written
+finite-domain proof and twenty actual bounded units plus a separate combine.
+The further fifteen-unit batch and separate combine also passed. Its
+:download:`fifth-edge proof <../../results/compact_h9_prime239_fifth_edge_and_e8_long_a1_germ_candidate_20261022.md>`
+has full mathematical/runtime review and root acceptance: the full germ
+is E8+A1 with the actual isolated norm2b root. Chamber completion, finite volume and a new
+polytope example remain unproved.
 
 For the literal norm79 construction host, the accepted END0 run checked
 810,436 scalar trials and six profiles, finding six integral mirrors and
@@ -163,3 +167,11 @@ gives nonreflectivity at its explicit actual-germ and arithmetic-covolume
 boundary. END8 is unnecessary. This excludes that literal host only; no new
 example, field, form-class or other-lattice exclusion is claimed.
 
+
+``D15TypedSevenCentreKernel`` has bounded compilation and a separate actual
+six-declaration axiom audit
+:download:`PASS <../../results/lean_d15_typed_seven_centre_verification_20261022/manifest.json>`.
+Its :download:`logic map <../d15_typed_seven_centre_kernel_logic_20261022.md>`
+separates derived continuous radical/funded margins from actual geometry,
+classification and application inputs. Successful output has no ``sorryAx``;
+the failed tactic predecessor is preserved with zero credit.

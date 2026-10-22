@@ -39,16 +39,16 @@ The other two papers concern ideal and compact right-angled polytopes in
 dimension four. The compact volume minimum and second-volume problems remain
 open. No new higher-dimensional example is claimed here.
 
-The latest supporting written batches exclude arithmetic B16+I and B15
-with either actual typed-seven defect, and the entire general B19 forest,
-leaving two necessary groups
-in dimension nineteen and five in dimension seventeen. This does not lower
-either ceiling. Its `acceptance and full review bindings
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/whole_b19_exclusion_acceptance_20261022.json>`_
-also record the complete B19 exclusion, a third actual norm239
-edge with full E7+A2 germ, and eleven actual Lean declarations in two
-small conditional kernels. Chamber completion remains open. The six compiled editions
-remain unchanged.
+The latest supporting written batch also excludes arithmetic D15 with
+either actual typed-seven defect and the ordinary nonshort D16+A1 branch.
+Two necessary general nineteen groups and four arithmetic seventeen groups
+remain. The `acceptance and full review bindings
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/d15_d16_and_norm239_progress_acceptance_20261022.json>`_
+keep restricted A19/D19 progress separate from global bounds. Norm239 now
+has five reviewed actual edges, with its fifth full germ E8+A1 retaining
+the isolated norm2b root; finite volume and chamber completion remain open.
+A new six-declaration D15 conditional Lean kernel passed compilation and a
+separate actual axiom audit. The six compiled paper editions are unchanged.
 
 .. toctree::
    :maxdepth: 2

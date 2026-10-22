@@ -47,12 +47,13 @@ It is not an additional restriction on the arithmetic Coxeter results.
 The [external-input register](docs/manuscript_assumptions.md#arithmetic-reflection-groups-and-the-quadratic-form-model)
 records this published reduction and its references.
 
-The [latest accepted supporting batch](results/whole_b19_exclusion_acceptance_20261022.json)
-closes arithmetic B16+I and B15 with either actual typed-seven defect.
-Five arithmetic seventeen groups remain. The complete B19 exclusion
-leaves two general nineteen groups: whole A19 and D19. Its proof first
-reduces the last long wall to two possibilities, then excludes each by
-an actual-wall comparison and one legally paid prefix reference.
+The [latest accepted supporting batch](results/d15_d16_and_norm239_progress_acceptance_20261022.json)
+also closes arithmetic D15 with either actual typed-seven defect and
+the ordinary nonshort branch of D16+A1. Four arithmetic seventeen
+groups remain: whole A17, whole B17, D16+actual-I and whole D17.
+The complete B19 exclusion leaves two general nineteen groups: whole
+A19 and D19. Further reviewed reductions restrict their endpoint and
+head possibilities.
 These are necessary possibilities, not realized examples. Complete
 arguments and source-bound reviews are linked in the receipt; global
 ceilings remain unchanged.
@@ -70,12 +71,14 @@ has full internal reviews and separate exact execution records. Its actual-germ
 and arithmetic-covolume inputs are explicit; no field, form-class, other
 lattice or infinite-family exclusion follows.
 
-The distinct golden norm239 lattice now has three reviewed actual edges:
-its unique first binary edge reaches a full finite E8+A1 germ, and
-the next transverse edge reaches E7+I2(5), and the following edge reaches
-E7+A2. The [third-edge proof](results/compact_h9_prime239_second_h2_edge_first_wall_and_e7_a2_germ_candidate_20261022.md)
-states the complete finite algorithm and its actual output. Its twenty
-bounded units and separate combination check all passed. These are
+The distinct golden norm239 lattice has reviewed actual edges through
+E8+A1, E7+I2(5), E7+A2 and E7+2A1. The
+[fourth-edge proof](results/compact_h9_prime239_fourth_edge_and_e7_two_a1_germ_candidate_20261022.md)
+states its complete finite algorithm and actual twenty-unit output.
+The [fifth-edge proof](results/compact_h9_prime239_fifth_edge_and_e8_long_a1_germ_candidate_20261022.md)
+reaches E8+A1 with an isolated square2b root; all fifteen units and the
+separate combine passed, followed by full mathematical/runtime review.
+These are
 construction steps within the full reflection arrangement; chamber
 completion and finite volume remain open.
 
@@ -95,10 +98,11 @@ The repository keeps four kinds of evidence separate:
   literature inputs and concrete application bridges remain partly outside
   Lean; prepared modules earn no compilation credit.
 
-For finite57, matching bounded records cover **111 of 113 selected script
-commands**. Two legacy eager loaders still need replacement in the full
-selection; their reviewed 25-unit replacement has **3 of 25 actual PASS
-records**. There is no combined full-manuscript runtime PASS. See the
+For finite57, **all 25 bounded replacement units passed** and now replace
+the two eager loaders in the primary catalogue. Together with inherited
+records for 111 unchanged commands, they provide separate matching
+evidence for the current 136 script selections. There is no combined
+146-job full-manuscript runtime PASS. See the
 [finite57 reproduction guide](docs/finite_volume57_reproduce.md).
 
 The [verification guide](docs/manuscript_verification.md),
@@ -142,6 +146,14 @@ reference-applicability premises remain explicit; the preparation headers
 are preserved as historical source bytes. Each audit retains one harmless
 unused-variable warning.
 
+The [D15 typed-seven centre kernel](docs/d15_typed_seven_centre_kernel_logic_20261022.md)
+also has bounded compilation and a separate **six-declaration** axiom audit
+[PASS](results/lean_d15_typed_seven_centre_verification_20261022/manifest.json).
+It derives the continuous radical estimate and conditional funded margins
+from primitive scalar premises. Actual geometry, classification and the
+reference-applicability bridge remain explicit inputs. The failed tactic
+predecessor is preserved with zero verification credit.
+
 ## Large research inputs
 
 Large scientific inputs are packaged separately from Git. The
@@ -168,9 +180,10 @@ python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core --pdf --p
 python3 -B scripts/verify_manuscript.py finite57 --mode full --pdf --plan
 ```
 
-**Keep `--plan` on the finite57 full command.** Its current selection
-still contains the two eager loaders described above. A plan is an
-inventory, not a proof run or a successful verification record.
+A plan is an inventory, not a proof run or a successful verification
+record. Finite57's [current integration receipt](results/finite57_complete_loader_catalogue_integration_20261022.json)
+binds the completed bounded replacements and the actual146-job plan.
+Full replay still requires the exact inherited inputs described in its guide.
 
 For actual replay, follow the relevant proof map and
 [bounded reproduction instructions](docs/manuscript_verification.md).

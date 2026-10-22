@@ -1,5 +1,15 @@
 # General finite-volume bound57: internal proof and formalization map
 
+Current execution status,22 October2026: **all25 bounded B13/frontier
+units passed and are integrated in the primary catalogue**. The current
+full plan has136 script checks, nine Lean roots and one PDF build (146jobs);
+core11 is unchanged. See the [integration receipt](../results/finite57_complete_loader_catalogue_integration_20261022.json)
+and [current reproduction guide](finite_volume57_reproduce.md).
+The dated execution paragraphs below describe earlier checkpoints;
+their preserved counts are not the current status. There is no combined
+146-job runtime PASS or complete transitive regeneration. The mathematical
+algorithm/coverage contract below is unchanged.
+
 The endpoint is the frozen [dimension57 composition](../results/fresh_d13_context_dimension57_20261018.md).
 It proves that every finite-sided, finite-volume real hyperbolic Coxeter
 polytope has dimension at most57. Arithmeticity, compactness, simple cusps
@@ -235,7 +245,7 @@ coverage now PASSes:19/19 D13 parts and2196/2196 current distance9
 units, including complete overlap classification and isolation. Old-source
 pilots do not count toward the current repair. No new
 certificate, full-manuscript replay PASS,
-dimension bound or cap increase is claimed. The [actual current plan](../results/publication_shape_counting_verification_plan_20261020.json)
+dimension bound or cap increase is claimed. The [actual20October plan](../results/publication_shape_counting_verification_plan_20261020.json)
 under catalogue `3bc62bbd…` selects all19 D13 parts, the distance9 intervals,
 the two ancestor phases and nine conditional Lean roots: 113 script jobs,
 nine Lean roots and one PDF, totaling 123 full jobs and 11 core jobs with PDF.
@@ -490,9 +500,10 @@ preserves the parser fixture PASS:0.139s and60,080,128B process-tree RSS.
 Its [separate successor](../results/finite57_loader_replay_post_finishing_20261021.json)
 reuses that receipt and adds an actual `b13:pins-0` PASS:14.154s and
 150,093,824B. The next unit was refused before launch at4.6GiB available
-RAM. Thus two of25 units have runtime PASS records;23 remain without
-one. These source reviews and partial executions do not constitute a complete producer PASS,
-catalogue replacement or safe full123-job replay.
+RAM. At that21October checkpoint, two of25 units had runtime PASS records;
+23 then remained without one. Those source reviews and partial executions
+did not constitute a complete producer PASS, catalogue replacement or
+safe full123-job replay.
 The unchanged six printed editions, source/PDF bindings and theorem57
 remain at their previous status. Runtime admission still requires6GiB
 available RAM; the latest resource deferral is not permission to lower it.
@@ -507,8 +518,9 @@ python3 -B scripts/check_finite57_b13_frontier_batches_20261021.py \
   --ledger results/finite57_loader_replay_new.json --max-jobs 1
 ```
 
-These are the prepared entrypoints; only the two units linked above
-have runtime PASS records. Use a new owned
+At that checkpoint these entrypoints were prepared, with only the two
+linked units executed. All25 now pass, as bound by the current integration
+receipt above. Use a new owned
 ledger name, preserve failed/deferred attempts, and do not modify a ledger
 after it has been sealed into an acceptance. A job-limit exit can leave
 the conjunction incomplete. The coordinator skips only current-source
@@ -593,6 +605,7 @@ coverage pending; no omitted domain earns PASS.
 This contract preserves the original two selected producer scopes. It
 does not regenerate all transitive native geometry, turn historical local
 censuses into fresh executions, prove geometric claims by hashes, or
-instantiate the full theorem in Lean. The old full-plan caveat remains
-until independently reviewed equivalents have actually passed and root
-has integrated their selection.
+instantiate the full theorem in Lean. The preparation phase withheld full
+selection until the reviewed equivalents passed and root integrated them.
+That bounded replacement obligation is now complete, as recorded above;
+full transitive regeneration and geometric Lean remain separate.

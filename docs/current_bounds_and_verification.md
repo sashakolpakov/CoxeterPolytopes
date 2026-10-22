@@ -44,11 +44,15 @@ also excludes B15 with either actual typed-seven defect, leaving three
 general and five arithmetic necessary groups at that checkpoint. It narrows B19 to one
 last-long wall, accepts the third norm239 edge and records eleven actual
 Lean declarations in two new conditional kernels. The
-[latest acceptance](../results/whole_b19_exclusion_acceptance_20261022.json)
+[previous acceptance](../results/whole_b19_exclusion_acceptance_20261022.json)
 closes the last B19 wall and hence the whole B19 forest, leaving only
 whole A19 and D19 in general dimension nineteen. These batches do not
-lower a global ceiling. The six-paper writing milestone is complete;
-research has resumed within the existing paper families.
+lower a global ceiling. The [latest acceptance](../results/d15_d16_and_norm239_progress_acceptance_20261022.json)
+also excludes arithmetic D15+either actual typed7 and the ordinary nonshort
+D16+A1 branch, leaving four grouped arithmetic rows. It records additional
+restricted general A19/D19 proofs, new norm239 actual-edge evidence and
+complete bounded finite57 loader integration. The six-paper writing
+milestone is complete; research continues within the existing families.
 
 ## Dimension comparison
 
@@ -96,7 +100,7 @@ seventeen results belong in those same two paper families when integrated.
 
 | Paper | Written audit | Reproduction and formal boundary |
 | --- | --- | --- |
-| Finite volume 57 | [Fresh full composition audit](../results/review_finite57_geometric_composition_new_audit_20261021.md); no blocker at named finite-input boundaries | Matching bounded records cover 111/113 selected script commands. The reviewed 25-unit replacement for two eager commands has **3 PASS, 22 without PASS**. There is no combined 123-job full replay or complete transitive regeneration. Conditional Lean checks selected counting, table and scalar implications. |
+| Finite volume 57 | [Fresh full composition audit](../results/review_finite57_geometric_composition_new_audit_20261021.md); no blocker at named finite-input boundaries | All25 bounded B13/frontier replacement units passed and are selected in the current catalogue. With inherited records for 111 unchanged commands, separate evidence covers136 script selections. There is no combined146-job full replay or complete transitive regeneration. Conditional Lean checks selected counting, table and scalar implications. |
 | Sharp right-angled 8/ideal 4 | Fresh [geometry](../results/review_sharp_ra_geometric_foundations_adversarial_20261021.md) and [tensor/equality](../results/review_sharp_ra_tensor_ideal_equality_adversarial_20261021.md) audits | Exact core checks and selected conditional Lean have actual successful runs. Coordinate projection, height and cubic identities are formalized; published bounds and actual geometric interfaces remain explicit premises. |
 | Compact arithmetic PDF 20 | Full exposition/field-closure reviews and [completed internal-field proof review](../results/review_compact_arithmetic20_internal_field_translation_foundations_20261021.md) | Its matching 21-page build has zero warnings. Accounting and finite checks keep their declared scopes; this is not formal verification of the later seventeen theorem. |
 | General compact PDF 23 | [Full source review](../results/review_compact_farthest23_full_batch_guard_20261020.md), with source-bound editorial delta review | Matching 36-page build has zero warnings. The compiled accounting kernel retains twenty-three; actual geometric inequalities and later nineteen remain outside that kernel. |
@@ -104,12 +108,11 @@ seventeen results belong in those same two paper families when integrated.
 | Compact RA4 constraints | [Fresh full adversarial audit](../results/review_compact_ra4_volume_constraints_fresh_adversarial_20261021.md) | Graph and geometric cases are written out. The catalogue selection checks typesetting only; there is no universal geometric Lean proof. |
 
 The finite57 [reproduction guide](finite_volume57_reproduce.md) records
-all completed bounded replacements and the still-unintegrated loader.
-Its immutable [partial successor ledger](../results/finite57_loader_replay_quadratic_b16_20261022.json)
-preserves the parser and first two B13 pin-group PASS records, including
-the second group's earlier resource refusal before its later successful run.
-Resume with `b13:pins-2` in a new ledger; never
-replace this partial receipt with a completion claim.
+complete bounded replacements. Its [current integration receipt](../results/finite57_complete_loader_catalogue_integration_20261022.json)
+binds all 25 actual B13/frontier units, their complete source-equivalent
+conjunction and the current 146-job metadata-only full plan. The old
+partial ledgers and earlier RAM refusal remain immutable historical
+evidence. Core 11 and the Python driver source are unchanged.
 
 Recent actual Lean additions include the
 [two-foot payment kernel](two_foot_paid_logic_20261021.md) and
@@ -154,6 +157,14 @@ preserved unused-variable warning. Their unchanged source headers and logic
 maps retain their original preparation status; these execution receipts
 record the later successful verification. Actual geometry, arithmetic-field
 and exhaustive-cap applicability remain explicit premises.
+
+The [D15 typed-seven centre kernel](d15_typed_seven_centre_kernel_logic_20261022.md)
+now also has bounded compilation and a separate six-declaration actual
+axiom audit [PASS](../results/lean_d15_typed_seven_centre_verification_20261022/manifest.json).
+It derives the continuous radical gap and conditional energy margins;
+actual geometry, exhaustive classification and reference applicability
+remain explicit premises. Only standard axioms occur in successful output,
+with no `sorryAx`. The failed tactic predecessor earns no credit.
 
 ## Recent dimension proofs and next work
 
@@ -260,16 +271,15 @@ The complete reduced necessary lists are now:
 | --- | --- |
 | A17 | none |
 | B17 | none |
-| D15 | either typed7 |
-| D16 | ordinary A1 or actual I |
+| D16 | actual I |
 | D17 | none |
 
 Here T2 and T3 are irreducible ordinary components, and I/typed7 retain
-their actual-wall definitions. There are two and five grouped rows,
+their actual-wall definitions. There are two and four grouped rows,
 respectively. These necessary lists make no realization claim. The
-[latest checkpoint](../results/whole_b19_exclusion_acceptance_20261022.json)
-binds the full reviews and subtraction of exactly whole B19. The previous
-batches removed arithmetic B15+either typed7 and B16+I. Earlier batches removed general
+[latest checkpoint](../results/d15_d16_and_norm239_progress_acceptance_20261022.json)
+binds the complete D15 exclusion and ordinary-only D16 subtraction.
+Previous batches removed whole B19, arithmetic B15+either typed7 and B16+I. Earlier batches removed general
 D18+I and D17+either typed7. All other necessary groups and the six
 printed editions are preserved.
 The bounds still leave gaps of eleven and nine above the known compact
@@ -309,6 +319,34 @@ field and energy greater than.09; a fresh prefix reference and complete
 pure/mixed long-head analysis give total norm at least1.00069125. Both
 typed defects are excluded, with their different actual-wall definitions
 retained. This has full root and other-author reviews.
+
+The [D15+typed7 proof](../results/arithmetic17_d15_typed_seven_centre_and_head_exclusion_candidate_20261022.md)
+recomputes the actual rank15 centre and all head/foreign alternatives.
+Both actual defects force the cubic-seven field and energy greater than.09;
+a continuous radical estimate and one jointly paid reference finish the
+complete exclusion. The [ordinary D16+A1 proof](../results/arithmetic17_d16_nonshort_rank_one_centre_and_head_exclusion_candidate_20261022.md)
+uses the ACTUAL nonshort edge length, not a bare A1 diagram. Its tight
+mixed head and centre share one spectator coefficient. The final total
+exceeds1.0084. Both have full root and other-author reviews; actual-I at
+D16 remains open, and the arithmetic ceiling remains17.
+
+For general A19, a [two-weak-end theorem](../results/compact_whole_a19_two_weak_ends_exact_cross_paid_feet_candidate_20261022.md)
+excludes simultaneous weak central indices5 and15 using both actual feet,
+their exact nonzero cross term and both anchor payments. The
+[D19 head reduction](../results/compact_whole_d19_long_head_complete_reduction_foundations_20261022.md)
+leaves only isolated native5, finite>=7 or dotted heads. The [one-weak-end proof](../results/compact_whole_a19_one_weak_end_joint_isolated_endpoint_candidate_20261022.md)
+also excludes exactly one weak central end. It classifies every actual
+endpoint, proves at least one is isolated, and pays unequal-block foot
+cross terms at both anchors. Together the two A19 proofs require both
+central indices5 and15 to be strong at loss.61. The remaining zero-weak
+branch and whole D19 are open; none is a whole-forest exclusion.
+The [D19 pooled-reference proof](../results/compact_whole_d19_old_strong_five_head_independent_pooled_reference_foundations_20261022.md)
+also establishes the old-.61 strong5 floor without a head hypothesis.
+Its dotted case uses the weak upper bound with a negative coefficient
+and the chamber inequality with a positive coefficient in one explicit
+rational vector of norm greater than1.00008039. The late15/16 floors
+used in that contradiction are conditional on assumed weak5; they are
+not new unconditional individual floors.
 
 The [complete B19 two-wall reduction](../results/compact_whole_b19_two_terminal_wall_reduction_foundations_20261022.md)
 and its [short4 exclusion](../results/compact_whole_b19_short_four_terminal_fresh_index17_exclusion_foundations_20261022.md)
@@ -400,8 +438,15 @@ combine have actual bounded PASS records in the
 The largest unit took6.579s and used57,950,208B. The full new firstness
 and geometric composition have root and outside-author reviews.
 Original dyadic glue is retained throughout.
-Further chamber completion and finite volume remain open; this is not
-a new example.
+The [fourth-edge proof](../results/compact_h9_prime239_fourth_edge_and_e7_two_a1_germ_candidate_20261022.md)
+now reaches E7+2A1, retaining an actual square2b wall. All20 new released-R
+units and the separate combination check passed; the
+[runtime manifest](../results/prime239_released_r_runtime_manifest_20261022.json)
+binds45,620 actual scalar rows. A further15-unit released-S computation
+and separate combination have also passed. The [fifth-edge proof](../results/compact_h9_prime239_fifth_edge_and_e8_long_a1_germ_candidate_20261022.md)
+identifies the full E8+A1 germ with its original square2b spectator;
+its full mathematical/runtime review and root acceptance are complete. Further chamber
+completion and finite volume remain open; this is not a new example.
 
 ## Ideal and compact right-angled four-volume
 

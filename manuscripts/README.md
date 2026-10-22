@@ -88,8 +88,9 @@ python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core --pdf --p
 ```
 
 For sharpRA, remove `--plan` to execute its core checks sequentially.
-The finite57 full command is an inventory: its two eager loader commands
-still need the reviewed bounded replacement fully executed and integrated.
+Finite57's two eager loader selections now have complete reviewed bounded
+replacements, all 25 actual units passed and integrated into the catalogue.
+The full plan is inventory evidence; no combined full run is claimed.
 Its
 [reproduction guide](../docs/finite_volume57_reproduce.md) gives the
 smaller runnable core and the completed bounded parts. The IDs for the
@@ -99,24 +100,15 @@ save a new receipt; existing receipts are never overwritten. The
 `scripts`, `logic`, `core` and `full`, including inherited input scopes.
 The compact RA4 selection currently checks typesetting only.
 
-Finite57 has completed bounded replacement replays for D13 (19 parts)
-and distance nine (2,196 units in 56 batches), plus its other recorded
-checks. There is no combined 123-job full-manuscript runtime PASS;
-some transitive finite-data inputs remain assumed. The new
-[bounded low8 replay](../results/finite57_audit_edition_low8_bounded_replay_20261021.json)
-passes all2,552 cusp profiles. Matching bounded records now cover111/113
-selected script commands. The two eager commands still await replacement
-in the selection. Their reviewed25-unit bounded replacement now has three
-actual PASS records (parser and the first two B13 pin groups). The
-[successor ledger](../results/finite57_loader_replay_quadratic_b16_20261022.json)
-preserves the earlier resource refusal and records the later successful
-second pin group; it is not a complete replay. These
-execution boundaries do not alter the stated theorem.
-The sharp right-angled
-package has exact algebra/model checks and selected conditional Lean
-verification. Historical core runs retain their original source bindings;
-editorial successors have separate source-bound builds and delta reviews.
-The proof maps record that distinction.
+Finite57 has complete bounded replacement replays for D13 (19 parts),
+distance nine (2,196 units in56 batches), and B13/frontier (25 units).
+The [integration receipt](../results/finite57_complete_loader_catalogue_integration_20261022.json)
+binds the latter's full actual executions and current catalogue selection.
+With inherited matching records for 111 other commands, separate evidence
+covers the current 136 script selections. The current full plan has146
+jobs including nine Lean roots and a PDF build; core 11 is unchanged.
+There is no combined146-job runtime PASS or complete transitive regeneration.
+The earlier RAM refusal remains preserved and earns no credit.
 
 Selected Lean modules check internal implications with explicit external,
 script and geometric premises. They do not formalize every geometric

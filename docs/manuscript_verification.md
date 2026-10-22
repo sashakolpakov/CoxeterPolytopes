@@ -64,13 +64,22 @@ verification. Compact23's source-integrity check and compactRA4's
 typesetting-only selection retain their explicitly narrower scopes.
 For finite57 this covers31 inherited higher-tail obligations: the
 ambient59--163 layers and the independent all-rank support, failure,
-packing and compact-facet checks. The current full selection has113 script
-jobs, nine conditional Lean roots and optional PDF compilation (123 jobs
-with PDF), recorded in the actual
-[current shape-counting verification plan](../results/publication_shape_counting_verification_plan_20261020.json).
-Catalogue `3bc62bbd…` replaces the primary finite57 standalone
-`ShapeCurvatureArithmetic` root (ambient59 arithmetic) with the verified
-dimension58 shape kernel; the 11 core/123 full job counts are unchanged.
+packing and compact-facet checks. The current full selection has136 script
+jobs, nine conditional Lean roots and a PDF build:146 jobs with PDF.
+Core 11 is unchanged. The actual [current full plan](../results/finite57_bounded_loader_catalogue_full_plan_20261022.json)
+and [integration receipt](../results/finite57_complete_loader_catalogue_integration_20261022.json)
+bind replacement of both eager B13/frontier selections by25 actual-passed
+bounded units: parser + 16 B13 + 8 frontier. The complete
+[runtime/catalogue review](../results/review_finite57_b13_frontier_complete_runtime_and_catalogue_integration_compact_reviewer_20261022.md)
+authenticates every unit and the original producer-equivalent conjunction.
+Together with inherited matching records for 111 unchanged commands,
+these supply separate evidence for the current 136 script selections.
+There is no combined146-job runtime PASS or complete transitive regeneration.
+
+The [earlier shape-counting plan](../results/publication_shape_counting_verification_plan_20261020.json)
+had123 jobs. At that checkpoint catalogue `3bc62bbd…` replaced the primary
+standalone `ShapeCurvatureArithmetic` root (ambient59 arithmetic) by the
+verified dimension58 shape kernel.
 The old root's source, evidence and historical `finite57_atlas` selection
 remain preserved.
 The [preceding 123-job plan](../results/publication_audited_forest_tail_verification_plan_20261020.json)
@@ -104,7 +113,7 @@ now actually PASS: 8114 tables and 10,195,241 transition inequalities in
 [contract](../results/finite57_ancestor_forest_replay_contract_20261020.md)
 replays the complete coarse and first increasing-family calculations;
 local geometry, actual refinement and some ambient59–65 forest/local-census
-computations remain inherited finite-data inputs. No combined 123-job runtime
+computations remain inherited finite-data inputs. No combined146-job runtime
 PASS or whole transitive regeneration is claimed. The
 [fresh composition review](../results/review_finite57_theorem_composition_adversarial_20261020.md)
 checks the mathematical implications at that declared boundary.
@@ -211,10 +220,12 @@ Its actual six-job run passes. Use `mixed10 --mode core --pdf`;
 the older `mixed11` package is preserved as a predecessor.
 The current `compact20` package uses the universal-only successor
 `manuscripts/compact_arithmetic_dimension_bound.tex`: three exact checks
-and six unchanged universal-theorem Lean roots. Its current 17-page PDF
-compiles with zero warnings and matches its source hash in the
-[PDF receipt](../results/six_paper_pdf_completion_20261020.json).
-This build does not claim a fresh combined core replay.
+and six unchanged universal-theorem Lean roots. Its current21-page PDF
+includes the two required internal field-closure proofs, compiles with
+zero warnings and matches source5d5235da/PDFef1569ab in the
+[current delivery receipt](../results/six_paper_final_tex_delivery_20261021.json).
+The17-page predecessor and its old receipt remain preserved. This build
+does not claim a fresh combined core replay or integrate the later17 bound.
 The [field-closure source audit](../results/review_compact_arithmetic20_field_closure_batch_guard_20261020.md)
 (`994b4965…`) passes at its written-proof and declared finite-data
 boundary, without parked19 inputs or a new finite/Lean execution. The original
@@ -341,9 +352,10 @@ stops below8GiB disk or3GiB available RAM. Below20GiB disk, the coordinator
 starts a cleanup agent. These limits are not relaxed to finish a build.
 
 All six current PDFs match their source-bound build ledgers in the
-[audit-edition receipt](../results/six_papers_audit_edition_20261021.json):
-finite57 has48 pages, compact20 has17, compact23 has36, sharpRA has5,
-ideal4 has17 and compactRA4 has14. Finite57 source `c300db69…ca82a0` /
+[current delivery receipt](../results/six_paper_final_tex_delivery_20261021.json):
+finite57 has48 pages, compact20 has21, compact23 has36, sharpRA has5,
+ideal4 has17 and compactRA4 has14. The earlier audit-edition receipt
+preserves compact20's17-page predecessor. Finite57 source `c300db69…ca82a0` /
 PDF `1f3c020c…` has main exposition pp.1–12 and essential appendices/table
 documentation pp.13–48, with21 underfull spacing warnings and no overflow
 or unresolved references. The other five have zero warnings. The44-page
@@ -429,3 +441,10 @@ is retained as such. After available memory recovered above8GiB, the
 passed all eleven jobs. The source-bound temporary PDF had20 pages
 and zero warnings; it was discarded and the published PDF was preserved.
 All actual geometry remains at the explicit conditional Lean boundary.
+
+The [D15 typed-seven centre kernel](d15_typed_seven_centre_kernel_logic_20261022.md)
+has actual bounded compilation and a separate six-declaration axiom audit
+[PASS](../results/lean_d15_typed_seven_centre_verification_20261022/manifest.json).
+It derives continuous radical and conditional funded-energy inequalities.
+Geometry, classification and actual-reference applicability remain explicit
+premises; the failed tactic predecessor is preserved with zero credit.

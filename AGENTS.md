@@ -17,11 +17,14 @@ conditional internal kernels, not complete formalizations of geometric,
 literature, field or enumeration inputs. The logic maps list those premises;
 printed axioms do not enumerate theorem parameters.
 
-Finite57 has matching records for111 of113 selected script commands. Its
-bounded replacement has only3 of25 actual PASS units. Keep the full catalogue
-selection in plan mode until the remaining eager loaders have complete bounded
-replacements. No full-manuscript runtime PASS or transitive regeneration is
-claimed. Preserve failures and deferrals; never credit a plan as execution.
+Finite57's bounded replacement has all 25 distinct actual PASS units and is
+integrated into the primary catalogue. The current full inventory has136
+scripts, nine Lean roots and one PDF job (146 total); core 11 is unchanged.
+The111 other command matches remain inherited execution records. No combined
+full-manuscript runtime PASS or transitive regeneration is claimed. See
+`results/finite57_complete_loader_catalogue_integration_20261022.json`.
+Do not rerun successful parts or modules merely to update documentation.
+Preserve failures and deferrals; never credit a plan as execution.
 
 New mathematical claims require a complete argument, a source-bound review
 by another author and root acceptance before updating a global bound. Distinguish

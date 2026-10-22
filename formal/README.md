@@ -49,6 +49,18 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`D15TypedSevenCentreKernel` has bounded compilation and a separate actual
+six-declaration axiom audit
+[PASS](../results/lean_d15_typed_seven_centre_verification_20261022/manifest.json).
+It derives the continuous31.59 radical gap and the conditional1.00357
+and1.00069125 funded margins from primitive scalar premises. Only standard
+axioms occur, with no `sorryAx` in the successful audit. Its
+[logic map](../docs/d15_typed_seven_centre_kernel_logic_20261022.md)
+keeps actual geometry, complete classification, field interpretation
+and reference applicability outside Lean. A failed elaboration and its
+sole tactic correction are preserved; the corrected module was compiled
+once and reused for the separate audit.
+
 `D18CentreScalarKernel` now has bounded compilation and a separate actual
 five-declaration axiom audit [PASS](../results/lean_d18_centre_verification_20261022/manifest.json).
 `CubicB16ShortCapKernel` likewise has six actual audited declarations and

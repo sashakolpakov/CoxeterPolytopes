@@ -9,10 +9,11 @@ no proof child. Use the paper IDs on :doc:`papers`.
    python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core --pdf --plan
    python3 -B scripts/verify_manuscript.py finite57 --mode full --pdf --plan
 
-The second command is an inventory only. **Keep** ``--plan`` on finite57's full
-selection until the two eager loaders have complete bounded replacements and
-the catalogue has been updated. The current replacement has 3 of 25 actual
-PASS units; a partial ledger is not a successful full replay.
+Both commands report inventory only. Finite57's two eager loader selections
+now have complete reviewed bounded replacements: all 25 distinct units passed
+and are integrated into the primary catalogue. The current full plan has136
+script checks, nine Lean roots and one PDF build. Separate matching records
+are not a combined146-job runtime PASS.
 
 Data and environment
 --------------------
@@ -72,8 +73,8 @@ ledger:
    python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core --pdf \
      --ledger results/right_angled_core_new.json
 
-The smaller finite57 endpoint/logic/typesetting core is also distinct from
-the blocked full script selection:
+The smaller finite57 endpoint/logic/typesetting core is distinct from
+its full script selection:
 
 .. code-block:: sh
 
@@ -82,9 +83,10 @@ the blocked full script selection:
 
 Choose unused ledger filenames. Preserve failures and resource deferrals;
 do not overwrite old receipts or silently credit a success under a different
-source pin. The finite57 core does not replay the 113 script obligations.
+source pin. The finite57 core does not replay the 136 script obligations.
 Its :download:`reproduction guide <../finite_volume57_reproduce.md>` supplies
-the completed bounded parts and their exact conjunctions. The shared
+the completed bounded parts, exact conjunctions and fresh full-run command.
+No successful module or part needs rerunning just to update status. The shared
 :download:`verification guide <../manuscript_verification.md>` explains
 ``scripts``, ``logic``, ``core``, and ``full``.
 
