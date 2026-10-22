@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-22",
+  "status": "SOURCE_SCALAR_REPAIR_FROZEN_PENDING_FULL_OUTSIDE_AND_ROOT_REVIEW",
+  "source_path": "results/arithmetic16_b14_typed_seven_actual_defect_wall_head_exclusion_candidate_20261022.md",
+  "predecessor": {
+    "sha256": "ecef4359094bd660ad2355bef3d0568f2d9d563f221fb826a9ad1c3a58661a93",
+    "bytes": 18281,
+    "lines": 405
+  },
+  "archive": {
+    "path": "results/source_archive/arithmetic16_b14_before_mixed_head_factor_two_precision_20261022.md.gz",
+    "sha256": "22c805153a8ca8f83a63e9bb44ef90528e2dd39fe50fd7ce7406887bb6aa1d17",
+    "bytes": 8393,
+    "decoded_sha256": "ecef4359094bd660ad2355bef3d0568f2d9d563f221fb826a9ad1c3a58661a93",
+    "decoded_bytes": 18281,
+    "byte_round_trip": true
+  },
+  "reason": "Full outside review found a genuine factor-two transcription error: Q=1/3 gives C1^2=(3/2)(A^2+2/3), not 3(A^2+2/3). Preserve the predecessor without acceptance credit before correcting both uses and retaining the stronger off-diagonal native gap.",
+  "authorization": "Root explicitly authorized this exact local scalar repair after the outside-author finding.",
+  "scientific_executions": 0,
+  "source_consumer_changes": 0,
+  "successor": {
+    "path": "results/arithmetic16_b14_typed_seven_actual_defect_wall_head_exclusion_candidate_20261022.md",
+    "sha256": "237080ad5775d91e83b2fde217acd275ecf1f0949103a937fedbc6497e89b07c",
+    "bytes": 18351,
+    "lines": 407
+  },
+  "delta": {
+    "exact_only_authorized_replacements": true,
+    "unified_diff": "--- ecef_predecessor\n+++ current_corrected_source\n@@ -242,13 +242,15 @@\n \n     q^2=(2+theta)/9>16/45, A^2>64/15>4.\n \n-Since C1^2=3(A^2+2/3), this gives C1^2>14. If a!=b, g>1 yields\n+Since C1^2=(3/2)(A^2+2/3), this gives C1^2>37/5. If a!=b, g>1 yields\n \n     A^2 h_N-q^2\n        >(4/3)h_N-(2+theta)/36=(5theta-6)/12>0.\n \n The product in(12) is strictly negative, so its ACTUAL native gap\n-forces A sqrt(h_N)-q>=1/2. Thus A^2 h_N>1/4, A^2>3 and C1^2>11.\n+forces A sqrt(h_N)>=q+1/2>.8: here q=g7/3>.3 because\n+theta>31/25 implies g7>.9. Thus A^2>192/25 and\n+C1^2=(3/2)(A^2+2/3)>313/25.\n In either orientation C1>12/5 and x1>.64. No unknown I-opposite\n contact, field squareclass or pure mixed-head foot was assumed.\n \n",
+    "mathematical_scope": "The predecessor received no whole-row acceptance. Correct formula C1^2=(3/2)(A^2+2/3); the diagonal bound is37/5. Retain q>.3 in the off-diagonal actual native gap to obtain A^2>192/25 and C1^2>313/25. Both remain above(12/5)^2. The legal X=.64 graft, global proof conclusion and final pure certificate1.00859 are unchanged."
+  }
+}

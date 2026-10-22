@@ -151,7 +151,13 @@ has eleven grouped necessary families. The later
 :download:`uniform A15 energy theorem <../../results/review_compact_a15_paid_weak_helpers_point826_root_acceptance_20261022.md>`
 proves energy>.826 without arithmeticity and excludes its ENTIRE A15 row,
 including both formerly remaining actual-I/typed-seven alternatives.
-Other rows remain open; the ceiling stays18 and these rows are not examples.
+The subsequent
+:download:`whole-A16 acceptance <../../results/review_compact18_whole_a16_row_root_acceptance_20261022.md>`
+excludes its two actual typed-seven cases and completes that entire row.
+Both new endpoint pressures concern one original vector; the reference
+pays their separate anchor costs and their residuals are orthogonal.
+These are full written mathematical reviews, not new Lean or checker runs.
+Nine general18 groups remain; the ceiling stays18 and these rows are not examples.
 
 The arithmetic dimension-seventeen frontier is now closed, including
 whole A17. The predecessor exclusions and final census below yield the
@@ -222,6 +228,65 @@ These are complete reviewed written arguments at their explicit inputs.
 The later compact18 final composition has its own conditional Lean receipt;
 its geometric premises remain external. The six printed papers are unchanged.
 
+The fresh exact-dimension16 necessary list starts with nineteen groups.
+Its :download:`current accepted refinement <../../results/review_arithmetic16_whole_a16_and_universal_a3_root_acceptance_20261022.md>`
+leaves **thirteen**, after closing six whole groups and the selected
+A14+actual-I+ordinary-A1 subcase. The earlier gates exclude
+:download:`D13 with all rank-three spectators <../../results/review_arithmetic16_whole_d13_root_acceptance_and_remaining_frontier_20261022.md>`,
+the :download:`ordinary rank-five A11 group <../../results/review_arithmetic16_uniform_a11_point65_root_acceptance_20261022.md>`,
+and :download:`B14 with either actual typed-seven defect <../../results/review_arithmetic16_b14_typed_seven_corrected_root_acceptance_20261022.md>`.
+The latest gate adds whole A16 and A11+O7+A3. Arithmetic A11 energy exceeds
+13/20 with arbitrary finite spectators and all retained feet; the universal
+compact A3 energy exceeds13/50 **without arithmeticity**. Their sum with
+the actual O7 defect cost exceeds1. The whole-A16 exclusion uses fresh
+endpoint geometry, one funded reference, complete finite-anchor fields
+and hand-proved integer-ring tables, without new enumeration execution.
+
+The later
+:download:`ordinary dihedral3/19 acceptance <../../results/review_compact_ordinary_dihedral_three_nineteenths_root_acceptance_20261022.md>`
+raises the general ordinary rank-two energy floor from1/7 to3/19, retaining
+the exact actual O7 exception. Its conditional arithmetic16 D14 consumer
+has a strict total1+719/118750 and removes only the ordinary spectator.
+The later :download:`complete D14 acceptance <../../results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md>`
+also closes both actual N7/O7 alternatives. Original group17 is deleted,
+leaving thirteen groups. The prepared kernel derives the whole-row exclusion
+from its three spectator cases under separate ordinary/typed written inputs.
+
+The exact thirteen alternatives and actual N7/O7 meanings are in the
+:download:`current comparison guide <../current_bounds_and_verification.md>`.
+This is necessary-list refinement, not a dimension15 theorem or a set of
+examples. Its separate :download:`conditional frontier Lean kernel <../arithmetic_sixteen_frontier_refinement_logic_20261022.md>`
+has a reviewed repair after the first compile failed in opaque membership
+proofs. The :download:`preserved failure and repair record <../../results/source_archive/arithmetic16_frontier_before_survives_decide_repair_20261022/manifest.json>`
+retains its complete diagnostic output, including downstream ``sorryAx``;
+that failed output earns zero verification credit. The retry was
+:download:`refused before starting Lean <../../results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/retry_resource_refusal.json>`
+for RAM below6GiB. After RAM recovered, the SAME corrected source passed
+:download:`one bounded compile and a separate six-declaration actual audit <../../results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/manifest.json>`.
+Four declarations use only ``propext`` and two have empty axiom lists;
+none uses ``sorryAx``. Nine written interfaces remain external and no
+geometric instance is supplied. Twelve unused-simp-argument warnings are
+retained; no zero-warning result or cosmetic rerun is claimed. The existing global16
+kernel's three-declaration PASS under27 named inputs remains unchanged;
+its receipt does not verify these later mathematical exclusions.
+
+The :download:`universal A12 theorem <../../results/review_compact_a12_point65_and_general18_eight_groups_root_acceptance_20261022.md>`
+has a full different-author mathematical review and root acceptance.
+It proves energy above13/20 without arithmeticity and with arbitrary finite
+spectators, using fresh N13 nonadjacency and one paid actual helper. Both
+general18 row consumers are excluded. The later
+:download:`complete D16 typed-seven acceptance <../../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md>`
+binds a full different-author mathematical review of all fresh tail/head/
+centre cases, signed forks and a shared funded vector. It closes both
+actual N7/O7 forests, leaving seven groups after A12/A15/A16. These new
+geometric arguments add no worker or Lean execution and do not prove global17.
+
+The new :download:`glued E7/A2 ambient-edge acceptance <../../results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md>`
+binds complete written proofs and different-author reviews of actual edges,
+full germs and a complete compact quadrilateral. The last intrinsic angle
+is arccos(1/sqrt3), computed from projected normals. No arbitrary Coxeter-face
+inheritance, finite nine-dimensional chamber, period or new example is assumed.
+
 The new
 :download:`finite57 all-heavy-hexagon theorem <../../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md>`
 has :download:`full outside review <../../results/review_finite57_heavy_hexagon_nonadjacent_cusp_financing_full_scope_foundations_reviewer_20261022.md>`
@@ -230,6 +295,15 @@ heavy deficit8, respecting complete arrival multiplicities and all prior
 compatible debts; the tight receiving margin is exactly1/2. This covers
 the entire stated hexagon domain, but other faces and costly forests still
 lack complete global coverage/allocation. Dimension57 remains unchanged.
+
+The new
+:download:`parallel short-fork acceptance <../../results/review_finite57_isolated_parallel_short_fork_financing_root_acceptance_20261022.md>`
+has a full source-bound different-author mathematical review. Its actual
+off-face null ray forces an affine-A1 cusp factor; seven receiving families
+have complete source multiplicities and compatible full8 loads. The smallest
+remaining curvature is3,485. It covers only isolated parallel short-fork
+opposites, leaving other contacts and costly forests open. No new checker,
+Lean execution, universal finite cap364 or dimension56 theorem is claimed.
 
 The norm239 construction has reviewed actual edges through E8+A1,
 E7+I2(5), E7+A2 and E7+2A1. The fourth edge has a complete written
@@ -264,6 +338,20 @@ order and the arithmetic index/covolume theorem therefore prove this
 literal norm379 lattice nonreflective. This is a written geometric proof
 with actual finite execution, not a new example, form-class exclusion or
 new geometric Lean verification.
+
+The composite551 host has an
+:download:`authenticated transverse runtime <../../results/composite551_transverse3_actual_runtime_manifest_20261022.json>`
+covering all seven disjoint profiles and a separate combine. Its full
+intermediate germ is E7 perpendicular to an ordinary A1 and a norm2b A1,
+not E8. The subsequent complete manual next-edge proof and
+:download:`literal nonreflectivity acceptance <../../results/review_composite551_binary_release_and_literal_nonreflectivity_root_acceptance_20261022.md>`
+establish a FULL E8+norm2b corner and an ORIGINAL integral future chamber
+symmetry with trace843+1354phi>10. Infinite order gives infinite reflection
+index and covolume at the explicit arithmetic-lattice boundary. This closes
+only that original module, with no new example or commensurability-class
+exclusion. No worker or Lean execution is credited to the manual period
+argument; the seven earlier profile outputs and separate combine are
+actual inherited evidence, not repeated runs.
 
 For the literal norm79 construction host, the accepted END0 run checked
 810,436 scalar trials and six profiles, finding six integral mirrors and

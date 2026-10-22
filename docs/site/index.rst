@@ -35,6 +35,11 @@ The :doc:`verification status <verification>` keeps those distinctions explicit.
      - 4, sharp
      - 4
 
+The finite-volume search also has a new
+:download:`isolated parallel short-fork theorem <../../results/review_finite57_isolated_parallel_short_fork_financing_root_acceptance_20261022.md>`:
+seven actual receiving cusp families finance the full selected transfers,
+with minimum remaining curvature3,485. Global coverage for56 remains open.
+
 The other two papers concern ideal and compact right-angled polytopes in
 dimension four. The compact volume minimum and second-volume problems remain
 open. No new higher-dimensional example is claimed here.
@@ -84,6 +89,44 @@ ceiling16. Its conditional final composition now has a
 :download:`bounded Lean compile and separate three-declaration audit PASS <../../results/lean_arithmetic16_composition_verification_20261022/manifest.json>`,
 with27 explicit external inputs and no geometric instance. The printed
 arithmetic20 paper and all six editions are unchanged.
+
+At exact compact dimension18, the
+:download:`complete A16 closure <../../results/review_compact18_whole_a16_row_root_acceptance_20261022.md>`
+closes both actual typed-seven alternatives without arithmeticity. The new
+:download:`universal A12 energy theorem <../../results/review_compact_a12_point65_and_general18_eight_groups_root_acceptance_20261022.md>`
+proves energy above13/20 with arbitrary finite spectators and closes its
+whole row too. The later
+:download:`complete D16 typed-seven exclusion <../../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md>`
+closes both actual N7/O7 forests without arithmeticity, leaving **seven
+necessary groups** after the earlier A15/A16 exclusions. This new geometric
+proof has written review credit, not Lean credit.
+The :download:`ordinary dihedral floor above3/19 <../../results/review_compact_ordinary_dihedral_three_nineteenths_root_acceptance_20261022.md>`
+closes arithmetic dimension16's ordinary D14 spectator. The
+:download:`complete D14 acceptance <../../results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md>`
+also closes both actual typed-seven defects. No global ceiling or example changes.
+
+At exact dimension16, a fresh complete nineteen-group list and the
+`accepted refinement
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_arithmetic16_whole_a16_and_universal_a3_root_acceptance_20261022.md>`_
+now leave **thirteen necessary groups**. The closures include the selected
+A14+actual-I+ordinary-A1 subcase, D13 with rank-three spectators, ordinary
+rank-five A11, B14 with either typed-seven defect, whole A16, A11+O7+A3 and D14.
+The common advances are arithmetic A11 energy above13/20, nonarithmetic A3
+energy above13/50, and one-reference actual endpoint/finite-anchor arguments.
+The :doc:`verification guide <verification>` preserves the exact boundaries.
+This does not prove dimension15 or realize any remaining forest. A separate
+:download:`conditional frontier kernel <../arithmetic_sixteen_frontier_refinement_logic_20261022.md>`
+now has a
+:download:`bounded compile and separate six-declaration axiom audit PASS <../../results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/manifest.json>`
+under nine explicit written interfaces, with no ``sorryAx``. Failed/refused
+predecessors remain preserved. Global ceilings remain57/18/16.
+
+The distinct
+:download:`glued golden E7/A2 construction <../../results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md>`
+has accepted actual edges, full finite germs and complete compact triangle
+and quadrilateral faces. Finite nine-dimensional chamber volume remains
+unresolved; no new polytope example is claimed.
+
 The literal norm239 and norm379 construction lattices are proved
 nonreflective by original integral infinite-order chamber periods.
 The norm379 fourth edge reaches a full E8 corner with an isolated long
@@ -93,6 +136,12 @@ bind five actual profile runs and a separate combine, all15 selectors
 and294 scalar rows. The earlier RAM refusal remains preserved with zero
 execution credit. These conclusions concern the two original lattices only.
 No new polytope example is claimed.
+The distinct composite551 literal host is now also `nonreflective
+<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_composite551_binary_release_and_literal_nonreflectivity_root_acceptance_20261022.md>`_.
+Seven actual transverse profile runs and a separate combine give an
+E7+two-A1 corner. The subsequent complete manual next edge and original
+integral chamber period close that module; this is not a new worker run,
+example, or exclusion of its whole commensurability class.
 The compact18 conditional composition now has bounded compilation and a
 separate five-declaration actual axiom audit under23 named written premises.
 The six compiled paper editions are unchanged.

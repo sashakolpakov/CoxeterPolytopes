@@ -42,6 +42,15 @@ the PDFs stating 23 and 20**. The [compact eighteen composition](results/compact
 and [comparison guide](docs/current_bounds_and_verification.md) give their
 precise hypotheses and review records. General finite volume remains 57.
 
+At exact compact dimension18, the [universal A12 energy above13/20](results/review_compact_a12_point65_and_general18_eight_groups_root_acceptance_20261022.md)
+closes its entire row without arithmeticity and with arbitrary finite
+spectators. The later [complete D16 typed-seven exclusion](results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md)
+also closes that whole row, leaving **seven necessary groups** after the
+earlier A15/A16 closures. At arithmetic dimension16, the [complete D14 exclusion](results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md)
+combines ordinary-dihedral and both actual typed-seven cases, leaving
+**thirteen groups**. These are reviewed written refinements, not new global
+ceilings or examples.
+
 The admissible quadratic-form model, also called arithmetic of first or
 simplest type, is automatic for arithmetic hyperbolic reflection lattices.
 It is not an additional restriction on the arithmetic Coxeter results.
@@ -111,6 +120,24 @@ exposes27 written geometric/arithmetic/data premises; no geometric instance
 is supplied. The first pre-child RAM refusal is preserved, and the successful
 compile was reused. The six PDFs remain unchanged.
 
+Fresh work at **exact dimension16** now gives a complete necessary frontier
+with **thirteen groups**, following six whole-group exclusions and one
+A14 subcase from the original nineteen-group list. The
+[accepted refinement](results/review_arithmetic16_whole_a16_and_universal_a3_root_acceptance_20261022.md)
+combines whole-A16 exclusion, arithmetic A11 energy above13/20 with arbitrary
+spectators, the D13 rank-three and B14 typed-seven exclusions, and the selected
+A14+actual-I+ordinary-A1 exclusion. The new compact A3 energy above13/50
+requires **no arithmeticity**; together with A11 and the actual typed-seven
+defect it removes another group. The later complete D14 proof closes all
+three of that row's original spectator cases. These are necessary alternatives, not
+realized examples, and do not lower the arithmetic ceiling to15. The
+[comparison guide](docs/current_bounds_and_verification.md) lists all thirteen.
+A separate [conditional frontier kernel](docs/arithmetic_sixteen_frontier_refinement_logic_20261022.md)
+now has a [bounded compile and separate six-declaration axiom audit PASS](results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/manifest.json)
+under nine explicit written interfaces, with no `sorryAx`. Its first failed
+compile and pre-child RAM refusal remain preserved. The existing
+final16 three-declaration Lean PASS above is unchanged.
+
 A new [finite-volume financing theorem](results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md)
 uses two actual nonadjacent cusps to cover the heavy vertices on every
 hexagon in its stated all-heavy domain. Its complete geometry, receiving
@@ -128,6 +155,12 @@ Two further selected cases now have reviewed off-face cusp financing:
 and [isolated fork4 gives affine B4](results/review_finite57_short_fork_four_off_face_b4_financing_root_acceptance_20261022.md).
 Both use complete source multiplicities and a compatible full8 transfer.
 Other contacts and costly forests still lack global coverage.
+
+The new [isolated parallel short-fork theorem](results/review_finite57_isolated_parallel_short_fork_financing_root_acceptance_20261022.md)
+finances a further selected heavy-vertex domain at actual off-face ideal
+cusps. All seven receiving families have positive remaining curvature,
+with minimum3,485 after their full loads. Other short-fork contacts and
+costly forests remain open; this does not prove dimension56.
 
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled
@@ -168,11 +201,23 @@ records1.006seconds total and under61MB maximum sampled process-tree RSS.
 This excludes that original lattice only. No new example or field-wide
 nonreflectivity theorem follows; the earlier RAM refusal remains preserved.
 
-The next distinct construction host has determinant norm551=19*29. Its
-[reviewed full base and first edge](results/review_composite551_full_base_first_binary_edge_and_transverse_domain_root_acceptance_20261022.md)
-give an actual E8+A1 corner and a complete seven-profile finite domain
-for the next edge. Preparation of its checker is underway; no
-finite-volume chamber or new polytope example is yet established.
+The new [glued golden E7/A2 module](results/review_glued_e7_a2_original_module_first_two_edges_and_triangle_root_acceptance_20261022.md)
+has accepted actual first edges and a complete triangle face. Its
+[ambient continuation](results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md)
+reaches full D6+three-A1 and D6+A3 corners and identifies a complete compact
+quadrilateral, with its intrinsic angles computed by projection. Finite
+nine-dimensional chamber volume remains unresolved; this is not a new example.
+
+The distinct determinant-norm551=19*29 host is now also
+[proved nonreflective](results/review_composite551_binary_release_and_literal_nonreflectivity_root_acceptance_20261022.md).
+Its [seven actual profile runs and separate combine](results/composite551_transverse3_actual_runtime_manifest_20261022.json)
+reach a full E7+two-A1 germ. The subsequent complete manual next-edge proof
+reaches E8 with the norm2b spectator and constructs an original integral
+chamber period of trace843+1354phi>10. Infinite order and the arithmetic
+index/covolume argument exclude finite reflection covolume for this literal
+module. The manual continuation earns no new worker or Lean execution
+credit. Other invariant lattices and the commensurability class are not
+excluded; no new example is claimed.
 
 ## What “verified” means here
 

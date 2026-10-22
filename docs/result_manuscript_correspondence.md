@@ -24,6 +24,11 @@ refinements remain excluded and preserved.
 | Ideal RA4 minimum, second volume and unique double; restricted 24-cell chains | [TeX](../manuscripts/ideal_ra4_volume_and_structure_publication.tex), [17-page PDF](../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf) | Defect counting proves the gap and equality spectrum first. Actual sections, cutting, metric recognition and gluing then prove the restricted Oct/D chain theorem and identify the second-volume double. | [Proof map](ideal_ra4_volume_and_structure_proof_map.md), [fresh full audit](../results/review_ideal_ra4_volume_structure_fresh_adversarial_20261021.md). Published minimum is an input. Exact model checks and conditional Lean do not replace the universal geometric proof. |
 | Compact RA4 volume constraints | [TeX](../manuscripts/compact_ra4_volume_constraints.tex), [14-page PDF](../manuscripts/build/compact_ra4_volume_constraints.pdf) | Perpendicular-facet capacity and neighboring excess. Separate zero-excess recognition from positive-excess graph and metric configurations. | [Reproduction map](compact_ra4_volume_constraints_reproduce_20261019.md), [fresh full audit](../results/review_compact_ra4_volume_constraints_fresh_adversarial_20261021.md). Cases are written out; catalogue execution checks typesetting only. No universal 120-cell minimum or second-volume theorem. |
 
+The later [parallel short-fork financing theorem](../results/review_finite57_isolated_parallel_short_fork_financing_root_acceptance_20261022.md)
+also belongs in the finite-volume paper's local-to-global argument. It
+adds seven actual receiving cusp families with compatible full8 transfers;
+it neither changes the PDF's57 theorem nor supplies global coverage for56.
+
 A written review is an internal audit at declared premises. It is not
 external refereeing, an independent reproduction of every finite input,
 or formalization of all geometric steps.
@@ -35,6 +40,26 @@ closes all six D19 head branches and the complete exact-dimension19 frontier,
 then uses the independent previous global19 tail. This belongs in the same
 compact paper. The historical checkpoint notes below explain inherited
 proof dependencies; their former surviving lists are not current frontiers.
+
+The [complete general18 A16 closure](../results/review_compact18_whole_a16_row_root_acceptance_20261022.md)
+belongs in this same compact paper: actual endpoint walls and two legal
+residual payments eliminate both typed-seven spectators. The later
+[universal A12 energy theorem](../results/review_compact_a12_point65_and_general18_eight_groups_root_acceptance_20261022.md)
+uses fresh N13 nonadjacency and one paid actual helper, with arbitrary
+spectators and no arithmeticity. It closes the entire A12 row, leaving
+eight general18 groups after the earlier A15/A16 closures. The later
+[complete D16 typed-seven proof](../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md)
+combines fresh tails, a native-angle head gap and adaptive centre pressures
+in one funded vector, leaving seven groups. All belong in the same general
+compact paper; the new D16 proof has written review, not Lean credit.
+The general component
+[dihedral floor above3/19](../results/review_compact_ordinary_dihedral_three_nineteenths_root_acceptance_20261022.md)
+belongs with its ordinary component estimates. Its arithmetic D14 consumer
+belongs in the arithmetic paper. Together with the
+[complete typed-D14 proof](../results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md),
+it closes that whole dimension16 row, leaving thirteen groups. These results
+do not create another paper or change
+the frozen PDF statements.
 
 In the arithmetic seventeen research, the
 [complete D16+actual-I exclusion](../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
@@ -77,7 +102,25 @@ keeps27 geometric/arithmetic/data inputs explicit, with no geometric instance.
 All of this belongs in the same arithmetic paper; no separate paper is
 created for an intermediate bound, and all six printed editions stay frozen.
 
-The same acceptance records a new
+The next [fresh exact-dimension16 frontier and accepted refinements](../results/review_arithmetic16_whole_a16_and_universal_a3_root_acceptance_20261022.md)
+leave **thirteen necessary groups**, after six whole-group exclusions
+and the selected A14+actual-I+ordinary-A1 subcase from the original
+nineteen-group list. The new arguments close D13 with rank-three
+spectators, ordinary-rank-five A11, B14 with either actual typed-seven
+defect, whole A16 and A11+O7+A3. They belong in the same compact arithmetic
+proof family. The reusable statements are arithmetic A11 energy above13/20
+with arbitrary spectators and all retained feet, the **nonarithmetic** A3
+energy above13/50, and a whole-A16 actual endpoint/finite-anchor argument.
+The [comparison guide](current_bounds_and_verification.md) gives the exact
+remaining list and typed meanings. This is not a new global dimension15
+bound. A separate [conditional frontier kernel](arithmetic_sixteen_frontier_refinement_logic_20261022.md)
+now has a [bounded compile and separate six-declaration axiom audit PASS](../results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/manifest.json)
+under nine explicit written interfaces. The first failed compile and
+pre-child RAM refusal are preserved; the existing
+final16 three-declaration Lean PASS under27 external premises is unchanged.
+
+The [separate D16/I and hexagon acceptance](../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md)
+records a new
 [all-heavy-hexagon financing theorem](../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md):
 actual nonadjacent cusps receive the heavy-vertex deficits with complete
 preimage counts and prior-debt accounting. This is supporting research
@@ -227,6 +270,17 @@ norm379 host is nonreflective. These are construction notes in the existing
 research lane, with no added manuscript family, new example or form-class
 exclusion. The new geometry is written and internally reviewed; no new
 geometric Lean verification is claimed.
+
+The distinct composite551 host is now also
+[proved nonreflective](../results/review_composite551_binary_release_and_literal_nonreflectivity_root_acceptance_20261022.md).
+The [seven actual profile units and separate combine](../results/composite551_transverse3_actual_runtime_manifest_20261022.json)
+give the intermediate E7+two-A1 germ, with one norm2b component. A complete
+manual next-edge proof reaches a FULL E8+norm2b corner and an original
+integral future chamber map with trace843+1354phi>10. Its infinite order
+and the arithmetic index/covolume argument close that literal module.
+The intermediate corner is not mislabeled E8, and the manual continuation
+claims no new checker execution. No example or commensurability-class
+exclusion follows, and these construction notes add no manuscript family.
 
 The ideal RA4 paper already follows the requested sequence: the published
 minimum, the universal gap and equality reduction, the restricted
