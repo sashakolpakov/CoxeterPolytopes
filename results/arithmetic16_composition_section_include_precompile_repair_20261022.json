@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-22",
+  "status": "EXACT_TWO_SECTION_INCLUDES_REPAIRED_SOURCE_ONLY_PENDING_FULL_OUTSIDE_REVIEW",
+  "reason": "Outside precompile review found body-only section variables need explicit include a17Inputs and include forestInputs. No mathematical interface change. No import/compiler/test/run occurred; predecessor has zero runtime credit.",
+  "preserved": [
+    {
+      "predecessor": {
+        "path": "formal/CoxeterProofs/ArithmeticDimensionSixteenComposition.lean",
+        "bytes": 12717,
+        "sha256": "0d6e91ac9cfa92c20b50adca2bcc42e7090d07abee1eb0c0d0a433183f60602e"
+      },
+      "archive": {
+        "path": "results/source_archive/arithmetic16_composition_before_section_includes_20261022/ArithmeticDimensionSixteenComposition.lean.gz",
+        "bytes": 2831,
+        "sha256": "784a11f738bd1688fb13686de1c7b072ba104e5c4567ea7cb613d9a9566a09b5"
+      },
+      "decoded_roundtrip_equal": true
+    },
+    {
+      "predecessor": {
+        "path": "docs/arithmetic_dimension_sixteen_composition_logic_20261022.md",
+        "bytes": 12783,
+        "sha256": "19763309556c8966d22a3be4023677ad8726cf4a188ed96f3ffa4e9026f2cacf"
+      },
+      "archive": {
+        "path": "results/source_archive/arithmetic16_composition_before_section_includes_20261022/arithmetic_dimension_sixteen_composition_logic_20261022.md.gz",
+        "bytes": 5723,
+        "sha256": "4d99c85e7ee820ccc0522fe50f211daea7e682b1fb74bdfd4244cfec899d93e1"
+      },
+      "decoded_roundtrip_equal": true
+    }
+  ],
+  "actual_compilations": 0,
+  "actual_axiom_outputs": 0,
+  "successors": [
+    {
+      "path": "formal/CoxeterProofs/ArithmeticDimensionSixteenComposition.lean",
+      "bytes": 12758,
+      "lines": 301,
+      "sha256": "de5b471364e3328be881c44e1f215f8e5af0b8d99d22545aa76aadc4cfb46404",
+      "exact_unified_diff": "--- preserved predecessor\n+++ precompile successor\n@@ -215,6 +215,8 @@\n   ActualFarthest ActualForest ActualEndpoints BothIsolated actualDegree\n   ActualGroundField ActualFiniteAnchor QuadraticDomain CubicDomain)\n \n+include a17Inputs\n+\n /-- The same actual pair follows one of FOUR field routes to an empty census domain. -/\n theorem whole_a17_exclusion\n     (at17 : dimension = 17) (p : Vertex)\n@@ -243,6 +245,8 @@\n     exact a17Inputs.cubicExhaustiveEmpty p pair .nativeEighteen\n       (a17Inputs.nativeEighteenDomain at17 p pair farthest forest\n         actualPair isolated actualField finiteAnchor)\n+\n+include forestInputs\n \n /-- The FRESH fourteen-group frontier closes without ordinary/I contact transfer. -/\n theorem dimension_seventeen_exclusion (at17 : dimension = 17) : False := by\n"
+    },
+    {
+      "path": "docs/arithmetic_dimension_sixteen_composition_logic_20261022.md",
+      "bytes": 13649,
+      "lines": 207,
+      "sha256": "9e1dfe7b621115826b988b8d4e5b2d3adebb4e00bfccf6d20df969e186d2f9af",
+      "exact_unified_diff": "--- preserved predecessor\n+++ precompile successor\n@@ -7,13 +7,26 @@\n \n The new module is\n [ArithmeticDimensionSixteenComposition.lean](../formal/CoxeterProofs/ArithmeticDimensionSixteenComposition.lean),\n-SHA256 `0d6e91ac9cfa92c20b50adca2bcc42e7090d07abee1eb0c0d0a433183f60602e`\n-(12,717 bytes/297 lines). It imports **Std only**, with no local module\n+SHA256 `de5b471364e3328be881c44e1f215f8e5af0b8d99d22545aa76aadc4cfb46404`\n+(12,758 bytes/301 lines). It imports **Std only**, with no local module\n dependency, additional axiom, `sorry`, native evaluator, number-field\n library or geometric instance. Std's transitive compiled-object closure\n has not been separately hashed here. Full source review by another author\n and root must precede any later serial compilation and separate actual\n axiom audit under the unchanged resource gates.\n+\n+Outside PRECOMPILE source review found that the premise records occurred\n+only in theorem bodies, so the section variables were not automatically\n+included in theorem signatures. Before any execution, the authorized\n+repair added exactly `include a17Inputs` before `whole_a17_exclusion` and\n+`include forestInputs` before `dimension_seventeen_exclusion`; both apply\n+to the final theorem. No mathematical interface or proof body changed.\n+The exact source0d6e91ac and map19763309 predecessors were byte-preserved\n+and gzip-roundtrip verified before editing, with the complete hashes and\n+exact deltas in the\n+[precompile repair receipt](../results/arithmetic16_composition_section_include_precompile_repair_20261022.json).\n+The rejected source preparation received ZERO compilation or axiom-output\n+credit; this successor is still UNCOMPILED pending full delta/source review.\n \n The mathematical target is the already accepted written\n [whole-A17/global16 composition](../results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md),\n"
+    }
+  ],
+  "source_delta": "Exactly include a17Inputs and include forestInputs plus separating blank lines; all mathematical declarations and theorem proof bodies unchanged.",
+  "map_delta": "Dependent source SHA/bytes/lines updated and the prelaunch blocker, exact repair and preserved-zero-runtime history disclosed."
+}

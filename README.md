@@ -34,11 +34,11 @@ of essential proof and algorithm appendices. Each paper’s proof map is
 linked from the [reader’s index](manuscripts/README.md).
 
 Later internally reviewed written proofs lower the general compact
-ceiling to **18** and the compact arithmetic Coxeter ceiling to **17**
+ceiling to **18** and the compact arithmetic Coxeter ceiling to **16**
 over every actual admissible field. Those stronger proofs are supporting
 research in the same two paper families; they are **not yet theorems of
 the PDFs stating 23 and 20**. The [compact eighteen composition](results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md),
-[arithmetic seventeen composition](results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md)
+[arithmetic sixteen composition](results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md)
 and [comparison guide](docs/current_bounds_and_verification.md) give their
 precise hypotheses and review records. General finite volume remains 57.
 
@@ -54,16 +54,15 @@ continuous dotted interval. Together with the complete dimension-nineteen
 forest exclusions and the independent higher-dimensional tail, this
 proves the **global compact ceiling of eighteen**, without arithmeticity.
 It has full source-bound internal branch and composition reviews. The next
-general frontier is dimension eighteen. Two arithmetic seventeen groups
-remain: whole A17 and whole B17. These are necessary
-possibilities, not realized examples.
+general frontier is dimension eighteen. The arithmetic dimension-seventeen
+frontier, including whole A17, is now completely excluded below.
 
 The [complete arithmetic D16+I exclusion](results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
 now has [full outside review and root acceptance](results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md).
 The actual-field reduction and separate quadratic, cubic and quartic
 contradictions exhaust that entire forest. At that stage its removal left
-three whole families; the later D17 exclusion below leaves two. The
-arithmetic ceiling remains seventeen. The
+three whole families; the later D17 exclusion below left two. At that
+checkpoint the arithmetic ceiling remained seventeen. The
 [compact eighteen logic kernel](docs/compact_dimension_eighteen_composition_logic_20261022.md)
 now has [bounded compilation and a separate five-declaration axiom audit PASS](results/lean_compact18_composition_verification_20261022/manifest.json),
 with no `sorryAx`. It checks the final composition under23 named written
@@ -76,14 +75,41 @@ Its120 pairs leave two necessary configurations; both violate one
 simultaneously funded metric budget, forcing squared norm greater than
 1.00184 where it must be below1. The four actual census units and full
 written composition have separate source-bound reviews. This removes a
-forest family, with the global arithmetic ceiling still17. The
+forest family; at that checkpoint the global arithmetic ceiling stayed17. The
 [new scalar Lean kernel](results/lean_classical17_census_verification_20261022/manifest.json)
 also passed a bounded compilation and separate four-declaration audit.
 It checks the numerical implications under explicit geometric/reference
-premises; the enumeration and actual geometry remain written inputs. Within B17,
-the [accepted short-edge reduction](results/review_arithmetic17_whole_b17_short_cap_field_root_acceptance_20261022.md)
-leaves actual degree2 or3 and eight possible nonisolated quadratic cap
-models; it does not yet exclude that family.
+premises; the enumeration and actual geometry remain written inputs.
+
+The later [whole-B17 exclusion](results/review_arithmetic17_whole_b17_complete_exclusion_root_acceptance_20261022.md)
+also has full source-bound internal review and root acceptance. Fresh
+head/short-edge geometry, all finite-head cases and actual B17 cycle
+normalization put its quadratic branch inside the same executed census;
+both survivors violate the funded norm budget. Its incomplete predecessor's
+finite-head gap and exact correction are preserved. No successful census
+job was repeated. This left only whole A17. Its
+[accepted endpoint reduction](results/review_arithmetic17_whole_a17_endpoint_reduction_root_acceptance_20261022.md)
+forces both endpoint opposites to be isolated, excludes the golden field
+and bounds both edge cosh lengths below2.1. The later
+[geometric field reduction](results/review_arithmetic17_whole_a17_four_actual_fields_root_acceptance_20261022.md)
+forces one finite endpoint and derives four possible fields. The
+[complete quadratic exclusion](results/review_arithmetic17_whole_a17_quadratic_exclusion_root_acceptance_20261022.md)
+removes two: all25-field/159-pair census units and the separate full replay
+passed with zero survivors. The two remaining cubic fields K7 and K9
+are now excluded too: two complete field units and a separate all-record
+replay checked **2,432 coefficient triples with zero survivors**. The
+[actual evidence](results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json)
+and [full runtime review](results/review_a17_finite_cubic_endpoint_actual_runtime_and_conditional_exclusion_foundations_20261022.md)
+bind that finite computation. The [complete composition](results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md)
+and its [full review and root acceptance](results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md)
+close all fourteen original dimension-seventeen forest groups. Together
+with the independently established higher-dimensional tail, this proves
+the **global compact arithmetic ceiling16**. The final sixteen composition now has a
+[bounded Lean compile and separate three-declaration axiom audit PASS](results/lean_arithmetic16_composition_verification_20261022/manifest.json).
+Its [logic map](docs/arithmetic_dimension_sixteen_composition_logic_20261022.md)
+exposes27 written geometric/arithmetic/data premises; no geometric instance
+is supplied. The first pre-child RAM refusal is preserved, and the successful
+compile was reused. The six PDFs remain unchanged.
 
 A new [finite-volume financing theorem](results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md)
 uses two actual nonadjacent cusps to cover the heavy vertices on every
@@ -96,6 +122,12 @@ also now finances its complete selected domain, using a hyperbolic-line
 inequality and bounded actual receiver multiplicities. It replaces the
 older three-heavy allocation on overlap. One-heavy pentagons and complete
 global coverage remain open; the finite-volume ceiling is still57.
+
+Two further selected cases now have reviewed off-face cusp financing:
+[isolated fork3 gives affine E8](results/review_finite57_short_fork_three_off_face_e8_financing_root_acceptance_20261022.md),
+and [isolated fork4 gives affine B4](results/review_finite57_short_fork_four_off_face_b4_financing_root_acceptance_20261022.md).
+Both use complete source multiplicities and a compatible full8 transfer.
+Other contacts and costly forests still lack global coverage.
 
 The right-angled 8 and entirely ideal 4 bounds match published examples.
 No new polytope example is claimed. The unrestricted compact right-angled
@@ -135,6 +167,12 @@ The proof has complete source-bound mathematical/runtime reviews; the
 records1.006seconds total and under61MB maximum sampled process-tree RSS.
 This excludes that original lattice only. No new example or field-wide
 nonreflectivity theorem follows; the earlier RAM refusal remains preserved.
+
+The next distinct construction host has determinant norm551=19*29. Its
+[reviewed full base and first edge](results/review_composite551_full_base_first_binary_edge_and_transverse_domain_root_acceptance_20261022.md)
+give an actual E8+A1 corner and a complete seven-profile finite domain
+for the next edge. Preparation of its checker is underway; no
+finite-volume chamber or new polytope example is yet established.
 
 ## What “verified” means here
 

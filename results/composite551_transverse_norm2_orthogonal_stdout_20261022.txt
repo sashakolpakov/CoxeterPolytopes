@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py", line 129, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py", line 96, in main
+    assert child.wait() == 0, output[-7000:].decode(errors='replace')
+           ^^^^^^^^^^^^^^^^^
+AssertionError: Traceback (most recent call last):
+  File "<string>", line 13, in <module>
+    runpy.run_path(sys.argv[0], run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 294, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_compact_h9_composite551_transverse_batches_20261022.py", line 882, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_compact_h9_composite551_transverse_batches_20261022.py", line 866, in main
+    geo = geometry()
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_compact_h9_composite551_transverse_batches_20261022.py", line 517, in geometry
+    assert tau == F(25, 49)/2 and tau.sign() > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+

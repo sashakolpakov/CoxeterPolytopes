@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py", line 129, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py", line 59, in main
+    before = safe.resources()
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_lean_batches_20261018.py", line 53, in resources
+    raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '
+                       f'memory={memory/GIB:.1f}GiB; '
+                       f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')
+RuntimeError: Resource gate: disk=110.8GiB memory=5.6GiB; require 40/6GiB

@@ -49,6 +49,30 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`ArithmeticDimensionSixteenComposition` has bounded compilation and a
+SEPARATE actual three-declaration axiom audit
+[PASS](../results/lean_arithmetic16_composition_verification_20261022/manifest.json).
+It derives whole-A17 exclusion, dispatches the fourteen original forest
+groups, and combines exact-dimension17 exclusion with the prior global17
+tail. Its [logic map](../docs/arithmetic_dimension_sixteen_composition_logic_20261022.md)
+exposes27 geometric, arithmetic and computed-data premises; there is no
+geometric instance or end-to-end paper formalization. The first two
+declarations are axiom-free; the final Nat implication uses only propext
+and Quot.sound, with no sorryAx. The initial pre-child RAM refusal and
+precompile source repair are preserved. The successful audit reused the
+compiled object. Frozen preparation headers describe their historical stage;
+the actual receipt records the later execution.
+
+To reproduce only this module in two serial batches, from the repository root:
+
+```sh
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.ArithmeticDimensionSixteenComposition
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.ArithmeticDimensionSixteenComposition --audit-axioms
+```
+
+The existing aggregate root does not automatically import this new module.
+Do not rebuild already successful modules simply to refresh their status.
+
 `ClassicalSeventeenCensusKernel` has bounded compilation and a SEPARATE
 actual four-declaration axiom audit
 [PASS](../results/lean_classical17_census_verification_20261022/manifest.json).

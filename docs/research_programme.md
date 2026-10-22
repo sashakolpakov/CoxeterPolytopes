@@ -9,7 +9,7 @@ because a script or a conditional Lean theorem compiles.
 
 The six existing TeX editions are written, compiled and internally reviewed.
 Their current PDF theorems are57/23/20 and sharp right-angled8/ideal4;
-later reviewed supporting proofs give general compact18 and arithmetic17.
+later reviewed supporting proofs give general compact18 and arithmetic16.
 Research now prioritizes further bound improvements and new examples.
 Improvements belong in the same paper families, organized by method.
 The parked field-specific arithmetic19 refinements stay excluded from the
@@ -29,8 +29,8 @@ frozen PDF editions.
 |Lane|Known examples / current ceiling|Active work|Owner|
 |---|---|---|---|
 |General finite-volume Coxeter|21 / 57|The complete all-heavy-hexagon domain is now financed at actual nonadjacent cusps. Cover the remaining short faces and costly forests with one compatible global rule.|finite57_composition_audit with root|
-|General compact Coxeter|8 / 18|Complete dimension18 necessary forests have eleven groups; the A15 ordinary rank-three branches are now closed. Pursue further energy/correlation exclusions and compact H9 construction.|root with parallel mathematical reviewers|
-|Compact arithmetic Coxeter|8 / 17|Entire D16+actual-I and whole D17 are excluded. The latter uses a complete36-field census and one coupled metric budget. Only whole A17 and B17 remain; B17's accepted short-cap theorem gives actual degree2/3. Pursue their actual geometry and arithmetic cycles.|sharp_ra_foundations_audit and finite57_composition_audit with root and independent review|
+|General compact Coxeter|8 / 18|Complete dimension18 necessary forests have eleven groups; the complete A15 row is now excluded by the reviewed uniform energy>.826 theorem. Pursue further energy/correlation exclusions. The distinct norm551 H9 host has a reviewed full base/first edge and a finite next-edge domain; finite volume remains open.|root with parallel mathematical reviewers|
+|Compact arithmetic Coxeter|8 / 16|All fourteen original dimension17 forest groups, including whole A17, are excluded. Complete quadratic and two-field cubic endpoint censuses close the last family. Prepare a fresh necessary frontier at exact dimension16; the conditional final16 Lean composition has a bounded compile and separate three-declaration audit PASS, with27 explicit external inputs.|root with independent mathematical review|
 |Entirely ideal right-angled|4 / 4|Sharp internal theorem; preserve its verified package, stop ideal5/6 searches.|Completed, monitored by root|
 |Mixed-vertex right-angled|8 / 8|Sharp internal universal finite-volume theorem; preserve its package, stop right-angled9 searches.|Completed, monitored by root|
 |Ideal right-angled dimension4 volume|Second value and unique double24-cell structure internally proved|Preserve the unified17-page paper. Its chain theorem remains restricted; no universal garland classification follows.|root|
@@ -48,9 +48,17 @@ separate actual five-declaration axiom audit, under23 named written premises.
 Its geometric instance is still external. The
 [current comparison guide](current_bounds_and_verification.md) records
 accepted sources, runtime evidence and exact open boundaries.
-The [latest written acceptance](../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md)
-binds the complete arithmetic D16+actual-I exclusion and selected finite57
-hexagon financing. Neither lowers a global ceiling by itself.
+The [latest written acceptance](../results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md)
+accepts the [complete global16 composition](../results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md):
+all fourteen dimension17 groups close, while the prior global17 theorem
+supplies every higher dimension. The final
+[two-field cubic census](../results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json)
+has two actual units plus a separate all-record replay, checking2,432
+coefficient triples with zero survivors. Full source/domain, actual-runtime
+and global-composition reviews are separate. The final16 conditional logic
+now has [bounded compilation and a separate actual three-declaration audit PASS](../results/lean_arithmetic16_composition_verification_20261022/manifest.json),
+with all27 geometric/arithmetic/data premises exposed in its
+[logic map](arithmetic_dimension_sixteen_composition_logic_20261022.md). The six paper editions remain frozen.
 
 ## Earlier mathematical checkpoints
 

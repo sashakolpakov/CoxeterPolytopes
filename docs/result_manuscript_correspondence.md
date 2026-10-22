@@ -18,7 +18,7 @@ refinements remain excluded and preserved.
 | Result | Primary manuscript and PDF | Main technique and point where cases separate | Verification scope |
 | --- | --- | --- | --- |
 | General finite-volume Coxeter dimension ≤57 | [TeX](../manuscripts/finite_volume57.tex), [48-page PDF](../manuscripts/build/finite_volume57.pdf) | One corner-payment rule and global incidence curvature. Separate finite spherical forests from affine cusp links; then handle dimension 58 and the complete higher-dimensional tail. Twelve main pages, 36 essential proof/algorithm appendices. | [Proof map](finite_volume57_lemma_map.md), [reproduction guide](finite_volume57_reproduce.md), [fresh composition audit](../results/review_finite57_geometric_composition_new_audit_20261021.md). Complete bounded replacements, separately matched136 script selections and selected conditional Lean; no combined146-job replay. |
-| Compact arithmetic Coxeter dimension ≤20 in this PDF; later reviewed written ceiling17 | [TeX](../manuscripts/compact_arithmetic_dimension_bound.tex), [21-page PDF](../manuscripts/build/compact_arithmetic_dimension_bound.pdf) | Angle payments with arithmetic restrictions: actual-field reduction precedes the golden branch and exact charge maximum. The two required nongolden proofs are now included. The later seventeen proof uses farthest-point geometry, arithmetic cycles and exhaustive low-degree norm arguments. | [PDF proof map](compact_arithmetic20_proof_map.md), [later seventeen composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md). Full written source and composition reviews; seventeen is not yet in this PDF or verified by its old accounting kernel. |
+| Compact arithmetic Coxeter dimension ≤20 in this PDF; later reviewed written ceiling16 | [TeX](../manuscripts/compact_arithmetic_dimension_bound.tex), [21-page PDF](../manuscripts/build/compact_arithmetic_dimension_bound.pdf) | Angle payments with arithmetic restrictions: actual-field reduction precedes the golden branch and exact charge maximum. The two required nongolden proofs are now included. The later sixteen proof combines farthest-point geometry, arithmetic cycles and complete endpoint censuses with the higher-dimensional tail. | [PDF proof map](compact_arithmetic20_proof_map.md), [later sixteen composition](../results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md), [acceptance](../results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md). Full written and finite-data reviews; a [conditional final16 kernel](../results/lean_arithmetic16_composition_verification_20261022/manifest.json) has compilation and a separate three-declaration audit PASS under27 explicit inputs. Sixteen is not yet in this PDF; actual geometry remains external. |
 | General compact dimension ≤23 in this PDF; later reviewed written ceiling18 | [TeX](../manuscripts/compact_farthest_vertex_bounds.tex), [36-page PDF](../manuscripts/build/compact_farthest_vertex_bounds.pdf) | One actual farthest vector supplies the norm budget. Ordinary components separate from large-A paired pressures and B/D coordinate-prefix arguments, followed by the terminal forest ledger. | [Proof map](compact_farthest_vertex_bounds_proof_map_20261020.md), [general eighteen composition](../results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md), [acceptance](../results/compact_dimension18_global_written_acceptance_20261022.json). Full written source and composition reviews. The older accounting kernel retains23; a separate [compact18 kernel](../results/lean_compact18_composition_verification_20261022/manifest.json) now has a compile and actual five-declaration audit PASS under23 written premises, with geometry external. |
 | Right-angled dimension ≤8 universally and ≤4 if entirely ideal; both sharp | [TeX](../manuscripts/right_angled_sharp_dimension_bounds_publication.tex), [5-page PDF](../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf) | Shared finite projection and height comparison. The universal branch uses a cubic tensor spherical-code argument; the ideal branch uses the explicitly named Musin/Kolpakov inputs. | [Proof/reproduction map](right_angled_sharp_dimensions_publication_proof_map_20261021.md), fresh [geometry](../results/review_sharp_ra_geometric_foundations_adversarial_20261021.md) and [tensor/equality](../results/review_sharp_ra_tensor_ideal_equality_adversarial_20261021.md) audits. Exact core runs and selected conditional Lean pass; actual geometry remains external. |
 | Ideal RA4 minimum, second volume and unique double; restricted 24-cell chains | [TeX](../manuscripts/ideal_ra4_volume_and_structure_publication.tex), [17-page PDF](../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf) | Defect counting proves the gap and equality spectrum first. Actual sections, cutting, metric recognition and gluing then prove the restricted Oct/D chain theorem and identify the second-volume double. | [Proof map](ideal_ra4_volume_and_structure_proof_map.md), [fresh full audit](../results/review_ideal_ra4_volume_structure_fresh_adversarial_20261021.md). Published minimum is an input. Exact model checks and conditional Lean do not replace the universal geometric proof. |
@@ -43,14 +43,39 @@ and quartic contradictions. Its [full review and root acceptance](../results/d16
 remove that ENTIRE forest. The later
 [whole-D17 composition](../results/arithmetic17_whole_d17_complete_quadratic_census_and_coupled_energy_exclusion_candidate_20261022.md)
 and its [full review/root acceptance](../results/review_arithmetic17_whole_d17_complete_exclusion_root_acceptance_20261022.md)
-now exclude whole D17 as well, leaving only whole A17 and B17. Its
+now exclude whole D17 as well. Its
 complete36-field/120-pair census retains two configurations; the common
 head/fork metric budget excludes both. Four actual guarded units passed;
 a [new scalar kernel](../results/lean_classical17_census_verification_20261022/manifest.json)
 also compiled and passed a separate four-declaration audit. Geometry,
 complete enumeration and paid-reference applicability remain written
 premises. These belong in the
-same arithmetic paper family, whose global ceiling remains17 and PDF20.
+same arithmetic paper family; at that stage the global ceiling remained17 and PDF20.
+The later [complete B17 exclusion](../results/review_arithmetic17_whole_b17_complete_exclusion_root_acceptance_20261022.md)
+has full internal source/composition review, including its substantive
+finite-head repair and derived census applicability. This left whole A17;
+its [accepted endpoint theorem](../results/review_arithmetic17_whole_a17_endpoint_reduction_root_acceptance_20261022.md)
+isolates both ends, excludes the golden field and proves both edge cosh
+lengths below2.1. These supporting results belong in the SAME arithmetic
+paper, without changing its printed20 theorem.
+The later [four-field reduction](../results/review_arithmetic17_whole_a17_four_actual_fields_root_acceptance_20261022.md)
+uses one funded two-endpoint norm argument and complete native conjugates.
+The [accepted quadratic census exclusion](../results/review_arithmetic17_whole_a17_quadratic_exclusion_root_acceptance_20261022.md)
+has four actual bounded units, complete replay and full runtime/composition
+review. This left A17 over K7 or K9. The
+[actual cubic census](../results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json)
+now has two field units and a separate all-record replay: all2,432
+coefficient triples were checked, leaving zero survivors. The
+[full runtime review](../results/review_a17_finite_cubic_endpoint_actual_runtime_and_conditional_exclusion_foundations_20261022.md)
+and [final global composition acceptance](../results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md)
+bind the complete evidence and fourteen-group subtraction. Together with
+the prior global17 higher-dimensional tail this proves the written
+arithmetic ceiling16. The final16 conditional composition now has
+[bounded Lean compilation and a separate three-declaration audit PASS](../results/lean_arithmetic16_composition_verification_20261022/manifest.json);
+its [logic map](arithmetic_dimension_sixteen_composition_logic_20261022.md)
+keeps27 geometric/arithmetic/data inputs explicit, with no geometric instance.
+All of this belongs in the same arithmetic paper; no separate paper is
+created for an intermediate bound, and all six printed editions stay frozen.
 
 The same acceptance records a new
 [all-heavy-hexagon financing theorem](../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md):
@@ -73,7 +98,7 @@ refinements. New research does not add a seventh manuscript.
 The two angle-payment papers each state the local-to-global mechanism
 before introducing their different arithmetic and cusp reductions.
 The compact farthest-point method is a separate approach and has its own
-paper. The stronger compact eighteen/seventeen results belong in the
+paper. The stronger compact eighteen/sixteen results belong in the
 same general/arithmetic paper families; they should replace the old arguments
 coherently rather than append chapters for successive increments.
 The [architecture guide](paper_architecture.md) gives that division and
@@ -84,14 +109,14 @@ removes the general nineteen A16 family, every arithmetic seventeen A12
 family, its A11+typed7 branch, and the typed7/two-ordinary-A1 A15 branches.
 These belong to the same farthest-point/arithmetic paper families. The
 reduced necessary lists then had eight and eleven grouped rows; the global
-ceilings remain nineteen/seventeen, and the PDFs still prove twenty-three/
+ceilings at that checkpoint remained nineteen/seventeen, and the PDFs still prove twenty-three/
 twenty. The new cubic-field half-loss argument is a case-specific refinement
 after the common actual-vector geometry; it is not another dimension paper.
 The [previous endpoint batch](../results/endpoint_case_exclusions_and_prime79_interval_acceptance_20261021.json)
 closes the general A17 row, the ordinary-A1 choice beside general A18,
 and the arithmetic A15/A16 rows. The [previous accepted batch](../results/a14_a18_and_prime79_period_acceptance_20261021.json)
 also closes the last general A18 companion and every arithmetic A14 case,
-leaving six and eight necessary groups at that checkpoint. The ceilings remain nineteen and
+leaving six and eight necessary groups at that checkpoint. The ceilings then remained nineteen and
 seventeen, and the six printed editions are unchanged. Its restricted
 large-D quadrilateral theorem supplies no charge372 improvement.
 

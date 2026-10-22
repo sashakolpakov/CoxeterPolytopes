@@ -10,7 +10,7 @@ Written proofs and PDF editions
 
 All six delivered papers have matching source/PDF/build records and internal
 mathematical reviews at their stated input boundaries. The compact PDFs still
-prove 23 and 20; the later written 18 and 17 proofs have their own source and
+prove 23 and 20; the later written 18 and 16 proofs have their own source and
 review records. Neither status is external refereeing.
 
 Finite57: complete bounded replacements, explicit input boundary
@@ -147,10 +147,15 @@ entire continuous dotted interval. Every row of the complete dimension19
 farthest-forest frontier is closed. Together with the independent previous
 global19 tail, this proves the general compact ceiling18. The fresh
 :download:`dimension18 frontier <../../results/compact_dimension18_complete_forest_frontier_candidate_20261022.md>`
-has eleven grouped necessary families; the later A15 theorem excludes its
-ordinary A3 and ordinary T2+A1 spectators. The remaining rows are not examples.
+has eleven grouped necessary families. The later
+:download:`uniform A15 energy theorem <../../results/review_compact_a15_paid_weak_helpers_point826_root_acceptance_20261022.md>`
+proves energy>.826 without arithmeticity and excludes its ENTIRE A15 row,
+including both formerly remaining actual-I/typed-seven alternatives.
+Other rows remain open; the ceiling stays18 and these rows are not examples.
 
-Two arithmetic seventeen groups remain: whole A17 and whole B17. The
+The arithmetic dimension-seventeen frontier is now closed, including
+whole A17. The predecessor exclusions and final census below yield the
+accepted written global compact arithmetic ceiling16. The
 :download:`complete D16+actual-I composition <../../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md>`
 combines the ACTUAL field-degree reduction with complete quadratic, cubic
 and quartic contradictions. The quadratic proof derives its own contact
@@ -170,7 +175,49 @@ records bounded compilation and a separate four-declaration actual audit.
 Its :download:`logic map <../classical_seventeen_census_kernel_logic_20261022.md>`
 keeps geometry, the complete census and legal paid-reference applicability
 outside Lean. Neither this scalar kernel nor the older kernels supply a
-complete geometric formalization. No arithmetic16 theorem follows.
+complete geometric formalization or verification of the final16 composition.
+The later
+:download:`whole-B17 acceptance <../../results/review_arithmetic17_whole_b17_complete_exclusion_root_acceptance_20261022.md>`
+binds the complete corrected head/short-edge argument and its full outside
+review. The actual B17 normalization proves applicability of the SAME
+executed census; both survivors fail a legally funded norm budget.
+The preserved incomplete predecessor has no whole-family PASS. No census
+job was repeated. The
+:download:`A17 endpoint acceptance <../../results/review_arithmetic17_whole_a17_endpoint_reduction_root_acceptance_20261022.md>`
+forces both opposite endpoints to be isolated, excludes the golden field
+and bounds both edge cosh lengths below2.1. The subsequent
+:download:`four-field reduction <../../results/review_arithmetic17_whole_a17_four_actual_fields_root_acceptance_20261022.md>`
+forces one finite endpoint. The
+:download:`complete quadratic exclusion <../../results/review_arithmetic17_whole_a17_quadratic_exclusion_root_acceptance_20261022.md>`
+has full source/domain and actual-runtime/composition reviews. Three
+disjoint batches and a separate complete replay checked25 fields,
+53 models and159 pairs, leaving none. Its
+:download:`actual execution manifest <../../results/a17_two_isolated_quadratic_endpoints_runtime_manifest_20261022.json>`
+records.354seconds and57,131,008bytes maximum sampled RSS, with all
+resource gates retained and the first monitoring refusal preserved.
+This left cubic K7/K9. The
+:download:`complete cubic contract <../../results/arithmetic17_a17_finite_cubic_endpoint_exact_census_contract_20261022.md>`
+and :download:`actual runtime manifest <../../results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json>`
+now cover both: two actual field units and a separate all-record replay
+checked2,432 coefficient triples, nine strict-strip models and zero survivors.
+The :download:`full runtime review <../../results/review_a17_finite_cubic_endpoint_actual_runtime_and_conditional_exclusion_foundations_20261022.md>`
+checks every saved model, counter, binding, ledger and stdout. The
+:download:`complete global16 composition <../../results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md>`
+has :download:`full outside review and root acceptance <../../results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md>`.
+Its explicit subtraction closes all fourteen original dimension17 groups;
+the prior global17 theorem supplies every higher dimension. This proves
+the written compact arithmetic ceiling16. These acceptances claim no new
+Lean compilation themselves. The subsequent
+:download:`conditional final16 kernel <../../results/lean_arithmetic16_composition_verification_20261022/manifest.json>`
+now has an actual bounded compile and SEPARATE three-declaration axiom audit
+PASS. Its :download:`logic map <../arithmetic_dimension_sixteen_composition_logic_20261022.md>`
+exposes all27 forest/endpoint/field/data premises. The first two declarations
+are axiom-free; the final Nat step uses only propext and Quot.sound, with
+no sorryAx. Actual geometry, arithmetic and exhaustive enumeration remain
+external; no geometric instance is supplied. The first pre-child RAM refusal
+is preserved and the successful audit reused the compiled object. Frozen
+source/map preparation headers are historical; the actual receipt records
+the current execution status.
 These are complete reviewed written arguments at their explicit inputs.
 The later compact18 final composition has its own conditional Lean receipt;
 its geometric premises remain external. The six printed papers are unchanged.

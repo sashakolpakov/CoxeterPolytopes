@@ -1,0 +1,245 @@
+{
+  "date": "2026-10-22",
+  "status": "REPAIRED_SUCCESSOR_SOURCE_ONLY_AWAITING_FULL_ROOT_AND_DIFFERENT_AUTHOR_REVIEW",
+  "preservation_manifest": {
+    "path": "results/source_archive/composite551_before_known_base_collision_two_type_repair_20261022/manifest.json",
+    "bytes": 2280,
+    "sha256": "279496d23680cc4f8ec7eeae7decbf5e0f9a888b32d49ddd9b0e986f422e5a9d"
+  },
+  "preserved": [
+    {
+      "predecessor": {
+        "path": "scripts/check_compact_h9_composite551_transverse_batches_20261022.py",
+        "bytes": 36658,
+        "sha256": "1eaf84bb05d1fd8e3b05b7ec617a9ade0b3d8b06e31652062a6bae7f5ddcf2d0"
+      },
+      "archive": {
+        "path": "results/source_archive/composite551_before_known_base_collision_two_type_repair_20261022/check_compact_h9_composite551_transverse_batches_20261022.py.gz",
+        "bytes": 11142,
+        "sha256": "6b3db713624c44378d25d21281ecbac5f1d7a8d510c6ad696a7564235a15ace6"
+      },
+      "decoded_roundtrip_equal": true
+    },
+    {
+      "predecessor": {
+        "path": "results/compact_h9_composite551_transverse_batches_checker_spec_20261022.md",
+        "bytes": 10601,
+        "sha256": "9e00e11ad1093a255a2d07203d068ea4bce63a4ce3bb0960b211e98be79a7cc2"
+      },
+      "archive": {
+        "path": "results/source_archive/composite551_before_known_base_collision_two_type_repair_20261022/compact_h9_composite551_transverse_batches_checker_spec_20261022.md.gz",
+        "bytes": 5194,
+        "sha256": "8cf735e4731cbd647d6ad6fa0a377cd1805a22a330ff785c09493ee3c87daa9b"
+      },
+      "decoded_roundtrip_equal": true
+    },
+    {
+      "predecessor": {
+        "path": "results/composite551_transverse_norm2_orthogonal_stdout_20261022.txt",
+        "bytes": 1260,
+        "sha256": "6a4c8d585b9113981a3b751d8058fedc9a4d05226873f93f64a575ac40d26724"
+      },
+      "archive": {
+        "path": "results/source_archive/composite551_before_known_base_collision_two_type_repair_20261022/composite551_transverse_norm2_orthogonal_stdout_20261022.txt.gz",
+        "bytes": 450,
+        "sha256": "50e98ba3a796021cd32fe76aa42683c15f9251eddd26fe7bfd053c67bc0e8425"
+      },
+      "decoded_roundtrip_equal": true
+    }
+  ],
+  "actual_predecessor_failure": {
+    "status": "FAILED_PRE_PROFILE_GEOMETRY_ASSERTION",
+    "worker_sha256": "1eaf84bb05d1fd8e3b05b7ec617a9ade0b3d8b06e31652062a6bae7f5ddcf2d0",
+    "spec_sha256": "9e00e11ad1093a255a2d07203d068ea4bce63a4ce3bb0960b211e98be79a7cc2",
+    "raw_stdout": {
+      "path": "results/composite551_transverse_norm2_orthogonal_stdout_20261022.txt",
+      "bytes": 1260,
+      "sha256": "6a4c8d585b9113981a3b751d8058fedc9a4d05226873f93f64a575ac40d26724"
+    },
+    "raw_stdout_unchanged_and_gzip_roundtrip_equal": true,
+    "failed_source_line": 517,
+    "assertion": "assert tau == F(25, 49)/2 and tau.sign() > 0",
+    "source_flow": "main calls geometry() before unit() or combine(); assertion failed before returning geometry",
+    "output_and_success_ledger_absent": [
+      "results/composite551_transverse_norm2_orthogonal_20261022.json",
+      "results/composite551_transverse_norm2_orthogonal_execution_20261022.json"
+    ],
+    "profile_loop_trials_credited": 0,
+    "successful_units_credited": 0,
+    "failed_attempt_is_not_erased": true,
+    "resources_note": "Failure stdout does not contain a successful compact resource ledger; no elapsed/RSS values are reconstructed here."
+  },
+  "changes": [
+    {
+      "predecessor": {
+        "path": "scripts/check_compact_h9_composite551_transverse_batches_20261022.py",
+        "bytes": 36658,
+        "sha256": "1eaf84bb05d1fd8e3b05b7ec617a9ade0b3d8b06e31652062a6bae7f5ddcf2d0"
+      },
+      "successor": {
+        "path": "scripts/check_compact_h9_composite551_transverse_batches_20261022.py",
+        "bytes": 36712,
+        "sha256": "6303678672185c6d0d843d97755d00f3cc9dea3aab2a627210d8549433d77451"
+      },
+      "exact_unified_diff": "--- preserved predecessor\n+++ corrected successor\n@@ -21,7 +21,7 @@\n SELF = Path(__file__).resolve()\n PINS = {\n     'results/compact_h9_composite551_transverse_batches_checker_spec_20261022.md':\n-        '9e00e11ad1093a255a2d07203d068ea4bce63a4ce3bb0960b211e98be79a7cc2',\n+        '1252228722f70b11a2877d4804f9277c67f667e260c237e934a3bd9c9f160f04',\n     'results/compact_h9_composite551_full_base_first_binary_edge_and_transverse_contract_candidate_20261022.md':\n         '33058946a4dd33df9559d5a2d3d388c87d09b3cd94be4ede1a40161243e73f22',\n     'results/review_compact_h9_composite551_full_base_first_edge_and_transverse_domain_full_scope_replay_reviewer_20261022.md':\n@@ -509,15 +509,15 @@\n     assert dot(add(q, h, upper), upper_root, gram) == ZERO\n \n     # Known positive self mirrors cannot be a new cutter on this interval.\n-    positive_known = 0\n+    positive_known = {F(25, 49)/2: 0, B/2: 0}\n     for wall in known:\n         derivative, value = dot(h, wall, gram), dot(q, wall, gram)\n         if derivative.sign() > 0:\n             tau = -value/derivative\n-            assert tau == F(25, 49)/2 and tau.sign() > 0\n+            assert tau in positive_known and tau.sign() > 0\n             assert (tau*tau-D).sign() > 0\n-            positive_known += 1\n-    assert positive_known == 3\n+            positive_known[tau] += 1\n+    assert positive_known == {F(25, 49)/2: 2, B/2: 1}\n     retained = [scale(v, -1) for v in native[:7]]+[r]\n     assert all(dot(q, v, gram) == ZERO == dot(h, v, gram) for v in retained)\n     assert dot(h, scale(native[7], -1), gram) == -1\n"
+    },
+    {
+      "predecessor": {
+        "path": "results/compact_h9_composite551_transverse_batches_checker_spec_20261022.md",
+        "bytes": 10601,
+        "sha256": "9e00e11ad1093a255a2d07203d068ea4bce63a4ce3bb0960b211e98be79a7cc2"
+      },
+      "successor": {
+        "path": "results/compact_h9_composite551_transverse_batches_checker_spec_20261022.md",
+        "bytes": 12039,
+        "sha256": "1252228722f70b11a2877d4804f9277c67f667e260c237e934a3bd9c9f160f04"
+      },
+      "exact_unified_diff": "--- preserved predecessor\n+++ corrected successor\n@@ -6,6 +6,20 @@\n compiler, Lean, TeX or Git ran during preparation. All execution belongs\n to root after full root and DIFFERENT-author code/domain reviews and the\n unchanged serial admission gate. This is not a second-edge certificate.\n+\n+This is the UNEXECUTED successor of worker1eaf84bb/spec9e00e11a.\n+The predecessor's first guarded norm2_orthogonal attempt ACTUALLY failed\n+in `geometry()`, before profile loops, at its false uniform known-wall\n+collision assertion. Raw failure stdout remains at\n+`results/composite551_transverse_norm2_orthogonal_stdout_20261022.txt`;\n+no profile output or success ledger was created and no enumeration credit\n+is earned. Exact predecessor gzip round trips, failure bindings and the\n+source-only two-collision repair are recorded in\n+`results/composite551_known_base_collision_two_type_preloop_repair_20261022.json`.\n+Earlier static code reviews bind the predecessor and are superseded for\n+this successor; new root and different-author review are required before\n+a retry with NEW stdout/ledger/output paths. The accepted33058946 domain\n+is unchanged; the correction preserves its known-wall self-exclusion.\n \n ## Accepted inputs and exact coordinates\n \n@@ -67,11 +81,16 @@\n Reconstruct all thirteen ORIGINAL known walls from their pinned data.\n Each must be an original primitive reflector. Check full starting germ,\n future Q and the exact original norm/covector identities. Known positive\n-self mirrors can be excluded on THIS interval: the three positive-time\n-base roots have e7 coefficient twice their X coefficient, so their\n-collision is(25+49phi)/2>sqrtD. All other known walls are retained,\n-released-e7, or constant negative. The worker verifies this directly;\n-it does not transport a later-edge self-exclusion rule blindly.\n+self mirrors can be excluded on THIS interval. Two positive-time base\n+roots have e7 coefficient twice their X coefficient and collide at\n+tauA=(25+49phi)/2. The third is calibrated row8, X+phi*H, whose e7\n+coefficient is2phi and whose collision is\n+tauB=(25+49phi)/(2phi)=b/2=(24+25phi)/2. BOTH exceed sqrtD:\n+tauA\u00b2-D=(3022+4755phi)/4 and tauB\u00b2-D=(1197+1729phi)/4 are positive.\n+The worker verifies the exact two/one multiplicities and retains its\n+strict tau\u00b2>D test for every positive-derivative known wall. All other\n+known walls are retained, released-e7, or constant negative; no later-edge\n+self-exclusion rule is transported blindly.\n \n ## Complete domain and exact arithmetic\n \n@@ -170,8 +189,10 @@\n \n ## Prospective root-only commands and status\n \n-NONE of these commands has run. After both complete code reviews and\n-fresh root admission, substitute the final worker SHA and NEW paths:\n+NONE of these commands has run under this SUCCESSOR. The predecessor's\n+failed pre-loop attempt is preserved above. After both complete code\n+reviews and fresh root admission, substitute the final worker SHA and\n+NEW paths, including a distinct retry stdout/ledger:\n \n ```sh\n python3 -B scripts/run_bounded_research_check_20261018.py --parent-lock --ledger results/NEW551_profile_execution.json -- scripts/check_compact_h9_composite551_transverse_batches_20261022.py --expected-source-sha256 SOURCE_SHA --profile norm2_orthogonal --output results/NEW551_profile.json\n@@ -188,5 +209,7 @@\n exclusive shared lock,40GiB disk/6GiB available-RAM admission and8GiB/3GiB\n abort floors. Root alone owns launches; arithmetic cubic/Lean work has\n priority. All prior workers/outputs, six papers, guides and global bounds\n-are preserved. At this preparation there are ZERO551 transverse units,\n-ZERO observed mirrors and ZERO actual endpoint/germ certificates.\n+are preserved. At this successor preparation there are ZERO successful551\n+transverse units, ZERO credited profile-loop trials and ZERO actual\n+endpoint/germ certificates. The actual failed predecessor attempt is\n+not erased or credited as a completed unit.\n"
+    }
+  ],
+  "worker_exact_reverse_recovery": true,
+  "fixed_pin_count": 14,
+  "current_fixed_pin_bindings": [
+    {
+      "path": "results/compact_h9_composite551_transverse_batches_checker_spec_20261022.md",
+      "bytes": 12039,
+      "sha256": "1252228722f70b11a2877d4804f9277c67f667e260c237e934a3bd9c9f160f04"
+    },
+    {
+      "path": "results/compact_h9_composite551_full_base_first_binary_edge_and_transverse_contract_candidate_20261022.md",
+      "bytes": 18440,
+      "sha256": "33058946a4dd33df9559d5a2d3d388c87d09b3cd94be4ede1a40161243e73f22"
+    },
+    {
+      "path": "results/review_compact_h9_composite551_full_base_first_edge_and_transverse_domain_full_scope_replay_reviewer_20261022.md",
+      "bytes": 16453,
+      "sha256": "21e7adfb3cbaef05326f7edee0001ac83994d557a5271e1dc56c8fa34aeb911b"
+    },
+    {
+      "path": "results/review_composite551_full_base_first_binary_edge_and_transverse_domain_root_acceptance_20261022.md",
+      "bytes": 4022,
+      "sha256": "0d538a3fb62ee24772c4c8651acce103afdc0b0a462723bdbd4f4623d09a5a20"
+    },
+    {
+      "path": "results/golden_odd_glue_full_base_and_discriminant_reduction_20261021.md",
+      "bytes": 12913,
+      "sha256": "b107f0de4f76da942100e0c82867cd6d4eeee40d833304fee67cebd84d3e41ce"
+    },
+    {
+      "path": "results/bugaenko_facet_binary_extension_and_collar_audit_20261020.md",
+      "bytes": 12332,
+      "sha256": "774e87f7abb33680a06879a17a5be9f06e2218bf12a95023bcff5c7046ba1227"
+    },
+    {
+      "path": "results/golden_odd_prime_e8_long_corner_original_module_recognition_candidate_20261022.md",
+      "bytes": 8706,
+      "sha256": "503a332347bae12cf24c328764c085baf0462f6b14c66cef7fcbddd0bc5d7c1e"
+    },
+    {
+      "path": "results/golden_e8_binary_family_full_base_facet_20261020.md",
+      "bytes": 8929,
+      "sha256": "ea5d96e331ac91cb9efc457db2ddaa24bac3341e9e6781038150765895675afd"
+    },
+    {
+      "path": "data/known_examples/bugaenko_compact_h8.json",
+      "bytes": 7648,
+      "sha256": "c17ac49e443918e61e541c9de35c7f29da9120e22bd9883678cc8091a2f4fc5c"
+    },
+    {
+      "path": "scripts/check_compact_h9_prime379_fourth_edge_released_r_batches_20261022.py",
+      "bytes": 39165,
+      "sha256": "b3a31476176a2c6267e4ac9dcb1ab16eb2e57dd5c2f61b4c673f37085e970219"
+    },
+    {
+      "path": "scripts/run_bounded_research_check_20261018.py",
+      "bytes": 5703,
+      "sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132"
+    },
+    {
+      "path": "scripts/build_illustrated_ra_manuscript_20261018.py",
+      "bytes": 6606,
+      "sha256": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15"
+    },
+    {
+      "path": "scripts/run_lean_batches_signal_safe_20261018.py",
+      "bytes": 1234,
+      "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d"
+    },
+    {
+      "path": "scripts/run_lean_batches_20261018.py",
+      "bytes": 14192,
+      "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c"
+    }
+  ],
+  "mathematical_correction": {
+    "known_positive_derivative_base_rows": [
+      0,
+      8,
+      10
+    ],
+    "base_X_coefficients": [
+      "phi",
+      "1",
+      "2+3phi"
+    ],
+    "base_e7_coefficients": [
+      "2phi",
+      "2phi",
+      "4+6phi"
+    ],
+    "tau_A": "(25+49phi)/2",
+    "tau_A_count": 2,
+    "tau_B": "(25+49phi)/(2phi)=(24+25phi)/2=b/2",
+    "tau_B_count": 1,
+    "tau_A_squared_minus_D": "(3022+4755phi)/4>0",
+    "tau_B_squared_minus_D": "(1197+1729phi)/4>0",
+    "strict_tau_squared_gt_D_assertion": "UNCHANGED for every known wall with positive derivative",
+    "self_exclusion": "All three known positive-derivative walls still meet beyond sqrt(D); none cuts the proved finite interval."
+  },
+  "unchanged_scope": [
+    "accepted domain33058946 and all mathematical domain inputs",
+    "all seven profiles/four phases and scalar boxes",
+    "both signed square-root branches/whole-quarter original seed tests",
+    "all original norm/primitivity/reflection and thirteen-wall filters",
+    "all ties/full-cone/combiner algorithms",
+    "unchanged guard/admission/watchdog/lock sources",
+    "all earlier workers, scientific outputs, six papers and public guides"
+  ],
+  "historical_review_status": {
+    "code_reviews": [
+      {
+        "path": "results/review_composite551_transverse_worker_full_source_domain_foundations_20261022.md",
+        "bytes": 13466,
+        "sha256": "54b791bdaf21bc71688cef4305a1523182ec7ba48b136955db7938adbe628262"
+      },
+      {
+        "path": "results/review_composite551_transverse_worker_root_source_acceptance_20261022.md",
+        "bytes": 2681,
+        "sha256": "88aacdd0225f59b8ff804837df53bf880d0d0dc496f7721a33d11efd68a151a7"
+      }
+    ],
+    "status": "SUPERSEDED_FOR_SUCCESSOR_CODE_NOT_RETROACTIVE_PASS",
+    "root_and_outside_full_successor_review_required": true,
+    "domain_review_precision": {
+      "record": {
+        "path": "results/review_compact_h9_composite551_full_base_first_edge_and_transverse_domain_full_scope_replay_reviewer_20261022.md",
+        "bytes": 16453,
+        "sha256": "21e7adfb3cbaef05326f7edee0001ac83994d557a5271e1dc56c8fa34aeb911b"
+      },
+      "lines": "275-277",
+      "incorrect_clause": "All three base e7 coefficients are twice their X coefficients, giving one common collision.",
+      "corrected_clause": "Only rows0/10 have ratio2; row8=X+phi*H has ratio2phi. Its collision is b/2, also outside sqrt(D).",
+      "old_review_left_immutable": true,
+      "domain_source_left_immutable": true
+    }
+  },
+  "retry_boundary": {
+    "successor_actual_executions": 0,
+    "successor_profile_loop_trials": 0,
+    "successor_actual_outputs": 0,
+    "no_import_help_plan_syntax_test_compiler_or_worker_run_by_author": true,
+    "retry_owner": "root only after full successor source/spec reviews and unchanged fresh admission",
+    "paths": "NEW stdout_attempt2, ledger and exclusive output; predecessor raw stdout is immutable",
+    "expected_source_sha256": "6303678672185c6d0d843d97755d00f3cc9dea3aab2a627210d8549433d77451"
+  }
+}

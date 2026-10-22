@@ -69,10 +69,15 @@ now has [full review and root acceptance](../results/review_compact_dimension18_
 It has eleven grouped families and includes three new local exclusions;
 the surviving configurations are not asserted realized.
 The subsequent [A15 component theorem](../results/review_a15_general18_and_cubic_d16_old_i_contacts_root_acceptance_20261022.md)
-excludes its ordinary A3 and ordinary T2+A1 spectators. Its actual I+T2
-and OLD-I2(7)/NEW-isolated3 plus A1 alternatives remain.
+excluded its ordinary A3 and ordinary T2+A1 spectators. The later
+[uniform A15 energy theorem](../results/review_compact_a15_paid_weak_helpers_point826_root_acceptance_20261022.md)
+proves energy>.826 without arithmeticity and closes both remaining actual
+I+T2 and OLD-I2(7)/NEW-isolated3 plus A1 alternatives. Thus the entire
+A15 row is excluded; other rows remain open and the ceiling stays18.
 
-Two arithmetic seventeen groups remain: whole A17 and whole B17.
+The arithmetic dimension-seventeen frontier is now completely closed,
+including whole A17. The predecessor exclusions and final closure below
+give the accepted written **global compact arithmetic ceiling16**.
 The [complete D16+actual-I composition](../results/arithmetic17_d16_actual_i_complete_exclusion_composition_20261022.md)
 has [full outside review](../results/review_arithmetic17_d16_actual_i_complete_exclusion_composition_full_scope_compact_reviewer_20261022.md)
 and [root acceptance](../results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md).
@@ -81,9 +86,9 @@ quadratic, cubic and quartic theorems exclude all three for the same
 actual farthest vertex. The quadratic argument derives its own contact
 restrictions, retains unequal fork parameters and does not transfer
 cubic zero-contact conclusions. Thus the ENTIRE D16+actual-I forest is
-excluded, rather than merely reduced to quadratic fields. The remaining
-remaining families are necessary possibilities, not realized examples;
-the arithmetic ceiling stays17.
+excluded, rather than merely reduced to quadratic fields. At that
+checkpoint the remaining families were necessary possibilities, not
+realized examples, and the arithmetic ceiling remained17.
 
 The [new whole-D17 exclusion](../results/arithmetic17_whole_d17_complete_quadratic_census_and_coupled_energy_exclusion_candidate_20261022.md)
 has [full outside review and root acceptance](../results/review_arithmetic17_whole_d17_complete_exclusion_root_acceptance_20261022.md).
@@ -103,14 +108,54 @@ has bounded compilation and a separate four-declaration axiom audit PASS.
 The [logic map](classical_seventeen_census_kernel_logic_20261022.md) keeps
 actual geometry, the exhaustive census and the legal paid-reference
 inequality outside Lean. This verifies the strict scalar implications;
-there is no full geometric formalization or arithmetic16 conclusion.
+it does not verify the new final arithmetic16 composition or its geometry.
 
-The [accepted B17 short-cap theorem](../results/review_arithmetic17_whole_b17_short_cap_field_root_acceptance_20261022.md)
-proves actual short-edge cosh length below15 and actual field degree2
-or3. All nonisolated caps lie in eight explicit quadratic models; a
-cubic cap must be isolated dotted. It uses its own B17 normalization
-and bound900/17, with no D17 fork conclusion transferred. Whole B17
-and A17 remain open at this checkpoint.
+The later [complete B17 exclusion](../results/review_arithmetic17_whole_b17_complete_exclusion_root_acceptance_20261022.md)
+has full source-bound outside review and root acceptance. Its fresh
+short-edge bound C<11 and complete head analysis exclude every finite
+head and every cubic actual field. The actual B17 LONG/TWO cycles then
+prove inclusion into the unchanged quadratic census, and a legally funded
+head/tail norm inequality excludes both survivors. The incomplete
+predecessor's omitted finite-head branch is byte-preserved and explicitly
+receives no whole-family acceptance. No successful job was rerun.
+
+The [accepted A17 endpoint reduction](../results/review_arithmetic17_whole_a17_endpoint_reduction_root_acceptance_20261022.md)
+forces BOTH endpoint opposite walls to be isolated, excludes the golden
+field and gives C<21/10 at both ends. Each integral endpoint parameter
+generates the actual field, has36/17<U<3969/425 and other conjugates
+in(0,36/17). The subsequent
+[degree-five theorem](../results/review_arithmetic17_whole_a17_degree_five_root_acceptance_20261022.md)
+and [two-dotted-endpoint exclusion](../results/review_arithmetic17_whole_a17_four_actual_fields_root_acceptance_20261022.md)
+force at least one finite endpoint and derive just four actual fields.
+The [complete quadratic exclusion](../results/review_arithmetic17_whole_a17_quadratic_exclusion_root_acceptance_20261022.md)
+then removes ALL quadratic fields: three disjoint batches and a separate
+complete replay check25 fields,53 models and159 ordered pairs, with zero
+survivors. The [actual manifest](../results/a17_two_isolated_quadratic_endpoints_runtime_manifest_20261022.json)
+records.354seconds total and57,131,008bytes maximum sampled RSS. Its first
+pre-child monitoring refusal is preserved separately. Full source/domain
+and actual-runtime/composition reviews passed; no successful job was rerun.
+This left only the cubic fields K7 (native7) and K9 (native18) for A17.
+The [complete cubic domain](../results/arithmetic17_a17_finite_cubic_endpoint_exact_census_contract_20261022.md)
+and [actual runtime manifest](../results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json)
+now exclude both: two field units and a separate all-record replay checked
+2,432 coefficient triples, nine strict-strip models and zero survivors.
+The [full runtime review](../results/review_a17_finite_cubic_endpoint_actual_runtime_and_conditional_exclusion_foundations_20261022.md)
+checks all nine algebraic rejections and the authentic recorded evidence.
+The [complete global composition](../results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md)
+and [full review/root acceptance](../results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md)
+close all fourteen original dimension-seventeen groups. The prior global17
+theorem already excludes every dimension at least18, so the resulting
+**global arithmetic ceiling is16**, without dimension-heredity assumptions.
+This is internally reviewed written mathematics with exact finite computation;
+the final16 conditional composition now has a
+[bounded compilation and separate three-declaration axiom audit PASS](../results/lean_arithmetic16_composition_verification_20261022/manifest.json).
+The [logic map](arithmetic_dimension_sixteen_composition_logic_20261022.md)
+exposes all27 forest/endpoint/field/data premises. The first two derived
+declarations are axiom-free; the final Nat implication uses only propext
+and Quot.sound, with no sorryAx. Actual geometry, arithmetic and exhaustive
+computations remain external. The first audit admission refusal is preserved;
+its successful retry reused the compiled object.
+All six frozen PDF editions, including arithmetic20, remain unchanged.
 
 The new [all-heavy-hexagon financing theorem](../results/finite57_heavy_hexagon_nonadjacent_affine_cusp_global_discharge_candidate_20261022.md)
 also has full outside review and root acceptance in the same record.
@@ -126,6 +171,13 @@ keep its charge at most350/353.5. The union replaces the older three-heavy
 allocation on overlap. One-heavy pentagons and complete heavy-source
 coverage remain open; no new global bound follows.
 
+The reviewed [isolated short-fork3 E8 rule](../results/review_finite57_short_fork_three_off_face_e8_financing_root_acceptance_20261022.md)
+and [isolated short-fork4 B4 rule](../results/review_finite57_short_fork_four_off_face_b4_financing_root_acceptance_20261022.md)
+now finance two further complete selected domains at actual off-face cusps.
+Their whole-parent classifications, actual source injections and complete
+prior-debt ledgers have full mathematical reviews. They cover those actual
+contact types only; other contacts and costly forests still prevent a56 bound.
+
 Norm239 and the distinct norm379 host are nonreflective. The norm379
 [fourth-edge and original-period acceptance](../results/review_prime379_fourth_germ_original_period_root_acceptance_20261022.md)
 binds a complete actual E8+long germ, six guarded units and an original
@@ -133,7 +185,8 @@ integral infinite-order chamber symmetry. These are literal-lattice
 exclusions; no new example or form-class exclusion is claimed.
 Its five NEW profiles and separate combine passed; a new isolated wall has
 norm2b. The earlier4.1GiB admission refusal is retained with zero execution
-credit. Reflectivity and finite volume remain open; resource limits are unchanged.
+credit. The current nonreflectivity proof supersedes that earlier open
+construction checkpoint; resource limits are unchanged.
 
 ## Dimension comparison
 
@@ -144,7 +197,7 @@ The repository columns report internally reviewed written arguments.
 | --- | ---: | ---: | ---: | --- |
 | Arbitrary finite-volume Coxeter | 21 | 995, Prokhorov | 57 | [57](../manuscripts/build/finite_volume57.pdf), 48 pages |
 | Arbitrary compact Coxeter | 8 | 29, Vinberg | 18 | [23](../manuscripts/build/compact_farthest_vertex_bounds.pdf), 36 pages |
-| Compact arithmetic Coxeter | 8 | 29, Vinberg | 17 | [20](../manuscripts/build/compact_arithmetic_dimension_bound.pdf), 21 pages |
+| Compact arithmetic Coxeter | 8 | 29, Vinberg | 16 | [20](../manuscripts/build/compact_arithmetic_dimension_bound.pdf), 21 pages |
 | Noncompact arithmetic Coxeter | 21 | 21, Esselmann | 21, published and sharp | No separate new paper |
 | Arithmetic Coxeter, compact or noncompact | 21 | 29 overall | 21, sharp as a union | Compact argument plus published noncompact theorem |
 | Compact right-angled | 4 | 4, Potyagailo–Vinberg | 4, published and sharp | Background in the right-angled paper |
@@ -175,7 +228,7 @@ The arithmetic proof covers every actual admissible ground field,
 with no prescribed field list. These are internally reviewed written
 proofs, with their geometric and published inputs explicit. The finished
 compact PDFs still state twenty-three and twenty; the new eighteen/
-seventeen results belong in those same two paper families when integrated.
+sixteen results belong in those same two paper families when integrated.
 The [eighteen composition](../results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md)
 and its [root acceptance](../results/review_compact_dimension18_global_composition_root_acceptance_20261022.md)
 record the subsequent complete dimension-nineteen exclusion.
@@ -195,7 +248,7 @@ module was recompiled. The unchanged serial resource gates remained active.
 | --- | --- | --- |
 | Finite volume 57 | [Fresh full composition audit](../results/review_finite57_geometric_composition_new_audit_20261021.md); no blocker at named finite-input boundaries | All25 bounded B13/frontier replacement units passed and are selected in the current catalogue. With inherited records for 111 unchanged commands, separate evidence covers136 script selections. There is no combined146-job full replay or complete transitive regeneration. Conditional Lean checks selected counting, table and scalar implications. |
 | Sharp right-angled 8/ideal 4 | Fresh [geometry](../results/review_sharp_ra_geometric_foundations_adversarial_20261021.md) and [tensor/equality](../results/review_sharp_ra_tensor_ideal_equality_adversarial_20261021.md) audits | Exact core checks and selected conditional Lean have actual successful runs. Coordinate projection, height and cubic identities are formalized; published bounds and actual geometric interfaces remain explicit premises. |
-| Compact arithmetic PDF 20 | Full exposition/field-closure reviews and [completed internal-field proof review](../results/review_compact_arithmetic20_internal_field_translation_foundations_20261021.md) | Its matching 21-page build has zero warnings. Accounting and finite checks keep their declared scopes; this is not formal verification of the later seventeen theorem. |
+| Compact arithmetic PDF 20 | Full exposition/field-closure reviews and [completed internal-field proof review](../results/review_compact_arithmetic20_internal_field_translation_foundations_20261021.md) | Its matching 21-page build has zero warnings. Accounting and finite checks keep their declared scopes; this is not formal verification of the later sixteen theorem. |
 | General compact PDF 23 | [Full source review](../results/review_compact_farthest23_full_batch_guard_20261020.md), with source-bound editorial delta review | Matching 36-page build has zero warnings. The older accounting kernel retains23. A separate compiled compact18 composition has five actual axiom outputs under23 written premises; geometric inequalities remain external. |
 | Ideal RA4 volume/structure | [Fresh full adversarial audit](../results/review_ideal_ra4_volume_structure_fresh_adversarial_20261021.md) | Universal second-volume equality is proved before the restricted chain theorem is applied. Exact model outputs and conditional Lean have explicit scopes; the actual cutting and recognition proofs are written geometry. |
 | Compact RA4 constraints | [Fresh full adversarial audit](../results/review_compact_ra4_volume_constraints_fresh_adversarial_20261021.md) | Graph and geometric cases are written out. The catalogue selection checks typesetting only; there is no universal geometric Lean proof. |
@@ -263,7 +316,7 @@ with no `sorryAx`. The failed tactic predecessor earns no credit.
 
 The earlier frontiers and checkpoint-local ceilings below are preserved
 to explain the proof dependencies. The current written ceilings are18
-for general compact and17 for compact arithmetic; see the table above.
+for general compact and16 for compact arithmetic; see the table above.
 
 The previous general dimension-twenty frontier is now closed. Its whole
 A20 and B20 exclusions are joined by a complete whole-D20 proof. Actual
@@ -380,9 +433,9 @@ Previous batches removed whole B19, arithmetic B15+either typed7 and B16+I. Earl
 D18+I and D17+either typed7. All other necessary groups and the six
 printed editions are preserved.
 The later whole-D19 exclusion closes the last general row above. The current
-ceilings18/17 leave gaps of ten and nine above the known compact example
+ceilings18/16 leave gaps of ten and eight above the known compact example
 dimension eight. The fresh complete dimension18 frontier has eleven
-grouped families, with the A15 ordinary rank-three alternatives subsequently
+grouped families, with the entire A15 row subsequently
 excluded; see the current overview at the beginning of this guide. No new
 polytope example has been found.
 
@@ -430,7 +483,7 @@ uses the ACTUAL nonshort edge length, not a bare A1 diagram. Its tight
 mixed head and centre share one spectator coefficient. The final total
 exceeds1.0084. Both have full root and other-author reviews. At that
 checkpoint actual-I at D16 remained open; it is now excluded by the
-complete all-degree theorem above. The arithmetic ceiling remains17.
+complete all-degree theorem above. At that checkpoint the arithmetic ceiling remained17.
 
 For general A19, a [two-weak-end theorem](../results/compact_whole_a19_two_weak_ends_exact_cross_paid_feet_candidate_20261022.md)
 excludes simultaneous weak central indices5 and15 using both actual feet,
