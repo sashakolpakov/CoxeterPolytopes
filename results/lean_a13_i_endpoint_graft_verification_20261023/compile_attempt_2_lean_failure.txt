@@ -1,0 +1,173 @@
+CoxeterProofs/A13IEndpointGraftScalarKernel.lean:76:39: warning: Variable name `nonnegative` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+CoxeterProofs/A13IEndpointGraftScalarKernel.lean:123:63: error: `grind` failed
+case grind
+R : Type u
+inst : CommRing R
+inst_1 : LE R
+inst_2 : LT R
+inst_3 : Std.IsLinearOrder R
+inst_4 : Std.LawfulOrderLT R
+inst_5 : OrderedRing R
+s energy isolated : R
+data : PaidGraftData R s energy
+parameter_positive : 0 < s
+isolated_floor : s ^ 2 ≤ isolated
+low_identity : 3125 * data.lowGain = 963 - 3615 * s
+middle_identity : 2500000 * data.middleGain = (1163 - 3615 * s) ^ 2
+low : ¬5 * s ≤ 1
+middle_lower : 1 ≤ 5 * s
+middle : 10 * s ≤ 3
+scalar : 217000 < 2500000 * s ^ 2 + (1163 - 3615 * s) ^ 2
+h : ¬217 < 2500 * (s ^ 2 + data.middleGain)
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] Std.IsLinearOrder R
+    [prop] Std.LawfulOrderLT R
+    [prop] OrderedRing R
+    [prop] 0 < s
+    [prop] s ^ 2 ≤ isolated
+    [prop] 3125 * data.lowGain = 963 - 3615 * s
+    [prop] 2500000 * data.middleGain = (1163 - 3615 * s) ^ 2
+    [prop] ¬5 * s ≤ 1
+    [prop] 1 ≤ 5 * s
+    [prop] 10 * s ≤ 3
+    [prop] 217000 < 2500000 * s ^ 2 + (1163 - 3615 * s) ^ 2
+    [prop] ¬217 < 2500 * (s ^ 2 + data.middleGain)
+  [eqc] True propositions
+    [prop] Std.IsLinearOrder R
+    [prop] Std.IsPreorder R
+    [prop] Std.LawfulOrderLT R
+    [prop] 1 ≤ 5 * s
+    [prop] 10 * s ≤ 3
+    [prop] s ^ 2 ≤ isolated
+    [prop] 0 < s
+    [prop] 217000 < 2500000 * s ^ 2 + (1163 - 3615 * s) ^ 2
+    [prop] OrderedRing R
+  [eqc] False propositions
+    [prop] 5 * s ≤ 1
+    [prop] 217 < 2500 * (s ^ 2 + data.middleGain)
+  [eqc] Equivalence classes
+    [eqc] {3125 * data.lowGain, 963 - 3615 * s}
+    [eqc] {2500000 * data.middleGain, (1163 - 3615 * s) ^ 2}
+  [ematch] E-matching patterns
+    [thm] Nat.pow_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+  [linarith] Linarith assignment for `R`
+    [assign] s := 1/4
+    [assign] energy := 4
+    [assign] isolated := 3
+    [assign] 「s ^ 2」 := 2
+    [assign] 「(1163 - 3615 * s) ^ 2」 := 28
+    [assign] data.lowGain := 237/12500
+    [assign] data.middleGain := -3
+  [ring] Ring `R`
+    [basis] Basis
+      [_] 9765625 * data.lowGain ^ 2 + 1250000 * data.lowGain + -2500000 * data.middleGain + 40000 = 0
+      [_] 3615 * s + 3125 * data.lowGain + -963 = 0
+CoxeterProofs/A13IEndpointGraftScalarKernel.lean:147:62: error: `grind` failed
+case grind
+R : Type u
+inst : CommRing R
+inst_1 : LE R
+inst_2 : LT R
+inst_3 : Std.IsLinearOrder R
+inst_4 : Std.LawfulOrderLT R
+inst_5 : OrderedRing R
+s energy isolated : R
+data : PaidGraftData R s energy
+parameter_positive : 0 < s
+isolated_floor : s ^ 2 ≤ isolated
+low_identity : 6250 * data.lowGain = 981 - 3615 * s
+middle_identity : 5000000 * data.middleGain = (1181 - 3615 * s) ^ 2
+low : ¬5 * s ≤ 1
+middle_lower : 1 ≤ 5 * s
+middle : 10 * s ≤ 3
+scalar : 385000 < 5000000 * s ^ 2 + (1181 - 3615 * s) ^ 2
+h : ¬77 < 1000 * (s ^ 2 + data.middleGain)
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] Std.IsLinearOrder R
+    [prop] Std.LawfulOrderLT R
+    [prop] OrderedRing R
+    [prop] 0 < s
+    [prop] s ^ 2 ≤ isolated
+    [prop] 6250 * data.lowGain = 981 - 3615 * s
+    [prop] 5000000 * data.middleGain = (1181 - 3615 * s) ^ 2
+    [prop] ¬5 * s ≤ 1
+    [prop] 1 ≤ 5 * s
+    [prop] 10 * s ≤ 3
+    [prop] 385000 < 5000000 * s ^ 2 + (1181 - 3615 * s) ^ 2
+    [prop] ¬77 < 1000 * (s ^ 2 + data.middleGain)
+  [eqc] True propositions
+    [prop] Std.IsLinearOrder R
+    [prop] Std.IsPreorder R
+    [prop] Std.LawfulOrderLT R
+    [prop] 1 ≤ 5 * s
+    [prop] 10 * s ≤ 3
+    [prop] s ^ 2 ≤ isolated
+    [prop] 0 < s
+    [prop] 385000 < 5000000 * s ^ 2 + (1181 - 3615 * s) ^ 2
+    [prop] OrderedRing R
+  [eqc] False propositions
+    [prop] 5 * s ≤ 1
+    [prop] 77 < 1000 * (s ^ 2 + data.middleGain)
+  [eqc] Equivalence classes
+    [eqc] {6250 * data.lowGain, 981 - 3615 * s}
+    [eqc] {5000000 * data.middleGain, (1181 - 3615 * s) ^ 2}
+  [ematch] E-matching patterns
+    [thm] Nat.pow_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+  [linarith] Linarith assignment for `R`
+    [assign] s := 1/4
+    [assign] energy := 4
+    [assign] isolated := 3
+    [assign] 「s ^ 2」 := 2
+    [assign] 「(1181 - 3615 * s) ^ 2」 := 28
+    [assign] data.lowGain := 309/25000
+    [assign] data.middleGain := -3
+  [ring] Ring `R`
+    [basis] Basis
+      [_] 39062500 * data.lowGain ^ 2 + 2500000 * data.lowGain + -5000000 * data.middleGain + 40000 = 0
+      [_] 3615 * s + 6250 * data.lowGain + -981 = 0
+'CoxeterProofs.A13IEndpointGraftScalarKernel.nonhelper_middle_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.helper_middle_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.nonhelper_fixed_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.helper_fixed_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.high_parameter_square' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.paid_energy_completion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.nonhelper_all_ranges' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.helper_all_ranges' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.nonhelper_total_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.helper_total_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A13IEndpointGraftScalarKernel.complete_group_nine_scalar_contradiction' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

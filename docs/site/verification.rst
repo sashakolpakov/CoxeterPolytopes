@@ -28,7 +28,7 @@ refereed status or complete geometric Lean formalization is claimed.
    * - Compact18
      - Complete written composition, outside review and root acceptance. Its five-declaration conditional composition compiled and passed a separate actual audit under23 written inputs.
    * - Arithmetic16
-     - Complete written composition and reviews over every actual admissible field. Its three-declaration composition and older thirteen-group kernel passed their actual batches. The later ten-group frontier and A13 refinements remain written mathematics at their separate boundaries.
+     - Complete written composition and reviews over every actual admissible field. Its three-declaration composition and older thirteen-group kernel passed their actual batches. The later nine-group frontier and complete A13 exclusion remain written mathematics at their separate boundaries.
    * - Sharp right-angled8/ideal4
      - Complete5-page paper, internal reviews, exact polynomial/model checks and selected compiled projection/height/count logic. Published facet/code/classification results and actual geometry remain external.
    * - Ideal RA4 volume/structure
@@ -122,10 +122,32 @@ Eight prints are axiom-free; the other three use propext/Quot.sound.
 Its successful six-case dependency was reused, not rerun or relabelled.
 The newer written exclusions are not automatically formal instances of it.
 
-Arithmetic16 now has :download:`ten necessary original groups <../../results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md>`.
-The :download:`universal and cubic7-field A13 arguments <../../results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md>`
-leave only actualI+ordinaryT2 in its A13 row. No new original group or global
-ceiling is removed. The cubic-field coefficient lemma is direct, not a census.
+Arithmetic16 now has :download:`nine necessary original groups <../../results/review_arithmetic16_a13_actual_i_ordinary_dihedral_group_nine_root_acceptance_20261023.md>`.
+Universal and cubic7-field A13 arguments, followed by simultaneous actual-I
+endpoint grafts and all weak-foot corrections, delete original group9 entirely.
+The cubic-field coefficient lemma is direct, not a census. The global
+arithmetic ceiling remains16.
+The :download:`new universal A14 theorem <../../results/review_arithmetic16_a14_point597_four_fifths_root_acceptance_20261023.md>`
+gives energy greater than4/5 with arbitrary spectators and every actual field.
+It removes only its two-ordinary-A1 alternative; group10 and all nine IDs remain.
+
+The :download:`A13 scalar logic map <../a13_i_endpoint_graft_scalar_kernel_logic_20261023.md>`
+and source have full different-author static review and
+:download:`root precompile acceptance <../../results/review_a13_i_endpoint_graft_scalar_kernel_root_precompile_acceptance_20261023.md>`.
+The :download:`first admission refusal <../../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_1_resource_deferral.json>`
+records4.7GiB RAM before Lean. The next admitted compile
+:download:`failed at two tactic scalings <../../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_2_failed_compile.json>`.
+The :download:`two explicit identity rewrites <../../results/review_a13_endpoint_graft_two_identity_rewrites_root_preclear_20261023.md>`
+have outside/root clearance. The repaired retry was first
+:download:`refused before Lean at5.8GiB <../../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_3_resource_deferral.json>`.
+A later retry has an :download:`actual compile PASS in1.33seconds <../../results/lean_a13_i_endpoint_graft_verification_20261023/pre_audit_manifest.json>`.
+Its separate audit was initially refused at5.3GiB RAM. A later
+:download:`actual eleven-declaration audit PASS <../../results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json>`
+took1.28seconds at6.34GiB RAM and reran no successful compilation.
+All eleven actual prints use only standard foundational axioms, with no
+``sorryAx``. Failed diagnostic prints, including error-propagated sorryAx,
+earn zero credit. Actual geometric vector
+data, legal payments and weak-foot absorption remain external.
 
 The :download:`A12 scalar logic map <../a12_adjusted_loss_kernel_logic_20261023.md>`
 has complete source review. Its initial RAM refusal and
@@ -140,8 +162,19 @@ remain dated preparation records, superseded in execution status by the receipt.
 
 The :download:`new B18/D18 terminal reductions <../../results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md>`
 have full written proofs and outside/root reviews. D18 has both actual fork
-cosh lengths<12, or<10 in its strong5 branch. A selected strong17 B18 pair
-must be orthogonal; that locus stays open. Neither family is excluded.
+cosh lengths<12, or<10 in its strong5 branch. The selected
+:download:`strong17 B18 pure-helper/isolated-short branch <../../results/review_b18_strong_helper_actual_a17_neighbor_root_acceptance_20261023.md>`
+is now excluded entirely. The selected
+:download:`weak pure dotted D18 centre16 branch <../../results/review_compact18_d18_weak_pure_dotted_centre_branch_complete_root_acceptance_20261023.md>`
+is also fully excluded. Complete actual fork forcing and all three far-profile
+proofs use one funded reference, including zero and unbounded mutuals.
+The new :download:`finite-own pure centre16 theorem <../../results/review_compact18_d18_finite_own_weak_pure_centre_root_acceptance_20261023.md>`
+also closes the finite-own version, using freshly reconstructed finite-g
+constants and every signed fork case. Thus no weak PURE far-left3 helper
+remains. The new :download:`unconditional isolated17 theorem <../../results/review_compact18_b18_unconditional_isolated_seventeen_root_acceptance_20261023.md>`
+closes every isolated17 own label, with no strong17 or short-opposite
+premise. Other centre/terminal profiles remain. These are written mathematical
+theorems, not full geometric Lean results; neither whole family is excluded.
 
 Finite-volume discharge and construction
 ----------------------------------------
@@ -158,8 +191,20 @@ strengthens escape to exact linear expansion: every heavy subset S has
 ``|S|+2c(S)`` actual centre-edge incidences leaving it. Heavy-to-heavy edges have
 cosh length at least16 and successive centre directions are orthogonal, so
 the ambient hyperbolic chain cannot close. Receiver costs and previous debts
-remain unresolved. The scalar/chain kernel above does not create the actual
-geometric or finite-graph instances.
+remain unresolved in that theorem. The subsequent
+:download:`mixed row1/row2 theorem <../../results/review_finite57_row_one_two_variable_cone_component_financing_root_acceptance_20261023.md>`
+proves a larger forest by variable-angle cones and finances full components
+whose nonheavy centre neighbours all have these types. All old K/Q/L1 tokens
+and ideal debts remain included. Other exits stay in its explicit criterion;
+there is no universal dimension56 result. The older scalar/chain kernel does
+not formalize this newer geometry or create its graph instances.
+
+The :download:`zero-exchanged costly-exit financing theorem <../../results/review_finite57_zero_exchanged_bad_centre_affine_financing_root_acceptance_20261023.md>`
+pays full-table rows4/5/6/11. Actual positive affine kernels and the complete
+fifteen-parent recovery prove the global source multiplicities. Canonical
+cusp budgets retain all old shared loads, with smallest remaining balance
+5161/2. Zero-exchanged rows7/8 and positive exchanged products remain;
+there is no universal364 cap or dimension56 theorem.
 
 The :download:`full glued-host period theorem <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`
 now proves this literal host nonreflective. Both23-profile edge proofs establish
@@ -171,6 +216,21 @@ infinite order, infinite reflection-group index and infinite chamber volume.
 No whole commensurability class, field or dimension is excluded. This is
 internally reviewed written mathematics, with explicit arithmetic-lattice and
 reflection-chamber inputs, not a new example or a Lean geometric instance.
+
+A different :download:`original squared-unit coupling host <../../results/review_h9_squared_unit_glued_host_first_two_actual_edges_root_acceptance_20261023.md>`
+has complete first-wall proofs, a
+:download:`whole compact E7 quadrilateral face <../../results/review_h9_squared_unit_third_edge_full_e7_quadrilateral_root_acceptance_20261023.md>`
+and an :download:`actual ambient D6 edge <../../results/review_h9_squared_unit_first_d6_ambient_edge_root_acceptance_20261023.md>`.
+Two :download:`further actual edges reach a full D6+B3 corner <../../results/review_h9_squared_unit_d6_b2_to_b3_actual_edges_root_acceptance_20261023.md>`;
+their nine-profile proof includes every primitive norm class and proves the
+tied norm-four mirror redundant, leaving a unique actual norm-two wall.
+These are written, different-author-reviewed and root-accepted construction
+results. The subsequent :download:`long D6-leaf edge and original involution <../../results/review_h9_squared_unit_d6_long_leaf_edge_original_involution_root_acceptance_20261023.md>`
+have a complete nine-profile firstness proof and all ten original basis
+columns. Two individually nonintegral reflections have an original product
+preserving the full chamber, of order exactly two and trace6. This finite
+symmetry gives neither an infinite-period obstruction nor a finite-volume
+conclusion. Ambient finite volume and a new H9 example remain unproved.
 
 Reproduction and resources
 --------------------------

@@ -49,6 +49,25 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`A13IEndpointGraftScalarKernel` has full different-author source/map review
+and [root precompile acceptance](../results/review_a13_i_endpoint_graft_scalar_kernel_root_precompile_acceptance_20261023.md),
+and an [actual compile PASS in1.33seconds](../results/lean_a13_i_endpoint_graft_verification_20261023/pre_audit_manifest.json),
+and now has a [separate actual eleven-declaration audit PASS](../results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json).
+The audit took1.28seconds at6.34GiB RAM; no successful module was recompiled.
+Its earlier audit admission was refused at5.3GiB RAM. Its first compile admission was refused
+at4.7GiB RAM. The next admitted compile [failed at two tactic scalings](../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_2_failed_compile.json).
+Two explicit identity rewrites have [outside/root clearance](../results/review_a13_endpoint_graft_two_identity_rewrites_root_preclear_20261023.md);
+the repaired retry was [refused before Lean at5.8GiB](../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_3_resource_deferral.json).
+The failed diagnostic prints, including error-propagated sorryAx, have zero
+verification credit. The successful compile admitted6.49GiB RAM and retained
+its682968-byte ignored object. All eleven actual audit prints use only
+`propext`, `Classical.choice` and `Quot.sound`; none uses `sorryAx`.
+The [logic map](../docs/a13_i_endpoint_graft_scalar_kernel_logic_20261023.md)
+separates the continuous square/factor gains and case dispatch from actual
+geometry, inventories, individually legal prices and weak-foot absorption.
+Those strong geometric vector interfaces are ordinary explicit arguments.
+This is conditional scalar verification, not a full geometric group9 theorem.
+
 `A12AdjustedLossKernel` has [bounded compilation and a separate
 ten-declaration actual audit PASS](../results/lean_a12_adjusted_loss_verification_20261023/manifest.json).
 It proves continuous individual-loss and finite-list paid-square logic from
@@ -65,7 +84,7 @@ no cosmetic rerun was made. Owned temporary proof work is absent.
 The [logic map](../docs/a12_adjusted_loss_kernel_logic_20261023.md) retains
 the geometry, actual fields/inventories, legal pressures and spectator floors
 as premises. It does not formalize the later universal A12/A13 theorems or
-the current ten-group arithmetic frontier. The source header and logic map
+the current nine-group arithmetic frontier. The source header and logic map
 are immutable preparation records; the execution receipt supplies the later
 PASS. Older successful modules were not rerun or relabelled.
 

@@ -38,13 +38,15 @@ follows the complete
 and [B17+actual-I](results/review_compact18_whole_b17_actual_i_and_four_group_frontier_root_acceptance_20261023.md)
 exclusions. These are configurations that any hypothetical candidate must have
 at one selected vertex, not examples. Arithmetic dimension16 now has
-[ten necessary groups](results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md).
-The new all-field theorem gives every A12 component energy greater than5/7
-and closes its remaining groups. The global ceilings stay compact18/arithmetic16.
-The new [A13 refinements](results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md)
-remove three of its four alternatives: only A13+actual shortI+ordinaryT2 remains
-in that row. The cubic7-field step uses a direct integral-basis argument,
-with no enumeration. The ten original group IDs are unchanged.
+[nine necessary groups](results/review_arithmetic16_a13_actual_i_ordinary_dihedral_group_nine_root_acceptance_20261023.md),
+with original IDs1,2,4,10,11,14,15,18,19. The all-field A12 theorem gives
+energy greater than5/7. The A13 arguments combine universal energy,
+a direct cubic7-field integral-basis proof and actual-I endpoint grafts;
+no A12- or A13-dominant group remains. The global ceilings stay
+compact18/arithmetic16, and these configurations are not examples.
+The [new universal arithmetic A14 estimate](results/review_arithmetic16_a14_point597_four_fifths_root_acceptance_20261023.md)
+gives energy greater than4/5 and excludes its two-ordinary-A1 alternative.
+Its ordinaryT2 and actual typed-seven alternatives remain open.
 
 ## The six papers
 
@@ -83,10 +85,25 @@ and its full chamber, with trace5+4phi>10. Its infinite order proves infinite
 chamber volume. This closes one literal host, and gives **no new example**
 or exclusion of its whole commensurability class.
 
+A different [squared-unit coupling host](results/review_h9_squared_unit_glued_host_first_two_actual_edges_root_acceptance_20261023.md)
+now has a proved [whole compact E7 quadrilateral face](results/review_h9_squared_unit_third_edge_full_e7_quadrilateral_root_acceptance_20261023.md)
+and an [actual ambient D6 edge leaving it](results/review_h9_squared_unit_first_d6_ambient_edge_root_acceptance_20261023.md).
+Two [further actual edges reach a full D6+B3 vertex](results/review_h9_squared_unit_d6_b2_to_b3_actual_edges_root_acceptance_20261023.md).
+Each edge has a complete original-lattice firstness proof. Ambient finite
+volume and compactness remain open; this is not yet a new polytope example.
+One [further long-leaf edge and original chamber symmetry](results/review_h9_squared_unit_d6_long_leaf_edge_original_involution_root_acceptance_20261023.md)
+are now proved. The symmetry has order two, so it supplies no infinite-period
+obstruction or finite-volume conclusion.
+
 The [latest compact reductions](results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md)
 bound both actual D18 fork edges by cosh length12, or10 under the stated
-strong5 hypothesis. A selected strong17 B18 helper/short pair must be
-orthogonal; that locus remains open. The earlier selected weak pure-helper17
+strong5 hypothesis. The selected [strong17 pure-helper/isolated-short B18 branch](results/review_b18_strong_helper_actual_a17_neighbor_root_acceptance_20261023.md)
+is now excluded, including its formerly open orthogonal locus. The new
+[unconditional isolated17 theorem](results/review_compact18_b18_unconditional_isolated_seventeen_root_acceptance_20261023.md)
+excludes that entire white role, without strong17 or any short-opposite hypothesis.
+The [weak pure dotted centre16 branch in D18](results/review_compact18_d18_weak_pure_dotted_centre_branch_complete_root_acceptance_20261023.md)
+and the [finite-own pure centre16 branch](results/review_compact18_d18_finite_own_weak_pure_centre_root_acceptance_20261023.md)
+are both excluded. Other centre profiles remain. The earlier selected weak pure-helper17
 branch is fully excluded. Neither wholeB18 nor wholeD18 is eliminated.
 
 The finite-volume57 improvement lane now has a
@@ -95,7 +112,13 @@ following complete [isolated finite-cap](results/review_finite57_all_isolated_fi
 and [ideal-centre](results/review_finite57_ideal_fork_centre_joint_parallel_financing_root_acceptance_20261023.md)
 financing results. The new [heavy-centre forest theorem](results/review_finite57_heavy_centre_forest_and_linear_exit_expansion_root_acceptance_20261023.md)
 forces exactly H+2 actual exits from a heavy component of H vertices.
-Costly and shared-capacity cases remain; there is no56 theorem.
+The [mixed row1/row2 receiver theorem](results/review_finite57_row_one_two_variable_cone_component_financing_root_acceptance_20261023.md)
+now finances every full enlarged component whose nonheavy centre neighbours
+have either receiving type, retaining all older credits. The new
+[zero-exchanged costly-exit financing theorem](results/review_finite57_zero_exchanged_bad_centre_affine_financing_root_acceptance_20261023.md)
+pays four more full-table rows through actual recovered cusps, including
+every prior shared debt. Zero-exchanged rows7/8 and positive exchanged
+products remain; there is no56 theorem.
 
 ## Verification and reproduction
 
@@ -125,6 +148,16 @@ occurs. The earlier RAM refusal and failed compile remain preserved. Actual
 geometry, field inventories and legal pressure inputs remain external; this
 does not verify the later universal A12/A13 theorems. Its source and logic map
 remain immutable preparation records; the execution receipt supplies the PASS.
+
+The new [A13 endpoint-graft scalar kernel](docs/a13_i_endpoint_graft_scalar_kernel_logic_20261023.md)
+has a reviewed [two-line implementation repair](results/review_a13_endpoint_graft_two_identity_rewrites_root_preclear_20261023.md)
+after an [actual failed compile](results/lean_a13_i_endpoint_graft_verification_20261023/attempt_2_failed_compile.json).
+An admitted later retry has an [actual compile PASS in1.33seconds](results/lean_a13_i_endpoint_graft_verification_20261023/pre_audit_manifest.json).
+The separate audit was initially refused before Lean at5.3GiB RAM. A later
+[actual eleven-declaration audit PASS](results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json)
+took1.28seconds at6.34GiB RAM, with no successful compilation rerun and no
+`sorryAx`. Earlier failed diagnostic prints earn zero credit. Geometry and
+legal payments stay external; no whole-group geometric formalization is claimed.
 
 The [A18 scalar kernel](docs/a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
 has a [bounded compilation and separate ten-declaration axiom audit PASS](results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).

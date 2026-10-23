@@ -54,13 +54,23 @@ General compact18 and arithmetic16 have complete reviewed supporting composition
 and separately compiled conditional Lean modules. At exact compact18 the latest
 accepted necessary frontier is wholeB18/D18 after the
 [complete whole-A18 exclusion](../results/review_compact18_whole_a18_and_two_classical_group_frontier_root_acceptance_20261023.md).
-Arithmetic16 retains [ten original groups](../results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md).
-Its [A13 row now retains only actualI+ordinaryT2](../results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md),
-after universal and cubic7-field component arguments. The latter uses a direct
-integral-basis proof, not enumeration. Neither list asserts realized examples.
+Arithmetic16 retains [nine original groups](../results/review_arithmetic16_a13_actual_i_ordinary_dihedral_group_nine_root_acceptance_20261023.md).
+Its entire A13 row is now excluded, after universal and cubic7-field arguments
+and a simultaneous actual-I endpoint/weak-foot square. The cubic step uses
+a direct integral-basis proof, not enumeration. Neither list asserts examples.
 The PDFs have not been revised for these later bounds. The new compact
 terminal reductions and literal-host nonreflectivity belong to supporting
 research, not additional proposed manuscripts.
+
+The new mixed row1/row2 financing theorem belongs to the finite-volume family.
+The selected strong17 B18 branch, unconditional isolated17 exclusion and
+both finite/dotted weak pure D18 centre16 exclusions belong to the general
+compact family. The zero-exchanged costly-exit financing theorem belongs
+to the finite-volume family. The squared-unit host's actual edges, compact
+E7 face, full D6+B3 corners and original order-two chamber symmetry are
+construction research; ambient finite volume remains open.
+The universal arithmetic A14>4/5 energy theorem and its two-ordinary-A1
+consumer belong to the same arithmetic family; the nine group IDs remain.
 
 Each computational algorithm needs a mathematical specification: its complete
 domain, a termination and completeness argument, exact output, and the part
@@ -78,6 +88,16 @@ has [bounded compilation and a separate ten-declaration audit PASS](../results/l
 It verifies the conditional loss and paid-square argument; actual geometry,
 field inventories and the later universal A12/A13 theorems remain external.
 Earlier failed/refused attempts are preserved with zero verification credit.
+
+The [A13 endpoint-graft scalar source/map](../docs/a13_i_endpoint_graft_scalar_kernel_logic_20261023.md)
+have complete static review and root preclear. A failed admitted compile and
+two before-child RAM refusals are preserved. Two explicit identity rewrites
+have outside/root clearance and an actual1.33second compile PASS. The separate
+audit was initially refused at5.3GiB RAM and now has an
+[actual eleven-declaration PASS in1.28seconds](../results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json),
+with no successful compilation rerun and no `sorryAx`. Failed diagnostic
+prints earn zero credit. This is not full geometric
+verification of the A13 result.
 
 The newest [A18 continuous scalar kernel](../docs/a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
 has an [actual bounded compile and separate ten-declaration audit PASS](../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).

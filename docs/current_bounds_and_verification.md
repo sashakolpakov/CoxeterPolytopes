@@ -73,7 +73,7 @@ closes every original exact-dimension17 forest group over every actual admissibl
 field. Its [three-declaration conditional Lean audit](../results/lean_arithmetic16_composition_verification_20261022/manifest.json)
 leaves the geometric, field and computed-data interfaces explicit. The next
 [arithmetic16 frontier](../results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md)
-now has **ten necessary groups**. The new all-field theorem gives every whole
+first had ten necessary groups. The new all-field theorem gives every whole
 A12 component energy>5/7, with arbitrary finite spectators. A complete helper,
 near4 and endpoint argument handles every remaining weak-foot pattern in one
 vector. This closes original groups6/7, after the separate two-defect proof
@@ -87,8 +87,34 @@ gives e_A13>.757198412>53/70 and removes its ordinaryA3 and ordinaryT2+A1
 alternatives. The [direct cubic7-field argument](../results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md)
 gives e_A13>.777074642 in that actual field and removes actualO7+A1.
 It bounds three integral-basis coefficients directly; no census ran.
-Thus original group9 now retains ONLY **A13+actual shortI+ordinaryT2**.
-The ten original group IDs and the global ceiling16 are unchanged.
+The subsequent [actual-I endpoint-graft theorem](../results/review_arithmetic16_a13_actual_i_ordinary_dihedral_group_nine_root_acceptance_20261023.md)
+excludes the last **A13+actual shortI+ordinaryT2** alternative and deletes
+original group9 entirely. It pays both endpoint pressures and every weak foot
+in one A13 square; its current ordinaryT2 floor is3/19. There are now
+**nine necessary groups**, with original IDs1,2,4,10,11,14,15,18,19.
+The global arithmetic ceiling remains16; no A13-dominant group survives.
+The [universal A14 theorem](../results/review_arithmetic16_a14_point597_four_fifths_root_acceptance_20261023.md)
+now gives e_A14>4/5 with arbitrary finite spectators and every actual field.
+It excludes A14+two ordinary nonshortA1. Original group10 still retains
+ordinaryT2 and actualN7/O7; the nine original group IDs do not change.
+
+The [A13 scalar logic map](a13_i_endpoint_graft_scalar_kernel_logic_20261023.md)
+and source have full different-author review and
+[root precompile acceptance](../results/review_a13_i_endpoint_graft_scalar_kernel_root_precompile_acceptance_20261023.md).
+The [first actual admission was refused](../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_1_resource_deferral.json)
+BEFORE Lean at4.7GiB RAM. The next admitted compile
+[failed at two tactic scalings](../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_2_failed_compile.json).
+Two explicit identity rewrites have [outside/root clearance](../results/review_a13_endpoint_graft_two_identity_rewrites_root_preclear_20261023.md);
+the repaired retry was first [refused before Lean at5.8GiB](../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_3_resource_deferral.json).
+A later admitted retry has an [actual compile PASS in1.33seconds](../results/lean_a13_i_endpoint_graft_verification_20261023/pre_audit_manifest.json),
+at6.49GiB available RAM. The separate audit was initially refused at5.3GiB.
+A later [actual eleven-declaration audit PASS](../results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json)
+took1.28seconds at6.34GiB, reusing the successful compilation. All eleven
+prints use only standard foundational axioms; no `sorryAx` occurs. Failed diagnostic dependencies,
+including error-propagated sorryAx, have zero verification credit.
+The source derives continuous scalar gains; actual geometry, inventories,
+legal prices and full weak-foot absorption remain external. Its source/map
+are immutable preparation records; later actual receipts must supply execution.
 
 The new [continuous A12 kernel](a12_adjusted_loss_kernel_logic_20261023.md)
 has complete different-author source/map review. It derives full-interval
@@ -106,8 +132,22 @@ dated preparation records; the execution receipt supplies the later status.
 The [latest B18/D18 reductions](../results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md)
 are complete reviewed necessary theorems. D18 has a fresh .58 window and both
 actual fork cosh lengths<12, or<10 if5 is .58-strong. In a selected strong17
-B18 pure-helper/isolated-short configuration the two actual walls must be
-orthogonal; its zero-mutual locus remains open. The earlier selected weak
+B18 pure-helper/isolated-short configuration the two actual walls had to be
+orthogonal. The [complete actual-A17-neighbour argument](../results/review_b18_strong_helper_actual_a17_neighbor_root_acceptance_20261023.md)
+now excludes that locus too, closing the selected strong17 branch. The new
+[unconditional isolated17 theorem](../results/review_compact18_b18_unconditional_isolated_seventeen_root_acceptance_20261023.md)
+excludes every isolated17 own label and the entire dotted interval, without
+strong17 or a premise on the actual short18 opposite. The earlier selected branch's
+auxiliary actual vertex is not chosen farthest; a weakened comparison keeps
+the same original vector. The selected [weak pure dotted centre16 branch in D18](../results/review_compact18_d18_weak_pure_dotted_centre_branch_complete_root_acceptance_20261023.md)
+is now excluded entirely. A complete actual fork list forces a far-attached
+opposite; all three far profiles then contradict the same funded reference,
+including every zero/finite/parallel/dotted mutual case. The new
+[finite-own pure-helper theorem](../results/review_compact18_d18_finite_own_weak_pure_centre_root_acceptance_20261023.md)
+rebuilds the strong15 and all-head references at finite g, then closes all
+actual fork roles and continuous mutual cases. Thus no weak PURE far-left3
+centre16 helper remains, whether finite-own or dotted-own. Other centre16
+profiles remain open. The earlier selected weak
 pure-helper17 branch is [fully excluded](../results/review_compact18_b18_selected_native_five_weak_seventeen_complete_branch_root_acceptance_20261023.md).
 Other terminal profiles remain; neither whole family is excluded.
 
@@ -179,8 +219,21 @@ strengthens this: heavy-to-heavy centre edges have cosh length at least16,
 and successive directions are orthogonal, so no cycle is possible. Every
 heavy set S has exactly |S|+2c(S) centre-edge incidences leaving it. A full
 component with H vertices has H+2 nonheavy exits. This supplies linear
-expansion, **not** sufficient receiving capacity. Costly and multiply used
-finite exits remain; there is no Hall completion or universal364 cap.
+expansion. The later [mixed row1/row2 theorem](../results/review_finite57_row_one_two_variable_cone_component_financing_root_acceptance_20261023.md)
+extends the forest to both receiving types, including every finite dihedral
+label and arbitrary dotted exchanged products. A variable-angle cone argument
+handles the nonright row2 turns. Full-component counting supplies enough safe
+eight-unit tokens when all nonheavy centre neighbours have these types,
+retaining the old K/Q/L1 payments. Other exits remain explicit in its criterion;
+there is no universal364 cap or dimension56 theorem.
+
+The new [zero-exchanged costly-exit theorem](../results/review_finite57_zero_exchanged_bad_centre_affine_financing_root_acceptance_20261023.md)
+finances full-table rows4/5/6/11. Positive actual affine kernels recover
+old-p edges and all fifteen whole cusp-parent families. Global multiplicities
+and canonical budgets retain every old shared load; the minimum joint
+remaining balance is5161/2. Among still-unpaid nonheavy finite centre exits
+with zero exchanged product only rows7/8 remain. Positive exchanged products
+remain open. This written theorem does not prove a universal364 cap or56.
 
 ## Construction search
 
@@ -198,8 +251,25 @@ two actual full germs and preserves the full chamber. Its exact trace5+4phi>10
 proves infinite order. Distinct powers give infinitely many cosets of the full
 reflection group in the arithmetic lattice, hence infinite chamber volume.
 This closes precisely this literal host. It gives no new compact9 example,
-field-wide theorem or commensurability-class exclusion. Construction work now
-requires a different original host.
+field-wide theorem or commensurability-class exclusion.
+
+A different [squared-unit coupling host](../results/review_h9_squared_unit_glued_host_first_two_actual_edges_root_acceptance_20261023.md)
+uses the original E7 summand and ternary Gram
+`[[2,-1,phi²],[-1,2,0],[phi²,0,-2phi]]`. Complete first-wall proofs retain
+all four primitive norm classes. Its [whole E7 face](../results/review_h9_squared_unit_third_edge_full_e7_quadrilateral_root_acceptance_20261023.md)
+is a compact quadrilateral with angles(pi/3,pi/2,pi/2,pi/2), area pi/6.
+The [first ambient D6 edge](../results/review_h9_squared_unit_first_d6_ambient_edge_root_acceptance_20261023.md)
+leaves that face and reaches the full actual germ D6+[2]+[4b]+[2], b=2+phi.
+Two [further actual edges](../results/review_h9_squared_unit_d6_b2_to_b3_actual_edges_root_acceptance_20261023.md)
+reach D6+B2+[4b] and then a full D6+B3 germ, determinant16. A complete
+nine-profile proof handles a tied norm-four mirror by proving it redundant;
+the actual new wall has original norm2. This advances the construction; ambient finite volume,
+compactness and any new H9 example remain unproved. The subsequent
+[long D6-leaf edge](../results/review_h9_squared_unit_d6_long_leaf_edge_original_involution_root_acceptance_20261023.md)
+has a complete nine-profile firstness proof and reaches another full D6+B3
+vertex. A product of two individually nonintegral reflections is original
+on the entire lattice and preserves the full chamber. Its order is exactly
+two, with trace6; it proves neither infinite chamber volume nor finite volume.
 
 ## Papers, algorithms and resource limits
 

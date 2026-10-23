@@ -66,10 +66,13 @@ removes the third. It uses complete actual endpoint classification, the native
 angle gap and a positive H4+A1 projection in the last case. This geometric
 result is written and internally reviewed, not Lean-verified. The remaining
 groups are necessary configurations, not examples; the ceiling stays18.
-Arithmetic16 now has :download:`ten original groups <../../results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md>`.
-The new :download:`A13 refinements <../../results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md>`
-leave only actual shortI+ordinaryT2 in that row. The cubic7-field step
-uses a direct integral-basis proof, with no enumeration. The ceiling stays16.
+Arithmetic16 now has :download:`nine original groups <../../results/review_arithmetic16_a13_actual_i_ordinary_dihedral_group_nine_root_acceptance_20261023.md>`.
+Its entire A13 row is excluded by universal energy, a direct cubic7-field
+integral-basis argument and a simultaneous actual-I endpoint/weak-foot square.
+No enumeration was needed for the cubic step. The ceiling stays16.
+The :download:`new arithmetic A14 theorem <../../results/review_arithmetic16_a14_point597_four_fifths_root_acceptance_20261023.md>`
+gives energy greater than4/5 and removes its two-ordinary-A1 alternative.
+OrdinaryT2 and actual typed-seven alternatives remain; the nine IDs are unchanged.
 
 The six papers
 --------------
@@ -127,11 +130,42 @@ The finite-volume57 lane now has a
 :download:`complete finite-centre classification, safe union and heavy escape theorem <../../results/review_finite57_finite_centre_safe_union_and_heavy_escape_root_acceptance_20261023.md>`.
 The new :download:`metric forest theorem <../../results/review_finite57_heavy_centre_forest_and_linear_exit_expansion_root_acceptance_20261023.md>`
 forces exactly H+2 actual exits from each heavy component of H vertices.
-Costly and shared-capacity exits remain, so no56 theorem is claimed.
+The :download:`mixed row1/row2 receiver theorem <../../results/review_finite57_row_one_two_variable_cone_component_financing_root_acceptance_20261023.md>`
+now finances every full enlarged component whose nonheavy centre neighbours
+have either receiving type, retaining all prior credits. The subsequent
+:download:`zero-exchanged costly-exit financing theorem <../../results/review_finite57_zero_exchanged_bad_centre_affine_financing_root_acceptance_20261023.md>`
+pays four more full-table rows through complete actual cusp-parent recovery,
+retaining every shared debt. Zero-exchanged rows7/8 and positive exchanged
+products remain; no56 theorem is claimed.
 The :download:`latest compact reductions <../../results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md>`
 bound both D18 fork cosh lengths by12, or10 under a strong5 hypothesis.
-A selected strong17 B18 helper/short pair must be orthogonal; that locus
-and the other terminal profiles remain open. Neither whole family is excluded.
+A selected :download:`strong17 B18 pure-helper/isolated-short branch <../../results/review_b18_strong_helper_actual_a17_neighbor_root_acceptance_20261023.md>`
+is now excluded, including its formerly open orthogonal locus. A selected
+:download:`weak pure dotted D18 centre16 branch <../../results/review_compact18_d18_weak_pure_dotted_centre_branch_complete_root_acceptance_20261023.md>`
+is also excluded by complete actual fork cases.
+The new :download:`unconditional isolated17 theorem <../../results/review_compact18_b18_unconditional_isolated_seventeen_root_acceptance_20261023.md>`
+excludes that entire role without strong17 or a short-opposite premise. The
+:download:`finite-own pure centre16 theorem <../../results/review_compact18_d18_finite_own_weak_pure_centre_root_acceptance_20261023.md>`
+also excludes the finite-own version of the weak pure dotted branch.
+Other centre16 roles remain; neither whole family is excluded.
+
+The :download:`A13 scalar source/map <../a13_i_endpoint_graft_scalar_kernel_logic_20261023.md>`
+have a :download:`reviewed two-line repair <../../results/review_a13_endpoint_graft_two_identity_rewrites_root_preclear_20261023.md>`
+after an :download:`actual failed compile <../../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_2_failed_compile.json>`.
+A later admitted retry has an :download:`actual compile PASS in1.33seconds <../../results/lean_a13_i_endpoint_graft_verification_20261023/pre_audit_manifest.json>`.
+The separate audit was initially refused before Lean at5.3GiB. A later
+:download:`actual eleven-declaration audit PASS <../../results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json>`
+took1.28seconds at6.34GiB RAM. It reran no successful compilation and
+uses no ``sorryAx``. Earlier failed prints earn zero credit; geometric
+premises stay external.
+
+A different :download:`squared-unit host <../../results/review_h9_squared_unit_glued_host_first_two_actual_edges_root_acceptance_20261023.md>`
+has a :download:`whole compact E7 quadrilateral face <../../results/review_h9_squared_unit_third_edge_full_e7_quadrilateral_root_acceptance_20261023.md>`
+and an :download:`actual ambient D6 edge leaving it <../../results/review_h9_squared_unit_first_d6_ambient_edge_root_acceptance_20261023.md>`.
+Two :download:`further actual edges reach a full D6+B3 corner <../../results/review_h9_squared_unit_d6_b2_to_b3_actual_edges_root_acceptance_20261023.md>`.
+The subsequent :download:`long D6-leaf edge and original chamber involution <../../results/review_h9_squared_unit_d6_long_leaf_edge_original_involution_root_acceptance_20261023.md>`
+are proved. The symmetry has order exactly two and trace6. Ambient finite
+volume and compactness remain open; no new example is claimed.
 
 The :download:`glued nine-dimensional host is proved nonreflective <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`.
 Two actual edge proofs and a universal original-module parity identity give
