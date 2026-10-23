@@ -49,6 +49,26 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`A12AdjustedLossKernel` has [bounded compilation and a separate
+ten-declaration actual audit PASS](../results/lean_a12_adjusted_loss_verification_20261023/manifest.json).
+It proves continuous individual-loss and finite-list paid-square logic from
+primitive ordered-ring data. Compilation took2.37seconds and the separate
+audit1.51seconds. All ten prints use only `propext`, `Classical.choice` and
+`Quot.sound`; no `sorryAx` occurs. Its first admission was refused below6GiB
+RAM. Its second admitted compile failed on two tactics;
+the [failure evidence](../results/lean_a12_adjusted_loss_verification_20261023/attempt_2_failed_compile.json)
+and predecessor are preserved. The exact two-step implementation repair has
+[outside/root clearance](../results/review_a12_adjusted_loss_two_tactic_repairs_root_preclear_20261023.md),
+and its third compile and separate audit passed. The earlier failed output
+retains zero verification credit. Two unused-variable/section warnings remain;
+no cosmetic rerun was made. Owned temporary proof work is absent.
+The [logic map](../docs/a12_adjusted_loss_kernel_logic_20261023.md) retains
+the geometry, actual fields/inventories, legal pressures and spectator floors
+as premises. It does not formalize the later universal A12/A13 theorems or
+the current ten-group arithmetic frontier. The source header and logic map
+are immutable preparation records; the execution receipt supplies the later
+PASS. Older successful modules were not rerun or relabelled.
+
 `HeavyCentreForestScalarKernel` has [bounded compilation and a separate
 eleven-declaration actual audit PASS](../results/lean_heavy_centre_forest_verification_20261023/manifest.json).
 Its [map](../docs/heavy_centre_forest_scalar_kernel_logic_20261023.md) separates

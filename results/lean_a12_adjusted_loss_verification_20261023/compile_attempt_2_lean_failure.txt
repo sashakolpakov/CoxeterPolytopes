@@ -1,0 +1,111 @@
+CoxeterProofs/A12AdjustedLossKernel.lean:46:5: warning: Variable name `b_nonnegative` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+CoxeterProofs/A12AdjustedLossKernel.lean:121:4: error: `grind` failed
+case grind
+R : Type u
+inst : CommRing R
+inst_1 : LE R
+inst_2 : LT R
+inst_3 : Std.IsLinearOrder R
+inst_4 : Std.LawfulOrderLT R
+inst_5 : OrderedRing R
+u b beta loss : R
+u_lower : 0 ≤ u
+u_upper : u ≤ 1
+b_nonnegative : 0 ≤ b
+root_square : b ^ 2 = u * (1 - u)
+inner : 2000 * beta = 61 ∧ 4000 * loss < 820 * u + 4000 * b
+scalar : 698 * u + 61 * u ^ 2 + 4000 * b < 2402
+h : ¬2000 * loss - 1000 * beta * (2 * u - u ^ 2) < 1201
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] Std.IsLinearOrder R
+    [prop] Std.LawfulOrderLT R
+    [prop] OrderedRing R
+    [prop] 0 ≤ u
+    [prop] u ≤ 1
+    [prop] 0 ≤ b
+    [prop] b ^ 2 = u * (1 - u)
+    [prop] 2000 * beta = 61 ∧ 4000 * loss < 820 * u + 4000 * b
+    [prop] 698 * u + 61 * u ^ 2 + 4000 * b < 2402
+    [prop] ¬2000 * loss - 1000 * beta * (2 * u - u ^ 2) < 1201
+  [eqc] True propositions
+    [prop] 2000 * beta = 61 ∧ 4000 * loss < 820 * u + 4000 * b
+    [prop] Std.IsLinearOrder R
+    [prop] Std.IsPreorder R
+    [prop] 2000 * beta = 61
+    [prop] Std.LawfulOrderLT R
+    [prop] u ≤ 1
+    [prop] 0 ≤ u
+    [prop] 0 ≤ b
+    [prop] 698 * u + 61 * u ^ 2 + 4000 * b < 2402
+    [prop] 4000 * loss < 820 * u + 4000 * b
+    [prop] OrderedRing R
+  [eqc] False propositions
+    [prop] 2000 * loss - 1000 * beta * (2 * u - u ^ 2) < 1201
+  [eqc] Equivalence classes
+    [eqc] {61, 2000 * beta}
+    [eqc] {u * (1 - u), b ^ 2}
+  [ematch] E-matching patterns
+    [thm] Nat.pow_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+    [thm] Nat.div_pow_of_pos: [@HPow.hPow `[Nat] `[Nat] `[Nat] `[instHPow] #2 #1]
+  [linarith] Linarith assignment for `R`
+    [assign] u := 0
+    [assign] b := 1
+    [assign] beta := 61/2000
+    [assign] loss := 0
+    [assign] 「u ^ 2」 := -28
+    [assign] 「b ^ 2」 := 0
+  [ring] Ring `R`
+    [basis] Basis
+      [_] u ^ 2 + b ^ 2 + -1 * u = 0
+      [_] 2000 * beta + -61 = 0
+CoxeterProofs/A12AdjustedLossKernel.lean:155:8: error: unsolved goals
+case nil
+R : Type u
+inst✝⁵ : CommRing R
+inst✝⁴ : LE R
+inst✝³ : LT R
+inst✝² : Std.IsLinearOrder R
+inst✝¹ : Std.LawfulOrderLT R
+inst✝ : OrderedRing R
+⊢ 0 ≤ 0 - 0
+CoxeterProofs/A12AdjustedLossKernel.lean:189:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.A12AdjustedLossKernel.reference_energy`:
+  [LE R]
+  [LT R]
+  [Std.IsLinearOrder R]
+  [Std.LawfulOrderLT R]
+  [OrderedRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'CoxeterProofs.A12AdjustedLossKernel.circle_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.radical_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.outer_adjusted_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.inner_adjusted_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.individual_adjusted_loss' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.finite_gain' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.simultaneous_foot_completion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.reference_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.typed_seven_budget_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CoxeterProofs.A12AdjustedLossKernel.complete_typed_seven_scalar_contradiction' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

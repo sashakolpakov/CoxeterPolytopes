@@ -54,8 +54,13 @@ General compact18 and arithmetic16 have complete reviewed supporting composition
 and separately compiled conditional Lean modules. At exact compact18 the latest
 accepted necessary frontier is wholeB18/D18 after the
 [complete whole-A18 exclusion](../results/review_compact18_whole_a18_and_two_classical_group_frontier_root_acceptance_20261023.md).
-Arithmetic16 retains thirteen groups. Neither list asserts realized examples. The PDFs have not been revised
-for these later bounds.
+Arithmetic16 retains [ten original groups](../results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md).
+Its [A13 row now retains only actualI+ordinaryT2](../results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md),
+after universal and cubic7-field component arguments. The latter uses a direct
+integral-basis proof, not enumeration. Neither list asserts realized examples.
+The PDFs have not been revised for these later bounds. The new compact
+terminal reductions and literal-host nonreflectivity belong to supporting
+research, not additional proposed manuscripts.
 
 Each computational algorithm needs a mathematical specification: its complete
 domain, a termination and completeness argument, exact output, and the part
@@ -67,6 +72,12 @@ Finite57 has all25 bounded B13/frontier replacement units passed and integrated.
 The full146-job selection, including136 script selections, nine Lean roots and
 one PDF build, has no combined runtime PASS or complete transitive regeneration.
 Historical and bounded replacements retain their individual execution records.
+
+The [A12 continuous-loss scalar kernel](../docs/a12_adjusted_loss_kernel_logic_20261023.md)
+has [bounded compilation and a separate ten-declaration audit PASS](../results/lean_a12_adjusted_loss_verification_20261023/manifest.json).
+It verifies the conditional loss and paid-square argument; actual geometry,
+field inventories and the later universal A12/A13 theorems remain external.
+Earlier failed/refused attempts are preserved with zero verification credit.
 
 The newest [A18 continuous scalar kernel](../docs/a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
 has an [actual bounded compile and separate ten-declaration audit PASS](../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).

@@ -72,10 +72,44 @@ The [global arithmetic16 composition](../results/review_arithmetic17_whole_a17_g
 closes every original exact-dimension17 forest group over every actual admissible
 field. Its [three-declaration conditional Lean audit](../results/lean_arithmetic16_composition_verification_20261022/manifest.json)
 leaves the geometric, field and computed-data interfaces explicit. The next
-[arithmetic16 frontier](../results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md)
-still has **thirteen necessary groups**; its separate
-[frontier kernel](../results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/manifest.json)
-checks that conditional refinement, not realized examples or arithmetic15.
+[arithmetic16 frontier](../results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md)
+now has **ten necessary groups**. The new all-field theorem gives every whole
+A12 component energy>5/7, with arbitrary finite spectators. A complete helper,
+near4 and endpoint argument handles every remaining weak-foot pattern in one
+vector. This closes original groups6/7, after the separate two-defect proof
+closed group8; no A12-dominant group remains. The older
+[thirteen-group frontier kernel](../results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/manifest.json)
+retains that earlier conditional scope. It does not verify these later deletions,
+realized examples or arithmetic15.
+
+The subsequent [universal A13 energy theorem](../results/review_arithmetic16_a13_fifty_three_seventieths_and_two_ordinary_alternatives_root_acceptance_20261023.md)
+gives e_A13>.757198412>53/70 and removes its ordinaryA3 and ordinaryT2+A1
+alternatives. The [direct cubic7-field argument](../results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md)
+gives e_A13>.777074642 in that actual field and removes actualO7+A1.
+It bounds three integral-basis coefficients directly; no census ran.
+Thus original group9 now retains ONLY **A13+actual shortI+ordinaryT2**.
+The ten original group IDs and the global ceiling16 are unchanged.
+
+The new [continuous A12 kernel](a12_adjusted_loss_kernel_logic_20261023.md)
+has complete different-author source/map review. It derives full-interval
+adjusted losses and the finite-list paid square from primitive ring data,
+including the reference's exact rational value. Its first admission was refused
+BEFORE Lean at5.7GiB RAM. The second admitted compile failed on two proof tactics;
+its output is preserved. The reviewed repairs now have an
+[actual bounded compile and separate ten-declaration audit PASS](../results/lean_a12_adjusted_loss_verification_20261023/manifest.json):
+2.37seconds and1.51seconds respectively. All prints use only standard
+foundational axioms; no `sorryAx` occurs. The6GiB admission gate is unchanged,
+and owned temporary work was removed. The full geometric A12/A13 theorems remain
+outside this narrower scalar kernel. Its source header and logic map remain
+dated preparation records; the execution receipt supplies the later status.
+
+The [latest B18/D18 reductions](../results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md)
+are complete reviewed necessary theorems. D18 has a fresh .58 window and both
+actual fork cosh lengths<12, or<10 if5 is .58-strong. In a selected strong17
+B18 pure-helper/isolated-short configuration the two actual walls must be
+orthogonal; its zero-mutual locus remains open. The earlier selected weak
+pure-helper17 branch is [fully excluded](../results/review_compact18_b18_selected_native_five_weak_seventeen_complete_branch_root_acceptance_20261023.md).
+Other terminal profiles remain; neither whole family is excluded.
 
 ## Verification status
 
@@ -150,25 +184,22 @@ finite exits remain; there is no Hall completion or universal364 cap.
 
 ## Construction search
 
-The current glued E7/ternary nine-dimensional host has a sequence of proved
-actual ambient edges. The [three-edge B3 theorem](../results/review_glued_e7_a2_three_actual_edges_and_original_b3_break_root_acceptance_20261023.md)
-uses complete first-wall profiles, both embeddings and original-module tests.
-The [next accepted continuation](../results/review_glued_e7_a2_heptagon_and_ambient_e2_edge_full_scope_root_acceptance_20261023.md)
-recognizes that B3 facet as the old-f3 wall, closes a whole compact heptagon of
-area3pi/2, and proves a further ambient edge to the old-e2 wall. Its full new
-germ is two H3 factors, two norm2 A1s and the retained norm2b line.
+The glued E7/ternary nine-dimensional host is now [proved nonreflective](../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md).
+After the actual norm-four corner, two complete23-profile first-wall proofs
+give two actual finite vertices and their full outward germs. Each proof keeps
+all primitive norm classes, both embeddings, original-module membership and
+unknown-wall firstness. Five displayed projection-sign errors in excluded
+rows of the first edge were [corrected with byte-preserved history](../results/review_glued_e7_a2_e2_release_five_sign_successor_root_acceptance_20261023.md);
+the repaired exclusions and actual first wall survive.
 
-The [next accepted large-facet release](../results/review_glued_e7_a2_large_facet_release_full_scope_root_acceptance_20261023.md)
-uses a complete seventeen-profile, four-norm first-wall classification to
-prove an actual edge leaving the n-facet. Its new primitive original wall has
-norm2b. Every unknown wall is covered; a finite upper was not declared actual
-before the complete classification.
-
-The immediate matching metric maps fail original integrality. A closed face or
-matching germ does not prove an ambient chamber period. Finite volume,
-reflectivity/nonreflectivity and a new compact9 example remain unresolved for
-this host. Other literal hosts have separate nonreflectivity results; these do
-not exclude whole commensurability classes or arbitrary invariant lattices.
+Two individually nonintegral metric involutions have a product G that preserves
+the ENTIRE original module, proved by a universal parity identity. It maps the
+two actual full germs and preserves the full chamber. Its exact trace5+4phi>10
+proves infinite order. Distinct powers give infinitely many cosets of the full
+reflection group in the arithmetic lattice, hence infinite chamber volume.
+This closes precisely this literal host. It gives no new compact9 example,
+field-wide theorem or commensurability-class exclusion. Construction work now
+requires a different original host.
 
 ## Papers, algorithms and resource limits
 

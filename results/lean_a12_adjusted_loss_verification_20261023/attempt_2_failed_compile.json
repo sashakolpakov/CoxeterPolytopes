@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-23",
+  "status": "ACTUAL_LEAN_COMPILE_FAILED_TWO_EXPLICIT_PROOF_STEPS_REQUIRED",
+  "terminal_session": 9890,
+  "exit_code": 1,
+  "source_sha256": "5ab0165dd843e9599f7a2c4ccb68701f2bcc9f5d701d3715ba5a7eecf9f4858d",
+  "source_preservation": [
+    {
+      "source_path": "formal/CoxeterProofs/A12AdjustedLossKernel.lean",
+      "bytes": 10075,
+      "sha256": "5ab0165dd843e9599f7a2c4ccb68701f2bcc9f5d701d3715ba5a7eecf9f4858d",
+      "preserved_path": "results/source_archive/a12_adjusted_loss_before_explicit_inner_scaling_and_empty_case_20261023/A12AdjustedLossKernel.lean.gz",
+      "preserved_bytes": 2804,
+      "preserved_sha256": "5cb90e721c623d1a4dd1fd2f103cf3e079ede2ebc663e6ea437d0577fd105237",
+      "round_trip_verified": true
+    }
+  ],
+  "failure": {
+    "path": "results/lean_a12_adjusted_loss_verification_20261023/compile_attempt_2_lean_failure.txt",
+    "bytes": 4298,
+    "sha256": "1b9ea49427d3bed97c30574e7d3ae30a0321d038d2c0885dfe539ffcea6bd7af"
+  },
+  "diagnosis": [
+    "inner adjusted-loss branch needs multiplication of 2000*beta=61 by 2*u-u^2 explicitly supplied",
+    "finite_gain empty-list reflexivity not discharged by simp alone"
+  ],
+  "runtime_pass": false,
+  "axiom_audit_pass": false,
+  "work_directory_absent": true
+}

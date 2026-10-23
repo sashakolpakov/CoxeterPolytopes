@@ -66,7 +66,10 @@ removes the third. It uses complete actual endpoint classification, the native
 angle gap and a positive H4+A1 projection in the last case. This geometric
 result is written and internally reviewed, not Lean-verified. The remaining
 groups are necessary configurations, not examples; the ceiling stays18.
-Arithmetic16 still has thirteen groups.
+Arithmetic16 now has :download:`ten original groups <../../results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md>`.
+The new :download:`A13 refinements <../../results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md>`
+leave only actual shortI+ordinaryT2 in that row. The cubic7-field step
+uses a direct integral-basis proof, with no enumeration. The ceiling stays16.
 
 The six papers
 --------------
@@ -125,10 +128,24 @@ The finite-volume57 lane now has a
 The new :download:`metric forest theorem <../../results/review_finite57_heavy_centre_forest_and_linear_exit_expansion_root_acceptance_20261023.md>`
 forces exactly H+2 actual exits from each heavy component of H vertices.
 Costly and shared-capacity exits remain, so no56 theorem is claimed.
-The :download:`latest glued-host continuation <../../results/review_glued_e7_a2_large_facet_release_full_scope_root_acceptance_20261023.md>`
-proves an actual edge leaving the large facet, using all seventeen possible
-first-wall profiles. Finite chamber volume is unresolved; this is not a new
-nine-dimensional example.
+The :download:`latest compact reductions <../../results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md>`
+bound both D18 fork cosh lengths by12, or10 under a strong5 hypothesis.
+A selected strong17 B18 helper/short pair must be orthogonal; that locus
+and the other terminal profiles remain open. Neither whole family is excluded.
+
+The :download:`glued nine-dimensional host is proved nonreflective <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`.
+Two actual edge proofs and a universal original-module parity identity give
+an integral chamber stabilizer of trace5+4phi>10. Its infinite order proves
+infinite chamber volume. This closes one literal host and yields no example
+or commensurability-class exclusion.
+
+The new :download:`A12 scalar kernel <../a12_adjusted_loss_kernel_logic_20261023.md>`
+has :download:`bounded compilation and a separate ten-declaration audit PASS <../../results/lean_a12_adjusted_loss_verification_20261023/manifest.json>`.
+Compilation took2.37seconds and the separate audit1.51seconds; no ``sorryAx``
+occurs. Earlier refused/failed attempts are preserved. Actual geometry and
+field inventories remain external; the later universal A12/A13 theorems are
+outside this scalar module. The execution receipt supplies the later status
+of the immutable preparation source and logic map.
 
 Read and reproduce
 ------------------

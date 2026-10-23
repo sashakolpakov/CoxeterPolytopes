@@ -28,7 +28,7 @@ refereed status or complete geometric Lean formalization is claimed.
    * - Compact18
      - Complete written composition, outside review and root acceptance. Its five-declaration conditional composition compiled and passed a separate actual audit under23 written inputs.
    * - Arithmetic16
-     - Complete written composition and reviews over every actual admissible field. Its three-declaration conditional composition and separate thirteen-group frontier kernel passed their actual compile/audit batches.
+     - Complete written composition and reviews over every actual admissible field. Its three-declaration composition and older thirteen-group kernel passed their actual batches. The later ten-group frontier and A13 refinements remain written mathematics at their separate boundaries.
    * - Sharp right-angled8/ideal4
      - Complete5-page paper, internal reviews, exact polynomial/model checks and selected compiled projection/height/count logic. Published facet/code/classification results and actual geometry remain external.
    * - Ideal RA4 volume/structure
@@ -122,6 +122,27 @@ Eight prints are axiom-free; the other three use propext/Quot.sound.
 Its successful six-case dependency was reused, not rerun or relabelled.
 The newer written exclusions are not automatically formal instances of it.
 
+Arithmetic16 now has :download:`ten necessary original groups <../../results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md>`.
+The :download:`universal and cubic7-field A13 arguments <../../results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md>`
+leave only actualI+ordinaryT2 in its A13 row. No new original group or global
+ceiling is removed. The cubic-field coefficient lemma is direct, not a census.
+
+The :download:`A12 scalar logic map <../a12_adjusted_loss_kernel_logic_20261023.md>`
+has complete source review. Its initial RAM refusal and
+:download:`actual failed compile <../../results/lean_a12_adjusted_loss_verification_20261023/attempt_2_failed_compile.json>`
+are preserved. The reviewed repairs now have an
+:download:`actual bounded compile and separate ten-declaration audit PASS <../../results/lean_a12_adjusted_loss_verification_20261023/manifest.json>`:
+2.37seconds and1.51seconds respectively. All prints use only standard
+foundational axioms; no ``sorryAx`` occurs. Earlier failed declarations
+retain zero verification credit. The6GiB admission gate is unchanged;
+the later full A12/A13 geometry is outside this module. Its source and map
+remain dated preparation records, superseded in execution status by the receipt.
+
+The :download:`new B18/D18 terminal reductions <../../results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md>`
+have full written proofs and outside/root reviews. D18 has both actual fork
+cosh lengths<12, or<10 in its strong5 branch. A selected strong17 B18 pair
+must be orthogonal; that locus stays open. Neither family is excluded.
+
 Finite-volume discharge and construction
 ----------------------------------------
 
@@ -140,17 +161,16 @@ the ambient hyperbolic chain cannot close. Receiver costs and previous debts
 remain unresolved. The scalar/chain kernel above does not create the actual
 geometric or finite-graph instances.
 
-The :download:`glued-host B3 continuation <../../results/review_glued_e7_a2_three_actual_edges_and_original_b3_break_root_acceptance_20261023.md>`
-and :download:`heptagon plus ambient-e2 continuation <../../results/review_glued_e7_a2_heptagon_and_ambient_e2_edge_full_scope_root_acceptance_20261023.md>`
-prove actual original-lattice edges and full germs, including all unknown-wall
-firstness. The heptagon is a two-face, not a finite-volume nine-dimensional
-chamber. Both immediate matching maps fail original integrality; no later
-period, example or reflectivity conclusion is inferred.
-
-The :download:`next large-facet release <../../results/review_glued_e7_a2_large_facet_release_full_scope_root_acceptance_20261023.md>`
-proves a genuine ambient edge leaving n, after a complete seventeen-profile
-first-wall proof across all four primitive norm classes. Its unique new wall
-is an original primitive norm2b reflector. Finite ambient volume remains open.
+The :download:`full glued-host period theorem <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`
+now proves this literal host nonreflective. Both23-profile edge proofs establish
+actual vertices and their full germs. The first proof's excluded-row signs
+have a :download:`reviewed precision successor <../../results/review_glued_e7_a2_e2_release_five_sign_successor_root_acceptance_20261023.md>`
+with byte-preserved history. A product of individually nonintegral involutions
+preserves the entire original module and full chamber; trace5+4phi>10 proves
+infinite order, infinite reflection-group index and infinite chamber volume.
+No whole commensurability class, field or dimension is excluded. This is
+internally reviewed written mathematics, with explicit arithmetic-lattice and
+reflection-chamber inputs, not a new example or a Lean geometric instance.
 
 Reproduction and resources
 --------------------------

@@ -37,8 +37,14 @@ follows the complete
 [D17+actual-I](results/review_compact18_whole_d17_actual_i_and_three_group_frontier_root_acceptance_20261023.md)
 and [B17+actual-I](results/review_compact18_whole_b17_actual_i_and_four_group_frontier_root_acceptance_20261023.md)
 exclusions. These are configurations that any hypothetical candidate must have
-at one selected vertex, not examples. Arithmetic dimension16 still has thirteen
-necessary groups. The global compact ceiling stays18.
+at one selected vertex, not examples. Arithmetic dimension16 now has
+[ten necessary groups](results/review_arithmetic16_universal_a12_five_sevenths_root_acceptance_and_ten_group_frontier_20261023.md).
+The new all-field theorem gives every A12 component energy greater than5/7
+and closes its remaining groups. The global ceilings stay compact18/arithmetic16.
+The new [A13 refinements](results/review_arithmetic16_k7_a13_integer_strip_and_three_a13_alternatives_root_acceptance_20261023.md)
+remove three of its four alternatives: only A13+actual shortI+ordinaryT2 remains
+in that row. The cubic7-field step uses a direct integral-basis argument,
+with no enumeration. The ten original group IDs are unchanged.
 
 ## The six papers
 
@@ -70,10 +76,18 @@ and their combined required cost exceeds its norm budget. The sharp right-angled
 proof uses actual facet projections followed by spherical-code bounds.
 
 The active construction search walks actual edges in explicit original lattices.
-The latest [glued nine-dimensional continuation](results/review_glued_e7_a2_large_facet_release_full_scope_root_acceptance_20261023.md)
-proves an actual edge leaving the retained large facet, after a complete
-seventeen-profile first-wall classification. Finite volume of that chamber
-is still unresolved: this is **not a new example**.
+The [glued nine-dimensional host is now proved nonreflective](results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md).
+Two complete23-profile edge proofs produce actual finite vertices. A product
+of two individually nonintegral metric maps preserves the original lattice
+and its full chamber, with trace5+4phi>10. Its infinite order proves infinite
+chamber volume. This closes one literal host, and gives **no new example**
+or exclusion of its whole commensurability class.
+
+The [latest compact reductions](results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md)
+bound both actual D18 fork edges by cosh length12, or10 under the stated
+strong5 hypothesis. A selected strong17 B18 helper/short pair must be
+orthogonal; that locus remains open. The earlier selected weak pure-helper17
+branch is fully excluded. Neither wholeB18 nor wholeD18 is eliminated.
 
 The finite-volume57 improvement lane now has a
 [complete finite-centre classification and safe discharge union](results/review_finite57_finite_centre_safe_union_and_heavy_escape_root_acceptance_20261023.md),
@@ -103,6 +117,14 @@ It checks ordered-ring cone inequalities, finite-chain induction from two local
 geometric bridges and incidence algebra. Actual geometry, graph realization,
 forest Euler and reverse-port instances remain external. No `sorryAx` occurs.
 The initial RAM refusal is preserved; no earlier successful module was rerun.
+
+The new [A12 continuous-loss kernel](docs/a12_adjusted_loss_kernel_logic_20261023.md)
+has [bounded compilation and a separate ten-declaration audit PASS](results/lean_a12_adjusted_loss_verification_20261023/manifest.json).
+Compilation took2.37seconds and the separate audit1.51seconds; no `sorryAx`
+occurs. The earlier RAM refusal and failed compile remain preserved. Actual
+geometry, field inventories and legal pressure inputs remain external; this
+does not verify the later universal A12/A13 theorems. Its source and logic map
+remain immutable preparation records; the execution receipt supplies the PASS.
 
 The [A18 scalar kernel](docs/a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
 has a [bounded compilation and separate ten-declaration axiom audit PASS](results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).

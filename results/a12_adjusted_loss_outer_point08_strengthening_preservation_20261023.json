@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-23",
+  "status": "SOURCE_ONLY_MATHEMATICAL_STRENGTHENING_BEFORE_FIRST_COMPILE",
+  "reason": "Outer coefficients at least .08 suffice on the whole interval and permit the proposed endpoint graft in later research. Inner .0305 role is unchanged. No future geometry is assumed or credited.",
+  "files": [
+    {
+      "predecessor": {
+        "path": "formal/CoxeterProofs/A12AdjustedLossKernel.lean",
+        "bytes": 10077,
+        "sha256": "69317ae63fca640319829bce5f66cf6620439a3459c29c29d949f8b8d6e2ea43"
+      },
+      "archive": {
+        "path": "results/source_archive/a12_adjusted_loss_before_outer_point08_strengthening_20261023/formal__CoxeterProofs__A12AdjustedLossKernel.lean.gz",
+        "bytes": 2805,
+        "sha256": "9067b8364c5ddf4914cd8f68178240e5a3d55d4ce6c9853959a903b77819253c"
+      },
+      "successor": {
+        "path": "formal/CoxeterProofs/A12AdjustedLossKernel.lean",
+        "bytes": 10075,
+        "sha256": "5ab0165dd843e9599f7a2c4ccb68701f2bcc9f5d701d3715ba5a7eecf9f4858d"
+      },
+      "entire_deltas": [
+        {
+          "old": "beta >= .15",
+          "new": "beta >= .08",
+          "occurrences": 1
+        },
+        {
+          "old": "124 * u + 150 * u ^ 2",
+          "new": "264 * u + 80 * u ^ 2",
+          "occurrences": 1
+        },
+        {
+          "old": "(300 \u2264 2000 * beta",
+          "new": "(160 \u2264 2000 * beta",
+          "occurrences": 2
+        },
+        {
+          "old": "1000 * beta - 150",
+          "new": "1000 * beta - 80",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "predecessor": {
+        "path": "docs/a12_adjusted_loss_kernel_logic_20261023.md",
+        "bytes": 6115,
+        "sha256": "497104e52b0e69c57b0452e8c0401a2b08f4b2092509a27c1bd01346744e255e"
+      },
+      "archive": {
+        "path": "results/source_archive/a12_adjusted_loss_before_outer_point08_strengthening_20261023/docs__a12_adjusted_loss_kernel_logic_20261023.md.gz",
+        "bytes": 2969,
+        "sha256": "5dc271fbb024a022b15f8f57d499d9143f6e02782b708097ea5990a98ea997e5"
+      },
+      "successor": {
+        "path": "docs/a12_adjusted_loss_kernel_logic_20261023.md",
+        "bytes": 6114,
+        "sha256": "37466f322b2e0ddf1d3568d3c2dd687d034195d8d90c9793cd67b9297609a3fb"
+      },
+      "entire_deltas": [
+        {
+          "old": "124u+150u\u00b2",
+          "new": "264u+80u\u00b2",
+          "occurrences": 1
+        },
+        {
+          "old": "and beta=.15",
+          "new": "and beta=.08",
+          "occurrences": 1
+        },
+        {
+          "old": "beta>=.15 and",
+          "new": "beta>=.08 and",
+          "occurrences": 1
+        }
+      ]
+    }
+  ],
+  "all_roundtrips_verified": true,
+  "mathematical_check": "On u<=.4 the unchanged unadjusted loss<=.5848; on u>=.4 it is<.6175 and the .08/2 correction is at least .0256. In cleared polynomial form264u+80u\u00b2+2000b<1201.",
+  "scientific_or_formal_execution": false
+}
