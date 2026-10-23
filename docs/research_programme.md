@@ -28,8 +28,8 @@ frozen PDF editions.
 
 |Lane|Known examples / current ceiling|Active work|Owner|
 |---|---|---|---|
-|General finite-volume Coxeter|21 / 57|Selected cusp rules and merged short-fork matching have compatible full8 financing. Matching covers private-receiver or at-least-two-neighbor sources and retains partial pentagon transfers. Complete coverage of remaining contacts, short faces and costly forests is open.|root with parallel mathematical reviewers|
-|General compact Coxeter|8 / 18|Six necessary dimension18 groups remain; A17 retains only actual I, while D17 retains both rank-one cases. Pursue further same-vector exclusions. The glued golden H9 host has accepted triangle/quadrilateral faces and a whole right hexagon of area pi; ambient finite volume is open. No new example is claimed.|root with parallel mathematical reviewers|
+|General finite-volume Coxeter|21 / 57|Every remaining heavy source with ANY merging edge now has compatible full8 financing, including the sole-shared case. Zero merging-degree, isolated finite>=5/dotted and other costly domains remain open.|root with parallel mathematical reviewers|
+|General compact Coxeter|8 / 18|Five necessary dimension18 groups remain after complete A17 and ordinary D17 exclusions. A18's paired isolated finite endpoint branch is also excluded. Pursue the remaining same-vector cases. The glued golden H9 host has further actual ambient edges and a full double-H3 corner; ambient finite volume is open. No new example is claimed.|root with parallel mathematical reviewers|
 |Compact arithmetic Coxeter|8 / 16|Thirteen necessary dimension16 groups remain after six whole-group exclusions and one A14 subcase. Pursue remaining actual forests using coupled wall pressures. The existing global16 Lean compile/separate three-declaration audit PASS under27 external inputs is unchanged. The new frontier kernel now has a bounded compile/separate six-declaration audit PASS under nine written interfaces; failed/refused predecessors remain preserved.|root with independent mathematical review|
 |Entirely ideal right-angled|4 / 4|Sharp internal theorem; preserve its verified package, stop ideal5/6 searches.|Completed, monitored by root|
 |Mixed-vertex right-angled|8 / 8|Sharp internal universal finite-volume theorem; preserve its package, stop right-angled9 searches.|Completed, monitored by root|
@@ -89,16 +89,20 @@ foreign contact and continuous dotted interval. The later
 [complete B16 typed-seven exclusion](../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md)
 uses fresh B2 geometry and an actual A16 endpoint to close both variants.
 The [A17 ordinary rank-one exclusion](../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md)
-leaves actual I there; D17 retains ordinary nonshort A1 or actual I.
-Six rows remain open. The [conditional general18 refinement](general_eighteen_frontier_refinement_logic_20261023.md)
-now has a [bounded compile and separate six-declaration audit PASS](../results/lean_general18_six_group_frontier_verification_20261023/manifest.json)
-under nine written premises. Geometry remains external; no instance or
-global17 theorem follows.
+left actual I there at the earlier six-group checkpoint. The later
+[complete A17 acceptance](../results/review_compact18_whole_a17_actual_i_and_five_group_frontier_root_acceptance_20261023.md)
+and ordinary D17 exclusion leave FIVE groups. The [new endpoint refinement](general_eighteen_endpoint_refinement_logic_20261023.md)
+has a [bounded compile and separate eleven-declaration audit PASS](../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json).
+It derives the five-case logic and proves literal finite integer seals;
+geometry and analytic sign transport remain external. There is no instance,
+whole-A18 exclusion or global17 conclusion.
 
 The [finite57 merged short-fork matching](../results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md)
 adds full8 financing for the complete private-receiver or two-neighbor
 selected domain, with the prior partial pentagon transfers retained.
-Zero-neighbor and sole-shared-receiver cases remain open, so this gives
+The [later any-merging theorem](../results/review_finite57_all_merging_short_fork_residual_pentagon_thirds_root_acceptance_20261023.md)
+includes the sole-shared case; zero merging-degree and other uncovered
+domains remain open. Thus there is
 no global56 bound.
 
 The distinct [glued E7/A2 construction](../results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md)

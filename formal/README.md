@@ -49,6 +49,25 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`GeneralEighteenEndpointRefinement` has a [bounded compile and separate
+eleven-declaration actual audit PASS](../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json).
+It derives the five remaining compact18 forest cases at the SAME vertex
+from eleven explicit written interfaces. Its arithmetic section proves
+thirty Taylor-table integer inequalities, finite Machin-sum bounds and
+all endpoint comparison signs by ordinary kernel reduction. Eight prints
+are axiom-free; the remaining three use only propext/Quot.sound. The
+[logic map](../docs/general_eighteen_endpoint_refinement_logic_20261023.md)
+exposes the geometric and analytic bridges still external. It reuses the
+earlier capped six-case dependency without rerunning it, and proves no
+whole-A18 exclusion, global compact17 bound or geometric instance.
+
+Reproduce that module with two separate guarded commands:
+
+```sh
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.GeneralEighteenEndpointRefinement
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.GeneralEighteenEndpointRefinement --audit-axioms
+```
+
 `ArithmeticDimensionSixteenComposition` has bounded compilation and a
 SEPARATE actual three-declaration axiom audit
 [PASS](../results/lean_arithmetic16_composition_verification_20261022/manifest.json).

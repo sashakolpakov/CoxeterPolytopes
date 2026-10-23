@@ -47,13 +47,17 @@ closes its entire row without arithmeticity and with arbitrary finite
 spectators. The later [complete D16 typed-seven exclusion](results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md)
 also closes that whole row. The [complete B16 exclusion](results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md)
 uses an actual neighboring A16 endpoint and one jointly funded vector to
-close both typed-seven cases, leaving **six necessary groups** after
-A12/A15/A16/D16. The [A17 ordinary rank-one exclusion](results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md)
-narrows A17 to actual I; D17 retains both ordinary and actual-I spectators,
-so the group count stays six. The [conditional general18 frontier kernel](docs/general_eighteen_frontier_refinement_logic_20261023.md)
-has a [bounded compile and separate six-declaration audit PASS](results/lean_general18_six_group_frontier_verification_20261023/manifest.json)
-under nine explicit written premises, with no geometric instance or global17
-conclusion. At arithmetic dimension16, the [complete D14 exclusion](results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md)
+close both typed-seven cases. The new [complete A17 acceptance](results/review_compact18_whole_a17_actual_i_and_five_group_frontier_root_acceptance_20261023.md)
+removes both rank-one alternatives; the [D17 ordinary exclusion](results/review_compact18_d17_ordinary_rank_one_root_acceptance_20261023.md)
+leaves actual I there. **Five necessary groups remain:** whole A18,
+B17+actual I, whole B18, D17+actual I and whole D18. A separate
+[analytic endpoint theorem](results/review_compact18_a18_paired_finite_analytic_root_acceptance_20261023.md)
+excludes the branch with two isolated finite endpoint opposites in A18;
+it does not remove that whole group. The [new logic and arithmetic kernel](docs/general_eighteen_endpoint_refinement_logic_20261023.md)
+has a [bounded compile and separate eleven-declaration audit PASS](results/lean_general18_endpoint_refinement_verification_20261023/manifest.json),
+with geometric and analytic bridges explicit. The earlier
+[six-group kernel](results/lean_general18_six_group_frontier_verification_20261023/manifest.json)
+retains its actual PASS. At arithmetic dimension16, the [complete D14 exclusion](results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md)
 combines ordinary-dihedral and both actual typed-seven cases, leaving
 **thirteen groups**. These are reviewed written refinements, not new global
 ceilings or examples.

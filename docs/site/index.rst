@@ -41,7 +41,16 @@ seven actual receiving cusp families finance the full selected transfers,
 with minimum remaining curvature3,485. Global coverage for56 remains open.
 The accepted :download:`merged short-fork matching <../../results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md>`
 adds sources with a private eligible receiver or at least two merging
-neighbors, retaining the partial pentagon rule. It does not prove56.
+neighbors, retaining the partial pentagon rule. The later
+:download:`any-merging theorem <../../results/review_finite57_all_merging_short_fork_residual_pentagon_thirds_root_acceptance_20261023.md>`
+finances EVERY remaining heavy source with at least one merging edge,
+including the sole-shared case, with receiver caps1064/3 and2177/6.
+Zero merging-degree and other costly domains remain open; this does not prove56.
+
+The construction lane has :download:`two further actual edges and a new
+double-H3 corner <../../results/review_glued_e7_a2_post_b2_return_and_double_h3_root_acceptance_20261023.md>`
+in the original glued nine-dimensional host. Ambient finite volume and
+a new polytope example remain unresolved.
 
 The other two papers concern ideal and compact right-angled polytopes in
 dimension four. The compact volume minimum and second-volume problems remain
@@ -104,9 +113,17 @@ closes both actual N7/O7 forests without arithmeticity. The new
 :download:`complete B16 typed-seven exclusion <../../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md>`
 uses an actual neighboring A16 endpoint and one funded head/endpoint
 reference to leave **six necessary groups** after A12/A15/A16/D16.
-The :download:`A17 ordinary rank-one exclusion <../../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md>`
-leaves actual I there; D17 retains both rank-one cases. The count stays six.
-The :download:`conditional general18 frontier kernel <../general_eighteen_frontier_refinement_logic_20261023.md>`
+The later :download:`complete A17 acceptance <../../results/review_compact18_whole_a17_actual_i_and_five_group_frontier_root_acceptance_20261023.md>`
+and :download:`ordinary D17 exclusion <../../results/review_compact18_d17_ordinary_rank_one_root_acceptance_20261023.md>`
+leave **five necessary groups**: whole A18, B17+actual I, whole B18,
+D17+actual I and whole D18. The
+:download:`analytic A18 endpoint theorem <../../results/review_compact18_a18_paired_finite_analytic_root_acceptance_20261023.md>`
+also excludes two isolated finite endpoint opposites; it does not exclude
+the whole group. The :download:`new endpoint kernel <../general_eighteen_endpoint_refinement_logic_20261023.md>`
+has a :download:`bounded compile and separate eleven-declaration audit PASS <../../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json>`
+for the five-case logic and literal endpoint integer seals. Actual geometry
+and analytic sign transport remain explicit written inputs. The EARLIER
+:download:`conditional six-group kernel <../general_eighteen_frontier_refinement_logic_20261023.md>`
 has a :download:`bounded compile and separate six-declaration audit PASS <../../results/lean_general18_six_group_frontier_verification_20261023/manifest.json>`
 under nine written premises. Actual geometry remains external; no instance
 or global17 theorem is supplied.

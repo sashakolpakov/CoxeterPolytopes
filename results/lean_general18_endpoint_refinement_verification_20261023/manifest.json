@@ -1,0 +1,274 @@
+{
+  "date": "2026-10-23",
+  "status": "BOUNDED_COMPILE_AND_SEPARATE_ACTUAL_AXIOM_AUDIT_PASS",
+  "module": "CoxeterProofs.GeneralEighteenEndpointRefinement",
+  "source_sha256": "f6630f0f3275295c71b1bf8cc49e8476dc022177fb918de006ac4e9316d831c5",
+  "compile": {
+    "status": "KERNEL_COMPILED",
+    "module": "CoxeterProofs.GeneralEighteenEndpointRefinement",
+    "inputs": {
+      "source_sha256": "f6630f0f3275295c71b1bf8cc49e8476dc022177fb918de006ac4e9316d831c5",
+      "dependency_olean_sha256": {
+        "CoxeterProofs.GeneralEighteenFrontierRefinement": "35ae12d6380bfae171e8a58af83a89f8124620cf11c4f6775871ba79e174da41"
+      },
+      "compiler": {
+        "lean-toolchain": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273",
+        "lakefile.toml": "73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7",
+        "lake-manifest.json": "31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395",
+        "compiler_files": {
+          "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+          "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib": "c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c",
+          "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib": "e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a",
+          "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib": "be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182"
+        },
+        "environment": {
+          "ELAN_TOOLCHAIN": "",
+          "LEAN_PATH": "",
+          "LEAN_SRC_PATH": ""
+        }
+      },
+      "memory_cap_mib": 2048,
+      "threads": 1
+    },
+    "stdout_sha256": "9e24915e908b562301781d4a77b80546fc77ecacbcf24a0d96ab5cd3838e77fe",
+    "output_bytes": 2296,
+    "elapsed_seconds": 0.74,
+    "resources": {
+      "free_disk_gib": 101.68,
+      "available_memory_gib": 7.79
+    },
+    "olean_sha256": "061b448e3a8e705def17aeb83e5999acd42528b019a2de3eb220fa632ff55f13"
+  },
+  "separate_axiom_audit": {
+    "status": "KERNEL_AXIOM_AUDIT",
+    "module": "CoxeterProofs.GeneralEighteenEndpointRefinement",
+    "inputs": {
+      "source_sha256": "f6630f0f3275295c71b1bf8cc49e8476dc022177fb918de006ac4e9316d831c5",
+      "dependency_olean_sha256": {
+        "CoxeterProofs.GeneralEighteenFrontierRefinement": "35ae12d6380bfae171e8a58af83a89f8124620cf11c4f6775871ba79e174da41"
+      },
+      "compiler": {
+        "lean-toolchain": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273",
+        "lakefile.toml": "73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7",
+        "lake-manifest.json": "31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395",
+        "compiler_files": {
+          "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+          "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib": "c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c",
+          "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib": "e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a",
+          "/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib": "be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182"
+        },
+        "environment": {
+          "ELAN_TOOLCHAIN": "",
+          "LEAN_PATH": "",
+          "LEAN_SRC_PATH": ""
+        }
+      },
+      "memory_cap_mib": 2048,
+      "threads": 1
+    },
+    "stdout_sha256": "9e24915e908b562301781d4a77b80546fc77ecacbcf24a0d96ab5cd3838e77fe",
+    "output_bytes": 2296,
+    "elapsed_seconds": 0.51,
+    "resources": {
+      "free_disk_gib": 101.68,
+      "available_memory_gib": 7.76
+    }
+  },
+  "axiom_summary": {
+    "status": "ELEVEN_ACTUAL_DECLARATIONS_PASS",
+    "declarations": [
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.exact_five_cases",
+        "axioms": []
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.a17_all_spectators_exclusion",
+        "axioms": []
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.classified_five_case_refinement",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.same_vertex_five_case_refinement",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.Arithmetic.all_angle_integer_seals",
+        "axioms": []
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.Arithmetic.machin_integer_seals",
+        "axioms": []
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.Arithmetic.radical_integer_seals",
+        "axioms": []
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.Arithmetic.mutual_three_integer_signs",
+        "axioms": []
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.Arithmetic.mutual_four_endrange_signs",
+        "axioms": []
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.Arithmetic.all_mutual_four_gap_seals",
+        "axioms": []
+      },
+      {
+        "name": "CoxeterProofs.GeneralEighteenEndpointRefinement.Arithmetic.consecutive_gap_excludes_root",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "axiom_free": 8,
+    "standard_axioms_only": true,
+    "sorryAx": false
+  },
+  "retained_warnings": {
+    "count": 5,
+    "kind": "unnecessarySimpa",
+    "raw_stdout_preserved": true
+  },
+  "scope": {
+    "forest_logic": "conditional five-case refinement at same selected vertex; nine inherited and two new written premises",
+    "integer_certificates": "thirty Taylor seals, exact finite Machin sums, radical bounds, H/F sign comparisons, consecutive-gap logic",
+    "external": "actual geometry, analytic remainder/monotonicity/sign transport, written exclusions and classification",
+    "not_proved": [
+      "whole A18 exclusion",
+      "global compact17 bound",
+      "new example",
+      "full real trigonometric or hyperbolic instance"
+    ]
+  },
+  "dependency_reused_without_rerun": {
+    "module": "CoxeterProofs.GeneralEighteenFrontierRefinement",
+    "source_sha256": "d45f3a3652e82b8fb908e2b58857cbf2f18b8b1acb255c5c2309296ab2656194",
+    "object_sha256": "35ae12d6380bfae171e8a58af83a89f8124620cf11c4f6775871ba79e174da41",
+    "prior_runtime_manifest": "results/lean_general18_six_group_frontier_verification_20261023/manifest.json"
+  },
+  "object_cache_only": {
+    "path": "formal/.lake/build/lib/lean/CoxeterProofs/GeneralEighteenEndpointRefinement.olean",
+    "bytes": 759480,
+    "sha256": "061b448e3a8e705def17aeb83e5999acd42528b019a2de3eb220fa632ff55f13"
+  },
+  "cleanup": {
+    "owned_work_absent": true,
+    "object_ignored_cache_not_publication_asset": true
+  },
+  "bindings": [
+    {
+      "path": "formal/CoxeterProofs/GeneralEighteenEndpointRefinement.lean",
+      "bytes": 10668,
+      "sha256": "f6630f0f3275295c71b1bf8cc49e8476dc022177fb918de006ac4e9316d831c5"
+    },
+    {
+      "path": "formal/CoxeterProofs/GeneralEighteenFrontierRefinement.lean",
+      "bytes": 12892,
+      "sha256": "d45f3a3652e82b8fb908e2b58857cbf2f18b8b1acb255c5c2309296ab2656194"
+    },
+    {
+      "path": "docs/general_eighteen_endpoint_refinement_logic_20261023.md",
+      "bytes": 6906,
+      "sha256": "0166a9a14c57514954b994a5a154477f83070cdd84a378b36e1c1baa35cd5deb"
+    },
+    {
+      "path": "results/review_general_eighteen_endpoint_refinement_full_source_foundations_20261023.md",
+      "bytes": 10865,
+      "sha256": "c456ef88ce7208b7e61666e5bcd2d456f60fdc45bc8d427ddee970eb31d40eb4"
+    },
+    {
+      "path": "results/review_general_eighteen_endpoint_refinement_precompile_root_gate_20261023.md",
+      "bytes": 2942,
+      "sha256": "61a2176e5263fc73d403fe40348a43049b2204c1bc51495bbaf9dfa356dc421b"
+    },
+    {
+      "path": "results/lean_general18_endpoint_refinement_verification_20261023/compile_ledger.json",
+      "bytes": 1648,
+      "sha256": "e42d95b7ab0ac6bc77742895f842340699dc63168dd3880beb258d469954454a"
+    },
+    {
+      "path": "results/lean_general18_endpoint_refinement_verification_20261023/separate_axiom_audit_ledger.json",
+      "bytes": 1567,
+      "sha256": "b3db1d74d37c648e9699e341205c1464e2b130af70691b0d36e880c6084dac28"
+    },
+    {
+      "path": "results/lean_general18_endpoint_refinement_verification_20261023/actual_axiom_stdout.txt",
+      "bytes": 2296,
+      "sha256": "9e24915e908b562301781d4a77b80546fc77ecacbcf24a0d96ab5cd3838e77fe"
+    },
+    {
+      "path": "results/lean_general18_endpoint_refinement_verification_20261023/compile_tool_stdout.txt",
+      "bytes": 1851,
+      "sha256": "a041fcdcd1ea0080b976e8540bcffe72134e22caa7561c73f19583e4e1263e7d"
+    },
+    {
+      "path": "results/lean_general18_endpoint_refinement_verification_20261023/axiom_audit_tool_stdout.txt",
+      "bytes": 4017,
+      "sha256": "db3f1bd2fdfefa2e0bc6a9b89756f7a2b1ff84c9e3dfae8ddf471461722ecf76"
+    },
+    {
+      "path": "results/source_archive/endpoint_refinement_map_before_actual_runtime_20261023/manifest.json",
+      "bytes": 660,
+      "sha256": "b744ef3f66a2369b7bdad2727dde111f8bd1d9102c81354719ec55a98afcdc97"
+    },
+    {
+      "path": "results/source_archive/endpoint_refinement_map_before_actual_runtime_20261023/general_eighteen_endpoint_refinement_logic_20261023.md.gz",
+      "bytes": 2806,
+      "sha256": "cfe1d23027dc33a9eaea12bbcc49f35702578478f14c104b5276899c53598059"
+    },
+    {
+      "path": "results/compact18_a17_actual_i_full_paid_helper_and_endpoint_exclusion_candidate_20261023.md",
+      "bytes": 23594,
+      "sha256": "0087b05756a8ddc589eb6667bd737f96931bdb07987e9955f19f81303d03f20e"
+    },
+    {
+      "path": "results/review_compact18_a17_actual_i_full_paid_helper_endpoint_exclusion_full_scope_compact_reviewer_20261023.md",
+      "bytes": 12892,
+      "sha256": "b45e7dc1cf4bec962c6523be334c46d6fe9f733b9649f5cf4cfcaeda53cfa4c9"
+    },
+    {
+      "path": "results/review_compact18_whole_a17_actual_i_and_five_group_frontier_root_acceptance_20261023.md",
+      "bytes": 6558,
+      "sha256": "553f702a038e1a94ebb65e0998cd300f64a7f0e0bc3fe3670b88436f44c05636"
+    },
+    {
+      "path": "results/compact18_d17_ordinary_rank_one_fresh_tails_and_head_exclusion_candidate_20261023.md",
+      "bytes": 21351,
+      "sha256": "a1bb3e1702c7ef178913b58e517127c330b3f7962e756e239186f0014c18438c"
+    },
+    {
+      "path": "results/review_compact18_d17_ordinary_rank_one_root_acceptance_20261023.md",
+      "bytes": 3259,
+      "sha256": "1d43b117b1e15f3d4fe4798b867538e25666aaa79c32cb851a04866620fa608e"
+    },
+    {
+      "path": "results/compact18_whole_a18_two_isolated_finite_endpoints_analytic_exclusion_candidate_20261023.md",
+      "bytes": 11360,
+      "sha256": "d6c84b18803d567e16dc1d8c483416ab52058b8135b74f6f086176b7623f0472"
+    },
+    {
+      "path": "results/review_compact18_a18_paired_isolated_finite_analytic_full_scope_replay_reviewer_20261023.md",
+      "bytes": 9003,
+      "sha256": "eb7f007df890945b2d89d4c08fee43e03f25406fe26f30a91148753cbe084d62"
+    },
+    {
+      "path": "results/review_compact18_a18_paired_finite_analytic_root_acceptance_20261023.md",
+      "bytes": 4228,
+      "sha256": "3637059d8e4ca47985fb222c9e37aa266dba9bb68827261874fc611c1aa265df"
+    }
+  ],
+  "precompile_map_history": {
+    "source_sha256": "39810d34cb886504cee320643f86344208a082294047991c05ba324e6adedd5e",
+    "archive_manifest": "results/source_archive/endpoint_refinement_map_before_actual_runtime_20261023/manifest.json",
+    "later_change": "Only actual status and runtime documentation; Lean source and mathematical premises unchanged."
+  }
+}

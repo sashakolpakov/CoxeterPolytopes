@@ -286,13 +286,27 @@ joint head/endpoint budget. It closes both B16 variants, leaving six groups
 after A12/A15/A16/D16. The
 :download:`A17 ordinary rank-one acceptance <../../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md>`
 narrows A17 to actual I, leaving both D17 rank-one alternatives untouched.
-The group count remains six. The separate
+The group count at that checkpoint was six. The separate
 :download:`general18 frontier logic map <../general_eighteen_frontier_refinement_logic_20261023.md>`
 now has :download:`bounded compilation and a separate six-declaration audit PASS <../../results/lean_general18_six_group_frontier_verification_20261023/manifest.json>`.
 Four actual prints use only ``propext``; two are axiom-free, and none uses
 ``sorryAx``. Compilation took5.88s and the audit1.31s; five unused-simp
 warnings are retained. The nine written premises are explicit, with no
 geometric instance or global17 theorem.
+
+The later :download:`complete A17 acceptance <../../results/review_compact18_whole_a17_actual_i_and_five_group_frontier_root_acceptance_20261023.md>`
+and :download:`ordinary D17 exclusion <../../results/review_compact18_d17_ordinary_rank_one_root_acceptance_20261023.md>`
+leave FIVE necessary groups. The new
+:download:`endpoint logic and arithmetic map <../general_eighteen_endpoint_refinement_logic_20261023.md>`
+has a :download:`bounded compile and SEPARATE eleven-declaration audit PASS <../../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json>`.
+Eight prints are axiom-free; the other three use only propext/Quot.sound.
+It verifies the same-vertex five-case deduction, all thirty integer Taylor
+seals, the finite Machin sums and the strict endpoint sign comparisons.
+Compilation took0.74s and the audit0.51s; the previous module was reused
+without rerunning it. Five simpa warnings remain in the complete raw output.
+Actual geometry and analytic sign transport are explicit written inputs.
+The :download:`A18 analytic theorem <../../results/review_compact18_a18_paired_finite_analytic_root_acceptance_20261023.md>`
+excludes ONLY the two-isolated-finite-endpoint branch, not whole A18.
 
 The new :download:`glued E7/A2 ambient-edge acceptance <../../results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md>`
 binds complete written proofs and different-author reviews of actual edges,

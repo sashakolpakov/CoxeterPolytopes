@@ -117,6 +117,12 @@ argument. The [assumption register](../docs/manuscript_assumptions.md)
 and per-kernel maps identify those premises; printed axiom lists alone
 are not an assumption inventory.
 
+The latest [compact18 endpoint kernel](../docs/general_eighteen_endpoint_refinement_logic_20261023.md)
+has a [bounded compile and separate eleven-declaration audit PASS](../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json).
+It checks the five-case deduction and the finite integer seals in the
+analytic A18 endpoint theorem. These supporting results belong in the
+existing general compact paper; its frozen23 PDF is unchanged.
+
 All scientific, Lean and TeX work shares one exclusive lock. Batches
 require 40 GiB free disk and 6 GiB available RAM; script/TeX jobs retain
 their 59-second/1-GiB caps and Lean its 2,048-MiB cap. Temporary build

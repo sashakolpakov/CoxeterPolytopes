@@ -86,11 +86,23 @@ closes both actual N7/O7 forests at D16. Fresh tail/head/centre geometry
 and one jointly funded budget give a final norm above1.03339. The new
 [complete B16 typed-seven exclusion](../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md)
 then uses the actual short normal, a neighboring A16 endpoint and one legal
-head/endpoint reference to force norm above1.01488. **Six general18 groups
-remain**. The [A17 ordinary rank-one exclusion](../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md)
-narrows their exact list to A17+actual I; whole A18; B17+actual I; whole
-B18; D17 with an ordinary nonshort A1 or actual I; and whole D18.
-The ceiling stays18. The [conditional general18 frontier kernel](general_eighteen_frontier_refinement_logic_20261023.md)
+head/endpoint reference to force norm above1.01488, leaving six groups at
+that checkpoint. The later [complete A17 acceptance](../results/review_compact18_whole_a17_actual_i_and_five_group_frontier_root_acceptance_20261023.md)
+closes ordinary and actual-I rank-one spectators. The [D17 ordinary exclusion](../results/review_compact18_d17_ordinary_rank_one_root_acceptance_20261023.md)
+leaves only actual I there. **Five necessary groups remain:** whole A18,
+B17+actual I, whole B18, D17+actual I and whole D18. The ceiling stays18.
+Within B17+I, the [complete two-helper bootstrap and head reduction](../results/review_compact18_b17_two_helper_bootstrap_and_dotted_head_reduction_root_acceptance_20261023.md)
+now proves5 strong and leaves only an isolated dotted long head, still
+allowing a finite contact with old I. It does not yet remove that group.
+The [new analytic A18 endpoint theorem](../results/review_compact18_a18_paired_finite_analytic_root_acceptance_20261023.md)
+excludes two isolated finite endpoint opposites, using monotone native-angle
+brackets rather than a cyclotomic census. Nonisolated or dotted endpoints
+remain open. The [new endpoint kernel](general_eighteen_endpoint_refinement_logic_20261023.md)
+has a [bounded compile and separate eleven-declaration actual audit PASS](../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json).
+It checks the five-case logic and the literal angle/sign integer seals;
+eight prints are axiom-free. Actual geometry and analytic bridges remain
+explicit; it proves no whole-A18 exclusion or global17 theorem.
+The EARLIER [conditional six-group kernel](general_eighteen_frontier_refinement_logic_20261023.md)
 has a [bounded compile and separate six-declaration actual audit PASS](../results/lean_general18_six_group_frontier_verification_20261023/manifest.json):
 four prints use only `propext`, two are axiom-free, and none uses `sorryAx`.
 Its nine written premises and actual geometry remain external; five
@@ -308,6 +320,12 @@ literal module, not all compatible invariant lattices or its
 commensurability class. There is no new example or execution credit for
 the manual continuation.
 
+The construction lane now also has [two further actual glued-host edges,
+a return quadrilateral and a full double-H3 corner](../results/review_glued_e7_a2_post_b2_return_and_double_h3_root_acceptance_20261023.md).
+All original norm classes and unknown walls are covered; the apparent
+germ symmetries fail original integrality. Ambient finite volume and a
+new compact nine-dimensional example remain unresolved.
+
 The [isolated parallel short-fork financing theorem](../results/review_finite57_isolated_parallel_short_fork_financing_root_acceptance_20261022.md)
 adds a new complete selected domain to the finite57 search. The actual
 null pair forces a whole affine-A1 cusp factor. Seven complete receiving
@@ -318,9 +336,13 @@ large-A cycle charge5 is essential in one family. The later
 finances the complete selected set of remaining heavy sources having a
 private eligible finite receiver or at least two merging neighbors.
 Whole-component port bounds and a finite Hall matching retain the prior
-partial pentagon rule, with receiving caps358 and361.5. Zero-neighbor,
-sole-shared-receiver, isolated finite>=5/dotted and other costly cases
-remain open; there is no universal364 cap or dimension56 conclusion.
+partial pentagon rule, with receiving caps358 and361.5. The later
+[complete any-merging theorem](../results/review_finite57_all_merging_short_fork_residual_pentagon_thirds_root_acceptance_20261023.md)
+removes the matching restriction: every remaining heavy source with ANY
+merging edge is financed. Discharged pentagon debts leave receiver caps
+1064/3 and2177/6<364, including the sole-shared case. Zero merging-degree,
+isolated finite>=5/dotted and other costly cases remain open; there is no
+universal364 cap or dimension56 conclusion.
 
 ## Dimension comparison
 

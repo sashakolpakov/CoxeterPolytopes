@@ -57,9 +57,16 @@ in one funded vector. The later
 [complete B16 typed-seven proof](../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md)
 adds fresh short-end geometry and an actual neighboring A16 endpoint,
 leaving six groups. All belong in the same general compact paper; these
-geometric proofs remain written inputs. The [A17 ordinary exclusion](../results/review_compact18_a17_ordinary_rank_one_root_acceptance_20261023.md)
-retains only actual I there, while D17 retains ordinary nonshort A1 or
-actual I; the group count stays six. Their [conditional frontier logic](general_eighteen_frontier_refinement_logic_20261023.md)
+geometric proofs remain written inputs. The later [complete A17 acceptance](../results/review_compact18_whole_a17_actual_i_and_five_group_frontier_root_acceptance_20261023.md)
+and [ordinary D17 exclusion](../results/review_compact18_d17_ordinary_rank_one_root_acceptance_20261023.md)
+leave FIVE groups: whole A18, B17+actual I, whole B18, D17+actual I and
+whole D18. The [A18 analytic endpoint theorem](../results/review_compact18_a18_paired_finite_analytic_root_acceptance_20261023.md)
+also closes the two-isolated-finite-endpoint branch. These belong in the
+same compact paper. Their [new endpoint logic/arithmetic map](general_eighteen_endpoint_refinement_logic_20261023.md)
+records a [bounded compile and separate eleven-declaration audit PASS](../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json)
+for the five-case logic and literal finite integer seals, with geometric
+and analytic bridges external. The EARLIER
+[six-group conditional frontier logic](general_eighteen_frontier_refinement_logic_20261023.md)
 has a [bounded compile and separate six-declaration audit PASS](../results/lean_general18_six_group_frontier_verification_20261023/manifest.json)
 under nine explicit written premises, without a geometric instance or
 global17 conclusion.
