@@ -106,6 +106,12 @@ are not additional proposed papers.
 Recent verified work
 --------------------
 
+The :download:`heavy-centre forest kernel <../../results/lean_heavy_centre_forest_verification_20261023/manifest.json>`
+has bounded compilation and a separate actual audit of eleven declarations.
+It derives ordered-ring cone bounds, finite-chain no-return from two local
+geometric bridges and incidence algebra. Actual geometric and graph instances
+remain external. The initial RAM refusal is preserved; no older module ran.
+
 The :download:`A18 continuous scalar kernel receipt <../../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json>`
 records bounded compilation and a SEPARATE actual audit of ten declarations.
 It proves continuous ordered-ring inequalities and paid-square logic for the
@@ -116,10 +122,13 @@ verification of the later two-family frontier.
 
 The finite-volume57 lane now has a
 :download:`complete finite-centre classification, safe union and heavy escape theorem <../../results/review_finite57_finite_centre_safe_union_and_heavy_escape_root_acceptance_20261023.md>`.
+The new :download:`metric forest theorem <../../results/review_finite57_heavy_centre_forest_and_linear_exit_expansion_root_acceptance_20261023.md>`
+forces exactly H+2 actual exits from each heavy component of H vertices.
 Costly and shared-capacity exits remain, so no56 theorem is claimed.
-The :download:`latest glued-host continuation <../../results/review_glued_e7_a2_heptagon_and_ambient_e2_edge_full_scope_root_acceptance_20261023.md>`
-closes an actual heptagon and proves a further ambient edge. Finite chamber
-volume is unresolved; this is not a new nine-dimensional example.
+The :download:`latest glued-host continuation <../../results/review_glued_e7_a2_large_facet_release_full_scope_root_acceptance_20261023.md>`
+proves an actual edge leaving the large facet, using all seventeen possible
+first-wall profiles. Finite chamber volume is unresolved; this is not a new
+nine-dimensional example.
 
 Read and reproduce
 ------------------

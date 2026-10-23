@@ -61,6 +61,13 @@ This complete geometric result is written and internally reviewed, not
 Lean-verified. The remaining two frontiers are necessary configurations,
 not examples, and no compact17 theorem follows.
 
+The complete [B18 window/head reduction](../results/review_compact18_whole_b18_fresh_window_head_and_finite_helper_root_acceptance_20261023.md)
+and [D18 window/strong5/head reduction](../results/review_compact18_whole_d18_fresh_window_strong_five_head_root_acceptance_20261023.md)
+are now internally reviewed supporting theorems. They retain the same original
+farthest vector and actual endpoints. The B18 finite-helper obstruction uses
+finite-angle conjugates without an arithmetic-lattice hypothesis. Terminal
+and dotted-cap couplings remain; neither whole family is excluded.
+
 The [global arithmetic16 composition](../results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md)
 closes every original exact-dimension17 forest group over every actual admissible
 field. Its [three-declaration conditional Lean audit](../results/lean_arithmetic16_composition_verification_20261022/manifest.json)
@@ -81,7 +88,21 @@ checks that conditional refinement, not realized examples or arithmetic15.
 | Ideal RA4 volume and structure | Complete17-page paper and internal reviews | Exact combinatorial/model checks and selected conditional logic; no complete geometric Lean formalization or external referee approval. |
 | Compact RA4 volume constraints | Complete14-page paper and internal reviews | Exact capacity/excess checks and conditional logic. It does not prove a global minimum or a unique second-volume double. |
 
-### New continuous scalar verification
+### Heavy-centre forest logic
+
+The [new kernel map](heavy_centre_forest_scalar_kernel_logic_20261023.md)
+has an [actual bounded compilation and separate eleven-declaration audit PASS](../results/lean_heavy_centre_forest_verification_20261023/manifest.json).
+Primitive square equations imply the cone inequalities; strong finite-chain
+induction derives no-return from two local geometric bridges. Natural variables
+index the chain or count incidences; metric quantities remain in an ordered ring.
+Actual hyperbolic instances, graph-cycle realization,
+forest Euler and reverse ports remain external. All eleven prints use only
+standard foundational axioms, with no `sorryAx`. Compilation took2.4seconds
+and the separate audit1.93seconds. The earlier5.8GiB admission refusal and
+one unused-variable warning are retained. The531912-byte object is ignored;
+owned temporary proof work is absent. No older successful module was rerun.
+
+### A18 continuous scalar verification
 
 [A18TwoDottedEndpointScalarKernel](a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
 now has [actual bounded compilation and a separate ten-declaration audit PASS](../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).
@@ -117,9 +138,15 @@ The global ceiling remains57. New accepted selected-domain results finance:
 The last result also proves that a component of heavy vertices cannot be closed
 under all three centre moves: its actual three-face would be compact and
 right-angled, and three facet colours would force every polygon to have an even
-number of sides at least six, contradicting Euler's formula. This guarantees an
-exit, **not** sufficient receiving capacity. Costly and multiply used finite
-exits remain. There is no unproved Hall completion or universal364 cap.
+number of sides at least six, contradicting Euler's formula.
+
+The [new metric forest theorem](../results/review_finite57_heavy_centre_forest_and_linear_exit_expansion_root_acceptance_20261023.md)
+strengthens this: heavy-to-heavy centre edges have cosh length at least16,
+and successive directions are orthogonal, so no cycle is possible. Every
+heavy set S has exactly |S|+2c(S) centre-edge incidences leaving it. A full
+component with H vertices has H+2 nonheavy exits. This supplies linear
+expansion, **not** sufficient receiving capacity. Costly and multiply used
+finite exits remain; there is no Hall completion or universal364 cap.
 
 ## Construction search
 
@@ -130,6 +157,12 @@ The [next accepted continuation](../results/review_glued_e7_a2_heptagon_and_ambi
 recognizes that B3 facet as the old-f3 wall, closes a whole compact heptagon of
 area3pi/2, and proves a further ambient edge to the old-e2 wall. Its full new
 germ is two H3 factors, two norm2 A1s and the retained norm2b line.
+
+The [next accepted large-facet release](../results/review_glued_e7_a2_large_facet_release_full_scope_root_acceptance_20261023.md)
+uses a complete seventeen-profile, four-norm first-wall classification to
+prove an actual edge leaving the n-facet. Its new primitive original wall has
+norm2b. Every unknown wall is covered; a finite upper was not declared actual
+before the complete classification.
 
 The immediate matching metric maps fail original integrality. A closed face or
 matching germ does not prove an ambient chamber period. Finite volume,

@@ -49,6 +49,21 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`HeavyCentreForestScalarKernel` has [bounded compilation and a separate
+eleven-declaration actual audit PASS](../results/lean_heavy_centre_forest_verification_20261023/manifest.json).
+Its [map](../docs/heavy_centre_forest_scalar_kernel_logic_20261023.md) separates
+ordered-ring cone algebra, finite-chain induction from two local bridges and
+incidence arithmetic from the actual geometric and graph instances. Six prints
+use `propext`, `Classical.choice`, `Quot.sound`; the other five use `propext`
+and `Quot.sound`. No `sorryAx` occurs. Compilation took2.4s and the separate
+audit1.93s. The initial RAM refusal and unused-variable warning are preserved;
+owned temporary work is absent. No old successful module was rerun.
+
+```sh
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.HeavyCentreForestScalarKernel
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.HeavyCentreForestScalarKernel --audit-axioms
+```
+
 `A18TwoDottedEndpointScalarKernel` has [bounded compilation and a separate
 ten-declaration actual axiom audit PASS](../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).
 It derives the continuous radical gap, endpoint gains and one legally funded

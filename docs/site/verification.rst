@@ -49,8 +49,28 @@ Relevant maps and actual records:
 * :download:`Arithmetic16 thirteen-group actual receipt <../../results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/manifest.json>`
 * :download:`Sharp right-angled proof map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`
 
-New continuous scalar kernel
-----------------------------
+Heavy-centre forest kernel
+----------------------------------------
+
+The :download:`new scalar/chain kernel <../../formal/CoxeterProofs/HeavyCentreForestScalarKernel.lean>`
+has :download:`actual compilation and a separate eleven-declaration audit PASS <../../results/lean_heavy_centre_forest_verification_20261023/manifest.json>`.
+Primitive square equations imply both cone gaps; strong finite-chain induction
+derives no-return from two LOCAL geometric bridges. Natural variables index
+the chain or count incidences; metric quantities remain in an ordered ring.
+The :download:`immutable map <../heavy_centre_forest_scalar_kernel_logic_20261023.md>`
+retains real geometry, actual classification, graph realization, forest Euler
+and finite reverse-port instances as explicit external premises.
+
+Compilation took2.4seconds and the separate audit1.93seconds. Six actual prints
+use propext/Classical.choice/Quot.sound, the other five propext/Quot.sound;
+none uses sorryAx. The :download:`actual stdout <../../results/lean_heavy_centre_forest_verification_20261023/axiom_stdout.txt>`
+retains one unused-variable warning. The :download:`initial RAM refusal <../../results/lean_heavy_centre_forest_verification_20261023/attempt_1_resource_deferral.json>`
+is preserved. Owned work is absent; the531912-byte object is an ignored cache.
+The complete actual heavy-graph instance is not claimed Lean-verified, and no
+capacity or dimension56 conclusion follows. No older successful module ran.
+
+A18 continuous scalar kernel
+----------------------------------------
 
 ``CoxeterProofs.A18TwoDottedEndpointScalarKernel`` has a
 :download:`bounded compile and separate ten-declaration actual audit PASS <../../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json>`.
@@ -89,6 +109,12 @@ internally reviewed, not Lean-verified; the scalar module above proves only
 its older two-dotted branch. The global compact ceiling stays18, and neither
 remaining group is an example.
 
+The :download:`B18 window/head theorem <../../results/review_compact18_whole_b18_fresh_window_head_and_finite_helper_root_acceptance_20261023.md>`
+and :download:`D18 window/strong5/head theorem <../../results/review_compact18_whole_d18_fresh_window_strong_five_head_root_acceptance_20261023.md>`
+are complete internally reviewed necessary reductions. Neither removes a whole
+remaining family or changes the global ceiling. Actual terminal couplings
+remain outside those theorems.
+
 The older :download:`five-case endpoint logic map <../general_eighteen_endpoint_refinement_logic_20261023.md>`
 retains its :download:`eleven-declaration actual audit PASS <../../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json>`
 for its original five-case deduction and finite analytic integer seals.
@@ -106,12 +132,25 @@ have full written proofs, different-author reviews and root acceptances.
 The finite table retains every costly/overloaded holdout. A component escape
 is not a Hall condition or a sufficient receiving budget. No56 theorem follows.
 
+The new :download:`heavy-centre forest theorem <../../results/review_finite57_heavy_centre_forest_and_linear_exit_expansion_root_acceptance_20261023.md>`
+strengthens escape to exact linear expansion: every heavy subset S has
+``|S|+2c(S)`` actual centre-edge incidences leaving it. Heavy-to-heavy edges have
+cosh length at least16 and successive centre directions are orthogonal, so
+the ambient hyperbolic chain cannot close. Receiver costs and previous debts
+remain unresolved. The scalar/chain kernel above does not create the actual
+geometric or finite-graph instances.
+
 The :download:`glued-host B3 continuation <../../results/review_glued_e7_a2_three_actual_edges_and_original_b3_break_root_acceptance_20261023.md>`
 and :download:`heptagon plus ambient-e2 continuation <../../results/review_glued_e7_a2_heptagon_and_ambient_e2_edge_full_scope_root_acceptance_20261023.md>`
 prove actual original-lattice edges and full germs, including all unknown-wall
 firstness. The heptagon is a two-face, not a finite-volume nine-dimensional
 chamber. Both immediate matching maps fail original integrality; no later
 period, example or reflectivity conclusion is inferred.
+
+The :download:`next large-facet release <../../results/review_glued_e7_a2_large_facet_release_full_scope_root_acceptance_20261023.md>`
+proves a genuine ambient edge leaving n, after a complete seventeen-profile
+first-wall proof across all four primitive norm classes. Its unique new wall
+is an original primitive norm2b reflector. Finite ambient volume remains open.
 
 Reproduction and resources
 --------------------------

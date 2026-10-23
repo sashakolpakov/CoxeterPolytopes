@@ -70,16 +70,18 @@ and their combined required cost exceeds its norm budget. The sharp right-angled
 proof uses actual facet projections followed by spherical-code bounds.
 
 The active construction search walks actual edges in explicit original lattices.
-The latest [glued nine-dimensional continuation](results/review_glued_e7_a2_heptagon_and_ambient_e2_edge_full_scope_root_acceptance_20261023.md)
-closes a compact heptagon face and then leaves it along an additional actual
-ambient edge. Finite volume of that chamber is still unresolved: this is **not a
-new example**. A matching local diagram or a closed face is insufficient.
+The latest [glued nine-dimensional continuation](results/review_glued_e7_a2_large_facet_release_full_scope_root_acceptance_20261023.md)
+proves an actual edge leaving the retained large facet, after a complete
+seventeen-profile first-wall classification. Finite volume of that chamber
+is still unresolved: this is **not a new example**.
 
 The finite-volume57 improvement lane now has a
 [complete finite-centre classification and safe discharge union](results/review_finite57_finite_centre_safe_union_and_heavy_escape_root_acceptance_20261023.md),
 following complete [isolated finite-cap](results/review_finite57_all_isolated_finite_short_fork_receivers_root_acceptance_20261023.md)
 and [ideal-centre](results/review_finite57_ideal_fork_centre_joint_parallel_financing_root_acceptance_20261023.md)
-financing results. Costly and shared-capacity cases remain; there is no56 theorem.
+financing results. The new [heavy-centre forest theorem](results/review_finite57_heavy_centre_forest_and_linear_exit_expansion_root_acceptance_20261023.md)
+forces exactly H+2 actual exits from a heavy component of H vertices.
+Costly and shared-capacity cases remain; there is no56 theorem.
 
 ## Verification and reproduction
 
@@ -95,7 +97,14 @@ transitive regeneration; inherited and newly replayed checks retain their exact
 scopes. The frozen paper's proof is internally reviewed at its declared finite
 input boundaries.
 
-The newest [A18 scalar kernel](docs/a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
+The [heavy-centre forest kernel](docs/heavy_centre_forest_scalar_kernel_logic_20261023.md)
+has [bounded compilation and a separate eleven-declaration audit PASS](results/lean_heavy_centre_forest_verification_20261023/manifest.json).
+It checks ordered-ring cone inequalities, finite-chain induction from two local
+geometric bridges and incidence algebra. Actual geometry, graph realization,
+forest Euler and reverse-port instances remain external. No `sorryAx` occurs.
+The initial RAM refusal is preserved; no earlier successful module was rerun.
+
+The [A18 scalar kernel](docs/a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
 has a [bounded compilation and separate ten-declaration axiom audit PASS](results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).
 It proves continuous ordered-ring inequalities and paid-square logic for two
 dotted endpoint opposites. Its real geometric interpretation, complete actual

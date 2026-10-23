@@ -1,0 +1,33 @@
+{
+  "kind": "source-only one-sign precision preservation",
+  "date": "2026-10-23",
+  "source": "results/compact_h9_glued_e7_a2_actual_large_facet_release_and_original_norm_b_wall_candidate_20261023.md",
+  "predecessor": {
+    "sha256": "cc556994a81733badf95790824108a0f2e65a9dc683ac2347e4c420aeeacd5b0",
+    "bytes": 16341,
+    "lines": 373
+  },
+  "archive": {
+    "path": "results/source_archive/glued_e7_a2_large_facet_before_kn_covector_sign_precision_20261023.md.gz",
+    "sha256": "202ef8098bbc5a03505026de4fdfd4998e39c392fac9407f87f61f3904e4a09c",
+    "bytes": 7164,
+    "gzip_roundtrip_byte_comparison": "PASS before source mutation",
+    "decompressed_sha256": "cc556994a81733badf95790824108a0f2e65a9dc683ac2347e4c420aeeacd5b0"
+  },
+  "successor": {
+    "sha256": "4e451c9478f298755cc9f39aa56c246579db63ed475c98d7ac038edb587a87de",
+    "bytes": 16342,
+    "lines": 373
+  },
+  "exact_delta": {
+    "location": "Section 8 final metric-map paragraph",
+    "before": "The primitive Kn has odd f3 covector phi², so its reflection is not",
+    "after": "The primitive Kn has odd f3 covector -phi², so its reflection is not",
+    "verification": "Full decompressed predecessor/successor diff has this single changed line."
+  },
+  "reason": "Kn=n-phi*Tq and Tq.f3=phi imply Kn.f3=-phi². The Section 7 candidate -Kn correctly retains covector +phi². Either sign is a unit modulo 2, so no nonintegrality argument, theorem, constant, profile or conclusion changes.",
+  "authorization": "Root requested this exact one-sign correction after an entire different-author mathematical read; final acceptance remains root-owned.",
+  "execution_scope": "Only source text, gzip byte preservation and metadata/diff inspection. No mathematical worker, import, enumeration, test, compiler, Lean, TeX, plan or Git operation.",
+  "other_sources_modified": false,
+  "new_execution_credit": false
+}
