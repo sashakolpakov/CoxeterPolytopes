@@ -1,141 +1,88 @@
-# Six papers: reading and verification
+# The six papers and their techniques
 
-These are the six TeX papers prepared for audit. All six are **written,
-compiled and internally reviewed**, with matching PDFs at their stated
-input boundaries. This is a manuscript status, not a claim of complete
-computational replay, external refereeing or full geometric Lean verification.
-The arithmetic paper now includes two necessary field proofs previously
-cited only from research notes; its completed 21-page PDF replaces the
-preserved 17-page predecessor. The other 27 TeX files are preserved predecessors,
-supporting notes, input fragments and generated atlases.
+There are **six current paper families**, with written, compiled and internally
+reviewed TeX/PDF editions. The compact18 and arithmetic16 supporting improvements
+belong in the existing compact families when integrated. They are not extra
+papers, and the frozen PDFs still state23 and20. Earlier TeX notes, fragments,
+predecessors and generated atlases are preserved supporting material.
 
-| Paper and TeX | Result in this edition | PDF | Proof and reproduction map | Verification ID |
-| --- | --- | --- | --- | --- |
-| [General finite volume](finite_volume57.tex) | Dimension at most 57 | [48 pages](build/finite_volume57.pdf): 12 main + 36 essential proof appendices | [Corner payments, forests and cusps](../docs/finite_volume57_lemma_map.md) | `finite57` |
-| [Compact arithmetic](compact_arithmetic_dimension_bound.tex) | Dimension at most 20; field proofs completed; parked refinements excluded | [21 pages](build/compact_arithmetic_dimension_bound.pdf) | [Field reductions and exact angle rules](../docs/compact_arithmetic20_proof_map.md) | `compact20` |
-| [General compact](compact_farthest_vertex_bounds.tex) | Dimension at most 23 | [36 pages](build/compact_farthest_vertex_bounds.pdf) | [Farthest vertex and component energies](../docs/compact_farthest_vertex_bounds_proof_map_20261020.md) | `compact_farthest_bounds` |
-| [Sharp right-angled dimensions](right_angled_sharp_dimension_bounds_publication.tex) | At most 8 for finite volume; at most 4 if entirely ideal; both sharp | [5 pages](build/right_angled_sharp_dimension_bounds_publication.pdf) | [Projection, heights and spherical codes](../docs/right_angled_sharp_dimensions_publication_proof_map_20261021.md) | `right_angled_sharp` |
-| [Ideal right-angled four-volume and structure](ideal_ra4_volume_and_structure_publication.tex) | Published minimum; second volume and its unique double; restricted 24-cell chains | [17 pages](build/ideal_ra4_volume_and_structure_publication.pdf) | [Volume, equality and decomposition](../docs/ideal_ra4_volume_and_structure_proof_map.md) | `ideal_ra4_volume_and_structure` |
-| [Compact right-angled four-volume constraints](compact_ra4_volume_constraints.tex) | Facet capacity, neighboring excess and recognition results | [14 pages](build/compact_ra4_volume_constraints.pdf) | [Capacity and excess](../docs/compact_ra4_volume_constraints_reproduce_20261019.md) | `compact_ra4` |
+| Paper and TeX | Main technique | Result in this PDF | PDF | Proof/reproduction map | Verification ID |
+|---|---|---|---|---|---|
+| [General finite volume](finite_volume57.tex) | Corner payments, Coxeter forests and cusp curvature | Dimension at most57 | [48 pages](build/finite_volume57.pdf),12 main +36 essential appendices | [Proof map](../docs/finite_volume57_lemma_map.md) | `finite57` |
+| [Sharp right-angled dimensions](right_angled_sharp_dimension_bounds_publication.tex) | Actual projections, descending heights and spherical codes | Finite volume at most8; entirely ideal at most4; both internally sharp | [5 pages](build/right_angled_sharp_dimension_bounds_publication.pdf) | [Proof map](../docs/right_angled_sharp_dimensions_publication_proof_map_20261021.md) | `right_angled_sharp` |
+| [General compact](compact_farthest_vertex_bounds.tex) | One farthest vertex and additive component energies | Dimension at most23; later supporting proof18 | [36 pages](build/compact_farthest_vertex_bounds.pdf) | [Proof map](../docs/compact_farthest_vertex_bounds_proof_map_20261020.md) | `compact_farthest_bounds` |
+| [Compact arithmetic](compact_arithmetic_dimension_bound.tex) | Field reduction and exact angle rules, with the same geometric budget | Dimension at most20; later supporting proof16 | [21 pages](build/compact_arithmetic_dimension_bound.pdf) | [Proof map](../docs/compact_arithmetic20_proof_map.md) | `compact20` |
+| [Ideal RA4 volume and structure](ideal_ra4_volume_and_structure_publication.tex) | Volume gap, equality recognition and restricted decomposition | Published minimum; second volume and unique double; restricted24-cell chains | [17 pages](build/ideal_ra4_volume_and_structure_publication.pdf) | [Proof map](../docs/ideal_ra4_volume_and_structure_proof_map.md) | `ideal_ra4_volume_and_structure` |
+| [Compact RA4 volume constraints](compact_ra4_volume_constraints.tex) | Facet capacity, excess and recognition | Necessary volume/structure constraints | [14 pages](build/compact_ra4_volume_constraints.pdf) | [Proof map](../docs/compact_ra4_volume_constraints_reproduce_20261019.md) | `compact_ra4` |
 
-The priority reading is the 57 paper and the sharp right-angled paper.
-Both now have fresh adversarial mathematical reviews: the
-[finite57 composition](../results/review_finite57_geometric_composition_new_audit_20261021.md),
-[sharpRA geometry](../results/review_sharp_ra_geometric_foundations_adversarial_20261021.md)
-and [sharpRA tensor/equality argument](../results/review_sharp_ra_tensor_ideal_equality_adversarial_20261021.md).
-No blocking gap was found at their explicit finite-data/published-input
-boundaries. These are internal mathematical audits, distinct from full
-producer replay, geometric formalization and external refereeing.
-The remaining papers also have complete written reviews. The fresh
-[ideal RA4 audit](../results/review_ideal_ra4_volume_structure_fresh_adversarial_20261021.md)
-checks the universal equality reduction and actual cutting/gluing proof;
-the fresh [compact RA4 audit](../results/review_compact_ra4_volume_constraints_fresh_adversarial_20261021.md)
-checks its complete capacity, metric and graph cases. The
-[completed-audit checkpoint](../results/six_paper_completed_audits_and_restricted_continuations_20261021.json)
-binds these reviews and the unchanged six editions. Written audit
-completion does not turn partial reproduction or prepared Lean into
-executed verification.
-The former establishes one corner-payment rule before separating finite
-vertex forests from ideal cusp links. Its appendices contain necessary
-proofs and algorithm specifications, rather than raw execution logs.
-The latter shares one projection lemma between two short branches:
-a direct cubic tensor argument for dimension eight, and the
-Musin/Kolpakov inputs for entirely ideal dimension four.
+The57 and sharp right-angled papers are the priority entry points. The
+[current comparison guide](../docs/current_bounds_and_verification.md) distinguishes
+published bounds, supporting improvements and actual verification. The
+[detailed result correspondence](../docs/result_manuscript_correspondence.md)
+preserves the longer provenance. The
+[six-paper delivery receipt](../results/six_paper_final_tex_delivery_20261021.json)
+binds the matching frozen sources, PDFs and build records.
 
-The compact arithmetic and general compact PDFs retain the 20 and 23
-theorems requested for this finishing phase. Later reviewed written
-research now gives 17 and 18, respectively. The
-[arithmetic seventeen composition](../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md),
-[general eighteen composition](../results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md)
-and their full internal source/composition reviews do not turn those stronger
-statements into theorems of the older PDFs.
-Any integration belongs in these same two papers, with one coherent
-argument rather than chapters for successive increments. The
-[paper architecture](../docs/paper_architecture.md) explains the division
-by method. Compact right-angled minimum and second-volume questions
-remain open; the sixth paper does not settle them.
+## Where the common arguments split
 
-## What the audit editions assume
+Finite57 first establishes one simultaneous corner-payment rule. Finite vertices
+then require exact spherical-forest maxima; ideal vertices require affine-factor
+charges and actual cusp multiplicities. Both branches reunite in one incidence
+contradiction. The higher-dimensional tail is separate and does not assume a
+facet is itself Coxeter.
 
-The manuscripts distinguish published results, internal geometric
-arguments and exact computed propositions. In particular, the arithmetic
-20 paper identifies its internal companion dimension/field reductions;
-the finite-volume paper identifies its inherited finite tables. Their
-proof maps give the precise statements and proof homes.
+The compact proofs start with the same original farthest vector. Ordinary,
+large-A and large-B/D component estimates have separate geometric arguments,
+then reunite through additive squared norms. Rank-specific endpoint and fork
+cases close the surviving configurations. Arithmeticity adds field/angle
+restrictions rather than a second unrelated geometric framework.
 
-Every proof-relevant algorithm is to be read as mathematics: its domain,
-steps, termination, soundness/completeness and exact output are separate
-obligations. The shared
-[computational proof contract](../docs/computational_proof_contract.md)
-sets out this convention. A hash match or a successful checker run does
-not establish geometric coverage by itself.
+The sharp right-angled paper shares one actual projection lemma between its
+general and entirely ideal cases. Spherical-code estimates and the relevant
+published facet minima enter at clearly identified later steps. Its internally
+sharp8/4 bounds do not assume arithmeticity.
 
-The parked field-specific arithmetic refinements are excluded from the
-current universal paper. Both
-[eight-field](appendices/compact_arithmetic_eight_field19.tex) and
-[K7](appendices/compact_arithmetic_k7_field19.tex) appendices, the
-[combined predecessor](compact_arithmetic20.tex), its
-[20-page PDF](build/compact_arithmetic20.pdf) and verification evidence
-are preserved. These are not additional papers for this audit.
+The ideal four-dimensional paper combines the published minimum, second-volume
+recognition and restricted24-cell chains as one sequence. It does not classify
+arbitrary ideal right-angled polytopes as24-cell garlands. The compact RA4 paper
+does not prove that the120-cell is the absolute volume minimum, nor that its
+double is the unique second-volume example; those remain open here.
 
-## Reproduce the declared checks
+## Supporting research and actual checks
 
-Run from the repository root. Inspect a plan first; it performs no proof
-computation. For the two priorities:
+General compact18 and arithmetic16 have complete reviewed supporting compositions
+and separately compiled conditional Lean modules. At exact compact18 the latest
+accepted necessary frontier is wholeB18/D18 after the
+[complete whole-A18 exclusion](../results/review_compact18_whole_a18_and_two_classical_group_frontier_root_acceptance_20261023.md).
+Arithmetic16 retains thirteen groups. Neither list asserts realized examples. The PDFs have not been revised
+for these later bounds.
+
+Each computational algorithm needs a mathematical specification: its complete
+domain, a termination and completeness argument, exact output, and the part
+actually replayed. The [computational proof contract](../docs/computational_proof_contract.md)
+and individual proof maps give those boundaries. A source hash or a successful
+PDF build proves neither coverage nor a mathematical theorem.
+
+Finite57 has all25 bounded B13/frontier replacement units passed and integrated.
+The full146-job selection, including136 script selections, nine Lean roots and
+one PDF build, has no combined runtime PASS or complete transitive regeneration.
+Historical and bounded replacements retain their individual execution records.
+
+The newest [A18 continuous scalar kernel](../docs/a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
+has an [actual bounded compile and separate ten-declaration audit PASS](../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).
+Actual geometry, legal prices and a real instance remain explicit. It verifies
+the two-dotted scalar branch, not wholeA18 or the newer two-family written
+frontier. The previous five-case kernel retains its original scope. See
+[formal/README.md](../formal/README.md) for all conditional logic boundaries.
+
+Run named checks through the existing coordinator/runner, for example:
 
 ```sh
-python3 -B scripts/verify_manuscript.py finite57 --mode full --pdf --plan
-python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core --pdf --plan
+python3 -B scripts/verify_manuscript.py finite57 --mode core
+python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core
 ```
 
-For sharpRA, remove `--plan` to execute its core checks sequentially.
-Finite57's two eager loader selections now have complete reviewed bounded
-replacements, all 25 actual units passed and integrated into the catalogue.
-The full plan is inventory evidence; no combined full run is claimed.
-Its
-[reproduction guide](../docs/finite_volume57_reproduce.md) gives the
-smaller runnable core and the completed bounded parts. The IDs for the
-other papers are in the table. Use `--ledger results/NEW_NAME.json` to
-save a new receipt; existing receipts are never overwritten. The
-[verification guide](../docs/manuscript_verification.md) explains
-`scripts`, `logic`, `core` and `full`, including inherited input scopes.
-The compact RA4 selection currently checks typesetting only.
-
-Finite57 has complete bounded replacement replays for D13 (19 parts),
-distance nine (2,196 units in56 batches), and B13/frontier (25 units).
-The [integration receipt](../results/finite57_complete_loader_catalogue_integration_20261022.json)
-binds the latter's full actual executions and current catalogue selection.
-With inherited matching records for 111 other commands, separate evidence
-covers the current 136 script selections. The current full plan has146
-jobs including nine Lean roots and a PDF build; core 11 is unchanged.
-There is no combined146-job runtime PASS or complete transitive regeneration.
-The earlier RAM refusal remains preserved and earns no credit.
-
-Selected Lean modules check internal implications with explicit external,
-script and geometric premises. They do not formalize every geometric
-argument. The [assumption register](../docs/manuscript_assumptions.md)
-and per-kernel maps identify those premises; printed axiom lists alone
-are not an assumption inventory.
-
-The latest [compact18 endpoint kernel](../docs/general_eighteen_endpoint_refinement_logic_20261023.md)
-has a [bounded compile and separate eleven-declaration audit PASS](../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json).
-It checks the five-case deduction and the finite integer seals in the
-analytic A18 endpoint theorem. These supporting results belong in the
-existing general compact paper; its frozen23 PDF is unchanged.
-
-All scientific, Lean and TeX work shares one exclusive lock. Batches
-require 40 GiB free disk and 6 GiB available RAM; script/TeX jobs retain
-their 59-second/1-GiB caps and Lean its 2,048-MiB cap. Temporary build
-products are removed after each batch. Below 20 GiB free disk, cleanup
-starts before further jobs. Proof sources, certificates, PDFs and frozen
-evidence are retained.
-
-The [audit-edition receipt](../results/six_papers_audit_edition_20261021.json)
-binds the preserved six source/PDF pairs before the arithmetic field-proof
-completion. The arithmetic predecessor is preserved in its
-[translation record](../results/compact_arithmetic20_internal_field_translation_preservation_20261021.json);
-the other five pairs are unchanged. The
-[current delivery record](../results/six_paper_final_tex_delivery_20261021.json)
-binds all six matching pairs and the separate verification scopes.
-These are internal audit editions, not
-externally refereed or end-to-end Lean-verified publications.
+One scientific/Lean/TeX child runs at a time. Admission requires40GiB disk and
+6GiB available RAM; the existing time, memory and thread caps remain. Remove
+owned unused products after every batch, preserving mathematical evidence.
+The preceding reader guide is [byte-preserved](../results/source_archive/reader_guides_before_classical_frontier_refresh_20261023/manifest.json).

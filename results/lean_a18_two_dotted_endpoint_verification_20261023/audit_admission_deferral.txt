@@ -1,0 +1,7 @@
+Separate axiom-audit attempt returned exit code1 BEFORE any Lean child launch.
+Command: python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.A18TwoDottedEndpointScalarKernel --audit-axioms
+Observed tool stderr ended:
+RuntimeError: Resource gate: disk=101.7GiB memory=6.0GiB; require 40/6GiB
+The displayed memory is rounded to one decimal. The actual admission comparison failed.
+There is NO actual separate axiom-audit output and NO separate audit PASS.
+The compilation above is retained and must not be rerun merely to obtain the audit.

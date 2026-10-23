@@ -49,9 +49,34 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`A18TwoDottedEndpointScalarKernel` has [bounded compilation and a separate
+ten-declaration actual axiom audit PASS](../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json).
+It derives the continuous radical gap, endpoint gains and one legally funded
+completed square over a genuine ordered ring. All ten actual axiom sets contain
+only `propext`, `Classical.choice` and `Quot.sound`; none uses `sorryAx`.
+The [immutable preparation map](../docs/a18_two_dotted_endpoint_scalar_kernel_logic_20261023.md)
+exposes actual geometric pressures, reference inventories, legal prices,
+orthogonality and the real interpretation as premises. The runtime receipt
+supplies the later status; preparation headers are not silently rewritten.
+It supports the two-dotted A18 branch, not the full whole-A18 theorem.
+Compilation took3.25s and the separate admitted audit1.77s. The earlier
+admission refusal and one unused-variable warning are preserved; owned work
+was removed. No successful earlier module was rerun.
+
+```sh
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.A18TwoDottedEndpointScalarKernel
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.A18TwoDottedEndpointScalarKernel --audit-axioms
+```
+
+The later written compact18 frontier has two groups (wholeB18/D18), after
+the [complete written A18 exclusion](../results/review_compact18_whole_a18_and_two_classical_group_frontier_root_acceptance_20261023.md).
+That geometric result is not formalized by this two-dotted scalar module.
+The older five-case and six-case modules below retain their original verified
+scope; they do not acquire the newer written exclusions automatically.
+
 `GeneralEighteenEndpointRefinement` has a [bounded compile and separate
 eleven-declaration actual audit PASS](../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json).
-It derives the five remaining compact18 forest cases at the SAME vertex
+It derives the five compact18 forest cases at its preserved checkpoint at the SAME vertex
 from eleven explicit written interfaces. Its arithmetic section proves
 thirty Taylor-table integer inequalities, finite Machin-sum bounds and
 all endpoint comparison signs by ordinary kernel reduction. Eight prints

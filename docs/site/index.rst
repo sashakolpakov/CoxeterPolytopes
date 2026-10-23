@@ -1,197 +1,140 @@
-Coxeter polytopes: papers and verification
-==========================================
+Coxeter polytopes: results and verification
+===========================================
 
-This project studies dimension bounds, volumes, and structures of hyperbolic
-Coxeter polytopes. Start with the :doc:`six papers <papers>`, especially the
-general finite-volume bound of 57 and the sharp right-angled bounds of 8 and 4.
-Each paper has a matching compiled PDF and a proof map identifying its inputs.
+This project studies dimension bounds, explicit reflection chambers and
+right-angled volume/structure problems. There are **six paper families**,
+with matching TeX/PDF editions and separately scoped mathematical reviews,
+exact computations and Lean kernels. Updated23 October2026.
 
-The papers are complete at their declared published-result and finite-data
-boundaries. Internal mathematical reviews, exact script checks, PDF builds,
-and conditional Lean proofs provide different kinds of evidence. None is a
-claim of external refereeing or an end-to-end formalization of the geometry.
-The :doc:`verification status <verification>` keeps those distinctions explicit.
+Current dimension bounds
+------------------------
 
-.. list-table:: Dimension results and their proof homes
+The new ceilings are internally reviewed written proofs. They are distinct
+from published theorems, external refereeing and full geometric formalization.
+
+.. list-table:: Dimension comparison
    :header-rows: 1
-   :widths: 42 26 32
+   :widths: 43 16 18 23
 
    * - Class
-     - Bound in the compiled paper
-     - Later internally reviewed written result
-   * - General finite volume
-     - 57
-     - 57
-   * - General compact
-     - 23
-     - 18; supporting proof, not in the 23 PDF
-   * - Compact arithmetic Coxeter
-     - 20
-     - 16 over every actual admissible field; not in the 20 PDF
-   * - Right-angled finite volume
-     - 8, sharp
+     - Largest example
+     - Published ceiling
+     - Repository ceiling
+   * - General Coxeter, finite volume
+     - 21
+     - 995
+     - **57**
+   * - General compact Coxeter
      - 8
-   * - Entirely ideal right-angled
-     - 4, sharp
+     - 29
+     - **18**
+   * - Compact arithmetic Coxeter
+     - 8
+     - 29
+     - **16**
+   * - Noncompact arithmetic Coxeter
+     - 21
+     - 21
+     - **21**, published and sharp
+   * - Right-angled, finite volume, all vertices
+     - 8
+     - 12
+     - **8**, internally sharp
+   * - Right-angled, entirely ideal
      - 4
+     - 6
+     - **4**, internally sharp
+   * - Right-angled, compact
+     - 4
+     - 4
+     - **4**, published and sharp
 
-The finite-volume search also has a new
-:download:`isolated parallel short-fork theorem <../../results/review_finite57_isolated_parallel_short_fork_financing_root_acceptance_20261022.md>`:
-seven actual receiving cusp families finance the full selected transfers,
-with minimum remaining curvature3,485. Global coverage for56 remains open.
-The accepted :download:`merged short-fork matching <../../results/review_finite57_merged_short_fork_matching_root_acceptance_20261023.md>`
-adds sources with a private eligible receiver or at least two merging
-neighbors, retaining the partial pentagon rule. The later
-:download:`any-merging theorem <../../results/review_finite57_all_merging_short_fork_residual_pentagon_thirds_root_acceptance_20261023.md>`
-finances EVERY remaining heavy source with at least one merging edge,
-including the sole-shared case, with receiver caps1064/3 and2177/6.
-Zero merging-degree and other costly domains remain open; this does not prove56.
+The compact18 and arithmetic16 arguments are supporting work in the existing
+compact paper families; their frozen PDFs still state23 and20. Arithmetic
+reflection lattices automatically admit the quadratic-form model: “first type”
+is not an additional restriction. See the
+:download:`current guide <../current_bounds_and_verification.md>` and
+:download:`published-input register <../manuscript_assumptions.md>`.
 
-The construction lane has :download:`two further actual edges and a new
-double-H3 corner <../../results/review_glued_e7_a2_post_b2_return_and_double_h3_root_acceptance_20261023.md>`
-in the original glued nine-dimensional host. Ambient finite volume and
-a new polytope example remain unresolved.
+At exact compact dimension18, only **wholeB18 or wholeD18** remains in the
+accepted necessary frontier. The complete
+:download:`B17+actual-I exclusion <../../results/review_compact18_whole_b17_actual_i_and_four_group_frontier_root_acceptance_20261023.md>`
+and :download:`D17+actual-I exclusion <../../results/review_compact18_whole_d17_actual_i_and_three_group_frontier_root_acceptance_20261023.md>`
+remove two groups, and the new
+:download:`whole-A18 exclusion <../../results/review_compact18_whole_a18_and_two_classical_group_frontier_root_acceptance_20261023.md>`
+removes the third. It uses complete actual endpoint classification, the native
+angle gap and a positive H4+A1 projection in the last case. This geometric
+result is written and internally reviewed, not Lean-verified. The remaining
+groups are necessary configurations, not examples; the ceiling stays18.
+Arithmetic16 still has thirteen groups.
 
-The other two papers concern ideal and compact right-angled polytopes in
-dimension four. The compact volume minimum and second-volume problems remain
-open. No new higher-dimensional example is claimed here.
+The six papers
+--------------
 
-The latest supporting written proof excludes the last whole D19 family
-through all six long-head classes, completing the dimension-nineteen frontier
-and proving global compact dimension at most18. Its `acceptance and full review bindings
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/compact_dimension18_global_written_acceptance_20261022.json>`_
-record the complete manual argument. The arithmetic dimension-seventeen
-frontier is now also closed, including whole A17. The entire
-D16+actual-I forest is excluded by
-the actual-degree reduction and complete quadratic, cubic and quartic
-contradictions. Its `full review and root acceptance
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/d16_actual_i_exclusion_and_finite57_hexagon_root_acceptance_20261022.md>`_
-also record complete selected-domain financing for finite57 all-heavy
-hexagons at actual nonadjacent cusps. Neither result lowers a global
-ceiling by itself. The later `whole-D17 exclusion
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_arithmetic17_whole_d17_complete_exclusion_root_acceptance_20261022.md>`_
-uses complete field reductions and a36-field/120-pair exact census. Its
-two survivors both violate the same legally funded head/fork norm budget.
-All four actual bounded units passed. A scalar Lean kernel compiled and
-passed a separate four-declaration audit; geometry, complete enumeration
-and paid-reference applicability remain explicit written inputs. The
-arithmetic ceiling at that checkpoint stayed17. The later `complete B17 exclusion
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_arithmetic17_whole_b17_complete_exclusion_root_acceptance_20261022.md>`_
-has full internal review, including all finite-head branches and the
-derived B17 applicability of the unchanged census. Both surviving pairs
-contradict the same funded norm inequality. The `A17 endpoint theorem
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_arithmetic17_whole_a17_endpoint_reduction_root_acceptance_20261022.md>`_
-isolates both ends, excludes the golden field and bounds both edge cosh
-lengths below2.1. The later geometric reduction forces one finite
-endpoint and derives four possible actual fields. The `complete A17
-quadratic exclusion
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_arithmetic17_whole_a17_quadratic_exclusion_root_acceptance_20261022.md>`_
-has full source/runtime/composition review: three batches and a separate
-complete replay checked25 fields and159 ordered pairs, with zero survivors.
-This left the two actual cubic fields K7 and K9. Their `complete actual census
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json>`_
-now has two field units and a separate all-record replay: all2,432 coefficient
-triples were checked, with zero survivors. The `complete global16 proof
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md>`_
-and its `full review and root acceptance
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md>`_
-close all fourteen original forest groups. The prior global17 theorem
-supplies the higher-dimensional tail, giving the global compact arithmetic
-ceiling16. Its conditional final composition now has a
-:download:`bounded Lean compile and separate three-declaration audit PASS <../../results/lean_arithmetic16_composition_verification_20261022/manifest.json>`,
-with27 explicit external inputs and no geometric instance. The printed
-arithmetic20 paper and all six editions are unchanged.
+.. list-table:: Current frozen editions
+   :header-rows: 1
+   :widths: 53 30 17
 
-At exact compact dimension18, the
-:download:`complete A16 closure <../../results/review_compact18_whole_a16_row_root_acceptance_20261022.md>`
-closes both actual typed-seven alternatives without arithmeticity. The new
-:download:`universal A12 energy theorem <../../results/review_compact_a12_point65_and_general18_eight_groups_root_acceptance_20261022.md>`
-proves energy above13/20 with arbitrary finite spectators and closes its
-whole row too. The later
-:download:`complete D16 typed-seven exclusion <../../results/review_compact18_whole_d16_typed_seven_root_acceptance_and_seven_group_frontier_20261022.md>`
-closes both actual N7/O7 forests without arithmeticity. The new
-:download:`complete B16 typed-seven exclusion <../../results/review_compact18_whole_b16_typed_seven_root_acceptance_and_six_group_frontier_20261023.md>`
-uses an actual neighboring A16 endpoint and one funded head/endpoint
-reference to leave **six necessary groups** after A12/A15/A16/D16.
-The later :download:`complete A17 acceptance <../../results/review_compact18_whole_a17_actual_i_and_five_group_frontier_root_acceptance_20261023.md>`
-and :download:`ordinary D17 exclusion <../../results/review_compact18_d17_ordinary_rank_one_root_acceptance_20261023.md>`
-leave **five necessary groups**: whole A18, B17+actual I, whole B18,
-D17+actual I and whole D18. The
-:download:`analytic A18 endpoint theorem <../../results/review_compact18_a18_paired_finite_analytic_root_acceptance_20261023.md>`
-also excludes two isolated finite endpoint opposites; it does not exclude
-the whole group. The :download:`new endpoint kernel <../general_eighteen_endpoint_refinement_logic_20261023.md>`
-has a :download:`bounded compile and separate eleven-declaration audit PASS <../../results/lean_general18_endpoint_refinement_verification_20261023/manifest.json>`
-for the five-case logic and literal endpoint integer seals. Actual geometry
-and analytic sign transport remain explicit written inputs. The EARLIER
-:download:`conditional six-group kernel <../general_eighteen_frontier_refinement_logic_20261023.md>`
-has a :download:`bounded compile and separate six-declaration audit PASS <../../results/lean_general18_six_group_frontier_verification_20261023/manifest.json>`
-under nine written premises. Actual geometry remains external; no instance
-or global17 theorem is supplied.
-The :download:`ordinary dihedral floor above3/19 <../../results/review_compact_ordinary_dihedral_three_nineteenths_root_acceptance_20261022.md>`
-closes arithmetic dimension16's ordinary D14 spectator. The
-:download:`complete D14 acceptance <../../results/review_arithmetic16_whole_d14_root_acceptance_and_thirteen_group_frontier_20261022.md>`
-also closes both actual typed-seven defects. No global ceiling or example changes.
+   * - Paper
+     - Result in PDF
+     - Read
+   * - General finite volume
+     - Dimension at most57
+     - :download:`48 pages <../../manuscripts/build/finite_volume57.pdf>`
+   * - Sharp right-angled dimensions
+     - Finite volume8; entirely ideal4
+     - :download:`5 pages <../../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf>`
+   * - General compact
+     - Dimension at most23
+     - :download:`36 pages <../../manuscripts/build/compact_farthest_vertex_bounds.pdf>`
+   * - Compact arithmetic
+     - Dimension at most20
+     - :download:`21 pages <../../manuscripts/build/compact_arithmetic_dimension_bound.pdf>`
+   * - Ideal right-angled four-volume and structure
+     - Minimum, second volume, restricted chains
+     - :download:`17 pages <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
+   * - Compact right-angled four-volume constraints
+     - Capacity, excess and recognition
+     - :download:`14 pages <../../manuscripts/build/compact_ra4_volume_constraints.pdf>`
 
-At exact dimension16, a fresh complete nineteen-group list and the
-`accepted refinement
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_arithmetic16_whole_a16_and_universal_a3_root_acceptance_20261022.md>`_
-now leave **thirteen necessary groups**. The closures include the selected
-A14+actual-I+ordinary-A1 subcase, D13 with rank-three spectators, ordinary
-rank-five A11, B14 with either typed-seven defect, whole A16, A11+O7+A3 and D14.
-The common advances are arithmetic A11 energy above13/20, nonarithmetic A3
-energy above13/50, and one-reference actual endpoint/finite-anchor arguments.
-The :doc:`verification guide <verification>` preserves the exact boundaries.
-This does not prove dimension15 or realize any remaining forest. A separate
-:download:`conditional frontier kernel <../arithmetic_sixteen_frontier_refinement_logic_20261022.md>`
-now has a
-:download:`bounded compile and separate six-declaration axiom audit PASS <../../results/lean_arithmetic16_frontier_thirteen_group_verification_20261022/manifest.json>`
-under nine explicit written interfaces, with no ``sorryAx``. Failed/refused
-predecessors remain preserved. Global ceilings remain57/18/16.
+All six are **written, compiled and internally reviewed**. The57 paper has
+12 pages of main exposition and36 pages of essential appendices. The
+:download:`reader index <../../manuscripts/README.md>` maps each result to its
+technique, source, proof map and verification ID. Earlier notes and refinements
+are not additional proposed papers.
 
-The distinct
-:download:`glued golden E7/A2 construction <../../results/review_glued_e7_a2_second_ambient_edge_and_quadrilateral_root_acceptance_20261022.md>`
-has accepted actual edges, full finite germs and complete compact triangle
-and quadrilateral faces. The later
-:download:`actual U edge <../../results/review_glued_e7_a2_released_e2_actual_a5_bridge_root_acceptance_20261023.md>`
-and :download:`actual F edge <../../results/review_glued_e7_a2_v_e2_actual_d4_edge_root_acceptance_20261023.md>`
-reach full H3+A5+A1 and H3+D4+A1+[2b] corners. Their complete first-wall
-proofs also show the later mirrors T and P2 are nonactual. Finite
-nine-dimensional chamber volume remains unresolved. The accepted
-:download:`whole H3+D4 face <../../results/review_glued_e7_a2_complete_right_hexagon_root_acceptance_20261023.md>`
-is a compact right-angled hexagon of area pi. Its finite face symmetries
-are not ambient periods; no new polytope example is claimed.
+Recent verified work
+--------------------
 
-The literal norm239 and norm379 construction lattices are proved
-nonreflective by original integral infinite-order chamber periods.
-The norm379 fourth edge reaches a full E8 corner with an isolated long
-wall. Its `complete proof and acceptance
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_prime379_fourth_germ_original_period_root_acceptance_20261022.md>`_
-bind five actual profile runs and a separate combine, all15 selectors
-and294 scalar rows. The earlier RAM refusal remains preserved with zero
-execution credit. These conclusions concern the two original lattices only.
-No new polytope example is claimed.
-The distinct composite551 literal host is now also `nonreflective
-<https://github.com/sashakolpakov/CoxeterPolytopes/blob/main/results/review_composite551_binary_release_and_literal_nonreflectivity_root_acceptance_20261022.md>`_.
-Seven actual transverse profile runs and a separate combine give an
-E7+two-A1 corner. The subsequent complete manual next edge and original
-integral chamber period close that module; this is not a new worker run,
-example, or exclusion of its whole commensurability class.
-The compact18 conditional composition now has bounded compilation and a
-separate five-declaration actual axiom audit under23 named written premises.
-The six compiled paper editions are unchanged.
+The :download:`A18 continuous scalar kernel receipt <../../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json>`
+records bounded compilation and a SEPARATE actual audit of ten declarations.
+It proves continuous ordered-ring inequalities and paid-square logic for the
+two-dotted endpoint branch. Actual geometry and legal-price premises remain
+explicit. All printed dependencies are standard Lean foundational axioms;
+there is no ``sorryAx``. This is not a whole-A18 formalization or a formal
+verification of the later two-family frontier.
+
+The finite-volume57 lane now has a
+:download:`complete finite-centre classification, safe union and heavy escape theorem <../../results/review_finite57_finite_centre_safe_union_and_heavy_escape_root_acceptance_20261023.md>`.
+Costly and shared-capacity exits remain, so no56 theorem is claimed.
+The :download:`latest glued-host continuation <../../results/review_glued_e7_a2_heptagon_and_ambient_e2_edge_full_scope_root_acceptance_20261023.md>`
+closes an actual heptagon and proves a further ambient edge. Finite chamber
+volume is unresolved; this is not a new nine-dimensional example.
+
+Read and reproduce
+------------------
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Read and reproduce
+   :maxdepth: 1
 
    papers
+   methods
    verification
    reproducibility
-   methods
    scope
 
-The source repository is `sashakolpakov/CoxeterPolytopes
-<https://github.com/sashakolpakov/CoxeterPolytopes>`_. Repository publication,
-Pages deployment, and release-data availability are separate from the local
-proof records described here; this site does not certify a completed upload.
-
+The `GitHub repository <https://github.com/sashakolpakov/CoxeterPolytopes>`_
+contains the source arguments and evidence. Before interpreting a PASS, read
+its declared scope: source review, arithmetic replay, conditional kernel logic
+and full geometric formalization are different checks. The optional936-file
+bulk payload has not been uploaded and is excluded from Git.
