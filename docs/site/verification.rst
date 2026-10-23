@@ -160,21 +160,57 @@ retain zero verification credit. The6GiB admission gate is unchanged;
 the later full A12/A13 geometry is outside this module. Its source and map
 remain dated preparation records, superseded in execution status by the receipt.
 
-The :download:`new B18/D18 terminal reductions <../../results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md>`
-have full written proofs and outside/root reviews. D18 has both actual fork
-cosh lengths<12, or<10 in its strong5 branch. The selected
-:download:`strong17 B18 pure-helper/isolated-short branch <../../results/review_b18_strong_helper_actual_a17_neighbor_root_acceptance_20261023.md>`
-is now excluded entirely. The selected
-:download:`weak pure dotted D18 centre16 branch <../../results/review_compact18_d18_weak_pure_dotted_centre_branch_complete_root_acceptance_20261023.md>`
-is also fully excluded. Complete actual fork forcing and all three far-profile
-proofs use one funded reference, including zero and unbounded mutuals.
-The new :download:`finite-own pure centre16 theorem <../../results/review_compact18_d18_finite_own_weak_pure_centre_root_acceptance_20261023.md>`
-also closes the finite-own version, using freshly reconstructed finite-g
-constants and every signed fork case. Thus no weak PURE far-left3 helper
-remains. The new :download:`unconditional isolated17 theorem <../../results/review_compact18_b18_unconditional_isolated_seventeen_root_acceptance_20261023.md>`
-closes every isolated17 own label, with no strong17 or short-opposite
-premise. Other centre/terminal profiles remain. These are written mathematical
-theorems, not full geometric Lean results; neither whole family is excluded.
+The :download:`complete B18 terminal inventory <../../results/review_compact18_b18_uniform_terminal_lengths_complete_seventeen_inventory_root_acceptance_20261023.md>`
+provides unconditional S17/S18 sum and actual edge-length bounds, using
+one original farthest vector. The :download:`near3/own6 exclusion <../../results/review_compact18_b18_near_three_own_six_complete_short_exclusion_root_acceptance_20261023.md>`
+retains every actual short-opposite role and mutual range. The
+:download:`finite-own far-helper exclusion <../../results/review_compact18_b18_all_finite_far_helper17_raw_prefix_root_acceptance_20261023.md>`
+uses actual H4 finite projections and full A2 cores, all reference cross
+terms and legal individual prices. The
+:download:`complete dotted far-helper exclusion <../../results/review_compact18_b18_dotted_far_helper17_complete_root_acceptance_20261023.md>`
+now leaves only the short-contact family. It retains every actual short and
+mutual branch, then uses a full actual A17+I neighbour with a freshly proved
+height ratio and1.061 comparison. The neighbour is never chosen farthest.
+Its :download:`explicit price erratum <../../results/compact18_b18_strong_helper_neighbor_one_weak_far_opposite_anchor_payment_erratum_20261023.md>`
+corrects the asymmetric opposite anchor to .013, fitting>.134; every gain
+is unchanged. Historical source/review/gate bytes and the predecessor are
+preserved, with no retrospective PASS for the false copied sentence.
+The :download:`D18 complete centre list <../../results/review_compact18_d18_complete_centre16_inventory_two_holdouts_root_acceptance_20261023.md>`
+and :download:`strong15/finite-fork reduction <../../results/review_compact18_d18_nonpure_strong15_finite_fork3_head_root_acceptance_20261023.md>`
+leave two specified weak-centre profiles, retaining both actual fork signs.
+These written results exclude neither whole family nor dimension18.
+
+The :download:`B18 terminal-pressure map <../b18_terminal_pressure_kernel_logic_20261023.md>`
+has full different-author static review and
+:download:`root precompile clearance <../../results/review_b18_terminal_pressure_kernel_root_precompile_acceptance_20261023.md>`.
+Its :download:`actual compile and separate ten-declaration audit PASS <../../results/lean_b18_terminal_pressure_verification_20261023/manifest.json>`
+took1.71seconds and1.16seconds, with no successful compilation rerun.
+All ten prints use only propext, Classical.choice and Quot.sound; no
+``sorryAx`` occurs. Primitive scalar products/squares imply the unbounded
+polynomial seal and finite radical/convex-sum contradiction. Actual
+geometry, complete inventories, original-vector pressure, terminal sums
+and a real instance remain ordinary explicit premises. This verifies
+one near3/own6 scalar argument, not the whole geometric theorem or later
+role exclusions. Two warnings are retained; owned temporary work is absent.
+
+The :download:`fresh arithmetic B16 head theorem <../../results/review_arithmetic16_whole_b16_head_near_short_three_scale_root_acceptance_20261023.md>`
+uses rank16 strong6..14 without an initial5 premise, forcing head isolation
+and2<U<12 over all actual fields. The
+:download:`complete short-family theorem <../../results/review_arithmetic16_whole_b16_complete_short_white_isolated_dotted_field_root_acceptance_20261023.md>`
+now excludes EVERY nonisolated short opposite. Its unconditional C<16
+bound has a tight SAME-vector strong5 norm>1.000007005; weak5 is stronger.
+The complete seven A15-white roles, all owns, every actual null and both
+orientations are retained. Full ambient field locking gives eleven
+quadratic models; ORIGINAL K-basis square tests dispose of all of them,
+including the full Q(sqrt13) ring and both true square-norm exceptions.
+
+The remaining short cap is isolated dotted. ACTUAL K=Q(U)=Q(V) has
+degree2 or3, strict physical/conjugate strips and UV/2 integral, derived
+from explicit ORIGINAL-scaled long and two-cycles. No individual Cartan
+entry, disconnected scale relation, B18 decrement or rank17 census is
+assumed. This is reviewed written mathematics, not a Lean instance,
+executed field census or wholeB16 exclusion. The pair, original group15
+and the arithmetic ceiling16 remain open.
 
 Finite-volume discharge and construction
 ----------------------------------------
@@ -200,37 +236,44 @@ there is no universal dimension56 result. The older scalar/chain kernel does
 not formalize this newer geometry or create its graph instances.
 
 The :download:`zero-exchanged costly-exit financing theorem <../../results/review_finite57_zero_exchanged_bad_centre_affine_financing_root_acceptance_20261023.md>`
-pays full-table rows4/5/6/11. Actual positive affine kernels and the complete
-fifteen-parent recovery prove the global source multiplicities. Canonical
-cusp budgets retain all old shared loads, with smallest remaining balance
-5161/2. Zero-exchanged rows7/8 and positive exchanged products remain;
-there is no universal364 cap or dimension56 theorem.
+pays full-table rows4/5/6/11 through complete actual cusp recovery and all
+shared debts. The :download:`new all-row7/near-row8 theorem <../../results/review_finite57_zero_exchanged_all_row7_near_row8_financing_root_acceptance_20261023.md>`
+pays every zero-exchanged row7 and the near orientation of row8. Positive
+actual finite projections supply A4/B4 receivers; full restorer products
+force at most ONE source across both A4 ports. All previous charges are
+retained and the largest new finite cost is358<364. Far-row7 instead
+has an actual ideal short-leaf endpoint already financed by J.
 
-The :download:`full glued-host period theorem <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`
-now proves this literal host nonreflective. Both23-profile edge proofs establish
-actual vertices and their full germs. The first proof's excluded-row signs
-have a :download:`reviewed precision successor <../../results/review_glued_e7_a2_e2_release_five_sign_successor_root_acceptance_20261023.md>`
-with byte-preserved history. A product of individually nonintegral involutions
-preserves the entire original module and full chamber; trace5+4phi>10 proves
-infinite order, infinite reflection-group index and infinite chamber volume.
-No whole commensurability class, field or dimension is excluded. This is
-internally reviewed written mathematics, with explicit arithmetic-lattice and
-reflection-chamber inputs, not a new example or a Lean geometric instance.
+Among still-unpaid nonheavy finite zero-exchanged exits only FAR-row8
+remains. Its actual affine B4 accounts for rank55 on a two-face, not a
+rank56 edge or a virtual affine A1. Immediate finite receivers cost
+371.75/365 and cannot accept8 under364. Positive exchanged products and
+complete simultaneous coverage remain open. There is no56 theorem.
 
-A different :download:`original squared-unit coupling host <../../results/review_h9_squared_unit_glued_host_first_two_actual_edges_root_acceptance_20261023.md>`
-has complete first-wall proofs, a
-:download:`whole compact E7 quadrilateral face <../../results/review_h9_squared_unit_third_edge_full_e7_quadrilateral_root_acceptance_20261023.md>`
-and an :download:`actual ambient D6 edge <../../results/review_h9_squared_unit_first_d6_ambient_edge_root_acceptance_20261023.md>`.
-Two :download:`further actual edges reach a full D6+B3 corner <../../results/review_h9_squared_unit_d6_b2_to_b3_actual_edges_root_acceptance_20261023.md>`;
-their nine-profile proof includes every primitive norm class and proves the
-tied norm-four mirror redundant, leaving a unique actual norm-two wall.
-These are written, different-author-reviewed and root-accepted construction
-results. The subsequent :download:`long D6-leaf edge and original involution <../../results/review_h9_squared_unit_d6_long_leaf_edge_original_involution_root_acceptance_20261023.md>`
-have a complete nine-profile firstness proof and all ten original basis
-columns. Two individually nonintegral reflections have an original product
-preserving the full chamber, of order exactly two and trace6. This finite
-symmetry gives neither an infinite-period obstruction nor a finite-volume
-conclusion. Ambient finite volume and a new H9 example remain unproved.
+The :download:`glued-host period theorem <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`
+proves that literal host nonreflective. The different
+:download:`squared-unit host is now also nonreflective <../../results/review_h9_squared_unit_e7_return_original_period_literal_nonreflectivity_root_acceptance_20261023.md>`.
+A complete15-profile actual return to E7+A2 and all ten original basis
+columns establish a new chamber symmetry. Its product with the earlier
+original involution has trace16phi^6=80+128phi>10 and infinite order.
+Disjoint chamber balls then give infinite volume. The earlier symmetry
+of order two alone supplied no such conclusion. Neither theorem excludes
+a whole commensurability class or gives a new example or geometric Lean
+instance.
+
+A genuinely different :download:`prime41 original host <../../results/review_h9_cubed_unit_prime41_original_host_first_edge_root_acceptance_20261023.md>`
+has admissible signatures, a complete primitive root pool and a complete
+first actual edge. Its :download:`second actual unit edge <../../results/review_h9_prime41_second_actual_unit_edge_original_germ_obstruction_root_acceptance_20261023.md>`
+includes all eight finite profiles, both embeddings, complete closed
+strips, dyadic/prime primitivity and unknown-wall firstness. The unique
+prescribed metric return between the repeated germs is nonoriginal;
+no later period is thereby excluded. The
+:download:`third actual edge and whole E7 hexagon <../../results/review_h9_prime41_third_actual_edge_original_involution_full_hexagon_root_acceptance_20261023.md>`
+have a complete eight-profile firstness proof, an original map checked
+on all ten basis columns, full-germ chamber preservation and convex
+whole-face closure. The symmetry has order TWO and trace6; the compact
+hexagon has area4pi/3. Neither supplies ambient finite volume, an
+infinite period or a new H9 example.
 
 Reproduction and resources
 --------------------------
@@ -247,5 +290,5 @@ Strict Sphinx and actual staged-index hygiene checks use the separate
 publication watchdog and do not run mathematics. Generated sites, compiler
 objects and caches are not publication assets. The optional936-file bulk
 payload remains unuploaded and excluded from Git. The preceding reader
-guides are :download:`byte-preserved <../../results/source_archive/reader_guides_before_classical_frontier_refresh_20261023/manifest.json>`;
+guides are :download:`byte-preserved <../../results/source_archive/reader_guides_before_b18_terminal_and_prime41_refresh_20261023/manifest.json>`;
 historical receipts retain their original bindings.

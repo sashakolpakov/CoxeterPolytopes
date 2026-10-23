@@ -49,6 +49,31 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+
+`B18TerminalPressureKernel` has full different-author source/map review,
+[root precompile clearance](../results/review_b18_terminal_pressure_kernel_root_precompile_acceptance_20261023.md)
+and an [actual bounded compile and separate ten-declaration axiom audit PASS](../results/lean_b18_terminal_pressure_verification_20261023/manifest.json).
+Compilation took1.71seconds and the separate audit1.16seconds. The audit
+reused the object; no old successful module ran. All ten actual prints
+contain only propext, Classical.choice and Quot.sound, with no sorryAx.
+Two unused-variable warnings are preserved; owned temporary work is absent.
+
+The [logic map](../docs/b18_terminal_pressure_kernel_logic_20261023.md)
+exposes actual geometry, inventories, future feasible points, original
+farthest-vector pressure, terminal sums and the real instance as ordinary
+explicit premises. The code derives the continuous unbounded polynomial
+seal and subcritical radical/convex-sum contradiction. It does not verify
+the full geometric near3/own6 theorem, wholeB18 or later role exclusions.
+Its source/map preparation labels remain immutable history; actual PASS
+comes from the execution receipt. The runner reports the2048MiB Lean cap,
+one thread and disk/RAM monitoring; no process-tree RSS peak is recorded
+or inferred for this package.
+
+```sh
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.B18TerminalPressureKernel
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.B18TerminalPressureKernel --audit-axioms
+```
+
 `A13IEndpointGraftScalarKernel` has full different-author source/map review
 and [root precompile acceptance](../results/review_a13_i_endpoint_graft_scalar_kernel_root_precompile_acceptance_20261023.md),
 and an [actual compile PASS in1.33seconds](../results/lean_a13_i_endpoint_graft_verification_20261023/pre_audit_manifest.json),

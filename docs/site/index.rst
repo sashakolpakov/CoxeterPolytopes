@@ -112,74 +112,65 @@ are not additional proposed papers.
 Recent verified work
 --------------------
 
-The :download:`heavy-centre forest kernel <../../results/lean_heavy_centre_forest_verification_20261023/manifest.json>`
-has bounded compilation and a separate actual audit of eleven declarations.
-It derives ordered-ring cone bounds, finite-chain no-return from two local
-geometric bridges and incidence algebra. Actual geometric and graph instances
-remain external. The initial RAM refusal is preserved; no older module ran.
+The :download:`new B18 terminal theorem <../../results/review_compact18_b18_uniform_terminal_lengths_complete_seventeen_inventory_root_acceptance_20261023.md>`
+gives unconditional SAME-vector sums S17<3.760 and S18<3.830, actual edge
+length bounds and a complete seventeenth-white inventory. The entire
+:download:`near3/own6 role <../../results/review_compact18_b18_near_three_own_six_complete_short_exclusion_root_acceptance_20261023.md>`
+and :download:`all finite-own far-helper roles <../../results/review_compact18_b18_all_finite_far_helper17_raw_prefix_root_acceptance_20261023.md>`
+are excluded. The :download:`complete dotted far-helper theorem <../../results/review_compact18_b18_dotted_far_helper17_complete_root_acceptance_20261023.md>`
+now leaves ONLY the short-wall contact family for the seventeenth opposite.
+Its actual neighbouring point is never assumed farthest; a freshly weakened
+comparison closes every zero/one/two weak-end pattern. A supporting anchor
+price correction is explicit and byte-preserved; all norm margins remain.
+The :download:`complete D18 centre inventory <../../results/review_compact18_d18_complete_centre16_inventory_two_holdouts_root_acceptance_20261023.md>`
+and :download:`strong15/finite-fork reduction <../../results/review_compact18_d18_nonpure_strong15_finite_fork3_head_root_acceptance_20261023.md>`
+leave two stated weak-centre profiles. Neither wholeB18 nor wholeD18 is
+excluded, and the global ceiling remains18.
 
-The :download:`A18 continuous scalar kernel receipt <../../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json>`
-records bounded compilation and a SEPARATE actual audit of ten declarations.
-It proves continuous ordered-ring inequalities and paid-square logic for the
-two-dotted endpoint branch. Actual geometry and legal-price premises remain
-explicit. All printed dependencies are standard Lean foundational axioms;
-there is no ``sorryAx``. This is not a whole-A18 formalization or a formal
-verification of the later two-family frontier.
+The :download:`fresh arithmetic B16 head theorem <../../results/review_arithmetic16_whole_b16_head_near_short_three_scale_root_acceptance_20261023.md>`
+and :download:`complete short-family reduction <../../results/review_arithmetic16_whole_b16_complete_short_white_isolated_dotted_field_root_acceptance_20261023.md>`
+now leave both actual opposites isolated, the short one dotted. EVERY
+nonisolated short role is excluded over all actual fields. The remaining
+pair has an actual quadratic/cubic field, strict conjugate strips and an
+additional half-product integrality condition. It is not excluded:
+original group15 and the arithmetic ceiling16 remain.
 
-The finite-volume57 lane now has a
-:download:`complete finite-centre classification, safe union and heavy escape theorem <../../results/review_finite57_finite_centre_safe_union_and_heavy_escape_root_acceptance_20261023.md>`.
-The new :download:`metric forest theorem <../../results/review_finite57_heavy_centre_forest_and_linear_exit_expansion_root_acceptance_20261023.md>`
-forces exactly H+2 actual exits from each heavy component of H vertices.
-The :download:`mixed row1/row2 receiver theorem <../../results/review_finite57_row_one_two_variable_cone_component_financing_root_acceptance_20261023.md>`
-now finances every full enlarged component whose nonheavy centre neighbours
-have either receiving type, retaining all prior credits. The subsequent
-:download:`zero-exchanged costly-exit financing theorem <../../results/review_finite57_zero_exchanged_bad_centre_affine_financing_root_acceptance_20261023.md>`
-pays four more full-table rows through complete actual cusp-parent recovery,
-retaining every shared debt. Zero-exchanged rows7/8 and positive exchanged
-products remain; no56 theorem is claimed.
-The :download:`latest compact reductions <../../results/review_compact18_b18_strong17_and_d18_point58_root_acceptance_20261023.md>`
-bound both D18 fork cosh lengths by12, or10 under a strong5 hypothesis.
-A selected :download:`strong17 B18 pure-helper/isolated-short branch <../../results/review_b18_strong_helper_actual_a17_neighbor_root_acceptance_20261023.md>`
-is now excluded, including its formerly open orthogonal locus. A selected
-:download:`weak pure dotted D18 centre16 branch <../../results/review_compact18_d18_weak_pure_dotted_centre_branch_complete_root_acceptance_20261023.md>`
-is also excluded by complete actual fork cases.
-The new :download:`unconditional isolated17 theorem <../../results/review_compact18_b18_unconditional_isolated_seventeen_root_acceptance_20261023.md>`
-excludes that entire role without strong17 or a short-opposite premise. The
-:download:`finite-own pure centre16 theorem <../../results/review_compact18_d18_finite_own_weak_pure_centre_root_acceptance_20261023.md>`
-also excludes the finite-own version of the weak pure dotted branch.
-Other centre16 roles remain; neither whole family is excluded.
+The :download:`zero-exchanged row7/near-row8 financing theorem <../../results/review_finite57_zero_exchanged_all_row7_near_row8_financing_root_acceptance_20261023.md>`
+retains every older payment. Full actual restorer products limit the A4
+finite receiver to one qualifying arrival across both possible ports.
+Far-row8 and positive exchanged products remain open; no56 theorem follows.
 
-The :download:`A13 scalar source/map <../a13_i_endpoint_graft_scalar_kernel_logic_20261023.md>`
-have a :download:`reviewed two-line repair <../../results/review_a13_endpoint_graft_two_identity_rewrites_root_preclear_20261023.md>`
-after an :download:`actual failed compile <../../results/lean_a13_i_endpoint_graft_verification_20261023/attempt_2_failed_compile.json>`.
-A later admitted retry has an :download:`actual compile PASS in1.33seconds <../../results/lean_a13_i_endpoint_graft_verification_20261023/pre_audit_manifest.json>`.
-The separate audit was initially refused before Lean at5.3GiB. A later
-:download:`actual eleven-declaration audit PASS <../../results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json>`
-took1.28seconds at6.34GiB RAM. It reran no successful compilation and
-uses no ``sorryAx``. Earlier failed prints earn zero credit; geometric
-premises stay external.
+The :download:`B18 scalar kernel <../../results/lean_b18_terminal_pressure_verification_20261023/manifest.json>`
+now has actual bounded compilation in1.71seconds and a SEPARATE ten-declaration
+audit in1.16seconds. The audit reused its object; no successful old module
+ran. All ten prints use standard foundational axioms and no ``sorryAx``.
+Actual geometry, inventories, original-vector pressure and terminal sums
+remain external. This is scalar verification for near3/own6, not wholeB18
+or later geometric exclusions. See its :download:`logic map <../b18_terminal_pressure_kernel_logic_20261023.md>`.
+Two unused-variable warnings are preserved; temporary proof work is absent.
 
-A different :download:`squared-unit host <../../results/review_h9_squared_unit_glued_host_first_two_actual_edges_root_acceptance_20261023.md>`
-has a :download:`whole compact E7 quadrilateral face <../../results/review_h9_squared_unit_third_edge_full_e7_quadrilateral_root_acceptance_20261023.md>`
-and an :download:`actual ambient D6 edge leaving it <../../results/review_h9_squared_unit_first_d6_ambient_edge_root_acceptance_20261023.md>`.
-Two :download:`further actual edges reach a full D6+B3 corner <../../results/review_h9_squared_unit_d6_b2_to_b3_actual_edges_root_acceptance_20261023.md>`.
-The subsequent :download:`long D6-leaf edge and original chamber involution <../../results/review_h9_squared_unit_d6_long_leaf_edge_original_involution_root_acceptance_20261023.md>`
-are proved. The symmetry has order exactly two and trace6. Ambient finite
-volume and compactness remain open; no new example is claimed.
+The earlier :download:`A13 eleven-declaration <../../results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json>`,
+:download:`A12 ten-declaration <../../results/lean_a12_adjusted_loss_verification_20261023/manifest.json>`,
+:download:`A18 ten-declaration <../../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json>`
+and :download:`heavy-centre eleven-declaration <../../results/lean_heavy_centre_forest_verification_20261023/manifest.json>`
+audits retain their exact conditional scopes. Preparation labels are
+historical; actual receipts supply execution status. Earlier failures and
+resource deferrals earn zero PASS credit. No end-to-end geometric
+formalization is claimed.
 
-The :download:`glued nine-dimensional host is proved nonreflective <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`.
-Two actual edge proofs and a universal original-module parity identity give
-an integral chamber stabilizer of trace5+4phi>10. Its infinite order proves
-infinite chamber volume. This closes one literal host and yields no example
-or commensurability-class exclusion.
+Both the :download:`glued H9 host <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`
+and the :download:`squared-unit host <../../results/review_h9_squared_unit_e7_return_original_period_literal_nonreflectivity_root_acceptance_20261023.md>`
+are now proved nonreflective by original chamber symmetries of infinite
+order. The latter product has trace16phi^6=80+128phi>10; its earlier
+order-two symmetry alone did not establish infinite volume. These close
+two literal hosts, not their whole commensurability classes.
 
-The new :download:`A12 scalar kernel <../a12_adjusted_loss_kernel_logic_20261023.md>`
-has :download:`bounded compilation and a separate ten-declaration audit PASS <../../results/lean_a12_adjusted_loss_verification_20261023/manifest.json>`.
-Compilation took2.37seconds and the separate audit1.51seconds; no ``sorryAx``
-occurs. Earlier refused/failed attempts are preserved. Actual geometry and
-field inventories remain external; the later universal A12/A13 theorems are
-outside this scalar module. The execution receipt supplies the later status
-of the immutable preparation source and logic map.
+A different :download:`prime41 host and first actual edge <../../results/review_h9_cubed_unit_prime41_original_host_first_edge_root_acceptance_20261023.md>`
+and its :download:`second actual unit edge <../../results/review_h9_prime41_second_actual_unit_edge_original_germ_obstruction_root_acceptance_20261023.md>`
+are proved with complete original-lattice firstness arguments. The
+:download:`third edge and original order-two symmetry <../../results/review_h9_prime41_third_actual_edge_original_involution_full_hexagon_root_acceptance_20261023.md>`
+close the WHOLE compact E7 hexagon, of area4pi/3. Ambient volume remains
+open; the symmetry is not an infinite period. There is no new example.
 
 Read and reproduce
 ------------------

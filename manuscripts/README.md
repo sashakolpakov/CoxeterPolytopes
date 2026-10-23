@@ -62,13 +62,22 @@ The PDFs have not been revised for these later bounds. The new compact
 terminal reductions and literal-host nonreflectivity belong to supporting
 research, not additional proposed manuscripts.
 
-The new mixed row1/row2 financing theorem belongs to the finite-volume family.
-The selected strong17 B18 branch, unconditional isolated17 exclusion and
-both finite/dotted weak pure D18 centre16 exclusions belong to the general
-compact family. The zero-exchanged costly-exit financing theorem belongs
-to the finite-volume family. The squared-unit host's actual edges, compact
-E7 face, full D6+B3 corners and original order-two chamber symmetry are
-construction research; ambient finite volume remains open.
+The finite-volume family now includes all zero-exchanged row7 and near-row8
+financing; far-row8 and positive exchanged products remain. The general
+compact family includes unconditional B18 terminal sums and complete
+inventories, the near3/own6 and COMPLETE finite/dotted far-helper exclusions,
+and the D18 strong15/two-profile centre reduction. No new global ceiling follows.
+The fresh arithmetic B16 head and COMPLETE short-family/field reduction
+belong in the arithmetic compact family. The remaining isolated dotted
+pair has actual degree2 or3; wholeB16 and group15 remain open. These are supporting
+results, not additional paper editions.
+
+The squared-unit construction host is now proved nonreflective by an
+original infinite-order chamber symmetry. The different prime41 host has
+three complete actual edges and a whole compact E7 hexagon, closed by
+an original order-two chamber symmetry; ambient volume remains open. Construction
+research does not add a seventh proposed paper or a new polytope example.
+
 The universal arithmetic A14>4/5 energy theorem and its two-ordinary-A1
 consumer belong to the same arithmetic family; the nine group IDs remain.
 
@@ -106,6 +115,11 @@ the two-dotted scalar branch, not wholeA18 or the newer two-family written
 frontier. The previous five-case kernel retains its original scope. See
 [formal/README.md](../formal/README.md) for all conditional logic boundaries.
 
+The [B18 terminal-pressure kernel](../docs/b18_terminal_pressure_kernel_logic_20261023.md)
+now has an [actual compile and separate ten-declaration audit PASS](../results/lean_b18_terminal_pressure_verification_20261023/manifest.json),
+with geometry and actual pressure premises external. Its scope is one
+near3/own6 scalar argument, not the whole B18 geometry or later exclusions.
+
 Run named checks through the existing coordinator/runner, for example:
 
 ```sh
@@ -116,4 +130,4 @@ python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core
 One scientific/Lean/TeX child runs at a time. Admission requires40GiB disk and
 6GiB available RAM; the existing time, memory and thread caps remain. Remove
 owned unused products after every batch, preserving mathematical evidence.
-The preceding reader guide is [byte-preserved](../results/source_archive/reader_guides_before_classical_frontier_refresh_20261023/manifest.json).
+The preceding reader guide is [byte-preserved](../results/source_archive/reader_guides_before_b18_terminal_and_prime41_refresh_20261023/manifest.json).
