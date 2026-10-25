@@ -31,8 +31,17 @@ compiler/configuration and the resulting object recorded in
 ledger prevents cache reuse. Output retention is bounded to 512KiB.
 
 The runner removes temporary Lean/C/IR/LSP and TeX outputs after every
-batch, including failure and entirely cached runs, while preserving proof
-objects, sources, certificates and final PDFs. Below2% free disk it
+batch, including failures and entirely cached runs. Objects needed by the
+next separate audit remain during that sequence. After a completed work
+item, [reproduction-safe cleanup](../results/tex_lean_repro_only_cleanup_20261025.json)
+removes regenerable objects and preserves exact legacy objects with their
+trace/hash provenance in a local byte-verified archive. Its manifest records
+original paths, hashes and nanosecond timestamps. Sources, certificates,
+compilation/audit evidence, final PDFs and pinned configuration remain.
+A fresh checkout can give sources newer timestamps: the runner must then
+refuse stale cache reuse. Do not change times to force acceptance or infer
+a source-to-legacy-object link from restoration. Only a necessary new replay
+should rebuild a missing target, followed by its separate actual audit. Below2% free disk it
 writes `.proof-batches/cleanup_needed_percentage_20261025.json`: the coordinating agent must
 start a cleanup agent before further jobs. The subprocess cannot spawn a
 Codex agent itself. Frozen evidence and active application data must be

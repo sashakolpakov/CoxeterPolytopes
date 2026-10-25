@@ -1,28 +1,26 @@
 # Working general compact17 proof map
 
 The [working article](../manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex)
-contains the complete dimension17 argument, including its independent
-higher-dimensional tail. Its current compiled source is933066bytes, SHA256
-`3727e4240e38f7c1caac871d121dcabd5599d2e540af6a96f16c78a3fd2dfe61`.
-The mathematical bodies, final conjunction and editorial successor have
-[coordinating source acceptance](../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json)
-after separate-author reviews. The [matching working PDF](../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf)
-now has an [actual bounded build](../results/compact_farthest_vertex_bounds_consolidated_build_20261018.json):
-284 pages and202 retained warnings, including66 overfull boxes, with no
-undefined references. This is a working verification copy; length, layout
-and rendered editorial review remain. The frozen36-page edition still
-states23 and retains its edition-specific proof map.
+contains the complete dimension17 argument and its independent higher-dimensional
+tail. Its current source is936002bytes, SHA256
+`6222f5c6cee8b30b2c1019d648bc31cde8bfcddf08f031a0355a3e7137c107ac`.
+The [editorial completion and root acceptance](../results/compact17_arithmetic15_editorial_completion_20261025.json)
+bind the separate source reviews and [matching285-page PDF](../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf).
+The [final monitored build](../results/compact17_editorial_layout_final_build_20261025.json)
+has no overfull boxes, undefined references or package warnings; nine underfull
+spacing warnings remain. Twelve named pages were visually inspected, including
+the contents, algorithm contract, repaired tables, long formulas and final
+conjunction. This is sampled visual review, not inspection of every page.
+The common exposition runs through page19; complete case arguments begin
+on page20. The frozen36-page edition still states23.
 
-The accepted mathematical/editorial preimage was932938bytes, SHA256
-`1f48adbbcccc156a808f4043ca03bdc6a4436f49a5671ca7aa6fbcdd9f03fe67`.
-It remains preserved. The later hashes come from only recorded TeX syntax
-repairs, with unchanged mathematical tokens and byte-verified inverse
-deltas: [interval row prefixes](../results/consolidated_interval_row_typesetting_equivalence_20261025.json),
-[alignment syntax](../results/consolidated_alignment_syntax_equivalence_20261025.json),
-[five display closes](../results/consolidated_display_delimiter_equivalence_20261025.json)
-and [one array row break](../results/source_archive/before_compact17_array_header_row_break_20261025/manifest.json).
-These receipts retain their original source-only scopes; the later build
-receipt supplies compilation evidence. Failed attempts remain preserved.
+The [earlier mathematical acceptance](../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json)
+and its source/syntax predecessors remain preserved. The
+[editorial preimages](../results/source_archive/compact17_arithmetic15_before_editorial_finish_20261025/manifest.json)
+and [complete layout deltas/reviews](../results/source_archive/compact17_arithmetic15_layout_finish_20261025/manifest.json)
+record the later navigation, internal references, layout and equivalent144
+grouped fractions. Every essential proof body remains. No arithmeticity,
+new enumeration, stronger bound or exploratory16 result entered the article.
 
 The common method fixes one original farthest vertex and one spatial
 vector with squared norm below one. Component projections give lower

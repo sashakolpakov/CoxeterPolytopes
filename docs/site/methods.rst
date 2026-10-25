@@ -8,8 +8,8 @@ written proof establishes that every actual case belongs to its domain.
 Angle payments and finite forests
 ---------------------------------
 
-The finite-volume and compact arithmetic dimension papers assign payments to
-corners of two-faces, then compare the accumulated payment with global
+The finite-volume paper and frozen compact arithmetic20 edition assign payments
+to corners of two-faces, then compare the accumulated payment with global
 incidence or curvature identities. Finite vertex links give spherical Coxeter
 forests; ideal links require their own affine factors and curvature accounting.
 Context states, chosen outputs, and priority rules prevent one geometric
@@ -23,10 +23,12 @@ unrelated faces or to lower-dimensional forests without proof.
 Farthest-vertex component energies
 ----------------------------------
 
-The general compact paper fixes one original farthest vector. Its orthogonal
-components have additive squared energies. Actual feasible positive points
+The general compact17 and compact arithmetic15 revisions fix one original
+farthest vector. Its orthogonal components have additive squared energies.
+Actual feasible positive points
 give lower bounds for those components; positive dual references and paid-foot
-corrections combine several inequalities for that same vector.
+corrections combine several inequalities for that same vector. Arithmeticity
+restricts actual fields and integral cycles after this common geometric budget.
 
 Finite white extensions, native angles, foreign components, zero-own contacts,
 and tail configurations require complete case inventories. The final forest

@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-25T17:44:36.660531+00:00",
+  "status": "CURRENT_RIGHT_ANGLED_SOURCE_AND_REPLAY_DOCUMENTATION_ASSEMBLY",
+  "scope": "Two existing right-angled paper families. Current sources/PDFs and prior actual execution records assembled without rerunning successful checks. Metadata equality is identity evidence only. No new combined replay or end-to-end geometry formalization.",
+  "packets": [
+    {
+      "id": "right_angled_sharp",
+      "tex": {
+        "path": "manuscripts/right_angled_sharp_dimension_bounds_publication.tex",
+        "bytes": 15738,
+        "sha256": "0c29a7869fa46e4e1a542d8ae6f4dfc7e616136c7a1aad3984d941a95cf89722"
+      },
+      "pdf": {
+        "path": "manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf",
+        "bytes": 207990,
+        "sha256": "609a9fc025b43ae5c899b1b37b1051e592de6a8142f3ffd275fcd9dca360d443"
+      },
+      "pages": 5,
+      "recorded_build_status": "PASS_TEX_BUILD",
+      "recorded_build_warnings": [],
+      "historical_core": {
+        "path": "results/right_angled_sharp_projection_height_core_verification_20261020.json",
+        "bytes": 23059,
+        "sha256": "2c290d5b7bf2b94221ce66420f12b936172b89f9b3fd990338c43ddb1f925680"
+      },
+      "historical_core_manuscript_sha256": "3c3ddd8540593004bcd5fb57832afc77ffc639268e66cb0ab29302b286654310",
+      "historical_core_binds_current_tex": false,
+      "reused_script_records": [
+        {
+          "id": "ideal_dimension4_model",
+          "source": {
+            "path": "scripts/check_ideal_right_angled_dimension4_model_20261020.py",
+            "bytes": 3612,
+            "sha256": "bb506ec1ee98dee1429d6e668553af40316ebdeda6b59b82bbf03b8f3a6dc261"
+          },
+          "execution_record": "results/right_angled_sharp_projection_height_core_verification_20261020.json",
+          "execution_status": "PASS_DECLARED_SCOPE",
+          "execution_coverage": "Exact24 standard unit normals,276Gram pairs,12opposite pairs,24displayed null vertices/cubical cusp links,actualfacet witnesses and scalar identity. No external theorem or universalgeometry proof.",
+          "source_unchanged_since_record": true,
+          "new_execution": false
+        },
+        {
+          "id": "right_angled_sharp_sos",
+          "source": {
+            "path": "scripts/check_right_angled_sharp_dimension_sos_20261020.py",
+            "bytes": 7217,
+            "sha256": "bd0ed1c4c1b7e18a219a2a8aca2b178dbe1d559d7e9ec90ad609150aedf8b2c3"
+          },
+          "execution_record": "results/right_angled_sharp_projection_height_core_verification_20261020.json",
+          "execution_status": "PASS_DECLARED_SCOPE",
+          "execution_coverage": "Exact12-variable polynomial identities for36rank2/216rank3 tensor contractions, explicit unit-ideal remainders, factor/positive coefficients, ratio27 and4-vector endpoint. No geometry/code enumeration.",
+          "source_unchanged_since_record": true,
+          "new_execution": false
+        }
+      ],
+      "conditional_lean_records": [
+        {
+          "module": "CoxeterProofs.RightAngledSharpDimensions",
+          "source": {
+            "path": "formal/CoxeterProofs/RightAngledSharpDimensions.lean",
+            "bytes": 12758,
+            "sha256": "e1844d73a3f07de6cc512e514b948dafef4253e272b3f98de36148543554e323"
+          },
+          "compile_ledger": {
+            "path": "results/right_angled_sharp_lean_compile_20261020.json",
+            "bytes": 1523,
+            "sha256": "e8ce17219350a1cb01290e1d03f3467a50fbc0a72cee0917e50bac958ecb63f1"
+          },
+          "separate_actual_axiom_audit_ledger": {
+            "path": "results/right_angled_sharp_lean_axiom_audit_20261020.json",
+            "bytes": 1443,
+            "sha256": "6158a46269fe471f53e5fd4961841d4091a1708e6c379641f0b5feda3038f671"
+          },
+          "recorded_audited_declarations": 12,
+          "source_unchanged_since_records": true,
+          "new_compilation_or_audit": false,
+          "scope": "Conditional internal deductions. Ordinary theorem parameters and external geometry/classification/script premises remain explicit.",
+          "selected_by_catalogue_core": true
+        },
+        {
+          "module": "CoxeterProofs.RightAngledCubicScalarKernel",
+          "source": {
+            "path": "formal/CoxeterProofs/RightAngledCubicScalarKernel.lean",
+            "bytes": 21805,
+            "sha256": "f55568035b8852a6284f1bd404c897758f30b301b1d85f38f09e4d9de365e6ee"
+          },
+          "compile_ledger": {
+            "path": "results/publication_logic_records_20261020/CoxeterProofs_RightAngledCubicScalarKernel_compile_60c61583d7d2.json",
+            "bytes": 1636,
+            "sha256": "60c61583d7d2f761a98b2fb057dca8ab018e1823c1b6df6cb5bf1c37174d0579"
+          },
+          "separate_actual_axiom_audit_ledger": {
+            "path": "results/publication_logic_records_20261020/CoxeterProofs_RightAngledCubicScalarKernel_audit_fc32261e5a63.json",
+            "bytes": 1554,
+            "sha256": "fc32261e5a6350eb3d2b54d89254a6d27963f18238b441f2981ad2f277c1a4e9"
+          },
+          "recorded_audited_declarations": 10,
+          "source_unchanged_since_records": true,
+          "new_compilation_or_audit": false,
+          "scope": "Conditional internal deductions. Ordinary theorem parameters and external geometry/classification/script premises remain explicit.",
+          "selected_by_catalogue_core": true
+        },
+        {
+          "module": "CoxeterProofs.RightAngledProjectionHeightKernel",
+          "source": {
+            "path": "formal/CoxeterProofs/RightAngledProjectionHeightKernel.lean",
+            "bytes": 12333,
+            "sha256": "2fac8028e432a2104a58e423c65fc38c9e214fed5f52210e408aabe3f15f0e90"
+          },
+          "compile_ledger": {
+            "path": "results/publication_logic_records_20261020/CoxeterProofs_RightAngledProjectionHeightKernel_compile_b7d81c1ede50.json",
+            "bytes": 1755,
+            "sha256": "b7d81c1ede501d4435ac1eef8caab2b8b5c1237610ef927dd6ffc212a97b12a9"
+          },
+          "separate_actual_axiom_audit_ledger": {
+            "path": "results/publication_logic_records_20261020/CoxeterProofs_RightAngledProjectionHeightKernel_audit_404b0b6ad657.json",
+            "bytes": 1673,
+            "sha256": "404b0b6ad657dd242bc03d33d92e7444febe77a038de44b53e979b466d8d884c"
+          },
+          "recorded_audited_declarations": 8,
+          "source_unchanged_since_records": true,
+          "new_compilation_or_audit": false,
+          "scope": "Conditional internal deductions. Ordinary theorem parameters and external geometry/classification/script premises remain explicit.",
+          "selected_by_catalogue_core": true
+        },
+        {
+          "module": "CoxeterProofs.RegularIdeal24CellHeightKernel",
+          "source": {
+            "path": "formal/CoxeterProofs/RegularIdeal24CellHeightKernel.lean",
+            "bytes": 4720,
+            "sha256": "633ae6fef8c5d0f0d0cafb2363d99f38e6922405d61c25c0e3a569e7bceaecec"
+          },
+          "compile_ledger": {
+            "path": "results/lean_publication_completion_20261021/CoxeterProofs_RegularIdeal24CellHeightKernel.json",
+            "bytes": 1871,
+            "sha256": "ffff22a543bb020c8a93c53d270c0cff1e0d3346997a50c7c37d81a273f3623c"
+          },
+          "separate_actual_axiom_audit_ledger": {
+            "path": "results/lean_publication_completion_20261021/CoxeterProofs_RegularIdeal24CellHeightKernel_axiom_audit.json",
+            "bytes": 1790,
+            "sha256": "10f1114de18ca2c226f8cb7c8598adb47051be0357fbe5a5e14b551b3f7511fd"
+          },
+          "recorded_audited_declarations": 5,
+          "new_compilation_or_audit": false,
+          "scope": "Selected conditional internal logic; no actual Coxeter geometric instance or automatic discharge of external/published/script/application premises.",
+          "selected_by_catalogue_core": false
+        }
+      ],
+      "bindings": [
+        {
+          "path": "docs/manuscript_assumptions.md",
+          "bytes": 49599,
+          "sha256": "8d6c6641f695cd4b1ee83be583c48a90e22ca48bc0dce6c0e09cb9269fdb8073"
+        },
+        {
+          "path": "docs/right_angled_projection_height_logic_20261020.md",
+          "bytes": 8789,
+          "sha256": "f24d8afbafb42ce28bb1ae7e234de422e04c5fb1dc54ac00101517da64e34612"
+        },
+        {
+          "path": "docs/right_angled_sharp_dimensions_publication_proof_map_20261021.md",
+          "bytes": 12109,
+          "sha256": "bae09e60f0c64a2b6dc6dcf75bea507ada8cdb4d2af51de5abe2d6b069e05dca"
+        },
+        {
+          "path": "formal/CoxeterProofs/RegularIdeal24CellHeightKernel.lean",
+          "bytes": 4720,
+          "sha256": "633ae6fef8c5d0f0d0cafb2363d99f38e6922405d61c25c0e3a569e7bceaecec"
+        },
+        {
+          "path": "formal/CoxeterProofs/RightAngledCubicScalarKernel.lean",
+          "bytes": 21805,
+          "sha256": "f55568035b8852a6284f1bd404c897758f30b301b1d85f38f09e4d9de365e6ee"
+        },
+        {
+          "path": "formal/CoxeterProofs/RightAngledProjectionHeightKernel.lean",
+          "bytes": 12333,
+          "sha256": "2fac8028e432a2104a58e423c65fc38c9e214fed5f52210e408aabe3f15f0e90"
+        },
+        {
+          "path": "formal/CoxeterProofs/RightAngledSharpDimensions.lean",
+          "bytes": 12758,
+          "sha256": "e1844d73a3f07de6cc512e514b948dafef4253e272b3f98de36148543554e323"
+        },
+        {
+          "path": "formal/README.md",
+          "bytes": 47217,
+          "sha256": "b02a38487a456dc5d00de8eb29de4660ea2b442aaf05568ea6f8822c817772bd"
+        },
+        {
+          "path": "formal/lake-manifest.json",
+          "bytes": 145,
+          "sha256": "31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395"
+        },
+        {
+          "path": "formal/lakefile.toml",
+          "bytes": 113,
+          "sha256": "73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7"
+        },
+        {
+          "path": "formal/lean-toolchain",
+          "bytes": 25,
+          "sha256": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273"
+        },
+        {
+          "path": "manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf",
+          "bytes": 207990,
+          "sha256": "609a9fc025b43ae5c899b1b37b1051e592de6a8142f3ffd275fcd9dca360d443"
+        },
+        {
+          "path": "manuscripts/catalogue.json",
+          "bytes": 290436,
+          "sha256": "598fe1137288433cf358e1cf5fa1635af4ded93278d0182fae380794219156fe"
+        },
+        {
+          "path": "manuscripts/right_angled_sharp_dimension_bounds_publication.tex",
+          "bytes": 15738,
+          "sha256": "0c29a7869fa46e4e1a542d8ae6f4dfc7e616136c7a1aad3984d941a95cf89722"
+        },
+        {
+          "path": "results/RightAngledCubicScalarKernel_axiom_summary_20261020.json",
+          "bytes": 4870,
+          "sha256": "9d3b9c783b875388df9e18b8bec278ea3e2a4129f8c93dc392d25b0b4d454d2d"
+        },
+        {
+          "path": "results/RightAngledProjectionHeightKernel_axiom_summary_20261020.json",
+          "bytes": 5652,
+          "sha256": "7eee0cd11287e44ca89116f80cb3118a3cd5573cd6b1a64c71cbe7fff7de79f3"
+        },
+        {
+          "path": "results/audit_sharp_ra_fresh_20261024.md",
+          "bytes": 17965,
+          "sha256": "ed69a9ff3dcbbbfe10595e3fb4d0d496783241ba83896e89a26775b48f505584"
+        },
+        {
+          "path": "results/lean_publication_completion_20261021/CoxeterProofs_RegularIdeal24CellHeightKernel.json",
+          "bytes": 1871,
+          "sha256": "ffff22a543bb020c8a93c53d270c0cff1e0d3346997a50c7c37d81a273f3623c"
+        },
+        {
+          "path": "results/lean_publication_completion_20261021/CoxeterProofs_RegularIdeal24CellHeightKernel_axiom_audit.json",
+          "bytes": 1790,
+          "sha256": "10f1114de18ca2c226f8cb7c8598adb47051be0357fbe5a5e14b551b3f7511fd"
+        },
+        {
+          "path": "results/lean_publication_completion_20261021/manifest.json",
+          "bytes": 7162,
+          "sha256": "593f5f4aa2dbae6e3c790cb07208099c9c497a966cec88587fae08e5dd2b9419"
+        },
+        {
+          "path": "results/lean_publication_completion_20261021/regular24_height_axiom_audit_20261021.txt",
+          "bytes": 3784,
+          "sha256": "3f4277854e86b2c0b8d6f82e34547f447d19653228d6a1bece60d89b019fafb7"
+        },
+        {
+          "path": "results/lean_publication_completion_20261021/regular24_height_compile_20261021.txt",
+          "bytes": 2071,
+          "sha256": "5766abeb00dda04f953f14d4dd196e4a4c9aada4993fa2d9eba90f4c6e05aae5"
+        },
+        {
+          "path": "results/publication_logic_records_20261020/CoxeterProofs_RightAngledCubicScalarKernel_audit_fc32261e5a63.json",
+          "bytes": 1554,
+          "sha256": "fc32261e5a6350eb3d2b54d89254a6d27963f18238b441f2981ad2f277c1a4e9"
+        },
+        {
+          "path": "results/publication_logic_records_20261020/CoxeterProofs_RightAngledCubicScalarKernel_compile_60c61583d7d2.json",
+          "bytes": 1636,
+          "sha256": "60c61583d7d2f761a98b2fb057dca8ab018e1823c1b6df6cb5bf1c37174d0579"
+        },
+        {
+          "path": "results/publication_logic_records_20261020/CoxeterProofs_RightAngledProjectionHeightKernel_audit_404b0b6ad657.json",
+          "bytes": 1673,
+          "sha256": "404b0b6ad657dd242bc03d33d92e7444febe77a038de44b53e979b466d8d884c"
+        },
+        {
+          "path": "results/publication_logic_records_20261020/CoxeterProofs_RightAngledProjectionHeightKernel_compile_b7d81c1ede50.json",
+          "bytes": 1755,
+          "sha256": "b7d81c1ede501d4435ac1eef8caab2b8b5c1237610ef927dd6ffc212a97b12a9"
+        },
+        {
+          "path": "results/publication_logic_verification_20261020.json",
+          "bytes": 27042,
+          "sha256": "63fe5fa62d824b5901866f7545a9111d8f0c42be968dd286ab525f8cf7f3ce74"
+        },
+        {
+          "path": "results/review_ra_release_primary_inputs_root_20261024.md",
+          "bytes": 3683,
+          "sha256": "05d8b544bfac27991658f759f2521cdc7d4ebe873d9db694dec62620d71ea19a"
+        },
+        {
+          "path": "results/review_sharp_ra_audit_edition_root_20261021.md",
+          "bytes": 2955,
+          "sha256": "4a8c0b77029317aadfa290b5bbabc5e576fb3d3528c91509d8d5c13e67931b98"
+        },
+        {
+          "path": "results/right_angled_dimension8_descending_height_proof_20261020.md",
+          "bytes": 7280,
+          "sha256": "9470fa1fa3a973a12c412fbc1257537655536dba4ffc4e9ac23c320615babdbe"
+        },
+        {
+          "path": "results/right_angled_sharp_dimension_sos_20261020.json",
+          "bytes": 1610,
+          "sha256": "3be4dc597c00c8b96198fb95cd362612316da858606e1c5789511e3ad4655b46"
+        },
+        {
+          "path": "results/right_angled_sharp_lean_axiom_audit_20261020.json",
+          "bytes": 1443,
+          "sha256": "6158a46269fe471f53e5fd4961841d4091a1708e6c379641f0b5feda3038f671"
+        },
+        {
+          "path": "results/right_angled_sharp_lean_compile_20261020.json",
+          "bytes": 1523,
+          "sha256": "e8ce17219350a1cb01290e1d03f3467a50fbc0a72cee0917e50bac958ecb63f1"
+        },
+        {
+          "path": "results/right_angled_sharp_projection_height_core_verification_20261020.json",
+          "bytes": 23059,
+          "sha256": "2c290d5b7bf2b94221ce66420f12b936172b89f9b3fd990338c43ddb1f925680"
+        },
+        {
+          "path": "results/right_angled_sharp_publication_terminology_acceptance_20261021.json",
+          "bytes": 5089,
+          "sha256": "9473d1426a4668eb326b99f5ef3cefe8d9f840b98626c1d9732c0cad2a2df9e2"
+        },
+        {
+          "path": "results/sharp_ra_audit_edition_readability_build_20261021.json",
+          "bytes": 902,
+          "sha256": "572b14642e9732653b75617c456765c53aa2e012b37921b395142d03321495b1"
+        },
+        {
+          "path": "results/sharp_ra_dufour_original_source_boundary_20261024.md",
+          "bytes": 4341,
+          "sha256": "a326fb47748b66fc59ab95f5253f1891b90efab4e9fec8f5b593f7b6ea6ff6c3"
+        },
+        {
+          "path": "results/six_papers_audit_edition_20261021.json",
+          "bytes": 29453,
+          "sha256": "e150aa701683b9b45a9d1ef3c7bb6a148c4b2dd943ae8f5bb10331f36c70062c"
+        },
+        {
+          "path": "scripts/check_ideal_right_angled_dimension4_model_20261020.py",
+          "bytes": 3612,
+          "sha256": "bb506ec1ee98dee1429d6e668553af40316ebdeda6b59b82bbf03b8f3a6dc261"
+        },
+        {
+          "path": "scripts/check_right_angled_sharp_dimension_sos_20261020.py",
+          "bytes": 7217,
+          "sha256": "bd0ed1c4c1b7e18a219a2a8aca2b178dbe1d559d7e9ec90ad609150aedf8b2c3"
+        },
+        {
+          "path": "scripts/run_proof_batch_20261024.py",
+          "bytes": 6319,
+          "sha256": "78bfafca1791fcdfc217860ea923cb15c16fbd6eb0fe6943586e41849121e4bb"
+        }
+      ]
+    },
+    {
+      "id": "ideal_ra4_volume_and_structure",
+      "tex": {
+        "path": "manuscripts/ideal_ra4_volume_and_structure_publication.tex",
+        "bytes": 56865,
+        "sha256": "e0c2ca24cec24ffcd736e201d3c7e06d75b28ef7be8093decd321ae3ac54bda1"
+      },
+      "pdf": {
+        "path": "manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf",
+        "bytes": 389376,
+        "sha256": "d95d1e29abc01bee7b4cf3d66f2c760871e1f6ac9f725fb4a017312c0ab69c47"
+      },
+      "pages": 17,
+      "recorded_build_status": "PASS_TEX_BUILD",
+      "recorded_build_warnings": [],
+      "historical_core": {
+        "path": "results/ideal_ra4_unified_core_verification_final_20261018.json",
+        "bytes": 13538,
+        "sha256": "5763d85328eb435254e24f286411ca18dd692f4baf139ca47ce7603ab511243b"
+      },
+      "historical_core_manuscript_sha256": "e503ad2cb8edafd827f735a62568a3372407e9dfdaf3f50d09b05fb3bc75f025",
+      "historical_core_binds_current_tex": false,
+      "reused_script_records": [
+        {
+          "id": "ideal4_gap_saved",
+          "source": {
+            "path": "scripts/check_ideal_ra4_second_volume_saved_20261018.py",
+            "bytes": 9080,
+            "sha256": "05ebb4f12e7413a13c82da8be366fe874933c93c3f6e57e8bc9bb4e932f64c09"
+          },
+          "execution_record": "results/ideal_ra4_unified_core_verification_final_20261018.json",
+          "execution_status": "PASS_DECLARED_SCOPE",
+          "execution_coverage": "Independent saved double face lattice,f-vector(42,168,164,38),defect12,volume8/3.",
+          "source_unchanged_since_record": true,
+          "new_execution": false
+        },
+        {
+          "id": "ideal4_equality_model",
+          "source": {
+            "path": "scripts/fresh_ideal_ra4_equality_structure_20261018.py",
+            "bytes": 10995,
+            "sha256": "298b3722b6aeceecab918f3c137882bf4f672cf94fb7fe646a6ac724d353ef5f"
+          },
+          "execution_record": "results/ideal_ra4_unified_core_verification_final_20261018.json",
+          "execution_status": "PASS_DECLARED_SCOPE",
+          "execution_coverage": "Figure7 transcription,D9 cusp/quad data,cuboctahedron and cube equalities.",
+          "source_unchanged_since_record": true,
+          "new_execution": false
+        },
+        {
+          "id": "ideal4_equality_saved",
+          "source": {
+            "path": "scripts/check_ideal_ra4_equality_structure_saved_20261018.py",
+            "bytes": 8732,
+            "sha256": "464fa7261976233865b170bb747d9fa499e498860d1b337d2fc8ae3bfd096b00"
+          },
+          "execution_record": "results/ideal_ra4_unified_core_verification_final_20261018.json",
+          "execution_status": "PASS_DECLARED_SCOPE",
+          "execution_coverage": "Independent finite equality data; not universal geometry.",
+          "source_unchanged_since_record": true,
+          "new_execution": false
+        },
+        {
+          "id": "ideal4_chain_roots",
+          "source": {
+            "path": "scripts/check_ideal_ra4_octahedral_path_roots_20261018.py",
+            "bytes": 3327,
+            "sha256": "87dca49df0d666db7f65bb541d2997bb1c625ef9e11f47f2e66ec479dfa1548a"
+          },
+          "execution_record": "results/ideal_ra4_unified_core_verification_final_20261018.json",
+          "execution_status": "PASS_DECLARED_SCOPE",
+          "execution_coverage": "D4 roots,24 ideal vertices,276 products and1152 reflected octahedron vertices; cuts/recognition written.",
+          "source_unchanged_since_record": true,
+          "new_execution": false
+        }
+      ],
+      "conditional_lean_records": [
+        {
+          "module": "CoxeterProofs.IdealRA4Gap",
+          "source": {
+            "path": "formal/CoxeterProofs/IdealRA4Gap.lean",
+            "bytes": 2601,
+            "sha256": "a39656988e358c9d53323f0927e216080cdb89e7251aa9f83f187c4ae7257a24"
+          },
+          "status": "LEGACY_DEPENDENCY_COMPILATION_REUSED_NO_NEW_AXIOM_AUDIT",
+          "audited_declarations": 0,
+          "scope": "Historical core explicitly records reused uncapped dependency caches. No fresh capped compile or separate actual axiom audit is inferred.",
+          "current_source_to_recorded_dependency_object_binding_claimed": false
+        },
+        {
+          "module": "CoxeterProofs.ManuscriptIdeal4",
+          "source": {
+            "path": "formal/CoxeterProofs/ManuscriptIdeal4.lean",
+            "bytes": 14345,
+            "sha256": "c7726547a68d8617806436138c3e10d2f5dac338229b5b537c91685b163b295f"
+          },
+          "compile_ledger": {
+            "path": "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptIdeal4.json",
+            "bytes": 1710,
+            "sha256": "17e2c1aeed403846d1e49791d83cbd3468eb4d72e3b4c5b33805ed7751ec4152"
+          },
+          "separate_actual_axiom_audit_ledger": {
+            "path": "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptIdeal4_axiom_audit.json",
+            "bytes": 1630,
+            "sha256": "dc5353349812aa7cc8605d8eec5cedd86aa5795b99e7f41e1b3fea1596906455"
+          },
+          "recorded_audited_declarations": 8,
+          "source_unchanged_since_records": true,
+          "new_compilation_or_audit": false,
+          "scope": "Conditional internal deductions. Ordinary theorem parameters and external geometry/classification/script premises remain explicit."
+        },
+        {
+          "module": "CoxeterProofs.CertificateBounds",
+          "source": {
+            "path": "formal/CoxeterProofs/CertificateBounds.lean",
+            "bytes": 3403,
+            "sha256": "0b205264fdc3816568195e6a02e7a7a68949dc410691b83ad9091626c16e84fe"
+          },
+          "status": "LEGACY_DEPENDENCY_CACHE_SOURCE_PIN_ONLY",
+          "audited_declarations": 0,
+          "new_compilation_or_audit": false,
+          "current_source_to_recorded_dependency_object_binding_claimed": false,
+          "scope": "Historical ManuscriptIdeal4 record reuses this uncapped dependency object. No separate preserved source-bound compile or axiom-audit receipt was found. Current source identity does not prove it produced that old object."
+        }
+      ],
+      "bindings": [
+        {
+          "path": "docs/ideal_ra4_volume_and_structure_proof_map.md",
+          "bytes": 8129,
+          "sha256": "78621490a4d2eb5c6cb2a98c696b7ce08eea9cd426611f70e6dc5295a95bd756"
+        },
+        {
+          "path": "docs/manuscript_assumptions.md",
+          "bytes": 49599,
+          "sha256": "8d6c6641f695cd4b1ee83be583c48a90e22ca48bc0dce6c0e09cb9269fdb8073"
+        },
+        {
+          "path": "formal/CoxeterProofs/CertificateBounds.lean",
+          "bytes": 3403,
+          "sha256": "0b205264fdc3816568195e6a02e7a7a68949dc410691b83ad9091626c16e84fe"
+        },
+        {
+          "path": "formal/CoxeterProofs/IdealRA4Gap.lean",
+          "bytes": 2601,
+          "sha256": "a39656988e358c9d53323f0927e216080cdb89e7251aa9f83f187c4ae7257a24"
+        },
+        {
+          "path": "formal/CoxeterProofs/ManuscriptIdeal4.lean",
+          "bytes": 14345,
+          "sha256": "c7726547a68d8617806436138c3e10d2f5dac338229b5b537c91685b163b295f"
+        },
+        {
+          "path": "formal/README.md",
+          "bytes": 47217,
+          "sha256": "b02a38487a456dc5d00de8eb29de4660ea2b442aaf05568ea6f8822c817772bd"
+        },
+        {
+          "path": "formal/lake-manifest.json",
+          "bytes": 145,
+          "sha256": "31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395"
+        },
+        {
+          "path": "formal/lakefile.toml",
+          "bytes": 113,
+          "sha256": "73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7"
+        },
+        {
+          "path": "formal/lean-toolchain",
+          "bytes": 25,
+          "sha256": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273"
+        },
+        {
+          "path": "manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf",
+          "bytes": 389376,
+          "sha256": "d95d1e29abc01bee7b4cf3d66f2c760871e1f6ac9f725fb4a017312c0ab69c47"
+        },
+        {
+          "path": "manuscripts/catalogue.json",
+          "bytes": 290436,
+          "sha256": "598fe1137288433cf358e1cf5fa1635af4ded93278d0182fae380794219156fe"
+        },
+        {
+          "path": "manuscripts/ideal_ra4_volume_and_structure.tex",
+          "bytes": 52724,
+          "sha256": "e503ad2cb8edafd827f735a62568a3372407e9dfdaf3f50d09b05fb3bc75f025"
+        },
+        {
+          "path": "manuscripts/ideal_ra4_volume_and_structure_publication.tex",
+          "bytes": 56865,
+          "sha256": "e0c2ca24cec24ffcd736e201d3c7e06d75b28ef7be8093decd321ae3ac54bda1"
+        },
+        {
+          "path": "results/audit_ideal_ra4_fresh_20261024.md",
+          "bytes": 28892,
+          "sha256": "38bb7f21b0910a2dcf75d8444ce2e6bdcf223af32cf945120cba320063373640"
+        },
+        {
+          "path": "results/fresh_ideal_ra4_double24_volume_20261018.json",
+          "bytes": 114650,
+          "sha256": "386d9650b8f669e3edcb3cdee56ed53d1c9ea4a90af2b4ba5c8c1b83f9d7bfa3"
+        },
+        {
+          "path": "results/fresh_ideal_ra4_equality_structure_20261018.json",
+          "bytes": 45087,
+          "sha256": "589a7901494481ddbefb8b3cf2a51854c70bd804bd78128386bd650dcf4e19fc"
+        },
+        {
+          "path": "results/ideal_ra4_figure7_primary_authentication_20261024.md",
+          "bytes": 5914,
+          "sha256": "c8b897b1fa7a4700c7f9a5417499f51e6350a936bfa67b8cc159cd412178a490"
+        },
+        {
+          "path": "results/ideal_ra4_second_volume_20261018.md",
+          "bytes": 14649,
+          "sha256": "9dff11c375bddcf62f16f3f01ddabd7f5b5c137756cf02ebff275076e6869c25"
+        },
+        {
+          "path": "results/ideal_ra4_unified_core_verification_final_20261018.json",
+          "bytes": 13538,
+          "sha256": "5763d85328eb435254e24f286411ca18dd692f4baf139ca47ce7603ab511243b"
+        },
+        {
+          "path": "results/ideal_ra4_volume_and_structure_publication_build_20261018.json",
+          "bytes": 892,
+          "sha256": "6787fbb05a4c593b76da05ed55b10c711675bccf17d584b6b53183d8b6ba5fd8"
+        },
+        {
+          "path": "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptIdeal4.json",
+          "bytes": 1710,
+          "sha256": "17e2c1aeed403846d1e49791d83cbd3468eb4d72e3b4c5b33805ed7751ec4152"
+        },
+        {
+          "path": "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptIdeal4_axiom_audit.json",
+          "bytes": 1630,
+          "sha256": "dc5353349812aa7cc8605d8eec5cedd86aa5795b99e7f41e1b3fea1596906455"
+        },
+        {
+          "path": "results/review_ideal_ra4_fresh_audit_root_acceptance_20261024.md",
+          "bytes": 6636,
+          "sha256": "a14504084ea16d11fe0d1f67732de54ec3556c704fb46d4a39110baa840dc21a"
+        },
+        {
+          "path": "results/review_ra_release_primary_inputs_root_20261024.md",
+          "bytes": 3683,
+          "sha256": "05d8b544bfac27991658f759f2521cdc7d4ebe873d9db694dec62620d71ea19a"
+        },
+        {
+          "path": "scripts/check_ideal_ra4_equality_structure_saved_20261018.py",
+          "bytes": 8732,
+          "sha256": "464fa7261976233865b170bb747d9fa499e498860d1b337d2fc8ae3bfd096b00"
+        },
+        {
+          "path": "scripts/check_ideal_ra4_octahedral_path_roots_20261018.py",
+          "bytes": 3327,
+          "sha256": "87dca49df0d666db7f65bb541d2997bb1c625ef9e11f47f2e66ec479dfa1548a"
+        },
+        {
+          "path": "scripts/check_ideal_ra4_second_volume_saved_20261018.py",
+          "bytes": 9080,
+          "sha256": "05ebb4f12e7413a13c82da8be366fe874933c93c3f6e57e8bc9bb4e932f64c09"
+        },
+        {
+          "path": "scripts/fresh_ideal_ra4_double24_volume_20261018.py",
+          "bytes": 8569,
+          "sha256": "16731c71d949e287d4cdce85e0ef98f8e5551beaaef7a6acfdd196c1fb0f5323"
+        },
+        {
+          "path": "scripts/fresh_ideal_ra4_equality_structure_20261018.py",
+          "bytes": 10995,
+          "sha256": "298b3722b6aeceecab918f3c137882bf4f672cf94fb7fe646a6ac724d353ef5f"
+        },
+        {
+          "path": "scripts/run_proof_batch_20261024.py",
+          "bytes": 6319,
+          "sha256": "78bfafca1791fcdfc217860ea923cb15c16fbd6eb0fe6943586e41849121e4bb"
+        }
+      ]
+    }
+  ],
+  "new_scientific_lean_or_tex_runs": 0,
+  "bulk_assets_uploaded": false,
+  "publication_gate_complete": false,
+  "predecessor_assembly": {
+    "path": "results/right_angled_release_assembly_draft_20261025.json",
+    "bytes": 26627,
+    "sha256": "c7d5e6f26ceeb412477dae93d3f51d106469e0cd9b27fd34e051cf82e056e124"
+  },
+  "outside_assembly_review": {
+    "path": "results/review_right_angled_release_assembly_source_only_20261025.md",
+    "bytes": 12728,
+    "sha256": "fa52f387fa547adec70861c9706250b8d900e65af2165f0da049b240586445aa"
+  },
+  "release_guide": {
+    "path": "docs/right_angled_release_packages_20261025.md",
+    "bytes": 9785,
+    "sha256": "f4d14c7fc6a527033ed033a9a3f1ba64fe35d404fdc4f20d059b7374c3f8870a"
+  },
+  "final_delta_scope": "Current docs replace only stale hashes/resource instructions and clarify post-verification cleanup. Already used model producer/height proof/toolchain configuration now have direct retrieval pins.",
+  "execution_reuse": "All original script, compile and separate actual axiom-audit records are unchanged at their precise historical scopes. Current paper sources/PDFs are unchanged. No new scientific/Lean/TeX execution; documentation, direct retrieval pins and cleanup instructions only.",
+  "predecessor_release": {
+    "path": "results/right_angled_release_packages_20261025.json",
+    "bytes": 29024,
+    "sha256": "d7bb822cf0cbf5d9d002e88f9102feb433d62227b551fd378a17e30abb1ccf47"
+  },
+  "current_doc_delta": [
+    {
+      "before": {
+        "path": "docs/manuscript_assumptions.md",
+        "bytes": 48364,
+        "sha256": "b0c1eaee4cd42639ca0d68e8e97e647ee2eec58601d10653f1ae7046259db028"
+      },
+      "after": {
+        "path": "docs/manuscript_assumptions.md",
+        "bytes": 49599,
+        "sha256": "8d6c6641f695cd4b1ee83be583c48a90e22ca48bc0dce6c0e09cb9269fdb8073"
+      }
+    },
+    {
+      "before": {
+        "path": "docs/right_angled_sharp_dimensions_publication_proof_map_20261021.md",
+        "bytes": 12012,
+        "sha256": "ff9087dfc4851c6f86e7891452df50849e634296f67cff004b619da09fd12cc3"
+      },
+      "after": {
+        "path": "docs/right_angled_sharp_dimensions_publication_proof_map_20261021.md",
+        "bytes": 12109,
+        "sha256": "bae09e60f0c64a2b6dc6dcf75bea507ada8cdb4d2af51de5abe2d6b069e05dca"
+      }
+    },
+    {
+      "before": {
+        "path": "formal/README.md",
+        "bytes": 45864,
+        "sha256": "9cd10c1899b5b0f3407251bf6014d76a3347947bb071953e2318e51b811d3036"
+      },
+      "after": {
+        "path": "formal/README.md",
+        "bytes": 47217,
+        "sha256": "b02a38487a456dc5d00de8eb29de4660ea2b442aaf05568ea6f8822c817772bd"
+      }
+    },
+    {
+      "before": {
+        "path": "docs/manuscript_assumptions.md",
+        "bytes": 48364,
+        "sha256": "b0c1eaee4cd42639ca0d68e8e97e647ee2eec58601d10653f1ae7046259db028"
+      },
+      "after": {
+        "path": "docs/manuscript_assumptions.md",
+        "bytes": 49599,
+        "sha256": "8d6c6641f695cd4b1ee83be583c48a90e22ca48bc0dce6c0e09cb9269fdb8073"
+      }
+    },
+    {
+      "before": {
+        "path": "formal/README.md",
+        "bytes": 45864,
+        "sha256": "9cd10c1899b5b0f3407251bf6014d76a3347947bb071953e2318e51b811d3036"
+      },
+      "after": {
+        "path": "formal/README.md",
+        "bytes": 47217,
+        "sha256": "b02a38487a456dc5d00de8eb29de4660ea2b442aaf05568ea6f8822c817772bd"
+      }
+    },
+    {
+      "before": {
+        "path": "docs/right_angled_release_packages_20261025.md",
+        "bytes": 8265,
+        "sha256": "8d471dde0c1524f14e4e6651d461096a249edee11a14bb562555d266a028d6d6"
+      },
+      "after": {
+        "path": "docs/right_angled_release_packages_20261025.md",
+        "bytes": 9785,
+        "sha256": "f4d14c7fc6a527033ed033a9a3f1ba64fe35d404fdc4f20d059b7374c3f8870a"
+      }
+    }
+  ],
+  "current_documentation_bindings": [
+    {
+      "path": "docs/manuscript_assumptions.md",
+      "bytes": 49599,
+      "sha256": "8d6c6641f695cd4b1ee83be583c48a90e22ca48bc0dce6c0e09cb9269fdb8073"
+    },
+    {
+      "path": "docs/right_angled_release_packages_20261025.md",
+      "bytes": 9785,
+      "sha256": "f4d14c7fc6a527033ed033a9a3f1ba64fe35d404fdc4f20d059b7374c3f8870a"
+    },
+    {
+      "path": "docs/right_angled_sharp_dimensions_publication_proof_map_20261021.md",
+      "bytes": 12109,
+      "sha256": "bae09e60f0c64a2b6dc6dcf75bea507ada8cdb4d2af51de5abe2d6b069e05dca"
+    },
+    {
+      "path": "formal/README.md",
+      "bytes": 47217,
+      "sha256": "b02a38487a456dc5d00de8eb29de4660ea2b442aaf05568ea6f8822c817772bd"
+    }
+  ],
+  "cleanup_receipt": {
+    "path": "results/tex_lean_repro_only_cleanup_20261025.json",
+    "bytes": 4353,
+    "sha256": "f6b8bb420b8afcb27cc43ed6d6189135f2c3b0e984ba5f3bbd0c22ed3c0b2562"
+  },
+  "documentation_preservation_manifest": {
+    "path": "results/source_archive/right_angled_current_doc_pins_and_cleanup_20261025/manifest.json",
+    "bytes": 2333,
+    "sha256": "29cb6246ef3462f5e9f9a210ee83062f3d6fc945e24fb915107efcf156485668"
+  },
+  "legacy_cache_replay_scope": "Source-bound targets were removed as regenerable compiler outputs. Exact legacy dependency bytes survive in the documented local preservation archive, without a source-to-legacy-object claim. A source checkout alone does not include local caches or unuploaded bulk assets; rebuild or restore only at the stated provenance boundary. Never adjust timestamps to bypass guarded cache checks.",
+  "independent_current_assembly_review_pending": true
+}

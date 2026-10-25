@@ -64,8 +64,10 @@ and editorial sources now have
 The :download:`compact working map <../compact17_consolidated_proof_map_20261025.md>`
 and :download:`arithmetic working map <../compact_arithmetic_consolidation_proof_map_20261025.md>`
 identify the full arguments and their verification boundaries. Both now have
-matching compiled working verification copies. These retain long complete
-case appendices and layout warnings, so they are not promoted editions.
+matching compiled revisions and
+:download:`source/build/sampled-layout acceptance <../../results/compact17_arithmetic15_editorial_completion_20261025.json>`.
+Complete case appendices remain; no overfull box, undefined reference or package
+warning remains. The frozen editions are preserved separately.
 Those bounds are not stated by the frozen23/20 PDFs.
 
 .. list-table:: Working verification copies in the same families
@@ -79,11 +81,11 @@ Those bounds are not stated by the frozen23/20 PDFs.
      - :download:`50 pages <../../manuscripts/build/finite_volume57_consolidated.pdf>`
      - :download:`Build receipt <../../results/finite57_terminal_tail_working_tex_build_20261025.json>`;21 underfull warnings, no overfull boxes or undefined references. All 64 actual applications and the final 259-unit reader PASS at explicit premises; :download:`evidence guide <../finite_volume57_reproduce.md>`.
    * - General compact17
-     - :download:`284 pages <../../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf>`
-     - :download:`Build receipt <../../results/compact_farthest_vertex_bounds_consolidated_build_20261018.json>`;202 warnings, including 66 overfull boxes; editorial/rendering review remains.
+     - :download:`285 pages <../../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf>`
+     - :download:`Build receipt <../../results/compact17_editorial_layout_final_build_20261025.json>`; nine underfull spacing warnings, no overfull boxes, undefined references or package warnings. Twelve named pages visually inspected.
    * - Compact arithmetic15
      - :download:`216 pages <../../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf>`
-     - :download:`Build receipt <../../results/compact_arithmetic_dimension_bound_consolidated_build_20261018.json>`;205 warnings, including 9 overfull boxes; editorial/rendering review remains.
+     - :download:`Build receipt <../../results/arithmetic15_editorial_publication_style_build_20261025.json>`; eight underfull spacing warnings, no overfull boxes, undefined references or package warnings. Six named final pages visually inspected.
 
 The build-receipt filenames retain their older date convention; their exact
 source/PDF hashes identify these actual builds. No undefined references

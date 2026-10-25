@@ -63,26 +63,29 @@ premises and references. **No new polytope example has been established.**
 Current audit and publication work
 ----------------------------------
 
-The active task is finite57 verification, release records for the two
-right-angled papers, consolidation of compact17/arithmetic15, then selected
-Lean checks, matching PDFs, strict documentation and Git-index audits, and
-publication. Further dimension and construction searches are stopped.
+Finite57 current-rule verification, both right-angled packages and the
+compact17/arithmetic15 article revisions have current completion records.
+Selected Lean, matching PDFs, strict documentation, actual Git-index inspection
+and source delivery retain separate evidence. Further dimension and construction
+searches are stopped.
 
 The arithmetic working source now contains its reviewed local proofs and
 complete forest dispatch. Its
 :download:`working proof map <../compact_arithmetic_consolidation_proof_map_20261025.md>`
 identifies the general companion, literal literature assumption and four
-finite-output premises. Its matching 216-page working verification PDF now
-compiles, with retained layout warnings; the frozen PDF still states20.
+finite-output premises. Its matching216-page revision has separate source
+and sampled visual acceptance, with no overfull boxes or undefined references.
+Eight underfull spacing warnings remain; the frozen PDF still states20.
 
 The compact working source now has complete mathematical and editorial
 source acceptance: every exact 18 row, the actual-rank19–29 tail, all three
 whole rank19 consumers and the independent final conjunction. Its
 :download:`working proof map <../compact17_consolidated_proof_map_20261025.md>`
 identifies the shared method and the case-specific arguments. Its matching
-284-page working verification PDF now compiles, with retained layout warnings.
-The frozen PDF still states23. Length and rendering review remain; no
-arithmeticity is used.
+285-page revision has separate source and sampled visual acceptance, with no
+overfull boxes or undefined references. Nine underfull spacing warnings remain.
+The frozen PDF still states23. The common exposition occupies about19 pages,
+followed by complete case arguments; no arithmeticity is used.
 
 Finite57 now has :download:`all 64 actual selected application PASS receipts <../../results/finite57_longer_tail_all64_actual_application_completion_20261025.json>`
 and a :download:`successful 259-unit current-rule reader <../../results/finite57_final_current_rule_conjunction_execution_20261025.json>`.
@@ -95,9 +98,9 @@ article includes the reviewed terminal-tail lemma; the frozen48-page edition
 is unchanged. Bounded59–163 tail inputs retain their inherited numerical scope.
 
 The :download:`right-angled release records <../right_angled_release_packages_20261025.md>`
-assemble source, computation and actual conditional-Lean receipts for both
-right-angled papers. They distinguish predecessor-edition checks from
-current source reviews. The two new compact17 Lean modules now have
+have :download:`current root acceptance <../../results/right_angled_current_release_root_acceptance_20261025.json>`
+for source, computation and actual conditional-Lean receipts for both papers.
+They distinguish predecessor-edition checks from current source reviews. The two new compact17 Lean modules now have
 :download:`actual compilation and separate axiom audits for ten declarations <../../results/compact17_targeted_lean_completion_20261025/manifest.json>`.
 Their geometric and complete-data parameters remain external; older successful
 modules retain their scopes.

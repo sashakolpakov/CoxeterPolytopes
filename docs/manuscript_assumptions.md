@@ -631,9 +631,9 @@ one scalar identity; no enumeration hypothesis is needed for the theorem.
 
 ## Unified sharp right-angled ceilings eight and four
 
-The current [unified manuscript](../manuscripts/right_angled_sharp_dimension_bounds.tex)
+The current [unified manuscript](../manuscripts/right_angled_sharp_dimension_bounds_publication.tex)
 supersedes the earlier ideal-cusp-height and mixed10 manuscripts as the
-primary dimension paper. The [proof map](right_angled_sharp_dimensions_proof_map_20261020.md)
+primary dimension paper. The [proof map](right_angled_sharp_dimensions_publication_proof_map_20261021.md)
 lists every published input. General8 needs the universal RA6 facet
 minimum27, from Dufour2010 Lemma1/Proposition4, explicitly stated in
 Alexandrov2023 Section4. Entirely ideal4 additionally uses Musin's

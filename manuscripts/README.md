@@ -16,8 +16,9 @@ The compact17 and arithmetic15 working articles now have complete
 Their [general compact map](../docs/compact17_consolidated_proof_map_20261025.md)
 and [arithmetic map](../docs/compact_arithmetic_consolidation_proof_map_20261025.md)
 show the common foundation, actual branch points and external/computed
-premises. Matching working verification PDFs now compile. Their length and
-layout still need review; the delivered editions below remain23 and 20.
+premises. Their [editorial completion record](../results/compact17_arithmetic15_editorial_completion_20261025.json)
+binds matching PDF builds, separate source reviews and sampled rendered-page
+inspection. Complete case appendices remain; the frozen editions below stay23 and20.
 
 | Paper and TeX | Main technique | Result in this PDF | PDF | Proof/reproduction map | Verification ID |
 |---|---|---|---|---|---|
@@ -38,20 +39,23 @@ binds the matching frozen sources, PDFs and build records.
 
 ## Working verification copies
 
-These are revisions within the existing three families, rather than additional
-papers or accepted replacement editions. Compilation confirms a matching PDF,
-not mathematical verification. The long compact case appendices and layout
-warnings still require editorial review.
+These are revisions within the existing three families. Compilation confirms
+a matching PDF; mathematical source review and conditional formal verification
+have their own records. The compact revisions now have reviewed presentation
+changes and sampled visual acceptance. Their long actual-rank case appendices
+retain complete arguments. No frozen paper is silently replaced.
 
 | Working source | Result | Matching PDF | Bounded build receipt and remaining warnings |
 |---|---|---|---|
 | [General finite volume](finite_volume57_consolidated.tex) | Dimension at most57 | [50 pages](build/finite_volume57_consolidated.pdf) | [Actual build](../results/finite57_terminal_tail_working_tex_build_20261025.json);21 underfull-box warnings; no overfull boxes or undefined references |
-| [General compact](revisions/compact_farthest_vertex_bounds_consolidated.tex) | Dimension at most17 | [284 pages](build/compact_farthest_vertex_bounds_consolidated.pdf) | [Actual build](../results/compact_farthest_vertex_bounds_consolidated_build_20261018.json);202 warnings, including 66 overfull boxes |
-| [Compact arithmetic](revisions/compact_arithmetic_dimension_bound_consolidated.tex) | Dimension at most15 | [216 pages](build/compact_arithmetic_dimension_bound_consolidated.pdf) | [Actual build](../results/compact_arithmetic_dimension_bound_consolidated_build_20261018.json);205 warnings, including 9 overfull boxes |
+| [General compact](revisions/compact_farthest_vertex_bounds_consolidated.tex) | Dimension at most17 | [285 pages](build/compact_farthest_vertex_bounds_consolidated.pdf) | [Actual build](../results/compact17_editorial_layout_final_build_20261025.json); nine underfull spacing warnings; no overfull boxes, undefined references or package warnings |
+| [Compact arithmetic](revisions/compact_arithmetic_dimension_bound_consolidated.tex) | Dimension at most15 | [216 pages](build/compact_arithmetic_dimension_bound_consolidated.pdf) | [Actual build](../results/arithmetic15_editorial_publication_style_build_20261025.json); eight underfull spacing warnings; no overfull boxes, undefined references or package warnings |
 
 All three builds report no undefined references and removal of their owned
-temporary build files. The receipt filenames retain the builder's original
-date convention; their sources and resource records identify these later runs.
+temporary build files. The compact17/arithmetic15 completion record lists the
+12/6 final-PDF pages visually inspected; this is sampled layout review. Their
+common expositions end around pages19/38, with genuine case-specific proofs
+following. Earlier receipts retain their original scope and dated filenames.
 Earlier failed attempts and byte-preserved TeX repair preimages remain evidence.
 The current finite57 source includes the reviewed terminal-tail lemma. Its
 [pinned replay predecessor](../results/finite57_terminal_tail_working_source_replay_separation_20261025.json),

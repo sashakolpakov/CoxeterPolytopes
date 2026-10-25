@@ -6,7 +6,7 @@ and PDF production are different records. No complete geometric formalization
 or fresh combined whole-manuscript runtime PASS is claimed. Updated25 October 2026.
 
 The :download:`current audit guide <../audit_and_consolidation_status_20261024.md>`
-tracks the four authorized tasks. Further dimension and example searches are
+tracks the five authorized tasks, including cleanup after each item. Further dimension and example searches are
 stopped. The :download:`six-paper index <../../manuscripts/README.md>` identifies
 matching delivered editions; a working revision is never paired with an old PDF.
 
@@ -22,9 +22,9 @@ Papers and working revisions
    * - Finite volume57
      - Frozen48-page edition and matching 50-page working revision. All 64 actual selected applications and the final 259-unit current-rule reader PASS at explicit premises. Historical25 bounded replacements retain PASS. No combined historical146-job replay, complete transitive regeneration or geometric formalization.
    * - General compact17
-     - Complete revised mathematical and editorial source accepted, including exact 18 and the independent actual-rank19–29 tail. Matching284-page working PDF compiled, with 202 warnings and editorial/rendering review pending; frozen36-page PDF states23. Two new conditional Lean modules compiled with separate actual audits for ten declarations.
+     - Complete revised mathematical and editorial source accepted, including exact 18 and the independent actual-rank19–29 tail. Matching285-page revision has source and sampled layout acceptance; nine underfull spacing warnings, no overfull boxes, undefined references or package warnings. Frozen36-page PDF states23. Two new conditional Lean modules compiled with separate actual audits for ten declarations.
    * - Compact arithmetic15
-     - Complete revised mathematical and editorial source accepted. Four computed premises and the literal golden-lattice external input remain explicit. Matching216-page working PDF compiled, with 205 warnings and editorial/rendering review pending; frozen21-page PDF states20. Existing successful composition and dyadic kernels retain their conditional scopes.
+     - Complete revised mathematical and editorial source accepted. Four computed premises and the literal golden-lattice external input remain explicit. Matching216-page revision has source and sampled layout acceptance; eight underfull spacing warnings, no overfull boxes, undefined references or package warnings. Frozen21-page PDF states20. Existing successful composition and dyadic kernels retain their conditional scopes.
    * - Sharp right-angled8/ideal4
      - Matching5-page edition, written reviews, exact model/polynomial checks and selected actual conditional-Lean audits. Both internally sharp. Geometry and named facet/code/classification inputs remain external.
    * - Ideal RA4 volume and structure
@@ -36,10 +36,10 @@ The :download:`compact17 working map <../compact17_consolidated_proof_map_202610
 and :download:`arithmetic15 working map <../compact_arithmetic_consolidation_proof_map_20261025.md>`
 identify the common foundation, actual branch points, complete consumers and
 external or computed premises. Their
-:download:`final source acceptance <../../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json>`
-remains source evidence. Matching later build receipts and the separate actual
-compact Lean completion are linked independently; geometry and complete-data
-parameters are not validated by compilation.
+:download:`current editorial completion <../../results/compact17_arithmetic15_editorial_completion_20261025.json>`
+binds exact source reviews, matching builds and sampled visual coverage. The
+separate actual compact Lean completion remains conditional; geometry and
+complete-data parameters are not validated by compilation.
 
 Finite57 current-rule audit
 ---------------------------
@@ -75,9 +75,12 @@ The two right-angled release records
 ------------------------------------
 
 The :download:`accepted release packages <../right_angled_release_packages_20261025.md>`
-bind precise source/PDF, computation and formal records. Their manifest has
-57 file pins, twelve embedded verification outputs and five selected module
-records. Historical combined cores bind predecessor TeX; unchanged components
+bind precise source/PDF, computation and formal records. Their
+:download:`current assembly <../../results/right_angled_release_packages_current_20261025.json>`
+has116 current path/hash/size bindings, including direct retrieval inputs.
+:download:`Separate root acceptance <../../results/right_angled_current_release_root_acceptance_20261025.json>`
+follows a complete independent source/evidence review. The earlier57-pin
+assembly remains a historical predecessor. Historical combined cores bind predecessor TeX; unchanged components
 are reused at their recorded scopes, not called a new combined current run.
 
 Thirty audited declarations belong to the sharp paper's three selected

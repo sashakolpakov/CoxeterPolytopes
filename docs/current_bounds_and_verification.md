@@ -21,18 +21,21 @@ prove the assumed geometric statements, or formalize the manuscript end to end.
 The historical146-job selection is not a combined fresh replay. The
 [reproduction guide](finite_volume57_reproduce.md) is the compact evidence
 map and preserves links to failed and deferred attempts. The two right-angled
-papers retain their [accepted release evidence packages](right_angled_release_packages_20261025.md).
+papers have [current release evidence packages](right_angled_release_packages_20261025.md)
+with [separate root acceptance](../results/right_angled_current_release_root_acceptance_20261025.json).
 
 Both compact article revisions now have complete
-[mathematical and editorial working-source acceptance](../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json).
+[source, build and sampled layout acceptance](../results/compact17_arithmetic15_editorial_completion_20261025.json).
 The [compact17 map](compact17_consolidated_proof_map_20261025.md) includes
 the independent19–29 tail and all three whole rank19 proofs; the
 [arithmetic15 map](compact_arithmetic_consolidation_proof_map_20261025.md)
 lists the four computed premises and the exact external literature limit.
-Matching working PDFs now compile: finite57 has 50 pages, compact17 has 284
-and arithmetic15 has 216. These are verification copies with long case
-appendices and unresolved layout warnings, not accepted replacement editions;
-the [paper index](../manuscripts/README.md) lists precise build receipts.
+Matching working PDFs now compile: finite57 has50 pages, compact17 has285
+and arithmetic15 has216. The compact revisions have no overfull boxes,
+undefined references or package warnings; nine/eight underfull spacing
+warnings remain. Their common expositions occupy about19/38 pages, followed
+by complete case appendices. The [paper index](../manuscripts/README.md)
+lists exact builds and sampled visual coverage; frozen editions stay unchanged.
 The six frozen editions remain unchanged. Finite57's ambient58 current-rule
 conjunction now passes at its explicit premises. Its bounded 59–163 source
 binding retains inherited numerical premises; this is not a new tail enumeration.
@@ -51,8 +54,8 @@ retains the exact source selectors and arguments behind the provider families.
 | Class | Largest published example | Published ceiling | Current internally reviewed ceiling | Relation to the PDF |
 |---|---:|---:|---:|---|
 | General Coxeter, finite volume | 21 | 995, Prokhorov/Khovanskii | **57** | Frozen48-page edition; matching 50-page working revision;259-unit current-rule reader PASS at explicit premises |
-| General compact Coxeter | 8 | 29, Vinberg | **17** | Reviewed source;284-page working verification copy; frozen36-page edition states23 |
-| Compact arithmetic Coxeter | 8 | 29, Vinberg | **15** | Reviewed source;216-page working verification copy; frozen21-page edition states20 |
+| General compact Coxeter | 8 | 29, Vinberg | **17** | Reviewed source and sampled layout;285-page matching revision; frozen36-page edition states23 |
+| Compact arithmetic Coxeter | 8 | 29, Vinberg | **15** | Reviewed source and sampled layout;216-page matching revision; frozen21-page edition states20 |
 | Noncompact arithmetic Coxeter | 21 | 21, Esselmann | **21**, sharp and published | No new claim |
 | Arithmetic Coxeter, compact or noncompact | 21 | 29 overall | **21**, sharp overall | New compact proof plus published noncompact theorem |
 | Right-angled, finite volume, all vertex types | 8 | 12, Dufour | **8**, internally sharp | Current5-page paper |
@@ -530,7 +533,7 @@ a degree-two moment separator; it uses no arithmetic ground field.
 | Result/package | Written status | Actual verification and boundary |
 |---|---|---|
 | General finite volume57 | Compiled48-page edition and complete internal composition review | All 64 actual selected applications and the final 259-unit current-rule reader PASS at explicit ordinary/supplemental premises; see the [evidence guide](finite_volume57_reproduce.md). All 25 historical bounded replacements retain PASS and catalogue integration;111 other catalogue matches retain inherited scope. No combined146-job replay or complete transitive regeneration; core11 unchanged. |
-| General compact17 | Complete supporting written proof, outside review and root acceptance | [Two new conditional scalar/composition modules compiled, with two separate actual axiom audits and ten declarations](../results/compact17_targeted_lean_completion_20261025/manifest.json). Geometry, analytic estimates, classifications and enumeration inputs remain explicit ordinary premises. The earlier failed/deferred attempts are preserved. Frozen PDF23; matching 284-page working verification copy has editorial review pending. |
+| General compact17 | Complete supporting written proof, outside review and root acceptance | [Two new conditional scalar/composition modules compiled, with two separate actual axiom audits and ten declarations](../results/compact17_targeted_lean_completion_20261025/manifest.json). Geometry, analytic estimates, classifications and enumeration inputs remain explicit ordinary premises. The earlier failed/deferred attempts are preserved. Frozen PDF23; matching285-page revision has source/build/sampled-layout acceptance, retaining nine underfull spacing warnings. |
 | Compact arithmetic15 | Complete supporting written whole-D16 proof/global composition | Older computations remain inputs. New dyadic kernel has 14 ACTUAL declarations compiled/separately audited, with field/geometry external. Frozen PDF20. |
 | Right-angled8 / ideal4 | Complete5-page edition, reviews and exact checks | Selected projection/height/tensor/count kernels; geometry and cited code/facet/classification facts external. Both internally sharp. |
 | Ideal RA4 volume/structure | Complete17-page edition and reviews | Exact model/combinatorial checks and selected conditional logic; no full geometric formalization or classification of all ideal polytopes as24-cell chains. |

@@ -1,15 +1,16 @@
 # The two right-angled release packages
 
 25 October2026. These are two existing paper families. The assembled
-[manifest](../results/right_angled_release_packages_20261025.json)
-binds current paper editions
+[current manifest](../results/right_angled_release_packages_current_20261025.json)
+binds the unchanged paper editions and current documentation
 to their builds, written audits, unchanged computational sources and
 prior actual formal-verification records. Assembly is metadata work;
 no successful mathematical check or Lean module was rerun.
-The [independent assembly review](../results/review_right_angled_release_assembly_source_only_20261025.md)
-accepts the reused evidence at its stated boundaries. The final manifest
-adds its requested explicit legacy CertificateBounds source entry;
-that entry gives no new source-to-object verification credit.
+The [predecessor assembly review](../results/review_right_angled_release_assembly_source_only_20261025.md)
+accepts the reused evidence at its stated boundaries. The current assembly
+refreshes documentation and retrieval pins while preserving every execution
+record. The explicit legacy CertificateBounds source entry supplies no new
+source-to-object verification credit.
 
 | Paper | Current edition | Written result |
 |---|---|---|
@@ -104,6 +105,27 @@ These provenance findings are in the
 [primary-input review](../results/review_ra_release_primary_inputs_root_20261024.md).
 The third-party image is not part of the release payload.
 
+The [predecessor manifest](../results/right_angled_release_packages_20261025.json)
+retains its original documentation snapshots and execution scopes. The current
+assembly refreshes those document pins and directly records the already used
+model producer, descending-height proof and pinned Lean configuration. It
+introduces no new mathematical or formal-verification execution.
+
+## Cleanup and subsequent replay
+
+The [completed cleanup](../results/tex_lean_repro_only_cleanup_20261025.json)
+removed loose compiler products after verification. Sources, final PDFs,
+certificates, compilation/audit records and scientific inputs remain.
+Source-bound selected objects may be compiled again when a new replay is
+needed; compilation must precede its separate actual axiom audit.
+The local preservation archive retains the exact legacy objects and their
+trace/hash provenance. It is not a new source-to-legacy-object verification,
+and a source checkout alone does not supply that local archive or the
+unuploaded scientific assets. Restore at the recorded provenance boundary
+or use the documented bounded source compilation as appropriate. The runner
+rejects objects older than their sources/imports; never change timestamps to
+force stale-cache acceptance.
+
 ## Running a necessary replay
 
 Use the guarded public entry from the repository root. Planning runs no
@@ -116,7 +138,9 @@ python3 -B scripts/run_proof_batch_20261024.py manuscript ideal_ra4_volume_and_s
 
 To execute a necessary replay, omit `--plan` and supply a fresh `--ledger`
 path in `results/`. Execution remains serial under the shared lock and
-requires40 GiB free disk and6 GiB available RAM. Compile and actual-axiom
+requires at least 2% free filesystem capacity and 15% available physical RAM.
+Active jobs stop below 1% disk or 6% RAM. Gates use exact byte ratios and
+record totals, percentages and the policy source hash. Compile and actual-axiom
 audit are separate stages; the temporary PDF build preserves the existing
 edition. Successful unchanged stages need no rerun merely to refresh a date.
 

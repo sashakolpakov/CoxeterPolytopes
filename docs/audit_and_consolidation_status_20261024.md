@@ -1,63 +1,65 @@
-# Current execution and consolidation — 25 October 2026
+# Verification and manuscript completion — 25 October 2026
 
-The four-item task remains active. The ceilings57/17/15 and sharp
-right-angled8/4, and all six accepted canonical TeX/PDF editions, are
-unchanged. The dated checkpoints below preserve earlier failures, deferrals
-and preparation states; this section supersedes their pending-status claims.
+The five-item completion task has closed its current-source, package and
+manuscript work. The ceilings57/17/15 and sharp right-angled8/4 are unchanged.
+The six frozen editions are preserved. Strict documentation, actual Git-index
+inspection and source delivery have separate publication records; no bulk
+asset upload or complete geometric formalization is implied.
 
-| Goal | Actual current evidence | Remaining boundary |
+| Goal | Current evidence | Explicit boundary |
 |---|---|---|
-| Finite57 verification | All 64 exact selected application receipts PASS, covering 28,028 maps and 83 prefixes; final 259-unit current-rule reader PASS | Explicit ordinary/supplemental geometry and finite-data premises; no complete transitive regeneration or combined historical146-job replay |
-| Two right-angled release packages | Accepted source/PDF/computation/formal-verification records and separate review | Retain their explicit external geometric, classification and predecessor-core boundaries |
-| Compact17/arithmetic15 articles | Complete reviewed working sources and matching bounded working PDF builds | Length, layout and rendered editorial review before replacing any frozen edition |
-| Targeted formal/publication checks | Two new compact modules compiled, with two separate actual axiom audits and ten selected declarations | Final documentation build with warnings as errors, actual Git-index audit and source publication after verification gates |
+| Finite57 audit and reproducibility | All64 actual selected applications and final259-unit current-rule reader PASS; current algorithm contract matches the actual reader | Geometry, finite data and inherited numerical inputs remain named; no combined146-job or transitive regeneration claim |
+| Two right-angled release packages | [Current root acceptance](../results/right_angled_current_release_root_acceptance_20261025.json), after complete separate-author source/evidence review; all116 current bindings checked | External geometry/classifications, predecessor-core scopes and conditional formal interfaces remain explicit |
+| Compact17/arithmetic15 articles | [Editorial completion](../results/compact17_arithmetic15_editorial_completion_20261025.json): complete case arguments, source reviews, matching285/216-page PDFs and12/6 named final pages visually inspected | Nine/eight underfull spacing warnings retained; sampled visual review; six frozen editions unchanged |
+| Targeted Lean and publication | Two new compact modules have actual compile plus SEPARATE actual axiom audits; successful unchanged arithmetic and right-angled kernels retained | Internal kernels assume geometry, classifications and script outputs; documentation/index/source-delivery gates are separate |
+| Cleanup after each item | All owned TeX intermediates and rendered previews removed; no loose Lean compiler objects or Python caches retained | Sources, certificates, final PDFs, actual receipts, failures and necessary restoration archives preserved |
 
-The [complete selected-application inventory](../results/finite57_longer_tail_all64_actual_application_completion_20261025.json)
-records 64 genuine successful applications under one frozen snapshot:
-28,028 full maps,15,510 direct units,12,518 nonunit obligations and 83 prefixes.
-It includes24 applications of the reviewed terminal-tail argument. The
-[final 259-unit reader](../results/finite57_final_current_rule_conjunction_execution_20261025.json)
-then passed in 6.593 seconds and peaked at 1.35% of physical RAM.
-Its195 scoped prerequisite/control/index receipts and 64 application receipts
-retain their exact source and execution boundaries.
+The [finite57 reproduction guide](finite_volume57_reproduce.md) now states the
+current mathematical algorithm and partition contract. Its source-derived
+finite domains, complete exact-key union, traversal/refusal limits and termination
+argument match the actual reader. A separate saved-evidence audit found all368
+consumed-source pins and all518 actual-unit files locally present and byte-matching.
+That is availability/evidence inspection, not a new mathematical replay. The
+259-unit result covers28,028 maps, including12,518 nonunit applications and83
+prefixes across64 shards, with24 terminal-tail applications. The eleven ordinary
+and supplemental geometric/finite-data premises stay explicit. Historical146-job
+and25-unit replacement records retain their own scopes.
 
-The [source/premise acceptance](../results/finite57_old_affine_longer_tail_root_acceptance_20261025.json)
-and unchanged eleven ordinary premises remain explicit. The
-[reproduction guide](finite_volume57_reproduce.md) is the single compact
-current-rule evidence map, including failed first inventories, interrupted
-attempts and the source-version separation. Neither this conjunction nor
-its earlier117 prerequisites regenerate native classification or supply a
-complete geometric formalization. The historical146-job catalogue,25 bounded
-PASS units and 111 inherited matches retain their separate scopes.
+The two right-angled papers have current source/PDF, computation, actual
+compile/audit and retrieval records with independent review and root acceptance.
+Their [guide](right_angled_release_packages_20261025.md) distinguishes current
+source reviews from predecessor combined-core executions. Source checkout alone
+does not restore local legacy objects or unuploaded scientific assets; their
+provenance and required separate compile/audit sequence are stated.
 
-The three matching working builds are
-[finite57,50 pages](../manuscripts/build/finite_volume57_consolidated.pdf),
-[compact17,284 pages](../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf)
-and [arithmetic15,216 pages](../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf).
-Their [build register](../manuscripts/README.md#working-verification-copies)
-records 21,202 and 205 warnings respectively, with no undefined references.
-These are working verification copies with long case appendices and pending
-layout review, not promoted publication editions. Owned TeX intermediates
-were removed; failed attempts and byte-preserved source repairs remain.
+The [compact](compact17_consolidated_proof_map_20261025.md) and
+[arithmetic](compact_arithmetic_consolidation_proof_map_20261025.md) maps expose
+one common farthest-vector method and the actual case divisions. The common
+expositions run through about pages19/38, followed by complete supporting case
+arguments. No essential proof body was replaced by a provenance citation and no
+exploratory16/14 refinement entered. Separate source reviews cover the signed-fork
+derivation, all144/361 equivalent grouped fractions, formula breaks and final
+presentation deltas. Both final builds have no overfull boxes, undefined
+references or package warnings. The accepted paper families are not multiplied.
 
-The [new compact Lean completion manifest](../results/compact17_targeted_lean_completion_20261025/manifest.json)
-records actual compilation and SEPARATE actual axiom audits for seven
-dotted-head scalar and three discrete composition declarations. The first
-scalar compile failed on a reserved binder; its reviewed three-token rename
-preceded the successful retry. This verifies conditional internal logic.
-Geometry, analytic estimates, classifications and enumerations remain
-ordinary premises, as the [logic map](compact_dimension17_conditional_logic_map_20261024.md)
-states. No successful old module or dependency was rerun.
+The [two new compact Lean modules](../results/compact17_targeted_lean_completion_20261025/manifest.json)
+retain actual compilation and separate actual axiom audits for ten declarations.
+The unchanged [dyadic kernel](../results/lean_quadratic_dyadic_triple_verification_20261023/manifest.json)
+also actually audits `global_dimension_fifteen`: a prior ceiling16 plus exclusion
+of exact16 yields15. The exclusion, complete nineteen-group dispatch and actual
+field interpretation remain written inputs. These ordinary parameters are not
+listed by printed foundational axioms. Successful unchanged kernels were not
+rebuilt for editorial changes.
 
-The user's25October resource override measures percentages of total
-filesystem capacity and physical RAM: admit at 2% disk/15% RAM, stop active
-jobs below 1% disk/6% RAM, and start cleanup below 2% disk. Exact byte ratios,
-totals, percentages and the policy source hash are recorded. One scientific,
-Lean or TeX process runs under the shared lock, with all process-tree/RSS
-monitoring retained. The earlier absolute admission rules below are history.
-No new strict Sphinx receipt, actual Git-index audit, commit or push is claimed
-by this documentation update. The936-file/33-archive bulk payload remains
-unuploaded and requires its separate exact-payload authorization.
+The [cleanup receipt](../results/tex_lean_repro_only_cleanup_20261025.json) preserves
+necessary legacy bytes and provenance. Every later build/render batch removed its
+owned disposable outputs. No cache restoration supplies a missing source-to-object
+proof or permits changing timestamps to force reuse.
+
+The user's percentage policy admits new work at2% free disk/15% available RAM
+and stops active work below1%/6%, with one monitored process under the shared lock.
+The936-file/33-archive bulk payload remains unuploaded. Older checkpoint statements
+below are historical and superseded by this current-source account.
 
 ---
 

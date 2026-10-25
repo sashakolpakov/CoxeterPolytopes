@@ -1,25 +1,27 @@
 # Working compact arithmetic15 proof map
 
 The [working revision](../manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex)
-now contains the complete arithmetic local bodies and forest dispatch at
-their declared inputs. Its current compiled source is695022bytes, SHA256
-`fd637e7c19aa37e67b3c493190a081bb2183c43b03cb434f3d11100c07584aee`.
-The [matching working PDF](../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf)
-has an [actual bounded build](../results/compact_arithmetic_dimension_bound_consolidated_build_20261018.json):
-216 pages and205 retained warnings, including9 overfull boxes, with no
-undefined references. This is a working verification copy; length, layout
-and rendered editorial review remain. The accepted21-page PDF still states20;
-this map does not replace its [edition-specific proof map](compact_arithmetic20_proof_map.md).
-No bound, example or formal-verification status changes through this map.
+contains complete local arguments and forest dispatch at its declared inputs.
+Its current source is696288bytes, SHA256
+`d0f040b253146f318bafd2391c8809c9d995f53fcd920477f78f42038d424295`.
+The [matching216-page PDF](../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf)
+has a [final monitored build](../results/arithmetic15_editorial_publication_style_build_20261025.json)
+with no overfull boxes, undefined references or package warnings; eight
+underfull spacing warnings remain. The [editorial completion record](../results/compact17_arithmetic15_editorial_completion_20261025.json)
+binds separate source reviews and six named final pages visually inspected.
+It also records the earlier six-page inspection before link/provenance styling.
+This is sampled layout review, not inspection of every page. The common
+method, algorithms and dyadic finish run through page38; detailed supporting
+cases begin on that page. The frozen21-page edition still states20 and
+retains its [edition-specific map](compact_arithmetic20_proof_map.md).
 
-The accepted mathematical/editorial preimage was694946bytes, SHA256
-`f14a929b7aeada65c2c3ed1bba6cecdc45d0b40a6f165ef70ffa46e65c3a01b9`.
-It remains preserved. The [interval-prefix record](../results/consolidated_interval_row_typesetting_equivalence_20261025.json)
-and [alignment/citation repair record](../results/consolidated_alignment_syntax_equivalence_20261025.json)
-bind the syntax-only successor and byte-verified inverse deltas. They
-change no numerical token or mathematical display body. Their original
-source-only labels remain historical; the later build receipt establishes
-matching compilation. Earlier failed attempts are preserved.
+The [earlier mathematical/editorial acceptance](../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json),
+[byte-preserved preimages](../results/source_archive/compact17_arithmetic15_before_editorial_finish_20261025/manifest.json)
+and [current layout/prose reviews and exact deltas](../results/source_archive/compact17_arithmetic15_layout_finish_20261025/manifest.json)
+retain the source lineage. The revision prints the previously cited signed-fork
+derivation and cleans provenance wording. All361 grouped infix fractions were
+replaced equivalently. Four computation-output premises and the literal external
+golden-lattice assumption remain; no exploratory14 result entered the article.
 
 The common argument uses one original farthest vertex and one spatial
 vector of squared norm below one. The general companion supplies geometry;
@@ -51,15 +53,18 @@ inclusions and consumers. No surviving algebraic model is called a polytope.
 The [final root review](../results/review_arithmetic15_final_covers_and_composition_root_20261025.md),
 [integration receipt](../results/arithmetic15_final_dispatch_working_integration_20261025.json)
 and [outside integration review](../results/review_arithmetic15_final_dispatch_integration_delta_fresh_20261025.md)
-bind the completed writing and removal of obsolete duplicate explanations.
+record the earlier completed writing and removal of duplicate explanations.
 Earlier individual receipts bind the full local reviews and byte-preserved
 predecessors; the audit guide links them. The primary Markdown homes remain
 provenance and are not substitutes for printed arguments.
 
 The [human editorial integration](../results/arithmetic15_article_editorial_working_integration_20261025.json)
-and [final source acceptance](../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json)
-bind this successor. Its mathematical bodies and four output premises are
-unchanged through the recorded syntax-only repairs above. The [general companion map](compact17_consolidated_proof_map_20261025.md)
+and [earlier source acceptance](../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json)
+bind earlier source versions. The current source and PDF are bound by the
+[editorial completion record](../results/compact17_arithmetic15_editorial_completion_20261025.json),
+including reviews of the printed signed-fork derivation and later presentation
+changes. The four computation-output premises and theorem scope are unchanged.
+The [general companion map](compact17_consolidated_proof_map_20261025.md)
 identifies the independent geometry and actual-rank tail it uses.
 
 The exact [literal golden-lattice assumption](manuscript_assumptions.md)
@@ -70,9 +75,11 @@ actual compilation and three separate actual axiom prints in its
 [22 October receipt](../results/lean_arithmetic16_composition_verification_20261022/manifest.json).
 QuadraticDyadicTripleKernel has fourteen in its
 [23 October receipt](../results/lean_quadratic_dyadic_triple_verification_20261023/manifest.json).
-These successful kernels retain their recorded conditional scopes; this
-editorial successor calls for no rerun and supplies no complete geometric
-formalization. The companion's two new compact17 modules likewise verify
+The dyadic kernel explicitly audits `global_dimension_fifteen`, deriving
+`n <= 15` from the prior global ceiling16 and exclusion of exact16. The latter
+exclusion, complete nineteen-group dispatch and actual-field interpretation
+remain written inputs. These successful kernels retain their recorded scopes;
+editorial changes call for no rerun and supply no complete geometric formalization. The companion's two new compact17 modules likewise verify
 conditional internal logic, not its geometric inputs. No combined runtime
 replay or promotion of the working PDF to a replacement publication edition
 is claimed here.

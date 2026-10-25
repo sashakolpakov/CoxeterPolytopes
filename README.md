@@ -14,16 +14,17 @@ That guide separates fresh mathematical audits, manuscript revisions and the
 new bounded execution entry. Its 14 infrastructure tests passed; necessary
 proof jobs run serially under the monitored resource policy below.
 The [right-angled release records](docs/right_angled_release_packages_20261025.md)
-now assemble reviewed source, computation and formal-verification evidence
-for both right-angled papers, with unresolved input boundaries stated explicitly.
+now have [current root acceptance](results/right_angled_current_release_root_acceptance_20261025.json)
+for both papers, with external inputs and historical execution boundaries explicit.
 The compact17 and arithmetic15 working articles now have complete
 [mathematical and editorial source acceptance](results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json).
 Their [compact](docs/compact17_consolidated_proof_map_20261025.md) and
 [arithmetic](docs/compact_arithmetic_consolidation_proof_map_20261025.md)
 maps expose the common method, case divisions and assumed inputs.
-Matching working PDFs now compile, and the two new compact Lean modules have
-actual compilation and separate actual axiom audits. The working copies still
-need length and layout review; the six frozen editions remain unchanged.
+The [completed editorial revision](results/compact17_arithmetic15_editorial_completion_20261025.json)
+now has matching PDFs, separate source reviews and sampled rendered-page review.
+The two new compact Lean modules retain actual compilation and separate actual
+axiom audits. The six frozen editions remain unchanged.
 
 ## Current dimension results
 
@@ -76,11 +77,13 @@ a unique second-volume double.
 
 Three later working verification copies now have matching bounded builds:
 [finite57,50 pages](manuscripts/build/finite_volume57_consolidated.pdf),
-[compact17,284 pages](manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf)
+[compact17,285 pages](manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf)
 and [arithmetic15,216 pages](manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf).
-These are same-family revisions, with long case appendices and unresolved
-layout warnings; they are not promoted publication editions. The
-[paper index](manuscripts/README.md) records their build receipts and warnings.
+The compact revisions have no overfull boxes, undefined references or package
+warnings; nine/eight underfull spacing warnings remain. Their main expositions
+occupy about19/38 pages, followed by complete case appendices. These remain
+revisions in the same families; the six frozen editions are preserved. The
+[paper index](manuscripts/README.md) records exact builds and sampled visual coverage.
 
 ## What the proofs do
 

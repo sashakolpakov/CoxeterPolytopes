@@ -96,8 +96,10 @@ Resource contract
 Scientific, Lean, and TeX work shares **one process at a time** and the lock
 ``formal/.proof-batches/exclusive.lock``.
 
-* Admission requires at least **40 GiB free disk and 6 GiB available RAM**.
-* Abort thresholds are **8 GiB disk and 3 GiB available RAM**.
+* Admission requires at least **2% free disk and 15% available RAM**.
+* Abort thresholds are **1% free disk and 6% available RAM**.
+* Measure exact byte ratios against total filesystem capacity and physical
+  RAM. Record totals, percentages and the resource-policy source hash.
 * Scientific and TeX children use the existing 59-second, 1-GiB, one-thread
   bounded wrappers. Lean uses one module, 2,048 MiB, and one thread, followed
   by a separate axiom audit.
@@ -105,7 +107,7 @@ Scientific, Lean, and TeX work shares **one process at a time** and the lock
   run; do not bypass the watchdog or lower a resource floor.
 * A failed or deferred child stops the coordinated run. Remove only owned,
   unused temporary build products after a batch; retain sources, certificates,
-  PDFs, and evidence. Below 20 GiB free disk, cleanup precedes further jobs.
+  PDFs, and evidence. Below **2% free disk**, cleanup precedes further jobs.
 
 No parallel proof farm, raw project-wide Lean build, or repeated successful
 batch is needed to read the papers or build this documentation.

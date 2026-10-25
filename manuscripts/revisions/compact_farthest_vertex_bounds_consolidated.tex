@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
 \usepackage[margin=1in]{geometry}
+\setlength{\emergencystretch}{3em}
 \usepackage{booktabs,longtable,array,enumitem,xcolor}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 \newtheorem{theorem}{Theorem}[section]
@@ -41,6 +42,9 @@ dotted-head pressure, legally funded reference vectors, the two genuine
 signed fork directions, and a local calculation at an adjacent
 \(A_{18}\) vertex. Arithmeticity is nowhere assumed.
 \end{abstract}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
 
 \section{The theorem and the organization of its proof}
 \label{sec:organization}
@@ -385,8 +389,8 @@ There is at most one short \(I/J\) profile or one typed exception;
 they do not coexist. Acuteness of their actual isolated walls
 is essential: two on orthogonal supports would have product
 \(-\sqrt{h_1h_2}\) strictly between \(-1/2\) and \(0\).
-The full endpoints, \(J\) case and ordinary rates are internal
-inputs \src{Ord}, \src{F19-local}, not field classifications.
+Appendix~\ref{app:ordinary} proves the endpoint estimates,
+the \(J\) case and the ordinary rates.
 
 Useful joint bounds, counting \(I\) only once, are
 \begin{equation}
@@ -407,7 +411,7 @@ height constraints behind \eqref{eq:joint}, are given in
 Appendix~\ref{app:ordinary}. The uniform actual \(B/D\) floor
 is proved in Appendix~\ref{app:BDfloor}.
 
-\subsection{The \(A\)-chain branch}
+\subsection[The A-chain branch]{The \(A\)-chain branch}
 For \(A_r\), use the zero-sum subspace of \(\R^{r+1}\) with roots
 \((e_i-e_{i+1})/\sqrt2\). The inverse Gram matrix is
 \[
@@ -428,8 +432,6 @@ e(A_r)>&1/2&4/7&5/7&199/250&6/7
 \]
 Later local refinements give \(e(A_{12})>13/20\) and
 \(e(A_{15})>413/500\), uniformly with arbitrary spectators.
-Only the first nonarithmetic component theorem of the mixed-title
-\src{A13} is used, not its arithmetic packing theorem.
 The shared actual feet, common-pair inventories, uniform
 \(1/2,4/7,5/7\) bounds, and the \(N=17,18,19\) central-window
 and paid-reference arguments are proved in Appendix~\ref{app:Achain}.
@@ -440,7 +442,7 @@ and~\ref{app:A15}. Their full native-cosine inventories and
 individual actual-helper payments are included. Later exact-\(17\)
 research remains excluded.
 
-\subsection{The common \(B/D\) prefix branch}
+\subsection[The common B/D prefix branch]{The common \(B/D\) prefix branch}
 For \(B_r\), use long roots \((e_i-e_{i+1})/\sqrt2\), \(i<r\),
 and short root \(e_r\). For \(D_r\), use the long chain and the
 fork root \((e_{r-1}+e_r)/\sqrt2\). On a long initial segment,
@@ -460,7 +462,7 @@ With arbitrary finite spectators,
 \(\sum_{j=1}^{M+1}x_j^2>E_M-H_M/3200\).
 \end{proposition}
 \begin{proof}
-The exact-rank inventory \src{Prefix} proves that a weak site
+Appendix~\ref{app:prefixinventory} proves that a weak site
 \(5\leq i\leq M+1\) has a pure cap
 \[
  v=\gamma\omega_i+\omega_1/2,\quad
@@ -477,8 +479,8 @@ floor loses \(<1/3200\); at \(K=M+1\) the extra increment
 \((\sqrt{M+1}-\sqrt M)^2>1/(4M+2)\geq1/66\)
 pays the possible extra omission.
 
-If \(5\) is weak, the first-six-root actual point table of
-\src{Prefix} gives \(x_1>.5965\), and \(6\) is strong, with
+If \(5\) is weak, the first-six-root point table in
+Appendix~\ref{app:prefixinventory} gives \(x_1>.5965\), and \(6\) is strong, with
 \(S_6>2.01815\). Interpolate through \((1,.5965),(6,2.01815)\)
 and a later strong endpoint. The slopes decrease:
 \(.5965,.28433\), then \(1/(\sqrt K+\sqrt6)<1/5\).
@@ -502,7 +504,7 @@ at an excluded rank still requires its own new local proof.
 
 \section{Complete forest covers and their consumers}
 \label{sec:forests}
-\subsection{A fresh cover in exact dimension \(18\)}
+\subsection[A fresh cover in exact dimension 18]{A fresh cover in exact dimension \(18\)}
 Call \(A_r\), \(r\geq7\), or \(B_r,D_r\), \(r\geq9\),
 dominant. Each costs \(>1/2\), so at most one is possible.
 With none the ordinary rank-over-\(14\) baseline, even allowing
@@ -559,8 +561,8 @@ At \(13,14,15\), every ordinary, \(I/J\), and typed remainder
 exceeds the residual budget; \(I+T_2>.21\) closes rank \(15\).
 At \(16\), two ordinary \(A_1\)'s and \(I+A_1\) are excluded;
 ordinary \(T_2\) and both typed defects initially remain.
-The fresh \(B_3,D_4,D_3\) layer checks of \src{F18},
-Sections 5--6, extend helper coverage to \(13\), giving
+The \(B_3,D_4,D_3\) layer checks in
+Appendix~\ref{app:exact18layers} extend helper coverage to \(13\), giving
 energy \(>.8689525\); ordinary \(T_2>1/7\) closes that case.
 The fresh \(B_{17}\) layers reach a strong \(14/15\) endpoint
 and energy \(>.90715\), excluding a nonshort ordinary \(A_1\).
@@ -581,7 +583,7 @@ The other internal proof homes are:
 \begin{tabular}{lp{.69\linewidth}}
 \toprule
 Row&Excluding project argument\\ \midrule
-\(A_{16}\)&\src{A16-new}, ordinary and \(I+A_1\);
+\(A_{16}\)&Proposition~\ref{app:prop:A16}, ordinary and \(I+A_1\);
  Appendix~\ref{app:A16typed18}, both actual typed defects\\
 \(A_{17}\)&Appendix~\ref{app:A17rankone18}, ordinary and actual \(I\)\\
 whole \(A_{18}\)&Appendix~\ref{app:wholeA18}, full two-end native-gap argument\\
@@ -595,18 +597,14 @@ whole \(D_{18}\)&Sections~\ref{sec:d18-setup}--\ref{sec:composition}\\
 \bottomrule
 \end{tabular}
 \end{center}
-Appendix~\ref{app:exact18layers} gives \src{F18}'s fresh local
-layers, including the distinct signed \(D_4/D_3\) forks and the
-actual \(A_{17}\) neighbor for \(B_{17}\).
-Every exact-\(18\) row exclusion now has its written proof home
-identified above, including both actual short-rank-one cases.
-Their common kernels and separate actual terminal classifications
-are explicit. The necessary cover and their complete composition
-still require final joint verification. Appendix~\ref{app:highertail}
-now supplies the separate higher-dimensional argument through exact
-\(20\); its exact-\(19\) completion remains below.
-No field, lattice or integral dotted-product premise is used in these
-general geometric arguments.
+Appendix~\ref{app:exact18layers} proves the local layers used in
+this cover, including the distinct signed \(D_4/D_3\) forks and the
+actual \(A_{17}\) neighbor for \(B_{17}\). The table identifies the
+complete proof of every retained row, including both short rank-one
+cases. The independent higher-dimensional exclusions are proved in
+Appendices~\ref{app:highertail}--\ref{app:exact19:wholeD19proof}.
+These arguments use no field, lattice or integral dotted-product
+hypothesis.
 
 \subsection{The separate complete higher-dimensional tail}
 \label{subsec:higher}
@@ -616,25 +614,17 @@ The earlier internal package establishes the separate theorem:
 \label{thm:tail}
 There is no compact hyperbolic Coxeter polytope of dimension at least \(19\).
 \end{theorem}
-Appendix~\ref{app:highertail} now proves the component caps, shared
+Appendix~\ref{app:highertail} proves the component caps, shared
 windows and complete actual-rank exclusions from \(29\) through \(20\).
-It uses the published ceiling only at dimensions at least \(30\).
-The complete exact-\(19\) proper consumers and necessary cover are
-also proved there. The cover leaves only the three whole classical
-forests handled in Appendix~\ref{app:exact19:wholeclassical}.
-Appendix~\ref{app:exact19:wholeclassical} supplies all three whole
-consumers. Their direct combination with the actual-rank covers is
-written in Section~\ref{app:tail:completeconjunction}. Final joint
-verification and a matching build remain separate from this source
-integration.
+The published ceiling is used only at dimensions at least \(30\).
 At dimension nineteen, Proposition~\ref{app:tail:prop:exact19cover}
-reduces the necessary forest to whole \(A_{19},B_{19},D_{19}\).
-Their separate proofs occupy Appendix~\ref{app:exact19:wholeclassical}.
-The \(A\) proof separates the three actual weak-end patterns; the
-\(B\) proof separates its two exceptional terminal walls; the \(D\)
-proof separates its six actual head types after a common centre analysis.
-Each uses one original vector. The proper-component cases preceding
-the cover retain their entire spectator forests.
+leaves whole \(A_{19},B_{19},D_{19}\). Their proofs occupy
+Appendices~\ref{app:exact19:wholeclassical}--\ref{app:exact19:wholeD19proof}:
+the \(A\) proof splits by the three weak-end patterns; the \(B\)
+proof splits by its two exceptional terminal walls; and the \(D\)
+proof splits by six head types after a common centre analysis.
+Each case keeps one original vector and every spectator in its cover.
+Section~\ref{app:tail:completeconjunction} joins these exclusions.
 
 The higher ranks have their own complete covers in
 Appendix~\ref{app:highertail}. The short \(B_3/B_2\) and \(D_4/D_3\)
@@ -644,53 +634,35 @@ arguments with the published compact ceiling. This is a logical
 conjunction of exclusions, not geometric dimension heredity.
 No arithmetic theorem or field census enters that conjunction.
 
-\section{The whole-\(B_{18}\) terminal partition}
+\section[The whole-B18 terminal partition]{The whole-\(B_{18}\) terminal partition}
 \label{sec:b18}
-First classify the actual opposite of old node \(17\) without
-assuming a strong head. The complete inventory \src{B18-T} leaves:
+Classify the actual opposite of old node \(17\) without assuming
+a strong head. Section~\ref{app:B18inventory} leaves:
 \begin{enumerate}[label=(\roman*)]
 \item a pure far-three helper with finite own \(5\), finite own
  at least \(7\), or dotted own \(1<g<4/3\);
 \item near-three with own \(6\);
 \item no left contact, with short white label \(3,4,5,6,7,8\).
 \end{enumerate}
-All other isolated, left, bridge and affine/null roles are
-excluded in that same inventory.
-Sources \src{B18-F}, \src{B18-D} close the finite and full
-dotted far cases. Source \src{B18-N} closes near-three/own-six
-through all seven actual short-wall roles.
-In the last branch, \src{B18-R} closes distinct \(17/18\)
-caps and leaves seven common-cap roles:
-\[
-\begin{array}{c|c}
-\text{own }0&\text{short }5,6,7,8\\
-\text{own }3&\text{short }3,4,5.
-\end{array}
-\]
-Source \src{B18-C} closes own \(0\)/short \(6,7,8\) and
-own \(3\)/short \(4,5\). Source \src{B18-Z} closes
-own \(0\)/short \(5\). The last own \(3\)/short \(3\)
-role is excluded at its actual adjacent whole-\(A_{18}\)
-vertex, \src{A-local}, with comparison \(11/8\).
-That vertex is never assumed farthest.
+All other isolated, left, bridge and affine/null roles are excluded
+in that inventory. Sections~\ref{app:B18finitefar}--\ref{app:B18localA17}
+exclude the first branch, and Section~\ref{app:B18near6} excludes
+the second. In the last branch, Sections~\ref{app:B18noleft}--\ref{app:B18conclusion}
+exclude distinct terminal caps and then every common-cap role.
+The last common cap is treated at its actual adjacent whole-\(A_{18}\)
+vertex, with comparison \(11/8\); that vertex is never assumed farthest.
 
-This exhausts the terminal list. The complete conjunction
-\src{B18-compose} and its root gate \src{V18} also bind the
-earlier exact-\(18\) row closures. Thus the same selected
-original vertex in dimension \(18\) has only whole \(D_{18}\)
-left, without any claim about all other vertices.
-Appendix~\ref{app:wholeB18} proves this complete partition and each
-terminal exclusion, including the actual finite-white inventory,
-all original-wall checks and the corrected asymmetric individual
-price \(.13/10=.013\). Its source and the two local exposition
-repairs have independent and coordinating review.
+Thus an original farthest whole-\(B_{18}\) vertex cannot occur.
+Appendix~\ref{app:wholeB18} gives the complete finite-white inventory,
+each terminal exclusion, all original-wall checks and the individual
+coefficient payments. Together with the preceding row consumers,
+this leaves only whole \(D_{18}\) at the selected original vertex.
 
-\section{The last case: an actual whole-\(D_{18}\) vertex}
+\section[The last case: an actual whole-D18 vertex]{The last case: an actual whole-\(D_{18}\) vertex}
 \label{sec:d18-setup}
 
-We now give the final dotted-head argument of \src{D18-final}
-in full. Its earlier internal inventory interfaces are stated
-separately from the new estimates.
+We treat the final dotted-head case using the complete inventory
+proved in Appendix~\ref{app:D18foundation}.
 Keep the original \(p,z,x\) and use actual old roots
 \[
  n_i=(e_i-e_{i+1})/\sqrt2\quad(1\leq i\leq17),\qquad
@@ -712,14 +684,15 @@ In particular \(x_{18}\) is signed and
 All terminating decimals in this paper denote exact rational numbers.
 
 The head is the actual opposite wall of the long-end edge \(1\).
-The complete isolation theorem \src{H} says that its normal is
+Section~\ref{app:D18oldhead} proves that its normal is
 \[
  H=A_Hp-\eta\Omega_1,\qquad A_H^2=2\eta^2-1>0.
 \]
-It also supplies the complete own-contact whitelist.
-The strong terminal floor \(S_{16}>f_{16}\), its legal reference
-append, and the complete fork-role list are supplied by \src{L}.
-Finite heads are excluded by the complete conjunction \src{FH}.
+The same section gives the complete own-contact list.
+Sections~\ref{app:D18strong16} and~\ref{app:D18forkinventory} prove
+the strong terminal floor \(S_{16}>f_{16}\), its funded reference
+append and the complete fork-role list. The finite-head cases close
+in Section~\ref{app:D18foundationcomposition}.
 We treat every dotted head \(\eta>1\) without a parameter cutoff.
 
 Appendix~\ref{app:D18foundation} proves these earlier inputs in
@@ -758,7 +731,7 @@ energy lower bound, and is valid on the entire open interval.
 \subsection{The four original reference cases}
 \label{subsec:fourrefs}
 
-The fresh \(.58\) inventory \src{D} has the following complete
+Section~\ref{app:D18freshwindow} gives the following complete
 initial alternatives: strong \(5\); a weak pure far-left-three
 helper at \(5\); or an isolated dotted weak \(5\) with a chosen
 strong \(J=6\) or \(7\). Thus there are four reference rows.
@@ -775,7 +748,7 @@ row concerned a native-five head and is outside \(\eta>1\).
 We emphasize the \emph{bare} references for the three nonhelper
 rows. They interpolate through the strong knots, are flat on
 their first \(J\) coordinates, and have endpoint sum \(f_{16}\).
-The complete contracts \src{B}, \src{L} are
+Sections~\ref{app:D18rawreferences} and~\ref{app:D18strong16} give
 \[
 \begin{array}{c|c|c|c|c}
 \text{initial case}&B_0&\text{first mean }b<
@@ -792,7 +765,7 @@ More explicitly, each reference \(w\) has
  \ip{w}{P_{16}}=f_{16},\quad \beta_{16}>.127.
 \]
 No head pressure has been paid. Their raw endpoint-\(15\)
-lower bounds are \(.9403998,.9212053,.9035167\).
+lower bounds are \(.9403998,\allowbreak .9212053,\allowbreak .9035167\).
 The legal endpoint-\(16\) append adds at least
 \(.127^2-.00001=.016119\); if \(15\) is weak, its fictitious
 knot is deleted before pressure. All late repairs preserve the
@@ -829,7 +802,7 @@ knot by a chord. Its first six coordinates are
  w_1=a_0,\quad w_2=\cdots=w_6=b_0=(f_6-a_0)/5.
 \end{equation}
 The actual helper proves \(x_1>a_0\) and strong \(6\).
-The raw contract of \src{B}, \src{E}, \src{L} is
+The unheaded reference satisfies
 \[
  \ip{x}{w}>A_w,\quad L_w:=2A_w-\norm{w}^2>.987759,\quad
  \ip{w}{P_{16}}=f_{16},\quad \beta_{16}>.127.
@@ -881,9 +854,10 @@ because \(b\leq1/2\), \(a>1\). Hence
 \(F''>.66\cdot7/(4\sqrt2)-.1089>.7\), using \(\sqrt2<1.415\).
 At \(u_0=2/3\),
 \[
- h(u_0)=\sqrt{2/3}-1/3,\quad R(u_0)=5/9,\quad
- F(u_0)>.9956502,\quad
+\begin{gathered}
+ h(u_0)=\sqrt{2/3}-1/3,\quad R(u_0)=5/9,\quad F(u_0)>.9956502,\\
  F'(u_0)=.2013-.0825\sqrt6,\quad |F'(u_0)|<.0008.
+\end{gathered}
 \]
 The value bound uses
 \(.81649^2=.6666559201<2/3\), and the derivative bound uses
@@ -1038,13 +1012,13 @@ For an actual fork edge with distance cosine \(C\),
 \end{equation}
 since \(.876^2=.767376\) and
 \(7.6\cdot.232624=1.7679424>1.767376\).
-In the complete fork-role list \src{L}, every far-next-three
+In Section~\ref{app:D18forkinventory}, every far-next-three
 role has \(g\geq\cos(\pi/5)>.809\) and exact cosine
 \(C=9g+1>8.281\). Equation~\eqref{eq:forkcosh} removes that
 entire role, including all its previously classified native/null
 own alternatives.
 
-\section{A local \(A_{18}\) lemma at an adjacent actual vertex}
+\section[A local A18 lemma at an adjacent actual vertex]{A local \(A_{18}\) lemma at an adjacent actual vertex}
 \label{sec:localA18}
 \begin{lemma}
 \label{lem:localA18}
@@ -1060,9 +1034,8 @@ Then \(\ip{y}{u_{18}}>.78\) is impossible for the positive
 normalized endpoint-dual direction.
 \end{lemma}
 The lemma is local at \(q\), which is not assumed farthest.
-We give the new endpoint proof and the precise scope of its
-earlier local inventory \src{A-local}, Sections 2--5.
-That source's original \(B_{18}\) Section 1 is not used.
+Appendix~\ref{app:localAinputs} supplies its local inventory; no
+original \(B_{18}\) hypothesis is used.
 \begin{proof}
 In the zero-sum subspace of \(\R^{19}\), for \(i\leq j\),
 \[
@@ -1154,7 +1127,7 @@ the matrix with diagonal
 Both are positive with positive inverse. Their positive
 projections are feasible against every original wall,
 including the reverse wall at \(q\).
-The exact cap-time/weight estimates in \src{A-local} give
+The cap-time and weight estimates in Appendix~\ref{app:localAinputs} give
 weighted mean loss less than
 \[
  1/10+(11/8)(7/16)=.7015625
@@ -1215,8 +1188,8 @@ After chords set \(w_i=(H_i-H_{i-1})/\sqrt2\).
 The reference is zero-sum with demand \(E_0=\norm{w}^2\).
 
 Before internal holes, the exact energies for zero, one and
-two weak ends are \(.7205882,.70082285,.6810575\).
-Internal curvatures are \(.043,.038,.036,.034\) and reflections;
+two weak ends are \(.7205882,\allowbreak .70082285,\allowbreak .6810575\).
+Internal curvatures are \(.043,\allowbreak .038,\allowbreak .036,\allowbreak .034\) and reflections;
 even summing all eight losses gives
 \[
  2(.043^2+.038^2+.036^2+.034^2)/4=.0028725<.002873.
@@ -1282,7 +1255,8 @@ The original-\(x\) energy is never added to this local-\(y\) budget.
 \label{sec:composition}
 \subsection{Every actual near/far fork edge is short}
 For a near-three or far-three fork role, the complete finite-white
-classification \src{T} gives an actual other endpoint \(q\)
+classification in Section~\ref{app:D18forkinventory} gives an
+actual other endpoint \(q\)
 with whole diagram \(A_{18}\). The positive reverse direction
 at \(q\) is exactly its normalized new endpoint dual: \(p\)
 has nonzero product with only that new incident root.
@@ -1347,7 +1321,7 @@ are excluded at once, for all finite or dotted near/far owns.
 
 \subsection{Exhausting the actual head and fork covers}
 For a dotted head, \eqref{eq:forkcosh} removes every
-far-next-three role from the complete \src{L} fork cover.
+far-next-three role from Section~\ref{app:D18forkinventory}.
 What remains is isolated, near-three, or far-three.
 Their six unordered pairs are exhausted by
 \begin{center}\small
@@ -1366,7 +1340,7 @@ Both assignments of the genuine signed forks are included.
 Every pair is impossible, so no dotted head remains.
 
 The head cover also includes own zero, finite and parallel
-cases. The complete isolation proof \src{H} removes own
+cases. Section~\ref{app:D18oldhead} removes own
 \(0,3,4\) by time constraints and own \(6\) by a positive
 affine \([6,3]\) kernel. At own \(6\) an actual null is
 \(\sqrt3H+2n_1+n_2\); at parallel own it is \(H+n_1\).
@@ -1734,7 +1708,7 @@ For $H_4$, $R_e^2=1584/2209$; at $\beta=1/2$ the four tests
 All exceed one, the last by $\ph>198/125$; larger contacts only
 increase these positive tests. This proves $H_4>11/36$.
 
-\subsection{The two intermediate \texorpdfstring{$A$}{A} components}
+\subsection[The two intermediate A components]{The two intermediate \texorpdfstring{$A$}{A} components}
 
 Use $C_{ij}=2\min(i,j)(N-\max(i,j))/N$, with $N=6,7$.
 For $A_5$, distinct $2/3$ and $3/4$ pairs each demand a sum above
@@ -1829,7 +1803,7 @@ is $(\sqrt2-3)/4<0$. Here $A^2=(5+4\sqrt2)/7$ and
 $A^2-9k=(335-236\sqrt2)/28>0$; \eqref{eq:pointenergy} gives
 energy $>(A-\sqrt k)/(A+\sqrt k)>1/2$.
 
-\subsection{The four intermediate \texorpdfstring{$B$}{B} components}
+\subsection[The four intermediate B components]{The four intermediate \texorpdfstring{$B$}{B} components}
 
 Use $u_i=(e_1+\cdots+e_i)/\sqrt i$ and, for $i<r$,
 $\omega_i=\sqrt2(e_1+\cdots+e_i)$, while
@@ -1893,7 +1867,7 @@ It has $\cosh L_6\ge5+3\sqrt2>9$; it is estimated, not removed
 by an incorrect $F_4$ sealing claim. These complete lists prove
 the four asserted $B$ costs.
 
-\subsection{Extended stars, \texorpdfstring{$D_7$}{D7}, and the \texorpdfstring{$D_8$}{D8} closure}
+\subsection[Extended stars, D7, and the D8 closure]{Extended stars, \texorpdfstring{$D_7$}{D7}, and the \texorpdfstring{$D_8$}{D8} closure}
 
 Let $S$ be a central $D_4$ star with an extended arm. If one wall
 closes its center and three neighbors, every minimal nonpositive
@@ -2056,10 +2030,8 @@ by \(Q<h\). Two or more give
 the final difference being \((75\varphi-112)/972>0\).
 This covers all native/dotted contacts and all spectators.
 
-\subsection{A rank-free joint payment for an isolated \(I\)}
+\subsection[A rank-free joint payment for an isolated I]{A rank-free joint payment for an isolated \(I\)}
 \label{app:Ijoint}
-This rank-free argument transcribes \src{F19-local}, \src{A16-local},
-and the real scalar barrier isolated in the source ledger.
 Let the actual isolated short wall be
 \[
  c_0=\sqrt h\,p-\sqrt{1+h}\,e,\qquad0<h<1/2,
@@ -2143,8 +2115,6 @@ if \(K^{-1}\mathbf1>0\) and every height is at least
 
 \subsection{Propagation from each actual typed rank-two defect}
 \label{app:typedpropagation}
-The complete propagation proof is the real geometric argument of \src{Old7}
-and its old-\(A_2\) companion.
 For \(N_7\), put \(b=\cos^2(\pi/7)<5/6\) and
 \(h_N=4b/3-1<1/12\).
 An opposite in another component retains the whole old
@@ -2226,7 +2196,7 @@ contradicting the common-wall low-energy branch.
 Thus \(O_7+T_2\) has its other component energy \(>1/5\).
 
 
-\section{The uniform actual \(B/D\) component floor}
+\section[The uniform actual B/D component floor]{The uniform actual \(B/D\) component floor}
 \label{app:BDfloor}
 The next proof supplies the \(9/14\) input used before the long-prefix
 argument. Its small boundary cases refer only to the complete ordinary
@@ -2434,11 +2404,7 @@ squaring of their prefix correlations. Their expansion is the stated
 bound on $W^2$. This contradicts Cauchy and proves the proposition.
 \end{proof}
 
-\section{Coupled actual pressures in an \(A\)-chain}\label{app:Achain}
-
-This shared proof consolidates \src{Ahalf}, \src{Afour}, and
-\src{A13}; the later central-window proofs consolidate the geometric
-window of \src{A16}, \src{A16-new}, \src{A17}, and \src{A18}.
+\section[Coupled actual pressures in an A-chain]{Coupled actual pressures in an \(A\)-chain}\label{app:Achain}
 
 The crucial feature of this section is that a foot at one end is
 tested against \emph{actual} opposites at the other end. A collection
@@ -2860,7 +2826,7 @@ Both far-end alternatives are impossible. This proves the
 rank-seven base and completes Theorem~\ref{app:thm:Ahalf}.
 
 
-\subsection{The paired-end Gram and the uniform \(4/7\) bound}
+\subsection[The paired-end Gram and the uniform 4/7 bound]{The paired-end Gram and the uniform \(4/7\) bound}
 \label{app:Afour}
 \begin{proposition}
 Every actual \(A_r\) component, \(r\geq8\), has energy
@@ -2873,10 +2839,11 @@ the height sums exceed \(41/40\) and \(1219/1000\),
 and likewise at the opposite end. At \(N=9\) the
 correlations are \(\sqrt7/4,\sqrt{5/8}\); the exact tests are
 \[
- F(41/80)^2=\frac{43033600}{65302561}
- <33/50<\sqrt7/4,\qquad
- F(1219/2000)^2=\frac{23775376000000}{30095768093521}
+\begin{aligned}
+ F(41/80)^2&=\frac{43033600}{65302561}<33/50<\sqrt7/4,\\
+ F(1219/2000)^2&=\frac{23775376000000}{30095768093521}
  <79/100<\sqrt{5/8}.
+\end{aligned}
 \]
 The cross-product margins are \(3304513,28079388159\).
 The correlations increase with \(N\).
@@ -3024,7 +2991,7 @@ This violates the native gap without an unsupported
 overlap formula. All cases are excluded.
 \end{proof}
 
-\subsection{A fourth actual foot and the rank-\(13\) threshold}
+\subsection[A fourth actual foot and the rank-13 threshold]{A fourth actual foot and the rank-\(13\) threshold}
 \label{app:Afivesevenths}
 \begin{proposition}
 Every actual \(A_r\) component, \(r\geq13\), has energy
@@ -3194,7 +3161,7 @@ This exhausts all actual profiles and proves the
 nonarithmetic component theorem.
 \end{proof}
 
-\subsection{One central-window lemma for \(N=17,18,19\)}
+\subsection[One central-window lemma for N=17,18,19]{One central-window lemma for \(N=17,18,19\)}
 \label{app:Acentralwindow}
 The next lemma separates the geometric inventory from the
 reference chosen for a particular rank.
@@ -3617,7 +3584,7 @@ and
 All three cases contradict the contrary bound.
 \end{proof}
 
-\subsection{Raw helper-end pressures at \(N=18,19\)}
+\subsection[Raw helper-end pressures at N=18,19]{Raw helper-end pressures at \(N=18,19\)}
 \label{app:Arawends}
 For weak \(5\), put \(z=x_1\) for helper \(1\) and
 \(z=-x_N\) for helper \(N-1\). Then
@@ -3770,7 +3737,7 @@ always on one modified reference for the same \(x_A\).
 \end{proof}
 
 
-\section{The local \(A_{18}\) inventory at comparison \(11/8\)}
+\section[The local A18 inventory at comparison 11/8]{The local \(A_{18}\) inventory at comparison \(11/8\)}
 \label{app:localAinputs}
 This appendix supplies the earlier geometric body used in
 Lemma~\ref{lem:localA18}; it does not use that lemma's
@@ -3944,7 +3911,7 @@ mutual. No arithmetic criterion is used.
 For the surviving mixed pairs, use the explicit
 positive Schur matrices, coefficients
 \(\lambda=H^{-1}(A_i,A_j)^T\), and all four
-orientation formulas for \(W_i,W_j\) in the
+orientation formulas for \(W_i,\allowbreak W_j\) in the
 central-window lemma. They are purely geometric,
 so remain valid at comparison \(\kappa\).
 Cap times still exceed \(2\); hence
@@ -3968,16 +3935,13 @@ argument already written, this completes all
 earlier local inputs of Lemma~\ref{lem:localA18}.
 
 
-\subsection{The fresh \(N=16\) inventory and \(A_{15}>.826\)}
+\subsection[The fresh N=16 inventory and A15>.826]{The fresh \(N=16\) inventory and \(A_{15}>.826\)}
 \label{app:A15}
 \begin{proposition}
 With arbitrary finite spectators, an actual \(A_{15}\)
 component has energy greater than \(413/500\).
 \end{proposition}
 \begin{proof}
-This proof consolidates \src{A15-new} with only the fresh
-\(N=16\) inventory/reference portions of \src{A15-two}; its older
-numerical consumers are not needed.
 Use the exact interval \(5\leq i\leq11\), loss \(.61\),
 and \(55/8\leq D_i\leq8\).
 The finite-white list is the two-path list already
@@ -4182,15 +4146,13 @@ consumer is therefore unnecessary.
 \end{proof}
 
 
-\subsection{The fresh \(N=13\) component and its native-cosine split}
+\subsection[The fresh N=13 component and its native-cosine split]{The fresh \(N=13\) component and its native-cosine split}
 \label{app:A12}
 \begin{proposition}
 With arbitrary finite spectators, an actual \(A_{12}\)
 component has energy greater than \(13/20\).
 \end{proposition}
 \begin{proof}
-The following complete native-cosine and paid-helper argument transcribes
-\src{A12-new}, at its general real geometric scope.
 Use \(N=13\), the exact window \(5\leq i\leq8\),
 loss \(.65\), and \(80/13\leq D_i\leq84/13\).
 The same complete two-path finite-white classification
@@ -4611,10 +4573,10 @@ i&q_i\text{ upper}&R_0(i)\text{ lower}&T(q_i)\text{ upper}\\ \hline
 13\text{--}29&7.62&1.577&1.577.
 \end{array}
 \]
-The squared lower margins are \(.052740,.321913,.546001\).
+The squared lower margins are \(.052740,\allowbreak .321913,\allowbreak .546001\).
 The upper comparisons follow by multiplying the numerator/
 denominator pairs
-\((27.4921,18.0316),(44.2721,28.6395)\),
+\((27.4921,18.0316),\allowbreak (44.2721,28.6395)\),
 \((107.2045,68.003166)\).
 Every foreign far cap is strong.
 
@@ -4746,7 +4708,7 @@ prove it. Together with nonadjacency this supplies
 both initial branches of Proposition~\ref{prop:prefix}
 without assuming strong \(5\).
 
-\section{Fresh exact-\(18\) classical layers}
+\section[Fresh exact-18 classical layers]{Fresh exact-\(18\) classical layers}
 \label{app:exact18layers}
 This appendix supplies the short layers used in the
 fresh rank-\(18\) cover, at their actual ranks rather
@@ -4805,7 +4767,7 @@ which supplies strictness. The \(K=13\) data above are used in
 the later \(B_{17}\) extension with its separately funded new
 slope \(<.39/3=.13<7/50\), not with weight \(1/7\).
 
-\subsection{\(B_{16}\) with ordinary \(T_2\)}
+\subsection[B16 with ordinary T2]{\(B_{16}\) with ordinary \(T_2\)}
 At \(i=13\), deletion retains \(A_{12}+B_3\).
 The right finite extensions are long \(3\) or
 short \(3\), the latter giving \(F_4\).
@@ -4836,7 +4798,7 @@ contradicts the norm. This is a fresh local
 extension, not an out-of-domain application
 of Proposition~\ref{prop:prefix}.
 
-\subsection{\(D_{16}\) with ordinary \(T_2\)}
+\subsection[D16 with ordinary T2]{\(D_{16}\) with ordinary \(T_2\)}
 At \(i=12\), the right white \(D_4\) has
 three simple-\(3\) leaf extensions: long leaf
 \(13\), and the distinct signed forks \(15,16\).
@@ -4957,7 +4919,7 @@ gives \(e(D_{16})>.8689525\), again
 contradicting its ordinary \(T_2\).
 No typed defect is charged as ordinary.
 
-\subsection{\(B_{17}\) with a nonshort \(A_1\)}
+\subsection[B17 with a nonshort A1]{\(B_{17}\) with a nonshort \(A_1\)}
 The generic inventory reaches \(13\).
 At \(14\), the preceding complete \(B_3\)
 layer reaches \(14\), with the actual
@@ -5010,13 +4972,11 @@ nonshort debit, so \(B_{17}+I\) remains
 for its separate consumer.
 
 
-% UNINTEGRATED WORKING APPENDIX FRAGMENT, 24 October 2026.
 % Same general compact paper family; no standalone manuscript or compilation.
 % Complete endpoint transcription from the accepted whole-A18 source chain.
 % Source reviewed by another author and the coordinating author, 24--25 October.
-% Integrated in the same-family working revision; uncompiled, canonical editions unchanged.
 
-\section{The whole-\(A_{18}\) endpoint argument}
+\section[The whole-A18 endpoint argument]{The whole-\(A_{18}\) endpoint argument}
 \label{app:wholeA18}
 Here the entire diagram at the original farthest vertex is
 \(A_{18}\), with no spectators. Fix that vertex \(p\) and the
@@ -5114,7 +5074,7 @@ three energy bounds plus this gain would exceed
 \[
  .86414+(6/5)(.603-.266)^2=1.0004228.
 \]
-Therefore \(x_1,-x_{19}<.603\).
+Therefore \(x_1,\allowbreak -x_{19}<.603\).
 The genuine endpoint-edge inequality and
 \(.603^2<90/247=(18/19)(5/13)\) imply
 \begin{equation}\label{app:eq:A18shortends}
@@ -5396,9 +5356,9 @@ m&C_-&C_+&T_-&T_+&A_+\\ \hline
 For last-below \(n\), use its upper cosine
 and \(S=1.414213\).
 The \(\delta\) numerators over \(10^6\) are
-\(5130,12311,19214,21852\);
+\(5130,\allowbreak 12311,\allowbreak 19214,\allowbreak 21852\);
 upper numerators of \(A\delta^2\) are
-\(1401,8400,20800,27374\), also over \(10^6\).
+\(1401,\allowbreak 8400,\allowbreak 20800,\allowbreak 27374\), also over \(10^6\).
 The exact resulting upper numerators over
 \(10^9\) are
 \[
@@ -5407,7 +5367,7 @@ The exact resulting upper numerators over
 For first-above \(n\), use its lower cosine
 and \(S=1.414214\).
 The \(\delta\) numerators are
-\(4816,11170,17027,19215\);
+\(4816,\allowbreak 11170,\allowbreak 17027,\allowbreak 19215\);
 dropping the positive quadratic term gives
 lower numerators over \(10^9\)
 \[
@@ -5743,9 +5703,11 @@ labels and the continuous dotted interval.
 \label{app:A18jointpoint}
 Only far own five remains. Set
 \[
- \phi=(1+\sqrt5)/2,\quad g=\phi/2,\quad
- A^2=(10\phi-1)/19,\quad L=(18+\phi)/19,\quad
+\begin{gathered}
+ \phi=(1+\sqrt5)/2,\quad g=\phi/2,\\
+ A^2=(10\phi-1)/19,\quad L=(18+\phi)/19,\\
  \delta=1-3g^2/2=(5-3\phi)/8>0.
+\end{gathered}
 \]
 Substitution in \(t^2-t-1\) gives \(1.618<\phi<1.619\).
 Write the isolated right cap as
@@ -5952,7 +5914,7 @@ arithmeticity, a finite-label cutoff, arbitrary-face heredity,
 or a rank decrement.
 \end{proof}
 
-\section{Terminal walls in a whole \(B_{18}\) diagram}
+\section[Terminal walls in a whole B18 diagram]{Terminal walls in a whole \(B_{18}\) diagram}
 \label{app:wholeB18}
 Fix the original strict interior unit point \(z\) and an original
 farthest vertex \(p\), and assume that the entire incident diagram
@@ -6471,10 +6433,10 @@ For \(S_{17}\geq3.760\), the extra terms are bounded below by
  2(.1361)(.428)-3(.1362)^2=.06085028,\qquad
  2(.1313)(.297)-2(.1314)^2=.04346028.
 \]
-Their totals exceed \(1.000401255,1.00024575\).
+Their totals exceed \(1.000401255,\allowbreak 1.00024575\).
 For \(S_{18}\geq3.830\), the increments are
-\(.06135384,.04457632\), giving totals
-\(>1.000904815,>1.00136179\).
+\(.06135384,\allowbreak .04457632\), giving totals
+\(>1.000904815,\allowbreak >1.00136179\).
 Thus
 \begin{equation}\label{app:eq:B18sumbounds}
  S_{17}<3.760,\qquad S_{18}<3.830,\qquad
@@ -6977,9 +6939,11 @@ cross \(-8/17\), and inverse
 \(\left(\begin{smallmatrix}9&8\\8&9\end{smallmatrix}\right)\).
 Its positive projection has
 \[
- \alpha=9A+8B,\quad \chi=8A+9B,\quad
- T=9a+16AB+9B^2>319.5,\quad
+\begin{gathered}
+ \alpha=9A+8B,\quad \chi=8A+9B,\\
+ T=9a+16AB+9B^2>319.5,\\
  L=\alpha Q/17+\chi(\delta+v_0)>M=\chi\delta>0 .
+\end{gathered}
 \]
 The full-projection test excludes it. This handles every far-three
 short own and every unbounded actual mutual range.
@@ -7098,16 +7062,16 @@ The explicit \(q\) formula gives
 Indeed \(R\) decreases on \(0<k<.20276\): its positive derivative
 term is \(<.122\) and the magnitude of the negative term is
 \(>(20/21).594\). At the upper endpoint use
-\(\sqrt{17.20276}>4.1476,\ \sqrt{.20276(1-.20276)}<.4021\).
-The independent strong \(K=11,12\) references through strong \(5,6,7\),
+\(\sqrt{17.20276}>4.1476,\allowbreak \ \sqrt{.20276(1-.20276)}<.4021\).
+The independent strong \(K=11,\allowbreak 12\) references through strong \(5,\allowbreak 6,\allowbreak 7\),
 after every permitted hole, have raw energies
-\(>.86375298,>.88550238\), terminal capacities \(>.1543,>.1474\),
+\(>.86375298,\allowbreak >.88550238\), terminal capacities \(>.1543,\allowbreak >.1474\),
 and fifth capacity \(>.151\).
 After the same \(.56\) head payment, pay \(.14\) from that terminal
 toward \(P_{17}+ke_{18}\).
 Its residual is orthogonal to the head residual and to the reference,
 of square \(17+k^2-K\), with \(k^2<.0412\). Since
-\(f_{11}<2.907,\ f_{12}<3.055\), the full original squares give
+\(f_{11}<2.907,\allowbreak \ f_{12}<3.055\), the full original squares give
 \[
 \begin{split}
  .86375298+.0155344+.28(3.764-2.907)-.0196(6.0412)
@@ -7159,7 +7123,7 @@ Finally \(C'>35/18>1.94\), and its endpoint coordinate exceeds
 \]
 All three conclusions of \eqref{eq:B18A17interface} follow.
 
-\subsection{One local \(A_{17}+I\) contradiction for both height branches}
+\subsection[One local A17+I contradiction for both height branches]{One local \(A_{17}+I\) contradiction for both height branches}
 \label{app:B18localA17}
 We prove the common consumer of \eqref{eq:B18A17interface}.
 The hypotheses are an actual whole \(A_{17}+I\) vertex \(q\),
@@ -7361,7 +7325,7 @@ The initial values are exactly, with
 The available individual end-anchor capacities are at least
 \(\rho_0(821/6000)\) on a six-block or
 \(\rho_0(343/2500)\) on a five-block, both \(>.134\).
-The signed block means satisfy \(b_5<.28812,\ b_6<.98(.2614)\).
+The signed block means satisfy \(b_5<.28812,\allowbreak \ b_6<.98(.2614)\).
 Every remaining positive coefficient is on an actual strong site;
 no weak floor or \(I\) energy is in these references.
 
@@ -7416,6 +7380,7 @@ pairing \(2.218(5\gamma/6+1/12)\).
 For owns five, seven, eight and at least nine the respective lower bounds
 are
 \[
+{\setlength{\arraycolsep}{4pt}
 \begin{array}{c|c|c|c}
 \text{own}&\text{own bracket}&\text{time/radical bounds}&
  \text{deficit lower bound}\\ \hline
@@ -7427,7 +7392,7 @@ are
  2.4795-.2464-2.218(.85325)>.34059\\
 \geq9&\gamma>.93&A_0(.93)>2.497,\ R\leq1/4&
  2.497-.25-2.218(103/120)>.3432 .
-\end{array}
+\end{array}}
 \]
 All root bounds are positive-square comparisons, using
 \(\phi\), the native-seven cubic \(8u^3-4u^2-4u+1\), and
@@ -7578,9 +7543,9 @@ Thus a far-three short opposite must have dotted own \(\delta>1\).
 The following constants are deliberately coarse:
 \[
 \begin{gathered}
- 60.212<a<60.2136,\quad 7.759<A<7.76,\quad32.13<Q<32.14,\\
- .1494<w:=9/a<.1495,\quad Q/A>4.141,\quad
- H:=A-G_{17}Q/17>.65,\quad
+ 60.212<a<60.2136,\quad 7.759<A<7.76,\\
+ 32.13<Q<32.14,\quad .1494<w:=9/a<.1495,\\
+ Q/A>4.141,\quad H:=A-G_{17}Q/17>.65,\\
  0<K:=A\sqrt{18}-Q<.8 .
 \end{gathered}
 \]
@@ -7678,7 +7643,7 @@ Equation~\eqref{eq:B18near6seal} with \(s=r\) excludes the
 entire remaining range, including arbitrarily large dotted mutuals.
 Thus no short opposite survives near-three/own-six.
 
-\subsection{A central \(A_{16}\) lemma with a rank-two spectator}
+\subsection[A central A16 lemma with a rank-two spectator]{A central \(A_{16}\) lemma with a rank-two spectator}
 \label{app:B18localA16}
 The no-left terminal roles will lead to three types of actual
 \(A_{16}+I_2(m)\) neighbors. We prove one local lemma with the
@@ -7725,12 +7690,12 @@ The whole block is cleared by its positive inverse on actual roots.
 
 Deleting \(8\) retains \(A_7\) and \(A_8\).
 The complete finite-white overlist is one three at
-\(j=1,2,3,5,6,7,9,10,15,16\);
-one four at \(j=1,7,9,16\);
-or two end-threes, one from \(1,7\) and one from \(9,16\);
+\(j=1,\allowbreak 2,\allowbreak 3,\allowbreak 5,\allowbreak 6,\allowbreak 7,\allowbreak 9,\allowbreak 10,\allowbreak 15,\allowbreak 16\);
+one four at \(j=1,\allowbreak 7,\allowbreak 9,\allowbreak 16\);
+or two end-threes, one from \(1,\allowbreak 7\) and one from \(9,\allowbreak 16\);
 isolation is also allowed.
-The left \(3,5\) positions are the \(E_8\) additions,
-\(2,6,10,15\) are \(D\) additions. Two contacts on one path
+The left \(3,\allowbreak 5\) positions are the \(E_8\) additions,
+\(2,\allowbreak 6,\allowbreak 10,\allowbreak 15\) are \(D\) additions. Two contacts on one path
 make a cycle. A joined rank-sixteen tree is classical and has
 no new internal four. The exceptional finite classification gives
 no other extension of either retained full path.
@@ -7777,7 +7742,8 @@ and pure far-three as separate cases:
 \[
 \begin{array}{c|c|c}
 \text{white position}&\text{numerator lower bound}&
- \text{denominator upper bound before foreign cost}\\ \hline
+ \begin{gathered}\text{denominator upper bound}\\
+ \text{before foreign cost}\end{gathered}\\ \hline
 \text{near three left/right}&.7+7/16,\ .7+4/9&3/4,\ \sqrt5/3\\
 D\text{ left/right}&.7+1/8,\ .7+1/9&1/2,\ \sqrt2/3\\
 E\text{ left}&.7+3/16&1/4\\
@@ -7983,10 +7949,10 @@ also close the short edge. This is the complete distinction for
 the own values left by the table; no native product is applied to
 a wall paired with itself.
 
-At \(g=0,m=3\), the actual affine \(F_4\) path
-\(n_{15},n_{16},n_{17},n_{18},c\) has positive kernel
+At \(g=0,\allowbreak m=3\), the actual affine \(F_4\) path
+\(n_{15},\allowbreak n_{16},\allowbreak n_{17},\allowbreak n_{18},\allowbreak c\) has positive kernel
 \((1,2,3,2\sqrt2,\sqrt2)\), already excluded.
-For \(g=\phi/2,m=4\), positive clearing of the whole old
+For \(g=\phi/2,\allowbreak m=4\), positive clearing of the whole old
 \(A_{17}\) gives the actual negative core
 \[
  \Xi=Ap-sP_{18},\quad
@@ -8073,9 +8039,10 @@ values, a forbidden actual mutual.
 Therefore \(S_{17}\leq f_{17}\), and \(t<.901\).
 For its actual \(A_{16}+I_2(5)\) neighbor,
 \[
- C^2=\frac{17(\phi+1)}{3-\phi}>32.2>5.67^2,\qquad
- \beta>.984,\qquad
+\begin{gathered}
+ C^2=\frac{17(\phi+1)}{3-\phi}>32.2>5.67^2,\quad \beta>.984,\\
  E_q/E>5.67-.901(5.582)=.640618>100/157 .
+\end{gathered}
 \]
 The reverse pressure is
 \(>(.984-.901)/(1-.984(.901))>.73\).
@@ -8144,10 +8111,8 @@ The one original farthest vector is retained throughout each original
 reference argument. A neighboring vector is introduced only with its
 derived comparison factor, and all its orthogonal energies are taken
 at that same actual neighbor.
-No geometric Lean formalization, new script PASS or complete
-compact-dimension theorem is asserted by this unintegrated fragment.
-The remaining whole-\(D_{18}\), higher-rank and forest consumers
-belong to the main manuscript's separate dependency closure.
+The whole-\(D_{18}\) case and the independent higher-dimensional
+exclusions are proved in the remaining parts of the article.
 
 
 
@@ -8155,18 +8120,14 @@ belong to the main manuscript's separate dependency closure.
 
 
 % REVIEWED EARLIER WHOLE-D18 APPENDIX, integrated 25 October 2026.
-% Existing general compact family; source preparation only.
 % Complete scoped transcription with independent and root source review.
-% The ledger identifies shared proof homes and remaining manuscript work.
-% No worker import, enumeration, test, Lean or TeX execution.
-\section{The earlier whole-\(D_{18}\) geometry}
+\section[The earlier whole-D18 geometry]{The earlier whole-\(D_{18}\) geometry}
 \label{app:D18foundation}
 This appendix supplies the head, prefix and fork inputs used before
 the final dotted-head argument in the main text. We keep its geometric
 steps in dependency order. In particular an old loss \(.61\) is used
 only to establish head isolation; the later loss \(.58\) is proved
-afresh. An acceptance record for an internal lemma does not replace
-its proof.
+afresh before it is used.
 
 Fix the original interior point and farthest vertex
 \[
@@ -8456,7 +8417,7 @@ The head is therefore ACTUALLY isolated, with own five,
 finite at least seven, or dotted. This conclusion did not use any
 later \(.58\) statement or center/fork hypothesis.
 
-\subsection{The fresh \(.58\) window, with the two changed tail rows}
+\subsection[The fresh .58 window, with the two changed tail rows]{The fresh \(.58\) window, with the two changed tail rows}
 \label{app:D18freshwindow}
 From now on put \(f_i=\sqrt i-.58/\sqrt2\).
 The head isolation just proved remains valid; old \(.61\)-strength
@@ -8831,9 +8792,11 @@ contradicting both weak floors. Thus fifteen is strong and
 
 Put
 \[
- a=32g^2+2g-\tfrac12,\quad k=16g+\tfrac12,\quad
- P=k/(8\sqrt2),\quad r=17/32,\quad
+\begin{gathered}
+ a=32g^2+2g-\tfrac12,\quad k=16g+\tfrac12,\\
+ P=k/(8\sqrt2),\quad r=17/32,\\
  \bar c=c+\sum_{i=1}^{15}(16-i)n_i/16=Ap-PP_{16}.
+\end{gathered}
 \]
 Then \(\bar c^2=r\) and \(k^2=8a+17/4\).
 A finite own has \(.8<g<1\).
@@ -9257,9 +9220,11 @@ negative, both fork products are negative, and time is positive.
 With \(\alpha=\sqrt2(g+1/4)\), its normalized displacement \(V\)
 has
 \[
- V_j=1\ (j\leq14),\quad V_{15}=V_{16}=1-a,\quad
- V_{17}=2a+b,\quad V_{18}=\pm b,\quad
+\begin{gathered}
+ V_j=1\ (j\leq14),\quad V_{15}=V_{16}=1-a,\\
+ V_{17}=2a+b,\quad V_{18}=\pm b,\\
  a=\frac1{4g(g+1/4)},\quad b=\frac1{4(g+1/4)} .
+\end{gathered}
 \]
 The full residual square is
 \(1-2a+6a^2+4ab+2b^2<1.174\).
@@ -9317,7 +9282,7 @@ the bounds \(\beta>197/200\) or \(124/125\) give the stated
 reverse fractions by positive rational multiplication.
 These two neighbor cases will use the following local facts.
 
-\subsection{The two required central \(A_{15}\) facts}
+\subsection[The two required central A15 facts]{The two required central \(A_{15}\) facts}
 \label{app:D18localA15}
 Use zero-sum \(\mathbb R^{16}\), with
 \[
@@ -9631,7 +9596,7 @@ are
 \]
 They are constructed by the same \(.016119\) append/omission
 from bare fifteen energies
-\(.9403998,.9212053,.9035167\).
+\(.9403998,\allowbreak .9212053,\allowbreak .9035167\).
 No head or isolated-five pressure has yet been paid in these rows.
 They remain flat first \(J\), have sum \(f_{16}\) and unspent
 terminal price \(>.127\).
@@ -9645,9 +9610,11 @@ has square \(-\eta^2(7u-4-3u^2)\), zero head/first-root products,
 negative second-root product, positive time and all unknown signs.
 Its pressure is \(\ip xZ\geq h\), with
 \[
- Z=(1-u/2)(e_1+e_2)+(u-1)e_3,\quad
- h=[\sqrt{2-u}-\sqrt{7u-4-3u^2}]/\sqrt2,\quad
- R=Z^2=3-4u+3u^2/2,\quad \sum Z_j=1 .
+\begin{aligned}
+ Z&=(1-u/2)(e_1+e_2)+(u-1)e_3,\\
+ h&=[\sqrt{2-u}-\sqrt{7u-4-3u^2}]/\sqrt2,\\
+ R&=Z^2=3-4u+3u^2/2,\qquad \sum Z_j=1 .
+\end{aligned}
 \]
 
 If the native head label is at least ten, then
@@ -9668,9 +9635,10 @@ In the fourth, weak-helper-five case the existing unheaded reference
 has energy \(>.987759\), \(w_1=.5455\), \(w_2=w_3<.299\).
 The exact head cross is
 \[
- \ip wY< M(u)=(1.091-.2465u)/\sqrt2,\quad Y=\sqrt2Z,\qquad
- Q=Y-(\sqrt2/16)P_{16},\quad
- Q^2=T(u)=47/8-8u+3u^2 .
+\begin{gathered}
+ \ip wY< M(u)=(1.091-.2465u)/\sqrt2,\quad Y=\sqrt2Z,\\
+ Q=Y-(\sqrt2/16)P_{16},\quad Q^2=T(u)=47/8-8u+3u^2 .
+\end{gathered}
 \]
 Pay \(\mu\sqrt2/16<.018\) at the genuinely unspent terminal,
 retaining this full cross. The norm lower bound is
@@ -9688,9 +9656,13 @@ u\text{ interval}&f>&M<&T\leq&\mu&\text{norm lower}\\ \hline
 \end{array}
 \]
 The square brackets for the two radicals at the successive right
-endpoints are
-\((.9746,.2062),(.9591,.2466),(.9486,.2646),
-(.9460,.2682),(.94339,.27149)\).
+endpoints are, in order,
+\[
+\begin{gathered}
+(.9746,.2062),\quad(.9591,.2466),\quad(.9486,.2646),\\
+(.9460,.2682),\quad(.94339,.27149).
+\end{gathered}
+\]
 These prove every \(f\) entry; \(M\) uses \(\sqrt2>1.4142\)
 and \(T\) is exact substitution.
 The table is a complete interval certificate, not a sampled search.
@@ -9970,7 +9942,7 @@ and isolated point losses just displayed are \(<.8\).
 Hence possible weak roles are near-four at five/six or reflection,
 or pure far helpers with \(\phi/2\leq\gamma<17/16\).
 For two adjacent PURE far helpers, the actual two-cap comparison
-gives weighted losses \(<.655625,.481\), both below \(.8\).
+gives weighted losses \(<.655625,\allowbreak .481\), both below \(.8\).
 Thus pure helpers are nonadjacent. This statement does not yet
 include any near-four role.
 
@@ -10062,20 +10034,20 @@ Clearing spectators uses the positive actual sum
 
 Deleting eight leaves \(A_7+A_8\).
 Its complete one-node finite extensions are one 3 at
-\(1,2,3,5,6,7,9,10,15,16\), one 4 at
-\(1,7,9,16\), or one endpoint 3 in each path.
+\(1,\allowbreak 2,\allowbreak 3,\allowbreak 5,\allowbreak 6,\allowbreak 7,\allowbreak 9,\allowbreak 10,\allowbreak 15,\allowbreak 16\), one 4 at
+\(1,\allowbreak 7,\allowbreak 9,\allowbreak 16\), or one endpoint 3 in each path.
 A second contact within either path makes a cycle; the exceptional
 extensions supply exactly the displayed \(E_8\) positions.
 For own zero at a global end 3,
 \(H^2=Q-9/17\) whereas positivity requires \(Q<9/16\).
 The entire native two-spectator alphabet below \(9/16\) is
-\(Q=0,1/4,1/2\), so the time is negative.
-The next-3 and end-4 remainders are \(1/4,1/8\);
+\(Q=0,\allowbreak 1/4,\allowbreak 1/2\), so the time is negative.
+The next-3 and end-4 remainders are \(1/4,\allowbreak 1/8\);
 they force \(Q=0\) and again negative time.
 Isolation gives \(H^2=Q-1<0\).
 All other own-zero roles have the actual affine \(E_8/E_7\),
 \(4/3/3\) star or all-3 cycle.
-For positive own, isolated \(3,4,6\), a single-white own 3,
+For positive own, isolated \(3,\allowbreak 4,\allowbreak 6\), a single-white own 3,
 the non-near single-white own 4, and own 6 have the corresponding
 star, cycle or chain null.  The near-own-4 roles at seven and nine
 are retained.  Parallel gives \(d+n_8\).
@@ -10086,9 +10058,9 @@ including both spectators.
 For a single white 3 in a side of order \(l=8\) or \(9\),
 at distance \(t\) from its remote end, the exact ratio is
 \[
- {C_8\over\sqrt D}
- ={\gamma+t/(2l)\over
-       \sqrt{1-t(l-t)/(2l)-Q}}.
+ {\frac{C_8}{\sqrt D}}
+ ={\frac{\gamma+t/(2l)}{
+       \sqrt{1-t(l-t)/(2l)-Q}}}.
 \]
 For white 4 replace \(t/(2l)\) by \(t/(\sqrt2l)\) and
 \(t(l-t)/(2l)\) by \(t(l-t)/l\).
@@ -10125,7 +10097,7 @@ To obtain the central height as well, use concavity of the actual
 \(h_8\ge(9/10)h_7\) or \(h_8\ge(8/9)h_9\), respectively.
 Since \(D_7=140/17\) and \(D_8=D_9=144/17\), this gives
 \[
- {h_8\over\sqrt{D_8}}>
+ {\frac{h_8}{\sqrt{D_8}}}>
  .8\min\{(9/10)\sqrt{140/144},\,8/9\}>.68 .
 \]
 White 4 forces \(Q=0\); its far-own-3 has the affine \(F_4\)
@@ -10134,8 +10106,8 @@ The two-end-3 join has residual \(17/144=1/D\) and
 \(C_8\ge89/17>5\).
 Consequently all these ordinary roles have
 \[
- {\ip{y_A}{\omega_8}\over\sqrt D}
- >{5-1.65\over\sqrt{24}}>.68,\qquad e_A>.4624>.46.
+ {\frac{\ip{y_A}{\omega_8}}{\sqrt D}}
+ >{\frac{5-1.65}{\sqrt{24}}}>.68,\qquad e_A>.4624>.46.
 \]
 
 For isolated contact put \(\tau=(1-Q)/\gamma^2\).
@@ -10153,7 +10125,7 @@ it by \(\kappa/2\le.825\).
 At \(\tau=1\) it is a forbidden future null.
 For \(\tau>1\) the positive finite projection
 \[
- q+{H\over\gamma^2(\tau-1)}
+ q+{\frac{H}{\gamma^2(\tau-1)}}
           (d+w_S+\gamma n_8)
 \]
 gives
@@ -10197,7 +10169,7 @@ the full \(U=v_A+v_S-w_5\), rather than calling it pure \(A\).
 Its actual projected point gives
 \[
  \ip y{U/\norm U}>
- 1-{1.65(.1352)\over H}>.9,
+ 1-{\frac{1.65(.1352)}{ H}}>.9,
  \qquad H^2\ge(44\phi+27)/17>2.4^2 .
 \]
 The full white remainder gives \(Q<9/16\), and hence
@@ -10230,8 +10202,8 @@ If \(0<\lambda<1\), it is a native finite cosine, at least \(1/2\).
 The positive projection onto \(c,d\) gives an actual
 \(A_{16}+I_2(m)\) vertex with
 \[
- C^2={17g^2h^2\over1-\lambda^2}
- \ge {17(1+\lambda)\over1-\lambda}\ge51.
+ C^2={\frac{17g^2h^2}{1-\lambda^2}}
+ \ge {\frac{17(1+\lambda)}{1-\lambda}}\ge51.
 \]
 Its displacement is a positive multiple of
 \(P_{17}+ve_{18}\), \(|v|<1\).
@@ -10239,8 +10211,8 @@ Every released root, the head and every unknown wall has
 nonpositive product termwise with the projection.
 The original envelope therefore gives
 \[
- \kappa<{3\over2},\qquad
- \ip yu>{.99-.9124\over1-.99(.9124)}>.8
+ \kappa<{\frac{3}{2}},\qquad
+ \ip yu>{\frac{.99-.9124}{1-.99(.9124)}}>.8
 \]
 in the entire new \(I_2(m)\) plane; the original maximum is
 unchanged.  The local \(A_{16}\) comparison in
@@ -10286,15 +10258,15 @@ The actual finite set \(n_1,\ldots,n_{15},n_f,c,d\) has
 forest \(A_{15}+I_2(m)+A_1\).
 Its positive projection is
 \[
- q_0=p+{A\over1-a}c+{gA\over1-a}n_f+Bd,\qquad
- C^2={8ab\over1-a}.
+ q_0=p+{\frac{A}{1-a}}c+{\frac{gA}{1-a}}n_f+Bd,\qquad
+ C^2={\frac{8ab}{1-a}}.
 \]
 Its released products are strictly negative, all unknown products
 are nonpositive, and \(q_0^2=\ip p{q_0}=-C^2\).
 Write
 \[
  q_0=C^2p-KV,\quad V=P_{16}+\alpha(e_{17}-\sigma e_{18}),
- \quad \alpha={8(1-a)\over9a-1}\in(0,1).
+ \quad \alpha={\frac{8(1-a)}{9a-1}}\in(0,1).
 \]
 The full original reference has
 \(\ip wV=f_{16}<3.5899\).
@@ -10302,8 +10274,8 @@ Paying its unspent \(.127\) at the residual \(V-P_{16}\),
 whose square is \(2\alpha^2\) and cross with \(w\) is zero,
 proves
 \[
- {\ip xV\over\sqrt{16+2\alpha^2}}
- <{3.6967+.127\alpha^2\over\sqrt{16+2\alpha^2}}<.9242.
+ {\frac{\ip xV}{\sqrt{16+2\alpha^2}}}
+ <{\frac{3.6967+.127\alpha^2}{\sqrt{16+2\alpha^2}}}<.9242.
 \]
 Indeed a violation would give
 \(.9729+.254(3.6967-3.5899)>1\);
@@ -10313,8 +10285,8 @@ The displayed envelope decreases with \(\alpha^2\).
 The native-7 cubic gives \(.9009<g<.901\).
 The increasing function
 \[
- C^2={9a-1\over1-a}
-          +9{9a-1\over17a-9}
+ C^2={\frac{9a-1}{1-a}}
+          +9{\frac{9a-1}{17a-9}}
 \]
 then exceeds \(45.2944>6.73^2\), and \(\alpha>.238\).
 The envelope improves to \(.9228\).
@@ -10424,20 +10396,20 @@ There is no need to use the older auxiliary four-thirds gap.
 Assume \(g\ge h\).
 The actual feet
 \[
- q_c={d+\lambda c\over\sqrt{\lambda^2-1}},\qquad
- q_d={c+\lambda d\over\sqrt{\lambda^2-1}}
+ q_c={\frac{d+\lambda c}{\sqrt{\lambda^2-1}}},\qquad
+ q_d={\frac{c+\lambda d}{\sqrt{\lambda^2-1}}}
 \]
 are future and feasible: the selected product is zero, the other
 is negative, and every omitted wall is checked termwise.
 Their squared coshes satisfy
 \[
- C_c^2=9g^2+{17P^2\over\lambda^2-1},\qquad
- C_d^2=9h^2+{17P^2\over\lambda^2-1}.
+ C_c^2=9g^2+{\frac{17P^2}{\lambda^2-1}},\qquad
+ C_d^2=9h^2+{\frac{17P^2}{\lambda^2-1}}.
 \]
 Thus
 \[
- C_c^2\ge9P+{17P\over P-2}
- >{441225\over6208}>71.
+ C_c^2\ge9P+{\frac{17P}{ P-2}}
+ >{\frac{441225}{6208}}>71.
 \]
 The last expression decreases on \(2<P<225/64\), so the strict
 individual cutoffs justify its endpoint evaluation.
@@ -10494,7 +10466,7 @@ The near white 4 already gives \(T^2\ge15\).
 For the far white 4,
 \[
  T^2=\sqrt2(x+y)+9(x^2+y^2)+16xy,\qquad
- {T^2\over g^2}=-\tfrac12+\sqrt2y+17y^2 .
+ {\frac{T^2}{ g^2}}=-\tfrac12+\sqrt2y+17y^2 .
 \]
 If both contacts are positive then \(T^2\ge8.5+\sqrt2\).
 If \(y=0\) the second expression is negative.
@@ -10511,7 +10483,7 @@ on \(e,n_{14},n_{15},n_{16},n_f,n_o\) is a forbidden future null.
 At the far white 3,
 \[
  T^2=2(x+y)+9(x^2+y^2)+16xy,\qquad
- {T^2\over g^2}=-1+2y+17y^2 .
+ {\frac{T^2}{ g^2}}=-1+2y+17y^2 .
 \]
 The zero-contact cases fail as above.
 If a positive contact is at least \(1/\sqrt2\), then
@@ -10521,7 +10493,7 @@ The only remaining pair is \(x=y=1/2\), whose actual
 
 The final \(A_{17}+A_1\) and whole-\(A_{18}\) germs have
 \[
- u={T\Omega'_e+A\Omega'_c\over\sqrt{C_R^2-1}},
+ u={\frac{T\Omega'_e+A\Omega'_c}{\sqrt{C_R^2-1}}},
 \]
 with both coefficients positive.
 These are exactly the two standalone local statements of
@@ -10550,7 +10522,7 @@ Consequently \(gh>(18+16\lambda)/17>3/2\).
 The positive pair projection onto \(c,d\), retaining old \(A_{16}\),
 is an actual \(A_{16}+I_2(m)\) vertex and has exactly
 \[
-                  C^2={17g^2h^2\over1-\lambda^2}>51.
+                  C^2={\frac{17g^2h^2}{1-\lambda^2}}>51.
 \]
 Its displacement is a positive fork-dual combination.
 The same envelope gives \(\kappa<3/2\), reverse pressure \(>.8\);
@@ -10581,9 +10553,9 @@ Put \(z=1/g^2\), \(H=h+1/2\), and
 \(j=\lambda/g=\sqrt{9-z}B-8h-9/2>0\).
 Then
 \[
- w^2={j^2-z\over(1+jH)^2},\quad
- \partial_j={2(j+Hz)\over(1+jH)^3}>0,\quad
- \partial_z=-{1\over(1+jH)^2}<0 .
+ w^2={\frac{j^2-z}{(1+jH)^2}},\quad
+ \partial_j={\frac{2(j+Hz)}{(1+jH)^3}}>0,\quad
+ \partial_z=-{\frac{1}{(1+jH)^2}}<0 .
 \]
 Replace \(g<15/8\) by \(15/8\) to increase this value.
 The original \(C_{\rm near}<10\) gives \(h<2\).
@@ -10618,7 +10590,7 @@ contradicting the original envelope
 It remains to treat \(\lambda=0\).
 The exact equation is
 \[
- g^2={9h^2+8h+5/4\over17h^2-9}.
+ g^2={\frac{9h^2+8h+5/4}{17h^2-9}}.
 \]
 Near own 4 gives a negative denominator.
 For own 5 it gives
@@ -10645,7 +10617,7 @@ Using \(\sqrt{36/37}>.9863\) and \(\sqrt{37}>6.0827\)
 gives
 \[
  E_q/E>.6083>20/33,\qquad
- \ip yu>{.9863-.9124\over1-.9863(.9124)}>.738 .
+ \ip yu>{\frac{.9863-.9124}{1-.9863(.9124)}}>.738 .
 \]
 The whole two-\(A_1\) direction is
 \(u=(Ac+Bd)/\sqrt{A^2+B^2}\).
@@ -10678,7 +10650,7 @@ It gives the useful full-domain inequality
 \]
 At \(\lambda=0\), direct squaring gives
 \[
- g^2={9h^2+h-1/2\over17h^2+h-19/4}.
+ g^2={\frac{9h^2+h-1/2}{17h^2+h-19/4}}.
 \]
 This function decreases: its derivative numerator is
 \(-8h^2-(137/2)h-17/4\).
@@ -10721,8 +10693,8 @@ For \(\lambda=\phi/2\), clear only \(n_1\):
 \(d_1=d+n_1/2\) has square \(3/4\).
 The positive projection on \(c,d,n_1\) has coefficients
 \[
- a={(3/4)A+\lambda F\over\Delta},\quad
- b={F+\lambda A\over\Delta},\quad
+ a={\frac{(3/4)A+\lambda F}{\Delta}},\quad
+ b={\frac{F+\lambda A}{\Delta}},\quad
  \Delta=(2-\phi)/4,
 \]
 and
@@ -10731,7 +10703,7 @@ For this last bound, \(AF>13.089\),
 \(\sqrt{3/4}>.866\), \(\lambda>.809\), \(\Delta<.0955\).
 Its full displacement, including the head coordinate, is
 \[
- {D\over\sqrt2}
+ {\frac{D}{\sqrt2}}
    (P_{17}+ve_{18}+\epsilon P_2),\quad
  D=ag+bh,\quad |v|<1,\quad \epsilon=b/(2D)<5/22.
 \]
@@ -10740,8 +10712,8 @@ The last inequality follows from \(a/b>\lambda\) and
 Using~\eqref{eq:DIFS2} conservatively as \(S_2<1.1\),
 the normalized pressure is at most
 \[
- {3.761+.0635s+1.1\epsilon
-       \over\sqrt{17+s+4\epsilon+2\epsilon^2}},\qquad s=v^2.
+ {\frac{3.761+.0635s+1.1\epsilon
+       }{\sqrt{17+s+4\epsilon+2\epsilon^2}}},\qquad s=v^2.
 \]
 On \(0\le s\le1\), \(0\le\epsilon\le5/22\), it decreases
 in \(s\) and increases in \(\epsilon\).
@@ -10788,7 +10760,7 @@ The radical square
 \]
 decreases on \([.9,1]\), while
 \[
- O={\sqrt{2\lambda^2-3/2}+.52\over2\sqrt Q}
+ O={\frac{\sqrt{2\lambda^2-3/2}+.52}{2\sqrt Q}}
 \]
 increases.
 For the first derivative the numerator is
@@ -10813,7 +10785,7 @@ Finally suppose \(\lambda=1/2\).
 Positive projection on old \(A_{16},c,d\) has determinant
 \(19/68\) and gives an actual whole \(A_{18}\) vertex with
 \[
- C={g(34h+1)\over\sqrt{19}}>19/2 .
+ C={\frac{g(34h+1)}{\sqrt{19}}}>19/2 .
 \]
 The strict bound follows from
 \(gh\ge1/2+\sqrt{19}/6\).
@@ -10821,7 +10793,7 @@ The displacement has positive fork-dual coefficients; hence
 \[
  E_q/E>9.5-.9124(9.448)=.8796448>7/8,\quad
  \kappa<8/7,\quad
- \ip yu>{.9944-.9124\over1-.9944(.9124)}>.884 .
+ \ip yu>{\frac{.9944-.9124}{1-.9944(.9124)}}>.884 .
 \]
 In the chain \(n_{16},\ldots,n_1,d,c\), the reverse is exactly
 \[
@@ -10886,7 +10858,7 @@ nonpositive termwise.
 Since \(F(t)>3t\), their normalized feet satisfy
 \[
  \max(C_f^2,C_o^2)>
- {17(\lambda+1)^2\over\lambda-1/17}\ge72.
+ {\frac{17(\lambda+1)^2}{\lambda-1/17}}\ge72.
 \tag{DFFfoot}\label{eq:DFFfoot}
 \]
 For the last inequality, put \(a=\lambda-1/17\) and use
@@ -10906,8 +10878,8 @@ With
 \]
 the positive actual foot from \(rc+\lambda b\) has
 \[
- C_Q^2=1+{F(h)^2\over r}
-           +{17g^2(h+1/34)^2\over\lambda^2-r}.
+ C_Q^2=1+{\frac{F(h)^2}{ r}}
+           +{\frac{17g^2(h+1/34)^2}{\lambda^2-r}}.
 \]
 This is feasible against all walls; its selected \(b\) product
 vanishes and its \(c\) product is negative.
@@ -10944,14 +10916,14 @@ Its product with the released old fork is negative with magnitude
 less than \(1/(34\sqrt r)\).
 The selected far/far foot has magnitude
 \[
- {rk+(r+\mu)/34\over\sqrt{r(\mu^2-r^2)}}
-                  >{1\over34\sqrt r},
+ {\frac{rk+(r+\mu)/34}{\sqrt{r(\mu^2-r^2)}}}
+                  >{\frac{1}{34\sqrt r}},
 \]
 where \(k>0\) is the other cap own.
 The isolated/far foot has magnitude
 \[
- {rg+\lambda/34\over\sqrt{r(\lambda^2-r)}}
-                  >{1\over34\sqrt r}.
+ {\frac{rg+\lambda/34}{\sqrt{r(\lambda^2-r)}}}
+                  >{\frac{1}{34\sqrt r}}.
 \]
 The released root projects to a spacelike normal in the retained
 Lorentz plane, and its signed product is proportional to
@@ -11042,7 +11014,7 @@ Thus \(a,b\ge1/\sqrt2\), at least one strictly larger, and
 The two nonzero original time coordinates at this actual
 whole \(A_{18}\) give the ONE full inverse identity
 \[
- C_R^2=1+{36\over19}(T^2+F^2)+{4\over19}TF .
+ C_R^2=1+{\frac{36}{19}}(T^2+F^2)+{\frac{4}{19}}TF .
 \tag{DFA18cross}\label{eq:DFA18cross}
 \]
 The cross is retained; no separate cap energy is added.
@@ -11155,8 +11127,8 @@ For \(g=1/\sqrt2\), \(.89035<M<.90928\), so it would be
 a finite cosine.  In the totally real biquadratic field
 \(\mathbb Q(\phi,\sqrt2)\),
 \[
- T^2={(\phi-1)(23+16\sqrt2)\over8},\qquad
- b={\phi(\sqrt2+1)\over4}.
+ T^2={\frac{(\phi-1)(23+16\sqrt2)}{8}},\qquad
+ b={\frac{\phi(\sqrt2+1)}{4}}.
 \]
 The embedding \(\phi\mapsto1-\phi\) fixing \(\sqrt2\)
 makes \(T^2\) negative.
@@ -11235,7 +11207,7 @@ has zero \(H,n_1\) products, negative \(n_2\) product,
 positive time and all other products nonpositive.
 Its spatial pressure, after division by \(\sqrt2\eta\), is
 \[
- \ip xZ\ge h_0={\sqrt{2-u}-\sqrt{d(u)}\over\sqrt2},\quad
+ \ip xZ\ge h_0={\frac{\sqrt{2-u}-\sqrt{d(u)}}{\sqrt2}},\quad
  \sum Z_i=1,\quad
  \operatorname{supp}Z\subset\{1,2,3\},\quad
  Z^2=R=3-4u+\tfrac32u^2 .
@@ -11323,8 +11295,8 @@ price remains unspent.  Hence
 The squared projection of \(x\) onto the complement of old \(A_{15}\)
 is bounded by
 \[
- {S_{16}^2\over16}+x_{17}^2+x_{18}^2
- <{(3.59+\Delta)^2\over16}+.0141-.254\Delta
+ {\frac{S_{16}^2}{16}}+x_{17}^2+x_{18}^2
+ <{\frac{(3.59+\Delta)^2}{16}}+.0141-.254\Delta
  \le .83062756<.9114^2 .
 \]
 The quadratic increases throughout \(0\le\Delta\le.0556\),
@@ -11332,7 +11304,7 @@ which justifies its endpoint substitution.
 For ANY actual point on old \(A_{15}\), original maximality
 therefore gives
 \[
-              C<{1+.9114^2\over1-.9114^2}<10.81 .
+              C<{\frac{1+.9114^2}{1-.9114^2}}<10.81 .
 \tag{DFiniteface}\label{eq:DFiniteface}
 \]
 This is an all-point distance cap on the original face, with both
@@ -11502,10 +11474,10 @@ Using \(S_{17}\pm x_{18}<3.823\), its normalized pressure is
 less than \(3.823/\sqrt{17}<.928\).
 Thus
 \[
- \rho=E_q/E>C-.928\sqrt{C^2-1}
-                 >.072C+.464/C>.82,
- \quad\kappa<50/41<1.22,
- \quad\ip yu>1-1.22/10.8>.887 .
+\begin{gathered}
+ \rho=E_q/E>C-.928\sqrt{C^2-1}>.072C+.464/C>.82,\\
+ \kappa<50/41<1.22,\quad\ip yu>1-1.22/10.8>.887 .
+\end{gathered}
 \]
 The reverse is the positive combination
 \((N\Omega'_{18}+F\Omega'_{17})/\sqrt{C^2-1}\).
@@ -11521,7 +11493,7 @@ Clearing their positive old-root coefficients gives diagonal
 Schur matrix \(\operatorname{diag}(1-g^2,17/32)\).
 The resulting actual vertex is whole \(A_{16}+I_2(m)\), with
 \[
-                C^2=1+{N^2\over1-g^2}+{32F^2\over17}.
+                C^2=1+{\frac{N^2}{1-g^2}}+{\frac{32F^2}{17}}.
 \]
 For \(m=7\), monotonicity and
 \(\lambda(.901,1.35)<3.9705(4.154)-16.5063=-.012843\)
@@ -11548,8 +11520,8 @@ therefore orthogonality forces \(1<g<1.08\).
 The positive actual core \(c_N+gn_f\), square \(1-g^2<0\),
 is a genuine point on all old \(A_{15}\), with
 \[
- C^2={N^2\over g^2-1}>
- {20.3876\over.1664}>122.5>10.81^2 .
+ C^2={\frac{N^2}{ g^2-1}}>
+ {\frac{20.3876}{.1664}}>122.5>10.81^2 .
 \]
 The ratio decreases for \(g>1\), since its derivative numerator
 is \(-8g^2-(41/2)g-8<0\).
@@ -11598,7 +11570,6 @@ research enters this appendix.
 
 % WORKING SAME-FAMILY APPENDIX, 25 October 2026.
 % Current batch: complete A16 + actual typed-seven consumer only.
-% Unintegrated, uncompiled, and awaiting different-author/root review.
 % Source: compact18_a16_actual_typed_seven_endpoint_defect_coupling_exclusion_candidate_20261022.md.
 % No scientific import, enumeration, test, Lean or TeX job.
 \section{The other exact-dimension-eighteen consumers}
@@ -11608,7 +11579,7 @@ This appendix supplies its component-specific consumers, using the same
 original farthest vertex throughout.  A typed exception includes its
 actual isolated opposite wall; a bare old seven bond is insufficient.
 
-\subsection{\(A_{16}\) with either actual typed-seven defect}
+\subsection[A16 with either actual typed-seven defect]{\(A_{16}\) with either actual typed-seven defect}
 \label{app:A16typed18}
 Suppose the entire incident forest is \(A_{16}+Z\), where
 \(Z=N_7\) means old \(A_2\) with its new isolated seven opposite,
@@ -11617,9 +11588,11 @@ opposite.  There is no arithmeticity hypothesis.
 
 Use zero-sum \(\mathbb R^{17}\), with actual unit normals and duals
 \[
- n_i=(e_i-e_{i+1})/\sqrt2,\qquad
- \Omega_i=\sqrt2(P_i-iP_{17}/17),\qquad
+\begin{gathered}
+ n_i=(e_i-e_{i+1})/\sqrt2,\quad
+ \Omega_i=\sqrt2(P_i-iP_{17}/17),\\
  D_i=2i(17-i)/17,\quad C_{ij}=2i(17-j)/17\quad(i\le j).
+\end{gathered}
 \]
 Write the original interior point as \(z=E(p-x-y)\), with
 \(x\) in this \(A_{16}\) space and \(y\) in the orthogonal
@@ -11925,14 +11898,26 @@ Use the root chords and \(u^2\le(l+r)u-lr\) on each interval:
 \]
 Here \(G_0>K-au-.64\sqrt{u(1-u)}\).
 The four root squares are
-\(1.88210961,1.38227049,1.13230881,.88228449\),
+\[
+\begin{gathered}
+1.88210961,\quad1.38227049,\\
+1.13230881,\quad .88228449,
+\end{gathered}
+\]
 each below \(32/17,47/34,77/68,15/17\), respectively.
 The three upper-radical square gaps are
-\(.000142978704,.000095351184,.000068333456\), all positive.
-Finally
-\(au+.64\sqrt{u(1-u)}\le(a+\sqrt{a^2+.64^2})/2\),
+\[
+\begin{gathered}
+.000142978704,\quad .000095351184,\\
+.000068333456,
+\end{gathered}
+\]
+and all are positive. Finally,
+\[
+ au+.64\sqrt{u(1-u)}\le\frac{a+\sqrt{a^2+.64^2}}2,
+\]
 so the three lower bounds for \(G_0\) are
-\(.07849,.06559,.071338\).  Thus, uniformly,
+\(.07849,.06559,.071338\). Thus, uniformly,
 \[
                G>.06559-208/37500=18013/300000>.06.
 \]
@@ -11952,9 +11937,7 @@ argument here.  It does not assert an arbitrary-spectator
 \(A_{16}>.91\) theorem.
 
 % SAME-FAMILY WORKING FRAGMENT, 25 October 2026. Root-owned.
-% Complete A17+ordinary A1 / actual I transcription; outside review pending.
-% Unintegrated and uncompiled. No new bound or runtime credit.
-\subsection{The two rank-one spectators beside \(A_{17}\)}
+\subsection[The two rank-one spectators beside A17]{The two rank-one spectators beside \(A_{17}\)}
 \label{app:A17rankone18}
 We now exclude the two genuinely different rank-one alternatives.
 An ordinary \(A_1\) has energy greater than \(.1\); an actual isolated
@@ -12133,9 +12116,11 @@ leaves isolation, a three at \(j=2,3,16,17\), or a four at
 \(j=2,17\). For \(v_A=g\Omega_1+\delta\Omega_j\), their
 zero-foreign cosines, in that order, are
 \[
- (34g+16)/18,\quad(34g+15)/(2\sqrt{18}),\quad
- (34g+2)/(2\sqrt{18}),\quad(34g+1)/18,\quad
+\begin{gathered}
+ (34g+16)/18,\quad(34g+15)/(2\sqrt{18}),\\
+ (34g+2)/(2\sqrt{18}),\quad(34g+1)/18,\\
  (34g+16\sqrt2)/6,\quad(34g+\sqrt2)/6.
+\end{gathered}
 \]
 Foreign cost only increases the actual cosine. Own-zero cases violate
 \(\norm{v_A}^2>1\) or have the actual affine \(E_8\) null at
@@ -12166,7 +12151,7 @@ For pure finite at least seven use
 zero, zero, and \((3-4g^2)/(2g)<0\), and
 \[
  \zeta=(1-u/2,1-u/2,u-1),\quad R=3-4u+3u^2/2,
- \quad t_0={\sqrt{D-u}-\sqrt{7u-4-3u^2}\over\sqrt2}.
+ \quad t_0={\frac{\sqrt{D-u}-\sqrt{7u-4-3u^2}}{\sqrt2}}.
 \]
 Seven has \(1.23<u<1.233\), \(R<.35,t_0>.38\).
 Finite at least eight has \(1<u<1.1716\), \(R\le.5,t_0>.39\);
@@ -12179,7 +12164,7 @@ product is negative. Its positive time and original coefficients
 check every other wall. It gives
 \[
  \zeta=(1-u/2,u/2),\quad R=1-u+u^2/2,\quad
- t_0={\sqrt{D-u}-\sqrt{u(1-u)}\over\sqrt2}>.4,
+ t_0={\frac{\sqrt{D-u}-\sqrt{u(1-u)}}{\sqrt2}}>.4,
  \quad R<.515.
 \]
 The last bounds use \(u>.83\), radicals \(>.9428\), \(<.376\).
@@ -12213,7 +12198,7 @@ Put \(k=\sqrt{17/18}\), \(D_0=.7453706\). Since \(k>.9718\),
 \(a_I+(3k/2)s>D_0\). Weighted Cauchy therefore gives, for
 \(c>0,B<D_0\),
 \begin{equation}\label{eq:A17Igraft}
- s^2+c(a_I-B)_+^2>{(D_0-B)^2\over17/8+1/c}.
+ s^2+c(a_I-B)_+^2>{\frac{(D_0-B)^2}{17/8+1/c}}.
 \end{equation}
 It counts the spectator energy once. An endpoint graft on a block
 of length \(L\), from its current coordinate \(B\) toward \(a_I\),
@@ -12331,7 +12316,7 @@ foreign contacts, own parameters and wall signs have been retained;
 the same original farthest vector and separate anchor prices are used
 throughout. Both rank-one alternatives beside \(A_{17}\) are now closed.
 
-\subsection{Typed defects beside \(B_{16}\) and \(D_{16}\)}
+\subsection[Typed defects beside B16 and D16]{Typed defects beside \(B_{16}\) and \(D_{16}\)}
 \label{app:BD16typed18}
 These cases share the long-prefix and head geometry. They separate at
 the final short layer: \(B_{16}\) has a genuine short normal and a
@@ -12415,8 +12400,10 @@ Indeed its derivative has numerator
 \(\sqrt5>559/250,\sqrt6<49/20\).
 Choosing actual strong \(K=9\) or \(10\) gives
 \[
- .797425+.09+2(3.25-2.570)/7-4/49>1.000078,
-\quad .823735+.09+2(3.25-2.732)/7-3/49>1.000510.
+\begin{gathered}
+ .797425+.09+2(3.25-2.570)/7-4/49>1.000078,\\
+ .823735+.09+2(3.25-2.732)/7-3/49>1.000510.
+\end{gathered}
 \]
 This sharper comparison is needed for the typed spectator; the weaker
 ordinary-case \(3.23\) estimate is not substituted. Coverage reaches
@@ -12499,7 +12486,7 @@ For it put \(u=g^{-2}\in(0,1)\). The actual positive core
 negative own product, positive time and every omitted wall nonpositive.
 It gives
 \[
- \ip xZ\ge{\sqrt{2-u}-\sqrt{u(1-u)}\over\sqrt2},
+ \ip xZ\ge{\frac{\sqrt{2-u}-\sqrt{u(1-u)}}{\sqrt2}},
  \quad Z=(1-u/2)e_1+(u/2)e_2.
 \]
 Pay weight \(\sqrt2/5\) on \(Z-P_5/5\), costing
@@ -12519,7 +12506,7 @@ The circle inequality with radical upper bounds \(.4104,.4308\)
 gives \(>.04644,>.03624\). This one paid head can be combined
 with any later residual vanishing on the first five coordinates.
 
-\subsubsection{The \(B_{16}\) last-long layer}
+\subsubsection[The B16 last-long layer]{The \(B_{16}\) last-long layer}
 Delete fourteen, retaining the actual \(B_2\) on long fifteen
 and short sixteen. A finite contact to it is a three at either end.
 For long fifteen the Schur data are \(\sigma=g+1/2\),
@@ -12559,9 +12546,9 @@ are negative. Every other wall is nonpositive termwise, and the full
 rank-two block is retained. In the old edge direction
 \(P_{15}/\sqrt{15}\) its data are
 \[
- b_{15}={15+14\sqrt2\over2\sqrt{15}},\quad
+ b_{15}={\frac{15+14\sqrt2}{2\sqrt{15}}},\quad
  b_{15}^2-A^2=17/60,\quad
- C_{15}={15+14\sqrt2\over\sqrt{17}}>42/5.
+ C_{15}={\frac{15+14\sqrt2}{\sqrt{17}}}>42/5.
 \]
 Therefore \(S_{15}>\sqrt{555/47}>3.43\) on the original vector.
 Append this floor to an actual strong twelve/thirteen reference,
@@ -12582,7 +12569,7 @@ strong. Their energies exceed \(.88864\) and
 then give at least \(.88864+.03624+.09>1\).
 Thus the entire typed \(B_{16}\) row is impossible.
 
-\subsubsection{The \(D_{16}\) centre and the point where cases split}
+\subsubsection[The D16 centre and the point where cases split]{The \(D_{16}\) centre and the point where cases split}
 Delete centre fourteen, retaining \(A_{13}\), both actual fork
 \(A_1\)'s and the full rank-two component. For own \(g\), left
 contact \(\beta\) at \(j\), and fork contacts \(\delta,\epsilon\),
@@ -12662,7 +12649,7 @@ has
 \[
  R=14+(1/4-4g^2/3)/\alpha^2<14,\quad
  G=(A-\sqrt a)/\alpha>
- {2(\sqrt{835}-\sqrt{11})\over11\sqrt2}>3.28.
+ {\frac{2(\sqrt{835}-\sqrt{11})}{11\sqrt2}}>3.28.
 \]
 The same derivative as above, now with \(3/4\), is negative,
 so the endpoint \(9/8\) covers the entire weak interval.
@@ -12714,7 +12701,7 @@ projection on the cap and both forks. Its displacement is
 \(\alpha P_{14}\), \(\alpha=(1+\phi)/(2\sqrt2)\), and
 \[
  A^2=3+11\phi/2,\quad \Delta=(2-\phi)/4,\quad
- G={14+21\phi-\phi\sqrt7\over4A\alpha}>3.4,\quad R=14.
+ G={\frac{14+21\phi-\phi\sqrt7}{4A\alpha}}>3.4,\quad R=14.
 \]
 The last strict comparison follows from
 \(1.618<\phi<1.619,\sqrt7<2.646,A<3.451,\alpha<.927\):
@@ -12744,7 +12731,7 @@ The ordinary rank-one case and the actual isolated-short case use
 different information. We first treat the ordinary \(D_{17}\)
 alternative without imposing a shape on its rank-one opposite.
 
-\subsubsection{\(D_{17}\) with an ordinary nonshort \(A_1\)}
+\subsubsection[D17 with an ordinary nonshort A1]{\(D_{17}\) with an ordinary nonshort \(A_1\)}
 \label{app:D17ordinary18}
 Use the actual unit \(D_{17}\) roots, centre fifteen and forks
 sixteen/seventeen. The long duals are \(\Omega_i=\sqrt2P_i\),
@@ -12891,7 +12878,7 @@ gain \(>.0168\). Pure finite at least seven uses
 \(u=g^{-2}\in(1,1.232)\),
 \[
  Z=(1-u/2)(e_1+e_2)+(u-1)e_3,\quad
- H={\sqrt{2-u}-\sqrt{7u-3u^2-4}\over\sqrt2},\quad
+ H={\frac{\sqrt{2-u}-\sqrt{7u-3u^2-4}}{\sqrt2}},\quad
  R=3-4u+3u^2/2.
 \]
 The complete interval seals for weight \(1/2\) are
@@ -12934,7 +12921,7 @@ This closes precisely the ordinary \(D_{17}\) rank-one case.
 Tail elimination contradictions have not been added to the final
 reference, and no short-\(I\) energy or arithmeticity is assumed.
 
-\subsection{\(B_{17}\) with an actual isolated short spectator}
+\subsection[B17 with an actual isolated short spectator]{\(B_{17}\) with an actual isolated short spectator}
 \label{app:B17I18}
 We separate the local payment lemmas from the short-tail classification.
 This makes the order of the argument explicit: the local lemmas first
@@ -12951,8 +12938,8 @@ The original vector is \(z=E(p-x-ye)\), with
 \]
 Put
 \[
- s^2={\sqrt{1+h}-1\over\sqrt{1+h}+1},\qquad
- t=\sqrt{1+4h}-2\sqrt h,\qquad h(r)={4r\over(1-r)^2}.
+ s^2={\frac{\sqrt{1+h}-1}{\sqrt{1+h}+1}},\qquad
+ t=\sqrt{1+4h}-2\sqrt h,\qquad h(r)={\frac{4r}{(1-r)^2}}.
 \]
 Appendix~\ref{app:Ijoint} proves \(y\ge s\), and height at least
 \(t\) in every other actual unit dual direction. At a classical long
@@ -13003,7 +12990,7 @@ Suppose an actual pure classical pressure is
 \(\ip xZ\ge H\), with \(Z\) supported in the first \(m\) coordinates
 and \(\ip Z{P_m}=1\). Write \(R=Z^2\) and
 \[
- B_Z=\ip{W_0}Z+{a_m-\ip{W_0}{P_m}\over m}.
+ B_Z=\ip{W_0}Z+{\frac{a_m-\ip{W_0}{P_m}}{ m}}.
 \]
 For \(\nu\ge0\), with debit \(\nu/m\) available at \(P_m\), the
 same square improves \(\mathcal E_0\) by
@@ -13023,7 +13010,7 @@ does not assume a weak-five \(P_1/P_6\) reference is flat.
 Suppose the actual pressures are \(a x_1+v y\ge F\), \(y\ge s_0\),
 with \(a>0,v\ge0\). Put
 \[
- B_0=(W_0)_1+{a_m-\ip{W_0}{P_m}\over m}.
+ B_0=(W_0)_1+{\frac{a_m-\ip{W_0}{P_m}}{ m}}.
 \]
 For \(\eta,\tau\ge0\), write \(k=\eta a\), \(\ell=\eta v+\tau\),
 and require the individual anchor debit \(k/m\) to be available.
@@ -13067,12 +13054,12 @@ it is not zero in general. In the uncapped branch, weighted Cauchy
 and Lemma~\ref{lem:I923-real-barrier} give
 \[
  s^2+(6/5)(t-a_0)_+^2>
- {(.923-.5965)^2\over25/4+5/6}>.015.
+ {\frac{(.923-.5965)^2}{25/4+5/6}}>.015.
 \]
 In the capped branch \(t>a_0+1/12\). The relation makes \(t\)
 decrease with \(s\), and
 \[
- t(.1)={\sqrt{11401}-40\over99}<67/99<a_0+1/12.
+ t(.1)={\frac{\sqrt{11401}-40}{99}}<67/99<a_0+1/12.
 \]
 Thus \(s<.1\). The \(.923\)-barrier then gives
 \[
@@ -13095,7 +13082,7 @@ A head means the actual opposite of the old long node one.
 On a flat-five reference, suppose an actual pure pressure has
 \[
  Z=(1-u/2)e_1+(u/2)e_2,\quad
- H={\sqrt{2-u}-\sqrt{u(1-u)}\over\sqrt2},\quad
+ H={\frac{\sqrt{2-u}-\sqrt{u(1-u)}}{\sqrt2}},\quad
  R=1-u+u^2/2,\qquad 0<u<1.
 \]
 Weight \(\nu=.36\), costing \(.072\) at \(P_5\), gives gain \(>.04\).
@@ -13139,7 +13126,7 @@ isolated head beside actual \(I\), without a terminal-strength hypothesis.
 \begin{proof}
 For the nonisolated head,
 \[
- A^2=2g^2+2g+Q,\qquad C_1={2g+1\over\sqrt{1-2Q}}.
+ A^2=2g^2+2g+Q,\qquad C_1={\frac{2g+1}{\sqrt{1-2Q}}}.
 \]
 Own zero has zero time or the positive null
 \(c+\Omega_2/2=\sqrt Qp-\beta e\);
@@ -13204,9 +13191,9 @@ u&\text{head gain lower}&h\text{ lower}&I\text{ energy lower}\\ \hline
 \end{array}
 \]
 The first radicals are bounded below by
-\(.6708,.6519,.63245,.6196\), the second above by
-\(.1871,.204125,.204125,.2\), and \(R\) above by
-\(.5,.415,.38375,.36\). Positive squaring proves these;
+\(.6708,\allowbreak .6519,\allowbreak .63245,\allowbreak .6196\), the second above by
+\(.1871,\allowbreak .204125,\allowbreak .204125,\allowbreak .2\), and \(R\) above by
+\(.5,\allowbreak .415,\allowbreak .38375,\allowbreak .36\). Positive squaring proves these;
 the second radicand has maximum \(1/24\) and \(R\) decreases.
 Use \(h=u/[4(2-u)]\) and \(h(r)\) for the \(I\)-column.
 Every combined gain is \(>.0933875>1-.90715\).
@@ -13218,16 +13205,18 @@ unselected original walls retain nonpositive products.
 \label{lem:I-pure-dotted-joint-point}
 For an actual pure dotted head \(c=Ap-g\sqrt2e_1\), put
 \[
- u=g^{-2}\in(0,1),\quad h_0={u\over4(2-u)},\quad
- a=\sqrt{1-u/2},\quad v_0=\sqrt{u/(8-3u)},\quad
- d=\sqrt{1-a^2-v_0^2},\quad F=1-d,\quad s_0=s(h_0).
+\begin{aligned}
+ u&=g^{-2}\in(0,1),& h_0&=\frac{u}{4(2-u)},\\
+ a&=\sqrt{1-u/2},& v_0&=\sqrt{u/(8-3u)},\\
+ d&=\sqrt{1-a^2-v_0^2},& F&=1-d,\qquad s_0=s(h_0).
+\end{aligned}
 \]
 For \(u\ge1/5\), every actual \(h\ge h_0\) gives a feasible
 future point \((p-ae_1-v_0e)/d\). Consequently
 \[
  a x_1+v_0y\ge F,\quad y\ge s_0,\qquad
- X={F-v_0s_0\over a}
- =\sqrt{{1-\sqrt{3u/8}\over1+\sqrt{3u/8}}}.
+ X={\frac{F-v_0s_0}{ a}}
+ =\sqrt{{\frac{1-\sqrt{3u/8}}{1+\sqrt{3u/8}}}}.
 \]
 \end{lemma}
 \begin{proof}
@@ -13237,8 +13226,8 @@ then \(v\ge v_0\), \(v<1/\sqrt3\).
 The denominator \(D=u/2-v_0v\) is positive because
 \(3u(8-3u)\ge111/25>4\) on this interval. For
 \[
- T=1/D,\quad \rho={Ta\over\sqrt2g}>0,\quad
- \sigma={Tv_0\over\sqrt{1+h}}>0
+ T=1/D,\quad \rho={\frac{Ta}{\sqrt2g}}>0,\quad
+ \sigma={\frac{Tv_0}{\sqrt{1+h}}}>0
 \]
 direct substitution gives
 \[
@@ -13263,7 +13252,7 @@ The comparison \(X>r\) at \(u=U\) is the positive rational test
 For a dotted head with \(Q=\beta^2>0\), set \(v=(1-Q)/g^2\).
 Then \(0<v<3/4\), and
 \[
- h\ge h_{\min}(v):={v\over6-4v}.
+ h\ge h_{\min}(v):={\frac{v}{6-4v}}.
 \]
 The actual foreign-cleared core gives the pure pressure
 \[
@@ -13282,7 +13271,7 @@ Also \(y^2>.08625v-.014375\) for \(v\le.6\), and
 \begin{proof}
 Acuteness with \(c_I\) gives \(h(2g^2-1)\ge Q\); hence
 \[
- h\ge{Qv\over2(1-Q)-v}\ge{v\over6-4v}.
+ h\ge{\frac{Qv}{2(1-Q)-v}}\ge{\frac{v}{6-4v}}.
 \]
 The second expression increases with \(Q\ge1/4\).
 The core \(c+\beta e+((1-Q)/g)n_1\) has zero cap/old-\(I\)
@@ -13312,8 +13301,8 @@ For \(v\le.6\), \(h_{\min}\le1/6\), and
 \(.23(2.081)^2<1\) gives \(s(h_{\min})^2>.23h_{\min}\).
 The exact tangent inequality is
 \[
- {v\over6-4v}-\left({3v\over8}-{1\over16}\right)
- ={3(2v-1)^2\over8(6-4v)}\ge0.
+ {\frac{v}{6-4v}}-\left({\frac{3v}{8}}-{\frac{1}{16}}\right)
+ ={\frac{3(2v-1)^2}{8(6-4v)}}\ge0.
 \]
 For \(v\ge.6\), \(h_{\min}\ge1/6\), whose \(I\)-energy is
 \(>.0385\), again checked using \(h(r)\).
@@ -13433,7 +13422,7 @@ Thus \(W_0=w+\mu Y\) has effective energy \(>q+.0421\).
 Its debits are \(<.1273\) at \(P_{14}\) and \(<.01273\) at \(P_5\).
 Its initial coordinate is
 \[
- (W_0)_1=b+{\mu(1/k-1/5)\over\sqrt2}<.412.
+ (W_0)_1=b+{\frac{\mu(1/k-1/5)}{\sqrt2}}<.412.
 \]
 This lemma does not assume a \(B\) short normal or that \(P_{16}\)
 is an actual long dual.
@@ -13529,7 +13518,7 @@ u&s_0^2\text{ lower}&X\text{ lower}&
 \]
 The \(X\)-tests are those of
 Lemma~\ref{lem:I-pure-dotted-joint-point}; the \(I\)-tests use
-the left endpoints \(h_0=1/12,3/28,7/52,1/6,9/44\).
+the left endpoints \(h_0=1/12,\allowbreak 3/28,\allowbreak 7/52,\allowbreak 1/6,\allowbreak 9/44\).
 For example the first \(X\)-test has positive numerator
 \(.0002777057265\). This proves gain \(>.0515\) on all the
 displayed intervals. Small \(u\) uses the standalone actual core
@@ -13539,8 +13528,8 @@ For a foreign head put \(v=(1-Q)/g^2\), and use its cleared
 pressure at weight \(\nu=.4\). The initial helper products with
 \(Z-P_5/5\), for \(k=3,2,1\), are respectively
 \[
- {2/15\over\sqrt2},\quad {3/10\over\sqrt2},\quad
- {.8-v/2\over\sqrt2}.
+ {\frac{2/15}{\sqrt2}},\quad {\frac{3/10}{\sqrt2}},\quad
+ {\frac{.8-v/2}{\sqrt2}}.
 \]
 The last is largest on \(0<v<.75\). Hence the complete adverse
 cross is at most \((.072/\sqrt2)(.8-v/2)\).
@@ -13564,7 +13553,7 @@ pressure or the helper gain. The full totals exceed
 \]
 \end{proof}
 
-\subsubsection{The fresh \(B_{17}\) tail and its exceptional actual mate}
+\subsubsection[The fresh B17 tail and its exceptional actual mate]{The fresh \(B_{17}\) tail and its exceptional actual mate}
 We now impose the entire \(B_{17}+I\) forest, with actual unit roots
 \(n_i=(e_i-e_{i+1})/\sqrt2\), \(i\le16\), and genuine short
 root \(n_{17}=e_{17}\). Thus
@@ -13625,9 +13614,9 @@ sixteen is strict, because it has negative product with the positive
 old-fifteen and short-seventeen terms. This is the actual other
 endpoint of old edge sixteen. Its exact data give
 \[
- C_{16}={16+15\sqrt2\over\sqrt{18}},\qquad
- S_{16}\ge4\sqrt{{C_{16}-1\over C_{16}+1}}
- =G:={8+12\sqrt2\over7},\quad
+ C_{16}={\frac{16+15\sqrt2}{\sqrt{18}}},\qquad
+ S_{16}\ge4\sqrt{{\frac{C_{16}-1}{ C_{16}+1}}}
+ =G:={\frac{8+12\sqrt2}{7}},\quad
  3.56722<G<3.5673<f_{16}.
 \]
 In particular this floor is not called strong sixteen.
@@ -13821,7 +13810,7 @@ replaced. No arbitrary face is declared Coxeter, no disconnected root
 scale or arithmeticity is imposed, no actual mate floor is promoted to
 strong sixteen, and no earlier elimination energy is added again.
 
-\subsection{\(D_{17}\) with an actual short rank-one factor}
+\subsection[D17 with an actual short rank-one factor]{\(D_{17}\) with an actual short rank-one factor}
 \label{app:D17I18}
 Keep the actual roots and signed fork coordinates of
 Appendix~\ref{app:D17ordinary18}. The original vector is
@@ -13829,11 +13818,11 @@ Appendix~\ref{app:D17ordinary18}. The original vector is
 rank-one opposite is
 \[
  c_I=\sqrt h\,p-\sqrt{1+h}\,e,\quad0<h<1/2,\qquad
- s^2={\sqrt{1+h}-1\over\sqrt{1+h}+1}.
+ s^2={\frac{\sqrt{1+h}-1}{\sqrt{1+h}+1}}.
 \]
 We have \(y\ge s\), \(x_1\ge t\), where
 \[
- t={\sqrt{1+14s^2+s^4}-4s\over1-s^2},\qquad t+2.5s>.923
+ t={\frac{\sqrt{1+14s^2+s^4}-4s}{1-s^2}},\qquad t+2.5s>.923
 \]
 by Lemma~\ref{lem:I923-real-barrier}. The same \(y\) coordinate
 is counted once; the ordinary debit \(y^2>.1\) is unavailable.
@@ -13874,8 +13863,10 @@ In the strong-five branch pay \(.16/.15\) at actual strong ten/eleven,
 below the individual terminal prices. With
 \(q_{10}>.823735,q_{11}>.8472225\), the bare totals are
 \[
- .823735+.32(3.388-2.732)-.0256(4)=.931255,\quad
+\begin{gathered}
+ .823735+.32(3.388-2.732)-.0256(4)=.931255,\\
  .8472225+.30(3.388-2.886)-.0225(3)=.9303225.
+\end{gathered}
 \]
 Adding the local head gain closes both. In the weak-five branch the
 reference norms are \(>.8870,.9104\); the capped initial-\(I\)
@@ -13916,7 +13907,7 @@ After projection on \(P_1,P_6,P_{13}\), their initial pieces
  (\sqrt2/5,\sqrt2/20),\quad(1/\sqrt2,0).
 \]
 The residual norm bounds for own five, seven/eight, finite at least
-nine, and dotted are \(.824,1.105,1,1.28\). Only the last two
+nine, and dotted are \(.824,\allowbreak 1.105,\allowbreak 1,\allowbreak 1.28\). Only the last two
 residuals are confined to fourteen/fifteen; initial crosses in the
 other rows must be retained. The actual time/radical bounds are
 \[
@@ -14000,7 +13991,7 @@ For a pure dotted head put \(u=g^{-2}\), \(h_0=u/[4(2-u)]\),
 joint point of Lemma~\ref{lem:I-pure-dotted-joint-point} supplies
 \[
  ax_1+v_0y\ge F=1-d,\quad a^2=1-u/2,\quad
- v_0^2={u\over8-3u},\quad d^2=u/2-v_0^2.
+ v_0^2={\frac{u}{8-3u}},\quad d^2=u/2-v_0^2.
 \]
 Besides its stated all-\(h\) domain \(u\ge.2\), it is valid for
 \(.1\le u\le.2,h\le.2\). Indeed \(u(8-3u)\ge.77>2/3\)
@@ -14008,8 +13999,8 @@ and \(h/(1+h)\le1/6\), so
 \(D_0=u/2-v_0\sqrt{h/(1+h)}>0\). The actual construction is
 \[
  p+\rho c+\sigma c_I=D_0^{-1}(p-ae_1-v_0e),\quad
- \rho={a\over D_0\sqrt2g}>0,\quad
- \sigma={v_0\over D_0\sqrt{1+h}}>0.
+ \rho={\frac{a}{ D_0\sqrt2g}}>0,\quad
+ \sigma={\frac{v_0}{ D_0\sqrt{1+h}}}>0.
 \]
 The cap product is zero, the \(c_I\) product has sign
 \(v_0-\sqrt{h/(1+h)}\le0\), old \(n_1,e\) products are negative
@@ -14018,7 +14009,7 @@ therefore remain satisfied, for every mutual head/\(I\) label.
 
 Put \(X=(F-v_0s_0)/a\). Simplification gives
 \[
- X=\sqrt{{1-\sqrt{3u/8}\over1+\sqrt{3u/8}}},\quad
+ X=\sqrt{{\frac{1-\sqrt{3u/8}}{1+\sqrt{3u/8}}}},\quad
  (1-X^2)(1+s_0^2)=4\sqrt3s_0X,\qquad X+2s_0>.91.
 \]
 For completeness, \(0<s_0<\sqrt5-2<.237\). At
@@ -14051,8 +14042,10 @@ and an initial graft without an \(I\) charge gains \(>.03072\).
 For \(.1\le u\le.2,h>.2\), \(I\) alone costs \(>.0455\).
 Thus all pure dotted parameters are covered. The least totals are
 \[
- .9703299945+.00953+.02033425>1.0001942,\quad
+\begin{gathered}
+ .9703299945+.00953+.02033425>1.0001942,\\
  .9521324945+.00953+.0192+.02033425>1.0011967.
+\end{gathered}
 \]
 
 For a positive foreign contact put \(Q=\beta^2\ge1/4\),
@@ -14182,7 +14175,7 @@ close both references. The genuinely permitted \(Q=1/4\) retains
 \[
  x\cdot P_{14}+dy\ge G>3.61,\qquad
  d=1/(2\alpha)<.875,\quad d^2<.765,
- \quad G={\sqrt{5+6\phi}\over1+\sqrt{(13-8\phi)/(18-2\phi)}}.
+ \quad G={\frac{\sqrt{5+6\phi}}{1+\sqrt{(13-8\phi)/(18-2\phi)}}}.
 \]
 At \(K=13,14\), weights \(.14,.13\) give bare mixed gains
 \(>.0874216,.0649831\). Every dotted/foreign head has pure gain
@@ -14290,7 +14283,6 @@ without arithmeticity or an ordinary rank-one debit.
 
 % SAME-FAMILY SOURCE DRAFT. Author: audit_finite57_algorithms, 25 October 2026.
 % Higher-dimensional tail; currently coherent component-cap writing batch.
-% Source accepted through exact21; exact20/19 integration and matching build pending.
 % No workers/imports/enumeration/tests/Lean/TeX jobs. Canonical editions unchanged.
 \section{The independent higher-dimensional tail}
 \label{app:highertail}
@@ -14485,7 +14477,7 @@ $(2f-1)m-1>0$, with final squared margin $342365$.
 The foreign near-$4$ role has ratio squared $>121/35$.
 Thus every remaining weak packet has $Q=0$.
 
-\subsection{The \texorpdfstring{$A_{21}$}{A21} certificate and its plateau transfer}
+\subsection[The A21 certificate and its plateau transfer]{The \texorpdfstring{$A_{21}$}{A21} certificate and its plateau transfer}
 \label{app:tail:sec:Acap}
 
 Put $N=r+1\in[22,30]$. Then
@@ -15046,7 +15038,7 @@ this without separating incompatible minima, reverse so $i\le N/2$.
 The smaller, far-helper time is exactly
 \[
  A_N^2=2i\gamma^2-\tfrac12-
-                     {(2i\gamma-1)^2\over2N}.
+                     {\frac{(2i\gamma-1)^2}{2N}}.
 \]
 It increases in $N$ and in $i$ on this half interval, and in
 $\gamma\ge.8$. Its minimum at $N=20,i=5,\gamma=.8$ is
@@ -15058,7 +15050,7 @@ and $<3/10$ for opposite helpers. The spatial rationalization
 now gives
 \[
  W_iq_i+W_jq_j-\norm Z
- <{W\over2(\sqrt{15/2}+\sqrt7)}<W/10.
+ <{\frac{W}{2(\sqrt{15/2}+\sqrt7)}}<W/10.
 \]
 Thus the weighted loss of two adjacent weak packets is less than
 $43/80$ or $2/5$, both below $.61$. Adjacent literal packets
@@ -15070,7 +15062,7 @@ the same cosine formula printed in the cap proof. Reversing its
 numbering if needed gives $6\le j\le N-4$ and
 \[
  jD_j\ge72(N-6)/N>216/5,\qquad
- \tfrac12+{j-1\over j\sqrt2}>13/12.
+ \tfrac12+{\frac{j-1}{ j\sqrt2}}>13/12.
 \]
 Its cosine is therefore greater than seven, and its normalized
 height exceeds $43/50$. None of these steps used an energy target
@@ -15088,7 +15080,7 @@ Lemma~\ref{app:tail:lem:Awindow2021}. At the other end there is another such
 mate, or, by nonadjacency, a strong anchor in $\{N-6,N-5\}$.
 That anchor has normalized height $>.77$. The correlation is at most
 \[
- \sqrt{{5\cdot6\over15\cdot14}}=1/\sqrt7<1/2.
+ \sqrt{{\frac{5\cdot6}{15\cdot14}}}=1/\sqrt7<1/2.
 \]
 The sum of the two heights is $>1.63$, while the sum direction
 has square less than three. This contradicts the assumed energy,
@@ -15099,7 +15091,7 @@ There is now a strong $i\in\{5,6\}$ and a strong
 $j\in\{N-6,N-5\}$. Their initial and final coordinate intervals
 are disjoint. The exact height-energy identity and Cauchy give
 \[
- e_A\ge{h_i^2\over2i}+{h_j^2\over2(N-j)}.
+ e_A\ge{\frac{h_i^2}{2i}}+{\frac{h_j^2}{2(N-j)}}.
 \]
 At $N=20$, the endpoint floors are already $q_5-.61>2.1$ and
 $q_6-.61>2.28$, by the positive squares
@@ -15113,7 +15105,7 @@ $81/8750>0$. This proves the proposition on the same original
 projection, with no spectator or face-inheritance restriction.
 \end{proof}
 
-\subsection{The one short spectator beside $D_{23}$}
+\subsection[The one short spectator beside D23]{The one short spectator beside $D_{23}$}
 \label{app:tail:D23I}
 \begin{lemma}
 \label{app:tail:lem:D23I}
@@ -15191,7 +15183,7 @@ without asserting that an abstract forest is realized. Dimensions
 above twenty-nine use only the named published starting bound.
 \end{proof}
 
-\subsection{One isolated-$I$ argument for all the proper large classical rows}
+\subsection[One isolated-I argument for all the proper large classical rows]{One isolated-$I$ argument for all the proper large classical rows}
 \label{app:tail:classicalI}
 \begin{proposition}
 \label{app:tail:prop:classicalI}
@@ -15290,7 +15282,7 @@ In particular it does not exclude $D_{20}+I$, whose $M=15$ rank
 hypothesis fails, or supply a theorem with arbitrary extra spectators.
 \end{proof}
 
-\subsection{One smaller-loss window for whole $B_{22},D_{22},D_{23}$}
+\subsection[One smaller-loss window for whole B22,D22,D23]{One smaller-loss window for whole $B_{22},D_{22},D_{23}$}
 \label{app:tail:whole58}
 \begin{lemma}[A local whole-diagram $.58$ window]
 \label{app:tail:lem:whole58local}
@@ -15315,7 +15307,7 @@ genuine short root in $B$, and both signed forks in $D$.
 \paragraph{The new inventory is checked locally.}
 The sufficient ratio for $c_0$-strength is
 \[
- T_0(q)={50\over29}-{q-29/50\over q(2q-29/50)}.
+ T_0(q)={\frac{50}{29}}-{\frac{q-29/50}{ q(2q-29/50)}}.
 \]
 It increases for $q\ge\sqrt{10}$. Positive rational multiplication
 at the right endpoints gives
@@ -15382,7 +15374,7 @@ owns three/four/six and parallel retain their actual affine/null
 principals. For isolated dotted own, $u=g^{-2}\in(0,1)$, the
 actual core gives loss at most
 \[
- {u\over\sqrt{2i}+\sqrt{2i-1}}+\sqrt{u(1-u)}.
+ {\frac{u}{\sqrt{2i}+\sqrt{2i-1}}}+\sqrt{u(1-u)}.
 \]
 At $i\ge6$ the first coefficient is $<37/250$, so this is
 $<(37/250+1.011)/2=.5795$. Only isolated dotted five remains.
@@ -15508,7 +15500,7 @@ $Q_K$.
 If five is isolated dotted, its actual core gives
 \[
  U'=P_5+(u/2)(e_6-e_5),\qquad
- x.U'\ge T'={\sqrt{10-u}-\sqrt{u(1-u)}\over\sqrt2}.
+ x.U'\ge T'={\frac{\sqrt{10-u}-\sqrt{u(1-u)}}{\sqrt2}}.
 \]
 Its loss is $<.588$, since with $a=\sqrt{10}-3<13/80$,
 $au+\sqrt{u(1-u)}<(a+\sqrt{1+a^2})/2<.588$.
@@ -15651,7 +15643,7 @@ negative, including the additional contacted fork. Average their
 pressures retaining the full correction cross $8g^2/9$.
 The displacement is flat through sixteen, and
 \[
- x.Y/\alpha\ge{A-\sqrt d\over\alpha},\quad
+ x.Y/\alpha\ge{\frac{A-\sqrt d}{\alpha}},\quad
  A^2=i\alpha^2-5/8,\quad
  Y^2=A^2+1-14g^2/9<i\alpha^2.
 \]
@@ -15867,8 +15859,8 @@ At rank twenty-three, $B_{23}$ has its cap and whole $D_{23}$ is
 excluded by Proposition~\ref{app:tail:prop:whole58}.
 
 At dimension twenty-two, $r\ge17$. Ranks seventeen/eighteen/nineteen
-have floors $>.8472225,.8689525,.88864$ and spectator ranks
-five/four/three. Their weakest costs $4/14,3/14,2/14$ suffice.
+have floors $>.8472225,\allowbreak .8689525,\allowbreak .88864$ and spectator ranks
+five/four/three. Their weakest costs $4/14,\allowbreak 3/14,\allowbreak 2/14$ suffice.
 At rank twenty the improved standalone prefix floor is
 \[
  .90715+G_0=.91211125.
@@ -15885,7 +15877,7 @@ has now been covered. The argument never descends to an arbitrary
 face or uses a higher-dimensional cover at a different rank.
 \end{proof}
 
-\subsection{One rational curve for the two remaining large-$A$ couplings}
+\subsection[One rational curve for the two remaining large-A couplings]{One rational curve for the two remaining large-$A$ couplings}
 \label{app:tail:Atwoends}
 We use the same central inventory with a different reference, rather
 than starting a new component classification. At $N=20$ the target
@@ -15962,7 +15954,7 @@ An actual endpoint floor $x_1\ge z$ improves a constant initial
 block of length $m$ and coordinate mean $b_0$ by replacing its
 entries with $z,(mb_0-z)/(m-1),\ldots$. If $z>b_0$, the gain is
 \[
- {m\over m-1}(z-b_0)^2.
+ {\frac{m}{ m-1}}(z-b_0)^2.
 \]
 If $z\le b_0$, leave the block unchanged. All reference sums are
 preserved. For every $z\le1$ the remaining means exceed the next
@@ -16022,7 +16014,7 @@ Weighted Cauchy, on these two changes and the \emph{single} $I$ cost,
 gives
 \[
  s^2+(12/5)(at-b)_+^2>
- {(a\cdot.767-b)^2\over(9/4)a^2+5/12}.
+ {\frac{(a\cdot.767-b)^2}{(9/4)a^2+5/12}}.
 \]
 Indeed $(at-b)_++(3/2)as>a\cdot.767-b$.
 The denominator is $215/84<2.56$. With $b=.305$ the numerator
@@ -16033,7 +16025,7 @@ the zero/one-end totals are larger. No separate $I$ charge was
 added at the second end, and no other component energy was reused.
 \end{proof}
 
-\subsection{The proper $D_{19}/D_{20}$ continuation}
+\subsection[The proper D19/D20 continuation]{The proper $D_{19}/D_{20}$ continuation}
 \label{app:tail:properD1920}
 \begin{lemma}
 \label{app:tail:lem:D4proper}
@@ -16196,7 +16188,7 @@ The nonzero $W.V=a/\sqrt2$ is already included in $\Delta$;
 no separate early-block or head energy has been added.
 \end{proof}
 
-\subsection{The whole $B_{21}$ terminal}
+\subsection[The whole B21 terminal]{The whole $B_{21}$ terminal}
 \label{app:tail:wholeB21}
 \begin{proposition}
 \label{app:tail:prop:wholeB21}
@@ -16272,7 +16264,7 @@ If there are no holes, no correction is needed. In every branch
 the legal positive reference has energy greater than one.
 \end{proof}
 
-\subsection{Whole $D_{21}$: sum the exceptional feet before bounding their errors}
+\subsection[Whole D21: sum the exceptional feet before bounding their errors]{Whole $D_{21}$: sum the exceptional feet before bounding their errors}
 \label{app:tail:wholeD21}
 \begin{proposition}
 \label{app:tail:prop:wholeD21}
@@ -16289,7 +16281,7 @@ classification is transported unchanged.
 
 The sufficient ratio is
 \[
- T_1(q)=7/4-{q-4/7\over q(2q-4/7)}.
+ T_1(q)=7/4-{\frac{q-4/7}{ q(2q-4/7)}}.
 \]
 It increases on $q\ge\sqrt{10}$; positive-denominator comparisons
 give $T_1(q)<1.673$ through $q=\sqrt{38}<37/6$,
@@ -16660,8 +16652,8 @@ two ranks. This exhausts the $A$ side at its own rank.
 
 For $B/D$, $S\le5$ and $r\ge16$. The valid D-admissible
 $M=r-6$ floors at sixteen/seventeen/eighteen are
-$>.823735,.8472225,.8689525$. Their weakest short-discard
-spectators cost $4/14,3/14,2/14$, already too much.
+$>.823735,\allowbreak .8472225,\allowbreak .8689525$. Their weakest short-discard
+spectators cost $4/14,\allowbreak 3/14,\allowbreak 2/14$, already too much.
 At $B_{19}$, its genuinely valid $M=14$ improved floor
 $>.91211125$ closes an ordinary rank-two block, a two-$A_1$
 remainder with its at least one nonshort cost $>.1$, or either
@@ -16684,9 +16676,6 @@ impossible. There is no appeal to face inheritance or to a
 necessary cover computed at another dimension.
 \end{proof}
 
-% Exact20/19 covers/proper consumers remain to write.
-% Exact19 wholeA/B/D consumers are owned by the separate consolidation author.
-% All earlier coherent source freezes remain unchanged in their archives.
 
 % SAME-FAMILY GENERAL COMPACT SOURCE DRAFT, 25 October2026.
 % Exact19 whole A/B/D consumers; no new paper, canonical or main edit.
@@ -16806,7 +16795,7 @@ its older mixed-$H_4$ catalogue remains preserved but is unnecessary
 for this composition with the later local head theorem.
 \end{proof}
 
-\subsection{The two rank-one remainders beside $A_{19}$}
+\subsection[The two rank-one remainders beside A19]{The two rank-one remainders beside $A_{19}$}
 \label{app:tail:A19rankone}
 \begin{lemma}
 \label{app:tail:lem:A19ordinary}
@@ -16824,7 +16813,7 @@ where $H_6=2.288$. Its internal weak holes have already been paid.
 For the actual weak cap at five, either helper assignment gives
 \[
  A^2=(15/2)\gamma^2+C\gamma-21/40,\quad C\in\{1/2,3/2\},
- \qquad K=w.v={143\over750}(10\gamma+1).
+ \qquad K=w.v={\frac{143}{750}}(10\gamma+1).
 \]
 The positive corrections below use only old $n_3,n_4,n_5$, so have
 zero product with this flat reference. For $Y=v-u$ we therefore
@@ -16858,8 +16847,8 @@ $\sqrt\delta<.4$, so $g_0^2>21/29>.85^2$.
 The exact lower overlap polynomial is
 \[
  .77^2S^2-K^2\ge
- {1573\over7200}\gamma^2-{387563\over900000}\gamma
-                +{4414927\over18000000}
+ {\frac{1573}{7200}}\gamma^2-{\frac{387563}{900000}}\gamma
+                +{\frac{4414927}{18000000}}
  >.218(\gamma-1)^2+.005\gamma+.027>0.
 \]
 Thus $K/S<.77$ and the gap is $>.08$ on the whole finite interval.
@@ -16876,7 +16865,7 @@ Multiplying the overlap difference by $\gamma^2$ gives the bound
        +2.813(\gamma-1)^3+.811(\gamma-1)^4>0.
 \]
 The rounded quartic coefficients come from
-$146047/180000,-387563/900000,-16929473/18000000,.5929$,
+$146047/180000,\allowbreak -387563/900000,\allowbreak -16929473/18000000,\allowbreak .5929$,
 so every coefficient comparison is rational. This gives a gap
 $>.09$ for the entire dotted interval.
 
@@ -16931,8 +16920,8 @@ Their disjoint legal changes add at least $(12/5)z^2$.
 Weighted Cauchy with the single $I$ height gives
 \[
  s^2+(12/5)z^2>
- {(a\cdot.767-.302)^2\over(9/4)a^2+5/12}
- >{.445058^2\over511/200}>.0775.
+ {\frac{(a\cdot.767-.302)^2}{(9/4)a^2+5/12}}
+ >{\frac{.445058^2}{511/200}}>.0775.
 \]
 The exact denominator is $613/240$; the last cleared margin is
 $.000064123364$. Thus both end indices must be weak.
@@ -16992,9 +16981,11 @@ $.2455,.118,\ldots$, decreasing. Delete actual internal weak
 knots seven through thirteen; their entire loss is $\le.001296$.
 The positive end coefficients in the spatial duals are
 \[
- \beta_1={5A_0-B_0\over8}=59/640,\quad
- \beta_5={5B_0-A_0-4C_0\over8}=1009/16000,\quad
- \eta=\beta_1-r\beta_5=1351/25600>0.
+\begin{aligned}
+ \beta_1&={\frac{5A_0-B_0}{8}}=59/640,\\
+ \beta_5&={\frac{5B_0-A_0-4C_0}{8}}=1009/16000,\\
+ \eta&=\beta_1-r\beta_5=1351/25600>0.
+\end{aligned}
 \]
 All remaining coefficients use actual strong floors. Direct rational
 calculation of that same central segment gives energy $\ge.021912$,
@@ -17047,7 +17038,7 @@ coefficients, rather than Coxeter bonds.}
 \label{fig:tail:A19Ipressure}
 \end{figure}
 
-\subsection{The whole twenty-dimensional $A$ row}
+\subsection[The whole twenty-dimensional A row]{The whole twenty-dimensional $A$ row}
 \begin{lemma}\label{app:tail:lem:wholeA20}
 The entire vertex forest cannot be $A_{20}$.
 \end{lemma}
@@ -17112,9 +17103,9 @@ middle, hence $w.Y=0$. Its variance and projected deficit satisfy
 \end{array}
 \]
 For five use $A>2.2$, radical $<.111$, giving $\Delta>.3319$.
-For the other finite owns split at $.91,.92$: lower times
-$2.4649,2.4937,2.5225$ and upper radicals $.2318,.2434,.25$
-give deficits $.302266,.300158,.30305$.
+For the other finite owns split at $.91,\allowbreak .92$: lower times
+$2.4649,\allowbreak 2.4937,\allowbreak 2.5225$ and upper radicals $.2318,\allowbreak .2434,\allowbreak .25$
+give deficits $.302266,\allowbreak .300158,\allowbreak .30305$.
 The dotted deficit decreases through $1.08$, where $A>2.9794$
 and radical $<.37771$ give $>.3233$. These are complete intervals.
 
@@ -17212,7 +17203,7 @@ the finite rows use projected points, the negative rows future
 cores. The full zero-, one- and two-weak-end partition is exhausted.
 \end{proof}
 
-\subsection{The whole twenty-dimensional $B$ row}
+\subsection[The whole twenty-dimensional B row]{The whole twenty-dimensional $B$ row}
 \begin{lemma}\label{app:tail:lem:wholeB20}
 The entire vertex forest cannot be $B_{20}$.
 \end{lemma}
@@ -17289,8 +17280,8 @@ $.9009<\gamma<.901$ gives $h>.4315,R<.349$, hence $>.28936$.
 For finite labels at least eight, $1<u<4-2\sqrt2<1.172$.
 With $D=(u-1)(4-3u)$ the derivative of the left side is
 \[
- { .8\over\sqrt2}
- \left[-{1\over2\sqrt{2-u}}-{7-6u\over2\sqrt D}\right]
+ {\frac{ .8}{\sqrt2}}
+ \left[-{\frac{1}{2\sqrt{2-u}}}-{\frac{7-6u}{2\sqrt D}}\right]
                    +.64-.48u.
 \]
 It is negative up to $7/6$; above that point its three
@@ -17409,7 +17400,7 @@ The final totals are
 Every actual head case is impossible, proving the whole $B_{20}$ row.
 \end{proof}
 
-\subsection{The whole twenty-dimensional $D$ row}
+\subsection[The whole twenty-dimensional D row]{The whole twenty-dimensional $D$ row}
 \label{app:tail:sec:wholeD20}
 The three possible isolated long heads have different paid references,
 but share one finite-white inventory at the last centre. We prove
@@ -17455,13 +17446,13 @@ The slopes $a,.28433,1/(\sqrt K+\sqrt6)$ strictly decrease.
 Thus all duals are positive, the endpoint coefficient exceeds
 $1/7$, and its energy is
 \[
- q_K=.7600299945+{K-6\over(\sqrt K+\sqrt6)^2}>.91.
+ q_K=.7600299945+{\frac{K-6}{(\sqrt K+\sqrt6)^2}}>.91.
 \]
 The terminal sum $g_K$ is $<s_K<3.034$.
 For any actual pressure $x.V\ge G$ with $V$ equal to one on
 the first $K$ entries and $V^2\le R$, paying $1/7$ gives
 \begin{equation}\label{app:tail:eq:D20weak5pay}
- \norm x^2>q_K+{2(G-g_K)\over7}-{R-K\over49}.
+ \norm x^2>q_K+{\frac{2(G-g_K)}{7}}-{\frac{R-K}{49}}.
 \end{equation}
 This is one square on this reference; no head is paid.
 
@@ -17525,7 +17516,7 @@ of those two is $.58$-strong, hence old-strong.
 Append that actual endpoint $J$ to the same weak-five reference.
 Its energy is at least
 \[
- .7600299945+{4-\sqrt6\over4+\sqrt6}
+ .7600299945+{\frac{4-\sqrt6}{4+\sqrt6}}
  =.7600299945+2.2-(4/5)\sqrt6
  >1.0004379945,
 \]
@@ -17956,7 +17947,7 @@ exhaust the actual rank-twenty forest. Orthogonal component
 energies use the same original $x$ throughout.
 \end{proof}
 
-\subsection{The two proper $A$ rows in exact dimension nineteen}
+\subsection[The two proper A rows in exact dimension nineteen]{The two proper $A$ rows in exact dimension nineteen}
 \begin{lemma}\label{app:tail:lem:A17typed}
 An $A_{17}$ component cannot coexist with either actual typed-seven
 defect as its entire rank-two remainder.
@@ -18152,7 +18143,7 @@ Its deficit and variance are
 $\Delta_1=\Delta_2-1349/60000$, $V_1=V_2-1/60$.
 Payment $\mu=.11$ gives a gain $>.058$ in every row:
 the conservative five/seven/eight/larger/dotted gains are
-$.065714,.06064868,.05809604,.0585244,.06034939$.
+$.065714,\allowbreak .06064868,\allowbreak .05809604,\allowbreak .0585244,\allowbreak .06034939$.
 The same finite derivative and dotted endpoint bounds prove
 the complete intervals.
 Retain the propagated left endpoint at the same time.
@@ -18338,7 +18329,7 @@ Their averaged pressure is pure, flat through twelve, with
 \[
  \alpha=\sqrt2(\gamma+1/4),\quad
  G>\sqrt{14-125/529}-.327>3.38,\quad
- R=14-{14\gamma^2/9-3/8\over2(\gamma+1/4)^2}<13.67.
+ R=14-{\frac{14\gamma^2/9-3/8}{2(\gamma+1/4)^2}}<13.67.
 \]
 The subtracted quotient increases from $177/529> .33$;
 the radical quotient increases to $8/75<.327^2$.
@@ -18505,7 +18496,7 @@ $K$, $V^2\le R$, the two branches therefore give
 \begin{equation}\label{app:tail:eq:D18Ipurepay}
  \norm x^2+y^2>
  \begin{cases}q_K+.05426,&5\text{ strong},\\L_K,&5\text{ weak},\end{cases}
- \quad +{2(G-f_K)\over7}-{R-K\over49}.
+ \quad +{\frac{2(G-f_K)}{7}}-{\frac{R-K}{49}}.
 \end{equation}
 The pure residual vanishes on the initial support, so its
 cross with the first-five/$I$ adjustment is zero.
@@ -18537,7 +18528,7 @@ Their average has
 \[
  \alpha=\sqrt2(\gamma+1/4),\quad
  G>\sqrt{15-125/529}-.327>3.515,\quad
- R=15-{14\gamma^2/9-3/8\over2(\gamma+1/4)^2}<14.67.
+ R=15-{\frac{14\gamma^2/9-3/8}{2(\gamma+1/4)^2}}<14.67.
 \]
 The saving increases from $177/529>.33$ and the radical
 quotient increases to $8/75$. Inserting the full saving gives
@@ -18585,7 +18576,7 @@ $G>3.62,R=15$, enough in \eqref{app:tail:eq:D18Ipurepay}.
 At $Q=1/4$ retain the same point's $I$ coordinate rather
 than clearing and reusing it. Its ambient normalized data are
 \[
- G={\sqrt{6+6\phi}\over1+\sqrt{(13-8\phi)/(19-2\phi)}}>3.74,
+ G={\frac{\sqrt{6+6\phi}}{1+\sqrt{(13-8\phi)/(19-2\phi)}}}>3.74,
  \quad R=19-2\phi<15.764,\quad d=\sqrt2/\phi<.875,
 \]
 where the pressure is $x.V_D+d y\ge G$, $V_D$ flat through
@@ -18598,8 +18589,8 @@ $d/7+\nu$. Optimizing the unused nonnegative multipliers
 gives the legal additional gain
 \[
  (5/4)(t-b)_+^2+(s-d/7)_+^2
- >{[.788-b-(8/5)d/7]^2\over84/25}
- >{.227^2\over84/25}>.01533.
+ >{\frac{[.788-b-(8/5)d/7]^2}{84/25}}
+ >{\frac{.227^2}{84/25}}>.01533.
 \]
 This uses \eqref{app:tail:eq:I788} and includes the full
 shifted $I$ cross. If $t\ge.6$ its clipped initial gain
@@ -18828,7 +18819,7 @@ fourteen: at thirteen the worst $I$ remainder leaves five
 ordinary ranks, or a typed defect leaves four beside $.09$.
 At fourteen/fifteen/sixteen the valid weaker $D$ prefix
 floors are respectively
-$>.7683275,>.797425,>.823735$.
+$>.7683275,\allowbreak >.797425,\allowbreak >.823735$.
 The smallest sufficient spectator charges are respectively
 $>2/7$, $>.09+1/7$, and $>.19$.
 These account for all ordinary partitions, $I$, $J$, and
@@ -18868,20 +18859,15 @@ Each concerns an actual whole forest at this same rank, with its
 own complete head/end classification. No twenty-dimensional theorem
 is decremented and no Coxeter structure is inherited by a face.
 
-\section{The whole classical forests at exact dimension nineteen}
+\section[The whole A19 case]{The whole \(A_{19}\) case}
 \label{app:exact19:wholeclassical}
-
-These are three actual-rank consumers for
-the general compact argument.
-Every point and pressure below belongs
-to one original farthest vertex \(p\),
-chosen from one strict interior point.
-We keep its single decomposition
-\(z=E(p-x)\), \(x\in p^\perp\),
-\(\|x\|<1\).
+The next three appendices treat the whole classical forests at rank
+nineteen. In each case every point and pressure belongs to one
+original farthest vertex \(p\), chosen from one strict interior point.
+We retain \(z=E(p-x)\), \(x\in p^\perp\) and \(\|x\|<1\).
 No arithmetic restriction is used.
 
-\subsection{A whole \(A_{19}\): the window and the three reference shapes}
+\subsection[A whole A19: the window and the three reference shapes]{A whole \(A_{19}\): the window and the three reference shapes}
 \label{app:exact19:Awindow}
 
 Use the zero-sum subspace of
@@ -19013,6 +18999,7 @@ weak, flatten that entire end through
 six or fourteen instead.
 The complete reference data are
 \[
+{\setlength{\arraycolsep}{2pt}
 \begin{array}{c|c|c|c}
  \text{weak end count}&E=\|w\|^2\text{ at least}
           &\text{end block lengths}&\text{individual capacities}\\ \hline
@@ -19022,7 +19009,7 @@ The complete reference data are
              \beta_6\ge79/600,\ \beta_{15}\ge83/625\\
  2&1341604/1500000&6,6&
              \beta_6,\beta_{14}\ge79/600 .
-\end{array}
+\end{array}}
 \tag{A19refs}\label{app:exact19:eq:Arefs}
 \]
 For count one orient the weak end to
@@ -19292,8 +19279,8 @@ deficit/norm bounds.
 Thus
 \[
             \|x\|^2>
-               {1341604\over1500000}+{6487\over60000}
-                     =1+{3779\over1500000}>1 .
+               {\frac{1341604}{1500000}}+{\frac{6487}{60000}}
+                     =1+{\frac{3779}{1500000}}>1 .
 \]
 This excludes the two-weak-end case
 with every internal hole retained.
@@ -19739,8 +19726,8 @@ The tight finite row is
 All gains again exceed \(.0774\).
 Thus in every one-weak-end case,
 \[
-              \|x\|^2>{3462479\over3750000}+.0774
-                       =1+{2729\over3750000}>1 .
+              \|x\|^2>{\frac{3462479}{3750000}}+.0774
+                       =1+{\frac{2729}{3750000}}>1 .
 \]
 
 \begin{proposition}\label{app:exact19:prop:wholeA19}
@@ -19768,7 +19755,9 @@ original-vector reference.
 
 % Whole B19 and whole D19 proof bodies follow in this SAME family part.
 
-\subsection{Whole \(B_{19}\): the real short layers before any terminal conclusion}
+\section[The whole B19 case]{The whole \(B_{19}\) case}
+\label{app:exact19:wholeB19proof}
+\subsection{The short layers before the terminal analysis}
 \label{app:exact19:Bwindow}
 
 Use actual unit roots
@@ -20072,7 +20061,7 @@ checks.
 This proves the entire continuous
 dotted range.
 
-\subsection{The \(B_{19}\) long head and its paid gains}
+\subsection[The B19 long head and its paid gains]{The \(B_{19}\) long head and its paid gains}
 \label{app:exact19:Bhead}
 
 The actual long head is isolated.
@@ -20141,11 +20130,11 @@ pressures at one, six and the
 remaining strong knots.
 One square gives
 \[
- \|x\|^2>
- E_K^{\rm old}-E_6^{\rm old}
-      +.7916565045-4/3200
- >.9084-.6971+.7916565045-.00125
-       =1.0017065045>1 .
+\begin{aligned}
+ \|x\|^2&>E_K^{\rm old}-E_6^{\rm old}+.7916565045-4/3200\\
+ &>.9084-.6971+.7916565045-.00125\\
+ &=1.0017065045>1 .
+\end{aligned}
 \]
 Both references are ordered and
 paid by the original \(x\).
@@ -20520,9 +20509,12 @@ The largest possible curvature
 loss is bounded by holes
 \(8,10,12,14,16\):
 \[
+\begin{aligned}
  \sum_{j=8,10,12,14,16}\frac1{32(j-1)^3}
- <.000091108+.000042867+.000023479+.000014224+.000009260
- <.000181 .
+ &<.000091108+.000042867+.000023479\\
+ &\qquad+.000014224+.000009260\\
+ &<.000181 .
+\end{aligned}
 \]
 The decreasing weights and
 nonadjacency make this earliest
@@ -20563,9 +20555,11 @@ At short six put
 and \(k=AB-q\delta\).
 The complete rational seals
 \[
- .5558<A<.556,\quad1.1440<q<1.1442,\quad
- .8660<\delta<.8661,\quad3.6400<B<3.6401,\quad
-                                      1.032<k<1.034
+\begin{gathered}
+ .5558<A<.556,\quad1.1440<q<1.1442,\\
+ .8660<\delta<.8661,\quad3.6400<B<3.6401,\\
+ 1.032<k<1.034
+\end{gathered}
 \]
 follow from positive squaring.
 The ACTUAL positive combination
@@ -20683,7 +20677,7 @@ Thus all three zero-own short-only
 native terminal walls are impossible.
 
 
-\subsection{The complete actual \(B_{19}\) last-long classification}
+\subsection[The complete actual B19 last-long classification]{The complete actual \(B_{19}\) last-long classification}
 \label{app:exact19:Blastlong}
 
 Release eighteen.
@@ -21302,7 +21296,7 @@ The endpoint-four positive-own
 rows are directly tested below,
 including own three.
 
-\subsection{Short-four terminal: a new \(.56\) floor at the one actual index}
+\subsection[Short-four terminal: a new .56 floor at the one actual index]{Short-four terminal: a new \(.56\) floor at the one actual index}
 \label{app:exact19:Bshortfourfloor}
 
 Assume survivor (c),
@@ -21390,9 +21384,11 @@ increase.
 We have \(M(1)=1/2\).
 At \(g=243/200=1.215\),
 \[
- A_H^2=52.12165<(7.21954)^2,\quad
- \sqrt{71/2}<5.9582,\qquad
- M<7.21954(5.9582)-42.31=.705463228<.707<\cos(\pi/4).
+\begin{gathered}
+ A_H^2=52.12165<(7.21954)^2,\quad\sqrt{71/2}<5.9582,\\
+ M<7.21954(5.9582)-42.31\\
+ \qquad=.705463228<.707<\cos(\pi/4).
+\end{gathered}
 \]
 Thus for \(g\le1.215\) the only
 possible native magnitude is \(1/2\);
@@ -21904,7 +21900,9 @@ and every point is feasible against
 the entire original polytope.
 \end{proof}
 
-\subsection{Whole \(D_{19}\): the original signed frame and a fresh head reduction}
+\section[The whole D19 case]{The whole \(D_{19}\) case}
+\label{app:exact19:wholeD19proof}
+\subsection{The signed frame and the head reduction}
 \label{app:exact19:Dhead}
 
 Use unit actual roots and duals
@@ -22235,7 +22233,7 @@ seven, or dotted.
 No centre, tail or outgoing-fork
 floor was assumed in this proof.
 
-\subsection{An independent old strong-five floor in whole \(D_{19}\)}
+\subsection[An independent old strong-five floor in whole D19]{An independent old strong-five floor in whole \(D_{19}\)}
 \label{app:exact19:Doldfive}
 
 We next prove
@@ -22686,7 +22684,7 @@ It asserts neither a \(.58\)
 five floor nor centre/fork strength.
 
 
-\subsection{Native-five \(D_{19}\): the fork bounds actually needed by the centre}
+\subsection[Native-five D19: the fork bounds actually needed by the centre]{Native-five \(D_{19}\): the fork bounds actually needed by the centre}
 \label{app:exact19:Dfiveforkinputs}
 
 Assume the isolated head has
@@ -22849,7 +22847,7 @@ own is used.
 These are the only outgoing-
 fork facts needed below.
 
-\subsection{Native-five \(D_{19}\): one head-paid centre reference}
+\subsection[Native-five D19: one head-paid centre reference]{Native-five \(D_{19}\): one head-paid centre reference}
 \label{app:exact19:Dfivereference}
 
 The complete new bulk through
@@ -22945,7 +22943,7 @@ No centre floor is being supplied
 in advance.
 
 
-\subsection{Native-five \(D_{19}\): every isolated centre fails}
+\subsection[Native-five D19: every isolated centre fails]{Native-five \(D_{19}\): every isolated centre fails}
 \label{app:exact19:Dfiveisolatedcentre}
 
 Own zero has negative time.
@@ -23067,7 +23065,7 @@ rational square checks.
 Thus the ENTIRE dotted isolated
 centre case is excluded.
 
-\subsection{Native-five \(D_{19}\): the complete finite-white centre list}
+\subsection[Native-five D19: the complete finite-white centre list]{Native-five \(D_{19}\): the complete finite-white centre list}
 \label{app:exact19:Dfivecentrelist}
 
 Deleting seventeen leaves the
@@ -23222,7 +23220,7 @@ the cap and nonpositive against
 ALL omitted original walls.
 
 
-\subsection{Native-five \(D_{19}\): every remaining centre point exception}
+\subsection[Native-five D19: every remaining centre point exception]{Native-five \(D_{19}\): every remaining centre point exception}
 \label{app:exact19:Dfivecentrepoints}
 
 For near-left three and own
@@ -23383,7 +23381,7 @@ All non-far-helper centre cases
 have now been excluded at their
 actual changed threshold.
 
-\subsection{Native-five \(D_{19}\): the only centre left is a dotted far helper}
+\subsection[Native-five D19: the only centre left is a dotted far helper]{Native-five \(D_{19}\): the only centre left is a dotted far helper}
 \label{app:exact19:Dfivefarcentre}
 
 For the far-left-three cap,
@@ -23519,7 +23517,7 @@ isolation or symmetry was
 assumed.
 
 
-\subsection{Native-five \(D_{19}\): classify short fork edges at the actual adjacent vertex}
+\subsection[Native-five D19: classify short fork edges at the actual adjacent vertex]{Native-five \(D_{19}\): classify short fork edges at the actual adjacent vertex}
 \label{app:exact19:Dfiveq}
 
 Replace old seventeen by its
@@ -23744,7 +23742,7 @@ fork edge; its old dual expansion
 follows just from the actual
 products and unit norm.
 
-\subsection{Native-five \(D_{19}\): one q-fork edge is nonshort}
+\subsection[Native-five D19: one q-fork edge is nonshort]{Native-five \(D_{19}\): one q-fork edge is nonshort}
 \label{app:exact19:Dfiveqnonshort}
 
 Both q-fork edges cannot be short.
@@ -23812,7 +23810,7 @@ No ordinary \(A_1\) energy theorem
 or farthest-forest classification
 was applied at \(q\).
 
-\subsection{Native-five \(D_{19}\): compare that endpoint with the ORIGINAL farthest vertex}
+\subsection[Native-five D19: compare that endpoint with the ORIGINAL farthest vertex]{Native-five \(D_{19}\): compare that endpoint with the ORIGINAL farthest vertex}
 \label{app:exact19:Dfiveqfinish}
 
 For the nonshort q-fork edge,
@@ -24527,8 +24525,8 @@ It retains the \(P_K\) coefficient \(>1/8\).
 
 In the strong-six case the exact sufficient thresholds in
 \eqref{app:exact19:eq:Dgeneralpay} are
-\(42.2723904,42.2644032\), so \(H=42.273\) suffices.
-In the weak-six case they are \(41.53816384,41.53017664\), so
+\(42.2723904,\allowbreak 42.2644032\), so \(H=42.273\) suffices.
+In the weak-six case they are \(41.53816384,\allowbreak 41.53017664\), so
 \(H=41.539\) suffices.
 The first and second coordinate rows of
 Lemma~\ref{app:exact19:lem:Dcentretest}, respectively, apply.
@@ -24546,13 +24544,23 @@ The polynomial \(8g^3-6g-1=0\), increasing above \(.9\), gives
 \[
                     .9396<g<.9398,\qquad 1.1322<u<1.1327 .
 \]
-The cubic numerators at \(2349/2500,4699/5000\) are
-\(-21983608,203952792\), with denominators
-\(15625000000,125000000000\).
+The two exact cubic evaluations have the following numerators
+and denominators:
+\[
+\begin{array}{c|r|r}
+\text{argument}&\text{numerator}&\text{denominator}\\\hline
+2349/2500&-21983608&15625000000\\
+4699/5000&203952792&125000000000.
+\end{array}
+\]
 The intended root is above \(.9\) by the elementary cosine estimate.
-Reciprocal checks
-\(.9398^2(1.1322)=.999986258088<1\) and
-\(.9396^2(1.1327)=1.000002110832>1\)
+The reciprocal checks
+\[
+\begin{aligned}
+.9398^2(1.1322)&=.999986258088<1,\\
+.9396^2(1.1327)&=1.000002110832>1
+\end{aligned}
+\]
 give the second interval.
 
 The positive head core again supplies
@@ -24836,8 +24844,8 @@ Its full square, including the already paid head, gives
               \|x\|^2>.98905006+.26(G-f_{15}-w\cdot Y)-.0169Y^2 .
 \]
 Since \(f_{15}<3.442\), the finite/dotted deficits are respectively
-greater than \(.2777,.1167,.1182,.1009\); their extra gains exceed
-\(.0615381,.0192725,.0174655,.013559\).
+greater than \(.2777,\allowbreak .1167,\allowbreak .1182,\allowbreak .1009\); their extra gains exceed
+\(.0615381,\allowbreak .0192725,\allowbreak .0174655,\allowbreak .013559\).
 Every case satisfies
 \(\|x\|^2>.98905006+.013559=1.00260906>1\).
 Own-three/four/six and parallel were already excluded by actual
@@ -25126,7 +25134,7 @@ Appendices~\ref{app:wholeA18} and~\ref{app:wholeB18}.
 Appendix~\ref{app:D18foundation} supplies the remaining head and
 fork cases; the main text closes the final dotted-head near/far case.
 The independent higher tail is proved in
-Appendices~\ref{app:highertail} and~\ref{app:exact19:wholeclassical},
+Appendices~\ref{app:highertail}--\ref{app:exact19:wholeD19proof},
 then joined in Section~\ref{app:tail:completeconjunction}.
 There is no dependency on the arithmetic companion's dimension bound.
 

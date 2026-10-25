@@ -116,9 +116,10 @@ python3 -B scripts/verify_manuscript.py right_angled_sharp --mode core --pdf
 This selects six sequential jobs: two exact workers, three capped Lean
 module/axiom checks (12+10+8 declarations), and a temporary PDF build.
 The original four-job record below is historical; the expanded six-job
-execution is recorded in `results/right_angled_sharp_projection_height_core_verification_20261020.json`. The normal shared lock, one-thread limits,40GiB disk
-and6GiB available-memory start gates remain in force. A resource
-deferral means no verification pass is claimed for the deferred job.
+execution is recorded in `results/right_angled_sharp_projection_height_core_verification_20261020.json`. Execution uses the shared lock and one thread. Admission requires at least
+2% free filesystem capacity and 15% available physical RAM; active jobs stop
+below 1% disk or 6% RAM. Exact byte ratios and policy identities are recorded.
+A resource deferral supplies no verification credit.
 Temporary build files and inspected figure previews are removed;
 proof sources, compact certificates, final PDF and ledgers are kept.
 

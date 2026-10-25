@@ -37,7 +37,9 @@ def main():
     with pdf.open('rb') as stream:
         assert file_digest(stream, 'sha256').hexdigest() == args.sha256
     reader = PdfReader(pdf)
-    assert 1 <= len(reader.pages) <= 64
+    # The compact working articles include long case appendices. Keep the
+    # six-page render batch unchanged while allowing selection within them.
+    assert 1 <= len(reader.pages) <= 512
     assert all(1 <= p <= len(reader.pages) for p in pages)
     out = ROOT / 'formal/.proof-batches' / args.output_name
     out.mkdir(exist_ok=False)
