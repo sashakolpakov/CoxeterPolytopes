@@ -1,0 +1,192 @@
+--- a/manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex
++++ b/manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex
+@@ -1815,10 +1815,10 @@
+ For these three next-three parameters the actual head path cycle and
+ two-cycle give integral $g=-H\cdot C$, $L=g^2/U_H$, and
+ \[
+-\begin{split}
++\begin{aligned}
+ L+g(t+2)&=(15t^2+4t-4)U_H/4-2M&&\text{far},\\
+ L+g(t+2)&=(15t^2+52t+44)U_H/4-2M&&\text{near}.
+-\end{split}
++\end{aligned}
+ \]
+ Each listed $t$ is a dyadic unit, so $U_H/4$ is integral.
+ Writing $W=U_H/4$, its full strips are
+@@ -2242,10 +2242,10 @@
+ The original path and own two-cycle make both integral. Expanding
+ the common time product gives
+ \[
+-\begin{split}
++\begin{aligned}
+ L+g(t+2)&=(15t^2-8)U/4-2M&&\text{far},\\
+ L+g(t+1)&=(15z^2-4z-4)U/4-2M&&\text{near}.
+-\end{split}
++\end{aligned}
+ \]
+ All remaining terms are integral, and $15$ is coprime to four;
+ therefore $z^2U/4$ is integral in both roles.
+@@ -15539,7 +15539,7 @@
+ The exact scalar barrier \(t+3s/2>.767\)
+ for \(0<h<1/2\) is the already proved
+ rank-free barrier \eqref{eq:Ibarrier},
+-with its companion proof in Appendix~\ref{app:Ijoint}.
++with its companion proof in the rank-free joint-payment appendix subsection~\cite{ProjectGeneral}.
+ For \(1/2\le h\le.6\), monotonicity gives
+ \(t\ge t(.6)>.294\), \(s\ge s(.5)>.317\),
+ and hence sum \(>.7695\).
+@@ -17714,9 +17714,9 @@
+ \[
+ \begin{array}{c|c|c}
+  u\text{ interval}&\sqrt{2-u}\text{ lower chord}&R\text{ upper chord}\\ \hline
+- [0,1/2]&1.4142-.379u&1-.75u\\
+- [1/2,3/4]&1.4381-.4268u&.8125-.375u\\
+- [3/4,1]&1.4721-.4721u&.625-.125u .
++ {}[0,1/2]&1.4142-.379u&1-.75u\\
++ {}[1/2,3/4]&1.4381-.4268u&.8125-.375u\\
++ {}[3/4,1]&1.4721-.4721u&.625-.125u .
+ \end{array}
+ \]
+ The endpoint-square comparisons are positive.
+--- a/manuscripts/compact_arithmetic_dimension_bound_consolidated.tex
++++ b/manuscripts/compact_arithmetic_dimension_bound_consolidated.tex
+@@ -1815,10 +1815,10 @@
+ For these three next-three parameters the actual head path cycle and
+ two-cycle give integral $g=-H\cdot C$, $L=g^2/U_H$, and
+ \[
+-\begin{split}
++\begin{aligned}
+ L+g(t+2)&=(15t^2+4t-4)U_H/4-2M&&\text{far},\\
+ L+g(t+2)&=(15t^2+52t+44)U_H/4-2M&&\text{near}.
+-\end{split}
++\end{aligned}
+ \]
+ Each listed $t$ is a dyadic unit, so $U_H/4$ is integral.
+ Writing $W=U_H/4$, its full strips are
+@@ -2242,10 +2242,10 @@
+ The original path and own two-cycle make both integral. Expanding
+ the common time product gives
+ \[
+-\begin{split}
++\begin{aligned}
+ L+g(t+2)&=(15t^2-8)U/4-2M&&\text{far},\\
+ L+g(t+1)&=(15z^2-4z-4)U/4-2M&&\text{near}.
+-\end{split}
++\end{aligned}
+ \]
+ All remaining terms are integral, and $15$ is coprime to four;
+ therefore $z^2U/4$ is integral in both roles.
+@@ -15539,7 +15539,7 @@
+ The exact scalar barrier \(t+3s/2>.767\)
+ for \(0<h<1/2\) is the already proved
+ rank-free barrier \eqref{eq:Ibarrier},
+-with its companion proof in Appendix~\ref{app:Ijoint}.
++with its companion proof in the rank-free joint-payment appendix subsection~\cite{ProjectGeneral}.
+ For \(1/2\le h\le.6\), monotonicity gives
+ \(t\ge t(.6)>.294\), \(s\ge s(.5)>.317\),
+ and hence sum \(>.7695\).
+@@ -17714,9 +17714,9 @@
+ \[
+ \begin{array}{c|c|c}
+  u\text{ interval}&\sqrt{2-u}\text{ lower chord}&R\text{ upper chord}\\ \hline
+- [0,1/2]&1.4142-.379u&1-.75u\\
+- [1/2,3/4]&1.4381-.4268u&.8125-.375u\\
+- [3/4,1]&1.4721-.4721u&.625-.125u .
++ {}[0,1/2]&1.4142-.379u&1-.75u\\
++ {}[1/2,3/4]&1.4381-.4268u&.8125-.375u\\
++ {}[3/4,1]&1.4721-.4721u&.625-.125u .
+ \end{array}
+ \]
+ The endpoint-square comparisons are positive.
+--- a/manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex
++++ b/manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex
+@@ -14072,8 +14072,8 @@
+ \[
+ \begin{array}{c|c|c|c}
+ v\text{ interval}&H>&I\text{ energy}>&\text{total gain}>\\\hline
+-(0,.2]&.6658&0&.0246888\\[.2,.25]&.6292&0&.02557275\\
+-{}[.25,.3]&.5979&.0121&.02739115\\[.3,.35]&.5709&.01515&.02191389\\
++(0,.2]&.6658&0&.0246888\\{}[.2,.25]&.6292&0&.02557275\\
++{}[.25,.3]&.5979&.0121&.02739115\\{}[.3,.35]&.5709&.01515&.02191389\\
+ {}[.35,.375]&.5590&.0182&.0229054175\\
+ {}[.375,.4]&.5480&.0200&.021464225\\
+ {}[.4,.75)&\text{unused}&.0217&.0217
+@@ -14160,8 +14160,8 @@
+ \[
+ \begin{array}{c|c|c}
+ u&G>&R\le\\\hline
+-{}[1,1.1]&3.472&15\\[1.1,1.15]&3.4277&14.66\\
+-{}[1.15,1.2]&3.41265&14.535\\[1.2,100/81]&3.4119&14.44
++{}[1,1.1]&3.472&15\\{}[1.1,1.15]&3.4277&14.66\\
++{}[1.15,1.2]&3.41265&14.535\\{}[1.2,100/81]&3.4119&14.44
+ \end{array}
+ \]
+ Use the maximum second radical \(1/\sqrt6\), positive squares and
+@@ -19190,8 +19190,8 @@
+  g\text{ interval}&A_{\rm far}\text{ at left}>
+       &\sqrt{(1-g^2)(4g^2-3)}\le&\Delta>\\ \hline
+  (.9,.91]&2.449&.2318&.3105333\ldots\\
+- [.91,.92]&2.478&.2434&.3088666\ldots\\
+- [.92,1)&2.5065&.25&.3117 .
++ {}[.91,.92]&2.478&.2434&.3088666\ldots\\
++ {}[.92,1)&2.5065&.25&.3117 .
+ \end{array}
+ \]
+ The first two radical bounds use
+@@ -19536,8 +19536,8 @@
+ \begin{array}{c|c|c|c}
+  u&t>&R-1/5<&\Delta_h-(R-1/5)/4>\\ \hline
+  (1,1.1)&.4448&.3&.0678\\
+- [1.1,1.14)&.4122&.215&.05645\\
+- [1.14,1.1716)&.399&.1894&.04965 .
++ {}[1.1,1.14)&.4122&.215&.05645\\
++ {}[1.14,1.1716)&.399&.1894&.04965 .
+ \end{array}
+ \]
+ The middle interval uses radicals
+--- a/manuscripts/compact_farthest_vertex_bounds_consolidated.tex
++++ b/manuscripts/compact_farthest_vertex_bounds_consolidated.tex
+@@ -14072,8 +14072,8 @@
+ \[
+ \begin{array}{c|c|c|c}
+ v\text{ interval}&H>&I\text{ energy}>&\text{total gain}>\\\hline
+-(0,.2]&.6658&0&.0246888\\[.2,.25]&.6292&0&.02557275\\
+-{}[.25,.3]&.5979&.0121&.02739115\\[.3,.35]&.5709&.01515&.02191389\\
++(0,.2]&.6658&0&.0246888\\{}[.2,.25]&.6292&0&.02557275\\
++{}[.25,.3]&.5979&.0121&.02739115\\{}[.3,.35]&.5709&.01515&.02191389\\
+ {}[.35,.375]&.5590&.0182&.0229054175\\
+ {}[.375,.4]&.5480&.0200&.021464225\\
+ {}[.4,.75)&\text{unused}&.0217&.0217
+@@ -14160,8 +14160,8 @@
+ \[
+ \begin{array}{c|c|c}
+ u&G>&R\le\\\hline
+-{}[1,1.1]&3.472&15\\[1.1,1.15]&3.4277&14.66\\
+-{}[1.15,1.2]&3.41265&14.535\\[1.2,100/81]&3.4119&14.44
++{}[1,1.1]&3.472&15\\{}[1.1,1.15]&3.4277&14.66\\
++{}[1.15,1.2]&3.41265&14.535\\{}[1.2,100/81]&3.4119&14.44
+ \end{array}
+ \]
+ Use the maximum second radical \(1/\sqrt6\), positive squares and
+@@ -19190,8 +19190,8 @@
+  g\text{ interval}&A_{\rm far}\text{ at left}>
+       &\sqrt{(1-g^2)(4g^2-3)}\le&\Delta>\\ \hline
+  (.9,.91]&2.449&.2318&.3105333\ldots\\
+- [.91,.92]&2.478&.2434&.3088666\ldots\\
+- [.92,1)&2.5065&.25&.3117 .
++ {}[.91,.92]&2.478&.2434&.3088666\ldots\\
++ {}[.92,1)&2.5065&.25&.3117 .
+ \end{array}
+ \]
+ The first two radical bounds use
+@@ -19536,8 +19536,8 @@
+ \begin{array}{c|c|c|c}
+  u&t>&R-1/5<&\Delta_h-(R-1/5)/4>\\ \hline
+  (1,1.1)&.4448&.3&.0678\\
+- [1.1,1.14)&.4122&.215&.05645\\
+- [1.14,1.1716)&.399&.1894&.04965 .
++ {}[1.1,1.14)&.4122&.215&.05645\\
++ {}[1.14,1.1716)&.399&.1894&.04965 .
+ \end{array}
+ \]
+ The middle interval uses radicals

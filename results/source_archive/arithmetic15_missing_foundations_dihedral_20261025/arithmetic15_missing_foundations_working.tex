@@ -1,0 +1,247 @@
+% UNINTEGRATED ARITHMETIC15 FOUNDATION PART, 25 October2026.
+% Same existing arithmetic paper family; source preparation only.
+% First batch: accepted general dihedral3/19 theorem and D14 consumer.
+% DRAFT pending independent and coordinating review; no execution/compilation.
+\section{A strengthened ordinary dihedral comparison}
+\label{app:arithdihedral}
+
+This section supplies the ordinary rank-two comparison needed beside
+\(D_{14}\).  Its component theorem is general real geometry.
+Arithmeticity enters only when the already established arithmetic
+\(D_{14}\) prefix bound is used in the final corollary.
+Throughout, \(p\) is the ORIGINAL vertex farthest from one strict
+interior point.  The theorem is not asserted at an arbitrary
+neighbour with a weakened comparison factor.
+
+\begin{proposition}\label{prop:ordinarydihedralthreenineteenths}
+Let a compact hyperbolic Coxeter polytope have an actual farthest
+vertex \(p\), and write \(z=E(p-x)\), \(\|x\|<1\).
+Let one WHOLE component of the incident finite diagram be
+\(I_2(m)\), \(m\ge4\), and let \(e\) be the squared norm of the
+projection of this SAME \(x\) onto that component.
+If \(e\le3/19\), then \(m=7\) and one actual opposite wall
+closes both component directions, has a single old contact of
+label three there, and has no contact with any other old component.
+This is precisely the actual \(O_7\) profile.
+Consequently every ordinary \(I_2(m)\), \(m\ge4\), has energy
+strictly greater than \(3/19\), with arbitrary finite spectators.
+\end{proposition}
+
+\begin{proof}
+Use outward unit incident roots, finite Gram \(B\), inverse
+\(C=B^{-1}\ge0\), duals \(\omega_i\), and unit inward dual
+directions \(-u_i=-\omega_i/\sqrt{C_{ii}}\).
+For an actual outgoing edge of length \(L_i\), maximality at
+the original \(p\) gives
+\[
+ x\cdot u_i\ge\tau_i=\tanh(L_i/2)>0,\qquad
+ r_i=\tanh L_i={2\tau_i\over1+\tau_i^2}.
+\]
+The old dihedral inverse is
+\[
+ C_I=d\begin{pmatrix}1&k\\k&1\end{pmatrix},\qquad
+ k=\cos(\pi/m)\ge1/\sqrt2,\quad d=(1-k^2)^{-1}.
+\]
+Thus each \(\tau_i^2\le e\), and the increasing function
+\(4t/(1+t)^2\) on \(0\le t<1\) gives
+\[
+                         r_i^2\le57/121=:r .
+\tag{Dih1}\label{eq:arithdihedralr}
+\]
+
+We recall the actual-wall calculation forcing a common opposite.
+For an outside actual wall \(c=Ap-v\), let
+\(\beta_j=-c\cdot n_j\ge0\) and put
+\[
+ T_i(c)={(C\beta)_i\over A\sqrt{C_{ii}}}.
+\]
+For the actual opposite \(c_i\) of edge \(i\),
+\(T_i(c_i)=1/r_i\).
+The matrix
+\(C-C_{\cdot j}C_{j\cdot}/C_{jj}\)
+is entrywise nonnegative: its nonzero block is the inverse of
+the positive principal Gram obtained by deleting \(j\).
+Actual acuteness between two distinct opposites therefore gives
+\(T_j(c_i)\le r_j\), while that same nonnegative matrix gives
+\(T_j(c_i)\ge k/r_i\) within this old component.
+Hence distinct opposites imply \(r_ir_j\ge k\).
+But~\eqref{eq:arithdihedralr} gives
+\(r_ir_j\le57/121<1/\sqrt2\le k\).
+One actual wall \(c\) therefore closes BOTH directions.
+
+Write its full decomposition as
+\[
+ c=Ap-v_I-v_S,\quad h=A^2>0,\quad
+ b=-c\cdot n_1\ge0,\quad g=-c\cdot n_2\ge0,\quad
+ Q=\|v_S\|^2\ge0 .
+\]
+Here \(S\) is the entire orthogonal spectator forest.
+Every positive contact is a native magnitude at least \(1/2\);
+none of its finite, parallel or dotted possibilities is omitted
+before the actual endpoint constraints are imposed.
+At least one of \(b,g\) is positive.
+
+Suppose both are positive.
+At the actual endpoint releasing direction one, the retained
+white Gram has residual \(\delta=1-Q-g^2>0\).
+Its actual edge formula is
+\[
+ \cosh L_1={\sqrt d(b+kg)\over\sqrt{1-Q-g^2}}
+ \ge{\sqrt d(1+k)\over\sqrt3}
+ ={\,\cot(\pi/(2m))\over\sqrt3}
+ \ge{1+\sqrt2\over\sqrt3}>{11\over8}.
+\]
+The last comparison is \(128\sqrt2>171\), whose positive
+squared margin is \(32768-29241\).
+It follows that
+\[
+ e\ge\tanh^2(L_1/2)>
+ {11/8-1\over11/8+1}={3\over19},
+\]
+a contradiction.  Hence exactly one old contact \(\beta>0\)
+remains.
+
+We need one whole-spectator fact at small time.
+If \(h<1/4\), then \(c\) cannot contact any foreign component.
+Indeed a positive foreign contact gives a normalized derivative
+\[
+ {(C_S\beta)_j\over\sqrt{(C_S)_{jj}}}\ge1/2 .
+\]
+This uses the full spectator inverse, with nonnegative entries
+and diagonal at least one.
+Its ratio to \(\sqrt h\) exceeds one.
+The actual-wall shadow inequality therefore forces this SAME
+\(c\) to be the opposite of that foreign edge as well.
+
+For clarity, the required orthogonal obstruction is specific to
+the original farthest vertex.  Suppose a wall closed orthogonal
+dual directions \(u_i,u_j\).
+Clear it positively off all other incident roots \(W\):
+\[
+ c_F=c+\sum_{s\in W}\alpha_sn_s,\qquad
+ \alpha=B_W^{-1}(-c\cdot n_W)\ge0.
+\]
+Strict interiority gives \(z\cdot c_F<0\).
+In the retained Lorentz three-space its exact form is
+\[
+ c_F=A p-(A/r_i)u_i-(A/r_j)u_j .
+\]
+Therefore
+\[
+ {x\cdot u_i\over r_i}+{x\cdot u_j\over r_j}<1.
+\]
+Original maximality gives the opposite bound
+\(\tau_i/r_i+\tau_j/r_j
+ =1+(\tau_i^2+\tau_j^2)/2>1\).
+This proves the obstruction, including arbitrary contacts in \(W\).
+Thus \(h<1/4\) really forces \(Q=0\).
+
+Put \(q=d\beta^2\).
+The smaller normalized derivative square is \(k^2q\).
+The common-wall edge formula and~\eqref{eq:arithdihedralr} imply
+\[
+ q-1\le h=q+Q-1\le rk^2q .
+\]
+Substituting \(k^2=1-1/d\) and \(r=57/121\) gives the exact
+strengthened restriction
+\[
+                         \beta^2(64d+57)\le121 .
+\tag{Dih2}\label{eq:arithdihedralcut}
+\]
+This is derived at the \(3/19\) threshold; it is not the older
+\(1/7\) inequality with an unchanged coefficient.
+
+Since \(\beta^2\ge1/4\), this forces \(d\le427/64\).
+For every old \(m\ge8\),
+\(d\ge4+2\sqrt2>34/5>427/64\), impossible.
+The complete remaining old alphabet is \(4,5,6,7\).
+At old \(m=5\),
+\(d=2+2/\sqrt5>185/64\):
+equivalently \(128>57\sqrt5\), with squared margin139.
+Since \(d\) increases with \(m\), if
+\(\beta\ge1/\sqrt2\) at any of old \(5,6,7\),
+\eqref{eq:arithdihedralcut} would give the opposite
+\(d\le185/64\).
+Thus all three rows have exactly \(\beta=1/2\).
+Every larger finite contact, parallel and dotted contact has
+been excluded by the native jump, rather than a sampled label list.
+
+At old four, \(d=2\) and
+\(\beta^2\le121/185<\cos^2(\pi/5)\).
+The strict comparison is \(413<185\sqrt5\), with squared
+margin556.  Only contacts three and four remain, giving
+\(q=1/2\) or \(1\).
+Consequently \(0<h\le57/242<1/4\).
+The small-time argument just proved gives \(Q=0\), whereas
+\(h=q-1\le0\), a contradiction.
+
+At old five only \(\beta=1/2\) remains.
+Since \(d<3\), \(q<3/4\) and
+\(0<h\le r(d-1)/4<57/242<1/4\).
+Again \(Q=0\), and \(h=q-1<0\).
+
+At old six, \(\beta=1/2\), \(d=4\), \(q=1\).
+If \(Q=0\), then \(h=0\), impossible.
+For any \(Q>0\), the actual positive sum
+\[
+                          \nu=c+2n_1+\sqrt3n_2
+\]
+is a nonzero future null: all three selected products vanish.
+The coefficient order is for OLD6/NEW3, since
+\(c\cdot n_1=-1/2\), \(n_1\cdot n_2=-\sqrt3/2\),
+\(c\cdot n_2=0\).
+Every other actual wall pairs nonpositively termwise with \(\nu\).
+It is a feasible ideal ray, contrary to compactness.
+No foreign contact was discarded in this affine exclusion.
+
+At old seven only \(\beta=1/2\) remains, and
+\[
+ 0\le Q=1+h-d/4
+ \le{427-64d\over484}<{107\over484}<{1\over4},
+\]
+using \(d_7>5\).
+Every positive spectator cost is at least \(1/4\), by inverse
+positivity and the native contact lower bound.  Thus \(Q=0\).
+We have exactly the ACTUAL isolated-new-three wall in old
+\(I_2(7)\), closing both directions: the stated \(O_7\).
+Its time square is \(d_7/4-1\in(0,1/3)\);
+the bounds \(5<d_7<16/3\) follow from
+\(6/5<2\cos(2\pi/7)<5/4\).
+Its separate inherited energy floor \(>9/100\) is unchanged.
+
+All weak inequalities included \(e=3/19\), so no ordinary equality
+case is omitted.  The proof has retained every finite spectator
+component, all its contacts and the same original \(x\).
+No arithmetic hypothesis or weakened-neighbour comparison was used.
+\end{proof}
+
+\begin{corollary}\label{cor:D14ordinarydihedral}
+At the original farthest vertex in arithmetic dimension sixteen,
+a whole \(D_{14}\) cannot have an ordinary irreducible
+rank-two spectator.
+\end{corollary}
+\begin{proof}
+The fresh true-rank-\(14\) argument in the proof of
+Proposition~\ref{prop:f16} gives
+\[
+                         e_D>.84816={5301\over6250}
+\]
+for its actual whole rank-two spectator.
+Its bootstrap uses only the independently available spectator
+floor \(>.09\), so it does not depend on the present strengthening.
+For an ordinary \(I_2(m)\), \(m\ge4\), the proposition gives
+\[
+ \|x\|^2=e_D+e_S>
+ {5301\over6250}+{3\over19}
+ =1+{719\over118750}>1 .
+\]
+For ordinary \(A_2\), use its geometric companion bound
+\(319/2000\), which exceeds \(3/19\) by \(61/38000\).
+Both contradict \(\|x\|<1\).
+The actual typed \(N_7/O_7\) alternatives retain their separate
+costs and arguments; they have not been charged as ordinary.
+\end{proof}
+
+% Next batches may append reviewed arithmetic proof bodies here.
+% Preserve this exact first-batch source before any such expansion.
+

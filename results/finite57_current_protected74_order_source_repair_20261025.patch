@@ -1,0 +1,108 @@
+--- index_finite57_current_protected74_applications_20261025.py
++++ index_finite57_current_protected74_order_safe_applications_20261025.py
+@@ -23,8 +23,8 @@
+ ROOT=Path(__file__).resolve().parents[1]
+ LOADER='scripts/check_finite57_current_adaptive9_path_binding_20261025.py'
+ LOADER_SHA='76022d95fcc5ec6e61bf1ccaea65635adda1ab8593d0bf921d75754f14bd139c'
+-PRIORITY_INPUTS='results/finite57_current_protected74_priority_inputs_20261025.json'
+-PRIORITY_INPUTS_SHA='21e30762c875cdfd24060fb767b85f6d0e73103c540088358011d767b28b3401'
++PRIORITY_INPUTS='results/finite57_current_protected74_order_safe_priority_inputs_20261025.json'
++PRIORITY_INPUTS_SHA='76e479ddb0a462e08e66c5277c3705eac7c06b70656fd90b13061fd80430e82b'
+ MAX_OUTPUT=500*1024
+ SHARDS=4
+ PRIORITY_SOURCES={
+@@ -32,13 +32,14 @@
+  'finite57.current.BC11_zero.whole_face.v1':'fresh_order11_bc_zero_transfer_20261018',
+  'finite57.current.B12_center_terminal.whole_face.v1':'fresh_order12_b_center_terminal_transfer_20261018',
+  'finite57.current.BC12_near_terminal.whole_face.v1':'fresh_order12_bc_near_terminal_half_transfer_20261018',
+- 'finite57.current.D12_opposite_leaves.whole_face.v1':'fresh_affine_d12_leaf_pair_transfer_20261017',
++ 'finite57.current.affine_order12_D_opposite_leaves.whole_face.v1':'fresh_affine_d11_leaf_pair_transfer_20261017',
+  'finite57.current.BC13_inner_terminal.whole_face.v1':'fresh_order13_bc_inner_terminal_transfer_20261018',
+  'finite57.current.D13_center_leaf.whole_face.v1':'fresh_order13_d_center_leaf_half_transfer_20261018',
+  'finite57.current.D14_near_fork.whole_face.v1':'fresh_order14_d_near_fork_half_transfer_20261018',
+  'finite57.current.D15_basic_fractional.whole_face.v1':'fresh_order15_bd_basic_fractional_transfer_20261018',
+  'finite57.current.largeD_leaf9_distinct_half.whole_face.v1':'fresh_large_finite_d_leaf_half_transfer_20261017',
+ }
++ORDER12_REPAIR='fresh_d12_universal_ideal_output_repairs_20261018'
+ 
+ # Exact all-native whole-face domains, NOT intrinsic units or full-map
+ # claims about selected-only sparse/projection packets.
+@@ -48,7 +49,7 @@
+  **{('C',11,*p):'finite57.current.BC11_zero.whole_face.v1' for p in ((0,9),(0,10),(1,10))},
+  ('B',12,0,9):'finite57.current.B12_center_terminal.whole_face.v1',
+  **{('B',12,8,j):'finite57.current.BC12_near_terminal.whole_face.v1' for j in (10,11)},
+- **{('D',12,i,j):'finite57.current.D12_opposite_leaves.whole_face.v1'
++ **{('D',12,i,j):'finite57.current.affine_order12_D_opposite_leaves.whole_face.v1'
+     for i in (8,9) for j in (10,11)},
+  **{('B',13,8,j):'finite57.current.BC13_inner_terminal.whole_face.v1' for j in (11,12)},
+  **{('D',13,*p):'finite57.current.D13_center_leaf.whole_face.v1'
+@@ -81,16 +82,48 @@
+     priority=raw(PRIORITY_INPUTS)
+     need(sha256(priority).hexdigest()==PRIORITY_INPUTS_SHA,'exact priority source register')
+     entries=json.loads(priority,object_pairs_hook=c.unique)['inputs']
+-    expected={f'{folder}/{stem}.{ext}' for stem in PRIORITY_SOURCES.values()
++    expected={f'{folder}/{stem}.{ext}' for stem in set(PRIORITY_SOURCES.values())|{ORDER12_REPAIR}
+               for folder,ext in (('scripts','py'),('results','json'),('results','md'))}
+-    need(len(entries)==len(expected)==30 and {p['path'] for p in entries}==expected,
+-         'exact thirty named priority proof/source/data identities')
++    need(len(entries)==len(expected)==33 and {p['path'] for p in entries}==expected,
++         'exact thirty-three order-safe priority proof/source/data identities')
+     for p in entries:
+         if p['path'] in c.PINS:need(c.PINS[p['path']]==p['sha256'],'priority/base identity collision')
+         c.PINS[p['path']]=p['sha256']
+         need(c.digest(p['path'])==p['sha256'],'bound current-priority proof/source premise')
+         c.READ.add(p['path'])
+     return a,r,c,extra,priority
++
++
++def order12_dependencies(c):
++    """Pin the CORRECT rank11/order12 producer and current32repair domain.
++
++    These are identity/application joins only. Current distinct funding
++    remains OPEN, and no generic old finite-rank<=17 unit is consumed.
++    """
++    stem='fresh_affine_d11_leaf_pair_transfer_20261017'
++    marks=list(product((8,9),(10,11)))
++    need(c.field(stem,('removed_pairs',))==[list(p) for p in marks] and
++         all(c.W.affine_weight('D',12,*p)==0 and
++             c.W._distances(c.W.classical_graph('D',12,affine=True),p[0])[p[1]]==9
++             for p in marks),'exact rank11/order12/distance9 zero domain')
++    repairs=c.field(ORDER12_REPAIR,('affine_D11','rows'))
++    keys=[(tuple(p['old_marks']),p['spectator_free_extreme_side'],p['branch']) for p in repairs]
++    expected=set(product(marks,('left','right'),('isolated4','mate3_1','D5','A1_A3')))
++    need(len(keys)==len(set(keys))==32 and set(keys)==expected,
++         'exact current32 D11 repair keys, NOT quiet24 of order13')
++    old=c.field(stem,('two_A1_A3_spectators','rows'))
++    oldkeys=[(tuple(p['marks']),tuple(p['leaf_attachments']),p['A1_contacting_black']) for p in old]
++    expected_old={(p,(i,j),side) for p in marks for i in (8,9) for j in (10,11) for side in (12,13)}
++    need(len(oldkeys)==len(set(oldkeys))==32 and set(oldkeys)==expected_old,
++         'exact separate32 both-nonempty A1+A3 receivers')
++    return dict(theorem='finite57.current.affine_order12_D_opposite_leaves.whole_face.v1',
++        producer=stem,whole_affine_order=12,affine_rank=11,canonical_marked_pairs=[list(p) for p in marks],
++        current_repair_source=ORDER12_REPAIR,current_repair_selector=['affine_D11','rows'],
++        exact_current_repair_keys=[[list(p),side,branch] for p,side,branch in sorted(keys)],
++        separate_both_nonempty_selector=['two_A1_A3_spectators','rows'],
++        exact_both_nonempty_keys=[[list(p),list(at),side] for p,at,side in sorted(oldkeys)],
++        current_distinct_receipts_verified=False,
++        required_current_funding='Current32repair distinct receipts plus current adjacent whole A2/A4-D11 units or D13/D15 near-end units in the separate32 both-nonempty receivers. No rank<=17 blanket unit; no D12 quiet24 or final-D13 guard consumer is substituted.')
+ 
+ 
+ def large_interface(c):
+@@ -217,7 +250,8 @@
+     parser.add_argument('--batch',choices=tuple(f'protected-{i}' for i in range(SHARDS)),required=True)
+     parser.add_argument('--parent-lock',action='store_true',required=True)
+     args=parser.parse_args();own=str(Path(__file__).resolve().relative_to(ROOT));source=raw(own)
+-    a,r,c,extra,priority=prepare();large=large_interface(c);rows=protected(int(args.batch[-1]),a,r,c)
++    a,r,c,extra,priority=prepare();order12=order12_dependencies(c)
++    large=large_interface(c);rows=protected(int(args.batch[-1]),a,r,c)
+     for p in c.READ:need(c.digest(p)==c.PINS[p],'consumed protected input changed')
+     need(sha256(raw(LOADER)).hexdigest()==LOADER_SHA,
+          'shared protected loader changed')
+@@ -229,6 +263,7 @@
+     payload=json.dumps(dict(status='CURRENT_PROTECTED74_APPLICATION_INDEX_WITH_EXPLICIT_OPEN_PRIORITIES',
+         batch=args.batch,source_sha256=sha256(source).hexdigest(),large_current_interface=large,
+         current_prefix_applications=rows,consumed_inputs={p:c.PINS[p] for p in sorted(c.READ)},
++        exact_order12_D_current_dependencies=order12,
+         independent_S8_verified=False,current_terminal_bridge_complete=False,global_finite57_verified=False,
+         universal_current_priority_receipts_verified=False,fuel_used=c.FUEL[0],
+         premise='Accepted full-core allowed-contact/end-block inverse seal and current actual-factor geometry. Saved inverse validity/all-native domain completeness are not regenerated.'),sort_keys=True)

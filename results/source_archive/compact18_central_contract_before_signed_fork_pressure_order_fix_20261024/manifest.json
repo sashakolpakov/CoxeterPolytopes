@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-23T23:10:18.105947+00:00",
+  "kind": "SOURCE_ONLY_SIGNED_FORK_PRESSURE_ORDER_REPAIR",
+  "source": "results/compact18_spectral_central_opposite_native_prefix_search_contract_20261023.md",
+  "predecessor_sha256": "f5c1f372ed3e5112a7565e1fd12fd264f64d09acc608e7f94662f5d7d52f5d31",
+  "predecessor_bytes": 16885,
+  "predecessor_lines": 292,
+  "archive": "results/source_archive/compact18_central_contract_before_signed_fork_pressure_order_fix_20261024/contract.md.gz",
+  "archive_sha256": "5ac0ef8a9f850f24f956b5ef1afc103c2e813830dad8f3bdc020a97f8279b556",
+  "archive_bytes": 7947,
+  "byte_round_trip_verified": true,
+  "sole_delta": {
+    "before": "U=(P1, P_i, P16, P17+e18, P17-e18).",
+    "after": "U=(P1, P_i, P16, P17-e18, P17+e18).",
+    "reason": "Pressure slots use original Omega17 with minus e18 and Omega18 with plus e18, matching worker index order. The last-two Gram symmetry leaves code and all scores unchanged."
+  },
+  "successor_sha256": "370d1563164ffe20bbd50521e18692349025e4059f51e55d3f5790b211b3c24d",
+  "successor_bytes": 16885,
+  "successor_lines": 292,
+  "worker": "scripts/compact18_central_prefix_interval_search_20261023.py",
+  "worker_sha256_unchanged": "3c2b69ebdbb520ac1c8f95f0c2e45a50d0505b452c777bfb6f0f574a0e2c2fc9",
+  "predecessor_adopted": false,
+  "mathematical_execution": false,
+  "current_source_status": "PENDING final outside report and coordinating gate"
+}

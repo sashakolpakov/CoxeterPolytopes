@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/sasha/CoxeterPolytopes/tools/compress_one_preserved_json_apfs_20261025.py", line 184, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/tools/compress_one_preserved_json_apfs_20261025.py", line 125, in main
+    guard(True)
+    ~~~~~^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/tools/compress_one_preserved_json_apfs_20261025.py", line 83, in guard
+    require(rss < 256*1024**2, 'Storage process-group RSS limit')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/tools/compress_one_preserved_json_apfs_20261025.py", line 41, in require
+    raise RuntimeError(message)
+RuntimeError: Storage process-group RSS limit

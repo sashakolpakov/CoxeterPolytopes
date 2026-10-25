@@ -1,0 +1,115 @@
+--- test_finite57_current_adaptive9_associations_20261025.py
++++ test_finite57_current_adaptive9_twenty_controls_20261025.py
+@@ -1,9 +1,10 @@
+ #!/usr/bin/env python3
+-"""SOURCE ONLY: tiny new adaptive leaf/pair/key association controls.
++"""SOURCE ONLY: twenty adaptive leaf/pair/key/whole-bound controls.
+ 
+ All matrices and profiles here are representation fixtures, not geometric
+-examples or Gram-inverse certificates. No scientific JSON or legacy worker
+-is read. Root exclusively launches this future batch after source review.
++examples or Gram-inverse certificates. One fixed187KiB saved producer input
++supplies all nine branch fixtures, with synthetic high/interface wrappers.
++No legacy worker is read or run. Root exclusively launches after review.
+ """
+ if not __debug__:
+     raise SystemExit('Optimization is forbidden')
+@@ -24,6 +25,8 @@
+ ROOT=Path(__file__).resolve().parents[1]
+ SOURCE='scripts/check_finite57_current_adaptive9_path_binding_20261025.py'
+ SOURCE_SHA='76022d95fcc5ec6e61bf1ccaea65635adda1ab8593d0bf921d75754f14bd139c'
++FIXTURE='results/fresh_distance8_adaptive_leaf_overlap_20261017.json'
++FIXTURE_SHA='c738c6af3f910e74b24c17a10c3f38cab2ed3835f4a6661c745046abb98ec8ab'
+ 
+ 
+ def need(ok,message):
+@@ -36,6 +39,20 @@
+     with p.open('rb') as stream:b=stream.read(65537)
+     need(0<len(b)<=65536,'bounded source bytes')
+     return b
++
++
++def fixture_bytes():
++    p=ROOT/FIXTURE
++    with p.open('rb') as stream:b=stream.read(256*1024+1)
++    need(len(b)==187026 and sha256(b).hexdigest()==FIXTURE_SHA,'exact bounded nine-case fixture')
++    return b
++
++
++def unique(pairs):
++    d={}
++    for k,v in pairs:
++        need(k not in d,'duplicate fixture JSON key');d[k]=v
++    return d
+ 
+ 
+ def main():
+@@ -124,13 +141,65 @@
+     refuse('later_interface_key_mismatch',lambda:domain_call(cases,high,wrong_interface),
+            'exact nine later interface keys')
+ 
+-    need(len(passed)==18,'complete eighteen necessary association controls')
++    # Actual saved matrices/profile values exercise every source branch.
++    # The high-index and later-interface wrappers below are synthetic:
++    # this tests the adapter's positive schema, not the2614-domain theorem.
++    fixed=fixture_bytes()
++    saved=json.loads(fixed,object_pairs_hook=unique,
++        parse_constant=lambda _:(_ for _ in ()).throw(ValueError('nonfinite fixture constant')))
++    saved_cases=saved['cases']
++    def complete_fixture(case_rows):
++        high_rows=[];cores={};interface_rows=[]
++        def fixture_labels(g,nodes):
++            out=[]
++            for i in nodes:
++                row=[]
++                for j in nodes:
++                    value=F(g[i][j])
++                    need(value in (F(2),F(0),F(-1)),'fixture uses only its actual simply-laced entries')
++                    row.append(0 if i==j or value==0 else 3)
++                out.append(row)
++            return out
++        for case in case_rows:
++            core_key='synthetic-wrapper-'+str(case['index'])
++            cores[core_key]=dict(gram=case['gram'],inverse=case['inverse'],gauge=[1]*len(case['gram']))
++            high_rows.append(dict(index=case['index'],left=case['left'],right=case['right'],
++                match=case['match'],local_case=case['index'],payment=case['payment'],
++                all_corners=case['all_corners'],core_key=core_key,
++                method='nine_context_adaptive_finite_payment'))
++            marks=case['payment']['corner']
++            corner=next(p for p in case['all_corners'] if p['preferred_corner']==marks)
++            nodes=corner['marked_component'];lab=fixture_labels(case['gram'],nodes)
++            adj={v:{nodes[j]:label for j,label in enumerate(lab[i]) if label} for i,v in enumerate(nodes)}
++            interface_rows.append(dict(index=case['index'],marks=marks,distance=9,
++                                       retained_path=sut.path(adj,marks)))
++        fuel=[0]
++        def charge(_):
++            fuel[0]+=1;need(fuel[0]<=1000,'tiny fixture fuel')
++        c=types.SimpleNamespace(field=lambda stem,selector:case_rows if stem==sut.ADAPT else interface_rows,
++            canonical=lambda v:json.dumps(v,sort_keys=True,separators=(',',':')),
++            E=types.SimpleNamespace(matrix=lambda g:g,labels=fixture_labels,charge=charge),FUEL=fuel)
++        r=types.SimpleNamespace(domain=lambda _:(high_rows,cores,{}))
++        out=sut.adaptive(c,r)
++        need(len(out)==9 and {p['method'] for p in out}=={
++            'sealed_marked_leaf','adaptive_untouched_marked_leaf','adaptive_leaf_or_bounded_relevant_tail'},
++            'complete nine source branches reached')
++        need(all(p['independent_S8_verified'] is False for p in out),'S8 open prerequisite survives every provider')
++        need(sum('whole_finite_order_bound' in b for p in out for b in p['current_alternative_branches'])==2,
++             'both complete whole-bound branches reached')
++    accept('complete_nine_case_positive_fixture_all_three_methods',lambda:complete_fixture(deepcopy(saved_cases)))
++    wrong_bound=deepcopy(saved_cases);wrong_bound[2]['payment']['whole_component_bound']=17
++    refuse('whole_bound_seventeen_refused_at_bound_interface',lambda:complete_fixture(wrong_bound),
++           'accepted complete whole-bound interface')
++    need(len(passed)==20,'complete twenty necessary association controls')
+     need(raw(SOURCE)==encoded and raw(own)==own_bytes,'test/adapter source changed')
++    need(fixture_bytes()==fixed,'saved fixture changed')
+     print(json.dumps(dict(status='PASS_ADAPTIVE9_ASSOCIATION_CONTROLS_ONLY',tests=passed,
+         count=len(passed),source_sha256=SOURCE_SHA,test_sha256=sha256(own_bytes).hexdigest(),
+-        scientific_json_read=False,geometric_theorem_tested=False,
++        saved_fixture_sha256=FIXTURE_SHA,synthetic_high_and_later_wrappers=True,
++        authoritative_high_domain_read=False,geometric_theorem_tested=False,
+         independent_S8_verified=False,current_terminal_bridge_complete=False,
+-        remaining_controls='A full modeled whole-bound16-to17 negative and successful complete nine-case fixture are not covered by these helper/domain-only controls.'),sort_keys=True))
++        scope='Twenty new schema/association controls, including complete saved nine-case positive and bound17 negative fixtures. No current typed-rule enumeration, inverse-validity or whole-support theorem is tested.'),sort_keys=True))
+ 
+ 
+ if __name__=='__main__':main()

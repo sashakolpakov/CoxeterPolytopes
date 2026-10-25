@@ -1,0 +1,23 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/check_finite57_literal_binding_batches_20261024.py",
+    "--batch",
+    "affine-large-1",
+    "--parent-lock"
+  ],
+  "elapsed_seconds": 1.244,
+  "peak_process_tree_rss_bytes": 79429632,
+  "initial_resources": {
+    "free_disk_gib": 40.16,
+    "available_memory_gib": 7.31
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 1577,
+  "stdout": "{\"batch\": \"affine-large-1\", \"full_manuscript_verified\": false, \"inputs_read\": [\"results/fresh_order10_low8_ambient58_frontier_20261018.json\"], \"library_sha256\": \"f6eba7af77af50b821e9e99c589388c1352f9ba5a99052aaeee64393f5ada1e0\", \"native_worker_imports\": false, \"result\": {\"exceptional\": \"all order<=9 factors have binomial(order,2) cost; classification external\", \"rows\": [{\"costs\": {\"A\": \"95\", \"B\": \"127\", \"C\": \"126\", \"D\": \"128\"}, \"envelope\": \"128/19\", \"order\": 19}, {\"costs\": {\"A\": \"115\", \"B\": \"160\", \"C\": \"156\", \"D\": \"163\"}, \"envelope\": \"163/23\", \"order\": 23}, {\"costs\": {\"A\": \"135\", \"B\": \"181\", \"C\": \"176\", \"D\": \"186\"}, \"envelope\": \"62/9\", \"order\": 27}, {\"costs\": {\"A\": \"155\", \"B\": \"201\", \"C\": \"196\", \"D\": \"206\"}, \"envelope\": \"206/31\", \"order\": 31}, {\"costs\": {\"A\": \"175\", \"B\": \"221\", \"C\": \"216\", \"D\": \"226\"}, \"envelope\": \"226/35\", \"order\": 35}, {\"costs\": {\"A\": \"195\", \"B\": \"241\", \"C\": \"236\", \"D\": \"246\"}, \"envelope\": \"82/13\", \"order\": 39}, {\"costs\": {\"A\": \"215\", \"B\": \"261\", \"C\": \"256\", \"D\": \"266\"}, \"envelope\": \"266/43\", \"order\": 43}, {\"costs\": {\"A\": \"235\", \"B\": \"281\", \"C\": \"276\", \"D\": \"286\"}, \"envelope\": \"286/47\", \"order\": 47}, {\"costs\": {\"A\": \"255\", \"B\": \"301\", \"C\": \"296\", \"D\": \"306\"}, \"envelope\": \"6\", \"order\": 51}, {\"costs\": {\"A\": \"275\", \"B\": \"321\", \"C\": \"316\", \"D\": \"326\"}, \"envelope\": \"326/55\", \"order\": 55}], \"scope\": \"literal costs exactly bind the frozen cusp envelopes; historical per-pair receipt provenance is separate\"}, \"source_sha256\": \"b3780a3978fd3ac9bf5517b831437f2b304640209641a3c00b83872d79ce4d0f\", \"status\": \"PASS_DECLARED_LITERAL_BINDING_SCOPE\"}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "b3780a3978fd3ac9bf5517b831437f2b304640209641a3c00b83872d79ce4d0f",
+  "lock_owner": "wrapper"
+}

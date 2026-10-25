@@ -1,0 +1,37 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/audit_existing_lean_module_20261024.py",
+    "CoxeterProofs.D18UniformDottedHeadScalarKernel"
+  ],
+  "elapsed_seconds": 2.661,
+  "peak_process_tree_rss_bytes": 753532928,
+  "initial_resources": {
+    "free_disk_gib": 28.7,
+    "available_memory_gib": 4.23,
+    "disk_free_bytes": 30811103232,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 4546543616,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 3.097807,
+    "available_memory_percent": 17.642911,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 5865,
+  "stdout": "CoxeterProofs/D18UniformDottedHeadScalarKernel.lean:30:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.D18UniformDottedHeadScalarKernel.f_completion`:\n  [LE R]\n  [LT R]\n  [Std.IsLinearOrder R]\n  [Std.LawfulOrderLT R]\n  [OrderedRing R]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nCoxeterProofs/D18UniformDottedHeadScalarKernel.lean:66:0: warning: automatically included section variable(s) unused in theorem `CoxeterProofs.D18UniformDottedHeadScalarKernel.g_completion`:\n  [LE R]\n  [LT R]\n  [Std.IsLinearOrder R]\n  [Std.LawfulOrderLT R]\n  [OrderedRing R]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [LE R] [LT R] [Std.IsLinearOrder R] [Std.LawfulOrderLT R] [OrderedRing R] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n'CoxeterProofs.D18UniformDottedHeadScalarKernel.f_uniform_seal' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CoxeterProofs.D18UniformDottedHeadScalarKernel.g_uniform_seal' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CoxeterProofs.D18UniformDottedHeadScalarKernel.weak_helper_anchor_affordability' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CoxeterProofs.D18UniformDottedHeadScalarKernel.far_next_impossible' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CoxeterProofs.D18UniformDottedHeadScalarKernel.near_far_native_contradiction' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CoxeterProofs.D18UniformDottedHeadScalarKernel.local_a18_six_tail_contradiction' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'CoxeterProofs.D18UniformDottedHeadScalarKernel.local_a18_five_tail_contradiction' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n{\"status\": \"KERNEL_AXIOM_AUDIT\", \"module\": \"CoxeterProofs.D18UniformDottedHeadScalarKernel\", \"inputs\": {\"source_sha256\": \"4d85588868a0f781999332f1d3fb53f25b17b5b9054278d0858c683b361a1b9a\", \"dependency_olean_sha256\": {}, \"compiler\": {\"lean-toolchain\": \"2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273\", \"lakefile.toml\": \"73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7\", \"lake-manifest.json\": \"31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395\", \"compiler_files\": {\"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean\": \"1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib\": \"c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib\": \"e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib\": \"be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182\"}, \"environment\": {\"ELAN_TOOLCHAIN\": \"\", \"LEAN_PATH\": \"\", \"LEAN_SRC_PATH\": \"\"}}, \"memory_cap_mib\": 2048, \"threads\": 1}, \"stdout_sha256\": \"ea9a2624a988f4e868e86e19bee037ccbbae7ea662385cf76514f08dd071b760\", \"output_bytes\": 2092, \"elapsed_seconds\": 2.16, \"resources\": {\"free_disk_gib\": 28.69, \"available_memory_gib\": 4.13, \"disk_free_bytes\": 30809751552, \"disk_total_bytes\": 994610155520, \"available_memory_bytes\": 4432265216, \"physical_memory_bytes\": 25769803776, \"free_disk_percent\": 3.097671, \"available_memory_percent\": 17.199453, \"resource_policy\": {\"id\": \"percentage-v1-20261025\", \"admission_disk_percent\": 2, \"admission_memory_percent\": 15, \"abort_disk_percent\": 1, \"abort_memory_percent\": 6, \"cleanup_disk_percent\": 2, \"rounding_digits\": 6, \"source_sha256\": \"51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f\"}}}\n{\"status\": \"PASS_SEPARATE_ACTUAL_AXIOMS_PARSED\", \"module\": \"CoxeterProofs.D18UniformDottedHeadScalarKernel\", \"compilation_performed\": false, \"printed_commands\": [\"#print axioms CoxeterProofs.D18UniformDottedHeadScalarKernel.f_uniform_seal\", \"#print axioms CoxeterProofs.D18UniformDottedHeadScalarKernel.g_uniform_seal\", \"#print axioms CoxeterProofs.D18UniformDottedHeadScalarKernel.weak_helper_anchor_affordability\", \"#print axioms CoxeterProofs.D18UniformDottedHeadScalarKernel.far_next_impossible\", \"#print axioms CoxeterProofs.D18UniformDottedHeadScalarKernel.near_far_native_contradiction\", \"#print axioms CoxeterProofs.D18UniformDottedHeadScalarKernel.local_a18_six_tail_contradiction\", \"#print axioms CoxeterProofs.D18UniformDottedHeadScalarKernel.local_a18_five_tail_contradiction\"], \"actual_axioms\": {\"CoxeterProofs.D18UniformDottedHeadScalarKernel.f_uniform_seal\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"CoxeterProofs.D18UniformDottedHeadScalarKernel.g_uniform_seal\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"CoxeterProofs.D18UniformDottedHeadScalarKernel.weak_helper_anchor_affordability\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"CoxeterProofs.D18UniformDottedHeadScalarKernel.far_next_impossible\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"CoxeterProofs.D18UniformDottedHeadScalarKernel.near_far_native_contradiction\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"CoxeterProofs.D18UniformDottedHeadScalarKernel.local_a18_six_tail_contradiction\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"CoxeterProofs.D18UniformDottedHeadScalarKernel.local_a18_five_tail_contradiction\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"ordinary_theorem_parameters_remain_external\": true, \"cache_provenance\": {\"CoxeterProofs.D18UniformDottedHeadScalarKernel\": \"KERNEL_COMPILED\"}}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "1399fbc6fbc7f0c92496b7f7284fcc8389573c544ee8bb427739666c1af6f7d5",
+  "lock_owner": "checker"
+}

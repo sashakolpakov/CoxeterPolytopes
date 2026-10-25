@@ -1,0 +1,136 @@
+--- a/manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex
++++ b/manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex
+@@ -21,11 +21,6 @@
+ \date{24 October 2026}
+ \begin{document}
+ \maketitle
+-\begin{center}\small
+-Consolidated draft in the existing compact arithmetic paper family.\\
+-Translation and dependency audit pending; not a replacement for the
+-delivered edition or a compilation record.
+-\end{center}
+ \begin{abstract}
+ We give a dimension bound of fifteen for compact arithmetic hyperbolic
+ Coxeter polytopes. Geometry supplies a norm budget at one farthest
+@@ -67,15 +62,23 @@
+ seventeen, without an arithmetic hypothesis.
+ \end{proposition}
+ 
+-This is the internal companion theorem \supp{G17} of
+-Appendix~\ref{app:sources}, not a published input or field restriction.
+-Its proof excludes dimension eighteen and retains the independently
+-proved higher-dimensional tail. It does not use
+-Theorem~\ref{thm:main}. It remains here to exclude exact dimensions
+-seventeen and sixteen. The first case split is by the whole finite
+-forest; the last is by inert, ramified or split behavior of two.
++Proposition~\ref{prop:general17} is proved in the general compact
++companion~\cite{ProjectGeneral}; its precise interface is \supp{G17}
++in Appendix~\ref{app:sources}. Its proof excludes dimension eighteen,
++includes the independently proved higher-dimensional tail, and does
++not use Theorem~\ref{thm:main}. Thus only dimensions seventeen and
++sixteen remain. We first split by the whole finite forest; the final
++$D_{16}$ argument splits by the inert, ramified or split behavior of two.
+ No argument assumes arithmeticity or Coxeter angles for an arbitrary face.
+ 
++Section~\ref{sec:seventeen} gives the rank-seventeen reduction, and
++Section~\ref{sec:algorithms} states the finite algorithms and their
++numerical output premises. Section~\ref{sec:sixteen} gives the
++rank-sixteen reduction; Sections~\ref{sec:d16}--\ref{sec:split} prove
++the final dyadic obstruction. The appendices develop the component
++estimates, actual-domain inclusions and complete forest dispatches
++used in these reductions.
++
+ \subsection{One original vector}
+ Use the Lorentz form with negative time coordinate and outward unit
+ normals. Distinct actual wall normals have nonpositive products.
+@@ -2789,15 +2792,14 @@
+ and finite-output inputs.
+ \end{proof}
+ 
+-\section{Proof and verification boundaries}\label{sec:verification}
++\section{Inputs, computation and verification}\label{sec:verification}
+ 
+-\subsection{Written proof bodies and remaining verification interfaces}
+-The arithmetic local bodies, both necessary forest covers and their
+-complete dispatches now have printed proofs. The stronger conditioned
+-$A_{11}$ corollary is separate from its uniform and joint-$I$ estimates.
+-The whole-$D_{16}$ finish is manual. The source map in
+-Appendix~\ref{app:sources} distinguishes the printed proof homes from
+-preserved primary-source provenance.
++\subsection{Dependencies and verification scope}
++Appendix~\ref{app:sources} locates the proofs of the local component
++estimates, both necessary forest covers and their complete dispatches,
++and records their primary-source provenance. The stronger conditioned
++$A_{11}$ corollary is distinct from the uniform and joint-$I$ estimates.
++The whole-$D_{16}$ argument is manual.
+ 
+ The remaining joint-manuscript obligations are the complete source
+ closure of the independent general compact companion and all shared
+@@ -2815,7 +2817,6 @@
+ the full primary PDF could not be retrieved, so this is not independent
+ authentication of the exact theorem. The all-compatible-invariant-lattice
+ bridge is proved internally and does not follow merely from commensurability.
+-The older arithmetic20 global field chapter is not an input to this proof.
+ 
+ Each computed proposition specifies a complete necessary domain,
+ termination argument, exact tests and recorded output. Different
+@@ -2833,19 +2834,14 @@
+ Successful older objects gain no new theorem or manuscript-source
+ scope from this draft.
+ 
+-Reproduction uses bounded serial repository entry points, one
+-admitted proof job at a time, with separate actual axiom audits.
+-All historical input and execution bindings are retained in the
+-source ledger. No new whole-manuscript replay, compilation or
+-algorithm execution is asserted by writing this TeX.
+-The D16 obstruction is manual; the overall theorem retains the
+-older finite-computation premises identified above.
++The reproducibility record specifies bounded serial entry points,
++separate actual axiom audits, and the historical source and execution
++bindings. This revision is uncompiled. No new whole-manuscript replay
++or revised Lean compilation with a separate axiom audit is recorded
++for it. The manual $D_{16}$ obstruction does not remove the four
++finite-computation premises used elsewhere in the proof.
+ 
+ \appendix
+-% REVIEWED ARITHMETIC15 FOUNDATION PART, integrated 25 October2026.
+-% Same existing arithmetic paper family; source preparation only.
+-% First batch: accepted general dihedral3/19 theorem and D14 consumer.
+-% Independent and coordinating source reviews accepted; no execution/compilation.
+ \section{A strengthened ordinary dihedral comparison}
+ \label{app:arithdihedral}
+ 
+@@ -3086,9 +3082,6 @@
+ costs and arguments; they have not been charged as ordinary.
+ \end{proof}
+ 
+-% Next batches may append reviewed arithmetic proof bodies here.
+-% Preserve this exact first-batch source before any such expansion.
+-
+ \section{Arithmetic chain windows and simultaneous actual feet}
+ \label{app:arithmeticchain}
+ 
+@@ -20576,10 +20569,10 @@
+ PASS or publication status follows
+ from this source-only completion.
+ 
+-\section{Precise project proof homes}\label{app:sources}
++\section{Proof locations and source provenance}\label{app:sources}
+ 
+ Each identifier denotes a theorem with its precise scope in the
+-named project supplement, relative to \path{results/}.
++named supplement, relative to \path{results/}.
+ The companion report
+ \path{results/compact_arithmetic15_consolidation_source_ledger_20261024.md}
+ gives full paths, literal hashes, acceptance/review bindings and
+@@ -20602,8 +20595,8 @@
+ the printed arguments above or enlarge the scopes of historical checks.
+ 
+ \begin{longtable}{lp{11.3cm}}
+-\toprule ID&Mathematical statement and complete project proof home\\\midrule\endfirsthead
+-\toprule ID&Mathematical statement and complete project proof home\\\midrule\endhead
++\toprule ID&Mathematical statement and primary source\\\midrule\endfirsthead
++\toprule ID&Mathematical statement and primary source\\\midrule\endhead
+ \supp{G17}&General compact17, final geometric composition and its complete21-input closure. \path{compact18_whole_d18_uniform_dotted_head_all_initial_references_and_global17_composition_candidate_20261024.md}\\
+ \supp{F17}&Complete rank17 cover, Sections 2--5. \path{arithmetic_dimension17_complete_forest_frontier_candidate_20261021.md}\\
+ \supp{E17}&Complete rank17 rowwise local exclusions, Sections 1--3; old arithmetic global tail omitted. \path{arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md}\\

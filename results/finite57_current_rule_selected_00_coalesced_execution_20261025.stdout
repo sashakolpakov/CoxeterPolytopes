@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py", line 129, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/run_bounded_research_check_20261018.py", line 96, in main
+    assert child.wait() == 0, output[-7000:].decode(errors='replace')
+           ^^^^^^^^^^^^^^^^^
+AssertionError: Traceback (most recent call last):
+  File "<string>", line 13, in <module>
+    runpy.run_path(sys.argv[0], run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 294, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_finite57_current_rule_conjunction_20261025.py", line 1311, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_finite57_current_rule_conjunction_20261025.py", line 1289, in main
+    payload=final(meta,reviews,accepted,snapshot) if args.batch=='final' else selected(args.batch,meta,reviews,accepted,snapshot)
+                                                                              ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_finite57_current_rule_conjunction_20261025.py", line 1049, in selected
+    units=inventory(meta,reviews)
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_finite57_current_rule_conjunction_20261025.py", line 504, in inventory
+    out[entry['worker'],entry.get('batch')] = (entry,actual(entry,reviews,meta['controller_source_sha256']))
+                                                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_finite57_current_rule_conjunction_20261025.py", line 420, in actual
+    need(type(output) is str and output.endswith('\n') and len(output.splitlines()) == 1 and
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         len(output.encode()) == outer['stdout_bytes'] < 512*1024 and
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         len(lines) == 3 and lines[0]+'\n' == output, 'complete public three-line stdout')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sasha/CoxeterPolytopes/scripts/check_finite57_current_rule_conjunction_20261025.py", line 123, in need
+    raise ValueError(message)
+ValueError: complete public three-line stdout
+

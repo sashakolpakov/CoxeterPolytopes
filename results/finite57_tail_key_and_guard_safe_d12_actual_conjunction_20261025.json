@@ -1,0 +1,109 @@
+{
+  "status": "ACTUAL_SCOPED_TAIL_KEY_AND_GUARD_SAFE_D12_BINDING_PASSES",
+  "date": "2026-10-25",
+  "records": [
+    {
+      "ledger": {
+        "path": "results/finite57_tail_key_structural_regressions_execution_20261025.json",
+        "bytes": 4843,
+        "sha256": "0de1d366574a7848290bcc56070e422db85fd380d51ae7b3a9f6871513fd513f"
+      },
+      "stdout": {
+        "path": "results/finite57_tail_key_structural_regressions_execution_20261025.stdout",
+        "bytes": 5933,
+        "sha256": "69740d5b3c692ff0486fb48ca415bb323984c763d91afd19a5093b630e8146c3"
+      },
+      "inner_status": "PASS_FINITE57_TAIL_KEY_GUARD_STRUCTURAL_REGRESSIONS_ONLY",
+      "seconds": 0.889,
+      "peak_process_tree_rss_bytes": 96813056,
+      "measured_initial_resources": {
+        "free_disk_gib": 40.2,
+        "available_memory_gib": 7.62
+      }
+    },
+    {
+      "ledger": {
+        "path": "results/finite57_d12_guard_safe_structural_execution_20261025.json",
+        "bytes": 3673,
+        "sha256": "af8828dd49c3f276cc79385b3f100d5b5dc60dacabfacad3db4d80b8201a010d"
+      },
+      "stdout": {
+        "path": "results/finite57_d12_guard_safe_structural_execution_20261025.stdout",
+        "bytes": 4777,
+        "sha256": "56b936e091b115fd89f8133da701a63f3473ee8f46c41635af00be219c5d6522"
+      },
+      "inner_status": "PASS_GUARD_SAFE_D12_TERMINAL_BINDER_STRUCTURAL_REGRESSIONS",
+      "seconds": 0.088,
+      "peak_process_tree_rss_bytes": 59244544,
+      "measured_initial_resources": {
+        "free_disk_gib": 40.19,
+        "available_memory_gib": 7.77
+      }
+    },
+    {
+      "ledger": {
+        "path": "results/finite57_d12_first_current_binding_execution_20261025.json",
+        "bytes": 87166,
+        "sha256": "2082b383f340ae542ca636a4fa7fdf55a5ec44614204dd03e0b94723b4bfb444"
+      },
+      "stdout": {
+        "path": "results/finite57_d12_first_current_binding_execution_20261025.stdout",
+        "bytes": 79400,
+        "sha256": "59e32af8bc84f16b6327219dc2357772926191b45cb96cf110f99de8b0ca9840"
+      },
+      "inner_status": "PASS_GUARD_SAFE_CURRENT_D12_TERMINAL_LITERAL_BINDING",
+      "seconds": 0.401,
+      "peak_process_tree_rss_bytes": 66928640,
+      "measured_initial_resources": {
+        "free_disk_gib": 40.19,
+        "available_memory_gib": 7.6
+      }
+    },
+    {
+      "ledger": {
+        "path": "results/finite57_d12_rest_current_binding_execution_20261025.json",
+        "bytes": 18698,
+        "sha256": "d9d4f85e5c378544bea75861e1380f840f9cd73a2d1251977baeccfbe96515ec"
+      },
+      "stdout": {
+        "path": "results/finite57_d12_rest_current_binding_execution_20261025.stdout",
+        "bytes": 18340,
+        "sha256": "5f4f4037575c427bc1dba3efb589b25cea188c3c7b30490a3401ef07c69f8ea4"
+      },
+      "inner_status": "PASS_GUARD_SAFE_CURRENT_D12_TERMINAL_LITERAL_BINDING",
+      "seconds": 0.159,
+      "peak_process_tree_rss_bytes": 64618496,
+      "measured_initial_resources": {
+        "free_disk_gib": 40.2,
+        "available_memory_gib": 7.72
+      }
+    }
+  ],
+  "counts": {
+    "tail_key_structural_cases": 13,
+    "d12_structural_positive_cases": 4,
+    "d12_structural_negative_cases": 17,
+    "current_selected_d12_positive_output_paths": 332,
+    "a13_near_end_output_paths": 10
+  },
+  "source_clearance": {
+    "path": "results/finite57_d12_guard_safe_execution_source_clearance_20261025.json",
+    "bytes": 1935,
+    "sha256": "52c4dd68f2f31d4e1088aacf65e32d376f05415e137f22d657b90c8bf1261f35"
+  },
+  "root_source_acceptance": {
+    "path": "results/review_finite57_d12_guard_safe_binding_root_20261025.md",
+    "bytes": 4732,
+    "sha256": "73172228d81fcfd48efd26873f9f7c618624258da284d87b22460d6c4a6238c7"
+  },
+  "premises": [
+    "Paying-factor wholeness and complete selected-domain maps remain the source-reviewed geometric inputs.",
+    "Tail-key tests establish structural identity only; they do not recompute KKT or packing numerical values."
+  ],
+  "scope_exclusions": [
+    "No unmarked displayed spectator is used as a sealed positive witness.",
+    "No G1-G6 current-terminal conjunction or full finite57 manuscript runtime PASS.",
+    "No new enumeration, global bound, TeX build or Lean verification."
+  ],
+  "old_successful_jobs_rerun": false
+}

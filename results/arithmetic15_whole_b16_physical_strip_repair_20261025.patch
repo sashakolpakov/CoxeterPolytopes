@@ -1,0 +1,26 @@
+--- results/source_archive/arithmetic15_whole_b16_physical_strip_repair_20261025/whole_b16_section_predecessor.tex	2026-10-25 02:04:42
++++ results/source_archive/arithmetic15_whole_b16_physical_strip_repair_20261025/whole_b16_section.tex	2026-10-25 02:04:42
+@@ -215,6 +215,23 @@
+ Trace and norm are EVEN by the same half-square
+ argument already proved above.
+ 
++The hand table uses the EXACT physical short-edge
++cutoff \(C_S<16\), rather than only the coarser
++\(S<42/5\) used to bound the degree:
++\[
++\begin{array}{c|c}
++ \text{far}&\sqrt2\le S<(16\sqrt{17}-1)/8<65/8\\
++ \text{near}&2+\sqrt2\le S<(16\sqrt{17}+1)/8<67/8 .
++\end{array}
++\]
++Indeed the actual edge formulas are
++\(C_S=(8S+1)/\sqrt{17}\) and
++\(C_S=(8S-1)/\sqrt{17}\), respectively;
++the lower bounds retain the native own gap.
++For example the far integer \(4+3\sqrt2\)
++passes the coarse bound but violates this
++exact physical cutoff and is not a table row.
++
+ The far strips give traces \(2,4,6,8\),
+ \(-6<\mathrm N(S)<4\).
+ The near strips give traces \(4,6,8\),

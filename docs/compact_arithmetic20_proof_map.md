@@ -2,8 +2,10 @@
 
 The current [manuscript](../manuscripts/compact_arithmetic_dimension_bound.tex)
 states the compact arithmetic ceiling20. This map concerns that printed
-scope; the later reviewed written arithmetic Coxeter bound17 is not silently
+scope; the later reviewed written arithmetic Coxeter bound15 is not silently
 substituted for its theorem.
+The [current consolidation guide](audit_and_consolidation_status_20261024.md)
+tracks its pending same-family revision and the explicit proof dependencies.
 The older21 package remains an essential preserved proof input. The
 noncompact arithmetic ceiling21 and combined finite-volume arithmetic
 ceiling21 are unchanged.

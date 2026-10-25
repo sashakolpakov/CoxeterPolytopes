@@ -1,0 +1,322 @@
+--- tools/archive_unused_parked_search_results_20261025.py
++++ tools/archive_unused_parked_enumerations_20261025.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Byte-preserving streamed archive of 115 unused parked search JSON results.
++"""Byte-preserving streamed archive of eight unused parked H9 enumeration JSON results.
+ 
+ This is neither publication packing nor a scientific/Lean/TeX launcher. It
+ does not change the40GiB/6GiB proof admission gate. It retains the original
+@@ -19,236 +19,14 @@
+ ROOT = Path(__file__).resolve().parents[1]
+ GIB = 1024**3
+ FILES = {
+-    'fresh_h20_balanced_20261014_bridge_scaled_scout':
+-        (44331173, '699b81acaf1cb1c3f376e5b500d3311feb892194da8a30e16f2d17ba525f8598'),
+-    'fresh_h20_balanced_20261014_golden_endpoint_scout':
+-        (53293700, 'f9c1b7d8095cb22e316d32fca5b0d705deea6c6357d031a143fb4881293b1646'),
+-    'fresh_h20_balanced_20261014_unit_endpoint_scout':
+-        (53441192, '111477271b033941302b3b2315d3cabbd2739451c4cf1717fae386780cdfb73f'),
+-    'fresh_h20_bridge_edge_closure_20261014':
+-        (38424994, '5cb211f95a05a1981629457c4bc5f7741272b6c41500dc1fdfe07a81cc55e390'),
+-    'fresh_h20_dihedral_edge_sections_20261014_g2_summary':
+-        (10964094, '6a7cdb7efe56e44b913ace50b97b521397d5dc2c816549f71a41cb459bc259f9'),
+-    'fresh_h20_dotted_arc_bank_20261016_scout':
+-        (39186573, 'f70968d3d62b7e6c60c82387775423400615be3e68eec5511d8373abd977cb25'),
+-    'fresh_h20_e7_bridge_face_20261014_scout':
+-        (19018878, '1e32ed0405784a96c8c3196d2e170f2b167c691d67a7d3781d6235f34cf4edb2'),
+-    'fresh_h20_e8_endpoint_belt_20261017_finite158':
+-        (13090943, 'a4e2d92d81734c5e65af87151461274c94fbca97eac528d574d31415c05bdf64'),
+-    'fresh_h20_e8_partner_endpoints_20261017':
+-        (11687928, '5e1b42dbba2cb541b75b1a9dc4c8efbaa6a6e5353f72d1f16276878f645c9cd6'),
+-    'fresh_h20_e8_partner_endpoints_20261017_boost':
+-        (13142316, 'bb20218cbd8508dbd4c6ac98f823977c2df298d3c79593871d8a8563eeaca59e'),
+-    'fresh_h20_h4_face_closure_20261014_scout':
+-        (136759933, '42d177a45476d39aa2f1e2306a8e1ff1719e68563b99fefe4e4777f2800c1773'),
+-    'fresh_h20_intrinsic_caps_20261014_annulus_endpoint_all_scout':
+-        (25647930, '5c754a7d0e769c40cb15b2391ff1d506c65b28ca6d8f2a9ff06dc5d56243a784'),
+-    'fresh_h20_intrinsic_caps_20261014_completion_scout':
+-        (16608854, '6f3b6e662c966157f4654e05e7343ce5f02c10b77982ba900f6e9973e04f7f78'),
+-    'fresh_h20_one_anchor_dotted_families_20261016':
+-        (55401603, '1f0a1231044c5e7e166bc9cc5cb5fe47d99fd4523f41b851ad741ec9fabca022'),
+-    'fresh_h20_pentagon_closure_scout_20261016':
+-        (26145150, 'f2c9f9681546025ee0b94d08625cad5a932eea6b05b45693b2fec319e9191dde'),
+-    'fresh_h20_polar_frontier_20261014':
+-        (20426936, '37b906ffdcccb215018e9faa259b2b4131ad4e302508e30e955ecf6ee24d9069'),
+-    'fresh_h20_replaced_old_edge_profiles_20261017':
+-        (21143933, '1c7a2edabf2b66378b595634f75ee3532f3dec8da2035a12c9c46d4d4af228ac'),
+-    'fresh_h20_replaced_triangle_events_20261017':
+-        (23458797, '3f4ce0187e94b50598c5d7b770284fa8c5785ef500f67f9d1aa155d851123de7'),
+-    'fresh_h20_replacement150_continuation_20261017':
+-        (29182453, 'd4e091a09227d5b31755b96b4158dd8db99ef7fac655df052ba088ca7a62ef9a'),
+-    'fresh_h20_replacement150_triangles_20261017':
+-        (44850234, '2219e70cdfd19cdd38fd953aacc4e4b0cd0a6384af943590759237cd77b697f2'),
+-    'fresh_h20_replacement_outer_patch_pairs_20261017':
+-        (31982060, '20b24f5003b6a642a428b96aea3353225d4737ad90278936ec3f976d31d4c692'),
+-    'fresh_h20_seed_edge_families_20261016_pairs':
+-        (23294917, '867c3365b690b4d6a33e7d91a096fe6caee65ef3adbe22f5fad04e5c04ce796b'),
+-    'fresh_h20_two_anchor_families_20261016':
+-        (81648140, 'c06ef01ebb80099825e33fb4742e500424378eb28bdada2b99ff02430fa73dde'),
+-    'fresh_h9_beta131_h300_20261016':
+-        (11366052, 'f100a57725bb278eaa09aeea06738406457c98dd32f527bc2dc18adbd87c140e'),
+-    'fresh_h9_bugaenko_closure_20261014_large_first_0_505':
+-        (64058695, '8ca88e264d770e290cf2ec71049e6510423b4696caf685b48f28f3eb78887e29'),
+-    'fresh_h9_bugaenko_closure_20261014_search_25_250':
+-        (21248859, 'c8e37719e338c8859cb8afab132585e3ff26a6123c01ecbdae2083badd03c476'),
+-    'fresh_h9_bugaenko_closure_20261014_search_500_650':
+-        (12772597, '1246fd2b2da3e7b82fe1712328c5e7813a0f6f7c21060c06deb80b0a62208739'),
+-    'fresh_h9_bugaenko_remaining_20261014_1150_1950':
+-        (113250757, 'daa3b36f4e581dc56f9718b1b919cf1c5fa92abd52872d704b362cb184f7a219'),
+-    'fresh_h9_bugaenko_remaining_20261014_650_1150':
+-        (69467070, 'f9a92a7acdb1163c7746cc795b7149becab9197b4880f18aeba971dd2a362e19'),
+-    'fresh_h9_bugaenko_remaining_20261014_newfacet':
+-        (16506403, 'ea89d10cd5f0052e805cb7240a1b16a157856c3c7e588d105ec9467247d7cd7b'),
+-    'fresh_h9_bugaenko_remaining_20261014_selected':
+-        (13798965, '21be0907f8c972e355d5506a89f5462f25b38f591870694602071cd6c2002e71'),
+-    'fresh_h9_bugaenko_surgery_20261014_incidence':
+-        (16466420, '99984b34dc331217c858f4ced958e5e1a4371485dea9b4c62f4ad543108999b1'),
+-    'fresh_h9_bugaenko_surgery_20261014_labels_0_25':
+-        (62275196, '79bf02153ea5e683ea822e93322701249b17ab65da178479dfd010c3322f1000'),
+-    'fresh_h9_dotted_central_20261014_next_targets':
+-        (23658945, 'd6e897e27a604e2159fe99602016a77dfbdcd1d95844c20d2259c7a55726f66e'),
+-    'fresh_h9_fifteen_facet_20261014_incidence':
+-        (19542907, '9a1e51d274e262b89cef6b01a345557a884b1e42c1f5556e90311683108e3595'),
+-    'fresh_h9_highbase_construction_20261014_cell':
+-        (41325164, 'a6bd4ed99bf5e825c4538bca8227d7ca202f115f9bbb5dd246ab2d4f64f3c66e'),
+-    'fresh_h9_makarov_joint_20261013_profiles':
+-        (13064645, 'cf26e8e3957d1c22173fcaebb1789af1e06626469676b6011338c1961691f002'),
+-    'fresh_h9_makarov_joint_completion_20261013_continuous':
+-        (59747184, '28d50de89d0f9f29a94e33d4c8b9c29b8562c5f16046e24edb2f98200cb9bbf4'),
+-    'fresh_h9_makarov_joint_completion_20261013_coupled_frontier':
+-        (14170675, '086eb8cf07aac8b468c6e2488c7e48663a3b9c3a2c742dfa0db7a10361aa7ef7'),
+-    'fresh_h9_makarov_joint_completion_20261013_profiles_all':
+-        (150013597, '294da61b95927bf9330130ec08eab04a5219ac1afa142061a0f0fb7d6ccf23be'),
+-    'fresh_h9_makarov_joint_completion_20261013_remote_edges':
+-        (10904991, '8e9b47f45dc0955a3d1f736da72fe6776052d2b04eb607802ddca68d07e524cb'),
+-    'fresh_h9_makarov_polar_closure_20261013_verify':
+-        (17327897, '61d6714320cbff6d6d0cfd96f41deb1933d7e37f58776f833c7de51778e47317'),
+-    'fresh_h9_mixed_d4_endpoint_caps_20261014_scout':
+-        (69446191, '9f3da299031d0969608e6dbf22d1ec3f9564579435217c6ad150b310f28a727e'),
+-    'fresh_h9_mixed_d4_endpoint_pair_20261014_next_caps':
+-        (18460832, '87e2f46b7fe577995bf0070faf3b4f146fa22549ca5d585ffbc1470ecc8e5b03'),
+-    'fresh_h9_star_cube_metric_20261014_orientations':
+-        (35858305, '58ee95d959f5f6d5f5b90cdf3a50d73132981fb6c96906030820b22edf86be47'),
+-    'fresh_h9_star_opposite_high_20261014':
+-        (43135242, 'a0963e94fec00478e4c076bf6224dbd4391cbcb00ba38b7b0e928028b2c8aac5'),
+-    'fresh_nonarithmetic_h3_closure_20261016_nonpolar_scout':
+-        (14066679, 'fff05db142b5ba749216ff0d041c068f4b5a02bc44fad58187d9a5bb544a8882'),
+-    'fresh_nonarithmetic_h3_closure_20261016_pair_selection':
+-        (87323612, 'a5c0b4d3b1d0780fddd20bafd16d775282644dc5a74aed25380adf89d8382140'),
+-    'fresh_nonarithmetic_h3_closure_20261016_repair_scout':
+-        (82599808, '6b81e2bd74cc6b8ac0a85bf7af5493b2021f125390afcde0abffd78727514648'),
+-    'fresh_nonarithmetic_h3_edge749_20261016':
+-        (11023081, '3f39a3246b1c20fec934d68a6642cd7cffd1c84cfc20bb9bf9b6721c3973f343'),
+-    'fresh_sqrt5_actual_provenance_dual_20261017':
+-        (19080280, 'b9787dd4416ca1718220d6fcf27f691e7dcc6c45a29080187ef2595501b14aa8'),
+-    'fresh_sqrt5_all_a1_cross_corrected_20261015_review':
+-        (6509204, '0e93e6ff6cec38211862bb7dcb21ec1eb2d372cca155ebfc870c4b6bd56e9177'),
+-    'fresh_sqrt5_all_quad_contacts_20261015_review':
+-        (5824702, '55aaf25d610d9dfebf134c3f2a9397e17b5588cbbf634d3a640adfc845700d08'),
+-    'fresh_sqrt5_all_quad_unions_20261015_classes':
+-        (11110847, '5ee703792a90db297c429d53d2d6b5348b3f3683d3f0902d5a0d617cb483aa80'),
+-    'fresh_sqrt5_complete_face_weights_20261015_review_n26':
+-        (5495198, 'e9dd85118a4232e132d98d925aa639d63a8861a5f3ddb2cfbaa6fee871dc903e'),
+-    'fresh_sqrt5_complete_face_weights_20261015_review_n27':
+-        (6125839, 'fb0002ccf5426dd992b84ac5c2224daea94110cb8dcbb7f4e2797ea8853736b0'),
+-    'fresh_sqrt5_cross_coface_cap_repair_20261017':
+-        (7511628, 'f6d13be88bad4860e870167fa0d7a1c2ab4d0f302a8eb45017cb2bface57dc1a'),
+-    'fresh_sqrt5_dimension21_a4_cross_20261016_cap2':
+-        (25092401, '7e32dae0006b4085bcd4d591859afdb3fdbd95862c8773fedf6d3955caf1d486'),
+-    'fresh_sqrt5_dimension21_a4_pairs_20261016_cap2':
+-        (25438500, '3488fe470b7fe4de0a85c3b97b0f40c3d1ccf856802359eaa27b1cbb99c8b08d'),
+-    'fresh_sqrt5_dimension21_e7_context_20261016_cap2':
+-        (16248246, 'cf399688a381c88db16bd9212c62a49ba51051f0f5f357c4fcb213671e9f67e3'),
+-    'fresh_sqrt5_dimension21_e8_context_20261016_cap2':
+-        (16461282, 'ada6a339e7ab4dd4fdc6b7d035d31b14b28acb1849dea9ad8d82ade9a892ff5b'),
+-    'fresh_sqrt5_dimension21_h3_cross_20261016_cap2':
+-        (10946538, 'd8d91b49f2f9053b56582d62326da79ff4513476dd5f45dc4436fa9196bf06ed'),
+-    'fresh_sqrt5_dimension22_a2_context_20261016_cap2':
+-        (8201352, 'f9ed2490a3ba665ba0d05f0e13e1f2c81fd65f999c6f8d87f42294a89c9dab01'),
+-    'fresh_sqrt5_dimension22_a2_cross_20261016_cap2':
+-        (8274363, '5c2fa9050d30fc8796cd8c86f7ad71e10b9ec08c382337aabe9777b4867aa3c2'),
+-    'fresh_sqrt5_dimension22_e8_context_20261016_cap2':
+-        (12057642, '4465651335a3b482b72e9457c9cef1550eb5a8e1f7aeac456d55b5109d1545f6'),
+-    'fresh_sqrt5_dimension22_h3_cross_20261016_cap2':
+-        (8201600, '9c04d61a4647f62d808e1699b3de140fd47f748b901ca5a390cb36f4a90bac83'),
+-    'fresh_sqrt5_dimension22_h3_cross_20261016_review':
+-        (24470446, '576418cd7c12bdcca6896d66e91a73fcabe3578621c4f73d71ae6420e2f0aaa1'),
+-    'fresh_sqrt5_dimension22_i25_counts_20261016_exact':
+-        (15979551, 'cd2aa84db9d37e65b83718bc35e575dffd1ee2b939d36a8997f52e527ab09fc4'),
+-    'fresh_sqrt5_dimension23_coverage_20261015':
+-        (16092536, 'dd6c54050440cfae7aca0eb5b5586eddba1121ea31d4af269d231b1afb79cbe8'),
+-    'fresh_sqrt5_dimension24_coverage_20261015':
+-        (13999377, 'a4810dece788ca36b0e4da4fc0f8e5260f7e04615e4e459baba154abb09b3d6b'),
+-    'fresh_sqrt5_dimension24_i25_cross_20261015_review':
+-        (16147429, 'f1c2903d8dc9bb836e5e85dcfc87a72379827d23cdc281bb921334c5136f761a'),
+-    'fresh_sqrt5_discount_attachment_seeds_20261016':
+-        (18332503, 'd0606ac222cff5c3232824152bb3b9339d72f119b03a25c63eee8fccff6fbef7'),
+-    'fresh_sqrt5_flag_refined_base_capacity_20261017':
+-        (25305095, '70d9d1b2de01de19dfb766ab8b79328ac6d95c8f8e6d95255ce1f8e9c9afbf11'),
+-    'fresh_sqrt5_global_b1_finite_first_20261016':
+-        (6779107, 'aa9a5c9056ab6b766f852b35244c4fb61e846e88f741af59135addee94fd7d36'),
+-    'fresh_sqrt5_global_b1_first_extensions_20261016':
+-        (6075892, '5c8fcd83a4a34e9dbab59199c8afa0ef5cace8167fe7aa89d2e5266d7fbeca82'),
+-    'fresh_sqrt5_global_discount_20261016':
+-        (15230211, '223af02d660f56243c49327944e4bad4c50f49e788a6d2549e8d31eec35be6ae'),
+-    'fresh_sqrt5_h3_a4_actual_count_split_20261016':
+-        (18948802, '8387f8f8b561c6b077e526a1ae8e7afc2f75f391aa6c9811e11b28e00dd9dfec'),
+-    'fresh_sqrt5_h3_all_actual_count_split_20261016':
+-        (19687994, '76e9a0de38ac11a51c59faca5ae993ba0be0f6695fc72ebe7709981a182a6cc7'),
+-    'fresh_sqrt5_h3_center_complete_triangle_repair_20261016':
+-        (18863885, '790c4c07cd498d2deb560a2369181f6ebd2e78c8363427d64fc2ce683ff2c106'),
+-    'fresh_sqrt5_h3_center_e6_orbit_exempt_20261016':
+-        (18805578, '5648d2a6531d873c3373181f492d872c9996a1ac6504342a0ba0750e8fb6c754'),
+-    'fresh_sqrt5_h4_e8_context_split_20261016':
+-        (19710852, '2355adafda7986566ccb33d54914d741c8675cd846cf0f6665e98af99c57c3a7'),
+-    'fresh_sqrt5_hub_count_coverage_20261016_bound22':
+-        (13820138, '0966cbef8bb70a603a87111c8fe406e55034b385275cae4b0b40ebdaa9da1818'),
+-    'fresh_sqrt5_hub_count_weights_20261016_review_n23_cap2':
+-        (13617120, '7cb21986d098fcb3340a38d37085570779b7169522c2b8aea6f4d877800090fc'),
+-    'fresh_sqrt5_joint_triangle_square_ports_20261017':
+-        (14625076, 'cee8ecbd341855d1038ff923d2a2b1f29bdce131d1bf2f36a5ba8f655a668a89'),
+-    'fresh_sqrt5_marked_a1_facet_mixed_cross_20261016':
+-        (11915919, '8160b1bc2a6fe54c27358ef6d1c3450d50d89df40d36c8991f95a2fa8d5bd201'),
+-    'fresh_sqrt5_marked_a4_d4_cross_free_bonus_20261016':
+-        (11176543, '3b4ef7d904e4de5f560fcc2e8e198f56b239cce5d73de987e0a9425b167696c1'),
+-    'fresh_sqrt5_marked_discount_census_20261016':
+-        (10454339, '985370dbf3f7bc972396dbc33d8acb2df4a89ac4e6ce4d3b20bdc466109fba7f'),
+-    'fresh_sqrt5_marked_free_bonus_proposal_20261016':
+-        (9765685, '17a07e806336f28aa3b11e1a99726992b8305c7e690c636d9624166a0cfaff00'),
+-    'fresh_sqrt5_marked_h3_center_sparse_recovery_20261016':
+-        (25244472, 'd7e71682be6123f158802813f1c65e236a14da442949450d33dd5698bd9a56a7'),
+-    'fresh_sqrt5_marked_h4_count_free_bonus_20261016':
+-        (9812918, 'cef1d32e492d829e4ce3c24d73bdb5121ed2af38082b4263e2cc39cc60c988ed'),
+-    'fresh_sqrt5_marked_h4_facet_context_free_bonus_20261016':
+-        (9861794, '8df59210f4483952aa29fa60bd944a4ebda013bc3871583cdf02279d0492d749'),
+-    'fresh_sqrt5_marked_h4_remainder_free_bonus_20261016':
+-        (9028095, '4dfff643bea28aa2cc5cff080997b4a80c757fc91c16aa8f251d71fb9314b222'),
+-    'fresh_sqrt5_marked_mixed_a4_cross_free_bonus_20261016':
+-        (12250819, '073a6003b71b362ef9634a15aa547ad03382d1ce435352472c15b00acc08118e'),
+-    'fresh_sqrt5_marked_reallocation_proposal_20261016':
+-        (5573030, '05b70bd51cb70ed3b52628a8b76fc4e8a2e0f2a2ea28145f6621efeb4d39f35c'),
+-    'fresh_sqrt5_mixed_forced_base_transfers_20261017':
+-        (17029840, '3a00e69f8018e0edd362d9d5376f45b529a2e0ddeadeaafaf89774ca10f0ae49'),
+-    'fresh_sqrt5_nonsingular_attachment_search_20261015':
+-        (11468919, '9031c56fad9fb8f275dda1f7fc7b9a8183f2f507277a3b4fcb1643da67bf65d4'),
+-    'fresh_sqrt5_nonsingular_rank29_exhaustion_20261015':
+-        (22140451, '0ed589406c00c34cda709eb4e44bf3b0784c8bef9ce2e71aa6163cf9ffba9175'),
+-    'fresh_sqrt5_parameter_weight_stress_20261015':
+-        (9956662, '0c9aa92be3bde7ea364e9ddb211877e2415acd5cdede3c046182c7d07f492507'),
+-    'fresh_sqrt5_parameter_weight_stress_20261015_cross':
+-        (10889953, '3b1242b49eac342017023ac028654865feacf07745d7ebdacacf62dc71c1e84a'),
+-    'fresh_sqrt5_pointed_simplex_base_capacity_20261017':
+-        (7057104, '4711967b80d2613f4df30d6c1b912321e106ff078f238744ab2df2e697ff2ddc'),
+-    'fresh_sqrt5_quad_contacts_20261015':
+-        (8114001, '2e279d3f513d23f394d11061cc0ed3393584abe9d75a8ac054c9016703e9f11b'),
+-    'fresh_sqrt5_quad_exhaustion_20261015':
+-        (5952291, '9a065eb3c77ba46ae4d6627f3c0275e10144f815b4429ce3fa52585d0e7b9481'),
+-    'fresh_sqrt5_rank13_dotted_b1_quad_cores_20261017':
+-        (14661566, 'ca3a486ff2ed90317a345919b07e2c2f6796d29f1536b67f936301f31f777aa7'),
+-    'fresh_sqrt5_rank13_double_h4_triangle_separation_20261017':
+-        (10332433, 'ad17ac3f4d79a4d5a2d5d3e4f7f6036571d244e97d4257679eb04ef7b30b6f94'),
+-    'fresh_sqrt5_rank13_five_core_spectators_20261017':
+-        (6751630, 'a85ee6c8f13f68ed7c581531c3dbcba1302308cc0bbfc04e3c880a739233cc95'),
+-    'fresh_sqrt5_rank13_high_ade_endpoints_20261017':
+-        (22328165, 'b3ef28a3643d3bc658b64cad89f0a22c70319c9b76d1ad4f666313dd606a20af'),
+-    'fresh_sqrt5_rank13_known_representative_payments_20261017':
+-        (15506070, 'fe6b754f27085c00c1cac5c7a85773516e68b5143fcabf2f64dc1f006ef27d1e'),
+-    'fresh_sqrt5_rank13_packing_all_star_separation_20261017':
+-        (8449722, 'dd653305a57800aa52f5179065a52615b3b1e3c3be5689b0a9640fd849496649'),
+-    'fresh_sqrt5_rank13_triangle_discriminant_gate_20261017':
+-        (18476671, '734eab7f9c58218d53fa85b652f3b5cf19d983cc8e54e58c73daa5b69d36ba9d'),
+-    'fresh_sqrt5_rank13_triangle_dual_core_20261017':
+-        (6192592, '38aa38e7b86fe814924439eded0cc66e016a334a6f7112acc1b4bdec2c4023c3'),
+-    'fresh_sqrt5_rooted_component_completion_20261015':
+-        (9652469, 'f7849451330b74167c9674a42d8c6cc5b0a7693ddc2304ef269775314d3da2eb'),
+-    'fresh_sqrt5_triangle_extension_complete_20261016_rank22':
+-        (14733189, 'd0ba928baf794b7b3bf6bdbfe821978d42b4bad1b6056cef5be33eb877ac7901'),
+-    'fresh_sqrt5_uniform_face_weights_20261015_rank29':
+-        (8045982, '2b888506db3a7a1a5d18b3c9c1bf8fe59d012e02a55fcbc64f382788088ad477'),
+-    'fresh_sqrt5_universal_self_edges_20261016':
+-        (6762975, 'b53b7ea2703db62eb61348bddc3342f0c1c5ec70057391fa65fbd2554436af72'),
+-    'fresh_sqrt5_vertex_refined_base_capacity_20261017':
+-        (6870592, '09ca1c294750aaa39a16223b5100bc19108bf69561ff8b779d913479aa2b6e2e'),
++    'data/enumerations/fresh_h9_dotted_seed_caps_m4_20261013_scout.json': (90102320, '42c0f9cc2feeb40e0cd87f288aa822c10b8624bcdf57282bacd40952f4498e0b'),
++    'data/enumerations/fresh_h9_three_norm_seed_20261013_scout.json': (76388953, 'b5f72837666de3fa071dbef53b210c773d6fb331b74085ec2a9ea1c440513787'),
++    'data/enumerations/fresh_h9_asymmetric_four_labels_20261013_scout.json': (75239720, '2c7c84b4e88391d7e607e19895584b6ec87d130fa01a34aedebcd71c47434ea0'),
++    'data/enumerations/fresh_h9_split_endpoint_families_20261013_scout.json': (64421765, '7e314f912be5d308e830e974cfe23671c44dc41082223c1913171cff6b4d5f56'),
++    'data/enumerations/fresh_h9_asymmetric_four_labels_20261013_selection_scout.json': (29692145, 'e55bb9b10125c3ec804b4b710cd4960255ad647278139b8a8e391f1a0d152862'),
++    'data/enumerations/fresh_h9_face_bridge_20261013_scout.json': (25492072, '592e3cc5c8f1a9f0ebae444a136ffeceaf4d58897fea5539c5715c4a7b04e6a5'),
++    'data/enumerations/fresh_h9_asymmetric_intersections_20261013_scout.json': (25149934, 'd93e24522281b79c9ec5c9b84ee222dc28c43487239943d627bb96a103dcfb4f'),
++    'data/enumerations/fresh_h9_h5_closure_20261013_endpoint_scout.json': (22575194, '8a21511ce4164a71681e0d0aa53ffaf84e65631c327a4a184557419ca95f676a'),
+ }
+ 
+ 
+@@ -299,17 +77,33 @@
+     require(hashlib.sha256(manifest).hexdigest() ==
+             '8a0973d7b7ef08231e199bee9f04f45c6a8dc01ba66ca8de8acb2d8e513ee7b7',
+             'Current terminal manifest changed')
+-    require(not any(x['path'] == 'results/'+name+'.json'
++    require(not any(x['path'] == name
+                     for x in json.loads(manifest)['inputs'] for name in FILES),
+             'A current terminal input must not be archived')
+-    archive = ROOT/'formal/.proof-batches/parked_search_json_archive_20261025'
+-    receipt = ROOT/'results/parked_search_json_streamed_archive_20261025.json'
++    def check_input_registers():
++        pins = {}
++        for register in sorted((ROOT/'results').glob('finite57*inputs*.json')):
++            with register.open('rb') as inp:
++                data = inp.read(131073)
++            require(len(data) <= 131072, 'Bounded metadata input register required')
++            doc = json.loads(data)
++            if not isinstance(doc, dict) or 'inputs' not in doc:
++                continue
++            require(isinstance(doc['inputs'], list), 'Input register entries must be a list')
++            paths = {row['path'] for row in doc['inputs']}
++            require(not set(FILES) & paths, 'A current input must not be archived')
++            pins[str(register.relative_to(ROOT))] = hashlib.sha256(data).hexdigest()
++        return pins
++    registers_before = check_input_registers()
++    archive = ROOT/'formal/.proof-batches/parked_enumeration_json_archive_20261025'
++    receipt = ROOT/'results/parked_enumeration_json_streamed_archive_20261025.json'
+     require(not archive.exists() and not receipt.exists(), 'New maintenance targets required')
+     with (ROOT/'formal/.proof-batches/exclusive.lock').open('a') as lock:
+         fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+         sources = []
+         for name, (size, digest) in FILES.items():
+-            p = ROOT/f'results/{name}.json'
++            p = (ROOT/name).resolve()
++            require(p.is_relative_to(ROOT/'data/enumerations'), 'Only selected parked data paths')
+             require(p.is_file() and not p.is_symlink() and p.stat().st_size == size,
+                     'Exact unused historical-result path/size required')
+             git = subprocess.run(['git', '-c', 'core.packedGitWindowSize=8m',
+@@ -323,7 +117,7 @@
+         records = []
+         verified_archives = []
+         for name, source, size, expected, before in sources:
+-            target = archive/(name+'.json.gz')
++            target = archive/(Path(name).name+'.gz')
+             original_hash = hashlib.sha256()
+             count = 0
+             with source.open('rb') as inp, target.open('xb') as out:
+@@ -369,6 +163,7 @@
+             require(identity(source) == before, 'Object changed before removal')
+         with (ROOT/'results/finite57_terminal_adapter_inputs_small_affine_20261025.json').open('rb') as inp:
+             require(inp.read(65537) == manifest, 'Terminal manifest changed before removal')
++        registers_after = check_input_registers()
+         for target, verified in verified_archives:
+             require(identity(target) == verified, 'Archive changed before original removal')
+         for name, source, size, expected, before in sources:
+@@ -381,9 +176,11 @@
+                   'original_raw_path_archived': True,
+                   'scientific_byte_contents_preserved': True,
+                   'current_terminal_manifest_110_inputs_unchanged': True,
++                  'input_registers_before': registers_before,
++                  'input_registers_before_removal': registers_after,
+                   'scientific_or_lean_execution': False,
+                   'proof_admission_policy_changed': False,
+-                  'restore': 'Stream gzip decompression to its original results path; verify the recorded SHA256 before use. The current110-input terminal manifest does not use this historical result.',
++                  'restore': 'Stream gzip decompression to its original data/enumerations path; verify the recorded SHA256 before use. The current110-input terminal manifest does not use this historical result.',
+                   'monitor_precision': 'Sampled256MiB group RSS and20GiB/3GiB storage floors every0.2s; each1MiB block checks owner/deadline. No mathematical admission policy changed.'}
+         with receipt.open('x') as out:
+             json.dump(result, out, indent=2)

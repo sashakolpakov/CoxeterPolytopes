@@ -1,0 +1,125 @@
+--- frozen-foundation-6ee917c0.tex
++++ local-repairs-successor.tex
+@@ -181,16 +181,20 @@
+ 
+ \begin{lemma}[Future-point pressure]
+ \label{lem:pointpressure}
+-Suppose \(\xi=A p-U\) is future timelike, \(\xi^2=-k<0\),
++Suppose \(U\in p^\perp\), \(\xi=A p-U\) is future timelike
++with \(\xi^2=-k<0\),
+ and its normalization is feasible against every actual wall.
+ Then the same original vector satisfies
+ \[
+  \ip{x}{U}\geq A-\sqrt{k}.
+ \]
+-At a vertex with all-point comparison factor \(\kappa\), the
+-corresponding inequality is \(\ip{y}{U}\geq A-\kappa\sqrt{k}\).
++At a different actual vertex \(q\), use the decomposition
++\(\xi=Aq-U\) with \(U\in q^\perp\). With all-point comparison
++factor \(\kappa\), the corresponding inequality is
++\(\ip{y}{U}\geq A-\kappa\sqrt{k}\).
+ \end{lemma}
+ \begin{proof}
++The spatial hypothesis gives \(A=-\ip{p}{\xi}>0\).
+ Apply \eqref{eq:allpoint} to \(\xi/\sqrt{k}\):
+ \(-\ip{z}{\xi/\sqrt{k}}=E(A-\ip{x}{U})/\sqrt{k}\leq E\).
+ The modified comparison is the identical calculation.
+@@ -341,16 +345,20 @@
+ \[
+  Q=Z-\sum_i t_iP_i,\qquad W=w+\mu Q.
+ \]
+-Before using pressures check every \(b_i-\mu t_i\geq0\).
++Before using pressures require \(\mu\geq0\) and check every
++\(b_i-\mu t_i\geq0\).
+ Then
+ \begin{equation}
+ \label{eq:payment}
+- \ip{x}{W}>A_w+\mu(h-\sum_i t_i a_i),\quad
++ \ip{x}{W}\geq A_w+\mu(h-\sum_i t_i a_i),\quad
+  \norm{W}^2=\norm{w}^2+2\mu\ip{w}{Q}+\mu^2\norm{Q}^2.
+ \end{equation}
+ The available price \(b_i\) is individual to anchor \(i\).
+-For multiple corrections, their combined debit at each anchor
+-and all mutual cross terms must be retained.
++The first inequality is strict if some strictly constrained old
++anchor retains a positive coefficient, or if \(\mu>0\) and the
++new pressure is strict. For multiple corrections every new weight
++must be nonnegative; their combined debit at each anchor and all
++mutual cross terms must be retained.
+ 
+ Put \(P_i=e_1+\cdots+e_i\), \(S_i=\ip{x}{P_i}\).
+ If selected indices satisfy \(S_i>f_i\), concave interpolation
+@@ -3601,15 +3609,20 @@
+  \quad
+  \Delta>2.667-.338-11H_6/12>.327.
+ \]
+-The deficits increase with \(\gamma\):
++These bounds subtract fixed radical caps from an increasing
++time-minus-linear envelope; they do not assert that the actual
++deficit, with its varying radical, increases. Indeed
++\(A_{\mathrm{far}}-H_6(5\gamma/6+1/12)\) increases because
+ \[
+  (A_{\mathrm{far}}')^2-120/17
+        =1105/(289A_{\mathrm{far}}^2)>0,\qquad
+  \sqrt{120/17}>5H_6/6.
+ \]
+-The near time is larger with the same radical and
+-reference pairing. These inequalities therefore
+-cover all finite/dotted intervals and both orientations.
++Subtract the uniform cap \(1/4\) from that envelope starting
++at \(\gamma=.9\), or the uniform cap \(.338\) starting at
++\(\gamma=1\), respectively. The near time is larger with
++the same cap and reference pairing. This proves the displayed
++lower bounds on all finite/dotted intervals and both orientations.
+ 
+ For one weak end, the far projection instead uses
+ \((5\gamma/6)\omega_6+\omega_{12}/10\).
+@@ -4436,10 +4449,16 @@
+ so its deficit exceeds \(.456\).
+ For finite owns at least seven,
+ \(A_{\rm far}(.9)^2=334/65>2.266^2\);
+-the pairing is \(1.60125\), radical at most \(1/4\),
+-giving deficit \(>.41475\).
+-Its deficit increases because
+-\((A_{\rm far}')^2-80/13=585/(169A_{\rm far}^2)>0\).
++the pairing envelope at \(\gamma=.9\) is \(1.60125\).
++The envelope \(A_{\rm far}-(5b/6)\gamma-a/10\) increases because
++\[
++ (A_{\rm far}')^2-80/13=585/(169A_{\rm far}^2)>0,
++ \qquad \sqrt{80/13}>5b/6.
++\]
++Subtracting the uniform radical cap \(1/4\) gives
++deficit \(>2.266-.25-1.60125=.41475\) throughout this
++finite-own interval. Monotonicity of the actual radical-dependent
++deficit is not required.
+ Near times are larger and pairings smaller.
+ Uniformly \(\Delta>.4\).
+ In particular the far-native-five pairing is
+@@ -4802,7 +4821,8 @@
+ rational increment floors and permitted omission
+ losses in the prefix proof.
+ 
+-If an actual point/core gives \(\ip{x}{V}\geq G\),
++For \(K=8,\ldots,12\), if an actual point/core gives
++\(\ip{x}{V}\geq G\),
+ \(V\) equals \(1\) on the first \(K\) coordinates,
+ and \(V^2\leq R\), pay \(\mu=1/7\) at that
+ individual terminal price. The residual \(V-P_K\)
+@@ -4815,6 +4835,17 @@
+ The weak-\(5\) interpolation has higher energy
+ and no larger endpoint. No extra overlapping
+ first-coordinate gain is added to it.
++At \(K=13\) use only a nonnegative weight \(\mu\)
++within its actual individual capacity \(\beta_K\); the corresponding
++formula is
++\[
++ e_{\rm classical}>
++ q_K+2\mu(G-f_K)-\mu^2(R-K),\qquad 0\leq\mu\leq\beta_K.
++\]
++The other strong reference anchors retain positive coefficients,
++which supplies strictness. The \(K=13\) data above are used in
++the later \(B_{17}\) extension with its separately funded new
++slope \(<.39/3=.13<7/50\), not with weight \(1/7\).
+ 
+ \subsection{\(B_{16}\) with ordinary \(T_2\)}
+ At \(i=13\), deletion retains \(A_{12}+B_3\).

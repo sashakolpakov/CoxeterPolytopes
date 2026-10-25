@@ -1,0 +1,151 @@
+{
+  "schema": "working-consolidated-tex-display-delimiter-equivalence-v1",
+  "date": "2026-10-25",
+  "status": "SOURCE_ONLY_FIVE_MISSING_DISPLAY_CLOSES_REPAIRED_FOR_ROOT_REVIEW_AND_COMPILE",
+  "prepared_by": "/root/finite57_release_audit/provider_occurrence_finite",
+  "scope": "Only the two working compact17 consolidated source copies were edited. The arithmetic15 copies were inspected and preserved unchanged. No canonical accepted edition was edited.",
+  "actual_failure": {
+    "path": "results/compact17_consolidated_tex_attempt2_execution_20261025.stdout",
+    "sha256": "1adcd28a3ec5777612b68798dd68120a7df5d667bfe01601519ef3c8914c8159",
+    "source_sha256": "b1f72f4556b704536621e08cc3d2bbff57f96681fc0c1cedd3ab3ca448377b5e",
+    "observed_error": "Bad math environment delimiter at old source line7586: a new inline math opener follows prose after a gathered display whose closing backslash-bracket was absent.",
+    "executed_success_claimed": false
+  },
+  "preserved_preimages": {
+    "manifest": "results/source_archive/before_consolidated_display_delimiter_repair_20261025/manifest.json",
+    "sha256": "e51b06f0f5c6479231bb6c5bdffe1ab03bf54bf2c0f56c7fe1296fb45068e44b",
+    "bytes": 1794,
+    "lines": 36,
+    "copied_before_edits": true
+  },
+  "exact_diff": {
+    "path": "results/consolidated_display_delimiter_repair_20261025.diff",
+    "sha256": "62944333ac80d7e4dd1a3a1f92b541b2fc0afcda02acf8be7b43fba1cf9c9988",
+    "bytes": 2774,
+    "lines": 84
+  },
+  "changes": {
+    "inserted_token": "\\]",
+    "insertions_per_compact_copy": 5,
+    "old_source_gathered_end_lines": [
+      7585,
+      21917,
+      24452,
+      24521,
+      24921
+    ],
+    "new_source_closing_display_lines": [
+      7586,
+      21919,
+      24455,
+      24525,
+      24926
+    ],
+    "reason": "Each gathered block already ends its mathematical body and is followed by prose. Close the enclosing displayed math before that prose.",
+    "mathematical_bodies_changed": false,
+    "numerical_tokens_changed": false,
+    "tag_or_label_tokens_changed": false,
+    "arithmetic_source_modified": false
+  },
+  "records": [
+    {
+      "path": "manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex",
+      "archive": "results/source_archive/before_consolidated_display_delimiter_repair_20261025/manuscripts__revisions__compact_farthest_vertex_bounds_consolidated.tex",
+      "before_sha256": "b1f72f4556b704536621e08cc3d2bbff57f96681fc0c1cedd3ab3ca448377b5e",
+      "after_sha256": "8ce2b23e3449fc77d6a511c0cde9e9fa16812cedf5c8c6efdd7d2f493ca936da",
+      "bytes_before": 933050,
+      "bytes_after": 933065,
+      "lines_before": 25167,
+      "lines_after": 25172,
+      "source_modified": true,
+      "inverse_or_unchanged_byte_identity_verified": true
+    },
+    {
+      "path": "manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex",
+      "archive": "results/source_archive/before_consolidated_display_delimiter_repair_20261025/manuscripts__revisions__compact_arithmetic_dimension_bound_consolidated.tex",
+      "before_sha256": "fd637e7c19aa37e67b3c493190a081bb2183c43b03cb434f3d11100c07584aee",
+      "after_sha256": "fd637e7c19aa37e67b3c493190a081bb2183c43b03cb434f3d11100c07584aee",
+      "bytes_before": 695022,
+      "bytes_after": 695022,
+      "lines_before": 20654,
+      "lines_after": 20654,
+      "source_modified": false,
+      "inverse_or_unchanged_byte_identity_verified": true
+    },
+    {
+      "path": "manuscripts/compact_farthest_vertex_bounds_consolidated.tex",
+      "archive": "results/source_archive/before_consolidated_display_delimiter_repair_20261025/manuscripts__compact_farthest_vertex_bounds_consolidated.tex",
+      "before_sha256": "b1f72f4556b704536621e08cc3d2bbff57f96681fc0c1cedd3ab3ca448377b5e",
+      "after_sha256": "8ce2b23e3449fc77d6a511c0cde9e9fa16812cedf5c8c6efdd7d2f493ca936da",
+      "bytes_before": 933050,
+      "bytes_after": 933065,
+      "lines_before": 25167,
+      "lines_after": 25172,
+      "source_modified": true,
+      "inverse_or_unchanged_byte_identity_verified": true
+    },
+    {
+      "path": "manuscripts/compact_arithmetic_dimension_bound_consolidated.tex",
+      "archive": "results/source_archive/before_consolidated_display_delimiter_repair_20261025/manuscripts__compact_arithmetic_dimension_bound_consolidated.tex",
+      "before_sha256": "fd637e7c19aa37e67b3c493190a081bb2183c43b03cb434f3d11100c07584aee",
+      "after_sha256": "fd637e7c19aa37e67b3c493190a081bb2183c43b03cb434f3d11100c07584aee",
+      "bytes_before": 695022,
+      "bytes_after": 695022,
+      "lines_before": 20654,
+      "lines_after": 20654,
+      "source_modified": false,
+      "inverse_or_unchanged_byte_identity_verified": true
+    }
+  ],
+  "equivalence": {
+    "inverse_description": "Delete only the five newly inserted compact display-close lines at their exact recorded new positions. The byte stream then equals the preserved b1f72 preimage. Both arithmetic copies equal their fd637 preimages without transformation.",
+    "compact_inverse_byte_roundtrips": 2,
+    "arithmetic_unchanged_byte_comparisons": 2,
+    "root_revision_byte_identical_pairs": 2,
+    "earlier_interval_prefix_and_alignment_and_cross_paper_citation_repairs_preserved": true,
+    "previous_repair_receipt": {
+      "path": "results/consolidated_alignment_syntax_equivalence_20261025.json",
+      "sha256": "3dc887f63d86eb3c909e41ff0aae44c31f4bd8816551e3c0c496d6280c6424ff"
+    }
+  },
+  "static_inspection": {
+    "full_source_scope": "All unescaped display/inline backslash delimiters, single-dollar delimiters, outer mathematical environments and gathered/split/aligned/array/cases/smallmatrix/pmatrix begin/end tokens in both complete revision sources. No verbatim environments, double-dollar delimiters or mathematical tokens inside source comments were found.",
+    "arithmetic": {
+      "source_sha256": "fd637e7c19aa37e67b3c493190a081bb2183c43b03cb434f3d11100c07584aee",
+      "math_token_events": 21218,
+      "unresolved_delimiter_or_environment_nesting_issues": []
+    },
+    "compact": {
+      "source_sha256": "8ce2b23e3449fc77d6a511c0cde9e9fa16812cedf5c8c6efdd7d2f493ca936da",
+      "math_token_events": 29588,
+      "unresolved_delimiter_or_environment_nesting_issues": [],
+      "manually_reviewed_text_local_math_contexts": [
+        {
+          "line": 7040,
+          "context": "Two local inline math pairs inside the text argument of an equation; unchanged."
+        },
+        {
+          "line": 7170,
+          "context": "One local inline math pair inside a text argument of displayed math; unchanged."
+        },
+        {
+          "line": 7689,
+          "context": "One local inline math pair inside the text header of an array; unchanged."
+        }
+      ]
+    },
+    "local_text_argument_inline_tokens_counted_separately": 8,
+    "tags_inside_gathered_left_unchanged": true,
+    "previous_all_split_alignment_review_preserved": true,
+    "scope_limit": "A lexical source review identifies these five missing closes and checks delimiter/environment nesting. It does not establish exhaustive TeX validity or a successful PDF build."
+  },
+  "executions": {
+    "mathematical_jobs_run": 0,
+    "repository_modules_imported": 0,
+    "tests_or_syntax_compilers_run": 0,
+    "tex_compiles_run_by_this_lane": 0,
+    "git_operations_run": 0,
+    "root_owns_all_compiles": true,
+    "matching_pdfs_established_by_this_receipt": false
+  }
+}

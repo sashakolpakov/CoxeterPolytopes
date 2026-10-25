@@ -1,0 +1,73 @@
+{
+  "status": "PASS_STRICT_SPHINX_CURRENT_PROOF_CURATION_GUIDES",
+  "date": "2026-10-25",
+  "actual_stdout": "results/current_proof_curation_guides_strict_sphinx_20261025.stdout",
+  "stdout_sha256": "898fe4dcc5091a2fab305bb36134c9b05b8b82ec4e78909b6e4c89694e0f3b18",
+  "warnings": 0,
+  "watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/site-proof-curation-20261025"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 96223232,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 34402250752,
+      "ram_available_bytes": 5124227072
+    },
+    "seconds": 2.041
+  },
+  "source_snapshot": {
+    "path": "results/current_proof_curation_guides_sphinx_source_snapshot_20261025.json",
+    "sha256": "ed3a85c17d0496a3bf93acff504987ef41e66e55e2a1700d948dd1f0dcd78fda"
+  },
+  "observed_before_and_after_source_hashes": {
+    "docs/current_bounds_and_verification.md": "7a31add902335e7282e2f2bb742717febb29862a223f76924c1c47b4b96defd3",
+    "docs/finite_volume57_lemma_map.md": "c6835906c9a49ce954c49e3570d6cf7835338daadcfea2fc75bc48322383f726",
+    "docs/local_evidence_storage_20261025.md": "d9dea9253bd979629e2bb2ca33d66df0fd8c525cfd6ee8d91422066898fe1dc2",
+    "docs/site/index.rst": "690b65b9605d3b934d3832623842b49e74790ac13396cfed448a29fdce699c69",
+    "docs/site/methods.rst": "af62437882c374596144379b84a44d1ccc52bf1c117b28734df47b16f7542ee4",
+    "docs/site/papers.rst": "63c300207cdcc05c6c2c719c9af85168e2a0ed1385b1bdf5a71c31bafeb3584a",
+    "docs/site/reproducibility.rst": "9ff046a7d0cc40d62d21c873ce92ac1ef41e804546239673150fcb08ece976c9",
+    "docs/site/scope.rst": "353dfbad02ab20b0dee27aa98d259d0da4d297e3f13f0fa037f3fc5f2a4ce63c",
+    "docs/site/verification.rst": "3b348d4abb2e35c231fdacc5a02889cc6db0510f94e74bbe94878fbc5bea7ffa",
+    "docs/site/conf.py": "f4f019514d3253e42f24202ef65ea9783c00c77d6e79188f42908a505cd577ab"
+  },
+  "actual_rendered_downloads": [
+    {
+      "source": "docs/current_bounds_and_verification.md",
+      "rendered_path": ".publication/site-proof-curation-20261025/_downloads/92b38dd516fdac8f676b86e66c51e55a/current_bounds_and_verification.md",
+      "sha256": "7a31add902335e7282e2f2bb742717febb29862a223f76924c1c47b4b96defd3",
+      "byte_equal": true
+    },
+    {
+      "source": "docs/finite_volume57_lemma_map.md",
+      "rendered_path": ".publication/site-proof-curation-20261025/_downloads/3ae35512ea94fd8c8c86e80f7567d375/finite_volume57_lemma_map.md",
+      "sha256": "c6835906c9a49ce954c49e3570d6cf7835338daadcfea2fc75bc48322383f726",
+      "byte_equal": true
+    }
+  ],
+  "rendered_verification_html_sha256": "ff7ac7bb939a98717e90dd6ee837802f07d4a6237271d9b8db3f7917c7bf0af1",
+  "owned_generated_site_removed_after_batch": true,
+  "documented_curation_review": {
+    "path": "results/review_finite57_current_ten_premise_curation_metadata_20261025.md",
+    "sha256": "afca388ac8488edf3308c1d2f828f2e78ae375c0aa10f2daeffe44e6217794c2",
+    "root_read_scope": "Full49-line independent metadata review; ten candidate records and selected/final identity preserved, nine actual rows unchanged, provider applicability still unaccepted. This is separate source review, not checked by Sphinx."
+  },
+  "mathematical_checks_launched": false,
+  "new_Lean_or_TeX_run": false,
+  "actual_Git_index_audited": false,
+  "commit_or_push": false,
+  "scope": "Changed documentation and exact current downloadable guides only. Required current-rule runtime batches, targeted Lean/audits, matching PDFs and final publication gates remain pending."
+}

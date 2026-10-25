@@ -1,5 +1,13 @@
 # Arithmetic dimension sixteen: conditional composition logic
 
+Current execution status: the [source-bound manifest](../results/lean_arithmetic16_composition_verification_20261022/manifest.json)
+records successful bounded compilation and a **separate actual three-declaration
+axiom audit**. The unchanged source and its27 ordinary proof parameters retain
+that original conditional scope; no successful module was rerun. This is not
+formalization of the revised arithmetic15 paper or of its geometry.
+
+The following source-preparation status is retained as historical text:
+
 **SOURCE PREPARATION ONLY: UNCOMPILED, with ZERO actual axiom-print
 outputs.** No import, compiler, test, scientific worker, census, Lean or
 TeX job was run in preparing this source or map. The three print requests

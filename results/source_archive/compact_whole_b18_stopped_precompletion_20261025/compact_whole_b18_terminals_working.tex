@@ -1,0 +1,589 @@
+% UNINTEGRATED WHOLE-B18 WORKING APPENDIX, 24 October 2026.
+% Same existing general compact paper family; not a standalone paper.
+% Source-only transcription in progress. Remaining bodies are listed at end.
+% No compilation, worker import, test or scientific execution has occurred.
+
+\section{Terminal walls in a whole \(B_{18}\) diagram}
+\label{app:wholeB18}
+Fix the original strict interior unit point \(z\) and an original
+farthest vertex \(p\), and assume that the entire incident diagram
+is \(B_{18}\). Normalize the actual old normals by
+\[
+ n_i=(e_i-e_{i+1})/\sqrt2\quad(1\leq i\leq17),\qquad n_{18}=e_{18}.
+\]
+Write
+\[
+ p^2=-1,\qquad z=E(p-x),\qquad E>0,\quad x\perp p,\quad
+ x_1>\cdots>x_{18}>0,\quad \norm x^2<1.
+\]
+For \(P_i=e_1+\cdots+e_i\), put
+\[
+ S_i=\ip x{P_i},\qquad f_i=\sqrt i-.58/\sqrt2,\qquad
+ d_K=\sqrt K-\sqrt{K-1}.
+\]
+The actual duals are \(\omega_i=\sqrt2P_i\) for \(i\leq17\)
+and \(\omega_{18}=P_{18}\). In particular
+\(\ip{\omega_i}{\omega_j}=2\min(i,j)\) for \(i,j\leq17\).
+An index is strong when \(S_i>f_i\); equality belongs to the weak case.
+There are no old spectator directions. All subsequent references
+in the original frame concern this one vector \(x\).
+
+We use the actual positive projection and future-point pressure lemmas
+already proved in the main text. Their hypotheses will be checked for
+each point below. A positive correction on actual old normals leaves
+every unknown wall inequality nonpositive by acuteness. A spacelike
+corrected normal is used only inside its positive finite projection;
+it is never normalized as a chamber point.
+
+\subsection{The early window and actual head pressures}
+\label{app:B18bulk}
+Deleting \(i\), \(5\leq i\leq14\), retains
+\(A_{i-1}+B_{18-i}\), with both ranks at least four.
+The finite one-node list consists of isolation; one left end bond
+of label three or four; a left \(D\) or permitted \(E\) position;
+one right long-end simple bond; or an end-to-end bridge.
+Two contacts on one retained component create a cycle. A joined
+rank-eighteen diagram is classical; exceptional types add no case.
+The right \(B_3\) at \(i=15\) additionally allows its short-end
+simple bond, and the right \(B_2\) at \(i=16\) allows either end.
+These last roles will be checked separately.
+
+For an actual edge with \(C=\cosh L=qR\), \(q=\sqrt{2i}\),
+clearing the positive denominators of its directional pressure
+shows that
+\[
+ R>T(q):=\frac{50}{29}
+    -\frac{q-29/50}{q(2q-29/50)}
+ \quad\Longrightarrow\quad S_i>f_i.
+\]
+The function increases for \(q\geq\sqrt{10}\), and substitution gives
+\[
+ T(q)<83/50\ (q<7),\qquad
+ T(q)<801/500\ (q<15/4),\qquad
+ T(q)<159/100\ (q<16/5).
+\]
+The finite-white Schur calculations have the following complete
+non-helper bounds; \(\phi=(1+\sqrt5)/2\).
+\[
+\begin{array}{c|l}
+\text{role}&\text{lower bound for }R\\ \hline
+\text{left near three, own at least five}
+ &[i(\phi+1)-1]/\sqrt{2i(i+1)}\\
+D\text{ position}&(i\phi/2+1)/\sqrt{2i}\\
+E\text{ position}&2\phi/2+3/8\\
+\text{right long three, positive remaining own}
+ &1+1/\sqrt2\\
+\text{right }B_3\text{ short three, positive own}
+ &1+1/\sqrt2\\
+\text{end-to-end bridge}&(i+1)/\sqrt{2i}.
+\end{array}
+\]
+The near-three bound increases with \(i\). At \(i=6\) it is
+\((6\phi+5)/\sqrt{84}>801/500\), which covers \(6,7\);
+at \(i=8\) it exceeds \(83/50\), covering larger \(i\).
+At \(i=5\), every own at least seven gives \(R>5/3\).
+For the \(D\) row, \(i=5\) gives \(R>159/100\), and
+\(i\geq6\) gives \(R\geq2927/1750>83/50\).
+An \(E\) position has \(i\leq8\) and retained residual at most
+\(1/4\). The bridge residual is \(1/(2i)\); its numerator is
+at least \((i+1)/(2i)\), proving the displayed lower bound,
+including own zero. Left label-four roles have the affine
+small-own alternative or the larger direct edge bounds:
+near own three has \(C=(i-1)+i/\sqrt2\).
+The positive-null and impossible-time boundaries in the common
+prefix inventory apply to the actual retained blocks at these
+ranks. For the right long-three own-zero boundary one can also
+see the kernel directly: use coefficient one on the cap and
+old \(i\), two on old \(i+1,\ldots,17\), and \(\sqrt2\) on
+old short \(18\). Every selected product vanishes.
+
+An isolated finite cap has the actual finite/core pressures used
+in the earlier component lemmas. At own five its loss is less than
+\(25/76+5/24<.58\); own seven has loss
+\(1000/4779+9/25<.57\); the remaining finite interval has its
+largest loss at \(i=5\), own eight:
+\(\sqrt{10}+\sqrt2-4<.578\).
+For an isolated dotted cap put \(u=g^{-2}\). Its positive
+reciprocal core gives
+\[
+ \ip x{\omega_i}>\sqrt{2i-u}-\sqrt{u(1-u)}.
+\]
+For \(i\geq6\) the loss is at most
+\[
+ a_i u+\sqrt{u(1-u)},\qquad
+ a_i=\frac1{\sqrt{2i}+\sqrt{2i-1}}<37/250,
+\]
+whose maximum is less than \(.5795\), since
+\(\sqrt{1+(37/250)^2}<1011/1000\).
+Thus only an isolated dotted cap at \(5\) may remain weak.
+
+There is one early near-three exception, own five at \(5\).
+For \(g=\phi/2\), the actual cap has displacement
+\(v=g\omega_5+\omega_4/2\). On the right actual \(H_4\), correct by
+\[
+ w=g(3n_5/2+n_6+n_7/2),\qquad
+ \delta=(5-3\phi)/8>0.
+\]
+The corrected normal is spacelike and its finite projection is
+actual; the extra old \(4\) product is negative, and all unknown
+wall signs follow by positivity. Its pure spatial displacement is
+\[
+ Y=(1/2+3g/4)\omega_4+(g/4)\omega_8,\qquad
+ A^2=(7+13\phi)/2,\quad Y^2=(33+49\phi)/8.
+\]
+The finite-point pressure gives
+\[
+ \ip xY>18/5,\qquad Y^2<281/20,\qquad
+ \sum Y_j<43/5.
+\]
+Independently, the earlier rank-valid \(.61\) prefix lemma supplies
+a strong \(K=11\) or \(12\). Its old floors exceed \(72/25\)
+or \(303/100\). The vector \(Y+(3/4)P_K\) therefore has
+squared demand exceeding squared norm by \(.0401\) or
+\(.78625625\), respectively, a contradiction.
+This use of the earlier lemma concerns \(B_{18}\geq B_{16}\)
+and precedes any new \(.58\) or strong-five conclusion.
+
+Consequently every weak ordinary site is a pure far helper
+\[
+ c_i=A_i p-g\sqrt2P_i-e_1/\sqrt2,\qquad
+ A_i^2=2ig^2+2g-\tfrac12,\qquad
+ \phi/2\leq g<6/5,
+\]
+apart from the isolated dotted \(5\).
+The upper cutoff follows from
+\(R^2\geq4g-2\geq14/5>(83/50)^2\) at \(g\geq6/5\).
+
+For adjacent pure helpers the exact time/dual calculation gives
+\[
+ \ip{c_i}{c_{i+1}}
+ \geq \frac12-g_i g_{i+1}
+           +\frac14(g_i/g_{i+1}+g_{i+1}/g_i)
+ \geq1-g_i g_{i+1}>-11/25.
+\]
+Their actual native gap forces orthogonality. The positive two-cap
+replacement, with every other old wall retained, has positive
+inverse Schur matrix; its weighted loss is less than
+\(7/16+1/(4\sqrt{10})<.58\).
+Thus both sites cannot be weak. This uses their actual new
+parameter range, rather than inclusion in an older weak class.
+In particular some \(K=14\) or \(15\) is strong.
+
+The same actual helper feet give \(x_1>.5455\) at a weak
+helper \(5\). For an isolated dotted weak \(5\), its reciprocal
+core gives
+\[
+ U'=P_5+(u/2)(e_6-e_5),\qquad
+ \ip x{U'}>T'>1.8185,\qquad .4<u<1.
+\]
+Indeed the loss is bounded by
+\(a u+\sqrt{u(1-u)}\), \(a=\sqrt{10}-3<13/80\);
+for \(u\leq.4\) it is less than \(.565<.58\), and globally
+it is less than \(.588\).
+The pressure bound follows from
+\(\sqrt{10}>3.162,\sqrt2<99/70\).
+These are actual point pressures, not assigned floors at weak nodes.
+
+\subsection{Raw references, head isolation and the uniform paid prefix}
+\label{app:B18references}
+A reference \(w\) has support through a strong \(K\), sum \(f_K\),
+actual pressure \(\ip xw>A_w\), and effective energy
+\(L=2A_w-w^2\). Point insertion need not leave \(L=w^2\).
+For a new actual pressure \(\ip xV\geq G\), weight \(\mu\geq0\),
+and \(Y=V-P_K\), the completed-square rule is
+\[
+ \norm x^2>L+2\mu(G-f_K-\ip wY)-\mu^2Y^2,
+ \qquad \mu\leq\beta_K .
+\]
+The inequality is strict when the old strong reference retains
+a positive coefficient. Every use below checks its individual prices.
+
+Let \(d_i=\sqrt{i+1}-\sqrt i\).
+The first-five energy exceeds \(.6668157\), and rational lower
+numerators for \(10^7d_i^2\), \(i=5,\ldots,16\), are
+\[
+ 455488,385186,333704,294372,263340,238230,
+ 217494,200080,185248,172465,161332,151549.
+\]
+For a direct verification, put \(a=4i+2\) and use
+\(d_i^2(a-d_i^2)=1\), whence
+\(d_i^2>(a^2-1)/(a(a^2-2))\).
+Thus the unomitted energies satisfy
+\[
+ E_{14}>.9241299,\quad E_{15}>.9413764,\quad
+ E_{16}>.9575096,\quad E_{17}>.9726645.
+\]
+A missing knot \(j\geq6\) loses less than
+\(1/[32(j-1)^3]\); nonadjacency makes these losses disjoint.
+Their total is less than
+\((1/32)\int_4^\infty t^{-3}\,dt=1/1024\).
+Each terminal capacity is at least \(d_K\).
+
+Before any head payment, the three initial-five cases give the
+following full contracts:
+\[
+\begin{array}{c|cc|c}
+\text{case at five}&L_{14}>&L_{15}>&w_1<\\ \hline
+\text{strong}&.9231&.9403998&.3652\\
+\text{pure helper}&.95255&.96895&.5455\\
+\text{isolated dotted weak}&.9291&.9455&.377 .
+\end{array}
+\]
+In the strong case interpolate through all actual strong floors,
+skipping every weak knot. The first mean is \(f_5/5<.3652\).
+For a helper, interpolate through \((1,.5455),(6,f_6),(K,f_K)\).
+Its first-six energy exceeds
+\(.5455^2+(f_6-.5455)^2/5>.74385\);
+the tails to \(14,15\) exceed \(.2087,.2251\).
+All slopes are positive decreasing.
+
+For isolated dotted weak \(5\), choose strong \(J=6\) or \(7\)
+and a reference constant first \(J\), then straight to \(K\).
+Insert \(\mu[U'-(5/J)P_J]\), with \(\mu=.21,.2\).
+The residual squares are bounded by
+\[
+ 5-u+u^2/2-25/J<77/150,\ 194/175
+\]
+and the deficits exceed \(.119,.221\).
+Its individual \(P_J\) prices are \(.175,1/7\),
+below the capacities \(>.1783,>.1628\) already at \(K=14\).
+The gains exceed \(.027342,.044057\).
+The bare first-\(J\) energies exceed \(.69312,.7139\);
+the tails to \(14\) exceed \(.2087,.1715\) and to \(15\)
+exceed \(.2251,.18825\).
+The full first coordinates are less than
+\[
+ .3399+.21(1-5/6)=.3749,\qquad
+ .31938+.2(1-5/7)<.377.
+\]
+This uses the straight reference for these prices. A curved
+reference with a smaller \(P_6\) capacity is not substituted.
+
+The actual long-head opposite is isolated. Deleting old \(1\)
+retains \(B_{17}\); its finite enlargement is isolation or a
+simple bond to its long endpoint \(2\). In the latter case
+\[
+ v=g\omega_1+\omega_2/2,\qquad A^2=2g^2+2g,\qquad C_1=2g+1.
+\]
+Own zero has zero time; own three is an actual affine triangle.
+Every other own gives \(x_1>\sqrt{\sqrt2-1}>.643\).
+If \(5\) is strong, replace the first-five mean \(<.3652\)
+by this pressure, gaining
+\((5/4)(.643-.3652)^2>.0964\) over \(L_{14}>.9231\).
+If \(5\) is weak, choose strong \(J=6,7\) and interpolate
+through \(1,J,K\); the first energies exceed \(.8034,.8361\)
+and the tails exceed \(.2087,.1715\).
+Each case exceeds one, including isolated dotted weak \(5\).
+Therefore a head has time \(A_H^2=2g_H^2-1\).
+Owns zero, three, four have impossible time; six and parallel
+have the positive actual \(6/3\) and parallel nulls.
+Only own five, finite own at least seven, and dotted own remain.
+
+For later reference, every non-five head has a point pressure
+\(\ip xZ\geq h\), with \(\sum Z_j=1\) and the following
+full local data:
+\[
+\begin{array}{c|c|c|c}
+\text{own}&Z&h&R=Z^2\\ \hline
+\text{finite }\geq7&
+ (1-u/2)(e_1+e_2)+(u-1)e_3&
+ [\sqrt{2-u}-\sqrt{7u-4-3u^2}]/\sqrt2&
+ 3-4u+3u^2/2\\
+\text{dotted}&(1-u/2)e_1+(u/2)e_2&
+ [\sqrt{2-u}-\sqrt{u(1-u)}]/\sqrt2&
+ 1-u+u^2/2 .
+\end{array}
+\]
+Here \(u=g_H^{-2}\); the first row has
+\(1<u\leq\cos(\pi/7)^{-2}\), the second \(0<u<1\).
+Their actual positive cores are
+\(c_H+g_H^{-1}n_1+2(g_H^{-1}-g_H)n_2\)
+and \(c_H+g_H^{-1}n_1\), respectively.
+Their cap product is zero, the stated old-root products are
+nonpositive and all unknown signs follow termwise.
+They are future, giving these pure spatial pressures.
+Both obey
+\begin{equation}\label{app:eq:B18headF}
+ .8h-.16R>.2893.
+\end{equation}
+For native seven, \(.9009<g_H<.901\) gives \(h>.4315,R<.349\),
+and the left side exceeds \(.28936\).
+For finite labels at least eight, \(1<u<1.172\).
+Writing \(D=(u-1)(4-3u)\), the derivative is
+\[
+ \frac{.8}{\sqrt2}\left(-\frac1{2\sqrt{2-u}}
+                 -\frac{7-6u}{2\sqrt D}\right)+.64-.48u.
+\]
+It is negative on \((1,7/6]\); on \([7/6,1.172)\),
+\(\sqrt D>.284\), its positive term is \(<.032\)
+and its other terms total less than \(-.20\).
+At own eight \(h>.4388,R<.373\), giving \(>.29136\).
+For dotted \(u\), the two chords
+\(\sqrt{2-u}\geq1.4142-.379u\) on \([0,1/2]\) and
+\(\sqrt{2-u}\geq1.4494-.4494u\) on \([1/2,1]\)
+give, respectively,
+\[
+ .8h-.16R>
+ .63987152-.0944u-.5657\sqrt{u(1-u)}>.30587152,
+\]
+\[
+ .8h-.16R>
+ .69978064-.2142u-.5657\sqrt{u(1-u)}>.29023064.
+\]
+Use
+\(bu+c\sqrt{u(1-u)}\leq(b+\sqrt{b^2+c^2})/2\),
+with radical bounds \(.5736,.6049\).
+This proves the entire finite and unbounded dotted head seal.
+
++
+\subsection{One uniform paid prefix, without a terminal premise}
+\label{app:B18paidprefix}
+If the head has own five, its actual unit normal is
+\[
+ c_H=A_Hp-(\phi/\sqrt2)e_1,\qquad A_H^2=(\phi-1)/2.
+\]
+A weak pure helper at \(i=5,6,7\) would have mutual magnitude
+\[
+ M_i(g)=A_H\sqrt{2ig^2+2g-\tfrac12}
+             -\frac\phi2(2g+1).
+\]
+This increases in \(g,i\) on the allowed range and
+\(M_7(6/5)<0\), since the positive squared comparison has
+difference \((814\phi-1392)/100<0\).
+An isolated dotted weak \(5\) has own \(h<2\), by its edge
+pressure and \(f_5^2<7/2\). Its increasing mutual magnitude
+\[
+ A_H\sqrt{10h^2-1}-\phi h
+\]
+lies strictly between zero and \(1/4\) for \(1<h<2\):
+the endpoint squared comparisons are
+\((7\phi-11)/2>0\) and \(377/16-(29/2)\phi>0\).
+Both cases contradict actual acuteness or the native gap.
+Thus a native-five head makes \(5,6,7\) strong independently
+of any terminal hypothesis.
+
+The head's actual finite \(H_4\) projection gives
+\[
+ \ip x{P_4/4}\geq h_0,\qquad
+ h_0^2=(\phi-1)/4,\qquad h_0>.39307.
+\]
+At strong \(K=14,15\) the curved reference, omitting every
+nonadjacent internal weak knot, has energies
+\[
+ w_{14}^2>.924016575,\qquad w_{15}^2>.94125107.
+\]
+Indeed the complete raw energies above lose at most
+\((.0112^2+.008^2+.0061^2)/2=.000113325\)
+for \(K=14\), and \(<.00012533\) for \(K=15\);
+these bounds include every permitted hole.
+The \(P_5\) capacity is \(>.151\).
+Pay weight \(.56\) on \(P_4/4-P_5/5\), costing \(.112\).
+Its square is \(1/20\), it is orthogonal to the raw reference,
+and the single-square gain exceeds
+\[
+ 1.12(.39307-.3652)-.56^2/20=.0155344.
+\]
+Hence this initial/head case gives
+\[
+ L_{14}>.939550975,\qquad L_{15}>.95678547.
+\]
+
+All other initial/head cases give larger uniform energies.
+For a non-five head and strong \(5\), pay \(.4(Z-P_5/5)\).
+Its price is \(.08<.151\), and
+\eqref{app:eq:B18headF} gives gain
+\(.2893-.8(.3652)+.032>.02914\).
+For a weak helper \(5\), the raw contracts above already
+give \(L_{14}>.95255,L_{15}>.96895\), with no further head graft.
+
+For isolated dotted weak \(5\), choose strong \(J=6,7\) and
+a curved reference to \(K\), constant first \(J\).
+Its first mean, individual capacity, and the square of
+\(Y_5=U'-(5/J)P_J\) obey
+\[
+\begin{array}{c|ccc}
+J&m<&\beta_J>&Y_5^2<\\ \hline
+6&.3399&.1435&77/150\\
+7&.31938&.1366&194/175 .
+\end{array}
+\]
+The raw first-\(J\) energies exceed \(.69317,.71400\);
+the complete tails to \(14\) exceed \(.2117654,.1732468\)
+after omission losses \(<.000267,.000181\).
+Thus the raw energies exceed \(.9046684,.8870658\).
+At \(15\), the additional increment is \(>.0172465\).
+Let \(Y_H=Z-P_J/J\). The full cross is
+\(\ip{Y_H}{Y_5}=1-5/J\), while
+\(\ip w{Y_H}=\ip w{Y_5}=0\).
+The one vector \(w+.4Y_H+.09Y_5\) spends \(.85/J\),
+below each displayed capacity. Its entire gain is
+\[
+ (.8h-.16R)-.8m+.16/J
+ +.18(T'-5m)-.0081Y_5^2-.072(1-5/J).
+\]
+It exceeds \(.04930,.06699\), respectively. The resulting
+\(K=14\) energies exceed \(.9539684,.9540558\), and the
+\(K=15\) energies exceed \(.9712149,.9713023\).
+The earlier \(.21/.2\) insertion is not also charged.
+
+In every case, therefore, there is one paid reference \(V\),
+supported through a strong \(K=14\) or \(15\), with sum \(f_K\),
+unspent terminal capacity \(\beta_K\geq d_K\), and
+\begin{equation}\label{app:eq:B18uniformprefix}
+ 2A_V-V^2>L_K,\qquad
+ L_{14}=.939550975,\quad L_{15}=.95678547 .
+\end{equation}
+All corrections have zero sum and support through seven.
+Their individual nonnegative coefficients were checked before
+the terminal pressure is used.
+
+We shall also need the following independent implication:
+if \(17\) is strong, the head has own five.
+For a non-five head and strong \(5\), the curved reference to
+\(17\) has energy \(>.97133\), and its head gain \(>.02914\)
+already exceeds one. If \(5\) is a helper, the full curved
+reference gains \(>.74385-.7126=.03125\) in its first six
+coordinates, yielding
+\(E_{17}+.03125-1/1024>1.0029\).
+If \(5\) is isolated dotted, the analogous curved references
+to \(17\) have energies \(>.9530,.9354\); the joint
+head/isolated-five gains just proved exceed \(.04930,.06699\).
+Again the totals exceed one. Thus every non-five head is
+incompatible with strong \(17\). This argument precedes any
+classification of its terminal opposite.
+
+\subsection{Unconditional terminal sums and isolated opposites}
+\label{app:B18sumcutoffs}
+For \(N=16,17,18\), let \(Y=P_N-P_K\).
+It has support after \(K\), square \(N-K\), and zero product
+with the entire corrected reference in
+\eqref{app:eq:B18uniformprefix}.
+Paying the nonnegative weight \(d_K\leq\beta_K\) shows that
+\(S_N\geq G\) would imply
+\[
+ \norm x^2>L_K+2d_K(G-f_K)-(N-K)d_K^2.
+\]
+The rational root bounds
+\[
+\begin{gathered}
+3.60555<\sqrt{13}<3.60556,\quad
+3.74165<\sqrt{14}<3.74166,\\
+3.87298<\sqrt{15}<3.87299
+\end{gathered}
+\]
+give
+\(.1361<d_{14}<.1362,\ .1313<d_{15}<.1314\).
+Every bound follows by positive squares and
+\(d_K=1/(\sqrt K+\sqrt{K-1})\).
+
+For \(S_{17}\geq3.760\), the extra terms are bounded below by
+\[
+ 2(.1361)(.428)-3(.1362)^2=.06085028,\qquad
+ 2(.1313)(.297)-2(.1314)^2=.04346028.
+\]
+Their totals exceed \(1.000401255,1.00024575\).
+For \(S_{18}\geq3.830\), the increments are
+\(.06135384,.04457632\), giving totals
+\(>1.000904815,>1.00136179\).
+Thus
+\begin{equation}\label{app:eq:B18sumbounds}
+ S_{17}<3.760,\qquad S_{18}<3.830,\qquad
+ C_{17}<10.879,\quad C_{18}<9.81 .
+\end{equation}
+The edge cosines use the actual directions
+\(P_N/\sqrt N\):
+\(C_N<(N+G_N^2)/(N-G_N^2)\).
+The two fractions are
+\(31.1376/2.8624<10.879\) and
+\(32.6689/3.3311<9.81\).
+These are simultaneous consequences for the same \(x\),
+not energies added from different references.
+
+An entirely isolated \(17\)-opposite has
+\[
+ c=A p-\sqrt2gP_{17},\qquad A^2=34g^2-1>0.
+\]
+Own zero has negative time. Own three, four, six and parallel
+have positive actual null combinations, respectively,
+\[
+ c+n_{16}+2n_{17}+\sqrt2n_{18},\qquad
+ c+\sqrt2n_{17}+n_{18},\qquad
+ g c+n_{17}+n_{16}/2,\qquad c+n_{17}.
+\]
+Selected products vanish, cap time is positive, and all
+unselected wall products are nonpositive. Compactness forbids them.
+For own five, correct on the actual \(H_4\) by
+\(g(3n_{17}/2+n_{16}+n_{15}/2)\), with positive residual
+\(\delta=(5-3\phi)/8\). The actual finite projection gives
+pressure on \(V=P_{14}+\tfrac34(e_{15}+\cdots+e_{18})\)
+strictly greater than \((A-\sqrt\delta)/(\sqrt2g)\).
+Ordering implies \(\ip xV\leq S_{17}\).
+Since \(A^2=(17\phi+15)/2\), the rational bounds
+\(A>4.61,\sqrt\delta<.136,\sqrt2g<1.145\) give
+\(S_{17}>(4.61-.136)/1.145>31/8\).
+Every finite own at least seven has the positive core
+\(c+g^{-1}n_{17}+2(1-g^2)g^{-1}n_{16}\).
+Its norm is \(-(1-g^2)(4g^2-3)/g^2\), selected cap/own
+products vanish, and the other selected product is negative.
+All unknown wall signs follow from positive actual coefficients.
+With \(u=g^{-2}\in(1,4/3)\), divide its displacement by
+\(\sqrt2g\). Its coordinates are one through fifteen,
+\(2-u\) at sixteen, and \(u/2\) at seventeen and eighteen.
+Its product with \(x\) is at most \(S_{17}\) by ordering.
+The actual pressure is at least
+\(\sqrt{17-u/2}-\sqrt{(7u-4-3u^2)/2}\).
+The first radical exceeds \(4.04\) and the second is at most
+\(1/\sqrt{24}<.2042\); hence \(S_{17}>34/9\).
+All these finite cases contradict the same prefix rule:
+the gains at \(G=34/9\) exceed \(.065,.047\).
+
+For every dotted \(g>1\), put \(u=g^{-2}\).
+The actual future reciprocal core \(c+n_{17}/g\)
+has norm \(-(1-u)\). Its displacement is
+\(U=\sqrt2gP_{17}-n_{17}/g\).
+For \(r=17-K\), choose
+\[
+ Y=U-\sqrt2gP_K,\qquad
+ \nu=d_K/(\sqrt2g),\qquad
+ Y^2=2r/u-2+u.
+\]
+The residual is supported after \(K\), so is orthogonal
+to the entire already paid reference. Its price is
+\(\nu\sqrt2g=d_K\), allowing equality at the terminal.
+The gain is exactly
+\[
+ G_K(u)=\sqrt2d_K\!
+ \left[\sqrt{34-u}-\sqrt{2K}+.58-\sqrt{u(1-u)}\right]
+ -d_K^2(r-u+u^2/2).
+\]
+The chord \(\sqrt{34-u}\geq\sqrt{34}-.0864u\) follows from
+\(\sqrt{34}>5.8309,\sqrt{33}>5.7445\).
+The circle square gives
+\(\sqrt{u(1-u)}\leq1/4+u-u^2\).
+Using \(\sqrt{28}<5.2916,\sqrt{30}<5.4773\),
+the bracket exceeds \(u^2-1.0864u+.8693\) or
+\(u^2-1.0864u+.6836\), both positive.
+Also \(\sqrt2d_{14}>.19247,\sqrt2d_{15}>.18568\).
+Use the upper \(d_K\) only in the negative constant and
+the lower \(d_K\) in \(d_K^2(u-u^2/2)\).
+This gives
+\[
+\begin{split}
+G_{14}(u)&>.183208395u^2-.190576198u+.111662851,\\
+G_{15}(u)&>.177060155u^2-.184483062u+.092398928.
+\end{split}
+\]
+For \(F=au^2-bu+c\), the identity
+\(4a(F-\tau)=(2au-b)^2+4a(c-\tau)-b^2\)
+has positive last constants
+\[
+ \frac{808151227201376}{10^{18}}\quad(\tau=.061),\qquad
+ \frac{244086609159516}{10^{18}}\quad(\tau=.044).
+\]
+Thus the full dotted interval gives gains \(>.061,>.044\),
+and totals \(>1.000550975,>1.00078547\).
+No isolated \(17\)-opposite survives.
+
+% Further proof bodies remain: terminal inventory, finite/dotted far helper,
+% near-six and distinct/common terminal neighbors. No integration yet.
+

@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-24T16:54:28.548674+00:00",
+  "status": "FROZEN_PREDECESSOR_PRESERVED_EXPLICIT_OWN3_WHITE4_COVERAGE_REPAIR_PENDING_FULL_OUTSIDE_SUCCESSOR_REVIEW",
+  "predecessor": {
+    "path": "results/compact17_whole_a16_actual_i_raw_helper_endpoint_crosses_complete_exclusion_candidate_20261024.md",
+    "sha256": "22ba322787dd5f26973662af3a83b942260d1c779d0847fd3ede7bcf9c62abc5",
+    "bytes": 28212,
+    "lines": 624,
+    "preserved_byte_exact_in_place": true
+  },
+  "successor": {
+    "path": "results/compact17_whole_a16_actual_i_raw_helper_endpoint_crosses_complete_exclusion_corrected_candidate_20261024.md",
+    "sha256": "4c641c3f7f34b9e906732b4e98584a0b86ac12a2acfc38173c71fae9d64ef40e",
+    "bytes": 28442,
+    "lines": 628
+  },
+  "only_change": {
+    "old_text": "cycle; the NEAR contact gives its affine triangle. At own>=4,\n",
+    "new_text": "cycle; the NEAR contact gives its affine triangle. Own3 with WHITE4\nis also too long: even its FAR cosine is\nC=(16+sqrt2)/sqrt34>12/5, since (16+1)^2=289>4896/25\n=(144/25)*34. The NEAR expression is larger, and positive Q\nonly increases C. This explicitly disposes of own3/WHITE4. At own>=4,\n"
+  },
+  "diagnosis": "Section9 explicitly dispatched own3 only for simple3 and began its white4 argument at own>=4. The successor explicitly excludes own3/white4 by the FRESH12/5 cutoff. The old13/8 bound is not used.",
+  "math_source_authors": [
+    "Root",
+    "Frog"
+  ],
+  "finding_reviewers": [
+    "Root",
+    "Composition"
+  ],
+  "predecessor_full_pass_claimed": false,
+  "successor_adopted": false,
+  "new_scientific_lean_or_tex_executions": 0,
+  "all_other_source_bytes_unchanged": true
+}

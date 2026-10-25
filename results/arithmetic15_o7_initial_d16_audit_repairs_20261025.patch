@@ -1,0 +1,74 @@
+--- arithmetic15-reviewed122f3-preimage
++++ manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex
+@@ -92,8 +92,8 @@
+ \begin{equation}\label{eq:edge}
+  x\cdot u\ge(\cosh L-1)/\sinh L=\tanh(L/2).
+ \end{equation}
+-More generally a future unit point $q=ap-v$ satisfying every wall
+-of the original polytope gives $x\cdot v\ge a-1$.
++More generally a future unit point $q=ap-v$, with $v\in p^\perp$,
++satisfying every wall of the original polytope gives $x\cdot v\ge a-1$.
+ Distance from $z$ is convex on geodesic segments, so its maximum over
+ the compact polytope is attained at a vertex.
+ For any reference vector $w$,
+@@ -1493,8 +1493,14 @@
+ 
+ \begin{proof}[Proof of Lemma~\ref{lem:D16initial}]
+ All coordinates, caps and comparisons in this proof use the original
+-whole-$D_{16}$ vertex. In particular the two forks always have the
+-signed vectors $(P_{15}\pm e_{16})/\sqrt2$.
++whole-$D_{16}$ vertex. Define its unit-root dual vectors by
++\[
++ \Omega_i=\sqrt2P_i\quad(1\le i\le14),\qquad
++ \Omega_{15}=(P_{15}-e_{16})/\sqrt2,\quad
++ \Omega_{16}=(P_{15}+e_{16})/\sqrt2,
++ \qquad h_i=x\cdot\Omega_i.
++\]
++Thus both genuine signed fork directions are retained.
+ 
+ \paragraph{The coordinate bound before any terminal classification.}
+ The legal rank16 bulk and Lemma~\ref{lem:literal-helper} already
+@@ -1630,7 +1636,15 @@
+ cycle, and no exceptional finite diagram contains this path.
+ There are no foreign components. For positive own put $t=2\gamma$
+ at a white-three contact, $a=2\sqrt2\gamma$ at white four.
+-The raw time square is twice the following unit time square:
++The following table gives UNIT time squares. For a white-three cap
++the helper permits a raw $K$-root of norm two and time square $2A^2$.
++For an isolated fork the reflection-defined raw norm is $2U_f$ and
++its time square is $2U_f(2U_f-1)$. For a white-four cap use a raw
++$K$-root of norm four, with white product $-2$, own product $-a$
++and time square $4A^2$. Indeed, if a $K$-root $r$ makes angle
++$\pi/4$ with an old raw root $\alpha$ of norm two, then
++$(r,\alpha)^2=(r,r)$; rescaling by $2/|(r,\alpha)|$ gives this
++norm-four representative without assuming $\sqrt2\in K$.
+ \[
+ \begin{array}{c|c|c}
+ \text{white contact}&A^2&\text{actual edge cosh}\\\hline
+@@ -1674,7 +1688,7 @@
+ three or four, giving norms $s(3-s)\in(-.2464,0)$ or
+ $s(4-s)\in(2.8336,3)$, both impossible.
+ 
+-At degree four its norm is one, so $s,s-1,s+1$ are units.
++At degree four its absolute norm is one, so $s,s-1,s+1$ are units.
+ For the minimal polynomial $P=X^4-TX^3+BX^2-CX+D$,
+ $D=\pm1$, the real strips force $P(1)=-1$, $P(-1)=1$.
+ Hence $B=-1-D$, $C=1-T$.
+@@ -1772,8 +1786,15 @@
+ 
+ All remaining forks must be endpoint-three. Indeed near-next-three
+ and near-four have cosh at least eleven and greater than twelve.
+-Far-next-three has $t<3/2$, leaving only own three, an affine
+-triangle, or own four, whose conjugate violates its negative time strip.
++Far-next-three has $t<3/2$, leaving only own three or own four.
++Own three gives the actual fifteen-node all-three cycle
++$c,n_2,n_3,\ldots,n_{14},n_f,c$, where $f$ is the released fork.
++The sum $c+n_2+\cdots+n_{14}+n_f$ is null: its positive all-ones
++kernel annihilates every selected unit-Gram row. Its time is the
++positive time of $c$, and acuteness makes its product with every
++other original wall nonpositive. It is therefore a feasible ideal
++ray of the whole chamber, contradicting compactness.
++Own four has a conjugate violating its negative time strip.
+ Far-four has $a<3/2$, leaving only $a=\sqrt2$; its time numerator
+ $2a^2+a$ is positive at $-\sqrt2$, also forbidden.
+ Own zero and parallel were already excluded.

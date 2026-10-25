@@ -1,0 +1,106 @@
+--- results/source_archive/finite57_current_rule_before_priority_and_premise_joins_20261025/check_finite57_current_rule_conjunction_20261025.py	2026-10-25 05:49:04
++++ scripts/check_finite57_current_rule_conjunction_20261025.py	2026-10-25 05:57:25
+@@ -28,6 +28,8 @@
+ S8 = 'scripts/check_finite57_current_s8_applications_20261025.py'
+ UNIVERSAL = 'scripts/check_finite57_current_universal_receivers_20261025.py'
+ OWN = 'scripts/check_finite57_current_rule_conjunction_20261025.py'
++LITERAL = 'scripts/finite57_literal_weights_audit_20261024.py'
++LITERAL_SHA = 'f6eba7af77af50b821e9e99c589388c1352f9ba5a99052aaeee64393f5ada1e0'
+ SELECTED_INPUTS = 'results/finite57_current_rule_selected_inputs_20261025.json'
+ FINAL_INPUTS = 'results/finite57_current_rule_final_inputs_20261025.json'
+ MAX_OUTPUT = 500 * 1024
+@@ -357,7 +359,32 @@
+     U.digest_string(row['physical_context_sha256'])
+ 
+ 
+-def universal_domains(units):
++def old_largeD_priority(mapping,W,units):
++    U.full_key(mapping['key'])
++    theorem=mapping['conditional_whole_face_priority']
++    if theorem is None:
++        return None
++    application=whole_application(mapping['key'],W,units)
++    need(application['theorem']==theorem,
++         'exact OLD largeD full-map conditional priority theorem')
++    return dict(requested_theorem=theorem,application=application)
++
++
++def retain_selected_assumptions(accepted,rows):
++    need(type(rows) is list and rows,'selected receipt must retain its ordinary premises')
++    seen=set()
++    for row in rows:
++        need(type(row) is dict and type(row.get('id')) is str and
++             row['id'] not in seen and row.get('runtime_regenerated') is False,
++             'unique explicit selected premise records without regeneration')
++        name=row['id'];seen.add(name)
++        need(name in accepted,'selected premise missing from final accepted premises')
++        need(canonical(row)==canonical(accepted[name]),
++             'selected/final accepted premise conflict')
++    return sorted(seen)
++
++
++def universal_domains(units,W):
+     order12=required(units,UNIVERSAL,'order12-d')['result']
+     pairs=[(a,b) for a in (8,9) for b in (10,11)]
+     expected32={canonical([list(p),side,branch]) for p in pairs for side in ('left','right')
+@@ -369,7 +396,7 @@
+         need(len(keys)==len(set(keys)) and set(keys)==expected,'exact physical '+field+' receiver keys')
+         for row in rows:
+             receiver_sum(row)
+-    complete=None;seen=set()
++    complete=None;seen=set();old_priority_applications=[]
+     for shard in range(4):
+         data=required(units,UNIVERSAL,f'large-d-{shard}')['result']
+         keys=data['complete_old40plus16_keys']
+@@ -392,7 +419,13 @@
+                  'largeD theorem cannot depend on genericprotected74')
+             for option in app['protected_options']:
+                 for mapping in option['complete_small_native_maps']:
+-                    U.full_key(mapping['key'])
++                    resolution=old_largeD_priority(mapping,W,units)
++                    if resolution is not None:
++                        old_priority_applications.append(dict(
++                            old_largeD_consumer_key=app['application_key'],
++                            actual_old_protected_corner=option['actual_corner'],
++                            physical_context_sha256=option['physical_context_sha256'],
++                            **resolution))
+     need(seen==set(complete),'all exact old-split applications, not merely their cardinality')
+     quiet=required(units,UNIVERSAL,'final-quiet')['result']['theorem_applications']
+     keys=[canonical(p['application_key']) for p in quiet]
+@@ -421,7 +454,8 @@
+             need(F(app['distinct_current_total'])>=1,'quiet distinct current receiver sum')
+     need(used==set(providers),'every quietB13 consumer joins its actual quiet context')
+     return dict(order12_current32_and_separate32='exact physical keys and current sums checked',
+-                old_largeD_application_keys=complete,quiet_context_keys=keys,
++                old_largeD_application_keys=complete,
++                old_largeD_exact_priority_applications=old_priority_applications,quiet_context_keys=keys,
+                 quiet_B13_consumer_keys=sorted(used))
+ 
+ 
+@@ -669,7 +703,9 @@
+         required(units,G4,batch)
+     for batch in UNIVERSAL_BATCHES:
+         required(units,UNIVERSAL,batch)
+-    universal=universal_domains(units)
++    hash_file(LITERAL,LITERAL_SHA)
++    literal=load('finite57_final_old_priority_literal',LITERAL,LITERAL_SHA)
++    universal=universal_domains(units,literal)
+     for i in range(4):
+         required(units,PROTECTED,f'protected-{i}')
+     required(units,ADAPTIVE,'adaptive9')
+@@ -683,6 +719,7 @@
+     selected=[];all_prefixes=set();all_maps=set()
+     for shard in range(64):
+         doc=required(units,OWN,f'selected-{shard:02d}')
++        premise_ids=retain_selected_assumptions(accepted,doc['accepted_assumptions'])
+         result=doc['result'];route=result['authoritative_route_result']
+         need(result['shard']==shard and result['shards']==64 and
+              result['selected_routes_complete_at_explicit_premises'] is True and
+@@ -704,6 +741,7 @@
+             need(key not in all_prefixes and key%64==shard,'disjoint actual prefix applications')
+             all_prefixes.add(key)
+         selected.append(dict(batch=doc['batch'],receipt=units[OWN,doc['batch']][0]['path'],
++            retained_accepted_assumption_ids=premise_ids,
+             direct_unit_full_key_sha256=route['direct_map_key_sha256'],
+             direct_unit_maps=route['direct_whole_factor_unit_maps'],
+             joined_nonunit_maps=len(joined),physical_prefix_applications=len(prefix)))

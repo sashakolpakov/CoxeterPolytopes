@@ -1,0 +1,87 @@
+{
+  "cases": [
+    {
+      "case": "fixed_inputs",
+      "result": "accepted_key_coverage_only"
+    },
+    {
+      "case": "four_duplicate_e7_rows",
+      "message": "four same-row E7 supports: duplicate key (0, False, (4, 7), (6,))",
+      "result": "required_rejection"
+    },
+    {
+      "case": "missing_e7_row",
+      "message": "four same-row E7 supports: key mismatch; missing=[(1, True, (3,), (4, 7, 6))]; extra=[]",
+      "result": "required_rejection"
+    },
+    {
+      "case": "altered_e7_side",
+      "message": "four same-row E7 supports: key mismatch; missing=[(0, False, (4, 7), (6,))]; extra=[(1, False, (4, 7), (6,))]",
+      "result": "required_rejection"
+    },
+    {
+      "case": "altered_e7_own_flag",
+      "message": "four same-row E7 supports: key mismatch; missing=[(0, False, (4, 7), (6,))]; extra=[(0, True, (4, 7), (6,))]",
+      "result": "required_rejection"
+    },
+    {
+      "case": "duplicate_cycle_wrapper",
+      "message": "height producer cycles: duplicate key 2",
+      "result": "required_rejection"
+    },
+    {
+      "case": "replaced_widened580_key",
+      "message": "all widened cycle scalar receipts: key mismatch; missing=[(2, (0,), (1,))]; extra=[(2, (1,), (0,))]",
+      "result": "required_rejection"
+    },
+    {
+      "case": "duplicate_exceptional_descriptor",
+      "message": "height producer exceptional: duplicate key ('A1', None)",
+      "result": "required_rejection"
+    },
+    {
+      "case": "wrong_unit_e7_nodes",
+      "message": "ordinary E7 two-contact support must be ((0,4),(1,7))",
+      "result": "required_rejection"
+    },
+    {
+      "case": "unexpected_reversed_ordered_budget",
+      "message": "ordered packing receipts: key mismatch; missing=[('10/9', '4/3')]; extra=[('4/3', '10/9')]",
+      "result": "required_rejection"
+    },
+    {
+      "case": "repeated_ordered_budget",
+      "message": "ordered packing receipts: duplicate key ('10/9', '4/3')",
+      "result": "required_rejection"
+    },
+    {
+      "case": "missing_BCD_tail_key",
+      "message": "five BCD analytic-tail receipts: key mismatch; missing=[('D', False, 18)]; extra=[]",
+      "result": "required_rejection"
+    },
+    {
+      "case": "valid_whole_packing_row_permutation",
+      "result": "accepted_key_coverage_only"
+    }
+  ],
+  "driver_sha256": "3e9e47313d14cfb214f6e1fdce2e027188c386ddd13e80c3f6457c6652de08c1",
+  "fixed_input_pins": {
+    "results/fresh_nikulin_defect_frontier_20261015.json": "3c8897e52d781b97c9b5de222e276234c84b8a95770f7039d2d2b99880614d04",
+    "results/fresh_nikulin_defect_frontier_20261015_review.json": "a45b3764e1ba9fdc71e3c28a03d36368e1b4df0ded8f26f4dd585a26e9c63da2",
+    "results/fresh_nikulin_height_charge_20261015.json": "6427dadcaa1577d0416b31f48da7b67425eb647d4661ab464c2e7f55f7098b6b",
+    "results/fresh_nikulin_height_charge_20261015_review.json": "bebad068dac2e18fc70830adbb3fc9613487414ad2f1b3e0061dd399e9bfd449",
+    "results/fresh_nikulin_two_budget_frontier_20261015.json": "1a32a2aa37b44b73ab03a322c136e846cea5c37028718e5241cfdad779edfdc9",
+    "results/fresh_nikulin_unit_charge_20261015.json": "c6b85ef3c5abbcd53c9f90347f7e129ecd52285fac4672cea0b67563a67bd888",
+    "results/fresh_nikulin_unit_charge_20261015_review.json": "7b1d281d52b2d2e171b2ffe1b4155ca55708e333889c4b2525af579de5f88c14"
+  },
+  "fixture_limits_bytes": {
+    "per_file": 4194304,
+    "total": 8388608
+  },
+  "guard_sha256": "bdda6b5cd4b4da3894f8981d5c67fd226a595dad18cfb963663f4b48244f3b1c",
+  "owned_fixture_cleanup": "TemporaryDirectory context exited before receipt construction",
+  "scope": "One process; two positive key-only cases and eleven required structural rejections. No certificate arithmetic, geometric enumeration, packing optimization, Lean, TeX or full-manuscript verification.",
+  "status": "PASS_FINITE57_TAIL_KEY_GUARD_STRUCTURAL_REGRESSIONS_ONLY"
+}
+{"status": "PASS_BOUNDED_RESEARCH_CHECK", "command": ["scripts/test_finite57_tail_key_coverage_supplement_20261024.py", "--fixture-parent", "/private/tmp/coxeter-finite57-tail-keys-regression-20261025-1"], "elapsed_seconds": 0.889, "peak_process_tree_rss_bytes": 96813056, "initial_resources": {"free_disk_gib": 40.2, "available_memory_gib": 7.62}, "wall_limit_seconds": 59, "rss_limit_bytes": 1073741824, "threads": 1, "stdout_bytes": 3844, "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132", "checker_sha256": "3e9e47313d14cfb214f6e1fdce2e027188c386ddd13e80c3f6457c6652de08c1", "lock_owner": "wrapper"}
+{"owned_tree_bridge_only": true, "child_exit_code": 0, "cleanup": {"observed_processes": 2, "signals": [], "reused_ids_skipped": [], "verified_live_owned_processes_remaining": 0}, "controller_source_sha256": {"scripts/run_proof_batch_20261024.py": "78bfafca1791fcdfc217860ea923cb15c16fbd6eb0fe6943586e41849121e4bb", "scripts/audit_existing_lean_module_20261024.py": "1399fbc6fbc7f0c92496b7f7284fcc8389573c544ee8bb427739666c1af6f7d5", "scripts/verify_manuscript_audited_20261024.py": "54e57bdb9cd0e9a9c3bb160743f22c4da1728c353f1e5a1cf9db1b397e8ef968", "scripts/monitor_owned_proof_tree_20261024.py": "517c0c78347c0aa81cd16489afcf7f11b7bce064490919b9cf5ff94c88e59cda", "scripts/run_bounded_research_check_20261018.py": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132", "scripts/run_lean_batches_signal_safe_20261018.py": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d", "scripts/run_lean_batches_20261018.py": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c", "scripts/build_illustrated_ra_manuscript_20261018.py": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15", "scripts/build_compact_arithmetic_nine_field19_20261020.py": "857796b333f613ad0affea7f09504a11c5f52961a91e79ef5bf19f0ca742608b", "scripts/verify_manuscript.py": "f6a0b39f981c41f3c7d75b184ee3d274e309616bcfa72b693a3b018bfc7394a1"}, "assertions_enabled": true, "python_optimize_flag": 0, "child_pythonoptimize": null}

@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-25",
+  "status": "ROOT_ACCEPTED_SCOPED_SOURCE_AND_ACTUAL_CURRENT_RECEIPTS",
+  "author": "/root/finite57_release_audit",
+  "reviewer_and_root": "/root",
+  "source": {
+    "path": "scripts/check_finite57_d14_current24_witness_receivers_20261025.py",
+    "sha256": "8f606376b015f7b1571635a30d5d2b23e0fb34bc3dfc5efe88484e1008ad6b8b",
+    "bytes": 15141
+  },
+  "contract": {
+    "path": "results/finite57_d14_current24_witness_receivers_contract_20261025.md",
+    "sha256": "8da81b8a0ce91f02d16b5d4b0d48fb33bc9c59da4ae112840e10a72f13842435",
+    "bytes": 5864
+  },
+  "source_freeze": {
+    "path": "results/finite57_d14_current24_a14_debit_source_freeze_20261025.json",
+    "sha256": "f3d25bf32f0cf1eef7a4553cfa3076e2b41e4f953e447fc37bf7eb061cc6e916",
+    "bytes": 1697
+  },
+  "actual_receipt": {
+    "path": "results/finite57_d14_current24_a14_adjusted_execution_20261025.json",
+    "sha256": "04c8478093cfd25c08ca436d35872b05f608e42e8b28a970615ecf92ae6cd365",
+    "bytes": 183313
+  },
+  "actual_stdout": {
+    "path": "results/finite57_d14_current24_a14_adjusted_execution_20261025.stdout",
+    "sha256": "0e6e59e9223ccd71a1c8a8e0a5f8d5244bfe99f1b072ee41ca27dbe4370706e0",
+    "bytes": 170783
+  },
+  "review_scope": [
+    "Entire 240-line final worker and complete 92-line contract, including earlier whole-witness repair and later A14 debit correction.",
+    "Exact equality of all24 physical variants, whole-witness guards, rank15 quarter ledgers, later A14 endpoint adjustments and final B13 ledgers; four distinct original corners per variant.",
+    "Source-specific full-core seal remains a geometric and complete-data premise modulo independent same-face S8. Whole witnesses are not inferred merely by classifying a displayed diagram.",
+    "Current literal receivers are recomputed with the source-sealed masks. Every current corner must meet its correctly adjusted source lower. No old A16 half is restored.",
+    "The A14 predecessor failure is retained: rank15-stage endpoint unit1 becomes0 without whole A1; the explicit later A14 ledger is now joined rather than dropping the failed comparison."
+  ],
+  "execution_scope": {
+    "all24_current_receipts": true,
+    "selected_full_map_applications": false,
+    "independent_S8_established_by_this_job": false,
+    "complete_geometric_formalization": false,
+    "full_transitive_regeneration": false,
+    "global_finite57_runtime_pass": false
+  },
+  "failure_history_preserved": [
+    "results/finite57_d14_current24_witness_execution_20261025.stdout",
+    "results/finite57_d14_current24_diagnostic_execution_20261025.stdout",
+    "results/source_archive/finite57_d14_current24_before_a14_debit_join_20261025/"
+  ],
+  "disposition": "Admit this exact actual worker/batch as one scoped current numerical receipt unit. A later full-map consumer must still bind its original high/core/base/marks/native map and source-variant seal."
+}

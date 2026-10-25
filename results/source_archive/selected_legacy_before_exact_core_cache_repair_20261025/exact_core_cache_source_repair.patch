@@ -1,0 +1,34 @@
+--- results/source_archive/selected_legacy_before_exact_core_cache_repair_20261025/finite57_selected_legacy_receipt_applications_20261025.py	2026-10-25 13:50:02
++++ scripts/finite57_selected_legacy_receipt_applications_20261025.py	2026-10-25 13:51:22
+@@ -315,7 +315,9 @@
+     n = len(core['gram'])
+     if core.get('inverse') is None or core['signature'] != [n-1,1,0]:
+         return None
+-    if key['core_key'] not in CORE_CACHE:
++    core_input_sha256 = sha256(canonical([core['gram'],core['inverse'],core['gauge'],core['signature']]).encode()).hexdigest()
++    cache_key = (key['core_key'],core_input_sha256)
++    if cache_key not in CORE_CACHE:
+         g,J = matrix_values(core['gram']),matrix_values(core['inverse'])
+         scales = [rational(v) for v in core['gauge']]
+         if len(J) != n or len(scales) != n or not all(s > 0 for s in scales):
+@@ -335,8 +337,8 @@
+                         total += g[i][k]*J[k][j]
+                 if total != int(i == j):
+                     return None
+-        CORE_CACHE[key['core_key']] = g,J,scales
+-    g,J,scales = CORE_CACHE[key['core_key']]
++        CORE_CACHE[cache_key] = g,J,scales
++    g,J,scales = CORE_CACHE[cache_key]
+     u,v = opposite_pairs(p,n);du,dv = graph_distances(g,u),graph_distances(g,v)
+     if len(du) != n or len(dv) != n or min(du[i] for i in v) <= 8:
+         return None
+@@ -397,7 +399,8 @@
+             physical=physical,source_sealing=dict(
+                 kind='strict_generic_proper_boundary_root',method=p['method'],
+                 core_selector=['isolation','cores',key['core_key']],source_gauge=core['gauge'],
+-                source_signature=core['signature'],inverse_identity_checked_in_this_call=True,
++                source_signature=core['signature'],core_input_sha256=core_input_sha256,
++                checked_in_this_actual_process_on_exact_core=True,
+                 original_opposite_pairs=[u,v],complete_possible_contacts=allowed,end_sets=ends,
+                 distance_split=splits[0],full_end_inverse_blocks=[
+                     [[str(J[i][j]) for j in e] for i in e] for e in ends],

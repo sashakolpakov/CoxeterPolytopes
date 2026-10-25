@@ -27,6 +27,16 @@ MEMORY_MB = 2048
 OUTPUT_LIMIT = 524288
 TIMEOUT_SECONDS = 900
 _COMPILER_HASHES = {}
+_PHYSICAL_MEMORY_BYTES = None
+RESOURCE_POLICY = {
+    'id': 'percentage-v1-20261025',
+    'admission_disk_percent': 2,
+    'admission_memory_percent': 15,
+    'abort_disk_percent': 1,
+    'abort_memory_percent': 6,
+    'cleanup_disk_percent': 2,
+    'rounding_digits': 6,
+}
 
 
 def available_memory():
@@ -38,23 +48,50 @@ def available_memory():
 
 
 def resources(start=True, mark_cleanup=True):
-    disk = shutil.disk_usage(ROOT).free
+    global _PHYSICAL_MEMORY_BYTES
+    usage = shutil.disk_usage(ROOT)
+    disk, disk_total = usage.free, usage.total
     memory = available_memory()
-    if disk < 20*GIB and mark_cleanup:
+    if _PHYSICAL_MEMORY_BYTES is None:
+        if sys.platform == 'darwin':
+            _PHYSICAL_MEMORY_BYTES = int(subprocess.check_output(
+                ['sysctl', '-n', 'hw.memsize'], text=True, timeout=5).strip())
+        else:
+            _PHYSICAL_MEMORY_BYTES = os.sysconf('SC_PHYS_PAGES')*os.sysconf('SC_PAGE_SIZE')
+    memory_total = _PHYSICAL_MEMORY_BYTES
+    if not (type(disk_total) is int and disk_total > 0 and
+            type(disk) is int and 0 <= disk <= disk_total and
+            type(memory_total) is int and memory_total > 0 and
+            type(memory) is int and 0 <= memory <= memory_total):
+        raise RuntimeError('Resource gate: invalid capacity measurement')
+    disk_percent = 100*disk/disk_total
+    memory_percent = 100*memory/memory_total
+    if 100*disk < RESOURCE_POLICY['cleanup_disk_percent']*disk_total and mark_cleanup:
         STATE.mkdir(exist_ok=True)
-        marker = STATE / 'cleanup_needed.json'
+        marker = STATE / 'cleanup_needed_percentage_20261025.json'
         if not marker.exists():
             marker.write_text(json.dumps(dict(status='CLEANUP_AGENT_REQUEST',
-                free_disk_gib=round(disk/GIB, 2), threshold_gib=20,
+                free_disk_percent=round(disk_percent, 6), threshold_percent=2,
                 action='Coordinator must start a cleanup agent before further jobs'))+'\n')
             print(f'CLEANUP_AGENT_REQUEST: {marker}', file=sys.stderr, flush=True)
-    disk_floor, memory_floor = (40*GIB, 6*GIB) if start else (8*GIB, 3*GIB)
-    if disk < disk_floor or memory < memory_floor:
-        raise RuntimeError(f'Resource gate: disk={disk/GIB:.1f}GiB '
-                           f'memory={memory/GIB:.1f}GiB; '
-                           f'require {disk_floor/GIB:.0f}/{memory_floor/GIB:.0f}GiB')
+    disk_floor = RESOURCE_POLICY['admission_disk_percent' if start else 'abort_disk_percent']
+    memory_floor = RESOURCE_POLICY['admission_memory_percent' if start else 'abort_memory_percent']
+    # Gate on exact measured byte ratios, never their rounded display values.
+    if 100*disk < disk_floor*disk_total or 100*memory < memory_floor*memory_total:
+        raise RuntimeError(f'Resource gate: disk={disk_percent:.3f}% '
+                           f'memory={memory_percent:.3f}%; '
+                           f'require {disk_floor}%/{memory_floor}%')
+    policy = dict(RESOURCE_POLICY,
+        source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+    # GiB fields remain as historical-shape compatibility data. Admission,
+    # stopping, reports and new receipt validation use the percentage policy.
     return {'free_disk_gib': round(disk/GIB, 2),
-            'available_memory_gib': round(memory/GIB, 2)}
+            'available_memory_gib': round(memory/GIB, 2),
+            'disk_free_bytes': disk, 'disk_total_bytes': disk_total,
+            'available_memory_bytes': memory, 'physical_memory_bytes': memory_total,
+            'free_disk_percent': round(disk_percent, 6),
+            'available_memory_percent': round(memory_percent, 6),
+            'resource_policy': policy}
 
 
 def source(module):

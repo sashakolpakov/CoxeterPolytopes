@@ -4,19 +4,23 @@ This is a real Lean4 project, pinned by `lean-toolchain` to the locally
 installed Lean4.32.2. It currently uses only Lean's standard library, so
 no unpinned mathematical library or network download is required.
 
-Run these commands from the repository root:
+For a new named module, run separate compilation and actual audit commands
+from the repository root. Choose unused ledger filenames:
 
 ```sh
-python3 -B scripts/run_lean_batches_signal_safe_20261018.py --check-only
-python3 -B scripts/run_lean_batches_signal_safe_20261018.py --audit-axioms
+python3 -B scripts/run_proof_batch_20261024.py lean-compile \
+  CoxeterProofs.CompactDimensionSeventeenComposition --ledger results/local_compact17_compile.json
+python3 -B scripts/run_proof_batch_20261024.py lean-audit \
+  CoxeterProofs.CompactDimensionSeventeenComposition --ledger results/local_compact17_audit.json
 ```
 
-The runner holds an exclusive lock and compiles one module at a time with
-one thread, a 2048MiB Lean memory cap and a 15-minute timeout. It requires
-40GiB free disk and 6GiB available memory before each child starts, and
-stops below 8GiB disk or 3GiB available memory. Do not use unrestricted
-`lake build` or direct uncapped Lean commands. A named module can be supplied
-to verify only that module and its local dependencies.
+The public entry monitors one owned process tree under the exclusive lock.
+Lean uses one module, one thread and a2048MiB compiler cap; the outer
+research watchdog retains59seconds and1GiB RSS. The current percentage
+policy admits work at2% free disk and15% available physical RAM and stops
+below1% disk or6% RAM. Exact measured byte ratios determine the gates.
+Do not use a whole-project build or an uncapped direct Lean command. Reuse
+successful unchanged modules and dependencies.
 
 The read-only `--check-only` command reports cache provenance. Existing
 objects without a guarded-build ledger are labelled
@@ -28,8 +32,8 @@ ledger prevents cache reuse. Output retention is bounded to 512KiB.
 
 The runner removes temporary Lean/C/IR/LSP and TeX outputs after every
 batch, including failure and entirely cached runs, while preserving proof
-objects, sources, certificates and final PDFs. Below 20GiB free disk it
-writes `.proof-batches/cleanup_needed.json`: the coordinating agent must
+objects, sources, certificates and final PDFs. Below2% free disk it
+writes `.proof-batches/cleanup_needed_percentage_20261025.json`: the coordinating agent must
 start a cleanup agent before further jobs. The subprocess cannot spawn a
 Codex agent itself. Frozen evidence and active application data must be
 preserved. Mathematical work takes priority; Lean is final verification
@@ -49,6 +53,43 @@ the same thing as a published external mathematical assumption.
 
 ## Current coverage
 
+`QuadraticDyadicTripleKernel` has [bounded compilation and a SEPARATE
+fourteen-declaration actual axiom audit PASS](../results/lean_quadratic_dyadic_triple_verification_20261023/manifest.json).
+Compile2.35seconds; audit.50seconds reused the object. All14 actual prints use
+only propext and Quot.sound, with no sorryAx. Its [input map](../docs/quadratic_dyadic_triple_kernel_logic_20261023.md)
+keeps its immutable preparation status/hash; the execution receipt supplies
+the later PASS. Primitive Nat valuation/parity constraints yield the selected
+dyadic and bounded-norm deductions. Actual fields, maximal-order strips,
+K-square exceptions, geometry and the prior global theorem remain external.
+One unused time_parity warning is preserved. This is not the full geometric
+arithmetic15 formalization and supplies no actual number-field instance.
+
+`B16IsolatedPairScalarKernel` has [repaired-source compilation and a SEPARATE
+twelve-declaration actual axiom audit PASS](../results/lean_b16_isolated_pair_scalar_verification_20261023/manifest.json).
+Compile2.09seconds; audit1.66seconds reused the object. The first print uses
+propext/Quot.sound; the other11 also use Classical.choice. No successful print
+uses sorryAx. Both literal scalar-prefix contradictions and the cubic root
+bound compile. The [logic map](../docs/b16_isolated_pair_scalar_kernel_logic_20261023.md)
+retains actual ideal/field facts, original geometry, census, primitive pressures
+and real instances as external premises.
+
+The first admitted B16 compile failed on reserved local names. Its complete
+source/map/diagnostics are [byte-preserved with ZERO audit credit](../results/lean_b16_isolated_pair_scalar_verification_20261023/failed_compile_source_preservation.json).
+The exact two-name [outside delta review](../results/review_b16_isolated_pair_scalar_reserved_identifier_and_map_delta_compact_20261023.md)
+and [root clearance](../results/review_b16_isolated_pair_scalar_reserved_identifier_repair_root_clearance_20261023.md)
+preceded the successful retry. Two unused-section-variable warnings remain.
+Neither new audit recompiled an already successful module; both imported only
+Std. The unchanged40GiB/6GiB admission,2048MiB/one-thread named runner and
+runtime monitoring applied. No process-tree RSS peak is inferred where the
+Lean receipt records none. Local objects remain cache provenance, never
+publication assets; older selected-module scopes are unchanged.
+
+For a fresh checkout, named compilation and audit are separate commands:
+
+```sh
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.QuadraticDyadicTripleKernel
+python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.QuadraticDyadicTripleKernel --audit-axioms
+```
 
 `B18TerminalPressureKernel` has full different-author source/map review,
 [root precompile clearance](../results/review_b18_terminal_pressure_kernel_root_precompile_acceptance_20261023.md)
@@ -109,7 +150,7 @@ no cosmetic rerun was made. Owned temporary proof work is absent.
 The [logic map](../docs/a12_adjusted_loss_kernel_logic_20261023.md) retains
 the geometry, actual fields/inventories, legal pressures and spectator floors
 as premises. It does not formalize the later universal A12/A13 theorems or
-the current nine-group arithmetic frontier. The source header and logic map
+the later arithmetic frontier refinements. The source header and logic map
 are immutable preparation records; the execution receipt supplies the later
 PASS. Older successful modules were not rerun or relabelled.
 
@@ -147,9 +188,112 @@ python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.A18Two
 python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.A18TwoDottedEndpointScalarKernel --audit-axioms
 ```
 
-The later written compact18 frontier has two groups (wholeB18/D18), after
-the [complete written A18 exclusion](../results/review_compact18_whole_a18_and_two_classical_group_frontier_root_acceptance_20261023.md).
-That geometric result is not formalized by this two-dotted scalar module.
+The later written compact18 frontier has ONLY wholeD18, after the
+[complete written B18 exclusion](../results/review_compact18_whole_b18_complete_composition_and_single_d18_frontier_root_acceptance_20261023.md).
+This concerns a selected farthest vertex, not every vertex or an example.
+Neither the whole-A18 nor whole-B18 geometric theorem is formalized by
+this two-dotted scalar module.
+
+The [GLOBAL arithmetic15 proof](../results/review_arithmetic16_whole_d16_manual_dyadic_exclusion_and_global15_root_acceptance_20261023.md)
+now closes the last whole-D16 family. Its earlier frontier, complete actual
+quadratic head/fork reduction and dyadic splitting argument have full written
+reviews. The new Std-only kernel above prepares a conditional discrete part;
+it does not formalize those actual fields, all original walls, coefficient
+tables or geometric prices. Older compiled/audited16 and precursor kernels
+retain their historical scopes and acquire no new geometric instance.
+
+The [fresh arithmetic15 necessary frontier](../results/review_arithmetic15_fresh_complete_twenty_two_group_frontier_root_full_source_acceptance_20261023.md)
+has a full written review of its original22 grouped rows. The
+[complete whole-B14+I proof](../results/review_arithmetic15_whole_b14_actual_i_all_degree_manual_root_acceptance_20261023.md)
+removes original group19. The
+[complete B13 rank-two proof](../results/review_arithmetic15_b13_ordinary_and_typed_seven_whole_group17_root_acceptance_20261023.md)
+also removes original17. Ordinary spectators
+use only the fresh6..10 body; actual typed-seven spectators have freshly
+proved11/12 estimates in K7 before E12 is used. The
+[complete D13 theorem](../results/review_arithmetic15_d13_both_actual_typed_seven_and_whole_group18_root_acceptance_20261023.md)
+removes original18 too. Its separate
+typed proof uses a full maximal order, exhaustive coefficient strips,
+both signed fork lengths>6 and one reference omitting11. The new
+handwritten field/fork argument has no Lean instance.
+The [A13 typed-seven theorem](../results/review_arithmetic15_a13_both_actual_typed_seven_whole_group14_root_acceptance_20261023.md)
+also removes original14, leaving18 necessary groups at that stage. Its new endpoint
+and two-block reference arguments have full written reviews; the old
+central .574 theorem remains an explicit input. There is no new Lean
+instance or endpoint theorem for arbitrary extra spectators.
+The [four-family extension](../results/review_arithmetic15_four_typed_seven_a_families_full_foreign_root_acceptance_20261023.md)
+retains all extra spectator costs and removes original2,5,8,11, leaving14
+necessary groups. The [two-A1 theorem](../results/review_arithmetic15_a13_two_ordinary_a1_root_full_source_acceptance_20261023.md)
+narrows original12 to ordinary irreducible T2. Both are complete reviewed
+written proofs with no new Lean instance or numerical14 theorem. The
+[compact spectral tool](../results/review_spectral_frog_canonical_lorentz_gram_band_root_full_source_acceptance_20261023.md)
+likewise has a full written proof of B³-B positive semidefinite for an
+appropriately scaled FULL wall Gram. Unknown-wall control and a local
+dimension application remain open; this has no formalization credit.
+These new proofs and the whole-B14 joint scalar and
+all-degree closure, small-tail H4 projection and fresh partition exhaustion
+have no new Lean instance;
+the older compiled frontier modules retain their stated dimensions.
+
+The new [complete native-six finite budgets](../results/review_finite57_all_single_native_six_finite_budgets_root_acceptance_20261023.md)
+cover all finite vertices containing native6, including Context and old
+tokens. The same-rank replacement certificate, strict modular endpoint
+and complete finite remainder bounds have full written review. These
+and the weighted incidence/minima/conditional ideal comparison have no
+new Lean instance. The [selected old ideal debts](../results/review_finite57_native_six_all_old_ideal_debts_root_full_source_acceptance_20261023.md)
+are covered in a separately reviewed written argument. The residual
+bare small-factor worker now has [actual generation, separate full replay
+and complete ideal-budget acceptance](../results/review_finite57_native_six_complete_weighted_ideal_budgets_root_acceptance_20261023.md):
+All 6,626 cases are strictly positive across 862 profiles. Every one of the 6,656
+canonical record was regenerated with strict EOF, under two separately
+admitted guarded units. The exact selected weighted ideal ledger is
+closed by its conjunction with the old-debt theorem. This is same-
+implementation execution, not a new Lean instance or silent additional
+premise of any older compiled module. The k0 finite-heavy and global
+face-coverage obligations remain.
+The [new weighted strict-counting proof](../results/review_finite57_native_six_weighted_global_extrema_strictness_root_acceptance_20261023.md)
+is complete written mathematics, with no new Lean instance. It closes
+the global positive-correction step while retaining every face-payment,
+ledger-conservation and finite/ideal cap premise.
+The new B14+actual-I
+[head](../results/review_arithmetic15_b14_all_finite_pure_heads_positive_foreign_root_acceptance_20261023.md),
+[short-cap](../results/review_arithmetic15_b14_complete_short_white_isolated_dotted_root_acceptance_20261023.md)
+and [cubic norm](../results/review_arithmetic15_b14_cubic_terminal_even_norm_foreign_four_root_acceptance_20261023.md)
+reductions likewise have full written reviews and no new formal instance.
+The later complete whole-B14+I proof removes group19 as written mathematics;
+none of these results enlarges any older kernel's scope.
+The [complete zero-exchanged far-row8 refund](../results/review_finite57_zero_exchanged_far8_all_corner_refund_one_unit_root_acceptance_20261023.md)
+also has full written review. Its actual finite/affine classification,
+fifteen Gram/native-gap cases and simultaneous full-ledger proof have
+no new Lean instance; no earlier kernel is credited with this theorem.
+The [positive-exchange far8 extension](../results/review_finite57_all_far8_positive_exchange_normalized_refund_root_acceptance_20261023.md)
+shares one receiver port across the zero/positive union. The
+[broader pure-D17 theorem](../results/review_finite57_whole_d17_large_inert_d_far8_refund_root_acceptance_20261023.md)
+retains arbitrary inert D-factors of rank>=9 and total40, conditional
+on an actual qualifying centre, including the old D40+D17 load.
+Both have full written reviews and no new Lean instance or56 theorem.
+The [entire D18 isolated/near3 family](../results/review_compact18_d18_whole_isolated_near_three_family_root_acceptance_20261023.md)
+is also excluded as written mathematics: actual future-core and
+A16+2A1-neighbor arguments retain all heads, unequal owns, both reverse
+coordinates and one norm budget. It does not enlarge any older
+compiled kernel or prove compact17.
+The [complete isolated/far3 finite-mutual reduction](../results/review_compact18_d18_isolated_far_three_complete_finite_reduction_root_acceptance_20261023.md)
+has full written source review and root acceptance. Actual B18/H3
+points and the finite7+ continuous core initially left native3 or dotted mutuals,
+and only dotted mutuals under native5 head. No old scalar kernel
+formalizes that complete geometry or its new simultaneous S2 bound.
+The [subsequent native3 theorem](../results/review_compact18_d18_isolated_far_three_native_three_two_dual_root_acceptance_20261023.md)
+now leaves dotted mutuals only for every head. Its actual-A18 factor8/7,
+joint reverse duals, fresh .71 inventory and single funded reference
+are written and fully reviewed. They enlarge no existing Lean scope.
+The later [whole isolated/isolated exclusion](../results/review_compact18_d18_whole_isolated_isolated_pair_root_acceptance_20261023.md),
+[isolated native5 long-head conjunction](../results/review_compact18_d18_isolated_native5_head_complete_exclusion_root_acceptance_20261023.md)
+and [six central bridges](../results/review_compact18_d18_central_bridge_six_configurations_root_full_source_acceptance_20261024.md)
+are likewise complete reviewed written mathematics with their own original-vector
+and all-wall boundaries. The new finite57 [row5](../results/review_finite57_positive_row_five_two_corner_refund_root_full_source_acceptance_20261023.md)
+and [row11](../results/review_finite57_whole_positive_row_eleven_refund_root_full_source_acceptance_20261023.md)
+refund theorems retain their complete geometric/ledger premises. None of these
+new geometric results is added to an older kernel's formal scope. Their current
+research frontier is summarized in the [comparison guide](../docs/current_bounds_and_verification.md).
 The older five-case and six-case modules below retain their original verified
 scope; they do not acquire the newer written exclusions automatically.
 
@@ -394,3 +538,29 @@ verification of the stated module theorems, with their explicit hypotheses;
 it is not a substitute for proving the remaining internal bridges.
 
 The manuscripts and per-result lemma maps document the next obligations.
+
+## Compact17: actual compilation and separate axiom audits
+
+The general compact17 written theorem assumes no arithmeticity. Its new
+[scalar source](CoxeterProofs/D18UniformDottedHeadScalarKernel.lean) and
+[composition source](CoxeterProofs/CompactDimensionSeventeenComposition.lean)
+have complete different-author static reviews and
+[root pre-execution clearance](../results/review_compact17_scalar_composition_lean_sources_root_preexecution_clearance_20261024.md).
+They use Std only, with13 public theorems and ten selected axiom-print roots.
+No custom axioms or proof placeholders are declared. Both now have
+[actual bounded compilation and separate actual axiom audits](../results/compact17_targeted_lean_completion_20261025/manifest.json):
+seven scalar declarations and three composition declarations. The earlier
+[resource deferral](../results/compact17_lean_source_clearance_and_resource_deferral_20261024.json)
+is preserved as history. The scalar's first compile failed on the reserved
+binder `mutual`; an exact three-occurrence alpha rename to `mutualProduct`
+preceded its successful retry. Two unused-section-variable warnings remain.
+
+The [logic map](../docs/compact_dimension17_conditional_logic_map_20261024.md)
+lists calculus/radical estimates, actual-wall points, coefficient funding,
+complete geometric inventories and the prior global18 tail as explicit
+parameters. Scalar theorems derive their conclusions from lower-level
+Taylor and value/derivative bounds; the composition derives whole-D18
+exclusion and17 from a single coherent geometric record. The scalar and
+geometric records are not automatically instantiated or wired together.
+Printed axioms do not list these ordinary theorem parameters. Older
+successful modules retain their original scope and have not been rerun.

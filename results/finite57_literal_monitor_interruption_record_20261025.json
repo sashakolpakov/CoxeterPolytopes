@@ -1,0 +1,31 @@
+{
+  "status": "THREE_INTERRUPTED_LITERAL_ATTEMPTS_PRESERVED_NOT_PASSES",
+  "date": "2026-10-25",
+  "failed_stdout": [
+    {
+      "path": "results/finite57_literal_common_affine_large_0_execution_20261025.stdout",
+      "bytes": 1351,
+      "sha256": "0333a8fa50484fc1305f98b3b463c8fa2754ef9c2ca4699e9667f58a717c163e"
+    },
+    {
+      "path": "results/finite57_literal_common_coarse_2_execution_20261025.stdout",
+      "bytes": 1351,
+      "sha256": "a4872abb4988c7c975b336911605227f8b3ce3688b067e4dc76ab8eeaa1661d3"
+    },
+    {
+      "path": "results/finite57_literal_common_coarse_3_execution_20261025.stdout",
+      "bytes": 1351,
+      "sha256": "9937f56807c5cd2b501419cba7ffb2125d8d7bd818f29e7f04c5b619f8552086"
+    }
+  ],
+  "observation": "Darwin proc_pidinfo returned EPERM; runner cleanup also reported signal permission error. Approved later process-table inspections showed no remaining proof runner or literal checker processes.",
+  "root_cause": "Disappearing-process race suspected; not proved by these logs.",
+  "successful_unchanged_retry_ledgers": [
+    "results/finite57_literal_common_affine_large_0_attempt_2_execution_20261025.json",
+    "results/finite57_literal_common_coarse_2_attempt_2_execution_20261025.json"
+  ],
+  "coarse3_retry": "Not yet executed.",
+  "failure_not_credited_as_execution_pass": true,
+  "monitor_predecessor_sha256": "517c0c78347c0aa81cd16489afcf7f11b7bce064490919b9cf5ff94c88e59cda",
+  "source_repair_status": "Prepared successor, awaiting independent review and focused actual regressions. No gate disabled."
+}

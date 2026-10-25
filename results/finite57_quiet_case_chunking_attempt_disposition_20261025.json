@@ -1,0 +1,33 @@
+{
+  "status": "ATTEMPT_REFUSED_BEFORE_CONTROL_WORKER",
+  "date": "2026-10-25",
+  "attempted_worker": "scripts/test_finite57_current_rule_conjunction_controls_20261025.py",
+  "public_stdout": {
+    "path": "results/finite57_quiet_case_controls_attempt1_20261025.stdout",
+    "bytes": 2125,
+    "sha256": "4c463406f30a858208faddf5387f419de6078ac843418ffe97fe07e26e0debc7"
+  },
+  "gate": "Resource gate: disk=30.7GiB memory=5.5GiB; require 40/6GiB",
+  "actual_control_tests_run": 0,
+  "actual_quiet_cases_run": 0,
+  "actual_pass_ledger_created": false,
+  "owned_cleanup": {
+    "observed_processes": 1,
+    "signals": [],
+    "reused_ids_skipped": [],
+    "verified_live_owned_processes_remaining": 0
+  },
+  "requirement_origin": {
+    "path": "AGENTS.md",
+    "sha256": "4bd9b40f2077b44e5b11c4c8df78a9ca679a9ab185b1bbfe1cb6f5c0dedfc251",
+    "instruction": "Admission requires40GiB free disk and6GiB available RAM; abort at8GiB/3GiB. Do not lower these gates or disable process-tree/RSS monitoring."
+  },
+  "chunking_source_clearance": {
+    "path": "results/finite57_quiet_case_chunking_source_clearance_root_20261025.json",
+    "sha256": "bf8e25bb09b741b99f6be7db48f920d775624a332a8d8e2a4dede52f0e8115ae"
+  },
+  "scope": "The requested smaller24x8 partition is implemented and source-reviewed. This execution attempt reached the unchanged startup gate and did not import/run the test or numerical case worker; smaller runtime work does not bypass that global gate.",
+  "resource_thresholds_changed": false,
+  "scientific_claim_or_new_bound": false,
+  "unused_build_products_created": false
+}

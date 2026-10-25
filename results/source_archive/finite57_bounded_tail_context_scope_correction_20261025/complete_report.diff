@@ -1,0 +1,84 @@
+--- results/finite57_bounded_tail_source_binding_closure_20261025.md@7d032a5c
++++ results/finite57_bounded_tail_source_binding_closure_context_scope_corrected_20261025.md
+@@ -1,4 +1,10 @@
+ # Finite57 bounded tail: explicit rule, cost and numerical-premise bindings
++
++> Root notation successor,25 October2026, pending independent delta review.
++> The original author report7d032a5c is preserved unchanged. The only
++> mathematical-description changes separate the ordinary finite pair rule
++> from the two forest-dependent59 bonuses. Source observations, saved
++> numerical outputs and all assumed-premise boundaries retain their scope.
+ 
+ 25 October2026. SOURCE ONLY, ambient dimensions59--163. This supplements,
+ and does not overwrite, the preserved566-line bounded-tail audit.
+@@ -69,7 +75,14 @@
+   multiplicity via the separately proved factor-fiber theorem.
+ 
+ The rules pay a pair once; alternative descriptions are a union, not
+-an additive multiplicity. For a weighted table, missing pairs mean0;
++an additive multiplicity. To distinguish the forest-dependent entries,
++write R_N^0 for the ordinary finite marked rule BEFORE the two59 Boolean
++additions. The full physical rule is R_N(F;pair), with the whole forest F
++as an argument whenever a guard is used. For ideal factors there is no
++such Boolean addition. All ordinary component and cross sums below use
++R_N^0; the forest adds its Boolean contribution Gamma59(F) exactly once.
++
++For a weighted table, missing pairs mean0;
+ a retained-pair list means the indicator of its set. A changed-pair
+ list is a SET patch on the complete inherited function.
+ An array lookup must have exactly ONE row of the required type/order
+@@ -149,13 +162,23 @@
+ ## 3. Physical marked costs and the complete forest alphabet
+ 
+ For each finite type t define
+-B_N(t)=sum over its canonical pairs of R_N(t,p).
++B_N(t)=sum over its canonical pairs of R_N^0(t,p).
+ For two distinct components define
+-C_N(t,u)=sum over the Cartesian product of their marks of R_N(t,u,p).
+-For a forest F the exact total is
++C_N(t,u)=sum over the Cartesian product of their marks of R_N^0(t,u,p).
++These ordinary functions depend only on the stated components, rather
++than on a surrounding forest. For a forest F the exact total is
+ 
+ sum B_N(t) + sum over unordered component instances C_N(t,u)
+-+ the two separately evaluated59 Boolean charges.
+++ Gamma59(F).
++
++For N=59 the last term is exactly
++
++Gamma59(F) = a2(a2-1)/4 * [a10>0 and a1>=2]
++           + a2*d5 * [a1>0 and a9>0].
++
++For every other layer it is zero. Each bracket is Boolean witness
++presence. This term is NOT already included in C_N; it accounts once
++for the difference between full R_N(F;pair) and ordinary R_N^0.
+ 
+ These are literal component INSTANCES. A same-type component pair is
+ counted binomially and cannot be merged with an internal same-component
+@@ -352,8 +375,10 @@
+ domains, not only affected images or216 corner totals.
+ 
+ COST: for EVERY type and ordered type pair through the given ambient
+-rank, ARRAY's physical sums equal the originating actual cost functions,
+-and actual/representative domination holds. Each residual item is exactly
++rank, ARRAY's ORDINARY physical component/cross sums from R_N^0 equal
++the originating ordinary actual cost functions. Complete forest totals
++include Gamma59 exactly once, and actual/representative domination
++holds with those same Boolean guards. Each residual item is exactly
+ its base plus all fixed interactions, residual-residual interactions
+ vanish, all fixed/guard classes occur, and every saved Bellman inequality
+ and required predecessor is correct. The59 assertion is only an upper
+@@ -426,9 +451,10 @@
+    labels, zero defaults, Boolean guards and ordered patches. ARRAY is
+    the explicit finite equality premise wherever its contents were not
+    replayed; no family-total surrogate is substituted.
+-2. Physical-to-aggregate identity is the literal B_N/C_N sum, its full
+-   alphabet/dihedral domain, the checked role-cardinality joins and the
+-   exact current source functions above. COST is the complete finite
++2. Physical-to-aggregate identity is the literal ordinary B_N/C_N sum
++   plus Gamma59 exactly once, its full alphabet/dihedral domain, the
++   checked role-cardinality joins and the exact current source functions
++   above. COST is the complete finite
+    output/upper premise, not an unqualified claim about additive tables.
+ 3. P_b/T17 have exact key/map domains and current whole-face receiver
+    identities. MAP is the classification/enumeration premise, while

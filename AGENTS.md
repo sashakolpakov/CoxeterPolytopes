@@ -26,6 +26,16 @@ full-manuscript runtime PASS or transitive regeneration is claimed. See
 Do not rerun successful parts or modules merely to update documentation.
 Preserve failures and deferrals; never credit a plan as execution.
 
+The separate current-rule application conjunction now passed: 259 actual
+scoped units, all 64 selected shards, 28,028 maps, 12,518 nonunit applications
+and 83 prefixes. See `results/finite57_current_rule_release_completion_20261025.json`.
+This is conditional on its explicit inherited geometric and finite-data inputs;
+it is not the combined 146-job replay or a geometric formalization. Preserve
+the pinned `manuscripts/revisions/finite_volume57_consolidated.tex` input.
+The current human working article is `manuscripts/finite_volume57_consolidated.tex`,
+with a matching 50-page PDF and the reviewed terminal-tail lemma. Do not rerun
+successful unchanged jobs merely to update status documentation.
+
 New mathematical claims require a complete argument, a source-bound review
 by another author and root acceptance before updating a global bound. Distinguish
 necessary forest lists from realized examples. Use one original farthest vector
@@ -40,21 +50,24 @@ Run ONE scientific, Lean or TeX process in total, sharing
 parallel agents may inspect sources or prepare proofs/code, but must not import
 workers, enumerate, test or compile independently.
 
-Admission requires40GiB free disk and6GiB available RAM; abort at8GiB/3GiB.
-Do not lower these gates or disable process-tree/RSS monitoring. Scientific
+The user's25October override uses measured percentages of total filesystem
+capacity and physical RAM. Admit at2% free disk and15% available RAM; stop
+an active job below1% free disk or6% available RAM. Gate on exact byte
+ratios and record totals, percentages and the policy source hash. The old
+40/6GiB admission rule is historical. Keep process-tree/RSS monitoring. Scientific
 and TeX work uses the existing bounded research runner (59seconds,1GiB,
 one thread). Lean uses `scripts/run_lean_batches_signal_safe_20261018.py`,
 one module at2048MiB and one thread, then a SEPARATE actual axiom audit.
 Never substitute a raw whole-project Lean build or launch parallel proof jobs.
 
 Use `tools/run_publication_io.py` for its allowlisted publication-only I/O.
-It samples process-group RSS against256MiB and retains20GiB disk/3GiB RAM
-floors; this is not an enforced heap allocation cap and does not relax proof
-admission. Git object inspection uses small mapped-pack/delta caches. If
+It samples process-group RSS against256MiB and uses the same percentage
+resource policy; this is not an enforced heap allocation cap. Git object
+inspection uses small mapped-pack/delta caches. If
 monitoring access is denied, obtain appropriate execution approval rather
 than bypassing monitoring.
 
-Start a cleanup agent only below20GiB disk free, then reassign it. After each
+Start a cleanup agent below2% free disk, then reassign it. After each
 batch remove only owned unused build products. Preserve scientific sources,
 certificates, final PDFs, evidence and history; verify byte round trips when
 compressing preserved material. Never kill unrelated processes.

@@ -1,0 +1,122 @@
+--- scripts/test_finite57_actual_receipt_union_controls_20261025.py
++++ scripts/test_finite57_actual_receipt_union_schema_safe_controls_20261025.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""SOURCE ONLY: sixteen synthetic receipt/parser/union control regressions.
++"""SOURCE ONLY: twenty-three synthetic receipt/parser/whole-schema control regressions.
+ 
+ Memory fixtures are deliberately NOT actual executions. They exercise the
+ pinned union reader's parser and logic, never produce a scientific receipt,
+@@ -22,10 +22,12 @@
+ import unittest
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-UNION = 'scripts/index_finite57_current_terminal_receipt_union_20261025.py'
+-UNION_SHA = '8a0010451ac1daf473c018750848435e7bc24198a77b6a12b8aaaaf09d5cb15d'
++UNION = 'scripts/index_finite57_current_terminal_receipt_union_schema_safe_20261025.py'
++UNION_SHA = '435e2912d2e1bc82e97da8d33f499dc018802dbd10b2a00368a57e4f14d9fb71'
+ PROPER = 'scripts/index_finite57_all_proper_finite_completion_providers_20261025.py'
++WHOLE = 'scripts/index_finite57_funded_selected_whole_providers_schema_safe_20261025.py'
+ SOURCE_SHA = {
++    WHOLE: '6ace38a526ccf22d9913ffe0b814b7ee4177d74c3be478295a981fef5b7afb03',
+     UNION: UNION_SHA,
+     'scripts/index_finite57_current_terminal_routes_syntax_safe_20261025.py':
+         '43a0c4e986cbdb92d112771bf0edc1d128ce2d0feced30fffd9d9825dda7c29d',
+@@ -180,6 +182,18 @@
+         legacy_pointwise_shortfalls=[dict(saved_legacy_lower='1/4', status='UNUSED_IN_DIRECT_RECEIVER_PROOF')])
+ 
+ 
++def whole(k):
++    model = dict(model_key='b' * 64, context_sha256='a' * 64, current_total='1',
++        current_corners=[dict(marks=p, lower='1/4') for p in [[0,1],[1,2],[2,3],[0,3]]])
++    proof = dict(all_current_funded_source_models=[model], automatic_exhaustiveness_claim=False,
++        full_completion_keys=[dict(key=k, funded_model_keys=['b' * 64])],
++        geometric_applicability_premise='Synthetic whole applicability modulo independent current S8.')
++    names = ['synthetic_source_' + str(i) for i in range(22)]
++    return dict(shard=6, shards=8, complete_packet_keys=names, complete_reference_interface_count=564,
++        packets=[dict(source=names[i], current_funded_whole_model_providers=[proof] if i == 6 else [])
++                 for i in range(22) if i % 8 == 6])
++
++
+ class UnionControls(unittest.TestCase):
+     def test_synthetic_three_line_actual_schema_accepted(self):
+         m, e = actual_fixture()
+@@ -277,6 +291,61 @@
+         self.assertFalse(result['current_terminal_bridge_complete'])
+         self.assertFalse(result['full_finite57_verified'])
+         self.assertTrue(any('Current S8' in item for item in result['unresolved_global_interfaces']))
++
++
++    def test_schema_safe_whole_exact_key_is_indexed_with_open_s8(self):
++        m = Memory(); m.add(U.ROUTES, 'selected-00', selected()); m.add(WHOLE, 'whole-6', whole(key()))
++        result = m.run()
++        self.assertTrue(result['selected_nonunit_key_union_complete'])
++        provider = result['exact_joined_key_bindings'][0]['providers'][0]
++        self.assertEqual(provider['adapter'], 'whole_schema_safe')
++        self.assertEqual(provider['application_prerequisites'], [dict(kind='independent_current_S8',
++            status='UNVERIFIED_EXTERNAL_TO_THIS_JOIN', discharged_by_key_match=False)])
++        self.assertFalse(result['selected_shard_all_routes_closed'])
++        self.assertFalse(result['current_terminal_bridge_complete'])
++        self.assertFalse(result['full_finite57_verified'])
++
++    def test_schema_safe_whole_reversed_full_map_is_not_a_match(self):
++        m = Memory(); m.add(U.ROUTES, 'selected-00', selected()); m.add(WHOLE, 'whole-6', whole(key(True)))
++        result = m.run()
++        self.assertFalse(result['selected_nonunit_key_union_complete'])
++        self.assertEqual(len(result['uncovered_completion_keys']), 1)
++
++    def test_schema_safe_whole_unfunded_model_is_rejected(self):
++        result = whole(key()); result['packets'][0]['current_funded_whole_model_providers'][0][
++            'all_current_funded_source_models'][0]['current_total'] = '0'
++        m = Memory(); m.add(U.ROUTES, 'selected-00', selected()); m.add(WHOLE, 'whole-6', result)
++        with self.assertRaisesRegex(ValueError, 'complete current receiver sum'):
++            m.run()
++
++    def test_schema_safe_whole_exhaustiveness_is_never_inferred(self):
++        result = whole(key()); result['packets'][0]['current_funded_whole_model_providers'][0][
++            'automatic_exhaustiveness_claim'] = True
++        m = Memory(); m.add(U.ROUTES, 'selected-00', selected()); m.add(WHOLE, 'whole-6', result)
++        with self.assertRaisesRegex(ValueError, 'variant geometry'):
++            m.run()
++
++    def test_schema_safe_whole_wrong_packet_shard_is_rejected(self):
++        result = whole(key()); result['packets'][0]['source'] = 'synthetic_source_7'
++        m = Memory(); m.add(U.ROUTES, 'selected-00', selected()); m.add(WHOLE, 'whole-6', result)
++        with self.assertRaisesRegex(ValueError, 'entire named whole packet shard'):
++            m.run()
++
++    def test_schema_safe_whole_empty_applicability_premise_is_rejected(self):
++        result = whole(key()); result['packets'][0]['current_funded_whole_model_providers'][0][
++            'geometric_applicability_premise'] = ''
++        m = Memory(); m.add(U.ROUTES, 'selected-00', selected()); m.add(WHOLE, 'whole-6', result)
++        with self.assertRaisesRegex(ValueError, 'whole applicability'):
++            m.run()
++
++    def test_proper_exact_key_still_requires_independent_current_s8(self):
++        m = Memory(); m.add(U.ROUTES, 'selected-00', selected()); m.add(PROPER, 'proper-0', proper(key()))
++        result = m.run(); self.assertTrue(result['selected_nonunit_key_union_complete'])
++        premise = result['exact_joined_key_bindings'][0]['providers'][0]['application_prerequisites'][0]
++        self.assertEqual(premise['kind'], 'independent_current_S8')
++        self.assertEqual(premise['status'], 'UNVERIFIED_EXTERNAL_TO_THIS_JOIN')
++        self.assertFalse(premise['discharged_by_key_match'])
++        self.assertFalse(result['source_geometric_and_computed_premises_proved_by_this_checker'])
+ 
+ 
+ def main():
+@@ -290,14 +359,14 @@
+     U = types.ModuleType('finite57_actual_receipt_union_control_tests'); U.__file__ = str(ROOT / UNION)
+     exec(compile(SOURCES[UNION], str(ROOT / UNION), 'exec'), U.__dict__)
+     suite = unittest.defaultTestLoader.loadTestsFromTestCase(UnionControls)
+-    need(suite.countTestCases() == 16, 'exact sixteen new union control cases')
++    need(suite.countTestCases() == 23, 'exact twenty-three union/whole-schema control cases')
+     stream = io.StringIO(); result = unittest.TextTestRunner(stream=stream, verbosity=2).run(suite)
+     need(raw(relative) == before and all(raw(p) == b for p, b in SOURCES.items()), 'union-test source changed')
+     payload = json.dumps(dict(status='PASS_TINY_ACTUAL_RECEIPT_UNION_CONTROLS' if result.wasSuccessful()
+         else 'FAIL_TINY_ACTUAL_RECEIPT_UNION_CONTROLS', source_sha256=sha256(before).hexdigest(),
+         sources=SOURCE_SHA, tests_run=result.testsRun, failures=len(result.failures), errors=len(result.errors),
+         output=stream.getvalue(),
+-        scope='Sixteen in-memory synthetic parser/key/receiver-control cases only. Faked receipts are not actual runs. No scientific worker is imported; source bytes are read only. Filesystem/monitor correctness, actual provider execution, geometric premises, all64 coverage and finite57 are not verified.'), sort_keys=True)
++        scope='Twenty-three in-memory synthetic parser/key/receiver-control cases only. Faked receipts are not actual runs. No scientific worker is imported; source bytes are read only. Filesystem/monitor correctness, actual provider execution, geometric premises, all64 coverage and finite57 are not verified.'), sort_keys=True)
+     need(len(payload.encode()) <= 500 * 1024, 'tiny union-control output cap')
+     print(payload)
+     if not result.wasSuccessful():

@@ -1,0 +1,1944 @@
+% UNINTEGRATED ARITHMETIC15 FOUNDATION PART, 25 October2026.
+% Same existing arithmetic paper family; source preparation only.
+% First batch: accepted general dihedral3/19 theorem and D14 consumer.
+% DRAFT pending independent and coordinating review; no execution/compilation.
+\section{A strengthened ordinary dihedral comparison}
+\label{app:arithdihedral}
+
+This section supplies the ordinary rank-two comparison needed beside
+\(D_{14}\).  Its component theorem is general real geometry.
+Arithmeticity enters only when the already established arithmetic
+\(D_{14}\) prefix bound is used in the final corollary.
+Throughout, \(p\) is the ORIGINAL vertex farthest from one strict
+interior point.  The theorem is not asserted at an arbitrary
+neighbour with a weakened comparison factor.
+
+\begin{proposition}\label{prop:ordinarydihedralthreenineteenths}
+Let a compact hyperbolic Coxeter polytope have an actual farthest
+vertex \(p\), and write \(z=E(p-x)\), \(\|x\|<1\).
+Let one WHOLE component of the incident finite diagram be
+\(I_2(m)\), \(m\ge4\), and let \(e\) be the squared norm of the
+projection of this SAME \(x\) onto that component.
+If \(e\le3/19\), then \(m=7\) and one actual opposite wall
+closes both component directions, has a single old contact of
+label three there, and has no contact with any other old component.
+This is precisely the actual \(O_7\) profile.
+Consequently every ordinary \(I_2(m)\), \(m\ge4\), has energy
+strictly greater than \(3/19\), with arbitrary finite spectators.
+\end{proposition}
+
+\begin{proof}
+Use outward unit incident roots, finite Gram \(B\), inverse
+\(C=B^{-1}\ge0\), duals \(\omega_i\), and unit inward dual
+directions \(-u_i=-\omega_i/\sqrt{C_{ii}}\).
+For an actual outgoing edge of length \(L_i\), maximality at
+the original \(p\) gives
+\[
+ x\cdot u_i\ge\tau_i=\tanh(L_i/2)>0,\qquad
+ r_i=\tanh L_i={2\tau_i\over1+\tau_i^2}.
+\]
+The old dihedral inverse is
+\[
+ C_I=d\begin{pmatrix}1&k\\k&1\end{pmatrix},\qquad
+ k=\cos(\pi/m)\ge1/\sqrt2,\quad d=(1-k^2)^{-1}.
+\]
+Thus each \(\tau_i^2\le e\), and the increasing function
+\(4t/(1+t)^2\) on \(0\le t<1\) gives
+\[
+                         r_i^2\le57/121=:r .
+\tag{Dih1}\label{eq:arithdihedralr}
+\]
+
+We recall the actual-wall calculation forcing a common opposite.
+For an outside actual wall \(c=Ap-v\), let
+\(\beta_j=-c\cdot n_j\ge0\) and put
+\[
+ T_i(c)={(C\beta)_i\over A\sqrt{C_{ii}}}.
+\]
+For the actual opposite \(c_i\) of edge \(i\),
+\(T_i(c_i)=1/r_i\).
+The matrix
+\(C-C_{\cdot j}C_{j\cdot}/C_{jj}\)
+is entrywise nonnegative: its nonzero block is the inverse of
+the positive principal Gram obtained by deleting \(j\).
+Actual acuteness between two distinct opposites therefore gives
+\(T_j(c_i)\le r_j\), while that same nonnegative matrix gives
+\(T_j(c_i)\ge k/r_i\) within this old component.
+Hence distinct opposites imply \(r_ir_j\ge k\).
+But~\eqref{eq:arithdihedralr} gives
+\(r_ir_j\le57/121<1/\sqrt2\le k\).
+One actual wall \(c\) therefore closes BOTH directions.
+
+Write its full decomposition as
+\[
+ c=Ap-v_I-v_S,\quad h=A^2>0,\quad
+ b=-c\cdot n_1\ge0,\quad g=-c\cdot n_2\ge0,\quad
+ Q=\|v_S\|^2\ge0 .
+\]
+Here \(S\) is the entire orthogonal spectator forest.
+Every positive contact is a native magnitude at least \(1/2\);
+none of its finite, parallel or dotted possibilities is omitted
+before the actual endpoint constraints are imposed.
+At least one of \(b,g\) is positive.
+
+Suppose both are positive.
+At the actual endpoint releasing direction one, the retained
+white Gram has residual \(\delta=1-Q-g^2>0\).
+Its actual edge formula is
+\[
+ \cosh L_1={\sqrt d(b+kg)\over\sqrt{1-Q-g^2}}
+ \ge{\sqrt d(1+k)\over\sqrt3}
+ ={\,\cot(\pi/(2m))\over\sqrt3}
+ \ge{1+\sqrt2\over\sqrt3}>{11\over8}.
+\]
+The last comparison is \(128\sqrt2>171\), whose positive
+squared margin is \(32768-29241\).
+It follows that
+\[
+ e\ge\tanh^2(L_1/2)>
+ {11/8-1\over11/8+1}={3\over19},
+\]
+a contradiction.  Hence exactly one old contact \(\beta>0\)
+remains.
+
+We need one whole-spectator fact at small time.
+If \(h<1/4\), then \(c\) cannot contact any foreign component.
+Indeed a positive foreign contact gives a normalized derivative
+\[
+ {(C_S\beta)_j\over\sqrt{(C_S)_{jj}}}\ge1/2 .
+\]
+This uses the full spectator inverse, with nonnegative entries
+and diagonal at least one.
+Its ratio to \(\sqrt h\) exceeds one.
+The actual-wall shadow inequality therefore forces this SAME
+\(c\) to be the opposite of that foreign edge as well.
+
+For clarity, the required orthogonal obstruction is specific to
+the original farthest vertex.  Suppose a wall closed orthogonal
+dual directions \(u_i,u_j\).
+Clear it positively off all other incident roots \(W\):
+\[
+ c_F=c+\sum_{s\in W}\alpha_sn_s,\qquad
+ \alpha=B_W^{-1}(-c\cdot n_W)\ge0.
+\]
+Strict interiority gives \(z\cdot c_F<0\).
+In the retained Lorentz three-space its exact form is
+\[
+ c_F=A p-(A/r_i)u_i-(A/r_j)u_j .
+\]
+Therefore
+\[
+ {x\cdot u_i\over r_i}+{x\cdot u_j\over r_j}<1.
+\]
+Original maximality gives the opposite bound
+\(\tau_i/r_i+\tau_j/r_j
+ =1+(\tau_i^2+\tau_j^2)/2>1\).
+This proves the obstruction, including arbitrary contacts in \(W\).
+Thus \(h<1/4\) really forces \(Q=0\).
+
+Put \(q=d\beta^2\).
+The smaller normalized derivative square is \(k^2q\).
+The common-wall edge formula and~\eqref{eq:arithdihedralr} imply
+\[
+ q-1\le h=q+Q-1\le rk^2q .
+\]
+Substituting \(k^2=1-1/d\) and \(r=57/121\) gives the exact
+strengthened restriction
+\[
+                         \beta^2(64d+57)\le121 .
+\tag{Dih2}\label{eq:arithdihedralcut}
+\]
+This is derived at the \(3/19\) threshold; it is not the older
+\(1/7\) inequality with an unchanged coefficient.
+
+Since \(\beta^2\ge1/4\), this forces \(d\le427/64\).
+For every old \(m\ge8\),
+\(d\ge4+2\sqrt2>34/5>427/64\), impossible.
+The complete remaining old alphabet is \(4,5,6,7\).
+At old \(m=5\),
+\(d=2+2/\sqrt5>185/64\):
+equivalently \(128>57\sqrt5\), with squared margin139.
+Since \(d\) increases with \(m\), if
+\(\beta\ge1/\sqrt2\) at any of old \(5,6,7\),
+\eqref{eq:arithdihedralcut} would give the opposite
+\(d\le185/64\).
+Thus all three rows have exactly \(\beta=1/2\).
+Every larger finite contact, parallel and dotted contact has
+been excluded by the native jump, rather than a sampled label list.
+
+At old four, \(d=2\) and
+\(\beta^2\le121/185<\cos^2(\pi/5)\).
+The strict comparison is \(413<185\sqrt5\), with squared
+margin556.  Only contacts three and four remain, giving
+\(q=1/2\) or \(1\).
+Consequently \(0<h\le57/242<1/4\).
+The small-time argument just proved gives \(Q=0\), whereas
+\(h=q-1\le0\), a contradiction.
+
+At old five only \(\beta=1/2\) remains.
+Since \(d<3\), \(q<3/4\) and
+\(0<h\le r(d-1)/4<57/242<1/4\).
+Again \(Q=0\), and \(h=q-1<0\).
+
+At old six, \(\beta=1/2\), \(d=4\), \(q=1\).
+If \(Q=0\), then \(h=0\), impossible.
+For any \(Q>0\), the actual positive sum
+\[
+                          \nu=c+2n_1+\sqrt3n_2
+\]
+is a nonzero future null: all three selected products vanish.
+The coefficient order is for OLD6/NEW3, since
+\(c\cdot n_1=-1/2\), \(n_1\cdot n_2=-\sqrt3/2\),
+\(c\cdot n_2=0\).
+Every other actual wall pairs nonpositively termwise with \(\nu\).
+It is a feasible ideal ray, contrary to compactness.
+No foreign contact was discarded in this affine exclusion.
+
+At old seven only \(\beta=1/2\) remains, and
+\[
+ 0\le Q=1+h-d/4
+ \le{427-64d\over484}<{107\over484}<{1\over4},
+\]
+using \(d_7>5\).
+Every positive spectator cost is at least \(1/4\), by inverse
+positivity and the native contact lower bound.  Thus \(Q=0\).
+We have exactly the ACTUAL isolated-new-three wall in old
+\(I_2(7)\), closing both directions: the stated \(O_7\).
+Its time square is \(d_7/4-1\in(0,1/3)\);
+the bounds \(5<d_7<16/3\) follow from
+\(6/5<2\cos(2\pi/7)<5/4\).
+Its separate inherited energy floor \(>9/100\) is unchanged.
+
+All weak inequalities included \(e=3/19\), so no ordinary equality
+case is omitted.  The proof has retained every finite spectator
+component, all its contacts and the same original \(x\).
+No arithmetic hypothesis or weakened-neighbour comparison was used.
+\end{proof}
+
+\begin{corollary}\label{cor:D14ordinarydihedral}
+At the original farthest vertex in arithmetic dimension sixteen,
+a whole \(D_{14}\) cannot have an ordinary irreducible
+rank-two spectator.
+\end{corollary}
+\begin{proof}
+The fresh true-rank-\(14\) argument in the proof of
+Proposition~\ref{prop:f16} gives
+\[
+                         e_D>.84816={5301\over6250}
+\]
+for its actual whole rank-two spectator.
+Its bootstrap uses only the independently available spectator
+floor \(>.09\), so it does not depend on the present strengthening.
+For an ordinary \(I_2(m)\), \(m\ge4\), the proposition gives
+\[
+ \|x\|^2=e_D+e_S>
+ {5301\over6250}+{3\over19}
+ =1+{719\over118750}>1 .
+\]
+For ordinary \(A_2\), use its geometric companion bound
+\(319/2000\), which exceeds \(3/19\) by \(61/38000\).
+Both contradict \(\|x\|<1\).
+The actual typed \(N_7/O_7\) alternatives retain their separate
+costs and arguments; they have not been charged as ordinary.
+\end{proof}
+
+% Next batches may append reviewed arithmetic proof bodies here.
+% Preserve this exact first-batch source before any such expansion.
+
+\section{Arithmetic chain windows and simultaneous actual feet}
+\label{app:arithmeticchain}
+
+The endpoint arguments below share one arithmetic chain calculation.
+We prove it before specializing to the whole \(A_{16}\) and
+\(A_{17}\) cases.  The geometric finite-white classification is the
+one in the general companion; the arithmetic restrictions and the
+simultaneous treatment of isolated feet are given here.
+No component dimension is obtained by deleting a node from a
+previous ambient theorem.
+
+Let \(N=16,17,18\), let the original incident forest contain the
+WHOLE component \(A_{N-1}\), and retain all finite spectators.
+Use its zero-sum \(\mathbb R^N\) frame and unit old roots
+\(n_i=(e_i-e_{i+1})/\sqrt2\).  Then
+\[
+ D_i=\omega_i^2={2i(N-i)\over N},\qquad
+ C_{ij}=\omega_i\cdot\omega_j={2i(N-j)\over N}\quad(i\le j).
+\]
+All heights \(h_i=x_A\cdot\omega_i\) concern the SAME original
+farthest vector.  Set
+\[
+             \ell_{16}=.601,\qquad\ell_{17}=\ell_{18}=.6.
+\]
+
+\subsection{The complete central inventory at the new losses}
+\label{app:arithchaininventory}
+
+For \(5\le i\le N-5\), call an index weak when
+\(h_i\le\sqrt{D_i}-\ell_N\).
+We claim that every central constraint is either strong, an
+isolated-within-\(A\) cap with its actual cleared parameter
+\(0<u<1\), or a pure golden end-helper.
+The last alternative can occur at at most ONE central index.
+
+First establish the full inventory, without assuming a contrary
+component energy.  Deleting \(i\) retains two old paths of ranks
+at least four.  Their complete one-node finite extensions are
+isolation; one admissible end, \(D\)- or \(E\)-position three;
+one terminal four; or two endpoint threes, one in each path.
+Two contacts in a single path make a cycle.
+A connected two-path completion has rank \(N-1>8\), so finite
+classification forces the ordinary path bridge, with no extra
+finite foreign arm.
+
+The zero-own repair depends only on side order \(m\ge5\).
+At a far-end three the time square is less than its full positive
+foreign cost; the next-to-far three has foreign remainder \(<2/m\)
+and the same obstruction.
+If such a positive foreign contact existed, its actual shadow
+would force the same opposite to close an orthogonal component,
+contrary to the original-farthest obstruction proved above.
+Terminal four has foreign remainder \(<1/m\le1/5\), so no positive
+spectator cost, and then negative time.
+The other zero-own \(D/E\), internal-four and two-white roles
+have their actual positive affine stars or cycles.
+Their time is positive through the actual cap and every omitted
+wall product is nonpositive.  Own contact is therefore positive.
+
+Write \(q=\sqrt{D_i}\).  Here \(5/2<q\le3\).
+The actual edge ratio needed for a loss \(\ell\) is
+\[
+ R_\ell(q)={1\over\ell}
+                -{q-\ell\over q(2q-\ell)}.
+\]
+It increases with \(q\) and decreases with \(\ell\) on this
+rectangle.  Thus
+\[
+ R_\ell(q)\le R_{.6}(3)=41/27<761/500.
+\]
+The finite-white residual formulas give the following ordinary
+lower ratios, with side order at least five:
+near-three/own at least five has
+\((101/125+2/5)/\sqrt{3/5}\);
+a \(D\)-position has
+\((101/125+1/5)/\sqrt{2/5}\);
+the \(E\), terminal-four and two-end-three rows are stronger.
+All exceed \(761/500\).
+The smaller owns have the same actual affine principals.
+For the two exceptional roles WITH positive foreign cost,
+the complete clearings give ratio
+\(>227/(25\sqrt{35})>761/500\), or ratio square \(>121/35\).
+These estimates retain the ENTIRE contacted spectator cost.
+Hence no additional ordinary nonisolated row is weak.
+
+Unlike the older \(3/2\) test, the present ratio threshold retains
+near-own-four also at side order seven.  Up to reflection all
+remaining such profiles are
+\[
+          v=\omega_i/\sqrt2+\omega_{i-1}/2,\qquad i=5,6,7 .
+\]
+The simple-three helper normalizes the cap to square two over the
+actual field, with old product \(-1\); its own product is
+\(-\sqrt2\), so \(\sqrt2\in K\).
+At the embedding reversing \(\sqrt2\), the time numerators at
+\(N=16\) are
+\[
+        126-88\sqrt2,\quad143-100\sqrt2,\quad154-108\sqrt2 .
+\]
+They are positive since \(\sqrt2<17/12\).
+Their increments with \(N\) are
+\((i-1)(3-2\sqrt2)>0\).
+The conjugate new-root Schur complement is the negative of this
+numerator divided by \(N\), contradicting positive definiteness.
+This removes all three side orders and both orientations.
+
+The remaining nonisolated possibility is pure:
+\[
+ c=Ap-\gamma\omega_i-\omega_e/2,\qquad
+ e=1\text{ or }N-1,\quad Q=0,
+\]
+with own five, finite own at least seven, or dotted.
+The exact helper-side identity is
+\[
+ {(\gamma+1/(2m))^2\over(m+1)/(2m)}-(4\gamma-2)
+ ={(\gamma-1-1/(2m))^2\over(m+1)/(2m)}\ge0.
+\]
+The ratio threshold and native-five gap therefore give
+\[
+             202/125<t=2\gamma<3139/1458<54/25.
+\tag{Astrip}\label{eq:arithAhelperphysical}
+\]
+
+For isolated-within-\(A\) contact, retain the whole foreign
+projection \(v_S\) and write
+\[
+ c=Ap-\gamma\omega_i-v_S,\quad Q=\|v_S\|^2,\quad
+ u=(1-Q)/\gamma^2,\quad A^2=\gamma^2(D_i-u).
+\]
+Here \(Q<1\) by finite-white positivity.
+When \(Q>0,u>1\), the actual positive clearing has loss at most
+\[
+ {1\over\sqrt{D_i}+\sqrt{D_i-1}}+\sqrt{u-1}
+ <.2+.383<\ell_N .
+\]
+This uses \(Q\ge1/4\), \(\gamma\ge\varphi/2\), and
+\(u-1\le5-3\varphi<.383^2\).
+At \(u=1\) the positive cleared vector is a forbidden feasible
+future null.
+The interval \(0<u<1\) is RETAINED, including \(Q>0\);
+we do not charge a strong floor there.
+
+For pure isolated owns, three, four, six and parallel have their
+actual affine/null principals.
+Own five has the actual \(H_4\) projected-point loss
+\(<25/76+5/24<.6\).
+For own seven, the increasing cubic
+\(8a^3-4a^2-4a+1\) gives \(.9<a<.902\).
+The actual positive \(A_2\) core gives
+\[
+ h_i>\sqrt{D_i-a^{-2}}-\sqrt{4/3-a^{-2}},
+\]
+and hence loss
+\[
+ <{100/81\over2.6+2.37}+\sqrt{17/150}
+ <.25+.337=.587 .
+\]
+Pure own eight is arithmetically impossible:
+\(4\gamma^2=2+\sqrt2\), and its opposite conjugate would require
+\(D_i(2-\sqrt2)<4\), whereas
+\(D_i\ge55/8>4+2\sqrt2\).
+Every embedding of this minimal field extends to the actual
+totally real field, so this contradiction applies there.
+For all finite owns at least nine, the exact singleton finite
+projection gives
+\(h_i>\sqrt{D_i-1}-\tan(\pi/m)\).
+Since \(\tan(\pi/9)<1386/3727<2/5\), the loss is \(<.6\).
+This covers the infinite finite-own tail, not a finite label sample.
+All positive finite and negative-norm projections just used are
+positive sums of ACTUAL roots; their selected signs, positive
+time and all omitted walls are retained as in the companion's
+actual-point lemmas.
+
+\subsection{Every pure weak helper is golden over the actual field}
+\label{app:arithgoldenfield}
+
+Normalize old \(A\) roots to square two.
+If \(r\) is a \(K\)-root on the actual cap line and its simple-three
+helper is \(a_e\) of square two, then
+\(r^2=2(r,a_e)^2\).  Rescaling by \(-(r,a_e)^{-1}\in K\)
+therefore makes the cap square two with helper product \(-1\).
+Its own product is \(-t\).
+The path cycle through old simple-three bonds makes \(t\) integral.
+This compares only connected root lines; no disconnected norm
+squareclasses are equated.
+
+Every nonidentity embedding of \(\mathbb Q(t)\) extends to \(K\).
+Strict conjugate positivity of the full old-component Schur
+complement gives
+\[
+                    D_it_\sigma^2+2C_{ie}t_\sigma+D_e<4 .
+\]
+After reversing \(i\le N/2\), the cheaper costs for negative and
+positive \(t_\sigma\) are respectively
+\[
+ Q_-(s)=2is^2+4s+2-2(is+1)^2/N,\qquad
+ Q_+(s)=2is^2+2-2(is-1)^2/N .
+\]
+At the smallest \(N=16,i=5\), their values at \(-4/5,12/25\)
+exceed four by \(3/40,59/1000\), respectively.
+The costs at those endpoints increase with \(i\) and \(N\);
+their values at zero are below four.
+Convexity of the quadratics therefore gives the full strict strip
+\[
+                         -4/5<t_\sigma<12/25 .
+\tag{Agoldenstrip}\label{eq:arithAgoldenstrip}
+\]
+This covers EVERY nonphysical conjugate, not chosen ones.
+
+If the degree is at least five, the nonzero integral norm has
+magnitude \(<(54/25)(4/5)^4<1\).
+At degree four or three its magnitude is below two.
+Any positive small conjugate would make the magnitude below one,
+so all small conjugates are negative and their absolute product
+is \(1/t\).
+At degree four the integral trace lies in \((-1,0)\):
+its lower bound is \(t-12/5>-1\), and its upper bound
+\(t-3t^{-1/3}<0\) follows from \((54/25)^4<27\).
+At degree three the trace lies in \((0,1)\), since
+\(t-8/5>0\) and \(t-2/\sqrt t<1\);
+the latter follows from
+\((54/25)(29/25)^2<4\).
+Both degrees are impossible.
+At degree two the integral trace is one or two.
+Trace two makes the nonzero norm \(t(2-t)\) lie in \((-1,1)\).
+Trace one forces \(t<9/5\) and \(t(1-t)\in(-2,0)\);
+the norm is \(-1\), and \(t=\varphi\).
+Degree one leaves only \(t=2\), the actual parallel pair with
+a feasible future null.
+Thus every pure weak helper has \(\gamma=\varphi/2\).
+
+The old component and this foreign-free cap have a physically
+Lorentzian Gram over \(\mathbb Q(\varphi)\).
+If \(K\) were a proper extension, a nonphysical real embedding
+fixing that subfield would preserve this indefinite principal
+Gram, impossible.
+Consequently the helper forces the ACTUAL field
+\(K=\mathbb Q(\varphi)\), rather than a convenient overfield.
+
+\subsection{The complete golden packing calculation}
+\label{app:arithgoldenpacking}
+
+For a golden cap reversed to \(5\le i\le N/2\), its time
+numerator \(M=2NA^2\) is
+\[
+ M_i^{\rm near}=i(N-i)-(N+1)+(i+2)(N-i)\varphi,\quad
+ M_i^{\rm far}=i(N-i)-(N+1)+i(N-i+2)\varphi .
+\]
+These formulas retain BOTH helper ends.
+At \(N=18\), conjugate positivity excludes the midpoint nine
+and opposite-end indices six through nine.
+The endpoint costs are \((173-84\varphi)/36\) and
+\((197-99\varphi)/36\), both greater than one, and the
+opposite-end cost is concave in \(i\).
+At \(N=17\), only far seven is excluded, by
+\((170-84\varphi)/34>1\) using \(\varphi<34/21\).
+At \(N=16\) retain every orientation.
+The resulting COMPLETE necessary tables are
+\[
+\begin{array}{c|c|r}
+ N&\text{type and }M&\mathrm N(M)\\ \hline
+16&\mathrm{near}\ 5:\ 38+77\varphi&-1559\\
+ &\mathrm{near}\ 6:\ 43+80\varphi&-1111\\
+ &\mathrm{near}\ 7:\ 46+81\varphi&-719\\
+ &\mathrm{near}\ 8:\ 47+80\varphi&-431\\
+ &\mathrm{far}\ 5:\ 38+65\varphi&-311\\
+ &\mathrm{far}\ 6:\ 43+72\varphi&-239\\
+ &\mathrm{far}\ 7:\ 46+77\varphi&-271\\ \hline
+17&\mathrm{near}\ 5:\ 42+84\varphi&-1764\\
+ &\mathrm{near}\ 6:\ 48+88\varphi&-1216\\
+ &\mathrm{near}\ 7:\ 52+90\varphi&-716\\
+ &\mathrm{near}\ 8:\ 54+90\varphi&-324\\
+ &\mathrm{far}\ 5:\ 42+70\varphi&-196\\
+ &\mathrm{far}\ 6:\ 48+78\varphi&-36\\
+ &\mathrm{far}\ 8:\ 54+88\varphi&-76\\ \hline
+18&\mathrm{near}\ 5:\ 46+91\varphi&-1979\\
+ &\mathrm{near}\ 6:\ 53+96\varphi&-1319\\
+ &\mathrm{near}\ 7:\ 58+99\varphi&-695\\
+ &\mathrm{near}\ 8:\ 61+100\varphi&-179\\
+ &\mathrm{far}\ 5:\ 46+75\varphi&-59 .
+\end{array}
+\]
+At \(N=16\), near and far eight are reflections at the same
+central index, so one row suffices.
+
+Why do these finite tables restrict coexistence?
+Subtracting a cap's \(K\)-valued projection onto the FULL old
+forest leaves a nonzero vector on the SAME one-dimensional
+time line over \(K\).
+The caps have no foreign component.
+Thus any two time coefficients have ratio in \(K\);
+their \(M\)-ratio must be a square IN \(K\), and its rational
+norm must be a rational square.
+This argument retains all spectators.
+
+At \(N=16\) and \(18\), the positive norm magnitudes in each
+table are pairwise coprime nonsquares; their ratios are therefore
+not rational squares.  These are direct small integer checks of
+the displayed complete tables.
+At \(N=17\), different norm squareclasses \(-1,-19,-179\)
+cannot mix.
+In class \(-1\), write the four entries as
+\(42\varphi^3,18\varphi^5,14\varphi^5,6\varphi^7\).
+After squares are removed the rational coefficient classes are
+\(42,2,14,6\).
+Every pair ratio has an odd valuation at three or seven;
+none is a rational square or five times a rational square.
+Those are exactly the positive rational squares in
+\(\mathbb Q(\sqrt5)\), as expansion of
+\((a+b\sqrt5)^2\) shows.
+For the repeated \(-19\) class,
+\[
+ {M_{\rm far8}\over M_{\rm near6}}
+   ={25+33\varphi\over76}={83+33\sqrt5\over152}
+\]
+has norm \(1/16\).
+A square would require
+\(a^2=121/304\) or \(45/304\), both with odd denominator
+valuation at nineteen.
+Thus different types cannot coexist, including the repeated
+norm classes where a norm-only test would be insufficient.
+
+At a fixed index the actual opposite is unique.
+Reflected copies of the same noncentral type would have
+\[
+ -2c_L\cdot c_R=
+ { (N-2i)(i+(i+2)\varphi)-(N+2)\over N}
+\]
+for near helpers, and the same formula with \(i-2\) replacing
+\(i+2\) for far helpers.
+Their simple-three helper bonds and old path make this
+parameter integral by the invariant cyclic criterion, even for
+a dotted mutual.
+But the constant numerators for \(i=5,6,7\) at \(N=16\) are
+\(12,6,-4\); for \(i=5,6,7,8\) at \(17\) they are
+\(16,11,2,-11\); and at \(18\) they are \(20,16,8,-4\).
+The far rows have the same respective constants.
+None is divisible by \(N\), contrary to
+\(\mathcal O_{\mathbb Q(\varphi)}=\mathbb Z[\varphi]\).
+The central \(N=16\) row cannot occupy two different indices.
+Hence at most ONE central index has a golden helper.
+This is an all-native-five packing statement, independent of
+which of those caps are actually weak at the new loss.
+
+\subsection{Sum every retained isolated foot in one reference}
+\label{app:arithsummedfeet}
+
+The intervals \(0<u<1\) retained earlier cannot be declared
+strong by the older \(.61\) estimate.
+For such a cap clear the entire spectator projection by its
+positive actual-root combination.  The actual vector
+\[
+ \eta=c+v_S+\gamma u n_i
+      =\gamma\{\sqrt{D_i-u}\,p-(\omega_i-un_i)\}
+\]
+has square \(-\gamma^2u(1-u)\), positive time, zero contacted
+spectator products, negative or zero \(c,n_i\) products, and
+all other actual products nonpositive.
+Its normalization is a genuine point of the whole chamber.
+Original maximality gives
+\[
+ x_A\cdot(\omega_i-un_i)
+ \ge\sqrt{D_i-u}-\sqrt{u(1-u)}.
+\]
+If \(\lambda_i=\sqrt{D_i}-\sqrt{D_i-u}+\sqrt{u(1-u)}\)
+denotes its loss, then
+\[
+ \lambda_i\le a_i u+\sqrt{u(1-u)},\qquad
+ a_i={1\over\sqrt{D_i}+\sqrt{D_i-1}}.
+\]
+The rational constants needed below are
+\[
+\begin{array}{c|ccc}
+N&a_i<a&\text{positive reference coefficient }\beta_i\ge b&
+ \ell\\ \hline
+16&.1982&.022&.601\\
+17&.1955&.0205&.6\\
+18&.194&.018&.6 .
+\end{array}
+\]
+The \(a\) bounds are positive-square comparisons at
+\(D_{\min}=55/8,120/17,65/9\).
+For every \(0<u<1\),
+\[
+ a u+\sqrt{u(1-u)}-\frac b2(2u-u^2)<\ell.
+\tag{Aabsorb}\label{eq:arithAabsorb}
+\]
+For \(u\le1/2\) use \(a/2+1/2\), giving
+\(.5991,.59775,.597\).
+For \(u\ge1/2\), use \(2u-u^2\ge3/4\) and
+\(\max(au+\sqrt{u(1-u)})=(a+\sqrt{1+a^2})/2\).
+Radical upper bounds \(1.0195,1.019,1.019\) give respectively
+\(.6006,.5995625,.59975\), all strictly below their \(\ell\).
+
+Let \(H\) be a concave reference with available nonnegative
+coefficients \(\beta_i\), positive ones at least \(b\):
+\[
+ w_j=(H_j-H_{j-1})/\sqrt2,\quad
+ \beta_i=w\cdot n_i,\quad
+ w=\sum_i\beta_i\omega_i,\quad
+ E_H=\|w\|^2=\sum_i\beta_iH_i .
+\]
+Require \(H_i+\ell<\sqrt{D_i}\) at its positive central
+coefficients.  Omit the possible golden index.
+If \(S\) is the set of retained isolated indices with
+\(\beta_i>0\), define ONE vector
+\[
+                       Z=w-\sum_{i\in S}\beta_i u_i n_i .
+\]
+Sum all actual point pressures BEFORE estimating its norm:
+\[
+ x_A\cdot Z\ge E_H-\sum_{i\in S}\beta_i(\lambda_i-\ell).
+\]
+Because \(w\cdot n_i=\beta_i\) and
+\(n_i\cdot n_j\le0\) for \(i\ne j\),
+\[
+ \|Z\|^2\le E_H-\sum_{i\in S}\beta_i^2(2u_i-u_i^2).
+\]
+It follows that
+\[
+ e_A\ge2x_A\cdot Z-\|Z\|^2
+ \ge E_H+\sum_{i\in S}\beta_i
+       \{\beta_i(2u_i-u_i^2)-2(\lambda_i-\ell)\}>E_H.
+\tag{Asummed}\label{eq:arithAsummed}
+\]
+Strictness follows from~\eqref{eq:arithAabsorb} if \(S\ne\varnothing\),
+and from the strict available constraints otherwise.
+Adjacent isolated indices and positive foreign costs are allowed.
+No nonadjacency is assumed for this new isolated set, and no
+independently optimized energies are added.
+
+The references used by the endpoint arguments are
+\[
+\begin{array}{c|c|c|c}
+N&H_5,H_6,\ldots\text{ to midpoint}&E_H&
+ \text{maximum internal golden omission loss}\\ \hline
+16&2.021,2.137,2.205,2.227&.8354522&.000576\\
+17&2.056,2.186,2.269,2.310&.8708972&.00055225\\
+18&2.087,2.228,2.324,2.381,2.399&.9037838&.00050625 .
+\end{array}
+\]
+Reflect \(H_{N-i}=H_i\), use linear end tails, and at \(N=17\)
+take \(H_9=H_8\).
+The positive curvatures have exactly the lower bounds \(b\) above.
+All floor inequalities are positive-square comparisons:
+the new heights are the old \(.61\) heights shifted by
+\(.61-\ell\), so \(H_i+\ell\) is unchanged.
+A single internal omission sets its coefficient zero by neighbour
+averaging and increases the adjacent coefficients.
+An end omission replaces the first tail by the chord \(0\)--\(6\),
+or its reflection.  These are changes in ONE reference.
+In particular the full and omitted references preserve the
+summed-foot argument whenever their positive central coefficients
+have the displayed lower bounds; subsequent endpoint grafts must
+check that condition again rather than assume it.
+
+\subsection{A golden end hole pays for its own endpoint}
+\label{app:arithgoldenend}
+
+For later proper-component consumers we record how the exceptional
+end omission is closed.  Suppose its central index is five,
+reversing if necessary, and put \(\gamma=\varphi/2<.81\).
+For either helper end \(e\), with its adjacent old node \(j\),
+the actual finite \(H_4\) correction is
+\[
+ b_c=\gamma n_5+\tfrac23n_e+\tfrac13n_j,\qquad
+ \eta=c+b_c,\quad
+ \eta^2=\tfrac23-\gamma^2<.111^2 .
+\]
+The actual positive finite projected point has pure spatial
+displacement \(v-b_c\).
+Its normalization and original maximality give
+\(x\cdot(v-b_c)\ge A-.111\).
+Since \(x\cdot b_c>0\), the helper-end signed coordinate satisfies
+\[
+                  x_{\rm end}>
+             \sqrt2(A-.111-\gamma h_5)>.49 .
+\]
+Both orientations are covered: the smaller opposite-end time
+squares, at \(N=16,17,18\), are
+\[
+ (38+65\varphi)/32,\quad(42+70\varphi)/34,\quad
+ (46+75\varphi)/36.
+\]
+They give \(A>2.115,2.136,2.155\).
+Weakness gives \(h_5<2.022,2.057,2.088\).
+Using \(\sqrt2>1.4\), the corresponding signed-coordinate lower
+bounds are \(.512652,.502362,.493808\).
+The nearer-end time is larger.
+Here the signed coordinate is \(x_1\) at helper one and
+\(-x_N\) at helper \(N-1\).
+No strong floor at the missing index five has been inferred.
+
+Use the chord \(0\)--\(6\) at the omitted end.
+At the helper end the resulting reference is flat on \(L=6\)
+coordinates in the near case and \(L=5\) in the far case,
+with signed mean \(.25<b_0<.3\).
+Replace that block by
+\[
+             .49,\quad
+             {Lb_0-.49\over L-1},\ldots,
+             {Lb_0-.49\over L-1}.
+\]
+Its sum is unchanged.  The latter coordinates lie in
+\((.19,.262)\); the next old coordinate is below \(.101\).
+Thus concavity persists, the new central boundary coefficient
+is \(>.062>b\), and all other positive central coefficients
+keep their previous lower bound.
+The new endpoint coefficient is positive and is paid by the
+actual endpoint pressure just proved.
+The one-reference energy increases by
+\[
+                {L\over L-1}(.49-b_0)^2>.04332 .
+\]
+The pre-graft chord energy is exactly
+\[
+ E_H-\frac12\{H_5^2/5+(H_6-H_5)^2-H_6^2/6\}.
+\]
+At \(N=17,18\) it is respectively
+\(12569249/15000000\) and \(13079276/15000000\);
+at \(N=16\) it exceeds \(.8008\).
+These direct rational formulas give, after the graft and
+simultaneous absorption~\eqref{eq:arithAsummed}, the conservative
+component bounds
+\[
+                 e_{A_{15}}>.8348,\qquad
+                 e_{A_{16}}>.8703,\qquad
+                 e_{A_{17}}>.9032 .
+\]
+If the single golden hole is internal instead, subtract the
+internal losses in the reference table:
+the energies are \(>.8348762,.87034495,.90327755\).
+If there is no hole they are stronger.
+The three conclusions therefore include every omission location,
+all retained isolated feet, and arbitrary finite spectators.
+They are the shared component estimates; no historical
+ambient-dimension consumer has been imported.
+
+\section{The actual whole-\(A_{17}\) endpoint reduction}
+\label{app:wholearithA17}
+
+We now prove the geometric and arithmetic inclusion needed before
+using the recorded finite \(A_{17}\) propositions.
+The old incident diagram is WHOLE \(A_{17}\), so \(N=18\) and
+there is no spectator.
+Keep the original \(p,z,x\) throughout.
+Use the \(N=18\) reference and simultaneous-foot argument of
+Appendix~\ref{app:arithmeticchain}, with energy
+\(E_0=.9037838\), central coefficients at least \(.018\),
+and first/last five-coordinate signed means
+\(.2951<b<.2952\).
+The next signed coordinate is below \(.1\).
+A possible single golden central hole is omitted before its
+pressure is estimated.
+
+\subsection{Actual endpoint lengths and the full finite-white list}
+\label{app:arithA17endpointlist}
+
+Even with a golden end hole, the chord reference has energy
+\[
+ E_{\min}={13079276\over15000000}>.8719 .
+\]
+Each signed end block has length \(L=5\) or \(6\) and mean
+\(.25<b<.3\).
+If its actual endpoint coordinate were at least \(.63\), replace
+the block by
+\[
+ .63,\quad (Lb-.63)/(L-1),\ldots,(Lb-.63)/(L-1).
+\]
+Its sum and every available central height are unchanged.
+The remaining coordinates exceed \(.155\), and the following
+coordinate is \(<.1\); hence the changed positive central
+coefficient is \(>.055/\sqrt2>.018\).
+All other positive central coefficients still meet \(.018\).
+Thus the SAME summed-foot proof applies to this ONE new
+reference, whose energy increases by
+\[
+ {L\over L-1}(.63-b)^2>{6\over5}(.33)^2=.13068.
+\]
+This exceeds one after adding \(E_{\min}\).
+Therefore both signed actual endpoint coordinates are \(<.63\).
+
+For either actual endpoint edge,
+\[
+ x_{\rm end}\ge\sqrt{17/18}
+                        \sqrt{(C-1)/(C+1)} .
+\]
+The bound \(C\ge5/2\) would give endpoint square
+\(\ge17/42>.63^2\), impossible.
+If the ACTUAL field is nongolden, no central golden hole exists.
+Use the full reference and graft instead to \(.575=23/40\).
+The remaining block coordinates exceed \(.225125\);
+all changed central coefficients still exceed \(.018\).
+The energy gain is
+\((5/4)(.575-.2952)^2=.09786005\), giving total
+\(>1.00164385\).
+Since \(C\ge21/10\) would give endpoint square
+\(\ge187/558>(23/40)^2\), we obtain
+\[
+ \text{always }C<5/2,\qquad
+ \text{outside }\mathbb Q(\varphi): C<21/10 .
+\tag{A17C}\label{eq:arithA17C}
+\]
+
+Release old node one.
+The retained white path is \(A_{16}\) on nodes two through
+seventeen.  Finite one-node classification gives isolation;
+helper three at \(j=2,3,16,17\); or helper four at \(j=2,17\).
+A second contact would make a cycle; no exceptional finite
+rank-seventeen diagram contains that path.
+There is no foreign contact in this whole-diagram case.
+Parallel own always has its actual future-null pair.
+
+For helper three put \(t=2\gamma\).
+Connected simple-three normalization gives a square-two cap,
+helper product \(-1\), own product \(-t\), and integral \(t\).
+Its full Lorentz star is defined over \(\mathbb Q(t)\);
+all-place definiteness gives ACTUAL \(K=\mathbb Q(t)\).
+The unit time square and edge coshes are exactly
+\[
+ A^2={17t^2+2(18-j)t+j(18-j)-36\over36},
+\qquad
+\begin{array}{c|c}
+j&C\\ \hline
+2&(17\gamma+8)/9\\
+3&(17\gamma+15/2)/(3\sqrt2)\\
+16&(17\gamma+1)/(3\sqrt2)\\
+17&(17t+1)/18 .
+\end{array}
+\]
+These are obtained by clearing ALL retained \(A_{16}\) roots.
+For helper four the two formulas are
+\[
+ j=2:\ C=(17\gamma+8\sqrt2)/3,\qquad
+ j=17:\ C=(17\gamma+1/\sqrt2)/3 .
+\]
+The raw white residuals are \(18/17\) at a helper-three
+endpoint, \(4/17\) at a next-to-end three, and \(1/17\)
+at a helper-four endpoint.
+
+At helper \(j=3\), every positive own violates \(C<5/2\).
+Own zero has the ACTUAL feasible affine-\(E_8\) null
+\[
+ 2n_1+4n_2+6n_3+5n_4+4n_5+3n_6+2n_7+n_8+3c .
+\]
+Its future time is \(3A>0\), and all omitted products are
+nonpositive.
+At \(j=16\), own zero has \(A^2=-1/9\), own three has
+the actual all-three cycle, and own at least four violates
+\(C<5/2\).
+The helper-four rows fail already at own zero for \(j=2\)
+and own at least three for \(j=17\); the latter own-zero
+time is \(-1/18\).
+At \(j=2\), own zero has negative time and
+\(C<5/2\) gives \(\gamma<29/34\), leaving owns three,
+four or five.
+Own three is an actual affine triangle.
+Own four generates \(\mathbb Q(\sqrt2)\), but its edge exceeds
+\(21/10\), contrary to the nongolden bound.
+Only own five in the ACTUAL golden field can remain at this end.
+
+\subsection{The far-helper strip and the golden exceptions}
+\label{app:arithA17goldenends}
+
+For the far helper \(j=17\), positive time gives \(t>1\).
+Outside the golden field, \eqref{eq:arithA17C} gives
+\[
+ 1<t<184/85,\qquad -19/17<t_\sigma<1\quad(\sigma\ne\mathrm{id}).
+\]
+Set \(f(s)=s(s^2-1)\).
+On this nonphysical interval
+\(\lvert f(s)\rvert\le2/(3\sqrt3)\):
+on \([-1,1]\) use
+\(4/27-q(1-q)^2=(1-3q)^2(4-3q)/27\);
+on \([-19/17,-1]\) the bound \(1368/4913\) is smaller.
+Physically \(0<f(t)<8\).
+Degree at least four would give nonzero integer norm of
+magnitude \(<8[2/(3\sqrt3)]^3<1\).
+At degree three the magnitude is \(<32/27<2\), so
+\(t,t-1,t+1\) would all be units.
+The signs at one and minus one leave exactly
+\[
+ X^3-X-1,\quad X^3-2X^2-X+1,\quad
+ X^3+X^2-2X-1,\quad X^3-X^2-2X+1 .
+\]
+The first has discriminant \(-23\), so is not totally real.
+The second is negative at \(11/5\), with increasing positive
+branch there, so its physical root exceeds \(11/5>184/85\).
+The latter two have positive values \(5347/4913,2899/4913\)
+at \(-19/17\), contrary to all three roots lying above that
+endpoint.
+
+In degree two the integral trace is \(0,1,2,3\), and the nonzero
+norm is \(\pm1,\pm2\).
+For trace zero the negative conjugate strip forces
+\(1<t<19/17\), so \(-t^2\) lies strictly between \(-2,-1\).
+For trace one the norm \(t(1-t)\) leaves only \(-1\), giving
+\(t=\varphi\), or \(-2\), giving the rational \(t=2\).
+For trace two the norm \(t(2-t)\) is strictly between \(-1,1\),
+with zero excluded in degree two.
+For trace three the conjugate strip requires \(t>2\), and
+\(t(3-t)\) lies strictly between one and two.
+Thus no nongolden quadratic survives.
+In degree one only \(t=2\) is possible, the forbidden parallel.
+Hence any far helper forces the actual golden field.
+
+In \(K=\mathbb Q(\varphi)\), the unconditional bound gives
+\(1<t<44/17\) and the same nonphysical strip.
+Writing \(t=a+b\varphi\) in the FULL ring yields \(0<b<2\);
+thus \(b=1\), \(a=0\) or one, and \(a=1\) violates the
+physical bound.  Again \(t=\varphi\).
+Every possible nonisolated endpoint is therefore a near- or
+far-simple-three helper with own five in \(K=\mathbb Q(\varphi)\).
+
+We now exclude that actual field in full, retaining its isolated
+alternatives.  The unit near/far helper times are \(M_N/36,M_F/36\),
+where
+\[
+ M_N=13+49\varphi,\quad \mathrm N(M_N)=-1595,\qquad
+ M_F=-2+19\varphi,\quad \mathrm N(M_F)=-395 .
+\]
+Two far helpers have positive actual product \((1+4\varphi)/9\).
+Near/far time-norm ratio \(319/79\) is not a rational square.
+Two near helpers have invariant two-cycle
+\((500+660\varphi)/81\notin\mathbb Z[\varphi]\).
+Thus both endpoints cannot be nonisolated.
+
+For an isolated endpoint put \(U=4\gamma^2\).
+Rescale its actual \(K\)-root line to raw square \(2U\) and
+sole old product \(-U\).
+The actual two-cycle makes \(U\) integral and the full Lorentz
+star gives \(K=\mathbb Q(U)\).
+Its raw time square is
+\[
+ H^2=U(17U-36)/18,\quad
+ 36/17<U<225/17,\quad0<U'<36/17 .
+\]
+The FULL ring models \(U=a+b\varphi\) are exactly
+\[
+\begin{array}{c|r|r|r}
+U&\mathrm N(U)&-\mathrm N[U(17U-36)]&
+ \text{time norm squareclass}\\ \hline
+1+\varphi&1&251&251\\
+2+\varphi&5&1595&5\cdot11\cdot29\\
+2+2\varphi&4&4880&5\cdot61\\
+3+2\varphi&11&4631&11\cdot421\\
+2+3\varphi&1&2699&2699\\
+3+3\varphi&9&14499&179\\
+3+4\varphi&5&16895&5\cdot31\cdot109\\
+4+4\varphi&16&22784&89\\
+4+5\varphi&11&38291&11\\
+5+5\varphi&25&16475&659 .
+\end{array}
+\]
+Indeed \(b\sqrt5<225/17\) gives \(b=1,\ldots,5\);
+the strict conjugate strip gives respectively
+\(a=1,2;\ 2,3;\ 2,3;\ 3,4;\ 4,5\).
+The entries follow from
+\[
+ \mathrm N[U(17U-36)]
+ =n(289n-612T+1296),\quad n=\mathrm N(U),\quad T=\mathrm{Tr}(U).
+\]
+The displayed squareclasses are distinct; their small prime
+factorizations can be checked by trial divisibility through the
+respective square roots.
+
+Actual roots on the SAME \(K\)-time line require
+\(U(17U-36)/M_N\) or \(/M_F\) to be a square IN \(K\).
+Their rational norms exclude every model except \(U=2+\varphi\)
+with a near helper; none has the far-helper class \(5\cdot79\).
+For that exception \(U(17U-36)=M_N\) exactly.
+Its equal positive raw time coefficients and spatial product
+\(U^2/18\) give
+\[
+ g=-(4+22\varphi)/9,\qquad
+ g^2/U=(168+164\varphi)/81,
+\]
+whose nonintegral two-cycle excludes it.
+
+Finally two isolated golden endpoints cannot use different rows,
+since their rational time-norm squareclasses differ.
+With the same row their equal positive raw times give
+\[
+ g=2U(9-4U)/9,\qquad g^2/U^2=4(9-4U)^2/81\in\mathcal O_K .
+\]
+Integral closedness makes \(2(9-4U)/9\) integral, hence
+\(8U/9\) integral; Bezout \(8\cdot8-7\cdot9=1\)
+then makes \(U/9\) integral.
+But \(0<\mathrm N(U)<8100/289<29\), whereas
+\(\mathrm N(U/9)=\mathrm N(U)/81\) would be a positive integer.
+Thus the actual golden field is impossible.
+
+Both endpoints are now isolated in a nongolden actual field,
+with independent integral generators satisfying
+\[
+ K=\mathbb Q(U)=\mathbb Q(V),\quad
+ 36/17<U,V<3969/425,\quad
+ 0<U^\sigma,V^\sigma<36/17\quad(\sigma\ne\mathrm{id}).
+\tag{A17isolated}\label{eq:arithA17isolated}
+\]
+No equality of their parameters, finite-own assumption or common
+disconnected raw scale was used.
+
+\subsection{One two-end graft gives actual degree at most five}
+\label{app:arithA17degree}
+
+There is no golden hole after the preceding argument.
+If BOTH signed endpoint coordinates were at least \(1/2\),
+modify the first and last five-coordinate blocks simultaneously.
+Replace each signed block mean \(b\) by
+\[
+             a,r,r,r,r,\quad a=1/2,\quad r=(5b-a)/4 .
+\]
+Both sums and every central height stay unchanged.
+The supports are disjoint and each residual has sum zero,
+so the two residuals are orthogonal to one another and to the
+old flat blocks.
+Moreover \(r>.243875>.1\), making every changed positive
+central coefficient \(>.018\).
+The new endpoint coefficients are paid by the two ACTUAL
+coordinates assumed at least \(a\).
+The summed-foot proof therefore applies to this ONE new reference,
+with energy
+\[
+ >.9037838+2(5/4)(.5-.2952)^2
+ =1.0086414 .
+\]
+Thus at least one actual endpoint coordinate is \(<1/2\).
+For its generator \(U\), the edge formula
+\(C^2=17U/36\) and the farthest endpoint comparison give
+\[
+                  36/17<U<66564/10625<157/25.
+\tag{A17shortU}\label{eq:arithA17shortU}
+\]
+The other generator need not satisfy this sharper upper bound;
+the chosen one still generates the ENTIRE actual field.
+
+Let \(F(U)=U(U-1)(U-2)\) and \(d=[K:\mathbb Q]\).
+For \(d\ge2\) all factors are nonzero algebraic integers.
+Physically
+\[
+                    0<F(U)<142 .
+\]
+At any other embedding put \(t=U^\sigma-1\in(-1,19/17)\).
+On \([-1,1]\), \(|t^3-t|\le2/(3\sqrt3)<2/5\);
+on \((1,19/17)\) it is at most \(1368/4913<1/3\).
+If \(d\ge7\), the nonzero integral norm would have magnitude
+\(<142(2/5)^6=9088/15625<1\).
+Hence \(d\le6\).
+For \(d=6\), the bound \(142(2/5)^5<2\) makes its absolute
+norm one, and all three separate factor norms have absolute
+value one.
+
+We give the complete degree-six seal.
+Set \(s=U-1\), and let
+\(r_i=|U^{\sigma_i}-1|\), \(i=1,\ldots,5\).
+Irreducibility excludes \(r_i=0,1\).
+The unit norms and~\eqref{eq:arithA17shortU} give
+\[
+ 0<r_i<19/17<9/8,\quad
+ \prod r_i=1/s>3/16,\quad s<132/25,\quad
+ s^2-1<16799/625<27.
+\]
+The sharper \(s<132/25\), rather than merely \(s<16/3\),
+is needed in the last inequality.
+
+If \(m\) positive numbers \(q_i<1\) have
+\(p=(\prod q_i)^{2/m}\), ordinary AM--GM applied separately
+to \(q_i^2\) and \(1-q_i^2\) gives
+\[
+       p+\{\prod(1-q_i^2)\}^{1/m}\le1 .
+\]
+Let \(k\) be the number of \(r_i>1\), so \(m=5-k\).
+Each large \(r_i\) contributes
+\(|1-r_i^2|<72/289<1/4\).
+The following six cases exhaust all possibilities:
+\[
+\begin{array}{c|c|c|c}
+k&\prod_{\rm small}r_i\text{ lower}&
+ p\text{ lower}&\prod_{i=1}^5|1-r_i^2|\text{ upper}\\ \hline
+0&3/16&1/2&1/32\\
+1&1/6&2/5&81/2500\\
+2&4/27&1/4&27/1024\\
+3&32/243&1/8&49/4096\\
+4&\text{not needed}&\text{not needed}&1/256\\
+5&\text{empty product}&\text{not needed}&1/1024 .
+\end{array}
+\]
+For the product bounds use
+\(\prod_{\rm small}r_i>(3/16)(8/9)^k\).
+The four root comparisons for \(p\) follow respectively from
+\(9/256>1/32\), \(1/6>4/25\), \(16/729>1/64\),
+\(32/243>1/8\); each exponent has been cleared positively.
+Multiplying the last column by \(27\) gives
+\[
+ 27/32,\quad2187/2500,\quad729/1024,\quad
+ 1323/4096,\quad27/256,\quad27/1024,
+\]
+all below one.
+But the unit norm of \(U(U-2)\) would be
+\[
+             1=(s^2-1)\prod_{i=1}^5|1-r_i^2|<1 .
+\]
+This excludes degree six and proves the ACTUAL degree bound
+\(d\le5\), without a field list or an equality assumption on the
+two endpoints.
+
+\subsection{The whole two-dotted interval and the derived finite fields}
+\label{app:arithA17anchors}
+
+Suppose both isolated owns are dotted.
+For the left endpoint put \(u=\gamma^{-2}\in(0,1)\).
+The positive actual core
+\[
+ c+\gamma^{-1}n_1
+   =\gamma\{\sqrt{17/9-u}\,p-(\omega_1-un_1)\}
+\]
+has negative square \(u-1\), zero \(c\) product and negative
+\(n_1\) product.
+Every other original wall, INCLUDING the other endpoint opposite,
+has nonpositive product with both summands.
+After normalization it is a genuine chamber point and gives
+\[
+ x\cdot Z_L\ge h(u)=\sqrt{17/9-u}-\sqrt{u(1-u)},\quad
+ Z_L=\omega_1-un_1 .
+\]
+The right endpoint has its independent parameter \(v\in(0,1)\)
+and reflected vector \(Z_R\).
+
+Let
+\[
+ Y_L=Z_L-\omega_5/5,\qquad
+ R(u)=\|Y_L\|^2=8/5-2u+u^2 .
+\]
+This is a zero-sum vector supported in the first five coordinates.
+Its central-root products are zero except \(-1/5\) at five.
+Its reflected partner is supported in the LAST five coordinates.
+Consequently \(w\cdot Y_L=w\cdot Y_R=Y_L\cdot Y_R=0\), while
+\(w\cdot Z_L=w\cdot Z_R=.4174\).
+Pay both actual core pressures at \(\mu=.3\):
+\[
+ w'=w+\mu Y_L+\mu Y_R,\quad
+ \beta'_5=\beta'_{13}=.1382-.06=.0782,\quad
+ \beta'_i=\beta_i\ (6\le i\le12).
+\]
+Every positive central coefficient is still at least \(.018\),
+and \(w'\cdot n_i=\beta'_i\) EXACTLY.
+
+Retain every central isolated foot, with its OWN parameter
+\(v_i\in(0,1)\), using ONE vector
+\[
+                       V=w'-\sum_{i\in S}\beta'_iv_in_i .
+\]
+Sum the endpoint and central actual pressures before estimating
+the norm.  The identities just proved and
+\(n_i\cdot n_j\le0\) give
+\[
+ \begin{split}
+ x\cdot V&\ge E_0+
+ \mu\{h(u)-.4174+h(v)-.4174\}
+       -\sum_S\beta'_i(\lambda_i-.6),\\
+ \|V\|^2&\le E_0+\mu^2\{R(u)+R(v)\}
+       -\sum_S(\beta'_i)^2(2v_i-v_i^2).
+ \end{split}
+\]
+Every central summand is nonnegative by the already proved
+absorption inequality, since \(\beta'_i\ge.018\).
+Thus
+\[
+ \|x\|^2\ge E_0+G(u)+G(v),\qquad
+ G(u)=.6\{h(u)-.4174\}-.09(8/5-2u+u^2).
+\]
+
+This whole continuous interval has a strict rational seal.
+Concavity and the endpoint squares give
+\(\sqrt{17/9-u}>1.3743-.4315u\) on \([0,1]\).
+Therefore
+\[
+ G(u)>.43014-.0789u-.09u^2-.6\sqrt{u(1-u)}.
+\]
+For \(u\le1/2\), use \(u^2\le u/2\) and the circle inequality
+\[
+ au+b\sqrt{u(1-u)}\le(a+\sqrt{a^2+b^2})/2 .
+\]
+With \(a=.1239,b=.6\), \(\sqrt{a^2+b^2}<.6127\)
+gives \(G(u)>.06184\).
+For \(u\ge1/2\), use \(u^2\le1.5u-.5\);
+\(a=.2139,b=.6\), with radical \(<.637\), gives
+\(G(u)>.04969\).
+The positive square margins are \(.00005008,.00001579\),
+respectively.
+Hence throughout \((0,1)\),
+\[
+          \|x\|^2>.9037838+2(.04969)=1.0031638,
+\]
+impossible.  Parallel owns already have their actual future null.
+At least one endpoint is a finite native own.
+
+At that endpoint \(U=4\cos^2(\pi/m)=2+2\cos(2\pi/m)\)
+generates the ACTUAL field.
+The degree bound makes \(\phi(m)\le10\).
+The COMPLETE elementary totient list is
+\[
+ 3,4,5,6,7,8,9,10,11,12,14,15,16,18,20,22,24,30 .
+\]
+Indeed only prime divisors \(2,3,5,7,11\) are possible;
+their permissible prime powers and products give that list.
+Labels three and four have \(U\le2<36/17\).
+Six gives the rational field, excluded by Meyer and compact
+anisotropy at form rank eighteen.
+Five and ten give the already excluded golden field.
+For the following nine labels choose the indicated coprime
+cyclotomic embedding:
+\[
+\begin{array}{c|c|c|c}
+m&k&\cos(2k\pi/m)=\sin\theta&2\theta/\pi\\ \hline
+9&2&\theta=\pi/18&1/9\\
+14&3&\theta=\pi/14&1/7\\
+15&2&\theta=7\pi/30&7/15\\
+16&3&\theta=\pi/8&1/4\\
+20&3&\theta=\pi/5&2/5\\
+24&5&\theta=\pi/12&1/6\\
+30&7&\theta=\pi/30&1/15\\
+11&2&\theta=3\pi/22&3/11\\
+22&3&\theta=5\pi/22&5/11 .
+\end{array}
+\]
+Every last entry exceeds \(1/17\).
+Strict concavity on \(0<\theta<\pi/2\) gives
+\(\sin\theta>2\theta/\pi\), so that conjugate would have
+\(U^\sigma>36/17\), a contradiction.
+Label thirty was included before its conjugate test.
+Only labels \(7,8,12,18\) remain.
+Their actual fields are, respectively,
+\(K_7,\mathbb Q(\sqrt2),\mathbb Q(\sqrt3),K_9\);
+the cubic parameters have polynomials
+\[
+ X^3-5X^2+6X-1,\qquad X^3-6X^2+9X-3,
+\]
+with discriminants \(49,81\) and irreducibility by the
+rational-root test.  This proves the actual field reduction,
+rather than assuming a list of possible fields.
+
+\subsection{Actual inclusion in the recorded finite domains}
+\label{app:arithA17datainclusion}
+
+The isolated endpoint normalization in
+\eqref{eq:arithA17isolated} has raw square \(2U\), sole old
+product \(-U\) and time square \(F(U)/18\), where now
+\(F(X)=X(17X-36)\).
+For the two actual endpoint roots, subtracting their \(K\)-valued
+old projections leaves one common \(K\)-time line.
+Thus
+\[
+ R=F(U)F(V)\in K^2,\quad
+ g={UV-\sqrt R\over18},\quad
+ L={g^2\over UV}.
+\]
+The square root is PHYSICALLY POSITIVE.
+The long old-three cycle gives \(g\in\mathcal O_K\);
+the actual two-cycle gives \(L\in\mathcal O_K\).
+Acuteness gives \(g\le0\).
+If \(g\ne0\), every nonphysical place satisfies \(0<L^\sigma<4\);
+the branch \(g=L=0\) is retained.
+The physical owns and mutual products retain their native/dotted
+alphabet, with a parallel pair excluded by its actual future null.
+These are precisely the stated necessary tests in the quadratic
+domain; the endpoint parameters need not be equal.
+
+If \(K\) is quadratic, this actual pair therefore enters the FULL
+quadratic domain of Proposition~\ref{prop:pair-output}(i),
+including its maximal-order classes, square signs and zero mutual.
+That recorded finite-output proposition says the domain is empty.
+If \(K=K_7\) or \(K_9\), the finite endpoint proved above supplies
+the actual anchor seven or eighteen, respectively.
+The same original time-line square, cyclic and native conditions
+put the other endpoint in the full cubic finite-anchor domain
+of Proposition~\ref{prop:pair-output}(ii).
+Its complete ring/box/decision arguments are given in
+Section~\ref{sec:algorithms}, and the recorded output is empty.
+
+Thus, at those explicitly stated EXISTING finite-output premises,
+the whole \(A_{17}\) at the original arithmetic rank-seventeen
+vertex is impossible.
+The geometric domain inclusion and complete hand arguments are
+proved in this appendix; no new enumeration, independent replay,
+runtime PASS, higher-dimensional arithmetic tail or geometric
+Lean formalization is inferred by transcribing them.
+
+\section{The separate whole-\(A_{16}\) endpoint proof}
+\label{app:wholearithA16}
+
+The whole \(A_{16}\) case has \(N=17\) and its own constants.
+It is not a consequence of reranking the preceding \(A_{17}\)
+theorem.  We retain one original farthest vector throughout.
+The common chain proof gives central reference energy
+\[
+ E_0=.8708972,\quad
+ (H_5,H_6,H_7,H_8)=(2.056,2.186,2.269,2.310),\quad H_9=H_8,
+\]
+with positive coefficients at least \(.0205\).
+Its worst single end-hole chord has energy
+\(12569249/15000000\).
+All grafts below preserve the common simultaneous-foot proof
+by checking those coefficients afresh.
+
+\subsection{Actual lengths and all nonisolated endpoint roles}
+\label{app:arithA16endpointlist}
+
+On either signed end block, of length five or six and mean
+\(.25<b<.3\), grafting to \(.67\) leaves each remaining
+coordinate \(>.145\); the following coordinate is below \(.1\).
+The central coefficient stays \(>.045/\sqrt2>.0205\).
+The gain \(>(6/5)(.37)^2=.16428\), even after the worst
+chord omission, exceeds the available norm budget.
+Both signed endpoint coordinates are therefore \(<.67\).
+The actual edge comparison is now
+\[
+ x_{\rm end}\ge\sqrt{16/17}\sqrt{(C-1)/(C+1)}.
+\]
+At \(C=17/6\) its square \(176/391\) exceeds \(.67^2\).
+Hence both endpoints have \(C<17/6\).
+If both signed coordinates were at least \(.56\), disjoint
+grafts on the SAME reference would gain
+\(>2(6/5)(.26)^2=.16224\), again exceeding one.
+Since \(16/51>.56^2\), at least one endpoint has \(C<2\).
+
+Outside the actual golden field there is no hole and the
+full block mean lies in \((.2907,.2908)\).
+A single graft to \(.613\) gains \(>.12976605\), making total
+\(>1.00066325\).
+The retained coordinates are \(>.210125\), so the coefficient
+threshold remains valid.
+As \(32/85>.613^2\), both endpoints then have \(C<7/3\).
+Two disjoint grafts to \(.52\) gain \(>.1313316\), giving total
+\(>1.0022288\).
+The exact comparison
+\(1296/4777>(13/25)^2\) therefore proves
+\[
+ \text{always both }C<17/6,\ \min C<2;\qquad
+ K\ne\mathbb Q(\varphi):
+        \text{ both }C<7/3,\ \min C<181/100 .
+\tag{A16lengths}\label{eq:arithA16lengths}
+\]
+
+Release node one and retain the whole white \(A_{15}\).
+Its complete finite one-node extensions are isolation;
+helper three at \(j=2,3,15,16\); or helper four at \(j=2,16\).
+There is no foreign component or exceptional rank-sixteen
+completion.  A second contact makes a cycle.
+For helper three, the actual connected normalization gives
+integral \(t=2\gamma\), ACTUAL \(K=\mathbb Q(t)\), raw
+time square \(M_j/17\), and
+\[
+ M_j=16t^2+2(17-j)t+j(17-j)-34,\qquad
+\begin{array}{c|c}
+j&C\\ \hline
+2&(16t+15)/17\\
+3&(16\gamma+7)/\sqrt{17}\\
+15&(16\gamma+1)/\sqrt{17}\\
+16&(16t+1)/17 .
+\end{array}
+\]
+For helper four the lengths are
+\[
+ (16\gamma+15/\sqrt2)/\sqrt{17/2},\qquad
+ (16\gamma+1/\sqrt2)/\sqrt{17/2}.
+\]
+These follow by eliminating ALL retained roots; the unit white
+residuals are \(17/32,1/8,1/16\) in the endpoint-three,
+next-three and endpoint-four rows.
+
+Helper \(j=3\) with positive own gives
+\(C\ge15/\sqrt{17}>17/6\).
+Its own-zero case has the same actual affine-\(E_8\) vector
+printed in the preceding endpoint proof.
+At \(j=15\), own zero has unit time square \(-2/17\), own three
+has the actual all-three cycle, and owns at least four give
+\(C>17/6\).
+Helper four at \(j=2\) fails even at own zero.
+At \(j=16\), its own-zero time is \(-1/17\), and every positive
+own gives \(C\ge(8\sqrt2+1)/\sqrt{17}>17/6\).
+At near \(j=2\), own zero has negative time and own three
+the actual affine triangle.
+At far \(j=16\), positive time requires \(t>1\), since
+\(M_{16}=(t-1)(16t+18)\).
+Parallel has the positive actual future-null pair.
+All these nulls use UNIT actual normals and are feasible
+against every omitted wall.
+
+In a nongolden field the near helper has \(t<37/24\),
+so its only remaining native own is four, \(t=\sqrt2\).
+The far helper satisfies
+\[
+                    1<t<29/12,\qquad -9/8<t_\sigma<1.
+\]
+As before \(f(t)=t(t^2-1)\) has other-place magnitude at most
+\(2/(3\sqrt3)\); on the additional interval
+\([-9/8,-1]\), the maximum is \(153/512\), smaller.
+Physically \(0<f(t)<12\).
+The integral norm excludes degrees at least four.
+At degree three \(t,t-1,t+1\) would all be units.
+The same complete four cubics as before occur.
+The negative-discriminant cubic and the two with a conjugate
+below \(-9/8\) fail; the only survivor is
+\[
+                P(X)=X^3-2X^2-X+1,
+\]
+whose physical root \(a>2\) generates \(K_7\).
+For degree two, trace \(0,1,2,3\) and norm
+\(-2,-1,1,2\) exhaust the strip.
+Trace zero would require \(\sqrt2\), with conjugate below
+\(-9/8\); trace one leaves only \(\varphi\) or rational two;
+trace two leaves \(1+\sqrt2\), since \(1+\sqrt3\) is too large;
+trace three's irrational positive root exceeds \(29/12\).
+The rational two is parallel.
+Thus the nongolden helper roles are exactly near silver,
+far silver, or far \(K_7\).
+Their actual lengths are respectively
+\[
+ (16\sqrt2+15)/17,\quad (17+16\sqrt2)/17,\quad
+ (16a+1)/17,
+\]
+all \(>181/100\).
+The short endpoint selected in~\eqref{eq:arithA16lengths}
+is consequently ISOLATED.
+
+\subsection{The full golden endpoint table}
+\label{app:arithA16golden}
+
+For any isolated endpoint, its OWN \(K\)-rescaling gives
+raw norm \(2U\), sole old product \(-U\), integral \(U=4\gamma^2\)
+generating ACTUAL \(K\), and
+\[
+ F(U)=U(16U-34),\quad H_U^2=F(U)/17,\quad C^2=8U/17,
+ \quad U>17/8,\quad0<U^\sigma<17/8 .
+\tag{A16U}\label{eq:arithA16U}
+\]
+No raw time itself is assumed \(K\)-valued; the ratios along
+the SAME one-dimensional \(K\)-time line are \(K\)-valued.
+
+Suppose \(K=\mathbb Q(\varphi)\).
+The near helper has \(t<199/96\) and conjugate
+\(-2<t'<1/8\).  The finite native list leaves \(\varphi\);
+a dotted full-ring \(a+b\varphi\) has \(b=1\) and no integer
+\(a\) in \(2<t<199/96\).
+The far helper satisfies \(1<t<283/96\), \(-9/8<t'<1\),
+giving \(t=\varphi\) or \(\varphi^2\).
+All three types have raw times \(M/17\):
+\[
+\begin{array}{c|c|r}
+\text{helper}&M&\mathrm N(M)\\ \hline
+\text{near }\varphi&12+46\varphi&-1420\\
+\text{far }\varphi&-2+18\varphi&-356\\
+\text{far }\varphi^2&16+50\varphi&-1444 .
+\end{array}
+\]
+The norm squareclasses \(355,89,1\) forbid different types.
+Reflected near copies have nonintegral actual long-cycle
+\(g=-(7+41\varphi)/17\).
+Reflected far-\(\varphi\) copies have positive product
+\(g=(4+15\varphi)/17\).
+Reflected far-\(\varphi^2\) copies have
+\(g=(19-15\varphi)/17\in(-1,0)\), forbidden for two
+distinct square-two actual roots by the native gap.
+Thus both endpoints cannot be nonisolated.
+
+For the isolated golden end, the universal length cap gives
+\[
+                       17/8<U<4913/288,\qquad0<U'<17/8 .
+\]
+Writing \(U=a+b\varphi\) gives \(b=1,\ldots,7\).
+The complete conjugate intervals give
+\(a=1,2;\ 2,3;\ 2,3;\ 3,4;\ 4,5;\ 4,5;\ 5,6\),
+and the physical upper bound removes only \((6,7)\).
+The complete thirteen rows are
+\[
+\begin{array}{c|r|r|r}
+U&\mathrm N(U)&-\mathrm N(F(U))&\text{squareclass}\\ \hline
+1+\varphi&1&220&55\\
+2+\varphi&5&1420&355\\
+2+2\varphi&4&4336&271\\
+3+2\varphi&11&4180&1045\\
+2+3\varphi&1&2396&599\\
+3+3\varphi&9&12924&359\\
+3+4\varphi&5&15020&3755\\
+4+4\varphi&16&20416&319\\
+4+5\varphi&11&34100&341\\
+5+5\varphi&25&15100&151\\
+4+6\varphi&4&21744&151\\
+5+6\varphi&19&50996&12749\\
+5+7\varphi&11&58036&14509 .
+\end{array}
+\]
+For \(n=\mathrm N(U),T=\mathrm{Tr}(U)\), every entry follows from
+\(\mathrm N(F(U))=n(256n-544T+1156)\).
+The listed classes are squarefree:
+\(1045=5\cdot11\cdot19\), \(3755=5\cdot751\),
+\(319=11\cdot29\), \(341=11\cdot31\),
+\(12749=11\cdot19\cdot61\), \(14509=11\cdot1319\),
+\(355=5\cdot71\), \(55=5\cdot11\);
+the remaining small primality checks are direct trial division.
+The only repeated class is151.
+Precisely the FIRST SIX rows have \(U<17/2\), equivalently \(C<2\),
+and their classes occur nowhere else in this complete table.
+
+If one endpoint is near-\(\varphi\) or far-\(\varphi^2\),
+its \(C>2\), so the opposite isolated end is in the first six rows.
+Class one matches none.
+The near class355 matches only \(U=2+\varphi\);
+there \(F(U)=12+46\varphi\), so the actual positive raw
+times are equal.
+Their spatial product is \(U(\varphi+2)/17=U^2/17\),
+giving the same nonintegral long cycle
+\(g=-(7+41\varphi)/17\).
+For a far-\(\varphi\) helper the opposite end may be ANY of
+the thirteen rows, but none has class89.
+All helper/isolated possibilities are excluded.
+
+Both golden endpoints must now be isolated.
+One belongs to the first six rows by the selected \(C<2\).
+The SAME time-line square test forces equality of the two
+\(U\)-models; the repeated151 class cannot occur at the selected end.
+Equal positive raw times give
+\[
+ g=U(34-15U)/17,\qquad
+ L=g^2/U^2=((34-15U)/17)^2\in\mathcal O_K .
+\]
+Integral closedness makes \((34-15U)/17\), and then \(U/17\),
+integral, using Bezout for15 and17.
+But the selected norms \(1,5,4,11,1,9\) are smaller than289,
+so \(\mathrm N(U/17)=\mathrm N(U)/289\) cannot be a
+nonzero integer.
+The ACTUAL golden field is impossible.
+
+\subsection{Both actual endpoints are isolated}
+\label{app:arithA16helpers}
+
+The actual field is now nongolden, and the selected endpoint
+of \(C<181/100\) is isolated.
+At \(K=\mathbb Q(\sqrt2)\), its full possible isolated strip
+from \(C<7/3\) is
+\[
+ 17/8<U<833/72,\quad0<U'<17/8 .
+\]
+Writing \(U=A+B\sqrt2\), the complete models are
+\[
+ 2+s,\ 3+s,\ 3+2s,\ 4+2s,\ 5+3s,\ 6+3s,\qquad s=\sqrt2 .
+\]
+Indeed \(B=1,\ldots,4\);
+the conjugate strip permits respectively
+\(A=2,3;\ 3,4;\ 5,6;\ 6,7\), and the physical upper
+bound removes both \(B=4\) possibilities.
+Their signed \(F\)-norms are
+\[
+                   -1016,-2212,-1852,-9184,-17444,-13752 .
+\]
+The near-silver helper has \(M=28+30s\), norm
+\(-1016=-8\cdot127\).
+Only \(U=2+s\) has a compatible norm squareclass:
+none of the other five norms is divisible by127.
+For that exception \(F(U)=M\) and the actual long cycle
+\(g=-(22+26s)/17\) is not integral.
+The far-silver helper has \(M=32+34s\), norm
+\(-1288=-8\cdot7\cdot23\).
+None of the six time norms is divisible by23.
+Both silver helper roles are excluded.
+
+For the remaining far helper in \(K_7\), let \(a>2\) be
+the root of \(P(X)=X^3-2X^2-X+1\).
+Its three roots have disjoint rational brackets
+\[
+ 2.246<a<2.247,\quad -.803<b<-.801,\quad .554<c<.556 .
+\]
+Signs and derivatives of \(P\) isolate them.
+The full ring is \(\mathbb Z[a]\), as justified below.
+The selected isolated endpoint has
+\(17/8<U<7\), \(0<U_b,U_c<17/8\).
+Write \(U=A+Ba+Ca^2\).
+Lagrange interpolation expresses \(C\) as the sum of the
+three values divided by the derivatives at the three roots.
+The two positive denominators exceed five and four;
+the magnitude of the negative denominator exceeds \(17/8\).
+Consequently \(-1<C<7/5+(17/8)/4<2\), so \(C=0,1\).
+The small conjugate difference gives
+\[
+                 |B+C(2-a)|<(17/8)/(c-b)<8/5 .
+\]
+If \(C=0\), positive physical difference forces \(B=1\),
+and the conjugate interval forces \(A=1\).
+If \(C=1\), the physical/conjugate difference \(<7\)
+removes \(B\ge1\), leaving \(-1,0\).
+For \(B=-1\), the \(c\)-value requires \(A\ge1\), while
+the \(b\)-value requires \(A\le0\).
+For \(B=0\), \(A=0,1\).
+Thus the COMPLETE selected models are
+\[
+                               U=1+a,\quad a^2,\quad1+a^2 .
+\]
+Their positive time norms are \(5048,32248,82264\).
+The helper time numerator is
+\((a-1)(16a+18)\), of norm \(7496=8\cdot937\).
+The prime937 divides none of these three norms;
+therefore no actual time ratio can be a \(K\)-square.
+This excludes the last nongolden helper.
+BOTH actual endpoints are isolated.
+
+\subsection{Degree, the whole two-dotted domain and finite anchors}
+\label{app:arithA16anchors}
+
+The selected isolated endpoint generates the actual field, with
+\[
+ 17/8<U<556937/80000<7,\qquad0<U^\sigma<17/8 .
+\]
+For \(F_3(U)=U(U-1)(U-2)\), physical value \(0<F_3(U)<210\).
+At a nonphysical embedding \(y=U^\sigma-1\in(-1,9/8)\).
+The same cubic bound gives
+\(|y^3-y|<2/5\), including the upper extra interval where
+the maximum is \(153/512\).
+A degree at least seven would give a nonzero integer norm
+\(<210(2/5)^6=.86016<1\).
+Hence ACTUAL degree is at most SIX.
+No degree-five refinement from the \(A_{17}\) case is used.
+
+Suppose both isolated owns were dotted.
+Their ACTUAL endpoint cores give, for independent \(u,v\in(0,1)\),
+\[
+ x\cdot Z_L\ge h(u)=\sqrt{32/17-u}-\sqrt{u(1-u)},\qquad
+ Z_L=\omega_1-un_1 ,
+\]
+and its reflection.
+The core is future timelike, zero on its cap, negative on the
+released old root, and nonpositive against EVERY other actual
+wall, including the opposite endpoint.
+The residual \(Y_L=Z_L-\omega_5/5\) has zero sum,
+support in the first five coordinates, norm
+\(R(u)=8/5-2u+u^2\), and sole central product \(-1/5\)
+at five.
+The reflected residual subtracts \(\omega_{12}/5\), and is
+orthogonal to both the first residual and the old flat block.
+Here \(w\cdot Z_L=w\cdot Z_R=.4112\).
+
+Pay each core at weight \(\mu=.32\).
+The individual outer coefficients change from \(.1406\) to
+\(.1406-.064=.0766>.0205\);
+every other central coefficient is unchanged.
+In particular the changed reference has its EXACT products
+equal to these new coefficients.
+Subtract all retained central isolated-foot terms with their
+own parameters, and apply the common simultaneous absorption
+proof to this ONE vector.
+All endpoint/central and adjacent-central crosses are retained,
+giving
+\[
+ \|x\|^2\ge E_0+G(u)+G(v),\quad
+ G(u)=.64\{h(u)-.4112\}-.1024(1.6-2u+u^2).
+\]
+The following COMPLETE three-chord certificate covers \([0,1]\):
+\[
+\begin{array}{c|c|c|c|c}
+u\text{ interval}&L(u)<\sqrt{32/17-u}&K&a&
+ \sqrt{a^2+.64^2}\text{ upper}\\ \hline
+[0,1/2]&1.3719-.3924u&.451008&.097536&.6475\\
+[1/2,3/4]&1.3989-.4464u&.506688&.208896&.6733\\
+[3/4,1]&1.4385-.4992u&.570432&.293888&.7043 .
+\end{array}
+\]
+The strict endpoint values \(1.3719,1.1757,1.0641,.9393\)
+have squares below \(32/17,47/34,77/68,15/17\).
+Concavity proves each chord lower bound.
+On \([l,r]\) use \(u^2\le(l+r)u-lr\);
+then \(G(u)>K-au-.64\sqrt{u(1-u)}\).
+The circle inequality used earlier gives the three lower values
+\(.07849,.06559,.071338\).
+The squared radical margins are
+\(.000142978704,.000095351184,.000068333456\).
+Thus \(G(u)>.06559\) on the whole dotted interval, and
+\[
+                  \|x\|^2>.8708972+2(.06559)=1.0020772 .
+\]
+Both owns cannot be dotted.
+Parallel has its actual future null, so at least one endpoint
+is a finite native own.
+
+Its integral \(U=2+2\cos(2\pi/m)\) generates the actual field,
+and the degree bound gives \(\phi(m)\le12\).
+The full totient list is
+\[
+ 3,4,5,6,7,8,9,10,11,12,13,14,15,16,
+ 18,20,21,22,24,26,28,30,36,42 .
+\]
+Only prime factors \(2,3,5,7,11,13\) and their allowed prime
+powers occur; checking products with totient at most twelve
+gives exactly this list.
+Labels three and four have \(U\le2<17/8\).
+For own six the ACTUAL unit-root null is
+\(\sqrt3c+2n_1+n_2\), a nonzero future ray feasible against
+all other walls.
+Five and ten give the excluded golden field.
+The remaining forbidden labels have explicit coprime embeddings:
+\[
+\begin{array}{c|c|c}
+m&k&\cos(2k\pi/m)\text{ lower}\\ \hline
+9,11,13,15,21&2&\sin(\pi/18)>1/9\\
+14,16,20,22,26,28&3&\sin(\pi/14)>1/7\\
+24,36,42&5&\sin(\pi/12)>1/6\\
+30&7&\sin(\pi/30)>1/15 .
+\end{array}
+\]
+All exceed \(1/16\), by strict sine concavity.
+Their conjugate \(U\) would exceed \(17/8\).
+Only finite anchors seven, eight, twelve and eighteen remain,
+with ACTUAL fields \(K_7,\mathbb Q(\sqrt2),\mathbb Q(\sqrt3),K_9\).
+
+We use FULL integer rings.
+For \(K_7\), \(P(X+3)=X^3+7X^2+14X+7\) is Eisenstein
+at seven, and the polynomial discriminant is49.
+For \(K_9\), put \(Q(X)=X^3-3X-1\);
+\(Q(X+1)=X^3+3X^2-3\) is Eisenstein at three and the
+discriminant is81.
+The Eisenstein uniformizer criterion proves maximality at the
+only possible index primes, while the discriminants exclude
+every other index prime.
+Equivalently these are the full-ring proofs already given in
+Section~\ref{sec:algorithms}, under translation.
+Thus the bases are the full \(\mathbb Z[a]\), \(\mathbb Z[k]\);
+the two quadratic rings are \(\mathbb Z[\sqrt2]\) and
+\(\mathbb Z[\sqrt3]\).
+
+\subsection{All twenty-one actual finite-anchor time norms}
+\label{app:arithA16times}
+
+The opposite isolated endpoint \(V\), whether finite or dotted,
+has
+\[
+                    17/8<V<833/72,\qquad0<V^\sigma<17/8 .
+\]
+For \(\mathbb Q(\sqrt2)\), its complete six models were printed
+above.
+For \(\mathbb Q(\sqrt3)\), the full ring gives
+\(B=1,2,3\), and conjugate intervals
+\(A=2,3;\ 4,5;\ 6,7\).
+The physical upper bound removes only \((A,B)=(7,3)\).
+The EXACT five models are
+\[
+                    2+r,\ 3+r,\ 4+2r,\ 5+2r,\ 6+3r,
+                    \qquad r=\sqrt3.
+\]
+
+For \(K_7\), the leading-coefficient interpolation bound now
+gives \(-1<C<3\), so \(C=0,1,2\) in \(V=A+Ba+Ca^2\).
+The same small conjugate difference gives
+\(|B+C(2-a)|<8/5\).
+The complete integer possibilities are
+\[
+\begin{array}{c|c|c}
+C&B&A\\ \hline
+0&1&1\\
+1&-1&\text{none}\\
+1&0&0,1\\
+1&1&1\\
+2&-1,0&0 .
+\end{array}
+\]
+For \(C=2,B\ge1\), the physical/conjugate difference exceeds
+\(3.047(1+2(1.444))=11.846736>833/72\).
+This excludes every remaining larger \(B\);
+the conjugate-difference bound excludes the smaller ones.
+The resulting EXACT six models are
+\[
+                 1+a,\ a^2,\ 1+a^2,\ 1+a+a^2,\ 2a^2-a,\ 2a^2 .
+\]
+
+For \(K_9\), the three roots have brackets
+\[
+ 1.879<k<1.880,\quad -.348<b<-.347,\quad -1.533<c<-1.532 .
+\]
+The two positive Lagrange denominators exceed \(7.5,4\),
+and the magnitude of the negative one exceeds \(17/8\).
+Thus again \(C=0,1,2\).
+The full conjugate difference gives \(|B-Ck|<9/5\).
+The constant-term interval cases are
+\[
+\begin{array}{c|c|c}
+C&B&A\\ \hline
+0&1&2\\
+1&1&1\\
+1&2&1,2\\
+1&3&3\text{ fails the physical upper bound}\\
+2&2&\text{none}.
+\end{array}
+\]
+For \(B=3,C=1\), the physical value is
+\(>3+3(1.879)+1.879^2=12.167641>833/72\).
+For \(C=2,B\ge3\), the physical difference exceeds
+\(3.411(3+.694)>833/72\).
+At \(C=2,B=2\), the \(b\)-strip forces \(A\ge1\) and
+the \(c\)-strip \(A\le0\).
+Hence the EXACT four models are
+\[
+                     2+k,\ 1+k+k^2,\ 1+2k+k^2,\ 2+2k+k^2 .
+\]
+Every listed accepted model satisfies all strict strips by the
+root brackets; every omitted integer coefficient has been excluded.
+These are complete handwritten domains, not unexecuted worker results.
+
+The original raw times of two isolated roots are \(F(U)/17\),
+\(F(V)/17\).
+The same actual \(K\)-time line makes their ratio a \(K\)-square.
+A necessary condition is a square rational norm; BOTH possible
+signed norms of any putative square root satisfy that condition.
+Here are ALL twenty-one signed time norms, in the stated model order:
+\[
+\begin{array}{c|l}
+\text{field and finite anchor}&\mathrm N(F(V))\\ \hline
+\sqrt2,\ 2+\sqrt2&
+ -1016,-2212,-1852,-9184,-17444,-13752\\
+\sqrt3,\ 2+\sqrt3&
+ -764,-3432,-8688,-12428,-27612\\
+K_7,\ 1+a&
+ 5048,32248,82264,110552,1784,330688\\
+K_9,\ 2+k&
+ 16872,66168,79032,293624 .
+\end{array}
+\]
+For a quadratic model the reproducible identity is
+\[
+ \mathrm N(F(V))=n(256n-544T+1156).
+\]
+For a cubic model with coefficient data \((T,S,n)\), it is
+\[
+ \mathrm N(F(V))
+      =n(4096n-8704S+18496T-39304).
+\]
+The six \(K_7\) triples are
+\[
+ (5,6,1),(6,5,1),(9,20,13),(11,24,13),(10,17,1),(12,20,8),
+\]
+and the four \(K_9\) triples are
+\[
+                     (6,9,3),(9,18,9),(9,6,1),(12,27,17).
+\]
+They follow by multiplication in the displayed full defining bases.
+
+The anchors have odd valuations respectively at the primes
+\(127,191,631,19\):
+\[
+ 1016=8(127),\quad764=4(191),\quad5048=8(631),\quad
+ 16872=8\cdot3\cdot19\cdot37.
+\]
+NONE of the other time norms in its field row is divisible by
+that prime.  The exact nonzero residues are respectively
+\[
+ (53,74,40,45,36),\quad(185,93,13,108),\quad
+ (67,234,127,522,44),\quad(10,11,17).
+\]
+Thus every UNEQUAL anchor/model time ratio has nonsquare rational
+norm and cannot be a square in \(K\).
+No square norm is used as a sufficient test, and no native,
+orthogonal, parallel or dotted mutual case is omitted by this
+necessary invariant.
+
+Only \(V=U\) at the actual finite anchor remains.
+The endpoint walls are distinct, and their canonical raw norms
+are \(2U\).
+Equal time squares give equal POSITIVE physical times;
+their spatial product is \(U^2/17\).
+Therefore the actual two-cycle is
+\[
+ g={U(34-15U)\over17},\qquad
+ L={g^2\over U^2}=\left({34-15U\over17}\right)^2
+                     \in\mathcal O_K .
+\]
+The zero branch would force the irrational anchor \(U=34/15\),
+impossible, but integral closedness applies in either case.
+It makes \(15U/17\), hence \(U/17\), integral:
+\(15\cdot8-17\cdot7=1\).
+The four anchor norms are \(2,1,1,3\), in degrees \(2,2,3,3\);
+their quotients by the corresponding powers of seventeen
+are not integers.
+This final contradiction excludes every diagonal pair too.
+
+The whole-\(A_{16}\) exclusion is complete: actual endpoint
+lengths and helper/golden cases, BOTH isolated, degree at most six,
+full two-dotted interval, finite anchors and actual fields, complete
+full-ring domains, every unequal time ratio, and the actual
+diagonal two-cycle.
+It is manual at the printed finite inequalities and norm tables,
+with no new enumeration-output premise, altered dimension bound
+or assumed equality of disconnected root scales.
+
+
+
+
+
+
+

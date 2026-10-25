@@ -1,0 +1,315 @@
+--- manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex@a55aafa0
++++ manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex@articleEditorialClosure
+@@ -18,40 +18,24 @@
+ \newcommand{\norm}[1]{\lVert #1\rVert}
+ \newcommand{\src}[1]{\textnormal{\textsf{[#1]}}}
+ \newcommand{\ph}{\varphi}
+-\newcommand{\pending}[1]{\par\smallskip\noindent
+-  {\color{red!65!black}\textbf{Internal proof transcription outstanding.} #1}\par\smallskip}
+-\title{Farthest vertices and dimension bounds for compact\\
+-hyperbolic Coxeter polytopes\\[4pt]
+-\large Consolidation draft for the existing general compact paper}
++\title{Farthest vertices and a dimension bound for compact\\
++hyperbolic Coxeter polytopes}
+ \author{CoxeterPolytopes project}
+-\date{24 October 2026 --- draft pending mathematical review}
++\date{25 October 2026}
+ \begin{document}
+ \maketitle
+-\begin{center}
+-\fbox{\begin{minipage}{.92\linewidth}
+-This is a replacement draft within the existing paper family, not a seventh
+-paper or a new accepted edition. The six canonical TeX/PDF pairs are
+-unchanged. The project has accepted an internally reviewed written proof of
+-the bound \(17\); this draft has not been compiled or independently reviewed.
+-It translates the final whole-\(D_{18}\) dotted-head argument in full, but
+-earlier internal inventories and some component exclusions still have
+-precisely identified project proof homes rather than complete proofs here.
+-Those passages must be incorporated into the appendices before this can be
+-called a self-contained manuscript. An internal proof awaiting transcription
+-is not an external mathematical axiom.
+-\end{minipage}}
+-\end{center}
+ \begin{abstract}
+ We study a compact hyperbolic Coxeter polytope from one vertex farthest
+ from a fixed interior point. Its incident spherical diagram gives an
+ orthogonal decomposition of a single Euclidean vector of norm less than
+ one. Actual opposite walls, and points obtained from positive combinations
+ of actual walls, impose incompatible lower bounds on that vector.
+-The method has two branches: concave interpolation for \(A\)-chains, and
+-prefix interpolation followed by terminal-wall analysis for \(B\)- and
+-\(D\)-components. The accepted source package excludes every dimension
+-at least \(18\). We organize its argument around common lemmas and one
+-final composition, rather than successive numerical improvements.
++The method has two branches: concave interpolation for \(A\)-chains,
++and prefix interpolation followed by terminal-wall analysis for \(B\)-
++and \(D\)-components. We prove that the dimension is at most \(17\).
++Common geometric lemmas supply the component estimates; complete
++actual-rank forest covers then reduce the proof to a small number
++of whole-component configurations.
+ The last obstruction, a whole \(D_{18}\) diagram, is treated by a uniform
+ dotted-head pressure, legally funded reference vectors, the two genuine
+ signed fork directions, and a local calculation at an adjacent
+@@ -60,8 +44,8 @@
+ 
+ \section{The theorem and the organization of its proof}
+ \label{sec:organization}
+-The theorem targeted by this revision is the following statement.
+-\begin{theorem}[Accepted written theorem; consolidated proof incomplete]
++Our main result is the following dimension bound.
++\begin{theorem}[Dimension bound]
+ \label{thm:main}
+ Every compact real hyperbolic Coxeter polytope has dimension at most \(17\).
+ \end{theorem}
+@@ -69,10 +53,6 @@
+ arbitrary Coxeter reflection groups; there is no ground field, lattice,
+ integrality condition, or arithmetic hypothesis. It asserts an upper
+ bound, not sharpness or the existence of an example in dimension \(17\).
+-The acceptance record is
+-\texttt{results/compact\_dimension17\_global\_written\_acceptance\_20261024.json}.
+-The source ledger accompanying this draft identifies its mathematical
+-inputs, their exact scopes, and the remaining transcription work.
+ 
+ The central object is one vector \(x\), obtained from an original
+ farthest vertex \(p\). Energies of orthogonal components of its incident
+@@ -92,14 +72,13 @@
+ whole-\(B_{18}\) terminal partition. Sections~\ref{sec:d18-setup}--%
+ \ref{sec:composition} give the whole-\(D_{18}\) closure.
+ 
+-The numerical theorem uses exactly two global boundaries:
+-every dimension at least \(19\) has already been excluded, and the
+-same selected farthest vertex in dimension \(18\) has only a whole
+-\(D_{18}\) diagram left. Neither boundary is obtained by taking a face
++The final composition has two parts. We exclude every dimension
++at least \(19\) by its actual-rank forest cover and local consumers.
++At dimension \(18\), the complete cover leaves only a whole
++\(D_{18}\) diagram at the same selected farthest vertex. Neither boundary is obtained by taking a face
+ or deleting a node from a higher-dimensional list. We do not assume
+ that a face is Coxeter, or that the property under investigation is
+-inherited by faces. The five remaining exact-dimension-\(17\) research
+-families are outside this manuscript.
++inherited by faces.
+ 
+ \section{One original vector and actual geometric points}
+ \label{sec:geometry}
+@@ -648,46 +627,22 @@
+ written in Section~\ref{app:tail:completeconjunction}. Final joint
+ verification and a matching build remain separate from this source
+ integration.
+-At exact \(19\), \src{F19} has nine necessary groups:
+-\[
+-\begin{array}{c|l}
+-A_{16}&A_3,\ T_2+A_1,\ I+T_2,\ N_7/O_7+A_1\\
+-A_{17}&T_2,\ N_7/O_7\\
+-A_{18}&A_1\text{ ordinary or }I\\
+-A_{19}&\text{whole}\\ B_{18}&I\\ B_{19}&\text{whole}\\
+-D_{17}&N_7/O_7\\ D_{18}&I\\ D_{19}&\text{whole}.
+-\end{array}
+-\]
+-Source \src{G18-body}, Sections 2--4, excludes them all.
+-Its \(A_{19}\) branch separates zero, one and two weak ends.
+-Its \(B_{19}\) branch uses the corrected short-three successor.
+-Its \(D_{19}\) branch covers heads \(5,7,8,9\), all finite
+-heads at least \(10\), and the entire dotted interval.
+-These are actual whole-component arguments using one original
+-vector, not a shifted-rank cover.
+-
+-The remaining numerical composition has this acyclic route:
+-\[
+-\begin{gathered}
+-\text{published }29\ \longrightarrow\
+-\text{canonical geometric exclusions }24\text{--}29\\
+-\longrightarrow\text{exact }23\longrightarrow\text{exact }22
+-\longrightarrow\text{exact }21\longrightarrow\text{exact }20
+-\longrightarrow\text{exact }19.
+-\end{gathered}
+-\]
+-Each arrow denotes a global logical composition, not geometric
+-dimension heredity; each cover is derived at its own rank.
+-The exact-\(22\) frontier has whole \(B_{22},D_{22}\) and
+-\(B_{21}+I,D_{21}+I\). Exact \(20\) reduces to whole
+-\(A_{20},B_{20},D_{20}\), each with its own actual-point proof.
+-Exact-\(21\) and exact-\(23\) proofs have ledger homes and
+-must be reproduced, not inferred from this overview.
+-Only general Sections 2--3 of \src{G19-mixed} and Sections
+-2--4 of \src{G20-mixed} occur on this route.
+-Their arithmetic chapters and field censuses are excluded.
+-The bound \(17\) does not depend on arithmetic \(15\), an
+-arithmetic exact-\(17\) theorem, or an exact-\(17\) field census.
++At dimension nineteen, Proposition~\ref{app:tail:prop:exact19cover}
++reduces the necessary forest to whole \(A_{19},B_{19},D_{19}\).
++Their separate proofs occupy Appendix~\ref{app:exact19:wholeclassical}.
++The \(A\) proof separates the three actual weak-end patterns; the
++\(B\) proof separates its two exceptional terminal walls; the \(D\)
++proof separates its six actual head types after a common centre analysis.
++Each uses one original vector. The proper-component cases preceding
++the cover retain their entire spectator forests.
++
++The higher ranks have their own complete covers in
++Appendix~\ref{app:highertail}. The short \(B_3/B_2\) and \(D_4/D_3\)
++continuations are proved before the prefix estimates that consume them.
++Section~\ref{app:tail:completeconjunction} combines these actual-rank
++arguments with the published compact ceiling. This is a logical
++conjunction of exclusions, not geometric dimension heredity.
++No arithmetic theorem or field census enters that conjunction.
+ 
+ \section{The whole-\(B_{18}\) terminal partition}
+ \label{sec:b18}
+@@ -1399,12 +1354,12 @@
+ \begin{tabular}{ll}
+ \toprule
+ Actual pair&Complete excluding argument\\ \midrule
+-isolated/isolated&\src{II}, every mutual and unequal own\\
+-isolated/near&\src{IN}, the entire family\\
+-isolated/far&\src{FF}, for every head\\
+-near/near&\src{T}, for every head\\
++isolated/isolated&Sections~\ref{app:D18isolatedfinite} and~\ref{app:D18isolateddotted}\\
++isolated/near&Section~\ref{app:D18isolatednear}\\
++isolated/far&Sections~\ref{app:D18isolatedfarfinite} and~\ref{app:D18farpairexits}\\
++near/near&Section~\ref{app:D18forkinventory}\\
+ near/far&The complete argument above\\
+-far/far&\src{FF}, for every head\\ \bottomrule
++far/far&Section~\ref{app:D18farpairexits}\\ \bottomrule
+ \end{tabular}
+ \end{center}
+ Both assignments of the genuine signed forks are included.
+@@ -1416,8 +1371,8 @@
+ affine \([6,3]\) kernel. At own \(6\) an actual null is
+ \(\sqrt3H+2n_1+n_2\); at parallel own it is \(H+n_1\).
+ The remaining finite labels \(5,7,8,9\) and every integer
+-label at least \(10\) are excluded by the complete \src{FH}
+-conjunction. Every dotted own has just been excluded.
++label at least \(10\) are excluded by the complete conjunction in
++Section~\ref{app:D18foundationcomposition}. Every dotted own has just been excluded.
+ Thus the whole-\(D_{18}\) diagram is impossible.
+ 
+ Theorem~\ref{thm:tail} excludes every dimension at least \(19\).
+@@ -1425,10 +1380,9 @@
+ row consumers, including Section~\ref{sec:b18}, leave only
+ whole \(D_{18}\) at the same original farthest vertex.
+ The head/fork argument excludes it. Hence dimension \(18\)
+-is impossible and Theorem~\ref{thm:main} follows at the
+-complete internal proof boundary, without dimension heredity.
+-The missing internal transcriptions identified in this draft
+-must be incorporated before it is a self-contained paper.
++is impossible, proving Theorem~\ref{thm:main}. Each step uses its
++own actual-rank cover and the same original vector within a case;
++no dimension heredity is used.
+ 
+ \section{Finite algorithms and conditional verification}
+ \label{sec:verification}
+@@ -1474,11 +1428,10 @@
+ wall for every auxiliary point.
+ 
+ \subsection{The distinct role of scripts}
+-This draft introduces no scientific computation and reports
+-no new execution. The final continuous seals above are
+-written rational inequalities and calculus arguments.
+-A source hash, review receipt or saved maximum does not
+-replace them.
++The final continuous seals are proved by displayed rational
++inequalities and calculus arguments. Ancillary scripts can check
++finite arithmetic tables, but their execution records are separate
++from the geometric arguments that make those tables applicable.
+ 
+ For a reproducibility checker attached to a finite table,
+ its mathematical statement must specify the exact input
+@@ -1510,13 +1463,13 @@
+ a literature theorem. Logic maps must list parameters as
+ well as printed axioms.
+ 
+-The selected historical publication kernel and its separate
+-actual axiom audits do not certify all new sources here.
+-No module was compiled or audited for this draft.
+-Neither the new whole-\(D_{18}\) geometry nor all its
+-references are claimed to be formalized. Mathematical
+-review, exact replay, Lean compilation, actual axiom
+-auditing and PDF production are separate stages.
++The supplementary Lean sources express selected algebraic and
++discrete implications with explicit premises. Their logic maps list
++the geometric, analytic, classification and finite-data statements
++left outside each kernel. These conditional deductions are not a
++formal construction of a hyperbolic polytope or a formalization of
++every geometric lemma. Separate compilation and actual axiom-audit
++records document the scope of each checked module.
+ 
+ \appendix
+ 
+@@ -25277,44 +25230,31 @@
+ result enters the conjunction.
+ \end{proof}
+ 
+-\section{Remaining transcription and review work}
++\section{Proof dependencies and reproducibility}
+ \label{app:obligations}
+-The frozen source batch contains reciprocal shadows, ordinary contacts
+-and actual defects, the uniform \(B/D\) floor, shared actual
+-\(A\)-chain feet, the \(A_7\) base and uniform \(A_{\geq8},A_{\geq13}\)
+-costs, the combined \(N=17,18,19\) windows and paid references,
+-the complete fresh \(A_{12}>.65\) and \(A_{15}>.826\) refinements,
+-the generic-prefix inventory, the fresh exact-\(18\) classical layers,
+-and the complete earlier local \(A_{18}\) body used by the final
+-head proof. These are draft transcriptions and consolidations pending
+-source-bound mathematical review, not new accepted bounds or
+-formalization claims.
+-
+-The manuscript remains incomplete while the following internal proof
+-bodies still have project Markdown homes:
+-\begin{enumerate}
+-\item A final joint review of the complete dependency chain.
+- All exact-\(19\) proper consumers, the cover and all three whole
+- classical exclusions now have complete reviewed written bodies.
+- Section~\ref{app:tail:completeconjunction} states their direct
+- higher-dimensional conjunction; no local case remains unwritten.
+-\item The final joint dependency, reproducibility and build checks.
+- All exact-\(18\) row exclusions now have complete written sections
+- at their stated common interfaces; this does not replace those checks.
+-\end{enumerate}
+-Appendix~\ref{app:wholeA18} now gives the complete original-farthest
+-whole-\(A_{18}\) argument, including its endpoint inventory and all
+-final payments. Its source has independent and coordinating review.
+-Appendix~\ref{app:wholeB18} now supplies the complete whole-\(B_{18}\)
+-terminal analysis with its corrected individual prices. Appendix~\ref{app:D18foundation} now supplies the earlier whole-\(D_{18}\)
+-foundations and finite-head/pair closure, with the reviewed scalar and
+-helper-scope repairs. These three integrations remain uncompiled and do
+-not promote a canonical edition.
+-The new final dotted-head estimates, true fork heights,
+-local adjacent-\(A_{18}\) argument and entire near/far contradiction
+-are written in the main text. Remaining bodies will be grouped by
+-technique, preserving every reviewed source version and excluding
+-unused historical numerical increments.
++The proof has one common geometric foundation and three genuine
++branch points. Ordinary components and actual defects are treated
++in Appendix~\ref{app:ordinary}. The chain and prefix arguments use
++that foundation but have different coordinate models and terminal
++classifications. Their component bounds are combined only after
++an actual-rank forest cover has fixed the allowed spectators.
++
++At exact eighteen the complete cover in Section~\ref{sec:forests}
++uses the whole-\(A_{18}\) and whole-\(B_{18}\) proofs in
++Appendices~\ref{app:wholeA18} and~\ref{app:wholeB18}.
++Appendix~\ref{app:D18foundation} supplies the remaining head and
++fork cases; the main text closes the final dotted-head near/far case.
++The independent higher tail is proved in
++Appendices~\ref{app:highertail} and~\ref{app:exact19:wholeclassical},
++then joined in Section~\ref{app:tail:completeconjunction}.
++There is no dependency on the arithmetic companion's dimension bound.
++
++The accompanying proof map records the source version of each
++local argument, its exact hypotheses and its verification records.
++It distinguishes written proof, finite arithmetic replay, conditional
++Lean deductions and PDF production. Historical intermediate bounds
++and unused numerical refinements are preserved as provenance rather
++than additional cases of this proof.
+ 
+ \section{External mathematical inputs}
+ \label{app:external}
+@@ -25325,8 +25265,6 @@
+ The actual-wall sign and positive projection conventions are
+ those of \cite[p.~42, \S2.1]{Vin85}; all project-specific
+ component and terminal statements are proved internally.
+-All project-specific component, helper, forest and terminal
+-assertions are internal mathematics to be proved.
+ The elementary real-cyclotomic degree formula
+ \([\mathbb Q(\cos(\pi/m)):\mathbb Q]=\phi(2m)/2\) for \(m\geq3\)
+ is a standard algebraic input in the literal native-cosine analysis; it

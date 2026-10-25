@@ -1,0 +1,201 @@
+{
+  "schema": "consolidated-working-tex-syntax-equivalence-v1",
+  "date": "2026-10-25",
+  "status": "SOURCE_ONLY_REPAIRS_PREPARED_FOR_ROOT_REVIEW_AND_COMPILE",
+  "prepared_by": "/root/finite57_release_audit/provider_occurrence_finite",
+  "scope": "Only the working compact17/arithmetic15 consolidated revision sources and their identical manuscript-root build copies were edited. The six canonical accepted editions were not edited.",
+  "source_preimages": {
+    "manifest": "results/source_archive/before_consolidated_alignment_syntax_repair_20261025/manifest.json",
+    "manifest_sha256": "911f9375cf748e5a39e16e3e5eabac9d37fc97cb0f98c404809faf3a0ebce8af",
+    "manifest_bytes": 1895,
+    "manifest_lines": 34,
+    "saved_before_edits": true
+  },
+  "exact_diff": {
+    "path": "results/consolidated_alignment_syntax_repair_20261025.diff",
+    "sha256": "fd4aabb656a913a4225c88cf0c691fca21f2e6ed1d7023fec5f5413a8b02e2dc",
+    "bytes": 6886,
+    "lines": 192
+  },
+  "inherited_interval_prefix_repair": {
+    "receipt": "results/consolidated_interval_row_typesetting_equivalence_20261025.json",
+    "receipt_sha256": "0e033a01c4d8fc32e91a3bffadec81ab4b668c7382b4a0b8c8b6ff8da43c6030",
+    "compact_source_sha256": "300cb7aa20eb5e889945f371c516b40f82c3b2aae63fbc1afcfb0b5a44ac3b3d",
+    "arithmetic_source_sha256": "1f5ebd2c1869f09c02858794918b0a458521bece19b088723972b40771fd63cc",
+    "prior_empty_group_insertions_preserved": true
+  },
+  "actual_failure_inputs": [
+    {
+      "path": "results/arithmetic15_consolidated_tex_execution_20261025.stdout",
+      "sha256": "a2ca08def768505297728ff2a621545c81c240b60691d909330c618a71f8a6dd",
+      "observed_failure": "Extra alignment tab has been changed to \\\\cr at arithmetic source line1821, end{split}.",
+      "scope": "Actual prior arithmetic build failure; this source-only receipt does not claim a successful retry."
+    },
+    {
+      "path": "results/compact17_consolidated_tex_execution_20261025.stdout",
+      "sha256": "cd82d7adcd9a93d93323347052a9283d6793795f437899123dca729359ea1f4f",
+      "observed_failure": "Illegal unit of measure at compact source line5187, interval table row.",
+      "scope": "Actual earlier compact failure already addressed by the inherited empty-group repair; further instances were found by static source inspection."
+    }
+  ],
+  "changes": [
+    {
+      "family": "arithmetic15",
+      "copies": [
+        "manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex",
+        "manuscripts/compact_arithmetic_dimension_bound_consolidated.tex"
+      ],
+      "environment_replacements": [
+        {
+          "begin_line": 1818,
+          "end_line": 1821,
+          "from": "split",
+          "to": "aligned"
+        },
+        {
+          "begin_line": 2245,
+          "end_line": 2248,
+          "from": "split",
+          "to": "aligned"
+        }
+      ],
+      "environment_reason": "Each display has multiple alignment pairs. aligned supports these pairs; the complete display bodies, alignment tabs and mathematical tokens are unchanged.",
+      "additional_neutral_empty_group_lines": [
+        17717,
+        17718,
+        17719
+      ],
+      "neutral_empty_group_reason": "Prevent a leading interval from being read as an optional row-break length.",
+      "cross_paper_reference": {
+        "line": 15542,
+        "before": "with its companion proof in Appendix~\\ref{app:Ijoint}.",
+        "after": "with its companion proof in the rank-free joint-payment appendix subsection~\\cite{ProjectGeneral}.",
+        "identified_target": {
+          "path": "manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex",
+          "heading_line": 2059,
+          "label_line": 2060,
+          "label": "app:Ijoint",
+          "heading": "A rank-free joint payment for an isolated I"
+        },
+        "existing_bibliography_key": "ProjectGeneral",
+        "bibliography_line": 20648,
+        "root_explicitly_authorized": true,
+        "target_guessed": false
+      }
+    },
+    {
+      "family": "compact17",
+      "copies": [
+        "manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex",
+        "manuscripts/compact_farthest_vertex_bounds_consolidated.tex"
+      ],
+      "additional_neutral_empty_group_lines": [
+        14075,
+        14076,
+        14163,
+        14164,
+        19193,
+        19194,
+        19539,
+        19540
+      ],
+      "same_line_interval_prefix_lines": [
+        14075,
+        14076,
+        14163,
+        14164
+      ],
+      "neutral_empty_group_reason": "Prevent same-line or indented interval cell starts from being read as optional row-break lengths. All interval endpoints and other displayed tokens are unchanged."
+    }
+  ],
+  "records": [
+    {
+      "path": "manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex",
+      "archive": "results/source_archive/before_consolidated_alignment_syntax_repair_20261025/manuscripts__revisions__compact_arithmetic_dimension_bound_consolidated.tex",
+      "source_sha256_before": "1f5ebd2c1869f09c02858794918b0a458521bece19b088723972b40771fd63cc",
+      "bytes_before": 694964,
+      "source_sha256_after": "fd637e7c19aa37e67b3c493190a081bb2183c43b03cb434f3d11100c07584aee",
+      "bytes_after": 695022,
+      "lines": 20654,
+      "inverse_delta_to_archive_byte_exact": true
+    },
+    {
+      "path": "manuscripts/compact_arithmetic_dimension_bound_consolidated.tex",
+      "archive": "results/source_archive/before_consolidated_alignment_syntax_repair_20261025/manuscripts__compact_arithmetic_dimension_bound_consolidated.tex",
+      "source_sha256_before": "1f5ebd2c1869f09c02858794918b0a458521bece19b088723972b40771fd63cc",
+      "bytes_before": 694964,
+      "source_sha256_after": "fd637e7c19aa37e67b3c493190a081bb2183c43b03cb434f3d11100c07584aee",
+      "bytes_after": 695022,
+      "lines": 20654,
+      "inverse_delta_to_archive_byte_exact": true
+    },
+    {
+      "path": "manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex",
+      "archive": "results/source_archive/before_consolidated_alignment_syntax_repair_20261025/manuscripts__revisions__compact_farthest_vertex_bounds_consolidated.tex",
+      "source_sha256_before": "300cb7aa20eb5e889945f371c516b40f82c3b2aae63fbc1afcfb0b5a44ac3b3d",
+      "bytes_before": 933034,
+      "source_sha256_after": "b1f72f4556b704536621e08cc3d2bbff57f96681fc0c1cedd3ab3ca448377b5e",
+      "bytes_after": 933050,
+      "lines": 25167,
+      "inverse_delta_to_archive_byte_exact": true
+    },
+    {
+      "path": "manuscripts/compact_farthest_vertex_bounds_consolidated.tex",
+      "archive": "results/source_archive/before_consolidated_alignment_syntax_repair_20261025/manuscripts__compact_farthest_vertex_bounds_consolidated.tex",
+      "source_sha256_before": "300cb7aa20eb5e889945f371c516b40f82c3b2aae63fbc1afcfb0b5a44ac3b3d",
+      "bytes_before": 933034,
+      "source_sha256_after": "b1f72f4556b704536621e08cc3d2bbff57f96681fc0c1cedd3ab3ca448377b5e",
+      "bytes_after": 933050,
+      "lines": 25167,
+      "inverse_delta_to_archive_byte_exact": true
+    }
+  ],
+  "source_equivalence": {
+    "inverse_delta_to_archived_preimage_byte_exact_files": 4,
+    "root_revision_pairs_byte_identical": 2,
+    "inverse_description": "For each exact recorded line, remove only its new empty group; restore only the four arithmetic environment boundary names and the one explicitly recorded cross-paper reference sentence. The resulting byte stream equals the corresponding archived preimage.",
+    "mathematical_display_bodies_changed": false,
+    "numerical_tokens_changed": false,
+    "argument_or_bound_changes": false,
+    "canonical_six_editions_edited": false
+  },
+  "static_source_inspection": {
+    "scope": "Lexical source inspection only: begin/end environment nesting, all split displays, local label/reference names, unfamiliar command uses and row-break-followed-by-bracket hazards.",
+    "environment_nesting_mismatches_observed": [],
+    "unclosed_environments_observed": [],
+    "multiple_alignment_split_displays_repaired": 2,
+    "remaining_rowbreak_bracket_match": {
+      "path": "manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex",
+      "line": 453,
+      "text": "\\\\[4pt]",
+      "interpretation": "Intentional dimension-valued row spacing; unchanged."
+    },
+    "local_reference_inventory": [
+      {
+        "path": "manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex",
+        "local_label_definitions": 262,
+        "local_reference_occurrences": 333,
+        "missing_local_reference_names": [],
+        "duplicate_local_label_names": []
+      },
+      {
+        "path": "manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex",
+        "local_label_definitions": 347,
+        "local_reference_occurrences": 460,
+        "missing_local_reference_names": [],
+        "duplicate_local_label_names": []
+      }
+    ],
+    "custom_command_observation": "Own document macros are declared in the respective preambles. Lexical a/k/L matches inspected were row-break-followed-by-symbol uses.",
+    "exhaustive_tex_validity_established": false
+  },
+  "executions": {
+    "repository_modules_imported": 0,
+    "mathematical_or_proof_jobs_run": 0,
+    "tests_or_syntax_compilers_run": 0,
+    "tex_jobs_run_by_this_lane": 0,
+    "git_operations_run": 0,
+    "matching_pdf_builds_established_by_this_receipt": false,
+    "root_owns_next_compile": true
+  }
+}

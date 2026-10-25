@@ -1,0 +1,41 @@
+{
+  "status": "PREPARED_LITERAL_REPAIR_ONLY_NOT_APPLIED",
+  "date": "2026-10-24",
+  "source": "results/finite57_all_positive_near_row_six_four_face_receiver_refunds_and_complete_exception_financing_candidate_20261024.md",
+  "source_sha256": "6f759a19b79cf14d3be91f724d80dbf4995054e8bf11252d362fc9af5ea2c334",
+  "source_bytes": 26704,
+  "source_lines": 477,
+  "scope": "Section6 only: retain the omitted prior V23 regular-D21 load; all other bytes must remain unchanged.",
+  "finding": "The predecessor incorrectly asserted zero prior load at both regular receivers. The D15 receiver has zero older additional arrival; D21+2A1+2D17 retains up to two older V23 one-unit arrivals. V23 deletes only heavy-source corners, so the new distinct receiver tokens remain available and each new NEAR operation has net zero receiver load.",
+  "outside_review": "results/review_finite57_all_positive_near_six_full_scope_compact_20261024.md",
+  "outside_review_sha256": "8bdbaba23f2e77d6f676b745ed3e780b45a0e4e0876ad11b2f2d8f95a29192e5",
+  "application_owner": "Root; preserve the exact predecessor and verify its gzip byte round trip before applying once. The author has not mutated the source.",
+  "replacements": [
+    {
+      "id": "differentiate_old_loads",
+      "expected_occurrences": 1,
+      "old": "Every q in(10) has ZERO earlier extra arrival. Z/N's whole-codomain\nproof applies with a fresh comparison: H's six forests are different;\n",
+      "new": "The D15 receiver in(10) has ZERO earlier extra arrival. The D21\nreceiver RETAINS V23's full old load<=2, hence old cap361+2=363.\nZ/N's remaining whole-codomain comparison is unchanged: H's six forests\nare different;\n"
+    },
+    {
+      "id": "qualify_v23_codomains",
+      "expected_occurrences": 1,
+      "old": "A15+I2(6), not(10). R5A/R11A/P0/P+/V17/V23 likewise have the\ndifferent finite whole receivers stated in Section4. The new finite\n",
+      "new": "A15+I2(6), not(10). R5A/R11A/P0/P+/V17 likewise have the different\nfinite whole receivers stated in Section4. V23's small-D5 exceptions\nare different, but its regular receiver is EXACTLY the D21 forest\nin(10); KEEP all its up-to-two one-unit arrivals. The new finite\n"
+    },
+    {
+      "id": "authenticate_still_held_receiver_tokens",
+      "expected_occurrences": 1,
+      "old": "No earlier refund rule deleted these q corners: those rules refund\ntheir heavy source corners, and their finite receiving forests differ\nfrom(10). Fixed Q/L tokens also occur at different whole forests.\nConsequently every refunded q unit is still held and available.\n",
+      "new": "No earlier rule deleted these q corners. In particular V23 Section8's\nregular rule refunds seven units ONLY at its HEAVY source and sends\none unit to the D21 receiver; it deletes NO receiver corner there.\nIts finite exceptions also refund only their heavy source corners.\nAll other earlier refund/receiver domains differ from(10), and fixed\nQ/L tokens occur at different whole forests. Consequently every new\n(c,yi)/(y1,yi), i5..8, receiver unit is still held and available.\n"
+    },
+    {
+      "id": "retain_complete_final_caps",
+      "expected_occurrences": 1,
+      "old": "If one or both reverse ports are selected, its new charge remains\nexactly its complete original C0, at most2897/8 or361, both<364.\n",
+      "new": "If one or both reverse ports are selected, each new NEAR arrival\nchanges the receiver by ZERO. Retain the complete old bounds\nCeff(D15+2A1+D17+D23)<=2897/8 and\nCeff(D21+2A1+2D17)<=361+2=363, both<364.\nNo sharpening of mixed FAR/NEAR port occupancy is required.\n"
+    }
+  ],
+  "unchanged": "All formulas, classifications, ideal/finite exception budgets, literal input pins, sections1-5 and7, and every other source byte.",
+  "execution_boundary": "Source/JSON/hash I/O only. No worker, import, enumeration, test, compiler, build, scientific job or source mutation."
+}

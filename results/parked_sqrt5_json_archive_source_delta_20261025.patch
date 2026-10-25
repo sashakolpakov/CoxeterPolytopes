@@ -1,0 +1,115 @@
+--- tools/archive_unused_historical_json_20261025.py
++++ tools/archive_unused_sqrt5_results_20261025.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Byte-preserving streamed archive of ONE unused historical JSON result.
++"""Byte-preserving streamed archive of 43 unused parked sqrt5 JSON results.
+ 
+ This is neither publication packing nor a scientific/Lean/TeX launcher. It
+ does not change the40GiB/6GiB proof admission gate. It retains the original
+@@ -19,8 +19,92 @@
+ ROOT = Path(__file__).resolve().parents[1]
+ GIB = 1024**3
+ FILES = {
+-    'fresh_sqrt5_rank13_all_selected_nonade_separation_20261017':
+-        (1283771506, '4328a9600faec034bd59069e609a9d9323aceea4b9cc00383472c85f883c9437'),
++    'fresh_sqrt5_adjacent_discount_frontier_20261016':
++        (54736542, '83947110599f43d4883a35e34833ac14eb0c23de921841ae2bd168335d6dcc07'),
++    'fresh_sqrt5_all_quad_contacts_20261015':
++        (39193205, 'c7a81ba0eb5689b8b0139d4a78e80b44c81a3bc4f30c539722ffb4ddb3f12feb'),
++    'fresh_sqrt5_all_quad_unions_20261015':
++        (30417018, '670539bc2fa64195bd497c31efa0b2ff13b6c018880c6b08e888a88c5d38143b'),
++    'fresh_sqrt5_dimension21_a4_exceptional_20261016_cap2':
++        (144777262, '9645cac9d7a62ce7e56e4692df4d96bbe7b879b14b1244d6dfd3d3f2af306da7'),
++    'fresh_sqrt5_dimension21_a4_pair_exceptional_20261016_cap2':
++        (144915640, '3660011ee75126289224ce5cf3305dc1d67d036a8f2d752f3a509ba35c731821'),
++    'fresh_sqrt5_dimension21_a4_source_orbits_20261016_cap2':
++        (27186536, 'de9cfd720adbb9976f6e6c3d0e39594ac0dd3d938477ebf451f3f5ab8c7b773d'),
++    'fresh_sqrt5_dimension21_e7e8_context_20261016_cap2':
++        (32854301, '994ae57b9502bfe62c176a652fe6ab85a31895d9c18d3dbd649fb67bf0449579'),
++    'fresh_sqrt5_dimension21_e7e8_exact_20261016_cap2':
++        (55236816, '56ffa14579f372d5508797cadc40cc736cdd27ef985b63774c8ddd0f3c63273b'),
++    'fresh_sqrt5_global_b1_dotted_closure_20261016':
++        (118658678, 'ca4ec6dff5ac96b883efff02e798c28fee5002d09a694c09f4a5f24e55b033a6'),
++    'fresh_sqrt5_global_b1_dotted_fast_20261017':
++        (514679613, '4b4168d24a3c998262dd0ff729a5332d97d1eddc570dbc21e0f310f3001944aa'),
++    'fresh_sqrt5_global_b1_finite_closure_20261016':
++        (826786125, '40b483cd2469c769a440ccc6976df51b0d1db6b2318cee14e283e0a4bea6c2c2'),
++    'fresh_sqrt5_h3_hub_coverage_20261016_bound21':
++        (26828124, 'dcf4be8a774f5f1961df2b3d882bd79a4d9a22c0e236259c26829882a603c9f1'),
++    'fresh_sqrt5_integer_simplex_port_packing_20261017':
++        (132103430, '5d25a38ff2f57d50b6081642c8e8996065ac336190e679236608599449d72c75'),
++    'fresh_sqrt5_joint_five_port_diagnostic_20261017':
++        (49285924, 'e42997ac1e8804adf8ead5a8118f656dcb5e23391b82e66af7fb97cda692bb1e'),
++    'fresh_sqrt5_joint_four_port_diagnostic_20261017':
++        (29508943, 'e4f7f81c29b12833c14e4485cb534f93d435cef12b306385277626b1044f1fe4'),
++    'fresh_sqrt5_labelled_coface_base_packing_20261017':
++        (51455513, '59231726adc0a68d3ef1a80bf0a06b8b512087ee3298748b6d64a4461b795817'),
++    'fresh_sqrt5_nonsingular_rank29_fast_20261015':
++        (68491759, 'f6f14c2b226221a0a507c3c2df6179c0aa1d3ec5bba91136b2db46eeab94d22f'),
++    'fresh_sqrt5_prism_simplex_base_incidence_20261017':
++        (30646244, '25ac36e08ef7a9ee33e26a6cadc2a28b8fc1ae66c2310d7fa255a6749c076275'),
++    'fresh_sqrt5_rank13_active_triangle_dual_20261017':
++        (44477706, '116a36c24e7c42be8c55db08d7b578b74ceb92c0e60aa6709ba112bc38ed8a28'),
++    'fresh_sqrt5_rank13_all_selected_nonade_triangles_20261017':
++        (585686433, '06ee37d5251737d81877ac1c284ca01b99d3579131ed4748e1f983d3ba11acb7'),
++    'fresh_sqrt5_rank13_combined_disjoint_ports_20261017':
++        (92008813, 'c352738277c6fb46ead52ed621ad3219e208b0e7594f5c6eb74cb23027fa7c74'),
++    'fresh_sqrt5_rank13_discriminant_simplex_lp_20261017':
++        (64149818, 'adfaf9fceb47ceffcd8a5d4f409c95e62355377a9841a9fcbb3616572fb8e569'),
++    'fresh_sqrt5_rank13_dotted_b1_spectators_20261017':
++        (169327409, '02f0ce96487423702ca4315f4914c5221e8881b3931149bbb7068e39ad2fd211'),
++    'fresh_sqrt5_rank13_full_flexible_simplex_lp_20261017':
++        (149368369, '74e659892cf8958f431256c247456f3fd6cf8126f3d4bb04d0afa844934715af'),
++    'fresh_sqrt5_rank13_full_triangle_simplex_separation_20261017':
++        (181750201, 'e21a488a3254689e93b695bb2e33d1b03e5bfa48f8354c2bac3f9252f3719272'),
++    'fresh_sqrt5_rank13_high_ade_triangles_20261017':
++        (37391288, '5a35ac8c4f2d2d257e785da4d96113a27c6983fc81f418dae39924580bf76e8b'),
++    'fresh_sqrt5_rank13_irreducible_joint_quads_20261017':
++        (80008894, '2d9c382f6bbdbc3943308380379d8e7387c162540c898d9141082dd60689a22a'),
++    'fresh_sqrt5_rank13_joint_corner_all_nonade_repair_20261017':
++        (302717179, '1dfde0ea6d3b6ac665210953f2624fd892a1b2a3721b31d0ff01f1d548c2ceac'),
++    'fresh_sqrt5_rank13_joint_corner_double_h4_repair_20261017':
++        (165971106, 'ec36267dd66c0a6aa689b6be530a6ca31f717956670235e48ed39c25f16c5881'),
++    'fresh_sqrt5_rank13_joint_corner_orbit_lp_20261017':
++        (49493871, '16bcf91d7aab9cb177861c3c2fd20a48b0c03e6af5d27ccd5592dd25a33c2f81'),
++    'fresh_sqrt5_rank13_joint_corner_repair1_20261017':
++        (49495459, '86ccb18fbc821aef08345c20561c2cd76d3510a469db57001262d4baf5f8bf0a'),
++    'fresh_sqrt5_rank13_joint_corner_spectator_repair_20261017':
++        (162682064, '1ca9c193ffe7523dea442460faa3d9acf745e7918558f651e00083270c0d0ce1'),
++    'fresh_sqrt5_rank13_packing_quad_separation_20261017':
++        (38723945, '8f9ca7f7a163db92bdbd5b9586d0ee97c907596aded99c28aeadff60054a1734'),
++    'fresh_sqrt5_rank13_simplex_aggregate_lp_20261017':
++        (46862547, 'b9b6375a4d175510e7d0c3e72ee5f76929e527f6c056487b123b03ba623c1726'),
++    'fresh_sqrt5_rank13_simplex_packing_repair_20261017':
++        (149388919, 'e8aa86cf6f59e854e2248d6c2667ad4bb07077bf775bca569cc95e484ee8679e'),
++    'fresh_sqrt5_rank13_simplex_quad_combined_20261017':
++        (86131211, '54e52e3a435d93e92856b8590f21ec3b889043f44344a3d9dd8d009e3fa9a79f'),
++    'fresh_sqrt5_rank13_small_d_joint_quads_20261017':
++        (189057836, 'aa85f386933150932bb3d7a7ff476dd0466248d0714df825c7200ff1efd62f72'),
++    'fresh_sqrt5_rank13_triangle_all_representatives_20261017':
++        (29160898, 'dc9d93e0b0d0e69b44aa9f25c1e72b16d9ee7244df8832477309329249059a32'),
++    'fresh_sqrt5_rank13_triangle_simplex_flags_20261017':
++        (43871477, '36ca67cc0264a1594e9c188affe43c174d88f5dd6e49995337e470f0ec32e8b2'),
++    'fresh_sqrt5_rank13_triangle_third_costs_20261017':
++        (26310570, 'ede5249677825a8c7e37b3cb6d8c39124be46d11b0ca2cb1d40ed12b7feae711'),
++    'fresh_sqrt5_rank14_core_spectator_domain_20261017':
++        (36053278, 'ef7906f4729114f95d9b73805a5a752222f74c1983f1abba712d1952a5414331'),
++    'fresh_sqrt5_rank14_core_spectator_lp_20261017':
++        (960803140, '677f5fe33bda068b1e2354c24cb7a0305a6de9ae0cf01c6127fb5dccefa12b28'),
++    'fresh_sqrt5_rank14_triangle_padding_barrier_20261017':
++        (48348777, '9238b1c40a4bead8017f43454fcdaf29c0b18d8dd00cb4f550088d23eaddbcf5'),
+ }
+ 
+ 
+@@ -74,8 +158,8 @@
+     require(not any(x['path'] == 'results/'+name+'.json'
+                     for x in json.loads(manifest)['inputs'] for name in FILES),
+             'A current terminal input must not be archived')
+-    archive = ROOT/'formal/.proof-batches/historical_json_archive_20261025'
+-    receipt = ROOT/'results/historical_json_streamed_archive_20261025.json'
++    archive = ROOT/'formal/.proof-batches/parked_sqrt5_json_archive_20261025'
++    receipt = ROOT/'results/parked_sqrt5_json_streamed_archive_20261025.json'
+     require(not archive.exists() and not receipt.exists(), 'New maintenance targets required')
+     with (ROOT/'formal/.proof-batches/exclusive.lock').open('a') as lock:
+         fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)

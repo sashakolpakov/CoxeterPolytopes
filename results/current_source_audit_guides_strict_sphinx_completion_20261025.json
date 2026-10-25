@@ -1,0 +1,54 @@
+{
+  "status": "PASS_STRICT_SPHINX_CURRENT_SOURCE_AUDIT_GUIDES",
+  "date": "2026-10-25",
+  "actual_stdout": "results/current_source_audit_guides_strict_sphinx_attempt2_20261025.stdout",
+  "stdout_sha256": "bb81b265f1b711413bf7a6d264ffd304298cc36780f23fd61fccb9197a7377d7",
+  "failed_predecessor_stdout": "results/current_source_audit_guides_strict_sphinx_20261025.stdout",
+  "repair_record": "results/source_archive/sphinx_current_guides_heading_repair_20261025/receipt.json",
+  "warnings": 0,
+  "watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/site-audit-20261025"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 97959936,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 42963845120,
+      "ram_available_bytes": 4859904000
+    },
+    "seconds": 2.056
+  },
+  "observed_after_build_source_hashes": {
+    "README.md": "8eb019b918cc6f9b351a451a3ddc575d101fc5016a52dd3fd89b564763dc7b68",
+    "manuscripts/README.md": "b78caf8b65dc47f84cc5a7d54f2c1f434b4b19a03cb2e4aa1c07d7a78b900f5d",
+    "docs/site/index.rst": "690b65b9605d3b934d3832623842b49e74790ac13396cfed448a29fdce699c69",
+    "docs/site/methods.rst": "af62437882c374596144379b84a44d1ccc52bf1c117b28734df47b16f7542ee4",
+    "docs/site/papers.rst": "63c300207cdcc05c6c2c719c9af85168e2a0ed1385b1bdf5a71c31bafeb3584a",
+    "docs/site/reproducibility.rst": "9ff046a7d0cc40d62d21c873ce92ac1ef41e804546239673150fcb08ece976c9",
+    "docs/site/scope.rst": "353dfbad02ab20b0dee27aa98d259d0da4d297e3f13f0fa037f3fc5f2a4ce63c",
+    "docs/site/verification.rst": "3b348d4abb2e35c231fdacc5a02889cc6db0510f94e74bbe94878fbc5bea7ffa",
+    "docs/site/conf.py": "f4f019514d3253e42f24202ef65ea9783c00c77d6e79188f42908a505cd577ab",
+    "docs/compact17_consolidated_proof_map_20261025.md": "5a25f9fe891893b83af287c6ef7b3016efc66659af9348214dc833a779324def",
+    "docs/compact_arithmetic_consolidation_proof_map_20261025.md": "bcac07b0d4517a6eee04b2f97d58f66c9780d4263858fc27f2a20b76a769ab42",
+    "docs/finite_volume57_reproduce.md": "eed26c9def6a8d3642a201a2e91e768bca33beaaf8d0fb1bc90717d99ac8faca"
+  },
+  "rendered_verification_html_sha256": "ff7ac7bb939a98717e90dd6ee837802f07d4a6237271d9b8db3f7917c7bf0af1",
+  "owned_generated_site_removed_after_batch": true,
+  "mathematical_checks_launched": false,
+  "revised_papers_compiled": false,
+  "actual_Git_index_audited": false,
+  "commit_or_push": false,
+  "scope": "Strict build of current audit documentation only. Final matching PDF/Lean records and the pre-push index gate remain pending; subsequent substantive document changes need their own strict build."
+}

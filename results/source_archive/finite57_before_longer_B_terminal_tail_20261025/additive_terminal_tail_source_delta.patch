@@ -1,0 +1,156 @@
+--- results/source_archive/finite57_before_longer_B_terminal_tail_20261025/finite57_selected_old_affine_source_applications_20261025.py	2026-10-25 14:34:40
++++ scripts/finite57_selected_old_affine_source_applications_20261025.py	2026-10-25 14:58:29
+@@ -1127,8 +1127,153 @@
+     if bound is None:
+         bound = b_orthogonal_terminal_cauchy(key,W,frame)
+     return bound if bound is not None else b_native_successor_cauchy(key,W,frame)
++
++
++# Additive terminal-tail successor. Existing B/D functions and contracts stay intact.
++B_TERMINAL_TAIL_NOTE = 'results/finite57_affine_b_longer_terminal_tail_source_proposal_20261025.md'
++PINS[B_TERMINAL_TAIL_NOTE] = 'c2cc35cb9e0739845ac0ead4b4b9ac6f74f227bb3c578f47a65bc8e42acda14f'
++
++
++def b_terminal_tail_contact_profile(key,frame):
++    """An old CONTACT theorem is transported; no old B15 map is relabelled."""
++    p,core = frame['p'],frame['core'];matches = []
++    for path,field in ((D16_SOURCE,'cases'),(B15_SOURCE,'B_cases')):
++        doc = source(path)
++        need(doc['sources'].get(L.HIGH) == L.PINS[L.HIGH],
++             'contact theorem was produced from THIS exact complete original HIGH source')
++        for ri,row in enumerate(doc[field]):
++            if row['index'] != key['high_index']:
++                continue
++            if path == D16_SOURCE:
++                proof = row
++                need(row['preferred_corner'] == key['selected_marks'],
++                     'contact profile uses THIS original ordered actual corner')
++                controls = [(['constraints'],row['constraints'])]
++            else:
++                proof = row['proof']
++                controls = [(['proof','maps',mi,'residual_contact_control'],m['residual_contact_control'])
++                            for mi,m in enumerate(proof['maps']) if 'residual_contact_control' in m]
++            need(row['core_key'] == key['core_key'] and row['method'] == p['method']
++                 and proof['core_gram'] == core['gram'] and proof['core_inverse'] == core['inverse']
++                 and proof['base_nodes'] == key['base_nodes'],
++                 'same complete original high/core/base/physical inverse CONTACT theorem')
++            for suffix,control in controls:
++                matches.append(dict(source=path,selector=[field,ri]+suffix,control=control))
++    if not matches:
++        return None
++    need(all(canonical(q['control']) == canonical(matches[0]['control']) for q in matches),
++         'all saved complete contact profiles for this original occurrence agree exactly')
++    chosen = min(matches,key=lambda q:canonical([q['source'],q['selector']]))
++    # This validates the COMPLETE ordinary/relevant numerical hypotheses,
++    # including all contact pairs, repeated coordinates and exterior no-bridge.
++    g,J = d16_control(key,p,core,chosen['control'])
++    need(g == frame['g'] and J == frame['J'],'same exact physical core in both contact frames')
++    return chosen,matches
+ 
+ 
++def b_complete_terminal_tail_application(key,W,units):
++    if not key['affine'] or key['target_kind'] != 'B' or key['target_order'] not in (16,17):
++        return None
++    frame = b_source_frame(key,W)
++    if frame is None or W.affine_weight('B',key['target_order'],*key['marked_image']) != 0:
++        return None
++    N = key['target_order'];missing = frame['missing']
++    if len(missing) < 2:
++        return None
++    first = missing[0]
++    if (missing != list(range(first,N-2)) or
++            set(key['induced_map']) != set(range(first)) | {N-2,N-1}):
++        return None
++    graph = frame['target']
++    image = dict(zip(key['induced_map'],key['base_nodes']))
++    if first == 0:
++        return None
++    entry = dict(new_target_node=first,old_target_node=first-1,
++                 core_node=image[first-1],native_label=3)
++    need(frame['entries'] == [entry],
++         'THIS given map has exactly its required simple first native spine entry')
++    for t in missing:
++        expected = {}
++        if t == first:
++            expected[first-1] = 3
++        else:
++            expected[t-1] = 4 if t == N-3 else 3
++        if t < N-3:
++            expected[t+1] = 4 if t+1 == N-3 else 3
++        need(graph[t] == expected,
++             'complete missing suffix is an unbranched native path with ONLY its final doubled bond')
++    profile = b_terminal_tail_contact_profile(key,frame)
++    if profile is None:
++        return None
++    chosen,all_profiles = profile;control = chosen['control'];i = entry['core_node']
++    if i not in control['candidate_nodes'] or not 1 < frame['J'][i][i] <= 2:
++        return None
++    exterior = None
++    if control['kind'] == 'one_relevant_root_with_optional_exterior_root':
++        need(control['relevant_node'] == i and
++             control['joint_component_order_bound'] < N,
++             'THIS forced first root is relevant and the actual whole target excludes its exterior root')
++        exterior = dict(actual_whole_target_order=N,
++            complete_source_whole_order_with_exterior_root=control['joint_component_order_bound'],
++            exterior_node=control['exterior_node'],
++            no_bridge_scope='Full inherited residual positive-relation/saturated-tail theorem, including exterior multiplicity and all indirect supporting-white bridges; not immediate-neighbor counting.')
++    else:
++        need(control['kind'] == 'at_most_one_core_contact_root' and
++             frame['p']['method'] == 'lorentz_residual',
++             'complete ordinary uniqueness theorem controls every additional old-core contact')
++    core_digest = b_checked_exact_core(key,frame)
++    rho = 2-frame['J'][i][i]
++    need(0 <= rho < 1,'strict positive-complement first-root residual bound')
++    tail = missing[1:]
++    # A terminal-only positive congruence records the EXACT vector identity:
++    # old physical norms stay2; terminal coefficient1/sqrt2 gives diagonal1.
++    scaled_tail = [[F(2 if a == b else -1 if abs(a-b) == 1 else 0)
++                    for b in range(len(tail))] for a in range(len(tail))]
++    scaled_tail[-1][-1] = F(1)
++    need(sum((x for row in scaled_tail for x in row),F()) == 1,
++         'exact terminal-scaled tail vector norm1')
++    coefficients = ['1']*(len(tail)-1)+['1/sqrt(2)']
++    return dict(application_kind='EXCLUDED_COMPLETION_UNDER_NO_S8',
++        source=chosen['source'],proof_selector=chosen['selector'],
++        map_source=L.HIGH,map_selector=dict(
++            format='GIVEN_COMPLETE_CURRENT_NATIVE_MAP_ON_ORIGINAL_HIGH',
++            original_high_selector=['isolation','cases',key['high_index']],
++            target=dict(affine=True,kind='B',order=N),induced_map=key['induced_map'],
++            old_contact_theorem_is_not_current_target_map_membership=True),
++        physical=frame['physical'],source_sealing=dict(
++            kind='COMPLETE_SAVED_CONTACT_THEOREM_AND_EXACT_NATIVE_B_TERMINAL_TAIL',
++            all_matching_original_contact_profile_selectors=[
++                dict(source=q['source'],selector=q['selector']) for q in all_profiles],
++            complete_contact_control=control,first_native_entry=entry,
++            whole_target_order=N,strict_exterior_exclusion=exterior,
++            complete_original_possible_contacts=frame['allowed'],complete_original_end_sets=frame['ends'],
++            source_signature=frame['core']['signature'],source_gauge=frame['core']['gauge'],
++            core_input_sha256=core_digest,checked_in_this_actual_process_on_exact_core=True,
++            required_complete_missing_suffix=missing,
++            later_root_newness_and_orthogonality='Only AFTER complete per-root contact/ordinary uniqueness or actual-whole-order exterior/no-bridge exclusion: every later missing target root is new and old-core-orthogonal. An old root in another original corner block would create a second old-core contact at the first bridge.',
++            first_projection_square=str(frame['J'][i][i]),first_residual_square=str(rho),
++            physical_tail_target_nodes=tail,physical_tail_root_norms=['2']*len(tail),
++            vector_coefficients=coefficients,
++            terminal_only_congruent_tail_gram=[[str(x) for x in row] for row in scaled_tail],
++            vector_norm_square='1',first_root_vector_inner_product='-1',
++            Cauchy_required_square='1',Cauchy_upper_bound=str(rho),strict_gap=str(1-rho),
++            new_inertia_computation_used=False,
++            source_signature_contact_completeness_and_actual_Lorentz_geometry_regenerated=False),
++        paying_corners=[],actual_receipts=[],
++        source_branch_conclusion=dict(kind='THIS_EXACT_ACTUAL_COMPLETION_IMPOSSIBLE_UNDER_NO_S8',
++            reason='The full given-map tail is proved new and old-core-orthogonal before zeros. Its physical terminal-scaled vector has norm1 and product-1 with the first residual of norm square<1, contradicting positive-space Cauchy.'),
++        proof_references=[pin(B_TERMINAL_TAIL_NOTE),pin(AFFINE_REVIEW),pin(AFFINE_ROOT),
++                          pin(RESIDUAL),pin(B_CONTACT_PRODUCER)])
++
++
++_B_PRE_TERMINAL_TAIL_APPLY = b_apply
++
++
++def b_apply(key,W,units):
++    previous = _B_PRE_TERMINAL_TAIL_APPLY(key,W,units)
++    return previous if previous is not None else b_complete_terminal_tail_application(key,W,units)
++
++
+ PINS.update(B_SOURCE_PINS)
+ 
+ 

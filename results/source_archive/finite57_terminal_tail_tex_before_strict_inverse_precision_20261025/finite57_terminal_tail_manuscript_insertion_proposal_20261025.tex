@@ -1,0 +1,53 @@
+\begin{lemma}[A terminal affine-$B$ tail]
+\label{lem:terminal-b-tail}
+Let $K$ be a nondegenerate Lorentzian subspace of the physical root space.
+Suppose that a root $e$ of squared norm $2$ has orthogonal residual
+$e_\perp$ with $e_\perp^2=\rho<1$. There cannot be a chain
+$f_1,\ldots,f_k$ of roots in $K^\perp$, each of squared norm $2$,
+with $k\ge1$ and the following native products. For $k\ge2$, consecutive products
+are $-1$, except for $(f_{k-1},f_k)=-\sqrt2$; also
+$(e,f_1)=-1$. For $k=1$, instead $(e,f_1)=-\sqrt2$.
+All other products between distinct roots in the chain, and between
+$e$ and $f_j$ for $j>1$, are zero.
+\end{lemma}
+
+\begin{proof}
+The complement $K^\perp$ is positive definite. Put
+\[
+ v=f_1+\cdots+f_{k-1}+\frac{f_k}{\sqrt2}.
+\]
+For $k\ge2$, its diagonal terms sum to $2(k-1)+1$ and its
+consecutive cross terms sum to $-2(k-1)$. Thus $v^2=1$.
+For $k=1$ the same identity follows from $f_1^2=2$.
+The prescribed products give $(e,v)=-1$ in both cases.
+Since $v\in K^\perp$, positive-space Cauchy gives the contradiction
+\[
+ 1=(e_\perp,v)^2\le e_\perp^2v^2=\rho<1.
+\]
+Only the coefficient of the final root has changed: every physical
+root still has squared norm $2$.
+\end{proof}
+
+This lemma treats a terminal chain of any length, including cases where
+the first two new roots alone do not violate Cauchy. Its orthogonality
+hypothesis must be proved before it is used. After excluding an adjacent
+white-interior path of length at most eight, the complete contact
+certificate permits a unique first root, or permits
+that root together with one exterior root. In the latter case the
+full no-bridge estimate bounds the whole component in the presence of
+the exterior root; that bound is strictly smaller than the actual target
+order. This excludes the exterior root and every indirect bridge.
+First-contact uniqueness then proves successively that all later roots
+are genuinely new and orthogonal to the old core. Their native zero
+products can be used only after this step. If the sole old-core contact of the first root
+is at $i$ with magnitude $1$, the inverse certificate gives
+$\rho=2-J_{ii}<1$.
+
+The exact application checks the complete supplied terminal-suffix map,
+all its edges and nonedges, and the original physical contact-profile
+selector. A contact theorem computed for another target is used only
+when its original core, ordered corner and full contact hypotheses
+coincide; its old target map is never relabelled as the present one.
+The terminal congruence in the calculation of $v^2$ is a rational check,
+with the scale $1/\sqrt2$ recorded explicitly.
+

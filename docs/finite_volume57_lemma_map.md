@@ -1,8 +1,23 @@
 # General finite-volume bound57: internal proof and formalization map
 
-Current execution status,22 October2026: **all25 bounded B13/frontier
+Current-rule verification,25 October 2026: [all 64 actual selected applications](../results/finite57_longer_tail_all64_actual_application_completion_20261025.json)
+and the [final 259-unit reader](../results/finite57_final_current_rule_conjunction_execution_20261025.json)
+passed under one accepted source/input/helper/premise snapshot. The
+[reproduction guide](finite_volume57_reproduce.md) maps those receipts to the
+reviewed algorithms, exact coverage and ordinary/supplemental premises.
+Geometry, native classification and inherited numerical inputs retain their
+explicit boundaries; this is not end-to-end geometric formalization or
+complete transitive regeneration. The
+[current 50-page working manuscript](../manuscripts/finite_volume57_consolidated.tex)
+includes the reviewed terminal-tail lemma and has a
+[matching bounded PDF build](../results/finite57_terminal_tail_working_tex_build_20261025.json).
+The frozen48-page edition below remains unchanged. The separate
+[pinned replay revision](../results/finite57_terminal_tail_working_source_replay_separation_20261025.json)
+is a predecessor input within the same paper family.
+
+Current execution status,22 October2026: **all 25 bounded B13/frontier
 units passed and are integrated in the primary catalogue**. The current
-full plan has136 script checks, nine Lean roots and one PDF build (146jobs);
+full plan has 136 script checks, nine Lean roots and one PDF build (146jobs);
 core11 is unchanged. See the [integration receipt](../results/finite57_complete_loader_catalogue_integration_20261022.json)
 and [current reproduction guide](finite_volume57_reproduce.md).
 The dated execution paragraphs below describe earlier checkpoints;
@@ -22,16 +37,16 @@ the shared geometric framework, intrinsic marked-pair/cross/context/affine
 tables, core and extension algorithms, distributed routing argument,
 finite/cusp certificate proofs and an analytic concentration lemma.
 The full higher-tail exposition is now integrated, including exact
-dimension-specific rules for59--163 and the unbounded two-budget proof.
+dimension-specific rules for 59--163 and the unbounded two-budget proof.
 The current [48-page PDF](../manuscripts/build/finite_volume57.pdf) matches
 source `c300db69…ca82a0` (PDF `1f3c020c…`) in the
 [six-paper build receipt](../results/six_paper_pdf_completion_20261020.json).
 Its main exposition occupies pp.1–12 and essential appendices/table
-documentation pp.13–48. The bounded build passed with21 underfull
+documentation pp.13–48. The bounded build passed with 21 underfull
 spacing warnings and no overflow or unresolved references. [Selected
 revised pages5,16,24,25](../results/finite57_publication_delta_visual_review_20261020.json)
 passed visual inspection; no all-page inspection is claimed. The44-page `89bd7658…` source /
-`ebf996a3…` PDF,41-page phase and8-page preparation are byte-preserved.
+`ebf996a3…` PDF,41-page phase and 8-page preparation are byte-preserved.
 The earlier
 [fresh full successor audit](../results/review_finite_volume57_full_resource_20261020.md)
 passes at its declared finite-input boundary. A later
@@ -43,7 +58,7 @@ boundary and proves no new dimension bound or finite-enumeration result.
 The latest [publication bridge receipt](../results/finite57_publication_bridge_completion_20261020.json)
 records two further independently accepted insertions: exclusion of the
 reduced affine-A orders10/11 and D order10 triangle types, and the complete
-coarse3298-to39 forest-screen domination (coefficients, all-rank generator,
+coarse3298-to 39 forest-screen domination (coefficients, all-rank generator,
 reservations and actual fibers). The rank12 representative split `k12`
 combines actual A12/B12 before fiber expansion and is explicitly distinct
 from the actual A12 multiplicity `a12` used by the context function.
@@ -94,7 +109,7 @@ Of31 original inherited higher-tail commands,30 have bounded PASS records in the
 [tail replay ledger](../results/finite57_higher_tail_replay_batches_20261020.json):
 65.182 seconds total and 256,278,528 B maximum RSS, including the
 [remaining-check ledger](../results/finite57_higher_tail_remaining_replay_20261020.json).
-The remaining tail108 obligation (covering109–116) now has a complete
+The remaining tail108 obligation (covering 109–116) now has a complete
 56-batch replacement replay; its old59-second timeout remains preserved.
 The replacement is described below. The
 [original 44-job full run](../results/finite57_publication_full_replay_20261020.json)
@@ -167,7 +182,7 @@ without dropping or reordering rows. Each reconstructed value undergoes
 the original `enc` and JSON normalization before exact comparison with
 the saved field. The source-domain equality also checks that all 161
 stems, their scripts/data/reports and the original producer are precisely
-the484 outer inputs.
+the 484 outer inputs.
 
 Every invocation checks all 484 outer pins and the saved certificate
 bytes before and after its work, as well as its own source and the
@@ -201,8 +216,8 @@ of disabled assertions, without changing mathematical domains or output
 comparisons. The [current runtime ledger](../results/finite57_d13_batched_replay_runtime_20261020.json)
 now records actual PASS for current parser `2f6b63da…` and worker
 `be8a42d1…`: 19 valid projections, 15 required rejections and the real
-certificate projection, in0.278 seconds. The historical distance9 scanner
-fixture `abc3b918…` passed13 positive cases,32 rejections and1262 real
+certificate projection, in 0.278 seconds. The historical distance9 scanner
+fixture `abc3b918…` passed13 positive cases,32 rejections and 1262 real
 array rows against worker `d9ab46e4…`; it is not a PASS for the current
 scanner pin. Both fixture suites are parser tests, not full mathematical replay.
 The108 replacement metadata pilot passed, but domain execution exposed
@@ -215,38 +230,38 @@ Its domains phase failed after2.709s because three expected key collections
 used tuples while recomputed keys were JSON-normalized lists. This is a
 representation mismatch, not a saved mathematical disproof. The
 [source-repair review](../results/review_distance9_expected_key_json_representation_fix_finite57_20261020.md)
-records only three expected tuple-to-list changes, checks all20 comparison
+records only three expected tuple-to-list changes, checks all 20 comparison
 sites, and preserves all domains, predicates and ordering. Current worker
 `f5f0b470…` has an actual [scanner-fixture PASS](../results/distance9_json_key_lists_scanner_fixture_execution_20261020.json)
 under fixture `f6fd1267…` (1.732s,89,915,392 B maximum RSS). This is a parser
 test, not mathematical interval coverage. Current metadata[0,1) and
-domains[0,1) actually PASS (13.792s and5.369s respectively). Full
+domains[0,1) actually PASS (13.792s and 5.369s respectively). Full
 `overlap-domain` generation, disjoint joins, inertia and scalar profiles
 also PASS, totaling863 current coverage units with metadata/domains.
-All384 overlap owners now PASS, including the heaviest owner356
-(35.723s,139,264,000 B RSS), and all949 isolation cases PASS.
-The complete eight-phase replay covers2196/2196 units in56 actual capped
-batches:388.008s total and159,432,704 B maximum process-tree RSS.
+All 384 overlap owners now PASS, including the heaviest owner356
+(35.723s,139,264,000 B RSS), and all 949 isolation cases PASS.
+The complete eight-phase replay covers2196/2196 units in 56 actual capped
+batches:388.008s total and 159,432,704 B maximum process-tree RSS.
 The108 replacement replay is complete under the unchanged resource gate.
 Earlier-source passes
 earn no current coverage. The old
 59-second timeout and earlier fixture/metadata evidence remain preserved.
 
-All19 D13 mathematical parts now actually PASS:24.408 seconds total,
+All 19 D13 mathematical parts now actually PASS:24.408 seconds total,
 184,041,472 B maximum RSS. Their conjunction covers the unchanged
 certificate and all original input/status/pin obligations described above. The
 [partition coverage receipt](../results/partitioned_replay_coverage_validation_20261020.json)
 records prior verifier `41f3c82b…` self-test PASS (14 adversarial
 mutations) and actual complete D13 partition coverage19/19. Earlier5/19
-and10/19 observations are preserved history. It checks recorded partitions
+and 10/19 observations are preserved history. It checks recorded partitions
 and source/certificate/runner bindings;
 it does not rerun mathematics. Current combined D13/distance9 receipt
-coverage now PASSes:19/19 D13 parts and2196/2196 current distance9
+coverage now PASSes:19/19 D13 parts and 2196/2196 current distance9
 units, including complete overlap classification and isolation. Old-source
 pilots do not count toward the current repair. No new
 certificate, full-manuscript replay PASS,
 dimension bound or cap increase is claimed. The [actual20October plan](../results/publication_shape_counting_verification_plan_20261020.json)
-under catalogue `3bc62bbd…` selects all19 D13 parts, the distance9 intervals,
+under catalogue `3bc62bbd…` selects all 19 D13 parts, the distance9 intervals,
 the two ancestor phases and nine conditional Lean roots: 113 script jobs,
 nine Lean roots and one PDF, totaling 123 full jobs and 11 core jobs with PDF.
 The new shape kernel replaces the standalone ambient59
@@ -259,14 +274,14 @@ PASS nor whole transitive regeneration is claimed.
 
 The [reviewed catalogue integration](../results/finite57_distance9_catalogue_integration_20261020.json)
 replaces only the current finite57 selection of the old108 command with
-one scanner contract and56 whole intervals that actually passed. All
+one scanner contract and 56 whole intervals that actually passed. All
 2196 units have exactly one selected owner; no intervals were trimmed or
 merged into unexecuted commands. The original registry entry and the
 previous catalogue are preserved. These checks retain the same
-59-second/1GiB wrapper and parent lock; the coordinator is not selected
+59-second/1 GiB wrapper and parent lock; the coordinator is not selected
 as a scientific check.
 
-## Resuming the108 distance-nine replay
+## Resuming the 108 distance-nine replay
 
 The [resume coordinator](../scripts/resume_distance9_replay_20261020.py)
 (`cb776f59…`) uses current coverage checker `456abc2b…`; their pin updates
@@ -342,8 +357,8 @@ These labels are proposed proof boundaries, not declarations of axioms.
 4. **`OldFiniteEightObstructions`.** For every actual finite Coxeter forest
    of rank58, the old charge is≤377 unless it is exactly B13 or D13 plus
    three factors from{A15,D15}; those eight forests have cost378. The
-   proof uses the3298 representative cover, both increasing families,
-   all748 actual fibers and1549 exact residual certificates, with all
+   proof uses the 3298 representative cover, both increasing families,
+   all 748 actual fibers and 1549 exact residual certificates, with all
    presence guards and unreachable ranks treated explicitly.
 5. **`ConnectedInverseLower`.** Let B be a positive-definite symmetric
    Coxeter Gram of rank k, diagonal2, nonpositive off-diagonal entries and
@@ -391,7 +406,7 @@ These labels are proposed proof boundaries, not declarations of axioms.
     ideal priority and later replacement route either avoids the D13
     distance11 pair or is one of Lemmas8–10. The low66 bound≤12,
     protected74/adaptive9 paths, old affine-D11 D13(1,11/12), center-leaf
-    D13(0,10), coupled-order11 D13(2,11/12), and current332 D12 outputs
+    D13(0,10), coupled-order11 D13(2,11/12), and current 332 D12 outputs
     are retained. Finite216/564/24/newer checks identify interfaces;
     the named universal proofs establish their exhaustiveness.
 12. **`TriangleRetention58`.** The actual triangle minimal-core theorem
@@ -407,13 +422,13 @@ These labels are proposed proof boundaries, not declarations of axioms.
 14. **`FiniteClosure377`.** For every rank58 forest, the new positive
     guards force exactly six forests, of values370.5 or375.5. The new
     negative guard and the separate B13 theorem lower all eight old
-    obstructions to377. Outside those six increasing families the cost
+    obstructions to 377. Outside those six increasing families the cost
     is pointwise no larger than the old rule. Lemma4 therefore proves
     the exact formal maximum377 for all actual types, with no new DP.
-15. **`PolynomialCurvature57`.** For every positive rank list summing to57,
+15. **`PolynomialCurvature57`.** For every positive rank list summing to 57,
     `H=∏(1+…+t^r)`, `V=Σh=∏(r+1)`, `G=Σmin(j,57−j)h_j`, and
     `κ=(5G−57V)/2`. The actual charge is bounded as in Lemma2. The
-    certificate reconstructs all2552 terminal products, not just degree,
+    certificate reconstructs all 2552 terminal products, not just degree,
     symmetry and coefficient sums.
 16. **`LowEightConcentration`.** For1≤a≤b≤7, transfer(a,b) to(a−1,b+1)
     preserves normalized cost c(r)=r/2, increases centered uniform-sum
@@ -422,7 +437,7 @@ These labels are proposed proof boundaries, not declarations of axioms.
     positive rank. The28 exact stop-loss certificates cover the finite
     low domain, and convolution preserves convex order. No transfer
     through the modified rank9 envelope is permitted.
-17. **`PositiveIdeal36`.** All2552 terminal profiles have positive margin
+17. **`PositiveIdeal36`.** All 2552 terminal profiles have positive margin
     (minimum87/10240) and absolute envelope surplus≥36. Since original
     `V≥V'` and `margin≥margin'>0`, its product is at least36. With
     `C_actual≤C_upper`, every actual cusp has `κ−C_actual≥36`. This
@@ -443,7 +458,7 @@ These labels are proposed proof boundaries, not declarations of axioms.
 
 ## External published statements
 
-The published boundary is unchanged from the58 proof map:
+The published boundary is unchanged from the 58 proof map:
 
 * finite and affine Coxeter diagram classification, including arbitrary
   labels in rank2 and proper-principal definiteness;
@@ -466,7 +481,7 @@ concentration, shape correction and the completed58 tail, is internal.
 
 The [formal project](../formal/README.md) is owned and updated separately.
 The existing checked generic induction and arithmetic modules do not
-justify claiming an end-to-end Lean proof of57. The new rank58 guard
+justify claiming an end-to-end Lean proof of 57. The new rank58 guard
 arithmetic is particularly small: eight old forests, six increasing
 forests, exact rational costs and a pointwise-complement theorem. Its
 kernel interpretation still needs Lemmas3–14, not an axiom named
@@ -474,9 +489,9 @@ kernel interpretation still needs Lemmas3–14, not an axiom named
 
 The final binder exports exact summary checks and input hashes; the local
 JSON contains complete selected maps/proofs, inverse profiles, quiet and
-one-sided models, current output identities and the8+6 finite closure.
-The low8 JSON holds all2552 coefficient lists, envelopes and28 stop-loss
-certificates. The old count holds all748 actual fibers and1549 residual
+one-sided models, current output identities and the 8+6 finite closure.
+The low8 JSON holds all 2552 coefficient lists, envelopes and 28 stop-loss
+certificates. The old count holds all 748 actual fibers and 1549 residual
 tables. A separate plain-data export may repackage these, but copying or
 hashing them is not itself a validity proof. Geometry, historical route
 completeness and the higher tail remain separately named obligations.
@@ -496,20 +511,20 @@ functions and comparisons. Complete source-equivalence reviews now pass
 [scope](../results/review_finite57_b13_frontier_bounded_equivalence_scope_20261021.md),
 [foundations](../results/review_finite57_b13_frontier_bounded_equivalence_foundations_20261021.md)).
 The [original runtime ledger](../results/finite57_loader_replay_runtime_20261021.json)
-preserves the parser fixture PASS:0.139s and60,080,128B process-tree RSS.
+preserves the parser fixture PASS:0.139s and 60,080,128B process-tree RSS.
 Its [separate successor](../results/finite57_loader_replay_post_finishing_20261021.json)
 reuses that receipt and adds an actual `b13:pins-0` PASS:14.154s and
-150,093,824B. The next unit was refused before launch at4.6GiB available
-RAM. At that21October checkpoint, two of25 units had runtime PASS records;
+150,093,824B. The next unit was refused before launch at 4.6 GiB available
+RAM. At that21October checkpoint, two of 25 units had runtime PASS records;
 23 then remained without one. Those source reviews and partial executions
 did not constitute a complete producer PASS, catalogue replacement or
 safe full123-job replay.
 The unchanged six printed editions, source/PDF bindings and theorem57
-remain at their previous status. Runtime admission still requires6GiB
+remain at their previous status. Runtime admission still requires6 GiB
 available RAM; the latest resource deferral is not permission to lower it.
 
-The worker has25 named units: one small array-parser fixture,16 B13
-units and8 frontier units. Its `--plan` and serial resume interface are:
+The worker has 25 named units: one small array-parser fixture,16 B13
+units and 8 frontier units. Its `--plan` and serial resume interface are:
 
 ```sh
 python3 -B scripts/check_finite57_b13_frontier_batches_20261021.py \
@@ -519,7 +534,7 @@ python3 -B scripts/check_finite57_b13_frontier_batches_20261021.py \
 ```
 
 At that checkpoint these entrypoints were prepared, with only the two
-linked units executed. All25 now pass, as bound by the current integration
+linked units executed. All 25 now pass, as bound by the current integration
 receipt above. Use a new owned
 ledger name, preserve failed/deferred attempts, and do not modify a ledger
 after it has been sealed into an acceptance. A job-limit exit can leave
@@ -535,19 +550,19 @@ attestations or a new mathematical proof.
 | Original checker obligation | Required replacement units and comparison |
 |---|---|
 | BOTH original all-STEMS status/source-map loops | `b13:pins-0` through`pins-3` and `frontier:pins-0` through`pins-3`; four disjoint ordered groups per producer, mandatory status and sources fields, every nested pin streamed |
-| B13 top-level scalar/rule/source fields and interface constants | `b13:metadata`; exact original output reconstruction, B13 base78→77 and all78 marked pairs, exact whole source-domain equality, complete interface key set,216 literals and564 later-corner domain |
-| All801 selected B13 patterns /174 maps | `b13:support`; unchanged native `support`, complete isolation cases/cores, every saved field compared |
+| B13 top-level scalar/rule/source fields and interface constants | `b13:metadata`; exact original output reconstruction, B13 base78→77 and all 78 marked pairs, exact whole source-domain equality, complete interface key set,216 literals and 564 later-corner domain |
+| All 801 selected B13 patterns /174 maps | `b13:support`; unchanged native `support`, complete isolation cases/cores, every saved field compared |
 | Both affected seals166/1744 and distinct A1/D12 unit corners | `b13:repairs`; unchanged native `repairs`, both complete old seals and global coupon text, entire returned object compared |
-| All216 current literal configurations and their corners | `b13:literal`; the original ordered strict zips, unchanged native corner calculation and exact lower/payment fields |
-| All564 later corners | `b13:later-0` through`later-3`; disjoint ordered partition of the complete original22-source domain; exact source/path/marked-image/debit rows |
+| All 216 current literal configurations and their corners | `b13:literal`; the original ordered strict zips, unchanged native corner calculation and exact lower/payment fields |
+| All 564 later corners | `b13:later-0` through`later-3`; disjoint ordered partition of the complete original22-source domain; exact source/path/marked-image/debit rows |
 | All eight newer proof collections | `b13:newer`; original order and index/default rules, every corner compared |
-| All24 D14 variants | `b13:variants`; original Gram, extra-contact and complete corner rows |
-| All280+52 positive D12 outputs | `b13:d12`; same complete traversal of both small documents, domain counts and all B13-role rows/payment/image checks |
+| All 24 D14 variants | `b13:variants`; original Gram, extra-contact and complete corner rows |
+| All 280+52 positive D12 outputs | `b13:d12`; same complete traversal of both small documents, domain counts and all B13-role rows/payment/image checks |
 | Every universal retained role | `b13:universal`; unchanged native `universal_roles`, complete affine-B fork, BC inner-terminal and B10 joined models, full provenance inventory |
-| Frontier metadata and unchanged ideal interface | `frontier:metadata`; every original scalar/source/scope field, ideal-weights-unchanged flag and2552/36 inputs |
+| Frontier metadata and unchanged ideal interface | `frontier:metadata`; every original scalar/source/scope field, ideal-weights-unchanged flag and 2552/36 inputs |
 | Complete representative domination /39 costly keys /759 increasing rows | `frontier:cover`; unchanged native `representative_cover`, exact complete saved result |
-| Second increasing family | `frontier:increasing`; unchanged native `increasing_family`, all539 coarse classes/37,985 options and77 actual fibers/23,376 options; all output fields compared |
-| Complete actual complement | `frontier:complement`; unchanged native `complement`, all39 classes/748 fibers/1549 tables/96,528 explicit options; all last-item upper inequalities, tight witnesses, unreachable states, tie order and eight exceptional forests; every class and global summary compared |
+| Second increasing family | `frontier:increasing`; unchanged native `increasing_family`, all 539 coarse classes/37,985 options and 77 actual fibers/23,376 options; all output fields compared |
+| Complete actual complement | `frontier:complement`; unchanged native `complement`, all 39 classes/748 fibers/1549 tables/96,528 explicit options; all last-item upper inequalities, tight witnesses, unreachable states, tie order and eight exceptional forests; every class and global summary compared |
 
 The original functions are never called through their eager `run()`.
 Frontier mathematics is not copied into a different recurrence. B13's
@@ -559,11 +574,11 @@ normalization is retained, one bounded expected object at a time.
 ### Input allocation, parser and resource boundary
 
 The unchanged audited `JsonProjection` supplies exact object-path
-projections with its40MiB file and24MiB selected-value limits. The
+projections with its40 MiB file and 24 MiB selected-value limits. The
 frontier's29,750,123-byte saved document is not eagerly decoded. A small
 read-only mmap adapter uses that parser's lexical tokens/end-of-value
 scanner to index its39 expected finite classes. It decodes at most one
-class at a time and preserves the same24MiB per-item cap. The native
+class at a time and preserves the same24 MiB per-item cap. The native
 complement still checks the entire domain in one unit; its actual result
 is compared class by class rather than normalized/copied wholesale.
 The adapter rejects duplicate visited keys, missing exact paths, malformed
@@ -586,7 +601,7 @@ The exact STEMS set is derived from the frozen outer script/JSON/report
 triple schema and bound by count158 and canonical sorted-list hash
 `e393a2ff27ac8004c9dfbfc07c8f5a6522ef359218e2f1121199c3f9e8d59efb`;
 each worker also checks equality with the native STEMS set. Nested-only
-paths outside the outer certificate and132-source closure are included
+paths outside the outer certificate and 132-source closure are included
 in before/after unit checks and current cache-credit checks. Thus a cached
 successful pin group cannot conceal a later change of a nested-only
 input. Only small status/source headers are decoded; all their scientific
@@ -594,8 +609,8 @@ fields remain structurally skipped. All digests stream; no
 357MB ancestor dictionary or whole-file byte string is created.
 
 Every child requires the existing parent-owned shared lock and unchanged
-59-second/1GiB/one-thread watchdog, with40GiB/6GiB admission and8GiB/3GiB
-abort floors. The worker also alarms at55seconds. The coordinator starts
+59-second/1 GiB/one-thread watchdog, with 40 GiB/6 GiB admission and 8 GiB/3 GiB
+abort floors. The worker also alarms at 55 seconds. The coordinator starts
 only that guarded runner, serially, and stops on a failure or deferral.
 It imports no mathematical worker. Source preparation and AST syntax
 inspection do not establish measured runtime/memory fitness. If a phase

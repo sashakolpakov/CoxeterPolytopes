@@ -58,6 +58,18 @@ three-dimensional right-angled rigidity. No four-dimensional census is
 assumed. See the [primary-source scope audit](../results/ideal_ra4_primary_literature_scope_audit_20261018.md)
 and [assumption register](manuscript_assumptions.md).
 
+The [24 October primary-input authentication](../results/ideal_ra4_figure7_primary_authentication_20261024.md)
+now directly identifies the Figure7 incidence data in the author's original
+arXiv-v2 image. Two authors independently checked its four quadrilateral
+cycles and their two disjoint adjacency edges. The published CaseD
+complete-list passage was read separately: it concerns ideal RA3
+polyhedra with only triangles/quadrilaterals and at most ten vertices.
+The [root acceptance](../results/review_ra_release_primary_inputs_root_20261024.md)
+closes the image-transcription gap without claiming a new proof of that
+external classification or rerunning unchanged model checks. The image
+remains outside the repository/release payload; its exact upstream URL,
+version and hash are documented for retrieval.
+
 From the repository root, inspect the plan or run the declared checks:
 
 ```sh

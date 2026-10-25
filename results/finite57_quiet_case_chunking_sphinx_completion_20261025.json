@@ -1,0 +1,60 @@
+{
+  "status": "PASS_STRICT_SPHINX_QUIET_CASE_REPLAY_DOCUMENTATION",
+  "date": "2026-10-25",
+  "stdout": {
+    "path": "results/finite57_quiet_case_chunking_sphinx_20261025.stdout",
+    "sha256": "ee6fde15e58188250ee936733239259f209f03e2c3551e821627f90152ba1e44"
+  },
+  "watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/site-quiet-case-chunking-20261025"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 102416384,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "disk_free_bytes": 32872763392,
+      "ram_available_bytes": 5819121664
+    },
+    "seconds": 2.035
+  },
+  "warnings": 0,
+  "source_snapshot": {
+    "path": "results/finite57_quiet_case_chunking_sphinx_sources_20261025.json",
+    "sha256": "31d5c3434fed04b531b4a8df6987658bd9b0f457a0716ee40a0175da0d673384"
+  },
+  "source_hashes_before_and_after": {
+    "docs/finite_volume57_reproduce.md": "be861e675b2a83ffe9f58ffd0452ba7640a41ccbf53953881fa0f9f17f6f63ca",
+    "docs/current_bounds_and_verification.md": "7a31add902335e7282e2f2bb742717febb29862a223f76924c1c47b4b96defd3",
+    "docs/finite_volume57_lemma_map.md": "c6835906c9a49ce954c49e3570d6cf7835338daadcfea2fc75bc48322383f726",
+    "docs/site/index.rst": "690b65b9605d3b934d3832623842b49e74790ac13396cfed448a29fdce699c69",
+    "docs/site/methods.rst": "af62437882c374596144379b84a44d1ccc52bf1c117b28734df47b16f7542ee4",
+    "docs/site/papers.rst": "63c300207cdcc05c6c2c719c9af85168e2a0ed1385b1bdf5a71c31bafeb3584a",
+    "docs/site/reproducibility.rst": "9ff046a7d0cc40d62d21c873ce92ac1ef41e804546239673150fcb08ece976c9",
+    "docs/site/scope.rst": "353dfbad02ab20b0dee27aa98d259d0da4d297e3f13f0fa037f3fc5f2a4ce63c",
+    "docs/site/verification.rst": "3b348d4abb2e35c231fdacc5a02889cc6db0510f94e74bbe94878fbc5bea7ffa",
+    "docs/site/conf.py": "f4f019514d3253e42f24202ef65ea9783c00c77d6e79188f42908a505cd577ab"
+  },
+  "actual_rendered_guide": {
+    "path": ".publication/site-quiet-case-chunking-20261025/_downloads/7f4b0f697f711ef866e498aaa780fbc1/finite_volume57_reproduce.md",
+    "sha256": "be861e675b2a83ffe9f58ffd0452ba7640a41ccbf53953881fa0f9f17f6f63ca",
+    "byte_equal_to_current_source": true
+  },
+  "owned_generated_site_removed": true,
+  "mathematical_checks_launched": false,
+  "control_or_case_runtime_pass_claimed": false,
+  "revised_Lean_or_PDF_build_claimed": false,
+  "commit_or_push": false,
+  "scope": "Strict build and byte-equal actual downloadable small-batch replay guide only; all mathematical execution remains subject to unchanged admission."
+}

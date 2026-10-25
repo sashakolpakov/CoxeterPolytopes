@@ -32,6 +32,11 @@ is separate evidence for136 script selections, but no combined146-job
 full-manuscript runtime PASS. The public-data manifest binds the bulk
 inputs separately from the source tree.
 
+The :download:`new guarded execution entry <../audit_and_consolidation_status_20261024.md>`
+preserves those legacy records. Its actual151/16-stage plans split Lean
+compilation from five actual audits. Its fourteen infrastructure tests
+are not mathematical replay or new formalization credit.
+
 Lean kernels assume the geometric and script interfaces specified in their
 maps, then prove internal implications from them. Actual wall/face incidence,
 coverage by classified diagrams, field-to-coordinate interpretation, and
@@ -44,7 +49,7 @@ Preserved research is not an extra paper
 The parked field-specific arithmetic refinements, predecessors, literal-host
 construction investigations, and supporting finite-transfer notes remain
 preserved. They are excluded from the current universal arithmetic 20 edition
-unless explicitly named as an input there. Later reviewed 18/17 results are
+unless explicitly named as an input there. Later reviewed17/15 results are
 separate written proof records; they do not relabel the compiled 23/20 PDFs.
 
 What remains open

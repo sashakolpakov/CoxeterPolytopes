@@ -1,0 +1,84 @@
+--- results/source_archive/finite57_full_universal_d_before_peer_repairs_20261025/finite57_full_universal_affine_d_applications_20261025.py
++++ scripts/finite57_full_universal_affine_d_applications_20261025.py
+@@ -72,7 +72,7 @@
+  'results/fresh_d14_small_component_context_retention_20261018.md':'10fb43eb7646aeb36b1f14c776d3defc76a6f63923d8d96c2f29bbbe01170f02',
+  'results/review_finite57_current_S8_conditional_bridge_fresh_20261025.md':'2c97525c6005627fb78e627dbca31895271112fd02556f72a6de7034f9d23f48',
+  'results/finite57_current_S8_conditional_bridge_root_acceptance_20261025.json':'7cfc187fe9a25e488e0952d063ab7771702a2732baeafaea6077c8ef628cff4f',
+- 'results/finite57_full_universal_affine_d_current_dependency_note_20261025.md':'297b9e514ba41407cf97e6f00bb120efdef40f09e1afbd302a488d2a6a154e49',
++ 'results/finite57_full_universal_affine_d_current_dependency_note_20261025.md':'cf91aba49029289e0034f87ef00e29be84b0daf3eb8c2b234e02b2b930e870a6',
+ }
+ 
+ 
+@@ -210,7 +210,7 @@
+     return (kind,n),dict(zip(order,range(n)))
+ 
+ 
+-def current_role(g,white,corner,W):
++def current_role(g,white,corner,W,whole_factor_premise=None):
+     marks=corner['marks'];indices(marks,len(g),2)
+     indices(white,len(g));need(not set(white)&set(marks),'actual black marks are absent from white')
+     cs=corner['components'];need(type(cs) is list and cs,'saved finite component partition')
+@@ -246,7 +246,7 @@
+         canonical_marks=[list(v) for v in locations],
+         all_canonical_mark_images=[[[i,v] for i,v in pair] for pair in alternatives],current_lower=str(value),
+         component_membership=[dict(nodes=c['nodes'],actual_marks=c['marks']) for c in cs],
+-        whole_factor_premise='complete source zero-energy or energy-one seal; all other actual spectator components are orthogonal to the entire source core',
++        whole_factor_premise=whole_factor_premise or 'complete source zero-energy or energy-one seal; all other actual spectator components are orthogonal to the entire source core',
+         evaluation_origin='THIS_ACTUAL_F_APPLICATION_NOT_A_HISTORICAL_RECEIPT')
+ 
+ 
+@@ -255,20 +255,30 @@
+     expected={(side,a,b,leaf) for side in ('left','right')
+               for a,b in ([(0,v) for v in (9,12,13)] if side=='left' else [(v,9) for v in (0,10,11)])
+               for leaf in ((12,13) if side=='left' else (10,11))}
+-    got=[];out=[]
++    got=[];out=[];single=0;double=0
+     for i,p in enumerate(repairs):
+         a,b=p['old_marks'];side=p['side'];leaf=p['attachment'];got.append((side,a,b,leaf))
+         edges=affine_d(14)+([(14,1),(15,leaf)] if side=='left' else [(14,leaf),(15,8)])
+         g=simple_gram(16,edges);white=sorted(set(range(14))-{a,b})
+-        roles=[current_role(g,white,c,W) for c in p['corners']]
++        slots=p['corners'];unit_only=p['old_marks']==[0,9]
++        need(type(slots) is list and len(slots)==2 and type(slots[0]) is dict and
++             ((unit_only and slots[1] is None) or
++              (not unit_only and type(slots[1]) is dict and slots[1]['marks']==[14,15])),
++             'exact boundary branch schema: four unit-only null second slots or eight distinct repairs')
++        single+=int(unit_only);double+=int(not unit_only)
++        roles=[current_role(g,white,c,W) for c in slots if c is not None]
+         need(len(roles) in (1,2) and len({tuple(sorted(c['actual_marks'])) for c in roles})==len(roles),
+              'distinct exact boundary receiver corners')
++        need(Q(roles[0]['current_lower'])==(1 if unit_only else Q(1,2)),
++             'unit-only D12 center pair or changed D12 leaf half is the first actual receiver')
+         total=sum((Q(c['current_lower']) for c in roles),Q())
+         need(total>=1,'CURRENT twelve-boundary source-role sum')
+         out.append(dict(source_selector=[BOUNDARY,'affine_D13','rows',i],
+             complete_key=[p['old_marks'],side,leaf],physical_context_sha256=digest([g,white]),
++            source_corner_slot_status=['CORNER','STRUCTURAL_UNUSED_NONE' if unit_only else 'CORNER'],
+             current_roles=roles,distinct_current_total=str(total)))
+-    need(len(got)==len(set(got))==12 and set(got)==expected,'complete exact twelve boundary keys')
++    need(len(got)==len(set(got))==12 and set(got)==expected and single==4 and double==8,
++         'complete exact twelve boundary keys and four/eight receiver branch partition')
+     rows=source(LEAF)['two_A1_spectators']['rows'];got=[];two=[]
+     for i,p in enumerate(rows):
+         a,b=p['marks'];c,d=p['leaf_attachments'];got.append((a,b,c,d))
+@@ -325,7 +335,9 @@
+         white=sorted(set(range(13))-{a,b});chosen=p['chosen']
+         need(contact in (13,14) and contact not in chosen['marks'],
+              'whole paying corner excludes the spectator-contacting opposite black')
+-        role=current_role(g,white,chosen,W);unit=chosen['full_A1_D12_upgrade']
++        role=current_role(g,white,chosen,W,whole_factor_premise=
++            'All actual spectators are orthogonal to the whole affine factor and the noncontacting new black. The PAYING corner excludes the spectator-contacting opposite black, so precisely its displayed marked factors are whole. The excluded black may have a nonzero spectator column; orthogonality to the entire four-black core is not assumed.')
++        unit=chosen['full_A1_D12_upgrade']
+         need(type(unit) is bool and Q(role['current_lower'])==1,
+              'CURRENT one-sided whole coupon or ordinary D13 receiver')
+         if not unit:
+@@ -427,6 +439,9 @@
+                 left,right=p['leaf_attachments'];attach=p['A3_attached_to']
+                 g=simple_gram(19,[(i,i+1) for i in range(9)]+[(0,10),(0,11),(9,12),(9,13),
+                     (14,left),(15,right),(16,attach),(16,17),(17,18)])
++                # Frozen DIRECT.gram hashes these raw literal strings.
++                # Preserve that historical representation identity exactly.
++                g=[['-(1)' if v=='-1' else v for v in row] for row in g]
+             else:g=p['gram']
+             need(row['context_sha256']==digest([g,p['white']]) and
+                  [c['marks'] for c in row['corners']]==[c['marks'] for c in p['corners']],

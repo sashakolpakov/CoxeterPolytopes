@@ -1,10 +1,11 @@
 # Reproduce the six papers
 
 The [six-paper reading table](../manuscripts/README.md) links the completed
-TeX editions and matching PDFs. The compact PDFs prove 23 and 20; later
-internally reviewed written research proves 19 and 17, respectively. These
-are distinct proof records. Neither written review nor selected computation
-is an end-to-end geometric Lean proof.
+TeX editions and matching PDFs. The frozen compact PDFs prove bounds of 23 and 20;
+reviewed revisions in those families prove 17 and 15, respectively, and now
+have matching verification PDFs. Their length and layout still need review.
+These are distinct proof records. Neither written review nor selected
+computation is an end-to-end geometric Lean proof.
 
 ## Inspect the selected checks
 
@@ -30,20 +31,22 @@ paper. A plan or a catalogue entry is not execution evidence.
 | Ideal RA4 volume and structure | `ideal_ra4_volume_and_structure` | [Volume, equality and restricted chains](../docs/ideal_ra4_volume_and_structure_proof_map.md) |
 | Compact RA4 volume constraints | `compact_ra4` | [Capacity and excess](../docs/compact_ra4_volume_constraints_reproduce_20261019.md) |
 
-**Keep finite57's full command in plan mode.** Its 123-job selection contains
-113 scripts, nine conditional Lean roots and a PDF build. Matching bounded
-records have been identified for 111/113 script commands, but its selected
-B13 and actual-frontier commands still use eager loaders. Their reviewed
-25-unit bounded replacement has only **2 PASS units; 23 lack PASS**. The next
-unit was refused before launch. The replacement must finish and be integrated
-before a safe full replay is available. There is no combined 123-job PASS or
-complete transitive regeneration. The
-[partial loader ledger](../results/finite57_loader_replay_post_finishing_20261021.json)
-preserves this boundary.
+**Keep finite57's full command in plan mode.** Its historical146-job selection
+contains136 scripts, nine conditional Lean roots and one PDF build. All 25
+distinct bounded replacement units have actual PASS receipts and are
+[integrated into the primary catalogue](../results/finite57_complete_loader_catalogue_integration_20261022.json).
+The111 other command matches retain their inherited execution scope;
+the core11 selection is unchanged. There is no combined146-job runtime
+PASS or complete transitive regeneration. The
+[current-rule evidence guide](../docs/finite_volume57_reproduce.md)
+records the successful 64-shard/259-unit application conjunction and its
+explicit geometric and finite-data premises. This is a separate verification
+scope, with inherited inputs rather than complete transitive regeneration.
+Earlier failures and resource deferrals remain preserved.
 
 The [verification guide](../docs/manuscript_verification.md) explains the
 `scripts`, `logic`, `core` and `full` selections. The smaller finite57 core
-does not replay the 113 scripts. SharpRA has recorded exact/model and selected
+does not replay the 136 scripts. SharpRA has recorded exact/model and selected
 conditional Lean checks; historical combined runs keep their original source
 bindings. Compact RA4's current selection checks typesetting only.
 
@@ -66,8 +69,11 @@ toolchain is pinned in [formal/lean-toolchain](../formal/lean-toolchain).
 Do not launch a clean whole-project build as a reproduction shortcut.
 
 All scientific, Lean and TeX checks share one exclusive lock and run serially.
-Admission requires **40 GiB free disk/6 GiB available RAM**; abort floors are
-**8 GiB/3 GiB**. The coordinator uses the existing bounded research runner
+The user's25October override measures percentages of total filesystem
+capacity and physical RAM: admit at **2% free disk and 15% available RAM**,
+stop active jobs below **1% disk or6% RAM**, and start cleanup below 2% disk.
+Gate on exact byte ratios and record totals, percentages and the policy source
+hash. The coordinator uses the existing bounded research runner
 `scripts/run_bounded_research_check_20261018.py` for scientific/TeX children
 (59 seconds, 1 GiB, one thread) and
 `scripts/run_lean_batches_signal_safe_20261018.py` for one Lean module

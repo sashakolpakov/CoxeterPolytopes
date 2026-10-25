@@ -1,0 +1,589 @@
+# Source-only affine-B fragment for the unified old-affine application helper.
+# Shared parent names: L=LEGACY_HELPER3a1d, F=Fraction, need, one,
+# source(own pinned path), pin(own pinned path), canonical, rational.
+# The parent merges B_SOURCE_PINS into its OWN registry; do not mutate L.PINS.
+B14_SOURCE = 'results/fresh_order14_b_terminal_residual_transfer_20261018.json'
+B14_PRODUCER = 'scripts/fresh_order14_b_terminal_residual_transfer_20261018.py'
+B14_REPORT = 'results/fresh_order14_b_terminal_residual_transfer_20261018.md'
+B15_SOURCE = 'results/fresh_order15_bd_terminal_coupon_transfer_20261018.json'
+B15_PRODUCER = 'scripts/fresh_order15_bd_terminal_coupon_transfer_20261018.py'
+B15_REPORT = 'results/fresh_order15_bd_terminal_coupon_transfer_20261018.md'
+B_CONTACT_PRODUCER = 'scripts/fresh_d16_partial_weight_transfer_20261017.py'
+B_RESIDUAL_REPORT = 'results/fresh_distance9_supporting_extensions_review_20261017.md'
+B_AFFINE_PROOF = 'results/audit_finite57_selected_affine_completion_chain_fresh_20261024.md'
+B_AFFINE_ROOT = 'results/review_finite57_selected_affine_completions_root_20261025.md'
+B_GENERAL_REPORT = 'results/finite57_old_affine_b_given_map_source_contract_20261025.md'
+B13_OLD = 'results/fresh_order13_affine_b_singleton_transfer_20261017.json'
+B13_FORK = 'results/fresh_order13_affine_b_fork_projection_transfer_20261017.json'
+B13_OLD_PRODUCER = 'scripts/fresh_order13_affine_b_singleton_transfer_20261017.py'
+B13_FORK_PRODUCER = 'scripts/fresh_order13_affine_b_fork_projection_transfer_20261017.py'
+B13_OLD_REPORT = 'results/fresh_order13_affine_b_singleton_transfer_20261017.md'
+B13_FORK_REPORT = 'results/fresh_order13_affine_b_fork_projection_transfer_20261017.md'
+B13_QUIET = 'scripts/check_finite57_quiet_b13_current_priority_bridge_20261025.py'
+B13_QUIET_SHA = '5e5c1b9736701dbb48ff3f3dc6bba6b7f87a314758d5fe0b16802607044263e4'
+B13_QUIET_ROOT = 'results/review_finite57_quiet_b13_current_priority_bridge_root_20261025.md'
+B13_QUIET_CONTRACT = 'results/finite57_quiet_b13_current_priority_bridge_contract_20261025.md'
+B_SOURCE_PINS = {
+    B_GENERAL_REPORT:'2fd81d1b9702bb25fa1037e7dbb1c41c9c35699f6c3a0bb39a0ff893c9deace9',
+    'results/fresh_distance8_high_overlap_20261017.json':'f8a2ed3bdef6064febf7336bbe4ad75d71c7d35b5747d9f57b0ebf26b03d0cc9',
+    B13_OLD:'d21a7a2daa5f215dae29f48730d1f0b6fc6c5ee0632715dcb3db4882a79b372c',
+    B13_FORK:'e9b32647aa9f29bc3da18388bba719718b6ac1ea520d01a1d9029f2b7f270d55',
+    B13_OLD_PRODUCER:'35749c95282c04909e1861706ff8115cdd45709e1933748ebae231f92a2ae0f5',
+    B13_FORK_PRODUCER:'ba82121f61158352d8d9b8c9d07901f4d74097fc608a0593fe6d74002469cd9e',
+    B13_OLD_REPORT:'84262d376910422fe21b252af4269509b3dd319db5b4ae54da2273c64ccca2f0',
+    B13_FORK_REPORT:'33144882bd974c15902d7c734c33f9a4f1586344e71a2cfbf91f8036ed3f13d0',
+    B13_QUIET:B13_QUIET_SHA,
+    B13_QUIET_ROOT:'2d1ae426c9c9eed1b81fa8fd88ef55b7c9f21439af8e042c4af1da09f9fac4fd',
+    B13_QUIET_CONTRACT:'9667c9028656440af5123f151c1ceccc0f1346eda538fa6c198f61332f38f59f',
+    B14_SOURCE:'54f2e36ba4c3e5815e8664504738009267ee7c9880c8510480f666c09d9c951c',
+    B14_PRODUCER:'8f8f25effcb6a2d5088865fdf9d6bd197f1af114b097815a715e1a92b2834936',
+    B14_REPORT:'fe70262bedc1dd220aa4e91a703b6eba89e8053a3042d25e108833daee7aa435',
+    B15_SOURCE:'dda5e90c98c99b99bdf4b667421adfb2dc1637862e7e70a2b906bc1dd5a178ec',
+    B15_PRODUCER:'f909ab330ed53c0a0faf219b171e05e010dc9c8f79b00fd37d4fd8bcf55a5486',
+    B15_REPORT:'8a8b2667fd05e6d318192918655e06c7b4663c605f956862a111ddfd428a16a3',
+    B_CONTACT_PRODUCER:'4f60793bce5c1c5a91d59eda946bbc71cb3956bbb35fa6bc68b61bca28cc55ee',
+    B_RESIDUAL_REPORT:'4a074a5c70634d64581c90c1884c142bd6b560c05c1760c416db712f03062677',
+    B_AFFINE_PROOF:'e740b5ccf7ed66546ceca59507a3c3fdedd6179069732d12f73ca6dbb37c3555',
+    B_AFFINE_ROOT:'6fe04d21f048a55997b583bc7bc54689d0f79ac994f008526795fb981cbf719f',
+}
+
+
+def b13_cross_current(corner,W):
+    parts = corner['components'];marks = corner['marks']
+    chosen = [one(parts,lambda b:m in b['nodes'],'same whole source marked finite factor') for m in marks]
+    if chosen[0] == chosen[1]:
+        return F(),[]  # No old same-component unit is borrowed after later deletions.
+    alternatives = []
+    for si,li in ((0,1),(1,0)):
+        small,large = chosen[si],chosen[li]
+        st,lt = small['type'],large['type'];sm,lm = marks[si],marks[li]
+        if not (st[0] in 'ABD' and st[1:].isdigit() and int(st[1:]) <= 5):
+            continue
+        role = large['roles'].get(str(lm));large_images = None
+        if lt == 'D12' and role in ('fork_center','short_fork_leaf'):
+            large_images = [9] if role == 'fork_center' else [10,11]
+        elif lt == 'D11' and role == 'short_fork_leaf' and st in ('A1','A2'):
+            large_images = [9,10]
+        elif lt == 'B10' and role == 'doubled_terminal' and st in ('A1','A2'):
+            large_images = [9]
+        if large_images is None:
+            continue
+        sr = int(st[1:]);lr = int(lt[1:])
+        evaluations = [dict(function='finite_cross_weight',small_type=[st[0],sr],small_mark=i,
+            large_type=[lt[0],lr],large_mark=j,
+            result=str(W.finite_cross_weight((st[0],sr),i,(lt[0],lr),j)))
+            for i in range(sr) for j in large_images]
+        value = min(rational(q['result']) for q in evaluations)
+        alternatives.append((value,evaluations))
+    if not alternatives:
+        return F(),[]
+    return max(alternatives,key=lambda t:t[0])
+
+
+def b13_full_application(key,W,units):
+    if not key['affine'] or key['target_kind'] != 'B' or key['target_order'] != 13:
+        return None
+    if len(key['base_nodes']) != 13 or key['marked_image'] not in ([0,10],[9,11],[9,12],[10,11],[10,12]):
+        return None
+    p,core = L.authoritative(key);old = source(B13_OLD);fork = source(B13_FORK)
+    support = one(fork['reconstructed_high_support'],lambda r:r['index'] == key['high_index'],
+                  'complete original B13 support occurrence')
+    need(support['embeddings'].count(key['induced_map']) == 1
+         and key['marked_image'] in support['marked_images'],
+         'THIS complete B13 native map in the complete original source census')
+    support_ordinal = fork['reconstructed_high_support'].index(support)
+    if key['marked_image'] == [0,10]:
+        collection = old['selected_support']['cases']
+        geometry = one(collection,lambda r:r['index'] == key['high_index'],'same source B13 singleton seal')
+        src = B13_OLD;selector = ['selected_support','cases',collection.index(geometry)]
+    elif key['marked_image'] in ([10,11],[10,12]):
+        collection = old['conditional_long_orbit']['cases']
+        geometry = one(collection,lambda r:r['index'] == key['high_index'],'same original B13 long-orbit seal')
+        src = B13_OLD;selector = ['conditional_long_orbit','cases',collection.index(geometry)]
+    else:
+        collection = fork['cases']
+        case = one(collection,lambda r:r['index'] == key['high_index'],'same source B13 fork seal')
+        need(case['method'] == 'radical' and case['outcome'] == 'sealed_A2_D11_unit'
+             and case['embeddings'].count(key['induced_map']) == 1,'same full affine B13 source branch')
+        geometry = case['proof']['geometry'];src = B13_FORK
+        selector = ['cases',collection.index(case),'proof','geometry']
+    need(geometry['index'] == key['high_index'] and geometry['core_key'] == key['core_key']
+         and geometry['affine_nodes'] == key['base_nodes']
+         and geometry['gram'] == core['gram'] and geometry['gauge_squared'] == core['gauge']
+         and geometry['signature'] == core['signature'] == [13,1,1]
+         and geometry['omitted'] == p['omitted_black']
+         and p['possible_contacts'] == p['omitted_black'] and p['shortcut_bound'] == 2
+         and len(geometry['positive_affine_kernel']) == 13
+         and all(rational(v) > 0 for v in geometry['positive_affine_kernel'])
+         and len(geometry['omitted_radical_coefficients']) == 2
+         and rational(geometry['omitted_radical_coefficients'][0])*
+             rational(geometry['omitted_radical_coefficients'][1]) < 0,
+         'same complete actual positive-affine-kernel/full-core-radical B13 seal')
+    L.source_physical(key,geometry['gram'],geometry['white'])
+    g = L.matrix_values(core['gram']);scales = [rational(v) for v in core['gauge']]
+    target = W.classical_graph('B',13,affine=True)
+    for ai,i in enumerate(key['base_nodes']):
+        for aj,j in enumerate(key['base_nodes'][:ai]):
+            label = target[key['induced_map'][ai]].get(key['induced_map'][aj],0)
+            need((label == 0 and g[i][j] == 0) or
+                 (label in (3,4) and g[i][j] < 0 and
+                  g[i][j]**2 == (1 if label == 3 else 2)*scales[i]*scales[j]),
+                 'same complete physical B13 native labels and nonedges')
+    need(W.affine_weight('B',13,*key['marked_image']) == 0,'selected B13 intrinsic CURRENT zero remains zero')
+    physical = L.context(geometry['gram'],geometry['white']);evidence = [];evaluations = []
+    if key['marked_image'] in ([10,11],[10,12]):
+        doc,receipt_evidence = L.unit(units,B13_QUIET,'quiet-b13',B13_QUIET_SHA,
+            'PASS_NAMED_QUIET_B13_CURRENT_PRIORITY_BRIDGE','consumed_inputs',(L.LITERAL,L.TEX))
+        need(doc['consumed_inputs'].get(B13_OLD) == B_SOURCE_PINS[B13_OLD],
+             'actual current long-orbit receipt uses THIS exact original source')
+        promotion = one(doc['current_promotion_receipts'],lambda r:r['case'] == key['high_index'],
+                        'one exact actual CURRENT B13 long-orbit promotion')
+        actual = promotion['current_receipt']
+        need(actual['source'] == B13_OLD[8:-5] and actual['index'] == key['high_index']
+             and actual['context_sha256'] == physical['context_sha256']
+             and actual['direct_current_receiver_condition'] is True
+             and actual['legacy_pointwise_bounds_used'] is False
+             and promotion['saved_old_promotion_payment_used'] is False
+             and [r['marks'] for r in actual['corners']] == [r['marks'] for r in geometry['corners']],
+             'actual current promotion is THIS exact source physical four-corner model')
+        paid = [dict(marks=r['marks'],current_lower=r['weight']) for r in actual['corners']]
+        need(sum((rational(r['current_lower']) for r in paid),F()) ==
+             rational(actual['total']) >= 1,'actual CURRENT distinct-corner B13 total')
+        evidence.append(receipt_evidence)
+    else:
+        paid = []
+        for ci,corner in enumerate(geometry['corners']):
+            if corner['kind'] != 'finite':
+                continue
+            value,scalars = b13_cross_current(corner,W)
+            if value > 0:
+                paid.append(dict(marks=corner['marks'],current_lower=str(value),
+                    source_selector=selector+['corners',ci]))
+                evaluations += scalars
+        need(sum((rational(r['current_lower']) for r in paid),F()) >= 1,
+             'CURRENT distinct whole B13 source coupons pay; old same-component values are unused')
+    need(paid and len({tuple(sorted(r['marks'])) for r in paid}) == len(paid),
+         'same actual B13 face corners are distinct, never count a native map as another corner')
+    return dict(source=src,proof_selector=selector,map_source=B13_FORK,
+        map_selector=['reconstructed_high_support',support_ordinal,'embeddings',
+            support['embeddings'].index(key['induced_map'])],physical=physical,
+        source_sealing=dict(kind='accepted_complete_positive_affine_kernel_and_actual_zero_core_radical',
+            source_signature=core['signature'],source_gauge=core['gauge'],
+            positive_affine_kernel=geometry['positive_affine_kernel'],radical=geometry['radical'],
+            original_omitted_black=geometry['omitted'],
+            opposite_omitted_radical_coefficients=geometry['omitted_radical_coefficients'],
+            complete_original_contacts=p['possible_contacts'],independent_contact_path_length=2,
+            every_finite_factor_used_is_whole_under_NO_S8=True,
+            source_finite_matrix_kernel_and_native_role_predicates_runtime_regenerated=False),
+        paying_corners=paid,actual_receipts=evidence,consumer_literal_evaluations=evaluations,
+        proof_references=[pin(B_GENERAL_REPORT),pin(B13_OLD_PRODUCER),pin(B13_FORK_PRODUCER),
+            pin(B13_OLD_REPORT),pin(B13_FORK_REPORT),pin(B13_QUIET_CONTRACT),pin(B13_QUIET_ROOT),
+            pin(B_AFFINE_PROOF),pin(B_AFFINE_ROOT)])
+
+
+def b_source_frame(key,W):
+    """Bind one GIVEN full native map to the original physical source."""
+    L.full_key(key)
+    if not key['affine'] or key['target_kind'] != 'B' or not 14 <= key['target_order'] <= 17:
+        return None
+    p,core = L.authoritative(key)
+    if len(key['base_nodes']) >= key['target_order']:
+        return None
+    n = len(core['gram'])
+    if core.get('inverse') is None or core['signature'] != [n-1,1,0] or core['gauge'] != [1]*n:
+        return None
+    if p['method'] not in ('lorentz_residual','relevant_component','marked_component_isolated_by_end_inverses'):
+        return None
+    g = L.matrix_values(core['gram']);J = L.matrix_values(core['inverse'])
+    if len(J) != n:
+        return None
+    need(all(g[i][i] == 2 and all(g[i][j] == g[j][i] and g[i][j] in (-1,0)
+         and J[i][j] == J[j][i] for j in range(i)) for i in range(n)),
+         'same complete simply-laced norm2 physical core and symmetric inverse')
+    u,v = L.opposite_pairs(p,n);white = sorted(set(range(n))-set(u+v))
+    L.source_physical(key,core['gram'],white,True)
+    target = W.classical_graph('B',key['target_order'],affine=True)
+    for ai,i in enumerate(key['base_nodes']):
+        for aj,j in enumerate(key['base_nodes'][:ai]):
+            label = target[key['induced_map'][ai]].get(key['induced_map'][aj],0)
+            need(label in (0,3) and g[i][j] == (-1 if label == 3 else 0),
+                 'THIS complete native map preserves every old simple label and nonedge')
+    allowed = p['possible_contacts'];ends = p['end_sets']
+    need(type(allowed) is list and len(allowed) == len(set(allowed))
+         and all(type(i) is int and 0 <= i < n for i in allowed)
+         and type(ends) is list and len(ends) == 2
+         and all(type(e) is list and len(e) == len(set(e)) for e in ends)
+         and not set(ends[0]) & set(ends[1])
+         and set(ends[0]+ends[1]) == set(allowed),
+         'complete source necessary contacts and disjoint full two-end cover')
+    du,dv = L.graph_distances(g,u),L.graph_distances(g,v)
+    need(len(du) == len(dv) == n and min(du[i] for i in v) > 8
+         and any(all(du[i] <= k for i in ends[0]) and all(dv[i] <= 6-k for i in ends[1])
+                 for k in range(7))
+         and all(J[i][j] > 0 for end in ends for i in end for j in end),
+         'complete strict positive inverse end blocks and actual original short8 distance split')
+    corner = set(white) | set(key['selected_marks'])
+    need(set(key['base_nodes']) <= corner
+         and p['omitted_black'] == sorted(set(u+v)-set(key['selected_marks']))
+         and all(g[i][j] == 0 for i in corner-set(key['base_nodes']) for j in key['base_nodes']),
+         'genuinely new first entry: omitted original blacks absent and other old corner blocks orthogonal')
+    image = dict(zip(key['induced_map'],key['base_nodes']))
+    missing = sorted(set(range(key['target_order']))-set(image))
+    entries = [dict(new_target_node=new,old_target_node=old,core_node=image[old],
+                    native_label=label)
+               for new in missing for old,label in target[new].items() if old in image]
+    need(entries and all(e['native_label'] in (3,4) for e in entries),
+         'nonempty exact mandatory native first-entry domain')
+    return dict(p=p,core=core,g=g,J=J,target=target,white=white,allowed=allowed,
+                ends=ends,du=du,dv=dv,missing=missing,entries=entries,
+                physical=L.context(core['gram'],white))
+
+
+def b_case(doc,field,key):
+    matches = [(i,p) for i,p in enumerate(doc[field]) if p['index'] == key['high_index']]
+    if not matches:
+        return None
+    return one(matches,lambda t:True,'unique exact affine-B saved source occurrence')
+
+
+def b_map(rows,key):
+    return one([[i,p] for i,p in enumerate(rows)],lambda t:t[1]['map'] == key['induced_map'],
+               'THIS complete affine-B native map in the exact original proof domain')
+
+
+def b_bound(key,frame,src,selector,map_selector,seal,reason,producer,report):
+    seal = dict(seal,original_high_source=L.HIGH,
+        original_high_selector=['isolation','cases',key['high_index']],
+        exact_core_selector=['isolation','cores',key['core_key']],
+        source_signature=frame['core']['signature'],source_gauge=frame['core']['gauge'])
+    return dict(application_kind='EXCLUDED_COMPLETION_UNDER_NO_S8',
+        source=src,proof_selector=selector,map_source=src,map_selector=map_selector,
+        physical=frame['physical'],source_sealing=seal,paying_corners=[],actual_receipts=[],
+        source_branch_conclusion=dict(kind='THIS_EXACT_SELECTED_COMPLETION_IMPOSSIBLE_UNDER_NO_S8',
+            reason=reason,source_numerical_predicates_runtime_regenerated=False),
+        proof_references=[pin(B_GENERAL_REPORT),pin(producer),pin(report),pin(B_CONTACT_PRODUCER),
+                          pin(B_RESIDUAL_REPORT),pin(B_AFFINE_PROOF),pin(B_AFFINE_ROOT)])
+
+
+def b14_saved_application(key,W,frame):
+    if key['target_order'] != 14 or key['marked_image'] not in ([9,12],[9,13]):
+        return None
+    doc = source(B14_SOURCE);found = b_case(doc,'cases',key)
+    if found is None:
+        return None
+    pi,p = found;mi,m = b_map(p['maps'],key)
+    support = one(doc['reconstructed_support'],lambda r:r['index'] == key['high_index'],
+                  'same complete B14 support occurrence')
+    need(support['embeddings'].count(key['induced_map']) == 1
+         and key['marked_image'] in support['marked_images']
+         and p['core_key'] == key['core_key'] and p['method'] == frame['p']['method']
+         and p['base_nodes'] == key['base_nodes'] and p['preferred_corner'] == key['selected_marks']
+         and p['core_gram'] == frame['core']['gram'] and p['core_inverse'] == frame['core']['inverse'],
+         'same B14 complete support/full map/core/physical inverse/ordered marks')
+    need(p['end_projection_proof']['allowed_contacts'] == frame['allowed']
+         and p['end_projection_proof']['end_sets'] == frame['ends'],
+         'same B14 complete original end/contact proof')
+    entries = m['forced_entries']
+    need([ {k:e[k] for k in ('new_target_node','old_target_node','core_node','native_label')}
+           for e in entries] == frame['entries'],
+         'same exact source B14 forced first entries')
+    seal = dict(kind='accepted_complete_B14_saved_map_exclusion',
+        source_selector=['cases',pi,'maps',mi],complete_end_proof=p['end_projection_proof'],
+        forced_entries=entries,saved_numeric_predicates_runtime_regenerated=False)
+    if m['outcome'] == 'first_entry_projection_above_norm':
+        need(m['witness'] in entries and rational(m['witness']['projection_lower_bound']) > 2,
+             'named physical B14 first-entry projection obstruction')
+        seal['forced_projection_witness'] = m['witness']
+        reason = 'Required physical norm2 first entry exceeds its projection norm bound, unless this same face has the independent short8 escape.'
+    else:
+        need(m['outcome'] == 'doubled_terminal_residual_cauchy_contradiction'
+             and frame['missing'] == [10,11] and len(entries) == 1
+             and entries[0]['new_target_node'] == m['first_new_target_node'] == 10
+             and entries[0]['old_target_node'] == 9 and entries[0]['native_label'] == 3
+             and entries[0]['core_node'] == m['old_entry_node']
+             and m['doubled_terminal_target_node'] == 11
+             and m['native_terminal_bond'] == frame['target'][10][11] == 4,
+             'exact source B14 one simple entry followed by a genuinely new doubled terminal')
+        i = m['old_entry_node'];rho = rational(m['first_entry_residual_square'])
+        need(0 < rho < 1 and rho == 2-frame['J'][i][i]
+             and rational(m['terminal_physical_norm']) == 2
+             and rational(m['required_residual_inner_product_square_at_least']) == 2
+             and rational(m['Cauchy_upper_bound']) == 2*rho < 2
+             and rational(m['strict_gap']) == 2-2*rho,
+             'same source strict residual Cauchy contradiction')
+        signs = m['terminal_complete_contact_signs']
+        need([r['core_node'] for r in signs] == frame['allowed']
+             and all(rational(r['projection_coefficient']) == frame['J'][i][r['core_node']]
+                     and (r['disposition'] == 'nonnegative_projection' and frame['J'][i][r['core_node']] >= 0
+                          or r['disposition'] == 'opposite_black_short_path'
+                          and frame['J'][i][r['core_node']] < 0
+                          and type(r['path_length']) is int and 0 < r['path_length'] <= 8)
+                     for r in signs),
+             'COMPLETE terminal contact coefficients: every negative term has the same-face short8 escape')
+        seal.update(first_entry_residual_square=m['first_entry_residual_square'],
+            same_end_two_contact_exclusions=m['same_end_two_contact_exclusions'],
+            terminal_complete_contact_signs=signs,terminal_is_new_reason=m['terminal_is_new_reason'],
+            required_residual_inner_product_square_at_least='2',
+            Cauchy_upper_bound=m['Cauchy_upper_bound'],strict_gap=m['strict_gap'])
+        reason = 'Under NO-S8 the arbitrary-contact terminal residual has squared product at least2, but positive-complement Cauchy bounds it by2rho<2.'
+    return b_bound(key,frame,B14_SOURCE,['cases',pi],['cases',pi,'maps',mi],
+                   seal,reason,B14_PRODUCER,B14_REPORT)
+
+
+def b15_saved_application(key,W,frame):
+    if key['target_order'] != 15 or key['marked_image'] not in ([9,13],[9,14]):
+        return None
+    doc = source(B15_SOURCE);found = b_case(doc,'B_cases',key)
+    if found is None:
+        return None
+    pi,case = found;p = case['proof'];mi,m = b_map(p['maps'],key)
+    support = one(doc['B_reconstructed_support'],lambda r:r['index'] == key['high_index'],
+                  'same complete B15 reconstructed support occurrence')
+    need(support['embeddings'].count(key['induced_map']) == 1
+         and key['marked_image'] in support['marked_images']
+         and case['core_key'] == key['core_key'] and case['method'] == frame['p']['method']
+         and p['base_nodes'] == key['base_nodes']
+         and p['core_gram'] == frame['core']['gram'] and p['core_inverse'] == frame['core']['inverse'],
+         'same B15 complete support/full map/core/physical inverse/ordered actual high row')
+    need(p['end_projection_proof']['allowed_contacts'] == frame['allowed']
+         and p['end_projection_proof']['end_sets'] == frame['ends']
+         and m['missing_target_nodes'] == frame['missing'],
+         'same B15 complete old-core contacts/ends and native missing-node domain')
+    entries = m['forced_entries']
+    need([{k:e[k] for k in ('new_target_node','old_target_node','core_node','native_label')}
+          for e in entries] == frame['entries'],'same exact B15 mandatory physical native entries')
+    seal = dict(kind='accepted_complete_B15_saved_map_exclusion',
+        source_selector=['B_cases',pi,'proof','maps',mi],complete_end_proof=p['end_projection_proof'],
+        forced_entries=entries,saved_numeric_predicates_runtime_regenerated=False)
+    if m['outcome'] == 'forced_entry_projection_exclusion':
+        need(m['witness'] in entries and rational(m['witness']['projection_lower_bound']) > 2,
+             'named physical B15 first-entry projection obstruction')
+        seal['forced_projection_witness'] = m['witness']
+        reason = 'A mandatory genuinely new physical norm2 first entry exceeds its projection bound under NO-S8.'
+    else:
+        need(m['outcome'] == 'forced_completed_index_two' and len(entries) == 1
+             and entries[0]['native_label'] == 3
+             and frame['missing'] in ([11,12],[10,11,12])
+             and entries[0]['new_target_node'] == min(frame['missing']),
+             'exact source B15 residual/no-bridge forced-tail branch')
+        control = m['residual_contact_control']
+        need(control['allowed_contacts'] == frame['allowed'] and control['end_sets'] == frame['ends']
+             and set(control['candidate_nodes']) ==
+                 {i for i in frame['allowed'] if frame['J'][i][i] <= 2}
+             and all(rational(control['projection_diagonals'][str(i)]) == frame['J'][i][i]
+                     for i in frame['allowed']),
+             'same complete necessary contact and native single-contact candidate domain')
+        if frame['p']['method'] == 'lorentz_residual':
+            need(control['kind'] == 'at_most_one_core_contact_root'
+                 and [r['nodes'] for r in control['pair_tests']] ==
+                     [[i,j] for i in control['candidate_nodes'] for j in control['candidate_nodes']]
+                 and m['exterior_root_order_exclusion'] is None,
+                 'complete ordered residual pair tests, including repeated coordinates')
+        else:
+            exterior = m['exterior_root_order_exclusion']
+            need(frame['p']['method'] == 'relevant_component'
+                 and control['kind'] == 'one_relevant_root_with_optional_exterior_root'
+                 and control['relevant_node'] == entries[0]['core_node']
+                 and exterior['actual_factor_order'] == 15
+                 and exterior['whole_order_with_exterior_root'] == control['joint_component_order_bound'] < 15,
+                 'optional exterior-root NO-BRIDGE order bound applies to THIS whole order15 target')
+        congruence = m['terminal_congruence']
+        need(congruence == dict(target_node=12,physical_norm='2',scale='1/sqrt2',
+             scaled_norm='1',scaled_native4_bond='-1')
+             and m['signature'] in ([16,2,0],[17,2,0])
+             and len(m['gram']) == len(frame['g'])+len(frame['missing'])
+             and len(m['target_to_literal']) == len(set(m['target_to_literal'])) == 15
+             and len(m['positive_affine_kernel']) == 15
+             and all(rational(v) > 0 for v in m['positive_affine_kernel']),
+             'exact saved physical-terminal congruence and two-negative completed principal')
+        need([m['target_to_literal'][t] for t in key['induced_map']] == key['base_nodes'],
+             'same full native image in the literal completed principal')
+        seal.update(residual_contact_control=control,
+            exterior_root_order_exclusion=m['exterior_root_order_exclusion'],
+            terminal_congruence=congruence,target_to_literal=m['target_to_literal'],
+            completed_gram_source_selector=['B_cases',pi,'proof','maps',mi,'gram'],
+            accepted_saved_completed_signature=m['signature'],
+            accepted_saved_positive_affine_kernel=m['positive_affine_kernel'],
+            completion_zero_geometry='Only after complete at-most-one-contact or strict exterior-root/no-bridge exclusion: every later required target white is genuinely new and old-core-orthogonal.')
+        reason = 'The accepted complete residual contact/no-bridge proof forces THIS saved principal Gram before zeros are written; its declared two-negative inertia is impossible in the ambient Lorentz space.'
+    return b_bound(key,frame,B15_SOURCE,['B_cases',pi],['B_cases',pi,'proof','maps',mi],
+                   seal,reason,B15_PRODUCER,B15_REPORT)
+
+
+B_EXACT_CORE_CACHE = set()
+B_GJ_PRODUCTS = 0
+B_MAX_GJ_PRODUCTS = 2_000_000
+
+
+def b_checked_exact_core(key,frame):
+    """Exact given-core identity only; no native-map or new-root enumeration."""
+    global B_GJ_PRODUCTS
+    core = frame['core'];g,J = frame['g'],frame['J'];n = len(g)
+    digest = L.sha256(canonical([core['gram'],core['inverse'],core['gauge'],core['signature']]).encode()).hexdigest()
+    cache_key = (key['core_key'],digest)
+    if cache_key not in B_EXACT_CORE_CACHE:
+        if cache_key in L.CORE_CACHE:
+            old_g,old_J,scales = L.CORE_CACHE[cache_key]
+            need(old_g == g and old_J == J and scales == [F(1)]*n,
+                 'same exact core identity already checked by frozen legacy helper in THIS process')
+        else:
+            for i in range(n):
+                for j in range(n):
+                    value = F()
+                    for k in range(n):
+                        if g[i][k]:
+                            B_GJ_PRODUCTS += 1
+                            need(B_GJ_PRODUCTS <= B_MAX_GJ_PRODUCTS,
+                                 'complete exact affine-B inverse identity budget; refuse, never truncate')
+                            value += g[i][k]*J[k][j]
+                    need(value == int(i == j),'exact physical GJ identity on THIS complete core input')
+        B_EXACT_CORE_CACHE.add(cache_key)
+    return digest
+
+
+def b_orthogonal_terminal_cauchy(key,W,frame):
+    """The successor's native zeros and complete contacts prove them physically."""
+    if set(key['base_nodes']) != set(frame['white']) | set(key['selected_marks']):
+        return None  # Otherwise an unassigned original corner factor needs separate control.
+    J = frame['J'];target = frame['target']
+    outside = [i for i in frame['allowed'] if i not in key['base_nodes']]
+    if not all(J[i][i] > 2 for i in outside):
+        return None
+    for terminal in frame['missing']:
+        if len(target[terminal]) != 1:
+            continue
+        first,label = next(iter(target[terminal].items()))
+        if first not in frame['missing'] or label not in (3,4):
+            continue
+        for entry in frame['entries']:
+            if entry['new_target_node'] != first or entry['native_label'] != 3:
+                continue
+            i = entry['core_node']
+            if i not in frame['allowed'] or not 1 < J[i][i] <= 2:
+                continue
+            rho = 2-J[i][i];bond_square = F(1 if label == 3 else 2)
+            if not bond_square > 2*rho:
+                continue
+            digest = b_checked_exact_core(key,frame)
+            return dict(application_kind='EXCLUDED_COMPLETION_UNDER_NO_S8',
+                source=L.HIGH,proof_selector=['isolation','cases',key['high_index']],
+                map_source=B_GENERAL_REPORT,map_selector=dict(
+                    format='GIVEN_COMPLETE_NATIVE_MAP_AND_STRICT_OLD_CORNER_TERMINAL_CERTIFICATE',
+                    induced_map=key['induced_map'],first=first,terminal=terminal),
+                physical=frame['physical'],source_sealing=dict(
+                    kind='strict_old_corner_covered_and_new_terminal_orthogonal_Cauchy',
+                    core_input_sha256=digest,checked_in_this_actual_process_on_exact_core=True,
+                    source_signature=frame['core']['signature'],source_gauge=frame['core']['gauge'],
+                    complete_original_actual_corner=key['base_nodes'],
+                    omitted_original_black=frame['p']['omitted_black'],
+                    complete_allowed_contacts=frame['allowed'],complete_end_sets=frame['ends'],
+                    terminal_target_node=terminal,terminal_only_native_neighbor=first,
+                    terminal_has_zero_product_with_every_mapped_old_corner_root=True,
+                    all_possible_contacts_outside_the_mapped_corner=[
+                        dict(core_node=j,inverse_diagonal=str(J[j][j])) for j in outside],
+                    terminal_old_core_orthogonality_reason='All original actual corner roots are already mapped, so the distinct missing terminal is new. Its native zeros exclude all mapped roots. Any nonzero remaining old contact has inverse diagonal>2 and native magnitude>=1 on a positive inverse end; both-end contacts give independent S8. Therefore every old-core product is zero.',
+                    first_target_node=first,forced_old_target_neighbor=entry['old_target_node'],
+                    forced_old_core_contact=i,first_native_label=3,
+                    first_projection_square_lower=str(J[i][i]),
+                    first_residual_square_upper=str(rho),
+                    arbitrary_additional_first_root_contacts_not_set_zero=True,
+                    terminal_residual_square='2',successor_native_label=label,
+                    required_residual_product_square=str(bond_square),
+                    Cauchy_upper_bound=str(2*rho),strict_gap=str(bond_square-2*rho),
+                    source_contact_and_signature_completeness_runtime_regenerated=False),
+                paying_corners=[],actual_receipts=[],
+                source_branch_conclusion=dict(kind='THIS_EXACT_SELECTED_COMPLETION_IMPOSSIBLE_UNDER_NO_S8',
+                    reason='The genuinely new native terminal is forced old-core-orthogonal before any product is set zero. Its required bond to the first root violates positive-complement Cauchy despite arbitrary other contacts of that first root.'),
+                proof_references=[pin(B_GENERAL_REPORT),pin(B14_PRODUCER),pin(B14_REPORT),
+                    pin(B_AFFINE_PROOF),pin(B_AFFINE_ROOT)])
+    return None
+
+
+def b_native_successor_cauchy(key,W,frame):
+    """Strict typed extension of the existing two-root/saturated-entry proof."""
+    J = frame['J'];target = frame['target'];allowed = frame['allowed'];ends = frame['ends']
+    for first in frame['missing']:
+        entries = [e for e in frame['entries'] if e['new_target_node'] == first]
+        if len(entries) != 1 or entries[0]['native_label'] != 3:
+            continue
+        i = entries[0]['core_node']
+        if i not in allowed or not 1 < J[i][i] <= 2:
+            continue
+        end = next(e for e in ends if i in e)
+        # A forced simple entry already has magnitude1. Every additional same-
+        # end native contact has magnitude>=1 and would exceed norm2 here.
+        if not all(J[i][i]+J[j][j]+2*J[i][j] > 2 for j in end if j != i):
+            continue
+        signs = []
+        for j in allowed:
+            a = J[i][j]
+            length = min(frame['du'][i]+frame['dv'][j],frame['du'][j]+frame['dv'][i])+3
+            if a < 0 and length > 8:
+                break
+            signs.append(dict(core_node=j,projection_coefficient=str(a),
+                disposition='same_face_white_interior_short8' if a < 0 else 'nonnegative_projection',
+                path_length=length if a < 0 else None))
+        else:
+            rho = 2-J[i][i]
+            for second,label in target[first].items():
+                if second not in frame['missing'] or label not in (3,4):
+                    continue
+                bond_square = F(1 if label == 3 else 2)
+                if not bond_square > 2*rho:
+                    continue
+                digest = b_checked_exact_core(key,frame)
+                seal = dict(kind='strict_native_first_entry_and_successor_residual_Cauchy',
+                    original_high_selector=['isolation','cases',key['high_index']],
+                    complete_core_selector=['isolation','cores',key['core_key']],
+                    core_input_sha256=digest,checked_in_this_actual_process_on_exact_core=True,
+                    source_signature=frame['core']['signature'],source_gauge=frame['core']['gauge'],
+                    complete_allowed_contacts=allowed,complete_end_sets=ends,
+                    first_target_node=first,old_target_node=entries[0]['old_target_node'],
+                    forced_old_core_contact=i,first_native_label=3,first_physical_contact='1',
+                    inverse_diagonal=str(J[i][i]),first_residual_square=str(rho),
+                    first_complete_same_end_extra_contact_lowers=[
+                        dict(other_core_node=j,lower=str(J[i][i]+J[j][j]+2*J[i][j]))
+                        for j in end if j != i],
+                    successor_target_node=second,successor_native_label=label,
+                    required_successor_bond_square=str(bond_square),
+                    successor_is_genuinely_new='The first root has exactly one old-core contact at an already mapped base node. An old missing successor in another original corner block would be an additional old-core contact; omitted original blacks are absent.',
+                    complete_successor_contact_coefficients=signs,
+                    successor_projection_square_nonnegative='Every allowed one-end inverse block is entrywise positive; a core-orthogonal successor has projection zero.',
+                    successor_residual_square_upper='2',
+                    required_residual_product_square_lower=str(bond_square),
+                    Cauchy_upper_bound=str(2*rho),strict_gap=str(bond_square-2*rho),
+                    independent_same_face_S8_premise_explicit=True,
+                    source_contact_and_signature_completeness_runtime_regenerated=False)
+                return dict(application_kind='EXCLUDED_COMPLETION_UNDER_NO_S8',
+                    source=L.HIGH,proof_selector=['isolation','cases',key['high_index']],
+                    map_source=B14_REPORT,map_selector=dict(
+                        format='GIVEN_COMPLETE_NATIVE_MAP_AND_VERIFIED_STRICT_RESIDUAL_CERTIFICATE',
+                        induced_map=key['induced_map'],first=first,successor=second),
+                    physical=frame['physical'],source_sealing=seal,
+                    paying_corners=[],actual_receipts=[],
+                    source_branch_conclusion=dict(
+                        kind='THIS_EXACT_SELECTED_COMPLETION_IMPOSSIBLE_UNDER_NO_S8',
+                        reason='NO-S8 removes every negative old-projection term. The required native successor bond forces residual product square above positive-complement Cauchy, including saturated rho=0.'),
+                    proof_references=[pin(B_GENERAL_REPORT),pin(B14_PRODUCER),pin(B14_REPORT),
+                        pin(B_CONTACT_PRODUCER),pin(B_RESIDUAL_REPORT),
+                        pin(B_AFFINE_PROOF),pin(B_AFFINE_ROOT)])
+    return None
+
+
+def b_apply(key,W,units):
+    L.full_key(key)
+    if key['affine'] and key['target_kind'] == 'B' and key['target_order'] == 13:
+        return b13_full_application(key,W,units)
+    frame = b_source_frame(key,W)
+    if frame is None:
+        return None
+    need(W.affine_weight('B',key['target_order'],*key['marked_image']) == 0,
+         'CURRENT selected affine-B intrinsic zero remains zero')
+    bound = None
+    if key['target_order'] == 14:
+        bound = b14_saved_application(key,W,frame)
+    elif key['target_order'] == 15:
+        bound = b15_saved_application(key,W,frame)
+    if bound is None:
+        bound = b_orthogonal_terminal_cauchy(key,W,frame)
+    return bound if bound is not None else b_native_successor_cauchy(key,W,frame)

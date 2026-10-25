@@ -34,11 +34,14 @@ RSS. Temporary build files were removed. The preceding source/PDF pair
 `2718192d…` / `39e665d8…` is byte-preserved under
 `results/source_archives/six_papers_before_editorial_freeze_20261021/`.
 
-Later research now has a reviewed written general ceiling of18 and an
-all-field arithmetic Coxeter ceiling of17. The
+Later research now has a reviewed written general ceiling of17 and an
+all-field arithmetic Coxeter ceiling of15. The
+[current guide](audit_and_consolidation_status_20261024.md) identifies the
+accepted compositions and pending revisions. The historical
 [compact eighteen proof](../results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md)
 and its [acceptance](../results/compact_dimension18_global_written_acceptance_20261022.json)
-are separate from this finished23 edition. The earlier
+are separate from this finished23 edition and precede the accepted17 result.
+The earlier
 [twenty/nineteen checkpoint](../results/compact20_arithmetic19_written_acceptance_20261021.json)
 is preserved history. Neither stronger conclusion is supplied by the old
 accounting kernel or by this PDF. The later

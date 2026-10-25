@@ -19,6 +19,189 @@ with only standard foundational axioms would certify each implication
 with the hypotheses listed here; it would not certify that those
 hypotheses have been instantiated for actual hyperbolic polytopes.
 
+## Exact external cutoff in the working arithmetic15 revision
+
+The uncompiled [same-family revision](../manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex)
+uses a separate, explicitly assumed literal-lattice statement: for
+`L = Z[phi]^(n+1)` and `f = -phi*t^2 + sum(x_i^2)`, with `n >= 8`,
+the full integral reflection arrangement has no compact chamber. The
+stronger infinite-covolume statement remains a separate premise wherever
+used. Neither follows merely from commensurability. The revision prints
+its internal bridge to compatible invariant lattices in
+`app:arithgoldenlongstar`.
+
+The cited [official Bugaenko1984 record](https://www.mathnet.ru/eng/vmumm3408)
+was checked for bibliographic metadata. Full-PDF retrieval timed out;
+the exact cutoff has **not** been independently authenticated against the
+primary theorem. The citation does not discharge that assumption or
+identify the literal form with the different `-2*phi` construction.
+The [final source review](../results/review_arithmetic15_final_covers_and_composition_root_20261025.md)
+and manuscript verification section preserve this boundary. The general
+compact companion does not use this arithmetic lattice premise.
+
+## General results have no arithmetic hypothesis
+
+Clarification, 24 October 2026. The general finite-volume and compact
+dimension arguments, including their later geometric restriction-cone
+exclusions, assume no arithmeticity. Physical Lorentz signature, native
+Coxeter angles, actual incidence and spherical/affine link classification
+are separate from integral cycles, number fields and conjugate positivity.
+Only the arithmetic lane may use the latter conditions. Dotted wall
+products in a general diagram remain real metric parameters.
+
+The later [general A11/A12](../results/review_compact17_whole_a11_a12_fresh_four_foot_root_acceptance_20261024.md)
+and [general A14](../results/review_compact17_whole_a14_point79_all_feet_root_acceptance_20261024.md)
+exclusions keep this boundary. Calculating degrees of EXPLICIT native
+cosines, or proving identities among them, is real angle algebra; it
+does not assert arithmeticity of the actual reflection group. H3/H4
+remain in the general spectator classification. All auxiliary points
+retain every original wall and the same original farthest vector.
+The [fresh classical-tail exclusions](../results/review_compact17_whole_d14_and_b15_d15_rank_two_tails_root_acceptance_20261024.md)
+also require only rank-free geometric spectator costs, complete local
+finite extensions and actual-point comparison. They retain the two
+ACTUAL typed-seven exceptions rather than impose a field restriction.
+
+The later [whole B15/D15 proofs](../results/review_compact17_whole_b15_d15_typed_seven_and_complete_rows_root_acceptance_20261024.md)
+close those actual exceptions using only the same geometric foundations.
+The [A15 non-typed theorem](../results/review_compact17_a15_all_non_typed_rank_two_root_acceptance_20261024.md)
+also keeps full native-angle, all-wall and simultaneous-price interfaces;
+it initially left ACTUAL N7/O7. The later
+[complete actual-typed proof](../results/review_compact17_whole_a15_both_actual_typed_seven_and_six_row_cover_root_acceptance_20261024.md)
+closes BOTH, using budget-free near4 concavity and individually paid
+endpoints in one RAW reference. All helper holes and remaining feet
+stay in that same square. This removes ENTIRE A15 with no field
+restriction. The [A16 rank-one theorem](../results/review_compact17_a16_rank_one_point9_ordinary_a1_exclusion_root_acceptance_20261024.md)
+likewise assumes no arithmeticity. It proves e_A16>.9 for ENTIRE
+A16+A1 and excludes ORDINARY A1, leaving ACTUAL I. Its13/8
+cutoff belongs only to its contrary zero-helper-end branch; it is
+not an unrestricted actual-I constraint. The later
+[corrected actual-I theorem](../results/review_compact17_whole_a16_actual_i_corrected_and_five_row_cover_root_acceptance_20261024.md)
+uses fresh budget-free near4 points and six RAW reference contexts.
+Its628-line successor and337-line different-author review retain every
+helper/head cross, individual price, actual wall and full continuous
+interval. The original624 remains byte-exact with its explicit
+own3/WHITE4 coverage omission; the sole repair uses the NEW12/5
+cutoff, without importing the ordinary13/8 cutoff or optimized>.9
+energy. Both ordinary A1 and ACTUAL I now close, removing wholeA16
+and leaving FIVE dominant rows. No new Lean credit follows. The
+[complete FAR7 and literal-heavy theorem](../results/review_finite57_all_positive_far_seven_and_full_literal_heavy_l12_root_acceptance_20261024.md)
+retains the SAME old debts, actual full forest and all centre ports.
+Its corrected short-dual proof is geometric. None of these written
+proofs acquires new runtime or Lean credit through documentation.
+
+The [uniform arithmetic A12 theorem](../results/review_arithmetic15_uniform_a12_three_quarters_and_whole_original9_root_acceptance_20261024.md)
+uses actual-field and nonphysical-embedding conditions in its stated
+arithmetic domain. Its>3/4 conclusion is uniform; branchwise larger
+numbers are not uniform replacements. It closes original9, leaving
+twelve groups at that stage. The later
+[complete original10 theorem](../results/review_arithmetic15_whole_original10_prime_thirteen_two_endpoints_and_eleven_group_root_acceptance_20261024.md)
+uses arithmetic ACTUAL-field equality, integral cycles and nonphysical
+positivity to close ACTUAL I+T2, leaving ELEVEN groups. The SAME
+joint spectator>.21 is counted ONCE, never as ordinary A1 cost.
+Its prime13 divisibility and changed complete endpoint classification
+are written mathematics; all feet and BOTH endpoint prices remain
+explicit. No new runtime or Lean credit follows. Those arithmetic
+restrictions do not enter the general proofs.
+
+The [original13 arithmetic theorem](../results/review_arithmetic15_original13_prime_seven_and_ten_group_root_acceptance_20261024.md)
+uses the same actual-field/norm-divisibility mechanism at prime7 and
+leaves TEN groups. The full finite endpoint catalogue differs from the
+I+T2 case: two foreign A1 contacts CAN make a finite D15 tree. Its
+exclusion uses actual-I acuteness, not a false nonfinite-tree shortcut.
+Only the scalar first radical is compared across D; every actual point
+and original-wall inequality is rebuilt at the fresh rank.
+
+The [whole-A17 dotted-pair theorem](../results/review_compact17_whole_a17_two_isolated_dotted_one_third_root_acceptance_20261024.md)
+has NO arithmetic premise. Its new near4 argument removes only the
+local WEAK exceptions, with an actual finite inverse projection and
+original concavity. Both isolated dotted cores retain the whole
+unbounded parameter interval. Their exact residual cross and separate
+anchor prices justify one raw quadratic certificate. Finite-own or
+nonisolated endpoints and wholeA17 remain outside its conclusion.
+The [finite-pair theorem](../results/review_compact17_a17_both_isolated_finite_analytic_root_acceptance_20261024.md)
+also has no arithmetic premise. It uses actual cap time/products,
+native angles, an all-wall null witness and complete monotone integer
+gaps. Its sixteen rational angle certificates are written arithmetic,
+not an executed script. Only both isolated finite owns are excluded;
+mixed finite/dotted and nonisolated A17 endpoints remain open.
+
+The [selected A16+A1 port theorem](../results/review_finite57_a16_ideal_orthogonal_ports_selected_financing_and_residual_root_acceptance_20261024.md)
+also assumes no arithmeticity. It needs the complete ORIGINAL-AMOUNT
+I8N allowance and every separately subtracted old PZ/G2/Context debt.
+Its old/new actual-edge union shares that allowance; it does not spend
+an extra5.5N. Six new whole A3/E6 parents have their full canonical
+charges and no additional old receiving codomain. Only vertices with
+the stated actual ideal or orthogonal ports are financed. The full
+finite residual, heavy-neighbour activation condition and unexecuted
+171-type contract remain explicit; no universal56 claim is made.
+The later [all-covered-port extension](../results/review_finite57_a16_all_covered_ports_joint_reserves_eight_templates_root_acceptance_20261024.md)
+activates8 at EVERY covered port and adds seven finite-safe forests,
+sharing the SAME original finite/ideal8N actual-edge allowance. D38
+keeps both cross-rank ports and separate H8; old5.5 tags get ONLY2.5
+extra. It retains resource tokens and original G2 currency. The eight
+finite residual templates and sufficient16g>=11H aggregate interface
+are explicit; the latter is UNPROVED universally. No full census or56
+is inferred from covered-port financing.
+
+The [H9 N-release theorem](../results/review_h9_prime41_n_release_order_upper_and_complete_nonunit_firstness_root_acceptance_20261024.md)
+uses its exact ORIGINAL lattice, original reflector arrangement and
+relative ORDER-unit theorem. It asserts no maximal-order equality.
+An original mirror upper need not itself be simple or feasible against
+all unknown chamber walls; its finite collision bounds the actual
+first endpoint. Firstness still requires BOTH nonunit conics. The
+[cleared upper-search worker](../results/review_h9_prime41_n_release_norm_one_upper_worker_root_preexecution_clearance_20261024.md)
+is statically reviewed and UNEXECUTED. Neither unit existence nor a
+window-search terminal supplies explicit firstness or ambient volume.
+
+Conversely, the [arithmetic common-cap alphabet](../results/review_arithmetic_large_a_common_end_cap_trace_alphabet_root_acceptance_20261024.md)
+requires actual-field equality and positive definiteness at every
+nonphysical embedding. Its five-field conclusion is LOCAL to its
+large-A cap hypotheses. It is not a complete list for arbitrary
+arithmetic vertices and supplies no restriction on a general diagram.
+Its rational compact-field exception uses the explicitly external
+rational-isotropy input, not an internal field-free assertion.
+
+The narrow-facet input in finite57's unbounded tail is also geometric.
+Although its convenient reference concerns arithmetic groups, Nikulin
+explicitly gives the narrow-face assertion for general hyperbolic closed
+convex polyhedra in [Section 4, page 10](https://arxiv.org/pdf/0708.3991v2).
+The tail uses that assertion, not the subsequent arithmetic field lemmas.
+
+The later [complete finite-head D18 exclusion](../results/review_compact18_d18_finite_heads_seven_eight_complete_root_acceptance_20261024.md)
+likewise uses only the physical diagram, actual positive points, native
+angle gaps and the same original maximum. Its small radical constants
+are trigonometric identities, not restrictions on an arithmetic field.
+The [all-head continuation](../results/review_compact18_d18_all_head_far_far_and_isolated_far_root_acceptance_20261024.md)
+uses the all-head original envelope and the complete inverse-Gram
+distance, including its cross term. Finite far owns require their own
+incidence proof; the finite-head DOT-own restriction is not transported.
+Its new geometry remains outside the older conditional Lean kernels.
+
+The [general compact17 theorem](../results/compact_dimension17_global_written_acceptance_20261024.json)
+now completes that geometric program at exact18 and composes the previously
+accepted higher-dimensional tail. No arithmetic hypothesis is introduced.
+The [new conditional logic map](compact_dimension17_conditional_logic_map_20261024.md)
+exposes the actual-wall geometry, one original maximum, complete initial
+and fork-role covers, individual coefficient funding, calculus/radical
+estimates and the prior tail as external interfaces. Two Std-only sources
+derive scalar contradictions and the17 composition from those interfaces;
+they do not assume their final scalar minima or whole-D18 exclusion.
+Full static reviews and root source clearance have passed. Neither new
+source has been compiled or actually axiom-audited: the
+[resource receipt](../results/compact17_lean_source_clearance_and_resource_deferral_20261024.json)
+records available RAM below6GiB and ZERO new Lean launches. Static review
+does not instantiate the geometric interfaces or certify a Lean build.
+
+Within the ARITHMETIC lane, the [A13 old-dihedral reduction](../results/review_arithmetic15_a13_ordinary_dihedral_four_plus_root_acceptance_20261024.md)
+illustrates how field restrictions are actually obtained. Integral cyclic
+products first identify a subfield F. A small actual Lorentzian principal,
+represented over F after allowed K-valued root rescaling and totally
+positive form scaling, then forces K=F: a nonidentity embedding fixing F
+would preserve that indefinite principal, contradicting the positive
+ambient conjugate. Merely seeing one finite angle does not prove field
+equality. The new determinant/residue deductions retain all foreign
+contacts; their arithmetic premises remain external to general proofs.
+
 ## Arithmetic reflection groups and the quadratic-form model
 
 Clarification, 21 October 2026. Every finite-covolume arithmetic
@@ -197,6 +380,18 @@ and [restricted Oct/D proof](../results/ideal_ra4_octahedral_block_decomposition
 The published ten-vertex Figure7 entry is distinct from the internal
 cuboctahedral reconstruction and cube/section arguments. The script
 checks are local finite support, not a census of four-polytopes.
+
+24 October source authentication: the
+[original author-image transcription](../results/ideal_ra4_figure7_primary_authentication_20261024.md)
+has now been directly checked by two authors, with
+[root acceptance](../results/review_ra_release_primary_inputs_root_20261024.md).
+Keep two separate premises: the external complete classification under
+the ideal RA3/triangles-and-quadrilaterals/at-most-ten-vertices hypotheses,
+and its authenticated Figure7 incidence data. The latter have four
+quadrilateral cycles ABCD, ABFE, EHIJ, CGHI with shared edges only AB
+and HI. The finite checker proves consequences of those data; it does
+not prove classification completeness. No third-party image is included
+in the repository/release payload.
 
 Attainment of numerator8 is supplied by the independently checked
 reflected-double construction, not by these universal implication
@@ -446,6 +641,17 @@ cardinality24 and Kolpakov's24-facet minimum with metric equality.
 Potyagailo--Vinberg's actual8-dimensional construction supplies
 sharpness only. Standard all-wall and actual-face inheritance facts
 remain explicit foundations.
+
+24 October provenance clarification: two authors directly authenticated
+the precise RA6, finite-volume, all-vertex-type 27-facet statement in
+Alexandrov's accessible research paper, including its Section6 derivation.
+The intermediate 26 bound concerns facets plus ideal vertices, not facets
+alone. The [source-access note](../results/sharp_ra_dufour_original_source_boundary_20261024.md)
+retains the distinction: Dufour's original article was not directly read;
+its attribution and numbering are reported by Alexandrov. The exact
+27-facet statement remains a named external premise, as permitted for
+conditional verification. This access limitation supplies no new Lean
+or original-theorem proof credit.
 
 `RightAngledSharpDimensions` uses typed face/point predicates.
 `ProjectionGeometry` supplies actual finite interior points and the

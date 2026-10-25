@@ -1,0 +1,17 @@
+--- preserved_e48/index_finite57_current_protected74_order_safe_applications_20261025.py
++++ successor/index_finite57_current_protected74_order_safe_applications_20261025.py
+@@ -145,10 +145,10 @@
+                         name='ideal_units'
+                     else:
+                         value=c.W.finite_same_weight((kind,order),p,q)
+-                        if value==F(1,2):
+-                            need(kind=='D' and order>=20 and
+-                                 {p,q} in ({order-11,order-2},{order-11,order-1}),
+-                                 'only the exact largeD short-leaf9 reduction is admitted')
++                        short_D_role=(kind=='D' and order>=20 and
++                                      {p,q} in ({order-11,order-2},{order-11,order-1}))
++                        if short_D_role:
++                            need(value==F(1,2),'CURRENT largeD short-leaf9 must retain its half')
+                             name='finite_D_short_leaf_halves'
+                         else:
+                             need(value==1,'large protected finite leaf9 CURRENT value')

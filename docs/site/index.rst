@@ -2,15 +2,20 @@ Coxeter polytopes: results and verification
 ===========================================
 
 This project studies dimension bounds, explicit reflection chambers and
-right-angled volume/structure problems. There are **six paper families**,
-with matching TeX/PDF editions and separately scoped mathematical reviews,
-exact computations and Lean kernels. Updated23 October2026.
+right-angled volume and structure problems. There are **six paper families**,
+with frozen TeX/PDF editions, supporting proofs and separately scoped reviews,
+exact computations and Lean kernels. Updated25 October 2026.
+
+The current task is :download:`auditing and consolidating the same six papers <../audit_and_consolidation_status_20261024.md>`.
+Fresh audits, same-family revisions and bounded execution have separate
+statuses. New scoped check receipts are listed separately from unexecuted
+plans and resource deferrals. The six frozen editions remain unchanged.
 
 Current dimension bounds
 ------------------------
 
-The new ceilings are internally reviewed written proofs. They are distinct
-from published theorems, external refereeing and full geometric formalization.
+The repository improvements are internally reviewed written proofs, distinct
+from publication, external refereeing and full geometric formalization.
 
 .. list-table:: Dimension comparison
    :header-rows: 1
@@ -27,11 +32,11 @@ from published theorems, external refereeing and full geometric formalization.
    * - General compact Coxeter
      - 8
      - 29
-     - **18**
+     - **17**
    * - Compact arithmetic Coxeter
      - 8
      - 29
-     - **16**
+     - **15**
    * - Noncompact arithmetic Coxeter
      - 21
      - 21
@@ -49,33 +54,69 @@ from published theorems, external refereeing and full geometric formalization.
      - 4
      - **4**, published and sharp
 
-The compact18 and arithmetic16 arguments are supporting work in the existing
-compact paper families; their frozen PDFs still state23 and20. Arithmetic
-reflection lattices automatically admit the quadratic-form model: “first type”
-is not an additional restriction. See the
-:download:`current guide <../current_bounds_and_verification.md>` and
-:download:`published-input register <../manuscript_assumptions.md>`.
+Arithmetic reflection lattices automatically admit the quadratic-form model;
+“first type” adds no restriction here. General results assume no arithmeticity.
+The :download:`current comparison guide <../current_bounds_and_verification.md>`
+and :download:`assumption register <../manuscript_assumptions.md>` give exact
+premises and references. **No new polytope example has been established.**
 
-At exact compact dimension18, only **wholeB18 or wholeD18** remains in the
-accepted necessary frontier. The complete
-:download:`B17+actual-I exclusion <../../results/review_compact18_whole_b17_actual_i_and_four_group_frontier_root_acceptance_20261023.md>`
-and :download:`D17+actual-I exclusion <../../results/review_compact18_whole_d17_actual_i_and_three_group_frontier_root_acceptance_20261023.md>`
-remove two groups, and the new
-:download:`whole-A18 exclusion <../../results/review_compact18_whole_a18_and_two_classical_group_frontier_root_acceptance_20261023.md>`
-removes the third. It uses complete actual endpoint classification, the native
-angle gap and a positive H4+A1 projection in the last case. This geometric
-result is written and internally reviewed, not Lean-verified. The remaining
-groups are necessary configurations, not examples; the ceiling stays18.
-Arithmetic16 now has :download:`nine original groups <../../results/review_arithmetic16_a13_actual_i_ordinary_dihedral_group_nine_root_acceptance_20261023.md>`.
-Its entire A13 row is excluded by universal energy, a direct cubic7-field
-integral-basis argument and a simultaneous actual-I endpoint/weak-foot square.
-No enumeration was needed for the cubic step. The ceiling stays16.
-The :download:`new arithmetic A14 theorem <../../results/review_arithmetic16_a14_point597_four_fifths_root_acceptance_20261023.md>`
-gives energy greater than4/5 and removes its two-ordinary-A1 alternative.
-OrdinaryT2 and actual typed-seven alternatives remain; the nine IDs are unchanged.
+Current audit and publication work
+----------------------------------
+
+The active task is finite57 verification, release records for the two
+right-angled papers, consolidation of compact17/arithmetic15, then selected
+Lean checks, matching PDFs, strict documentation and Git-index audits, and
+publication. Further dimension and construction searches are stopped.
+
+The arithmetic working source now contains its reviewed local proofs and
+complete forest dispatch. Its
+:download:`working proof map <../compact_arithmetic_consolidation_proof_map_20261025.md>`
+identifies the general companion, literal literature assumption and four
+finite-output premises. Its matching 216-page working verification PDF now
+compiles, with retained layout warnings; the frozen PDF still states20.
+
+The compact working source now has complete mathematical and editorial
+source acceptance: every exact 18 row, the actual-rank19–29 tail, all three
+whole rank19 consumers and the independent final conjunction. Its
+:download:`working proof map <../compact17_consolidated_proof_map_20261025.md>`
+identifies the shared method and the case-specific arguments. Its matching
+284-page working verification PDF now compiles, with retained layout warnings.
+The frozen PDF still states23. Length and rendering review remain; no
+arithmeticity is used.
+
+Finite57 now has :download:`all 64 actual selected application PASS receipts <../../results/finite57_longer_tail_all64_actual_application_completion_20261025.json>`
+and a :download:`successful 259-unit current-rule reader <../../results/finite57_final_current_rule_conjunction_execution_20261025.json>`.
+They cover28,028 maps and 83 prefixes under one frozen source/premise snapshot.
+The :download:`reproduction guide <../finite_volume57_reproduce.md>` records
+what was checked and which geometric and finite-data premises remain explicit.
+This does not regenerate native enumeration, provide a combined historical
+146-job replay or formalize the complete geometry. The current 50-page working
+article includes the reviewed terminal-tail lemma; the frozen48-page edition
+is unchanged. Bounded59–163 tail inputs retain their inherited numerical scope.
+
+The :download:`right-angled release records <../right_angled_release_packages_20261025.md>`
+assemble source, computation and actual conditional-Lean receipts for both
+right-angled papers. They distinguish predecessor-edition checks from
+current source reviews. The two new compact17 Lean modules now have
+:download:`actual compilation and separate axiom audits for ten declarations <../../results/compact17_targeted_lean_completion_20261025/manifest.json>`.
+Their geometric and complete-data parameters remain external; older successful
+modules retain their scopes.
+
+The :download:`audit guide <../audit_and_consolidation_status_20261024.md>`
+tracks each remaining gate. Earlier research toward stronger bounds and
+constructions is preserved in the
+:download:`detailed comparison guide <../current_bounds_and_verification.md>`;
+those partial results do not alter the table above.
 
 The six papers
 --------------
+
+All six editions are written, compiled and internally reviewed. Supporting
+improvements remain in these families; earlier notes and atlases are not
+additional proposed papers. The
+:download:`paper index <../../manuscripts/README.md>` and
+:download:`result correspondence <../result_manuscript_correspondence.md>`
+identify the common techniques and where their cases separate.
 
 .. list-table:: Current frozen editions
    :header-rows: 1
@@ -83,97 +124,56 @@ The six papers
 
    * - Paper
      - Result in PDF
-     - Read
+     - PDF
    * - General finite volume
-     - Dimension at most57
+     - At most57
      - :download:`48 pages <../../manuscripts/build/finite_volume57.pdf>`
    * - Sharp right-angled dimensions
      - Finite volume8; entirely ideal4
      - :download:`5 pages <../../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf>`
    * - General compact
-     - Dimension at most23
+     - At most23; supporting proof17
      - :download:`36 pages <../../manuscripts/build/compact_farthest_vertex_bounds.pdf>`
    * - Compact arithmetic
-     - Dimension at most20
+     - At most20; supporting proof15
      - :download:`21 pages <../../manuscripts/build/compact_arithmetic_dimension_bound.pdf>`
    * - Ideal right-angled four-volume and structure
-     - Minimum, second volume, restricted chains
+     - Minimum; unique second-volume double; restricted chains
      - :download:`17 pages <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
    * - Compact right-angled four-volume constraints
      - Capacity, excess and recognition
      - :download:`14 pages <../../manuscripts/build/compact_ra4_volume_constraints.pdf>`
 
-All six are **written, compiled and internally reviewed**. The57 paper has
-12 pages of main exposition and36 pages of essential appendices. The
-:download:`reader index <../../manuscripts/README.md>` maps each result to its
-technique, source, proof map and verification ID. Earlier notes and refinements
-are not additional proposed papers.
-
-Recent verified work
---------------------
-
-The :download:`new B18 terminal theorem <../../results/review_compact18_b18_uniform_terminal_lengths_complete_seventeen_inventory_root_acceptance_20261023.md>`
-gives unconditional SAME-vector sums S17<3.760 and S18<3.830, actual edge
-length bounds and a complete seventeenth-white inventory. The entire
-:download:`near3/own6 role <../../results/review_compact18_b18_near_three_own_six_complete_short_exclusion_root_acceptance_20261023.md>`
-and :download:`all finite-own far-helper roles <../../results/review_compact18_b18_all_finite_far_helper17_raw_prefix_root_acceptance_20261023.md>`
-are excluded. The :download:`complete dotted far-helper theorem <../../results/review_compact18_b18_dotted_far_helper17_complete_root_acceptance_20261023.md>`
-now leaves ONLY the short-wall contact family for the seventeenth opposite.
-Its actual neighbouring point is never assumed farthest; a freshly weakened
-comparison closes every zero/one/two weak-end pattern. A supporting anchor
-price correction is explicit and byte-preserved; all norm margins remain.
-The :download:`complete D18 centre inventory <../../results/review_compact18_d18_complete_centre16_inventory_two_holdouts_root_acceptance_20261023.md>`
-and :download:`strong15/finite-fork reduction <../../results/review_compact18_d18_nonpure_strong15_finite_fork3_head_root_acceptance_20261023.md>`
-leave two stated weak-centre profiles. Neither wholeB18 nor wholeD18 is
-excluded, and the global ceiling remains18.
-
-The :download:`fresh arithmetic B16 head theorem <../../results/review_arithmetic16_whole_b16_head_near_short_three_scale_root_acceptance_20261023.md>`
-and :download:`complete short-family reduction <../../results/review_arithmetic16_whole_b16_complete_short_white_isolated_dotted_field_root_acceptance_20261023.md>`
-now leave both actual opposites isolated, the short one dotted. EVERY
-nonisolated short role is excluded over all actual fields. The remaining
-pair has an actual quadratic/cubic field, strict conjugate strips and an
-additional half-product integrality condition. It is not excluded:
-original group15 and the arithmetic ceiling16 remain.
-
-The :download:`zero-exchanged row7/near-row8 financing theorem <../../results/review_finite57_zero_exchanged_all_row7_near_row8_financing_root_acceptance_20261023.md>`
-retains every older payment. Full actual restorer products limit the A4
-finite receiver to one qualifying arrival across both possible ports.
-Far-row8 and positive exchanged products remain open; no56 theorem follows.
-
-The :download:`B18 scalar kernel <../../results/lean_b18_terminal_pressure_verification_20261023/manifest.json>`
-now has actual bounded compilation in1.71seconds and a SEPARATE ten-declaration
-audit in1.16seconds. The audit reused its object; no successful old module
-ran. All ten prints use standard foundational axioms and no ``sorryAx``.
-Actual geometry, inventories, original-vector pressure and terminal sums
-remain external. This is scalar verification for near3/own6, not wholeB18
-or later geometric exclusions. See its :download:`logic map <../b18_terminal_pressure_kernel_logic_20261023.md>`.
-Two unused-variable warnings are preserved; temporary proof work is absent.
-
-The earlier :download:`A13 eleven-declaration <../../results/lean_a13_i_endpoint_graft_verification_20261023/manifest.json>`,
-:download:`A12 ten-declaration <../../results/lean_a12_adjusted_loss_verification_20261023/manifest.json>`,
-:download:`A18 ten-declaration <../../results/lean_a18_two_dotted_endpoint_verification_20261023/manifest.json>`
-and :download:`heavy-centre eleven-declaration <../../results/lean_heavy_centre_forest_verification_20261023/manifest.json>`
-audits retain their exact conditional scopes. Preparation labels are
-historical; actual receipts supply execution status. Earlier failures and
-resource deferrals earn zero PASS credit. No end-to-end geometric
-formalization is claimed.
-
-Both the :download:`glued H9 host <../../results/review_glued_e7_a2_two_unit_releases_original_period_and_literal_nonreflectivity_root_acceptance_20261023.md>`
-and the :download:`squared-unit host <../../results/review_h9_squared_unit_e7_return_original_period_literal_nonreflectivity_root_acceptance_20261023.md>`
-are now proved nonreflective by original chamber symmetries of infinite
-order. The latter product has trace16phi^6=80+128phi>10; its earlier
-order-two symmetry alone did not establish infinite volume. These close
-two literal hosts, not their whole commensurability classes.
-
-A different :download:`prime41 host and first actual edge <../../results/review_h9_cubed_unit_prime41_original_host_first_edge_root_acceptance_20261023.md>`
-and its :download:`second actual unit edge <../../results/review_h9_prime41_second_actual_unit_edge_original_germ_obstruction_root_acceptance_20261023.md>`
-are proved with complete original-lattice firstness arguments. The
-:download:`third edge and original order-two symmetry <../../results/review_h9_prime41_third_actual_edge_original_involution_full_hexagon_root_acceptance_20261023.md>`
-close the WHOLE compact E7 hexagon, of area4pi/3. Ambient volume remains
-open; the symmetry is not an infinite period. There is no new example.
+The ideal four-dimensional paper does not classify all ideal polytopes as
+24-cell chains. The compact four-dimensional paper establishes neither an
+absolute120-cell minimum nor a unique second-volume double.
 
 Read and reproduce
 ------------------
+
+Finite57 has 25 actual bounded replacement PASS units and catalogue integration.
+Its full136-script/nine-Lean-root/one-PDF selection has no combined146-job
+runtime PASS or complete transitive regeneration;111 other command matches
+retain inherited execution scope. Core11 is unchanged. See the
+:download:`reproduction guide <../finite_volume57_reproduce.md>`.
+
+Selected Lean kernels have actual compilation and SEPARATE actual axiom audits.
+The new dyadic and B16 scalar modules have14 and 12 audited declarations;
+their field, census, geometry and real-instance premises remain external.
+The :download:`formal guide <../../formal/README.md>` preserves logic maps,
+exact receipts, failures and resource deferrals. No selected conditional kernel
+is called a full geometric formalization.
+
+One root-owned scientific/Lean/TeX process runs at a time under the shared lock.
+The user's25October policy admits at 2% free disk and 15% available RAM,
+measured against total filesystem capacity and physical RAM. Stop active
+jobs below 1% disk or6% RAM; start cleanup below 2% disk. Exact ratios and
+policy identities are recorded. Script/TeX batches use59 seconds/1 GiB/one
+thread; Lean2048 MiB/one thread followed by a separate audit. Owned unused
+products are removed after each batch.
+Publication I/O and strict Sphinx use their separate monitored watchdog and
+must not launch mathematical checks. Generated sites, compiler objects and
+caches remain untracked. The optional936-file bulk payload is **unuploaded**.
 
 .. toctree::
    :maxdepth: 1
@@ -185,7 +185,6 @@ Read and reproduce
    scope
 
 The `GitHub repository <https://github.com/sashakolpakov/CoxeterPolytopes>`_
-contains the source arguments and evidence. Before interpreting a PASS, read
-its declared scope: source review, arithmetic replay, conditional kernel logic
-and full geometric formalization are different checks. The optional936-file
-bulk payload has not been uploaded and is excluded from Git.
+contains source arguments and evidence. Read each check's declared scope before
+interpreting PASS: written review, arithmetic replay and conditional Lean
+logic supply different evidence.

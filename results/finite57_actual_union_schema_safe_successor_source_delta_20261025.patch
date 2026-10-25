@@ -1,0 +1,68 @@
+--- scripts/index_finite57_current_terminal_receipt_union_20261025.py
++++ scripts/index_finite57_current_terminal_receipt_union_schema_safe_20261025.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""PROVISIONAL SOURCE: join one actual G6 shard to exact actual provider keys.
++"""PROVISIONAL SOURCE: schema-safe whole-provider actual-key join; S8 stays open.
+ 
+ This reads preserved bounded receipts; it imports no mathematical worker and
+ does no enumeration. Named source-geometric/computed premises remain premises.
+@@ -23,7 +23,7 @@
+ import re
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-INPUTS = 'results/finite57_current_terminal_union_actual_inputs_20261025.json'
++INPUTS = 'results/finite57_current_terminal_union_schema_safe_actual_inputs_20261025.json'
+ MAX_OUTPUT = 500 * 1024
+ MAX_TOTAL_READ = 256 * 1024**2
+ MAX_RECEIPTS = 192
+@@ -68,6 +68,9 @@
+     'scripts/index_finite57_funded_selected_whole_providers_20261025.py': (
+         '0a245deec21b283f0d47af0323cf9557fd6ba4465f6e25a2b7c47897f2a46e86',
+         'CURRENT_FUNDED_WHOLE_PROVIDER_INDEX_ONLY', tuple(f'whole-{i}' for i in range(8)), 'disabled_whole_schema'),
++    'scripts/index_finite57_funded_selected_whole_providers_schema_safe_20261025.py': (
++        '6ace38a526ccf22d9913ffe0b814b7ee4177d74c3be478295a981fef5b7afb03',
++        'CURRENT_FUNDED_WHOLE_PROVIDER_INDEX_ONLY', tuple(f'whole-{i}' for i in range(8)), 'whole_schema_safe'),
+     'scripts/index_finite57_newer_selected_whole_providers_20261025.py': (
+         '54f43fd07f84717d99a14545eb62edb397e74da648648d800ba2a292d8fb39ad',
+         'NEWER_CURRENT_WHOLE_PROVIDER_INDEX_ONLY', tuple(f'newer-{i}' for i in range(4)), 'newer'),
+@@ -321,6 +324,25 @@
+                     digest_string(row['computed_record_sha256'])
+                     need(row['forced_entries'] and row['geometric_premise'], 'exact proper entry/premise evidence')
+                     yield row['key'], 'PROPER_FINITE_EXCLUSION_AT_SOURCE_COMPUTED_PREMISES'
++    elif adapter == 'whole_schema_safe':
++        need(result['shards'] == 8 and type(result['shard']) is int
++             and result['shard'] == int(inner['batch'][-1]), 'exact schema-safe whole shard')
++        names = result['complete_packet_keys']
++        need(type(names) is list and len(names) == 22 and len(set(names)) == 22
++             and all(type(name) is str and name for name in names), 'complete twenty-two source packet keys')
++        need(result['complete_reference_interface_count'] == 564,
++             'exact source-bound whole interface count')
++        packets = result['packets']
++        need(type(packets) is list and [p['source'] for p in packets]
++             == [name for i, name in enumerate(names) if i % 8 == result['shard']],
++             'entire named whole packet shard')
++        for packet in packets:
++            rows = packet['current_funded_whole_model_providers']
++            need(type(rows) is list, 'whole model provider row list')
++            for proof in rows:
++                need(type(proof['geometric_applicability_premise']) is str
++                     and proof['geometric_applicability_premise'], 'whole applicability remains a premise')
++                yield from whole_entries(proof)
+     elif adapter == 'newer':
+         for row in result['exact_newer_provider_rows']:
+             funded(row['direct_current_receipt'], full=True)
+@@ -456,7 +478,12 @@
+             if token not in wanted:
+                 unmatched_provider_keys += 1
+                 continue
+-            wanted[token]['providers'].append(dict(receipt=entry['path'], adapter=adapter, nature=nature))
++            prerequisites = []
++            if adapter in ('proper', 'whole_schema_safe', 'newer', 'affine'):
++                prerequisites.append(dict(kind='independent_current_S8',
++                    status='UNVERIFIED_EXTERNAL_TO_THIS_JOIN', discharged_by_key_match=False))
++            wanted[token]['providers'].append(dict(receipt=entry['path'], adapter=adapter,
++                nature=nature, application_prerequisites=prerequisites))
+             matched += 1
+         used.append(dict(receipt=entry['path'], worker=entry['worker'], batch=entry['batch'],
+                          exact_matching_keys=matched, receipt_sha256=entry['sha256']))

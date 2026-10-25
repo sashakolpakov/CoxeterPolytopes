@@ -3,7 +3,7 @@
 
 macOS does not reliably support lowering RLIMIT_DATA. This parent instead
 measures the entire owned process group, stops it above 256 MiB RSS, and
-keeps the existing mathematical proof admission policy untouched. Only
+uses the user-approved percentage resource policy. Only
 publication packing, restoration, its synthetic tests and Sphinx are allowed.
 """
 from __future__ import annotations
@@ -21,22 +21,15 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 GIB = 1024**3
+sys.path.insert(0, str(ROOT/'scripts'))
+from run_lean_batches_20261018 import resources as measured_resources
 
 
-def resources() -> dict:
-    free = shutil.disk_usage(ROOT).free
-    if free < 20 * GIB:
-        raise RuntimeError("Publication I/O stopped: disk free below 20 GiB")
-    ram = None
-    if shutil.which("vm_stat"):
-        output = subprocess.run(["vm_stat"], capture_output=True, text=True,
-                                check=True, timeout=10).stdout
-        page = int(re.search(r"page size of (\d+) bytes", output).group(1))
-        ram = page * sum(int(re.search(re.escape(k) + r":\s*(\d+)", output).group(1))
-                         for k in ("Pages free", "Pages inactive", "Pages speculative"))
-        if ram < 3 * GIB:
-            raise RuntimeError("Publication I/O stopped: available RAM below 3 GiB")
-    return {"disk_free_bytes": free, "ram_available_bytes": ram}
+def resources(start: bool = True) -> dict:
+    snapshot = measured_resources(start=start)
+    # Retain the former metadata aliases without using absolute free floors.
+    return dict(snapshot, free_disk_bytes=snapshot['disk_free_bytes'],
+                ram_available_bytes=snapshot['available_memory_bytes'])
 
 
 def rss(group: int) -> int:
@@ -77,7 +70,7 @@ def main() -> int:
     peak, reason = 0, None
     try:
         while child.poll() is None:
-            resources()
+            resources(start=False)
             peak = max(peak, rss(child.pid))
             if peak > 256 * 1024**2:
                 raise RuntimeError("Publication I/O exceeded 256 MiB process-group RSS")

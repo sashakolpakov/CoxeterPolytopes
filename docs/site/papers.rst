@@ -6,6 +6,13 @@ The downloads below are the delivered editions. Proof maps identify the
 geometric arguments, published inputs, exact computed propositions, and
 verification commands supporting each one.
 
+The :download:`current consolidation guide <../audit_and_consolidation_status_20261024.md>`
+identifies fresh audit boundaries and pending same-family revisions.
+Fresh complete written-proof reviews of the sharp right-angled and ideal
+four-volume editions retain their named external-input boundaries. The
+finite57 current-rule application audit now passes at explicit premises;
+it is separate from a combined historical full replay or geometric formalization.
+
 General finite volume: dimension at most 57
 -------------------------------------------
 
@@ -46,13 +53,42 @@ It does not assume arithmeticity.
 * :download:`Proof map <../compact_farthest_vertex_bounds_proof_map_20261020.md>`
 * Verification ID: ``compact_farthest_bounds``.
 
-Later reviewed written proofs give general compact dimension at most 18 and
-compact arithmetic Coxeter dimension at most 17. Their
-:download:`compact eighteen composition <../../results/compact_dimension18_global_composition_and_whole_d19_exclusion_candidate_20261022.md>`
+Later reviewed written proofs give general compact dimension at most17 and
+compact arithmetic Coxeter dimension at most15. Their
+:download:`compact seventeen composition <../../results/compact_dimension17_global_written_acceptance_20261024.json>`
 and
-:download:`arithmetic seventeen composition <../../results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md>`
-are supporting research. Those bounds are not theorems of the current 23 and 20
-PDFs. A future integration belongs in these same two paper families.
+:download:`arithmetic fifteen composition <../../results/review_arithmetic16_whole_d16_manual_dyadic_exclusion_and_global15_root_acceptance_20261023.md>`
+belong to these same two paper families. Their complete revised mathematical
+and editorial sources now have
+:download:`coordinating acceptance <../../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json>`.
+The :download:`compact working map <../compact17_consolidated_proof_map_20261025.md>`
+and :download:`arithmetic working map <../compact_arithmetic_consolidation_proof_map_20261025.md>`
+identify the full arguments and their verification boundaries. Both now have
+matching compiled working verification copies. These retain long complete
+case appendices and layout warnings, so they are not promoted editions.
+Those bounds are not stated by the frozen23/20 PDFs.
+
+.. list-table:: Working verification copies in the same families
+   :header-rows: 1
+   :widths: 27 29 44
+
+   * - Working result
+     - Matching PDF
+     - Build evidence and remaining boundary
+   * - Finite volume57
+     - :download:`50 pages <../../manuscripts/build/finite_volume57_consolidated.pdf>`
+     - :download:`Build receipt <../../results/finite57_terminal_tail_working_tex_build_20261025.json>`;21 underfull warnings, no overfull boxes or undefined references. All 64 actual applications and the final 259-unit reader PASS at explicit premises; :download:`evidence guide <../finite_volume57_reproduce.md>`.
+   * - General compact17
+     - :download:`284 pages <../../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf>`
+     - :download:`Build receipt <../../results/compact_farthest_vertex_bounds_consolidated_build_20261018.json>`;202 warnings, including 66 overfull boxes; editorial/rendering review remains.
+   * - Compact arithmetic15
+     - :download:`216 pages <../../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf>`
+     - :download:`Build receipt <../../results/compact_arithmetic_dimension_bound_consolidated_build_20261018.json>`;205 warnings, including 9 overfull boxes; editorial/rendering review remains.
+
+The build-receipt filenames retain their older date convention; their exact
+source/PDF hashes identify these actual builds. No undefined references
+remain. Compilation verifies typesetting success, not mathematical correctness.
+
 
 Sharp right-angled dimensions
 -----------------------------
@@ -83,6 +119,14 @@ arbitrary ideal right-angled four-polytopes.
 
 Compact right-angled four-volume constraints
 --------------------------------------------
+
+A new :download:`reviewed publication source <../../manuscripts/compact_ra4_volume_constraints_publication.tex>`
+consolidates capacity/excess, dodecahedral-facet existence, the C26/C28
+regular-pentagon exclusions and the constraints f>=65 and
+Vol>=49*pi^2/6. Its :download:`proof and verification map <../compact_ra4_publication_proof_and_verification_map_20261024.md>`
+records the complete independent review, fixed algorithms and external inputs.
+Its replacement PDF is not built; the downloads below preserve the delivered
+14-page edition until a matching build and rendered review are ready.
 
 The 14-page paper proves facet-capacity, neighboring-excess, and recognition
 results. It does not prove unrestricted minimality of the regular 120-cell or

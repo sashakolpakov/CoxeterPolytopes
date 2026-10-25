@@ -1,0 +1,15 @@
+--- prepared
++++ final
+@@ -102,8 +102,10 @@
+         fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+         sources = []
+         for name, (size, digest) in FILES.items():
+-            p = (ROOT/name).resolve()
+-            require(p.is_relative_to(ROOT/'data/enumerations'), 'Only selected parked data paths')
++            original_path = ROOT/name
++            require(not original_path.is_symlink() and not original_path.parent.is_symlink(), 'No source symlinks')
++            p = original_path.resolve()
++            require(p == original_path and p.is_relative_to(ROOT/'data/enumerations'), 'Only selected parked data paths')
+             require(p.is_file() and not p.is_symlink() and p.stat().st_size == size,
+                     'Exact unused historical-result path/size required')
+             git = subprocess.run(['git', '-c', 'core.packedGitWindowSize=8m',

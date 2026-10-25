@@ -1,0 +1,37 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/audit_existing_lean_module_20261024.py",
+    "CoxeterProofs.CompactDimensionSeventeenComposition"
+  ],
+  "elapsed_seconds": 1.876,
+  "peak_process_tree_rss_bytes": 709443584,
+  "initial_resources": {
+    "free_disk_gib": 28.74,
+    "available_memory_gib": 3.89,
+    "disk_free_bytes": 30854270976,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 4174512128,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 3.102147,
+    "available_memory_percent": 16.199239,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 3192,
+  "stdout": "'CoxeterProofs.CompactDimensionSeventeenComposition.dotted_head_exclusion' does not depend on any axioms\n'CoxeterProofs.CompactDimensionSeventeenComposition.whole_d18_exclusion' does not depend on any axioms\n'CoxeterProofs.CompactDimensionSeventeenComposition.compact_dimension_at_most_seventeen' depends on axioms: [propext,\n Quot.sound]\n{\"status\": \"KERNEL_AXIOM_AUDIT\", \"module\": \"CoxeterProofs.CompactDimensionSeventeenComposition\", \"inputs\": {\"source_sha256\": \"1bd47e5058bdcf80b2fd1ca167f9bfffd51bf14c401c2d872aec3f135962e5fa\", \"dependency_olean_sha256\": {}, \"compiler\": {\"lean-toolchain\": \"2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273\", \"lakefile.toml\": \"73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7\", \"lake-manifest.json\": \"31be85ca5def52ff06fe5a80b56180832c517cdc7d5bf9097ccf4a0d8b124395\", \"compiler_files\": {\"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/bin/lean\": \"1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared.dylib\": \"c9cc7a6790f8e66135451550a3f2c8e835bb3e88fe404cd72c303d373068cd6c\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_1.dylib\": \"e44858e227323a23ce7416c5678415d2d022582b1627ad3690117ce73cd6345a\", \"/Users/sasha/.elan/toolchains/leanprover--lean4---v4.32.2/lib/lean/libleanshared_2.dylib\": \"be68927a4f282b99383e82af4d481b4ffe59f2a243aea20dae0e60b39c2ae182\"}, \"environment\": {\"ELAN_TOOLCHAIN\": \"\", \"LEAN_PATH\": \"\", \"LEAN_SRC_PATH\": \"\"}}, \"memory_cap_mib\": 2048, \"threads\": 1}, \"stdout_sha256\": \"a6eb0fa9df8ba64069f0d9b11f84756f858861c69e1de03342cd41ea2799c73a\", \"output_bytes\": 339, \"elapsed_seconds\": 1.43, \"resources\": {\"free_disk_gib\": 28.74, \"available_memory_gib\": 3.9, \"disk_free_bytes\": 30854205440, \"disk_total_bytes\": 994610155520, \"available_memory_bytes\": 4191404032, \"physical_memory_bytes\": 25769803776, \"free_disk_percent\": 3.102141, \"available_memory_percent\": 16.264788, \"resource_policy\": {\"id\": \"percentage-v1-20261025\", \"admission_disk_percent\": 2, \"admission_memory_percent\": 15, \"abort_disk_percent\": 1, \"abort_memory_percent\": 6, \"cleanup_disk_percent\": 2, \"rounding_digits\": 6, \"source_sha256\": \"51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f\"}}}\n{\"status\": \"PASS_SEPARATE_ACTUAL_AXIOMS_PARSED\", \"module\": \"CoxeterProofs.CompactDimensionSeventeenComposition\", \"compilation_performed\": false, \"printed_commands\": [\"#print axioms CoxeterProofs.CompactDimensionSeventeenComposition.dotted_head_exclusion\", \"#print axioms CoxeterProofs.CompactDimensionSeventeenComposition.whole_d18_exclusion\", \"#print axioms CoxeterProofs.CompactDimensionSeventeenComposition.compact_dimension_at_most_seventeen\"], \"actual_axioms\": {\"CoxeterProofs.CompactDimensionSeventeenComposition.dotted_head_exclusion\": [], \"CoxeterProofs.CompactDimensionSeventeenComposition.whole_d18_exclusion\": [], \"CoxeterProofs.CompactDimensionSeventeenComposition.compact_dimension_at_most_seventeen\": [\"propext\", \"Quot.sound\"]}, \"ordinary_theorem_parameters_remain_external\": true, \"cache_provenance\": {\"CoxeterProofs.CompactDimensionSeventeenComposition\": \"KERNEL_COMPILED\"}}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "1399fbc6fbc7f0c92496b7f7284fcc8389573c544ee8bb427739666c1af6f7d5",
+  "lock_owner": "checker"
+}

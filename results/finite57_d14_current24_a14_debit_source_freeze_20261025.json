@@ -1,0 +1,31 @@
+{
+  "schema": "finite57-d14-current24-a14-debit-source-freeze-v1",
+  "status": "SOURCE_ONLY_CORRECTED_SUCCESSOR_UNRUN_ROOT_REVIEW_PENDING",
+  "worker": {
+    "path": "scripts/check_finite57_d14_current24_witness_receivers_20261025.py",
+    "sha256": "8f606376b015f7b1571635a30d5d2b23e0fb34bc3dfc5efe88484e1008ad6b8b",
+    "lines": 240,
+    "bytes": 15141
+  },
+  "predecessor": {
+    "path": "results/source_archive/finite57_d14_current24_before_a14_debit_join_20261025/check_finite57_d14_current24_witness_receivers_20261025.py",
+    "sha256": "79f75dd0dbf561267f0f98cabbf99a7e5f9ba90375eb8ce3595e4a75cb4f3c4f"
+  },
+  "preserved_failures": [
+    "results/finite57_additional_d14_variants_execution_20261025.stdout",
+    "results/finite57_d14_current24_witness_execution_20261025.stdout",
+    "results/finite57_d14_current24_diagnostic_execution_20261025.stdout"
+  ],
+  "missing_adjustment": {
+    "path": "results/fresh_a14_endpoint_a1_context_half_transfer_20261018.json",
+    "sha256": "14af340c03fe54cdd6a39c4110e45b701cb2839f941539c3fac116097777e6da",
+    "selector": ["interfaces", "whole_D14_variants"],
+    "complete_source_domain": 24
+  },
+  "exact_scope": "Keep all source physical/witness/domain, DIRECT current total, per-corner current>=required and required-total>=1 assertions. Add the complete later A14 endpoint adjustment between the rank15 joint vector and final B13 debit, with exact native endpoint/known whole-A1/before/debit/retained/source-total checks.",
+  "no_old_A16_half_credit": true,
+  "author_imports_tests_syntax_checks_or_jobs": false,
+  "root_alone_may_launch": true,
+  "old_workers_F_and_successful_curator_modified": false,
+  "global_finite57_verified": false
+}

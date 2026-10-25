@@ -1,0 +1,32 @@
+--- results/finite57_bounded_tail_source_binding_closure_context_scope_corrected_20261025.md@e8e3ba75
++++ results/finite57_bounded_tail_source_binding_closure_context_scope_corrected_20261025.md@upperGuardScope
+@@ -179,6 +179,14 @@
+ For every other layer it is zero. Each bracket is Boolean witness
+ presence. This term is NOT already included in C_N; it accounts once
+ for the difference between full R_N(F;pair) and ordinary R_N^0.
++
++The representative upper program has a separate Gamma59^up. Its expressly
++stated relaxations witness A9/A10 by ANY component of rank9/rank10 and
++cover D5 by the fixed rank-five/A5 counter. These are upper allowances,
++not equalities of actual type or actual guard predicates. Rank preservation,
++nondecreasing small counters and coverage of every actual D5 imply that
++an actual witness is also an upper witness and Gamma59^up(rep(F)) is at
++least Gamma59(F). The actual forest always uses its exact typed guards.
+ 
+ These are literal component INSTANCES. A same-type component pair is
+ counted binomially and cannot be merged with an internal same-component
+@@ -376,9 +384,11 @@
+ 
+ COST: for EVERY type and ordered type pair through the given ambient
+ rank, ARRAY's ORDINARY physical component/cross sums from R_N^0 equal
+-the originating ordinary actual cost functions. Complete forest totals
+-include Gamma59 exactly once, and actual/representative domination
+-holds with those same Boolean guards. Each residual item is exactly
++the originating ordinary actual cost functions. Complete actual forest
++totals include Gamma59 exactly once. Actual guards are evaluated exactly;
++representative domination may use ONLY its expressly stated witness/type
++relaxations and its separately defined Gamma59^up, never an assertion
++that the actual and upper guard predicates are equal. Each residual item is exactly
+ its base plus all fixed interactions, residual-residual interactions
+ vanish, all fixed/guard classes occur, and every saved Bellman inequality
+ and required predecessor is correct. The59 assertion is only an upper
