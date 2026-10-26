@@ -127,6 +127,13 @@ self-contained page count has been proved. See :doc:`papers` for the
 current downloads and :doc:`volume_problems` for the deliberately narrower
 compact RA4 conclusions.
 
+The arithmetic paper's earlier primary-source warning has a separate
+:download:`26 October authentication addendum <../bugaenko_golden_lattice_cutoff_authentication_20261026.md>`.
+The original statement of Bugaenko's theorem now matches the literal
+lattice, full reflection group and dimension range used by the manuscript.
+This closes that citation check; the existing internal proofs, computed
+output premises and conditional Lean interfaces retain their scopes.
+
 Finite57: the current-rule conjunction and its inherited inputs
 ------------------------------------------------------------------
 

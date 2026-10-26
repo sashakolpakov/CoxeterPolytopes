@@ -21,8 +21,8 @@ certificates and selected Lean verification. There are **six paper families**.
 Repository improvements are internally reviewed written arguments at their
 [stated inputs](docs/manuscript_assumptions.md). Selected Lean kernels verify
 conditional internal logic; the entire geometry is not formalized. There is
-no new polytope example. Arithmetic 15 retains an explicit external
-golden-lattice cutoff assumption; its primary text is not yet authenticated.
+no new polytope example. The published golden-lattice theorem used by
+arithmetic 15 now has a [primary-source check](docs/bugaenko_golden_lattice_cutoff_authentication_20261026.md).
 Arithmetic reflection lattices automatically admit the quadratic-form model.
 
 The ideal RA4 paper treats the second volume and its unique double, and a

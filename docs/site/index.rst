@@ -37,7 +37,7 @@ or complete geometric Lean formalizations. Read :doc:`scope` alongside the table
    * - Compact arithmetic Coxeter
      - 8
      - 29
-     - **15**; computed premises and literal golden-lattice cutoff assumed.
+     - **15**; computed premises and the published golden-lattice theorem.
    * - Noncompact arithmetic Coxeter
      - 21
      - 21
@@ -54,6 +54,10 @@ or complete geometric Lean formalizations. Read :doc:`scope` alongside the table
      - 4
      - 4
      - **4**, published and sharp.
+
+The :download:`primary-source check of Bugaenko's golden-lattice theorem <../bugaenko_golden_lattice_cutoff_authentication_20261026.md>`
+closes the earlier citation-authentication warning on the arithmetic 15 row.
+The theorem is still an external mathematical input.
 
 The general arguments assume no arithmeticity. For arithmetic reflection
 lattices the quadratic-form model is automatic; “first type” adds no restriction

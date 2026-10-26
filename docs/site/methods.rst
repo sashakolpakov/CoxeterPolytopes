@@ -182,11 +182,18 @@ The final implication has the form
 
 The first premise comes from the general compact paper. The other two
 require their complete arithmetic cases. The literal golden-lattice
-cutoff is a stated external input whose exact primary text has not been
-authenticated in this repository audit. Its scope and the claimed
-arithmetic conclusion remain conditional on that input; see
-:ref:`arithmetic-golden-boundary`. The small Lean implication does not
-prove the cutoff, the four outputs or the geometric exclusions.
+cutoff is Bugaenko's published theorem, now authenticated against printed
+page 6 of the original paper. Its infinite-volume conclusion holds for
+the displayed integral form in every dimension at least eight; the
+current proof needs only dimension seventeen. The passage from the actual
+configuration to that integral group remains an internal reviewed proof,
+rather than an appeal to commensurability. See
+:ref:`arithmetic-golden-boundary` and the
+:download:`current authentication note <../bugaenko_golden_lattice_cutoff_authentication_20261026.md>`.
+The :download:`independent primary-source review <../../results/review_bugaenko_golden_cutoff_primary_authentication_20261026.md>`
+confirms the exact statement; it does not reconstruct the entire external
+proof. The small Lean implication does not prove Bugaenko's theorem, the
+four computed outputs or the geometric exclusions.
 
 Actual projections in the right-angled proof
 --------------------------------------------
