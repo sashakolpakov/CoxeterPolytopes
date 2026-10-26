@@ -5,13 +5,15 @@ author = "CoxeterPolytopes contributors"
 copyright = "2026, CoxeterPolytopes contributors"
 language = "en"
 root_doc = "index"
-extensions = []
+extensions = ["sphinx.ext.mathjax"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 html_theme = "alabaster"
 html_title = "Coxeter Polytopes: papers and verification"
 html_baseurl = "https://sashakolpakov.github.io/CoxeterPolytopes/"
-html_static_path = []
+html_static_path = ["_static"]
+html_css_files = ["site.css"]
+numfig = True
 templates_path = ["_templates"]
 html_sidebars = {
     "**": [
@@ -23,7 +25,7 @@ html_sidebars = {
     ],
 }
 html_theme_options = {
-    "description": "Six papers, explicit proof inputs, and bounded verification",
+    "description": "Six paper families: arguments, diagrams, algorithms and verification",
     "github_user": "sashakolpakov",
     "github_repo": "CoxeterPolytopes",
     "github_banner": True,

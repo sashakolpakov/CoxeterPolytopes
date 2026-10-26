@@ -37,6 +37,9 @@ jobs:
       - name: Install documentation dependencies
         run: python -m pip install --disable-pip-version-check -r repro/requirements-docs.txt
 
+      - name: Audit documentation inputs and asset boundaries
+        run: python tools/audit_sphinx_inputs.py --require-indexed
+
       - name: Build documentation, treating warnings as errors
         run: python -m sphinx -W --keep-going -b html docs/site _build/site
 

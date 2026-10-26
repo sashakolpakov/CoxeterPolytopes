@@ -1,149 +1,130 @@
-The six papers
-==============
+Six papers, their techniques and complete reading copies
+========================================================
 
-These are six paper families, not one manuscript per research increment.
-The downloads below are the delivered editions. Proof maps identify the
-geometric arguments, published inputs, exact computed propositions, and
-verification commands supporting each one.
+The project has six paper families. The three illustrated dimension editions
+below add explanations in figures to the reviewed consolidated sources. Removing
+the marked additions recovers those base sources byte for byte. No theorem,
+case exclusion or computation is strengthened by adding a figure.
 
-The :download:`current consolidation guide <../audit_and_consolidation_status_20261024.md>`
-identifies fresh audit boundaries and pending same-family revisions.
-Fresh complete written-proof reviews of the sharp right-angled and ideal
-four-volume editions retain their named external-input boundaries. The
-finite57 current-rule application audit now passes at explicit premises;
-it is separate from a combined historical full replay or geometric formalization.
-
-General finite volume: dimension at most 57
--------------------------------------------
-
-Every finite-sided, finite-volume real hyperbolic Coxeter polytope has dimension
-at most 57. No arithmeticity, compactness, or simple-cusp hypothesis is added.
-The 48-page edition has 12 main pages and 36 essential proof and finite-table
-appendix pages.
-
-* :download:`PDF <../../manuscripts/build/finite_volume57.pdf>`
-* :download:`TeX source <../../manuscripts/finite_volume57.tex>`
-* :download:`Proof map <../finite_volume57_lemma_map.md>` and
-  :download:`reproduction guide <../finite_volume57_reproduce.md>`
-* Verification ID: ``finite57``.
-
-Compact arithmetic: dimension at most 20
-----------------------------------------
-
-The 21-page universal arithmetic edition includes the two necessary internal
-field-closure proofs that were formerly cited from supporting notes. Its
-quadratic-form model is automatic for arithmetic reflection lattices;
-first type is not an extra restriction on this result. The parked
-field-specific refinements are excluded from this edition and preserved
-separately.
-
-* :download:`PDF <../../manuscripts/build/compact_arithmetic_dimension_bound.pdf>`
-* :download:`TeX source <../../manuscripts/compact_arithmetic_dimension_bound.tex>`
-* :download:`Proof and reproduction map <../compact_arithmetic20_proof_map.md>`
-* Verification ID: ``compact20``.
-
-General compact: dimension at most 23
--------------------------------------
-
-The 36-page paper uses a farthest vertex and actual component-energy estimates.
-It does not assume arithmeticity.
-
-* :download:`PDF <../../manuscripts/build/compact_farthest_vertex_bounds.pdf>`
-* :download:`TeX source <../../manuscripts/compact_farthest_vertex_bounds.tex>`
-* :download:`Proof map <../compact_farthest_vertex_bounds_proof_map_20261020.md>`
-* Verification ID: ``compact_farthest_bounds``.
-
-Later reviewed written proofs give general compact dimension at most17 and
-compact arithmetic Coxeter dimension at most15. Their
-:download:`compact seventeen composition <../../results/compact_dimension17_global_written_acceptance_20261024.json>`
-and
-:download:`arithmetic fifteen composition <../../results/review_arithmetic16_whole_d16_manual_dyadic_exclusion_and_global15_root_acceptance_20261023.md>`
-belong to these same two paper families. Their complete revised mathematical
-and editorial sources now have
-:download:`coordinating acceptance <../../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json>`.
-The :download:`compact working map <../compact17_consolidated_proof_map_20261025.md>`
-and :download:`arithmetic working map <../compact_arithmetic_consolidation_proof_map_20261025.md>`
-identify the full arguments and their verification boundaries. Both now have
-matching compiled revisions and
-:download:`source/build/sampled-layout acceptance <../../results/compact17_arithmetic15_editorial_completion_20261025.json>`.
-Complete case appendices remain; no overfull box, undefined reference or package
-warning remains. The frozen editions are preserved separately.
-Those bounds are not stated by the frozen23/20 PDFs.
-
-.. list-table:: Working verification copies in the same families
+.. list-table:: Current complete reading copies
    :header-rows: 1
-   :widths: 27 29 44
+   :widths: 29 11 28 32
 
-   * - Working result
-     - Matching PDF
-     - Build evidence and remaining boundary
-   * - Finite volume57
-     - :download:`50 pages <../../manuscripts/build/finite_volume57_consolidated.pdf>`
-     - :download:`Build receipt <../../results/finite57_terminal_tail_working_tex_build_20261025.json>`;21 underfull warnings, no overfull boxes or undefined references. All 64 actual applications and the final 259-unit reader PASS at explicit premises; :download:`evidence guide <../finite_volume57_reproduce.md>`.
-   * - General compact17
-     - :download:`285 pages <../../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf>`
-     - :download:`Build receipt <../../results/compact17_editorial_layout_final_build_20261025.json>`; nine underfull spacing warnings, no overfull boxes, undefined references or package warnings. Twelve named pages visually inspected.
-   * - Compact arithmetic15
-     - :download:`216 pages <../../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf>`
-     - :download:`Build receipt <../../results/arithmetic15_editorial_publication_style_build_20261025.json>`; eight underfull spacing warnings, no overfull boxes, undefined references or package warnings. Six named final pages visually inspected.
+   * - Paper and result
+     - Pages
+     - Technique
+     - Complete source and proof map
+   * - :download:`General finite volume: 57 <../../manuscripts/build/finite_volume57_illustrated.pdf>`
+     - 50
+     - Corner payments, spherical forests and cusp curvature.
+     - :download:`Illustrated TeX <../../manuscripts/finite_volume57_illustrated.tex>`; :download:`proof map <../finite_volume57_lemma_map.md>`.
+   * - :download:`General compact: 17 <../../manuscripts/build/compact_farthest_vertex_bounds_illustrated.pdf>`
+     - 286
+     - One farthest vector, funded component energies and actual-rank tails.
+     - :download:`Illustrated TeX <../../manuscripts/compact_farthest_vertex_bounds_illustrated.tex>`; :download:`complete case map <../compact17_consolidated_proof_map_20261025.md>`.
+   * - :download:`Compact arithmetic: 15 <../../manuscripts/build/compact_arithmetic_dimension_bound_illustrated.pdf>`
+     - 217
+     - The general compact theorem, field restrictions, four computed outputs and manual dyadic exclusion.
+     - :download:`Illustrated TeX <../../manuscripts/compact_arithmetic_dimension_bound_illustrated.tex>`; :download:`dependency map <../compact_arithmetic_consolidation_proof_map_20261025.md>`.
+   * - :download:`Sharp right-angled dimensions: 8 and 4 <../../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf>`
+     - 5
+     - Actual projection, heights, a cubic tensor identity and metric equality.
+     - :download:`TeX <../../manuscripts/right_angled_sharp_dimension_bounds_publication.tex>`; :download:`proof map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
+   * - :download:`Ideal RA4 volume and structure <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
+     - 17
+     - Defect count, equality spectrum, actual cutting and restricted recognition.
+     - :download:`TeX <../../manuscripts/ideal_ra4_volume_and_structure_publication.tex>`; :download:`proof map <../ideal_ra4_volume_and_structure_proof_map.md>`.
+   * - :download:`Compact RA4 volume constraints <../../manuscripts/build/compact_ra4_volume_constraints.pdf>`
+     - 14
+     - Facet capacity, neighboring excess, marked polygon geometry and graph arguments.
+     - :download:`TeX <../../manuscripts/compact_ra4_volume_constraints.tex>`; :download:`proof map <../compact_ra4_volume_constraints_reproduce_20261019.md>`.
 
-The build-receipt filenames retain their older date convention; their exact
-source/PDF hashes identify these actual builds. No undefined references
-remain. Compilation verifies typesetting success, not mathematical correctness.
+How much of a paper is essential?
+---------------------------------
 
+These are complete article lengths, not minimum necessary-page claims. The
+compact 17 and arithmetic 15 articles have about 19 and 38 pages of common
+exposition before their case arguments, respectively. Those front sections
+are **not standalone proofs**. Actual-rank tails, exceptional endpoint/fork
+cases and the four finite-output contracts remain necessary. Arithmetic 15
+also depends on the independent general compact 17 theorem; its 217 pages
+must not be presented as eliminating that companion dependency.
 
-Sharp right-angled dimensions
------------------------------
+The finite-volume appendices likewise supply proofs and finite-table
+interfaces used by the main argument. The five-page sharp right-angled article
+is already short. The 17-page ideal paper deliberately combines the minimum,
+second-volume equality and restricted chain argument in one sequence.
+The compact RA4 article proves constraints rather than the requested absolute
+minimum or second-volume classification. No smaller self-contained extraction
+has been certified for any family by this illustration update.
 
-The five-page paper proves dimension at most 8 for finite-volume right-angled
-polytopes and at most 4 when all vertices are ideal. Published examples attain
-both bounds. The two branches share a projection lemma, then use a tensor
-argument and the named Musin/Kolpakov inputs, respectively.
+Read the proof before the logs
+------------------------------
 
-* :download:`PDF <../../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf>`
-* :download:`TeX source <../../manuscripts/right_angled_sharp_dimension_bounds_publication.tex>`
-* :download:`Proof map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`
-* Verification ID: ``right_angled_sharp``.
+* :doc:`finite_volume` follows the single corner rule through finite and ideal
+  links and explains why exact dimension 58 and the higher tail are separate.
+* :doc:`compact_bounds` starts with the common geometric budget, then identifies
+  the classical branches and the additional arithmetic restrictions.
+* :doc:`right_angled` writes out the projection and cubic code argument, including
+  the strict endpoint, and the different ideal metric-equality branch.
+* :doc:`volume_problems` separates the independently proved equality spectrum
+  from the restricted Oct/D cutting theorem and the open compact questions.
 
-Ideal right-angled four-volume and structure
---------------------------------------------
+The :doc:`algorithms` chapter describes finite domains, induction arguments and
+computed propositions. :doc:`formal_logic` exposes the remaining hypotheses of
+the selected Lean kernels. All six families use external mathematical inputs;
+:doc:`scope` explains which ones remain assumed and where authentication is
+incomplete.
 
-The 17-page paper treats the published minimum volume, the next distinct volume
-and its unique reflection double, and a restricted 24-cell chain theorem.
-The chain theorem assumes that every facet has one of the specified octahedral
-or doubled-octahedral intrinsic types. It is not a decomposition theorem for
-arbitrary ideal right-angled four-polytopes.
+Preserved earlier editions
+---------------------------
 
-* :download:`PDF <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
-* :download:`TeX source <../../manuscripts/ideal_ra4_volume_and_structure_publication.tex>`
-* :download:`Proof map <../ideal_ra4_volume_and_structure_proof_map.md>`
-* Verification ID: ``ideal_ra4_volume_and_structure``.
+Earlier PDFs remain downloadable with their original sources and claims. They
+are editions of the same papers, not additional papers.
 
-Compact right-angled four-volume constraints
---------------------------------------------
+.. list-table:: Dimension-paper predecessors
+   :header-rows: 1
+   :widths: 27 24 24 25
 
-A new :download:`reviewed publication source <../../manuscripts/compact_ra4_volume_constraints_publication.tex>`
-consolidates capacity/excess, dodecahedral-facet existence, the C26/C28
-regular-pentagon exclusions and the constraints f>=65 and
-Vol>=49*pi^2/6. Its :download:`proof and verification map <../compact_ra4_publication_proof_and_verification_map_20261024.md>`
-records the complete independent review, fixed algorithms and external inputs.
-Its replacement PDF is not built; the downloads below preserve the delivered
-14-page edition until a matching build and rendered review are ready.
+   * - Family
+     - Frozen edition
+     - Consolidated base
+     - New illustration content
+   * - Finite volume
+     - :download:`57, 48 pages <../../manuscripts/build/finite_volume57.pdf>`; :download:`TeX <../../manuscripts/finite_volume57.tex>`.
+     - :download:`57, 50 pages <../../manuscripts/build/finite_volume57_consolidated.pdf>`; :download:`TeX <../../manuscripts/finite_volume57_consolidated.tex>`.
+     - Two new diagrams; the existing figure remains.
+   * - General compact
+     - :download:`23, 36 pages <../../manuscripts/build/compact_farthest_vertex_bounds.pdf>`; :download:`TeX <../../manuscripts/compact_farthest_vertex_bounds.tex>`.
+     - :download:`17, 285 pages <../../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf>`; :download:`TeX <../../manuscripts/compact_farthest_vertex_bounds_consolidated.tex>`.
+     - Two new diagrams sharing the original vector and distinguishing the higher tail.
+   * - Compact arithmetic
+     - :download:`20, 21 pages <../../manuscripts/build/compact_arithmetic_dimension_bound.pdf>`; :download:`TeX <../../manuscripts/compact_arithmetic_dimension_bound.tex>`.
+     - :download:`15, 216 pages <../../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf>`; :download:`TeX <../../manuscripts/compact_arithmetic_dimension_bound_consolidated.tex>`.
+     - Two new diagrams separating field filters from the geometric norm budget.
 
-The 14-page paper proves facet-capacity, neighboring-excess, and recognition
-results. It does not prove unrestricted minimality of the regular 120-cell or
-determine the second volume.
+The three right-angled reading copies in the first table are unchanged from
+the accepted editions and already contain ten figures in total. The six frozen
+edition hashes are recorded in the
+:download:`original delivery manifest <../../results/six_paper_final_tex_delivery_20261021.json>`.
+The compact/arithmetic base sources have
+:download:`separate full source acceptance <../../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json>`
+and :download:`editorial and matching-PDF acceptance <../../results/compact17_arithmetic15_editorial_completion_20261025.json>`.
 
-* :download:`PDF <../../manuscripts/build/compact_ra4_volume_constraints.pdf>`
-* :download:`TeX source <../../manuscripts/compact_ra4_volume_constraints.tex>`
-* :download:`Proof and reproduction map <../compact_ra4_volume_constraints_reproduce_20261019.md>`
-* Verification ID: ``compact_ra4``.
+A further :download:`compact RA4 publication source <../../manuscripts/compact_ra4_volume_constraints_publication.tex>`
+consolidates later reviewed local constraints in the same family. Its
+:download:`source map <../compact_ra4_publication_proof_and_verification_map_20261024.md>`
+states its distinct scope. No replacement matching PDF has been built, so it
+is not silently substituted for the 14-page reading copy above. Parked
+field-specific refinements and exploratory stronger-bound work are preserved
+outside the complete reading editions.
 
-Edition record
---------------
+Commands and their scope
+------------------------
 
-The :download:`delivery record <../../results/six_paper_final_tex_delivery_20261021.json>`
-binds the six sources, PDFs, and build evidence. Preserved predecessors,
-technical inputs, generated atlases, and parked refinements are not additional
-primary papers.
-
+The historical catalogue identifiers ``compact20`` and
+``compact_farthest_bounds`` select the frozen 20 and 23 editions, respectively.
+They do not replay every new 15/17 appendix. ``finite57``, ``right_angled_sharp``,
+``ideal_ra4_volume_and_structure`` and ``compact_ra4`` also
+retain their declared selection scopes. Use :doc:`reproducibility` to inspect
+a plan before deciding which actual new run is needed.
