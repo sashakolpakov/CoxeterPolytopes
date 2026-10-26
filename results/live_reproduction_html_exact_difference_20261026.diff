@@ -1,0 +1,46 @@
+--- local
++++ GitHub Pages
+@@ -65,30 +65,30 @@
+ <p>This read-only command compares all three pairs. It removes only the dated,
+ nonnested full-line blocks, including their delimiters and final newline,
+ then requires exact equality with the corresponding base bytes:</p>
+-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-B<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;&#39;PY&#39;</span>
++<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-B<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+ <span class="s">import hashlib</span>
+ <span class="s">import re</span>
+ <span class="s">from pathlib import Path</span>
+ 
+ <span class="s">block = re.compile(</span>
+-<span class="s">    rb&#39;^% BEGIN (ILLUSTRATION_20261026_[A-Z0-9_]+)\n&#39;</span>
+-<span class="s">    rb&#39;.*?^% END \1\n&#39;, re.MULTILINE | re.DOTALL)</span>
++<span class="s">    rb'^% BEGIN (ILLUSTRATION_20261026_[A-Z0-9_]+)\n'</span>
++<span class="s">    rb'.*?^% END \1\n', re.MULTILINE | re.DOTALL)</span>
+ <span class="s">pairs = (</span>
+-<span class="s">    (&#39;finite_volume57&#39;, 2),</span>
+-<span class="s">    (&#39;compact_farthest_vertex_bounds&#39;, 3),</span>
+-<span class="s">    (&#39;compact_arithmetic_dimension_bound&#39;, 3),</span>
++<span class="s">    ('finite_volume57', 2),</span>
++<span class="s">    ('compact_farthest_vertex_bounds', 3),</span>
++<span class="s">    ('compact_arithmetic_dimension_bound', 3),</span>
+ <span class="s">)</span>
+ <span class="s">for stem, expected_blocks in pairs:</span>
+-<span class="s">    base = Path(&#39;manuscripts&#39;) / (stem + &#39;_consolidated.tex&#39;)</span>
+-<span class="s">    illustrated = Path(&#39;manuscripts&#39;) / (stem + &#39;_illustrated.tex&#39;)</span>
++<span class="s">    base = Path('manuscripts') / (stem + '_consolidated.tex')</span>
++<span class="s">    illustrated = Path('manuscripts') / (stem + '_illustrated.tex')</span>
+ <span class="s">    base_bytes = base.read_bytes()</span>
+ <span class="s">    illustrated_bytes = illustrated.read_bytes()</span>
+-<span class="s">    restored, count = block.subn(b&#39;&#39;, illustrated_bytes)</span>
++<span class="s">    restored, count = block.subn(b'', illustrated_bytes)</span>
+ <span class="s">    if count != expected_blocks or restored != base_bytes:</span>
+-<span class="s">        raise SystemExit(&#39;Source identity failed: &#39; + stem)</span>
+-<span class="s">    print(stem, &#39;BASE_BYTES_MATCH&#39;, count, &#39;blocks&#39;)</span>
+-<span class="s">    print(&#39;base sha256:&#39;, hashlib.sha256(base_bytes).hexdigest())</span>
+-<span class="s">    print(&#39;illustrated sha256:&#39;, hashlib.sha256(illustrated_bytes).hexdigest())</span>
++<span class="s">        raise SystemExit('Source identity failed: ' + stem)</span>
++<span class="s">    print(stem, 'BASE_BYTES_MATCH', count, 'blocks')</span>
++<span class="s">    print('base sha256:', hashlib.sha256(base_bytes).hexdigest())</span>
++<span class="s">    print('illustrated sha256:', hashlib.sha256(illustrated_bytes).hexdigest())</span>
+ <span class="s">PY</span>
+ </pre></div>
+ </div>
