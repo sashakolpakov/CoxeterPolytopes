@@ -1,11 +1,20 @@
 # Current bounds and verification
 
-Updated25 October 2026. There are **six paper families**, each with a written,
+Updated 28 October 2026. There are **six paper families**, each with a written,
 compiled and internally reviewed TeX/PDF edition. Later supporting proofs improve
 the compact bounds without multiplying papers. This page reports the current
 mathematical state; dated receipts and preserved predecessor guides record history.
 
-The active task is [auditing and consolidating the six papers](audit_and_consolidation_status_20261024.md).
+The two right-angled families now have
+[28 October arXiv submission editions](arxiv_submission_editions_20261028.md):
+the sharp-dimension paper has 7 pages and 2 figures, and the ideal-volume paper
+has 19 pages and 5 figures. Their isolated single-file TeX builds pass with zero
+warnings. These are presentation and citation revisions with unchanged theorem
+scopes; no new mathematical-check or Lean execution is claimed. The six frozen
+editions and all dated verification records remain preserved.
+
+The [audit and consolidation record](audit_and_consolidation_status_20261024.md)
+preserves the preceding work programme and its verification boundaries.
 The [finite57 completion record](../results/finite57_current_rule_release_completion_20261025.json)
 binds [all 64 actual selected application PASS receipts](../results/finite57_longer_tail_all64_actual_application_completion_20261025.json)
 and a [successful final 259-unit reader](../results/finite57_final_current_rule_conjunction_execution_20261025.json).
@@ -58,8 +67,8 @@ retains the exact source selectors and arguments behind the provider families.
 | Compact arithmetic Coxeter | 8 | 29, Vinberg | **15** | Reviewed source and sampled layout;216-page matching revision; frozen21-page edition states20 |
 | Noncompact arithmetic Coxeter | 21 | 21, Esselmann | **21**, sharp and published | No new claim |
 | Arithmetic Coxeter, compact or noncompact | 21 | 29 overall | **21**, sharp overall | New compact proof plus published noncompact theorem |
-| Right-angled, finite volume, all vertex types | 8 | 12, Dufour | **8**, internally sharp | Current5-page paper |
-| Right-angled, entirely ideal | 4 | 6, Kolpakov | **4**, internally sharp | Same5-page paper |
+| Right-angled, finite volume, all vertex types | 8 | 12, Dufour | **8**, internally sharp | Current 7-page arXiv submission edition; frozen 5-page edition retained |
+| Right-angled, entirely ideal | 4 | 6, Kolpakov | **4**, internally sharp | Same 7-page submission edition |
 | Right-angled, compact | 4 | 4, published and sharp | **4**, unchanged | External starting result |
 
 “Internally reviewed” means a complete written argument with the stated external
@@ -535,9 +544,20 @@ a degree-two moment separator; it uses no arithmetic ground field.
 | General finite volume57 | Compiled48-page edition and complete internal composition review | All 64 actual selected applications and the final 259-unit current-rule reader PASS at explicit ordinary/supplemental premises; see the [evidence guide](finite_volume57_reproduce.md). All 25 historical bounded replacements retain PASS and catalogue integration;111 other catalogue matches retain inherited scope. No combined146-job replay or complete transitive regeneration; core11 unchanged. |
 | General compact17 | Complete supporting written proof, outside review and root acceptance | [Two new conditional scalar/composition modules compiled, with two separate actual axiom audits and ten declarations](../results/compact17_targeted_lean_completion_20261025/manifest.json). Geometry, analytic estimates, classifications and enumeration inputs remain explicit ordinary premises. The earlier failed/deferred attempts are preserved. Frozen PDF23; matching285-page revision has source/build/sampled-layout acceptance, retaining nine underfull spacing warnings. |
 | Compact arithmetic15 | Complete supporting written whole-D16 proof/global composition | Older computations remain inputs. New dyadic kernel has 14 ACTUAL declarations compiled/separately audited, with field/geometry external. Frozen PDF20. |
-| Right-angled8 / ideal4 | Complete5-page edition, reviews and exact checks | Selected projection/height/tensor/count kernels; geometry and cited code/facet/classification facts external. Both internally sharp. |
-| Ideal RA4 volume/structure | Complete17-page edition and reviews | Exact model/combinatorial checks and selected conditional logic; no full geometric formalization or classification of all ideal polytopes as24-cell chains. |
-| Compact RA4 volume constraints | Complete14-page edition and reviews | Exact capacity/excess checks and conditional logic. No universal120-cell minimum or second-volume-double theorem. |
+| Right-angled8 / ideal4 | Current 7-page submission edition; preserved 5-page publication edition, reviews and exact checks | Selected projection/height/tensor/count kernels; geometry and cited code/facet/classification facts external. Both internally sharp. New source-bound TeX build and visual review; no new mathematical or Lean replay. |
+| Ideal RA4 volume/structure | Current 19-page submission edition; preserved 17-page publication edition and reviews | Exact model/combinatorial checks and selected conditional logic; no full geometric formalization or classification of all ideal polytopes as24-cell chains. New source-bound TeX build, citation and visual reviews; no new mathematical or Lean replay. |
+| Compact RA4 volume constraints | Complete14-page edition and reviews | Exact capacity/excess checks and conditional logic. This manuscript does not prove the compact minimum or a compact second-volume-double theorem; Guo–Zheng's external preprint establishes the compact minimum. |
+
+The [ideal-volume submission introduction](../manuscripts/revisions/ideal_ra4_volume_and_structure_arxiv_20261028.tex)
+now follows the extremal-problem lineage explicitly. Potyagailo and Vinberg
+asked the compact 120-facet question. The
+[Guo–Zheng preprint](https://arxiv.org/abs/2610.33053), Theorem 1.1 and
+Corollary 1.2, proves the unique compact facet and volume minima. Kolpakov's
+earlier ideal result gives both the 24-facet and volume 4π²/3 minima; the present
+ideal paper addresses the next volume 8π²/3 and its unique reflected double.
+The [public-chronology audit](../results/arxiv_compact_prior_publication_audit_20261028.md)
+records that this repository became public after that preprint; no earlier
+public priority is claimed for the related compact partial results.
 
 Two new named Lean modules now have bounded compilation AND SEPARATE actual
 axiom audits, reusing their successful objects:

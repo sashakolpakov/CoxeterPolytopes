@@ -4,7 +4,9 @@ Six papers, their techniques and complete reading copies
 The project has six paper families. The three illustrated dimension editions
 below add explanations in figures to the reviewed consolidated sources. Removing
 the marked additions recovers those base sources byte for byte. No theorem,
-case exclusion or computation is strengthened by adding a figure.
+case exclusion or computation is strengthened by adding a figure. The two
+28 October right-angled submission editions add historical context, proof
+roadmaps and precise reproduction references to the existing arguments.
 
 .. list-table:: Current complete reading copies
    :header-rows: 1
@@ -26,18 +28,47 @@ case exclusion or computation is strengthened by adding a figure.
      - 217
      - The general compact theorem, field restrictions, four computed outputs and manual dyadic exclusion.
      - :download:`Illustrated TeX <../../manuscripts/compact_arithmetic_dimension_bound_illustrated.tex>`; :download:`dependency map <../compact_arithmetic_consolidation_proof_map_20261025.md>`.
-   * - :download:`Sharp right-angled dimensions: 8 and 4 <../../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf>`
-     - 5
+   * - :download:`Sharp right-angled dimensions: 8 and 4 <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_layout_final.pdf>`
+     - 7
      - Actual projection, heights, a cubic tensor identity and metric equality.
-     - :download:`TeX <../../manuscripts/right_angled_sharp_dimension_bounds_publication.tex>`; :download:`proof map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
-   * - :download:`Ideal RA4 volume and structure <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
-     - 17
+     - :download:`Submission TeX <../../manuscripts/revisions/right_angled_sharp_dimension_bounds_arxiv_20261028.tex>`; :download:`proof map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
+   * - :download:`Ideal RA4 volume and structure <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_historical_context.pdf>`
+     - 19
      - Defect count, equality spectrum, actual cutting and restricted recognition.
-     - :download:`TeX <../../manuscripts/ideal_ra4_volume_and_structure_publication.tex>`; :download:`proof map <../ideal_ra4_volume_and_structure_proof_map.md>`.
+     - :download:`Submission TeX <../../manuscripts/revisions/ideal_ra4_volume_and_structure_arxiv_20261028.tex>`; :download:`proof map <../ideal_ra4_volume_and_structure_proof_map.md>`.
    * - :download:`Compact RA4 volume constraints <../../manuscripts/build/compact_ra4_volume_constraints.pdf>`
      - 14
      - Facet capacity, neighboring excess, marked polygon geometry and graph arguments.
      - :download:`TeX <../../manuscripts/compact_ra4_volume_constraints.tex>`; :download:`proof map <../compact_ra4_volume_constraints_reproduce_20261019.md>`.
+
+.. _arxiv-submission-editions:
+
+The two arXiv submission editions
+---------------------------------
+
+Each 28 October source is a single self-contained TeX file: its figures are
+inline TikZ and its bibliography is inline. The sharp-dimension paper contains
+two figures; the ideal-volume paper contains five. Both name Alexander Kolpakov
+and include the requested AI-use acknowledgment. The
+:download:`edition guide <../arxiv_submission_editions_20261028.md>` and
+:download:`source/PDF release manifest <../../results/arxiv_publication_release_manifest_20261028.json>`
+record the exact editions and matching isolated, zero-warning PDF builds.
+
+The sharp paper adds an ideal-branch diagram and a short introduction explaining
+how its common projection closes the published dimension gaps. The ideal paper
+expands the equality reduction into full prose and puts the second ideal volume
+in its line of antecedents: Potyagailo--Vinberg's compact facet question,
+Guo--Zheng's compact facet and volume minima, and Kolpakov's earlier ideal
+facet and volume minima. The compact result is cited as a related preprint;
+it is not an input to the ideal proof.
+
+Their reproduction sections link to the exact companion suites
+``right_angled_sharp`` and ``ideal_ra4_volume_and_structure`` at public snapshot
+``04c9bab7``. The two and four script checks, respectively, use small tracked
+inputs rather than the unuploaded bulk collection. Existing mathematical
+outputs and conditional Lean records retain their original scope. The
+submission PDF builds are new typesetting evidence, not new proof executions;
+:ref:`repro-arxiv-editions` explains the distinction and the commands.
 
 How much of a paper is essential?
 ---------------------------------
@@ -51,12 +82,14 @@ also depends on the independent general compact 17 theorem; its 217 pages
 must not be presented as eliminating that companion dependency.
 
 The finite-volume appendices likewise supply proofs and finite-table
-interfaces used by the main argument. The five-page sharp right-angled article
-is already short. The 17-page ideal paper deliberately combines the minimum,
-second-volume equality and restricted chain argument in one sequence.
+interfaces used by the main argument. The sharp right-angled argument has a
+preserved five-page edition and a seven-page submission edition with a second
+figure and reproduction section. The nineteen-page ideal submission paper
+deliberately combines the known minimum, second-volume equality and restricted
+chain argument in one sequence.
 The compact RA4 article proves constraints rather than the requested absolute
 minimum or second-volume classification. No smaller self-contained extraction
-has been certified for any family by this illustration update.
+has been certified for any family by these presentation revisions.
 
 Read the proof before the logs
 ------------------------------
@@ -68,7 +101,8 @@ Read the proof before the logs
 * :doc:`right_angled` writes out the projection and cubic code argument, including
   the strict endpoint, and the different ideal metric-equality branch.
 * :doc:`volume_problems` separates the independently proved equality spectrum
-  from the restricted Oct/D cutting theorem and the open compact questions.
+  from the restricted Oct/D cutting theorem, the related compact minimum
+  preprint and the remaining compact second-volume questions.
 
 The :doc:`algorithms` chapter describes finite domains, induction arguments and
 computed propositions. :doc:`formal_logic` exposes the remaining hypotheses of
@@ -103,9 +137,22 @@ are editions of the same papers, not additional papers.
      - :download:`15, 216 pages <../../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf>`; :download:`TeX <../../manuscripts/compact_arithmetic_dimension_bound_consolidated.tex>`.
      - Two new diagrams separating field filters from the geometric norm budget.
 
-The three right-angled reading copies in the first table are unchanged from
-the accepted editions and already contain ten figures in total. The six frozen
-edition hashes are recorded in the
+.. list-table:: Preserved right-angled submission predecessors
+   :header-rows: 1
+   :widths: 30 35 35
+
+   * - Family
+     - Earlier accepted PDF
+     - Its unchanged source
+   * - Sharp dimensions 8 and 4
+     - :download:`Five-page edition <../../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf>`
+     - :download:`Earlier TeX <../../manuscripts/right_angled_sharp_dimension_bounds_publication.tex>`.
+   * - Ideal volume and structure
+     - :download:`Seventeen-page edition <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
+     - :download:`Earlier TeX <../../manuscripts/ideal_ra4_volume_and_structure_publication.tex>`.
+
+The fourteen-page compact RA4 reading copy remains the accepted edition with
+its four figures. The six frozen edition hashes are recorded in the
 :download:`original delivery manifest <../../results/six_paper_final_tex_delivery_20261021.json>`.
 The compact/arithmetic base sources have
 :download:`separate full source acceptance <../../results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json>`
@@ -127,4 +174,6 @@ The historical catalogue identifiers ``compact20`` and
 They do not replay every new 15/17 appendix. ``finite57``, ``right_angled_sharp``,
 ``ideal_ra4_volume_and_structure`` and ``compact_ra4`` also
 retain their declared selection scopes. Use :doc:`reproducibility` to inspect
-a plan before deciding which actual new run is needed.
+a plan before deciding which actual new run is needed. In particular, a
+catalogue ``--pdf`` selection for either right-angled suite still typesets
+its preserved reference edition, not the later submission copy above.

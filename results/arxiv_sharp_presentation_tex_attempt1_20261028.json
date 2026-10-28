@@ -1,0 +1,37 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/build_arxiv_submission_20261028.py",
+    "sharp_dimension_bounds_8_and_4"
+  ],
+  "elapsed_seconds": 1.134,
+  "peak_process_tree_rss_bytes": 128450560,
+  "initial_resources": {
+    "free_disk_gib": 30.26,
+    "available_memory_gib": 5.99,
+    "disk_free_bytes": 32487714816,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 6436356096,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 3.266377,
+    "available_memory_percent": 24.976349,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 1353,
+  "stdout": "{\n  \"status\": \"PASS_ISOLATED_TEX_BUILD_ONLY\",\n  \"source\": \"arxiv/sharp_dimension_bounds_8_and_4/main.tex\",\n  \"source_sha256\": \"54aac44d3173a52de8df6655443fe1765bed4c227bb74ed5cfe068fc725e32b5\",\n  \"source_bytes\": 22404,\n  \"pdf\": \"manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028.pdf\",\n  \"passes\": [\n    {\n      \"pass\": 1,\n      \"exit_code\": 0,\n      \"stdout_bytes\": 18006\n    },\n    {\n      \"pass\": 2,\n      \"exit_code\": 0,\n      \"stdout_bytes\": 14867\n    }\n  ],\n  \"builder_sha256\": \"16e90700743bed3014c2d9dc246144f22654218f6b2bd4505647142170a6552b\",\n  \"mathematical_verification_claimed\": false,\n  \"isolated_input\": \"Only the exact main.tex bytes are copied to a fresh temporary directory.\",\n  \"temporary_auxiliaries_removed\": true,\n  \"warnings\": [\n    \"Package epstopdf Warning: Shell escape feature is not enabled.\",\n    \"Overfull \\\\hbox (31.61224pt too wide) in paragraph at lines 442--453\"\n  ],\n  \"undefined_references_or_citations\": false,\n  \"repository_inputs_read_by_tex\": [],\n  \"pages\": 7,\n  \"figure_pages\": [\n    {\n      \"page\": 3,\n      \"figures\": [\n        1\n      ]\n    },\n    {\n      \"page\": 5,\n      \"figures\": [\n        2\n      ]\n    }\n  ],\n  \"font_subtypes\": [\n    \"/Type1\"\n  ],\n  \"pdf_sha256\": \"c3f442b973e0a394c636dc202d6bfb5e202eb10a7e160f702f842a48db1b64f4\",\n  \"pdf_bytes\": 236316,\n  \"source_figure_environments\": 2\n}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "16e90700743bed3014c2d9dc246144f22654218f6b2bd4505647142170a6552b",
+  "lock_owner": "wrapper"
+}

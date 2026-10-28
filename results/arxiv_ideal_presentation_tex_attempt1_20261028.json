@@ -1,0 +1,37 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/build_arxiv_submission_20261028.py",
+    "ideal_four_dimensional_volume_and_structure"
+  ],
+  "elapsed_seconds": 1.307,
+  "peak_process_tree_rss_bytes": 128253952,
+  "initial_resources": {
+    "free_disk_gib": 30.25,
+    "available_memory_gib": 6.02,
+    "disk_free_bytes": 32480616448,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 6459129856,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 3.265663,
+    "available_memory_percent": 25.064723,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 1651,
+  "stdout": "{\n  \"status\": \"PASS_ISOLATED_TEX_BUILD_ONLY\",\n  \"source\": \"arxiv/ideal_four_dimensional_volume_and_structure/main.tex\",\n  \"source_sha256\": \"72dd69f17ad86b3b089b4aac42ca0e24ff765ab5af2562344e2917481a36032b\",\n  \"source_bytes\": 65167,\n  \"pdf\": \"manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028.pdf\",\n  \"passes\": [\n    {\n      \"pass\": 1,\n      \"exit_code\": 0,\n      \"stdout_bytes\": 19880\n    },\n    {\n      \"pass\": 2,\n      \"exit_code\": 0,\n      \"stdout_bytes\": 15500\n    }\n  ],\n  \"builder_sha256\": \"16e90700743bed3014c2d9dc246144f22654218f6b2bd4505647142170a6552b\",\n  \"mathematical_verification_claimed\": false,\n  \"isolated_input\": \"Only the exact main.tex bytes are copied to a fresh temporary directory.\",\n  \"temporary_auxiliaries_removed\": true,\n  \"warnings\": [\n    \"Package epstopdf Warning: Shell escape feature is not enabled.\",\n    \"Overfull \\\\hbox (6.06161pt too wide) in paragraph at lines 513--523\"\n  ],\n  \"undefined_references_or_citations\": false,\n  \"repository_inputs_read_by_tex\": [],\n  \"pages\": 19,\n  \"figure_pages\": [\n    {\n      \"page\": 3,\n      \"figures\": [\n        7\n      ]\n    },\n    {\n      \"page\": 6,\n      \"figures\": [\n        1\n      ]\n    },\n    {\n      \"page\": 10,\n      \"figures\": [\n        2\n      ]\n    },\n    {\n      \"page\": 12,\n      \"figures\": [\n        3\n      ]\n    },\n    {\n      \"page\": 13,\n      \"figures\": [\n        4\n      ]\n    },\n    {\n      \"page\": 15,\n      \"figures\": [\n        5\n      ]\n    }\n  ],\n  \"font_subtypes\": [\n    \"/Type1\"\n  ],\n  \"pdf_sha256\": \"6bcb9014eb4a8d1e39edb78c6942539dcee488530e29d88c903daf1f3c10ee12\",\n  \"pdf_bytes\": 414179,\n  \"source_figure_environments\": 5\n}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "16e90700743bed3014c2d9dc246144f22654218f6b2bd4505647142170a6552b",
+  "lock_owner": "wrapper"
+}

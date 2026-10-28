@@ -46,6 +46,8 @@ def main() -> int:
     args = parser.parse_args()
     command = args.command[1:] if args.command[:1] == ["--"] else args.command
     allowed = {"tools/prepare_public_data.py", "scripts/fetch_public_data.py",
+               "tools/prepare_arxiv_release_20261028.py",
+               "tools/publish_arxiv_release_20261028.py",
                "tools/audit_public_tree.py", "tools/audit_sphinx_inputs.py",
                "tools/upload_public_data.py",
                "tools/audit_public_data_contents.py",

@@ -15,7 +15,9 @@ volume 57, 286 for general compact 17 and 217 for compact arithmetic 15.
 Removing their marked illustration additions recovers the reviewed base
 sources exactly. Their diagrams explain existing dependencies; no new
 bound, computation or Lean theorem follows from the illustration builds.
-The unchanged right-angled reading copies have 5, 17 and 14 pages.
+The current right-angled reading copies have 7, 19 and 14 pages. The
+seven- and nineteen-page submission editions preserve their earlier
+five- and seventeen-page sources as separately recorded predecessors.
 :doc:`papers` distinguishes these copies from the six frozen editions
 and the preserved consolidated bases.
 
@@ -48,7 +50,7 @@ The result and its quantified class
      - The chain theorem assumes that every facet is isometric to the metric octahedron Oct or its triangular-face double D. Equality in the universal second-volume theorem derives this spectrum.
    * - Compact right-angled dimension four
      - Complete facet-capacity, excess and local structural constraints.
-     - These results are partial progress toward unrestricted volume minimum and second-volume questions.
+     - These constraints do not supply the compact minimum proof now given in the Guo--Zheng preprint or a compact second-volume classification; see :doc:`volume_problems`.
 
 Necessary forest lists, algebraic survivors and local model profiles are
 not realized polytopes. No new hyperbolic Coxeter example is supplied.
@@ -209,8 +211,9 @@ imposing an additional adjacency hypothesis on the four-polytope.
 For compact RA4, the local excess inequalities do not prove that the
 regular 120-cell minimizes volume among all compact right-angled
 four-polytopes. They do not classify a universal second-volume double.
-The :doc:`volume_problems` chapter explains the exact universal constraints
-and where the unrestricted problems remain open.
+The compact minimum is established in the external Guo--Zheng preprint.
+The :doc:`volume_problems` chapter distinguishes that result from this
+repository's constraints and its unresolved compact second-volume problem.
 
 Named literature inputs include the relevant incidence and
 :math:`h`-vector theorems, spherical/affine classifications, arithmetic
@@ -312,8 +315,9 @@ Questions left open
 * Construct a new compact hyperbolic Coxeter example in dimension nine or
   higher. Necessary local diagrams and outer chamber relaxations supply
   no such example.
-* Determine unrestricted volume minimality and the second volume for
-  compact right-angled four-polytopes.
+* Determine the second distinct volume and its equality cases for compact
+  right-angled four-polytopes. The unrestricted compact minimum is
+  established in the Guo--Zheng preprint.
 * Determine the scope of any ideal RA4 chain classification beyond the
   current metric Oct/D facet condition.
 * Regenerate the inherited finite57 inputs if complete transitive

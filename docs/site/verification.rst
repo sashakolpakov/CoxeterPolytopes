@@ -204,7 +204,8 @@ facts or ordinary parameters in their stated maps. Historical combined
 cores bind predecessor TeX; unchanged components retain their recorded
 scope without a new combined current run.
 
-The sharp five-page proof, the ideal second-volume and restricted-chain
+The sharp dimension proof has a preserved five-page edition and a current
+seven-page submission edition. It, the ideal second-volume and restricted-chain
 theorem, and the compact constraints have different mathematical scopes.
 In particular, the compact 14-page paper proves no unrestricted 120-cell
 minimum or unique second-volume theorem. Complete scope and input tables

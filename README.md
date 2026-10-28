@@ -8,6 +8,13 @@ certificates and selected Lean verification. There are **six paper families**.
 · [Reproduction](repro/README.md)
 · [Formal logic](formal/README.md)
 
+The **28 October arXiv submission editions** are
+[sharp dimensions 8/4, 7 pages](manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_layout_final.pdf)
+and [ideal volume and structure, 19 pages](manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_historical_context.pdf).
+[Sources, figures and verification scope](docs/arxiv_submission_editions_20261028.md)
+and the [paper release](https://github.com/sashakolpakov/CoxeterPolytopes/releases/tag/arxiv-papers-2026-10-28)
+distinguish these copies from the preserved earlier editions.
+
 | Class | Largest published example | Published ceiling | Repository ceiling |
 |---|---:|---:|---:|
 | General finite volume | 21 | 995 | **57** |
@@ -27,7 +34,9 @@ Arithmetic reflection lattices automatically admit the quadratic-form model.
 
 The ideal RA4 paper treats the second volume and its unique double, and a
 restricted 24-cell chain theorem. The compact RA4 paper proves constraints;
-it does not settle the minimum or second volume of compact RA4 polytopes.
+the compact 120-cell facet and volume minima are established in the
+[Guo–Zheng preprint](https://arxiv.org/abs/2610.33053). The compact second-volume
+problem remains outside this repository's proved results.
 
 Inspect verification plans without launching proof jobs:
 

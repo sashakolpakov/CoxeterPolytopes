@@ -4,12 +4,13 @@ Coxeter polytopes: proofs and verification
 This repository studies dimension bounds, reflection chambers and
 right-angled volume and structure problems. The documentation explains the
 arguments, their finite algorithms and the limits of the verification.
-Updated 26 October 2026.
+Updated 28 October 2026.
 
 There are **six paper families**. The latest reading copies include illustrated
-revisions of the three general/arithmetic dimension papers. Earlier editions
-remain available. No new mathematical theorem is claimed by this documentation
-and illustration update; no new polytope example has been established.
+revisions of the three general/arithmetic dimension papers and two prepared
+arXiv editions: sharp right-angled dimensions and ideal four-dimensional volume
+and structure. Earlier editions remain available. These presentation revisions
+preserve the mathematical conclusions; no new polytope example is claimed.
 
 Current dimension comparison
 ----------------------------
@@ -110,15 +111,32 @@ Lean checks the internal deductions from explicitly supplied premises.
 What this release contains
 --------------------------
 
+The :ref:`two 28 October submission editions <arxiv-submission-editions>`
+have complete, self-contained TeX sources and matching reading PDFs:
+
+* :download:`Sharp dimensions 8 and 4, seven pages <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_layout_final.pdf>`:
+  two inline figures, a proof roadmap and exact reproduction references.
+* :download:`Ideal volume and structure, nineteen pages <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_historical_context.pdf>`:
+  five inline figures, the second-volume theorem, restricted chains and the
+  history of the compact and ideal extremal questions.
+
+Both sources include the author and AI-use acknowledgment. Their isolated PDF
+builds have zero warnings. The
+:download:`submission-edition guide <../arxiv_submission_editions_20261028.md>`
+and :download:`release manifest <../../results/arxiv_publication_release_manifest_20261028.json>`
+identify the exact source/PDF pairs and retain the existing mathematical and
+conditional Lean verification scopes. Updating a reading copy does not
+constitute a new execution of its supporting checks.
+
 The :download:`26 October release note <../documentation_illustration_release_20261026.md>`
 records the source-preservation and illustration audit boundaries.
 
 Five original vector diagrams illustrate the proof dependencies. Six additional
-TikZ figures appear in the illustrated dimension manuscripts. The three
-right-angled manuscripts already contain one, five and four figures respectively.
-The illustration blocks can be removed to recover each reviewed base source
-byte for byte. Compilation and sampled rendered-page reviews are recorded
-separately from mathematical source review.
+TikZ figures appear in the three illustrated general/arithmetic dimension
+manuscripts. Their marked illustration blocks can be removed to recover each
+reviewed base source byte for byte. The current right-angled reading copies
+contain two, five and four inline figures, respectively. Compilation and
+rendered-page reviews are recorded separately from mathematical source review.
 
 Finite57 has a successful **259-unit current-rule conjunction**, including all
 64 selected application shards. This does not mean a fresh combined replay of

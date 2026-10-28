@@ -1,13 +1,15 @@
 Right-angled four-dimensional volume problems
 =============================================
 
-The ideal and compact problems require different conclusions. The ideal
-paper proves a second-volume theorem and a restricted structure theorem.
-The compact paper proves capacity, excess and recognition constraints;
-unrestricted 120-cell minimality and a second-volume theorem remain open
-within this repository.
+The ideal paper continues the extremal study of right-angled four-polytopes
+from the known minimum to the second distinct ideal volume and a restricted
+structure theorem. The compact paper in this repository proves capacity,
+excess and recognition constraints. The compact minimum has meanwhile been
+established in the Guo--Zheng preprint described below; the repository's
+compact constraint paper does not supply that proof or a second-volume
+classification.
 
-.. list-table:: Accepted editions and their scope
+.. list-table:: Current reading editions and their scope
    :header-rows: 1
    :widths: 25 13 36 26
 
@@ -15,8 +17,8 @@ within this repository.
      - Pages
      - Established statement
      - Excluded interpretation
-   * - :download:`Ideal volume and structure <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
-     - 17
+   * - :download:`Ideal volume and structure <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_historical_context.pdf>`
+     - 19
      - Published 24-cell minimum; internally reviewed next volume and unique reflected double; Oct/D chains.
      - A classification of all ideal four-polytopes as 24-cell chains.
    * - :download:`Compact volume constraints <../../manuscripts/build/compact_ra4_volume_constraints.pdf>`
@@ -26,8 +28,37 @@ within this repository.
 
 These are full article lengths, not proved minimum essential-page counts.
 Both use explicitly identified published foundations. Their complete sources
-are the :download:`ideal TeX <../../manuscripts/ideal_ra4_volume_and_structure_publication.tex>`
+are the :download:`ideal submission TeX <../../manuscripts/revisions/ideal_ra4_volume_and_structure_arxiv_20261028.tex>`
 and :download:`compact TeX <../../manuscripts/compact_ra4_volume_constraints.tex>`.
+The ideal submission has five inline figures, full historical context and
+precise reproduction instructions. Its
+:download:`source/PDF manifest <../../results/arxiv_publication_release_manifest_20261028.json>`
+binds the isolated zero-warning build. The earlier
+:download:`seventeen-page ideal PDF <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
+and :download:`source <../../manuscripts/ideal_ra4_volume_and_structure_publication.tex>`
+remain preserved.
+
+The compact and ideal extremal questions
+----------------------------------------
+
+The basic questions ask for the least facet number and the least volume.
+In the compact case, `Potyagailo and Vinberg, printed p. 66
+<https://ems.press/content/serial-article-files/43032>`_ explicitly asked
+whether the least facet number of a right-angled four-polytope is 120.
+`Guo and Zheng, Theorem 1.1 and Corollary 1.2
+<https://arxiv.org/html/2610.33053v1#S1>`_ establish both compact minima:
+the right-angled 120-cell uniquely attains 120 facets and volume
+:math:`34\pi^2/3`. Their result is cited as a 2026 preprint.
+
+For entirely ideal polytopes, `Kolpakov, Theorems 3 and 4
+<https://msp.org/agt/2012/12-4/agt-v12-n4-p03-s.pdf>`_ had already
+established both analogous minima: the regular ideal right-angled 24-cell
+uniquely attains 24 facets and volume :math:`4\pi^2/3`. The current paper
+continues that ideal-volume question by determining the next distinct
+volume :math:`8\pi^2/3` and its unique reflected-double equality case.
+The restricted chain theorem explains the cutting geometry used in this
+identification. Guo--Zheng's compact result supplies historical context;
+the ideal proof uses the external and internal inputs stated below.
 
 Ideal polytopes: the defect measures volume
 ----------------------------------------------
@@ -292,13 +323,22 @@ recognition, path structure and gluing remain written premises. Legacy
 the release supplies no new source-to-old-object verification or separate
 audit for those dependencies.
 
-The current source/PDF has a
+The preserved seventeen-page source/PDF has a
 :download:`17-page zero-warning build receipt <../../results/ideal_ra4_volume_and_structure_publication_build_20261018.json>`
 and a :download:`fresh complete source acceptance <../../results/review_ideal_ra4_fresh_audit_root_acceptance_20261024.md>`.
 The core's predecessor-TeX binding stays historical. The
 :download:`proof map <../ideal_ra4_volume_and_structure_proof_map.md>` and
 :download:`assumption register <../manuscript_assumptions.md>` expose the
 remaining inputs; a complete clean-checkout replay is not claimed.
+
+The nineteen-page submission adds exposition, citations and a reproduction
+section while retaining all five figures and the same theorem scopes. Its
+companion suite remains ``ideal_ra4_volume_and_structure``. The script-only
+selection has four exact checks on small tracked inputs: saved double faces,
+equality-model replay, an independent saved-data check, and the :math:`D_4`
+root check. None needs the unuploaded bulk collection. For the exact commands,
+fixed public snapshot, macOS launcher requirement and the distinction between
+catalogue and submission PDF builds, see :ref:`repro-arxiv-editions`.
 
 Compact polytopes: capacity and pentagon excess
 --------------------------------------------------
@@ -433,14 +473,16 @@ The marked polygon geometry is essential. The weaker abstract graph
 conditions alone admit :math:`C_5[K_2]`; the paper explicitly avoids
 treating those conditions as a sufficient exclusion.
 
-What remains open in the compact problem
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The limits of the compact constraint paper
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The paper does not prove :math:`f+W\geq120`. Thus its local cutoffs and
-positive-excess gap do not prove that the regular 120-cell minimizes volume.
-They also do not prove a universal second-volume gap, a unique double, or
-a decomposition into regular 120-cells. The comparison double is a model
-used to obtain a threshold, not a classification of all chambers below it.
+The paper does not prove :math:`f+W\geq120`. Its local cutoffs and
+positive-excess gap therefore do not supply the compact minimum theorem now
+proved in the Guo--Zheng preprint. They also do not prove a universal
+second-volume gap, a unique double, or a decomposition into regular 120-cells.
+The comparison double is a model used to obtain a threshold, not a
+classification of all chambers below it. A compact second-volume
+classification remains beyond the results of this constraint paper.
 
 The four existing manuscript diagrams depict the dual ear argument, the
 capacity incidence count, positive-neighbor geometry and small-graph proof
@@ -474,6 +516,12 @@ Any necessary new replay uses the current percentage policy described in
    * - Ideal volume/incidence, antiprism bound and specified small ideal three-polyhedra
      - Ideal defect identities, the nine/ten-vertex entries and metric identification.
      - `Kolpakov, Lemmas 1--2, Proposition 5 and Section 4.3 <https://msp.org/agt/2012/12-4/agt-v12-n4-p03-p.pdf>`_. The minimum is his Theorem 3.
+   * - Ideal three-polyhedron rigidity
+     - Identifies the stated combinatorial facet types at fixed right dihedral angles.
+     - `Rivin, A characterization of ideal polyhedra in hyperbolic 3-space <https://doi.org/10.2307/2118652>`_.
+   * - Compact facet and volume minima
+     - Historical context for the ideal second-volume problem; not an input to the ideal proof.
+     - `Guo--Zheng, Theorem 1.1 and Corollary 1.2 <https://arxiv.org/html/2610.33053v1#S1>`_, preprint (2026); the facet question is in `Potyagailo--Vinberg, p. 66 <https://ems.press/content/serial-article-files/43032>`_.
    * - Figure 7 incidence transcription
      - Four quadrilaterals with adjacency two disjoint edges; classification hypotheses remain external.
      - :download:`Original-image authentication and retrieval provenance <../../results/ideal_ra4_figure7_primary_authentication_20261024.md>`; the third-party image is excluded from the release.

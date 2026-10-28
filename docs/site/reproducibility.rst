@@ -16,6 +16,13 @@ add no mathematical verification. The three consolidated bases and the six
 frozen editions remain preserved; :doc:`papers` identifies every reading
 copy and its proof map.
 
+The two 28 October right-angled submission editions are separate current
+reading copies: seven pages with two figures for sharp dimensions 8/4,
+and nineteen pages with five figures for ideal volume and structure. Their
+isolated TeX builds have zero warnings. These presentation builds retain the
+recorded mathematical and conditional Lean evidence; they do not rerun it.
+See :ref:`repro-arxiv-editions` for the exact companion selections.
+
 This page explains the available execution routes. The mathematical
 contracts are developed in :doc:`algorithms`; :doc:`scope` records the
 geometric, literature and finite-data assumptions that those routes leave
@@ -99,10 +106,10 @@ An identifier does not automatically follow a later working article.
      - It does not replay every premise and case of the arithmetic-15 article.
    * - ``right_angled_sharp``
      - Sharp right-angled 8/ideal 4 article
-     - Selected exact and conditional logic checks retain their listed inputs.
+     - Selected exact and conditional logic checks retain their listed inputs; ``--pdf`` typesets the preserved five-page edition.
    * - ``ideal_ra4_volume_and_structure``
      - Ideal RA4 volume and structure article
-     - Restricted chain recognition remains restricted.
+     - Restricted chain recognition remains restricted; ``--pdf`` typesets the preserved seventeen-page edition.
    * - ``compact_ra4``
      - Compact RA4 constraint article
      - Its checks do not settle unrestricted volume minimality.
@@ -126,6 +133,80 @@ Read the returned source paths and coverage fields. A plan authenticates
 the proposed inventory, not its execution. The guarded public entry also
 rejects Python optimization: assertions must remain enabled, with neither
 ``-O``/``-OO`` nor an optimizing ``PYTHONOPTIMIZE`` setting.
+
+.. _repro-arxiv-editions:
+
+Reproducing the two right-angled submission editions
+----------------------------------------------------
+
+The :download:`28 October edition guide <../arxiv_submission_editions_20261028.md>`
+and :download:`source/PDF manifest <../../results/arxiv_publication_release_manifest_20261028.json>`
+bind the current public scientific sources to their reading PDFs:
+
+.. list-table:: Submission source and supporting suite
+   :header-rows: 1
+   :widths: 32 18 30 20
+
+   * - Source and reading PDF
+     - Pages / figures
+     - Companion identifier
+     - Script-only jobs
+   * - :download:`Sharp-dimension TeX <../../manuscripts/revisions/right_angled_sharp_dimension_bounds_arxiv_20261028.tex>`; :download:`PDF <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_layout_final.pdf>`
+     - 7 / 2
+     - ``right_angled_sharp``
+     - Two exact model/algebra checks.
+   * - :download:`Ideal-volume TeX <../../manuscripts/revisions/ideal_ra4_volume_and_structure_arxiv_20261028.tex>`; :download:`PDF <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_historical_context.pdf>`
+     - 19 / 5
+     - ``ideal_ra4_volume_and_structure``
+     - Four exact model/incidence/root checks.
+
+Each source is self-contained for typesetting with standard pdfLaTeX packages:
+its figures and bibliography are inline. Put each source in its own upload
+folder as ``main.tex``. The public versioned scientific sources above preserve
+the current local submission bytes; older accepted TeX/PDF editions remain
+available as provenance.
+
+The companion computations are pinned to public repository snapshot
+``04c9bab7``. All inputs selected by these two script-only suites are small,
+tracked files. Neither selection requires the separate unuploaded bulk
+collection. The workers use Python 3.11 or later and only the standard library.
+The guarded launcher at this snapshot uses macOS resource measurements;
+printing the plans is portable, while actual guarded execution requires those
+probes.
+
+Inspect the jobs without launching mathematical checks:
+
+.. code-block:: sh
+
+   python3 -B scripts/run_proof_batch_20261024.py manuscript \
+     right_angled_sharp --mode scripts --plan
+   python3 -B scripts/run_proof_batch_20261024.py manuscript \
+     ideal_ra4_volume_and_structure --mode scripts --plan
+
+For a necessary new execution, choose ledger paths that do not already exist:
+
+.. code-block:: sh
+
+   python3 -B scripts/run_proof_batch_20261024.py manuscript \
+     right_angled_sharp --mode scripts \
+     --ledger results/sharp_replay_new.json
+   python3 -B scripts/run_proof_batch_20261024.py manuscript \
+     ideal_ra4_volume_and_structure --mode scripts \
+     --ledger results/ideal4_replay_new.json
+
+These are sequential model or algebra checks, with the scopes explained in
+:doc:`right_angled` and :doc:`volume_problems`. The ``core`` selection also
+includes conditional Lean stages; compilation precedes a separate actual axiom
+audit where declared. Geometry, literature and finite-data interfaces remain
+explicit premises. The ideal suite's ``full`` selection additionally offers
+its historical double-model producer.
+
+The optional catalogue ``--pdf`` job follows the source already bound to that
+catalogue identifier. It compiles the earlier five- or seventeen-page reference
+edition, not the current seven- or nineteen-page submission. The new isolated
+build records establish typesetting of the matching submission sources, not
+a fresh combined execution of their Python and Lean companions. No successful
+unchanged mathematical check was repeated merely for this presentation update.
 
 .. _repro-finite57-ledgers:
 
