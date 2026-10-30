@@ -1,0 +1,39 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/build_dimension_bounds_arxiv_20261028.py",
+    "--tag",
+    "bibtex_20261030",
+    "--replace-current"
+  ],
+  "elapsed_seconds": 7.62,
+  "peak_process_tree_rss_bytes": 136380416,
+  "initial_resources": {
+    "free_disk_gib": 19.3,
+    "available_memory_gib": 4.85,
+    "disk_free_bytes": 20723138560,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 5212962816,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 2.083544,
+    "available_memory_percent": 20.228958,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 2719,
+  "stdout": "{\n  \"status\": \"PASS_ISOLATED_TEX_BUILD_ONLY\",\n  \"source\": \"arxiv/hyperbolic_coxeter_dimension_bounds/main.tex\",\n  \"source_sha256\": \"e77f5ba5d67a3b93e9c5ceb1baa4119e4300f7c6e5fe1d49fdef8888a95b164c\",\n  \"source_bytes\": 1804221,\n  \"pdf\": \"manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf\",\n  \"passes\": [\n    {\n      \"pass\": 1,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 113152\n    },\n    {\n      \"pass\": 2,\n      \"program\": \"bibtex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 153\n    },\n    {\n      \"pass\": 3,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 23168\n    },\n    {\n      \"pass\": 4,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 20995\n    }\n  ],\n  \"builder_sha256\": \"5ac73e410de4f4aa18fbbb598ef3b23fdb37cb55604ba2c806b269e94d8e4acb\",\n  \"mathematical_verification_claimed\": false,\n  \"bibliography\": \"arxiv/hyperbolic_coxeter_dimension_bounds/references.bib\",\n  \"bibliography_sha256\": \"eba157658b23792015ec6a4784b3ae3b796205612ef189f002105abacbcb6d9b\",\n  \"bibliography_bytes\": 3854,\n  \"isolated_input\": \"Only main.tex and references.bib are copied; BibTeX generates main.bbl.\",\n  \"pipeline\": [\n    \"pdflatex main.tex\",\n    \"bibtex main\",\n    \"pdflatex main.tex\",\n    \"pdflatex main.tex\"\n  ],\n  \"temporary_auxiliaries_removed\": true,\n  \"bibtex_warnings\": [],\n  \"warnings\": [],\n  \"undefined_references_or_citations\": false,\n  \"repository_inputs_read_by_tex\": [],\n  \"pages\": 551,\n  \"font_subtypes\": [\n    \"/Type1\"\n  ],\n  \"part_start_pages\": {\n    \"part.1\": 5,\n    \"part.2\": 17,\n    \"part.3\": 35,\n    \"part.4\": 72,\n    \"part.5\": 107,\n    \"part.6\": 372\n  },\n  \"pdf_inspection\": \"All page resources inspected; full-page text extraction omitted.\",\n  \"pdf_sha256\": \"1515d19406afe30e5d3e1a2ab996364137b3197363f07afa8b7cc64d10c7ec85\",\n  \"pdf_bytes\": 3399733,\n  \"source_figure_environments\": 9,\n  \"compiled_bibliography\": \"arxiv/hyperbolic_coxeter_dimension_bounds/main.bbl\",\n  \"compiled_bibliography_sha256\": \"ab9416fc5f41ea4a71b91a90adb8591b94457de176661167b3605170df3ec5ae\",\n  \"compiled_bibliography_bytes\": 3361\n}\n{\n  \"status\": \"TYPESETTING_CONFIGURATION_ONLY\",\n  \"worker\": \"scripts/build_dimension_bounds_arxiv_20261028.py\",\n  \"worker_sha256\": \"8653c11d5a6d12f86efe6b3e75278ebe0cfda651704c698709fa5bde1a1c4395\",\n  \"shared_builder_sha256\": \"5ac73e410de4f4aa18fbbb598ef3b23fdb37cb55604ba2c806b269e94d8e4acb\",\n  \"source_limit_bytes\": 4194304,\n  \"pdf_limit_bytes\": 33554432,\n  \"page_limit\": 800,\n  \"per_pass_timeout_seconds\": 18,\n  \"max_tex_passes\": 3,\n  \"bibtex_passes\": 1,\n  \"scientific_checks_run\": false,\n  \"resource_policy\": \"Unchanged existing exclusive 59-second/1-GiB/one-thread wrapper\"\n}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "8653c11d5a6d12f86efe6b3e75278ebe0cfda651704c698709fa5bde1a1c4395",
+  "lock_owner": "wrapper"
+}

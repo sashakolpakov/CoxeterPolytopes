@@ -18,7 +18,7 @@ PAPERS = {
     "manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf",
     "manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf",
 }
-SUFFIXES = {".pyc", ".pyo", ".olean", ".ilean", ".o", ".bc", ".ir",
+SUFFIXES = {".pyc", ".pyo", ".olean", ".ilean", ".o", ".bc", ".ir", ".blg",
             ".trace", ".aux", ".toc", ".lof", ".lot", ".fls", ".fdb_latexmk",
             ".synctex", ".nav", ".snm", ".vrb", ".xdv", ".sqlite-shm", ".sqlite-wal",
             ".so", ".dylib", ".dll", ".a", ".exe", ".partial", ".download", ".tmp"}

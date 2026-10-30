@@ -33,7 +33,7 @@ and :download:`compact TeX <../../manuscripts/compact_ra4_volume_constraints.tex
 The ideal submission has five inline figures, full historical context and
 an outline of the proof. Its
 :download:`current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
-binds the isolated zero-warning build.
+binds its source, bibliography and PDF build records.
 
 The compact and ideal extremal questions
 ----------------------------------------

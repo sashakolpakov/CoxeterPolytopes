@@ -8,7 +8,7 @@ No arithmetic assumption is used. The two proofs share an actual geometric
 projection; their spherical-code and literature inputs then differ.
 
 * :download:`Current six-page submission PDF <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf>`
-  and :download:`self-contained submission TeX <../../arxiv/sharp_dimension_bounds_8_and_4/main.tex>`.
+  and :download:`submission TeX <../../arxiv/sharp_dimension_bounds_8_and_4/main.tex>`.
 * :download:`Proof and reproduction map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
 * :download:`Current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`.
 * :download:`25 October mathematical-evidence assembly <../../results/right_angled_release_packages_current_20261025.json>`
@@ -284,8 +284,8 @@ Their actual outputs are preserved in the
 :download:`six-job historical core ledger <../../results/right_angled_sharp_projection_height_core_verification_20261020.json>`.
 The core binds a predecessor TeX source. Reusing its unchanged components
 does not turn it into a combined run of a later source edition. The six-page
-submission source was compiled separately in an isolated directory containing
-only its TeX bytes, with zero warnings and no repository files read by TeX.
+submission uses ``main.tex``, ``references.bib`` and ``main.bbl``, with the
+standard pdfLaTeX/BibTeX sequence described in :ref:`repro-arxiv-typesetting`.
 The :download:`current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
 identifies that build without attributing a new script or Lean run to it.
 

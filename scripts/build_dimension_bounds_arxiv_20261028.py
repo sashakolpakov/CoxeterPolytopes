@@ -55,6 +55,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tag", required=True)
     parser.add_argument("--render-pages")
+    parser.add_argument("--replace-current", action="store_true")
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,31}", args.tag):
         raise ValueError("Unsafe tag")
@@ -70,6 +71,8 @@ def main() -> None:
     submission.checked(WORK).mkdir(parents=True, exist_ok=True)
     stem = f"arxiv_{PAPER}_20261028_{args.tag}"
     pdf = submission.checked(ROOT / "manuscripts/build" / (stem + ".pdf"))
+    if args.replace_current:
+        pdf = submission.checked(submission.CURRENT_PDFS[PAPER])
     report = submission.checked(WORK / (stem + "_build.json"))
     if args.render_pages:
         submission.render(stem, pdf, report, args.render_pages)
@@ -80,10 +83,10 @@ def main() -> None:
                "shared_builder_sha256": submission.digest(Path(submission.__file__)),
                "source_limit_bytes": SOURCE_LIMIT, "pdf_limit_bytes": PDF_LIMIT,
                "page_limit": PAGE_LIMIT, "per_pass_timeout_seconds": 18,
-               "max_tex_passes": 3, "scientific_checks_run": False,
+               "max_tex_passes": 3, "bibtex_passes": 1, "scientific_checks_run": False,
                "resource_policy": "Unchanged existing exclusive 59-second/1-GiB/one-thread wrapper"}
     submission.write_report(WORK / (stem + "_profile.json"), profile)
-    submission.build(PAPER, stem, pdf, report)
+    submission.build(PAPER, stem, pdf, report, replace_current=args.replace_current)
     print(json.dumps(profile, indent=2))
 
 

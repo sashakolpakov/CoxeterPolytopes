@@ -3,7 +3,8 @@
 Read the **[paper guide](https://sashakolpakov.github.io/CoxeterPolytopes/papers.html)**
 for the mathematical methods, assumptions, figures, page counts and evidence.
 The three [arXiv submission folders](../arxiv/README.md) contain the current
-single-file sources. One combined article joins the finite-volume, compact
+source folders. Each has `main.tex`, `references.bib` and a generated `main.bbl`.
+One combined article joins the finite-volume, compact
 and compact arithmetic dimension proofs; the two right-angled articles remain
 separate submissions. Only these three current PDFs are kept in `build/`.
 
@@ -24,11 +25,15 @@ provide supporting constraints. The external
 [Guo–Zheng preprint](https://arxiv.org/abs/2610.33053) establishes the compact
 120-cell minimum; the compact second-volume problem remains open here.
 
-All three submission PDFs compile from their isolated single-file sources with
-zero warnings. Their figures and bibliographies are inline; all name Alexander
+The sources use standard pdfLaTeX and BibTeX. Open `main.tex` in a TeX editor,
+or run `latexmk -pdf main.tex` in that paper's folder; no Python is needed.
+Figures are inline TikZ; all papers name Alexander
 Kolpakov and include an AI-use acknowledgment. The
 [edition and reproduction guide](../docs/arxiv_submission_editions_20261028.md)
-records exact evidence and the supporting suite IDs. No new mathematical checks or
+records the manual build sequence, exact evidence and supporting suite IDs.
+All three four-step pdfLaTeX/BibTeX builds passed with zero warnings and no
+undefined references or citations.
+No new mathematical checks or
 Lean modules were executed for these presentation revisions.
 
 For serial plans and resource rules, use [repro/README.md](../repro/README.md).

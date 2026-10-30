@@ -10,7 +10,7 @@ may be nonsimple, and no bound on the number of facets is imposed.
 
 Parts I and IV of the :download:`combined dimension article <../../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf>`
 contain the geometric argument, finite algorithm contracts and reviewed
-terminal-tail lemma. Its :download:`self-contained TeX <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`
+terminal-tail lemma. Its :download:`TeX source <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`
 includes the compact and arithmetic proofs as well. The
 :download:`proof map <../finite_volume57_lemma_map.md>` identifies each
 interface and its original source binding.

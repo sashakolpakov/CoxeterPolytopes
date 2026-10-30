@@ -72,22 +72,29 @@ binds each source to its PDF and build receipt.
    * - Sharp right-angled dimensions 8/4
      - 6
      - None
-     - :download:`Sharp build <../../results/arxiv_sharp_current_build_20261030.json>`.
+     - :download:`Sharp build <../../results/arxiv_sharp_bibtex_build_20261030.json>`.
    * - Second ideal four-volume
      - 18
      - None
-     - :download:`Ideal build <../../results/arxiv_ideal_current_build_20261030.json>`.
+     - :download:`Ideal build <../../results/arxiv_ideal_bibtex_build_20261030.json>`.
    * - General dimension bounds 57/17/15
      - 551
      - None
-     - :download:`Combined build <../../results/arxiv_dimensions_current_build_20261030.json>`.
+     - :download:`Combined build <../../results/arxiv_dimensions_bibtex_build_20261030.json>`.
 
-Only the selected ``main.tex`` is copied into the temporary TeX directory.
-The builds launch no mathematical checker or Lean module. A successful PDF
+The selected ``main.tex`` and ``references.bib`` are copied into a temporary
+directory. The build runs pdfLaTeX, BibTeX and two further pdfLaTeX passes,
+then retains ``main.bbl`` in the upload folder. It launches no mathematical
+checker or Lean module. A successful PDF
 build establishes typesetting, not geometric correctness or computational
 replay. Source-preservation review checks the assembly against its existing
 proof families. Layout inspection is sampled; the current record makes no
 claim that every page of the long manuscript was visually inspected.
+
+All three pdfLaTeX/BibTeX sequences passed with zero TeX or BibTeX warnings,
+no undefined references or citations, and Type 1 fonts. Their temporary build
+products were removed; the generated bibliographies remain in the submission
+folders.
 
 The long case appendices discharge necessary proof obligations. The arithmetic
 argument uses the independently proved compact theorem within the same

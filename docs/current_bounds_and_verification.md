@@ -25,7 +25,7 @@ scopes and references are in the [assumption register](manuscript_assumptions.md
 
 ## Current manuscripts
 
-| Manuscript | PDF | Self-contained TeX |
+| Manuscript | PDF | TeX source |
 |---|---|---|
 | Dimension bounds 57 / 17 / 15 | [551 pages, 9 figures](../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf) | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) |
 | Sharp right-angled dimensions 8 / 4 | [6 pages, 2 figures](../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf) | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) |
@@ -37,12 +37,14 @@ prove compact 17; Parts III/VI prove arithmetic compact 15, using the compact
 theorem within the same document. The appendices supply necessary case proofs.
 The [contents guide](../arxiv/DIMENSION_BOUNDS.md) identifies their locations.
 
-All three current PDFs were compiled from their isolated `main.tex` sources
-with zero warnings, no undefined references or citations, no other repository
-inputs, and Type 1 fonts. Temporary TeX products were removed. The
+Each source folder contains `main.tex`, `references.bib` and the generated
+`main.bbl`, with figures inline. Standard pdfLaTeX and BibTeX, or
+`latexmk -pdf main.tex`, build the paper without Python. The
 [current manifest](../results/arxiv_submission_current_manifest_20261030.json)
-binds the exact sources, PDFs and build receipts. Compilation and source-assembly
+binds the exact sources, bibliographies, PDFs and build receipts. Compilation and source-assembly
 review add no new mathematical or Lean execution.
+All three four-step pdfLaTeX/BibTeX builds passed with zero TeX or BibTeX
+warnings, no undefined references or citations, and Type 1 fonts.
 
 ## Verification boundaries
 

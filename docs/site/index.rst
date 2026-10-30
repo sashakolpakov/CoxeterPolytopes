@@ -112,7 +112,7 @@ Current manuscripts
 --------------------
 
 The :ref:`three submission editions <arxiv-submission-editions>`
-have complete, self-contained TeX sources and matching reading PDFs:
+have complete source folders and reading PDFs:
 
 * :download:`Sharp dimensions 8 and 4, six pages <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf>`:
   two inline figures and an outline of the proofs.
@@ -123,8 +123,10 @@ have complete, self-contained TeX sources and matching reading PDFs:
   nine inline figures, 71 pages of main exposition and complete proof appendices
   from page 72.
 
-All three sources include the author and AI-use acknowledgment. Their isolated PDF
-builds have zero warnings. The
+All three sources include the author and AI-use acknowledgment. Each folder
+contains ``main.tex``, ``references.bib`` and ``main.bbl`` and builds with standard
+pdfLaTeX and BibTeX, or ``latexmk -pdf main.tex``. All three four-step builds
+passed with zero TeX or BibTeX warnings and no undefined references or citations. The
 :download:`submission-edition guide <../arxiv_submission_editions_20261028.md>`
 and :download:`current manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
 identify the exact source/PDF pairs and retain the existing mathematical and

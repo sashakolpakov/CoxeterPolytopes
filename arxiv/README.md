@@ -8,10 +8,25 @@ Prepare one submission from each of these folders:
 | On the second smallest ideal right-angled hyperbolic four-polytope | [main.tex](ideal_four_dimensional_volume_and_structure/main.tex) | [18-page PDF](../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf) |
 | Dimension bounds for hyperbolic Coxeter polytopes: 57 / 17 / 15 | [main.tex](hyperbolic_coxeter_dimension_bounds/main.tex) | [551-page PDF](../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf) |
 
-Each folder contains only `main.tex`. Figures and references are
-inline, and all papers include the author, AI-use acknowledgment and repository
-links. Zip each folder's contents separately. Keep the reading PDFs and build
-records outside the upload folders.
+Each folder contains `main.tex`, `references.bib` and the generated `main.bbl`.
+Figures are inline TikZ. All papers include the author, AI-use acknowledgment
+and repository citation. For each submission, zip only `main.tex`,
+`references.bib` and `main.bbl`. Exclude PDFs and temporary files created by
+your TeX editor.
+
+Open `main.tex` in a TeX editor and select pdfLaTeX with BibTeX, or run
+`latexmk -pdf main.tex` from that paper's folder. The equivalent manual sequence is:
+
+```sh
+pdflatex main.tex
+bibtex main
+pdflatex main.tex
+pdflatex main.tex
+```
+
+The included `main.bbl` supplies the bibliography for the arXiv upload.
+`references.bib` remains available for editing and regeneration. No Python
+program is needed to typeset these papers.
 
 The large dimension paper has a common introduction, three main arguments and
 three groups of complete proof appendices. Its main exposition ends on page 71;
@@ -25,6 +40,8 @@ for the conditional Lean scope. Detailed source versions and execution records
 remain in the repository documentation. Each paper cites the repository once
 in its bibliography.
 
-All three submission copies were compiled from their isolated `main.tex` files with
-zero warnings. These are presentation revisions of the existing papers; this
-batch does not claim new mathematical-check or Lean executions.
+The [current manifest](../results/arxiv_submission_current_manifest_20261030.json)
+records source and bibliography files, PDFs and typesetting evidence. Bibliography
+and presentation changes do not claim new mathematical-check or Lean executions.
+All three papers passed the four-step pdfLaTeX/BibTeX build, with zero TeX or
+BibTeX warnings and no undefined references or citations.

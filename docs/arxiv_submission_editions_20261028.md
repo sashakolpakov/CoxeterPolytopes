@@ -14,12 +14,12 @@ dimension proofs. Preparing a source folder does not submit it to arXiv.
 | Dimension bounds for hyperbolic Coxeter polytopes | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) | [551 pages](../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf) | 9 | Finite-volume dimension at most 57, compact dimension at most 17, compact arithmetic dimension at most 15. |
 
 The [current source/PDF manifest](../results/arxiv_submission_current_manifest_20261030.json)
-records the exact editions. Each upload folder contains only `main.tex`.
-Figures and references are inline; no separate image, bibliography or custom
-class file is needed. All three papers name **Alexander Kolpakov**, acknowledge
+records the exact editions. Each upload folder contains `main.tex`,
+`references.bib` and the generated `main.bbl`. Figures are inline TikZ;
+no separate image or custom class file is needed. All three papers name **Alexander Kolpakov**, acknowledge
 the use of OpenAI's GPT-6-astra and GPT-6.1-sol, and cite the repository in the
-bibliography. Zip each folder's contents separately. Keep the reading PDFs and
-verification receipts outside the upload folders.
+bibliography. For each submission, zip only `main.tex`, `references.bib` and
+`main.bbl`. Exclude PDFs and temporary files produced by your TeX editor.
 
 ## The combined dimension article
 
@@ -111,45 +111,54 @@ resource-monitored. The catalogue's `--pdf` option typesets its preserved
 
 ## Building the current submission PDFs
 
-The sources are already in their separate `arxiv/` folders. Standard pdfLaTeX
-packages suffice to typeset each `main.tex`; the guarded builders additionally
-use `pypdf` for PDF inspection. The existing monitored launcher uses macOS
-resource probes. Choose fresh tags and ledger paths: prior outputs are preserved.
+The sources are already in their separate `arxiv/` folders. Open `main.tex`
+in a TeX editor configured for pdfLaTeX and BibTeX, or run this in the chosen
+paper's folder:
 
 ```sh
-python3 -B scripts/run_proof_batch_20261024.py check \
-  --ledger results/sharp_submission_build_new.json -- \
-  scripts/build_arxiv_submission_20261028.py \
-  sharp_dimension_bounds_8_and_4 --tag reviewer1
-python3 -B scripts/run_proof_batch_20261024.py check \
-  --ledger results/ideal_submission_build_new.json -- \
-  scripts/build_arxiv_submission_20261028.py \
-  ideal_four_dimensional_volume_and_structure --tag reviewer1
-python3 -B scripts/run_proof_batch_20261024.py check \
-  --ledger results/dimension_submission_build_new.json -- \
-  scripts/build_dimension_bounds_arxiv_20261028.py --tag reviewer1
+latexmk -pdf main.tex
 ```
 
-Each build copies only the selected `main.tex` to an isolated temporary directory,
-disables shell escape and writes the final PDF outside the upload folder.
-It launches no mathematical checker or Lean module. The combined article uses
-larger source/PDF/page envelopes while retaining the same serial, monitored
-resource policy.
+The equivalent manual sequence is:
+
+```sh
+pdflatex main.tex
+bibtex main
+pdflatex main.tex
+pdflatex main.tex
+```
+
+BibTeX reads `references.bib` and writes `main.bbl`, which is included in the
+arXiv source folder. The ordinary workflow needs a standard TeX distribution;
+it does not need Python, repository data or mathematical checkers. All figures
+are in `main.tex`. Upload `main.tex`, `references.bib` and `main.bbl` together,
+with a separate submission for each paper.
+
+The repository's own typesetting run uses the same pdfLaTeX/BibTeX sequence
+in a temporary directory and additionally records source hashes, resource
+measurements and PDF inspection. It retains the final PDF and `main.bbl`,
+then removes temporary build files. It launches no mathematical checker or
+Lean module.
 
 ## Verification records
 
 The current [manifest](../results/arxiv_submission_current_manifest_20261030.json)
-binds the reading PDFs to the source files. Successful isolated builds have zero
-warnings, no undefined references or citations, no other repository inputs and
-Type 1 fonts. TeX temporary products were removed. Source review and sampled
-layout inspection have separate scopes; no claim of visual inspection of every
-page of the long article is made.
+binds the reading PDFs to `main.tex`, `references.bib` and `main.bbl`.
+Its build receipts record the pdfLaTeX and BibTeX stages, bibliography entry
+order, warnings, references and PDF fonts. Source review and sampled layout
+inspection have separate scopes; no claim of visual inspection of every page
+of the long article is made.
+
+All three four-step builds passed with zero TeX or BibTeX warnings, no undefined
+references or citations, and Type 1 fonts. The PDFs have 6, 18 and 551 pages;
+the combined article's part start pages remain unchanged. The builds' temporary
+products were removed, while `main.bbl` is retained for each submission.
 
 The current build receipts are:
 
-- [Sharp 6-page build](../results/arxiv_sharp_current_build_20261030.json).
-- [Ideal 18-page build](../results/arxiv_ideal_current_build_20261030.json).
-- [Combined 551-page build](../results/arxiv_dimensions_current_build_20261030.json).
+- [Sharp 6-page build](../results/arxiv_sharp_bibtex_build_20261030.json).
+- [Ideal 18-page build](../results/arxiv_ideal_bibtex_build_20261030.json).
+- [Combined 551-page build](../results/arxiv_dimensions_bibtex_build_20261030.json).
 
 No successful mathematical worker or Lean module was rerun for preparation of
 these submission editions. Existing executions retain their original sources

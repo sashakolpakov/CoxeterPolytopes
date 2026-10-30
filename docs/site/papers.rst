@@ -18,15 +18,15 @@ these submissions. The mathematical conclusions are unchanged.
    * - :download:`Dimension bounds: 57 / 17 / 15 <../../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf>`
      - 551
      - Corner payments and cusp curvature; farthest-vertex component energies; arithmetic field restrictions.
-     - :download:`Submission TeX <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`; :download:`part and proof guide <../../arxiv/DIMENSION_BOUNDS.md>`.
+     - :download:`main.tex <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`, :download:`references.bib <../../arxiv/hyperbolic_coxeter_dimension_bounds/references.bib>`, :download:`main.bbl <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.bbl>`; :download:`part and proof guide <../../arxiv/DIMENSION_BOUNDS.md>`.
    * - :download:`Sharp right-angled dimensions: 8 and 4 <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf>`
      - 6
      - Actual projection, heights, a cubic tensor identity and metric equality.
-     - :download:`Submission TeX <../../arxiv/sharp_dimension_bounds_8_and_4/main.tex>`; :download:`proof map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
+     - :download:`main.tex <../../arxiv/sharp_dimension_bounds_8_and_4/main.tex>`, :download:`references.bib <../../arxiv/sharp_dimension_bounds_8_and_4/references.bib>`, :download:`main.bbl <../../arxiv/sharp_dimension_bounds_8_and_4/main.bbl>`; :download:`proof map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
    * - :download:`Second ideal RA4 volume and structure <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf>`
      - 18
      - Defect count, equality spectrum, actual cutting and restricted recognition.
-     - :download:`Submission TeX <../../arxiv/ideal_four_dimensional_volume_and_structure/main.tex>`; :download:`proof map <../ideal_ra4_volume_and_structure_proof_map.md>`.
+     - :download:`main.tex <../../arxiv/ideal_four_dimensional_volume_and_structure/main.tex>`, :download:`references.bib <../../arxiv/ideal_four_dimensional_volume_and_structure/references.bib>`, :download:`main.bbl <../../arxiv/ideal_four_dimensional_volume_and_structure/main.bbl>`; :download:`proof map <../ideal_ra4_volume_and_structure_proof_map.md>`.
 
 The :download:`compact RA4 source <../../manuscripts/compact_ra4_volume_constraints.tex>`
 and :download:`proof map <../compact_ra4_volume_constraints_reproduce_20261019.md>`
@@ -38,14 +38,20 @@ recognition. They do not settle the compact second-volume problem.
 The three arXiv submission editions
 -----------------------------------
 
-Each source is a single self-contained TeX file: its figures are
-inline TikZ and its bibliography is inline. The sharp-dimension paper contains
+Each source folder contains ``main.tex``, ``references.bib`` and the generated
+``main.bbl``. Figures are inline TikZ. The sharp-dimension paper contains
 two figures; the ideal-volume paper contains five; the combined dimension
 paper contains nine. All name Alexander Kolpakov
 and include the requested AI-use acknowledgment. The
 :download:`edition guide <../arxiv_submission_editions_20261028.md>` and
 :download:`current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
-record the exact editions and matching isolated, zero-warning PDF builds.
+record the exact editions and matching PDF builds.
+
+Open ``main.tex`` in a TeX editor configured for pdfLaTeX and BibTeX, or run
+``latexmk -pdf main.tex`` from the paper's folder. No Python is needed.
+The :ref:`typesetting instructions <repro-arxiv-typesetting>` give the four
+manual commands. For each arXiv submission, zip only ``main.tex``,
+``references.bib`` and ``main.bbl``; exclude PDFs and temporary editor files.
 
 The sharp paper adds a diagram for the ideal case and an introduction explaining
 how its common projection closes the published dimension gaps. The ideal paper

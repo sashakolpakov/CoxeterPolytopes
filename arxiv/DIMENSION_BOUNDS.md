@@ -1,9 +1,11 @@
 # Dimension bounds: arXiv submission
 
-Upload the contents of `hyperbolic_coxeter_dimension_bounds/` separately from
-the two right-angled submissions. It contains only `main.tex`, with all nine
-figures and the bibliography included. It compiles with pdfLaTeX and standard
-TeX packages; no repository files, images or data files are needed to typeset it.
+For this submission, zip only `main.tex`, `references.bib` and `main.bbl`
+from `hyperbolic_coxeter_dimension_bounds/`, separately from the two
+right-angled submissions. The source folder contains `main.tex`,
+`references.bib` and the generated `main.bbl`. All nine figures are inline TikZ.
+It compiles with pdfLaTeX, BibTeX and standard TeX packages; it needs no files
+from elsewhere in the repository.
 
 The author is Alexander Kolpakov. The acknowledgment records the use of
 OpenAI's GPT-6-astra and GPT-6.1-sol and the author's responsibility for the content.
@@ -64,10 +66,16 @@ execution limits remain documented in the [public-data guide](../repro/PUBLIC_DA
 
 ## Typesetting and editorial checks
 
-The final isolated build copies only `main.tex` into a fresh temporary directory.
-It passed three pdfLaTeX runs with no warnings, no undefined references or
-citations, and no access to files elsewhere in the repository. All PDF fonts
-are Type 1. TeX auxiliaries were removed; the final PDF and build records remain.
+The typesetting pipeline uses the paper's `main.tex` and `references.bib` in a
+fresh temporary directory, runs pdfLaTeX, BibTeX and two further pdfLaTeX passes,
+and retains `main.bbl` alongside the source. The final PDF is kept outside the
+upload folder. The manifest and build record distinguish typesetting evidence
+from mathematical verification.
+
+The four-step build passed with zero TeX or BibTeX warnings, no undefined
+references or citations, and Type 1 fonts. The PDF remains 551 pages, and the
+part start pages listed above are unchanged. The build's temporary products
+were removed.
 
 The assembly was independently checked against all three original main texts
 and appendix groups. Changes concern the common front matter, reference
@@ -77,18 +85,20 @@ source and earlier verification receipts keep their original bindings.
 
 The [current source/PDF manifest](../results/arxiv_submission_current_manifest_20261030.json)
 identifies this edition; its current build ledger is
-`results/arxiv_dimensions_current_build_20261030.json`. Earlier assembly and
+`results/arxiv_dimensions_bibtex_build_20261030.json`. Earlier assembly and
 editorial receipts retain their original source bindings.
 
-For a fresh monitored typesetting run from this checkout, choose an unused tag:
+For ordinary typesetting, open `main.tex` in your TeX editor or run
+`latexmk -pdf main.tex` from `hyperbolic_coxeter_dimension_bounds/`.
+The equivalent manual sequence is:
 
 ```sh
-python3 -B scripts/run_proof_batch_20261024.py check \
-  --ledger results/dimension_bounds_typesetting_new.json -- \
-  scripts/build_dimension_bounds_arxiv_20261028.py --tag new
+pdflatex main.tex
+bibtex main
+pdflatex main.tex
+pdflatex main.tex
 ```
 
-The wrapper keeps the existing percentage resource gates, exclusive lock,
-59-second limit, 1-GiB process-tree cap and one-thread policy. It performs
-typesetting only. The larger source/PDF/page envelopes accommodate the complete
-case appendices.
+No Python program is needed for this sequence. The repository's own builds
+add process monitoring and isolated PDF inspection; those checks do not change
+the normal TeX workflow.
