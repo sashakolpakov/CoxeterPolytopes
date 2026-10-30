@@ -1,7 +1,12 @@
 # Octahedral decomposition: proof and reproduction map
 
-The [nine-page manuscript](../manuscripts/ideal_ra4_octahedral_decomposition.tex)
-and [PDF](../manuscripts/build/ideal_ra4_octahedral_decomposition.pdf) prove
+For current reading, see the [current second-volume manuscript](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The nine-page manuscript
+and PDF prove
 a restricted structure theorem. Every facet must be isometric to the
 regular ideal octahedron or its triangular-face reflection double. Under
 that hypothesis the four-polytope splits into a chain of regular ideal
@@ -61,7 +66,6 @@ From the repository root, with Python3 and a TeX installation:
 
 ```sh
 python3 -B scripts/check_ideal_ra4_octahedral_path_roots_20261018.py
-python3 -B scripts/build_illustrated_ra_manuscript_20261018.py manuscripts/ideal_ra4_octahedral_decomposition.tex --check-only
 ```
 
 Run these serially. Both acquire the shared proof-batch lock and require

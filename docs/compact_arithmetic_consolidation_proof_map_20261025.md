@@ -1,10 +1,17 @@
 # Working compact arithmetic15 proof map
 
+The current submission includes this argument in Parts III and VI of
+[Dimension bounds for hyperbolic Coxeter polytopes](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex).
+The [submission guide](arxiv_submission_editions_20261028.md) lists its current
+PDF. The following map retains the original revision's source labels and
+verification scopes; the submission prefixes these labels with `arith:`.
+The dated source reviews and execution receipts retain their original scopes.
+
 The [working revision](../manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex)
 contains complete local arguments and forest dispatch at its declared inputs.
 Its current source is696288bytes, SHA256
 `d0f040b253146f318bafd2391c8809c9d995f53fcd920477f78f42038d424295`.
-The [matching216-page PDF](../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf)
+The matching216-page PDF
 has a [final monitored build](../results/arithmetic15_editorial_publication_style_build_20261025.json)
 with no overfull boxes, undefined references or package warnings; eight
 underfull spacing warnings remain. The [editorial completion record](../results/compact17_arithmetic15_editorial_completion_20261025.json)

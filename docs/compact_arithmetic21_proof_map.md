@@ -1,6 +1,11 @@
 # Compact arithmetic dimension21: proof and reproduction map
 
-This accompanies [the TeX proof exposition](../manuscripts/compact_arithmetic21.tex). It translates the completed internal computer-assisted proof of compact arithmetic dimension at most21. It is not a new catalogue run or a proof that compact dimension21 is attained. The broader arithmetic bound21 is attained by a published **noncompact** example. External refereeing, priority, and complete proof-assistant verification are separate matters.
+For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+This accompanies supporting argument. It translates the completed internal computer-assisted proof of compact arithmetic dimension at most21. It is not a new catalogue run or a proof that compact dimension21 is attained. The broader arithmetic bound21 is attained by a published **noncompact** example. External refereeing, priority, and complete proof-assistant verification are separate matters.
 
 Frozen reports retain their historical “candidate” language. The final internal mathematical review found no missing global hypothesis or unresolved mathematical step. The new manuscript keeps the published assumptions, internal geometric proofs, and finite computational obligations distinct.
 
@@ -84,7 +89,7 @@ All links below are frozen proof inputs. The manuscript is a translation of thes
 - [Exact dotted parameter review](../scripts/fresh_sqrt5_dotted_parameters_20261015_review.py):24 families,532 integral candidates,32 seeds.
 - [Complete dotted queue](../scripts/fresh_sqrt5_dotted_rank29_exhaustion_20261015_review.py):438 states,264 singular obligations, all423 below-boundary domains. The31-node ceiling is geometric.
 - [Complete finite queue](../scripts/fresh_sqrt5_nonsingular_rank29_fast_20261015_review.py):5,172 states,51,599 contact profiles,2,070 singular obligations, including expanded states. The separate arithmetic implementation and its fresh replay are recorded in its [report](../results/fresh_sqrt5_nonsingular_rank29_fast_20261015_review.md).
-- [Rank22 rational weight table](../results/fresh_sqrt5_dimension22_h3_cross_20261016_cap2.json): `variable_order` indexes `certificate.exact_primal`; the last coordinate is the bound, preceding coordinates are bonuses. All30,169 bonus variables are nonnegative rational numbers. The literal orbit records define the meaning of every coefficient.
+- Rank22 rational weight table: `variable_order` indexes `certificate.exact_primal`; the last coordinate is the bound, preceding coordinates are bonuses. All30,169 bonus variables are nonnegative rational numbers. The literal orbit records define the meaning of every coefficient.
 - [Independent rank22 rule/forest checker](../scripts/fresh_sqrt5_dimension22_h3_cross_20261016_review.py):71 finite types,410 exact hub contexts, explicit graph-orbit multiplicities and reverse-type recurrence; upper21977/500.
 - [Final golden-field coverage](../scripts/fresh_sqrt5_h3_hub_coverage_20261016.py): all2,661 obligation identities,1,634 feasible rows,91,726 common spectator triples; minimum quadrilateral payment560003/560000.
 - Earlier dimension-specific complete rules are [28–29](../results/fresh_sqrt5_dimension27_coverage_20261015.md), [25–27](../results/fresh_sqrt5_dimension24_coverage_20261015.md), [24](../results/fresh_sqrt5_dimension23_coverage_20261015.md), and [23](../results/fresh_sqrt5_hub_count_coverage_20261016.md). The rank22 coefficients are not extrapolated to these dimensions.
@@ -126,7 +131,6 @@ Build the manuscript without placing auxiliary files among frozen results:
 
 ```sh
 mkdir -p manuscripts/build
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=manuscripts/build manuscripts/compact_arithmetic21.tex
 ```
 
 ## Concrete next reductions, not current theorems

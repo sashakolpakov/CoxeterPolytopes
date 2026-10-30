@@ -1,19 +1,24 @@
 # Dimension ten: proof, assumptions and reproduction
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 20 October 2026. Current result:
 [finite-volume right-angled dimension at most10](../results/right_angled_mixed_dimension10_20261020.md).
 The new argument excludes mixed dimension11 and uses face heredity for
 the higher tail. It is unconditional as a mathematical theorem and has
 conditional, rather than end-to-end geometric, Lean verification.
-The consolidated [TeX](../manuscripts/right_angled_dimension10.tex) and
-[12-page PDF](../manuscripts/build/right_angled_dimension10.pdf) are
+The consolidated supporting argument and
+12-page PDF are
 complete: three visually checked vector figures, zero warnings and
 two full manuscript reviews. The older11-page ceiling11 paper is
 preserved as a predecessor.
 
 |Step|Written source|Verification boundary|
 |---|---|---|
-|Actual P3 recognition, fixed componentwise null direction|[Assembly](../results/right_angled_mixed_dimension10_assembly_candidate_20261020.md), geometry shared with the [predecessor](../manuscripts/right_angled_dimension11.tex)|All-wall feasibility, actual finite/cusp links and orientation are written geometry.|
+|Actual P3 recognition, fixed componentwise null direction|[Assembly](../results/right_angled_mixed_dimension10_assembly_candidate_20261020.md), geometry shared with the predecessor|All-wall feasibility, actual finite/cusp links and orientation are written geometry.|
 |Strict weighted row and coface/Euler identities|[Weighted-face proof, dimension11 section](../results/right_angled_mixed_weighted_triangles_research_20261018.md)|DS, standard truncation/links and published82 facets in dimension8. Earlier exact DS checker has fresh bounded replay.|
 |One-cusp exclusion, R7 balance and exceptional budget|[Local proof](../results/right_angled_one_cusp_ten_facet_exclusion_research_20261020.md), [balanced counts](../results/right_angled_mixed_eleven_three_face_corner_balance_20261020.md)|Complete own facet/edge argument and full root review; no 3D classification imported.|
 |H<=2E without D3 recognition|[Full assembly review](../results/review_right_angled_mixed_dimension10_assembly_finite57_20261020.md)|Direct three-unit excess, Euler and integer cusp capacity.|
@@ -29,9 +34,6 @@ preserved as a predecessor.
 The catalogue provides one command for the four declared exact checks,
 the conditional kernel/axiom audit and a fresh temporary PDF build:
 
-```sh
-python3 -B scripts/verify_manuscript.py mixed10 --mode core --pdf
-```
 
 Each job is serial and individually resource capped. A successful run
 has the stated conditional scope; it does not formalize actual geometry.

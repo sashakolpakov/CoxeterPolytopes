@@ -2,7 +2,7 @@
 """Reject build debris, oversized blobs and secret markers in the Git index.
 
 Reads staged Git blobs, not potentially different working files. Keeps the
-six intentional paper PDFs, source-generated mathematical certificates and
+three current submission PDFs, source-generated mathematical certificates and
 verification records. This checks publication hygiene, not mathematics.
 """
 from __future__ import annotations
@@ -14,12 +14,9 @@ import re
 import subprocess
 
 PAPERS = {
-    "manuscripts/build/finite_volume57.pdf",
-    "manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf",
-    "manuscripts/build/compact_arithmetic_dimension_bound.pdf",
-    "manuscripts/build/compact_farthest_vertex_bounds.pdf",
-    "manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf",
-    "manuscripts/build/compact_ra4_volume_constraints.pdf",
+    "manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf",
+    "manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf",
+    "manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf",
 }
 SUFFIXES = {".pyc", ".pyo", ".olean", ".ilean", ".o", ".bc", ".ir",
             ".trace", ".aux", ".toc", ".lof", ".lot", ".fls", ".fdb_latexmk",
@@ -109,6 +106,9 @@ def main() -> None:
     names = {name for name, _, _ in entries}
     for name in sorted(PAPERS - names):
         issues.append([name, "required current paper PDF absent from index"])
+    for name in sorted(names - PAPERS):
+        if name.startswith("manuscripts/build/") and name.endswith(".pdf"):
+            issues.append([name, "only the three current submission PDFs belong in manuscripts/build"])
     if manifest is None:
         issues.append(["repro/public-data-manifest.json", "bulk-data manifest absent from index"])
     else:

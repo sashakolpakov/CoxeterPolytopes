@@ -1,0 +1,38 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/build_dimension_bounds_arxiv_20261028.py",
+    "--tag",
+    "current_20261030"
+  ],
+  "elapsed_seconds": 22.161,
+  "peak_process_tree_rss_bytes": 135512064,
+  "initial_resources": {
+    "free_disk_gib": 18.64,
+    "available_memory_gib": 4.93,
+    "disk_free_bytes": 20018786304,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 5288738816,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 2.012727,
+    "available_memory_percent": 20.523008,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 1944,
+  "stdout": "{\n  \"status\": \"PASS_ISOLATED_TEX_BUILD_ONLY\",\n  \"source\": \"arxiv/hyperbolic_coxeter_dimension_bounds/main.tex\",\n  \"source_sha256\": \"3841569514006d411c9ecfa5184123135a3487744e81bd32639a706b9beb912e\",\n  \"source_bytes\": 1807125,\n  \"pdf\": \"manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf\",\n  \"passes\": [\n    {\n      \"pass\": 1,\n      \"exit_code\": 0,\n      \"stdout_bytes\": 113140\n    },\n    {\n      \"pass\": 2,\n      \"exit_code\": 0,\n      \"stdout_bytes\": 21064\n    },\n    {\n      \"pass\": 3,\n      \"exit_code\": 0,\n      \"stdout_bytes\": 20982\n    }\n  ],\n  \"builder_sha256\": \"16e90700743bed3014c2d9dc246144f22654218f6b2bd4505647142170a6552b\",\n  \"mathematical_verification_claimed\": false,\n  \"isolated_input\": \"Only the exact main.tex bytes are copied to a fresh temporary directory.\",\n  \"temporary_auxiliaries_removed\": true,\n  \"warnings\": [],\n  \"undefined_references_or_citations\": false,\n  \"repository_inputs_read_by_tex\": [],\n  \"pages\": 551,\n  \"font_subtypes\": [\n    \"/Type1\"\n  ],\n  \"part_start_pages\": {\n    \"part.1\": 5,\n    \"part.2\": 17,\n    \"part.3\": 35,\n    \"part.4\": 72,\n    \"part.5\": 107,\n    \"part.6\": 372\n  },\n  \"pdf_inspection\": \"All page resources inspected; full-page text extraction omitted.\",\n  \"pdf_sha256\": \"cb1864ea6bdb27da4bab09c5a45bd880328cb2c81cc50222a9abfe1c3cd53f3a\",\n  \"pdf_bytes\": 3399574,\n  \"source_figure_environments\": 9\n}\n{\n  \"status\": \"TYPESETTING_CONFIGURATION_ONLY\",\n  \"worker\": \"scripts/build_dimension_bounds_arxiv_20261028.py\",\n  \"worker_sha256\": \"0b5cbfd879ba67ae9ce6fd749c93d1e0f4231edeb4df9ec63b90329db952dff8\",\n  \"shared_builder_sha256\": \"16e90700743bed3014c2d9dc246144f22654218f6b2bd4505647142170a6552b\",\n  \"source_limit_bytes\": 4194304,\n  \"pdf_limit_bytes\": 33554432,\n  \"page_limit\": 800,\n  \"per_pass_timeout_seconds\": 18,\n  \"max_tex_passes\": 3,\n  \"scientific_checks_run\": false,\n  \"resource_policy\": \"Unchanged existing exclusive 59-second/1-GiB/one-thread wrapper\"\n}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "0b5cbfd879ba67ae9ce6fd749c93d1e0f4231edeb4df9ec63b90329db952dff8",
+  "lock_owner": "wrapper"
+}

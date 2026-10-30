@@ -8,17 +8,14 @@ saved-certificate check, regeneration of a finite search, a conditional Lean
 proof and a PDF build establish different things. Their receipts retain
 those differences even when they contribute to the same paper.
 
-The current illustrated dimension articles have 50, 286 and 217 pages for
-finite volume 57, compact 17 and compact arithmetic 15, respectively. Their
-marked illustration blocks can be removed to recover the reviewed
-consolidated sources byte for byte. The figures and their new PDF builds
-add no mathematical verification. The three consolidated bases and the six
-frozen editions remain preserved; :doc:`papers` identifies every reading
-copy and its proof map.
+The combined submission brings the finite-volume 57, compact 17 and compact
+arithmetic 15 proof families together in 551 pages, with 71 pages of
+main exposition followed by complete proof appendices. Its compact theorem is
+an internal input to its arithmetic argument.
 
-The two 28 October right-angled submission editions are separate current
-reading copies: seven pages with two figures for sharp dimensions 8/4,
-and nineteen pages with five figures for ideal volume and structure. Their
+The two right-angled submission editions remain separate current
+reading copies: six pages with two figures for sharp dimensions 8/4,
+and eighteen pages with five figures for ideal volume and structure. Their
 isolated TeX builds have zero warnings. These presentation builds retain the
 recorded mathematical and conditional Lean evidence; they do not rerun it.
 See :ref:`repro-arxiv-editions` for the exact companion selections.
@@ -31,52 +28,20 @@ illustration update.
 
 .. _repro-illustration-identity:
 
-Check that the illustrations preserve the base text
----------------------------------------------------
+Source assembly and current editions
+--------------------------------------
 
-The :download:`source proposal <../../results/illustrated_manuscript_source_only_proposal_20261026.json>`
-records the three base/illustrated pairs, exact hashes and removable blocks.
-The :download:`independent diagram review <../../results/review_illustrated_manuscripts_diagram_semantics_20261026.md>`
-checks the figures against the underlying propositions. Each illustrated
-article adds two figures. Compact and arithmetic also add a marked package
-block, so their removable block counts are three rather than two.
+The combined dimension article includes the complete arguments and appendices
+of its three proof families. Its source-preservation review checks their
+assembly, label changes and internal references. The
+:download:`current manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
+identifies the exact submission sources, matching PDFs and isolated build
+receipts. The :download:`dimension guide <../../arxiv/DIMENSION_BOUNDS.md>`
+links the retained proof inputs and mathematical maps.
 
-This read-only command compares all three pairs. It removes only the dated,
-nonnested full-line blocks, including their delimiters and final newline,
-then requires exact equality with the corresponding base bytes:
-
-.. code-block:: sh
-
-   python3 -B - <<'PY'
-   import hashlib
-   import re
-   from pathlib import Path
-
-   block = re.compile(
-       rb'^% BEGIN (ILLUSTRATION_20261026_[A-Z0-9_]+)\n'
-       rb'.*?^% END \1\n', re.MULTILINE | re.DOTALL)
-   pairs = (
-       ('finite_volume57', 2),
-       ('compact_farthest_vertex_bounds', 3),
-       ('compact_arithmetic_dimension_bound', 3),
-   )
-   for stem, expected_blocks in pairs:
-       base = Path('manuscripts') / (stem + '_consolidated.tex')
-       illustrated = Path('manuscripts') / (stem + '_illustrated.tex')
-       base_bytes = base.read_bytes()
-       illustrated_bytes = illustrated.read_bytes()
-       restored, count = block.subn(b'', illustrated_bytes)
-       if count != expected_blocks or restored != base_bytes:
-           raise SystemExit('Source identity failed: ' + stem)
-       print(stem, 'BASE_BYTES_MATCH', count, 'blocks')
-       print('base sha256:', hashlib.sha256(base_bytes).hexdigest())
-       print('illustrated sha256:', hashlib.sha256(illustrated_bytes).hexdigest())
-   PY
-
-It writes no files, imports no proof worker and launches no compiler. Its
-conclusion is source identity after the stated removals, not mathematical
-correctness, matching-PDF identity or inspection of the rendered figures.
-Those have separate reviews and build receipts.
+Source preservation and PDF compilation do not establish a fresh mathematical
+replay. The catalogue and evidence records below retain their declared source
+bindings and scopes.
 
 .. _repro-edition-selection:
 
@@ -136,11 +101,11 @@ rejects Python optimization: assertions must remain enabled, with neither
 
 .. _repro-arxiv-editions:
 
-Reproducing the two right-angled submission editions
-----------------------------------------------------
+Reproducing the three submission editions
+------------------------------------------
 
 The :download:`28 October edition guide <../arxiv_submission_editions_20261028.md>`
-and :download:`source/PDF manifest <../../results/arxiv_publication_release_manifest_20261028.json>`
+and :download:`current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
 bind the current public scientific sources to their reading PDFs:
 
 .. list-table:: Submission source and supporting suite
@@ -151,23 +116,25 @@ bind the current public scientific sources to their reading PDFs:
      - Pages / figures
      - Companion identifier
      - Script-only jobs
-   * - :download:`Sharp-dimension TeX <../../manuscripts/revisions/right_angled_sharp_dimension_bounds_arxiv_20261028.tex>`; :download:`PDF <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_layout_final.pdf>`
-     - 7 / 2
+   * - :download:`Sharp-dimension TeX <../../arxiv/sharp_dimension_bounds_8_and_4/main.tex>`; :download:`PDF <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf>`
+     - 6 / 2
      - ``right_angled_sharp``
      - Two exact model/algebra checks.
-   * - :download:`Ideal-volume TeX <../../manuscripts/revisions/ideal_ra4_volume_and_structure_arxiv_20261028.tex>`; :download:`PDF <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_historical_context.pdf>`
-     - 19 / 5
+   * - :download:`Ideal-volume TeX <../../arxiv/ideal_four_dimensional_volume_and_structure/main.tex>`; :download:`PDF <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf>`
+     - 18 / 5
      - ``ideal_ra4_volume_and_structure``
      - Four exact model/incidence/root checks.
+   * - :download:`Combined-dimension TeX <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`; :download:`PDF <../../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf>`
+     - 551 / 9
+     - Three existing proof families
+     - :download:`Proof and computation maps <../../arxiv/DIMENSION_BOUNDS.md>`; no combined fresh replay claimed.
 
 Each source is self-contained for typesetting with standard pdfLaTeX packages:
-its figures and bibliography are inline. Put each source in its own upload
-folder as ``main.tex``. The public versioned scientific sources above preserve
-the current local submission bytes; older accepted TeX/PDF editions remain
-available as provenance.
+its figures and bibliography are inline. Each upload folder already contains
+its ``main.tex``. Package the three folders separately; keep PDFs outside them.
+The :doc:`papers` chapter identifies the proof maps for the current sources.
 
-The companion computations are pinned to public repository snapshot
-``04c9bab7``. All inputs selected by these two script-only suites are small,
+All inputs selected by the two right-angled script-only suites are small,
 tracked files. Neither selection requires the separate unuploaded bulk
 collection. The workers use Python 3.11 or later and only the standard library.
 The guarded launcher at this snapshot uses macOS resource measurements;
@@ -203,10 +170,24 @@ its historical double-model producer.
 
 The optional catalogue ``--pdf`` job follows the source already bound to that
 catalogue identifier. It compiles the earlier five- or seventeen-page reference
-edition, not the current seven- or nineteen-page submission. The new isolated
+edition, not the current six- or eighteen-page submission. The new isolated
 build records establish typesetting of the matching submission sources, not
 a fresh combined execution of their Python and Lean companions. No successful
 unchanged mathematical check was repeated merely for this presentation update.
+
+For the combined dimension article, the source-preservation review covers the
+three main texts and all three appendix groups. Existing script results and
+conditional Lean kernels keep their original hypotheses and scopes. The
+compact and arithmetic case proofs do not acquire additional replay credit by
+being placed in one document. The source is self-contained for typesetting;
+the :doc:`sources` chapter separately states computational data availability.
+
+The :download:`edition guide <../arxiv_submission_editions_20261028.md>` gives
+isolated build commands for all three sources. The short papers use
+``scripts/build_arxiv_submission_20261028.py``; the combined article uses
+``scripts/build_dimension_bounds_arxiv_20261028.py``. Both run through the
+same serial resource-monitored entry. A PDF build launches no mathematical
+checker or Lean module.
 
 .. _repro-finite57-ledgers:
 

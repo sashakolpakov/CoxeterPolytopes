@@ -1,6 +1,11 @@
 # Mixed right-angled corner package: proof map and reproduction
 
-The [TeX manuscript](../manuscripts/right_angled_mixed_corner_constraints.tex)
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The supporting argument
 collects the universal weighted-face, low-facet rigidity, complete-corner
 and opposition-moment arguments. None assumes arithmeticity or a restricted
 four-facet spectrum. The dimension ceiling remains 12.

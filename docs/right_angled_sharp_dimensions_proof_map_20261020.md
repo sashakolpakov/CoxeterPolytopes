@@ -1,5 +1,10 @@
 # Sharp right-angled dimension bounds: proof and reproduction
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 20 October2026. One focused manuscript proves both bounds:
 
 |Class|Published ceiling|New internally reviewed ceiling|Largest published example|
@@ -15,8 +20,8 @@ from a full formalization of hyperbolic geometry.
 
 ## One primary paper
 
-The [unified manuscript](../manuscripts/right_angled_sharp_dimension_bounds.tex)
-and [PDF](../manuscripts/build/right_angled_sharp_dimension_bounds.pdf)
+The supporting argument
+and PDF
 share the finite-point projection lemma. Its complete root and two
 independent manuscript reviews are recorded separately. The general
 proof has a complete [authoritative note](../results/right_angled_dimension8_descending_height_proof_20261020.md)
@@ -130,7 +135,7 @@ temporary PDF build. The SOS certificate was generated in a separate
 and independently recomputed by the core replay. Its generator used
 under56MB process-tree RSS. Both scripts use exact arithmetic.
 
-The [five-page final PDF](../manuscripts/build/right_angled_sharp_dimension_bounds.pdf)
+The five-page final PDF
 has zero warnings, with source-bound [build record](../results/right_angled_sharp_dimension_bounds_build_20261018.json).
 Its sole figure was directly viewed and its disposable preview removed;
 the [visual record](../results/right_angled_sharp_dimensions_figure_visual_review_20261020.json)

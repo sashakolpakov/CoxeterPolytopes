@@ -54,85 +54,52 @@ on :doc:`papers` and :doc:`formal_logic` identify their external and
 computed interfaces. A plan executes no mathematical child. Existing
 successful unchanged jobs are not rerun merely to refresh documentation.
 
-Current reading copies and preserved editions
----------------------------------------------
+Current manuscripts and typesetting evidence
+--------------------------------------------
 
-There are six paper families. The six frozen 21 October source/PDF
-editions remain unchanged: 48 pages for finite volume57, 36 for compact23,
-21 for arithmetic20, five for sharp right-angled8/4, 17 for ideal RA4
-volume and structure, and 14 for compact RA4 constraints. Their
-:download:`delivery record <../../results/six_paper_final_tex_delivery_20261021.json>`
-binds those editions. Later compact17 and arithmetic15 results have their
-own reviewed bases and matching PDFs, rather than relabeling the old
-23/20 PDFs.
+The three current submission sources have isolated PDF builds. The
+:download:`current manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
+binds each source to its PDF and build receipt.
 
-The new illustrated reading copies retain the complete mathematical text
-of the reviewed 50/285/216-page bases and add six figures, two per paper.
-The :download:`independent source-semantic review <../../results/review_illustrated_manuscripts_diagram_semantics_20261026.md>`
-checks all six figure blocks and the two package blocks. Removing the
-dated blocks restores each base byte for byte. The source-only proposal
-is preserved as a proposal-stage record; subsequent actual build receipts
-provide the separate compilation evidence:
-
-.. list-table:: Actual illustrated TeX builds
+.. list-table:: Current PDF builds
    :header-rows: 1
-   :widths: 27 10 13 50
+   :widths: 32 10 15 43
 
-   * - Reading copy
+   * - Submission
      - Pages
      - Warnings
-     - Matching build record
-   * - General finite volume57
-     - 50
-     - 21 underfull
-     - :download:`Attempt 1 PASS <../../results/finite57_illustrated_build_attempt1_20261026.json>`
-   * - General compact17
-     - 286
-     - 9 underfull
-     - :download:`Attempt 1 PASS <../../results/compact17_illustrated_build_attempt1_20261026.json>`
-   * - Compact arithmetic15
-     - 217
-     - 8 underfull
-     - :download:`Attempt 3 PASS <../../results/arithmetic15_illustrated_build_attempt3_20261026.json>`
+     - Build receipt
+   * - Sharp right-angled dimensions 8/4
+     - 6
+     - None
+     - :download:`Sharp build <../../results/arxiv_sharp_current_build_20261030.json>`.
+   * - Second ideal four-volume
+     - 18
+     - None
+     - :download:`Ideal build <../../results/arxiv_ideal_current_build_20261030.json>`.
+   * - General dimension bounds 57/17/15
+     - 551
+     - None
+     - :download:`Combined build <../../results/arxiv_dimensions_current_build_20261030.json>`.
 
-These receipts bind source/PDF hashes and page counts. Their warning lists
-contain underfull spacing messages, with no overfull boxes, undefined
-references or package warnings. They explicitly claim no mathematical
-verification. Owned temporary build products were removed.
+Only the selected ``main.tex`` is copied into the temporary TeX directory.
+The builds launch no mathematical checker or Lean module. A successful PDF
+build establishes typesetting, not geometric correctness or computational
+replay. Source-preservation review checks the assembly against its existing
+proof families. Layout inspection is sampled; the current record makes no
+claim that every page of the long manuscript was visually inspected.
 
-Arithmetic illustrated attempts
-:download:`1 <../../results/arithmetic15_illustrated_attempt1_monitor_stop_20261026.json>`
-and :download:`2 <../../results/arithmetic15_illustrated_attempt2_monitor_stop_20261026.json>`
-were stopped by the owned-process identity monitor. Their failures remain
-preserved and have no TeX or mathematical PASS credit. The later successful
-attempt does not rewrite them.
+The long case appendices discharge necessary proof obligations. The arithmetic
+argument uses the independently proved compact theorem within the same
+manuscript. The :doc:`papers` chapter gives the part layout and proof maps.
 
-The :download:`25 October editorial completion <../../results/compact17_arithmetic15_editorial_completion_20261025.json>`
-records the preceding matching compact bases and sampled visual coverage.
-That sampled review belongs to its recorded PDF hashes. Any review of the
-illustrated PDFs must identify their own hashes and selected pages; the
-new build PASS alone does not transfer old visual coverage. The separate
-:download:`six-new-figure visual acceptance <../../results/illustrated_manuscripts_six_new_figures_visual_acceptance_20261026.json>`
-now records root's inspection of pages 2/29, 6/20 and 4/38 in the finite,
-general compact and arithmetic illustrated PDFs respectively. It binds
-the matching new PDF/build hashes and reports legible labels, arrows,
-captions and formulas without clipping. This covers all six new figures,
-not every page of the three manuscripts; temporary PNGs were removed.
-The unchanged right-angled editions retain their existing one/five/four
-figures and their five/17/14-page matching PDFs.
-
-The long case appendices discharge proof obligations. The arithmetic15
-theorem also uses the general compact17 result. No smaller minimum
-self-contained page count has been proved. See :doc:`papers` for the
-current downloads and :doc:`volume_problems` for the deliberately narrower
-compact RA4 conclusions.
-
-The arithmetic paper's earlier primary-source warning has a separate
-:download:`26 October authentication addendum <../bugaenko_golden_lattice_cutoff_authentication_20261026.md>`.
-The original statement of Bugaenko's theorem now matches the literal
-lattice, full reflection group and dimension range used by the manuscript.
-This closes that citation check; the existing internal proofs, computed
-output premises and conditional Lean interfaces retain their scopes.
+The arithmetic paper's external golden-lattice input has a separate
+:download:`primary-source authentication <../bugaenko_golden_lattice_cutoff_authentication_20261026.md>`.
+The published theorem matches the literal lattice, full reflection group and
+dimension range used in the argument. Geometry, computed outputs and literature
+statements retain their explicit roles in the conditional verification.
+Previous failures, resource deferrals and successful unchanged mathematical
+executions remain in their original evidence records.
 
 Finite57: the current-rule conjunction and its inherited inputs
 ------------------------------------------------------------------
@@ -205,7 +172,7 @@ cores bind predecessor TeX; unchanged components retain their recorded
 scope without a new combined current run.
 
 The sharp dimension proof has a preserved five-page edition and a current
-seven-page submission edition. It, the ideal second-volume and restricted-chain
+six-page submission edition. It, the ideal second-volume and restricted-chain
 theorem, and the compact constraints have different mathematical scopes.
 In particular, the compact 14-page paper proves no unrestricted 120-cell
 minimum or unique second-volume theorem. Complete scope and input tables

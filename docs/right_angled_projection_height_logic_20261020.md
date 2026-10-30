@@ -1,8 +1,13 @@
 # Right-angled projection and height descent: assumptions map
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 **Bounded compilation and all eight actual axiom prints pass.** [RightAngledProjectionHeightKernel.lean](../formal/CoxeterProofs/RightAngledProjectionHeightKernel.lean) has SHA-256 `2fac8028e432a2104a58e423c65fc38c9e214fed5f52210e408aabe3f15f0e90` (282 lines,12333 bytes). Each printed declaration uses only `propext`, `Classical.choice` and `Quot.sound`, with no `sorryAx`. The [verification receipt](../results/publication_logic_verification_20261020.json) now records seven selected kernels and 62 actual axiom prints: the preserved six/53 plus nine for the separate [dimension58 shape kernel](finite_volume58_shape_kernel_assumptions_20261020.md), whose geometry/normalization inputs remain explicit. All seven have raw output and fourteen immutable compile/audit snapshots. SharpRA's core/full selections remain six jobs each with PDF; its actual geometric inputs remain explicit.
 
-The source imports the verified [RightAngledCubicScalarKernel](../formal/CoxeterProofs/RightAngledCubicScalarKernel.lean), SHA-256 `f55568035b8852a6284f1bd404c897758f30b301b1d85f38f09e4d9de365e6ee`, for transparent finite sums and coordinate products. It uses the same generic linearly ordered commutative-ring interface, with no division, inverse, square-root or real-analysis library. No frozen module or manuscript was changed. Its written target is Lemma `lem:projection` and the strict height thresholds following equation `eq:iterate` in the [sharp right-angled manuscript](../manuscripts/right_angled_sharp_dimension_bounds.tex), SHA-256 `3c3ddd8540593004bcd5fb57832afc77ffc639268e66cb0ab29302b286654310`.
+The source imports the verified [RightAngledCubicScalarKernel](../formal/CoxeterProofs/RightAngledCubicScalarKernel.lean), SHA-256 `f55568035b8852a6284f1bd404c897758f30b301b1d85f38f09e4d9de365e6ee`, for transparent finite sums and coordinate products. It uses the same generic linearly ordered commutative-ring interface, with no division, inverse, square-root or real-analysis library. No frozen module or manuscript was changed. Its written target is Lemma `lem:projection` and the strict height thresholds following equation `eq:iterate` in the sharp right-angled manuscript, SHA-256 `3c3ddd8540593004bcd5fb57832afc77ffc639268e66cb0ab29302b286654310`.
 
 ## Coordinate statements
 

@@ -1,7 +1,12 @@
 # Compact facet capacity: proof and reproduction map
 
-The [seven-page manuscript](../manuscripts/compact_ra4_facet_capacity.tex)
-and [PDF](../manuscripts/build/compact_ra4_facet_capacity.pdf) give a direct
+For current reading, see the [complete compact RA4 constraint source](../manuscripts/compact_ra4_volume_constraints_publication.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The seven-page manuscript
+and PDF give a direct
 geometric proof of f>=2V+5, where f is the number of facets of any compact
 right-angled hyperbolic four-polytope and V is the number of vertices of
 any chosen facet. There are two explanatory combinatorial figures.
@@ -33,9 +38,6 @@ complete Lean proof or external human review is claimed.
 
 To reproduce typesetting from the repository root:
 
-```sh
-python3 -B scripts/build_illustrated_ra_manuscript_20261018.py manuscripts/compact_ra4_facet_capacity.tex --check-only
-```
 
 The shared lock,40GiB/6GiB start gates,59-second/1GiB process-tree cap and
 temporary-directory cleanup are built into this serial builder. Check-only

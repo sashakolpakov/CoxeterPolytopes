@@ -1,5 +1,10 @@
 # General finite-volume bound58: proof and formalization map
 
+For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 This map concerns **every finite-sided, finite-volume real hyperbolic Coxeter
 polytope**. The completed internal theorem is `dimension ≤ 58`. It imposes
 neither arithmeticity nor compactness, a simple-cusp condition or a facet
@@ -9,7 +14,7 @@ proof. Construction and compact-arithmetic experiments are also independent.
 
 The authoritative endpoint is
 [the dimension58 composition](../results/fresh_a15_d15_dimension58_20261018.md).
-The [TeX manuscript](../manuscripts/finite_volume58.tex) develops this proof
+The supporting argument develops this proof
 spine. [Reproduction instructions](finite_volume58_reproduce.md) distinguish
 arithmetic replay, source review and formal verification.
 
@@ -173,7 +178,7 @@ axiom file merely because it is lengthy.
 ## Plain certificate boundary for Lean
 
 The [exporter](../scripts/export_finite_volume58_arithmetic_20261018.py)
-writes [plain data](../data/certificates/finite_volume58_arithmetic_20261018.json).
+writes plain data.
 Rationals are numerator/positive-denominator pairs, finite costs are integer
 sixteenths, and type maps use integer indices. The export contains:
 

@@ -1,6 +1,11 @@
 # Right-angled five-face carriers: reproduction and lemma map
 
-The [four-page manuscript](../manuscripts/right_angled_five_face_carriers.tex) contains two separate results:
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The four-page manuscript contains two separate results:
 
 1. Every entirely ideal right-angled hyperbolic five-polytope has facet sum $\sum_Q(3f_0(Q)-4f_3(Q)+24)=48$. Combined with the internally proved RA4 second-value and equality theorems, some facet has volume at least $3\pi^2$. There are also necessary ideal6 and mixed-dimensional incidence inequalities.
 2. An exact sixteen-cell reflected union is an ideal right-angled four-polytope with f-vector $(258,1032,972,198)$ and positive $\kappa=6$. Positive kappa is unbounded under further doubling. This disproves the suggested universal nonpositive-kappa route; it is not an ideal5 example or a dimension bound.
@@ -15,7 +20,6 @@ Run from the repository root:
 python scripts/fresh_right_angled_five_face_carrier_20261018.py --verify
 python scripts/fresh_ideal_ra4_positive_kappa_doubling_20261018.py --verify
 python scripts/check_ideal_ra4_positive_kappa_saved_20261018.py
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build/right_angled_five_face_carriers manuscripts/right_angled_five_face_carriers.tex
 ```
 
 Python uses only the standard library. Default generation refuses to overwrite saved data. The standalone doubling checker imports no producer; it uses reverse-column elimination for rank checks. Typesetting does not verify the mathematical proof.

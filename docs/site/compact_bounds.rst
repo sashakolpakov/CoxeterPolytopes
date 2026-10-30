@@ -12,11 +12,10 @@ arguments branch.
 
 The :download:`general compact proof map <../compact17_consolidated_proof_map_20261025.md>`
 and :download:`arithmetic proof map <../compact_arithmetic_consolidation_proof_map_20261025.md>`
-identify the printed proof of each case. The current articles are available
-as :download:`general TeX <../../manuscripts/compact_farthest_vertex_bounds_consolidated.tex>`,
-:download:`general PDF <../../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf>`,
-:download:`arithmetic TeX <../../manuscripts/compact_arithmetic_dimension_bound_consolidated.tex>`
-and :download:`arithmetic PDF <../../manuscripts/build/compact_arithmetic_dimension_bound_consolidated.pdf>`.
+identify the printed proof of each case. The current :download:`combined dimension article <../../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf>`
+contains the compact argument in Parts II/V and the arithmetic argument in
+Parts III/VI. Its :download:`self-contained TeX <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`
+makes the compact theorem an internal dependency of the arithmetic proof.
 The case appendices are part of the proofs. No minimal standalone page
 count has been established by separating off the common exposition.
 

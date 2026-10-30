@@ -1,5 +1,10 @@
 # Current ideal5/6 conditional Lean successor: source handoff
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 19 October 2026. **SOURCE_PREPARED_NOT_COMPILED.** No Lean command, proof
 batch, axiom audit or scientific program ran in the authoring lane. The
 coordinator owns the final resource-gated execution. Existing sources,
@@ -14,7 +19,7 @@ It imports only `CoxeterProofs.RightAngledCuspPropagation` and adds no
 custom axiom, proof placeholder, enumeration or data producer.
 
 The primary manuscript is
-[ideal_right_angled_six_face_constraints.tex](../manuscripts/ideal_right_angled_six_face_constraints.tex),
+ideal_right_angled_six_face_constraints.tex,
 SHA256 `bf05cb7b634bc4e5c89822774d32f2c18bbefe24338737d41cef0aa67003184f`.
 This module follows its current37/25 carrier,63/211 ideal5,275/6106 ideal6,
 `272V>=6039F`, and strict mixed fractions4/47 and15/248. No superseded

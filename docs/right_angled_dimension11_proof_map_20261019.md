@@ -2,7 +2,7 @@
 
 19 October2026. [Current theorem and verification record](../results/right_angled_mixed_dimension11_20261019.md).
 The completed internal mixed ceiling is11. The focused
-[11-page PDF](../manuscripts/build/right_angled_dimension11.pdf) contains
+11-page PDF contains
 the complete geometric, scalar and counting argument with three vector
 figures. Two full manuscript reads, the zero-warning bounded build and
 all three actual figure-page visual checks pass. The earlier
@@ -85,9 +85,6 @@ All TeX intermediates and all nine raster previews have been removed.
 
 To reproduce the declared checks and a temporary PDF in one serial plan:
 
-```sh
-python3 -B scripts/verify_manuscript.py mixed11 --mode core --pdf
-```
 
 The driver plan has been inspected and includes exactly three bounded
 script replays, one conditional Lean module with axiom audit and one

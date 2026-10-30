@@ -1,5 +1,10 @@
 # Nine-field compact arithmetic ceiling19: proof and reproduction
 
+For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 20 October 2026. The complete written theorem now consists of the
 previous universal compact arithmetic ceiling20, the earlier eight-field
 rank20 exclusion, and the new actual-K7 rank20 exclusion. This map
@@ -133,98 +138,23 @@ python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.Arithm
 ```
 
 The wrapper applies the shared lock, one thread and2048MiB Lean cap,
-40GiB disk/6GiB RAM start gates and8/3GiB abort gates. Do not run
+and the current percentage resource gates. Do not run
 an unrestricted Lake build or parallel proof jobs. The existing source
 and compact records are retained; batch temporary outputs are removed.
 
-## Same primary paper and source-bound reproduction
+## Recorded execution and current scope
 
-The primary remains [compact_arithmetic20.tex](../manuscripts/compact_arithmetic20.tex),
-with the directly included [eight-field appendix](../manuscripts/appendices/compact_arithmetic_eight_field19.tex)
-and new [K7 appendix](../manuscripts/appendices/compact_arithmetic_k7_field19.tex).
-The K7 appendix reviewed here has SHA256
-`364c39129ba3af198c513ad1e3d0958149b37f3894ef15ad0b056f477c631475`.
-It adds the complete K7 composition and identifies all imported local
-proofs. The PDF is **not self-contained at the local geometric level**:
-the local Schur, cyclic-integrality, conjugate and finite-contact
-derivations remain the explicitly named reproducibility supplement.
-Those derivations are written proofs, not missing conclusions to be
-replaced by a numerical certificate.
+The [recorded eleven-job execution](../results/compact20_nine_field_core_verification_final_20261020.json)
+retains its original exact checks, conditional Lean roots, source-bound
+build and explicit input boundaries. Its
+[earlier resource-deferred attempt](../results/compact20_nine_field_core_verification_20261020.json)
+remains separate; a stopped attempt earns no successful execution credit.
+These are historical executions, rather than verification of the current
+submission or instructions to rebuild retired appendices.
 
-The parent introduction and both include commands are integrated and
-source-reviewed. The new source-bound build has actually passed:
-the [current PDF](../manuscripts/build/compact_arithmetic20.pdf) is20pages
-with zero warnings, SHA256
-`aeb248f077bd49860705838cb8d74a6a1077c9d33380171ad52932fb32f2698b`.
-The [execution record](../results/compact_arithmetic_nine_field19_included_build_20261020.json)
-binds all76 declared sources before and after the2.281-second build,
-records83,230,720-byte peak RSS, and confirms temporary build files
-were removed. This is an actual typesetting/source-binding result,
-not a proof or a claim of visual review. The completed combined core is
-recorded separately below. It uses the new K7 kernel, which imports the
-previously checked eight-field kernel; the separate historical eight-field
-axiom audit remains pinned and is not overwritten by a redundant new audit.
-Old compiled/frozen evidence,
-the eighteen-page predecessor and the48-file eight-field manifest
-remain preserved.
-
-The new wrapper is
-[build_compact_arithmetic_nine_field19_20261020.py](../scripts/build_compact_arithmetic_nine_field19_20261020.py).
-Its sealed input is
-[the nine-field source ledger](../manuscripts/supplements/compact_arithmetic_nine_field19_sources_20261020.json),
-SHA256 `5cf6afc51440ae1510e6b6e54ec96308749dd11713b29a866c5d9edb96065dae`.
-The wrapper SHA256 is
-`857796b333f613ad0affea7f09504a11c5f52961a91e79ef5bf19f0ca742608b`.
-It binds
-the parent, both included appendices and the full retained/new proof
-supplement before and after the bounded build, rather than hashing
-only the parent TeX. A check-only reproduction command is:
-
-```sh
-python3 -B scripts/build_compact_arithmetic_nine_field19_20261020.py --check-only
-```
-
-This command is documented, not executed by this map's author. A build
-checks source binding and typesetting; it does not verify mathematical
-geometry. The actual execution ledger supplies the page count and PDF
-hash above; visual review remains separate. Historical no-K7 statements in earlier
-pinned handoffs describe their old scope and are superseded by the new
-scoped theorem, not silently rewritten in frozen evidence.
-
-## Actual combined core: all eleven jobs passed
-
-The [final common-driver execution record](../results/compact20_nine_field_core_verification_final_20261020.json)
-reports `PASS_DECLARED_CHECKS_CONDITIONAL_ON_LISTED_ASSUMPTIONS` for all11
-declared jobs: three exact rational/certificate checks, seven declared
-Lean roots and one source-bound temporary PDF build. All exited0.
-This status retains the listed written geometric premises and legacy
-cache provenance; it does not assert a new end-to-end geometric Lean
-proof. In particular the first three legacy roots are dependency checks,
-not newly capped recompilations, and only the roots declaring printed
-axioms receive a fresh axiom audit.
-
-The exact checks recover the rational rank21 rule, independently check
-all1979 native faces/102917 spectator cases and729 hub tuples, and
-check the universal field/dimension composition. The K7 root's fresh
-six-theorem audit took0.39seconds. The temporary PDF check passed all76
-source pins,20pages and zero warnings, then removed temporary outputs.
-It preserved the published PDFaeb248f0 recorded above; its temporary
-PDF hash differs and is not substituted for the published artifact.
-
-The [earlier resource-deferred attempt](../results/compact20_nine_field_core_verification_20261020.json)
-is preserved separately. Its first three exact jobs passed before a
-later Lean audit stopped at the6GiB RAM gate; that stopped attempt was
-not counted as the final PASS and no gate was bypassed. The final
-record is a separate complete successful run, not an overwritten
-description of the deferral.
-
-The current single-command reproduction entry point is:
-
-```sh
-python3 -B scripts/verify_manuscript.py compact20 --mode core --pdf
-```
-
-The coordinator executed that declared serial core. This map's author
-only read its saved records; no scientific or proof job was run while
-preparing this update. Full local geometric derivations remain the
-named written supplement described above.
+The current all-field arithmetic ceiling is fifteen. Its
+[proof map](compact_arithmetic_consolidation_proof_map_20261025.md) identifies
+the retained source, four computed propositions and literal external lattice
+theorem. Use [the reproduction guide](../repro/README.md) for current selections.
+The old source-ledger/PDF build route has been retired; its builder remains
+only where the batch controller requires its fixed bytes as an input.

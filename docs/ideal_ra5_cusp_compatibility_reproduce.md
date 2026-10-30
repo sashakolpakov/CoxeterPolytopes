@@ -1,15 +1,19 @@
 # Restricted RA5 cusp compatibility: reproduction and lemma map
 
-The [manuscript](../manuscripts/ideal_ra5_cusp_compatibility.tex) and [three-page PDF](../build/ideal_ra5_cusp_compatibility/ideal_ra5_cusp_compatibility.pdf) translate the frozen [coupled cusp proof](../results/ideal_ra5_known_carrier_cusp_compatibility_20261018.md). **Every theorem in that paper assumes the explicit three-type four-facet spectrum**: the regular24-cell, its reflected facet double, and the particular sixteen-cell T from the frozen [positive-kappa construction](../results/ideal_ra4_positive_kappa_doubling_20261018.md). It does not classify all ideal RA4 facets or exclude unrestricted RA5.
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
 
-The distinct [ideal6 paper](../manuscripts/ideal_right_angled_six_face_constraints.tex) contains universal necessary bounds without this three-type restriction. The two scopes must not be conflated.
+The supporting argument and three-page PDF translate the frozen [coupled cusp proof](../results/ideal_ra5_known_carrier_cusp_compatibility_20261018.md). **Every theorem in that paper assumes the explicit three-type four-facet spectrum**: the regular24-cell, its reflected facet double, and the particular sixteen-cell T from the frozen [positive-kappa construction](../results/ideal_ra4_positive_kappa_doubling_20261018.md). It does not classify all ideal RA4 facets or exclude unrestricted RA5.
+
+The distinct ideal6 paper contains universal necessary bounds without this three-type restriction. The two scopes must not be conflated.
 
 ## Commands
 
 ```sh
 python scripts/fresh_ideal_ra5_known_carrier_cusp_compatibility_20261018.py --verify
 python scripts/check_ideal_ra5_carrier_cusps_saved_20261018.py
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build/ideal_ra5_cusp_compatibility manuscripts/ideal_ra5_cusp_compatibility.tex
 ```
 
 Generation and separate-process replay passed in `46215/f8ef0a`. The final standalone checker passed in `5302/ffa62e`. Integrity-only audit `1e815a` verifies four input bindings, three report links and both Python ASTs. The audit JSON retains exact source/data/helper/report hashes. The three-page manuscript built in `82493/f956f5`, with no warnings, overfull boxes or undefined references. Python uses only standard-library exact fractions, and default generation refuses to overwrite data.

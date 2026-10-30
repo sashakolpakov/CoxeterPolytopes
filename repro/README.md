@@ -25,6 +25,14 @@ illustrated revisions have separate source/build records. Finite57's current
 146-job replay or complete transitive regeneration is claimed. Its
 [evidence guide](../docs/finite_volume57_reproduce.md) preserves exact scopes.
 
+The [three current arXiv manuscripts](../arxiv/README.md) have their own
+[source/PDF guide and typesetting commands](../docs/arxiv_submission_editions_20261028.md).
+Their three PDFs are the only files retained in `manuscripts/build/`.
+The catalogue's `--pdf` option checks its historical source edition in a
+temporary directory and discards that PDF; it neither requires the old stored
+PDF nor builds a current submission. Mathematical checks and Lean are
+independent of these typesetting revisions.
+
 Bulk assets (936 files in 33 archives) remain **unuploaded**. See
 [availability](PUBLIC_DATA.md), the [manifest](public-data-manifest.json) and
 [third-party retrieval](EXTERNAL_INPUTS.md). Byte restoration is not mathematical

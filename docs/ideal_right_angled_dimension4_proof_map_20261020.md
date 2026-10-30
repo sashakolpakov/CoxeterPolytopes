@@ -1,5 +1,10 @@
 # Sharp entirely ideal right-angled dimension bound
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 This is the preserved predecessor map. The current primary is the
 [unified sharp8/4 manuscript and reproduction map](right_angled_sharp_dimensions_proof_map_20261020.md),
 which shortens the ideal proof using one finite-point projection.
@@ -19,7 +24,7 @@ assumption. The new argument excludes dimension five directly. Every
 higher-dimensional example would have an entirely ideal right-angled
 five-face, giving the same contradiction.
 
-The focused [manuscript](../manuscripts/ideal_right_angled_dimension4.tex)
+The focused supporting argument
 has a complete [authoritative proof note](../results/ideal_right_angled_dimension4_proof_20261020.md).
 The previous ideal5/6 size and cusp-compatibility papers remain preserved
 supporting history. None is needed for this proof. The separate ideal4

@@ -1,5 +1,10 @@
 # Compact arithmetic dimension20: proof and reproduction
 
+For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 The current [manuscript](../manuscripts/compact_arithmetic_dimension_bound.tex)
 states the compact arithmetic ceiling20. This map concerns that printed
 scope; the later reviewed written arithmetic Coxeter bound15 is not silently
@@ -41,16 +46,9 @@ predecessors are byte-preserved with verified gzip round trips in the
 The six universal conditional Lean roots retain their existing compilation
 records; no mathematical checker or Lean job accompanied the translation.
 
-The original combined
-[20-page source](../manuscripts/compact_arithmetic20.tex) and
-[PDF](../manuscripts/build/compact_arithmetic20.pdf), both parked appendices,
-the76-input manifest and all previous execution records remain unchanged
-at their original paths. The catalogue id for that preserved version is
-`compact20_with_parked_refinements`; it is not an additional current paper.
-The [ten-job universal core](../results/compact20_core_verification_20261019.json)
-and [eleven-job combined predecessor core](../results/compact20_nine_field_core_verification_final_20261020.json)
-retain their original source/assumption scopes. They are not presented as
-fresh verification of the publication successor.
+The earlier universal and parked-refinement execution records retain their
+original source and assumption scopes. The parked source/PDF route is retired;
+it is not another current paper or a current catalogue selection.
 
 The new theorem has a written universal-composition proof and independent
 exact checks. It has not been externally refereed or formalized end to end

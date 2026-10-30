@@ -17,26 +17,23 @@ classification.
      - Pages
      - Established statement
      - Excluded interpretation
-   * - :download:`Ideal volume and structure <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_historical_context.pdf>`
-     - 19
+   * - :download:`Ideal volume and structure <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf>`
+     - 18
      - Published 24-cell minimum; internally reviewed next volume and unique reflected double; Oct/D chains.
      - A classification of all ideal four-polytopes as 24-cell chains.
-   * - :download:`Compact volume constraints <../../manuscripts/build/compact_ra4_volume_constraints.pdf>`
-     - 14
+   * - :download:`Compact volume constraints, source <../../manuscripts/compact_ra4_volume_constraints.tex>`
+     - Supporting source
      - Facet capacity, neighboring excess, :math:`W=0` recognition and :math:`W\geq17` otherwise.
      - Universal 120-cell minimality, a unique second-volume double or a general decomposition.
 
 These are full article lengths, not proved minimum essential-page counts.
 Both use explicitly identified published foundations. Their complete sources
-are the :download:`ideal submission TeX <../../manuscripts/revisions/ideal_ra4_volume_and_structure_arxiv_20261028.tex>`
+are the :download:`ideal submission TeX <../../arxiv/ideal_four_dimensional_volume_and_structure/main.tex>`
 and :download:`compact TeX <../../manuscripts/compact_ra4_volume_constraints.tex>`.
 The ideal submission has five inline figures, full historical context and
-precise reproduction instructions. Its
-:download:`source/PDF manifest <../../results/arxiv_publication_release_manifest_20261028.json>`
-binds the isolated zero-warning build. The earlier
-:download:`seventeen-page ideal PDF <../../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf>`
-and :download:`source <../../manuscripts/ideal_ra4_volume_and_structure_publication.tex>`
-remain preserved.
+an outline of the proof. Its
+:download:`current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
+binds the isolated zero-warning build.
 
 The compact and ideal extremal questions
 ----------------------------------------
@@ -331,13 +328,13 @@ The core's predecessor-TeX binding stays historical. The
 :download:`assumption register <../manuscript_assumptions.md>` expose the
 remaining inputs; a complete clean-checkout replay is not claimed.
 
-The nineteen-page submission adds exposition, citations and a reproduction
+The eighteen-page submission adds exposition, citations and a reproduction
 section while retaining all five figures and the same theorem scopes. Its
 companion suite remains ``ideal_ra4_volume_and_structure``. The script-only
 selection has four exact checks on small tracked inputs: saved double faces,
 equality-model replay, an independent saved-data check, and the :math:`D_4`
 root check. None needs the unuploaded bulk collection. For the exact commands,
-fixed public snapshot, macOS launcher requirement and the distinction between
+companion selections, macOS launcher requirement and the distinction between
 catalogue and submission PDF builds, see :ref:`repro-arxiv-editions`.
 
 Compact polytopes: capacity and pentagon excess

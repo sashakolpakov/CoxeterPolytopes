@@ -2,7 +2,7 @@
 
 21 October 2026. This map describes the completed dimension-23 TeX
 edition, [source](../manuscripts/compact_farthest_vertex_bounds.tex) and
-[36-page PDF](../manuscripts/build/compact_farthest_vertex_bounds.pdf).
+36-page PDF.
 The printed theorem, supporting accounting kernel and final forest
 composition all have the same scope: dimension at most 23, with no
 arithmetic hypothesis. Published compact examples reach dimension 8.

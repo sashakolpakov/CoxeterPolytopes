@@ -1,7 +1,12 @@
 # Ideal5/6 primary-manuscript integration, source-only
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 19 October 2026. The SAME primary source,
-[ideal_right_angled_six_face_constraints.tex](../manuscripts/ideal_right_angled_six_face_constraints.tex),
+ideal_right_angled_six_face_constraints.tex,
 now presents the current independently reviewed necessary bounds:
 
 | Class | Facets | Vertices |
@@ -33,7 +38,7 @@ edited. The central bounds and result-correspondence documents were not
 edited by this integration agent.
 
 Before replacing the primary source, its old bytes were archived at
-[the source archive](../manuscripts/source_archives/ideal_right_angled_six_face_constraints_preintegration_20261019.tex.gz).
+the source archive.
 The old source was12,795 bytes, SHA256
 `26744b042f8919e0687f5070e2cd0ca341f8c87f54c8755be940ffc5b714563d`.
 The gzip is5,576 bytes; streaming decompression and SHA256 comparison
@@ -41,7 +46,7 @@ proved it byte-identical to the original, whose hash was checked again
 immediately before atomic replacement. The temporary replacement path
 was consumed; it was not retained as clutter.
 
-The existing [PDF](../manuscripts/build/ideal_right_angled_six_face_constraints.pdf)
+The existing PDF
 was preserved. It is298,518 bytes, SHA256
 `efbd6e1fb230aec6e1a0c65b515f4d594569fcdec5c4af62f966abc1c8ae56e1`,
 and is **stale**: it records the older five-page bounds. The archived

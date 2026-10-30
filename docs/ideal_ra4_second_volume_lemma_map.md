@@ -1,6 +1,11 @@
 # Ideal RA4 second value: precise lemma and assumption map
 
-The [manuscript](../manuscripts/ideal_ra4_second_volume.tex) proves the second **distinct value** $8\pi^2/3$. The [frozen proof](../results/ideal_ra4_second_volume_20261018.md) is authoritative. Equality uniqueness is not part of this packet. All polytopes are finite-sided, finite-volume, entirely ideal and right-angled in dimension4.
+For current reading, see the [current second-volume manuscript](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The supporting argument proves the second **distinct value** $8\pi^2/3$. The [frozen proof](../results/ideal_ra4_second_volume_20261018.md) is authoritative. Equality uniqueness is not part of this packet. All polytopes are finite-sided, finite-volume, entirely ideal and right-angled in dimension4.
 
 ## Published inputs
 

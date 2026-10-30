@@ -14,8 +14,8 @@ source-to-object verification credit.
 
 | Paper | Current edition | Written result |
 |---|---|---|
-| [Sharp right-angled dimensions](../manuscripts/right_angled_sharp_dimension_bounds_publication.tex) | [5-page PDF](../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf) | Finite-volume dimension at most8, entirely ideal dimension at most4; both internally sharp. |
-| [Ideal RA4 volume and structure](../manuscripts/ideal_ra4_volume_and_structure_publication.tex) | [17-page PDF](../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf) | Published24-cell minimum; internal next-volume and unique-double theorem; restricted octahedral-chain decomposition. |
+| [Sharp right-angled dimensions](../manuscripts/right_angled_sharp_dimension_bounds_publication.tex) | 5-page PDF | Finite-volume dimension at most8, entirely ideal dimension at most4; both internally sharp. |
+| [Ideal RA4 volume and structure](../manuscripts/ideal_ra4_volume_and_structure_publication.tex) | 17-page PDF | Published24-cell minimum; internal next-volume and unique-double theorem; restricted octahedral-chain decomposition. |
 
 The current source/PDF hashes match their separate successful zero-warning
 build records. Neither historical combined core ledger has the current

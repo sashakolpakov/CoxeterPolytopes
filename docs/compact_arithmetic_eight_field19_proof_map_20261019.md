@@ -1,5 +1,10 @@
 # Eight-field compact arithmetic ceiling19: proof and reproduction
 
+For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 19 October2026. Current [theorem and full dependency account](../results/compact_arithmetic_eight_field19_20261019.md).
 The actual ground field is one of Q(sqrt3),Q(sqrt6),K9,K11,K15,K16,K20,K24.
 This is a new scoped ceiling19; the all-field ceiling remains20.
@@ -43,8 +48,8 @@ The actual geometry and classifications are explicit interfaces:
   construction of their algebraic number fields is claimed.
 
 The compact source-bound records are
-[compilation](../formal/.proof-batches/CoxeterProofs_ArithmeticEightField19.json)
-and [axiom audit](../formal/.proof-batches/CoxeterProofs_ArithmeticEightField19_axiom_audit.json).
+[compilation](../results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ArithmeticEightField19.json)
+and [axiom audit](../results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ArithmeticEightField19_axiom_audit.json).
 The runner reused cached dependency kernels; its summary explicitly
 records that an older CompactHVector cache lacks a capped-batch ledger.
 No new unrestricted dependency build was run.
@@ -55,47 +60,20 @@ To reproduce only this final layer,run one serial batch:
 python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.ArithmeticEightField19 --audit-axioms
 ```
 
-The wrapper applies the shared lock,40GiB disk/6GiB RAM launch gate,
-8/3GiB abort gate,one thread and2048MiB Lean memory cap. Mathematical
+The wrapper applies the shared lock, the current percentage resource gates,
+one thread and a2048MiB Lean memory cap. Mathematical
 research came first; this check was scheduled after the full third-agent
 review. Sources and compact kernel records remain; temporary outputs
 are removed by the runner.
 
-The same `compact_arithmetic20.tex` is now the primary18-page paper
-for universal20 and this scoped19 composition. Its
-[current PDF](../manuscripts/build/compact_arithmetic20.pdf) has zero
-warnings. The [included-source build record](../results/compact_arithmetic_eight_field19_included_final_build_20261019.json)
-binds the primary, included appendix and every declared source in the
-[48-file final supplement ledger](../manuscripts/supplements/compact_arithmetic_eight_field19_sources_final_20261019.json)
-before and after the build. Old eight-page source/PDF evidence and the
-earlier prepared source ledger remain preserved. Pending/pre-build
-wording in those pinned earlier notes records their historical handoff,
-superseded by this current manuscript status.
+## Current verification entry
 
-The PDF includes the complete final consumer/triangle/forest/count
-composition, with detailed local interfaces. The full no-long,
-finite-long,dotted-long and earlier A/B/D derivations are explicitly
-imported INTERNAL proof sources. Thus the PDF is not yet self-contained
-at that local geometric level; accepting those lemmas is different
-from treating them as published external facts or script outputs.
-Further integration of those derivations remains an editorial/proof
-presentation task, not an unproved theorem step in the full supplement.
+The scoped nineteen-dimensional argument remains in its cited mathematical
+sources and conditional kernel. It is not a separate submission. The current
+all-field theorem is arithmetic dimension at most fifteen; its
+[proof map](compact_arithmetic_consolidation_proof_map_20261025.md) identifies
+the retained source and exact finite-output premises.
 
-Reproduce the bound-input build alone:
-
-```sh
-python3 -B scripts/build_compact_arithmetic_eight_field19_20261019.py --check-only
-```
-
-Or replay the declared arithmetic/conditional-logic checks and temporary
-PDF through the common serial driver:
-
-```sh
-python3 -B scripts/verify_manuscript.py compact20 --mode core --pdf
-```
-
-The custom PDF job uses the included-source wrapper, rather than hashing
-only the parent TeX. Both driver plans have been inspected without
-relabelling that plan inspection as a fresh proof run. The other four
-fields and all-field ceiling20 are unchanged. No new polytope or
-sharpness result is claimed.
+The old appendix-build route and the older combined catalogue selection are
+retired. The six current catalogue selections and the percentage resource
+policy are documented in [the reproduction guide](../repro/README.md).

@@ -1,8 +1,13 @@
 # Reproducing the ideal right-angled four-dimensional second volume
 
+For current reading, see the [current second-volume manuscript](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 The theorem is about the **second distinct volume value**, $8\pi^2/3$, in the class of finite-volume entirely ideal right-angled hyperbolic four-polytopes. The unique first minimizer is the ideal24-cell, by Kolpakov. The frozen proof does not classify all equality cases at the second value.
 
-The [manuscript](../manuscripts/ideal_ra4_second_volume.tex) translates the [frozen universal proof](../results/ideal_ra4_second_volume_20261018.md). The [lemma map](ideal_ra4_second_volume_lemma_map.md) separates published inputs, new geometric arguments, exact arithmetic and the partial Lean development. No optimization, large four-polytope census or numerical tolerance enters this proof.
+The supporting argument translates the [frozen universal proof](../results/ideal_ra4_second_volume_20261018.md). The [lemma map](ideal_ra4_second_volume_lemma_map.md) separates published inputs, new geometric arguments, exact arithmetic and the partial Lean development. No optimization, large four-polytope census or numerical tolerance enters this proof.
 
 ## Exact construction replay
 
@@ -34,9 +39,6 @@ These files are immutable. A later equality argument or stronger theorem belongs
 
 With a TeX installation containing `latexmk`, `pdflatex`, the AMS packages, `booktabs`, `geometry`, `hyperref` and `xurl`:
 
-```sh
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build/ideal_ra4_second_volume manuscripts/ideal_ra4_second_volume.tex
-```
 
 This produces `build/ideal_ra4_second_volume/ideal_ra4_second_volume.pdf`. A successful typesetting run is not a mathematical verification.
 

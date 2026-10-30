@@ -194,9 +194,15 @@ Receipts retain exact byte ratios, totals and the policy identity.
 
 ## Working article and preserved history
 
+The current submission collects this article in Parts I and IV of
+[Dimension bounds for hyperbolic Coxeter polytopes](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex).
+Its current PDF and separate typesetting instructions are in the
+[submission guide](arxiv_submission_editions_20261028.md). The earlier
+source receipts and replay scopes below remain unchanged.
+
 The [current working TeX](../manuscripts/finite_volume57_consolidated.tex),
 SHA256 `38186aa7…`, includes the independently reviewed terminal-tail lemma.
-Its [matching 50-page PDF](../manuscripts/build/finite_volume57_consolidated.pdf)
+Its matching 50-page PDF
 has SHA256 `a95b3a90…`. The
 [pinned replay revision](../results/finite57_terminal_tail_working_source_replay_separation_20261025.json)
 at `manuscripts/revisions/finite_volume57_consolidated.tex`, SHA256 `0a01a796…`,
@@ -232,7 +238,7 @@ or pending statements are historical.
 
 The current [manuscript](../manuscripts/finite_volume57.tex) proves dimension
 at most57 for every finite-sided, finite-volume real hyperbolic Coxeter
-polytope. Its current [48-page PDF](../manuscripts/build/finite_volume57.pdf)
+polytope. Its current 48-page PDF
 matches source `c300db69…ca82a0` and PDF `1f3c020c…` in the
 [build receipt](../results/six_paper_pdf_completion_20261020.json).
 The [lemma map](finite_volume57_lemma_map.md) separates the written

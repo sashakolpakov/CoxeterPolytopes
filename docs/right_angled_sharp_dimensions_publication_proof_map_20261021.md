@@ -16,7 +16,7 @@ from a full formalization of hyperbolic geometry.
 ## One primary paper
 
 The [unified manuscript](../manuscripts/right_angled_sharp_dimension_bounds_publication.tex)
-and [PDF](../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf)
+and PDF
 share the finite-point projection lemma. Its complete root and two
 independent manuscript reviews are recorded separately. The general
 proof has a complete [authoritative note](../results/right_angled_dimension8_descending_height_proof_20261020.md)

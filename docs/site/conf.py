@@ -25,7 +25,7 @@ html_sidebars = {
     ],
 }
 html_theme_options = {
-    "description": "Six paper families: arguments, diagrams, algorithms and verification",
+    "description": "Three manuscripts: arguments, diagrams, algorithms and verification",
     "github_user": "sashakolpakov",
     "github_repo": "CoxeterPolytopes",
     "github_banner": True,

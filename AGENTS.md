@@ -1,10 +1,14 @@
 # Working in CoxeterPolytopes
 
 Start with `README.md`, `manuscripts/README.md`, and
-`docs/current_bounds_and_verification.md`. They distinguish the six finished
-paper editions from later supporting research and identify the proof maps.
-Keep the six accepted TeX/PDF editions unchanged unless the current task
-explicitly calls for a revision. Consolidate improvements within those paper
+`docs/current_bounds_and_verification.md`. They identify the three current
+arXiv submissions, their proof maps and the retained verification inputs.
+Keep the six accepted TeX editions and their historical verification records
+unchanged unless the current task explicitly calls for a revision. The user
+requested on 30 October that `manuscripts/build/` contain only the three
+current arXiv PDFs. Remove obsolete presentation copies and assembly
+bookkeeping; retain the exact source inputs needed by current checkers.
+Consolidate improvements within those paper
 families; do not create a paper for each numerical increment.
 
 ## Evidence and claims
@@ -33,7 +37,8 @@ This is conditional on its explicit inherited geometric and finite-data inputs;
 it is not the combined 146-job replay or a geometric formalization. Preserve
 the pinned `manuscripts/revisions/finite_volume57_consolidated.tex` input.
 The current human working article is `manuscripts/finite_volume57_consolidated.tex`,
-with a matching 50-page PDF and the reviewed terminal-tail lemma. Do not rerun
+with the reviewed terminal-tail lemma. Its argument is included in
+the combined dimension-bound arXiv article. Do not rerun
 successful unchanged jobs merely to update status documentation.
 
 New mathematical claims require a complete argument, a source-bound review

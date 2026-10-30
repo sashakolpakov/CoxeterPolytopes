@@ -1,5 +1,10 @@
 # Reproducing the completed general finite-volume bound58
 
+For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 Run commands from the repository root with Python3. The completed endpoint
 is [fresh_a15_d15_dimension58_20261018](../results/fresh_a15_d15_dimension58_20261018.md).
 It proves n≤58 for finite-sided, finite-volume real hyperbolic Coxeter
@@ -34,8 +39,8 @@ not substitutes for this frozen certificate.
 |Artifact|JSON SHA256|
 |---|---|
 |[dimension58 endpoint](../results/fresh_a15_d15_dimension58_20261018.json)|`60a6dbedc03b3c0690c80ab86f276e5767de786469b46468d0990e4a75d25985`|
-|[finite closure](../results/fresh_a15_d15_ambient59_forest_closure_20261018.json)|`692e782f03d3dbc7ad230545819ccf37f6d9c69a8ed002bdeadbe8703c96c81e`|
-|[simultaneous baseline](../results/fresh_a14_cd16_ambient59_frontier_20261018.json)|`b192b2c6b9c27fa07a14d7cbf731a62c71c99da2de2460ea589e5d4a6d87a97d`|
+|finite closure|`692e782f03d3dbc7ad230545819ccf37f6d9c69a8ed002bdeadbe8703c96c81e`|
+|simultaneous baseline|`b192b2c6b9c27fa07a14d7cbf731a62c71c99da2de2460ea589e5d4a6d87a97d`|
 |[completed59 higher tail](../results/fresh_depth6_dimension59_20261018.json)|`2b09dac21f742a216bd10229fe25fba3f1e4114b8f43fae1206dcb1840169bab`|
 
 Each JSON's `sources` dictionary pins the source/data/report dependencies
@@ -76,7 +81,7 @@ to have repeated all these historical computations.
 ## Plain data for an independent arithmetic checker
 
 The [exporter](../scripts/export_finite_volume58_arithmetic_20261018.py)
-produces [finite_volume58_arithmetic_20261018.json](../data/certificates/finite_volume58_arithmetic_20261018.json).
+produces finite_volume58_arithmetic_20261018.json.
 It reads the frozen count, computes only the exposed item/base/cross formulas,
 and copies the saved certificates. It does not optimize, reconvolve or prove
 the geometric interpretation. Its schema label is
@@ -134,23 +139,13 @@ The export includes an `exclusions` list naming the geometric and all-rank
 statements not justified by the exported arithmetic. They are internal
 proof obligations, not permissions to add axioms for the final theorem.
 
-## Manuscript build
+## Current manuscript
 
-The standalone document is [finite_volume58.tex](../manuscripts/finite_volume58.tex).
-Its mathematical proof-atlas index links the internal local theorems and
-published inputs; the [lemma map](finite_volume58_lemma_map.md) separates
-those categories in more detail.
-
-```sh
-pdflatex -interaction=nonstopmode -halt-on-error manuscripts/finite_volume58.tex
-```
-
-To keep build products out of the source tree, pass an existing directory
-with `-output-directory=/path/to/build`. Run a second pass to resolve
-cross-references. A successful TeX build is a formatting check, not a
-mathematical proof check. The translation is a manuscript draft backed by
-the frozen proof atlas; external refereeing and end-to-end formalization
-are not claimed.
+The current dimension-bounds submission replaces the standalone bound58 draft.
+Its [submission guide](arxiv_submission_editions_20261028.md) supplies the
+source and typesetting command. The mathematical interfaces above retain
+their original scope; the current ceiling57 has its own
+[proof and reproduction map](finite_volume57_reproduce.md).
 
 ## Final arithmetic to keep visible
 

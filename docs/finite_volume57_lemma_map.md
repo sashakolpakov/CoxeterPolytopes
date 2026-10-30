@@ -1,5 +1,11 @@
 # General finite-volume bound57: internal proof and formalization map
 
+The current submission presents this proof in Parts I and IV of
+[Dimension bounds for hyperbolic Coxeter polytopes](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex).
+See the [submission guide](arxiv_submission_editions_20261028.md) for its
+current PDF. Earlier source editions and their verification scopes are
+distinguished below; the current submission is linked in the guide.
+
 Current-rule verification,25 October 2026: [all 64 actual selected applications](../results/finite57_longer_tail_all64_actual_application_completion_20261025.json)
 and the [final 259-unit reader](../results/finite57_final_current_rule_conjunction_execution_20261025.json)
 passed under one accepted source/input/helper/premise snapshot. The
@@ -38,7 +44,7 @@ tables, core and extension algorithms, distributed routing argument,
 finite/cusp certificate proofs and an analytic concentration lemma.
 The full higher-tail exposition is now integrated, including exact
 dimension-specific rules for 59--163 and the unbounded two-budget proof.
-The current [48-page PDF](../manuscripts/build/finite_volume57.pdf) matches
+The current 48-page PDF matches
 source `c300db69…ca82a0` (PDF `1f3c020c…`) in the
 [six-paper build receipt](../results/six_paper_pdf_completion_20261020.json).
 Its main exposition occupies pp.1–12 and essential appendices/table
@@ -135,7 +141,7 @@ and local-census computations remain inherited finite-data inputs.
 ## Memory-bounded D13 replay contract
 
 The frozen [D13 source](../scripts/fresh_d13_three_rank15_context_transfer_20261018.py)
-and [saved certificate](../results/fresh_d13_three_rank15_context_transfer_20261018.json)
+and saved certificate
 remain unchanged. The original `run()` decodes all 161 JSON inputs together
 (about 388 MB serialized). The replacement
 [batched checker](../scripts/check_d13_transfer_batches_20261020.py)

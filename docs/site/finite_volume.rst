@@ -8,13 +8,12 @@ The general finite-volume argument proves the repository ceiling
 polytopes. It assumes neither arithmeticity nor compactness. Ideal vertices
 may be nonsimple, and no bound on the number of facets is imposed.
 
-The :download:`current working article <../../manuscripts/finite_volume57_consolidated.tex>`
-and its :download:`matching PDF <../../manuscripts/build/finite_volume57_consolidated.pdf>`
-contain the geometric argument, the finite algorithm contracts and the
-reviewed terminal-tail lemma. The
+Parts I and IV of the :download:`combined dimension article <../../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf>`
+contain the geometric argument, finite algorithm contracts and reviewed
+terminal-tail lemma. Its :download:`self-contained TeX <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`
+includes the compact and arithmetic proofs as well. The
 :download:`proof map <../finite_volume57_lemma_map.md>` identifies each
-interface. The frozen publication edition and its later working revision
-belong to this same paper family.
+interface and its original source binding.
 
 .. figure:: _static/finite-payment-flow.svg
    :alt: One simultaneous corner rule branches into spherical finite-vertex bounds and affine cusp bounds, then rejoins at a global incidence comparison; a bottom note distinguishes the separate higher-dimensional tail.

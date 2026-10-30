@@ -7,19 +7,17 @@ ideal. Both bounds are attained by the published examples identified below.
 No arithmetic assumption is used. The two proofs share an actual geometric
 projection; their spherical-code and literature inputs then differ.
 
-* :download:`Current seven-page submission PDF <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_layout_final.pdf>`
-  and :download:`self-contained submission TeX <../../manuscripts/revisions/right_angled_sharp_dimension_bounds_arxiv_20261028.tex>`.
+* :download:`Current six-page submission PDF <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf>`
+  and :download:`self-contained submission TeX <../../arxiv/sharp_dimension_bounds_8_and_4/main.tex>`.
 * :download:`Proof and reproduction map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
-* :download:`Submission source/PDF manifest <../../results/arxiv_publication_release_manifest_20261028.json>`.
+* :download:`Current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`.
 * :download:`25 October mathematical-evidence assembly <../../results/right_angled_release_packages_current_20261025.json>`
   and :download:`root acceptance <../../results/right_angled_current_release_root_acceptance_20261025.json>`.
 
 The 28 October reading edition adds an introduction, proof roadmap, a second
-inline diagram for the ideal branch, and precise reproduction references.
-The :download:`earlier five-page PDF <../../manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf>`
-and its :download:`source <../../manuscripts/right_angled_sharp_dimension_bounds_publication.tex>`
-remain unchanged. Both contain the complete argument at its stated external
-inputs; no minimum essential-page count is asserted. The nineteen-page
+inline diagram for the ideal case, and a proof outline.
+The source contains the complete argument at its stated external inputs.
+The eighteen-page
 ideal-volume paper has a different purpose; see :doc:`volume_problems`.
 
 Projecting to an actual facet
@@ -284,13 +282,11 @@ The two exact workers have narrower scopes than the universal theorem:
 
 Their actual outputs are preserved in the
 :download:`six-job historical core ledger <../../results/right_angled_sharp_projection_height_core_verification_20261020.json>`.
-The preserved five-page source/PDF has its own
-:download:`matching zero-warning build receipt <../../results/sharp_ra_audit_edition_readability_build_20261021.json>`.
 The core binds a predecessor TeX source. Reusing its unchanged components
-does not turn it into a combined run of a later source edition. The seven-page
+does not turn it into a combined run of a later source edition. The six-page
 submission source was compiled separately in an isolated directory containing
 only its TeX bytes, with zero warnings and no repository files read by TeX.
-The :download:`current source/PDF manifest <../../results/arxiv_publication_release_manifest_20261028.json>`
+The :download:`current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
 identifies that build without attributing a new script or Lean run to it.
 
 .. list-table:: Separately compiled and actually axiom-audited Lean kernels
@@ -331,11 +327,11 @@ formalization of actual hyperbolic geometry or the cited theorems.
 Reproduce the supporting checks
 -------------------------------
 
-The submission points to companion suite ``right_angled_sharp`` at public
-repository snapshot ``04c9bab7``. Its two exact workers use Python 3.11 or later
-and only the standard library; their small certificate and proof-note inputs
-are tracked in that snapshot. The separate bulk archives are not needed by
-this selection. From the repository root, inspect the two jobs with:
+The manuscript cites the repository's main URL. This guide identifies its
+companion suite, ``right_angled_sharp``. The two exact workers use Python 3.11
+or later and only the standard library; their small certificate and proof-note
+inputs are tracked in the repository. The separate bulk archives are not needed
+by this selection. From the repository root, inspect the two jobs with:
 
 .. code-block:: sh
 
@@ -344,12 +340,12 @@ this selection. From the repository root, inspect the two jobs with:
 
 For a necessary new replay, replace ``--plan`` by
 ``--ledger results/sharp_replay_new.json`` and use a filename that does not
-already exist. The guarded launcher at this snapshot uses macOS resource
+already exist. The guarded launcher uses macOS resource
 probes. ``--mode core`` additionally selects its conditional Lean stages,
 with compilation and actual axiom audits kept separate. The regular-cell
 supplement above remains separately recorded.
 
 The catalogue's optional ``--pdf`` job typesets the preserved reference
-edition. It does not build the seven-page submission source. The
+edition. It does not build the six-page submission source. The
 :ref:`submission reproduction guide <repro-arxiv-editions>` identifies
 the source/PDF correspondence and the limits of each verification route.

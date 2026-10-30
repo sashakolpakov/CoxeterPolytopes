@@ -1,6 +1,11 @@
 # Compact21 triangle constraints: proof map and reproduction
 
-The new [manuscript](../manuscripts/compact21_supported_triangle_constraints.tex)
+For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The new supporting argument
 proves local triangle restrictions at the two recurring supported compact
 arithmetic rank21 forests. It supplies no new dimension ceiling or charge
 allowance. The compact arithmetic ceiling remains21.
@@ -42,7 +47,7 @@ initial D5+2E8 review and independent small checker passed a root mathematical
 read. The [D5+A1 review](../results/review_compact21_d5_a1_triangle_coupling_20261018.md)
 and [full supported-forest and TeX review](../results/review_compact21_supported_triangle_coupling_20261018.md)
 also pass. These mathematical/source reads are distinct from generation
-and exact replays. The [PDF](../manuscripts/build/compact21_supported_triangle_constraints.pdf)
+and exact replays. The PDF
 compiled in b818c0 with no final-pass warnings; unused TeX files were removed
 after the batch. The first draft's long-path overfull box was fixed before
 that final build. No Lean compilation was used for these new lemmas.

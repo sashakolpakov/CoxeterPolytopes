@@ -1,6 +1,11 @@
 # Second-volume equality: reproduction and lemma map
 
-The [equality manuscript](../manuscripts/ideal_ra4_second_volume_structure.tex) translates the frozen [universal equality proof](../results/ideal_ra4_second_volume_equality_20261018.md): every entirely ideal right-angled hyperbolic4-polytope of volume $8\pi^2/3$ is the reflected double of the ideal24-cell. This strengthens the earlier second-distinct-value theorem. It is internally checked; external refereeing and end-to-end Lean formalization are not claimed.
+For current reading, see the [current second-volume manuscript](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The supporting argument translates the frozen [universal equality proof](../results/ideal_ra4_second_volume_equality_20261018.md): every entirely ideal right-angled hyperbolic4-polytope of volume $8\pi^2/3$ is the reflected double of the ideal24-cell. This strengthens the earlier second-distinct-value theorem. It is internally checked; external refereeing and end-to-end Lean formalization are not claimed.
 
 ## Reproduction
 
@@ -9,7 +14,6 @@ From the repository root:
 ```sh
 python scripts/fresh_ideal_ra4_equality_structure_20261018.py --verify
 python scripts/check_ideal_ra4_equality_structure_saved_20261018.py
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build/ideal_ra4_second_volume_structure manuscripts/ideal_ra4_second_volume_structure.tex
 ```
 
 Python uses only its standard library. Default generation refuses to overwrite an existing certificate; replay uses `--verify`. The helper imports no producer and uses separate reverse-column elimination. Final generation, separate-process replay and helper passed in terminal run `bb139d`. The manuscript compiled to seven pages, session16424, final chunk `34a1f3`. Typesetting is not mathematical verification.

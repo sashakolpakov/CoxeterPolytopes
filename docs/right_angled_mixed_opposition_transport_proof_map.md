@@ -1,7 +1,12 @@
 # Opposition transport manuscript: proof and reproduction map
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 18 October 2026. New, unfrozen manuscript source:
-[right_angled_mixed_opposition_transport.tex](../manuscripts/right_angled_mixed_opposition_transport.tex).
+right_angled_mixed_opposition_transport.tex.
 This map records a translation of the reviewed packets below. Writing the
 translation did not run a checker, optimizer, Lean process or TeX build.
 The coordinating agent owns the subsequent review and build queue.

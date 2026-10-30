@@ -32,7 +32,7 @@ The third-party PDF is retained privately and is not included in Git or Pages.
 
 ## What the arithmetic-15 proof needs
 
-The [consolidated arithmetic source](../manuscripts/compact_arithmetic_dimension_bound_consolidated.tex),
+The [consolidated arithmetic source](../manuscripts/revisions/compact_arithmetic_dimension_bound_consolidated.tex),
 Appendix I.1 (`app:arithgoldenlongstar`), states the external theorem in the full
 range n >= 8. Its current applications are narrower: the isolated long-head
 label-five cases for whole B17 and whole D17, both in **ambient dimension 17**.

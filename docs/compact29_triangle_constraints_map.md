@@ -1,6 +1,11 @@
 # Compact29 triangle constraint: proof and reproduction map
 
-The [standalone manuscript](../manuscripts/compact29_triangle_constraints.tex)
+For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The supporting argument
 proves a local incidence constraint: at a compact H29 vertex of type
 E7³+E8, at most three of nine specified two-faces are triangles. At least
 six have four or more sides. It does not lower the compact bound29,
@@ -68,9 +73,6 @@ checker24256/ee6bb9. The report records the exact completed review scopes.
 
 Build the manuscript into a separate directory:
 
-```sh
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=manuscripts/build manuscripts/compact29_triangle_constraints.tex
-```
 
 The next unresolved task is a global charge use of the incidence
 restriction. In particular, the six nontriangles may be quadrilaterals;

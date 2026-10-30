@@ -1,7 +1,12 @@
 # Ideal right-angled5/6: proof and reproduction map
 
-The [current12-page manuscript](../manuscripts/build/ideal_right_angled_six_face_constraints.pdf)
-([TeX](../manuscripts/ideal_right_angled_six_face_constraints.tex)) is ONE
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The current12-page manuscript
+(supporting argument) is ONE
 paper with four vector figures and shared geometric arguments. It proves
 necessary conditions, not existence or a dimension exclusion.
 
@@ -66,16 +71,10 @@ it does not relabel a deferred execution as successful.
 
 From the repository root, inspect the exact job list without computation:
 
-```sh
-python3 -B scripts/verify_manuscript.py ideal6 --mode core --pdf --plan
-```
 
 Replay the three declared exact checkers, current conditional Lean logic
 and a fresh PDF compilation serially, preserving the canonical PDF:
 
-```sh
-python3 -B scripts/verify_manuscript.py ideal6 --mode core --pdf --ledger results/ideal56_local_replay.json
-```
 
 Choose a fresh ledger filename for another replay. The command refuses
 to overwrite an existing ledger. Each scientific/TeX job takes the shared
@@ -93,9 +92,6 @@ python3 -B scripts/run_lean_batches_signal_safe_20261018.py CoxeterProofs.RightA
 
 A fresh check-only typesetting command is:
 
-```sh
-python3 -B scripts/build_illustrated_ra_manuscript_with_ledger_20261019.py manuscripts/ideal_right_angled_six_face_constraints.tex --ledger results/ideal56_unused_checkonly.json --check-only
-```
 
 Check-only mode prints the build record and publishes neither a new PDF
 nor the unused ledger path. The old five-page source and PDF are preserved

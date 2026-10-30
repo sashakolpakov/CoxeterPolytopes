@@ -1,11 +1,18 @@
 # Working general compact17 proof map
 
+The current submission includes this argument in Parts II and V of
+[Dimension bounds for hyperbolic Coxeter polytopes](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex).
+The [submission guide](arxiv_submission_editions_20261028.md) lists its current
+PDF. The following map retains the original revision's source labels and
+verification scopes; the submission prefixes these labels with `compact:`.
+The dated source reviews and execution receipts retain their original scopes.
+
 The [working article](../manuscripts/revisions/compact_farthest_vertex_bounds_consolidated.tex)
 contains the complete dimension17 argument and its independent higher-dimensional
 tail. Its current source is936002bytes, SHA256
 `6222f5c6cee8b30b2c1019d648bc31cde8bfcddf08f031a0355a3e7137c107ac`.
 The [editorial completion and root acceptance](../results/compact17_arithmetic15_editorial_completion_20261025.json)
-bind the separate source reviews and [matching285-page PDF](../manuscripts/build/compact_farthest_vertex_bounds_consolidated.pdf).
+bind the separate source reviews and matching285-page PDF.
 The [final monitored build](../results/compact17_editorial_layout_final_build_20261025.json)
 has no overfull boxes, undefined references or package warnings; nine underfull
 spacing warnings remain. Twelve named pages were visually inspected, including

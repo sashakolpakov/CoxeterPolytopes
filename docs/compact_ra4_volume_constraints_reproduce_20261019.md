@@ -1,5 +1,10 @@
 # Compact right-angled four-polytopes: proof and reproduction map
 
+For current reading, see the [complete compact RA4 constraint source](../manuscripts/compact_ra4_volume_constraints_publication.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 19 October 2026. One current paper:
 [compact_ra4_volume_constraints.tex](../manuscripts/compact_ra4_volume_constraints.tex),
 SHA256 `afe807672f3a6bbf4bb2dd95d2861b60391d7c2d7c879c6d6382e749e7ad976f`.
@@ -7,7 +12,7 @@ The consolidated W>=17 source has
 [root](../results/review_compact_ra4_volume_constraints_W17_root_20261019.md)
 and [independent full manuscript reviews](../results/review_compact_ra4_volume_constraints_W17_finite57_20261019.md).
 All four vector figures are source-native. The
-[current14-page PDF](../manuscripts/build/compact_ra4_volume_constraints.pdf)
+current14-page PDF
 has a successful [source-bound build ledger](../results/compact_ra4_volume_constraints_W17_build_20261019.json):
 zero warnings,1.310 seconds,under86MB process-tree RSS,with temporary
 files removed. Its SHA256 is
@@ -16,7 +21,7 @@ All four figures have a [visual-review ledger](../results/compact_ra4_w17_figure
 disposable raster previews were removed after inspection.
 
 The paper supersedes the capacity note in the same manuscript family.
-The [seven-page predecessor](../manuscripts/build/compact_ra4_facet_capacity.pdf)
+The seven-page predecessor
 and its [source/PDF freeze](../results/compact_ra4_facet_capacity_20261018_freeze.json)
 are preserved. That PDF proves the older capacity theorem, not the
 successor results below.
@@ -107,11 +112,7 @@ source identity; the written proof review remains a separate layer.
 * [Primary-source comparison](../results/compact_ra4_primary_literature_comparison_20261019.md):
   the perpendicular-opposite mechanism and excess identity have explicit
   published antecedents; the comparison does not claim worldwide priority.
-* [Archived W>=15 source](../manuscripts/source_archives/compact_ra4_volume_constraints_W15_20261019.tex.gz):
-  byte-verified predecessor of the present source, not another current paper.
-* [Archived W>=16 source](../manuscripts/source_archives/compact_ra4_volume_constraints_W16_20261019.tex.gz)
-  and [13-page PDF](../manuscripts/source_archives/compact_ra4_volume_constraints_W16_20261019.pdf.gz):
-  byte-verified supporting predecessors with unchanged historical build ledgers.
 
-Temporary raster previews, if later used to inspect the PDF's vector
-figures, must be removed after their visual-review hashes are recorded.
+The current supporting source contains the resulting constraint proofs.
+Earlier draft production is recorded only by the dated execution receipts;
+those drafts are not separate reading or reproduction targets.

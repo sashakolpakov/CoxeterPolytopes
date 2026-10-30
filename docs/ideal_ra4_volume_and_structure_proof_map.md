@@ -1,22 +1,27 @@
 # Ideal right-angled four-polytopes: one paper and its proof dependencies
 
-The current publication source is
+The current submission is
+[On the second smallest ideal right-angled hyperbolic four-polytope](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex),
+with its [18-page PDF](../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf).
+The [submission guide](arxiv_submission_editions_20261028.md) records the
+editorial changes and typesetting evidence. The detailed proof and verification
+map below describes the preserved publication edition; its mathematical
+conclusions and stated input boundaries carry over to the submission.
+
+The preserved publication source is
 [Volumes and octahedral chains of ideal right-angled hyperbolic four-polytopes](../manuscripts/ideal_ra4_volume_and_structure_publication.tex).
 It keeps the same theorem scope and five figures, adding the finite-model
 algorithms and their termination/completeness arguments. Its
 [fresh full source audit](../results/review_ideal_ra4_publication_full_finite57_20261020.md)
 passes, with the historical classifications and exact outputs explicit
-as inherited inputs. The current [17-page PDF](../manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf)
+as inherited inputs. Its 17-page PDF
 has a [successful source-bound build](../results/ideal_ra4_volume_and_structure_publication_build_20261018.json)
 with zero warnings. A fresh combined package replay for this publication
 successor remains pending; the predecessor's checks retain their original scope.
 
-The verified [16-page predecessor PDF](../manuscripts/build/ideal_ra4_volume_and_structure.pdf)
-and [source](../manuscripts/ideal_ra4_volume_and_structure.tex) remain
-byte-identical at their original paths. Their existing exact/conditional
-Lean/build records retain that historical scope. The three earlier
-standalone papers are also preserved support. There is still one current
-ideal-volume/structure paper.
+Earlier exact checks, conditional Lean deductions and source reviews retain
+their recorded mathematical scopes. They support the single current
+ideal-volume manuscript; they are not additional submission papers.
 
 |Result in this paper|Status|Role in the argument|
 |---|---|---|
@@ -32,7 +37,7 @@ The shared proof proceeds as follows:
 2. **Equality spectrum** (Sections 6–7): at 8π²/3, the small-facet and
    cusp-shape arguments force precisely eight doubled octahedra. This
    step is independent of the later decomposition theorem.
-3. **General structure** (Sections 8–15): rectangular cusp boxes produce
+3. **General structure** (Sections 8–15): rectangular parallelepiped cusp sections produce
    closed internal surfaces, a six-cusp graph and eight wall normals.
    Lorentz identities place the triangles in an actual octahedral
    section. Cutting, direct all-octahedral recognition and the opposition

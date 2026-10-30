@@ -1,5 +1,10 @@
 # Integrating the reviewed right-angled cusp-capacity theorem
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 19 October 2026. Read-only integration plan. No TeX, frozen report,
 reproduction input, catalogue, checker or Lean source was edited, and no
 build or proof job was run. Source locations refer to the versions inspected
@@ -13,9 +18,9 @@ Keep the existing manuscript dependency order:
                          -> five_constraints -> ideal6
 
 The complete new geometric proof and the ideal-five size theorem fit in
-[the five-dimensional constraints manuscript](../manuscripts/right_angled_five_dimensional_constraints.tex),
+the five-dimensional constraints manuscript,
 replacing its present Section2 rather than adding a manuscript. The existing
-[ideal-six manuscript](../manuscripts/ideal_right_angled_six_face_constraints.tex)
+ideal-six manuscript
 should quote that theorem and retain its own transport proof. The catalogue
 already has ideal6 depending on five_constraints and carriers, so this
 placement avoids reversing the dependency or introducing a citation cycle.
@@ -41,10 +46,10 @@ the preceding all-antiprism extension, the complete stated published
 classification through ten vertices, and the Oct/D-chain theorem.
 
 The current
-[antiprism appendix](../manuscripts/ideal_ra4_square_antiprism_extension_appendix.tex)
+antiprism appendix
 starts at line6 with the O/D/A4 extension; it is an unbuilt input fragment,
 not the full new all-antiprism/Figure7 proof. The unified
-[ideal4 manuscript](../manuscripts/ideal_ra4_volume_and_structure.tex)
+ideal4 manuscript
 has the Figure7 combinatorics in its equality-only reduction around lines
 388-410, and its O/D chain theorem at lines84 and432 onward. Those statements
 must not be silently relabeled as the full new small-facet theorem.
@@ -60,7 +65,7 @@ look complete.
 ## Planned five-dimensional manuscript edits
 
 Current locations in
-[right_angled_five_dimensional_constraints.tex](../manuscripts/right_angled_five_dimensional_constraints.tex):
+right_angled_five_dimensional_constraints.tex:
 
 |Location|Replacement or addition|
 |---|---|
@@ -90,7 +95,7 @@ second-volume/equality theorem is not needed by this new size proof.
 ## Planned six-dimensional manuscript edits
 
 Current locations in
-[ideal_right_angled_six_face_constraints.tex](../manuscripts/ideal_right_angled_six_face_constraints.tex):
+ideal_right_angled_six_face_constraints.tex:
 
 |Location|Replacement or addition|
 |---|---|

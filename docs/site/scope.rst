@@ -10,16 +10,12 @@ review by another author and root acceptance. It does not mean external
 refereeing, complete regeneration of every finite input or end-to-end
 formalization of hyperbolic geometry.
 
-The three current illustrated dimension copies have 50 pages for finite
-volume 57, 286 for general compact 17 and 217 for compact arithmetic 15.
-Removing their marked illustration additions recovers the reviewed base
-sources exactly. Their diagrams explain existing dependencies; no new
-bound, computation or Lean theorem follows from the illustration builds.
-The current right-angled reading copies have 7, 19 and 14 pages. The
-seven- and nineteen-page submission editions preserve their earlier
-five- and seventeen-page sources as separately recorded predecessors.
-:doc:`papers` distinguishes these copies from the six frozen editions
-and the preserved consolidated bases.
+The combined dimension submission contains three proof families in
+551 pages, with 71 pages of main exposition and full proof appendices. The
+current right-angled submissions have 6 and 18 pages. The supporting compact
+RA4 source treats volume constraints. :doc:`papers` identifies the current
+manuscripts and proof maps. Their preparation adds no new mathematical
+computation or Lean verification.
 
 .. _scope-results:
 

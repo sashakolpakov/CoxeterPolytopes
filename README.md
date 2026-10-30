@@ -1,19 +1,20 @@
 # Coxeter Polytopes
 
 Hyperbolic Coxeter dimension bounds, right-angled volume problems, exact
-certificates and selected Lean verification. There are **six paper families**.
+certificates and selected Lean verification.
 
 **[Read the detailed documentation](https://sashakolpakov.github.io/CoxeterPolytopes/)**
 · [PDFs and editions](manuscripts/README.md)
 · [Reproduction](repro/README.md)
 · [Formal logic](formal/README.md)
 
-The **28 October arXiv submission editions** are
-[sharp dimensions 8/4, 7 pages](manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_layout_final.pdf)
-and [ideal volume and structure, 19 pages](manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_historical_context.pdf).
-[Sources, figures and verification scope](docs/arxiv_submission_editions_20261028.md)
-and the [paper release](https://github.com/sashakolpakov/CoxeterPolytopes/releases/tag/arxiv-papers-2026-10-28)
-distinguish these copies from the preserved earlier editions.
+Three **[arXiv submission folders](arxiv/README.md)** contain the current sources:
+[sharp dimensions 8/4, 6 pages](manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf),
+[second ideal four-volume, 18 pages](manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf),
+and [dimension bounds 57/17/15, 551 pages](manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf).
+The combined dimension article has 71 pages of main exposition followed by
+complete proof appendices. [Sources and verification scope](docs/arxiv_submission_editions_20261028.md)
+distinguish these copies from preserved earlier editions.
 
 | Class | Largest published example | Published ceiling | Repository ceiling |
 |---|---:|---:|---:|

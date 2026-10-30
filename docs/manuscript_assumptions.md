@@ -557,7 +557,7 @@ in the [new proof map](right_angled_dimension10_proof_map_20261020.md).
 
 The [complete K7 charge composition](../results/compact_arithmetic_k7_dimension19_charge_composition_20261020.md)
 has passed full root and independent mathematical review. The preserved
-combined version [compact_arithmetic20.tex](../manuscripts/compact_arithmetic20.tex)
+combined version compact_arithmetic20.tex
 includes its composition as Appendix B, after the eight-field Appendix A.
 Its preserved PDF has 20 pages and zero warnings, with all 76 named inputs
 bound before and after the build. These refinements and their two Lean
@@ -595,7 +595,7 @@ formalization is claimed.
 
 ## Entirely ideal right-angled ceiling four
 
-The new [four-page manuscript](../manuscripts/ideal_right_angled_dimension4.tex)
+The new four-page manuscript
 proves a sharp ideal dimension ceiling4 by maximum cusp height. Its
 complete [proof map](ideal_right_angled_dimension4_proof_map_20261020.md)
 separates the written proof, published inputs and conditional kernel.

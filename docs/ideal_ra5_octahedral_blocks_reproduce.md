@@ -1,12 +1,17 @@
 # Restricted ideal RA5 octahedral blocks: proof and reproduction
 
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
 The [new theorem](../results/ideal_ra5_octahedral_blocks_20261018.md)
 strengthens the restricted facet counts to36 T and84 D, from30 and66.
 It keeps the explicit C/D/T spectrum hypothesis of the
 [predecessor](ideal_ra5_cusp_compatibility_reproduce.md). No dimension
 ceiling or exclusion of all ideal RA5 polytopes follows.
 
-The [TeX manuscript](../manuscripts/ideal_ra5_octahedral_blocks.tex)
+The supporting argument
 contains the universal written argument. The
 [certificate](../results/fresh_ideal_ra5_octahedral_blocks_20261018.json)
 records the four complete24-vertex ridge stars, their exact Gram matrix,
@@ -39,7 +44,7 @@ The [independent geometric review](../results/ideal_ra5_octahedral_blocks_geomet
 checks those hypotheses, the whole composition and the primary coloring source.
 The standalone checker reconstructs all788 relevant wall-pair intersections
 and104 actual polygons, including rank checks and source bindings; its final
-replay passed in87bd0c. The [three-page PDF](../manuscripts/build/ideal_ra5_octahedral_blocks.pdf)
+replay passed in87bd0c. The three-page PDF
 built in eeadd1 with no final-pass warnings; its unused build files were removed.
 The resource-safe Lean runner is available, but Lean follows mathematical
 progress and no compilation was needed for this result.

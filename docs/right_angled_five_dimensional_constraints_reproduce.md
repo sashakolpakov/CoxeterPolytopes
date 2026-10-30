@@ -1,6 +1,11 @@
 # Five-dimensional attachment and density constraints: reproduction and lemma map
 
-The [manuscript](../manuscripts/right_angled_five_dimensional_constraints.tex) and [four-page PDF](../build/right_angled_five_dimensional_constraints/right_angled_five_dimensional_constraints.pdf) translate two separate packets:
+For current reading, see the [current sharp right-angled manuscript](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) and the
+[submission guide](arxiv_submission_editions_20261028.md). The supporting
+arguments and recorded verification scopes below remain distinct from those
+current submission builds. Standalone draft typesetting routes have been retired.
+
+The supporting argument and four-page PDF translate two separate packets:
 
 1. The frozen [one-layer attachment theorem](../results/ideal_ra5_positive_carrier_one_layer_20261018.md) constructs an infinite-volume right-angled H5 chamber having the positive-kappa sixteen-cell Q as an actual facet. All 457 facets are genuine and all 258 original cusps have bounded rectangular four-box links. This does not solve finite-volume completion.
 2. The [density theorem](../results/right_angled_mixed_five_face_density_20261018.md) gives ideal RA5 at least 56 facets and consequent necessary mixed-dimensional face/vertex inequalities. It does not give a dimension exclusion or assert optimality against all published bounds.
@@ -13,7 +18,6 @@ Run from the repository root:
 python scripts/fresh_ideal_ra5_positive_carrier_one_layer_20261018.py --verify
 python scripts/check_ideal_ra5_one_layer_saved_20261018.py
 python scripts/fresh_right_angled_mixed_five_face_density_20261018.py --verify
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build/right_angled_five_dimensional_constraints manuscripts/right_angled_five_dimensional_constraints.tex
 ```
 
 Python uses only the standard library. Default generation refuses to overwrite the saved JSON; `--verify` reconstructs and compares it. The attachment helper imports no producer and uses reverse-column elimination. No final 457-wall cone enumeration is needed: explicit strict facet witnesses prove genuineness, and an explicit strictly feasible ideal direction proves infinite volume.
