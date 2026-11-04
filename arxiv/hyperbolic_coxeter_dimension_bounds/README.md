@@ -1,9 +1,15 @@
 # Concise edition of the dimension-bound article
 
-This edition presents the bounds **57 / 17 / 15** with detailed geometric reductions, component estimates, field-theoretic
-arguments and the complete manual dyadic finish. Complete case proofs remain in the existing
-dimension-bound paper family and are cited as online proof addenda. The
-[addendum map](ADDENDA.md) identifies every supplementary proof dependency.
+This edition presents the bounds **57 / 17 / 15** through their proof
+strategies, central arguments and worked examples. It states the technical
+propositions precisely and proves the global deductions. Complete technical
+proofs, inventories and computations remain in the existing supplement;
+the [addendum map](ADDENDA.md) identifies their exact proof locations.
+
+The [current reproduction and Lean companion](../../repro/dimension_bounds/README.md)
+connects those propositions to checkers, exact inputs, execution records and
+selected conditional Lean kernels. It distinguishes checks available from
+a public checkout from bulk-dependent regeneration.
 
 The version cited throughout is
 [`36eeaddf646eff25d4990c9ab730a20ada21f80f`](https://github.com/sashakolpakov/CoxeterPolytopes/tree/36eeaddf646eff25d4990c9ab730a20ada21f80f).
@@ -39,11 +45,11 @@ are stored under `release/dimension_bounds/`; the current artifact index is
 [`release/manifest.json`](../../release/manifest.json). See the
 [submission guide](../../arxiv/SUBMISSION.md).
 
-The expanded edition adds 52 pages to the prior presentation. Its final
-monitored build produced a 67-page PDF with zero TeX or BibTeX
-warnings, no undefined references or citations, and Type 1 fonts.
-[Read the PDF](main.pdf). The full case proofs are retained in the
-[complete proof addenda](../../manuscripts/addenda/dimension_bounds_20261030/main.pdf).
+[Read the 41-page PDF](main.pdf). The final monitored build has zero TeX or
+BibTeX warnings, no undefined references or citations, and Type 1 fonts. The full technical proofs are retained in
+the unchanged [complete proof addenda](../../manuscripts/addenda/dimension_bounds_20261030/main.pdf).
+The release manifest records the matching PDF's page count and typesetting
+receipt, including reference and font checks.
 
 The package refers to the existing exact checker and evidence collection;
 typesetting this edition does not run mathematical checks or Lean modules.

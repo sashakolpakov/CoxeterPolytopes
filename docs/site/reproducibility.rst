@@ -8,7 +8,7 @@ saved-certificate check, regeneration of a finite search, a conditional Lean
 proof and a PDF build establish different things. Their receipts retain
 those differences even when they contribute to the same paper.
 
-The 67-page consolidated submission brings the finite-volume 57, compact 17
+The 41-page consolidated submission brings the finite-volume 57, compact 17
 and compact arithmetic 15 bounds together. Complete cases, computational
 proofs and reproduction records remain in the GitHub proof catalogue and
 the preserved 551-page addendum. The compact theorem is an internal input to
@@ -48,6 +48,15 @@ bindings and scopes.
 
 Choose the edition before the command
 -------------------------------------
+
+For the current **57/17/15** article, start with the
+:download:`current companion guide <../../repro/dimension_bounds/README.md>`
+and its :download:`proposition manifest <../../repro/dimension_bounds/manifest.json>`.
+They connect the paper's technical propositions to complete proofs, exact
+inputs, checker records and conditional Lean declarations. The guide gives
+the public-checkout routes and separates them from operations requiring
+unuploaded bulk inputs. Its metadata check does not execute mathematical
+workers or Lean.
 
 Run commands from the repository root. The
 :download:`catalogue <../../manuscripts/catalogue.json>` binds an identifier

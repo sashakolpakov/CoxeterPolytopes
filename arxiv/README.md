@@ -8,7 +8,7 @@ uses the complete earlier edition as its online proof addendum.
 |---|---|---|
 | Sharp dimension bounds 8 and 4 | [main.tex](sharp_dimension_bounds_8_and_4/main.tex) | [6-page PDF](sharp_dimension_bounds_8_and_4/main.pdf) |
 | On the second smallest ideal right-angled hyperbolic four-polytope | [main.tex](ideal_four_dimensional_volume_and_structure/main.tex) | [18-page PDF](ideal_four_dimensional_volume_and_structure/main.pdf) |
-| Dimension bounds for hyperbolic Coxeter polytopes: 57 / 17 / 15 | [main.tex](hyperbolic_coxeter_dimension_bounds/main.tex) | [67-page PDF](hyperbolic_coxeter_dimension_bounds/main.pdf) |
+| Dimension bounds for hyperbolic Coxeter polytopes: 57 / 17 / 15 | [main.tex](hyperbolic_coxeter_dimension_bounds/main.tex) | [41-page PDF](hyperbolic_coxeter_dimension_bounds/main.pdf) |
 
 Each folder contains `main.tex`, `references.bib`, `main.bbl` and the
 matching `main.pdf`. The [complete 551-page dimension proof addenda](../manuscripts/addenda/dimension_bounds_20261030/main.pdf)

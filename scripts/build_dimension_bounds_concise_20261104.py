@@ -27,7 +27,7 @@ DIST = ROOT / "dist"
 
 def main() -> None:
     if "COXETER_CHECK_OWNER" not in os.environ:
-        raise SystemExit("Use scripts/run_proof_batch_20261024.py check -- this worker")
+        raise SystemExit("Use scripts/run_bounded_research_check_20261018.py --parent-lock -- this worker")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tag", required=True)
     parser.add_argument("--render-pages")
@@ -192,7 +192,7 @@ def main() -> None:
                                  "bytes": report["pdf_bytes"],
                                  "sha256": report["pdf_sha256"]}
                 paper["pages"] = report["pages"]
-                paper["current_pdf_role"] = "Consolidated article with detailed geometric arguments; remaining case proofs and computations in the GitHub supplement"
+                paper["current_pdf_role"] = "Proof strategies, central arguments and global deductions; complete technical proofs in the GitHub supplement"
                 paper.pop("future_pdf", None)
                 paper.pop("commit_and_push_held_pending_expanded_proof_review", None)
                 paper.pop("extra_length_allowed_to_retain_essential_proofs", None)

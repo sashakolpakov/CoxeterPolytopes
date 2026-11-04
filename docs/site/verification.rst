@@ -78,9 +78,9 @@ binds each source to its PDF and build receipt.
      - None
      - :download:`Ideal build <../../results/arxiv_ideal_bibtex_build_20261030.json>`.
    * - General dimension bounds 57/17/15
-     - 67
+     - 41
      - None
-     - :download:`Combined build <../../release/dimension_bounds/build_balanced_final_20261104.json>`.
+     - :download:`Combined build <../../release/dimension_bounds/build_ideas_final_20261104.json>`.
 
 The selected ``main.tex`` and ``references.bib`` are copied into a temporary
 directory. The build runs pdfLaTeX, BibTeX and two further pdfLaTeX passes,

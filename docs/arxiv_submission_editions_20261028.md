@@ -11,7 +11,7 @@ dimension proofs. Preparing a source folder does not submit it to arXiv.
 |---|---|---|---:|---|
 | Sharp dimension bounds for right-angled hyperbolic polytopes | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) | [6 pages](../arxiv/sharp_dimension_bounds_8_and_4/main.pdf) | 2 | Finite-volume right-angled dimension at most 8; entirely ideal dimension at most 4. Both bounds are attained by known examples. |
 | On the second smallest ideal right-angled hyperbolic four-polytope | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) | [18 pages](../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf) | 5 | The second ideal volume is 8π²/3, uniquely attained by the reflected 24-cell double. A separate restricted facet-spectrum theorem gives chains of 24-cells. |
-| Dimension bounds for hyperbolic Coxeter polytopes | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) | [67 pages](../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf) | 0 | Finite-volume dimension at most 57, compact dimension at most 17, compact arithmetic dimension at most 15. |
+| Dimension bounds for hyperbolic Coxeter polytopes | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) | [41 pages](../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf) | 0 | Finite-volume dimension at most 57, compact dimension at most 17, compact arithmetic dimension at most 15. |
 
 The [current source/PDF manifest](../release/manifest.json)
 records the exact editions. Each upload folder contains `main.tex`,
@@ -23,7 +23,7 @@ bibliography. For each submission, zip only `main.tex`, `references.bib` and
 
 ## The combined dimension article
 
-The concise 67-page submission presents the three theorems, main geometric
+The concise 41-page submission presents the three theorems, main geometric
 arguments and exact interfaces to the [GitHub proof catalogue](../arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md).
 Complete case and computational proofs remain in the repository. The existing
 [551-page full edition](../manuscripts/addenda/dimension_bounds_20261030/main.pdf)
@@ -153,7 +153,7 @@ inspection have separate scopes; no claim of visual inspection of every page
 of the long article is made.
 
 All three four-step builds passed with zero TeX or BibTeX warnings, no undefined
-references or citations, and Type 1 fonts. The current PDFs have 6, 18 and 67 pages;
+references or citations, and Type 1 fonts. The current PDFs have 6, 18 and 41 pages;
 the full proof addendum retains its 551 pages. The builds' temporary
 products were removed, while `main.bbl` is retained for each submission.
 
@@ -161,7 +161,7 @@ The current build receipts are:
 
 - [Sharp 6-page build](../release/right_angled_sharp/build_20261104.json).
 - [Ideal 18-page build](../results/arxiv_ideal_bibtex_build_20261030.json).
-- [Combined 67-page build](../release/dimension_bounds/build_balanced_final_20261104.json).
+- [Combined 41-page build](../release/dimension_bounds/build_ideas_final_20261104.json).
 - [Preserved 551-page addendum build](../results/arxiv_dimensions_bibtex_build_20261030.json).
 
 No successful mathematical worker or Lean module was rerun for preparation of

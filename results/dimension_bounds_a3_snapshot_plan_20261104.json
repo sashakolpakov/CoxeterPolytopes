@@ -1,0 +1,38 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/replay_dimension_bounds_arithmetic_20261104.py",
+    "A3",
+    "--plan"
+  ],
+  "elapsed_seconds": 0.284,
+  "peak_process_tree_rss_bytes": 47316992,
+  "initial_resources": {
+    "free_disk_gib": 43.45,
+    "available_memory_gib": 7.3,
+    "disk_free_bytes": 46653210624,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 7833763840,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 4.690603,
+    "available_memory_percent": 30.399005,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 735,
+  "stdout": "{\n  \"item\": \"A3\",\n  \"worker\": \"scripts/check_d17_one_isolated_quadratic_fork_20261022.py\",\n  \"worker_sha256\": \"73c44f9435269b21c859acf8b35bfb85927c43f5d4daf4e37cb18ab86d81d5ed\",\n  \"snapshot_files\": 8,\n  \"snapshot_bytes\": 95044,\n  \"replay_scope\": \"Checks all field records, counters and the two survivors; does NOT recompute the 118 rejected pair tests. Those retain their actual source-bound batch records.\",\n  \"historical_runner_is_hash_input_only\": true,\n  \"manifest_sha256\": \"e1a8298b94b604f9c9ed30f25b7fe4f175004022a95930893c44e1f365ca9d14\",\n  \"launcher_sha256\": \"366eeef8ab96478138d3d4effe66fe62bd46b97afab8537584c70e59d3ea1143\",\n  \"status\": \"SNAPSHOT_METADATA_READY_NO_SCIENTIFIC_EXECUTION\",\n  \"scientific_workers_executed\": 0\n}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "366eeef8ab96478138d3d4effe66fe62bd46b97afab8537584c70e59d3ea1143",
+  "lock_owner": "wrapper"
+}

@@ -1,10 +1,10 @@
 # Submission sources and packages
 
 **The consolidated dimension-bound package is prepared.** The proofread
-67-page paper contains all three bounds, their main geometric arguments and
-precise references to the GitHub proof catalogue. The expanded edition
-restores detailed local geometry, reference-vector proofs, field reductions
-and every manual dyadic branch. Complete case proofs,
+41-page paper contains all three bounds, their main geometric arguments and
+precise references to the GitHub proof catalogue. The article explains the proof strategies and representative geometric and
+arithmetic arguments, states the technical propositions, and proves the
+global deductions. Complete technical proofs,
 computational proofs and reproduction records remain in the repository.
 The existing 551-page complete edition is preserved byte for byte.
 
@@ -33,7 +33,7 @@ dist/CoxeterPolytopes-dimension-bounds-arxiv.zip.sha256
 ```
 
 The archive contains exactly `main.tex`, `references.bib` and `main.bbl`.
-The 67-page PDF and prepared bibliography are beside the source. The final
+The 41-page PDF and prepared bibliography are beside the source. The final
 four-pass build passed with zero TeX/BibTeX warnings and no undefined
 references or citations. The full 551-page proof addendum is retained
 separately, with its original bytes.
@@ -59,10 +59,12 @@ separate recorded scopes in the [reproduction guide](../repro/README.md).
 
 ## Upload metadata for the dimension-bound article
 
-**Comments:** 67 pages; complete proof addenda, computational proofs and
+**Comments:** 41 pages; complete proof addenda, computational proofs and
 reproduction package at https://github.com/sashakolpakov/CoxeterPolytopes.
 
 Select `main.tex` as the primary source and PDFLaTeX as the compiler.
 The upload ZIP contains exactly the three source/bibliography files listed
 above. The [proof catalogue](hyperbolic_coxeter_dimension_bounds/ADDENDA.md#what-is-in-the-article-and-what-remains-online)
-identifies the expanded arguments and the essential cases retained online.
+identifies the central arguments and the technical proofs retained online.
+The [current reproduction and Lean companion](../repro/dimension_bounds/README.md)
+provides the proposition-to-checker map and public-checkout instructions.

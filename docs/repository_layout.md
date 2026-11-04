@@ -13,6 +13,7 @@ research history have distinct homes.
 | `release/manifest.json` | Current manuscript and package index |
 | `release/dimension_bounds/` | Concise-edition preparation and typesetting receipts |
 | `repro/` | Reproduction instructions, pinned requirements, input and archive manifests |
+| `repro/dimension_bounds/` | Current 57/17/15 proposition-to-proof, checker, input and conditional Lean companion |
 | `formal/` | Lean sources, project pins, certificates and retained verification inputs |
 | `results/`, `data/` | Scientific results, certificates, exact inputs and execution evidence at their recorded paths |
 | `audit/` | Repository organization checks, priority evidence and typesetting admission records |

@@ -1,0 +1,38 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/check_dimension_bounds_companion_metadata_20261104.py",
+    "--output",
+    "results/dimension_bounds_companion_metadata_20261104.json"
+  ],
+  "elapsed_seconds": 0.528,
+  "peak_process_tree_rss_bytes": 71254016,
+  "initial_resources": {
+    "free_disk_gib": 43.43,
+    "available_memory_gib": 7.54,
+    "disk_free_bytes": 46629134336,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 8100708352,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 4.688182,
+    "available_memory_percent": 31.434886,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 693,
+  "stdout": "{\n  \"status\": \"PASS_COMPANION_METADATA_ONLY\",\n  \"manifest_sha256\": \"e1a8298b94b604f9c9ed30f25b7fe4f175004022a95930893c44e1f365ca9d14\",\n  \"validator_sha256\": \"a399fb37db384f9712791eb8abc4182f6670523064cf58d52a8ca568a9ab0afc\",\n  \"proof_items\": 13,\n  \"bound_public_files\": 523,\n  \"bound_public_bytes\": 35143563,\n  \"arithmetic_snapshot_groups\": 4,\n  \"arithmetic_snapshot_files_with_repetition\": 49,\n  \"lean_module_entries\": 13,\n  \"scientific_workers_executed\": 0,\n  \"lean_compilations\": 0,\n  \"new_axiom_audits\": 0,\n  \"mathematical_verification\": false,\n  \"full_transitive_regeneration\": false,\n  \"scope\": \"Selected tracked bytes, proof labels, links, and literal arithmetic input closure only.\"\n}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "a399fb37db384f9712791eb8abc4182f6670523064cf58d52a8ca568a9ab0afc",
+  "lock_owner": "wrapper"
+}

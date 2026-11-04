@@ -1,0 +1,3215 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-04",
+  "title": "Dimension bounds 57/17/15: written proofs, exact certificates and conditional Lean companion",
+  "repository": "https://github.com/sashakolpakov/CoxeterPolytopes",
+  "scope": "An index within a full Git checkout. It binds selected public evidence and a complete small input snapshot for each of the four arithmetic combiners; it is not a full transitive regeneration package.",
+  "source_evidence_commit": "2496f08b43edde8757d11ce12700943e7bffc364",
+  "written_proof": {
+    "source": "manuscripts/addenda/dimension_bounds_20261030/main.tex",
+    "pdf": "manuscripts/addenda/dimension_bounds_20261030/main.pdf",
+    "original_proof_commit": "36eeaddf646eff25d4990c9ab730a20ada21f80f",
+    "scope": "Complete preserved 30 October 551-page proof supplement."
+  },
+  "navigation_paths": [
+    "arxiv/hyperbolic_coxeter_dimension_bounds/main.tex",
+    "arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf",
+    "arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md",
+    "docs/finite_volume57_reproduce.md",
+    "docs/finite_volume57_lemma_map.md",
+    "docs/compact17_consolidated_proof_map_20261025.md",
+    "docs/compact_arithmetic_consolidation_proof_map_20261025.md",
+    "docs/compact_dimension17_conditional_logic_map_20261024.md",
+    "docs/quadratic_dyadic_triple_kernel_logic_20261023.md",
+    "docs/arithmetic_dimension_sixteen_composition_logic_20261022.md",
+    "docs/publication_logic_formalization_20261020.md",
+    "docs/manuscript_assumptions.md",
+    "docs/bugaenko_golden_lattice_cutoff_authentication_20261026.md",
+    "repro/PUBLIC_DATA.md",
+    "repro/EXTERNAL_INPUTS.md"
+  ],
+  "proof_items": [
+    {
+      "id": "FV1",
+      "statement": "Intrinsic marked-corner payments: at least 2 on triangles and 1 on quadrilaterals, with actual supporting walls and cusp multiplicities.",
+      "article_labels": [
+        "fv:thm:local",
+        "prop:local"
+      ],
+      "full_proof_labels": [
+        "fv:thm:local",
+        "fv:app:routing",
+        "fv:app:weights"
+      ],
+      "checks": [
+        "fv_current_rule"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.ManuscriptFinite57",
+        "CoxeterProofs.GuardedRank58"
+      ]
+    },
+    {
+      "id": "FV2",
+      "statement": "Complete necessary rank 58 spherical-forest maximum 377; no realization claim.",
+      "article_labels": [
+        "prop:local"
+      ],
+      "full_proof_labels": [
+        "fv:prop:finite",
+        "fv:app:finite-contexts"
+      ],
+      "checks": [
+        "fv_finite_and_ideal_endpoint"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.ResidualBellmanCertificate",
+        "CoxeterProofs.ManuscriptFinite57"
+      ]
+    },
+    {
+      "id": "FV3",
+      "statement": "2552 rank 57 terminal profiles, normalized minimum 87/10240, absolute minimum 36, and concentration to every actual cusp.",
+      "article_labels": [
+        "prop:surplus"
+      ],
+      "full_proof_labels": [
+        "fv:prop:terminal",
+        "fv:lem:concentration",
+        "fv:lem:low8",
+        "fv:eq:envelope"
+      ],
+      "checks": [
+        "fv_finite_and_ideal_endpoint"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.ConcentrationDescent58",
+        "CoxeterProofs.ManuscriptFinite57"
+      ]
+    },
+    {
+      "id": "FV4",
+      "statement": "Independent exclusions 59\u2013163 and unbounded narrow-facet/two-budget exclusion from 164.",
+      "article_labels": [
+        "prop:fvtail"
+      ],
+      "full_proof_labels": [
+        "fv:app:tail",
+        "fv:app:narrow-tail"
+      ],
+      "checks": [
+        "fv_tail"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.FiniteVolumeTailKernel",
+        "CoxeterProofs.FiniteVolume58ShapeKernel"
+      ]
+    },
+    {
+      "id": "C1",
+      "statement": "Complete necessary rank 18 cover at one original farthest vertex and all proper-row consumers.",
+      "article_labels": [
+        "prop:compactcover"
+      ],
+      "full_proof_labels": [
+        "compact:sec:components",
+        "compact:sec:forests"
+      ],
+      "checks": [
+        "compact_written"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.CompactDimensionSeventeenComposition"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Whole D18 head/fork exclusion and independent actual-rank19\u201329 tail, then the published ceiling.",
+      "article_labels": [
+        "prop:d18"
+      ],
+      "full_proof_labels": [
+        "compact:sec:d18-setup",
+        "compact:sec:composition",
+        "compact:thm:tail",
+        "compact:app:tail:completeconjunction"
+      ],
+      "checks": [
+        "compact_written"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.D18UniformDottedHeadScalarKernel",
+        "CoxeterProofs.CompactDimensionSeventeenComposition"
+      ]
+    },
+    {
+      "id": "A0",
+      "statement": "Actual-field chain inventories, golden lattice input, simultaneous helper/foot payments and spectator-uniform energy estimates.",
+      "article_labels": [
+        "lem:absorption"
+      ],
+      "full_proof_labels": [
+        "arith:app:arithmeticchain",
+        "arith:app:arithgoldenfield",
+        "arith:app:arithgoldenpacking",
+        "arith:app:arithsummedfeet",
+        "arith:app:arithgoldenend"
+      ],
+      "checks": [
+        "arithmetic_written"
+      ],
+      "lean_modules": []
+    },
+    {
+      "id": "A1",
+      "statement": "Empty quadratic A17 endpoint domain.",
+      "article_labels": [
+        "arith:prop:pair-output"
+      ],
+      "full_proof_labels": [
+        "arith:prop:pair-output",
+        "arith:sec:algorithms"
+      ],
+      "checks": [
+        "A1",
+        "arithmetic_written"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.ArithmeticDimensionSixteenComposition"
+      ]
+    },
+    {
+      "id": "A2",
+      "statement": "Empty two cubic A17 finite-anchor domains.",
+      "article_labels": [
+        "arith:prop:pair-output"
+      ],
+      "full_proof_labels": [
+        "arith:prop:pair-output",
+        "arith:sec:algorithms"
+      ],
+      "checks": [
+        "A2",
+        "arithmetic_written"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.ArithmeticDimensionSixteenComposition"
+      ]
+    },
+    {
+      "id": "A3",
+      "statement": "Two necessary shared quadratic B/D17 pairs, with distinct actual geometric inclusions and consumers.",
+      "article_labels": [
+        "arith:prop:pair-output"
+      ],
+      "full_proof_labels": [
+        "arith:prop:pair-output",
+        "arith:sec:algorithms"
+      ],
+      "checks": [
+        "A3",
+        "arithmetic_written"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.ArithmeticDimensionSixteenComposition"
+      ]
+    },
+    {
+      "id": "A4",
+      "statement": "One necessary whole B16 quadratic pair, with its separate geometric exclusion.",
+      "article_labels": [
+        "arith:prop:pair-output"
+      ],
+      "full_proof_labels": [
+        "arith:prop:pair-output",
+        "arith:sec:algorithms"
+      ],
+      "checks": [
+        "A4",
+        "arithmetic_written"
+      ],
+      "lean_modules": []
+    },
+    {
+      "id": "A5",
+      "statement": "Complete rank 17 and rank 16 covers and all consumers reduce to the necessary whole D16 quadratic triple.",
+      "article_labels": [
+        "arith:prop:f17",
+        "arith:prop:f16",
+        "prop:d16reduce"
+      ],
+      "full_proof_labels": [
+        "arith:prop:f17",
+        "arith:prop:f16",
+        "arith:prop:d16reduce",
+        "arith:lem:D16initial"
+      ],
+      "checks": [
+        "arithmetic_written"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.ArithmeticDimensionSixteenComposition"
+      ]
+    },
+    {
+      "id": "A6",
+      "statement": "Manual odd/inert/ramified/split dyadic exclusion and final arithmetic bound 15 deduction; no whole D16 census premise.",
+      "article_labels": [
+        "arith:prop:noD16"
+      ],
+      "full_proof_labels": [
+        "arith:sec:odd-inert",
+        "arith:sec:ramified",
+        "arith:sec:split",
+        "arith:prop:noD16"
+      ],
+      "checks": [
+        "arithmetic_written"
+      ],
+      "lean_modules": [
+        "CoxeterProofs.QuadraticDyadicTripleKernel"
+      ]
+    }
+  ],
+  "checks": {
+    "fv_current_rule": {
+      "worker": "scripts/check_finite57_current_rule_conjunction_20261025.py",
+      "inputs": [
+        "results/finite57_current_rule_selected_inputs_20261025.json",
+        "results/finite57_current_rule_final_inputs_20261025.json"
+      ],
+      "receipts": [
+        "results/finite57_current_rule_release_completion_20261025.json",
+        "results/finite57_final_current_rule_conjunction_execution_20261025.json",
+        "results/finite57_longer_tail_all64_actual_application_completion_20261025.json"
+      ],
+      "scope": "259 scoped receipt/application units, 64 shards, 28028 maps, 12518 nonunit applications, 83 prefixes. Eleven inherited premises and explicit native/geometric interfaces; no combined 146-job or transitive replay.",
+      "fresh_replay_readiness": "Use docs/finite_volume57_reproduce.md; this index binds selected records, not a complete dynamic reader-input closure."
+    },
+    "fv_finite_and_ideal_endpoint": {
+      "worker": "scripts/fresh_d13_context_dimension57_20261018.py",
+      "inputs": [
+        "manuscripts/catalogue.json"
+      ],
+      "receipts": [
+        "results/finite57_publication_full_replay_20261020.json",
+        "results/finite57_audit_edition_low8_bounded_replay_20261021.json",
+        "results/finite57_complete_loader_catalogue_integration_20261022.json"
+      ],
+      "scope": "Inherited finite maximum 377 interfaces, 2552 terminal profiles and margins87/10240 and36; endpoint composition and separate bounded low-eight record. Complete finite producer replacement is25 distinctPASS units; no combined full runtime claim.",
+      "fresh_replay_readiness": "Historical finite-volume bound 57 selection and input availability are retained in the primary catalogue and proof map; not a source-only regeneration promise."
+    },
+    "fv_tail": {
+      "worker": null,
+      "inputs": [
+        "manuscripts/catalogue.json"
+      ],
+      "receipts": [
+        "results/finite57_higher_tail_replay_batches_20261020.json",
+        "results/finite57_higher_tail_remaining_replay_20261020.json",
+        "results/finite57_distance9_partitioned_replay_runtime_20261020.json"
+      ],
+      "scope": "Separate recorded bounded-tail checks and literal scalar inequalities; geometric framing/narrow-facet arguments and inherited arrays remain written/data premises."
+    },
+    "compact_written": {
+      "worker": null,
+      "inputs": [
+        "docs/compact17_consolidated_proof_map_20261025.md"
+      ],
+      "receipts": [
+        "results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json",
+        "results/review_compact17_final_tail_integration_and_joint_logic_fresh_20261025.md"
+      ],
+      "scope": "Written original-vector estimates, necessary forests and all actual-rank 18\u201329 consumers. No universal numerical checker or fresh full replay is claimed."
+    },
+    "arithmetic_written": {
+      "worker": null,
+      "inputs": [
+        "docs/compact_arithmetic_consolidation_proof_map_20261025.md",
+        "docs/bugaenko_golden_lattice_cutoff_authentication_20261026.md"
+      ],
+      "receipts": [
+        "results/review_arithmetic15_final_covers_and_composition_root_20261025.md",
+        "results/arithmetic15_final_dispatch_working_integration_20261025.json"
+      ],
+      "scope": "Written actual-field, component, cover and geometric-consumer proofs; authenticated external lattice theorem; four separately stated finite outputs."
+    },
+    "A1": {
+      "worker": "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py",
+      "inputs": [
+        "results/arithmetic17_whole_a17_short_endpoints_isolation_and_golden_exclusion_candidate_20261022.md",
+        "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md",
+        "results/arithmetic17_a17_two_isolated_quadratic_endpoints_exact_census_contract_20261022.md",
+        "scripts/check_d17_one_isolated_quadratic_fork_20261022.py",
+        "scripts/run_bounded_research_check_20261018.py",
+        "scripts/build_illustrated_ra_manuscript_20261018.py",
+        "scripts/run_lean_batches_signal_safe_20261018.py",
+        "scripts/run_lean_batches_20261018.py",
+        "results/a17_two_isolated_quadratic_endpoints_batch0_20261022.jsonl",
+        "results/a17_two_isolated_quadratic_endpoints_batch1_20261022.jsonl",
+        "results/a17_two_isolated_quadratic_endpoints_batch2_20261022.jsonl"
+      ],
+      "receipts": [
+        "results/a17_two_isolated_quadratic_endpoints_runtime_manifest_20261022.json",
+        "results/a17_two_isolated_quadratic_endpoints_combine_execution_20261022.json"
+      ],
+      "scope": "Complete same-code replay of all 25 fields, 53 models and 159 ordered pairs, including rejected pairs; zero survivors.",
+      "snapshot_replay": "A1"
+    },
+    "A2": {
+      "worker": "scripts/check_a17_finite_cubic_endpoint_20261022.py",
+      "inputs": [
+        "results/arithmetic17_whole_a17_short_endpoints_isolation_and_golden_exclusion_candidate_20261022.md",
+        "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md",
+        "results/arithmetic17_a17_finite_cubic_endpoint_exact_census_contract_20261022.md",
+        "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py",
+        "scripts/run_bounded_research_check_20261018.py",
+        "scripts/build_illustrated_ra_manuscript_20261018.py",
+        "scripts/run_lean_batches_signal_safe_20261018.py",
+        "scripts/run_lean_batches_20261018.py",
+        "results/a17_finite_cubic_native7_20261022.jsonl",
+        "results/a17_finite_cubic_native18_20261022.jsonl"
+      ],
+      "receipts": [
+        "results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json",
+        "results/a17_finite_cubic_combine_execution_20261022.json"
+      ],
+      "scope": "Complete same-code replay of all 2432 coefficient triples in two full integer rings; nine strip models, zero survivors.",
+      "snapshot_replay": "A2"
+    },
+    "A3": {
+      "worker": "scripts/check_d17_one_isolated_quadratic_fork_20261022.py",
+      "inputs": [
+        "results/arithmetic17_whole_d17_dotted_head_degree_three_and_nonisolated_quadratic_candidate_20261022.md",
+        "results/arithmetic17_whole_d17_fresh_long_head_and_all_finite_head_exclusion_candidate_20261022.md",
+        "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md",
+        "results/arithmetic17_d17_one_isolated_quadratic_fork_exact_census_contract_20261022.md",
+        "results/d17_one_isolated_quadratic_fork_batch0_20261022.jsonl",
+        "results/d17_one_isolated_quadratic_fork_batch1_20261022.jsonl",
+        "results/d17_one_isolated_quadratic_fork_batch2_20261022.jsonl"
+      ],
+      "receipts": [
+        "results/d17_one_isolated_quadratic_fork_runtime_manifest_20261022.json",
+        "results/d17_one_isolated_quadratic_fork_combine_execution_20261022.json"
+      ],
+      "scope": "Checks all field records, counters and the two survivors; does NOT recompute the 118 rejected pair tests. Those retain their actual source-bound batch records.",
+      "snapshot_replay": "A3"
+    },
+    "A4": {
+      "worker": "scripts/check_arithmetic16_b16_isolated_quadratic_head_short_pairs_20261023.py",
+      "inputs": [
+        "results/arithmetic16_whole_b16_complete_short_white_and_isolated_dotted_field_reduction_candidate_20261023.md",
+        "results/arithmetic_dimension16_fresh_complete_necessary_forest_frontier_candidate_20261022.md",
+        "results/arithmetic16_whole_b16_long_head_and_near_short_three_scale_obstruction_candidate_20261023.md",
+        "results/review_arithmetic16_whole_b16_head_near_short_three_scale_root_acceptance_20261023.md",
+        "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md",
+        "results/compact_classical_generic_prefix_energy_20261020.md",
+        "results/compact_farthest_vertex_mixed_replacement_inequalities_20261020.md",
+        "results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md",
+        "results/arithmetic16_b16_isolated_quadratic_head_short_pair_exact_census_contract_20261023.md",
+        "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py",
+        "scripts/run_bounded_research_check_20261018.py",
+        "scripts/build_illustrated_ra_manuscript_20261018.py",
+        "scripts/run_lean_batches_signal_safe_20261018.py",
+        "scripts/run_lean_batches_20261018.py",
+        "results/b16_isolated_quadratic_pair_part_0_20261023.jsonl",
+        "results/b16_isolated_quadratic_pair_part_1_20261023.jsonl",
+        "results/b16_isolated_quadratic_pair_part_2_20261023.jsonl"
+      ],
+      "receipts": [
+        "results/b16_isolated_quadratic_pair_census_verification_20261023.json",
+        "results/b16_isolated_quadratic_pair_combined_execution_20261023.json"
+      ],
+      "scope": "Complete same-code replay of all 43 fields and 273 pairs; one necessary algebraic survivor, excluded by the separate written geometric consumer.",
+      "snapshot_replay": "A4"
+    }
+  },
+  "arithmetic_replays": {
+    "A1": {
+      "worker": "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py",
+      "worker_sha256": "89139eb11d31259c49d079a64bcef39d80e0cf855fe1e22221fd983f0d335a4d",
+      "runtime_manifest": "results/a17_two_isolated_quadratic_endpoints_runtime_manifest_20261022.json",
+      "combine_receipt": "results/a17_two_isolated_quadratic_endpoints_combine_execution_20261022.json",
+      "historical_command": [
+        "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py",
+        "--expected-source-sha256",
+        "89139eb11d31259c49d079a64bcef39d80e0cf855fe1e22221fd983f0d335a4d",
+        "combine",
+        "--part",
+        "results/a17_two_isolated_quadratic_endpoints_batch0_20261022.jsonl",
+        "--part-sha256",
+        "e0d6e57eaa28ced589e21b6007ec7e6d2d60748250f5f45e0923baf040071a81",
+        "--part",
+        "results/a17_two_isolated_quadratic_endpoints_batch1_20261022.jsonl",
+        "--part-sha256",
+        "566b3532fcd9592651df2cdbfdbd5baab55060331ec166fa3d7ecb410471375f",
+        "--part",
+        "results/a17_two_isolated_quadratic_endpoints_batch2_20261022.jsonl",
+        "--part-sha256",
+        "6165783c345aa24c3daeadb92c86c2f7cc2e3ab684ac4d77f8c5cae752938e49",
+        "--output",
+        "results/a17_two_isolated_quadratic_endpoints_combine_20261022.jsonl"
+      ],
+      "snapshot_inputs": {
+        "results/arithmetic17_whole_a17_short_endpoints_isolation_and_golden_exclusion_candidate_20261022.md": {
+          "source": "results/arithmetic17_whole_a17_short_endpoints_isolation_and_golden_exclusion_candidate_20261022.md",
+          "sha256": "b80c27b00dc7ecdbdf7201327d620e10b372e35f1047964c9ae204c2d6996558",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md": {
+          "source": "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md",
+          "sha256": "535ac0d0fa92d28ccab2976fa147a4ccff0bd3bfcd1e04ca4e134c6ae6857905",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic17_a17_two_isolated_quadratic_endpoints_exact_census_contract_20261022.md": {
+          "source": "results/arithmetic17_a17_two_isolated_quadratic_endpoints_exact_census_contract_20261022.md",
+          "sha256": "ba2c8f72de389bea30b8a766e62b7ad11957f72a10c0c178183dd5820e69f220",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/check_d17_one_isolated_quadratic_fork_20261022.py": {
+          "source": "scripts/check_d17_one_isolated_quadratic_fork_20261022.py",
+          "sha256": "73c44f9435269b21c859acf8b35bfb85927c43f5d4daf4e37cb18ab86d81d5ed",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_bounded_research_check_20261018.py": {
+          "source": "scripts/run_bounded_research_check_20261018.py",
+          "sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/build_illustrated_ra_manuscript_20261018.py": {
+          "source": "scripts/build_illustrated_ra_manuscript_20261018.py",
+          "sha256": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_lean_batches_signal_safe_20261018.py": {
+          "source": "scripts/run_lean_batches_signal_safe_20261018.py",
+          "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_lean_batches_20261018.py": {
+          "source": "results/source_archive/before_user_percentage_resource_policy_20261025/run_lean_batches_20261018.py",
+          "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/a17_two_isolated_quadratic_endpoints_batch0_20261022.jsonl": {
+          "source": "results/a17_two_isolated_quadratic_endpoints_batch0_20261022.jsonl",
+          "sha256": "e0d6e57eaa28ced589e21b6007ec7e6d2d60748250f5f45e0923baf040071a81",
+          "role": "saved exact certificate part"
+        },
+        "results/a17_two_isolated_quadratic_endpoints_batch1_20261022.jsonl": {
+          "source": "results/a17_two_isolated_quadratic_endpoints_batch1_20261022.jsonl",
+          "sha256": "566b3532fcd9592651df2cdbfdbd5baab55060331ec166fa3d7ecb410471375f",
+          "role": "saved exact certificate part"
+        },
+        "results/a17_two_isolated_quadratic_endpoints_batch2_20261022.jsonl": {
+          "source": "results/a17_two_isolated_quadratic_endpoints_batch2_20261022.jsonl",
+          "sha256": "6165783c345aa24c3daeadb92c86c2f7cc2e3ab684ac4d77f8c5cae752938e49",
+          "role": "saved exact certificate part"
+        }
+      },
+      "replay_scope": "Complete same-code replay of all 25 fields, 53 models and 159 ordered pairs, including rejected pairs; zero survivors.",
+      "snapshot_runtime_closure": "Exact worker, its literal PINS and explicit --part files. Worker imports only the Python standard library. Historical runner pin is inert digest input; current outer watchdog governs execution.",
+      "new_replay_executed_for_this_companion": false
+    },
+    "A2": {
+      "worker": "scripts/check_a17_finite_cubic_endpoint_20261022.py",
+      "worker_sha256": "c060a24586aa13f94a201c7ffdff8df758993d246d18b38ceae464a2c409f231",
+      "runtime_manifest": "results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json",
+      "combine_receipt": "results/a17_finite_cubic_combine_execution_20261022.json",
+      "historical_command": [
+        "scripts/check_a17_finite_cubic_endpoint_20261022.py",
+        "--expected-source-sha256",
+        "c060a24586aa13f94a201c7ffdff8df758993d246d18b38ceae464a2c409f231",
+        "combine",
+        "--part",
+        "results/a17_finite_cubic_native7_20261022.jsonl",
+        "--part-sha256",
+        "b6cd994f25a75483874d051023c6d3dbfaa67a7f0c6936d2451fb65c94ebbc94",
+        "--part",
+        "results/a17_finite_cubic_native18_20261022.jsonl",
+        "--part-sha256",
+        "124e4fa7f03b5b2b2c22469bf566229ad775df0baf396a1ef7bde7ecb5c7d175",
+        "--output",
+        "results/a17_finite_cubic_combine_20261022.jsonl"
+      ],
+      "snapshot_inputs": {
+        "results/arithmetic17_whole_a17_short_endpoints_isolation_and_golden_exclusion_candidate_20261022.md": {
+          "source": "results/arithmetic17_whole_a17_short_endpoints_isolation_and_golden_exclusion_candidate_20261022.md",
+          "sha256": "b80c27b00dc7ecdbdf7201327d620e10b372e35f1047964c9ae204c2d6996558",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md": {
+          "source": "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md",
+          "sha256": "535ac0d0fa92d28ccab2976fa147a4ccff0bd3bfcd1e04ca4e134c6ae6857905",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic17_a17_finite_cubic_endpoint_exact_census_contract_20261022.md": {
+          "source": "results/arithmetic17_a17_finite_cubic_endpoint_exact_census_contract_20261022.md",
+          "sha256": "74b213461d250df03e601921744fa2831ea404d816e612562402dae3b8a0ec21",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py": {
+          "source": "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py",
+          "sha256": "89139eb11d31259c49d079a64bcef39d80e0cf855fe1e22221fd983f0d335a4d",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_bounded_research_check_20261018.py": {
+          "source": "scripts/run_bounded_research_check_20261018.py",
+          "sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/build_illustrated_ra_manuscript_20261018.py": {
+          "source": "scripts/build_illustrated_ra_manuscript_20261018.py",
+          "sha256": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_lean_batches_signal_safe_20261018.py": {
+          "source": "scripts/run_lean_batches_signal_safe_20261018.py",
+          "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_lean_batches_20261018.py": {
+          "source": "results/source_archive/before_user_percentage_resource_policy_20261025/run_lean_batches_20261018.py",
+          "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/a17_finite_cubic_native7_20261022.jsonl": {
+          "source": "results/a17_finite_cubic_native7_20261022.jsonl",
+          "sha256": "b6cd994f25a75483874d051023c6d3dbfaa67a7f0c6936d2451fb65c94ebbc94",
+          "role": "saved exact certificate part"
+        },
+        "results/a17_finite_cubic_native18_20261022.jsonl": {
+          "source": "results/a17_finite_cubic_native18_20261022.jsonl",
+          "sha256": "124e4fa7f03b5b2b2c22469bf566229ad775df0baf396a1ef7bde7ecb5c7d175",
+          "role": "saved exact certificate part"
+        }
+      },
+      "replay_scope": "Complete same-code replay of all 2432 coefficient triples in two full integer rings; nine strip models, zero survivors.",
+      "snapshot_runtime_closure": "Exact worker, its literal PINS and explicit --part files. Worker imports only the Python standard library. Historical runner pin is inert digest input; current outer watchdog governs execution.",
+      "new_replay_executed_for_this_companion": false
+    },
+    "A3": {
+      "worker": "scripts/check_d17_one_isolated_quadratic_fork_20261022.py",
+      "worker_sha256": "73c44f9435269b21c859acf8b35bfb85927c43f5d4daf4e37cb18ab86d81d5ed",
+      "runtime_manifest": "results/d17_one_isolated_quadratic_fork_runtime_manifest_20261022.json",
+      "combine_receipt": "results/d17_one_isolated_quadratic_fork_combine_execution_20261022.json",
+      "historical_command": [
+        "scripts/check_d17_one_isolated_quadratic_fork_20261022.py",
+        "--expected-source-sha256",
+        "73c44f9435269b21c859acf8b35bfb85927c43f5d4daf4e37cb18ab86d81d5ed",
+        "combine",
+        "--part",
+        "results/d17_one_isolated_quadratic_fork_batch0_20261022.jsonl",
+        "--part-sha256",
+        "beaeb3cd97b5bf50ae78b198f852553d9010507de81eda6b35a595948c1109e4",
+        "--part",
+        "results/d17_one_isolated_quadratic_fork_batch1_20261022.jsonl",
+        "--part-sha256",
+        "4266586f7b63f5bacee970891e6b0416554638d0cbac3ba37d931469f97d3f58",
+        "--part",
+        "results/d17_one_isolated_quadratic_fork_batch2_20261022.jsonl",
+        "--part-sha256",
+        "1ac954eef55ce16e21f85a1040cb5fff5eaea9f69022c72cafff9d673fc39ae6",
+        "--output",
+        "results/d17_one_isolated_quadratic_fork_combine_20261022.jsonl"
+      ],
+      "snapshot_inputs": {
+        "results/arithmetic17_whole_d17_dotted_head_degree_three_and_nonisolated_quadratic_candidate_20261022.md": {
+          "source": "results/arithmetic17_whole_d17_dotted_head_degree_three_and_nonisolated_quadratic_candidate_20261022.md",
+          "sha256": "4baa131a7609f1af7254e154fae99834f0ab38f9e7a31bc2a49a186b0916ceba",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic17_whole_d17_fresh_long_head_and_all_finite_head_exclusion_candidate_20261022.md": {
+          "source": "results/arithmetic17_whole_d17_fresh_long_head_and_all_finite_head_exclusion_candidate_20261022.md",
+          "sha256": "9e2cf7d75f12c73b69e0bc9c39044acb56c37be36f94fe707efb808ee5ae9eb6",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md": {
+          "source": "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md",
+          "sha256": "535ac0d0fa92d28ccab2976fa147a4ccff0bd3bfcd1e04ca4e134c6ae6857905",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic17_d17_one_isolated_quadratic_fork_exact_census_contract_20261022.md": {
+          "source": "results/arithmetic17_d17_one_isolated_quadratic_fork_exact_census_contract_20261022.md",
+          "sha256": "991c97fab25b01a5d7aadc5a2bb220e469525647fac331cf74c02665af01df21",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/d17_one_isolated_quadratic_fork_batch0_20261022.jsonl": {
+          "source": "results/d17_one_isolated_quadratic_fork_batch0_20261022.jsonl",
+          "sha256": "beaeb3cd97b5bf50ae78b198f852553d9010507de81eda6b35a595948c1109e4",
+          "role": "saved exact certificate part"
+        },
+        "results/d17_one_isolated_quadratic_fork_batch1_20261022.jsonl": {
+          "source": "results/d17_one_isolated_quadratic_fork_batch1_20261022.jsonl",
+          "sha256": "4266586f7b63f5bacee970891e6b0416554638d0cbac3ba37d931469f97d3f58",
+          "role": "saved exact certificate part"
+        },
+        "results/d17_one_isolated_quadratic_fork_batch2_20261022.jsonl": {
+          "source": "results/d17_one_isolated_quadratic_fork_batch2_20261022.jsonl",
+          "sha256": "1ac954eef55ce16e21f85a1040cb5fff5eaea9f69022c72cafff9d673fc39ae6",
+          "role": "saved exact certificate part"
+        }
+      },
+      "replay_scope": "Checks all field records, counters and the two survivors; does NOT recompute the 118 rejected pair tests. Those retain their actual source-bound batch records.",
+      "snapshot_runtime_closure": "Exact worker, its literal PINS and explicit --part files. Worker imports only the Python standard library. Historical runner pin is inert digest input; current outer watchdog governs execution.",
+      "new_replay_executed_for_this_companion": false
+    },
+    "A4": {
+      "worker": "scripts/check_arithmetic16_b16_isolated_quadratic_head_short_pairs_20261023.py",
+      "worker_sha256": "452587a42fcc03219cc77dabfa1ff0f691c81617c776943276b39e822d8ff42f",
+      "runtime_manifest": "results/b16_isolated_quadratic_pair_census_verification_20261023.json",
+      "combine_receipt": "results/b16_isolated_quadratic_pair_combined_execution_20261023.json",
+      "historical_command": [
+        "scripts/check_arithmetic16_b16_isolated_quadratic_head_short_pairs_20261023.py",
+        "--expected-source-sha256",
+        "452587a42fcc03219cc77dabfa1ff0f691c81617c776943276b39e822d8ff42f",
+        "combine",
+        "--part",
+        "results/b16_isolated_quadratic_pair_part_0_20261023.jsonl",
+        "--part-sha256",
+        "6bd64bb7fd7967637c188f942dc3375ad9e9c259d3c4caa2d60b4e120a99647c",
+        "--part",
+        "results/b16_isolated_quadratic_pair_part_1_20261023.jsonl",
+        "--part-sha256",
+        "cabf8de66cda3ecab9e16fc14892b139e107d1ce94da2237212072a9ef9e804e",
+        "--part",
+        "results/b16_isolated_quadratic_pair_part_2_20261023.jsonl",
+        "--part-sha256",
+        "715ad8f726823fdcbd2517f62b3fde925f66868efc94a78d85166a5e602a6cde",
+        "--output",
+        "results/b16_isolated_quadratic_pair_combined_20261023.jsonl"
+      ],
+      "snapshot_inputs": {
+        "results/arithmetic16_whole_b16_complete_short_white_and_isolated_dotted_field_reduction_candidate_20261023.md": {
+          "source": "results/arithmetic16_whole_b16_complete_short_white_and_isolated_dotted_field_reduction_candidate_20261023.md",
+          "sha256": "4fb202752c01f8ace7f38763403ef93dc13f937ddf1ee31cc656cdf80c27a514",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic_dimension16_fresh_complete_necessary_forest_frontier_candidate_20261022.md": {
+          "source": "results/arithmetic_dimension16_fresh_complete_necessary_forest_frontier_candidate_20261022.md",
+          "sha256": "a8cc202cc364f438e733c5c2536185aa923bc56ee2d3edc9e245a3c8d7e20e3c",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic16_whole_b16_long_head_and_near_short_three_scale_obstruction_candidate_20261023.md": {
+          "source": "results/arithmetic16_whole_b16_long_head_and_near_short_three_scale_obstruction_candidate_20261023.md",
+          "sha256": "b11bfefeb6babec483f4cf5cb5da9dc6a71caf52c967c45af8b7f6bd100e72a4",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/review_arithmetic16_whole_b16_head_near_short_three_scale_root_acceptance_20261023.md": {
+          "source": "results/review_arithmetic16_whole_b16_head_near_short_three_scale_root_acceptance_20261023.md",
+          "sha256": "7ceec2f7c3bf9a0a0e0943f48b66afe2317f774b72e97f6e6779e2c1ac77beea",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md": {
+          "source": "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md",
+          "sha256": "535ac0d0fa92d28ccab2976fa147a4ccff0bd3bfcd1e04ca4e134c6ae6857905",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/compact_classical_generic_prefix_energy_20261020.md": {
+          "source": "results/compact_classical_generic_prefix_energy_20261020.md",
+          "sha256": "f637d7294d17e37581330ca508c914c23a08ce259845614b055e45815d2790ef",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/compact_farthest_vertex_mixed_replacement_inequalities_20261020.md": {
+          "source": "results/compact_farthest_vertex_mixed_replacement_inequalities_20261020.md",
+          "sha256": "3732b82614e13dfe2f7a3c66ab6c7fe67e517cbaeb77be0ca533f559ddf6ed84",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md": {
+          "source": "results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md",
+          "sha256": "0ac802108e0ef8a9ca821c3091fca82f7bf9331a0037639d93888f2fabb37a75",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/arithmetic16_b16_isolated_quadratic_head_short_pair_exact_census_contract_20261023.md": {
+          "source": "results/arithmetic16_b16_isolated_quadratic_head_short_pair_exact_census_contract_20261023.md",
+          "sha256": "9fb3fa877e82e82bc26a32c10fb37261e6f32cd43c73ef0c5f6fc446c846dc3c",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py": {
+          "source": "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py",
+          "sha256": "89139eb11d31259c49d079a64bcef39d80e0cf855fe1e22221fd983f0d335a4d",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_bounded_research_check_20261018.py": {
+          "source": "scripts/run_bounded_research_check_20261018.py",
+          "sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/build_illustrated_ra_manuscript_20261018.py": {
+          "source": "scripts/build_illustrated_ra_manuscript_20261018.py",
+          "sha256": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_lean_batches_signal_safe_20261018.py": {
+          "source": "scripts/run_lean_batches_signal_safe_20261018.py",
+          "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d",
+          "role": "literal source pin; read as bytes only"
+        },
+        "scripts/run_lean_batches_20261018.py": {
+          "source": "results/source_archive/before_user_percentage_resource_policy_20261025/run_lean_batches_20261018.py",
+          "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c",
+          "role": "literal source pin; read as bytes only"
+        },
+        "results/b16_isolated_quadratic_pair_part_0_20261023.jsonl": {
+          "source": "results/b16_isolated_quadratic_pair_part_0_20261023.jsonl",
+          "sha256": "6bd64bb7fd7967637c188f942dc3375ad9e9c259d3c4caa2d60b4e120a99647c",
+          "role": "saved exact certificate part"
+        },
+        "results/b16_isolated_quadratic_pair_part_1_20261023.jsonl": {
+          "source": "results/b16_isolated_quadratic_pair_part_1_20261023.jsonl",
+          "sha256": "cabf8de66cda3ecab9e16fc14892b139e107d1ce94da2237212072a9ef9e804e",
+          "role": "saved exact certificate part"
+        },
+        "results/b16_isolated_quadratic_pair_part_2_20261023.jsonl": {
+          "source": "results/b16_isolated_quadratic_pair_part_2_20261023.jsonl",
+          "sha256": "715ad8f726823fdcbd2517f62b3fde925f66868efc94a78d85166a5e602a6cde",
+          "role": "saved exact certificate part"
+        }
+      },
+      "replay_scope": "Complete same-code replay of all 43 fields and 273 pairs; one necessary algebraic survivor, excluded by the separate written geometric consumer.",
+      "snapshot_runtime_closure": "Exact worker, its literal PINS and explicit --part files. Worker imports only the Python standard library. Historical runner pin is inert digest input; current outer watchdog governs execution.",
+      "new_replay_executed_for_this_companion": false
+    }
+  },
+  "lean": {
+    "toolchain": "leanprover/lean4:v4.32.2",
+    "standard_library": "Std from the pinned Lean distribution",
+    "source_import_closure": [
+      "formal/CoxeterProofs/ArithmeticDimensionSixteenComposition.lean",
+      "formal/CoxeterProofs/CompactDimensionSeventeenComposition.lean",
+      "formal/CoxeterProofs/Concentration58.lean",
+      "formal/CoxeterProofs/ConcentrationDescent58.lean",
+      "formal/CoxeterProofs/ContextCover59.lean",
+      "formal/CoxeterProofs/D18UniformDottedHeadScalarKernel.lean",
+      "formal/CoxeterProofs/FiniteVolume58ShapeKernel.lean",
+      "formal/CoxeterProofs/FiniteVolumeTailKernel.lean",
+      "formal/CoxeterProofs/GuardedRank58.lean",
+      "formal/CoxeterProofs/ManuscriptDataBounds.lean",
+      "formal/CoxeterProofs/ManuscriptFinite57.lean",
+      "formal/CoxeterProofs/QuadraticDyadicTripleKernel.lean",
+      "formal/CoxeterProofs/ResidualBellmanCertificate.lean"
+    ],
+    "modules": {
+      "CoxeterProofs.GuardedRank58": {
+        "source": "formal/CoxeterProofs/GuardedRank58.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [],
+        "evidence_kind": "Inherited selection; only the actual records listed here are bound."
+      },
+      "CoxeterProofs.Concentration58": {
+        "source": "formal/CoxeterProofs/Concentration58.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [],
+        "evidence_kind": "Inherited selection; only the actual records listed here are bound."
+      },
+      "CoxeterProofs.ContextCover59": {
+        "source": "formal/CoxeterProofs/ContextCover59.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [],
+        "evidence_kind": "Inherited selection; only the actual records listed here are bound."
+      },
+      "CoxeterProofs.FiniteVolume58ShapeKernel": {
+        "source": "formal/CoxeterProofs/FiniteVolume58ShapeKernel.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [
+          "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolume58ShapeKernel_compile_8a1c31fafeb6.json",
+          "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolume58ShapeKernel_audit_b31f8c573532.json",
+          "results/FiniteVolume58ShapeKernel_axiom_summary_20261020.json"
+        ],
+        "evidence_kind": "Actual bounded compilation and separate actual axiom audit",
+        "audited_declarations": 9
+      },
+      "CoxeterProofs.ManuscriptDataBounds": {
+        "source": "formal/CoxeterProofs/ManuscriptDataBounds.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [
+          "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptDataBounds.json"
+        ],
+        "evidence_kind": "Inherited selection; only the actual records listed here are bound."
+      },
+      "CoxeterProofs.ManuscriptFinite57": {
+        "source": "formal/CoxeterProofs/ManuscriptFinite57.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [
+          "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptFinite57.json",
+          "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptFinite57_axiom_audit.json"
+        ],
+        "evidence_kind": "Inherited selection; only the actual records listed here are bound."
+      },
+      "CoxeterProofs.ConcentrationDescent58": {
+        "source": "formal/CoxeterProofs/ConcentrationDescent58.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [
+          "results/publication_logic_records_20261020/CoxeterProofs_ConcentrationDescent58_compile_18ea83255d98.json",
+          "results/publication_logic_records_20261020/CoxeterProofs_ConcentrationDescent58_audit_03685601345b.json",
+          "results/ConcentrationDescent58_axiom_summary_20261020.json"
+        ],
+        "evidence_kind": "Actual bounded compilation and separate actual axiom audit",
+        "audited_declarations": 10
+      },
+      "CoxeterProofs.ResidualBellmanCertificate": {
+        "source": "formal/CoxeterProofs/ResidualBellmanCertificate.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [
+          "results/publication_logic_records_20261020/CoxeterProofs_ResidualBellmanCertificate_compile_c8c6445fdd39.json",
+          "results/publication_logic_records_20261020/CoxeterProofs_ResidualBellmanCertificate_audit_f2f502a4571f.json",
+          "results/ResidualBellmanCertificate_axiom_summary_20261020.json"
+        ],
+        "evidence_kind": "Actual bounded compilation and separate actual axiom audit",
+        "audited_declarations": 8
+      },
+      "CoxeterProofs.FiniteVolumeTailKernel": {
+        "source": "formal/CoxeterProofs/FiniteVolumeTailKernel.lean",
+        "scope": "Inherited selected finite-volume bound 57 internal logic; geometric, classification, finite-domain and interpretation premises remain external. See the named logic maps and frozen catalogue.",
+        "separate_execution_records": [
+          "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolumeTailKernel_compile_ad32bd841dca.json",
+          "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolumeTailKernel_audit_76fd2b13064f.json",
+          "results/FiniteVolumeTailKernel_axiom_summary_20261020.json"
+        ],
+        "evidence_kind": "Actual bounded compilation and separate actual axiom audit",
+        "audited_declarations": 9
+      },
+      "CoxeterProofs.D18UniformDottedHeadScalarKernel": {
+        "source": "formal/CoxeterProofs/D18UniformDottedHeadScalarKernel.lean",
+        "scope": "Conditional ordered-ring scalar consequences and same-original-vertex composition; analytic envelopes, geometric inventories, actual capacities and prior global bound 18 remain written inputs.",
+        "premise_map": "docs/compact_dimension17_conditional_logic_map_20261024.md",
+        "manifest": "results/compact17_targeted_lean_completion_20261025/manifest.json",
+        "separate_execution_records": [
+          "results/compact17_d18_scalar_lean_compile_attempt2_execution_20261025.json",
+          "results/compact17_d18_scalar_lean_compile_attempt2_execution_20261025.stdout",
+          "results/compact17_d18_scalar_lean_axiom_audit_execution_20261025.json",
+          "results/compact17_d18_scalar_lean_axiom_audit_execution_20261025.stdout",
+          "results/compact17_targeted_lean_completion_20261025/D18UniformDottedHeadScalarKernel_compile.json",
+          "results/compact17_targeted_lean_completion_20261025/D18UniformDottedHeadScalarKernel_audit.json"
+        ],
+        "audited_declarations": 7,
+        "actual_axioms": {
+          "CoxeterProofs.D18UniformDottedHeadScalarKernel.f_uniform_seal": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.D18UniformDottedHeadScalarKernel.g_uniform_seal": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.D18UniformDottedHeadScalarKernel.weak_helper_anchor_affordability": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.D18UniformDottedHeadScalarKernel.far_next_impossible": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.D18UniformDottedHeadScalarKernel.near_far_native_contradiction": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.D18UniformDottedHeadScalarKernel.local_a18_six_tail_contradiction": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.D18UniformDottedHeadScalarKernel.local_a18_five_tail_contradiction": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      },
+      "CoxeterProofs.CompactDimensionSeventeenComposition": {
+        "source": "formal/CoxeterProofs/CompactDimensionSeventeenComposition.lean",
+        "scope": "Conditional ordered-ring scalar consequences and same-original-vertex composition; analytic envelopes, geometric inventories, actual capacities and prior global bound 18 remain written inputs.",
+        "premise_map": "docs/compact_dimension17_conditional_logic_map_20261024.md",
+        "manifest": "results/compact17_targeted_lean_completion_20261025/manifest.json",
+        "separate_execution_records": [
+          "results/compact17_composition_lean_compile_execution_20261025.json",
+          "results/compact17_composition_lean_compile_execution_20261025.stdout",
+          "results/compact17_composition_lean_axiom_audit_execution_20261025.json",
+          "results/compact17_composition_lean_axiom_audit_execution_20261025.stdout",
+          "results/compact17_targeted_lean_completion_20261025/CompactDimensionSeventeenComposition_compile.json",
+          "results/compact17_targeted_lean_completion_20261025/CompactDimensionSeventeenComposition_audit.json"
+        ],
+        "audited_declarations": 3,
+        "actual_axioms": {
+          "CoxeterProofs.CompactDimensionSeventeenComposition.dotted_head_exclusion": [],
+          "CoxeterProofs.CompactDimensionSeventeenComposition.whole_d18_exclusion": [],
+          "CoxeterProofs.CompactDimensionSeventeenComposition.compact_dimension_at_most_seventeen": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      },
+      "CoxeterProofs.QuadraticDyadicTripleKernel": {
+        "source": "formal/CoxeterProofs/QuadraticDyadicTripleKernel.lean",
+        "scope": "Integer valuation/parity and bounded-norm implications. Actual number fields, valuations, norm and field-square inputs, finite outputs and geometry remain external. global_dimension_fifteen assumes n<=16 and n!=16.",
+        "premise_map": "docs/quadratic_dyadic_triple_kernel_logic_20261023.md",
+        "manifest": "results/lean_quadratic_dyadic_triple_verification_20261023/manifest.json",
+        "separate_execution_records": [
+          "results/lean_quadratic_dyadic_triple_verification_20261023/compile.json",
+          "results/lean_quadratic_dyadic_triple_verification_20261023/compile_attempt_1.stdout",
+          "results/lean_quadratic_dyadic_triple_verification_20261023/axiom_audit.json",
+          "results/lean_quadratic_dyadic_triple_verification_20261023/axiom_audit_attempt_1.stdout",
+          "results/lean_quadratic_dyadic_triple_verification_20261023/axiom_stdout.txt"
+        ],
+        "audited_declarations": 14,
+        "actual_axioms": {
+          "CoxeterProofs.QuadraticDyadicTripleKernel.inert_unit_head_contradiction": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.split_unit_head_contradiction": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.ramified_unit_fork_four": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.inert_first_head_fork_one": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.inert_second_head_pair_forces_two": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.ramified_first_head_fork_four": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.ramified_second_head_fork_three": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.ramified_third_head_pair_forces_three": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.split_odd_trace_pair_valuations": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.split_odd_trace_even_valuation_contradiction": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.split_even_trace_pair_forces_global_four": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.bounded_norm_multiple_sixteen": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.bounded_norm_valuation_three": [
+            "propext",
+            "Quot.sound"
+          ],
+          "CoxeterProofs.QuadraticDyadicTripleKernel.global_dimension_fifteen": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      },
+      "CoxeterProofs.ArithmeticDimensionSixteenComposition": {
+        "source": "formal/CoxeterProofs/ArithmeticDimensionSixteenComposition.lean",
+        "scope": "Conditional earlier arithmetic bound 16 composition. The newer arithmetic bound 15 argument uses the independent compact bound 17 theorem and explicit written rank 17/rank 16 dispatches; no field or geometric instance is supplied by this module.",
+        "premise_map": "docs/arithmetic_dimension_sixteen_composition_logic_20261022.md",
+        "manifest": "results/lean_arithmetic16_composition_verification_20261022/manifest.json",
+        "separate_execution_records": [
+          "results/lean_arithmetic16_composition_verification_20261022/actual_axiom_output.txt",
+          "results/lean_arithmetic16_composition_verification_20261022/axiom_audit_attempt2_stdout.txt",
+          "results/lean_arithmetic16_composition_verification_20261022/axiom_audit_ledger.json",
+          "results/lean_arithmetic16_composition_verification_20261022/axiom_audit_stdout.txt",
+          "results/lean_arithmetic16_composition_verification_20261022/axiom_summary.json",
+          "results/lean_arithmetic16_composition_verification_20261022/compile_ledger.json",
+          "results/lean_arithmetic16_composition_verification_20261022/compile_stdout.txt",
+          "results/lean_arithmetic16_composition_verification_20261022/first_axiom_audit_admission_refusal.json"
+        ],
+        "audited_declarations": 3
+      }
+    },
+    "boundary": "Conditional internal implications. Printed axioms do not enumerate ordinary theorem parameters. Geometry, literature, field instances, classifications and computed outputs are supplied by the written proof and named finite checks.",
+    "historical_source_headers": "Preparation-only/uncompiled comments are frozen source history. Later exact-source compile and separate actual audit receipts determine executed status."
+  },
+  "environment": {
+    "python": "Python 3.11 or later for the guarded entry points; the four arithmetic workers use the standard library only. Broader historical proof jobs use repro/requirements-proof-20261018.txt.",
+    "lean_toolchain_file": "formal/lean-toolchain",
+    "lean_project_file": "formal/lakefile.toml",
+    "guard": "Current scripts/run_proof_batch_20261024.py; one shared exclusive.lock; normal percentage-resource policy; no historical archived runner is executed.",
+    "tested_platform": "macOS; current runners require vm_stat, ps, sysctl and owned-process inspection permission. Create formal/.proof-batches once in a fresh checkout. The guard is not advertised as portable."
+  },
+  "availability": {
+    "public_scope": "All entries in artifacts are Git-tracked source, written proofs, certificates or execution evidence; metadata validation checks exact bytes and index membership.",
+    "bulk_manifest": "repro/public-data-manifest.json",
+    "bulk_files": 936,
+    "bulk_archives": 33,
+    "bulk_original_bytes": 17665895736,
+    "bulk_assets_uploaded": false,
+    "arithmetic_snapshot_closure": "All four snapshot inputs are explicit, small and public. No bulk asset is needed for these scoped combine modes. This is source/input inspection, not new mathematical execution.",
+    "finite57_reader_transitive_input_closure_established": false,
+    "unresolved_historical_or_nonpublic_bindings": [
+      {
+        "path": "docs/quadratic_dyadic_triple_kernel_logic_20261023.md",
+        "expected_sha256": "48543ba67b7c89a0c44e1d6cd1daafd12cb30d4b663d6d72c1801a8b4ec3ad1c",
+        "current_sha256": "ae617abb746c05cc32a053ae0fd0cb2d2d3762cadb25522bd548ab6b8f1ef87a",
+        "reason": "historical binding differs; do not substitute silently"
+      },
+      {
+        "path": "docs/arithmetic_dimension_sixteen_composition_logic_20261022.md",
+        "expected_sha256": "9e1dfe7b621115826b988b8d4e5b2d3adebb4e00bfccf6d20df969e186d2f9af",
+        "current_sha256": "750cd775d1779c7603317bcd89915d264ecc4274888ab3fc400eed3583abd7b5",
+        "reason": "historical binding differs; do not substitute silently"
+      },
+      {
+        "path": "manuscripts/build/finite_volume57_consolidated.pdf",
+        "expected_sha256": "a95b3a907f1712cd368d37a3e248b7858a1a22ddf9c1617dd55996662e5cdae4",
+        "reason": "not present as a tracked public file"
+      },
+      {
+        "path": "manuscripts/build/finite_volume57.pdf",
+        "expected_sha256": "1f3c020cb4029a931a3c2701ffb1034bf619e6c399297bd3af79dbafcbbee926",
+        "reason": "not present as a tracked public file"
+      },
+      {
+        "path": "manuscripts/build/compact_arithmetic_dimension_bound.pdf",
+        "expected_sha256": "ef1569abd5c04813aeca1bf2a66154fd86189fc39b7c202323182b08c87f8a96",
+        "reason": "not present as a tracked public file"
+      },
+      {
+        "path": "manuscripts/build/compact_farthest_vertex_bounds.pdf",
+        "expected_sha256": "1e6b71559eaa7100bb1f13ba1af38dd08530d8da77b9c5b334feef3c53f963cb",
+        "reason": "not present as a tracked public file"
+      },
+      {
+        "path": "manuscripts/build/right_angled_sharp_dimension_bounds_publication.pdf",
+        "expected_sha256": "609a9fc025b43ae5c899b1b37b1051e592de6a8142f3ffd275fcd9dca360d443",
+        "reason": "not present as a tracked public file"
+      },
+      {
+        "path": "manuscripts/build/ideal_ra4_volume_and_structure_publication.pdf",
+        "expected_sha256": "d95d1e29abc01bee7b4cf3d66f2c760871e1f6ac9f725fb4a017312c0ab69c47",
+        "reason": "not present as a tracked public file"
+      },
+      {
+        "path": "manuscripts/build/compact_ra4_volume_constraints.pdf",
+        "expected_sha256": "920edadbbd7a973d70931e6ced9b8d0d5cfa12922d3b5dc0def3dc19ed2e8bf2",
+        "reason": "not present as a tracked public file"
+      }
+    ],
+    "unresolved_historical_or_nonpublic_bindings_scope": "Historical provenance links only: two superseded guide versions and seven retired PDF paths. None is an input to the four arithmetic snapshot replays.",
+    "small_certificate_publication_additions": {
+      "scope": "Four original A4 certificates added to the public index with this companion; bytes match the existing 23 October execution receipt. They are absent from the separate 936-file bulk manifest. No regeneration or bulk upload.",
+      "paths": [
+        "results/b16_isolated_quadratic_pair_part_0_20261023.jsonl",
+        "results/b16_isolated_quadratic_pair_part_1_20261023.jsonl",
+        "results/b16_isolated_quadratic_pair_part_2_20261023.jsonl",
+        "results/b16_isolated_quadratic_pair_combined_20261023.jsonl"
+      ],
+      "total_bytes": 85236
+    }
+  },
+  "artifacts": {
+    "formal/CoxeterProofs/ArithmeticDimensionSixteenComposition.lean": {
+      "bytes": 12758,
+      "sha256": "de5b471364e3328be881c44e1f215f8e5af0b8d99d22545aa76aadc4cfb46404"
+    },
+    "formal/CoxeterProofs/CompactDimensionSeventeenComposition.lean": {
+      "bytes": 6534,
+      "sha256": "1bd47e5058bdcf80b2fd1ca167f9bfffd51bf14c401c2d872aec3f135962e5fa"
+    },
+    "formal/CoxeterProofs/Concentration58.lean": {
+      "bytes": 3188,
+      "sha256": "5408d9bcc575e4e756483e3494a76a6a961f4b982f29dcd716ce489d0d5a9626"
+    },
+    "formal/CoxeterProofs/ConcentrationDescent58.lean": {
+      "bytes": 14051,
+      "sha256": "1d0ef280bf631105fb0d6ef41166a298c6aaac7002bd8f05d3cd26bf8e9a8983"
+    },
+    "formal/CoxeterProofs/ContextCover59.lean": {
+      "bytes": 2368,
+      "sha256": "d85abba53b12cbfb0e18d175327df43fac1c2237825b19b8707e50889d1c210c"
+    },
+    "formal/CoxeterProofs/D18UniformDottedHeadScalarKernel.lean": {
+      "bytes": 7601,
+      "sha256": "4d85588868a0f781999332f1d3fb53f25b17b5b9054278d0858c683b361a1b9a"
+    },
+    "formal/CoxeterProofs/FiniteVolume58ShapeKernel.lean": {
+      "bytes": 12401,
+      "sha256": "40d12b5761a69470eee963a57ae9b6baf8c53ee120b83f05d11a4d98e1eebcec"
+    },
+    "formal/CoxeterProofs/FiniteVolumeTailKernel.lean": {
+      "bytes": 8779,
+      "sha256": "b8f03fd42fd60248379280d07949f596c21dfd6f16adc44c99060574b4c39daa"
+    },
+    "formal/CoxeterProofs/GuardedRank58.lean": {
+      "bytes": 1425,
+      "sha256": "62959684734a09a1ff2fba8e1c75010de5c6369ed2a5ba4821c8ce8258c65b9f"
+    },
+    "formal/CoxeterProofs/ManuscriptDataBounds.lean": {
+      "bytes": 1567,
+      "sha256": "ca26fe981352784d191aa5d8bd0781c4799396317b508046bf811c9a92e18047"
+    },
+    "formal/CoxeterProofs/ManuscriptFinite57.lean": {
+      "bytes": 3960,
+      "sha256": "c680d5d06b67b5574a2c53bf9131a81164cbdc3c704814c0cb9efc69770002dc"
+    },
+    "formal/CoxeterProofs/QuadraticDyadicTripleKernel.lean": {
+      "bytes": 6628,
+      "sha256": "593894c50b31af8559f236c5d1f2484dd3ecb5e0784e481679a7afae93e2a1b9"
+    },
+    "formal/CoxeterProofs/ResidualBellmanCertificate.lean": {
+      "bytes": 8274,
+      "sha256": "cd2a05a693cf9dd8c93b5a143bb90ed2ae2932f2ca7d872e5a1139fc05daa3d9"
+    },
+    "formal/lakefile.toml": {
+      "bytes": 113,
+      "sha256": "73443c40e462d23ae9e85ea874c70387862454123db3272bd4a5790cd001d4d7"
+    },
+    "formal/lean-toolchain": {
+      "bytes": 25,
+      "sha256": "2bdc48adfa58d0017e538a0ad117c5d73d35deec879978f909406a80c8037273"
+    },
+    "manuscripts/addenda/dimension_bounds_20261030/main.pdf": {
+      "bytes": 3399733,
+      "sha256": "1515d19406afe30e5d3e1a2ab996364137b3197363f07afa8b7cc64d10c7ec85"
+    },
+    "manuscripts/addenda/dimension_bounds_20261030/main.tex": {
+      "bytes": 1804221,
+      "sha256": "e77f5ba5d67a3b93e9c5ceb1baa4119e4300f7c6e5fe1d49fdef8888a95b164c"
+    },
+    "manuscripts/compact_arithmetic_dimension_bound.tex": {
+      "bytes": 72895,
+      "sha256": "5d5235dab7a1842e2fa3a9b0559220957a775608bb61e3097f5fbb17aec8caba"
+    },
+    "manuscripts/compact_farthest_vertex_bounds.tex": {
+      "bytes": 118932,
+      "sha256": "530d964e1957981af6c3a8f7bfc68331908e30b7a52d0f98cb264393d64a94f1"
+    },
+    "manuscripts/compact_ra4_volume_constraints.tex": {
+      "bytes": 53508,
+      "sha256": "afe807672f3a6bbf4bb2dd95d2861b60391d7c2d7c879c6d6382e749e7ad976f"
+    },
+    "manuscripts/finite_volume57.tex": {
+      "bytes": 156120,
+      "sha256": "c300db69c58211ffdf69c22970b289325224ad284d9e63a3c28d88821fca82a0"
+    },
+    "manuscripts/finite_volume57_consolidated.tex": {
+      "bytes": 164840,
+      "sha256": "38186aa7b05251cd8a6b781d751d8eadbd70eba9a49f603f0d4ba9c7eb66ee80"
+    },
+    "manuscripts/ideal_ra4_volume_and_structure_publication.tex": {
+      "bytes": 56865,
+      "sha256": "e0c2ca24cec24ffcd736e201d3c7e06d75b28ef7be8093decd321ae3ac54bda1"
+    },
+    "manuscripts/revisions/finite_volume57_consolidated.tex": {
+      "bytes": 162238,
+      "sha256": "0a01a79659c1c522f587315252e7dd1019fcca3281913cce089c4d4e154b7900"
+    },
+    "manuscripts/right_angled_sharp_dimension_bounds_publication.tex": {
+      "bytes": 15738,
+      "sha256": "0c29a7869fa46e4e1a542d8ae6f4dfc7e616136c7a1aad3984d941a95cf89722"
+    },
+    "repro/public-data-manifest.json": {
+      "bytes": 213687,
+      "sha256": "57dfd7fee51da317b7482dda3401b330e84c7b36fbc8bb12d8e0cf0110ff0e6d"
+    },
+    "repro/requirements-proof-20261018.txt": {
+      "bytes": 144,
+      "sha256": "184ddf5fc04fbe543a12b57067bf5343a67ed498422882696ff828c699b2e52b"
+    },
+    "results/ConcentrationDescent58_axiom_summary_20261020.json": {
+      "bytes": 2276,
+      "sha256": "829f9f49c7422ca1faa63ad418c381c83d8f18729b8b5d2d81daed3a946e6809"
+    },
+    "results/FiniteVolume58ShapeKernel_axiom_summary_20261020.json": {
+      "bytes": 2919,
+      "sha256": "156ac999ce97cd2c7e60a60b97c39aad95691655360992e1c990deda9c3baf68"
+    },
+    "results/FiniteVolumeTailKernel_axiom_summary_20261020.json": {
+      "bytes": 3647,
+      "sha256": "8922cb348647ae8985f93f4df14c7a93bf1fdb882e72e14a5475b3c5a6d0c533"
+    },
+    "results/ResidualBellmanCertificate_axiom_summary_20261020.json": {
+      "bytes": 3024,
+      "sha256": "f738f806660b220100b6add04b7ac8d1cb7a7219719489c0f055def9f04095d3"
+    },
+    "results/a17_finite_cubic_combine_20261022.jsonl": {
+      "bytes": 274796,
+      "sha256": "f0bb31c2db3cd489b8e1fb241db4cf353e7094c36d5fac3eb272451757a59fd1"
+    },
+    "results/a17_finite_cubic_combine_execution_20261022.json": {
+      "bytes": 2030,
+      "sha256": "9f9ed652afd280c0110f11ef77d83e765f0ad1d49493e742802128ffc323c417"
+    },
+    "results/a17_finite_cubic_combine_stdout_20261022.txt": {
+      "bytes": 1839,
+      "sha256": "2bdeef13789cae459208ab7446880fb21cb1f456a5b1fd7621c68d865608a784"
+    },
+    "results/a17_finite_cubic_endpoint_runtime_manifest_20261022.json": {
+      "bytes": 13252,
+      "sha256": "64eddbaf969a3b49e8aa39cdad297a3577d4519cf5ae3bf43795992328f68822"
+    },
+    "results/a17_finite_cubic_native18_20261022.jsonl": {
+      "bytes": 141099,
+      "sha256": "124e4fa7f03b5b2b2c22469bf566229ad775df0baf396a1ef7bde7ecb5c7d175"
+    },
+    "results/a17_finite_cubic_native18_execution_20261022.json": {
+      "bytes": 1741,
+      "sha256": "869fcac5ed878bd11cae7450c4e6e8ab52259c03b9b5b2ab759fd37c42315c66"
+    },
+    "results/a17_finite_cubic_native18_stdout_20261022.txt": {
+      "bytes": 1572,
+      "sha256": "636e5d85d71a17c86f8123cf7c1efe31a33f29dea9febd804a55ccb0bf342711"
+    },
+    "results/a17_finite_cubic_native7_20261022.jsonl": {
+      "bytes": 135658,
+      "sha256": "b6cd994f25a75483874d051023c6d3dbfaa67a7f0c6936d2451fb65c94ebbc94"
+    },
+    "results/a17_finite_cubic_native7_execution_20261022.json": {
+      "bytes": 1738,
+      "sha256": "47187ad42e8ec2c426036038d1976224a72789eca8aee00f3a2936d2acd6a8d3"
+    },
+    "results/a17_finite_cubic_native7_stdout_20261022.txt": {
+      "bytes": 1569,
+      "sha256": "46473ae1d8c6edc9656ad214907587b44119582ef6a94bbc2d63ebaa3b42a63d"
+    },
+    "results/a17_quadratic_census_first_monitoring_refusal_20261022.json": {
+      "bytes": 635,
+      "sha256": "543ed61ff9a4151c854568d4d0314a3c98bdc6869d8d3168c1ca600c55fa0d91"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch0_20261022.jsonl": {
+      "bytes": 20003,
+      "sha256": "e0d6e57eaa28ced589e21b6007ec7e6d2d60748250f5f45e0923baf040071a81"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch0_execution_20261022.json": {
+      "bytes": 1559,
+      "sha256": "5f30cc062b1ec5923603de6fb819bbb278bff4c31760c59b32f03bd96b6f4c14"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch0_stdout_attempt2_20261022.txt": {
+      "bytes": 1400,
+      "sha256": "a8d9fbb14a1e10ab2c5c6ce7d7c9a86426d3c7eb7044f1fdef2d422474fd2f30"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch1_20261022.jsonl": {
+      "bytes": 9608,
+      "sha256": "566b3532fcd9592651df2cdbfdbd5baab55060331ec166fa3d7ecb410471375f"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch1_execution_20261022.json": {
+      "bytes": 1557,
+      "sha256": "03450e8433166d5342831ad65cf3e03b3f9d61f1754189ccb88a68b94a9413c8"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch1_stdout_20261022.txt": {
+      "bytes": 1398,
+      "sha256": "20759afda16337db119596a050edf16be4ae9d9188db54cd8b085986fa82dcdd"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch2_20261022.jsonl": {
+      "bytes": 6545,
+      "sha256": "6165783c345aa24c3daeadb92c86c2f7cc2e3ab684ac4d77f8c5cae752938e49"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch2_execution_20261022.json": {
+      "bytes": 1554,
+      "sha256": "89604e2eb6870d498affb1503d96c67c20c203a06ae9070ae76ace84fb15305d"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_batch2_stdout_20261022.txt": {
+      "bytes": 1395,
+      "sha256": "8e6a04de3b449e4ab4a74d6f2eb12698b00cfde8ba09424f73291753c1c15b1c"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_combine_20261022.jsonl": {
+      "bytes": 33390,
+      "sha256": "e973522864e9c6be79d6e2223106310fa4b2e70cfb59b407f7d4cd6b1f5240ed"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_combine_execution_20261022.json": {
+      "bytes": 2081,
+      "sha256": "9d8080c3833d928416feea69b95270140e012d5c53236a127d042e7cc03041cb"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_combine_stdout_20261022.txt": {
+      "bytes": 1882,
+      "sha256": "b7fd29e67ed46e477cf41923cdf621620aa4d7ae267589eb82622fd1bd29dee0"
+    },
+    "results/a17_two_isolated_quadratic_endpoints_runtime_manifest_20261022.json": {
+      "bytes": 12549,
+      "sha256": "ad0dbd5afe1449ad0d153054babed5cb2e5f507130abec69869519a0e2de7321"
+    },
+    "results/arithmetic15_final_dispatch_working_integration_20261025.json": {
+      "bytes": 1919,
+      "sha256": "973bc2b13515dd59cb2b9cc7b60ce9371c48a334d8f718207368920820a53e15"
+    },
+    "results/arithmetic16_b16_isolated_quadratic_head_short_pair_exact_census_contract_20261023.md": {
+      "bytes": 9537,
+      "sha256": "9fb3fa877e82e82bc26a32c10fb37261e6f32cd43c73ef0c5f6fc446c846dc3c"
+    },
+    "results/arithmetic16_composition_section_include_precompile_repair_20261022.json": {
+      "bytes": 5158,
+      "sha256": "56d1f20482e8685ac76032887b8296a176e9ca8390069db7c1dfc688cebf8c1a"
+    },
+    "results/arithmetic16_whole_b16_complete_short_white_and_isolated_dotted_field_reduction_candidate_20261023.md": {
+      "bytes": 19429,
+      "sha256": "4fb202752c01f8ace7f38763403ef93dc13f937ddf1ee31cc656cdf80c27a514"
+    },
+    "results/arithmetic16_whole_b16_long_head_and_near_short_three_scale_obstruction_candidate_20261023.md": {
+      "bytes": 12977,
+      "sha256": "b11bfefeb6babec483f4cf5cb5da9dc6a71caf52c967c45af8b7f6bd100e72a4"
+    },
+    "results/arithmetic17_a17_finite_cubic_endpoint_exact_census_contract_20261022.md": {
+      "bytes": 13081,
+      "sha256": "74b213461d250df03e601921744fa2831ea404d816e612562402dae3b8a0ec21"
+    },
+    "results/arithmetic17_a17_two_isolated_quadratic_endpoints_exact_census_contract_20261022.md": {
+      "bytes": 11543,
+      "sha256": "ba2c8f72de389bea30b8a766e62b7ad11957f72a10c0c178183dd5820e69f220"
+    },
+    "results/arithmetic17_d17_one_isolated_quadratic_fork_exact_census_contract_20261022.md": {
+      "bytes": 10964,
+      "sha256": "991c97fab25b01a5d7aadc5a2bb220e469525647fac331cf74c02665af01df21"
+    },
+    "results/arithmetic17_whole_a17_complete_endpoint_census_and_global16_composition_20261022.md": {
+      "bytes": 27106,
+      "sha256": "2aac289e76e42b49949c918c35df0cbce6fb83e5e889bea7a0c1717165903dce"
+    },
+    "results/arithmetic17_whole_a17_short_endpoints_isolation_and_golden_exclusion_candidate_20261022.md": {
+      "bytes": 14194,
+      "sha256": "b80c27b00dc7ecdbdf7201327d620e10b372e35f1047964c9ae204c2d6996558"
+    },
+    "results/arithmetic17_whole_d17_dotted_head_degree_three_and_nonisolated_quadratic_candidate_20261022.md": {
+      "bytes": 15837,
+      "sha256": "4baa131a7609f1af7254e154fae99834f0ab38f9e7a31bc2a49a186b0916ceba"
+    },
+    "results/arithmetic17_whole_d17_fresh_long_head_and_all_finite_head_exclusion_candidate_20261022.md": {
+      "bytes": 23755,
+      "sha256": "9e2cf7d75f12c73b69e0bc9c39044acb56c37be36f94fe707efb808ee5ae9eb6"
+    },
+    "results/arithmetic_dimension16_fresh_complete_necessary_forest_frontier_candidate_20261022.md": {
+      "bytes": 23027,
+      "sha256": "a8cc202cc364f438e733c5c2536185aa923bc56ee2d3edc9e245a3c8d7e20e3c"
+    },
+    "results/arithmetic_uniform_classical_weak_helper_obstruction_20261021.md": {
+      "bytes": 9509,
+      "sha256": "535ac0d0fa92d28ccab2976fa147a4ccff0bd3bfcd1e04ca4e134c6ae6857905"
+    },
+    "results/audit_finite57_context_and_bounded_tail_logic_root_20261024.md": {
+      "bytes": 12055,
+      "sha256": "e6cf721a59ebfb920e03f11e5e0bba79aba7fd04ab975fde93cbd1251abb9ef7"
+    },
+    "results/audit_finite57_extension_schemas_and_weight_binding_fresh_20261024.md": {
+      "bytes": 23165,
+      "sha256": "1e6a165b957069b4d618a17361900aa0a92ee57f52bc7f7a22362ef05e57a847"
+    },
+    "results/audit_finite57_geometry_core_and_tail_interfaces_root_20261024.md": {
+      "bytes": 15698,
+      "sha256": "31495cfa00abf3d73846777fa17db76f4f32e46a0901bf0bf77811a0b4b4e0f0"
+    },
+    "results/audit_finite57_local_routing_whole_components_fresh_20261024.md": {
+      "bytes": 21702,
+      "sha256": "12f865b1373e043d5d1b9bbebb13b3e93a5e9b3a1519e3073f50506d8c4a4785"
+    },
+    "results/audit_finite57_unbounded_tail_algorithms_fresh_20261024.md": {
+      "bytes": 38142,
+      "sha256": "7f27fd0f3a13cdf85187efdf64985d8bf38728af0b3bfac5f79bb6a33f418dee"
+    },
+    "results/b16_isolated_quadratic_pair_census_verification_20261023.json": {
+      "bytes": 12175,
+      "sha256": "7db61f691ced96ffb9113dc98feb7f1b06e73a64e52aa0ab50a37136c45c4d70"
+    },
+    "results/b16_isolated_quadratic_pair_combined_20261023.jsonl": {
+      "bytes": 39913,
+      "sha256": "4b99b5d4324b5b818cee25d4011a165ea8a4ac0a2497e9fd02297215cea2651e"
+    },
+    "results/b16_isolated_quadratic_pair_combined_attempt_1_20261023.stdout": {
+      "bytes": 1842,
+      "sha256": "5fec1430cf0fc94c48b842fd79fbe0565c38d0749eb5da30b0db35abd41aac74"
+    },
+    "results/b16_isolated_quadratic_pair_combined_execution_20261023.json": {
+      "bytes": 2023,
+      "sha256": "cbb97171d1f2005fbda78ab347688b648e79696a9a133058b95492fb07fe8045"
+    },
+    "results/b16_isolated_quadratic_pair_part_0_20261023.jsonl": {
+      "bytes": 18259,
+      "sha256": "6bd64bb7fd7967637c188f942dc3375ad9e9c259d3c4caa2d60b4e120a99647c"
+    },
+    "results/b16_isolated_quadratic_pair_part_0_attempt_1_20261023.stdout": {
+      "bytes": 1380,
+      "sha256": "f890bfda77d446b04918600b2780caf6914f92095cef2c26cde9a0ead7f74b47"
+    },
+    "results/b16_isolated_quadratic_pair_part_0_execution_20261023.json": {
+      "bytes": 1521,
+      "sha256": "00be32934e7fc0976512392f27dfc7e2e507c76cc71c3b3a6df96e824cb4c904"
+    },
+    "results/b16_isolated_quadratic_pair_part_1_20261023.jsonl": {
+      "bytes": 14726,
+      "sha256": "cabf8de66cda3ecab9e16fc14892b139e107d1ce94da2237212072a9ef9e804e"
+    },
+    "results/b16_isolated_quadratic_pair_part_1_attempt_1_20261023.stdout": {
+      "bytes": 1377,
+      "sha256": "15cf310a193055a49448af30f8f85c5fd6fc9d5400d4d4df8ce6bc20dbfe21fa"
+    },
+    "results/b16_isolated_quadratic_pair_part_1_execution_20261023.json": {
+      "bytes": 1518,
+      "sha256": "a5ef0cee833c9d2026d72fca557539022df4413360383286b760fa7fb26b5fb1"
+    },
+    "results/b16_isolated_quadratic_pair_part_2_20261023.jsonl": {
+      "bytes": 12338,
+      "sha256": "715ad8f726823fdcbd2517f62b3fde925f66868efc94a78d85166a5e602a6cde"
+    },
+    "results/b16_isolated_quadratic_pair_part_2_attempt_1_20261023.stdout": {
+      "bytes": 1377,
+      "sha256": "6565faed4e9de5dceb8b58553a4a039d413c22dee614f57568e5d22c1fc65f41"
+    },
+    "results/b16_isolated_quadratic_pair_part_2_execution_20261023.json": {
+      "bytes": 1518,
+      "sha256": "58060f45af7d19adc7a8e2fd7bd4c5a76af85d5c79d2e346d35526bd6187b191"
+    },
+    "results/compact17_arithmetic15_final_working_source_root_acceptance_20261025.json": {
+      "bytes": 2087,
+      "sha256": "577f2100994475a84631f363873dfa2aeb1cf1b4c765ed584f91e7ebd34d57fd"
+    },
+    "results/compact17_composition_lean_axiom_audit_execution_20261025.json": {
+      "bytes": 4603,
+      "sha256": "dfde8e5bb58b2c6f55b591432f043e7994cc2879b1a50481ea688473488531d2"
+    },
+    "results/compact17_composition_lean_axiom_audit_execution_20261025.stdout": {
+      "bytes": 5748,
+      "sha256": "a0af8f236a6297e30c0dd4aeb9abecc4bc3df70ea100f0f278023603adc7754a"
+    },
+    "results/compact17_composition_lean_compile_execution_20261025.json": {
+      "bytes": 3636,
+      "sha256": "0aa0ea48d66e6df4f9fd0ed99401b22074df32e7cce3259b6bb6d50ddf889fab"
+    },
+    "results/compact17_composition_lean_compile_execution_20261025.stdout": {
+      "bytes": 4807,
+      "sha256": "4bccca2178e87e02e878b0493e327c11827507719cea67c1819851316db82762"
+    },
+    "results/compact17_d18_scalar_first_compile_failure_20261025.stdout": {
+      "bytes": 2566,
+      "sha256": "5d42b9434b7981ef66a3e4d270d0b488b7fc94dc49c19f025f577ea361aceebc"
+    },
+    "results/compact17_d18_scalar_lean_axiom_audit_execution_20261025.json": {
+      "bytes": 7362,
+      "sha256": "df3798b399074fe586f41e4c262039cdf8deacd6586f0e3633c6233e3ca24c13"
+    },
+    "results/compact17_d18_scalar_lean_axiom_audit_execution_20261025.stdout": {
+      "bytes": 8416,
+      "sha256": "b4b6899424943713d618c50c99b1fb2f0463c02190803313a7136a0b82bb2d93"
+    },
+    "results/compact17_d18_scalar_lean_compile_attempt2_execution_20261025.json": {
+      "bytes": 3625,
+      "sha256": "b95885910dda0651ee2f909e0f0298992c082061ad496633dabed38dc3b95d74"
+    },
+    "results/compact17_d18_scalar_lean_compile_attempt2_execution_20261025.stdout": {
+      "bytes": 4796,
+      "sha256": "1d34f829082fd97893986cd689ea319dda08fa19a6a43a284308e3c9bb827ebd"
+    },
+    "results/compact17_targeted_lean_completion_20261025/CompactDimensionSeventeenComposition_audit.json": {
+      "bytes": 1962,
+      "sha256": "c0fbfdf2f42dd07e558cd51bcaca037733b9add353ca7528cfaaed66fcf67eeb"
+    },
+    "results/compact17_targeted_lean_completion_20261025/CompactDimensionSeventeenComposition_compile.json": {
+      "bytes": 2043,
+      "sha256": "7d216080861b6c577eb9d259d2f8f46183b1732be71ffe4942df16157ff80572"
+    },
+    "results/compact17_targeted_lean_completion_20261025/D18UniformDottedHeadScalarKernel_audit.json": {
+      "bytes": 1960,
+      "sha256": "d486215407c4e88d7c8554cbc854d9e45082a627c2b8ddac5b4ccc4f71308d99"
+    },
+    "results/compact17_targeted_lean_completion_20261025/D18UniformDottedHeadScalarKernel_compile.json": {
+      "bytes": 2041,
+      "sha256": "b55b8567dfa9afe9da93c3088df2bee4282e1e05397383252d69b806919adbb6"
+    },
+    "results/compact17_targeted_lean_completion_20261025/manifest.json": {
+      "bytes": 6578,
+      "sha256": "e55af2cfc94bacf37c10f872bdcfceb5569f09d582225108f823296b82713bc9"
+    },
+    "results/compact_classical_generic_prefix_energy_20261020.md": {
+      "bytes": 9426,
+      "sha256": "f637d7294d17e37581330ca508c914c23a08ce259845614b055e45815d2790ef"
+    },
+    "results/compact_dimension19_and_arithmetic_dimension17_global_composition_20261021.md": {
+      "bytes": 11583,
+      "sha256": "0ac802108e0ef8a9ca821c3091fca82f7bf9331a0037639d93888f2fabb37a75"
+    },
+    "results/compact_farthest_vertex_mixed_replacement_inequalities_20261020.md": {
+      "bytes": 6102,
+      "sha256": "3732b82614e13dfe2f7a3c66ab6c7fe67e517cbaeb77be0ca533f559ddf6ed84"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch0_20261022.jsonl": {
+      "bytes": 5350,
+      "sha256": "beaeb3cd97b5bf50ae78b198f852553d9010507de81eda6b35a595948c1109e4"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch0_execution_20261022.json": {
+      "bytes": 1437,
+      "sha256": "8b5b928b509ba346613beffc69d4e88e4ecbe353f8c49b6116a63d7da6736e1a"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch0_stdout_20261022.txt": {
+      "bytes": 1288,
+      "sha256": "0e09edf87fc75fa220f7bb613a045871159fe05aff41264617ae4785e0fbb117"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch1_20261022.jsonl": {
+      "bytes": 4437,
+      "sha256": "4266586f7b63f5bacee970891e6b0416554638d0cbac3ba37d931469f97d3f58"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch1_execution_20261022.json": {
+      "bytes": 1437,
+      "sha256": "861f10581eee88af2e6ca639ac12d9fc4c42600e235a301c3a5f3b75928d176a"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch1_stdout_20261022.txt": {
+      "bytes": 1288,
+      "sha256": "732013db06a954414cb7997aac4904b0064cd2f03a32c604f5122d92363af8f7"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch2_20261022.jsonl": {
+      "bytes": 4450,
+      "sha256": "1ac954eef55ce16e21f85a1040cb5fff5eaea9f69022c72cafff9d673fc39ae6"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch2_execution_20261022.json": {
+      "bytes": 1434,
+      "sha256": "8b2907f92eb27533b90502c097c7ec9891297b3cde427842fb991391d28c84ca"
+    },
+    "results/d17_one_isolated_quadratic_fork_batch2_stdout_20261022.txt": {
+      "bytes": 1285,
+      "sha256": "426472c488e9d8209763481f4193d34df592fa5de722f57744695f1fb584c0d7"
+    },
+    "results/d17_one_isolated_quadratic_fork_combine_20261022.jsonl": {
+      "bytes": 12568,
+      "sha256": "d44b0cce94ca94a88e3803d220baa0009a8e61866a0da7d77e811e4c4ba60dab"
+    },
+    "results/d17_one_isolated_quadratic_fork_combine_execution_20261022.json": {
+      "bytes": 1944,
+      "sha256": "6391d6beb628d208d8a46fbd03920177b9eb616e60586ad0e49b9ecd858b89b5"
+    },
+    "results/d17_one_isolated_quadratic_fork_combine_stdout_20261022.txt": {
+      "bytes": 1755,
+      "sha256": "0e60590f03d121666a688aaee81d7616ed7dc543499a7faf0133fb9693d20d72"
+    },
+    "results/d17_one_isolated_quadratic_fork_runtime_manifest_20261022.json": {
+      "bytes": 11743,
+      "sha256": "edf00535f92d522546bea743323c615a10dc17885aa241967783c9496e6b3cf8"
+    },
+    "results/finite57_adaptive22_copy_map_execution_20261025.json": {
+      "bytes": 2962,
+      "sha256": "308bb4bdff7bc1e39d62baeafe924dc4f9b3518e9e192c084cbfbc8e4c60786e"
+    },
+    "results/finite57_adaptive_copy_map_schema_root_acceptance_20261025.json": {
+      "bytes": 1530,
+      "sha256": "daafce4fe4056f326ad3d5568beba03d3b2840b98cae760629d73f712f0ab358"
+    },
+    "results/finite57_affine9_nested_schema_execution_20261025.json": {
+      "bytes": 18971,
+      "sha256": "2e091ef04370e35b1bc5f50f1a744a74b3ae49a776dfc545f816fa9ca6bc7cbf"
+    },
+    "results/finite57_affine9_nested_schema_source_root_acceptance_20261025.json": {
+      "bytes": 1642,
+      "sha256": "ad64f5e62248d277b22223da6f17312031967ef94007932c609dfd57bc53ad14"
+    },
+    "results/finite57_affine_original_newer_provider_source_clearance_root_20261025.json": {
+      "bytes": 3512,
+      "sha256": "9396354728bd68ffc4a94318c1c91437747371d9eb7103b9c7279432b1ad7b6a"
+    },
+    "results/finite57_affine_provider_0_execution_20261025.json": {
+      "bytes": 58431,
+      "sha256": "35b05fbcd751f1512f8466a32ae1254fccfec235daf69ca71d74af7dd55a2736"
+    },
+    "results/finite57_affine_provider_1_execution_20261025.json": {
+      "bytes": 23080,
+      "sha256": "88d4ccbcdfeefff819a6447a14156b33748936d4b21034cef3559a24c9f73f91"
+    },
+    "results/finite57_affine_provider_2_execution_20261025.json": {
+      "bytes": 15271,
+      "sha256": "eb6b13cb4dd0703857cd0b782f974386ef1530add45d82b40b2692e656147993"
+    },
+    "results/finite57_affine_provider_3_execution_20261025.json": {
+      "bytes": 357232,
+      "sha256": "9fd4ec87428b13dabd95d1297a2fb82f68925fa18bd1364d3c17e5813f9e131f"
+    },
+    "results/finite57_affine_provider_4_execution_20261025.json": {
+      "bytes": 11871,
+      "sha256": "253dee5121da77d5106db7ef1e3b807d534395e0c1c75aaf4ddbea77b292a37f"
+    },
+    "results/finite57_affine_provider_5_execution_20261025.json": {
+      "bytes": 111483,
+      "sha256": "dae7a174d645e9533790cd0c1d7d69ea995d80173037003669da2753c8afa9f4"
+    },
+    "results/finite57_affine_provider_6_execution_20261025.json": {
+      "bytes": 196602,
+      "sha256": "861bdd0952709608eef0ab98ce84235b582f334804faad48de9428be0369c9f9"
+    },
+    "results/finite57_affine_provider_7_execution_20261025.json": {
+      "bytes": 78644,
+      "sha256": "cffdab115033f435ac446d7ff93edf3a70e0661a87df7c23d4d14466fa189092"
+    },
+    "results/finite57_affine_provider_8_execution_20261025.json": {
+      "bytes": 88100,
+      "sha256": "379166945a92a8a8cf31a21ffa3ee084269ee1e3b091ec228827ab4b940569c2"
+    },
+    "results/finite57_audit_edition_low8_bounded_replay_20261021.json": {
+      "bytes": 890,
+      "sha256": "e51f9bd6e89b2c460819267ff6921fac3b34d67fb98a4597e9c3e1b2d0b6b2fa"
+    },
+    "results/finite57_bounded_tail_source_binding_closure_context_scope_corrected_20261025.md": {
+      "bytes": 33653,
+      "sha256": "45ee2d244e3445219de0047c1394ff2a48acb23c0fe67eec3676d57e47f1e38b"
+    },
+    "results/finite57_complete_loader_catalogue_integration_20261022.json": {
+      "bytes": 2395,
+      "sha256": "bd061d3d7b6adbebf8faeed02c275ca1660fa07cfac8a59a726c097ac094f3f3"
+    },
+    "results/finite57_current_S8_conditional_bridge_root_acceptance_20261025.json": {
+      "bytes": 2593,
+      "sha256": "7cfc187fe9a25e488e0952d063ab7771702a2732baeafaea6077c8ef628cff4f"
+    },
+    "results/finite57_current_adaptive9_copy_map_attempt2_execution_20261025.json": {
+      "bytes": 13079,
+      "sha256": "e963bc37f265f0c3fe30338dc614d72c0b75995818ac64c6d6b1cc5f4caa4e99"
+    },
+    "results/finite57_current_d13_center_zero_execution_20261025.json": {
+      "bytes": 12393,
+      "sha256": "76a6f41de5104aa5cb8b1d0714018d79a7a5e6080079f45998f80ce2096dad6d"
+    },
+    "results/finite57_current_d13_center_zero_source_clearance_root_20261025.json": {
+      "bytes": 2024,
+      "sha256": "9bd6a5963898cd7507da19ae61730ae6121bde113bf90cd6f6b7eb76f95e4179"
+    },
+    "results/finite57_current_finite_universal_bc13_execution_20261025.json": {
+      "bytes": 6134,
+      "sha256": "c7588a88ac5345b263b975cae7346cdeb79eeb33b928ddec31a69bbc50c25d25"
+    },
+    "results/finite57_current_finite_universal_d13_execution_20261025.json": {
+      "bytes": 8032,
+      "sha256": "a7fec9e10dd1b888a15a46a2f1f466032db089bab46ba8860061fda3dbc99af9"
+    },
+    "results/finite57_current_finite_universal_d14_near_execution_20261025.json": {
+      "bytes": 6668,
+      "sha256": "7c5e521aaee81d80793502176af574862b6eec1bfd6236a8cc1bade521af55ce"
+    },
+    "results/finite57_current_finite_universal_d15_basic_execution_20261025.json": {
+      "bytes": 6634,
+      "sha256": "ce7668d75201f9767099baed3ad16863dd8174b6fb5eab9e67ae9b176a365f38"
+    },
+    "results/finite57_current_protected_0_execution_20261025.json": {
+      "bytes": 141066,
+      "sha256": "8b7ad90b9f792f23ee1898a95ea0b259e7f55ce7023298fb90f08a490e78859b"
+    },
+    "results/finite57_current_protected_1_execution_20261025.json": {
+      "bytes": 138413,
+      "sha256": "58bd4fe8bee03feef90585393b6b4e177c769606b32ef95e4f19e11908cd83cb"
+    },
+    "results/finite57_current_protected_2_execution_20261025.json": {
+      "bytes": 115656,
+      "sha256": "1e88a7eae9e9ff1a4bdd00ff9732ba0bdfa214b98edd381bd7c9b6ae95b2612d"
+    },
+    "results/finite57_current_protected_3_execution_20261025.json": {
+      "bytes": 81882,
+      "sha256": "530f58abb534ae18a64d84dca0421fa8bb0b9893a2aaff4e724c72337ad795e2"
+    },
+    "results/finite57_current_quiet_b13_execution_20261025.json": {
+      "bytes": 64607,
+      "sha256": "60ad55ff9a4ebe17765e62a9303b913764937d57a5fe5dfc3074403cea596b37"
+    },
+    "results/finite57_current_route_selected_00_attempt_3_execution_20261025.json": {
+      "bytes": 91666,
+      "sha256": "7202315b6a6509e915b1e9aa97ae1c96e02de13ef1585c391b0c9d384456a879"
+    },
+    "results/finite57_current_rule_final_inputs_20261025.json": {
+      "bytes": 200359,
+      "sha256": "a3de665c74e727b5f85ee9733150024f35243e4536a2e885d0ae385bf4377b73"
+    },
+    "results/finite57_current_rule_release_completion_20261025.json": {
+      "bytes": 12003,
+      "sha256": "579db7d0deec6ae4bc35ff029db6c5cb2190d439226199c08111c1d197d66b34"
+    },
+    "results/finite57_current_rule_selected_00_longer_tail_execution_20261025.json": {
+      "bytes": 144364,
+      "sha256": "124fcaa392b95837282197278a1a9cdbd9f1348648797633a4f04cbb91dd476c"
+    },
+    "results/finite57_current_rule_selected_01_longer_tail_execution_20261025.json": {
+      "bytes": 160652,
+      "sha256": "49a8386725e1cb41a284d6ab2c12a805d89efad0ae5e6689b73c7d58070859fc"
+    },
+    "results/finite57_current_rule_selected_02_longer_tail_execution_20261025.json": {
+      "bytes": 140300,
+      "sha256": "88d89798704e673ac35a57fff0c5aa81caaab6fb5e99b31bf3ae0bfa259adf28"
+    },
+    "results/finite57_current_rule_selected_03_longer_tail_execution_20261025.json": {
+      "bytes": 152368,
+      "sha256": "3ff25de6f8b3d5c36f8aba4f99d1670f6c20e82270ef4ee72b0acd2d085021c6"
+    },
+    "results/finite57_current_rule_selected_04_longer_tail_execution_20261025.json": {
+      "bytes": 159705,
+      "sha256": "17a20a8732862164c1b3214745d52458ff4f8a9a7930a4924b5db4ac6ea86e7c"
+    },
+    "results/finite57_current_rule_selected_05_longer_tail_execution_20261025.json": {
+      "bytes": 140226,
+      "sha256": "863463739e9fa8542d7089019c619c07c5f4c0781f3efdec20654a8bc6f1f82e"
+    },
+    "results/finite57_current_rule_selected_06_longer_tail_execution_20261025.json": {
+      "bytes": 143740,
+      "sha256": "77db5240948dc254bcc3847b7155f03ed7f2dbc82992024e075cb0881e866c12"
+    },
+    "results/finite57_current_rule_selected_07_longer_tail_execution_20261025.json": {
+      "bytes": 181541,
+      "sha256": "f5b9db8c59088ae4539a57a73f2c1d979fda1f02276f0bfb6f1096d3607531e5"
+    },
+    "results/finite57_current_rule_selected_08_longer_tail_execution_20261025.json": {
+      "bytes": 155405,
+      "sha256": "fb04c93402c24114ea35bde4f35123bb60843a7325c75bfe9c9f0c56d52a733c"
+    },
+    "results/finite57_current_rule_selected_09_longer_tail_execution_20261025.json": {
+      "bytes": 147216,
+      "sha256": "5b2210728d905de3e84cf6df07641cf3811dd31905fe855de0c33bd40e4b6128"
+    },
+    "results/finite57_current_rule_selected_10_longer_tail_execution_20261025.json": {
+      "bytes": 147277,
+      "sha256": "a54bad2ed8844a76f0dbd59b4adcea0a06efa1dfb80b930daff60723903fafda"
+    },
+    "results/finite57_current_rule_selected_11_longer_tail_execution_20261025.json": {
+      "bytes": 145569,
+      "sha256": "9cf7c4fc8b85460ef230bb21f4dd48d123c45fec44e3da27e71128273eb2df1b"
+    },
+    "results/finite57_current_rule_selected_12_longer_tail_execution_20261025.json": {
+      "bytes": 145149,
+      "sha256": "a651041383d0993e93fb4feef56be9bef11ed392d61469c6bfc85358ba7c82c4"
+    },
+    "results/finite57_current_rule_selected_13_longer_tail_execution_20261025.json": {
+      "bytes": 161365,
+      "sha256": "f74b9be0eb660560abbab023b1ecae84b4e6c12e3d8ad5ee75b9cef85b90119a"
+    },
+    "results/finite57_current_rule_selected_14_longer_tail_execution_20261025.json": {
+      "bytes": 167443,
+      "sha256": "87463ac014d5c9786518d79c02680a8cb2b8203d3db0752dd8976ee0f4fb9580"
+    },
+    "results/finite57_current_rule_selected_15_longer_tail_execution_20261025.json": {
+      "bytes": 164329,
+      "sha256": "b88a53cef89420f79514c4fc06125d71f69157a35c784391097d7c494764fe1e"
+    },
+    "results/finite57_current_rule_selected_16_longer_tail_execution_20261025.json": {
+      "bytes": 122519,
+      "sha256": "8bc471f5995d116cc8922fd83ccc19b3b912b20f11d11330f10ddbcadf05fdf0"
+    },
+    "results/finite57_current_rule_selected_17_longer_tail_execution_20261025.json": {
+      "bytes": 148081,
+      "sha256": "9b2334122fb57ef2c8eb25ee700bb0b614492df4fd7746fe36450bfccff05cd9"
+    },
+    "results/finite57_current_rule_selected_18_longer_tail_execution_20261025.json": {
+      "bytes": 143129,
+      "sha256": "aaeff1b66ed957c9f9cd9978686e801e90f38d09453c264e8b3637999d58c5fd"
+    },
+    "results/finite57_current_rule_selected_19_longer_tail_execution_20261025.json": {
+      "bytes": 145876,
+      "sha256": "fce8618a8117e38eb72c965f575b8bd38031b511d8fd3a053447cbe2a0408574"
+    },
+    "results/finite57_current_rule_selected_20_longer_tail_execution_20261025.json": {
+      "bytes": 148060,
+      "sha256": "e06049a58cf23098f75f388b9f0159524f1f65522945e86702aace2944f0a806"
+    },
+    "results/finite57_current_rule_selected_21_longer_tail_execution_20261025.json": {
+      "bytes": 140969,
+      "sha256": "5aa9619559cd7b8a7ff655b5b94448bdbea08bf33ecfdd85947c36ae32be02a4"
+    },
+    "results/finite57_current_rule_selected_22_longer_tail_execution_20261025.json": {
+      "bytes": 146117,
+      "sha256": "3c4d4bbfa8ebf41bb0c940ef496003a5fdb0f0cc78c40d76e2a8ea06bba324b5"
+    },
+    "results/finite57_current_rule_selected_23_longer_tail_execution_20261025.json": {
+      "bytes": 165064,
+      "sha256": "9c7cd3e5e2e4b6e0e6c4fd85be818b936510ed5723ff2899f3ca22c7a8192d30"
+    },
+    "results/finite57_current_rule_selected_24_longer_tail_execution_20261025.json": {
+      "bytes": 163561,
+      "sha256": "972822c15ebbcda08ac22ab73dbb3df5235933ce8f4c35ce42195915efeb3724"
+    },
+    "results/finite57_current_rule_selected_25_longer_tail_execution_20261025.json": {
+      "bytes": 141953,
+      "sha256": "e78c0c54da005ffffd62c8ca82a226c0b9f1e3c0b27f81235958354cb9f0ebba"
+    },
+    "results/finite57_current_rule_selected_26_longer_tail_execution_20261025.json": {
+      "bytes": 134992,
+      "sha256": "1cd8527323983afa230e78ebc2d5bc451ccdb2d2e2c5aaee066819e0e0db6797"
+    },
+    "results/finite57_current_rule_selected_27_longer_tail_execution_20261025.json": {
+      "bytes": 158120,
+      "sha256": "eee27466ed9e41d9d6d40fd6683a3f4138f810b5835c32f79b6a49af612ed916"
+    },
+    "results/finite57_current_rule_selected_28_longer_tail_execution_20261025.json": {
+      "bytes": 115007,
+      "sha256": "62d1230cadcc6e53a418712b196e1ce45726a2f60662a9b366e2616f97270427"
+    },
+    "results/finite57_current_rule_selected_29_longer_tail_execution_20261025.json": {
+      "bytes": 134900,
+      "sha256": "6e58f5765a36b6294c7b74fbc1dbbfde1433a06481303569ef1ecc0c4cca9100"
+    },
+    "results/finite57_current_rule_selected_30_longer_tail_execution_20261025.json": {
+      "bytes": 119926,
+      "sha256": "5d8da2dd508cd2d5e54ade5b1ae4ca21db47a6a189d5dc64ae5b280affa251ed"
+    },
+    "results/finite57_current_rule_selected_31_longer_tail_attempt2_execution_20261025.json": {
+      "bytes": 143165,
+      "sha256": "4b9f19a1a187431d3a85b8acd77b193b8c6cf1c39a1d91e048c3a0ee5b01d01b"
+    },
+    "results/finite57_current_rule_selected_32_longer_tail_execution_20261025.json": {
+      "bytes": 123295,
+      "sha256": "854c3b60e5a20e8f55736d9207e26c7b74b74c1c755144be8a8c858b6221dca0"
+    },
+    "results/finite57_current_rule_selected_33_longer_tail_execution_20261025.json": {
+      "bytes": 132178,
+      "sha256": "c3c66cd932dca62a48fe1c1c8b1a8dfe026366cd4a3b711da8724edd764de2bb"
+    },
+    "results/finite57_current_rule_selected_34_longer_tail_execution_20261025.json": {
+      "bytes": 126239,
+      "sha256": "fd16011cbf1523b8ec9bff7de552159978a46f3891f1447ec5d9ff58ecfef994"
+    },
+    "results/finite57_current_rule_selected_35_longer_tail_execution_20261025.json": {
+      "bytes": 134919,
+      "sha256": "f9edf0b6561584cba012093d206c65ff40cc840d3c8031629ac03ba78f1fc5db"
+    },
+    "results/finite57_current_rule_selected_36_longer_tail_execution_20261025.json": {
+      "bytes": 140328,
+      "sha256": "c2279d903b3f68871fb501a5e1234c193db7f39c625382f9f645b7940bded478"
+    },
+    "results/finite57_current_rule_selected_37_longer_tail_execution_20261025.json": {
+      "bytes": 129916,
+      "sha256": "5e54956a03ae7b3923652c3d98aa743972d1f9408bccb46f839e5a7b96ac634a"
+    },
+    "results/finite57_current_rule_selected_38_longer_tail_execution_20261025.json": {
+      "bytes": 139152,
+      "sha256": "8439af14dd43f4ed14f121d66a5bcba472c86bef6fbce467c5d7dd448021e914"
+    },
+    "results/finite57_current_rule_selected_39_longer_tail_execution_20261025.json": {
+      "bytes": 125104,
+      "sha256": "1e56b1e963f37335a9f492b4eeb54a434907c7e40b5b033065eea44799432c72"
+    },
+    "results/finite57_current_rule_selected_40_longer_tail_execution_20261025.json": {
+      "bytes": 121786,
+      "sha256": "2efaaad9ff55b67ee222a15efe2bf9fea202b083814aaacf5a0023166b098c09"
+    },
+    "results/finite57_current_rule_selected_41_longer_tail_execution_20261025.json": {
+      "bytes": 134298,
+      "sha256": "ee6a6f9967f26efbbd65ed2e7f5c80a7c3823df015c38d88e136ab55423386bf"
+    },
+    "results/finite57_current_rule_selected_42_longer_tail_execution_20261025.json": {
+      "bytes": 144972,
+      "sha256": "8c69635cb95079f86a44f3147f5976f4e9bce2e8370aa9768660aafc3ece38f2"
+    },
+    "results/finite57_current_rule_selected_43_longer_tail_execution_20261025.json": {
+      "bytes": 129075,
+      "sha256": "f78b2249faf67aaba6f1690e066140e1fcb51ff7ef9394eb1625513357d3583f"
+    },
+    "results/finite57_current_rule_selected_44_longer_tail_execution_20261025.json": {
+      "bytes": 121911,
+      "sha256": "2071ddf9c8c7852abd599da5d1ded1b7b426046ee65b570b29ec7d88396beccd"
+    },
+    "results/finite57_current_rule_selected_45_longer_tail_execution_20261025.json": {
+      "bytes": 110511,
+      "sha256": "152d55434063211da3a895d8188ac8231baf1234842e0b08bfb8871c13c210f6"
+    },
+    "results/finite57_current_rule_selected_46_longer_tail_attempt2_execution_20261025.json": {
+      "bytes": 165533,
+      "sha256": "6ab9890d5c7509bbbb8df7849899703d1125b40d02640d142a375541319462b1"
+    },
+    "results/finite57_current_rule_selected_47_longer_tail_execution_20261025.json": {
+      "bytes": 136204,
+      "sha256": "d3c3c84544e219b21e9f8cebb7d9026f08460e588f490a54c346cbaa21aa682d"
+    },
+    "results/finite57_current_rule_selected_48_longer_tail_execution_20261025.json": {
+      "bytes": 165425,
+      "sha256": "ff0e6672d6503097fba6f32137eab1c0067f53dc2d1ffded696b49225c895530"
+    },
+    "results/finite57_current_rule_selected_49_longer_tail_execution_20261025.json": {
+      "bytes": 141517,
+      "sha256": "225da7095f6c598eb504d28ac0d4ecf0495ebe06ff4210570a884cc847c66d23"
+    },
+    "results/finite57_current_rule_selected_50_longer_tail_execution_20261025.json": {
+      "bytes": 118779,
+      "sha256": "f85dd2340c1a8cced7d0b49a6c072eb223ca5fcb96fe046cc183818db1e22343"
+    },
+    "results/finite57_current_rule_selected_51_longer_tail_execution_20261025.json": {
+      "bytes": 156884,
+      "sha256": "8d530b3d3bfb9e44753aae20071fe2995dbe6adeead02a8e762d243a833d11a0"
+    },
+    "results/finite57_current_rule_selected_52_longer_tail_execution_20261025.json": {
+      "bytes": 76721,
+      "sha256": "34ba8ba6d11c33fb1782f3c6f79d9de761ae1e8a9680da7b194dab213d761db6"
+    },
+    "results/finite57_current_rule_selected_53_longer_tail_execution_20261025.json": {
+      "bytes": 159085,
+      "sha256": "31d18cf01d9c257148b396c2a1bcbb219363d33f8ccb20d190d90efb3ba063c9"
+    },
+    "results/finite57_current_rule_selected_54_longer_tail_execution_20261025.json": {
+      "bytes": 123151,
+      "sha256": "a66f0b4d87b6dd5793b4f2e8b0782772de8741878754535f03cdd928eed82b10"
+    },
+    "results/finite57_current_rule_selected_55_longer_tail_execution_20261025.json": {
+      "bytes": 148248,
+      "sha256": "1d8f0d093ec937fbde7b4547e9a14906adf2d9fe1a658851d91eb0771d7cb002"
+    },
+    "results/finite57_current_rule_selected_56_longer_tail_execution_20261025.json": {
+      "bytes": 173232,
+      "sha256": "7930e3a4465020f7e4a72025afc63d948bc75b74fd3688365028a18c33d6a4ec"
+    },
+    "results/finite57_current_rule_selected_57_longer_tail_execution_20261025.json": {
+      "bytes": 152799,
+      "sha256": "e874f2bcbffb51d567eda59fb6296c3cbe478fe4588c3690d6f81b9f8c98f72a"
+    },
+    "results/finite57_current_rule_selected_58_longer_tail_execution_20261025.json": {
+      "bytes": 135272,
+      "sha256": "85d2b5c4a705a2dab18598f14d18d12e2686525ff959cd548ff4c8f8275728f6"
+    },
+    "results/finite57_current_rule_selected_59_longer_tail_execution_20261025.json": {
+      "bytes": 124377,
+      "sha256": "77391c56daab0f3a983f9dc77523f2cb1dbf6312273757aea14dcf63e22e52e3"
+    },
+    "results/finite57_current_rule_selected_60_longer_tail_execution_20261025.json": {
+      "bytes": 152641,
+      "sha256": "3783f43066262f73f401d255ffe624a00a9581b5a7147ea6d5da61c3528849d6"
+    },
+    "results/finite57_current_rule_selected_61_longer_tail_execution_20261025.json": {
+      "bytes": 132767,
+      "sha256": "6760985399f99f5004b47be9e25d03784026e3c1a511683538a67a46a20a2571"
+    },
+    "results/finite57_current_rule_selected_62_longer_tail_execution_20261025.json": {
+      "bytes": 135453,
+      "sha256": "3e17f488fa53a6172437da0749233f57fb83052a0c0eab0ca634eca4a8d00fd4"
+    },
+    "results/finite57_current_rule_selected_63_longer_tail_execution_20261025.json": {
+      "bytes": 140111,
+      "sha256": "c8bed0835d2584f8a4cca8478074a8557eea6255524a3e2d8d37858e865026cf"
+    },
+    "results/finite57_current_rule_selected_inputs_20261025.json": {
+      "bytes": 160160,
+      "sha256": "c5631b06bda1baf98ff8b965a03e333b1603c41424f64812d058e9acf6ae768f"
+    },
+    "results/finite57_current_s8_applications_source_clearance_root_20261025.json": {
+      "bytes": 2362,
+      "sha256": "3be472d7aee14b9edc3709937389f2bad43637777e54c36d4050a4fd55a1fe6e"
+    },
+    "results/finite57_current_s8_association_controls_execution_20261025.json": {
+      "bytes": 29283,
+      "sha256": "eac530e7144714691197d8d4c69a231442aab769f3052e7ed9d848af29c0fc61"
+    },
+    "results/finite57_current_s8_deep_00_execution_20261025.json": {
+      "bytes": 240787,
+      "sha256": "4ec83cf50b1109bf8a7665e3306cb2cb857367c613e12002aa7feb776f725d60"
+    },
+    "results/finite57_current_s8_deep_01_execution_20261025.json": {
+      "bytes": 251503,
+      "sha256": "da09d9179256e399058822bfca994aab32128d9a02b4b1b17da44caee3396ac9"
+    },
+    "results/finite57_current_s8_deep_02_execution_20261025.json": {
+      "bytes": 262219,
+      "sha256": "0d2b7012831222e66982281a921e4f9e8b8f83b522375394af0e131e7e223074"
+    },
+    "results/finite57_current_s8_deep_03_execution_20261025.json": {
+      "bytes": 273525,
+      "sha256": "257355b3fe54e15ecc07ad161e1bcc3697e7a561640c503bcbc0e3c0dbf0124e"
+    },
+    "results/finite57_current_s8_deep_04_execution_20261025.json": {
+      "bytes": 286015,
+      "sha256": "0dba62b68df669270515be1a53104a9cb9b01a2609ff3dc2a010830cf4e60046"
+    },
+    "results/finite57_current_s8_deep_05_execution_20261025.json": {
+      "bytes": 300278,
+      "sha256": "c517ef1a01c69f7919024afd6268a0b10f3f2193a7105d1c889563499fcd46d5"
+    },
+    "results/finite57_current_s8_deep_06_execution_20261025.json": {
+      "bytes": 315727,
+      "sha256": "1931231e42a954a1762065c8bfcb9dd2277e055e6b4242472c1025a8989229e0"
+    },
+    "results/finite57_current_s8_deep_07_execution_20261025.json": {
+      "bytes": 331768,
+      "sha256": "0db990ed6bfabf86ac359df7b87600784bfe37f13a67bd0ab4586efbae1c5c98"
+    },
+    "results/finite57_current_s8_deep_08_execution_20261025.json": {
+      "bytes": 347819,
+      "sha256": "45875bd32a30bb3e38a2c52a73aecd8d9d9309ff8d5817e9ab5c43f8f25f6bff"
+    },
+    "results/finite57_current_s8_deep_09_execution_20261025.json": {
+      "bytes": 363883,
+      "sha256": "0bc12d1f3b60094441c9abdcc47be1c964c4e5e35961cf80b9ec047bb179b0b3"
+    },
+    "results/finite57_current_s8_deep_10_execution_20261025.json": {
+      "bytes": 379955,
+      "sha256": "b46253be97eaf284850024b9364927c1dfa3d4a24d71591a71b8996ff0ef0240"
+    },
+    "results/finite57_current_s8_deep_11_execution_20261025.json": {
+      "bytes": 187208,
+      "sha256": "31415378c3d6367cf9b702ddcc6c56a67f4c84f680d9e8f43990aa0b0153489c"
+    },
+    "results/finite57_current_s8_deep_12_execution_20261025.json": {
+      "bytes": 197924,
+      "sha256": "92382c38f134bd565da046f32ead5b414e86812baffa52822fe0d1919dc6bf9c"
+    },
+    "results/finite57_current_s8_deep_13_execution_20261025.json": {
+      "bytes": 208640,
+      "sha256": "fbbb3ff77056366bbb7b55695c7b58d2299d9c278dfb48ded739f22ae3af9979"
+    },
+    "results/finite57_current_s8_deep_14_execution_20261025.json": {
+      "bytes": 219356,
+      "sha256": "23f93017da889d356bf172114361c80f0ffff1580c198df94fbb0d89220bdc85"
+    },
+    "results/finite57_current_s8_deep_15_execution_20261025.json": {
+      "bytes": 230072,
+      "sha256": "7fa4c8080cbdb0b884ad65c7c7241b9a42245c08294c7e8c4208eb43cf7d7b65"
+    },
+    "results/finite57_current_s8_tree_immediate_execution_20261025.json": {
+      "bytes": 113271,
+      "sha256": "6a4baea9421155c37dfa486a7df71abff0925f33def88aa350d55c277036aedb"
+    },
+    "results/finite57_current_triangle_retention_root_acceptance_20261025.json": {
+      "bytes": 2513,
+      "sha256": "9b0180ba51d4f19a8c8c49fc9584893a8dbb6b15c7d1b3c41a0a177b14bb3a76"
+    },
+    "results/finite57_current_universal_five_local_execution_20261025.json": {
+      "bytes": 58742,
+      "sha256": "66ebf70686cce808e62587d407d9adeb4b0f1af79482c4d7e74c4e0693278556"
+    },
+    "results/finite57_current_universal_order12_d_execution_20261025.json": {
+      "bytes": 104032,
+      "sha256": "f7f9967c070e0073eb065e223a9105256460a0cce277585c840cbb1ea32a041f"
+    },
+    "results/finite57_current_universal_receiver_bridge_root_acceptance_20261025.json": {
+      "bytes": 2969,
+      "sha256": "6bc292fb08a50c15cfa1cff2ef9e43def44d4febd942904f0cdd1033eac4838e"
+    },
+    "results/finite57_current_universal_receiver_retention_bridge_20261025.md": {
+      "bytes": 20943,
+      "sha256": "309bbd85a766466bcb3bb4437d7a5d50ffe8c614c4892f40f4ccc06d842893eb"
+    },
+    "results/finite57_current_universal_receivers_source_clearance_root_20261025.json": {
+      "bytes": 2497,
+      "sha256": "5f8e71eda67706b7b658fb7b569d3e2b5fd3d119a7251786d78f8511be6d1f08"
+    },
+    "results/finite57_d12_first_current_binding_execution_20261025.json": {
+      "bytes": 87166,
+      "sha256": "2082b383f340ae542ca636a4fa7fdf55a5ec44614204dd03e0b94723b4bfb444"
+    },
+    "results/finite57_d12_guard_safe_execution_source_clearance_20261025.json": {
+      "bytes": 1935,
+      "sha256": "52c4dd68f2f31d4e1088aacf65e32d376f05415e137f22d657b90c8bf1261f35"
+    },
+    "results/finite57_d12_rest_current_binding_execution_20261025.json": {
+      "bytes": 18698,
+      "sha256": "d9d4f85e5c378544bea75861e1380f840f9cd73a2d1251977baeccfbe96515ec"
+    },
+    "results/finite57_d14_current24_a14_adjusted_execution_20261025.json": {
+      "bytes": 183313,
+      "sha256": "04c8478093cfd25c08ca436d35872b05f608e42e8b28a970615ecf92ae6cd365"
+    },
+    "results/finite57_d14_current24_root_acceptance_20261025.json": {
+      "bytes": 2910,
+      "sha256": "e423ad9828f5ebad6ffce01f54da7f19076540860b0756a55f2cd70586bb9857"
+    },
+    "results/finite57_direct_current_receiver_source_clearance_20261025.json": {
+      "bytes": 1775,
+      "sha256": "d442a1f6daec472f47890edc70e645cd5de6909222758408ae4d87cca0b5756d"
+    },
+    "results/finite57_direct_receiver2_structural_execution_20261025.json": {
+      "bytes": 1691,
+      "sha256": "976418a95f3fbf3fe913d7ecd78af841607ae53b9e4181367063e5ac5d798baf"
+    },
+    "results/finite57_distance9_partitioned_replay_runtime_20261020.json": {
+      "bytes": 118805,
+      "sha256": "1228a4a7c487c9b39d0b3d2daabac5c01127f068131003b268c79381ce7118bd"
+    },
+    "results/finite57_eight_proper_contacts_source_clearance_root_20261025.json": {
+      "bytes": 1744,
+      "sha256": "5fd240fbe30db2328072cc56a57f89e6fde7c18637e1dacb8bb20266e8b13b9c"
+    },
+    "results/finite57_final259_actual_registration_20261025.json": {
+      "bytes": 975,
+      "sha256": "c0502378ed89c3170898e1b3b04f1aa1482a7fdb9ea1a2ef37aeaa7f5ced0fc1"
+    },
+    "results/finite57_final_current_rule_conjunction_execution_20261025.json": {
+      "bytes": 139679,
+      "sha256": "79f05553cb137e4458e31aa031aa186b9f7d8285fb4874e3d01ea22f5fbef9f8"
+    },
+    "results/finite57_final_current_rule_conjunction_execution_20261025.stdout": {
+      "bytes": 140943,
+      "sha256": "6614285dc17d3f9c1f5dccc55d247711043c10bd9b21c95d587ea4927badc220"
+    },
+    "results/finite57_final_guard_one_sided_eight_execution_20261025.json": {
+      "bytes": 14669,
+      "sha256": "28a1ec6031105343b3e97840a0cc770d0ebef9d3366fd604767c8b2a73b95a94"
+    },
+    "results/finite57_final_guard_one_sided_source_clearance_root_20261025.json": {
+      "bytes": 2080,
+      "sha256": "dab08dc5abf52a07cc57dff538ebf7ed0891ce36f1bc4b961d847ca4f6f585da"
+    },
+    "results/finite57_final_quiet_case_03_execution_20261025.json": {
+      "bytes": 31116,
+      "sha256": "4d4fd06617289b54ec7b67bc18878427efb6ffa562ef3f9ef311225d6fd68b4d"
+    },
+    "results/finite57_final_quiet_case_04_execution_20261025.json": {
+      "bytes": 32451,
+      "sha256": "79f769cd2802bd393820566334b7033cc9bed5c8b76506d58cbea931f6042279"
+    },
+    "results/finite57_final_quiet_case_05_execution_20261025.json": {
+      "bytes": 30219,
+      "sha256": "a0b0a1fc540750304c66f1ddd1a9dc2643ad8b0e7b32a367fb1876359505f3f9"
+    },
+    "results/finite57_final_quiet_case_09_execution_20261025.json": {
+      "bytes": 31116,
+      "sha256": "8ce727175d95234317b195ff4ce9a5df8f22daf8ae095a898475a837d328b958"
+    },
+    "results/finite57_final_quiet_case_10_execution_20261025.json": {
+      "bytes": 32477,
+      "sha256": "a098a35aa3410fffa44a0ed84516cbc4eca9d5fc2fcf97356c2ae5459edf6f7f"
+    },
+    "results/finite57_final_quiet_case_11_execution_20261025.json": {
+      "bytes": 30267,
+      "sha256": "ec0a6fddb27b52f166ca6bfa06ed61d11f144ebdb167423a032bef17bdd9621e"
+    },
+    "results/finite57_final_quiet_case_15_execution_20261025.json": {
+      "bytes": 31133,
+      "sha256": "05b9a9c8a97532c03dc3d164fa4f22c438d9b2b70867e92e51792415adb257cd"
+    },
+    "results/finite57_final_quiet_case_16_execution_20261025.json": {
+      "bytes": 32477,
+      "sha256": "2b8f5e6f94472c21ac9a8bcba51389c7d970d23f6b6a52aa45908ded34917f51"
+    },
+    "results/finite57_final_quiet_case_17_execution_20261025.json": {
+      "bytes": 30235,
+      "sha256": "37870345ee59f53cb597b8112c95d0baef9d57cbd72b2609be2c9daa8d1fed4d"
+    },
+    "results/finite57_final_quiet_case_21_execution_20261025.json": {
+      "bytes": 31133,
+      "sha256": "83832debb1acec274010df80f481ffa0f21d0aa399e36f0c97baea8cbe00d271"
+    },
+    "results/finite57_final_quiet_case_22_execution_20261025.json": {
+      "bytes": 32485,
+      "sha256": "34ecccef59eb4036ee5671119d6d001835b87efe7a85d7541a15770017e0a8df"
+    },
+    "results/finite57_final_quiet_case_23_execution_20261025.json": {
+      "bytes": 30276,
+      "sha256": "b65a2a186fe04b824ffccd90769b4b172166181289ff3cffcc6a605849a7c369"
+    },
+    "results/finite57_final_quiet_case_27_execution_20261025.json": {
+      "bytes": 31157,
+      "sha256": "c6a834eef2f444d3f571cda4fc9f35c10a72cdc7f0098d6a1bd8af6e16268a2d"
+    },
+    "results/finite57_final_quiet_case_28_execution_20261025.json": {
+      "bytes": 32500,
+      "sha256": "8d19867e4a8ec8a2220f39cbfa4ab69ab3c46566f4fa5c121c7bd48e306c28aa"
+    },
+    "results/finite57_final_quiet_case_29_execution_20261025.json": {
+      "bytes": 30260,
+      "sha256": "971ee92d6e5c0259e95b98ea73b82dcc2c7987ebdf6e63dc874a3f0073dadffd"
+    },
+    "results/finite57_final_quiet_case_33_execution_20261025.json": {
+      "bytes": 31157,
+      "sha256": "e577c61ff32ec5f1aa3a50e7d19bfb93b786ba7040873bc52dd283aa8ab2b74d"
+    },
+    "results/finite57_final_quiet_case_34_execution_20261025.json": {
+      "bytes": 32501,
+      "sha256": "711fea9369752205b08bba824cd24a838810d16bc9c676291a3d75b35290eaf5"
+    },
+    "results/finite57_final_quiet_case_35_execution_20261025.json": {
+      "bytes": 30259,
+      "sha256": "c2dc14c7ea7f8d16fc70aaf6894792137aafcfb43bf8c031194513b730e3de55"
+    },
+    "results/finite57_final_quiet_case_39_execution_20261025.json": {
+      "bytes": 31156,
+      "sha256": "47129a70974a4d371610d4c5e21782ca2643b9e407eefc794c870712dcbeded4"
+    },
+    "results/finite57_final_quiet_case_40_execution_20261025.json": {
+      "bytes": 32501,
+      "sha256": "625badffeda7cf7e9730ee7bd1526fbe83a8bf6fd5c8e2a3454e102cab15cb05"
+    },
+    "results/finite57_final_quiet_case_41_execution_20261025.json": {
+      "bytes": 30259,
+      "sha256": "2a1182fcc536abca68526e09faaa4ed52afb2f2b7ea0702536fb58fde0b6f54c"
+    },
+    "results/finite57_final_quiet_case_45_execution_20261025.json": {
+      "bytes": 31157,
+      "sha256": "2bf9bb3e7f5c4e27f4f5a0385a6f4e9089c583de7085b84464bc9323dd849282"
+    },
+    "results/finite57_final_quiet_case_46_execution_20261025.json": {
+      "bytes": 32501,
+      "sha256": "47f33a734d8a147f8c00859a1db4bab627563fd1c26d0a73018ed02ece4f0314"
+    },
+    "results/finite57_final_quiet_case_47_execution_20261025.json": {
+      "bytes": 30261,
+      "sha256": "37ef5514c4727de2bec6e5a545ad1ea402f817ce3ce98ddd2545d122d3894a4e"
+    },
+    "results/finite57_g4_cycle11_execution_20261025.json": {
+      "bytes": 5976,
+      "sha256": "830da3088e0e1569569d7540522564ce18f49bd43b91c9d5c9f7eefc5621301c"
+    },
+    "results/finite57_g4_cycle12_execution_20261025.json": {
+      "bytes": 25147,
+      "sha256": "0ad5dee94febb70509ba70c5109326f9f7150e58423b0066c245c7a3bf50c092"
+    },
+    "results/finite57_g4_cycle13_execution_20261025.json": {
+      "bytes": 5525,
+      "sha256": "405850948f2896ff028d3ffbc48c13ee66e3bb9e89cf9fa4f8fce806fbceb35b"
+    },
+    "results/finite57_g4_cycle14_execution_20261025.json": {
+      "bytes": 9803,
+      "sha256": "2b4a5c41e0d6078c9792f9cbf6ac968018b724e28f23e5354cff0f795251f354"
+    },
+    "results/finite57_g4_cycle16_execution_20261025.json": {
+      "bytes": 7392,
+      "sha256": "11c79523d053378c4ee1570326bae37ccd051f486b15e8531b0d4bfea37b1911"
+    },
+    "results/finite57_g4_cycle18_tree_execution_20261025.json": {
+      "bytes": 7572,
+      "sha256": "43de8e981e7a3396a4f14c12e2698d3a860c8ca5eaa559a435ecbc5dc54e9cac"
+    },
+    "results/finite57_g4_large_d_execution_20261025.json": {
+      "bytes": 44450,
+      "sha256": "2bc14fb71e964adcc9333be35720180919247d0d0b35110a54c318b95b00ad71"
+    },
+    "results/finite57_g4_order10_b_execution_20261025.json": {
+      "bytes": 8587,
+      "sha256": "5b33153b9b739f9715c2cc8e32160d5ae00533510611b0fcddba55a1a6b2dc2f"
+    },
+    "results/finite57_g4_order10_cycle_execution_20261025.json": {
+      "bytes": 8904,
+      "sha256": "c5833c6e8098b9ccc02cae8d1d8a3537ddf040b4589cf0545a65d534c7585d82"
+    },
+    "results/finite57_g4_order10_d_execution_20261025.json": {
+      "bytes": 13517,
+      "sha256": "44eb85b262dbb98cae8d4e9359d7246d6468ccd1feb9ccdef536345824e56ec1"
+    },
+    "results/finite57_g4_order11_bc_execution_20261025.json": {
+      "bytes": 6889,
+      "sha256": "d1b4978d4bc0aa233dcf8ca407c22bf7884e4d4da7d973a92a614d55492af3ef"
+    },
+    "results/finite57_g4_order11_bcd_execution_20261025.json": {
+      "bytes": 19741,
+      "sha256": "e163e367d8051582d202eec35748b0014fdd01d6a8ab725e2fe8fc9a94b89e1a"
+    },
+    "results/finite57_g4_order12_center_execution_20261025.json": {
+      "bytes": 11116,
+      "sha256": "23722b2194b27857089a9ad2d93abeadfb12b27c6b89d62a4e0ec1237e4d6ea7"
+    },
+    "results/finite57_g4_order12_near_execution_20261025.json": {
+      "bytes": 5428,
+      "sha256": "3c4c771b910818c04c3b99ef5951a85868494dd8e7668d33f17c6efa9936d043"
+    },
+    "results/finite57_g4_order12_selected_execution_20261025.json": {
+      "bytes": 33749,
+      "sha256": "2a821b6e81fd956d0bf482f8b0027316bf337bd7a8467cef35cd8e6f1455578e"
+    },
+    "results/finite57_g4_order13_sparse_execution_20261025.json": {
+      "bytes": 6709,
+      "sha256": "e0ab40abd3aa3911c37aef97782d64993d5ae30293a59a27211c4145eb3df7af"
+    },
+    "results/finite57_g4_selected_terminal_source_clearance_root_20261025.json": {
+      "bytes": 1824,
+      "sha256": "29e14b3c73d11bba48a97c82e5d185433a74270486c4c605413979a80bc23a06"
+    },
+    "results/finite57_guard_partial12_structural_execution_20261025.json": {
+      "bytes": 4069,
+      "sha256": "7f172501a0acfca6703a2de7fa07a99265ce856a784751a94d95a1d3ba032c28"
+    },
+    "results/finite57_high_path56_root_source_clearance_20261025.json": {
+      "bytes": 2323,
+      "sha256": "ef574839fcb23f2cbd54133c44e4a8d152ea1969aa0c86f38acec7dce3d78eec"
+    },
+    "results/finite57_high_projection56_execution_20261025.json": {
+      "bytes": 12780,
+      "sha256": "d6f7e527e95ee7e0e84d4773aa98f95f1a7cc15a73c18c240519d78919db7a64"
+    },
+    "results/finite57_higher_tail_remaining_replay_20261020.json": {
+      "bytes": 15270,
+      "sha256": "9cfd3472b887486e6e6f60727a1e332d72c507d3e374e1c3d79a77b4a374c413"
+    },
+    "results/finite57_higher_tail_replay_batches_20261020.json": {
+      "bytes": 32211,
+      "sha256": "17b70fe94ce9830824f195b744e535b4fafbc67e8315697e2706bade55be88f1"
+    },
+    "results/finite57_large_d_lossless_0_execution_20261025.json": {
+      "bytes": 35002,
+      "sha256": "f26fffa6c1878b24d5c396943a5b4f4bca9fe4f384d404dc573b927040cdf853"
+    },
+    "results/finite57_large_d_lossless_1_execution_20261025.json": {
+      "bytes": 33662,
+      "sha256": "660467156cf59a367ec50de5c1637f2d925b6d15e0cdff166b0ffb61b8f97bc4"
+    },
+    "results/finite57_large_d_lossless_2_execution_20261025.json": {
+      "bytes": 29714,
+      "sha256": "d0d04ffc34650628e2131f3f7b6f515b3958b439a78744438aac58aa492c01d9"
+    },
+    "results/finite57_large_d_lossless_3_execution_20261025.json": {
+      "bytes": 26134,
+      "sha256": "b956eb4cf389086a1108638d966de11aea15b448107e0c89da79f99c6dc200bc"
+    },
+    "results/finite57_large_d_lossless_source_and_execution_root_acceptance_20261025.json": {
+      "bytes": 2803,
+      "sha256": "2de7b82e02176751cffa2a3edff52a27bb04f5f1edb4e33da3f74dbcc5ca6294"
+    },
+    "results/finite57_literal_35_actual_conjunction_20261025.json": {
+      "bytes": 30715,
+      "sha256": "7538e823514731d560cd17b56ee88d1c4eb7672fa53093924b4dd3bbf5504405"
+    },
+    "results/finite57_literal_binding_source_clearance_20261024.json": {
+      "bytes": 19934,
+      "sha256": "56506fab2336997a867e0dfc7e52acdabe371831d69970c0c3ba1fb36c0c3bd7"
+    },
+    "results/finite57_longer_tail_all64_actual_application_completion_20261025.json": {
+      "bytes": 60319,
+      "sha256": "a12b9ed6a84f28378b1cfabf471cc3aa01db444723e02c4782d5ae09e178e3e8"
+    },
+    "results/finite57_newer_provider_0_execution_20261025.json": {
+      "bytes": 51197,
+      "sha256": "ffa6b994a71555565e8163dda68b2c593a6ae53e1cd217d6566310f2291e67e9"
+    },
+    "results/finite57_newer_provider_1_execution_20261025.json": {
+      "bytes": 34012,
+      "sha256": "f044d174836de4cf735ddcdec555c62a1bf0cc1029710f5a1f9a0e6134fd66d2"
+    },
+    "results/finite57_newer_provider_2_execution_20261025.json": {
+      "bytes": 28456,
+      "sha256": "aaba9fc097421aaf19fa014f3fce023c038cb9b84ed033ef8c60f704040637c0"
+    },
+    "results/finite57_newer_provider_3_execution_20261025.json": {
+      "bytes": 30023,
+      "sha256": "c2901aa5ddcc45a08b40d99cc6966d8549a6231a8a4944702f2a44ef49bd221c"
+    },
+    "results/finite57_old_affine_adaptive62_owned_execution_20261025.json": {
+      "bytes": 15093,
+      "sha256": "1c53b8b4105b043232c292021b25ba8eb95441af546bb843a88a1d07b1f179ac"
+    },
+    "results/finite57_old_affine_adaptive62_root_source_clearance_20261025.json": {
+      "bytes": 1398,
+      "sha256": "574a8797ebb0fbcae0f8a17ae7d77cba5150788c470345a67461ba111f15f559"
+    },
+    "results/finite57_old_affine_longer_tail_root_acceptance_20261025.json": {
+      "bytes": 8231,
+      "sha256": "fc71f36ca5ac87fa24b4f89f2059add8506756b6252406645eb616b0f0c37545"
+    },
+    "results/finite57_original_affine_d16_execution_20261025.json": {
+      "bytes": 54500,
+      "sha256": "6c0da49a0528782c0a54b9703489acbe19ad0a8180c368f00bd61158dc7e9174"
+    },
+    "results/finite57_original_affine_d17_execution_20261025.json": {
+      "bytes": 56731,
+      "sha256": "6fdc468f260d1e48bf17db25c75ba92d5963a72cc226ede94a871973c9b6be50"
+    },
+    "results/finite57_percentage_conjunction38_execution_20261025.json": {
+      "bytes": 8701,
+      "sha256": "15f522c0cf46635a3820b4304fe5397e1419b238b8466ee105b70346bfc804e2"
+    },
+    "results/finite57_percentage_policy_reader_source_root_acceptance_20261025.json": {
+      "bytes": 2484,
+      "sha256": "eb0aa7891850b4aefe9385bf7c84b3b1d74df61aaa86b643d3e684d6c1cd59d1"
+    },
+    "results/finite57_proper_contact13_structural_execution_20261025.json": {
+      "bytes": 2957,
+      "sha256": "62298f5a2894da21354f170204d56f02770c5cf25339b9219394182f0db574b6"
+    },
+    "results/finite57_proper_provider_0_execution_20261025.json": {
+      "bytes": 15504,
+      "sha256": "24f18ae2c2d2232c9144a7fc562af900a907d8b078e93b65bd1a5bf1e45b27dc"
+    },
+    "results/finite57_proper_provider_1_execution_20261025.json": {
+      "bytes": 21713,
+      "sha256": "53f914a02bd7bb88f09030872d3ed258da00f5e23d63000193af9776f5558eb8"
+    },
+    "results/finite57_proper_provider_2_execution_20261025.json": {
+      "bytes": 13084,
+      "sha256": "f6cba8b8afe4cae41dc37f4229e456f0845e26e3cee7d2a375761b800912d99b"
+    },
+    "results/finite57_proper_provider_3_execution_20261025.json": {
+      "bytes": 16470,
+      "sha256": "6a66e51d5c22969b11e87cf84785cdd985ee64824fc755182944c6355f2dac13"
+    },
+    "results/finite57_protected12_structural_execution_20261025.json": {
+      "bytes": 3189,
+      "sha256": "a6ea2f6cbb0ad73fd281d2cd9d9070e485782d2a0e6aefebcaa34060d751af69"
+    },
+    "results/finite57_protected74_order_and_structure_source_clearance_root_20261025.json": {
+      "bytes": 2808,
+      "sha256": "5e3f6c0b24fd14d19c6c1758dc31dad661a3429505a802747fcf6523c46ea857"
+    },
+    "results/finite57_provider_occurrence_actual_inputs_20261025.json": {
+      "bytes": 48537,
+      "sha256": "0ec63161c7ea3473b82673bf9c935a4dc6ad7f5b7e13cbe032a81a5054830f48"
+    },
+    "results/finite57_provider_occurrence_catalogue_attempt1_execution_20261025.json": {
+      "bytes": 306143,
+      "sha256": "11386a1c6da9fe685facf7454954628aa7bce5a00670aa5986d1f383817c94b4"
+    },
+    "results/finite57_provider_occurrence_premise_20261025.md": {
+      "bytes": 4768,
+      "sha256": "58687bed41feb3b9f1caf3809643cc2e5c98f359bafe384d200ffdf7bddc0e40"
+    },
+    "results/finite57_publication_full_replay_20261020.json": {
+      "bytes": 3278,
+      "sha256": "9f086b3a1ccd967c20a0656cae2b96ec334d654fc1766d65f5938c30b0a25dd0"
+    },
+    "results/finite57_quiet_case_chunking_source_clearance_root_20261025.json": {
+      "bytes": 4165,
+      "sha256": "bf8e25bb09b741b99f6be7db48f920d775624a332a8d8e2a4dede52f0e8115ae"
+    },
+    "results/finite57_release_conjunction47_execution_20261025.json": {
+      "bytes": 10461,
+      "sha256": "af2f0dac779e07df60ccc3e28877e0e0c27e20a76778c303b4e1777b1f5b21d2"
+    },
+    "results/finite57_release_current_rule_source_and_premise_root_acceptance_20261025.json": {
+      "bytes": 6779,
+      "sha256": "fdbfcc72880384d429652740b929b3ee7a7cd166c329eae5041e0649db8b549f"
+    },
+    "results/finite57_route_index_selected_01_execution_20261025.json": {
+      "bytes": 124789,
+      "sha256": "f68421d3bf31e59126df9f4f4ffff0d014b117d5a14632ed54528c62af428051"
+    },
+    "results/finite57_route_index_selected_02_execution_20261025.json": {
+      "bytes": 92432,
+      "sha256": "1a41542ef3e8a1f2a12f4351ada916172fe352b2d34e15d1326da4b2ae537f1b"
+    },
+    "results/finite57_route_index_selected_03_execution_20261025.json": {
+      "bytes": 91876,
+      "sha256": "b8f2f2529b8375ef398d8e382612d2e4fcba2c2a8914622b8a53fad60f4512da"
+    },
+    "results/finite57_route_index_selected_04_execution_20261025.json": {
+      "bytes": 118414,
+      "sha256": "674dbb0b6125f71078d334502babe89f53bcccc0e0e5614f0e75e5138ad12570"
+    },
+    "results/finite57_route_index_selected_05_execution_20261025.json": {
+      "bytes": 123337,
+      "sha256": "d8d9431b327630d84c7779c89f59b4ec8e64d4e163ea66074da1c0fd75c5c94a"
+    },
+    "results/finite57_route_index_selected_06_execution_20261025.json": {
+      "bytes": 123363,
+      "sha256": "b0ad8f6ccdf05cb230e164aa1e6be4405d055666874f676749c29dc1e0a5bc43"
+    },
+    "results/finite57_route_index_selected_07_execution_20261025.json": {
+      "bytes": 226807,
+      "sha256": "2bf31d43b2f0ea0cc534d81069fe8e0fa33b19ee6f05c1e9fd99997b9830041e"
+    },
+    "results/finite57_route_index_selected_08_execution_20261025.json": {
+      "bytes": 138994,
+      "sha256": "657b49bbb05f1793c380caacb9c126c4704334111b013190d5f0ed2227185877"
+    },
+    "results/finite57_route_index_selected_09_execution_20261025.json": {
+      "bytes": 84894,
+      "sha256": "05916a8e492b5dcdf372057335832721c2107bdb821e5492e88ddab9171d4abf"
+    },
+    "results/finite57_route_index_selected_10_execution_20261025.json": {
+      "bytes": 121866,
+      "sha256": "4c7bbbea00fe98944ef0dd28389cf4e6ac4763fe001bd6972db67c53ab48d7d0"
+    },
+    "results/finite57_route_index_selected_11_execution_20261025.json": {
+      "bytes": 110288,
+      "sha256": "479d73e776f36e68cb1bfea21fce73c7979bd83e5e354b6588649745adac973b"
+    },
+    "results/finite57_route_index_selected_12_execution_20261025.json": {
+      "bytes": 65013,
+      "sha256": "d925d3d5ba1ca01a4d8a1e19cbdb64f453f73b4dff8ab617188037a24c3009f6"
+    },
+    "results/finite57_route_index_selected_13_execution_20261025.json": {
+      "bytes": 146683,
+      "sha256": "8170deeae38b51aa9b39b49cd61eac035de6613efe39f8e1d5027ecd4e33b9dc"
+    },
+    "results/finite57_route_index_selected_14_execution_20261025.json": {
+      "bytes": 117229,
+      "sha256": "e4bee3d2b5e61d374327befdbd17622bc82935764025bc6181fd4582b59f2046"
+    },
+    "results/finite57_route_index_selected_15_execution_20261025.json": {
+      "bytes": 120577,
+      "sha256": "790f2cbdb6152a96f4524b9e9a7976d8a3c4973dcaff6d31d160fa3e4f82e4f0"
+    },
+    "results/finite57_route_index_selected_16_execution_20261025.json": {
+      "bytes": 88291,
+      "sha256": "e0c030897f3ebeb383cc712dc6b6e19f0c783f4d0fc7c19fc49b7620e3bb18e9"
+    },
+    "results/finite57_route_index_selected_17_execution_20261025.json": {
+      "bytes": 151627,
+      "sha256": "78375fcfb3ce70e61d9e3c4523862f4b1e2ab3bc862abbb4ce4aea6275d2c4f0"
+    },
+    "results/finite57_route_index_selected_18_execution_20261025.json": {
+      "bytes": 156819,
+      "sha256": "ea6d8b62d7636c3c5ffcec65b139f375de74fa89f223aa62fc97560d80deb37f"
+    },
+    "results/finite57_route_index_selected_19_execution_20261025.json": {
+      "bytes": 127843,
+      "sha256": "f868d4bff6580869c2a77bc9f1e231779fd449e84ab72eec00c2009ee5e1fcc6"
+    },
+    "results/finite57_route_index_selected_20_execution_20261025.json": {
+      "bytes": 133341,
+      "sha256": "b15bbb917bb0268ed58a9d7ea9ec373d0f217a473fb2edad27f9ef6f1c934fd8"
+    },
+    "results/finite57_route_index_selected_21_execution_20261025.json": {
+      "bytes": 96373,
+      "sha256": "8d3d4d2856b207c7bad65c9d103d512675ea10b036401332c273768357464bcd"
+    },
+    "results/finite57_route_index_selected_22_execution_20261025.json": {
+      "bytes": 116295,
+      "sha256": "5e5eb0b8e2f425c6824bdbd7a87344898da996ad06471ac787633e91c4ec6519"
+    },
+    "results/finite57_route_index_selected_23_execution_20261025.json": {
+      "bytes": 146018,
+      "sha256": "520573f7fb8f7501ce74c5651f4fa9f9862646f2905632b4a79380f4dbd6b726"
+    },
+    "results/finite57_route_index_selected_24_execution_20261025.json": {
+      "bytes": 132405,
+      "sha256": "5b13c5b38295e6f91302a84ce85470b2678402f3cd2cb085c802246cce60dcda"
+    },
+    "results/finite57_route_index_selected_25_execution_20261025.json": {
+      "bytes": 105506,
+      "sha256": "fddc556e0380440473b81f3505331392badfab9a0c5d885046377d35319f2fbd"
+    },
+    "results/finite57_route_index_selected_26_execution_20261025.json": {
+      "bytes": 104260,
+      "sha256": "1bb4bd04e92a528664ea1eeba129e709cbd204edac34d032377b21f9aa746b91"
+    },
+    "results/finite57_route_index_selected_27_execution_20261025.json": {
+      "bytes": 109762,
+      "sha256": "f6af15d835c0ef3b426b5f1a4851d628332e9465c9b24b5bb6806ccea62bd118"
+    },
+    "results/finite57_route_index_selected_28_execution_20261025.json": {
+      "bytes": 90874,
+      "sha256": "346bda278f9eae32ece3319c4e469ed1e15bb7bafa433feda68b878409e71dbc"
+    },
+    "results/finite57_route_index_selected_29_execution_20261025.json": {
+      "bytes": 148205,
+      "sha256": "787f3d06a80951ecda933d11f3f78c6ad9c67828e27165a597b4fef6285d17dc"
+    },
+    "results/finite57_route_index_selected_30_execution_20261025.json": {
+      "bytes": 74595,
+      "sha256": "52c2524e31575f49035c5f4c1582b10cddeeea75b18efb5102e222bb363757c1"
+    },
+    "results/finite57_route_index_selected_31_execution_20261025.json": {
+      "bytes": 108210,
+      "sha256": "555a6098e7f523b3ba7c30ef3d635d5034caacb7f0148535bcbd30cab7b3c9e8"
+    },
+    "results/finite57_route_index_selected_32_execution_20261025.json": {
+      "bytes": 70108,
+      "sha256": "0c296d5b042f2a6d44274a079d306ef1784f82696981f02cb60af102bed94d77"
+    },
+    "results/finite57_route_index_selected_33_execution_20261025.json": {
+      "bytes": 95337,
+      "sha256": "a45519225f5b8199db538183bde28b1c0e16675650b51d6456ebef949be08bba"
+    },
+    "results/finite57_route_index_selected_34_execution_20261025.json": {
+      "bytes": 65423,
+      "sha256": "b787c96e2290fb25a7c7f3a0958192f5bb6ba0a652f21634a901edad892b4442"
+    },
+    "results/finite57_route_index_selected_35_execution_20261025.json": {
+      "bytes": 59004,
+      "sha256": "2ddff04d5c14ef0e0c106da4e7b181aabb7624d36f3cb78fb92a3bfb9e9bbd47"
+    },
+    "results/finite57_route_index_selected_36_execution_20261025.json": {
+      "bytes": 70598,
+      "sha256": "699987996267faebf49ea5b1b12185ef55339a03717cb95d071a60f94384d887"
+    },
+    "results/finite57_route_index_selected_37_execution_20261025.json": {
+      "bytes": 93870,
+      "sha256": "17ca8aee0ed628cbbe0e8e9fd54202eca9038cedca77c1df7249c7b0d66946ff"
+    },
+    "results/finite57_route_index_selected_38_execution_20261025.json": {
+      "bytes": 91511,
+      "sha256": "cf991924b110f129e9f1d20df70e3ca36e103d7b954a857f29c08edb24b91ce5"
+    },
+    "results/finite57_route_index_selected_39_execution_20261025.json": {
+      "bytes": 99999,
+      "sha256": "f29e79104addfa6b4c6eb8d27bd10446be5fab5edc5292bcb3862fbc7f0eebe9"
+    },
+    "results/finite57_route_index_selected_40_execution_20261025.json": {
+      "bytes": 72511,
+      "sha256": "344f154febc574e1130f98453b1383120c899539dc2f97f3cc52cc67150e5381"
+    },
+    "results/finite57_route_index_selected_41_execution_20261025.json": {
+      "bytes": 118963,
+      "sha256": "918c4ee2d5b7b7ffb785aa8fa64e7625d6357668d20dab2163972feea3376e43"
+    },
+    "results/finite57_route_index_selected_42_execution_20261025.json": {
+      "bytes": 105222,
+      "sha256": "c565b5add5743571bd021f20eb0ad61467ba2617c57889db90a2cf4b9d2a3b2e"
+    },
+    "results/finite57_route_index_selected_43_execution_20261025.json": {
+      "bytes": 96859,
+      "sha256": "dfaa279cabdc1a81920966f648051e351fbb6433f69e037ac15dc2f771620b7c"
+    },
+    "results/finite57_route_index_selected_44_execution_20261025.json": {
+      "bytes": 61734,
+      "sha256": "fb92ff147557b1a4826435861f5b3763e4ac13d200fda4bfb77e3373a935b681"
+    },
+    "results/finite57_route_index_selected_45_execution_20261025.json": {
+      "bytes": 101322,
+      "sha256": "a3ff9988897160141be0eee012027b34e53e8897bd1b8205f5693d0013017a1e"
+    },
+    "results/finite57_route_index_selected_46_execution_20261025.json": {
+      "bytes": 178043,
+      "sha256": "d206f61676794e010c817ae46972fdbd80efc64b6c20cb46688ad2127465f36a"
+    },
+    "results/finite57_route_index_selected_47_execution_20261025.json": {
+      "bytes": 80060,
+      "sha256": "f210b731278b362a4d2765e3815eebd16973ab5fcea24ad971cc85468834107f"
+    },
+    "results/finite57_route_index_selected_48_execution_20261025.json": {
+      "bytes": 138300,
+      "sha256": "f0d33e749ab60a71700fbd38997748b4320a5864627e51cc3544e30d55b28c85"
+    },
+    "results/finite57_route_index_selected_49_execution_20261025.json": {
+      "bytes": 90707,
+      "sha256": "21187ce95fcd1a455db84459055d3f02c6023d27916aa2e0da40909d7fc94d91"
+    },
+    "results/finite57_route_index_selected_50_execution_20261025.json": {
+      "bytes": 78462,
+      "sha256": "93d576b78f5547bb04a1f6eb539bf0f2f9ddc9bbbe87c7b8928744a90575b68b"
+    },
+    "results/finite57_route_index_selected_51_execution_20261025.json": {
+      "bytes": 128545,
+      "sha256": "9e4999d6dad1b25ce8ed7f2659a101dbd48c2f03a40db9aa4972c86e99085470"
+    },
+    "results/finite57_route_index_selected_52_execution_20261025.json": {
+      "bytes": 108609,
+      "sha256": "3df6054c2828e4cf90389e2da50aeeeacc66083e90515b145f080ccff5ff2135"
+    },
+    "results/finite57_route_index_selected_53_execution_20261025.json": {
+      "bytes": 134129,
+      "sha256": "5f9061b6d24da43e51863b7a6b1dc68bf5110fc882b70a8251a9167b6b00547e"
+    },
+    "results/finite57_route_index_selected_54_execution_20261025.json": {
+      "bytes": 57822,
+      "sha256": "e33a0aadaa1bb5e6df95e7b09140c57560f4f12ce30d9d50a288c9b2bde28424"
+    },
+    "results/finite57_route_index_selected_55_execution_20261025.json": {
+      "bytes": 123154,
+      "sha256": "973dc0f188523dc19fd433b06457a6ef5f98039d684dd88c6ee2bbc8733324f3"
+    },
+    "results/finite57_route_index_selected_56_execution_20261025.json": {
+      "bytes": 164974,
+      "sha256": "31b33c1f7dac4b72562b9c2dab31dc3bb38622ba112412c3a92641a349efcbcc"
+    },
+    "results/finite57_route_index_selected_57_execution_20261025.json": {
+      "bytes": 143363,
+      "sha256": "759bed574b002e3c128e55a424870a893e6211529e1b2b2a18760161c4d5d51a"
+    },
+    "results/finite57_route_index_selected_58_execution_20261025.json": {
+      "bytes": 74361,
+      "sha256": "5d5eae1dd830f87230bbdb0149e45266bfcfc203cbd87873da81c0475e908e74"
+    },
+    "results/finite57_route_index_selected_59_execution_20261025.json": {
+      "bytes": 82088,
+      "sha256": "54d85d60adec3ee54950b806aaeba758f494d5f6298ecc93176f237931e300f8"
+    },
+    "results/finite57_route_index_selected_60_execution_20261025.json": {
+      "bytes": 110768,
+      "sha256": "938f24338fa70519be03ddb455127adf0bb249ff2570ecff32a4358ddb4b69e6"
+    },
+    "results/finite57_route_index_selected_61_execution_20261025.json": {
+      "bytes": 84160,
+      "sha256": "873181508a5bf4d541215d11f21b816905a18709522c085e875153d6b6460188"
+    },
+    "results/finite57_route_index_selected_62_execution_20261025.json": {
+      "bytes": 90967,
+      "sha256": "ff4f8360928e10c539e9c3a4115ec43c32f468972ba71ae6213da9a3cde0e012"
+    },
+    "results/finite57_route_index_selected_63_execution_20261025.json": {
+      "bytes": 80119,
+      "sha256": "06f5e42d5b789058e19241d3f3d966b9739de356f1fea04d2ef33637aa84bb06"
+    },
+    "results/finite57_selected_guard_0_attempt_2_execution_20261025.json": {
+      "bytes": 11209,
+      "sha256": "371987b52d4a6516f30701fe5b671b10cdc841b7e0b0fa66d1765cb698545052"
+    },
+    "results/finite57_selected_guard_1_execution_20261025.json": {
+      "bytes": 11241,
+      "sha256": "48875752ccbef14e07ae0f0d0edf010c5f31e23d0a195284bae43b364fd18ade"
+    },
+    "results/finite57_selected_guard_2_execution_20261025.json": {
+      "bytes": 11984,
+      "sha256": "f771c9e2ef48f44b5366f5625a2c3d14bbecccd64f6048fc9fe07558d8f9f624"
+    },
+    "results/finite57_selected_guard_3_execution_20261025.json": {
+      "bytes": 10437,
+      "sha256": "09ccdffd68bd67f553a5cb3d31fc6b42b8570b91310cab3b2b052e9dceeb52b5"
+    },
+    "results/finite57_selected_guard_4_execution_20261025.json": {
+      "bytes": 8828,
+      "sha256": "9c14d9a21a68e24497f3d99cd3f207ade5873b4f44e13d79aa7ff4c8d4f36ca3"
+    },
+    "results/finite57_selected_guard_5_execution_20261025.json": {
+      "bytes": 9611,
+      "sha256": "dc48c6cfbd6f8496865f6c36cb02627e7e3cb534cffa7da01d373cb3a1f07084"
+    },
+    "results/finite57_selected_guard_6_execution_20261025.json": {
+      "bytes": 8039,
+      "sha256": "7e69d12cca230e9632c796a5cd0da06d9503ac1df7e234de5e482b31d0f92fc0"
+    },
+    "results/finite57_selected_guard_7_execution_20261025.json": {
+      "bytes": 12803,
+      "sha256": "800de6aa4d59a3cd3c2cd838f330a30170837676bd0b42dc6f6c5a927ca2fc78"
+    },
+    "results/finite57_selected_guard_partial_routes_source_clearance_20261025.json": {
+      "bytes": 2454,
+      "sha256": "e4b3b4fcae61519685c92abb994b8eaa6f5540ac11c034655ad1da4b61c899a6"
+    },
+    "results/finite57_source_application55_execution_20261025.json": {
+      "bytes": 12540,
+      "sha256": "57c7c4295652e1cc4a624767c92d5953a8aa1febc681c0a5a9b45eb435b83652"
+    },
+    "results/finite57_source_applications_common_root_acceptance_20261025.json": {
+      "bytes": 9180,
+      "sha256": "9479660ca5c595f19f68e4786bc87e7ae182785a6845f4baf8a5343600506bd0"
+    },
+    "results/finite57_tail_key_and_guard_safe_d12_actual_conjunction_20261025.json": {
+      "bytes": 4228,
+      "sha256": "dac3c94bb79b601b350af13f5c264964b12165e425197fb509ab24a5c90ffbe8"
+    },
+    "results/finite57_terminal_direct_original_0_attempt_2_execution_20261025.json": {
+      "bytes": 145044,
+      "sha256": "a247dc5af31f3d49ab0f9bfe9241310d2803814b6ed1383e9b54d409165cceb5"
+    },
+    "results/finite57_terminal_direct_original_1_attempt_2_execution_20261025.json": {
+      "bytes": 144542,
+      "sha256": "fd442f19873a90407cdd94d87d068c8867e3113ddd8b564706b1e7b02709f087"
+    },
+    "results/finite57_terminal_direct_original_2_attempt_4_execution_20261025.json": {
+      "bytes": 145768,
+      "sha256": "e922153b309f8b8c4c9c9b985d7350cc586e8b50cc5b4dd8dcb5ac86cbad3615"
+    },
+    "results/finite57_terminal_direct_original_3_execution_20261025.json": {
+      "bytes": 145252,
+      "sha256": "0d33cd793f0fda11769e147b0715c5ed6bc8ef5cfe947f2726e6e0c83ad5e9d3"
+    },
+    "results/finite57_terminal_first15_syntax_successor_source_clearance_20261025.json": {
+      "bytes": 1534,
+      "sha256": "b30f88d2dff9d7fa43a98d6329635947f1e96d9896d2178dca0bd07ad1751b5e"
+    },
+    "results/finite57_terminal_tail_manuscript_insertion_proposal_20261025.tex": {
+      "bytes": 2602,
+      "sha256": "d85a6816e2515062910639c3b426db41f925060df5b4a4c0813daea2e3515aa7"
+    },
+    "results/finite57_terminal_tail_working_manuscript_root_acceptance_20261025.json": {
+      "bytes": 4068,
+      "sha256": "e1111cedfe9fede15bee3bc43f69171fcff2d322e4a61270ee1e6d532b73f444"
+    },
+    "results/finite57_terminal_tail_working_source_replay_separation_20261025.json": {
+      "bytes": 2098,
+      "sha256": "656f473066a0f6b4eb08e402c9b162dd8fa6278110b783127348c8abff5d6fa8"
+    },
+    "results/finite57_terminal_tail_working_tex_bounded_execution_20261025.json": {
+      "bytes": 4266,
+      "sha256": "8847a8386d09ec9aeb347fae868d9e427fd66d04f18e765b587a6087e155c1f7"
+    },
+    "results/finite57_terminal_tail_working_tex_build_20261025.json": {
+      "bytes": 2979,
+      "sha256": "8e242999f036e7bf13e1bddc5c4165ada74f9c111d25befb1d799254910b64d1"
+    },
+    "results/finite57_whole22_schema_source_clearance_root_20261025.json": {
+      "bytes": 1656,
+      "sha256": "478b25b92779d25f0567a6252db48513ddeb2d1571946859c18c51c12a75db7e"
+    },
+    "results/finite57_whole_provider15_structural_execution_20261025.json": {
+      "bytes": 3266,
+      "sha256": "94c4f9c6c2cf082afa7ccbf334f0b2dcaaac3d0961ba49e717000ba991c41310"
+    },
+    "results/finite57_whole_provider_0_execution_20261025.json": {
+      "bytes": 91025,
+      "sha256": "52a73e13366d3ff23bd58751eac8dd99c810701a05ebf6d1d1f7458f9f4805b3"
+    },
+    "results/finite57_whole_provider_1_execution_20261025.json": {
+      "bytes": 126825,
+      "sha256": "9207a96c6ebd8facf5794450ec0fe2bed437318da923c7d736e46908203caca8"
+    },
+    "results/finite57_whole_provider_2_execution_20261025.json": {
+      "bytes": 89445,
+      "sha256": "1ab14ef8327a4226387d3fa064b766073a888806f0cea20bd1d381fb4cfbc288"
+    },
+    "results/finite57_whole_provider_3_execution_20261025.json": {
+      "bytes": 80867,
+      "sha256": "c1dc6d5eebd1e0669a3dd13e0fe7f2177a7d67ec26554fd577f034bfa0a2a19d"
+    },
+    "results/finite57_whole_provider_4_execution_20261025.json": {
+      "bytes": 63180,
+      "sha256": "a2b044c1aa931107ac010e725891814f552b026f01b662574c1a2604688a3c7a"
+    },
+    "results/finite57_whole_provider_5_execution_20261025.json": {
+      "bytes": 62572,
+      "sha256": "04c38c4e4d6dffa47dbfdf48020233f788e47603f5c05f1c8acae9d5ce3ad2b3"
+    },
+    "results/finite57_whole_provider_6_attempt_2_execution_20261025.json": {
+      "bytes": 61232,
+      "sha256": "76a61ceea48eb588b32088b5f691877f66958ca06c7e3f14e2959b6a81366bf5"
+    },
+    "results/finite57_whole_provider_7_execution_20261025.json": {
+      "bytes": 33189,
+      "sha256": "250e0efecb245d2aed6d622604909a3b922e0596307599290f4e398cd3cf3d25"
+    },
+    "results/fresh_nikulin_two_budget_frontier_20261015.md": {
+      "bytes": 13045,
+      "sha256": "e2a54cd23b9467b5ee6bd3ce04f2db4f1cc2f2a82521102f42c44568c67c07fa"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/actual_axiom_output.txt": {
+      "bytes": 351,
+      "sha256": "d0d5b8598fe0eb54093ca9d63be132ee43541fc9ea2282e26252e8814a47d2c9"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/axiom_audit_attempt2_stdout.txt": {
+      "bytes": 1958,
+      "sha256": "d3ec78a52bb101af06aab8592f9138efe026f92ddd9efaf6d35e6d7adf6bfea7"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/axiom_audit_ledger.json": {
+      "bytes": 1453,
+      "sha256": "cdc708c62cca2e29ad2352cb1080f7212e87767822bc77869f68e8ef61a9e5c3"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/axiom_audit_stdout.txt": {
+      "bytes": 1157,
+      "sha256": "aa49079c1bb3c7e6bf54ea3245bf97359e41e87403efb75cdea00fcdb4398ead"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/axiom_summary.json": {
+      "bytes": 476,
+      "sha256": "44ea1c03237095c930755e4b6371c6caa56a42e4119685de13f57a094fa50003"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/compile_ledger.json": {
+      "bytes": 1534,
+      "sha256": "740638fa84ed279a2cf38ea2c4c9a42f05c4f723a72fa1030f72a856b3d5bce0"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/compile_stdout.txt": {
+      "bytes": 1741,
+      "sha256": "070e5a29b49bf1f3355102d7fd593e5a91e671a06af72563aed2510828e2f941"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/first_axiom_audit_admission_refusal.json": {
+      "bytes": 757,
+      "sha256": "5fdd9a364dd9fb5de9eab7af29f397e9c19eaed753c426a6f5bbd3748f1fa0d0"
+    },
+    "results/lean_arithmetic16_composition_verification_20261022/manifest.json": {
+      "bytes": 7051,
+      "sha256": "643ac6d2cab8d8f50a58549bcbf6d48d8e8ea730648ff8f36016d8a4126df341"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ConcentrationDescent58.json": {
+      "bytes": 1519,
+      "sha256": "18ea83255d984100c2acc1377e33328d27bf1738f96423121c7a893db890a853"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ConcentrationDescent58_axiom_audit.json": {
+      "bytes": 1438,
+      "sha256": "9182c2eab9f649915ca3b49f41d37961b5155173ca94f2a8fb37c0de27af2904"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_FiniteVolume58ShapeKernel.json": {
+      "bytes": 1523,
+      "sha256": "8a1c31fafeb6974be0f3ed08871d1b95a31648dda43015a175c6a16017f81060"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_FiniteVolume58ShapeKernel_axiom_audit.json": {
+      "bytes": 1442,
+      "sha256": "b31f8c5735321715b5bd78d5becd754ee72dfe91f357f43a67b016bf7067e0d5"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_FiniteVolumeTailKernel.json": {
+      "bytes": 1520,
+      "sha256": "ad32bd841dca7ed7c2a0a46655819eb7323d4be14492ddce7a08b16e9591b11a"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_FiniteVolumeTailKernel_axiom_audit.json": {
+      "bytes": 1439,
+      "sha256": "76fd2b13064f9785c9251fab9c8b25f7bfde384a64c30e1d038c5dc2b1d43f42"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptDataBounds.json": {
+      "bytes": 1513,
+      "sha256": "aa580efed307369b6b4f7280edb1cb388e47751b166587a0a5fb11a0ce4a33f7"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptFinite57.json": {
+      "bytes": 1718,
+      "sha256": "edda04f5e7e2000e10831e334c340831c1fbf8f0babc5a86a665915ef1399bf2"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ManuscriptFinite57_axiom_audit.json": {
+      "bytes": 1637,
+      "sha256": "e71aea47945a632d6cd43dffcd16235dc16f8d419bf9a89bd57e243d357f0850"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ResidualBellmanCertificate.json": {
+      "bytes": 1523,
+      "sha256": "c8c6445fdd394ba43ca9933802a3ae55cd90a755e375c2fac3e0f55a94acaf6f"
+    },
+    "results/lean_execution_ledgers_snapshot_20261021/CoxeterProofs_ResidualBellmanCertificate_axiom_audit.json": {
+      "bytes": 1442,
+      "sha256": "f2f502a4571f66a888a37db833d2f57ba3e53363dbae1e6d374fab4d5c1b3c7a"
+    },
+    "results/lean_quadratic_dyadic_triple_verification_20261023/axiom_audit.json": {
+      "bytes": 1442,
+      "sha256": "56a2f265326d8537cb932e89b11161c1d4e225e474689e5cca811cdeb66f24b4"
+    },
+    "results/lean_quadratic_dyadic_triple_verification_20261023/axiom_audit_attempt_1.stdout": {
+      "bytes": 3512,
+      "sha256": "2784c5c8aa89831dd06c68689e64459bb1450c326b1a93ba7f12890c7ff25af2"
+    },
+    "results/lean_quadratic_dyadic_triple_verification_20261023/axiom_stdout.txt": {
+      "bytes": 1916,
+      "sha256": "0a0b4dd746d8eeadf2696b336b9b129ca79f4e1ccaa13b092c12ed8d5d8dd70c"
+    },
+    "results/lean_quadratic_dyadic_triple_verification_20261023/compile.json": {
+      "bytes": 1524,
+      "sha256": "af444872c0953c44decf0808df115cfe47ad49fb72faf2a27eda0b75186bbe7b"
+    },
+    "results/lean_quadratic_dyadic_triple_verification_20261023/compile_attempt_1.stdout": {
+      "bytes": 1721,
+      "sha256": "799bca6f42acaf21ae2fdc1ffb754ccd00819d708de0fff46d7cfc4160598277"
+    },
+    "results/lean_quadratic_dyadic_triple_verification_20261023/manifest.json": {
+      "bytes": 5459,
+      "sha256": "25b4702ba37e9d35481be9a7d12b1cbd2716eb8440a087418098644282c84b02"
+    },
+    "results/publication_logic_records_20261020/CoxeterProofs_ConcentrationDescent58_audit_03685601345b.json": {
+      "bytes": 1439,
+      "sha256": "03685601345beaa578a8f377f6bf8a3c4af206e11e500ce77e0a500a335343dd"
+    },
+    "results/publication_logic_records_20261020/CoxeterProofs_ConcentrationDescent58_compile_18ea83255d98.json": {
+      "bytes": 1519,
+      "sha256": "18ea83255d984100c2acc1377e33328d27bf1738f96423121c7a893db890a853"
+    },
+    "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolume58ShapeKernel_audit_b31f8c573532.json": {
+      "bytes": 1442,
+      "sha256": "b31f8c5735321715b5bd78d5becd754ee72dfe91f357f43a67b016bf7067e0d5"
+    },
+    "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolume58ShapeKernel_compile_8a1c31fafeb6.json": {
+      "bytes": 1523,
+      "sha256": "8a1c31fafeb6974be0f3ed08871d1b95a31648dda43015a175c6a16017f81060"
+    },
+    "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolumeTailKernel_audit_76fd2b13064f.json": {
+      "bytes": 1439,
+      "sha256": "76fd2b13064f9785c9251fab9c8b25f7bfde384a64c30e1d038c5dc2b1d43f42"
+    },
+    "results/publication_logic_records_20261020/CoxeterProofs_FiniteVolumeTailKernel_compile_ad32bd841dca.json": {
+      "bytes": 1520,
+      "sha256": "ad32bd841dca7ed7c2a0a46655819eb7323d4be14492ddce7a08b16e9591b11a"
+    },
+    "results/publication_logic_records_20261020/CoxeterProofs_ResidualBellmanCertificate_audit_f2f502a4571f.json": {
+      "bytes": 1442,
+      "sha256": "f2f502a4571f66a888a37db833d2f57ba3e53363dbae1e6d374fab4d5c1b3c7a"
+    },
+    "results/publication_logic_records_20261020/CoxeterProofs_ResidualBellmanCertificate_compile_c8c6445fdd39.json": {
+      "bytes": 1523,
+      "sha256": "c8c6445fdd394ba43ca9933802a3ae55cd90a755e375c2fac3e0f55a94acaf6f"
+    },
+    "results/publication_logic_verification_20261020.json": {
+      "bytes": 27042,
+      "sha256": "63fe5fa62d824b5901866f7545a9111d8f0c42be968dd286ab525f8cf7f3ce74"
+    },
+    "results/review_a17_finite_cubic_endpoint_census_root_source_acceptance_20261022.md": {
+      "bytes": 3522,
+      "sha256": "9fae579f0e3c56d1f377e98f3b193f22258c2dca5e9d7868564a8b2486ba34af"
+    },
+    "results/review_a17_two_isolated_quadratic_endpoints_census_root_source_acceptance_20261022.md": {
+      "bytes": 3785,
+      "sha256": "b4e7ca150780dbb5d13b7501ede6fbaed299aeafa539e9bfe0978d2e996a36b7"
+    },
+    "results/review_a17_two_isolated_quadratic_endpoints_census_source_domain_replay_reviewer_20261022.md": {
+      "bytes": 14331,
+      "sha256": "13cd75bd528fd59f35b988216375267fb57c3220a0087acd1a7c84a3935aee3c"
+    },
+    "results/review_arithmetic15_final_covers_and_composition_root_20261025.md": {
+      "bytes": 3277,
+      "sha256": "09dcd9152b8e52725cf77d3b2d28f4a85081f9e63763decd1344119af32bcb19"
+    },
+    "results/review_arithmetic16_b16_isolated_quadratic_pair_worker_and_contract_full_scope_foundations_20261023.md": {
+      "bytes": 17174,
+      "sha256": "49bb86761384d10af63c77a2bc13e7b3f86e067a3f4a7a42da23a2d0931af2e6"
+    },
+    "results/review_arithmetic16_b16_isolated_quadratic_pair_worker_root_prelaunch_acceptance_20261023.md": {
+      "bytes": 4106,
+      "sha256": "d787afcec6180595f9eb140e19fa9b5a12dc44235929847785b588bd9140784f"
+    },
+    "results/review_arithmetic16_whole_b16_complete_short_white_isolated_dotted_field_root_acceptance_20261023.md": {
+      "bytes": 3716,
+      "sha256": "c987452b13d48fe7876b772785471c4c3645253c5592c13d347efcaf136e735f"
+    },
+    "results/review_arithmetic16_whole_b16_head_near_short_three_scale_root_acceptance_20261023.md": {
+      "bytes": 3464,
+      "sha256": "7ceec2f7c3bf9a0a0e0943f48b66afe2317f774b72e97f6e6779e2c1ac77beea"
+    },
+    "results/review_arithmetic17_a17_finite_cubic_endpoint_worker_full_scope_foundations_20261022.md": {
+      "bytes": 12255,
+      "sha256": "7e5a761737a35f9b64a76eb6d39d8391ae5f559965b04898815c441284518355"
+    },
+    "results/review_arithmetic17_whole_a17_endpoint_reduction_root_acceptance_20261022.md": {
+      "bytes": 3832,
+      "sha256": "8ecfde6c66b76346dfe4deba62d4b6738cb18d049152399fd509c928b2e95880"
+    },
+    "results/review_arithmetic17_whole_a17_four_actual_fields_root_acceptance_20261022.md": {
+      "bytes": 2885,
+      "sha256": "b1df13d1d3b8ba3604832aef49cda0e095b62c12b84f4897267e1f7b75372582"
+    },
+    "results/review_arithmetic17_whole_a17_global16_complete_composition_foundations_20261022.md": {
+      "bytes": 15404,
+      "sha256": "e16ac7035a3f68f80b37585d057c6f1dc95685339c3ee8e16804c730b9286656"
+    },
+    "results/review_arithmetic17_whole_a17_global16_complete_composition_root_acceptance_20261022.md": {
+      "bytes": 5741,
+      "sha256": "dde2eee3d4ca12a7e1508f36cde6db9592749a4d2c111d0a2f0dddaa18c45ac9"
+    },
+    "results/review_arithmetic17_whole_a17_quadratic_exclusion_root_acceptance_20261022.md": {
+      "bytes": 3285,
+      "sha256": "8acac2f97211d5f114872714a0f7f5c4be2864310d061e17d27cfeec01b12cd9"
+    },
+    "results/review_arithmetic_dimension_sixteen_composition_root_source_acceptance_20261022.md": {
+      "bytes": 2859,
+      "sha256": "96625122c47daaea0c0da5d55b2a4d1050e1bdff4d04347f75ba29955b76be76"
+    },
+    "results/review_arithmetic_dimension_sixteen_composition_source_and_section_include_repair_replay_reviewer_20261022.md": {
+      "bytes": 9653,
+      "sha256": "96a2c5f4b7850ce32bba036eed45c2754f35f1cb0c259a7d58698d0d82b86e4d"
+    },
+    "results/review_compact17_final_tail_integration_and_joint_logic_fresh_20261025.md": {
+      "bytes": 10047,
+      "sha256": "723d72ba75aac62c924933940d9262125d8afb56b06c101264854796c9379742"
+    },
+    "results/review_d17_one_isolated_quadratic_fork_census_root_source_acceptance_20261022.md": {
+      "bytes": 3410,
+      "sha256": "3fc61a311c649556fcad6a8b1c0526fd0dc6e2e8daefb58d6153f8da3c13c632"
+    },
+    "results/review_d17_one_isolated_quadratic_fork_exact_census_source_domain_compact_reviewer_20261022.md": {
+      "bytes": 9205,
+      "sha256": "1e5e9611eb5aad91082c652ba1da26d9dfdc6019f5150e9bf8d82d7c468ea0b5"
+    },
+    "results/review_finite57_affine_b_longer_terminal_tail_independent_source_20261025.md": {
+      "bytes": 6921,
+      "sha256": "4c7c47654cc7a530bcbab8e9c2c031d053ed0ee2f880494cc4d4d59f8a13dd05"
+    },
+    "results/review_finite57_bounded_tail_source_binding_closure_different_author_20261025.md": {
+      "bytes": 11518,
+      "sha256": "fd5e9b72102b4e74785c3ee1eb3afc21fe1995e77e24cfd8c0e57019cc15f243"
+    },
+    "results/review_finite57_bounded_tail_source_binding_closure_root_20261025.md": {
+      "bytes": 3090,
+      "sha256": "d3cc7cad30ebdc1334d7c2682f53d5e62505232a77310177c7dfcf21341ec46d"
+    },
+    "results/review_finite57_coalesced_reader_and_integration62_source_20261025.md": {
+      "bytes": 7174,
+      "sha256": "d120d941759e7eb67c84340ccde6e9850faf2853d57abaf352982099520e13d8"
+    },
+    "results/review_finite57_context_bounded_tail_root_independent_20261024.md": {
+      "bytes": 9886,
+      "sha256": "faf0c10514094cfb42574f4b861897be32f2ae1ca8439bd50fde19d8bc6dbfeb"
+    },
+    "results/review_finite57_current_S8_conditional_bridge_fresh_20261025.md": {
+      "bytes": 18027,
+      "sha256": "2c97525c6005627fb78e627dbca31895271112fd02556f72a6de7034f9d23f48"
+    },
+    "results/review_finite57_current_triangle_retention_independent_20261025.md": {
+      "bytes": 16139,
+      "sha256": "1d4563389c3b97ad5caf4d9f91684e4133b5db3e05cbd1962698494949241a5e"
+    },
+    "results/review_finite57_current_triangle_retention_source_20261025.md": {
+      "bytes": 20478,
+      "sha256": "66630b97ae93039d2fec710a5874d1f3b4943843be8bc653f530ea2ce5ef4faa"
+    },
+    "results/review_finite57_current_universal_receiver_retention_independent_20261025.md": {
+      "bytes": 20514,
+      "sha256": "6af6dda7e6be5dbf99ea1a67b9beba5a1e4a65be8a9a5fcb954f4844543afa07"
+    },
+    "results/review_finite57_literal_binding_driver_independent_20261024.md": {
+      "bytes": 11092,
+      "sha256": "88c16b386d65ccc70763457bf0f97503b27134bebb4855abb5c8fdaf83a896ac"
+    },
+    "results/review_finite57_literal_binding_driver_source_root_20261024.md": {
+      "bytes": 7426,
+      "sha256": "9952337a603f8aeb42c94fad7c5711010dc393174d1a6615a5f7193e98e19d9f"
+    },
+    "results/review_finite57_literal_rule_and_extension_logic_root_20261024.md": {
+      "bytes": 10409,
+      "sha256": "6ea02657eea8cecc37f37b8e024ffbd0be700b98e3bcb5926824e1b80cca4cc8"
+    },
+    "results/review_finite57_longer_tail195_and_source_separation_metadata_20261025.md": {
+      "bytes": 5034,
+      "sha256": "9874d6def2de88397e18e315d019e0c822dc1a9eb0775291e3e1fe7d1a295b65"
+    },
+    "results/review_finite57_old_affine_B_independent_source_20261025.md": {
+      "bytes": 8950,
+      "sha256": "0e1ebf566b099a64ac37c965afe03ceab6a04392de2f0ca5814690f41bcbea18"
+    },
+    "results/review_finite57_old_affine_D_and_common_independent_source_20261025.md": {
+      "bytes": 8234,
+      "sha256": "773d4b96f3d1693dab74783f49abf5e60dce2a4656b9df33cda1a7933763ac2e"
+    },
+    "results/review_finite57_provider_occurrence_root_premise_20261025.md": {
+      "bytes": 4569,
+      "sha256": "531af2b826814e8e5a4074a7bcb6a14ad0e8900d40187eb2b56e0b9e2a3b06e0"
+    },
+    "results/review_finite57_quiet_b13_current_priority_bridge_root_20261025.md": {
+      "bytes": 2439,
+      "sha256": "2d1ae426c9c9eed1b81fa8fd88ef55b7c9f21439af8e042c4af1da09f9fac4fd"
+    },
+    "results/review_finite57_terminal_tail_manuscript_insertion_independent_20261025.md": {
+      "bytes": 2885,
+      "sha256": "5b22548f688c572ee9a5208ccefc6fc6addc2562df3789c57cf51ce6bf7eb9a8"
+    },
+    "results/review_finite57_unbounded_tail_logic_root_20261024.md": {
+      "bytes": 6086,
+      "sha256": "020d1cb017f69cf3467ebde20a7aac322f971642a64428a729800b071ec2150d"
+    },
+    "results/review_quadratic_dyadic_triple_kernel_full_source_map_compact_20261023.md": {
+      "bytes": 10601,
+      "sha256": "d11a5adf8f58546d7e46f5e1934e1cde1b886d45e6bcd03d4d2a933d0689bc3f"
+    },
+    "results/review_quadratic_dyadic_triple_kernel_root_precompile_clearance_20261023.md": {
+      "bytes": 2450,
+      "sha256": "70a1c5251cf55252c7e2797ea4b581aaa6f759e31a45274df3eb34505d8fb7ab"
+    },
+    "results/source_archive/before_user_percentage_resource_policy_20261025/manifest.json": {
+      "bytes": 1069,
+      "sha256": "de133d39a5bc0edd02145ae14d7aefc43842420c6306c1e4b84127ae8a2ff4b9"
+    },
+    "results/source_archive/before_user_percentage_resource_policy_20261025/run_lean_batches_20261018.py": {
+      "bytes": 14192,
+      "sha256": "97822ecf4d9aef2bf04aa429b582c4cc36cf6d1b6f0364579251278f66fae72c"
+    },
+    "scripts/audit_existing_lean_module_20261024.py": {
+      "bytes": 6370,
+      "sha256": "1399fbc6fbc7f0c92496b7f7284fcc8389573c544ee8bb427739666c1af6f7d5"
+    },
+    "scripts/build_illustrated_ra_manuscript_20261018.py": {
+      "bytes": 6606,
+      "sha256": "27f14501b52a38c92121266aceb58eb2e1d36bfc21c2615ab0b4e9be4f9dee15"
+    },
+    "scripts/check_a17_finite_cubic_endpoint_20261022.py": {
+      "bytes": 22547,
+      "sha256": "c060a24586aa13f94a201c7ffdff8df758993d246d18b38ceae464a2c409f231"
+    },
+    "scripts/check_a17_two_isolated_quadratic_endpoints_20261022.py": {
+      "bytes": 20759,
+      "sha256": "89139eb11d31259c49d079a64bcef39d80e0cf855fe1e22221fd983f0d335a4d"
+    },
+    "scripts/check_arithmetic16_b16_isolated_quadratic_head_short_pairs_20261023.py": {
+      "bytes": 19961,
+      "sha256": "452587a42fcc03219cc77dabfa1ff0f691c81617c776943276b39e822d8ff42f"
+    },
+    "scripts/check_d17_one_isolated_quadratic_fork_20261022.py": {
+      "bytes": 20742,
+      "sha256": "73c44f9435269b21c859acf8b35bfb85927c43f5d4daf4e37cb18ab86d81d5ed"
+    },
+    "scripts/check_finite57_current_rule_conjunction_20261025.py": {
+      "bytes": 74730,
+      "sha256": "3b9843ba745e8e760007dc5647cdcddfbb78354121109401f35f75b5c3c7240c"
+    },
+    "scripts/finite57_literal_weights_audit_20261024.py": {
+      "bytes": 17982,
+      "sha256": "f6eba7af77af50b821e9e99c589388c1352f9ba5a99052aaeee64393f5ada1e0"
+    },
+    "scripts/finite57_selected_old_affine_source_applications_20261025.py": {
+      "bytes": 87871,
+      "sha256": "adb5385544bff1f4b5967bf5816ea970dac5b9a882b9a0aa12eb640f24accb8a"
+    },
+    "scripts/fresh_d13_context_dimension57_20261018.py": {
+      "bytes": 10757,
+      "sha256": "9a41aa1d0395087a41692fb1d3a0d2b7f93f667446f4724d5b7920449b6d1795"
+    },
+    "scripts/fresh_distance8_high_overlap_20261017.py": {
+      "bytes": 17200,
+      "sha256": "ea78f48a58228319c9474d28d3f646709a808702e330a1a300a3814652c64608"
+    },
+    "scripts/monitor_owned_proof_tree_20261024.py": {
+      "bytes": 16594,
+      "sha256": "b07f84fbcc5b35e484696f0515b8e233ea975f13c2da6ff75c0d3b54b99ed5db"
+    },
+    "scripts/run_bounded_research_check_20261018.py": {
+      "bytes": 5703,
+      "sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132"
+    },
+    "scripts/run_lean_batches_20261018.py": {
+      "bytes": 16197,
+      "sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    },
+    "scripts/run_lean_batches_signal_safe_20261018.py": {
+      "bytes": 1234,
+      "sha256": "c0ddc98cd98e55f669252e4f138345665c2ce2b0e4adf12d8d4ce96aed65af4d"
+    },
+    "scripts/run_proof_batch_20261024.py": {
+      "bytes": 6319,
+      "sha256": "78bfafca1791fcdfc217860ea923cb15c16fbd6eb0fe6943586e41849121e4bb"
+    }
+  },
+  "new_scientific_execution": false,
+  "new_lean_compilation": false,
+  "new_axiom_audit": false,
+  "full_transitive_regeneration": false
+}

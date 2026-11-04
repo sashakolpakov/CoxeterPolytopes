@@ -1,18 +1,22 @@
 # Bulk research inputs
 
-The Git repository contains the code, manuscripts, six current PDFs, proof
-notes, verification records and smaller certificates. Larger scientific
-files are distributed as assets of the
+The Git repository contains code, manuscripts, the three current submission
+PDFs and retained proof editions, proof notes, verification records and
+smaller certificates. Larger scientific files are indexed for the
 [research-data release](https://github.com/sashakolpakov/CoxeterPolytopes/releases/tag/research-data-2026-10-21-r1).
 The versioned `public-data-manifest.json` records their original paths,
 lengths and SHA-256 hashes, and the corresponding archive hashes.
 
 **Availability:** no bulk assets have been uploaded. The revised manifest
 describes 936 research files in 33 prepared archives; publication of that
-payload is awaiting explicit authorization. The source repository, six
-paper PDFs and documentation site are public. The restore commands below
+payload is awaiting explicit authorization. The source repository, current paper PDFs, retained proof editions and
+documentation site are public. The restore commands below
 require the release assets and do not yet establish a successful public
 restore.
+
+For the current general bounds, start with the
+[57/17/15 reproduction and Lean companion](dimension_bounds/README.md).
+It distinguishes public small-input checks from bulk-dependent regeneration.
 
 Inspect the local plan first. This command performs no network requests or
 mathematical checks:

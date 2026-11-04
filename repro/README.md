@@ -1,5 +1,12 @@
 # Reproduction and verification
 
+For the current consolidated dimension bounds **57/17/15**, start with the
+[dimension-bound companion](dimension_bounds/README.md) and its
+[machine-readable manifest](dimension_bounds/manifest.json). They map the
+current article to complete written proofs, four small public arithmetic
+certificate snapshots and conditional Lean sources with actual audit records.
+The historical selectors below retain their original editions and scopes.
+
 Start with the **[detailed reproduction guide](https://sashakolpakov.github.io/CoxeterPolytopes/reproducibility.html)**
 and [mathematical algorithm contracts](https://sashakolpakov.github.io/CoxeterPolytopes/algorithms.html).
 Plans launch no scientific child:
