@@ -1,6 +1,6 @@
 # Current bounds and verification
 
-Updated 30 October 2026. The repository has three current submission manuscripts.
+Updated 4 November 2026. The repository has three current submission manuscripts.
 Their results are internally reviewed written proofs at the stated geometric,
 literature and finite-data inputs. No new polytope example is claimed.
 
@@ -27,20 +27,25 @@ scopes and references are in the [assumption register](manuscript_assumptions.md
 
 | Manuscript | PDF | TeX source |
 |---|---|---|
-| Dimension bounds 57 / 17 / 15 | [551 pages, 9 figures](../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf) | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) |
-| Sharp right-angled dimensions 8 / 4 | [6 pages, 2 figures](../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf) | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) |
-| On the second smallest ideal right-angled hyperbolic four-polytope | [18 pages, 5 figures](../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf) | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) |
+| Dimension bounds 57 / 17 / 15 | [15 pages](../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf) | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) |
+| Sharp right-angled dimensions 8 / 4 | [6 pages, 2 figures](../arxiv/sharp_dimension_bounds_8_and_4/main.pdf) | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) |
+| On the second smallest ideal right-angled hyperbolic four-polytope | [18 pages, 5 figures](../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf) | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) |
 
-The combined dimension article has 71 pages of main exposition and complete
+The concise article contains the main geometric arguments; its
+[GitHub proof catalogue](../arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md)
+locates the full case proofs, computational proofs and reproduction records.
+The [complete dimension proof addendum](../manuscripts/addenda/dimension_bounds_20261030/main.pdf)
+has 71 pages of main exposition and complete
 proof appendices from page 72. Parts I/IV prove finite volume 57; Parts II/V
 prove compact 17; Parts III/VI prove arithmetic compact 15, using the compact
 theorem within the same document. The appendices supply necessary case proofs.
 The [contents guide](../arxiv/DIMENSION_BOUNDS.md) identifies their locations.
 
-Each source folder contains `main.tex`, `references.bib` and the generated
+Each source folder also contains its matching `main.pdf`, beside `main.tex`,
+`references.bib` and the generated
 `main.bbl`, with figures inline. Standard pdfLaTeX and BibTeX, or
 `latexmk -pdf main.tex`, build the paper without Python. The
-[current manifest](../results/arxiv_submission_current_manifest_20261030.json)
+[current release manifest](../release/manifest.json)
 binds the exact sources, bibliographies, PDFs and build receipts. Compilation and source-assembly
 review add no new mathematical or Lean execution.
 All three four-step pdfLaTeX/BibTeX builds passed with zero TeX or BibTeX

@@ -6,15 +6,22 @@ The three [arXiv submission folders](../arxiv/README.md) contain the current
 source folders. Each has `main.tex`, `references.bib` and a generated `main.bbl`.
 One combined article joins the finite-volume, compact
 and compact arithmetic dimension proofs; the two right-angled articles remain
-separate submissions. Only these three current PDFs are kept in `build/`.
+separate submissions. Each current PDF is kept beside its source in `arxiv/`.
+
+The [concise 57/17/15 submission edition](../arxiv/hyperbolic_coxeter_dimension_bounds/README.md)
+is prepared with online proof addenda. Its source archive is indexed in
+[`release/manifest.json`](../release/manifest.json); the
+[submission guide](../arxiv/SUBMISSION.md) selects it for the dimension-bound
+paper. The [551-page complete edition](addenda/dimension_bounds_20261030/main.pdf)
+remains the proof addendum, with its [source](addenda/dimension_bounds_20261030/main.tex).
 
 | Submission | PDF | Complete TeX |
 |---|---|---|
-| Dimension bounds 57 / 17 / 15 | [551 pages, 9 figures](build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf) | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) |
-| Sharp right-angled dimensions 8 / 4 | [6 pages, 2 figures](build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf) | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) |
-| On the second smallest ideal right-angled hyperbolic four-polytope | [18 pages, 5 figures](build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf) | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) |
+| Dimension bounds 57 / 17 / 15 | [15 pages](../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf) | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) |
+| Sharp right-angled dimensions 8 / 4 | [6 pages, 2 figures](../arxiv/sharp_dimension_bounds_8_and_4/main.pdf) | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) |
+| On the second smallest ideal right-angled hyperbolic four-polytope | [18 pages, 5 figures](../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf) | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) |
 
-The combined article has 71 pages of main exposition, followed by the complete
+The complete proof addendum has 71 pages of main exposition, followed by the complete
 case appendices from page 72. The appendices supply necessary proof steps.
 The arithmetic bound uses the general compact theorem within the same document.
 Its [contents and proof maps](../arxiv/DIMENSION_BOUNDS.md) identify that dependency.
@@ -40,7 +47,7 @@ For serial plans and resource rules, use [repro/README.md](../repro/README.md).
 Written proof, source audit, exact computation, conditional Lean and PDF
 compilation retain separate verification records.
 
-The remaining root TeX files and `revisions/` sources are verification inputs
-for the [six catalogue selections](catalogue.json) and their proof maps.
-They preserve the exact text consumed by recorded checks; they are not
-additional current papers. Use the three `/arxiv` sources above for submission.
+The editions selected by the [six catalogue selections](catalogue.json)
+preserve the exact text consumed by recorded checks. They are verification
+inputs within the same paper families. Use the
+[submission guide](../arxiv/SUBMISSION.md) for the current upload selection.

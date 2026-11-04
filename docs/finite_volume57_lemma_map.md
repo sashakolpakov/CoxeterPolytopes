@@ -1,7 +1,7 @@
 # General finite-volume bound57: internal proof and formalization map
 
 The current submission presents this proof in Parts I and IV of
-[Dimension bounds for hyperbolic Coxeter polytopes](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex).
+[Dimension bounds for hyperbolic Coxeter polytopes](../manuscripts/addenda/dimension_bounds_20261030/main.tex).
 See the [submission guide](arxiv_submission_editions_20261028.md) for its
 current PDF. Earlier source editions and their verification scopes are
 distinguished below; the current submission is linked in the guide.

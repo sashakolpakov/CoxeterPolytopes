@@ -1,8 +1,8 @@
 # Results and manuscripts
 
-Updated 30 October 2026. There are **three arXiv submission manuscripts** drawn
-from six research families. Only their three current PDFs are kept in
-`manuscripts/build/`. The [reader’s index](../manuscripts/README.md) lists
+Updated 4 November 2026. There are **three arXiv submission manuscripts** drawn
+from six research families. Their current PDFs are beside the sources in
+`arxiv/`. The [reader’s index](../manuscripts/README.md) lists
 these submissions. Mathematical sources, proof maps and execution receipts
 retain their stated scopes.
 
@@ -10,11 +10,11 @@ retain their stated scopes.
 
 | Manuscript | Results and proof organization | Source and PDF |
 |---|---|---|
-| Dimension bounds for hyperbolic Coxeter polytopes | Finite volume ≤57, compact ≤17, compact arithmetic ≤15. Corner payments and incidence curvature give the first bound. One farthest vector and component energies give the compact bound; field restrictions and dyadic arguments sharpen the arithmetic case. The common introduction identifies the change of method; complete case appendices follow the main exposition. | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex), [551-page PDF](../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf), with 71 pages before the appendices |
-| Sharp dimension bounds for right-angled hyperbolic polytopes | Finite-volume dimension ≤8 and entirely ideal dimension ≤4, both attained. A shared projection leads to separate spherical-code and ideal-equality arguments. | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex), [6-page PDF](../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf) |
-| On the second smallest ideal right-angled hyperbolic four-polytope | Second volume 8π²/3 and its unique reflected double. The volume gap and equality facet spectrum precede the restricted 24-cell chain theorem. | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex), [18-page PDF](../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf) |
+| Dimension bounds for hyperbolic Coxeter polytopes | Finite volume ≤57, compact ≤17, compact arithmetic ≤15. Corner payments and incidence curvature give the first bound. One farthest vector and component energies give the compact bound; field restrictions and dyadic arguments sharpen the arithmetic case. The concise article cites the existing GitHub case and computational proofs. | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex), [15-page PDF](../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf), [proof catalogue](../arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md) and [551-page full addendum](../manuscripts/addenda/dimension_bounds_20261030/main.pdf) |
+| Sharp dimension bounds for right-angled hyperbolic polytopes | Finite-volume dimension ≤8 and entirely ideal dimension ≤4, both attained. A shared projection leads to separate spherical-code and ideal-equality arguments. | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex), [6-page PDF](../arxiv/sharp_dimension_bounds_8_and_4/main.pdf) |
+| On the second smallest ideal right-angled hyperbolic four-polytope | Second volume 8π²/3 and its unique reflected double. The volume gap and equality facet spectrum precede the restricted 24-cell chain theorem. | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex), [18-page PDF](../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf) |
 
-Each submission contains its figures and bibliography in `main.tex`. The
+Figures are inline and each submission has `references.bib` and `main.bbl`. The
 [submission guide](arxiv_submission_editions_20261028.md) gives source/PDF
 bindings and separate typesetting commands.
 

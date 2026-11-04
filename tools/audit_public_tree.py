@@ -14,17 +14,18 @@ import re
 import subprocess
 
 PAPERS = {
-    "manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf",
-    "manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf",
-    "manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf",
+    "arxiv/sharp_dimension_bounds_8_and_4/main.pdf",
+    "arxiv/ideal_four_dimensional_volume_and_structure/main.pdf",
+    "arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf",
 }
+PROOF_ADDENDA_PDF = "manuscripts/addenda/dimension_bounds_20261030/main.pdf"
 SUFFIXES = {".pyc", ".pyo", ".olean", ".ilean", ".o", ".bc", ".ir", ".blg",
             ".trace", ".aux", ".toc", ".lof", ".lot", ".fls", ".fdb_latexmk",
             ".synctex", ".nav", ".snm", ".vrb", ".xdv", ".sqlite-shm", ".sqlite-wal",
             ".so", ".dylib", ".dll", ".a", ".exe", ".partial", ".download", ".tmp"}
 CACHE_DIRS = {".lake", ".proof-batches", ".publication", ".venv", "venv",
               "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache",
-              "_build", "node_modules"}
+              "_build", "node_modules", "dist"}
 SECRET = re.compile(rb"-----BEGIN (?:RSA |EC |OPENSSH |DSA |ENCRYPTED )?PRIVATE KEY-----"
                     rb"|-----BEGIN PGP PRIVATE " rb"KEY BLOCK-----"
                     rb"|gh[pousr]_[A-Za-z0-9]{36,}"
@@ -106,9 +107,11 @@ def main() -> None:
     names = {name for name, _, _ in entries}
     for name in sorted(PAPERS - names):
         issues.append([name, "required current paper PDF absent from index"])
+    if PROOF_ADDENDA_PDF not in names:
+        issues.append([PROOF_ADDENDA_PDF, "complete dimension-proof addenda PDF absent from index"])
     for name in sorted(names - PAPERS):
         if name.startswith("manuscripts/build/") and name.endswith(".pdf"):
-            issues.append([name, "only the three current submission PDFs belong in manuscripts/build"])
+            issues.append([name, "superseded PDF location; current PDFs belong beside arxiv sources"])
     if manifest is None:
         issues.append(["repro/public-data-manifest.json", "bulk-data manifest absent from index"])
     else:

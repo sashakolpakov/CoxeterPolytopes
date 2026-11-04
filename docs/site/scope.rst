@@ -10,8 +10,9 @@ review by another author and root acceptance. It does not mean external
 refereeing, complete regeneration of every finite input or end-to-end
 formalization of hyperbolic geometry.
 
-The combined dimension submission contains three proof families in
-551 pages, with 71 pages of main exposition and full proof appendices. The
+The combined dimension submission presents all three bounds in 15 pages;
+complete case and computational proofs remain in the GitHub catalogue and
+the preserved 551-page proof addendum. The
 current right-angled submissions have 6 and 18 pages. The supporting compact
 RA4 source treats volume constraints. :doc:`papers` identifies the current
 manuscripts and proof maps. Their preparation adds no new mathematical

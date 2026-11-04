@@ -7,7 +7,7 @@ proofs. The sharp right-angled dimensions and second ideal four-volume remain
 separate articles. Compact RA4 constraints remain a supporting paper outside
 these submissions. The mathematical conclusions are unchanged.
 
-.. list-table:: Current complete reading copies
+.. list-table:: Current submission PDFs
    :header-rows: 1
    :widths: 29 11 28 32
 
@@ -15,15 +15,15 @@ these submissions. The mathematical conclusions are unchanged.
      - Pages
      - Technique
      - Complete source and proof map
-   * - :download:`Dimension bounds: 57 / 17 / 15 <../../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf>`
-     - 551
+   * - :download:`Dimension bounds: 57 / 17 / 15 <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf>`
+     - 15
      - Corner payments and cusp curvature; farthest-vertex component energies; arithmetic field restrictions.
-     - :download:`main.tex <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`, :download:`references.bib <../../arxiv/hyperbolic_coxeter_dimension_bounds/references.bib>`, :download:`main.bbl <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.bbl>`; :download:`part and proof guide <../../arxiv/DIMENSION_BOUNDS.md>`.
-   * - :download:`Sharp right-angled dimensions: 8 and 4 <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf>`
+     - :download:`main.tex <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`, :download:`references.bib <../../arxiv/hyperbolic_coxeter_dimension_bounds/references.bib>`, :download:`main.bbl <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.bbl>`; :download:`full proof addenda <../../manuscripts/addenda/dimension_bounds_20261030/main.pdf>`.
+   * - :download:`Sharp right-angled dimensions: 8 and 4 <../../arxiv/sharp_dimension_bounds_8_and_4/main.pdf>`
      - 6
      - Actual projection, heights, a cubic tensor identity and metric equality.
      - :download:`main.tex <../../arxiv/sharp_dimension_bounds_8_and_4/main.tex>`, :download:`references.bib <../../arxiv/sharp_dimension_bounds_8_and_4/references.bib>`, :download:`main.bbl <../../arxiv/sharp_dimension_bounds_8_and_4/main.bbl>`; :download:`proof map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
-   * - :download:`Second ideal RA4 volume and structure <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf>`
+   * - :download:`Second ideal RA4 volume and structure <../../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf>`
      - 18
      - Defect count, equality spectrum, actual cutting and restricted recognition.
      - :download:`main.tex <../../arxiv/ideal_four_dimensional_volume_and_structure/main.tex>`, :download:`references.bib <../../arxiv/ideal_four_dimensional_volume_and_structure/references.bib>`, :download:`main.bbl <../../arxiv/ideal_four_dimensional_volume_and_structure/main.bbl>`; :download:`proof map <../ideal_ra4_volume_and_structure_proof_map.md>`.
@@ -39,12 +39,13 @@ The three arXiv submission editions
 -----------------------------------
 
 Each source folder contains ``main.tex``, ``references.bib`` and the generated
-``main.bbl``. Figures are inline TikZ. The sharp-dimension paper contains
-two figures; the ideal-volume paper contains five; the combined dimension
-paper contains nine. All name Alexander Kolpakov
+``main.bbl`` and matching ``main.pdf``. Figures in the two right-angled
+articles are inline TikZ. The sharp-dimension paper contains
+two figures; the ideal-volume paper contains five. The 15-page dimension
+submission refers to the complete 551-page proof addenda, which retain nine figures. All name Alexander Kolpakov
 and include the requested AI-use acknowledgment. The
 :download:`edition guide <../arxiv_submission_editions_20261028.md>` and
-:download:`current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
+:download:`current source/PDF manifest <../../release/manifest.json>`
 record the exact editions and matching PDF builds.
 
 Open ``main.tex`` in a TeX editor configured for pdfLaTeX and BibTeX, or run
@@ -68,7 +69,7 @@ outputs and conditional Lean records retain their original scope. The
 submission PDF builds are new typesetting evidence, not new proof executions;
 :ref:`repro-arxiv-editions` explains the distinction and the commands.
 
-The combined article brings the three general/arithmetic proof families into
+The complete proof addendum brings the three general/arithmetic proof families into
 one document, with the compact theorem now an internal input to the arithmetic
 argument. Its main exposition occupies pages 1--71. Complete case appendices
 begin on page 72; the finite-volume, compact and arithmetic appendix groups
@@ -79,9 +80,10 @@ the original proof maps and the scope of the source-preservation review.
 How much of a paper is essential?
 ---------------------------------
 
-These are complete article lengths, not minimum necessary-page claims. The
-combined dimension paper has 71 pages of main exposition before its case
-appendices. Those front sections are **not a standalone proof**. Actual-rank
+The 15-page consolidated article presents the main arguments and exact
+interfaces to the :download:`GitHub proof catalogue <../../arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md>`.
+Its full proof addendum has 71 pages of main exposition before its case
+appendices. Those front sections require the case appendices. Actual-rank
 tails, exceptional endpoint/fork cases and the four arithmetic finite-output
 contracts remain necessary. The independent compact theorem is included
 before its use in the arithmetic argument.
@@ -92,8 +94,8 @@ contains both complete proofs and two figures. The eighteen-page ideal paper
 deliberately combines the known minimum, second-volume equality and restricted
 chain argument in one sequence.
 The compact RA4 article proves constraints rather than the requested absolute
-minimum or second-volume classification. No smaller self-contained extraction
-has been certified for any family by these presentation revisions.
+minimum or second-volume classification. The concise dimension article retains the main deductions and cites the
+complete case proofs as essential online addenda.
 
 Read the proof before the logs
 ------------------------------

@@ -5,15 +5,25 @@ certificates and selected Lean verification.
 
 **[Read the detailed documentation](https://sashakolpakov.github.io/CoxeterPolytopes/)**
 · [PDFs and editions](manuscripts/README.md)
+· [Submission packages](arxiv/SUBMISSION.md)
 · [Reproduction](repro/README.md)
 · [Formal logic](formal/README.md)
 
+The **[consolidated dimension-bound article](arxiv/hyperbolic_coxeter_dimension_bounds/main.tex)**
+combines **57 / 17 / 15** in a [15-page PDF](arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf).
+It presents the main geometric arguments and cites the existing
+[GitHub proof catalogue](arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md)
+for complete case proofs, computational proofs and reproduction records.
+The [release index](release/manifest.json) identifies the current source
+package, retained compiled editions and proof/reproduction guides.
+
 Three **[arXiv submission folders](arxiv/README.md)** contain the current sources:
-[sharp dimensions 8/4, 6 pages](manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf),
-[second ideal four-volume, 18 pages](manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf),
-and [dimension bounds 57/17/15, 551 pages](manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf).
-The combined dimension article has 71 pages of main exposition followed by
-complete proof appendices. [Sources and verification scope](docs/arxiv_submission_editions_20261028.md)
+[sharp dimensions 8/4, 6 pages](arxiv/sharp_dimension_bounds_8_and_4/main.pdf),
+[second ideal four-volume, 18 pages](arxiv/ideal_four_dimensional_volume_and_structure/main.pdf),
+and [dimension bounds 57/17/15, 15 pages](arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf).
+Each PDF sits beside its source. The [551-page complete dimension proof
+addenda](manuscripts/addenda/dimension_bounds_20261030/main.pdf) preserve all
+case proofs separately. [Sources and verification scope](docs/arxiv_submission_editions_20261028.md)
 distinguish these copies from preserved earlier editions.
 
 | Class | Largest published example | Published ceiling | Repository ceiling |
@@ -50,3 +60,8 @@ Actual execution is serial and monitored. Bulk research assets are not
 uploaded; [availability and exact replay limits](repro/PUBLIC_DATA.md) are
 explicit. The documentation separates source review, computation, Lean,
 PDF compilation and publication evidence.
+
+The [repository map](docs/repository_layout.md) separates manuscript sources,
+local upload archives (`dist/`), release metadata, proof records (`results/`),
+and audits. Historical publication staging is compressed with verified byte
+restoration; recorded scientific inputs retain their original paths.

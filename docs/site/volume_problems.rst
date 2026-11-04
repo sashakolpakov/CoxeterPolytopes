@@ -17,7 +17,7 @@ classification.
      - Pages
      - Established statement
      - Excluded interpretation
-   * - :download:`Ideal volume and structure <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf>`
+   * - :download:`Ideal volume and structure <../../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf>`
      - 18
      - Published 24-cell minimum; internally reviewed next volume and unique reflected double; Oct/D chains.
      - A classification of all ideal four-polytopes as 24-cell chains.

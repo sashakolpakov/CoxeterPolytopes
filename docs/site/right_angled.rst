@@ -7,7 +7,7 @@ ideal. Both bounds are attained by the published examples identified below.
 No arithmetic assumption is used. The two proofs share an actual geometric
 projection; their spherical-code and literature inputs then differ.
 
-* :download:`Current six-page submission PDF <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf>`
+* :download:`Current six-page submission PDF <../../arxiv/sharp_dimension_bounds_8_and_4/main.pdf>`
   and :download:`submission TeX <../../arxiv/sharp_dimension_bounds_8_and_4/main.tex>`.
 * :download:`Proof and reproduction map <../right_angled_sharp_dimensions_publication_proof_map_20261021.md>`.
 * :download:`Current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`.

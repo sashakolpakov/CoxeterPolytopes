@@ -4,10 +4,14 @@ Start with `README.md`, `manuscripts/README.md`, and
 `docs/current_bounds_and_verification.md`. They identify the three current
 arXiv submissions, their proof maps and the retained verification inputs.
 Keep the six accepted TeX editions and their historical verification records
-unchanged unless the current task explicitly calls for a revision. The user
-requested on 30 October that `manuscripts/build/` contain only the three
-current arXiv PDFs. Remove obsolete presentation copies and assembly
-bookkeeping; retain the exact source inputs needed by current checkers.
+unchanged unless the current task explicitly calls for a revision. The user's
+4 November instruction places each current PDF beside its source as
+`arxiv/<paper>/main.pdf`, following PseudoArithmetic. This replaces the
+30 October `manuscripts/build/` layout. The concise dimension submission is
+canonical in `arxiv/hyperbolic_coxeter_dimension_bounds/`; its complete
+30 October proof addenda are byte-preserved under
+`manuscripts/addenda/dimension_bounds_20261030/`. Remove obsolete presentation
+copies and assembly bookkeeping; retain exact inputs needed by current checkers.
 Consolidate improvements within those paper
 families; do not create a paper for each numerical increment.
 

@@ -1,6 +1,6 @@
 # Compact21 triangle constraints: proof map and reproduction
 
-For current reading, see the [current dimension-bounds manuscript](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) and the
+For current reading, see the [current dimension-bounds manuscript](../manuscripts/addenda/dimension_bounds_20261030/main.tex) and the
 [submission guide](arxiv_submission_editions_20261028.md). The supporting
 arguments and recorded verification scopes below remain distinct from those
 current submission builds. Standalone draft typesetting routes have been retired.

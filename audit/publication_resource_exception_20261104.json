@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-04",
+  "user_authorized": true,
+  "user_answer": "Authorize the revised publication exception",
+  "superseded_user_answer": "Authorize this one-time publication exception",
+  "superseded_thresholds": {"admission_disk_percent": 0.5, "abort_disk_percent": 0.25},
+  "scope": "Compile the requested manuscript PDFs and run this batch's publication and pre-push audits. No mathematical or Lean checks.",
+  "normal_policy_source": "scripts/run_lean_batches_20261018.py",
+  "normal_policy_source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f",
+  "normal_policy_files_changed": false,
+  "admission_disk_percent": 0.1,
+  "abort_disk_percent": 0.05,
+  "admission_memory_percent": 15,
+  "abort_memory_percent": 6,
+  "tex_wall_seconds": 59,
+  "tex_process_tree_rss_limit_bytes": 1073741824,
+  "publication_process_group_rss_limit_bytes": 268435456,
+  "threads": 1,
+  "shared_exclusive_lock": "formal/.proof-batches/exclusive.lock",
+  "launcher": ".publication/run_publication_exception_20261104.py"
+}

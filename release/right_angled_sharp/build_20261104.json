@@ -1,0 +1,74 @@
+{
+  "status": "PASS_ISOLATED_TEX_BUILD_ONLY",
+  "source": "arxiv/sharp_dimension_bounds_8_and_4/main.tex",
+  "source_sha256": "82c1196d07743dee0498357a7fe94418a5e569bf4d2d526820762c4b93ff1a49",
+  "source_bytes": 17038,
+  "pdf": "arxiv/sharp_dimension_bounds_8_and_4/main.pdf",
+  "passes": [
+    {
+      "pass": 1,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 17820
+    },
+    {
+      "pass": 2,
+      "program": "bibtex",
+      "exit_code": 0,
+      "stdout_bytes": 153
+    },
+    {
+      "pass": 3,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 15633
+    },
+    {
+      "pass": 4,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 14471
+    }
+  ],
+  "builder_sha256": "62eb9110cc5b96b61aa00877bbcccb10f3c4257a9a6e2b76d7d8769e8d702f5e",
+  "mathematical_verification_claimed": false,
+  "bibliography": "arxiv/sharp_dimension_bounds_8_and_4/references.bib",
+  "bibliography_sha256": "b8d3feb7d908774f6bf892a2a27bdbebeb5a19ebc63ce612573df4c33d8c171f",
+  "bibliography_bytes": 2154,
+  "isolated_input": "Only main.tex and references.bib are copied; BibTeX generates main.bbl.",
+  "pipeline": [
+    "pdflatex main.tex",
+    "bibtex main",
+    "pdflatex main.tex",
+    "pdflatex main.tex"
+  ],
+  "temporary_auxiliaries_removed": true,
+  "bibtex_warnings": [],
+  "warnings": [],
+  "undefined_references_or_citations": false,
+  "repository_inputs_read_by_tex": [],
+  "pages": 6,
+  "figure_pages": [
+    {
+      "page": 4,
+      "figures": [
+        1
+      ]
+    },
+    {
+      "page": 5,
+      "figures": [
+        2
+      ]
+    }
+  ],
+  "font_subtypes": [
+    "/Type1"
+  ],
+  "pdf_sha256": "d4ed592a22cbcd480a175bd506c82163259f9235200bfed63fca3f4a9010bf97",
+  "pdf_bytes": 232036,
+  "source_figure_environments": 2,
+  "compiled_bibliography": "arxiv/sharp_dimension_bounds_8_and_4/main.bbl",
+  "compiled_bibliography_sha256": "1d442f06765136c51e78eac468b5fd7d1e2236586f0e5cc725bec0ac62db28a5",
+  "compiled_bibliography_bytes": 1646
+}

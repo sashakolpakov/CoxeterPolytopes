@@ -1,11 +1,16 @@
 # Dimension bounds: arXiv submission
 
-For this submission, zip only `main.tex`, `references.bib` and `main.bbl`
-from `hyperbolic_coxeter_dimension_bounds/`, separately from the two
-right-angled submissions. The source folder contains `main.tex`,
-`references.bib` and the generated `main.bbl`. All nine figures are inline TikZ.
-It compiles with pdfLaTeX, BibTeX and standard TeX packages; it needs no files
-from elsewhere in the repository.
+The [concise submission edition](hyperbolic_coxeter_dimension_bounds/README.md)
+combines 57 / 17 / 15 in 15 pages, with the main geometric arguments and a
+[GitHub proof catalogue](hyperbolic_coxeter_dimension_bounds/ADDENDA.md)
+locating the complete case and computational proofs.
+Its package and typesetting status are in [SUBMISSION.md](SUBMISSION.md).
+The complete edition described below remains the proof addendum and retains
+its recorded source/PDF bindings.
+
+The full source folder contains `main.tex`, `references.bib` and generated
+`main.bbl`. All nine figures are inline TikZ. It compiles with pdfLaTeX,
+BibTeX and standard TeX packages without files from elsewhere in the repository.
 
 The author is Alexander Kolpakov. The acknowledgment records the use of
 OpenAI's GPT-6-astra and GPT-6.1-sol and the author's responsibility for the content.
@@ -13,7 +18,7 @@ The repository is cited once in the bibliography using its main URL.
 
 ## Contents
 
-The [551-page reading PDF](../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf)
+The [551-page reading PDF](../manuscripts/addenda/dimension_bounds_20261030/main.pdf)
 collects three existing proof families under a common introduction.
 
 | Part | Result or material | Begins on page |
@@ -68,8 +73,9 @@ execution limits remain documented in the [public-data guide](../repro/PUBLIC_DA
 
 The typesetting pipeline uses the paper's `main.tex` and `references.bib` in a
 fresh temporary directory, runs pdfLaTeX, BibTeX and two further pdfLaTeX passes,
-and retains `main.bbl` alongside the source. The final PDF is kept outside the
-upload folder. The manifest and build record distinguish typesetting evidence
+and retains `main.bbl` alongside the source. The complete PDF is kept beside
+its preserved source in `manuscripts/addenda/dimension_bounds_20261030/`.
+The manifest and build record distinguish typesetting evidence
 from mathematical verification.
 
 The four-step build passed with zero TeX or BibTeX warnings, no undefined
@@ -89,7 +95,8 @@ identifies this edition; its current build ledger is
 editorial receipts retain their original source bindings.
 
 For ordinary typesetting, open `main.tex` in your TeX editor or run
-`latexmk -pdf main.tex` from `hyperbolic_coxeter_dimension_bounds/`.
+`latexmk -pdf main.tex` from `manuscripts/addenda/dimension_bounds_20261030/`
+for this complete edition, or from the current arXiv folder for the concise one.
 The equivalent manual sequence is:
 
 ```sh

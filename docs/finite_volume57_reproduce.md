@@ -195,7 +195,7 @@ Receipts retain exact byte ratios, totals and the policy identity.
 ## Working article and preserved history
 
 The current submission collects this article in Parts I and IV of
-[Dimension bounds for hyperbolic Coxeter polytopes](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex).
+[Dimension bounds for hyperbolic Coxeter polytopes](../manuscripts/addenda/dimension_bounds_20261030/main.tex).
 Its current PDF and separate typesetting instructions are in the
 [submission guide](arxiv_submission_editions_20261028.md). The earlier
 source receipts and replay scopes below remain unchanged.

@@ -1,7 +1,7 @@
 # Working general compact17 proof map
 
 The current submission includes this argument in Parts II and V of
-[Dimension bounds for hyperbolic Coxeter polytopes](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex).
+[Dimension bounds for hyperbolic Coxeter polytopes](../manuscripts/addenda/dimension_bounds_20261030/main.tex).
 The [submission guide](arxiv_submission_editions_20261028.md) lists its current
 PDF. The following map retains the original revision's source labels and
 verification scopes; the submission prefixes these labels with `compact:`.

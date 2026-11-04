@@ -1,6 +1,6 @@
 # Manuscript organization and proof methods
 
-Updated 30 October 2026. There are three arXiv submission manuscripts:
+Updated 4 November 2026. There are three arXiv submission manuscripts:
 the combined dimension-bounds article, the sharp right-angled dimension article,
 and the second ideal four-volume article. They consolidate the research
 families without turning each numerical improvement into a paper.
@@ -15,8 +15,10 @@ standalone sources and the three current PDFs.
 | [Sharp right-angled dimensions 8 / 4](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) | Projection from a finite interior point to a facet of maximum height. | The general case uses a cubic spherical-code bound; the ideal case uses a cardinality bound and a metric-equality exclusion. |
 | [Second ideal four-volume](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) | Defect counting and cusp geometry. | The volume gap and equality facet spectrum come first. A separately proved cutting and recognition theorem applies to the restricted octahedral facet spectrum, then identifies the equality double. |
 
-The dimension article places all three main arguments before their complete
-case appendices. Its 71-page opening exposition does not replace those proofs.
+The 15-page dimension article presents all three main arguments and cites the
+existing [GitHub proof catalogue](../arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md).
+The preserved 551-page full edition supplies complete cases and computational
+proofs; its 71-page opening exposition requires those appendices.
 The compact and arithmetic arguments use the same original farthest vector
 throughout each component-energy estimate. Every auxiliary point must satisfy
 every original wall inequality. Arithmetic restrictions enter where integral
@@ -31,7 +33,8 @@ than a fourth arXiv submission.
 ## How computations are presented
 
 A finite computation enters when the geometric proof has reduced to a precisely
-stated finite obligation. The manuscript specifies:
+stated finite obligation. The complete GitHub proof catalogue and its linked
+addenda specify:
 
 1. The objects, equivalence relation, input domain and required output.
 2. The algorithm and the invariant that justifies every pruning rule.
@@ -51,8 +54,9 @@ of exact acceptance and completeness. The mathematical reductions here differ.
 
 ## Reading papers and auditing records
 
-The papers contain definitions, complete arguments, mathematical algorithms
-and explanatory figures. Source hashes, execution logs, raw enumeration rows
+The papers contain definitions and main arguments; complete case proofs and
+mathematical algorithms for the concise dimension article are in its GitHub
+proof addenda. Source hashes, execution logs, raw enumeration rows
 and earlier failed attempts belong in the repository’s verification records.
 Selected Lean modules formalize conditional deductions; their geometric,
 literature and finite-data premises remain explicit.

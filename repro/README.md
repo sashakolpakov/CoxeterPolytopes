@@ -27,7 +27,8 @@ illustrated revisions have separate source/build records. Finite57's current
 
 The [three current arXiv manuscripts](../arxiv/README.md) have their own
 [source/PDF guide and typesetting commands](../docs/arxiv_submission_editions_20261028.md).
-Their three PDFs are the only files retained in `manuscripts/build/`.
+Their PDFs sit beside the sources as `arxiv/<paper>/main.pdf`; the complete
+dimension proof addenda are retained under `manuscripts/addenda/`.
 The catalogue's `--pdf` option checks its historical source edition in a
 temporary directory and discards that PDF; it neither requires the old stored
 PDF nor builds a current submission. Mathematical checks and Lean are

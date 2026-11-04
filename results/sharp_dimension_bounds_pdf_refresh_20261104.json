@@ -1,0 +1,44 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/build_arxiv_submission_20261028.py",
+    "sharp_dimension_bounds_8_and_4",
+    "--tag",
+    "current_20261104",
+    "--replace-current"
+  ],
+  "elapsed_seconds": 9.84,
+  "peak_process_tree_rss_bytes": 107757568,
+  "initial_resources": {
+    "free_disk_gib": 3.07,
+    "available_memory_gib": 6.09,
+    "disk_free_bytes": 3292983296,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 6537953280,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 0.331083,
+    "available_memory_percent": 25.370598,
+    "resource_policy": {
+      "id": "publication-exception-20261104",
+      "admission_disk_percent": 0.1,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 0.05,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "override_authorization": "audit/publication_resource_exception_20261104.json",
+      "override_authorization_sha256": "36f2c0ba0f1f7c5a05c1ae7c0fe24eb7ecdeb8c6b35118499006c6cb4184b29b",
+      "override_launcher_sha256": "f39096265b14dac6b3970f163eecf1924142f3c0f0bbdfd76b4e266cf9834c00",
+      "scope": "This user-authorized PDF/publication batch only; no mathematical or Lean jobs",
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 2006,
+  "stdout": "{\n  \"status\": \"PASS_ISOLATED_TEX_BUILD_ONLY\",\n  \"source\": \"arxiv/sharp_dimension_bounds_8_and_4/main.tex\",\n  \"source_sha256\": \"82c1196d07743dee0498357a7fe94418a5e569bf4d2d526820762c4b93ff1a49\",\n  \"source_bytes\": 17038,\n  \"pdf\": \"arxiv/sharp_dimension_bounds_8_and_4/main.pdf\",\n  \"passes\": [\n    {\n      \"pass\": 1,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 17820\n    },\n    {\n      \"pass\": 2,\n      \"program\": \"bibtex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 153\n    },\n    {\n      \"pass\": 3,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 15633\n    },\n    {\n      \"pass\": 4,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 14471\n    }\n  ],\n  \"builder_sha256\": \"62eb9110cc5b96b61aa00877bbcccb10f3c4257a9a6e2b76d7d8769e8d702f5e\",\n  \"mathematical_verification_claimed\": false,\n  \"bibliography\": \"arxiv/sharp_dimension_bounds_8_and_4/references.bib\",\n  \"bibliography_sha256\": \"b8d3feb7d908774f6bf892a2a27bdbebeb5a19ebc63ce612573df4c33d8c171f\",\n  \"bibliography_bytes\": 2154,\n  \"isolated_input\": \"Only main.tex and references.bib are copied; BibTeX generates main.bbl.\",\n  \"pipeline\": [\n    \"pdflatex main.tex\",\n    \"bibtex main\",\n    \"pdflatex main.tex\",\n    \"pdflatex main.tex\"\n  ],\n  \"temporary_auxiliaries_removed\": true,\n  \"bibtex_warnings\": [],\n  \"warnings\": [],\n  \"undefined_references_or_citations\": false,\n  \"repository_inputs_read_by_tex\": [],\n  \"pages\": 6,\n  \"figure_pages\": [\n    {\n      \"page\": 4,\n      \"figures\": [\n        1\n      ]\n    },\n    {\n      \"page\": 5,\n      \"figures\": [\n        2\n      ]\n    }\n  ],\n  \"font_subtypes\": [\n    \"/Type1\"\n  ],\n  \"pdf_sha256\": \"d4ed592a22cbcd480a175bd506c82163259f9235200bfed63fca3f4a9010bf97\",\n  \"pdf_bytes\": 232036,\n  \"source_figure_environments\": 2,\n  \"compiled_bibliography\": \"arxiv/sharp_dimension_bounds_8_and_4/main.bbl\",\n  \"compiled_bibliography_sha256\": \"1d442f06765136c51e78eac468b5fd7d1e2236586f0e5cc725bec0ac62db28a5\",\n  \"compiled_bibliography_bytes\": 1646\n}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "62eb9110cc5b96b61aa00877bbcccb10f3c4257a9a6e2b76d7d8769e8d702f5e",
+  "lock_owner": "wrapper"
+}

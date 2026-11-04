@@ -30,7 +30,7 @@ PAPERS = (
 SOURCE_LIMIT = 256 * 1024
 PDF_LIMIT = 8 * 1024**2
 CURRENT_PDFS = {
-    name: ROOT / "manuscripts/build" / f"arxiv_{name}_20261028_current_20261030.pdf"
+    name: ROOT / "arxiv" / name / "main.pdf"
     for name in (*PAPERS, "hyperbolic_coxeter_dimension_bounds")
 }
 
@@ -87,7 +87,7 @@ def build(paper: str, stem: str, pdf: Path, report_path: Path,
     with source.open("rb") as stream:
         payload = stream.read(SOURCE_LIMIT + 1)
     if not payload or len(payload) > SOURCE_LIMIT:
-        raise ValueError("Submission source exceeds 256 KiB")
+        raise ValueError(f"Submission source exceeds {SOURCE_LIMIT} bytes")
     original = hashlib.sha256(payload).hexdigest()
     bibliography = checked(source.with_name("references.bib"))
     if not bibliography.is_file() or not 0 < bibliography.stat().st_size <= 256 * 1024:
@@ -292,7 +292,7 @@ def main() -> None:
     if args.tag and not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,31}", args.tag):
         raise ValueError("Unsafe --tag")
     stem = "arxiv_" + args.paper + "_20261028" + ("_" + args.tag if args.tag else "")
-    pdf = checked(ROOT / "manuscripts/build" / (stem + ".pdf"))
+    pdf = checked(REVIEW / (stem + ".pdf"))
     if args.replace_current:
         if not args.tag:
             raise ValueError("Use a fresh --tag for the replacement build receipt")

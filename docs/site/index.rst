@@ -114,21 +114,20 @@ Current manuscripts
 The :ref:`three submission editions <arxiv-submission-editions>`
 have complete source folders and reading PDFs:
 
-* :download:`Sharp dimensions 8 and 4, six pages <../../manuscripts/build/arxiv_sharp_dimension_bounds_8_and_4_20261028_current_20261030.pdf>`:
+* :download:`Sharp dimensions 8 and 4, six pages <../../arxiv/sharp_dimension_bounds_8_and_4/main.pdf>`:
   two inline figures and an outline of the proofs.
-* :download:`Second ideal four-volume, eighteen pages <../../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf>`:
+* :download:`Second ideal four-volume, eighteen pages <../../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf>`:
   five inline figures, the second-volume theorem, restricted chains and the
   history of the compact and ideal extremal questions.
-* :download:`Dimension bounds 57 / 17 / 15, 551 pages <../../manuscripts/build/arxiv_hyperbolic_coxeter_dimension_bounds_20261028_current_20261030.pdf>`:
-  nine inline figures, 71 pages of main exposition and complete proof appendices
-  from page 72.
+* :download:`Dimension bounds 57 / 17 / 15, fifteen pages <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf>`:
+  a concise submission with the :download:`complete 551-page proof addenda <../../manuscripts/addenda/dimension_bounds_20261030/main.pdf>` retained separately.
 
 All three sources include the author and AI-use acknowledgment. Each folder
 contains ``main.tex``, ``references.bib`` and ``main.bbl`` and builds with standard
 pdfLaTeX and BibTeX, or ``latexmk -pdf main.tex``. All three four-step builds
 passed with zero TeX or BibTeX warnings and no undefined references or citations. The
 :download:`submission-edition guide <../arxiv_submission_editions_20261028.md>`
-and :download:`current manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
+and :download:`current manifest <../../release/manifest.json>`
 identify the exact source/PDF pairs and retain the existing mathematical and
 conditional Lean verification scopes. Updating a reading copy does not
 constitute a new execution of its supporting checks.
@@ -137,7 +136,7 @@ The :download:`26 October release note <../documentation_illustration_release_20
 records the source-preservation and illustration audit boundaries.
 
 Five vector diagrams in these documentation pages illustrate the proof
-dependencies. The combined dimension manuscript retains all nine figures from
+dependencies. The complete dimension proof addendum retains all nine figures from
 its three constituent sources. The two right-angled submissions retain two and
 five inline figures. Compilation and sampled layout reviews are recorded
 separately from mathematical source review.

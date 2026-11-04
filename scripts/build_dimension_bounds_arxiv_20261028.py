@@ -70,7 +70,7 @@ def main() -> None:
     submission.pdf_description = describe_pdf
     submission.checked(WORK).mkdir(parents=True, exist_ok=True)
     stem = f"arxiv_{PAPER}_20261028_{args.tag}"
-    pdf = submission.checked(ROOT / "manuscripts/build" / (stem + ".pdf"))
+    pdf = submission.checked(WORK / (stem + ".pdf"))
     if args.replace_current:
         pdf = submission.checked(submission.CURRENT_PDFS[PAPER])
     report = submission.checked(WORK / (stem + "_build.json"))

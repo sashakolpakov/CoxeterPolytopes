@@ -2,7 +2,7 @@
 
 The current submission is
 [On the second smallest ideal right-angled hyperbolic four-polytope](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex),
-with its [18-page PDF](../manuscripts/build/arxiv_ideal_four_dimensional_volume_and_structure_20261028_current_20261030.pdf).
+with its [18-page PDF](../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf).
 The [submission guide](arxiv_submission_editions_20261028.md) records the
 editorial changes and typesetting evidence. The detailed proof and verification
 map below describes the preserved publication edition; its mathematical
