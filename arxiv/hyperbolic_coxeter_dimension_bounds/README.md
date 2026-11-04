@@ -1,7 +1,7 @@
 # Concise edition of the dimension-bound article
 
-This edition presents the bounds **57 / 17 / 15** with the common arguments
-and exact local interfaces. Complete case proofs remain in the existing
+This edition presents the bounds **57 / 17 / 15** with detailed geometric reductions, component estimates, field-theoretic
+arguments and the complete manual dyadic finish. Complete case proofs remain in the existing
 dimension-bound paper family and are cited as online proof addenda. The
 [addendum map](ADDENDA.md) identifies every supplementary proof dependency.
 
@@ -26,7 +26,7 @@ references and are not required by TeX. Repository typesetting uses the
 existing serial resource monitor:
 
 ```sh
-python3 -B scripts/run_proof_batch_20261024.py check \
+python3 -B scripts/run_bounded_research_check_20261018.py --parent-lock \
   --ledger results/dimension_bounds_concise_bounded_build_attempt1_20261104.json \
   -- scripts/build_dimension_bounds_concise_20261104.py --tag attempt1
 ```
@@ -39,7 +39,8 @@ are stored under `release/dimension_bounds/`; the current artifact index is
 [`release/manifest.json`](../../release/manifest.json). See the
 [submission guide](../../arxiv/SUBMISSION.md).
 
-The final monitored build produced a 15-page PDF with zero TeX or BibTeX
+The expanded edition adds 52 pages to the prior presentation. Its final
+monitored build produced a 67-page PDF with zero TeX or BibTeX
 warnings, no undefined references or citations, and Type 1 fonts.
 [Read the PDF](main.pdf). The full case proofs are retained in the
 [complete proof addenda](../../manuscripts/addenda/dimension_bounds_20261030/main.pdf).

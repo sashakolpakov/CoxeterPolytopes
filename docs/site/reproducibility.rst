@@ -8,7 +8,7 @@ saved-certificate check, regeneration of a finite search, a conditional Lean
 proof and a PDF build establish different things. Their receipts retain
 those differences even when they contribute to the same paper.
 
-The 15-page consolidated submission brings the finite-volume 57, compact 17
+The 67-page consolidated submission brings the finite-volume 57, compact 17
 and compact arithmetic 15 bounds together. Complete cases, computational
 proofs and reproduction records remain in the GitHub proof catalogue and
 the preserved 551-page addendum. The compact theorem is an internal input to

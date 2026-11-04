@@ -192,7 +192,7 @@ def main() -> None:
                                  "bytes": report["pdf_bytes"],
                                  "sha256": report["pdf_sha256"]}
                 paper["pages"] = report["pages"]
-                paper["current_pdf_role"] = "Concise consolidated article; complete proofs and computations in the GitHub supplement"
+                paper["current_pdf_role"] = "Consolidated article with detailed geometric arguments; remaining case proofs and computations in the GitHub supplement"
                 paper.pop("future_pdf", None)
                 paper.pop("commit_and_push_held_pending_expanded_proof_review", None)
                 paper.pop("extra_length_allowed_to_retain_essential_proofs", None)
@@ -203,6 +203,7 @@ def main() -> None:
                 paper["package_entries"] = names
                 paper["compiled_bibliography"] = {
                     "path": str((SOURCE / "main.bbl").relative_to(ROOT)),
+                    "bytes": (SOURCE / "main.bbl").stat().st_size,
                     "sha256": report["compiled_bibliography_sha256"]}
                 paper["typesetting_receipt"] = str(receipt.relative_to(ROOT))
                 break

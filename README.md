@@ -10,8 +10,9 @@ certificates and selected Lean verification.
 · [Formal logic](formal/README.md)
 
 The **[consolidated dimension-bound article](arxiv/hyperbolic_coxeter_dimension_bounds/main.tex)**
-combines **57 / 17 / 15** in a [15-page PDF](arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf).
-It presents the main geometric arguments and cites the existing
+combines **57 / 17 / 15** in a [67-page PDF](arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf).
+It develops the geometric reductions, component estimates and arithmetic
+exclusions in detail, and cites the existing
 [GitHub proof catalogue](arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md)
 for complete case proofs, computational proofs and reproduction records.
 The [release index](release/manifest.json) identifies the current source
@@ -20,7 +21,7 @@ package, retained compiled editions and proof/reproduction guides.
 Three **[arXiv submission folders](arxiv/README.md)** contain the current sources:
 [sharp dimensions 8/4, 6 pages](arxiv/sharp_dimension_bounds_8_and_4/main.pdf),
 [second ideal four-volume, 18 pages](arxiv/ideal_four_dimensional_volume_and_structure/main.pdf),
-and [dimension bounds 57/17/15, 15 pages](arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf).
+and [dimension bounds 57/17/15, 67 pages](arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf).
 Each PDF sits beside its source. The [551-page complete dimension proof
 addenda](manuscripts/addenda/dimension_bounds_20261030/main.pdf) preserve all
 case proofs separately. [Sources and verification scope](docs/arxiv_submission_editions_20261028.md)

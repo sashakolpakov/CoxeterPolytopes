@@ -119,7 +119,7 @@ have complete source folders and reading PDFs:
 * :download:`Second ideal four-volume, eighteen pages <../../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf>`:
   five inline figures, the second-volume theorem, restricted chains and the
   history of the compact and ideal extremal questions.
-* :download:`Dimension bounds 57 / 17 / 15, fifteen pages <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf>`:
+* :download:`Dimension bounds 57 / 17 / 15, sixty-seven pages <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf>`:
   a concise submission with the :download:`complete 551-page proof addenda <../../manuscripts/addenda/dimension_bounds_20261030/main.pdf>` retained separately.
 
 All three sources include the author and AI-use acknowledgment. Each folder

@@ -1,7 +1,7 @@
 # Dimension bounds: arXiv submission
 
 The [concise submission edition](hyperbolic_coxeter_dimension_bounds/README.md)
-combines 57 / 17 / 15 in 15 pages, with the main geometric arguments and a
+combines 57 / 17 / 15 in 67 pages, with the main geometric arguments and a
 [GitHub proof catalogue](hyperbolic_coxeter_dimension_bounds/ADDENDA.md)
 locating the complete case and computational proofs.
 Its package and typesetting status are in [SUBMISSION.md](SUBMISSION.md).

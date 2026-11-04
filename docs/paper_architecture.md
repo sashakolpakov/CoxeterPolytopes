@@ -15,7 +15,7 @@ standalone sources and the three current PDFs.
 | [Sharp right-angled dimensions 8 / 4](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) | Projection from a finite interior point to a facet of maximum height. | The general case uses a cubic spherical-code bound; the ideal case uses a cardinality bound and a metric-equality exclusion. |
 | [Second ideal four-volume](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) | Defect counting and cusp geometry. | The volume gap and equality facet spectrum come first. A separately proved cutting and recognition theorem applies to the restricted octahedral facet spectrum, then identifies the equality double. |
 
-The 15-page dimension article presents all three main arguments and cites the
+The 67-page dimension article presents all three main arguments and cites the
 existing [GitHub proof catalogue](../arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md).
 The preserved 551-page full edition supplies complete cases and computational
 proofs; its 71-page opening exposition requires those appendices.

@@ -1,0 +1,59 @@
+{
+  "status": "PASS_ISOLATED_TEX_BUILD_ONLY",
+  "inputs_sha256": {
+    "arxiv/hyperbolic_coxeter_dimension_bounds/main.tex": "f9a041d085f2876142728b09bf7747510e47df624e4b5affe0f7939575058284",
+    "arxiv/hyperbolic_coxeter_dimension_bounds/references.bib": "1783c3867925d7e93b6642ba42ee41c25a3965b9cae5b1761da51b8fd03b46e0"
+  },
+  "source": "arxiv/hyperbolic_coxeter_dimension_bounds/main.tex",
+  "source_sha256": "f9a041d085f2876142728b09bf7747510e47df624e4b5affe0f7939575058284",
+  "pdf": "arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf",
+  "builder_sha256": "25a76365839688f20feebff697fd14895bbf6f0d5cc10e054e93b1297d832333",
+  "shared_inspector_sha256": "f0a6202fb934dbd08bcf5326c88e2164b442f0b4f8843aab25f26f3c1277d336",
+  "passes": [
+    {
+      "pass": 1,
+      "program": "pdflatex",
+      "exit_code": 0
+    },
+    {
+      "pass": 2,
+      "program": "bibtex",
+      "exit_code": 0
+    },
+    {
+      "pass": 3,
+      "program": "pdflatex",
+      "exit_code": 0
+    },
+    {
+      "pass": 4,
+      "program": "pdflatex",
+      "exit_code": 0
+    }
+  ],
+  "mathematical_verification_claimed": false,
+  "full_proof_addenda_snapshot": "36eeaddf646eff25d4990c9ab730a20ada21f80f",
+  "temporary_auxiliaries_removed": true,
+  "warnings": [],
+  "bibtex_warnings": [],
+  "undefined_references_or_citations": false,
+  "pages": 67,
+  "figure_pages": [],
+  "font_subtypes": [
+    "/Type1"
+  ],
+  "pdf_sha256": "73aaa6063b1f701203373f3c05ad68b337727797a3ade62f03ada9356e9a34bd",
+  "pdf_bytes": 711419,
+  "source_figure_environments": 0,
+  "compiled_bibliography_sha256": "1844d1697c41387fb703d73be2277ccaa1868d0d3e77e39ff09d5c11acba18a5",
+  "submission_zip": {
+    "path": "dist/CoxeterPolytopes-dimension-bounds-arxiv.zip",
+    "sha256": "dd90aafac3212d0cc9f6d9566f9ff082ba40cd3e529ea59ba80422be1721ed16",
+    "entries": [
+      "main.tex",
+      "references.bib",
+      "main.bbl"
+    ],
+    "byte_round_trip_verified": true
+  }
+}

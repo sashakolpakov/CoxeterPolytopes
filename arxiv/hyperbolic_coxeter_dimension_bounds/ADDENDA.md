@@ -1,8 +1,8 @@
 # GitHub proof catalogue and complete addenda: dimension bounds 57/17/15
 
 
-The arXiv article is the concise consolidated presentation of all three
-bounds. Complete analytic case proofs, computational proofs, certificates
+The arXiv article is the consolidated presentation of all three bounds,
+expanded from the 15-page edition at commit `6e798119`. Complete analytic case proofs, computational proofs, certificates
 and reproduction records remain in this existing supplement. No additional
 manuscript family is created.
 
@@ -21,7 +21,7 @@ case proofs. Its
 is the corresponding reading copy. The proof appendices start on pages
 72, 107 and 372 for finite volume, compactness and arithmetic, respectively.
 
-| Concise source label | Complete source labels and proof home |
+| Article source label | Complete source labels and proof home |
 |---|---|
 | `lem:positive` | `compact:lem:inverse`, `compact:lem:projection`; finite/affine feasibility also in the finite-volume local interface |
 | `lem:payment` | `fv:lem:payment-comparison` |
@@ -33,16 +33,34 @@ is the corresponding reading copy. The proof appendices start on pages
 | `prop:compactcover` | `compact:sec:forests`, all listed row consumers, `compact:thm:tail`, `compact:app:tail:completeconjunction` |
 | `prop:d18` | `compact:sec:d18-setup`, `compact:sec:composition`, `compact:lem:localA18`; original references, head/fork inventories, and all six terminal fork pairs |
 | `lem:absorption` | `arith:app:arithsummedfeet`, `arith:eq:arithAsummed`; the concise lemma isolates its analytic combination |
-| `prop:arithreduce` | `arith:prop:f17`, `arith:prop:old17`, `arith:prop:a17reduce`, `arith:prop:f16`, `arith:prop:onlyd16`; full dispatches in Part VI |
+| `arith:prop:f17`, `arith:prop:old17`, `arith:prop:a17reduce`, `arith:prop:f16`, `arith:prop:onlyd16` | `arith:prop:f17`, `arith:prop:old17`, `arith:prop:a17reduce`, `arith:prop:f16`, `arith:prop:onlyd16`; full dispatches in Part VI |
 | Four finite output propositions | `arith:prop:pair-output`, `arith:sec:algorithms`, and their separate actual-domain inclusions and geometric consumers |
 | `prop:d16reduce` | `arith:prop:d16reduce`, `arith:lem:D16initial`, `arith:eq:reference`; full rank-sixteen endpoint and field reduction |
-| `prop:dyadic` and its two geometric finishes | `arith:sec:odd-inert`, `arith:sec:ramified`, `arith:sec:split`, `arith:prop:noD16`; the two alternatives collect the explicit terminal cases already printed there |
+| `arith:sec:odd-inert`, `arith:sec:ramified`, `arith:sec:split`, `arith:prop:noD16` | `arith:sec:odd-inert`, `arith:sec:ramified`, `arith:sec:split`, `arith:prop:noD16`; the two alternatives collect the explicit terminal cases already printed there |
 | Final arithmetic composition | `arith:app:arithfinalimplication`, with the independent `compact:thm:main` |
 
-The concise text retains the main deductions and supplies proof references
-for omitted case analyses. Those references are essential mathematical
+The expanded text includes the geometric reductions and many complete local
+proofs, with precise references for the remaining case analyses. Those references are essential mathematical
 dependencies. The two terminal dyadic alternatives are necessary residual
 possibilities; they are excluded geometrically and are not realized examples.
+
+## What is in the article and what remains online
+
+The article now develops the arguments substantially beyond the earlier
+15-page presentation. The complete 551-page supplement remains unchanged;
+its first 71 pages and its case appendices are not duplicated wholesale.
+The page count measures exposition, not a percentage of proof obligations.
+
+| Family | Detailed arguments included in the expanded article | Essential material still in the supplement |
+|---|---|---|
+| Finite volume 57 | Actual core and extension geometry; inverse-forest sealing; product-link multiplicities; the final payment transfer and affine-D12 repair; concentration and shape curvature; framing-wall, common-height and two-budget tail deductions. | Full marked-rule tables and route classifications; finite-forest and terminal-cusp computation certificates; detailed rules for dimensions 59–97; residual contact partitions, exceptional convex certificates and support matrices in the unbounded tail. |
+| Compact 17 | Original-vector and all-wall projection proofs; reciprocal shadows; individual reference funding and interpolation; small defects and rank-two costs; necessary forest accounting; D18 head bounds, signed fork estimates, local A18 calculation and continuous near/far contradiction. | Higher-rank component inventories; A-chain and long-prefix helper classifications; proper rank-18 row consumers; whole B18 cases; initial D18 inventories and the remaining fork-pair exclusions; actual-rank cases 19–29. |
+| Arithmetic 15 | Actual-field and golden invariant-lattice argument; simultaneous absorption; joint costs and helper exclusions; rank-17 cover proof; exact four computed propositions; rank-16 cover and a complete A3 calculation; D16 field/endpoint reduction and all odd, inert, ramified and split dyadic branches. | Component and initial D16 wall inventories; full rank-cover row dispatches; four finite algorithms, completeness certificates and execution records; auxiliary chain and helper cases specified in A0/A5. |
+
+The remaining geometric cases are essential proof dependencies alongside the
+computational ones. The article identifies them when used; it does not claim
+that its length permits every case proof to be included. All finite survivors
+and forest covers retain their meaning as necessary possibilities.
 
 ## Catalogue statements
 

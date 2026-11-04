@@ -16,7 +16,7 @@ these submissions. The mathematical conclusions are unchanged.
      - Technique
      - Complete source and proof map
    * - :download:`Dimension bounds: 57 / 17 / 15 <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf>`
-     - 15
+     - 67
      - Corner payments and cusp curvature; farthest-vertex component energies; arithmetic field restrictions.
      - :download:`main.tex <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`, :download:`references.bib <../../arxiv/hyperbolic_coxeter_dimension_bounds/references.bib>`, :download:`main.bbl <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.bbl>`; :download:`full proof addenda <../../manuscripts/addenda/dimension_bounds_20261030/main.pdf>`.
    * - :download:`Sharp right-angled dimensions: 8 and 4 <../../arxiv/sharp_dimension_bounds_8_and_4/main.pdf>`
@@ -41,7 +41,7 @@ The three arXiv submission editions
 Each source folder contains ``main.tex``, ``references.bib`` and the generated
 ``main.bbl`` and matching ``main.pdf``. Figures in the two right-angled
 articles are inline TikZ. The sharp-dimension paper contains
-two figures; the ideal-volume paper contains five. The 15-page dimension
+two figures; the ideal-volume paper contains five. The 67-page dimension
 submission refers to the complete 551-page proof addenda, which retain nine figures. All name Alexander Kolpakov
 and include the requested AI-use acknowledgment. The
 :download:`edition guide <../arxiv_submission_editions_20261028.md>` and
@@ -80,7 +80,7 @@ the original proof maps and the scope of the source-preservation review.
 How much of a paper is essential?
 ---------------------------------
 
-The 15-page consolidated article presents the main arguments and exact
+The 67-page consolidated article presents the main arguments and exact
 interfaces to the :download:`GitHub proof catalogue <../../arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md>`.
 Its full proof addendum has 71 pages of main exposition before its case
 appendices. Those front sections require the case appendices. Actual-rank

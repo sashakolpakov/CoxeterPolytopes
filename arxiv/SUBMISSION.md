@@ -1,8 +1,10 @@
 # Submission sources and packages
 
 **The consolidated dimension-bound package is prepared.** The proofread
-15-page paper contains all three bounds, their main geometric arguments and
-precise references to the GitHub proof catalogue. Complete case proofs,
+67-page paper contains all three bounds, their main geometric arguments and
+precise references to the GitHub proof catalogue. The expanded edition
+restores detailed local geometry, reference-vector proofs, field reductions
+and every manual dyadic branch. Complete case proofs,
 computational proofs and reproduction records remain in the repository.
 The existing 551-page complete edition is preserved byte for byte.
 
@@ -31,7 +33,7 @@ dist/CoxeterPolytopes-dimension-bounds-arxiv.zip.sha256
 ```
 
 The archive contains exactly `main.tex`, `references.bib` and `main.bbl`.
-The 15-page PDF and prepared bibliography are beside the source. The final
+The 67-page PDF and prepared bibliography are beside the source. The final
 four-pass build passed with zero TeX/BibTeX warnings and no undefined
 references or citations. The full 551-page proof addendum is retained
 separately, with its original bytes.
@@ -54,3 +56,13 @@ Standard typesetting uses PDFLaTeX, BibTeX, and two further PDFLaTeX passes.
 Figures are inline. Source archives exclude PDFs, TeX intermediates, research
 data and Lean products. Mathematical and Lean verification retain their
 separate recorded scopes in the [reproduction guide](../repro/README.md).
+
+## Upload metadata for the dimension-bound article
+
+**Comments:** 67 pages; complete proof addenda, computational proofs and
+reproduction package at https://github.com/sashakolpakov/CoxeterPolytopes.
+
+Select `main.tex` as the primary source and PDFLaTeX as the compiler.
+The upload ZIP contains exactly the three source/bibliography files listed
+above. The [proof catalogue](hyperbolic_coxeter_dimension_bounds/ADDENDA.md#what-is-in-the-article-and-what-remains-online)
+identifies the expanded arguments and the essential cases retained online.
