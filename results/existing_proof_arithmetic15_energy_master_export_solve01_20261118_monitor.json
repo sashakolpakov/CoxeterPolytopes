@@ -1,0 +1,47 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_existing_proof_energy_lp_20261118.py",
+    "export-solve",
+    "--catalogue",
+    "scripts/compact17_proof_recovery_energy_catalogue_20261118.py",
+    "51023cb1b78e124728c27950674374cb92694bde73a6ac5388544916447e98b7",
+    "--catalogue",
+    "scripts/existing_proof_arithmetic_energy_domains_20261118.py",
+    "3c8ec743958e9b88d4ed7e22b916fc3e7edd3692754d3da4ab80885729ee666c",
+    "--threshold",
+    "16",
+    "--directory",
+    "results/existing_proof_arithmetic15_energy_master01_20261118"
+  ],
+  "elapsed_seconds": 0.469,
+  "peak_process_tree_rss_bytes": 134086656,
+  "initial_resources": {
+    "free_disk_gib": 354.97,
+    "available_memory_gib": 8.2,
+    "disk_free_bytes": 381150703616,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 8802648064,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 38.321618,
+    "available_memory_percent": 34.15877,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 287,
+  "stdout": "{\"stage\": \"export-solve\", \"status\": \"EXACT_LP_FEASIBLE\", \"threshold\": 16, \"selected_branches\": 917, \"local_exits\": 167, \"primal_variables\": 3869, \"primal_rows\": 5147, \"dual_variables\": 3324, \"dual_rows\": 2488, \"normalized_primal_infeasibility_certified\": true, \"elapsed_seconds\": 0.403}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "9110bc491ae1619e2152c53640cd2a6a841e8f0f42bf48df18faf1487cbd817b",
+  "lock_owner": "wrapper"
+}

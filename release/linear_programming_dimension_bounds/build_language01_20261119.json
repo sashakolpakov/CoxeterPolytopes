@@ -1,0 +1,63 @@
+{
+  "status": "PASS_ISOLATED_TEX_BUILD_ONLY",
+  "source": "arxiv/linear_programming_dimension_bounds/main.tex",
+  "source_sha256": "cac3f0e179508622892368bd56a281f9b9bb636254af907ab90b39a865b05cdc",
+  "source_bytes": 113117,
+  "pdf": "arxiv/linear_programming_dimension_bounds/main.pdf",
+  "passes": [
+    {
+      "pass": 1,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 21385
+    },
+    {
+      "pass": 2,
+      "program": "bibtex",
+      "exit_code": 0,
+      "stdout_bytes": 153
+    },
+    {
+      "pass": 3,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 11262
+    },
+    {
+      "pass": 4,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 9380
+    }
+  ],
+  "builder_sha256": "e7c4cd97cde8bc55cc26ba7ce92f601b514833394da6782970bf8bf7fb7793f7",
+  "mathematical_verification_claimed": false,
+  "bibliography": "arxiv/linear_programming_dimension_bounds/references.bib",
+  "bibliography_sha256": "c542e8a58701d0e5f94b2c0b5b13ea8fde780b2825481141f53a213afee7f182",
+  "bibliography_bytes": 2014,
+  "isolated_input": "Only main.tex and references.bib are copied; BibTeX generates main.bbl.",
+  "pipeline": [
+    "pdflatex main.tex",
+    "bibtex main",
+    "pdflatex main.tex",
+    "pdflatex main.tex"
+  ],
+  "temporary_auxiliaries_removed": true,
+  "bibtex_warnings": [],
+  "warnings": [
+    "Overfull \\hbox (23.14104pt too wide) detected at line 1537"
+  ],
+  "undefined_references_or_citations": false,
+  "repository_inputs_read_by_tex": [],
+  "pages": 36,
+  "figure_pages": [],
+  "font_subtypes": [
+    "/Type1"
+  ],
+  "pdf_sha256": "d9e28da04d0d480b99c85b85f8cd672c5af57ef2b4eaf7d773ca6ceacff1ee50",
+  "pdf_bytes": 497925,
+  "source_figure_environments": 0,
+  "compiled_bibliography": "arxiv/linear_programming_dimension_bounds/main.bbl",
+  "compiled_bibliography_sha256": "af42181d0ef34697cfbaa4f5ba46ece9bff2f33fadc20256c930e54663c845e6",
+  "compiled_bibliography_bytes": 1793
+}

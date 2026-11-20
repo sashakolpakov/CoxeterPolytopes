@@ -1,0 +1,96 @@
+{
+  "status": "PASS_INPUT_AUDIT_AND_WARNINGS_AS_ERRORS_SPHINX_BUILD",
+  "input_audit_stdout": {
+    "path": "audit/lp_language_sphinx_inputs_20261119.stdout",
+    "bytes": 55824,
+    "sha256": "c42ef20e78edafe8bb6d74551f9c558bfcc5f0cde8806bc38a5c545adbf68908"
+  },
+  "build_stdout": {
+    "path": "audit/lp_language_sphinx_build_20261119.stdout",
+    "bytes": 16129,
+    "sha256": "40c8c0529624d40463fab1f462e7e1290d4eb373892721eb9580f2546e1479e3"
+  },
+  "input_files": 145,
+  "input_scope": "Working tree; actual Git index not changed or audited",
+  "input_monitor": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "tools/audit_sphinx_inputs.py"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 245760,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "free_disk_gib": 345.12,
+      "available_memory_gib": 9.9,
+      "disk_free_bytes": 370574741504,
+      "disk_total_bytes": 994610155520,
+      "available_memory_bytes": 10628071424,
+      "physical_memory_bytes": 25769803776,
+      "free_disk_percent": 37.258291,
+      "available_memory_percent": 41.242345,
+      "resource_policy": {
+        "id": "percentage-v1-20261025",
+        "admission_disk_percent": 2,
+        "admission_memory_percent": 15,
+        "abort_disk_percent": 1,
+        "abort_memory_percent": 6,
+        "cleanup_disk_percent": 2,
+        "rounding_digits": 6,
+        "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+      },
+      "free_disk_bytes": 370574741504,
+      "ram_available_bytes": 10628071424
+    },
+    "seconds": 1.02
+  },
+  "build_monitor": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/lp_language_site_20261119"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 245760,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "free_disk_gib": 345.12,
+      "available_memory_gib": 10.0,
+      "disk_free_bytes": 370574528512,
+      "disk_total_bytes": 994610155520,
+      "available_memory_bytes": 10733879296,
+      "physical_memory_bytes": 25769803776,
+      "free_disk_percent": 37.258269,
+      "available_memory_percent": 41.652934,
+      "resource_policy": {
+        "id": "percentage-v1-20261025",
+        "admission_disk_percent": 2,
+        "admission_memory_percent": 15,
+        "abort_disk_percent": 1,
+        "abort_memory_percent": 6,
+        "cleanup_disk_percent": 2,
+        "rounding_digits": 6,
+        "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+      },
+      "free_disk_bytes": 370574528512,
+      "ram_available_bytes": 10733879296
+    },
+    "seconds": 1.02
+  },
+  "owned_output_directory": ".publication/lp_language_site_20261119",
+  "owned_generated_files_removed": 197,
+  "owned_generated_bytes_removed": 11072841,
+  "mathematical_checks_or_deployment": false
+}

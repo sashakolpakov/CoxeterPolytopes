@@ -1,0 +1,61 @@
+{
+  "status": "PASS_ISOLATED_TEX_BUILD_ONLY",
+  "source": "arxiv/linear_programming_dimension_bounds/main.tex",
+  "source_sha256": "2bcdb90e33f2b1e512ce2dc2ac454d3d3514fcb22ffe131a65d4f83d46491047",
+  "source_bytes": 113145,
+  "pdf": "arxiv/linear_programming_dimension_bounds/main.pdf",
+  "passes": [
+    {
+      "pass": 1,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 21008
+    },
+    {
+      "pass": 2,
+      "program": "bibtex",
+      "exit_code": 0,
+      "stdout_bytes": 153
+    },
+    {
+      "pass": 3,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 10886
+    },
+    {
+      "pass": 4,
+      "program": "pdflatex",
+      "exit_code": 0,
+      "stdout_bytes": 9004
+    }
+  ],
+  "builder_sha256": "e7c4cd97cde8bc55cc26ba7ce92f601b514833394da6782970bf8bf7fb7793f7",
+  "mathematical_verification_claimed": false,
+  "bibliography": "arxiv/linear_programming_dimension_bounds/references.bib",
+  "bibliography_sha256": "c542e8a58701d0e5f94b2c0b5b13ea8fde780b2825481141f53a213afee7f182",
+  "bibliography_bytes": 2014,
+  "isolated_input": "Only main.tex and references.bib are copied; BibTeX generates main.bbl.",
+  "pipeline": [
+    "pdflatex main.tex",
+    "bibtex main",
+    "pdflatex main.tex",
+    "pdflatex main.tex"
+  ],
+  "temporary_auxiliaries_removed": true,
+  "bibtex_warnings": [],
+  "warnings": [],
+  "undefined_references_or_citations": false,
+  "repository_inputs_read_by_tex": [],
+  "pages": 36,
+  "figure_pages": [],
+  "font_subtypes": [
+    "/Type1"
+  ],
+  "pdf_sha256": "eb24412d79d2e864846c4cf58d87756a61664e87ab4d88fbdc5845a3083dec5d",
+  "pdf_bytes": 497936,
+  "source_figure_environments": 0,
+  "compiled_bibliography": "arxiv/linear_programming_dimension_bounds/main.bbl",
+  "compiled_bibliography_sha256": "af42181d0ef34697cfbaa4f5ba46ece9bff2f33fadc20256c930e54663c845e6",
+  "compiled_bibliography_bytes": 1793
+}

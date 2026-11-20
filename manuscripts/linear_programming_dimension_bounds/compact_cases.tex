@@ -1,0 +1,834 @@
+\section{The compact bound from a uniformly generated family}
+\label{c:section}
+
+The compact instance uses the component theorems of Supplement~C
+of~\cite{BoundsSupplement}. We state their energy bounds and complete
+domains; the common LP then performs the global accounting.
+
+Fix the original farthest vertex and the original vector $x$ used in
+Theorem~\ref{thm:energy-normalization}. If $C$ is an irreducible spherical
+component of its vertex diagram, put
+\[
+ e_C=\norm{\operatorname{proj}_{\langle C\rangle}x}^2.
+\]
+The component subspaces are mutually orthogonal and exhaust the spatial
+space. Consequently
+\begin{equation}\label{c:budget}
+ e_C\ge0,\qquad \sum_C e_C=\norm{x}^2<1.
+\end{equation}
+For disjoint collections $\mathcal S$ of components we write
+$e_{\mathcal S}=\sum_{C\in\mathcal S}e_C$. Throughout this section, a
+\emph{spectator} is another component at this same vertex, with its actual
+opposite walls retained. It is not an independently chosen diagram.
+
+Vinberg's compact dimension theorem~\cite{Vinberg1984} excludes dimensions
+at least $30$. The LP covers each actual dimension $18\le n\le29$;
+no passage to a lower-dimensional face is used.
+
+\subsection{Small components and the actual exceptional profiles}
+\label{c:small}
+
+We use the usual notation for irreducible spherical Coxeter diagrams.
+The rank-two family is $I_2(m)$, where $m\ge3$ is an integer. We identify
+$A_2$ with $I_2(3)$ and do not count aliases such as $B_2$ or $D_3$ a
+second time. An \emph{ordinary} component is a component that does not
+carry one of the actual exceptional wall profiles described below.
+
+A profile specifies an opposite wall of the given polytope and its
+contacts with the original walls. An old bond labelled seven alone
+does not specify $O_7$. All labels below belong to pairs of actual
+original walls. Auxiliary projected vectors are not assigned those labels.
+
+\begin{proposition}[Ordinary component estimates, retained input]
+\label{c:ordinary-input}
+For the same original vector $x$, the ordinary components in
+Table~\ref{c:ordinary-table} have energy strictly greater than the listed
+number. Every estimate permits arbitrary finite spectators.
+\end{proposition}
+
+\begin{table}[htbp]
+\centering
+\caption{The ordinary component lower bounds. Each decimal in this paper
+is an exact rational number.}\label{c:ordinary-table}
+\begin{tabular}{ll@{\qquad}ll}
+\toprule
+Component&Lower bound&Component&Lower bound\\\midrule
+$A_1$&$1/10$&$A_2$&$319/2000$\\
+$I_2(m),\ m\ge4$&$1/7$&$A_3$&$1/4$\\
+$B_3,H_3$&$2/7$&$A_4$&$2/7$\\
+$B_4,D_4,F_4$&$1/3$&$H_4$&$11/36$\\
+$A_5$&$3/8$&$D_5$&$5/14$\\
+$A_6,B_5,B_6,D_6$&$3/7$&$B_7,D_7$&$1/2$\\
+$B_8,D_8$&$4/7$&$E_6$&$9/20$\\
+$E_7$&$5/9$&$E_8$&$2/3$\\\bottomrule
+\end{tabular}
+\end{table}
+
+These are the ordinary-component conclusions of Supplement~C, including
+the $B_3,H_3$ improvement. The dihedral row quantifies over every integer
+$m\ge4$, rather than a finite sample of labels.
+
+For clarity, we describe the exceptional profiles before using their
+energy debits. Let $p$ be the original unit timelike vertex vector, and
+let $u$ be the unit normal of an original $A_1$ component. An isolated
+short rank-one opposite has the form
+\begin{equation}\label{c:I-normal}
+ c_I=\sqrt h\,p-\sqrt{1+h}\,u,
+ \qquad 0<h<\frac12.
+\end{equation}
+Its spatial support is this one $A_1$. This is profile $I$.
+Profile $J$ is the distinct short-wall alternative supported on two old
+$A_1$ factors, with a dotted contact on one and an actual contact labelled
+three on the other. Its squared time lies in $(1/3,3/8)$. The two factors
+belong to one profile and must be accounted for jointly.
+
+There are also two rank-two profiles:
+\[
+ N_7=(\text{old }A_2,\ \text{actual new isolated contact }7),
+ \qquad
+ O_7=(\text{old }I_2(7),\ \text{actual new isolated contact }3).
+\]
+Here isolation means that the new wall has no spatial contact with
+another old component. These specifications include the new wall, not
+merely the type of its old support.
+
+\begin{proposition}[Exceptional profiles and compatibility, retained input]
+\label{c:defect-input}
+At most one of $I,J,N_7,O_7$ occurs, and the alternatives do not coexist.
+Their owned ranks and energy bounds are
+\[
+\begin{array}{c|c|c}
+\text{profile}&\text{old support}&\text{energy lower bound}\\\hline
+I&A_1&0\\
+J&A_1+A_1&17/50\\
+N_7&A_2&9/100\\
+O_7&I_2(7)&9/100.
+\end{array}
+\]
+The positive entries are strict in the geometric theorem. No owned
+component receives an ordinary bound in addition to its profile bound.
+\end{proposition}
+
+Compatibility is part of the actual-wall theorem, including overlapping
+short-wall alternatives; it is not inferred from the spherical types
+of the supports.
+
+Two further input families will be used. If $T_j$ is an ordinary
+irreducible of rank $j$, then
+\begin{align}
+ e_{I+A_1}&>1/5,&
+ e_{I+2A_1}&>3/10,\label{c:I-joint-one}\\
+ e_{I+T_2}&>21/100,&
+ e_{I+T_3}&>2/7.\label{c:I-joint-two}
+\end{align}
+Each left side is one joint support. Overlapping uses of $I$ therefore
+share its single capacity in Theorem~\ref{thm:energy-certificate}.
+
+Beside an actual $N_7$ or $O_7$, every other ordinary rank-two component
+has energy greater than $1/5$. An additional ordinary $A_1$ has energy
+greater than $1/5$ beside $N_7$, and greater than $2/15$ beside $O_7$.
+These propagated estimates concern the additional component alone.
+Their domains and the joint bounds above are those of the
+ordinary-component appendix of Supplement~C.
+
+\subsection{The larger component families}
+\label{c:large}
+
+The $A$-component theorems give
+\begin{equation}\label{c:A-thresholds}
+ e_{A_r}>\frac12\quad(r\ge7),\qquad
+ e_{A_r}>\frac47\quad(r\ge8),\qquad
+ e_{A_r}>\frac57\quad(r\ge13).
+\end{equation}
+All three estimates allow arbitrary finite spectators. The exact-rank
+improvements retained by the LP are listed in
+Table~\ref{c:A-table}. These are bounds on the original projection,
+even when their local proofs use points or neighboring vertices.
+
+\begin{table}[htbp]
+\centering
+\caption{Additional spectator-uniform $A$-component bounds.}
+\label{c:A-table}
+\begin{tabular}{clp{.57\linewidth}}
+\toprule
+Rank&Lower bound&Local result in Supplement~C\\\midrule
+12&$13/20$&The two-end $A_{12}$ estimate\\
+15&$413/500$&The $A_{15}$ reference-vector estimate\\
+16&$43/50$&The $N=17$ reference-vector estimate\\
+17&$6/7$&The $A$-chain central-window argument\\
+18&$91/100$&The $N=19$ chain window and reference-vector estimate\\
+19&$563/625$&The $A_{19}$ projection-energy lemma\\
+20&$.92274$&The $A_{20}$ projection-energy lemma\\\bottomrule
+\end{tabular}
+\end{table}
+
+For actual $B_r,D_r$ components with $r\ge9$, the common bound is
+\begin{equation}\label{c:BD-nine}
+                         e_{B_r},e_{D_r}>\frac9{14}.
+\end{equation}
+The next family uses an initial segment of the original component. Its
+rank conditions are part of the statement and will be retained literally.
+
+\begin{proposition}[The generic prefix estimate, retained input]
+\label{c:prefix-input}
+Let $6\le M\le16$. Suppose that the actual component is $B_r$ with
+$r\ge M+5$, or $D_r$ with $r\ge M+6$. Put
+\[
+ f_i=\sqrt i-\frac{61}{100\sqrt2},\quad
+ E_M=\frac{f_5^2}{5}+
+        \sum_{i=5}^{M-1}(\sqrt{i+1}-\sqrt i)^2,
+ \quad H_M=\left\lfloor\frac{M-5}{2}\right\rfloor.
+\]
+On the same original vector, the first $M+1$ coordinates of that
+component have energy greater than
+\begin{equation}\label{c:prefix-formula}
+                  E_M-H_M/3200+3969/800000.
+\end{equation}
+The estimate permits arbitrary finite spectators.
+\end{proposition}
+
+The first two terms are the generic prefix estimate. The last term is
+the additional initial-coordinate gain proved under exactly the same
+hypotheses. It replaces the weaker bound on that prefix; it is not an
+independent energy contribution. The rational lower bounds used in the
+current program are $P_M+3969/800000$, with $P_M$ as follows:
+\begin{center}
+\begin{tabular}{c|ccccc}
+$M$&7&8&9&10&11\\\hline
+$P_M$&$.7349975$&$.7683275$&$.797425$&$.823735$&$.8472225$\\[2pt]
+\end{tabular}
+\par\smallskip
+\begin{tabular}{c|ccccc}
+$M$&12&13&14&15&16\\\hline
+$P_M$&$.8689525$&$.88864$&$.90715$&$.9240775$&$.9401975$
+\end{tabular}
+\end{center}
+The inequalities $P_M<E_M-H_M/3200$ are the rational evaluations in
+Supplement~C. The current finite LP uses $7\le M\le16$ from this family.
+For every applicable $M$ it may keep both the weaker and the stronger
+row. On identical support and domain the weaker one is redundant, but
+retaining it does not alter the validity of the stronger row.
+
+There are three further local continuations. They are stated separately
+because their proofs extend a short end where the generic theorem alone
+does not apply:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item On the entire forest $B_{16}+T_2$ or $D_{16}+T_2$ in actual
+ dimension $18$, where $T_2$ is ordinary, the large component has energy
+ greater than $.8689525$.
+\item On the entire forest $B_{17}+A_1$ in dimension $18$, with ordinary
+ nonshort $A_1$, the $B_{17}$ component has energy greater than $.90715$.
+\item On the entire forest $D_{19}+A_1$ in dimension $20$, with ordinary
+ nonshort $A_1$, the actual $D_4$ continuation and initial gain give
+ $e_{D_{19}}>.91211125$.
+\end{enumerate}
+The first two are the exact-rank-eighteen layer estimates. The third
+uses the proper $D_{19}$ continuation before the rank-twenty accounting.
+We import that local continuation and its energy calculation, not the
+conclusion that dimension twenty is impossible. A bound proved for an
+ordinary $T_2$ is not used for $N_7$ or $O_7$, and an ordinary $A_1$
+bound is not transferred to $I$.
+
+\subsection{A complete domain construction}
+\label{c:cover}
+
+We call $A_r$, $r\ge7$, and $B_r,D_r$, $r\ge9$,
+\emph{dominant}. This is a definition for the present accounting, not
+a new class of Coxeter diagrams. Every dominant costs more than one
+half by \eqref{c:A-thresholds} and \eqref{c:BD-nine}. Every other
+ordinary irreducible costs at least its rank divided by fourteen, as
+one checks directly from Table~\ref{c:ordinary-table}.
+
+\begin{lemma}[The common spectator estimate]\label{c:spectator}
+Let a collection of nondominant components have total rank $S$. Include
+every exceptional profile owned by that collection. Its energy satisfies
+\begin{equation}\label{c:spectator-rate}
+                          e_{\mathcal S}\ge\frac{S-1}{14}.
+\end{equation}
+For no profile or profile $J$, the stronger bound $S/14$ is available.
+For profile $I$ the possible loss is $1/14$, and for $N_7$ or $O_7$
+it is $37/700$.
+\end{lemma}
+\begin{proof}
+Sum the ordinary rank-over-fourteen estimates on the unmarked components.
+Profile $I$ replaces the ordinary rank-one contribution by a nonnegative
+energy, losing at most $1/14$. Profile $J$ owns rank two and its bound
+$17/50$ is greater than $2/14$, so it creates no loss. Either typed
+rank-two profile has cost at least $9/100$, whose deficit from $2/14$ is
+$37/700<1/14$. Proposition~\ref{c:defect-input} permits at most one of
+these losses. This proves every assertion.
+\end{proof}
+
+For a fixed dimension $18\le n\le29$, the following construction produces
+a complete necessary family of energy domains.
+
+\begin{enumerate}[label=\textup{\arabic*.},leftmargin=*]
+\item If there is no dominant, use one aggregate energy variable for all
+ components and the row $e\ge(n-1)/14$.
+\item If there are at least two dominants, select two distinct actual
+ dominant components. Give each its own energy variable and the bound
+ $1/2$. A third aggregate variable holds every remaining component.
+ The selected components' individual ranks need not be fixed for this
+ domain: only their disjointness and their common lower bound are used.
+\item If there is exactly one dominant of type $T$ and rank $r$, let
+ $S=n-r$ be the total spectator rank. Retain an explicit local
+ component exclusion whenever one applies. Otherwise, for $S\ge8$ use
+ the two rows $e_T\ge1/2$ and $e_{\mathcal S}\ge(S-1)/14$.
+\item For $0<S<8$, let $d(T,r)$ be the largest applicable lower bound
+ among the spectator-uniform component estimates in
+ Section~\ref{c:large}. Only unconditional component estimates are used
+ to choose $d(T,r)$; an estimate requiring one particular spectator
+ does not qualify. If
+ \begin{equation}\label{c:aggregate-test}
+                  d(T,r)+(S-1)/14\ge1,
+ \end{equation}
+ retain the complete domain with the two aggregate rows giving these
+ two bounds.
+\item In every remaining case, retain every nondominant spherical
+ spectator forest of rank $S$ and every allowed assignment of one
+ exceptional profile. On that detailed domain include all applicable
+ ordinary, component, joint and propagated bounds, together with the
+ precisely matched local exclusions described in Section~\ref{c:local-exits}.
+ For $S=0$ this step simply gives the whole dominant component.
+\end{enumerate}
+
+Coarse domains remain in the LP. Their displayed rows have a certificate
+with weights one, including the equality case $S=8$. The test
+\eqref{c:aggregate-test} decides whether to retain detailed spectator
+types; it does not enlarge any local theorem's domain.
+
+\begin{proposition}[Completeness of the compact family]
+\label{c:complete-cover}
+Every hypothetical compact Coxeter polytope of actual dimension
+$18\le n\le29$, with its chosen original farthest vertex, gives either
+one of the explicitly retained local contradictions or an energy point
+in a domain of the above construction. Every coordinate is an energy
+of the original vector, and every row applies on the entire domain to
+which it is attached.
+\end{proposition}
+\begin{proof}
+Spherical classification gives zero, at least two, or exactly one
+dominant component. The first two alternatives give steps one and two.
+In the third, its type and rank fix $S$; Lemma~\ref{c:spectator} and the
+applicable component bound justify either coarse description.
+Otherwise step five includes the actual spectator multiset and its
+unique allowed profile. Equal-type components may be relabelled with
+their actual walls to put a marked component first. This preserves all
+other parameters: an ordinary dihedral component retains its full
+integer range, while an $O_7$ mark fixes only its owned component to
+label seven. Every row and local exclusion is then used with its stated
+component, profile and spectator hypotheses. Orthogonality gives
+\eqref{c:budget} on the original vector.
+\end{proof}
+
+To generate a detailed remainder, use this ordered list of nondominant
+types through spectator rank seven:
+\[
+\begin{array}{c|l}
+\text{rank}&\text{types}\\\hline
+1&A_1\\
+2&A_2=I_2(3),\ I_2(m)\ (m\ge4)\\
+3&A_3,B_3,H_3\\
+4&A_4,B_4,D_4,F_4,H_4\\
+5&A_5,B_5,D_5\\
+6&A_6,B_6,D_6,E_6\\
+7&B_7,D_7,E_7.
+\end{array}
+\]
+Choose successive types in nondecreasing order, subtracting their ranks
+until the remainder is zero. Then mark none, one $A_1$ as $I$, two
+$A_1$ factors as $J$, one $A_2$ as $N_7$, or one dihedral factor as
+$O_7$. Nondecreasing order and exchangeability remove repetitions,
+while all dihedral parameters remain quantified. The construction
+produces the $829$ domains checked below; its completeness follows
+from Proposition~\ref{c:complete-cover}, independently of that count.
+
+\subsection{The retained local contradiction domains}
+\label{c:local-exits}
+
+Table~\ref{c:local-exit-table} gives the local contradiction inputs of
+Supplement~C. Their normalized mass is zero; no component energy floor
+is inferred from them. ``Entire'' specifies the complete original
+vertex forest. Apart from C1, only the displayed entire-forest domains
+are used, with every Coxeter label and separated-wall parameter in the
+cited theorem retained.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.08\linewidth}
+ >{\raggedright\arraybackslash}p{.43\linewidth}
+ >{\raggedright\arraybackslash}p{.39\linewidth}}
+\caption{Compact local contradiction inputs. The descriptions refer to
+the complete local proofs in Supplement~C.}\label{c:local-exit-table}\\
+\toprule
+Code&Matched domain&Local proof retained\\\midrule
+\endfirsthead
+\toprule Code&Matched domain&Local proof retained\\\midrule\endhead
+C1&Any $A_r$, $21\le r\le29$; $B_r$, $23\le r\le29$;
+ or $D_r$, $24\le r\le29$, with arbitrary finite spectators&
+ Large-component cap theorem\\
+C2&Entire $B_r+I$, $r\ge20$, or $D_r+I$, $r\ge21$&
+ The uniform proper classical-component argument beside $I$\\
+C3&Entire $A_{16}+N_7$ or $A_{16}+O_7$&
+ The two typed endpoint families in actual dimension $18$\\
+C4&Entire $A_{17}+A_1$ or $A_{17}+I$, with ordinary $A_1$&
+ The complete rank-one-remainder argument in dimension $18$\\
+C5&Entire $B_{16}+N_7/O_7$ or $D_{16}+N_7/O_7$&
+ The typed rank-sixteen arguments, retaining both signed $D$ forks\\
+C6&Entire $B_{17}+I$&The short rank-one-remainder head argument\\
+C7&Entire $D_{17}+A_1$ or $D_{17}+I$, with ordinary $A_1$&
+ The separate ordinary and isolated-short rank-one arguments\\
+C8&Entire $A_{18}$&The two-end argument using the gap between
+ allowed actual wall products\\
+C9&Entire $B_{18}$&The full terminal-wall partition, including common
+ and distinct opposite walls\\
+C10&Entire $D_{18}$&The complete original end-wall and fork argument,
+ including all finite, parallel and dotted contacts at the distinguished end\\
+C11&Entire $A_{17}+N_7/O_7$ or $A_{18}+I$&
+ The separate exact-rank-nineteen local arguments\\
+C12&Entire $D_{17}+T_2$, $B_{17}+N_7/O_7$, or
+ $B_{18}/D_{18}+A_1$, with ordinary $T_2,A_1$&
+ The proper classical rank-nineteen continuation\\
+C13&Entire $D_{17}+N_7/O_7$, $B_{18}+I$, or $D_{18}+I$&
+ The respective typed and short-remainder arguments at rank nineteen\\
+C14&Entire $A_{19}$, $B_{19}$ or $D_{19}$&
+ Their separate complete endpoint, head and fork proofs\\
+C15&Entire $A_{19}+I$&The $A_{19}$ isolated-short-remainder argument\\
+C16&Entire $B_{18}/D_{18}+N_7/O_7$ or $B_{19}/D_{19}+I$&
+ The proper classical rank-twenty continuation\\
+C17&Entire $A_{20}$, $B_{20}$ or $D_{20}$&
+ Their separate whole-component arguments at actual rank twenty\\
+C18&Entire $A_{19}+N_7/O_7$ or $A_{20}+I$&
+ The typed and isolated-short $A$-component arguments\\
+C19&Entire $D_{19}+N_7/O_7$ or $D_{20}+I$&
+ The proper $D$-component continuation at rank twenty-one\\
+C20&Entire $B_{21}$ or $D_{21}$&
+ The separate full-component arguments at actual rank twenty-one\\
+C21&Entire $B_{22}$, $D_{22}$ or $D_{23}$&
+ The retained full-component terminal argument\\\bottomrule
+\end{longtable}
+
+Each entry denotes the complete cited local theorem: C10, for example,
+includes all whole-$D_{18}$ end-wall and fork alternatives. A comparison
+with another vertex within such a proof contributes no further energy
+to the original budget \eqref{c:budget}.
+
+\subsection{The resulting compact certificate}
+\label{c:certificate}
+
+The construction gives $829$ branch domains. Of these, $151$ carry one
+of the retained local contradictions. On each remaining branch the LP
+has one nonnegative multiplier for every applicable energy row. The
+capacity at each original projection is one. The exact rational
+certificate satisfies the hypotheses of
+Theorem~\ref{thm:energy-certificate} simultaneously in every branch.
+In particular, overlapping rows involving $I$ share the same $I$ column;
+the program cannot buy two copies of its energy.
+
+\begin{theorem}[Compact recovery]\label{c:recovery}
+The local geometric inputs stated in Sections~\ref{c:small},
+\ref{c:large} and~\ref{c:local-exits}, together with spherical
+classification, give an infeasible normalized energy LP for the complete
+union of actual dimensions $18,\ldots,29$. With Vinberg's external
+compact ceiling $29$, they recover the dimension bound $n\le17$.
+\end{theorem}
+\begin{proof}
+Proposition~\ref{c:complete-cover} assigns every hypothetical polytope
+to a complete branch. A branch with a retained local contradiction is
+impossible. On every other branch, the exact capacity certificate gives
+total original energy at least one by
+Theorem~\ref{thm:energy-certificate}, contrary to \eqref{c:budget}.
+The exact check covers all $3157$ dual variables and $2224$ rows;
+the reproduction section identifies the certificate and model records.
+The external theorem excludes dimensions $n\ge30$.
+\end{proof}
+
+Thus the LP performs the final rank and energy accounting from valid
+local bounds. Its domain construction begins with spherical
+classification, without assuming the historical eleven-forest
+rank-eighteen list.
+
+\section{The compact arithmetic bound with the same energy program}
+\label{a:section}
+
+For a compact arithmetic polytope, its reflection group is an arithmetic
+lattice. Supplement~A of~\cite{BoundsSupplement} supplies the further
+local restrictions below, with the actual defining field and original
+root lines retained. The energy budget remains \eqref{c:budget}.
+The compact catalogue already covers dimensions $18,\ldots,29$;
+we append the arithmetic domains at actual ranks $16$ and $17$ to
+that same catalogue.
+
+\subsection{The retained arithmetic inputs}
+\label{a:inputs}
+
+We first recall what the field conditions refer to. In the quadratic-form
+model supplied by the arithmetic companion, $K$ is a totally real number
+field, $q$ is a quadratic form over $K$, and $B$ is its associated symmetric
+bilinear form. One real embedding $\sigma_0:K\hookrightarrow\R$ is
+distinguished: at this embedding $q$ has Lorentzian signature and defines
+the given hyperbolic space. At every other real embedding $\sigma$, the
+conjugate form $q^\sigma$ is positive definite. This is a statement about
+the form, not about independence of an arbitrary collection of walls.
+
+The roots $\alpha_i$ span the original wall lines over this same field.
+Their Cartan entries are
+\begin{equation}\label{a:cartan}
+ C_{ij}=\frac{2B(\alpha_i,\alpha_j)}{B(\alpha_i,\alpha_i)}.
+\end{equation}
+The arithmetic integrality condition used in the local proofs requires
+the cyclic products
+\begin{equation}\label{a:cycles}
+             C_{i_1i_2}C_{i_2i_3}\cdots C_{i_\ell i_1}
+\end{equation}
+to lie in $\mathcal O_K$, the ring of algebraic integers in $K$.
+This formulation is insensitive to changing a root representative on
+its line: under $\alpha_i\mapsto t_i\alpha_i$, with $t_i\in K^\times$,
+the entry $C_{ij}$ is
+multiplied by $t_j/t_i$, and those factors cancel around the cycle.
+The companion proves the field reductions on their stated domains.
+
+At a nonphysical embedding $\sigma\ne\sigma_0$, a Gram matrix of
+linearly independent conjugate roots is positive definite. A Gram matrix
+of all wall roots can have linear dependencies and is only positive
+semidefinite. In particular, one must not demand positive definiteness
+of a full redundant wall matrix. Similarly, normalizing roots to unit
+length can introduce square roots and enlarge the field. The field of
+the resulting real cosine entries is not a substitute for the original
+common field, root lines and norm classes. The local field-square tests
+retain that information when they restrict the possible wall parameters.
+Here a root's norm class is the square class of
+$B(\alpha_i,\alpha_i)$ in $K^\times/(K^\times)^2$; rescaling by
+$t_i\in K^\times$ changes its norm by $t_i^2$ and preserves that class.
+
+The golden-lattice applications also retain their proved inclusion
+$\Gamma(P)\subseteq\operatorname{Ref}(L)$ for the literal invariant
+lattice $L$ of Bugaenko's theorem~\cite{Bugaenko1984}. Here $\Gamma(P)$
+is the original reflection group and $\operatorname{Ref}(L)$ the full
+reflection group of that specified lattice. Equality of defining
+fields alone would not give this inclusion.
+
+Unlike the compact construction above, the arithmetic instance begins
+with proved necessary covers at ranks $16$ and $17$. Their pruning is
+an input; the LP supplies their final energy accounting.
+
+\begin{assumption}[Arithmetic input package]
+\label{a:input-package}
+We use the following proved statements of Supplement~A on their complete
+stated domains:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
+\item The actual common totally real field, original root lines,
+ integral Cartan-cycle conditions, field-square restrictions, and
+ positivity at every nonphysical real embedding are retained wherever
+ they occur in a local theorem.
+\item The complete necessary rank-seventeen and rank-sixteen covers
+ are the fourteen and nineteen groups stated in
+ Tables~\ref{a:rank17} and~\ref{a:rank16}, including all defect,
+ spectator and field alternatives used to prove those covers.
+\item The component and joint-component energy theorems give the rows
+ in Section~\ref{a:costs} and Tables~\ref{a:rank17}--\ref{a:rank16}
+ on the specified supports and complete forest domains. Each component
+ floor already includes all contributions used in its local proof.
+\item The complete local contradictions in Table~\ref{a:local-exits}
+ hold on their indicated actual domains, including their boundary
+ cases and the identity of each actual rank-one opposite.
+\item The four computed outputs in
+ Table~\ref{a:computed-inputs} hold at their proved complete input
+ domains, with the original reduction and domain-inclusion theorems.
+\item Every golden-lattice application retains the specified lattice
+ and reflection-group inclusion above.
+\end{enumerate}
+\end{assumption}
+
+This package specifies proved inputs of Supplement~A, rather than
+consequences of real matrix positivity alone.
+
+\begin{table}[htbp]
+\centering
+\caption{The four retained computed-output premises. A surviving model
+is a necessary algebraic possibility, not an asserted polytope.}
+\label{a:computed-inputs}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.08\linewidth}
+ >{\raggedright\arraybackslash}p{.43\linewidth}
+ >{\raggedright\arraybackslash}p{.39\linewidth}}
+\toprule
+Output&Complete reduced domain&Conclusion used by the local proof\\\midrule
+(i)&The quadratic-field whole-$A_{17}$ domain&Empty\\
+(ii)&The two cubic-field whole-$A_{17}$ finite-anchor domains&Empty
+ in each of the two complete domains\\
+(iii)&The shared quadratic pair domain reached separately from whole
+ $B_{17}$ and whole $D_{17}$&Two necessary pairs, each retained until
+ the final $B$- or $D$-specific energy estimate is applied\\
+(iv)&The quadratic pair domain reached from whole $B_{16}$&One necessary
+ pair, retained until its actual-edge energy estimate is applied\\\bottomrule
+\end{tabular}
+\end{table}
+
+The whole-$D_{16}$ exclusion is a separate manual dyadic argument,
+not a census premise. Its domain also differs from $D_{16}+I$ at
+rank seventeen; both appear separately below.
+
+\subsection{Notation and the arithmetic local rows}
+\label{a:costs}
+
+All component energies in this section are still projections of the
+original vector $x$. Write $T_2$ for an ordinary irreducible $I_2(m)$,
+$m\ge3$, $T_3$ for $A_3,B_3$ or $H_3$, and $T_4$ for one of
+$A_4,B_4,D_4,F_4,H_4$. Let $\mathcal K$ denote either actual typed profile
+$N_7$ or $O_7$, with the two choices retained as distinct branches.
+An unqualified $A_1$ is ordinary and nonshort. The symbols $I,J,N_7,O_7$
+retain the actual-wall definitions of Section~\ref{c:small}.
+
+We use the following complete rank-five families:
+\begin{align*}
+\mathcal R_5={}&\{A_5,D_5,A_4+A_1,H_4+A_1,
+                   T_3+T_2,2T_2+A_1\},\\
+\mathcal R'_5={}&\{A_5,D_5,A_4+A_1,H_4+A_1,
+                   A_3+T_2,2T_2+A_1\}.
+\end{align*}
+Every member has ordinary energy at least $5/14$ by
+Table~\ref{c:ordinary-table}. The restriction to $A_3$ in
+$\mathcal R'_5$ belongs to the rank-sixteen input cover.
+
+In addition to the ordinary estimates in
+Table~\ref{c:ordinary-table}, the following joint bounds are used:
+\begin{align}
+ e_{I+T_2}&>21/100,& e_{I+T_3}&>2/7,&
+ e_{I+T_4}&>23/70,\label{a:I-joints}\\
+ e_{I+A_1}&>5051/25000=.20204.\label{a:I-A1}
+\end{align}
+These are the actual-short-profile theorems of Supplement~A.
+We also retain the propagated floors $e_{T_2}>1/5$ beside either
+typed profile and $e_{A_1}>2/15$ beside $O_7$.
+
+Tables~\ref{a:rank17} and~\ref{a:rank16} state the remaining
+arithmetic floors directly on their domains. Each entry is a retained
+local theorem of Supplement~A for the complete forest in the middle
+column, with every displayed dihedral and field alternative retained.
+Separate summands denote separate support rows; a joint support is
+named explicitly. A floor on a named large component concerns that
+component alone, even when its local proof uses the remaining walls.
+Thus $16/19$ on $A_{14}$ beside ordinary $T_2$ and
+$.91286445198$ beside a typed profile are distinct input statements.
+The ordinary $T_2$ floor $3/19$ covers $m\ge4$ by its arithmetic
+dihedral theorem and $m=3$ by $319/2000>3/19$.
+For typed $B/D$ components the single floors $.91859$ and $.93859$
+already include the end-wall correction $.0487$; it consumes no
+additional energy variable. Only the rows needed by the displayed
+certificate are specified here; additional valid rows in the retained
+model may receive weight zero.
+
+\subsection{The complete rank-seventeen cover and its rows}
+\label{a:rank17-section}
+
+Table~\ref{a:rank17} gives all fourteen input groups. Braces and
+semicolons denote unions of complete alternatives. X1--X13 are the
+local contradiction inputs in Table~\ref{a:local-exits}.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.06\linewidth}
+ >{\raggedright\arraybackslash}p{.35\linewidth}
+ >{\raggedright\arraybackslash}p{.49\linewidth}}
+\caption{All rank-seventeen groups and their LP rows.}
+\label{a:rank17}\\
+\toprule
+No.&Complete forest family&Rows giving total energy at least one,
+ or retained local contradiction\\\midrule
+\endfirsthead
+\toprule No.&Complete forest family&Energy rows or contradiction\\\midrule\endhead
+1&$A_{11}+I+(A_5\text{ or }D_5)$&
+ $13/20+5/14=141/140$; the nonnegative $I$ energy is unused\\
+2&$A_{11}+\mathcal K+U_4$, $U_4\in\{A_4,B_4,D_4,F_4\}$&
+ $13/20+9/100+2/7$\\
+3&$A_{12}+R$, $R\in\mathcal R_5$&
+ $5/7+5/14$\\
+4&$A_{12}$ plus $I+T_4$; $I+T_3+A_1$; or $I+2T_2$&
+ $5/7$ plus, respectively, the joint $23/70$;
+ the joint $2/7$ and $1/10$; or the joint $21/100$ and $1/7$\\
+5&$A_{14}$ plus $T_3$; $T_2+A_1$; or $I+T_2$&
+ $4/5$ plus, respectively, $1/4$; $1/7+1/10$;
+ or the joint $21/100$\\
+6&$A_{15}$ plus $T_2$; $2A_1$; $I+A_1$; $N_7$; or $O_7$&
+ $T_2$: X1. The next two give $.8348+.2$ and
+ $.8348+.20204$. Either typed branch gives $.9191408+.09$\\
+7&$A_{16}$ plus ordinary $A_1$ or actual $I$&X2 in each
+ of its complete rank-one alternatives\\
+8&Entire $A_{17}$&X3, retaining outputs (i) and (ii) and their
+ actual endpoint-domain inclusions\\
+9&$B_{15}+N_7$ or $B_{15}+O_7$&
+ $.93859+.09=1.02859$\\
+10&$B_{16}+I$&X4\\
+11&Entire $B_{17}$&$e_{B_{17}}\ge1.00184$, after the
+ separate reduction and energy estimates for both survivors\\
+12&$D_{15}+N_7$ or $D_{15}+O_7$&
+ $.91859+.09=1.00859$\\
+13&$D_{16}$ plus ordinary $A_1$ or actual $I$&
+ X5 for ordinary $A_1$; X6 for actual $I$\\
+14&Entire $D_{17}$&$e_{D_{17}}\ge1.00184$, after its
+ genuine-fork reduction and its energy estimates for both survivors\\\bottomrule
+\end{longtable}
+
+The fourteen groups yield $39$ complete parameter-family branches,
+without asserting their geometric realizability. Repeated symbols
+such as $2T_2$ represent independently parameterized components.
+In $I+2T_2$, choose one dihedral for the joint bound and give the
+other its ordinary row; the $I$ energy is used once.
+
+\subsection{The complete rank-sixteen cover and its rows}
+\label{a:rank16-section}
+
+Table~\ref{a:rank16} gives the separate nineteen-group rank-sixteen
+input cover, including its narrower $\mathcal R'_5$ family.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.06\linewidth}
+ >{\raggedright\arraybackslash}p{.35\linewidth}
+ >{\raggedright\arraybackslash}p{.49\linewidth}}
+\caption{All rank-sixteen groups and their LP rows.}
+\label{a:rank16}\\
+\toprule
+No.&Complete forest family&Rows giving total energy at least one,
+ or retained local contradiction\\\midrule
+\endfirsthead
+\toprule No.&Complete forest family&Energy rows or contradiction\\\midrule\endhead
+1&$A_{10}+I+(A_5\text{ or }D_5)$&$404/625+5/14$\\
+2&$A_{10}+\mathcal K+U_4$, $U_4\in\{A_4,B_4,D_4,F_4\}$&
+ $404/625+9/100+2/7$\\
+3&$A_{11}+R$, $R\in\mathcal R'_5$&$13/20+5/14=141/140$\\
+4&$A_{11}+I+T_4$&The joint $A_{11}+I$ bound $18/25$,
+ plus the disjoint $T_4$ bound $2/7$, giving $176/175$\\
+5&$A_{11}+O_7+A_3$&$13/20+9/100+13/50=1$\\
+6&$A_{12}$ plus $A_4$; $H_4$; or $2T_2$&$5/7+2/7=1$\\
+7&$A_{12}+I+T_3$&$5/7$ plus the joint $I+T_3$ bound $2/7$\\
+8&$A_{12}+\mathcal K+T_2$&$5/7+9/100+1/5$, with the actual
+ typed-profile propagation on the last component\\
+9&$A_{13}$ plus $A_3$; $T_2+A_1$; $I+T_2$; or $O_7+A_1$&
+ Respectively: $53/70+1/4$; $53/70+1/7+1/10=1$;
+ X7; or $233/300+9/100+2/15=1$\\
+10&$A_{14}$ plus $T_2$; $2A_1$; $I+A_1$; $N_7$; or $O_7$&
+ Respectively: $16/19+3/19=1$; $4/5+.2=1$;
+ $4/5+.20204$; or $.91286445198+.09$ for either typed branch\\
+11&$A_{15}$ plus ordinary $A_1$ or actual $I$&X8 in its
+ complete isolated/nonisolated rank-one domains\\
+12&Entire $A_{16}$&X9\\
+13&$B_{14}+N_7$ or $B_{14}+O_7$&
+ $.91859+.09=1.00859$\\
+14&$B_{15}$ plus ordinary $A_1$ or actual $I$&
+ X10 for ordinary $A_1$; X11 for actual $I$\\
+15&Entire $B_{16}$&$e_{B_{16}}\ge1.00640742675$, after
+ its own domain inclusion and edge estimate for the unique survivor\\
+16&$D_{13}$ plus $I+T_2$ or $O_7+A_1$&
+ $.82436$ plus the remainder floor $.21$; joint on $I+T_2$,
+ and coarsened from $.09+2/15$ on $O_7+A_1$\\
+17&$D_{14}$ plus ordinary $I_2(m)$, $m\ge4$; $N_7$; or $O_7$&
+ Ordinary: $.84816+3/19$. Either typed branch:
+ $.91859+.09$\\
+18&$D_{15}$ plus ordinary $A_1$ or actual $I$&
+ X10 for ordinary $A_1$; X12 for actual $I$\\
+19&Entire $D_{16}$&X13, the actual quadratic reduction and
+ complete dyadic argument\\\bottomrule
+\end{longtable}
+
+Each sum is at least one, which suffices against the strict budget
+\eqref{c:budget}; no uniform positive excess is needed. For example,
+group 5 uses three disjoint rows summing to exactly one. Group 4
+instead uses the joint support $A_{11}+I$:
+\[
+ e_{A_{11}}+e_I\ge18/25,\qquad e_{T_4}\ge2/7.
+\]
+These rows have disjoint supports. The floor $18/25$ must not be
+assigned to $A_{11}$ alone or combined with a second full use of $I$.
+
+The nineteen groups give $49$ branches. Together the two covers have
+$88$: $72$ energy branches and $16$ local contradiction branches,
+with unbounded dihedral parameters quantified within their full domains.
+
+\subsection{The arithmetic local contradiction statements}
+\label{a:local-exit-section}
+
+For completeness, Table~\ref{a:local-exits} specifies every local
+contradiction used by Tables~\ref{a:rank17} and~\ref{a:rank16}. These
+are imported local theorems with their full arithmetic and geometric
+hypotheses. They are not extra scalar energy claims. Their LP row is
+zero mass on the exactly matched domain.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{.07\linewidth}
+ >{\raggedright\arraybackslash}p{.31\linewidth}
+ >{\raggedright\arraybackslash}p{.52\linewidth}}
+\caption{Arithmetic local contradiction inputs. ``Entire'' refers to
+the complete original vertex forest.}\label{a:local-exits}\\
+\toprule
+Code&Matched entire forest&Complete local argument retained\\\midrule
+\endfirsthead
+\toprule Code&Matched entire forest&Local argument\\\midrule\endhead
+X1&$A_{15}+T_2$, rank $17$&The ordinary-dihedral theorem,
+ including every silver, golden and low-energy label domain.\\
+X2&$A_{16}+A_1$ or $A_{16}+I$, rank $17$&The complete
+ actual rank-one-opposite theorem, isolated and nonisolated.\\
+X3&Entire $A_{17}$, rank $17$&The endpoint and field reductions,
+ with proved finite-anchor inclusions in outputs (i) and (ii).\\
+X4&$B_{16}+I$, rank $17$&The complete six-role short-cap theorem,
+ with its quadratic and cubic field alternatives.\\
+X5&$D_{16}+A_1$, rank $17$, with ordinary $A_1$&The ordinary
+ rank-one theorem, retaining both fork alternatives.\\
+X6&$D_{16}+I$, rank $17$&The actual root-line theorem in degrees
+ two, three and four, including both signed forks and all dyadic cases.\\
+X7&$A_{13}+I+T_2$, rank $16$&The joint endpoint-and-remainder
+ theorem with the complete ordinary dihedral domain.\\
+X8&$A_{15}+A_1$ or $A_{15}+I$, rank $16$&The complete
+ actual rank-one-opposite theorem, with all height boundaries.\\
+X9&Entire $A_{16}$, rank $16$&The endpoint, field, finite-anchor
+ and time-ratio theorem for this whole component.\\
+X10&$B_{15}+A_1$ or $D_{15}+A_1$, rank $16$, with ordinary $A_1$&
+ Their respective nonisolated reductions and ordinary isolated theorem,
+ including $h=1/2$.\\
+X11&$B_{15}+I$, rank $16$&The complete isolated-short theorem
+ for $0<h<1/2$.\\
+X12&$D_{15}+I$, rank $16$&The complete isolated-short theorem
+ for $0<h<1/2$, including both signed forks.\\
+X13&Entire $D_{16}$, rank $16$&The quadratic reduction and manual
+ dyadic theorem: odd, inert, ramified and split cases.\\\bottomrule
+\end{longtable}
+
+The rank-one theorems follow the same actual opposite wall. Nonzero
+contact with the large component gives the nonisolated alternative;
+otherwise its actual isolated height lies in $0<h<1/2$ or $h\ge1/2$.
+The equality case belongs to the ordinary theorem. These alternatives
+cover an existing wall without replacing it by a formal extension.
+
+The whole-$B_{17}$ and whole-$D_{17}$ energy rows use separate proved
+inclusions in output (iii) and separate energy estimates for its two
+survivors. Output (iv) likewise retains its unique pair until the actual
+$B_{16}$ edge estimate is applied. These outputs are not emptiness
+claims; whole $D_{16}$ instead uses the manual theorem X13.
+
+\subsection{One joined arithmetic certificate}
+\label{a:certificate}
+
+The arithmetic tables give a hand certificate. On each energy branch in
+Tables~\ref{a:rank17} and~\ref{a:rank16}, give the displayed disjoint
+support rows weight one and all additional rows weight zero. Each
+original energy has total weight at most one, and the weighted lower
+bounds sum to at least one. A branch X1--X13 has zero mass and hence
+zero normalized deficit by its retained local theorem.
+
+The actual computation uses the same assembler for all $88$ arithmetic
+branches and for the $829$ compact branches at dimensions $18$--$29$.
+The joined catalogue has $917$ branches, including $167$ local
+contradiction domains; its checked capacity dual has $3324$ variables
+and $2488$ rows. The reproduction section records these global LP
+checks separately from the retained local proofs.
+
+\begin{theorem}[Compact arithmetic recovery]\label{a:recovery}
+Retain Input~\ref{a:input-package}, the compact local inputs of
+Section~\ref{c:section}, and the published compact ceiling $29$.
+The joined energy LP is infeasible for every actual dimension at least
+$16$. It recovers the existing compact arithmetic bound $n\le15$.
+\end{theorem}
+\begin{proof}
+Every actual arithmetic configuration at ranks $16$ and $17$ belongs
+to the complete corresponding cover. A branch with a retained local
+contradiction is impossible. On every other branch the exact capacity
+certificate gives total original energy at least one, contrary to
+\eqref{c:budget}. The compact domains at ranks $18$--$29$ apply unchanged,
+since an arithmetic compact polytope is compact; their certificate was
+proved independently of arithmetic in Theorem~\ref{c:recovery}.
+The external ceiling excludes dimensions $30$ and above.
+\end{proof}
+

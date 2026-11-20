@@ -1,0 +1,613 @@
+{
+  "schema": "lp-rerun-execution-manifest-v1",
+  "date": "2026-11-15",
+  "status": "EIGHT_ACTUAL_BOUNDED_RERUNS_PASSED",
+  "root": "/root",
+  "runner": {
+    "path": "scripts/run_bounded_research_lp_rerun_override_20261115.py",
+    "bytes": 8753,
+    "sha256": "8e44d8e06bb82f3effacb844961dff876ebcb005c5ca2261614aeeb93ae8a62d"
+  },
+  "disk_authorization": {
+    "path": "audit/lp_rerun_disk_override_continuation_20261115.json",
+    "bytes": 2224,
+    "sha256": "977be3aa457bd9a4e531fd45809a8f98da5413337b2a6eb8c4a20e4cc58de614"
+  },
+  "jobs": [
+    {
+      "path": "results/joint58_parent_cached_rerun_job_20261115.json",
+      "bytes": 1345,
+      "sha256": "e367cb40a2f06aee097c0208e3b06e3dd291482c2232a27eb890cd77623333d5"
+    },
+    {
+      "path": "results/joint58_minimax_dual_rerun_job_20261115.json",
+      "bytes": 439,
+      "sha256": "2a348ce645ae50823b5e8b603d5d5d1517301e38d2ad3d74f474efd94267a749"
+    }
+  ],
+  "runs": [
+    {
+      "name": "joint58_local_rerun01_20261115",
+      "monitor": {
+        "path": "results/joint58_local_rerun01_20261115_monitor.json",
+        "bytes": 4694,
+        "sha256": "a25ecb732db7dc38c5dc0e53bdfbbe6469a10c111ec8a16ade54904084a02479"
+      },
+      "command": [
+        "scripts/run_finite_volume_joint58_staged_rows_20261110.py",
+        "check-local",
+        "--output-directory",
+        "results/joint58_local_rerun01_20261115",
+        "--candidate",
+        "results/joint58_local_proposal01_20261110/candidate.json",
+        "--candidate-sha256",
+        "ebf8e8ab84df8014897a51ee31684d21ee8f011a74a4927bcaef9755b3f36656"
+      ],
+      "elapsed_seconds": 6.062,
+      "peak_process_tree_rss_bytes": 98893824,
+      "initial_resources": {
+        "free_disk_gib": 11.27,
+        "available_memory_gib": 9.84,
+        "disk_free_bytes": 12096757760,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10568122368,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 1.216231,
+        "available_memory_percent": 41.009712,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        }
+      },
+      "files": [
+        {
+          "path": "results/joint58_local_rerun01_20261115/check.json",
+          "bytes": 4735,
+          "sha256": "d8feccbdb0d78bd9741c7335a5b64ecd45ab4ff3ec796e6ebfabecd6124ece45"
+        },
+        {
+          "path": "results/joint58_local_rerun01_20261115/completed.json",
+          "bytes": 36191,
+          "sha256": "92044782f55d6a0701a267294125853f7d19fca3c73428b1b14892b89fcff951"
+        },
+        {
+          "path": "results/joint58_local_rerun01_20261115/parent_descriptor.json",
+          "bytes": 719110,
+          "sha256": "7c275f42a0b77e77231d214bccd7ec8fa3d49d1726d8d75f79a919c45e403b8a"
+        }
+      ]
+    },
+    {
+      "name": "joint58_parent_cached_rerun01_20261115",
+      "monitor": {
+        "path": "results/joint58_parent_cached_rerun01_20261115_monitor.json",
+        "bytes": 2343,
+        "sha256": "307e41ef49e2958194689431db753e325795005b6948cfe7c8e66b647a78f2da"
+      },
+      "command": [
+        "scripts/finite_volume_finite58_fragment_join_20261110.py",
+        "--job",
+        "results/joint58_parent_cached_rerun_job_20261115.json",
+        "--job-sha256",
+        "e367cb40a2f06aee097c0208e3b06e3dd291482c2232a27eb890cd77623333d5"
+      ],
+      "elapsed_seconds": 1.776,
+      "peak_process_tree_rss_bytes": 112427008,
+      "initial_resources": {
+        "free_disk_gib": 11.27,
+        "available_memory_gib": 9.86,
+        "disk_free_bytes": 12095971328,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10583277568,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 1.216152,
+        "available_memory_percent": 41.068522,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        }
+      },
+      "files": [
+        {
+          "path": "results/joint58_parent_cached_rerun01_20261115/payload.json",
+          "bytes": 62424,
+          "sha256": "b84f6e66bf585da4f2676529171e243c99fc1d9d516ecab797642809fd7a879c"
+        }
+      ]
+    },
+    {
+      "name": "joint58_minimax_dual_rerun01_20261115",
+      "monitor": {
+        "path": "results/joint58_minimax_dual_rerun01_20261115_monitor.json",
+        "bytes": 2441,
+        "sha256": "c32f7bf8665606458610552de6209c3c7120ad89bfa394809d2b341e78927fb2"
+      },
+      "command": [
+        "scripts/check_finite_volume_finite58_minimax_dual_20261110.py",
+        "--job",
+        "results/joint58_minimax_dual_rerun_job_20261115.json",
+        "--job-sha256",
+        "2a348ce645ae50823b5e8b603d5d5d1517301e38d2ad3d74f474efd94267a749"
+      ],
+      "elapsed_seconds": 0.946,
+      "peak_process_tree_rss_bytes": 101138432,
+      "initial_resources": {
+        "free_disk_gib": 11.26,
+        "available_memory_gib": 9.86,
+        "disk_free_bytes": 12094693376,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10582835200,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 1.216024,
+        "available_memory_percent": 41.066806,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        }
+      },
+      "files": [
+        {
+          "path": "results/joint58_minimax_dual_rerun01_20261115/payload.json",
+          "bytes": 39369,
+          "sha256": "45704a8bee92263a021e23db46011abcbeaee3230f2385b4041834446b76950a"
+        }
+      ]
+    },
+    {
+      "name": "compact_d18_strong5_bare_rerun01_20261115",
+      "monitor": {
+        "path": "results/compact_d18_strong5_bare_rerun01_20261115_monitor.json",
+        "bytes": 3054,
+        "sha256": "c61c4f3082725b790b160f7cd604e752bc9368498383eeaedfd82e7fc006dbd2"
+      },
+      "command": [
+        "scripts/check_compact_d18_strong5_bare_reference_20261111.py",
+        "--output-directory",
+        "results/compact_d18_strong5_bare_rerun01_20261115"
+      ],
+      "elapsed_seconds": 0.093,
+      "peak_process_tree_rss_bytes": 64258048,
+      "initial_resources": {
+        "free_disk_gib": 11.26,
+        "available_memory_gib": 9.85,
+        "disk_free_bytes": 12093521920,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10581262336,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 1.215906,
+        "available_memory_percent": 41.060702,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        }
+      },
+      "files": [
+        {
+          "path": "results/compact_d18_strong5_bare_rerun01_20261115/arithmetic.json",
+          "bytes": 8648,
+          "sha256": "4a987f6fbbd62998bbd003e130f443e887392cd28250753228d1f5f7e2d17779"
+        },
+        {
+          "path": "results/compact_d18_strong5_bare_rerun01_20261115/candidate.json",
+          "bytes": 431,
+          "sha256": "3ac92ba4cbde88bcd400e72b39d2d514a69115e562bbaebc9ddc7f3281a47a82"
+        },
+        {
+          "path": "results/compact_d18_strong5_bare_rerun01_20261115/completed.json",
+          "bytes": 6132,
+          "sha256": "31e1d9d71ea0f08ab1ed027e945b4deefd148fe377b693c218bdf6078d4646e0"
+        },
+        {
+          "path": "results/compact_d18_strong5_bare_rerun01_20261115/model.json",
+          "bytes": 1740,
+          "sha256": "7f297ad882305166a521e86829cff22f79faffa84b829cba6bd8cdce057d40bd"
+        },
+        {
+          "path": "results/compact_d18_strong5_bare_rerun01_20261115/verification.json",
+          "bytes": 5375,
+          "sha256": "212e88f45a5851684a960a66343ef39292b8da6ac4918d42ec1dab23f313d383"
+        }
+      ]
+    },
+    {
+      "name": "compact_d18_isolated6_bare_rerun01_20261115",
+      "monitor": {
+        "path": "results/compact_d18_isolated6_bare_rerun01_20261115_monitor.json",
+        "bytes": 3233,
+        "sha256": "5cc99af760198385834a3021fb9e74bb7357880b94949af07ec106b757fffefe"
+      },
+      "command": [
+        "scripts/check_compact_d18_bare_reference_cases_20261112.py",
+        "--case",
+        "isolated6",
+        "--output-directory",
+        "results/compact_d18_isolated6_bare_rerun01_20261115"
+      ],
+      "elapsed_seconds": 0.098,
+      "peak_process_tree_rss_bytes": 64028672,
+      "initial_resources": {
+        "free_disk_gib": 11.26,
+        "available_memory_gib": 9.83,
+        "disk_free_bytes": 12093403136,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10558947328,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 1.215894,
+        "available_memory_percent": 40.974108,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        }
+      },
+      "files": [
+        {
+          "path": "results/compact_d18_isolated6_bare_rerun01_20261115/arithmetic.json",
+          "bytes": 8748,
+          "sha256": "fd5cefc69aad244453d1b727b7e112b9eb7f74497d335315ea257dbd3d892cb1"
+        },
+        {
+          "path": "results/compact_d18_isolated6_bare_rerun01_20261115/candidate.json",
+          "bytes": 418,
+          "sha256": "bde27face9e43ab726b4a06119dfee8925251d41f3b234a72a0aefbea10ddacd"
+        },
+        {
+          "path": "results/compact_d18_isolated6_bare_rerun01_20261115/completed.json",
+          "bytes": 7272,
+          "sha256": "7901420fc4c9b386f252b76178b3dc30c53619602118a7de8a1197ece2c51ead"
+        },
+        {
+          "path": "results/compact_d18_isolated6_bare_rerun01_20261115/model.json",
+          "bytes": 1612,
+          "sha256": "7ec68d07ca74eb0750199431c3cde2fb684bcc7a76265536816adccfdd3fadc9"
+        },
+        {
+          "path": "results/compact_d18_isolated6_bare_rerun01_20261115/verification.json",
+          "bytes": 6510,
+          "sha256": "faf75e3a0c7f539c57b3dd035e85e65f4b572e7c48b724d44c3f33028795a5e0"
+        }
+      ]
+    },
+    {
+      "name": "compact_d18_isolated7_bare_rerun01_20261115",
+      "monitor": {
+        "path": "results/compact_d18_isolated7_bare_rerun01_20261115_monitor.json",
+        "bytes": 3233,
+        "sha256": "1417815fa920968372786b1de58456711996807597e2192e2579c8ec76729f55"
+      },
+      "command": [
+        "scripts/check_compact_d18_bare_reference_cases_20261112.py",
+        "--case",
+        "isolated7",
+        "--output-directory",
+        "results/compact_d18_isolated7_bare_rerun01_20261115"
+      ],
+      "elapsed_seconds": 0.094,
+      "peak_process_tree_rss_bytes": 64143360,
+      "initial_resources": {
+        "free_disk_gib": 11.26,
+        "available_memory_gib": 9.83,
+        "disk_free_bytes": 12093431808,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10551607296,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 1.215897,
+        "available_memory_percent": 40.945625,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        }
+      },
+      "files": [
+        {
+          "path": "results/compact_d18_isolated7_bare_rerun01_20261115/arithmetic.json",
+          "bytes": 8261,
+          "sha256": "138344343161a6f82cfe2a683dd52e8738e8a55a265e83692b279ae56f574f8d"
+        },
+        {
+          "path": "results/compact_d18_isolated7_bare_rerun01_20261115/candidate.json",
+          "bytes": 397,
+          "sha256": "cbb5051da7ba03b36c3e1b475bf2a7af16c8b9e7e5a9389a6563fa11ad5a3601"
+        },
+        {
+          "path": "results/compact_d18_isolated7_bare_rerun01_20261115/completed.json",
+          "bytes": 7288,
+          "sha256": "a004f5a55b161ca22855f6fedc5b3d8e508918063235df5d1c23ea015d00ab1a"
+        },
+        {
+          "path": "results/compact_d18_isolated7_bare_rerun01_20261115/model.json",
+          "bytes": 1461,
+          "sha256": "bce8ade49d25247512837fcdec94c3c8a14059ebca82f1e53653e2de398cf6d4"
+        },
+        {
+          "path": "results/compact_d18_isolated7_bare_rerun01_20261115/verification.json",
+          "bytes": 6508,
+          "sha256": "a73872e7e3aac97bb0e0ca1ccd48cfd0e64412753a95411f387bbd3a2fe403ae"
+        }
+      ]
+    },
+    {
+      "name": "compact_d18_weak_helper_bare_rerun01_20261115",
+      "monitor": {
+        "path": "results/compact_d18_weak_helper_bare_rerun01_20261115_monitor.json",
+        "bytes": 3253,
+        "sha256": "0ecb83dc15b698dc01d4db4d36528a915e7a3e1892483753fdc3bce1bba75015"
+      },
+      "command": [
+        "scripts/check_compact_d18_bare_reference_cases_20261112.py",
+        "--case",
+        "weak-helper",
+        "--output-directory",
+        "results/compact_d18_weak_helper_bare_rerun01_20261115"
+      ],
+      "elapsed_seconds": 0.089,
+      "peak_process_tree_rss_bytes": 64241664,
+      "initial_resources": {
+        "free_disk_gib": 11.26,
+        "available_memory_gib": 9.8,
+        "disk_free_bytes": 12093190144,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10527408128,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 1.215872,
+        "available_memory_percent": 40.85172,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        }
+      },
+      "files": [
+        {
+          "path": "results/compact_d18_weak_helper_bare_rerun01_20261115/arithmetic.json",
+          "bytes": 8967,
+          "sha256": "c0d2625f4b5b5de537893182c59f05c9494230be14674f76b86e7b119319fa16"
+        },
+        {
+          "path": "results/compact_d18_weak_helper_bare_rerun01_20261115/candidate.json",
+          "bytes": 420,
+          "sha256": "dac1886aac2cd3c9bd990720f2049282962ed86c9915f3978bf7a92e6368a337"
+        },
+        {
+          "path": "results/compact_d18_weak_helper_bare_rerun01_20261115/completed.json",
+          "bytes": 7285,
+          "sha256": "8f8457cfcd53dad223c2c7bbf413ca9284597610ec389229511dcb19921ba669"
+        },
+        {
+          "path": "results/compact_d18_weak_helper_bare_rerun01_20261115/model.json",
+          "bytes": 1614,
+          "sha256": "24a17019789179ddad3e2965c8aedb239472ce5f58ece02f3f55742fa2c4bcf3"
+        },
+        {
+          "path": "results/compact_d18_weak_helper_bare_rerun01_20261115/verification.json",
+          "bytes": 6518,
+          "sha256": "38961b36d68f4b2605fa56ec0718f77999bbc77579c14ccb36da90872e8e8aab"
+        }
+      ]
+    },
+    {
+      "name": "compact_local_A18_helpers_rerun01_20261115",
+      "monitor": {
+        "path": "results/compact_local_A18_helpers_rerun01_20261115_monitor.json",
+        "bytes": 3219,
+        "sha256": "6d919adb0ca1a6529ddcefe5581466cd0fef66e1a5371d65d1d2c8a7ba6ad2ae"
+      },
+      "command": [
+        "scripts/check_compact_local_A18_adjacent_helpers_20261113.py",
+        "--output-directory",
+        "results/compact_local_A18_helpers_rerun01_20261115"
+      ],
+      "elapsed_seconds": 1.441,
+      "peak_process_tree_rss_bytes": 79806464,
+      "initial_resources": {
+        "free_disk_gib": 11.26,
+        "available_memory_gib": 9.8,
+        "disk_free_bytes": 12093382656,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10528030720,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 1.215892,
+        "available_memory_percent": 40.854136,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        }
+      },
+      "files": [
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/common_candidate.json",
+          "bytes": 506,
+          "sha256": "16a9478c19df8a431927bf549eb0ca4a150d782bd196aa3312a3f8a25e1ee759"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/common_model.json",
+          "bytes": 24052,
+          "sha256": "f3d4e1abc0f0433ad0d3b6c50e005e465ebf7b8454f394992f7450183d70acbf"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/common_specification.json",
+          "bytes": 9400,
+          "sha256": "f963c7bb8badd99b6f380af68f3b727c5a8776321a5386bbe5234fbedeaf80de"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/common_verification.json",
+          "bytes": 5637,
+          "sha256": "70f668e405cb37e6f233da7cd13617cd435c3c0fb131d67b6cac6231744043e1"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/completed.json",
+          "bytes": 18503,
+          "sha256": "6f845d4078f1661f5c09e20a1a774d0acf778cc0a6d71de6457c3b11114c702e"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/contacts.json",
+          "bytes": 49124,
+          "sha256": "c76dd4c262b67117c56ae33b10100b248ba51f3a1ca90ba02cf12a48aa5b7d1b"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/linear_projections.json",
+          "bytes": 13317,
+          "sha256": "131e9987aadf45edece8a0dc08ce7e1eea820a53fd74051e5c934d50bf701bd9"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/mean_loss.json",
+          "bytes": 67792,
+          "sha256": "cb78feaab5ea933a870792e2fc0a33b0e4adcba40937b5528fbbf3ac3f7e9fc2"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/native_common_left.json",
+          "bytes": 461223,
+          "sha256": "ba701d431c3f2047bba43dc0b8c388d1eeb8ee94c09c7ab6701aaa73d71bb0f1"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/native_common_right.json",
+          "bytes": 461611,
+          "sha256": "ba8e4f42dba2ef5963265a5f9fb2eb7736fb4335421e91dbdc75ca8a0806189a"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/native_outward.json",
+          "bytes": 500959,
+          "sha256": "9a63d3569a3bb0b04d76d3bb9c5ae242b366ae781012df478c100c373d743c15"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/native_registry.json",
+          "bytes": 15132,
+          "sha256": "bc7d6d22ec9fdab24ec7084602088cac9779a532c9bdd8a9aebe58eefb230bb6"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/native_reversed.json",
+          "bytes": 501073,
+          "sha256": "94911953a84c99869a96c425756705657a6200f29bde5fc1233efa127cb479a2"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/opposite_candidate.json",
+          "bytes": 516,
+          "sha256": "195510af1aa5d951eb5314cc6aec951646c41b3032e9540a504d921dcbc56738"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/opposite_model.json",
+          "bytes": 24204,
+          "sha256": "522744cbeb460aa28defc89335dda2701402cad016a1cd3aef6acd0cc60429f6"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/opposite_specification.json",
+          "bytes": 9401,
+          "sha256": "b20299859d4e251660d46f644ada114dac8ecd230471f1e545cfb10f57a2c93d"
+        },
+        {
+          "path": "results/compact_local_A18_helpers_rerun01_20261115/opposite_verification.json",
+          "bytes": 5633,
+          "sha256": "05d5c27efb9aa60d0b12d37b03853966d6f52116687df2d89c4be0f1f0e11bb7"
+        }
+      ]
+    }
+  ],
+  "byte_comparisons": [
+    {
+      "original": {
+        "path": "results/joint58_local_check01_20261110/check.json",
+        "bytes": 4735,
+        "sha256": "d8feccbdb0d78bd9741c7335a5b64ecd45ab4ff3ec796e6ebfabecd6124ece45"
+      },
+      "rerun": {
+        "path": "results/joint58_local_rerun01_20261115/check.json",
+        "bytes": 4735,
+        "sha256": "d8feccbdb0d78bd9741c7335a5b64ecd45ab4ff3ec796e6ebfabecd6124ece45"
+      },
+      "byte_identical": true
+    },
+    {
+      "original": {
+        "path": "results/joint58_parent_join01_20261110/payload.json",
+        "bytes": 62424,
+        "sha256": "b84f6e66bf585da4f2676529171e243c99fc1d9d516ecab797642809fd7a879c"
+      },
+      "rerun": {
+        "path": "results/joint58_parent_cached_rerun01_20261115/payload.json",
+        "bytes": 62424,
+        "sha256": "b84f6e66bf585da4f2676529171e243c99fc1d9d516ecab797642809fd7a879c"
+      },
+      "byte_identical": true
+    },
+    {
+      "original": {
+        "path": "results/joint58_minimax_dual01_20261110/payload.json",
+        "bytes": 39369,
+        "sha256": "45704a8bee92263a021e23db46011abcbeaee3230f2385b4041834446b76950a"
+      },
+      "rerun": {
+        "path": "results/joint58_minimax_dual_rerun01_20261115/payload.json",
+        "bytes": 39369,
+        "sha256": "45704a8bee92263a021e23db46011abcbeaee3230f2385b4041834446b76950a"
+      },
+      "byte_identical": true
+    }
+  ],
+  "scope": {
+    "numerical_optimizer_called": false,
+    "finite_local_rows_freshly_rechecked": true,
+    "finite_parent_join_freshly_executed": true,
+    "finite_parent_join_consumed_original_local_monitor": true,
+    "finite_parent_join_consumed_new_local_monitor": false,
+    "finite_minimax_lower_freshly_rechecked": true,
+    "finite_leaf_jobs_replayed": 0,
+    "finite_leaf_jobs_retained_from_prior_execution": 1228,
+    "full_recursive_descendant_revalidation": false,
+    "compact_omission_lp_runs": 4,
+    "compact_adjacent_helper_lp_certificates": 2,
+    "compact_adjacent_helper_native_systems": 36,
+    "compact_global_17_optimization_complete": false,
+    "compact_arithmetic_global_15_optimization_complete": false,
+    "noncompact_arithmetic_21_optimization_complete": false,
+    "new_dimension_bound": false,
+    "historical_sources_or_receipts_modified": false,
+    "all_rerun_processes_completed": true
+  },
+  "metadata_audit_only": "This manifest hashes outputs and compares bytes. Mathematical checks were executed by the eight listed unchanged workers under their monitors."
+}

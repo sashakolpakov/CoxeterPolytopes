@@ -1,0 +1,39 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_finite_volume_joint58_staged_rows_20261110.py",
+    "export",
+    "--output-directory",
+    "results/joint58_local_export03_20261110"
+  ],
+  "elapsed_seconds": 9.535,
+  "peak_process_tree_rss_bytes": 98516992,
+  "initial_resources": {
+    "free_disk_gib": 27.76,
+    "available_memory_gib": 7.95,
+    "disk_free_bytes": 29810425856,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 8531247104,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 2.997197,
+    "available_memory_percent": 33.105596,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 2471,
+  "stdout": "{\"elapsed_seconds\": \"0.040538\", \"event\": \"phase_start\", \"phase\": \"load_frozen_runtime\"}\n{\"duration_seconds\": \"0.070680\", \"elapsed_seconds\": \"0.111218\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"load_frozen_runtime\", \"started_seconds\": \"0.040538\"}\n{\"elapsed_seconds\": \"0.155831\", \"event\": \"phase_start\", \"phase\": \"prepare_fresh_primitives\"}\n{\"duration_seconds\": \"0.108136\", \"elapsed_seconds\": \"0.263967\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"prepare_fresh_primitives\", \"started_seconds\": \"0.155831\"}\n{\"elapsed_seconds\": \"0.263995\", \"event\": \"phase_start\", \"phase\": \"capture_primitive_state\"}\n{\"duration_seconds\": \"0.059133\", \"elapsed_seconds\": \"0.323128\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"capture_primitive_state\", \"started_seconds\": \"0.263995\"}\n{\"elapsed_seconds\": \"0.330243\", \"event\": \"phase_start\", \"phase\": \"export_complete_rows\"}\n{\"duration_seconds\": \"9.037941\", \"elapsed_seconds\": \"9.368183\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"export_complete_rows\", \"started_seconds\": \"0.330243\"}\n{\"elapsed_seconds\": \"9.369233\", \"event\": \"phase_start\", \"phase\": \"final_primitive_state\"}\n{\"duration_seconds\": \"0.055394\", \"elapsed_seconds\": \"9.424627\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"final_primitive_state\", \"started_seconds\": \"9.369233\"}\n{\"assembly_sha256\": \"c7b2d0c92cb099641822e8da196cbbb2a6fb3052c7f486a44420d77b9929cd38\", \"complete_finite58_evidence_checked\": false, \"completion_receipt\": {\"bytes\": 36051, \"path\": \"results/joint58_local_export03_20261110/completed.json\", \"sha256\": \"b88b8ba231ee0f4b334301816d42509d6ea947aeeb8099feea924e3159c591db\"}, \"counts\": {\"columns\": 5810, \"equalities\": 5696, \"inequalities\": 97910, \"nonzeros\": 935736, \"rows\": 103606}, \"global_dimension_bound_verified\": false, \"phase_timings\": [{\"duration_seconds\": \"0.070680\", \"outcome\": \"returned\", \"phase\": \"load_frozen_runtime\", \"started_seconds\": \"0.040538\"}, {\"duration_seconds\": \"0.108136\", \"outcome\": \"returned\", \"phase\": \"prepare_fresh_primitives\", \"started_seconds\": \"0.155831\"}, {\"duration_seconds\": \"0.059133\", \"outcome\": \"returned\", \"phase\": \"capture_primitive_state\", \"started_seconds\": \"0.263995\"}, {\"duration_seconds\": \"9.037941\", \"outcome\": \"returned\", \"phase\": \"export_complete_rows\", \"started_seconds\": \"0.330243\"}, {\"duration_seconds\": \"0.055394\", \"outcome\": \"returned\", \"phase\": \"final_primitive_state\", \"started_seconds\": \"9.369233\"}], \"status\": \"AUTHENTICATED_LOCAL_MATRIX_EXPORTED\"}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "f99b65ac514980f6260f3b15d8d68f4a7dd30fffcba1d89c063d003e65d0d69c",
+  "lock_owner": "wrapper"
+}

@@ -1,6 +1,7 @@
 # Current bounds and verification
 
-Updated 4 November 2026. The repository has three current submission manuscripts.
+Updated 20 November 2026. The repository has four prepared submission
+manuscripts within its existing three paper families.
 Their results are internally reviewed written proofs at the stated geometric,
 literature and finite-data inputs. No new polytope example is claimed.
 
@@ -30,6 +31,7 @@ scopes and references are in the [assumption register](manuscript_assumptions.md
 | Dimension bounds 57 / 17 / 15 | [41 pages](../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf) | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) |
 | Sharp right-angled dimensions 8 / 4 | [6 pages, 2 figures](../arxiv/sharp_dimension_bounds_8_and_4/main.pdf) | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) |
 | On the second smallest ideal right-angled hyperbolic four-polytope | [18 pages, 5 figures](../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf) | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) |
+| Linear programming certificates for dimension bounds of hyperbolic Coxeter polytopes | [36 pages](../arxiv/linear_programming_dimension_bounds/main.pdf) | [main.tex](../arxiv/linear_programming_dimension_bounds/main.tex) |
 
 The concise article contains the main geometric arguments; its
 [GitHub proof catalogue](../arxiv/hyperbolic_coxeter_dimension_bounds/ADDENDA.md)
@@ -41,6 +43,14 @@ prove compact 17; Parts III/VI prove arithmetic compact 15, using the compact
 theorem within the same document. The appendices supply necessary case proofs.
 The [contents guide](../arxiv/DIMENSION_BOUNDS.md) identifies their locations.
 
+The [LP companion](../arxiv/linear_programming_dimension_bounds/README.md)
+recovers the same three bounds through a common homogeneous feasibility
+and certificate argument, retaining proved local inequalities and complete
+domains as inputs. Its prior reviewed four-file
+[working edition](../manuscripts/linear_programming_dimension_bounds/README.md)
+is preserved separately. Preparing this submission adds typesetting and
+source-package records, not new mathematical or Lean execution.
+
 Each source folder also contains its matching `main.pdf`, beside `main.tex`,
 `references.bib` and the generated
 `main.bbl`, with figures inline. Standard pdfLaTeX and BibTeX, or
@@ -48,8 +58,9 @@ Each source folder also contains its matching `main.pdf`, beside `main.tex`,
 [current release manifest](../release/manifest.json)
 binds the exact sources, bibliographies, PDFs and build receipts. Compilation and source-assembly
 review add no new mathematical or Lean execution.
-All three four-step pdfLaTeX/BibTeX builds passed with zero TeX or BibTeX
+The three earlier four-step pdfLaTeX/BibTeX builds passed with zero TeX or BibTeX
 warnings, no undefined references or citations, and Type 1 fonts.
+The LP submission has separate build and package entries in that manifest.
 
 ## Verification boundaries
 

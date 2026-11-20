@@ -1,0 +1,75 @@
+{
+  "schema": "existing-proof-energy-lp-owner-source-review-v1",
+  "reviewer": "/root/pressure_review",
+  "status": "SOURCE_AND_HAND_REVIEW_ACCEPTED_WITH_BINDING_FINDING_CLOSED",
+  "subjects": {
+    "owner": {"path": "scripts/run_existing_proof_energy_lp_20261118.py", "bytes": 18116, "sha256": "9110bc491ae1619e2152c53640cd2a6a841e8f0f42bf48df18faf1487cbd817b"},
+    "unchanged_genuine_helper": {"path": "scripts/finite_volume_lp_matrix_20261106.py", "bytes": 19078, "sha256": "50a772e45c009f4aa0b1611d3b36eb24c806b468ebdfb1d8585acfee6ff9b88c"},
+    "master_hand_design": {"path": "notes/lp/existing_proof_energy_lp_master_20261118.md", "bytes": 13228, "sha256": "8db2fae0beda8a635b5e14c51ba0a815ce75027130c0ceaa52392719c5ec72ec"},
+    "execution_contract": {"path": "notes/lp/existing_proof_energy_lp_execution_contract_20261118.md", "bytes": 4446, "sha256": "db9694e2db8e05bb1af35304e8466b1ef614f0e64af3bdba6d12932501310478"}
+  },
+  "method": {
+    "full_owner_and_execution_contract_source_read": true,
+    "genuine_helper_export_reader_numerical_candidate_and_exact_checker_read": true,
+    "subsequent_binding_count_guard_and_objective_changes_read": true,
+    "pure_catalogue_modules_independently_reviewed_as_source": true,
+    "scientific_imports_constructors_catalogue_calls_or_model_decoding": false,
+    "tests_compile_solver_or_launch": false
+  },
+  "mathematical_checks": {
+    "primal": "Nonnegative mass, energy and deficit variables; delta=mass-sum energy; all cost rows scaled by mass; matched local exits force mass0; sum deficits=1 exactly normalizes the strict original budget.",
+    "actual_to_primal_lift": "For one covered actual branch use mass=1/(1-sum e) and scaled energies mass*e.",
+    "dual": "Nonnegative local weights, per-energy-slot total capacity<=1, payment>=eta and eta>=1 imply every branch deficit<=0. Complete local-exit multipliers can be chosen eta without energy capacity.",
+    "overlap_and_defect_accounting": "The same slot is shared by every overlapping row; alternative component floors cannot be independently charged.",
+    "objective": "Minimizing minus the sum of local payments changes no feasible constraint or certificate criterion. Every weight has nonempty support and is bounded by a capacity row, so this objective is bounded. It may improve proposal rationalization; no success, integrality or optimality is assumed.",
+    "threshold": "The complete fixed catalogue covers consecutive actual ranks through29; threshold only filters those fixed labels. The external published ceiling29 remains an explicit input.",
+    "no_global_bound_inserted_as_row": true,
+    "retained_theorem_and_coverage_semantics_are_inputs_not_mechanically_reproved": true
+  },
+  "closed_binding_finding": {
+    "original_gap": "A candidate could be checked against a file hash not compared to the just-exported or freshly regenerated authoritative dual; final proof artifacts also needed seals.",
+    "current_closure": [
+      "Export requires solver report model hash equal exported dual hash.",
+      "Successful export also binds the helper's exact-check model hash to that dual.",
+      "Verify regenerates complete primal and dual, compares both saved transports, binds both saved candidate model hashes to the regenerated dual, and requires its newly computed exact-check model hash to match.",
+      "Both stages finally seal catalogue, primal, dual and candidate bytes and rehash every retained source."
+    ]
+  },
+  "source_and_api_checks": {
+    "catalogue_source_hashes_bound_before_loading_and_after_evaluation": true,
+    "catalogue_keys_and_ranks_supports_rationals_theorem_ids_validated": true,
+    "genuine_LinearProgram_LinearRow_export_and_checker_interfaces_match": true,
+    "helper_feasibility_checked_exactly_including_bounds_and_every_row": true,
+    "whole_model_and_catalogue_regeneration_on_verify": true,
+    "solver_status_alone_never_certifies_the_primal": true,
+    "non_exact_candidate_cannot_pass_verify": true
+  },
+  "resource_scope": {
+    "required_outer_owner": "Existing run_bounded_research_check_20261018.py --parent-lock; root owns the scientific launch.",
+    "entry_alarm_seconds": 53,
+    "expected_outer_watchdog_seconds": 59,
+    "expected_outer_RSS_bytes": 1073741824,
+    "numerical_proposal": "Genuine existing helper, one-thread HiGHS proposal with at most25 requested seconds; complete exact checking follows any usable proposal.",
+    "preassembly_guards": {"branches": 20000, "slots": 60000, "cuts": 80000, "support_terms": 160000},
+    "reviewed_fixed_source_upper_counts_for_join": {"branches": 917, "slots": 4585, "cuts": 25963, "support_terms": 77889},
+    "derived_complete_model_upper_counts_checked_by_hand": {
+      "primal_variables": 6420, "primal_rows": 27798, "primal_coefficient_entries": 112106,
+      "dual_variables": 25964, "dual_rows": 5502, "dual_coefficient_entries": 104769
+    },
+    "inherited_transport_caps_unchanged": true,
+    "measured_runtime_or_RSS_fit_claimed": false,
+    "new_generic_heap_or_solver_fit_theorem_claimed": false
+  },
+  "reviewer_contribution": {
+    "authored_or_edited_owner_or_helper": false,
+    "authored_separate_master_hand_design": true,
+    "feedback": "Reported the closed artifact/model-hash binding finding and requested aggregate preassembly bounds. Independently flagged bounded-denominator proposal risk; root added the reviewed payment objective without changing the helper or any local floor."
+  },
+  "scope": {
+    "source_acceptance_only": true,
+    "local_geometric_proofs_replayed": false,
+    "scientific_execution_or_exact_witness_credited": false,
+    "new_bound_or_improvement": false,
+    "remaining": "Root source acceptance, actual serial export-solve and fresh verify for the approved compact and arithmetic catalogue joins."
+  }
+}

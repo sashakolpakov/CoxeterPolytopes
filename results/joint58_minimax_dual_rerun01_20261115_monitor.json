@@ -1,0 +1,50 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK_DISK_OVERRIDE",
+  "command": [
+    "scripts/check_finite_volume_finite58_minimax_dual_20261110.py",
+    "--job",
+    "results/joint58_minimax_dual_rerun_job_20261115.json",
+    "--job-sha256",
+    "2a348ce645ae50823b5e8b603d5d5d1517301e38d2ad3d74f474efd94267a749"
+  ],
+  "elapsed_seconds": 0.946,
+  "peak_process_tree_rss_bytes": 101138432,
+  "initial_resources": {
+    "free_disk_gib": 11.26,
+    "available_memory_gib": 9.86,
+    "disk_free_bytes": 12094693376,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10582835200,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 1.216024,
+    "available_memory_percent": 41.066806,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 598,
+  "stdout": "{\"context_sha256\":\"482f86e29856a8ff1de3605f8ff987d169ea0a10acf2b264721c3e1025673d11\",\"job_sha256\":\"2a348ce645ae50823b5e8b603d5d5d1517301e38d2ad3d74f474efd94267a749\",\"payload\":{\"bytes\":39369,\"path\":\"results/joint58_minimax_dual_rerun01_20261115/payload.json\",\"sha256\":\"45704a8bee92263a021e23db46011abcbeaee3230f2385b4041834446b76950a\"},\"producer_sha256\":\"d8136609379711904b33df9c59c5ebb4eec02b82fe775b68845b566e644f01f0\",\"schema\":\"finite58-minimax-dual-completion-v1\",\"shared_document_sha256\":\"5cb5f54e7b8ea94343d132f36b2f28948bb9ae756c873b8c8390d95ddef6999f\",\"status\":\"PASS_FINITE58_MINIMAX_DUAL\"}\n",
+  "runner_sha256": "8e44d8e06bb82f3effacb844961dff876ebcb005c5ca2261614aeeb93ae8a62d",
+  "runner_baseline_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "disk_admission_override": {
+    "authorization": {
+      "path": "audit/lp_rerun_disk_override_continuation_20261115.json",
+      "sha256": "977be3aa457bd9a4e531fd45809a8f98da5413337b2a6eb8c4a20e4cc58de614",
+      "bytes": 2224
+    },
+    "effective_admission_disk_percent": 1,
+    "scope": "disk admission only"
+  },
+  "checker_sha256": "d8136609379711904b33df9c59c5ebb4eec02b82fe775b68845b566e644f01f0",
+  "lock_owner": "wrapper"
+}

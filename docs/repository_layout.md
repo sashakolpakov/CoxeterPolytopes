@@ -6,18 +6,22 @@ research history have distinct homes.
 
 | Location | Contents |
 |---|---|
-| `arxiv/` | The three paper families and their [submission selection](../arxiv/SUBMISSION.md) |
+| `arxiv/` | Four prepared manuscripts within the three paper families and their [submission selection](../arxiv/SUBMISSION.md) |
 | `arxiv/hyperbolic_coxeter_dimension_bounds/` | Concise 57/17/15 manuscript, matching PDF, bibliography and exact proof-addendum map |
+| `arxiv/linear_programming_dimension_bounds/` | Canonical LP companion submission: single TeX source, bibliography, BBL, matching PDF and build guide |
+| `manuscripts/linear_programming_dimension_bounds/` | Prior reviewed LP working edition: four TeX files and its matching PDF |
 | `manuscripts/addenda/dimension_bounds_20261030/` | Byte-preserved full dimension proof: source, bibliography and 551-page PDF |
 | `dist/` | Latest local upload ZIP and checksum; generated and ignored by Git |
 | `release/manifest.json` | Current manuscript and package index |
 | `release/dimension_bounds/` | Concise-edition preparation and typesetting receipts |
+| `release/linear_programming_dimension_bounds/` | LP submission build and local source-package receipts |
 | `repro/` | Reproduction instructions, pinned requirements, input and archive manifests |
 | `repro/dimension_bounds/` | Current 57/17/15 proposition-to-proof, checker, input and conditional Lean companion |
 | `formal/` | Lean sources, project pins, certificates and retained verification inputs |
 | `results/`, `data/` | Scientific results, certificates, exact inputs and execution evidence at their recorded paths |
 | `audit/` | Repository organization checks, priority evidence and typesetting admission records |
 | `notes/` | Guide to research notes; local exploratory scripts under ignored `notes/experiments/` |
+| `notes/lp/` | LP [reading guide and formulation notes](../notes/lp/README.md), exact recoveries and manuscript inputs; earlier exploratory work remains local |
 | `docs/history/` | Ignored local session history and byte-verified archives of old publication administration |
 | `.publication/` | Protected prepared bulk archives, primary reference inputs, current delivery pointers and live publication work |
 

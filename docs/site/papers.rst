@@ -1,10 +1,11 @@
-The three manuscripts and their proofs
-======================================
+The manuscripts and their proofs
+================================
 
-The project has three current arXiv submission folders.
+The project has four prepared arXiv manuscripts within three paper families.
 One article joins the finite-volume, compact and compact arithmetic dimension
 proofs. The sharp right-angled dimensions and second ideal four-volume remain
-separate articles. Compact RA4 constraints remain a supporting paper outside
+separate articles. The LP companion gives another treatment of the same
+dimension bounds. Compact RA4 constraints remain a supporting paper outside
 these submissions. The mathematical conclusions are unchanged.
 
 .. list-table:: Current submission PDFs
@@ -27,6 +28,10 @@ these submissions. The mathematical conclusions are unchanged.
      - 18
      - Defect count, equality spectrum, actual cutting and restricted recognition.
      - :download:`main.tex <../../arxiv/ideal_four_dimensional_volume_and_structure/main.tex>`, :download:`references.bib <../../arxiv/ideal_four_dimensional_volume_and_structure/references.bib>`, :download:`main.bbl <../../arxiv/ideal_four_dimensional_volume_and_structure/main.bbl>`; :download:`proof map <../ideal_ra4_volume_and_structure_proof_map.md>`.
+   * - :download:`LP certificates for dimension bounds 57 / 17 / 15 <../../arxiv/linear_programming_dimension_bounds/main.pdf>`
+     - 36
+     - Linear feasibility, incidence weights and squared projection norms; exact rational certificates.
+     - :download:`main.tex <../../arxiv/linear_programming_dimension_bounds/main.tex>`, :download:`references.bib <../../arxiv/linear_programming_dimension_bounds/references.bib>`, :download:`main.bbl <../../arxiv/linear_programming_dimension_bounds/main.bbl>`; :download:`submission guide <../../arxiv/linear_programming_dimension_bounds/README.md>`.
 
 The :download:`compact RA4 source <../../manuscripts/compact_ra4_volume_constraints.tex>`
 and :download:`proof map <../compact_ra4_volume_constraints_reproduce_20261019.md>`
@@ -35,7 +40,7 @@ recognition. They do not settle the compact second-volume problem.
 
 .. _arxiv-submission-editions:
 
-The three arXiv submission editions
+The four prepared arXiv manuscripts
 -----------------------------------
 
 Each source folder contains ``main.tex``, ``references.bib`` and the generated
@@ -47,6 +52,18 @@ and include the requested AI-use acknowledgment. The
 :download:`edition guide <../arxiv_submission_editions_20261028.md>` and
 :download:`current source/PDF manifest <../../release/manifest.json>`
 record the exact editions and matching PDF builds.
+
+The LP companion states local inequalities on exhaustive configuration
+classes, then proves their linear programming consequences. The
+:download:`short LP reading guide <../../notes/lp/LP_READING_GUIDE.md>`
+explains the projection-norm variables, dual inequalities and diagram marks.
+Its
+:download:`prior reviewed working edition <../../manuscripts/linear_programming_dimension_bounds/README.md>`
+retains the four TeX files and matching PDF. The canonical submission uses
+one TeX file and a BibTeX bibliography, with separate
+:download:`build <../../release/linear_programming_dimension_bounds/build_language03_20261119.json>`
+and :download:`local package <../../release/linear_programming_dimension_bounds/package_language03_20261119.json>` receipts.
+The package guide identifies the local ZIP; no arXiv upload is claimed.
 
 Open ``main.tex`` in a TeX editor configured for pdfLaTeX and BibTeX, or run
 ``latexmk -pdf main.tex`` from the paper's folder. No Python is needed.

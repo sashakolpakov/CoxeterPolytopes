@@ -23,14 +23,25 @@ for complete case proofs, computational proofs and reproduction records.
 The [release index](release/manifest.json) identifies the current source
 package, retained compiled editions and proof/reproduction guides.
 
-Three **[arXiv submission folders](arxiv/README.md)** contain the current sources:
+Four **[prepared arXiv manuscripts](arxiv/README.md)** belong to the existing
+three paper families:
 [sharp dimensions 8/4, 6 pages](arxiv/sharp_dimension_bounds_8_and_4/main.pdf),
 [second ideal four-volume, 18 pages](arxiv/ideal_four_dimensional_volume_and_structure/main.pdf),
-and [dimension bounds 57/17/15, 41 pages](arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf).
+[dimension bounds 57/17/15, 41 pages](arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf),
+and the [LP companion, 36 pages](arxiv/linear_programming_dimension_bounds/main.pdf).
 Each PDF sits beside its source. The [551-page complete dimension proof
 addenda](manuscripts/addenda/dimension_bounds_20261030/main.pdf) preserve all
 case proofs separately. [Sources and verification scope](docs/arxiv_submission_editions_20261028.md)
 distinguish these copies from preserved earlier editions.
+
+The [LP companion](arxiv/linear_programming_dimension_bounds/README.md)
+recovers 57/17/15 by combining proved local inequalities on exhaustive
+configuration classes. The short [LP reading guide](notes/lp/LP_READING_GUIDE.md)
+explains the variables, the dual inequalities, and marks in a Coxeter diagram.
+The LP submission's source package and receipts are separate from the
+geometric article; the
+[reviewed working edition](manuscripts/linear_programming_dimension_bounds/README.md)
+remains preserved. Local preparation has not submitted a manuscript to arXiv.
 
 | Class | Largest published example | Published ceiling | Repository ceiling |
 |---|---:|---:|---:|
@@ -71,3 +82,6 @@ The [repository map](docs/repository_layout.md) separates manuscript sources,
 local upload archives (`dist/`), release metadata, proof records (`results/`),
 and audits. Historical publication staging is compressed with verified byte
 restoration; recorded scientific inputs retain their original paths.
+
+The [LP research notes](notes/lp/README.md) collect the reading guide,
+three-case formulation and exact recovery records.

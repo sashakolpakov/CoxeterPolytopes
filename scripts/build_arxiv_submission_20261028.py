@@ -80,8 +80,10 @@ def pdf_description(path: Path) -> dict:
 
 
 def build(paper: str, stem: str, pdf: Path, report_path: Path,
-          *, replace_current: bool = False) -> None:
-    source = checked(ROOT / "arxiv" / paper / "main.tex")
+          *, replace_current: bool = False,
+          source_directory: Path | None = None) -> None:
+    folder = source_directory if source_directory is not None else ROOT / "arxiv" / paper
+    source = checked(folder / "main.tex")
     if not source.is_file():
         raise ValueError(f"Missing submission source: {source}")
     with source.open("rb") as stream:

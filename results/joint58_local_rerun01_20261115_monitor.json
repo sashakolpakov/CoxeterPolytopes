@@ -1,0 +1,53 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK_DISK_OVERRIDE",
+  "command": [
+    "scripts/run_finite_volume_joint58_staged_rows_20261110.py",
+    "check-local",
+    "--output-directory",
+    "results/joint58_local_rerun01_20261115",
+    "--candidate",
+    "results/joint58_local_proposal01_20261110/candidate.json",
+    "--candidate-sha256",
+    "ebf8e8ab84df8014897a51ee31684d21ee8f011a74a4927bcaef9755b3f36656"
+  ],
+  "elapsed_seconds": 6.062,
+  "peak_process_tree_rss_bytes": 98893824,
+  "initial_resources": {
+    "free_disk_gib": 11.27,
+    "available_memory_gib": 9.84,
+    "disk_free_bytes": 12096757760,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10568122368,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 1.216231,
+    "available_memory_percent": 41.009712,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 2476,
+  "stdout": "{\"elapsed_seconds\": \"0.026775\", \"event\": \"phase_start\", \"phase\": \"load_frozen_runtime\"}\n{\"duration_seconds\": \"0.041199\", \"elapsed_seconds\": \"0.067975\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"load_frozen_runtime\", \"started_seconds\": \"0.026775\"}\n{\"elapsed_seconds\": \"0.099656\", \"event\": \"phase_start\", \"phase\": \"prepare_fresh_primitives\"}\n{\"duration_seconds\": \"0.064429\", \"elapsed_seconds\": \"0.164085\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"prepare_fresh_primitives\", \"started_seconds\": \"0.099656\"}\n{\"elapsed_seconds\": \"0.164108\", \"event\": \"phase_start\", \"phase\": \"capture_primitive_state\"}\n{\"duration_seconds\": \"0.038267\", \"elapsed_seconds\": \"0.202375\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"capture_primitive_state\", \"started_seconds\": \"0.164108\"}\n{\"elapsed_seconds\": \"0.218798\", \"event\": \"phase_start\", \"phase\": \"check_every_local_row\"}\n{\"duration_seconds\": \"5.728155\", \"elapsed_seconds\": \"5.946953\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"check_every_local_row\", \"started_seconds\": \"0.218798\"}\n{\"elapsed_seconds\": \"5.948144\", \"event\": \"phase_start\", \"phase\": \"final_primitive_state\"}\n{\"duration_seconds\": \"0.039461\", \"elapsed_seconds\": \"5.987605\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"final_primitive_state\", \"started_seconds\": \"5.948144\"}\n{\"assembly_sha256\": \"c7b2d0c92cb099641822e8da196cbbb2a6fb3052c7f486a44420d77b9929cd38\", \"complete_finite58_evidence_checked\": false, \"completion_receipt\": {\"bytes\": 36191, \"path\": \"results/joint58_local_rerun01_20261115/completed.json\", \"sha256\": \"92044782f55d6a0701a267294125853f7d19fca3c73428b1b14892b89fcff951\"}, \"counts\": {\"columns\": 5810, \"equalities\": 5696, \"inequalities\": 97910, \"nonzeros\": 935736, \"rows\": 103606}, \"global_dimension_bound_verified\": false, \"phase_timings\": [{\"duration_seconds\": \"0.041199\", \"outcome\": \"returned\", \"phase\": \"load_frozen_runtime\", \"started_seconds\": \"0.026775\"}, {\"duration_seconds\": \"0.064429\", \"outcome\": \"returned\", \"phase\": \"prepare_fresh_primitives\", \"started_seconds\": \"0.099656\"}, {\"duration_seconds\": \"0.038267\", \"outcome\": \"returned\", \"phase\": \"capture_primitive_state\", \"started_seconds\": \"0.164108\"}, {\"duration_seconds\": \"5.728155\", \"outcome\": \"returned\", \"phase\": \"check_every_local_row\", \"started_seconds\": \"0.218798\"}, {\"duration_seconds\": \"0.039461\", \"outcome\": \"returned\", \"phase\": \"final_primitive_state\", \"started_seconds\": \"5.948144\"}], \"status\": \"EXACT_AUTHENTICATED_LOCAL_ROWS_CHECKED\"}\n",
+  "runner_sha256": "8e44d8e06bb82f3effacb844961dff876ebcb005c5ca2261614aeeb93ae8a62d",
+  "runner_baseline_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "disk_admission_override": {
+    "authorization": {
+      "path": "audit/lp_rerun_disk_override_continuation_20261115.json",
+      "sha256": "977be3aa457bd9a4e531fd45809a8f98da5413337b2a6eb8c4a20e4cc58de614",
+      "bytes": 2224
+    },
+    "effective_admission_disk_percent": 1,
+    "scope": "disk admission only"
+  },
+  "checker_sha256": "f99b65ac514980f6260f3b15d8d68f4a7dd30fffcba1d89c063d003e65d0d69c",
+  "lock_owner": "wrapper"
+}

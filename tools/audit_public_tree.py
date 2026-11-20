@@ -2,7 +2,7 @@
 """Reject build debris, oversized blobs and secret markers in the Git index.
 
 Reads staged Git blobs, not potentially different working files. Keeps the
-three current submission PDFs, source-generated mathematical certificates and
+four current submission PDFs, source-generated mathematical certificates and
 verification records. This checks publication hygiene, not mathematics.
 """
 from __future__ import annotations
@@ -17,6 +17,7 @@ PAPERS = {
     "arxiv/sharp_dimension_bounds_8_and_4/main.pdf",
     "arxiv/ideal_four_dimensional_volume_and_structure/main.pdf",
     "arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf",
+    "arxiv/linear_programming_dimension_bounds/main.pdf",
 }
 PROOF_ADDENDA_PDF = "manuscripts/addenda/dimension_bounds_20261030/main.pdf"
 SUFFIXES = {".pyc", ".pyo", ".olean", ".ilean", ".o", ".bc", ".ir", ".blg",

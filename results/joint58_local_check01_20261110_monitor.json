@@ -1,0 +1,43 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_finite_volume_joint58_staged_rows_20261110.py",
+    "check-local",
+    "--output-directory",
+    "results/joint58_local_check01_20261110",
+    "--candidate",
+    "results/joint58_local_proposal01_20261110/candidate.json",
+    "--candidate-sha256",
+    "ebf8e8ab84df8014897a51ee31684d21ee8f011a74a4927bcaef9755b3f36656"
+  ],
+  "elapsed_seconds": 9.252,
+  "peak_process_tree_rss_bytes": 98877440,
+  "initial_resources": {
+    "free_disk_gib": 27.72,
+    "available_memory_gib": 8.15,
+    "disk_free_bytes": 29760438272,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 8754774016,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 2.992171,
+    "available_memory_percent": 33.972994,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 2476,
+  "stdout": "{\"elapsed_seconds\": \"0.037102\", \"event\": \"phase_start\", \"phase\": \"load_frozen_runtime\"}\n{\"duration_seconds\": \"0.059451\", \"elapsed_seconds\": \"0.096553\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"load_frozen_runtime\", \"started_seconds\": \"0.037102\"}\n{\"elapsed_seconds\": \"0.137383\", \"event\": \"phase_start\", \"phase\": \"prepare_fresh_primitives\"}\n{\"duration_seconds\": \"0.091951\", \"elapsed_seconds\": \"0.229334\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"prepare_fresh_primitives\", \"started_seconds\": \"0.137383\"}\n{\"elapsed_seconds\": \"0.229359\", \"event\": \"phase_start\", \"phase\": \"capture_primitive_state\"}\n{\"duration_seconds\": \"0.054118\", \"elapsed_seconds\": \"0.283477\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"capture_primitive_state\", \"started_seconds\": \"0.229359\"}\n{\"elapsed_seconds\": \"0.307682\", \"event\": \"phase_start\", \"phase\": \"check_every_local_row\"}\n{\"duration_seconds\": \"8.783719\", \"elapsed_seconds\": \"9.091402\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"check_every_local_row\", \"started_seconds\": \"0.307682\"}\n{\"elapsed_seconds\": \"9.093043\", \"event\": \"phase_start\", \"phase\": \"final_primitive_state\"}\n{\"duration_seconds\": \"0.062417\", \"elapsed_seconds\": \"9.155461\", \"event\": \"phase_end\", \"outcome\": \"returned\", \"phase\": \"final_primitive_state\", \"started_seconds\": \"9.093043\"}\n{\"assembly_sha256\": \"c7b2d0c92cb099641822e8da196cbbb2a6fb3052c7f486a44420d77b9929cd38\", \"complete_finite58_evidence_checked\": false, \"completion_receipt\": {\"bytes\": 36191, \"path\": \"results/joint58_local_check01_20261110/completed.json\", \"sha256\": \"d2adf7fbc1036f0f91ea548df8a732d4017ad34d2eafb4572e59fce75944eb1a\"}, \"counts\": {\"columns\": 5810, \"equalities\": 5696, \"inequalities\": 97910, \"nonzeros\": 935736, \"rows\": 103606}, \"global_dimension_bound_verified\": false, \"phase_timings\": [{\"duration_seconds\": \"0.059451\", \"outcome\": \"returned\", \"phase\": \"load_frozen_runtime\", \"started_seconds\": \"0.037102\"}, {\"duration_seconds\": \"0.091951\", \"outcome\": \"returned\", \"phase\": \"prepare_fresh_primitives\", \"started_seconds\": \"0.137383\"}, {\"duration_seconds\": \"0.054118\", \"outcome\": \"returned\", \"phase\": \"capture_primitive_state\", \"started_seconds\": \"0.229359\"}, {\"duration_seconds\": \"8.783719\", \"outcome\": \"returned\", \"phase\": \"check_every_local_row\", \"started_seconds\": \"0.307682\"}, {\"duration_seconds\": \"0.062417\", \"outcome\": \"returned\", \"phase\": \"final_primitive_state\", \"started_seconds\": \"9.093043\"}], \"status\": \"EXACT_AUTHENTICATED_LOCAL_ROWS_CHECKED\"}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "f99b65ac514980f6260f3b15d8d68f4a7dd30fffcba1d89c063d003e65d0d69c",
+  "lock_owner": "wrapper"
+}

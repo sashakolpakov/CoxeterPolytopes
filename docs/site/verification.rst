@@ -1,7 +1,7 @@
 What has actually been verified
 ===============================
 
-Updated 26 October 2026. The repository contains internally reviewed
+Updated 20 November 2026. The repository contains internally reviewed
 written arguments, scoped exact computations, selected conditional Lean
 kernels and matching compiled PDFs. Each has its own evidence. No
 complete geometric formalization or fresh combined whole-manuscript
@@ -57,7 +57,8 @@ successful unchanged jobs are not rerun merely to refresh documentation.
 Current manuscripts and typesetting evidence
 --------------------------------------------
 
-The three current submission sources have isolated PDF builds. The
+There are four prepared manuscripts within the existing three paper families.
+The
 :download:`current manifest <../../release/manifest.json>`
 binds each source to its PDF and build receipt.
 
@@ -81,6 +82,11 @@ binds each source to its PDF and build receipt.
      - 41
      - None
      - :download:`Combined build <../../release/dimension_bounds/build_ideas_final_20261104.json>`.
+   * - LP certificates for dimension bounds 57/17/15
+     - 36
+     - See receipt
+     - :download:`LP build <../../release/linear_programming_dimension_bounds/build_language03_20261119.json>`;
+       :download:`local source-package receipt <../../release/linear_programming_dimension_bounds/package_language03_20261119.json>`.
 
 The selected ``main.tex`` and ``references.bib`` are copied into a temporary
 directory. The build runs pdfLaTeX, BibTeX and two further pdfLaTeX passes,
@@ -91,10 +97,21 @@ replay. Source-preservation review checks the assembly against its existing
 proof families. Layout inspection is sampled; the current record makes no
 claim that every page of the full proof addendum was visually inspected.
 
-All three pdfLaTeX/BibTeX sequences passed with zero TeX or BibTeX warnings,
+The three earlier pdfLaTeX/BibTeX sequences recorded on 30 October and
+4 November passed with zero TeX or BibTeX warnings,
 no undefined references or citations, and Type 1 fonts. Their temporary build
 products were removed; the generated bibliographies remain in the submission
 folders.
+
+The LP companion's separate preparation converts the reviewed working TeX
+edition into a single submission source and BibTeX bibliography. Its local
+inequalities, complete geometric and arithmetic domains, original-field
+conditions and local exclusions retain their roles as theorem inputs.
+The global LP recovery has its own exact certificate records; the new
+typesetting and package receipts do not repeat those computations. The
+final three-file ZIP is local, as explained in the
+:download:`submission guide <../../arxiv/linear_programming_dimension_bounds/README.md>`;
+no arXiv upload or site deployment is claimed by this preparation.
 
 The long case appendices discharge necessary proof obligations. The arithmetic
 argument uses the independently proved compact theorem within the same

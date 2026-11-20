@@ -1,0 +1,867 @@
+\section{Finite volume: a charge on vertex--face incidences}
+\label{fv:section}
+
+Count each corner once at its face and once at its vertex. We seek a
+single corner charge that pays the face demands while respecting the
+vertex allowances. The resulting charge is a dual certificate for the
+necessary incidence problem. Searching for it in a specified family is
+a second LP; its optimum is a property of that family, rather than a
+geometric assumption.
+
+\subsection{Vertex figures and the incidence allowance}
+\label{fv:incidence}
+
+Fix an integer $n\ge58$. A \emph{corner} is an incidence
+$\kappa=(v,F)$ of a vertex $v$ and a two-dimensional face $F$.
+The number of sides of $F$ is denoted by $s(F)$, and
+\begin{equation}\label{fv:defect}
+ D_5(P)=\sum_{\dim F=2}(5-s(F)).
+\end{equation}
+A triangle contributes two, a quadrilateral contributes one, and a
+face with at least five sides contributes a nonpositive number.
+
+We use the standard vertex-figure description of a finite-volume
+Coxeter polytope. At a finite vertex the figure is a simplex. At an
+ideal vertex a horospherical figure is a product
+\begin{equation}\label{fv:link}
+ L_v=\prod_{i=1}^k\Delta^{r_i},\qquad
+ r_i\ge1,\qquad \sum_i r_i=n-1.
+\end{equation}
+Here $r_i$ is the dimension of a simplex factor, not the number of
+nodes of its affine diagram. That diagram has $r_i+1$ nodes and Gram
+rank $r_i$. These vertex-figure statements, including their applicability
+to nonsimple ideal vertices, are retained geometric inputs from
+\cite{BoundsArticle,BoundsSupplement}.
+
+Put $r=n-1$. Write the $h$-polynomial of the figure as
+\begin{equation}\label{fv:hpolynomial}
+ h_v(t)=\sum_{j=0}^r h_{v,j}t^j,
+ \qquad
+ h_v(t)=\prod_i(1+t+\cdots+t^{r_i})
+ \quad\hbox{at an ideal vertex}.
+\end{equation}
+At a finite vertex $h_{v,j}=1$ for every $0\le j\le r$.
+Define
+\begin{equation}\label{fv:allowance-general}
+ V_v=\sum_{j=0}^r h_{v,j},\qquad
+ G_v=\sum_{j=0}^r h_{v,j}\min(j,r-j),\qquad
+ b_n(v)=\frac52G_v-\frac r2V_v.
+\end{equation}
+The quantity $V_v$ is the number of vertices of the vertex figure.
+It equals $n$ at a finite vertex and $\prod_i(r_i+1)$ at an ideal
+vertex. Every vertex of the figure has degree $r$, so its number of
+edges is $E_v=rV_v/2$. These edges correspond to corners at $v$.
+
+For a finite vertex, the sum in \eqref{fv:allowance-general} gives
+\begin{equation}\label{fv:finite-allowance}
+ \beta_n=b_n(v)=
+ \begin{cases}
+ n(n-6)/8,&n\text{ even},\\
+ (n-1)(n-5)/8,&n\text{ odd}.
+ \end{cases}
+\end{equation}
+At an ideal vertex we write
+\begin{equation}\label{fv:ideal-allowance}
+ K_n(v)=\frac{5\sum_jh_{v,j}\min(j,n-1-j)-(n-1)V_v}{2}.
+\end{equation}
+Thus $K_n(v)=b_n(v)$; the separate letter only distinguishes the
+ideal allowance from the constant finite allowance $\beta_n$.
+
+The incidence input needed below has the following precise form.
+
+\begin{assumption}[Incidence excess]\label{fv:incidence-excess}
+Let $P\subset\HH^n$ be a finite-volume Coxeter polytope, with the
+vertex figures described above. The incidence theorem of
+\cite{BoundsSupplement} gives
+\begin{equation}\label{fv:incidence-excess-eq}
+ D_5(P)\ge\sum_v b_n(v)+\Delta_n,
+ \qquad \Delta_n\ge5(n-1)>0.
+\end{equation}
+\end{assumption}
+
+This imports the height-index argument, including its strict excess,
+as one geometric input. The LP need only prove
+$D_5(P)\le\sum_vb_n(v)$; it need not produce a positive charge margin.
+
+\subsection{The incidence feasibility problem and its charge certificate}
+\label{fv:incidence-primal}
+
+We first give the formulation without choosing particular corner
+features. Fix a vector of rational features $\Psi(\kappa)\in\Q^d$.
+The same feature vector must be used when a corner is viewed from its
+face and when it is viewed from its vertex. A vertex type $V$ includes
+its complete decorated vertex diagram or product-link data. A small-face
+type $Q$ includes a triangle or quadrilateral together with its coherent
+corner descriptions. Set
+\begin{equation}\label{fv:feature-sums}
+ A(V)=\sum_{\kappa\text{ at }V}\Psi(\kappa),\qquad
+ A(Q)=\sum_{\kappa\text{ on }Q}\Psi(\kappa),\qquad
+ d(Q)=5-s(Q).
+\end{equation}
+All domains used here are necessary domains: every actual vertex and
+small face must have an allowed description. An allowed description
+need not extend to an actual polytope.
+
+Introduce nonnegative variables $x_V$ for vertex types, $y_Q$ for
+small-face types, and $z_\kappa$ for allowed individual corners. The
+last variables account for corners belonging to faces with at least
+five sides. The incidence feasibility problem is
+\begin{align}
+ \sum_VA(V)x_V-\sum_QA(Q)y_Q-
+       \sum_\kappa\Psi(\kappa)z_\kappa&=0,
+       \label{fv:primal-balance}\\
+ \sum_Qd(Q)y_Q-\sum_Vb_n(V)x_V&=1.
+       \label{fv:primal-normalization}
+\end{align}
+If a domain is infinite, the variables may be read as finitely
+supported nonnegative measures. Actual polytopes use only finitely
+many incidences, which is all that the argument needs.
+
+\begin{lemma}\label{fv:actual-lift}
+An actual finite-volume Coxeter polytope gives a feasible point of
+\eqref{fv:primal-balance}--\eqref{fv:primal-normalization} whenever
+the allowed domains contain all its local descriptions.
+\end{lemma}
+
+\begin{proof}
+Let $f_3$ and $f_4$ be the numbers of triangular and quadrilateral
+two-faces, and put
+\[
+ L=2f_3+f_4-\sum_vb_n(v).
+\]
+Since the other two-faces contribute nonpositively to $D_5(P)$,
+Input~\ref{fv:incidence-excess} gives
+$L\ge\Delta_n>0$. Divide each actual vertex count, small-face count
+and residual-corner count by $L$. Counting the same corners by vertices
+and by faces gives \eqref{fv:primal-balance}. The definition of $L$
+gives \eqref{fv:primal-normalization}.
+\end{proof}
+
+The residual variables in \eqref{fv:primal-balance} are important.
+Their contribution has not disappeared merely because their faces have
+nonpositive demand. Feature conservation still counts those corners.
+
+\begin{proposition}[Charge certificate]\label{fv:charge-certificate}
+Suppose a coefficient vector $\theta\in\R^d$ satisfies
+\begin{align}
+ b_n(V)-\theta\cdot A(V)&\ge0 &&\text{for every allowed vertex type},
+    \label{fv:vertex-certificate}\\
+ \theta\cdot A(Q)-d(Q)&\ge0 &&\text{for every allowed small face},
+    \label{fv:face-certificate}\\
+ \theta\cdot\Psi(\kappa)&\ge0 &&\text{for every allowed corner}.
+    \label{fv:corner-certificate}
+\end{align}
+Then the incidence feasibility problem is infeasible.
+\end{proposition}
+
+\begin{proof}
+Use Theorem~\ref{thm:homogeneous-certificate}, reversing the sign of
+\eqref{fv:primal-balance}. The vertex, small-face and residual-corner
+columns $(T,d)$ are respectively $(-A(V),-b_n(V))$,
+$(A(Q),d(Q))$ and $(\Psi(\kappa),0)$; take $\lambda=\theta$.
+The three displayed conditions are exactly its certificate inequalities.
+\end{proof}
+
+Equivalently, $w(\kappa)=\theta\cdot\Psi(\kappa)$ pays every triangle
+and quadrilateral and stays within every vertex allowance. Faces with
+at least five sides are already paid by nonnegative corner charges.
+Summing gives $D_5(P)\le\sum_vb_n(v)$, contradicting incidence.
+This is a direct weak-duality argument. It makes no use of
+infinite-dimensional strong duality or a realization theorem for the
+allowed local descriptions.
+
+\subsection{The corner features used in the recovered certificate}
+\label{fv:features}
+
+We now specify the finite-dimensional family used in the actual
+certificate. Its basic feature vector is
+$\phi(\kappa)\in\Q^{26}$. A feature is a function of the decorated
+corner, whereas its coefficient is an optimization variable.
+
+At a finite vertex, the spherical diagram is a disjoint union of
+connected finite diagrams. Its two marks are the two nodes determining
+the corner. At an ideal vertex a corner corresponds to an edge of
+the product \eqref{fv:link}: one simplex factor varies along an edge,
+and a vertex is selected in every other factor. The varying affine
+diagram has two marked nodes. Each other factor contributes the finite
+diagram obtained by deleting the node selected by its vertex. These
+finite residual diagrams are retained in the corner description.
+
+We number $A_r$ along its path by $0,\ldots,r-1$. We number $D_r$
+along the spine $0,\ldots,r-3$, with leaves $r-2,r-1$ attached to
+$r-3$. The remaining finite and affine diagrams use the fixed
+numberings of the rational tables in \cite{BoundsSupplement}.
+One numbering is selected for a complete vertex diagram and used at
+all its corners. A relabelling must carry the numbering with it; one
+cannot choose a new favourable numbering separately at every corner.
+
+Set $\phi_0=1$. Features $\phi_1,\phi_2,\phi_3$ are respectively
+the prescribed ordinary pair weight for two marks in the same finite
+component, the affine pair weight in the varying ideal factor, and
+the ordinary weight for marks in different finite component copies;
+each is zero outside its stated case. Their fixed rational tables,
+including exceptional small ranks, are the intrinsic corner tables of
+\cite{BoundsSupplement}. We use their final edition: in particular,
+the ordinary $B_{13}$ endpoint entry is zero.
+
+The next fifteen features are indicators. Each is one when the two
+marks lie in a copy of the displayed component at the displayed
+unordered pair, and when the final column holds. Otherwise it is zero.
+A component mentioned as a witness is a connected component of the
+complete corner diagram disjoint from the marked component. Put
+$M_{15}=m_{A_{15}}+m_{D_{15}}$, the number of such finite components.
+\begin{center}\small
+\begin{tabular}{cllp{.30\textwidth}}
+\toprule
+$j$&Marked type&Marked pair&Witness condition\\\midrule
+4&$A_{13}$&$\{0,12\}$&An $A_1$ occurs.\\
+5&$A_{14}$&$\{0,13\}$&An $A_1$ occurs.\\
+6,7&$A_{15}$&$\{0,13\},\{1,14\}$&An $A_1$ occurs.\\
+8,9&$D_{15}$&$\{1,13\},\{1,14\}$&An $A_1$ occurs.\\
+10,11&$A_{16}$&$\{1,12\},\{3,14\}$&An $A_1$ occurs.\\
+12,13&$D_{16}$&$\{0,14\},\{0,15\}$&An $A_1$ occurs.\\
+14,15&$D_{14}$&$\{0,12\},\{0,13\}$&An $A_1,A_2$ or $A_3$ occurs.\\
+16,17&$D_{13}$&$\{0,11\},\{0,12\}$&$M_{15}\ge3$.\\
+18&$D_{28}$&$\{0,12\}$&$M_{15}\ge2$.\\
+\bottomrule
+\end{tabular}
+\end{center}
+In a row with two feature indices, the two marked pairs correspond
+in the displayed order.
+The final seven indicators concern different finite component copies:
+\begin{center}\small
+\begin{tabular}{cp{.48\textwidth}p{.31\textwidth}}
+\toprule
+$j$&Marked components and allowed nodes&Witness condition\\\midrule
+19&$A_4:\{0,3\}$ and $A_{12}:\{1,10\}$&An $A_1$ occurs.\\
+20&$A_2:\{0,1\}$ and $A_4:\{0,3\}$&An $A_1$ and an $A_{10}$ occur.\\
+21&$A_2:\{0,1\}$ and $D_5:\{0\}$&An $A_1$ and an $A_9$ occur.\\
+22&$A_1:\{0\}$ and $D_5:\{0\}$&An $A_{11}$ occurs, or both an $A_9$ and an $A_2$ occur.\\
+23&$A_1:\{0\}$ and $D_5:\{0\}$&An $A_9$ and an $A_2$ occur.\\
+24&$A_{12}:\{0,11\}$ and $D_{16}:\{0\}$&$M_{15}\ge2$.\\
+25&Two distinct $A_2$ copies, with either node in each&An $A_{10}$ and at least two $A_1$ copies occur.\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are indicators of unordered marked pairs, not oriented-pair
+counts. Features 22 and 23 deliberately overlap. Feature 25 vanishes
+when the two marks lie in one $A_2$ copy. The raw features all lie in
+$[0,1]$; this does not imply nonnegativity of an arbitrary linear
+combination of them.
+
+There is one additional ideal-corner indicator, denoted $\chi_B$.
+Write $\Gamma[m]$ for an affine diagram with $m$ nodes and rank $m-1$.
+The indicator is one precisely when the varying factor is $B[13]$,
+the marked pair is $\{10,11\}$ or $\{10,12\}$, and the complete
+residual finite diagram contains at least three components of types
+$A_{15}$ or $D_{15}$. It is zero otherwise. Thus $B[13]$ denotes
+standard type $\widetilde B_{12}$, not a finite rank-13 component.
+The residual diagrams are formed by the other factors' one-node
+deletions. One does not first delete the two marked nodes and count
+newly separated pieces in the varying factor.
+
+Let $\epsilon_n=[n=58]$. Use free vectors
+$a^{58},a^{\rm tail}\in\R^{26}$ and parameters $\lambda,\rho\ge0$.
+The searched charge is
+\begin{equation}\label{fv:piecewise-charge}
+ w(\kappa)=
+ \bigl(\epsilon_na^{58}+(1-\epsilon_n)a^{\rm tail}\bigr)
+       \cdot\phi(\kappa)+\epsilon_n\lambda\chi_B(\kappa).
+\end{equation}
+Its 53 conserved features are
+\begin{equation}\label{fv:conserved-features}
+ \Psi(\kappa)=
+ (\epsilon_n\phi(\kappa),(1-\epsilon_n)\phi(\kappa),
+                     \epsilon_n\chi_B(\kappa)).
+\end{equation}
+The margin $\rho$ is a separate certificate variable, giving 54
+shared variables in total. It is not another corner feature.
+The coefficient vectors are free: some entries in the successful
+certificate are negative. Nonnegativity is imposed on the resulting
+charge on admitted corners, rather than on every coefficient.
+
+The finite table construction used in the checked endpoint network
+has a declared ambient range through rank 58. No assertion about
+larger dimensions is obtained by running that constructor outside
+its range. The meaning and validity of \eqref{fv:piecewise-charge}
+above the endpoint come from the separately retained all-rank face
+theorems and analytic vertex estimates described below.
+
+\subsection{The geometric face inputs and their linear conclusions}
+\label{fv:face-inputs}
+
+The small-face theorems determine which marked components and original
+supporting walls can occur together, and which estimates can pay one
+face. We retain their complete domains as the following LP interface.
+
+\begin{assumption}[Retained local face theorems]\label{fv:face-assumption}
+Use the complete corner, triangle and quadrilateral coverage of
+\cite{BoundsSupplement}, together with the common-coefficient
+transfers recorded in \cite{LPRepository}. Their coefficient conditions
+form the declared local linear system $\mathcal L$. It contains the
+corner and triangle rows on both dimension branches; the guarded
+ideal and finite $D_{13}$ conditions; the fork and additional
+rank-16 conditions; and the complete retained quadrilateral
+coefficient conditions, including both branch-specific $A_{13}$ rows.
+For any feasible shared coefficients, with the stated auxiliary
+certificate variables, these theorems imply
+\eqref{fv:face-certificate}--\eqref{fv:corner-certificate} for every
+actual corner, triangle and quadrilateral in every $n\ge58$.
+When a local transfer uses equalities forced by the endpoint vertex
+budgets, its hypotheses include the complete network conditions of
+Section~\ref{fv:finite-network}; those equalities are not presumed as
+independent geometric axioms.
+\end{assumption}
+
+The word ``conditions'' in this input refers to restrictions
+on searched charge coefficients. It does not assert that a polytope
+has to satisfy numerical inequalities in variables $a^{58}$ and
+$a^{\rm tail}$. Those variables describe a proof we are constructing.
+Nor are the conditions claimed necessary for every possible valid
+charge. For example, the retained $A_{13}$ argument uses
+\begin{equation}\label{fv:A13-rows}
+ a^{58}_0+a^{58}_4\ge1,
+ \qquad a^{\rm tail}_0+a^{\rm tail}_4\ge1.
+\end{equation}
+These rows are part of this specified sufficient certificate family.
+
+The coverage retains actual wall identities, ordered marks, complete
+maps into the fixed numbered diagrams, residual choices at ideal links,
+and every original wall used by an auxiliary construction. These are
+the applicability conditions of the imported theorem; an inverse-Gram
+calculation alone does not supply them. Face payments from different
+alternatives are never added as though they belonged to disjoint corners.
+
+Two examples show the actual linear form. For either branch vector
+$z=a^{58}$ or $a^{\rm tail}$, the retained conditions include
+\begin{align}
+ 4z_0+z_3/16+z_{22}+z_{23}&\ge1,
+       \label{fv:example-face-P}\\
+ 4z_0+z_3/2+z_{21}&\ge1.
+       \label{fv:example-face-M}
+\end{align}
+The geometric domains on which these rows pay the face are part
+of their respective local theorems. The coefficients are not inferred
+from the appearance of a matching type name elsewhere in a face.
+The electronic local matrix gives every retained row and its source
+association. Its geometric validity is the content of the cited local
+results, not a consequence of the matrix having rational entries.
+
+\subsection{Finite vertices: an exact vector-cost network}
+\label{fv:finite-network}
+
+At a finite vertex the marks range over all unordered pairs of
+nodes in a spherical forest. A formal forest has nonnegative integer
+component multiplicities $m_T$ satisfying
+\begin{equation}\label{fv:forest-rank}
+                  \sum_T r_Tm_T=58,
+\end{equation}
+where $r_T$ is the rank of type $T$. We use the finite collection of
+weight types of the rational catalogue. A symbolic dihedral family
+can be represented by one weight type only when its complete feature
+table is the same throughout the stated parameter range and that
+range is covered by the local theorem. A finite sample of labels is
+not used in place of an unbounded family.
+
+Let
+\[
+ \Phi(m)=\sum_{\kappa\text{ at the formal vertex}}\phi(\kappa).
+\]
+Every actual finite vertex supplies an admitted formal forest. The
+converse is not required. We seek the family of inequalities
+\begin{equation}\label{fv:finite-budget-endpoint}
+                   a^{58}\cdot\Phi(m)+\rho\le377
+                  \quad\hbox{for every }m\text{ satisfying
+                  \eqref{fv:forest-rank}}.
+\end{equation}
+The right side is the incidence allowance
+$\beta_{58}=58(58-6)/8$, rather than an assumed optimized vertex cost.
+
+Here is the structure that makes this large family a network LP.
+For one component $T$, let $S_T$ be the sum of its ordinary
+same-component entries; for different component types $T,U$, let
+$B_{TU}$ be the sum of their ordinary cross entries. Using $u_j$
+for the $j$th coordinate vector of $\Q^{26}$ gives
+\begin{equation}\label{fv:first-aggregates}
+ \Phi_0=\binom{58}{2},\qquad
+ \Phi_1=\sum_Tm_TS_T,\qquad
+ \Phi_2=0,\qquad
+ \Phi_3=\sum_{T<U}m_Tm_UB_{TU}.
+\end{equation}
+Features 4--18 sum to the marked-type multiplicity times their witness
+indicator. The remaining coordinates follow by counting the unordered
+mark pairs in the table: for example,
+$\Phi_{19}=4m_{A_4}m_{A_{12}}[m_{A_1}>0]$ and
+$\Phi_{25}=4\binom{m_{A_2}}2[m_{A_{10}}>0,m_{A_1}\ge2]$.
+Brackets denote Boolean indicators; the factors four count node choices,
+not orientations.
+
+Fix the multiplicities $h_H=m_H$ of the types in
+\begin{equation}\label{fv:high-set}
+ \mathcal H=\{A_9,\ldots,A_{17},B_9,\ldots,B_{12},
+                    D_9,\ldots,D_{16},D_{28}\}.
+\end{equation}
+Also fix $a=m_{A_1}$ and $b=m_{A_2}$; call the resulting tuple an
+interface $I$. Let
+\[
+ M_h=58-\sum_Hr_Hh_H,\qquad R_I=M_h-a-2b.
+\]
+All nonzero ordinary cross terms have exactly one endpoint in
+$\mathcal H$. After an interface is fixed, the remaining vector cost
+is additive in the residual component counts, except for one
+$A_3$-presence condition. More precisely, let $\mathcal R$ be the
+remaining type alphabet after removing $\mathcal H,A_1,A_2$, and put
+$\mathcal S=\mathcal R\setminus\{A_3\}$. Define
+\[
+ p_T^h=S_Tu_1+\Bigl(\sum_Hh_HB_{TH}\Bigr)u_3.
+\]
+For residual types other than $A_4,D_5$ use $p_{I,T}=p_T^h$.
+The two exceptions have the complete vector costs
+\begin{align}
+ p_{I,A_4}={}&p_{A_4}^h+4h_{A_{12}}[a>0]u_{19}
+                    +4b[a>0,h_{A_{10}}>0]u_{20},\notag\\
+ p_{I,D_5}={}&p_{D_5}^h+2b[a>0,h_{A_9}>0]u_{21}\notag\\
+ &+a[h_{A_{11}}>0\text{ or }(h_{A_9}>0,b>0)]u_{22}
+                    +a[h_{A_9}>0,b>0]u_{23}.
+                    \label{fv:residual-costs}
+\end{align}
+Let $K_I$ contain $\binom{58}{2}u_0$ and all terms of the feature
+sum involving only the fixed counts $h,a,b$, including the fixed
+same-component indicators. Put
+\[
+              \gamma_I=h_{D_{14}}[a=b=0](u_{14}+u_{15}).
+\]
+Then, with $k=m_{A_3}$,
+\begin{equation}\label{fv:vector-cost-identity}
+ \Phi(m)=K_I+kp_{I,A_3}+[k>0]\gamma_I
+                         +\sum_{T\in\mathcal S}m_Tp_{I,T}.
+\end{equation}
+This identity follows directly from the feature definitions: the only
+unfixed witness is $A_3$ in the $D_{14}$ indicators, the unfixed cross
+terms are linear in $A_4,D_5$, and the others are fixed by $I$.
+
+An entry for $(I,k)$ has vector cost
+$K_I+kp_{I,A_3}+[k>0]\gamma_I$ and residual rank $R_I-3k$.
+A transition removes a type $T\in\mathcal S$, reduces rank by
+$r_T$, and contributes vector cost $p_{I,T}$. Only rank-feasible
+interfaces, entries and reachable residual states occur. Rank strictly
+decreases along every transition, so the graph is acyclic.
+
+\begin{lemma}[Exact network formulation]\label{fv:network-exact}
+Every admitted formal forest has a path whose vector cost is
+$\Phi(m)$, and every path gives admitted counts of total rank 58.
+Consequently the maximum path charge equals
+$\max_m a^{58}\cdot\Phi(m)$ for every signed vector $a^{58}$.
+\end{lemma}
+
+\begin{proof}
+The interface, entry and residual transitions select exactly the
+nonnegative counts in \eqref{fv:forest-rank};
+\eqref{fv:vector-cost-identity} gives the path cost. Different removal
+orders can repeat a forest but cannot change its cost. A unit flow on
+this acyclic graph is a convex combination of complete paths, so its
+maximum linear cost is the maximum path cost.
+\end{proof}
+
+For a fixed high assignment, interfaces may share a residual network
+only if their complete vectors $p_{I,A_4},p_{I,D_5}$ agree. The other
+residual costs are already fixed by $h$. Such sharing retains every
+entry separately. Equality of scalar costs at one previously selected
+charge would not justify sharing while the charge coefficients vary.
+
+For a network fragment $S$, write $v_{S,g,\ell}$ for free potentials
+at reachable residual rank $\ell$ in sharing group $g$. Let $U_S$ be a
+free fragment upper bound. The rows are
+\begin{align}
+ v_{S,g,0}&=0,\notag\\
+ v_{S,g,\ell}-v_{S,g,\ell-r_T}
+                  &\ge a^{58}\cdot p_{g,T},\notag\\
+ U_S-v_{S,g(I),R_I-3k}
+                  &\ge a^{58}\cdot(K_I+kp_{I,A_3}+[k>0]\gamma_I),
+                  \label{fv:network-lp}\\
+ U_S+\rho&\le377.\notag
+\end{align}
+All fragments use the same $a^{58},\rho$ and retain every residual
+type; only potentials are private. Telescoping gives every path bound.
+Conversely, maximum residual-completion costs give feasible potentials.
+Eliminating them therefore gives exactly
+\eqref{fv:finite-budget-endpoint}, even for signed coefficients.
+Neither integral optimization variables nor nonnegative potentials
+are needed. Completeness of the checked graph is a finite-data input;
+the lemma explains why its encoding is an LP.
+
+\subsection{Ideal vertices and the analytic tail}
+\label{fv:ideal-block}
+
+Let an ideal link have factor ranks
+$r_1,\ldots,r_k$, total rank $R=n-1$ and $V=\prod_i(r_i+1)$ vertices.
+For a connected affine factor $\Gamma$ of rank $r$, let $Q_\Gamma$
+be the sum of its ordinary marked-pair weights and put
+$q_\Gamma=Q_\Gamma/(r+1)$. Define $C=\sum_iq_{\Gamma_i}$.
+The normalized ordinary charge for coefficient values $(a_0,a_2)$ is
+\begin{equation}\label{fv:ideal-charge}
+              \frac{C(v)}{V}=\frac R2a_0+Ca_2
+\end{equation}
+before adding the guarded indicator. This follows because a marked
+pair in one factor occurs once for each choice of a vertex in every
+other factor. Only raw features 0 and 2 occur at ideal corners.
+
+Let $J$ be the sum of independent uniforms on
+$\{0,\ldots,r_i\}$ and put $Y=2J-R$. The coefficient distribution
+of $h_v$ is the distribution of $J$ multiplied by $V$. Symmetry gives
+\begin{equation}\label{fv:normalized-ideal}
+ \frac{K_n(v)}V=\frac{3R}{4}-\frac54\mathbb E|Y|,
+ \qquad
+ S_a=\frac{3R}{4}-\frac54\mathbb E|Y|-\frac R2a_0-Ca_2.
+\end{equation}
+The desired vertex inequality is $S_a\ge\rho$, so the raw ideal
+margin is $V\rho$, not an unscaled copy of $\rho$.
+
+\paragraph{The rank-57 block.}
+For $n=58$, introduce free factor-cost variables $k_r$ for
+$1\le r\le57$. For every connected affine family impose
+\begin{equation}\label{fv:ideal-factor-links}
+                 k_r\ge\frac r2a^{58}_0+q_\Gamma a^{58}_2.
+\end{equation}
+The complete family ranges are affine $A$ at ranks 1--57,
+$C$ at 2--57, $B$ at 3--57, $D$ at 4--57, and the exceptional
+$E_6,E_7,E_8,F_4,G_2$. There are 227 individual-family rows.
+They all remain, even when $a^{58}_2$ is negative.
+
+The ideal input supplies 354 retained symmetric payoff vectors, with
+fixed ancestry and domination indices covering every factor addition.
+Domination compares all central-block averages with those of one
+retained vector; its index cannot vary with the coordinate. The indices
+are data, while the payoff coordinates below are LP variables. The
+underlying operation on an array is uniform convolution minus its
+factor cost:
+\[
+ f'_j=\frac1{r+1}\sum_{\ell=0}^r f_{j+\ell}-k_r.
+\]
+Its initial array is $g_j=(5\min(j,57-j)-57)/2$; its final scalar
+is the normalized allowance minus the factor costs. At accumulated
+rank $R$, put $L=57-R$ and let
+$B_{R,i,a}$ be the payoff average on the
+central interval $a,\ldots,L-a$, for
+$0\le a\le\lfloor L/2\rfloor$. Let $I_R$ be the retained index
+set at level $R$. If a rank-$r$ factor is added to parent
+$j\in I_{R-r}$, put $A=L-2a+1$ and
+\begin{align}
+ \omega_{L,a,r,\ell}&=\frac{A+r-2\ell}{A(r+1)},
+       &&0\le\ell<\min(A,r+1),\notag\\
+ T_{R,i,a}^{r,j}&=B_{R,i,a}+k_r-
+       \sum_{\ell=0}^{\min(A,r+1)-1}
+           \omega_{L,a,r,\ell}B_{R-r,j,a+\ell}.
+       \label{fv:ideal-average-transform}
+\end{align}
+These positive coefficients sum to one and express the central average
+of the convolution as an average of nested central intervals. The rows
+are:
+\begin{enumerate}[label=\textup{(\roman*)},nosep]
+\item the 29 initial equalities
+\[
+ B_{0,0,a}=\frac1{58-2a}\sum_{j=a}^{57-a}
+                  \frac{5\min(j,57-j)-57}{2},
+ \qquad0\le a\le28;
+\]
+\item $T_{R,i,a}^{r,j}=0$ for the fixed ancestry $(r,j)$ of
+ each retained $i\in I_R$;
+\item $T_{R,D(R,r,j),a}^{r,j}\le0$ for every candidate, using
+ its fixed retained dominator $D(R,r,j)$;
+\item $\tau\le B_{57,i,0}$ for every final retained index, and
+ $\rho\le\tau$, with $\tau$ free.
+\end{enumerate}
+The fixed index sets and maps are specified in the retained electronic
+ideal data of \cite{LPRepository}. With the family links this block has
+103,265 rows and 5,754 private variables. Positive convolution propagates
+the retained lower bounds through every factor addition, so every
+rank-57 profile has surplus at least $\tau\ge\rho$. These fixed
+domination choices define a sufficient certificate family, rather than
+all possible ideal-vertex laws.
+
+\paragraph{The guarded ideal feature.}
+The additive block just described remains in the LP. The additional
+feature $\chi_B$ is handled separately; replacing its effect by an
+unconditional change of the rank-12 factor cost would be incorrect.
+If $\chi_B$ occurs, the varying $B[13]$ factor has rank 12 and
+the residual finite rank is 45. Three rank-15 components exhaust that
+rank. The complete one-node-deletion classification leaves exactly
+\begin{align}
+ \mathrm{I}:&\quad B[13]\times\Gamma_1[16]
+                   \times\Gamma_2[16]\times\Gamma_3[16],\notag\\
+ \mathrm{II}:&\quad B[13]\times D[31]\times\Gamma[16],
+ \qquad\Gamma_i,\Gamma\in\{A,B,D\}.
+ \label{fv:guarded-links}
+\end{align}
+Let $a_\chi=V^{-1}\sum_\kappa\chi_B(\kappa)$. The additional rows are
+\begin{equation}\label{fv:guarded-rows}
+  \frac{57}{2}a^{58}_0+C a^{58}_2+a_\chi\lambda+\rho\le K.
+\end{equation}
+All thirteen rows have the following compact specification. Put
+\[
+ (c_A,c_B,c_D)=(5,25/4,411/64),\qquad
+ (d_A,d_B,d_D)=(1,1/16,1/4).
+\]
+For every unordered triple $\Gamma_1,\Gamma_2,\Gamma_3\in\{A,B,D\}$
+in type I, and every $\Gamma\in\{A,B,D\}$ in type II, use
+\begin{equation}\label{fv:guarded-data}
+\begin{array}{c|ccc}
+ &C&a_\chi&K\\\hline
+ \mathrm{I}&11/2+\sum_{i=1}^3c_{\Gamma_i}
+       &(2/13)\prod_{i=1}^3d_{\Gamma_i}&331643/13312\\
+ \mathrm{II}&753/62+c_\Gamma&(2/403)d_\Gamma&16549/806.
+\end{array}
+\end{equation}
+Here $d_\Gamma$ is the proportion of one-node deletions giving the
+required residual component; the deletion counts are $16,1,4$.
+The values of $K$ are \eqref{fv:normalized-ideal} for ranks
+$(12,15,15,15)$ and $(12,30,15)$. Thus the specification retains
+deletion multiplicities, not just the affine factor types.
+
+\paragraph{The residual dimension-59 sector.}
+Append all 63 connected-family links of ranks at most 16 for the
+tail coefficients,
+\begin{equation}\label{fv:tail-factor-links}
+             k_r\ge\frac r2a^{\rm tail}_0
+                                      +q_\Gamma a^{\rm tail}_2,
+\end{equation}
+using the \emph{same} costs $k_r$ as above. Put $k_0=0$ and introduce
+$\mu\ge0$. The fifteen descent rows are
+\begin{equation}\label{fv:descent}
+ k_r-k_{r-1}+\mu\le h_r,\qquad 1\le r\le15,
+\end{equation}
+where
+\[
+ (h_1,\ldots,h_{15})=
+ \left(\frac34,\frac{47}{66},\frac{89}{132},\frac7{11},
+ \frac{79}{132},\frac{37}{66},\frac{23}{44},
+ \frac{2213}{4374},\frac{59}{132},\frac9{22},
+ \frac{67}{156},\frac{71}{168},\frac5{12},
+ \frac{79}{192},\frac{83}{204}\right).
+\]
+The retained descent theorem states that a rank-58 product with
+largest factor rank between 10 and 16 has a factor whose rank can be
+reduced by one so that its envelope surplus increases on restoring
+that factor by at least $\mu$. The reduced product has rank 57 and
+is covered by the full preceding block. This proves the required
+dimension-59 ideal budget in that sector. Independent copies of the
+costs in the two blocks would not justify this argument.
+
+\paragraph{The unbounded ideal tail.}
+For every remaining dimension-59 ideal link, and every ideal link
+in dimension at least 60, the retained analytic theorem gives surplus
+at least $\varepsilon=1/5307$ for baseline coefficients $(0,1)$.
+For an arbitrary tail law a sufficient interval test reduces exactly
+to four affine rows:
+\begin{align}
+ a^{\rm tail}_0&\le0,&
+ a^{\rm tail}_0+a^{\rm tail}_2&\le1,\notag\\
+ \rho+29a^{\rm tail}_0&\le\varepsilon,&
+ \rho+29a^{\rm tail}_0+29a^{\rm tail}_2&\le29+\varepsilon.
+ \label{fv:analytic-ideal-rows}
+\end{align}
+To see the reduction, write $t=1/n$,
+$u_0=a^{\rm tail}_0$, $u_1=a^{\rm tail}_0+a^{\rm tail}_2-1$ and
+\[
+ P_i(t)=(\varepsilon-\rho)t-\frac{1-t}{2}u_i.
+\]
+Each $P_i$ is affine, and \eqref{fv:analytic-ideal-rows} is exactly
+nonnegativity at the two endpoints of $[0,1/59]$. The analytic input
+also gives $0\le C\le R/2$. If $w=2C/R$, then
+\[
+ t(S_a-\rho)=t(S_{(0,1)}-\varepsilon)
+                         +(1-w)P_0(t)+wP_1(t)\ge0.
+\]
+Thus these four rows prove the desired budget on the entire stated
+tail. Their validity uses the analytic surplus theorem; it is not
+inferred from checking finitely many dimensions.
+
+\paragraph{Finite vertices above the endpoint.}
+Let $q\in\Q^{26}$ be the vector displayed in
+\eqref{fv:successful-law} below. Introduce $0\le\xi\le1$ and impose
+\begin{equation}\label{fv:finite-tail-rows}
+ a^{\rm tail}_j\le q_j+2\xi[\,j\in\{16,17\}\,]
+       \quad(j\ne2),\qquad \rho\le\frac14.
+\end{equation}
+The retained analytic finite-vertex estimate asserts that, for every
+formal finite forest of every rank $n\ge59$,
+\[
+ \beta_n-\bigl(q+2\xi(u_{16}+u_{17})\bigr)\cdot\Phi_n
+                                                       \ge\frac14.
+\]
+Since finite raw features are nonnegative and feature 2 is zero,
+\eqref{fv:finite-tail-rows} proves its vertex budget. This is a
+spectator- and rank-uniform analytic input, separate from the rank-58
+catalogue. The coordinatewise comparison is a sufficient restriction
+on the searched tail law, not a necessary description of all valid
+finite-vertex charges.
+
+\subsection{Optimization of the finite-vertex budget}
+\label{fv:377}
+
+The finite-vertex problem asks for the smallest allowance required
+by a charge family. Once a finite formal forest domain $\mathcal T$ and a
+local coefficient family $\mathcal C$ have been specified, write
+\begin{equation}\label{fv:budget-template}
+ U_{\mathcal T}(a)=\max_{F\in\mathcal T}a\cdot\Phi(F),
+ \qquad \min_{a\in\mathcal C}U_{\mathcal T}(a).
+\end{equation}
+Here $a$ is the coefficient vector used at the finite vertex,
+$\Phi(F)$ is its aggregate feature vector, and $\mathcal C$ is the
+projection of the specified joint certificate family onto $a$.
+The auxiliary variables and their conditions remain part of that
+joint family.
+The relevant geometric allowance is supplied independently by
+incidence. A complete feasible certificate closes the finite-vertex
+part when its required allowance is no greater than that geometric
+allowance. Its face and ideal-vertex obligations, including all
+dependencies of their local proofs, must hold at the same shared
+coefficients.
+
+Here $\mathcal T$ is the complete admitted rank-58 domain, and the
+independently supplied allowance is $\beta_{58}=377$. The following
+specialization gives both a feasible law and an exact dual lower bound
+for its declared coefficient family. It makes no extension of the
+endpoint catalogue to other ranks.
+
+The following rational point uses the coordinate order specified in
+Section~\ref{fv:features}:
+\begin{align}
+ (q_0,\ldots,q_{12})={}&
+ (0,1,1,1,1,\tfrac12,\tfrac14,\tfrac14,\tfrac14,\tfrac14,
+       \tfrac58,\tfrac58,\tfrac12),\notag\\
+ (q_{13},\ldots,q_{25})={}&
+ (\tfrac12,\tfrac12,\tfrac12,-\tfrac12,-\tfrac12,\tfrac12,
+       \tfrac18,\tfrac14,\tfrac12,\tfrac38,\tfrac58,\tfrac12,
+       \tfrac14),\notag\\
+ a^{58}={}&q,\qquad
+ a^{\rm tail}=q+\tfrac12(u_{16}+u_{17}),\notag\\
+ \lambda={}&\tfrac12,\qquad\rho=0.
+ \label{fv:successful-law}
+\end{align}
+In particular the two $D_{13}$ indicator coefficients are negative at
+the endpoint and zero on the tail. This does not contradict the
+nonnegativity of the resulting corner charge, which is checked on
+the admitted decorated-corner domain.
+
+The private variables can also be specified exactly. In the finite-tail
+and descent blocks take $\xi=1/4$ and $\mu=13/2187$. Take
+$k_r=\max_{\operatorname{rank}\Gamma=r}q_\Gamma$, over the complete
+connected-family inventory, and use the retained ideal payoff vectors
+and their ancestry equalities to assign every $B_{R,i,a}$, with
+$\tau=0$. This is an assignment to the complete ideal certificate,
+not a selection of a numerically best product profile. The actual
+complete verification also checks every finite-network potential at
+these same shared coefficients.
+
+For example, the face rows
+\eqref{fv:example-face-P}--\eqref{fv:example-face-M} take values
+$17/16$ and $1$ on both branches. The guarded ideal rows have slack
+at least $939/13312$ in type I and $50623/25792$ in type II. These
+examples illustrate the assignment; complete exact verification checks
+every local and network row at the same shared coefficients.
+
+There is a useful optimization statement in addition to feasibility.
+Let $\mathcal A$ be the projection onto
+$(a^{58},a^{\rm tail},\lambda)$ of the complete local coefficient
+system, including \eqref{fv:A13-rows}, with $\rho=0$. Replace the
+last network row by $U_S\le U$, for one free common variable $U$,
+and minimize $U$. Eliminating the potentials gives
+\begin{equation}\label{fv:minimax}
+ \min_{(a^{58},a^{\rm tail},\lambda)\in\mathcal A}
+                 \max_F a^{58}\cdot\Phi(F),
+\end{equation}
+where $F$ ranges over the complete admitted rank-58 formal-forest
+domain. The allowance 377 is no longer imposed as an upper bound
+in this diagnostic optimization.
+
+\begin{proposition}[Exact restricted minimax]\label{fv:exact-minimax}
+The optimum in \eqref{fv:minimax} is 377.
+\end{proposition}
+
+\begin{proof}
+The complete feasible assignment \eqref{fv:successful-law}, including
+its private local variables and all network potentials, gives an upper
+bound of 377. For the converse, write $a_0,a_1$ for coordinates 0 and
+1 of $a^{58}$. The retained corner and triangle rows give
+$a_0\ge0$ and $3a_0+2a_1\ge2$.
+The formal forest
+\[
+                    F_*=2D_{17}+D_{24}
+\]
+has total rank 58. The ordinary table gives
+$S_{D_{17}}=227/2$ and
+$S_{D_{24}}=8\cdot24-32-1-4-3-2=150$. All ordinary cross
+and contextual features vanish on this forest, so its aggregate
+feature vector is
+$\Phi(F_*)=1653u_0+377u_1$. Thus one path bound gives
+$U\ge1653a_0+377a_1$. The exact nonnegative combination
+\begin{equation}\label{fv:minimax-identity}
+ U-377=(U-1653a_0-377a_1)
+ +\frac{377}{2}(3a_0+2a_1-2)+\frac{2175}{2}a_0
+\end{equation}
+proves the lower bound: the first term is the sum of this forest's
+network rows and its link to $U$, and the other terms are multiples
+of the two local rows.
+\end{proof}
+
+The allowance 377 comes from incidence; the optimum 377 comes from
+feasibility and \eqref{fv:minimax-identity}. This is optimality within
+the declared law family and formal domain. The forest $F_*$ need not
+be geometrically realized, and richer valid law families may have
+smaller optima.
+
+In the original capped system,
+$\max_Fa^{58}\cdot\Phi(F)+\rho\le377$ and $\rho\ge0$.
+The same inequalities force $a_0=0$, $a_1=1$ and $\rho=0$.
+Thus maximizing this margin and requiring it to be positive would
+miss the successful certificate. Incidence already has the strict
+excess needed for the proof.
+
+\subsection{All dimensions and the recovered bound}
+\label{fv:all-dimensions}
+
+For clarity, the separate coverage obligations are collected below.
+They use one dimension-dependent charge, not independent face and
+vertex laws.
+\begin{center}\small
+\begin{tabular}{p{.29\textwidth}p{.61\textwidth}}
+\toprule
+Domain&Retained certificate argument\\\midrule
+Finite vertices, $n=58$&The complete vector-cost network and all its
+ entry and transition inequalities.\\
+Finite vertices, $n\ge59$&The analytic finite-vertex estimate and
+ coordinatewise domination \eqref{fv:finite-tail-rows}.\\
+Ideal vertices, $n=58$, $\chi_B$ aggregate zero&The complete rank-57
+ ideal block and connected-family links.\\
+Ideal vertices, $n=58$, positive $\chi_B$ aggregate&The complete
+ deletion classification \eqref{fv:guarded-links} and all thirteen
+ rows \eqref{fv:guarded-rows}.\\
+Ideal vertices, $n=59$, largest factor rank 10--16&The same costs
+ and the complete rank-descent inequalities.\\
+Other ideal vertices at 59, and all $n\ge60$&The analytic ideal
+ surplus theorem and the four rows \eqref{fv:analytic-ideal-rows}.\\
+All actual corners and small faces, $n\ge58$&The complete local
+ geometric and contact coverage of Input~\ref{fv:face-assumption}.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{theorem}[Finite-volume recovery]\label{fv:recovery}
+The retained local geometric, classification, incidence and exact
+finite-data theorems, together with the verified common-coefficient
+certificate above, exclude every finite-volume hyperbolic Coxeter
+polytope in every integer dimension $n\ge58$.
+\end{theorem}
+
+\begin{proof}
+Suppose such a polytope exists. The last row of the table gives
+nonnegative corner charges and the required payments on its triangles
+and quadrilaterals. The preceding rows give
+\[
+ \sum_{\kappa\text{ at }v}w(\kappa)\le b_n(v)
+\]
+at every finite or ideal vertex. Apply the charge certificate and the
+actual lift of Lemma~\ref{fv:actual-lift}.
+\end{proof}
+

@@ -1,0 +1,50 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK_DISK_OVERRIDE",
+  "command": [
+    "scripts/finite_volume_finite58_fragment_join_20261110.py",
+    "--job",
+    "results/joint58_parent_cached_rerun_job_20261115.json",
+    "--job-sha256",
+    "e367cb40a2f06aee097c0208e3b06e3dd291482c2232a27eb890cd77623333d5"
+  ],
+  "elapsed_seconds": 1.776,
+  "peak_process_tree_rss_bytes": 112427008,
+  "initial_resources": {
+    "free_disk_gib": 11.27,
+    "available_memory_gib": 9.86,
+    "disk_free_bytes": 12095971328,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10583277568,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 1.216152,
+    "available_memory_percent": 41.068522,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 499,
+  "stdout": "{\"phase\":\"join\",\"schema\":\"finite58-batch-join-progress-v1\"}\n{\"job_sha256\":\"e367cb40a2f06aee097c0208e3b06e3dd291482c2232a27eb890cd77623333d5\",\"mode\":\"join\",\"payload\":{\"bytes\":62424,\"path\":\"results/joint58_parent_cached_rerun01_20261115/payload.json\",\"sha256\":\"b84f6e66bf585da4f2676529171e243c99fc1d9d516ecab797642809fd7a879c\"},\"producer_sha256\":\"8739dd54e07a9efbb40f65f39f962392df930873161f216356937a65b2c12bb6\",\"schema\":\"finite58-fragment-join-completion-v1\",\"status\":\"PASS_FINITE58_FRAGMENT_JOIN\"}\n",
+  "runner_sha256": "8e44d8e06bb82f3effacb844961dff876ebcb005c5ca2261614aeeb93ae8a62d",
+  "runner_baseline_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "disk_admission_override": {
+    "authorization": {
+      "path": "audit/lp_rerun_disk_override_continuation_20261115.json",
+      "sha256": "977be3aa457bd9a4e531fd45809a8f98da5413337b2a6eb8c4a20e4cc58de614",
+      "bytes": 2224
+    },
+    "effective_admission_disk_percent": 1,
+    "scope": "disk admission only"
+  },
+  "checker_sha256": "8739dd54e07a9efbb40f65f39f962392df930873161f216356937a65b2c12bb6",
+  "lock_owner": "wrapper"
+}

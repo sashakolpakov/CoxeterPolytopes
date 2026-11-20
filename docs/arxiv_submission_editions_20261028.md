@@ -1,9 +1,11 @@
 # arXiv submission editions
 
-Updated 4 November 2026. Three upload folders contain the current
-submission sources. They present existing results from six paper families;
-one combined article joins the finite-volume, compact and arithmetic compact
-dimension proofs. Preparing a source folder does not submit it to arXiv.
+Updated 19 November 2026. Four prepared manuscripts belong to the existing
+three paper families. One combined article joins the finite-volume, compact
+and arithmetic compact dimension proofs; its LP companion recovers those
+same bounds through a common feasibility and certificate framework.
+The six accepted verification editions retain their existing selections.
+Preparing a source folder does not submit it to arXiv.
 
 ## Sources, PDFs and results
 
@@ -12,14 +14,36 @@ dimension proofs. Preparing a source folder does not submit it to arXiv.
 | Sharp dimension bounds for right-angled hyperbolic polytopes | [main.tex](../arxiv/sharp_dimension_bounds_8_and_4/main.tex) | [6 pages](../arxiv/sharp_dimension_bounds_8_and_4/main.pdf) | 2 | Finite-volume right-angled dimension at most 8; entirely ideal dimension at most 4. Both bounds are attained by known examples. |
 | On the second smallest ideal right-angled hyperbolic four-polytope | [main.tex](../arxiv/ideal_four_dimensional_volume_and_structure/main.tex) | [18 pages](../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf) | 5 | The second ideal volume is 8π²/3, uniquely attained by the reflected 24-cell double. A separate restricted facet-spectrum theorem gives chains of 24-cells. |
 | Dimension bounds for hyperbolic Coxeter polytopes | [main.tex](../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex) | [41 pages](../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf) | 0 | Finite-volume dimension at most 57, compact dimension at most 17, compact arithmetic dimension at most 15. |
+| Linear programming certificates for dimension bounds of hyperbolic Coxeter polytopes | [main.tex](../arxiv/linear_programming_dimension_bounds/main.tex) | [36 pages](../arxiv/linear_programming_dimension_bounds/main.pdf) | 0 | LP recovery of the existing bounds 57/17/15 from proved local inequalities and complete domains. |
 
 The [current source/PDF manifest](../release/manifest.json)
 records the exact editions. Each upload folder contains `main.tex`,
 `references.bib` and the generated `main.bbl`. Figures are inline TikZ;
-no separate image or custom class file is needed. All three papers name **Alexander Kolpakov**, acknowledge
-the use of OpenAI's GPT-6-astra and GPT-6.1-sol, and cite the repository in the
-bibliography. For each submission, zip only `main.tex`, `references.bib` and
+no separate image or custom class file is needed. All four papers name
+**Alexander Kolpakov**, include an AI-use acknowledgment and cite the
+repository in the bibliography. The three earlier manuscripts acknowledge
+OpenAI's GPT-6-astra and GPT-6.1-sol; the LP manuscript acknowledges Codex.
+For each submission, zip only `main.tex`, `references.bib` and
 `main.bbl`. Exclude PDFs and temporary files produced by your TeX editor.
+
+## The LP companion submission
+
+The [canonical LP submission](../arxiv/linear_programming_dimension_bounds/README.md)
+contains a single `main.tex`, `references.bib`, the generated `main.bbl`
+and the matching PDF. The four reviewed TeX files and PDF in
+[`manuscripts/linear_programming_dimension_bounds/`](../manuscripts/linear_programming_dimension_bounds/README.md)
+remain the prior working edition. The conversion inlines the TeX sections
+and supplies a BibTeX bibliography; it does not change the mathematical
+models or rerun their checkers.
+
+The local archive is
+`dist/CoxeterPolytopes-linear-programming-dimension-bounds-arxiv.zip`,
+with its `.sha256` checksum beside it. It contains exactly `main.tex`,
+`references.bib` and `main.bbl` at the archive root. Build and package
+receipts are under `release/linear_programming_dimension_bounds/`; the
+[release manifest](../release/manifest.json) identifies the current files
+and their hashes. This is another prepared manuscript in the dimension-bound
+family, leaving the three earlier submission editions unchanged.
 
 ## The combined dimension article
 
@@ -87,6 +111,7 @@ no earlier public priority is claimed for related local results.
 | Finite-volume 57 | [Reproduction map](finite_volume57_reproduce.md) | The 259-unit current-rule conjunction and earlier bounded replacements retain their explicit premises; no combined 146-job replay is claimed. |
 | Compact 17 | [Complete proof map](compact17_consolidated_proof_map_20261025.md) | Full written case proofs, with selected conditional scalar/composition kernels. |
 | Compact arithmetic 15 | [Dependency map](compact_arithmetic_consolidation_proof_map_20261025.md) | Four computed premises, the compact theorem and the published golden-lattice theorem remain explicit. |
+| LP recovery of 57/17/15 | [LP paradigm and evidence guide](../notes/lp/UNIFORM_LP_PARADIGM.md) | Retained local theorems and complete domains feed the common LP framework. Exact certificates have their own execution records; submission typesetting adds no mathematical replay. |
 
 The two right-angled script-only selections use small tracked inputs and require
 none of the unuploaded bulk collection. The broader dimension arguments retain
@@ -143,6 +168,21 @@ measurements and PDF inspection. It retains the final PDF and `main.bbl`,
 then removes temporary build files. It launches no mathematical checker or
 Lean module.
 
+For a revised LP submission build, run from the repository root with a fresh
+tag and ledger path:
+
+```sh
+python3 -B scripts/run_bounded_research_check_20261018.py --parent-lock \
+  --ledger results/fresh_lp_arxiv_build_monitor.json -- \
+  scripts/build_lp_dimension_arxiv_20261118.py --tag fresh_tag
+```
+
+The initial preparation tag is `submission01_20261118`. Its build and
+package receipts are
+`release/linear_programming_dimension_bounds/build_submission01_20261118.json`
+and
+`release/linear_programming_dimension_bounds/package_submission01_20261118.json`.
+
 ## Verification records
 
 The current [manifest](../release/manifest.json)
@@ -152,9 +192,10 @@ order, warnings, references and PDF fonts. Source review and sampled layout
 inspection have separate scopes; no claim of visual inspection of every page
 of the long article is made.
 
-All three four-step builds passed with zero TeX or BibTeX warnings, no undefined
-references or citations, and Type 1 fonts. The current PDFs have 6, 18 and 41 pages;
-the full proof addendum retains its 551 pages. The builds' temporary
+The three earlier four-step builds passed with zero TeX or BibTeX warnings,
+no undefined references or citations, and Type 1 fonts. Their PDFs have
+6, 18 and 41 pages; the LP submission adds a 36-page PDF with separate
+receipts below. The full proof addendum retains its 551 pages. The builds' temporary
 products were removed, while `main.bbl` is retained for each submission.
 
 The current build receipts are:
@@ -162,8 +203,16 @@ The current build receipts are:
 - [Sharp 6-page build](../release/right_angled_sharp/build_20261104.json).
 - [Ideal 18-page build](../results/arxiv_ideal_bibtex_build_20261030.json).
 - [Combined 41-page build](../release/dimension_bounds/build_ideas_final_20261104.json).
+- [LP 36-page build](../release/linear_programming_dimension_bounds/build_language03_20261119.json)
+  and [source-package receipt](../release/linear_programming_dimension_bounds/package_language03_20261119.json).
 - [Preserved 551-page addendum build](../results/arxiv_dimensions_bibtex_build_20261030.json).
 
 No successful mathematical worker or Lean module was rerun for preparation of
 these submission editions. Existing executions retain their original sources
 and declared scopes.
+
+The 19 November language revision checks terminology against earlier work by
+Kolpakov, Vinberg and Nikulin. The current LP article has 36 pages. Its
+mathematical preservation review is
+[`lp_manuscript_language_source_review_20261119.json`](../audit/lp_manuscript_language_source_review_20261119.json);
+the current build and package use tag `language03_20261119`.

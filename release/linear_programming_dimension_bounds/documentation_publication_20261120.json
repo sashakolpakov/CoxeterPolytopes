@@ -1,0 +1,204 @@
+{
+  "schema": "lp-documentation-publication-checks-v1",
+  "date_utc": "2026-11-20T23:02:17.101424+00:00",
+  "status": "DOCUMENTATION_BUILD_AND_PRECOMMIT_INDEX_AUDITS_PASS",
+  "scope": "Documentation and publication only; no scientific, solver, Lean or TeX jobs rerun.",
+  "base_commit": "2d6344b817a0bdf2d58f808627109ec113f59a86",
+  "sphinx_source": "Clean checkout-index snapshot of the actual Git index. Unstaged geometric prose revisions were excluded.",
+  "sphinx_command": [
+    "python3",
+    "-B",
+    "-m",
+    "sphinx",
+    "-W",
+    "--keep-going",
+    "-b",
+    "html",
+    ".publication/lp_docs_index_snapshot_20261120/docs/site",
+    ".publication/lp_docs_html_20261120"
+  ],
+  "sphinx_result": "build succeeded; warnings treated as errors",
+  "source_bindings": {
+    "path": "audit/lp_docs_sphinx_index_bindings_20261120.json",
+    "bytes": 28179,
+    "sha256": "16f8fe6a667511fa17adb024141e0e6fb0228a39da52a9174c60b8b4c958b12e"
+  },
+  "watchdogs": {
+    "indexed_input_audit": {
+      "publication_io_only": true,
+      "command": [
+        "python3",
+        "-B",
+        "tools/audit_sphinx_inputs.py",
+        "--require-indexed"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "observed_peak_group_rss_bytes": 245760,
+      "rss_sampling_seconds": 1,
+      "start_resources": {
+        "free_disk_gib": 327.78,
+        "available_memory_gib": 10.07,
+        "disk_free_bytes": 351950819328,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10816487424,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 35.385806,
+        "available_memory_percent": 41.973495,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        },
+        "free_disk_bytes": 351950819328,
+        "ram_available_bytes": 10816487424
+      },
+      "seconds": 1.017
+    },
+    "sphinx_build": {
+      "publication_io_only": true,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "sphinx",
+        "-W",
+        "--keep-going",
+        "-b",
+        "html",
+        ".publication/lp_docs_index_snapshot_20261120/docs/site",
+        ".publication/lp_docs_html_20261120"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "observed_peak_group_rss_bytes": 245760,
+      "rss_sampling_seconds": 1,
+      "start_resources": {
+        "free_disk_gib": 326.68,
+        "available_memory_gib": 10.12,
+        "disk_free_bytes": 350774726656,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10868260864,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 35.267559,
+        "available_memory_percent": 42.174403,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        },
+        "free_disk_bytes": 350774726656,
+        "ram_available_bytes": 10868260864
+      },
+      "seconds": 1.023
+    },
+    "publication_index_audit_before_receipts": {
+      "publication_io_only": true,
+      "command": [
+        "python3",
+        "-B",
+        "tools/audit_public_tree.py"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "observed_peak_group_rss_bytes": 97271808,
+      "rss_sampling_seconds": 1,
+      "start_resources": {
+        "free_disk_gib": 326.67,
+        "available_memory_gib": 10.63,
+        "disk_free_bytes": 350759985152,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 11413536768,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 35.266077,
+        "available_memory_percent": 44.290352,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        },
+        "free_disk_bytes": 350759985152,
+        "ram_available_bytes": 11413536768
+      },
+      "seconds": 5.116
+    }
+  },
+  "logs": [
+    {
+      "path": "audit/lp_docs_sphinx_inputs_20261120.stdout",
+      "bytes": 57243,
+      "sha256": "b8a0452d70396dfa1eded0c1e69bc1a2c96ebc3cac35b1189561a963e0a0b294"
+    },
+    {
+      "path": "audit/lp_docs_sphinx_build_20261120.stdout",
+      "bytes": 17261,
+      "sha256": "847089fedc7b981517e57c0f408e0e9f6aee4ff33eff5fb0676392f972281c9d"
+    },
+    {
+      "path": "audit/lp_public_index_precommit_20261120.stdout",
+      "bytes": 1195,
+      "sha256": "2ecdfa4a8cfecdccce77643a180f0a6a9eea18a31221b0f469efe6b4a31c2a0f"
+    }
+  ],
+  "new_reading_material": [
+    {
+      "path": "notes/lp/LP_READING_GUIDE.md",
+      "bytes": 3831,
+      "sha256": "2629bc3ecf3e765d4daa32719a6df76d24ec02563e128f9a67527f79ab1e340d"
+    },
+    {
+      "path": "notes/lp/README.md",
+      "bytes": 2206,
+      "sha256": "346b5325f9bc47966b6da5f8451140ed0eddb45f989abc0877fdfe363af5a23c"
+    },
+    {
+      "path": "docs/site/linear_programming.rst",
+      "bytes": 4030,
+      "sha256": "9e7a1d08104ebacf259122c6872bf2a5606d96bee380c800a714287036de4109"
+    }
+  ],
+  "markdown_link_check": {
+    "changed_files": 22,
+    "unindexed_local_link_targets": []
+  },
+  "preserved_local_process_index": {
+    "local_only_path": "docs/history/lp_readme_process_log_before_publication_20261120.md",
+    "bytes": 111181,
+    "sha256": "43d4748b75757529ed31e7388a380a030e78e5d4d8d1bd401d093d59170a35a4",
+    "byte_round_trip_verified": true
+  },
+  "protected_editions": "The three earlier arXiv source/PDF pairs, the 551-page proof edition and all six accepted checker inputs remain unchanged in the index.",
+  "bulk_assets_in_this_publication": 0,
+  "git_diff_check_exceptions": [
+    "Intentional Markdown two-space line break after author in the LP submission README.",
+    "Two retained working TeX files end with one extra blank line; their reviewed bytes are preserved."
+  ],
+  "publication_state": "Commit and push pending; no arXiv submission or bulk upload performed.",
+  "final_index_audit_policy": "Audit the actual index again after staging this receipt and source review, immediately before commit/push.",
+  "independent_source_review": {
+    "path": "audit/lp_docs_publication_source_review_20261120.json",
+    "bytes": 47519,
+    "sha256": "5f5708d495d8be77c548985e0ee74927e9c8b51b5e05007c5e45888b906e86f7",
+    "reviewed_staged_change_paths": 143,
+    "result": "CLEAN"
+  },
+  "owned_generated_outputs_removed": [
+    ".publication/lp_docs_index_snapshot_20261120/",
+    ".publication/lp_docs_html_20261120/"
+  ]
+}

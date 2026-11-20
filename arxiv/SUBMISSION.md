@@ -8,7 +8,8 @@ global deductions. Complete technical proofs,
 computational proofs and reproduction records remain in the repository.
 The existing 551-page complete edition is preserved byte for byte.
 
-There are three paper families. Local preparation has not submitted anything
+There are four prepared manuscripts within the existing three paper families.
+Local preparation has not submitted anything
 to arXiv. Upload packages belong in the ignored `dist/` directory; the
 [release manifest](../release/manifest.json) is the current artifact index.
 
@@ -17,6 +18,7 @@ to arXiv. Upload packages belong in the ignored `dist/` directory; the
 | Dimension bounds **57 / 17 / 15** | [Concise main.tex](hyperbolic_coxeter_dimension_bounds/main.tex) and [bibliography](hyperbolic_coxeter_dimension_bounds/references.bib) | [Addendum map](hyperbolic_coxeter_dimension_bounds/ADDENDA.md), [complete source](../manuscripts/addenda/dimension_bounds_20261030/main.tex), [551-page complete proof PDF](../manuscripts/addenda/dimension_bounds_20261030/main.pdf) |
 | Sharp right-angled dimensions **8 / 4** | [main.tex](sharp_dimension_bounds_8_and_4/main.tex), with the bibliography in that folder | [Retained 6-page PDF](sharp_dimension_bounds_8_and_4/main.pdf) |
 | Second ideal right-angled four-volume | [main.tex](ideal_four_dimensional_volume_and_structure/main.tex), with the bibliography in that folder | [Retained 18-page PDF](ideal_four_dimensional_volume_and_structure/main.pdf) |
+| LP certificates for dimension bounds **57 / 17 / 15** | [main.tex](linear_programming_dimension_bounds/main.tex) and [bibliography](linear_programming_dimension_bounds/references.bib) | [36-page PDF](linear_programming_dimension_bounds/main.pdf), [source and package guide](linear_programming_dimension_bounds/README.md) |
 
 ## Combined dimension-bound submission
 
@@ -44,10 +46,44 @@ separately, with its original bytes.
 The [concise source guide](hyperbolic_coxeter_dimension_bounds/README.md)
 contains the standard TeX commands and the monitored repository command.
 
+## Linear programming companion
+
+**Title:** Linear programming certificates for dimension bounds of hyperbolic Coxeter polytopes
+**Author:** Alexander Kolpakov
+
+The 36-page companion recovers the existing bounds 57/17/15 from the proved
+local inequalities and complete domains. One feasibility and certificate
+framework performs the global combination. The arithmetic pruning and other
+local theorem inputs retain their stated roles; this preparation runs no
+mathematical checkers.
+
+The canonical source folder is
+[`arxiv/linear_programming_dimension_bounds/`](linear_programming_dimension_bounds/README.md).
+It contains a single `main.tex`, `references.bib`, the generated `main.bbl`
+and the matching `main.pdf`. The earlier reviewed four-file working edition
+and its PDF remain in
+[`manuscripts/linear_programming_dimension_bounds/`](../manuscripts/linear_programming_dimension_bounds/README.md).
+
+The local upload archive and checksum are:
+
+```text
+dist/CoxeterPolytopes-linear-programming-dimension-bounds-arxiv.zip
+dist/CoxeterPolytopes-linear-programming-dimension-bounds-arxiv.zip.sha256
+```
+
+The ZIP contains exactly `main.tex`, `references.bib` and `main.bbl` at
+its root. Select `main.tex` and PDFLaTeX on upload. PDFs, editor output,
+research data and Lean products are excluded. Build and package receipts
+are under `release/linear_programming_dimension_bounds/`, with their current
+paths and hashes in the [release manifest](../release/manifest.json).
+
+**Comments:** 36 pages; exact LP certificates, local theorem sources and
+reproduction records at https://github.com/sashakolpakov/CoxeterPolytopes.
+
 ## Bibliography and compiled editions
 
-The two right-angled paper folders contain `main.tex`, `references.bib`,
-`main.bbl` and their matching PDFs. The
+Each submission folder contains `main.tex`, `references.bib`, `main.bbl`
+and its matching PDF. The
 [release manifest](../release/manifest.json) binds the current source/PDF
 pairs and build receipts. The [30 October manifest](../results/arxiv_submission_current_manifest_20261030.json)
 retains the historical compiled editions; it is not the upload selection.

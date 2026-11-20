@@ -1,0 +1,39 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_finite_volume_joint58_local_20261109.py",
+    "propose",
+    "--output-directory",
+    "results/joint58_local_proposal01_20261110"
+  ],
+  "elapsed_seconds": 42.541,
+  "peak_process_tree_rss_bytes": 92012544,
+  "initial_resources": {
+    "free_disk_gib": 23.71,
+    "available_memory_gib": 5.25,
+    "disk_free_bytes": 25453625344,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 5637718016,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 2.559156,
+    "available_memory_percent": 21.877225,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 506,
+  "stdout": "{\"assembly_sha256\": \"c7b2d0c92cb099641822e8da196cbbb2a6fb3052c7f486a44420d77b9929cd38\", \"complete_finite58_evidence_checked\": false, \"completion_receipt\": {\"bytes\": 3072, \"path\": \"results/joint58_local_proposal01_20261110/completed.json\", \"sha256\": \"4fa110635cddf8fb4a0c05a29145afa5a74c632c4062dfda36a1e26604f6894e\"}, \"counts\": {\"columns\": 5810, \"equalities\": 5696, \"inequalities\": 97910, \"nonzeros\": 935736, \"rows\": 103606}, \"global_dimension_bound_verified\": false, \"status\": \"LOCAL_CANDIDATE_PROPOSED\"}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "d125e21dff23212e4f4c214a18fddb69dbf9ab05e1290282035732b0873df114",
+  "lock_owner": "wrapper"
+}

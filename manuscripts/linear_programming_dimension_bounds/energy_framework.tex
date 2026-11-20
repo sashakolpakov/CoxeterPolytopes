@@ -1,0 +1,169 @@
+\section{Energy budgets and the common capacity dual}
+\label{sec:energy-framework}
+
+Both compact cases use the same specialization of
+Theorem~\ref{thm:homogeneous-certificate}. A complete domain $b$ has
+its own original orthogonal energy slots and all applicable rows
+\begin{equation}\label{eq:branch-energy}
+                  A_be_b\ge c_b,\qquad e_b\ge0.
+\end{equation}
+Here $A_b\ge0$ is rational, each row has a positive entry, and
+$c_b\ge0$ is rational. In the actual matrices $A_b$ records supports
+by $0$ and $1$. More generally, let the fixed geometric budget be
+\begin{equation}\label{eq:general-energy-budget}
+              h_b^Te_b<B_b,\qquad h_b>0,\quad B_b>0.
+\end{equation}
+The weights $h_b$ and budgets $B_b$ are rational data.
+The compact geometry gives $h_b=\one$ and $B_b=1$ by
+\eqref{eq:component-energies}. Leaving them as data shows which part
+of the formulation is independent of that numerical specialization.
+
+Different complete domains retain separate coordinates. For example,
+a two-slot configuration and a three-slot configuration do not share
+energy variables merely because both occur in the cover. Within one
+domain, however, every use of a given original component refers to
+its one slot. This distinction preserves both local applicability and
+energy ownership.
+
+\subsection{One normalization and duality theorem}
+
+For each domain introduce nonnegative mass $\tau_b$, scaled energies
+$E_b$ and deficit $\delta_b$. Impose
+\begin{equation}\label{eq:budget-deficit}
+ \begin{gathered}
+ A_bE_b\ge c_b\tau_b,\qquad
+ \delta_b=B_b\tau_b-h_b^TE_b\ge0,\\
+                         \sum_b\delta_b=1.
+ \end{gathered}
+\end{equation}
+A proved local exclusion adds
+\begin{equation}\label{eq:excluded-mass}
+                              \tau_b=0.
+\end{equation}
+It then forces $E_b=0$ and $\delta_b=0$, since $h_b>0$.
+A fixed positive tolerance is unnecessary: the positive physical
+budget deficit itself supplies the normalization.
+
+\begin{theorem}[Budget lift and capacity dual]
+\label{thm:budget-lift}\label{prop:general-energy-budget}
+\label{thm:energy-normalization}\label{thm:energy-certificate}
+\label{prop:capacity-complete}
+For a finite complete domain family, the following assertions hold.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item System~\eqref{eq:budget-deficit}--\eqref{eq:excluded-mass} is
+feasible exactly when a nonexcluded domain admits energies satisfying
+\eqref{eq:branch-energy} and~\eqref{eq:general-energy-budget}.
+Every actual polytope in the covered dimensions therefore has a lift.
+\item Put
+\begin{equation}\label{eq:branch-minimum}
+ m_b=\min\{h_b^Te:e\ge0,\ A_be\ge c_b\}.
+\end{equation}
+Then
+\begin{equation}\label{eq:branch-duality}
+ m_b=\max\{c_b^T\alpha:\alpha\ge0,\ A_b^T\alpha\le h_b\},
+\end{equation}
+and both optima are attained rationally. The normalized system is
+infeasible exactly when every
+nonexcluded domain has $m_b\ge B_b$.
+\item Consequently nonnegative rational multipliers satisfying
+\begin{equation}\label{eq:general-capacity-certificate}
+               A_b^T\alpha_b\le h_b,\qquad
+               c_b^T\alpha_b\ge B_b
+\end{equation}
+for each nonexcluded domain give a complete infeasibility certificate
+for this linear energy model.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+For an energy vector with $s=B_b-h_b^Te_b>0$, take
+$\tau_b=1/s$, $E_b=e_b/s$, $\delta_b=1$ and set all other domains
+zero. Conversely, some deficit in a normalized feasible point is
+positive. Its mass is positive, so division by that mass gives the
+local rows and
+\[
+           h_b^T(E_b/\tau_b)=B_b-\delta_b/\tau_b<B_b.
+\]
+Completeness of the geometric cover proves the actual-object claim.
+The masses can be arbitrarily large; no artificial upper bound is
+imposed on them.
+
+For the optimum, a sufficiently large multiple of $\one$ satisfies
+all local rows. Positivity of $h_b$ makes every finite objective
+sublevel compact, so the minimum is attained. To see the dual signs
+and equality directly, omit the subscript and consider the polyhedral
+cone
+\[
+       K=\{(Ae-u,h^Te+t):e,u,t\ge0\}.
+\]
+It contains $(c,m)$ but no $(c,m-\varepsilon)$ for
+$\varepsilon>0$. A nonzero supporting functional $(-\alpha,\beta)$,
+nonnegative on $K$ and zero at $(c,m)$, gives
+\[
+ \alpha\ge0,\quad\beta\ge0,\quad A^T\alpha\le\beta h,
+                  \quad\alpha^Tc=\beta m.
+\]
+If $\beta=0$, the positive entry in each nonnegative row of $A$
+forces $\alpha=0$, a contradiction. Division by $\beta$ gives a
+dual optimizer. The reverse inequality follows by multiplying
+$Ae\ge c$ by any feasible dual vector. A vertex of the compact
+primal optimal face is a rational vertex of the original feasible
+polyhedron. The resulting dual optimal face is also a nonempty
+rational polyhedron, so has a rational point by
+Lemma~\ref{lem:cone-alternative}.
+
+Finally, multiplication of the scaled rows by a capacity certificate
+shows
+\[
+ h_b^TE_b\ge\alpha_b^TA_bE_b
+            \ge(c_b^T\alpha_b)\tau_b\ge B_b\tau_b.
+\]
+Thus every deficit is zero. In the common formulation, take $C_b$ to
+be the local cone in~\eqref{eq:budget-deficit}, with zero mass on
+excluded domains, $T_b=0$ and $d_b=\delta_b$.
+The displayed inequality is precisely the certificate
+$-d_b\ge0$ of Theorem~\ref{thm:homogeneous-certificate}.
+Part (ii) makes this certificate criterion necessary as well as
+sufficient for the stated finite linear model.
+\end{proof}
+
+\subsection{Capacities and optimization in the compact applications}
+
+For $h_b=\one$, $B_b=1$, the implemented dual seeks
+\begin{equation}\label{eq:capacity-dual}
+ \alpha_b\ge0,\qquad A_b^T\alpha_b\le\one,\qquad
+              c_b^T\alpha_b\ge\eta,\qquad\eta\ge1.
+\end{equation}
+There is one capacity inequality for each original energy slot. For
+support rows its left side is
+$\sum_{\ell:j\in S_\ell}\alpha_{b\ell}$: the total multiplicity with
+which that slot is charged. A new local theorem does not give another
+copy of the same energy.
+
+\begin{example*}
+Suppose $e_I+e_A\ge a$ and $e_I+e_B\ge b$. Weights one on both rows
+would count $e_I$ twice. Weights $1/2,1/2$ give instead
+\[
+           e_I+\tfrac12e_A+\tfrac12e_B\ge\tfrac12(a+b),
+\]
+a valid lower bound for the total energy because the omitted
+half-energies are nonnegative. Capacities test validity of the
+combination; its payment tests whether it reaches the budget.
+\end{example*}
+
+For one fixed dimension-labelled catalogue define
+\begin{equation}\label{eq:threshold-energy-value}
+ \Gamma_N=\min_{\substack{b\ \text{not locally excluded}\\ n_b\ge N}}m_b,
+ \qquad\min\varnothing=+\infty.
+\end{equation}
+The normalized LP is infeasible exactly when $\Gamma_N\ge1$.
+Raising $N$ removes domains, so this minimum cannot decrease; this
+is the energy form of Proposition~\ref{prop:threshold}.
+Completeness concerns the supplied linear inequalities, not geometric
+realizability of an arbitrary feasible energy vector.
+
+The recorded computation enforces~\eqref{eq:capacity-dual} and
+maximizes the sum of local payments, favoring simple saturated
+capacity solutions. Exact verification of the resulting rational
+point proves the needed comparison. No numerical optimality claim
+is used. Compactness and compact arithmeticity change the domains
+and rows; their linear assembly is identical.

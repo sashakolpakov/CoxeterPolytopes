@@ -1,7 +1,7 @@
 # arXiv submission sources
 
-The [submission guide](SUBMISSION.md) selects the source and local package
-for each of the three paper families. The concise dimension-bound submission
+The [submission guide](SUBMISSION.md) selects four prepared manuscripts
+within the existing three paper families. The concise dimension-bound submission
 uses the complete earlier edition as its online proof addendum.
 
 | Paper | Source | Current reading PDF |
@@ -9,6 +9,7 @@ uses the complete earlier edition as its online proof addendum.
 | Sharp dimension bounds 8 and 4 | [main.tex](sharp_dimension_bounds_8_and_4/main.tex) | [6-page PDF](sharp_dimension_bounds_8_and_4/main.pdf) |
 | On the second smallest ideal right-angled hyperbolic four-polytope | [main.tex](ideal_four_dimensional_volume_and_structure/main.tex) | [18-page PDF](ideal_four_dimensional_volume_and_structure/main.pdf) |
 | Dimension bounds for hyperbolic Coxeter polytopes: 57 / 17 / 15 | [main.tex](hyperbolic_coxeter_dimension_bounds/main.tex) | [41-page PDF](hyperbolic_coxeter_dimension_bounds/main.pdf) |
+| Linear programming certificates for dimension bounds of hyperbolic Coxeter polytopes | [main.tex](linear_programming_dimension_bounds/main.tex) | [36-page PDF](linear_programming_dimension_bounds/main.pdf) |
 
 Each folder contains `main.tex`, `references.bib`, `main.bbl` and the
 matching `main.pdf`. The [complete 551-page dimension proof addenda](../manuscripts/addenda/dimension_bounds_20261030/main.pdf)
@@ -36,6 +37,15 @@ main exposition followed by full case appendices. See the
 [GitHub proof catalogue](hyperbolic_coxeter_dimension_bounds/ADDENDA.md) and
 [dimension-paper guide](DIMENSION_BOUNDS.md) for the detailed proofs and records.
 
+The [LP companion](linear_programming_dimension_bounds/README.md) states
+the retained local inequalities and complete domains, then recovers
+57/17/15 through one homogeneous feasibility and certificate principle.
+It is another manuscript in the dimension-bound family. Its flattened
+submission source is self-contained for typesetting; the prior reviewed
+four-file working edition remains under
+[`manuscripts/linear_programming_dimension_bounds/`](../manuscripts/linear_programming_dimension_bounds/README.md).
+The LP package contains only `main.tex`, `references.bib` and `main.bbl`.
+
 The verification suites are `right_angled_sharp` and
 `ideal_ra4_volume_and_structure`. See the [reproduction guide](../repro/README.md)
 for commands and requirements, and the [formal-verification guide](../formal/README.md)
@@ -45,5 +55,6 @@ in its bibliography.
 
 The [30 October manifest](../results/arxiv_submission_current_manifest_20261030.json)
 records the retained compiled editions and their successful typesetting.
-The concise edition's preparation is recorded separately. Mathematical
+The concise and LP editions' preparation is recorded separately. No local
+package has been submitted to arXiv. Mathematical
 checks and Lean execution retain their own proof maps and receipts.

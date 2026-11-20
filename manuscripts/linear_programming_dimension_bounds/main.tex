@@ -1,0 +1,586 @@
+\newcommand{\DoNotLoadEpstopdf}{}
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,array,longtable,enumitem,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\setlength{\emergencystretch}{2em}
+\setlength{\LTpre}{.6\baselineskip}
+\setlength{\LTpost}{.6\baselineskip}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Input}
+\newtheorem*{example*}{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\ph}{\varphi}
+\newcommand{\Dfive}{\mathcal D_5}
+\newcommand{\one}{\mathbf 1}
+\title{Linear programming certificates for dimension bounds\\
+of hyperbolic Coxeter polytopes}
+\author{Alexander Kolpakov}
+\date{Working manuscript, 18 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We express three dimension arguments for hyperbolic Coxeter polytopes
+as linear feasibility problems. Local geometric and arithmetic
+theorems provide valid inequalities on complete configuration domains;
+a common homogeneous formulation combines them with a strict global
+budget. One certificate principle and one support-restriction argument
+give the linear deduction and its dimension monotonicity. Finite
+volume uses charges shared between face and vertex sums. Both compact
+cases use supported energies of one original farthest vector and the
+same capacity dual. Exact rational certificates recover the existing
+bounds $57$, $17$ and $15$. We specify the inputs, explain their
+geometric meaning and give the complete global deductions, without
+repeating the local geometric proofs.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+\label{sec:introduction}
+
+A dimension argument usually combines local restrictions on walls
+and diagrams with a global count or energy budget. We put the second
+step into a linear program. The variables retain the quantities
+shared by different estimates; the dual determines how those
+estimates may be combined. The local theorems remain explicit inputs.
+This separates their geometric proofs from the global accounting and
+allows the same assembly to be used with different input families.
+
+Our applications recover the bounds in the companion geometric
+treatment~\cite{BoundsArticle,BoundsSupplement}:
+\begin{equation}\label{eq:three-bounds}
+ \begin{aligned}
+ n&\le57&&\text{in finite volume},\\
+ n&\le17&&\text{in the compact case},\\
+ n&\le15&&\text{in the compact arithmetic case}.
+ \end{aligned}
+\end{equation}
+Guo and Zheng~\cite{GuoZheng2026} obtain the general finite-volume
+bound $n\le81$. The present paper gives linear programming
+certificates for the three bounds in~\eqref{eq:three-bounds}, using
+the local inputs specified below.
+
+Polytopes are finite-sided, convex and full-dimensional; hyperbolic
+space has curvature $-1$. Arithmeticity refers to the reflection
+group. Supplements FV, C and A mean, respectively, Parts I/IV, II/V
+and III/VI of~\cite{BoundsSupplement}. We state their required local
+results with their full domains rather than reproduce the geometric
+proofs. Deriving those results from a smaller collection of Gram
+conditions is a separate question.
+
+\begin{theorem}[Linear programming recovery]
+\label{thm:recovery}
+The local estimates and complete configuration domains specified below
+have the following exact rational certificates.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The finite-volume incidence problem has a common charge
+certificate for every integer dimension $n\ge58$. Its face payments
+and vertex-budget inequalities contradict the strict incidence
+excess in every such dimension.
+\item The normalized compact energy problem on the complete
+configuration family in dimensions $18,\ldots,29$ is infeasible.
+A capacity certificate combines the local energy bounds into a
+contradiction to the original vector's strict total budget.
+\item The corresponding compact arithmetic problem in dimensions
+$16,\ldots,29$ is infeasible. Its rank-$16$ and rank-$17$ arithmetic
+domains and estimates are joined to the same compact
+higher-dimensional domains and use the same capacity formulation.
+\end{enumerate}
+The two compact conclusions, together with the published compact
+ceiling $29$, give the last two bounds in~\eqref{eq:three-bounds}.
+The finite-volume certificate includes its own higher-dimensional
+vertex and face estimates and gives the first bound.
+\end{theorem}
+
+The common mathematical structure is proved in
+Theorem~\ref{thm:homogeneous-certificate}: an actual object supplies a
+feasible point by normalization, and a linear functional rules it out.
+Proposition~\ref{prop:threshold} proves monotonicity once, by restricting
+one fixed dimension-labelled family. The applications supply different
+valid constraints and different coverage proofs.
+
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{.15\linewidth}
+ >{\raggedright\arraybackslash}p{.41\linewidth}
+ >{\raggedright\arraybackslash}p{.34\linewidth}}
+\toprule
+Case&Shared quantities and geometric budget&Linear certificate\\\midrule
+Finite volume&Corner features counted in both face and vertex sums;
+ the vertex allowances come from incidence&One charge pays the faces
+ and remains within every vertex allowance\\
+Compact&Orthogonal energies of one original vector, with strict
+ total budget&Local multipliers respect each component's capacity
+ and force the total up to the budget\\
+Compact arithmetic&The same energies and budget, on arithmetically
+ admitted domains&The same capacity dual uses the additional valid
+ arithmetic rows and local exclusions\\\bottomrule
+\end{tabular}
+\end{center}
+
+There are three logical roles to keep distinct. Geometric identities
+and budgets hold on every actual object. Local theorems give further
+inequalities or exclusions on stated domains. Certificate conditions
+are restrictions on searched multipliers, such as face payments and
+energy capacities; they are not additional hypotheses on a polytope.
+Statements labelled \emph{Input} specify the first two roles. The LP
+combination is proved here. In particular, the arithmetic pruning
+used below is retained input, not a consequence newly derived by LP.
+
+Uniformity is within each family: every component bound is used over
+its full stated rank and spectator range, every ordinary dihedral
+parameter keeps its complete range, and overlapping estimates share
+the same original quantities. A formal domain may contain unrealizable
+configurations. The necessary direction suffices for exclusion.
+All terminating decimals denote exact rational numbers.
+
+\section{Geometry, configurations and linear certificates}
+\label{sec:framework}
+
+\subsection{Wall conventions and spherical components}
+
+We use a Lorentz space of signature $(-,+,\ldots,+)$, with hyperbolic
+space the future unit hyperboloid. A wall has an outward spacelike
+normal $u$ with $\ip{u}{u}=1$, and the chamber inequality is
+$\ip{y}{u}\le0$. The Gram entry for incident Coxeter walls meeting at
+angle $\pi/m$ is $-\cos(\pi/m)$. The Gram matrix at a finite vertex is
+positive definite. Its connected components are mutually orthogonal
+and span the Euclidean tangent space at that vertex.
+
+We use the standard finite Coxeter classification. A canonical list
+is
+\[
+ A_r\ (r\ge1),\quad B_r\ (r\ge3),\quad D_r\ (r\ge4),\quad
+ E_6,E_7,E_8,F_4,H_3,H_4,\quad I_2(m)\ (m\ge4).
+\]
+Here $A_2=I_2(3)$, so the rank-two family has no missing label;
+$B_2$ and $D_3$ are not counted as additional types. The \emph{order}
+of a diagram is its number of nodes, and its \emph{rank} is the rank
+of its Gram matrix. They agree for a spherical diagram. A connected
+affine diagram with $r+1$ nodes has Gram rank $r$. The simplex factor
+of an ideal vertex link that it determines has dimension $r$.
+These conventions explain the ideal-link polynomials used later.
+
+The geometric meaning of a local wall is part of its hypothesis.
+When the source notation calls a diagram or label \emph{native}, it
+means that of the specified actual walls, with their original node
+numbering. This adjective never asserts that a projected or
+replacement vector is another Coxeter wall.
+In particular, an actual opposite wall is the facet reached on the
+specified original edge. A replacement Gram matrix does not by itself
+identify that wall. The local estimates cited below include the
+appropriate actual-wall, finite-projection and farthest-vertex
+arguments. Likewise, an arbitrary face is not assumed to inherit
+the Coxeter or arithmetic hypotheses of the original polytope.
+
+\subsection{The original vector in the compact case}
+
+Let $P$ be compact, choose a strict interior point $z$, and choose a
+vertex $p$ farthest from $z$. Put $H=-\ip{z}{p}=\cosh d(z,p)$.
+The decomposition
+\begin{equation}\label{eq:original-vector}
+                   z=H(p-x),\qquad x\in p^\perp
+\end{equation}
+defines the original spatial vector $x$. Indeed,
+$x=p-z/H$ is orthogonal to $p$, and $z^2=p^2=-1$ gives
+\begin{equation}\label{eq:original-budget}
+                         \norm{x}^2=1-H^{-2}<1.
+\end{equation}
+The space $p^\perp$ is Euclidean. If its orthogonal spherical
+components are $W_1,\ldots,W_k$, define
+\begin{equation}\label{eq:component-energies}
+ e_j=\norm{\operatorname{proj}_{W_j}x}^2,\qquad
+ e_j\ge0,\qquad \sum_{j=1}^ke_j=\norm{x}^2<1.
+\end{equation}
+An aggregate energy may group several of these mutually orthogonal
+spaces. Every estimate added to this account must concern the same
+vector $x$. An auxiliary point can prove an inequality for $x$;
+its own energy is not an additional summand in~\eqref{eq:component-energies}.
+
+\subsection{Complete domains and supported inequalities}
+
+\begin{definition}\label{def:configuration-family}
+A finite \emph{configuration family} at a dimension $n$ is a finite
+collection of domains $\mathcal D_b$, each labelled by its actual
+dimension $n_b=n$, such that every actual configuration under
+consideration belongs to at least one $\mathcal D_b$. A domain records
+all hypotheses needed by its local estimates. A complete symbolic
+parameter range may be represented by one domain when the estimates
+hold uniformly over that entire range.
+\end{definition}
+
+The domains need not be disjoint. Given an actual configuration one
+may choose any matching domain, or fix a first-applicable rule. They
+need not consist only of realizable configurations either. Extra
+formal configurations make exclusion harder and do not compromise
+the necessary direction.
+
+A supported energy inequality consists of a set $S$ of original
+orthogonal slots and a rational number $c\ge0$ such that
+\begin{equation}\label{eq:supported-row}
+                            \sum_{j\in S}e_j\ge c
+\end{equation}
+on its complete domain. If a theorem estimates a proper coordinate
+subspace of one component, nonnegativity of the omitted energy gives
+a bound for the whole component. Two bounds on overlapping subspaces
+cannot then be added as though those subspaces were orthogonal.
+
+A local theorem can instead prove that its entire domain is
+impossible. We call this a \emph{local exclusion}. It is stated with
+its full actual-wall or arithmetic hypotheses and will force the mass
+of that domain to be zero. We keep it distinct from an energy bound.
+A theorem excluding a complete component or a specified component
+with a spectator is legitimate local input. The final exclusion of
+all configurations at a dimension is the conclusion to be recovered.
+
+\subsection{One homogeneous feasibility problem}
+
+For reference we state the elementary certificate principle. Its use
+in this paper always concerns a finite matrix, a justified finite
+extended formulation, or a direct finite sum on an actual polytope.
+
+\begin{lemma}\label{lem:cone-alternative}
+Let $M$ and $d$ be finite rational data. Exactly one of the following
+systems has a solution:
+\begin{align}
+ Mu=d,\quad u\ge0; &\label{eq:cone-primal}\\
+ M^Ty\ge0,\quad d^Ty=-1. &\label{eq:cone-dual}
+\end{align}
+When either system is feasible, it has a rational solution.
+\end{lemma}
+\begin{proof}
+Let $K$ be the cone generated by the columns of $M$. It is a closed
+polyhedral cone. If $d\notin K$, separation gives a vector $y$ with
+$y^Tk\ge0$ on $K$ and $y^Td<0$; rescaling gives
+\eqref{eq:cone-dual}. If $d\in K$, its nonnegative column
+coefficients give~\eqref{eq:cone-primal}. Both systems cannot be
+feasible, since they would give
+$-1=d^Ty=u^TM^Ty\ge0$.
+
+For rationality, a nonempty polyhedron defined over $\Q$ has a
+rational point: restrict to the affine hull of a minimal face,
+solve its rational equality system, and approximate a relative
+interior point by rational points in that affine space. All remaining
+strict inequalities persist under a sufficiently small approximation.
+Apply this to the two displayed rational systems.
+\end{proof}
+
+Free variables can be split into the difference of two nonnegative
+variables. Linear inequalities can be converted to equalities by
+slacks. Thus this lemma applies to the LPs below. Their more informative
+duals, expressed as corner charges or energy capacities, are derived
+explicitly rather than hidden in a large matrix transpose.
+
+Here is a common formulation that also makes the dimension parameter
+precise. Fix an index family $I$. Each index $i$ has an actual dimension
+$n_i$, a polyhedral cone $C_i\subset\R^{k_i}$ of local variables,
+a linear balance map $T_i:\R^{k_i}\longrightarrow W$, and a linear
+functional $d_i:\R^{k_i}\longrightarrow\R$. The cones
+contain homogeneous necessary inequalities. The map $T_i$ records
+quantities that must balance between different local pieces, and
+$d_i$ records their contribution to a strict global excess or deficit.
+All these data are fixed before a dimension threshold is selected.
+
+For an integer $N$ consider
+\begin{equation}\label{eq:common-feasibility}
+ \begin{gathered}
+ u_i\in C_i\quad(n_i\ge N),\qquad
+ \sum_{n_i\ge N}T_i u_i=0,\qquad
+ \sum_{n_i\ge N}d_i(u_i)=1.
+ \end{gathered}
+\end{equation}
+Only finitely many $u_i$ may be nonzero. If the family has infinitely
+many dimensions, $W$ may have a separate block of balance coordinates
+for each dimension. This prevents an incidence count at one dimension
+from cancelling a count at another. An actual finite polytope always
+uses finitely many variables.
+
+\begin{theorem}[Homogeneous lift and certificate]
+\label{thm:homogeneous-certificate}
+Suppose every actual object of dimension $n\ge N$ in the covered
+family supplies finitely supported local vectors $v_i\in C_i$,
+supported on indices with $n_i=n$, with
+\[
+             \sum_iT_iv_i=0,\qquad D:=\sum_id_i(v_i)>0.
+\]
+Then it gives a feasible point of~\eqref{eq:common-feasibility}.
+Conversely, a linear functional $\lambda$ on $W$ satisfying
+\begin{equation}\label{eq:common-certificate}
+       \lambda(T_iu)-d_i(u)\ge0
+       \qquad(u\in C_i,\ n_i\ge N)
+\end{equation}
+certifies infeasibility and excludes those objects.
+If $I$ is finite, $W$ is finite-dimensional and all the cones, maps
+and functionals are rational, infeasibility is equivalent to the
+existence of such a rational certificate.
+\end{theorem}
+\begin{proof}
+Set $u_i=v_i/D$ for the lift. For a putative feasible point, summing
+\eqref{eq:common-certificate} gives $0-1\ge0$, a contradiction.
+For the finite converse, express each rational polyhedral cone by
+finitely many rational generators and apply
+Lemma~\ref{lem:cone-alternative} to their images
+$(T_iu,d_i(u))$, with target $(0,1)$. Its separating functional has
+the form $(\lambda,-1)$, exactly as in
+\eqref{eq:common-certificate}.
+\end{proof}
+
+\begin{proposition}[Monotone thresholds]\label{prop:threshold}
+In the fixed formulation~\eqref{eq:common-feasibility}, feasibility
+at $N'\ge N$ implies feasibility at $N$. Thus infeasibility at $N$
+implies infeasibility at every larger threshold. A certificate at
+$N$ remains a certificate after restricting to $n_i\ge N'$.
+\end{proposition}
+\begin{proof}
+Extend a feasible point by zeros on the removed indices. Every cone
+contains zero, and both sums are unchanged. The certificate assertion
+is restriction of the inequalities already proved.
+\end{proof}
+
+This argument uses neither dimension heredity nor a limiting duality
+theorem. For an infinite family we use only the displayed certificate
+on finite sums. A finite catalogue must be accompanied by a theorem
+covering the dimensions outside it. The table in
+Section~\ref{sec:thresholds} records that coverage for all three cases.
+The following applications identify the cones, the balance and the
+positive quantity being normalized.
+
+\input{finite_volume}
+\input{energy_framework}
+\input{compact_cases}
+
+\section{Coverage of the dimension thresholds}
+\label{sec:thresholds}
+
+Proposition~\ref{prop:threshold} is the monotonicity argument for all
+three cases. What differs is the proof that the fixed input family
+covers every actual dimension in the excluded range:
+
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{.17\linewidth}
+ >{\raggedright\arraybackslash}p{.35\linewidth}
+ >{\raggedright\arraybackslash}p{.38\linewidth}}
+\toprule
+Case&Certificate domains&Coverage beyond the finite endpoint\\\midrule
+Finite volume&Finite and ideal endpoint at $n=58$&Analytic face and
+ vertex estimates, with the stated ideal descent, cover every $n\ge59$\\
+Compact&Complete catalogue at $18\le n\le29$&Published compact
+ ceiling $n\le29$\\
+Compact arithmetic&Arithmetic covers at $n=16,17$, joined to the
+ same compact catalogue at $18\le n\le29$&The same published compact
+ ceiling\\\bottomrule
+\end{tabular}
+\end{center}
+
+Vinberg's ceiling excludes compact polytopes in dimensions
+$n\ge30$~\cite{Vinberg1984,Vinberg1985}. It is independent input.
+The arithmetic formulation copies the compact domains unchanged;
+it does not insert the conclusion $n\le17$ as a row. The
+finite-volume tail is part of its geometric input and certificate,
+not an assertion that a new finite matrix was exported at every
+higher dimension.
+
+Thus the exclusions concern every dimension above the respective
+threshold, rather than three isolated exact dimensions. Passing to
+an arbitrary face or deleting diagram nodes is never needed.
+To lower a threshold one would have to supply complete valid data in
+the newly admitted dimensions; changing $N$ alone supplies none.
+
+\section{Exact certificates and the interpretation of the computations}
+\label{sec:certificates}
+
+The numerical part of the two compact recoveries is small after the
+local theorems have been stated. Its purpose is to find the global
+coefficients. It does not reconstruct the geometric proof of each
+local estimate. The matrix stores the support of every estimate,
+its rational lower bound, and the domain on which it is used.
+
+The capacity constraints are assembled for all nonexcluded domains
+at once. A numerical solver proposes their multipliers. Those
+multipliers are converted to rational numbers and every matrix row
+and variable bound is checked exactly. A second run regenerates the
+entire configuration catalogue and both the normalized primal and
+capacity matrices, compares their complete bytes, and rechecks the
+rational point. Thus the final implication depends on a rational
+inequality check, not on floating-point tolerances or a solver's
+status message.
+
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\toprule
+Problem&Domains&\shortstack{Local\\exclusions}&
+\shortstack{Primal\\variables/rows}&\shortstack{Dual\\variables/rows}\\
+\midrule
+Compact&829&151&$3471/4876$&$3157/2224$\\
+\shortstack[l]{Arithmetic,\\with compact tail}&917&167&$3869/5147$&$3324/2488$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The finite-volume computation has a different representation. Its
+local matrix has $5\,810$ variables and $103\,606$ rows. The complete
+finite-$58$ network certificate is assembled from verified blocks
+sharing one coefficient assignment. The exact feasible certificate
+and the eight-row minimax lower certificate match at $377$. No
+numerical optimizer was run for that result, and no claim is made
+that its entire coupled matrix was flattened into one file. A
+subsequent check repeated the specified local, coverage-assembly
+and lower-bound tasks while reusing the original network executions.
+
+Some local inequalities are already dominated by others on the same
+domain and support. For example, the prefix estimate with the extra
+initial gain is stronger than the corresponding prefix estimate
+alone. Keeping both is harmless and makes their sources visible.
+More generally, a zero multiplier in one certificate only says that
+that certificate did not use the row. It does not prove that the row
+is logically redundant. We do not claim a minimal list of geometric
+inputs.
+
+\section{Scope for further constraints}
+\label{sec:strengthening}
+
+A new valid condition may shrink an admitted domain or add a row to
+its cone. A larger observable or multiplier family may also enlarge
+the available certificates. In each case the actual-object lift and
+the fixed dimension labels must be preserved. These are the
+requirements for reusing the same linear deduction and monotonicity.
+
+The positive-definiteness, Schur-complement and arithmetic arguments
+currently enter through local theorems. Replacing some by explicit
+matrix inequalities could give an SDP. Real Gram positivity alone
+would not replace integral Cartan cycles, nonphysical embeddings or
+the stated lattice-group inclusion. Such a replacement must say which
+local facts it proves and which remain inputs. The present results
+concern the exact LP recovery of~\eqref{eq:three-bounds}.
+
+\appendix
+\section{Source statements, data and reproduction}
+\label{app:reproduction}
+
+The mathematical sources are the dimension-bound article and its
+complete supplement~\cite{BoundsArticle,BoundsSupplement}. The
+finite-volume LP also uses the common-law transfers and endpoint/tail
+composition described in the research notes. The associated repository
+\cite{LPRepository} contains the reading guide
+\path{notes/lp/UNIFORM_LP_PARADIGM.md} and the detailed result note
+\path{notes/lp/existing_proof_lp_recovery_results_20261118.md}.
+These distinguish the mathematical premises, source reviews,
+actual computations and exact certificate checks.
+
+The following paths identify the precise records in the associated
+research checkout. They are not additional mathematical hypotheses.
+The repository's reproduction guide distinguishes the files supplied
+with the public checkout from the separate bulk research inputs.
+
+\begingroup\small\raggedright
+\begin{longtable}{>{\raggedright\arraybackslash}p{.23\linewidth}
+ >{\raggedright\arraybackslash}p{.70\linewidth}}
+\toprule
+Record&Path\\\midrule\endfirsthead
+\toprule Record&Path\\\midrule\endhead
+Finite-volume completion&\path{audit/joint58_complete_lp_execution_20261110.json}\\
+Later declared rerun&\path{audit/lp_rerun_report_execution_20261115.json}\\
+Compact local-data rules&\path{scripts/compact17_proof_recovery_energy_catalogue_20261118.py}\\
+Arithmetic local-data rules&\path{scripts/existing_proof_arithmetic_energy_domains_20261118.py}\\
+Common energy assembler&\path{scripts/run_existing_proof_energy_lp_20261118.py}\\
+Exact matrix transport/check&\path{scripts/finite_volume_lp_matrix_20261106.py}\\
+Compact complete models&\path{results/existing_proof_compact17_energy_master01_20261118/}\\
+Arithmetic complete models&\path{results/existing_proof_arithmetic15_energy_master01_20261118/}\\
+Independent execution review&\path{audit/existing_proof_energy_lp_execution_independent_review_20261118.json}\\
+Final recovery acceptance&\path{audit/existing_proof_lp_recovery_completion_root_acceptance_20261118.json}\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+Each compact model directory contains the complete configuration
+catalogue, normalized primal, capacity dual, rational candidate,
+construction report and fresh verification report. The monitor
+records give the exact commands, source hashes, resource samples,
+elapsed times and memory measurements. Source reviews check the
+configuration-to-theorem applicability; the exact checker verifies
+the final rational linear algebra. A checksum establishes byte
+identity, and does not replace either of those arguments.
+
+For both compact cases, reproduction uses the existing bounded runner
+with its shared exclusive lock. The construction stage is
+\texttt{export-solve}; the separate stage \texttt{verify} regenerates
+both matrices and rechecks the candidate. Arithmetic supplies both
+catalogue modules. Output directories and monitor ledgers must be
+fresh. The recorded runs use a $59$-second, $1$-GiB, one-thread outer
+watchdog and retain the original percentage resource policy.
+
+The computational statement is limited to the specified models.
+The local proofs, complete source domains, original field reductions,
+four arithmetic computed-output premises and applicable lattice
+theorems retain their stated roles. The successful local scientific
+checks and formal modules were not reexecuted merely to construct
+these global LPs. Typesetting this manuscript performs no
+mathematical verification.
+
+\paragraph{Acknowledgments.}
+The author used OpenAI's Codex as a research and coding assistant to
+investigate proof ideas, develop the linear programming formulations,
+improve the exposition, and generate and audit the accompanying Python
+code. The author reviewed the resulting mathematics and code and takes
+responsibility for the final content.
+
+\begin{thebibliography}{99}
+\bibitem{GuoZheng2026}
+L.~Guo and F.~Zheng, \emph{Dimension bounds for finite-volume hyperbolic
+Coxeter polytopes}, preprint, arXiv:2611.01795v1, 2026.
+\url{https://arxiv.org/abs/2611.01795}.
+
+\bibitem{BoundsArticle}
+A.~Kolpakov, \emph{Dimension bounds for hyperbolic Coxeter polytopes},
+working article, 2026.
+\url{https://github.com/sashakolpakov/CoxeterPolytopes/tree/main/arxiv/hyperbolic_coxeter_dimension_bounds}.
+
+\bibitem{BoundsSupplement}
+A.~Kolpakov, \emph{Dimension bounds for hyperbolic Coxeter polytopes:
+supplementary proofs}, 2026.
+\url{https://github.com/sashakolpakov/CoxeterPolytopes/tree/main/manuscripts/addenda/dimension_bounds_20261030}.
+
+\bibitem{LPRepository}
+A.~Kolpakov, \emph{CoxeterPolytopes: proof sources and LP research
+records}, research repository, 2026.
+\url{https://github.com/sashakolpakov/CoxeterPolytopes}.
+
+\bibitem{Vinberg1984}
+E.~B.~Vinberg, The absence of crystallographic groups of reflections
+in Lobachevsky spaces of large dimension,
+\emph{Trudy Moskov. Mat. Obshch.} \textbf{47} (1984), 68--102;
+English translation, \emph{Trans. Moscow Math. Soc.} (1985), 75--112.
+\url{https://www.mathnet.ru/eng/mmo444}.
+
+\bibitem{Vinberg1985}
+E.~B.~Vinberg, Hyperbolic reflection groups,
+\emph{Russian Math. Surveys} \textbf{40}:1 (1985), 31--75.
+\url{https://doi.org/10.1070/RM1985v040n01ABEH003527}.
+
+\bibitem{Bugaenko1984}
+V.~O.~Bugaenko, Groups of automorphisms of unimodular hyperbolic
+quadratic forms over $\Z[(\sqrt5+1)/2]$,
+\emph{Vestnik Moskov. Univ. Ser.~1 Mat. Mekh.} (1984), no.~5, 6--12.
+\url{https://www.mathnet.ru/eng/vmumm3408}.
+\end{thebibliography}
+\end{document}

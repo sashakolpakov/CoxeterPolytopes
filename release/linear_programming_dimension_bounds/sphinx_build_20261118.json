@@ -1,0 +1,62 @@
+{
+  "status": "PASS_WARNINGS_AS_ERRORS_SPHINX_BUILD",
+  "stdout": {
+    "path": "audit/lp_submission_sphinx_build_20261118.stdout",
+    "bytes": 16144,
+    "sha256": "0aba810a7c0f8c8297bf44a1260b07bc7f84f1a0694d2686718b0b839f7941c1"
+  },
+  "input_audit_stdout": {
+    "path": "audit/lp_submission_sphinx_inputs_20261118.stdout",
+    "bytes": 55844,
+    "sha256": "12946bf19747bfcc7c7e811f6813a6740b986c84f5996340e8173bf860a9a234"
+  },
+  "publication_watchdog": {
+    "publication_io_only": true,
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "sphinx",
+      "-W",
+      "--keep-going",
+      "-b",
+      "html",
+      "docs/site",
+      ".publication/lp_submission_site_20261118"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "observed_peak_group_rss_bytes": 262144,
+    "rss_sampling_seconds": 1,
+    "start_resources": {
+      "free_disk_gib": 346.98,
+      "available_memory_gib": 6.92,
+      "disk_free_bytes": 372567699456,
+      "disk_total_bytes": 994610155520,
+      "available_memory_bytes": 7435157504,
+      "physical_memory_bytes": 25769803776,
+      "free_disk_percent": 37.458666,
+      "available_memory_percent": 28.852208,
+      "resource_policy": {
+        "id": "percentage-v1-20261025",
+        "admission_disk_percent": 2,
+        "admission_memory_percent": 15,
+        "abort_disk_percent": 1,
+        "abort_memory_percent": 6,
+        "cleanup_disk_percent": 2,
+        "rounding_digits": 6,
+        "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+      },
+      "free_disk_bytes": 372567699456,
+      "ram_available_bytes": 7435157504
+    },
+    "seconds": 1.017
+  },
+  "input_scope": "Working-tree source audit; no Git-index or deployment claim",
+  "output_directory": ".publication/lp_submission_site_20261118",
+  "generated_files": 197,
+  "generated_bytes": 11067657,
+  "no_mathematical_checks_launched": true,
+  "owned_generated_site_removed_after_validation": true,
+  "deployed": false
+}

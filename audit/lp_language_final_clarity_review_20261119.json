@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-19",
+  "reviewer": "independent language reviewer",
+  "status": "THREE_FINAL_PROSE_CLARIFICATIONS_ACCEPTED",
+  "scope": "Source-only review of the three final prose deltas from the accepted layout source. No new full-manuscript review or execution is claimed.",
+  "subject": {
+    "path": "arxiv/linear_programming_dimension_bounds/main.tex",
+    "bytes": 113194,
+    "sha256": "9cae93ca464c7a2c101ba9dd1b47a1a192bad19cb2cc5951ac67f77f9a147517"
+  },
+  "accepted_preimage": {
+    "bytes": 113145,
+    "sha256": "2bcdb90e33f2b1e512ce2dc2ac454d3d3514fcb22ffe131a65d4f83d46491047",
+    "reconstruction": "The full-review preimage retained in the root prose draft, followed by the exact previously reviewed N7/O7 alignment-only replacement."
+  },
+  "prior_reviews": [
+    {
+      "path": "audit/lp_manuscript_language_source_review_20261119.json",
+      "bytes": 11563,
+      "sha256": "d73affae81ed3b19483783942ad136f73c71e79be54ebebcb3f72b274ffcd54f"
+    },
+    {
+      "path": "audit/lp_language_layout_source_review_20261119.json",
+      "bytes": 1804,
+      "sha256": "2a84abd230dac03191d9dd36c7095974d438dfca55d1df77c0432cd5890c17b5"
+    }
+  ],
+  "changes": [
+    {
+      "location": "finite-volume opening",
+      "before": "linear program. Their existence contradicts the incidence\ninequality stated below. We also minimize the required vertex bound",
+      "after": "linear program. A weight function satisfying these inequalities\ncontradicts the incidence inequality stated below. We also minimize the required vertex bound",
+      "assessment": "Resolves the ambiguous antecedent of Their existence: a weight function satisfying both sets of inequalities gives the contradiction."
+    },
+    {
+      "location": "energy normalization proof",
+      "before": "first construction applies to its projection norms. The scaling",
+      "after": "first construction applies to its squared projection norms. The scaling",
+      "assessment": "Names the squared projection norms used as energy coordinates, consistently with their preceding definition."
+    },
+    {
+      "location": "compact exceptional-component propagation",
+      "before": "If $N_7$ or $O_7$ occurs, every other ordinary rank-two component\nsatisfies a bound greater than $1/5$. An ordinary $A_1$ component\noutside the exceptional configuration satisfies a bound greater than\n$1/5$ in the $N_7$ case, and greater than $2/15$ in the $O_7$ case.",
+      "after": "If $N_7$ or $O_7$ occurs, the squared projection norm for every\nother ordinary rank-two component is greater than $1/5$. For an\nordinary $A_1$ component outside the exceptional configuration, it\nis greater than $1/5$ in the $N_7$ case and greater than $2/15$ in\nthe $O_7$ case.",
+      "assessment": "Identifies the quantity bounded as the squared projection norm; keeps the component classes, cases and strict constants unchanged."
+    }
+  ],
+  "checks": {
+    "exactly_three_literal_replacements_reconstruct_subject_bytes": true,
+    "all_inline_and_display_math_fragments_byte_identical": true,
+    "number_of_mathematical_fragments_compared": 1195,
+    "ordered_labels_identical": true,
+    "component_classes_rank_conditions_strict_constants_and_cases_preserved": true,
+    "no_new_mathematical_claim_or_bound": true
+  },
+  "findings": [],
+  "execution": "No TeX, scientific worker, solver, checker or test was launched. PDF and packaging review must use the new source hash."
+}

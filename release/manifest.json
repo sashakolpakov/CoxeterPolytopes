@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "date": "2026-11-04",
-  "scope": "Current manuscript sources, matching PDFs, proof addenda, build receipts and local upload-package index; three paper families. Scientific verification and Git publication have separate records.",
+  "date": "2026-11-19",
+  "scope": "Current manuscript sources, matching PDFs, proof addenda, build receipts and local upload-package index; four prepared manuscripts within three paper families. Scientific verification and Git publication have separate records.",
   "author": "Alexander Kolpakov",
   "submission_guide": "arxiv/SUBMISSION.md",
   "papers": [
@@ -190,11 +190,99 @@
       "reproduction_manifest": "repro/dimension_bounds/manifest.json",
       "reproduction_preparation": "release/dimension_bounds/ideas_companion_20261104.json",
       "reproduction_manifest_sha256": "e1a8298b94b604f9c9ed30f25b7fe4f175004022a95930893c44e1f365ca9d14"
+    },
+    {
+      "id": "linear_programming_dimension_bounds",
+      "family": "dimension_bounds",
+      "title": "Linear programming certificates for dimension bounds of hyperbolic Coxeter polytopes",
+      "author": "Alexander Kolpakov",
+      "submission_status": "TYPESET_PACKAGE_PREPARED",
+      "submission_source": {
+        "path": "arxiv/linear_programming_dimension_bounds/main.tex",
+        "bytes": 113194,
+        "sha256": "9cae93ca464c7a2c101ba9dd1b47a1a192bad19cb2cc5951ac67f77f9a147517"
+      },
+      "bibliography": {
+        "path": "arxiv/linear_programming_dimension_bounds/references.bib",
+        "bytes": 2014,
+        "sha256": "c542e8a58701d0e5f94b2c0b5b13ea8fde780b2825481141f53a213afee7f182"
+      },
+      "compiled_bibliography": {
+        "path": "arxiv/linear_programming_dimension_bounds/main.bbl",
+        "bytes": 1793,
+        "sha256": "af42181d0ef34697cfbaa4f5ba46ece9bff2f33fadc20256c930e54663c845e6"
+      },
+      "pdf": {
+        "path": "arxiv/linear_programming_dimension_bounds/main.pdf",
+        "bytes": 497968,
+        "sha256": "162844971eada5c109f5760279762a259d66e0cb91978e24ac54c03bf8b8fc64"
+      },
+      "pages": 36,
+      "bounds_recovered": {
+        "general_finite_volume": 57,
+        "general_compact": 17,
+        "compact_arithmetic": 15
+      },
+      "current_pdf_role": "Linear programming proofs of the existing dimension bounds from local incidence and projection-norm inequalities",
+      "local_upload_package": {
+        "path": "dist/CoxeterPolytopes-linear-programming-dimension-bounds-arxiv.zip",
+        "bytes": 38325,
+        "sha256": "f2736fa674cfc1e1d1d6d17896c6bcaae603c99e26c80b266729a53bbd05c1fb"
+      },
+      "local_upload_checksum": "dist/CoxeterPolytopes-linear-programming-dimension-bounds-arxiv.zip.sha256",
+      "package_entries": [
+        "main.tex",
+        "references.bib",
+        "main.bbl"
+      ],
+      "package_local_and_git_ignored": true,
+      "preparation_record": "release/linear_programming_dimension_bounds/preparation_20261118.json",
+      "source_review": "audit/lp_manuscript_language_source_review_20261119.json",
+      "typesetting_receipt": "release/linear_programming_dimension_bounds/build_language03_20261119.json",
+      "package_verification_receipt": "release/linear_programming_dimension_bounds/package_language03_20261119.json",
+      "bounded_build_ledger": "results/lp_dimension_arxiv_language03_20261119_monitor.json",
+      "build_worker": "scripts/build_lp_dimension_arxiv_20261118.py",
+      "prior_reviewed_working_edition": {
+        "main.tex": {
+          "path": "manuscripts/linear_programming_dimension_bounds/main.tex",
+          "bytes": 27530,
+          "sha256": "523176c4df1b81c929eac3d434de22ef1628cf40d8de9bc19043f2e8fdd4a192"
+        },
+        "finite_volume.tex": {
+          "path": "manuscripts/linear_programming_dimension_bounds/finite_volume.tex",
+          "bytes": 38816,
+          "sha256": "535753d081fe77776587e7aa9e8f950f005cb116b2e2849e8318af3f334cd964"
+        },
+        "energy_framework.tex": {
+          "path": "manuscripts/linear_programming_dimension_bounds/energy_framework.tex",
+          "bytes": 7198,
+          "sha256": "ee4e2a5f2d97a671dab5b7dfee1aec77140b070c5b822ddcf325c16770122366"
+        },
+        "compact_cases.tex": {
+          "path": "manuscripts/linear_programming_dimension_bounds/compact_cases.tex",
+          "bytes": 39105,
+          "sha256": "f19877dfd65f41f26be831260b76598ead38b803d68dbf99a51c4f9a6ffc2bea"
+        },
+        "main.pdf": {
+          "path": "manuscripts/linear_programming_dimension_bounds/main.pdf",
+          "bytes": 498113,
+          "sha256": "fda18c82df84e85e48807fbaac27119a5a009f149f5c8ff2e0f0fb21078e67e5"
+        }
+      },
+      "prior_manuscript_acceptance": "audit/lp_manuscript_citation_ack_completion_20261118.json",
+      "submission_guide": "arxiv/linear_programming_dimension_bounds/README.md",
+      "upload_comments": "36 pages; exact LP certificates, local theorem sources and reproduction records at https://github.com/sashakolpakov/CoxeterPolytopes.",
+      "scientific_checks_or_Lean_rerun_for_preparation": false,
+      "arxiv_upload_performed": false,
+      "language_layout_review": "audit/lp_language_layout_source_review_20261119.json",
+      "final_clarity_review": "audit/lp_language_final_clarity_review_20261119.json",
+      "language_revision_date": "2026-11-19",
+      "pre_language_edition": "release/linear_programming_dimension_bounds/pre_language_revision_20261119.json"
     }
   ],
   "repository_layout": "docs/repository_layout.md",
   "cleanup_receipt": "audit/ideas_manuscript_cleanup_20261104.json",
   "bulk_research_manifest_unchanged": "repro/public-data-manifest.json",
   "bulk_assets_uploaded": 0,
-  "publication_state": "The proofread 41-page dimension article, three-file local arXiv source ZIP and current reproduction/Lean companion are prepared; no arXiv submission or bulk upload has been performed."
+  "publication_state": "Four submission source/PDF pairs are prepared within three paper families. The LP companion has a verified three-file local source ZIP. No arXiv submission or bulk upload has been performed."
 }

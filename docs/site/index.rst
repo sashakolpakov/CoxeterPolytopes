@@ -4,12 +4,17 @@ Coxeter polytopes: proofs and verification
 This repository studies dimension bounds, reflection chambers and
 right-angled volume and structure problems. The documentation explains the
 arguments, their finite algorithms and the limits of the verification.
-Updated 30 October 2026.
+Updated 20 November 2026.
 
-There are **three prepared arXiv submissions**. A combined
+There are **four prepared arXiv manuscripts within three paper families**.
+A combined
 article contains the general finite-volume, compact and arithmetic compact
 dimension bounds. Separate articles treat sharp right-angled dimensions and the
-second ideal four-dimensional volume. These presentation revisions preserve the mathematical conclusions;
+second ideal four-dimensional volume. An LP companion recovers the three
+general dimension bounds through a common certificate framework, retaining
+the proved local inequalities and complete domains as inputs.
+Local preparation has not submitted a manuscript to arXiv.
+These presentation revisions preserve the mathematical conclusions;
 no new polytope example is claimed.
 
 Current dimension comparison
@@ -81,6 +86,7 @@ navigate execution logs first.
 
    papers
    methods
+   linear_programming
    finite_volume
    compact_bounds
    right_angled
@@ -111,7 +117,7 @@ Lean checks the internal deductions from explicitly supplied premises.
 Current manuscripts
 --------------------
 
-The :ref:`three submission editions <arxiv-submission-editions>`
+The :ref:`four prepared manuscripts <arxiv-submission-editions>`
 have complete source folders and reading PDFs:
 
 * :download:`Sharp dimensions 8 and 4, six pages <../../arxiv/sharp_dimension_bounds_8_and_4/main.pdf>`:
@@ -119,13 +125,20 @@ have complete source folders and reading PDFs:
 * :download:`Second ideal four-volume, eighteen pages <../../arxiv/ideal_four_dimensional_volume_and_structure/main.pdf>`:
   five inline figures, the second-volume theorem, restricted chains and the
   history of the compact and ideal extremal questions.
-* :download:`Dimension bounds 57 / 17 / 15, sixty-seven pages <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf>`:
+* :download:`Dimension bounds 57 / 17 / 15, forty-one pages <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf>`:
   a concise submission with the :download:`complete 551-page proof addenda <../../manuscripts/addenda/dimension_bounds_20261030/main.pdf>` retained separately.
+* :download:`Linear programming certificates for dimension bounds, thirty-six pages <../../arxiv/linear_programming_dimension_bounds/main.pdf>`:
+  one homogeneous feasibility and certificate principle, dimension
+  monotonicity, complete input domains and exact LP recoveries of 57/17/15.
 
-All three sources include the author and AI-use acknowledgment. Each folder
+All four sources include the author and AI-use acknowledgment. Each folder
 contains ``main.tex``, ``references.bib`` and ``main.bbl`` and builds with standard
-pdfLaTeX and BibTeX, or ``latexmk -pdf main.tex``. All three four-step builds
-passed with zero TeX or BibTeX warnings and no undefined references or citations. The
+pdfLaTeX and BibTeX, or ``latexmk -pdf main.tex``. The three earlier builds
+recorded on 30 October and 4 November passed with zero TeX or BibTeX warnings
+and no undefined references or citations. The LP manuscript has separate
+:download:`build <../../release/linear_programming_dimension_bounds/build_language03_20261119.json>`
+and :download:`local source-package <../../release/linear_programming_dimension_bounds/package_language03_20261119.json>` receipts.
+The
 :download:`submission-edition guide <../arxiv_submission_editions_20261028.md>`
 and :download:`current manifest <../../release/manifest.json>`
 identify the exact source/PDF pairs and retain the existing mathematical and

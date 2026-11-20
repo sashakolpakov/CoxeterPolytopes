@@ -14,6 +14,16 @@ proofs and reproduction records remain in the GitHub proof catalogue and
 the preserved 551-page addendum. The compact theorem is an internal input to
 the arithmetic argument.
 
+The :download:`36-page LP companion <../../arxiv/linear_programming_dimension_bounds/main.pdf>`
+derives the same bounds from the stated local estimates and exhaustive configuration classes.
+Its :download:`submission guide <../../arxiv/linear_programming_dimension_bounds/README.md>`
+separates the canonical single-file TeX source from the preserved reviewed
+working edition. Preparing its source package does not rerun the mathematical
+checks supporting those inputs.
+The :download:`short LP reading guide <../../notes/lp/LP_READING_GUIDE.md>`
+explains what the variables and dual multipliers mean, and distinguishes
+diagram marks from edge weights.
+
 The two right-angled submission editions remain separate current
 reading copies: six pages with two figures for sharp dimensions 8/4,
 and eighteen pages with five figures for ideal volume and structure. Their
@@ -111,11 +121,11 @@ rejects Python optimization: assertions must remain enabled, with neither
 
 .. _repro-arxiv-editions:
 
-Reproducing the three submission editions
-------------------------------------------
+Reproducing the four prepared manuscripts
+-----------------------------------------
 
-The :download:`28 October edition guide <../arxiv_submission_editions_20261028.md>`
-and :download:`current source/PDF manifest <../../results/arxiv_submission_current_manifest_20261030.json>`
+The :download:`edition guide <../arxiv_submission_editions_20261028.md>`
+and :download:`current source/PDF manifest <../../release/manifest.json>`
 bind the current public scientific sources to their reading PDFs:
 
 .. list-table:: Submission source and supporting suite
@@ -135,9 +145,13 @@ bind the current public scientific sources to their reading PDFs:
      - ``ideal_ra4_volume_and_structure``
      - Four exact model/incidence/root checks.
    * - :download:`Combined-dimension TeX <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.tex>`; :download:`PDF <../../arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf>`
-     - 13 / 0
+     - 41 / 0
      - Three existing proof families
      - :download:`Proof and computation maps <../../arxiv/DIMENSION_BOUNDS.md>`; no combined fresh replay claimed.
+   * - :download:`LP-companion TeX <../../arxiv/linear_programming_dimension_bounds/main.tex>`; :download:`PDF <../../arxiv/linear_programming_dimension_bounds/main.pdf>`
+     - 36 / 0
+     - :download:`LP input and certificate guide <../../arxiv/linear_programming_dimension_bounds/README.md>`
+     - Existing exact LP certificates; typesetting runs no mathematical jobs.
 
 Each upload folder contains ``main.tex``, ``references.bib`` and the generated
 ``main.bbl`` and matching ``main.pdf``. For each separate arXiv submission,
@@ -165,6 +179,25 @@ BibTeX reads ``references.bib`` and generates ``main.bbl``. Include that file
 alongside ``main.tex`` and ``references.bib`` when uploading to arXiv. Standard
 TeX packages suffice; no Python program or repository data is needed to build
 the PDFs. Typesetting launches no mathematical checker or Lean module.
+
+The LP repository builder uses that same sequence inside the existing
+exclusive resource monitor. From the repository root, choose a fresh tag
+and ledger path:
+
+.. code-block:: sh
+
+   python3 -B scripts/run_bounded_research_check_20261018.py --parent-lock \
+     --ledger results/fresh_lp_arxiv_build_monitor.json -- \
+     scripts/build_lp_dimension_arxiv_20261118.py --tag fresh_tag
+
+The initial preparation has separate
+:download:`build <../../release/linear_programming_dimension_bounds/build_language03_20261119.json>`
+and :download:`package <../../release/linear_programming_dimension_bounds/package_language03_20261119.json>` receipts.
+Its local final archive is
+``dist/CoxeterPolytopes-linear-programming-dimension-bounds-arxiv.zip``,
+with a ``.sha256`` checksum beside it. The ZIP contains exactly
+``main.tex``, ``references.bib`` and ``main.bbl`` at its root. It remains
+local and ignored by Git; no arXiv submission has been performed.
 
 Supporting mathematical checks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
