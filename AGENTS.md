@@ -15,6 +15,11 @@ copies and assembly bookkeeping; retain exact inputs needed by current checkers.
 Consolidate improvements within those paper
 families; do not create a paper for each numerical increment.
 
+The user's 23 November cleanup removes the subsequent finite-volume
+additional-constraint search. Keep the LP work focused on the completed
+57/17/15 bounds, their manuscript, sources and exact verification inputs.
+The published LP-manuscript checkpoint is commit `60303a81`.
+
 ## Evidence and claims
 
 The selected Lean publication gate passed: two modules, two separate actual

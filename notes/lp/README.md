@@ -32,8 +32,8 @@ finite data; its complete older matrix and the repository's unuploaded bulk
 collection are not included in this publication. A build receipt establishes
 typesetting, not a new mathematical replay.
 
-Earlier exploratory LP/SDP work and its unsuccessful runs are retained
-locally. They do not replace the completed existing-proof recoveries or
-establish stronger bounds. The full working index has been preserved
-byte for byte in the local session history; this public index selects the
-material needed to read the current manuscript.
+The retained LP work concerns these completed bounds and their required
+inputs. The subsequent 21–23 November search for additional finite-volume
+constraints, including its experimental code, generated models and working
+notes, was removed at the author's request. It established no new dimension
+bound. Commit `60303a81` is the published LP-manuscript checkpoint.
