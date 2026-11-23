@@ -36,8 +36,10 @@ distinguish these copies from preserved earlier editions.
 
 The [LP companion](arxiv/linear_programming_dimension_bounds/README.md)
 recovers 57/17/15 by combining proved local inequalities on exhaustive
-configuration classes. The short [LP reading guide](notes/lp/LP_READING_GUIDE.md)
-explains the variables, the dual inequalities, and marks in a Coxeter diagram.
+configuration classes. The [completed LP proofs and certificates](notes/lp/README.md)
+give the reading route and exact execution records. The short
+[LP reading guide](notes/lp/LP_READING_GUIDE.md) explains the variables,
+the dual inequalities, and marks in a Coxeter diagram.
 The LP submission's source package and receipts are separate from the
 geometric article; the
 [reviewed working edition](manuscripts/linear_programming_dimension_bounds/README.md)
@@ -83,5 +85,6 @@ local upload archives (`dist/`), release metadata, proof records (`results/`),
 and audits. Historical publication staging is compressed with verified byte
 restoration; recorded scientific inputs retain their original paths.
 
-The [LP research notes](notes/lp/README.md) collect the reading guide,
-three-case formulation and exact recovery records.
+The retained [LP documentation](notes/lp/README.md) covers the completed
+57/17/15 recoveries and their required inputs. The later search for additional
+finite-volume constraints has been removed.

@@ -70,7 +70,11 @@ dual certificates and diagram markings. The article states the local
 geometric hypotheses, exhaustive configuration classes and numerical
 inequalities, and gives worked certificates.
 [Submission sources and build instructions](../arxiv/linear_programming_dimension_bounds/README.md)
-are kept with the canonical PDF. The prior
+are kept with the canonical PDF. The
+[completed LP proof index](../notes/lp/README.md) and
+[exact recovery records](../notes/lp/existing_proof_lp_recovery_results_20261118.md)
+identify the retained formulations, certificates and verification scopes.
+The later additional-constraint search is excluded from this work. The prior
 [reviewed working edition](linear_programming_dimension_bounds/README.md)
 retains its four TeX files and PDF. The three earlier submission editions
 and six accepted verification inputs retain their existing selections.

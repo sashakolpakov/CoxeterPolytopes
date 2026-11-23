@@ -1,6 +1,6 @@
 # Current bounds and verification
 
-Updated 20 November 2026. The repository has four prepared submission
+Updated 23 November 2026. The repository has four prepared submission
 manuscripts within its existing three paper families.
 Their results are internally reviewed written proofs at the stated geometric,
 literature and finite-data inputs. No new polytope example is claimed.
@@ -50,6 +50,14 @@ domains as inputs. Its prior reviewed four-file
 [working edition](../manuscripts/linear_programming_dimension_bounds/README.md)
 is preserved separately. Preparing this submission adds typesetting and
 source-package records, not new mathematical or Lean execution.
+
+All three LP recoveries are complete at their stated local inputs. The
+[LP proof index](../notes/lp/README.md) selects the formulations and
+[exact certificate records](../notes/lp/existing_proof_lp_recovery_results_20261118.md).
+The subsequent 21–23 November search for additional finite-volume constraints
+has been removed. It established no improved dimension bound; the retained
+LP conclusions remain **57 / 17 / 15**. This documentation update reruns no
+mathematical checker, solver, Lean module or TeX build.
 
 Each source folder also contains its matching `main.pdf`, beside `main.tex`,
 `references.bib` and the generated

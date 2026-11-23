@@ -4,7 +4,7 @@ Coxeter polytopes: proofs and verification
 This repository studies dimension bounds, reflection chambers and
 right-angled volume and structure problems. The documentation explains the
 arguments, their finite algorithms and the limits of the verification.
-Updated 20 November 2026.
+Updated 23 November 2026.
 
 There are **four prepared arXiv manuscripts within three paper families**.
 A combined
@@ -13,6 +13,9 @@ dimension bounds. Separate articles treat sharp right-angled dimensions and the
 second ideal four-dimensional volume. An LP companion recovers the three
 general dimension bounds through a common certificate framework, retaining
 the proved local inequalities and complete domains as inputs.
+These three LP recoveries are complete at their stated inputs. The retained
+proofs and certificates are described in :doc:`linear_programming`; the later
+search for additional finite-volume constraints has been removed.
 Local preparation has not submitted a manuscript to arXiv.
 These presentation revisions preserve the mathematical conclusions;
 no new polytope example is claimed.

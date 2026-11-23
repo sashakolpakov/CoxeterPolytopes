@@ -23,6 +23,11 @@ checks supporting those inputs.
 The :download:`short LP reading guide <../../notes/lp/LP_READING_GUIDE.md>`
 explains what the variables and dual multipliers mean, and distinguishes
 diagram marks from edge weights.
+For the saved rational certificates and separate regeneration reports, use
+:ref:`lp-retained-certificates` and the
+:download:`completed LP proof index <../../notes/lp/README.md>`.
+The removed additional-constraint experiments are not reproduction inputs
+for these bounds.
 
 The two right-angled submission editions remain separate current
 reading copies: six pages with two figures for sharp dimensions 8/4,

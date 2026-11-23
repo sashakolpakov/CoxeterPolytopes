@@ -7,6 +7,14 @@ current article to complete written proofs, four small public arithmetic
 certificate snapshots and conditional Lean sources with actual audit records.
 The historical selectors below retain their original editions and scopes.
 
+For the LP companion's completed recovery of the same three bounds, use the
+[LP proof index](../notes/lp/README.md) and
+[exact recovery records](../notes/lp/existing_proof_lp_recovery_results_20261118.md).
+They identify the finite-volume certificate and the common compact/arithmetic
+assembler, saved rational certificates and separate regeneration checks.
+The later additional-constraint search has been removed; it is not a
+reproduction dependency.
+
 Start with the **[detailed reproduction guide](https://sashakolpakov.github.io/CoxeterPolytopes/reproducibility.html)**
 and [mathematical algorithm contracts](https://sashakolpakov.github.io/CoxeterPolytopes/algorithms.html).
 Plans launch no scientific child:
@@ -32,7 +40,7 @@ illustrated revisions have separate source/build records. Finite57's current
 146-job replay or complete transitive regeneration is claimed. Its
 [evidence guide](../docs/finite_volume57_reproduce.md) preserves exact scopes.
 
-The [three current arXiv manuscripts](../arxiv/README.md) have their own
+The [four prepared arXiv manuscripts](../arxiv/README.md) have their own
 [source/PDF guide and typesetting commands](../docs/arxiv_submission_editions_20261028.md).
 Their PDFs sit beside the sources as `arxiv/<paper>/main.pdf`; the complete
 dimension proof addenda are retained under `manuscripts/addenda/`.
@@ -52,8 +60,11 @@ All scientific, Lean and TeX work runs serially under the shared lock and
 monitoring. Admit at 2% free disk and 15% available RAM; stop below 1% disk
 or 6% RAM, and start cleanup below 2% disk. Use exact byte ratios against
 total filesystem capacity and physical RAM; record totals and the policy hash.
-Scientific/TeX batches use 59 seconds, 1 GiB and one thread; Lean uses one
-module, 2048 MiB and a separate audit. Retain sources, certificates, PDFs,
+The recorded LP recoveries and historical scientific/TeX batches used
+59 seconds, 1 GiB and one thread; their receipts retain those limits. Consult
+the current [repository instructions](../AGENTS.md) for the runner and limits
+applicable to a new job. Lean uses one module, 2048 MiB and a separate audit.
+Retain sources, certificates, PDFs,
 failures and receipts; remove only owned unused build products.
 Do not rerun successful unchanged jobs for a documentation update.
 

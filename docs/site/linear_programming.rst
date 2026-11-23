@@ -3,6 +3,12 @@ Linear programming and the dimension bounds
 
 The :download:`36-page LP manuscript <../../arxiv/linear_programming_dimension_bounds/main.pdf>`
 combines proved local inequalities to recover three existing bounds.
+All three recoveries are complete at their stated geometric, arithmetic and
+finite-data inputs. The
+:download:`LP proof index <../../notes/lp/README.md>` identifies the retained
+work. The subsequent 21–23 November search for additional finite-volume
+constraints has been removed; it established no improved bound. The manuscript
+and its matching PDF retain their existing mathematical content.
 
 .. list-table:: Bounds recovered by the current LP arguments
    :header-rows: 1
@@ -108,3 +114,49 @@ See the :download:`short reading guide <../../notes/lp/LP_READING_GUIDE.md>`,
 :download:`three-case formulation <../../notes/lp/UNIFORM_LP_PARADIGM.md>` and
 :download:`exact recovery records <../../notes/lp/existing_proof_lp_recovery_results_20261118.md>`
 for the definitions, retained inputs and execution evidence.
+
+.. _lp-retained-certificates:
+
+Retained certificates and verification
+--------------------------------------
+
+The finite-volume calculation has matching exact feasible and dual
+certificates for its restricted minimax value 377. Separate incidence and
+analytic-tail arguments give exclusion in every dimension at least 58.
+The compact and arithmetic calculations use the same global assembler;
+each has a saved rational capacity-dual certificate and a separate execution
+that regenerates its matrices and checks the certificate again.
+
+.. list-table:: Exact evidence for the completed LP bounds
+   :header-rows: 1
+   :widths: 20 38 42
+
+   * - Bound
+     - Covered configurations
+     - Retained records
+   * - Finite volume 57
+     - Rank-58 finite networks and ideal links, with the stated higher-dimensional estimates.
+     - :download:`Exact LP completion <../../audit/joint58_complete_lp_execution_20261110.json>`; :download:`subsequent verification <../../audit/lp_rerun_report_execution_20261115.json>`.
+   * - Compact 17
+     - 829 classes in dimensions 18–29, including 151 local exclusions; Vinberg's theorem above 29.
+     - :download:`Rational dual certificate <../../results/existing_proof_compact17_energy_master01_20261118/candidate.json>`; :download:`separate regeneration and verification <../../results/existing_proof_compact17_energy_master01_20261118/verified.json>`.
+   * - Compact arithmetic 15
+     - 917 classes: arithmetic ranks 16/17 and the compact classes at 18–29, with 167 local exclusions in total.
+     - :download:`Rational dual certificate <../../results/existing_proof_arithmetic15_energy_master01_20261118/candidate.json>`; :download:`separate regeneration and verification <../../results/existing_proof_arithmetic15_energy_master01_20261118/verified.json>`.
+
+``EXACT_LP_FEASIBLE`` in the compact execution files refers to the capacity
+dual. Its rational point proves the normalized strict-budget primal
+infeasible. A numerical solver status alone is not the certificate.
+
+The :download:`completion acceptance <../../audit/existing_proof_lp_recovery_completion_root_acceptance_20261118.json>`
+binds these recoveries at their retained inputs. The
+:download:`common assembler <../../scripts/run_existing_proof_energy_lp_20261118.py>`
+and :download:`exact matrix checker <../../scripts/finite_volume_lp_matrix_20261106.py>`
+remain available with the recorded sources. The finite-volume record still
+depends on retained finite data; its complete older matrix is not included
+in the public source checkout. The :doc:`reproducibility` chapter distinguishes
+publicly available inputs from the unuploaded bulk collection.
+
+The 23 November documentation update runs only documentation and publication
+checks. It does not repeat these mathematical executions or add Lean or TeX
+verification.

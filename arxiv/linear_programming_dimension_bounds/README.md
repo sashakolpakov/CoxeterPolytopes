@@ -19,6 +19,13 @@ The [short LP reading guide](../../notes/lp/LP_READING_GUIDE.md) explains
 the variables and diagram markings. The Guo–Zheng preprint citation and the
 AI-use acknowledgment are included.
 
+The [completed LP proof index](../../notes/lp/README.md) and
+[exact recovery records](../../notes/lp/existing_proof_lp_recovery_results_20261118.md)
+identify the inputs and certificates for all three bounds. The subsequent
+21–23 November additional-constraint search has been removed. The manuscript,
+matching PDF and completed verification records retain their existing bytes
+and mathematical scope.
+
 The directory follows the existing right-angled submission layout:
 
 | File | Role |

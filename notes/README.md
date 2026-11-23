@@ -1,9 +1,11 @@
 # Research notes
 
-The [LP research directory](lp/README.md) collects the completed dimension-bound
+The [LP proof index](lp/README.md) collects the completed dimension-bound
 formulations, a [short reading guide](lp/LP_READING_GUIDE.md), and the exact
-recovery records for 57/17/15. Earlier exploratory work remains separate
-from these completed arguments.
+recovery records for 57/17/15. Its scope is these completed arguments and
+their required inputs. The later 21–23 November search for additional
+finite-volume constraints, including its experimental models and working
+notes, has been removed.
 
 The mathematical notes used by the current papers remain at their recorded
 paths under `results/` and `docs/`, so exact checker inputs and historical

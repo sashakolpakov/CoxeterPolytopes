@@ -1,7 +1,7 @@
 What has actually been verified
 ===============================
 
-Updated 20 November 2026. The repository contains internally reviewed
+Updated 23 November 2026. The repository contains internally reviewed
 written arguments, scoped exact computations, selected conditional Lean
 kernels and matching compiled PDFs. Each has its own evidence. No
 complete geometric formalization or fresh combined whole-manuscript
@@ -112,6 +112,13 @@ typesetting and package receipts do not repeat those computations. The
 final three-file ZIP is local, as explained in the
 :download:`submission guide <../../arxiv/linear_programming_dimension_bounds/README.md>`;
 no arXiv upload or site deployment is claimed by this preparation.
+
+The completed LP recoveries have matching exact finite-volume certificates
+and separate compact/arithmetic rational certificate and regeneration
+records, listed under :ref:`lp-retained-certificates`. The subsequent
+additional-constraint search has been removed and supplied no improved
+bound. The documentation update preserves these mathematical records and
+runs only Sphinx and publication checks.
 
 The long case appendices discharge necessary proof obligations. The arithmetic
 argument uses the independently proved compact theorem within the same
@@ -310,7 +317,10 @@ Necessary scientific, Lean and TeX work uses the named bounded entry
 lock. The 25 October policy admits work at 2% free disk and 15% available
 physical RAM, stops below 1% disk or 6% RAM, and starts cleanup below 2%
 disk. Records retain exact byte ratios, totals and the policy-source hash.
-Scientific/TeX children use 59 seconds/1 GiB/one thread. Lean uses one
+The recorded LP recoveries and historical scientific/TeX children used
+59 seconds/1 GiB/one thread; their original receipts retain those limits.
+Consult ``AGENTS.md`` for the runner and limits applicable to a new job.
+Lean uses one
 module at 2048 MiB/one thread, followed by its separate audit, under the
 outer watchdog's own bounds. Process identity and RSS monitoring stay on.
 

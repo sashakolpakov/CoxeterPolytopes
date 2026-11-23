@@ -1,0 +1,210 @@
+{
+  "schema": "lp-documentation-cleanup-validation-v1",
+  "date_utc": "2026-11-23T17:55:11.058365+00:00",
+  "status": "PASS_DOCUMENTATION_INPUT_AUDIT_AND_STRICT_SPHINX_BUILD",
+  "scope": "Documentation and obsolete local status-log cleanup only. No scientific, solver, Lean or TeX jobs launched.",
+  "base_commit": "419624335315c84e61455546265adf9e0fd2d1cd",
+  "public_documentation_paths": [
+    "README.md",
+    "manuscripts/README.md",
+    "arxiv/linear_programming_dimension_bounds/README.md",
+    "notes/README.md",
+    "docs/current_bounds_and_verification.md",
+    "docs/repository_layout.md",
+    "repro/README.md",
+    "release/README.md",
+    "docs/site/index.rst",
+    "docs/site/papers.rst",
+    "docs/site/linear_programming.rst",
+    "docs/site/reproducibility.rst",
+    "docs/site/verification.rst"
+  ],
+  "sphinx_source": "Clean subset of the actual Git index; all 161 exported files checked against their staged Git blob IDs. Unstaged manuscript edits excluded.",
+  "source_bindings": {
+    "input_files": 159,
+    "total_bytes": 9642152,
+    "bindings_sha256": "1e99ae101870f7fa6893ceab6a768f23e9d1424d0aff5684100795be2a409d8d",
+    "binding_encoding": "SHA256 of the UTF-8 JSON array of {path, bytes, sha256} entries, sorted by path; keys sorted; separators comma and colon; no whitespace or final newline.",
+    "source": "Actual staged Git blobs, checked after checkout-index materialization; unrelated working edits excluded.",
+    "validation_tool_sha256": "1cc08d0dbb13c65b1895af5eb53d2c5d67bbc54f370e88f39f081e44d13c8923"
+  },
+  "sphinx_version": "9.1.0",
+  "input_audit": {
+    "source_pages": 15,
+    "input_files": 159,
+    "issues": [],
+    "require_indexed": true,
+    "mathematical_checks_launched": false
+  },
+  "sphinx_result": "build succeeded; warnings treated as errors",
+  "watchdogs": {
+    "input_audit": {
+      "publication_io_only": true,
+      "command": [
+        "python3",
+        "-B",
+        "tools/audit_sphinx_inputs.py",
+        "--require-indexed"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "observed_peak_group_rss_bytes": 245760,
+      "rss_sampling_seconds": 1,
+      "start_resources": {
+        "free_disk_gib": 331.68,
+        "available_memory_gib": 9.25,
+        "disk_free_bytes": 356141084672,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 9929637888,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 35.807103,
+        "available_memory_percent": 38.532066,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        },
+        "free_disk_bytes": 356141084672,
+        "ram_available_bytes": 9929637888
+      },
+      "seconds": 1.017
+    },
+    "sphinx_build": {
+      "publication_io_only": true,
+      "command": [
+        "/Users/sasha/.venvs/global/bin/python3",
+        "-B",
+        "-m",
+        "sphinx",
+        "-W",
+        "--keep-going",
+        "-b",
+        "html",
+        "docs/site",
+        "/Users/sasha/CoxeterPolytopes/.publication/lp_docs_cleanup_html_20261123"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "observed_peak_group_rss_bytes": 245760,
+      "rss_sampling_seconds": 1,
+      "start_resources": {
+        "free_disk_gib": 331.68,
+        "available_memory_gib": 9.38,
+        "disk_free_bytes": 356140965888,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 10071949312,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 35.807091,
+        "available_memory_percent": 39.084307,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        },
+        "free_disk_bytes": 356140965888,
+        "ram_available_bytes": 10071949312
+      },
+      "seconds": 1.015
+    }
+  },
+  "failed_attempt": {
+    "reason": "The escalated shell resolved python3 to a system interpreter without Sphinx. Retried with the existing Sphinx environment; no dependency installation or source change required.",
+    "watchdog": {
+      "publication_io_only": true,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "sphinx",
+        "-W",
+        "--keep-going",
+        "-b",
+        "html",
+        "docs/site",
+        "/Users/sasha/CoxeterPolytopes/.publication/lp_docs_cleanup_html_20261123"
+      ],
+      "exit_code": 1,
+      "stop_reason": null,
+      "observed_peak_group_rss_bytes": 245760,
+      "rss_sampling_seconds": 1,
+      "start_resources": {
+        "free_disk_gib": 331.68,
+        "available_memory_gib": 9.27,
+        "disk_free_bytes": 356137496576,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 9953181696,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 35.806742,
+        "available_memory_percent": 38.623428,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        },
+        "free_disk_bytes": 356137496576,
+        "ram_available_bytes": 9953181696
+      },
+      "seconds": 1.018
+    }
+  },
+  "markdown_local_link_check": {
+    "changed_markdown_files": 8,
+    "local_targets_checked": 125,
+    "missing_or_unindexed_targets": []
+  },
+  "protected_files_checked_unchanged": 47,
+  "removed_obsolete_local_logs": [
+    {
+      "path": "notes/lp/CURRENT.md",
+      "bytes": 18793
+    },
+    {
+      "path": "notes/lp/STATUS.md",
+      "bytes": 95544
+    },
+    {
+      "path": "notes/lp/PROGRESS.md",
+      "bytes": 196054
+    },
+    {
+      "path": "notes/lp/CATALOG.md",
+      "bytes": 160416
+    },
+    {
+      "path": "docs/history/lp_readme_process_log_before_publication_20261120.md",
+      "bytes": 111181
+    }
+  ],
+  "local_note_link_fix": "notes/lp/compact17_remaining_assembly_and_local_A18_mates_20261113.md now links to the completed proof index and dates its earlier incomplete status; it remains a local research source.",
+  "owned_generated_outputs_removed": [
+    {
+      "path": ".publication/lp_docs_cleanup_snapshot_20261123",
+      "files_removed": 161,
+      "bytes_removed": 9662576
+    },
+    {
+      "path": ".publication/lp_docs_cleanup_html_20261123",
+      "files_removed": 213,
+      "bytes_removed": 11345744
+    }
+  ],
+  "mathematical_execution_records": "Existing LP recoveries and historical evidence retain their original limits and scopes.",
+  "bulk_assets_uploaded": 0,
+  "publication_boundary": "This receipt establishes documentation validation. The actual Git index must be audited after staging all receipts and before push.",
+  "raw_output_policy": "The monitored outcomes, commands, resource samples and input-set fingerprint are retained in this receipt. Temporary documentation stdout and duplicate input listings were removed after validation."
+}

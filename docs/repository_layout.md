@@ -21,7 +21,7 @@ research history have distinct homes.
 | `results/`, `data/` | Scientific results, certificates, exact inputs and execution evidence at their recorded paths |
 | `audit/` | Repository organization checks, priority evidence and typesetting admission records |
 | `notes/` | Guide to research notes; local exploratory scripts under ignored `notes/experiments/` |
-| `notes/lp/` | LP [reading guide and formulation notes](../notes/lp/README.md), exact recoveries and manuscript inputs; earlier exploratory work remains local |
+| `notes/lp/` | Completed 57/17/15 LP [proof index, reading guide and formulations](../notes/lp/README.md), exact certificates and required manuscript inputs |
 | `docs/history/` | Ignored local session history and byte-verified archives of old publication administration |
 | `.publication/` | Protected prepared bulk archives, primary reference inputs, current delivery pointers and live publication work |
 
@@ -48,6 +48,13 @@ removed. The [cleanup receipt](../audit/repository_cleanup_20261104.json)
 records the operation and protected manuscript hashes. Historical paths
 inside that archive can be restored when needed; the archive is local
 administration and is not part of the public proof package.
+
+The 21–23 November finite-volume additional-constraint search was removed
+at the author's request, including its experimental sources, generated
+models, notes and continuation files. It was uncommitted and established
+no improved bound. Commit `60303a81` is the published LP-manuscript
+checkpoint; the completed 57/17/15 LP sources, certificates and retained
+verification inputs remain in place.
 
 The cancelled long expansion and superseded presentation bookkeeping are
 also retained in the ignored `docs/history/cancelled_dimension_expansion_20261104.tar.gz`,

@@ -57,6 +57,10 @@ The LP companion states local inequalities on exhaustive configuration
 classes, then proves their linear programming consequences. The
 :download:`short LP reading guide <../../notes/lp/LP_READING_GUIDE.md>`
 explains the projection-norm variables, dual inequalities and diagram marks.
+The :download:`completed LP proof index <../../notes/lp/README.md>` selects
+the formulations and exact certificate records for 57/17/15. The subsequent
+additional-constraint search has been removed; it changes no manuscript or
+accepted bound. See :ref:`lp-retained-certificates` for the retained evidence.
 Its
 :download:`prior reviewed working edition <../../manuscripts/linear_programming_dimension_bounds/README.md>`
 retains the four TeX files and matching PDF. The canonical submission uses
