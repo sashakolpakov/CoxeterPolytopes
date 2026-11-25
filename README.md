@@ -1,5 +1,7 @@
 # Coxeter Polytopes
 
+[![Paperlane Lean: builds](https://pragyaangaur.dev/Paperlane/lean/sashakolpakov/CoxeterPolytopes.svg)](https://pragyaangaur.dev/Paperlane/lean/sashakolpakov/CoxeterPolytopes.html)
+
 Hyperbolic Coxeter dimension bounds, right-angled volume problems, exact
 certificates and selected Lean verification.
 

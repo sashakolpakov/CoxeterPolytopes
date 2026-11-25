@@ -1,0 +1,25 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_NARROW_DRAFT_BOUND_READ_ONLY_STATUS_DELTA",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "ec13bbdb7913dd83c02432f670de10007e27619983d5d0891bc2141772ccdd60",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "audit/hexagon_submission_draft_client_independent_source_review_20261123.json": "f518c93d584d48148804483b56818795458efd97374b2105cad799a559a246e8",
+    "release/hexagon_submission_schedule_20261123/queue.json": "e593fd0050456bbd42ca90f36495783da5e5f5ae7966793f70560df5b028797c"
+  },
+  "previous_client_sha256": "493bf891d38c70428933a855603278c42b9f55a2519c3a6b67f9d209450bd3bf",
+  "method": "Read the complete current client and checked its new draft-binding/release-gate/request-receipt changes against the previously reviewed source. Verified final client/watchdog/queue and metadata hashes. No credential or local execution-receipt contents were accessed, and no client, test or network operation was executed by this reviewer.",
+  "findings": [
+    "The only newly reachable action is GET of one selected draft's status. Before credential loading, the supplied identifier must match a successful create-draft response receipt for the same selected paper and the exact current canonical metadata and POST-body hashes. The identifier is restricted to the bounded component grammar, and the target remains the fixed official HTTPS submission origin with no redirects or environmental proxy use.",
+    "The first successful legacy receipt can be used for this read-only draft association without inventing an upload/file association. The existing independent runtime release-manifest/source/PDF checks still run before the association and request. The GET carries no metadata or file payload and performs no source mutation.",
+    "New intent and response records share a fresh request identifier and record the exact file-manifest fingerprint. The first legacy response is not rewritten. Token redaction in keys/values, owner-only atomic local receipts, generic exceptions and no automatic retry remain unchanged.",
+    "The hard release gate still refuses create-upload, put-part, complete-upload, source-check, preview, preview-status and commit before credential access. Their dormant implementation is not approved by this delta. Upload association, revision-specific preview validation and unknown-commit outcome handling remain prerequisites to their separate release.",
+    "The publication watchdog and its one-path allowlist delta are unchanged. The user already authorized the selected submission workflow and declarations; this read-only schema/status step introduces no new permission request or scheduling/publication claim."
+  ],
+  "blocking_findings_for_bound_status_read": [],
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "uploads_previews_commits_released": false
+}

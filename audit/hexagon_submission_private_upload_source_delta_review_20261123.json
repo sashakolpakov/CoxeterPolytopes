@@ -1,0 +1,29 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_BOUND_PRIVATE_BYTE_UPLOAD_COMPLETION_AND_SOURCE_READS_ONLY",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "3e9a195dbd58278575daef449c8bdee29dfd6146b10c2995e0ebca9358521ee3",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "release/hexagon_submission_schedule_20261123/queue.json": "5bb03f79a1515cfb40fd6217fa41a69356ed90e6b2d94a081fc7b6ed9c531f30",
+    "audit/hexagon_submission_upload_registration_source_delta_review_20261123.json": "eb6477507a866dea04def11ef78d9de542506cfd18711e0263bc72ee9dfd09bf"
+  },
+  "previous_client_sha256": "3c99aaa878d37c11bf6a9d9a9dac55fe5540ae7b61b0405b4dbde3dd83459cbb",
+  "method": "Read the new upload-registration association, exact part/completion checks, full completed-file gate and final action-release gate. Matched them to the already reviewed preparation/credential/request/receipt code and checked the final source hash. No credential or private execution-receipt contents were opened; no client, network, test, upload or compile was run by this reviewer.",
+  "findings": [
+    "A source-byte PUT requires the existing paper/draft/current remote metadata verification and a successful registration response bound to the same paper, draft API path, exact manifest filename, metadata hash, full file-manifest hash and exact registration-body hash. The actual returned uploadId must match, and the reported part capacity must cover the entire verified source file. Only the fixed part-one endpoint is used; no returned arbitrary URL or redirect receives credentials or bytes.",
+    "The part body is the exact in-memory source byte sequence already checked against the authenticated release manifest and local file SHA/size. Upload completion additionally requires a successful PUT receipt for this same draft/upload/file, metadata and full manifest with the exact source-body SHA. No PDF, archive, credential, bulk asset or arbitrary local path is newly uploadable.",
+    "Source-check and preview-status GETs require successful completion receipts for all three expected files, each tied back to a reviewed registration. Their request paths remain fixed-origin submission paths with validated identifiers. Those reads can obtain the live source-tree hashes/schema for the next stage, but this audit does not infer that the remote set or revision already matches the local manifest.",
+    "The final explicit release gate blocks both preview POST and commit before credential loading. Thus no remote compiler or publication operation is enabled by this version. A later release must verify the actual complete staged set, byte hashes/sourceTreeDigest and exact revision before private compilation, then bind successful preview evidence and unknown-result protections before commit.",
+    "Intent/response request IDs, manifest_file, metadata/full-manifest/payload hashes and sanitized owner-only receipts remain. There is one manual request per invocation, no automatic retries and no inferred idempotency for registration/completion. Unknown mutation outcomes require bound status inspection before repeating. Existing origin, redirect/proxy, credential, release-file and watchdog protections are unchanged. Remote compilation timing remains the coordinator's separate responsibility."
+  ],
+  "resolved_findings": [
+    "Kept preview POST disabled until live staged-source evidence is available and bound."
+  ],
+  "blocking_findings_for_private_upload_stage": [],
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "remote_compilation_released": false,
+  "public_commit_released": false
+}

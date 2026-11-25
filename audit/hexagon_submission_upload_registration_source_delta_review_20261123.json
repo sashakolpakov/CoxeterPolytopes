@@ -1,0 +1,27 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_NARROW_VERIFIED_DRAFT_UPLOAD_REGISTRATION_ONLY",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "3c99aaa878d37c11bf6a9d9a9dac55fe5540ae7b61b0405b4dbde3dd83459cbb",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "release/hexagon_submission_schedule_20261123/queue.json": "5bb03f79a1515cfb40fd6217fa41a69356ed90e6b2d94a081fc7b6ed9c531f30",
+    "audit/hexagon_submission_draft_client_independent_source_review_20261123.json": "f518c93d584d48148804483b56818795458efd97374b2105cad799a559a246e8",
+    "audit/hexagon_submission_bound_status_client_source_delta_review_20261123.json": "28154656a22fee4ae6e0793eac91a2d0562c5b950dbaae33465949a9af6f8635"
+  },
+  "previous_client_sha256": "ec13bbdb7913dd83c02432f670de10007e27619983d5d0891bc2141772ccdd60",
+  "method": "Read the current draft verification, action gating, registration body and receipt paths against the already reviewed client. Verified final hashes and unchanged selected metadata hashes. No credential or private execution-receipt contents were opened; no client, test, upload, compile or network request was executed by this reviewer.",
+  "findings": [
+    "The sole new reachable operation is metadata-only POST to the selected draft's uploads endpoint. The draft must first match the successful create receipt for this paper and exact metadata, then a successful bound GET with the same actual response.id, paper, current metadata SHA and complete file-manifest SHA, and uploading status. The latest matching status is checked without falling back past a mismatch.",
+    "Every expected metadata field is compared against parsed remote metadataJson, with arxivId checked at its documented top-level location. Additional server defaults observed by the owner are not treated as author-supplied declarations. The static release-manifest/source/PDF validation and all selected user-declaration checks still run before credential access.",
+    "Registration requires an exact manifest filename and sends only its kind, filename, relativePath, contentType and byte size. It sends no source bytes, PDF, archive, key or other local material. Receipts now identify the manifest file in addition to request, metadata, full file-manifest and payload hashes, enabling the returned upload ID to be bound in the next stage.",
+    "One request is made with no automatic retry. An uncertain registration response must be resolved by a bound draft-status read before repeating a registration; this review does not infer idempotency for that POST. Fixed official HTTPS/no redirects, token redaction, private atomic receipts and the publication watchdog remain unchanged.",
+    "File-part PUT, upload completion, source-check, previews and commit remain hard-disabled before credential loading. Their upload-ID/file association, staged-source hash verification, same-revision preview and unknown-commit protections are not released by this audit."
+  ],
+  "blocking_findings_for_registration_stage": [],
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "source_bytes_upload_released": false,
+  "previews_or_commits_released": false
+}

@@ -1,0 +1,326 @@
+{
+  "schema": "hexagon-prepared-submission-queue-v1",
+  "prepared_utc_date": "2026-11-23",
+  "status": "ALL_READY_PAPERS_ACCEPTED_SCHEDULE_DISABLED",
+  "current_completion_record": "completion_five_per_day_20261123.json",
+  "subsequent_lp_correction_record": "../hexagon_lp_vinberg_update_20261123/completion.json",
+  "service_origin": "https://hexagonmath.org",
+  "api_version": "1.13.0-beta",
+  "api_spec": {
+    "url": "https://hexagonmath.org/api/v1/openapi.json",
+    "bytes": 36413,
+    "sha256": "46e761cf8bfafc54589139426026ab7875bae5f1a4f0edb48243cddda8c092f3"
+  },
+  "source_manifest": {
+    "path": "release/manifest.json",
+    "bytes": 13785,
+    "sha256": "52f05e5505903469948d981ad432852c5f14169700091f795f550f7ac1445e85"
+  },
+  "authorization_scope": "User requested a separate API usability check and scheduling of ready arXiv manuscripts. This plan contains only the selected manuscript sources, no bulk research payload.",
+  "hexagon_file_policy": {
+    "canonical_release_descriptors": "Each entry retains all three original preparation descriptors in upload_files for release and receipt hash binding.",
+    "active_upload_names": [
+      "main.tex",
+      "references.bib"
+    ],
+    "excluded_upload_names": {
+      "main.bbl": "Actual API registration returned HTTP 400: This supporting-source file type is not accepted. Original .bbl remains unchanged and is checked against the release manifest."
+    },
+    "bibliography_requirement": "Verify that the remote preview generates the bibliography from references.bib before commit."
+  },
+  "schedule": {
+    "mode": "LOCAL_QUEUE_COMPLETE_LABEL_DISABLED",
+    "remote_date_scheduling_documented": false,
+    "utc_start_date": "2026-11-23",
+    "remaining_not_before_utc_dates": {},
+    "initial_new_account_max_commits_per_utc_day": 1,
+    "user_reported_current_account_max_commits_per_utc_day": 5,
+    "current_allowance_authorization": "User instruction, 23 November 2026: proceed with remaining submissions, up to five per day.",
+    "completed_schedule_disabled": true,
+    "draft_lifetime_hours": 24,
+    "create_draft": "On that item's execution day, after final metadata and exact file hashes are checked",
+    "publication_date": "Not controlled by this queue; follows Hexagon screening/moderation",
+    "retry": "Unknown non-idempotent mutations hold for receipt reconciliation. Same finalized metadata and Idempotency-Key may resume draft creation only within the documented 24-hour window; no blind recommit.",
+    "installed_label": "org.coxeterpolytopes.hexagon-submissions-20261123",
+    "installation_receipt": "installation.json",
+    "checks": "Minutes 5 and 35 of each local hour and on load; UTC eligibility is enforced by the client.",
+    "first_actual_calendar_run": "EXIT_0_DEFERRED_UNTIL_2026_11_24_UTC_NO_NETWORK"
+  },
+  "confirmed_user_choices": {
+    "scope": "All three ready entries; no declaration is inferred for the held entry",
+    "license": "CC BY-SA 4.0",
+    "authorshipMode": "mixed",
+    "authorshipMode_meaning": "Mixed human and AI text",
+    "humanUnderstanding": "some",
+    "provenance": "The author reviewed this manuscript to the extent expected of a referee. Ideas supplied by the author have known provenance; for ideas originating with the AI, the author cannot always trace how the model arrived at them. The human-understanding declaration is therefore some; the review is not a guarantee of correctness.",
+    "correctnessConfirmed": true,
+    "communityInterestConfirmed": true,
+    "citationsConfirmed": true,
+    "rightsConfirmed": true,
+    "remaining_declarations_question_status": "ANSWERED"
+  },
+  "missing_inputs": [],
+  "credential_inventory": {
+    "user_supplied_path": "hexagon_key.local",
+    "git_ignore_rule": "*.local",
+    "actual_path_and_nested_example_ignore_verified": true,
+    "tracked_local_paths": [],
+    "credential_path_history_found": false,
+    "local_file_permissions": "0600",
+    "credential_value_recorded": false,
+    "authentication_validated": true,
+    "validation_evidence": "Authorized create-draft request returned HTTP 201; private draft ID and full response are retained only in ignored execution.local.",
+    "matching_environment_variable_names": [],
+    "matching_named_configuration_paths": [],
+    "browser_cookie_extraction_performed": false
+  },
+  "public_duplicate_search": {
+    "url": "https://hexagonmath.org/api/v1/works?author=Kolpakov&limit=100",
+    "total": 0,
+    "has_more": false,
+    "scope": "Public author-name filter only; this does not inventory private drafts or prove absence under other names."
+  },
+  "entries": [
+    {
+      "id": "right_angled_sharp",
+      "title": "Sharp dimension bounds for right-angled hyperbolic polytopes",
+      "queue_order": 1,
+      "status": "PUBLISHED",
+      "proposed_utc_day_offset": 0,
+      "remote_draft_id": null,
+      "remote_identifier": "2611.00913",
+      "remote_version_id": "2611.00913v1",
+      "submission_received_utc": "2026-11-23 04:24:13",
+      "remote_scheduled_at": null,
+      "matching_build_receipt": "release/right_angled_sharp/build_20261104.json",
+      "pages": 6,
+      "metadata_template": "right_angled_sharp.metadata.template.json",
+      "upload_files": [
+        {
+          "path": "arxiv/sharp_dimension_bounds_8_and_4/main.tex",
+          "bytes": 17038,
+          "sha256": "82c1196d07743dee0498357a7fe94418a5e569bf4d2d526820762c4b93ff1a49",
+          "relativePath": "main.tex",
+          "kind": "source",
+          "contentType": "text/x-tex"
+        },
+        {
+          "path": "arxiv/sharp_dimension_bounds_8_and_4/references.bib",
+          "bytes": 2154,
+          "sha256": "b8d3feb7d908774f6bf892a2a27bdbebeb5a19ebc63ce612573df4c33d8c171f",
+          "relativePath": "references.bib",
+          "kind": "source-asset",
+          "contentType": "text/plain"
+        },
+        {
+          "path": "arxiv/sharp_dimension_bounds_8_and_4/main.bbl",
+          "bytes": 1646,
+          "sha256": "1d442f06765136c51e78eac468b5fd7d1e2236586f0e5cc725bec0ac62db28a5",
+          "relativePath": "main.bbl",
+          "kind": "source-asset",
+          "contentType": "text/plain"
+        }
+      ],
+      "reference_pdf": {
+        "path": "arxiv/sharp_dimension_bounds_8_and_4/main.pdf",
+        "bytes": 232036,
+        "sha256": "d4ed592a22cbcd480a175bd506c82163259f9235200bfed63fca3f4a9010bf97",
+        "upload": false
+      },
+      "source_and_pdf_hashes_match_release_manifest": true
+    },
+    {
+      "id": "ideal_ra4_volume_and_structure",
+      "title": "On the second smallest ideal right-angled hyperbolic four-polytope",
+      "queue_order": 2,
+      "status": "SUBMITTED_UNDER_REVIEW",
+      "proposed_utc_day_offset": 1,
+      "remote_draft_id": null,
+      "remote_identifier": "2611.00958",
+      "remote_version_id": "2611.00958v1",
+      "submission_received_utc": "2026-11-24 00:06:13",
+      "remote_scheduled_at": null,
+      "matching_build_receipt": "results/arxiv_ideal_bibtex_build_20261030.json",
+      "pages": 18,
+      "metadata_template": "ideal_ra4_volume_and_structure.metadata.template.json",
+      "upload_files": [
+        {
+          "path": "arxiv/ideal_four_dimensional_volume_and_structure/main.tex",
+          "bytes": 58286,
+          "sha256": "3fa90b9cd66250d0f043baba59301547dbeaa0914d3c161c06325e2cfb47fc94",
+          "relativePath": "main.tex",
+          "kind": "source",
+          "contentType": "text/x-tex"
+        },
+        {
+          "path": "arxiv/ideal_four_dimensional_volume_and_structure/references.bib",
+          "bytes": 1835,
+          "sha256": "12dceab74cb79edeeb1b8e5f0229319b549f6bfc14aeb920f179fdd019549f7d",
+          "relativePath": "references.bib",
+          "kind": "source-asset",
+          "contentType": "text/plain"
+        },
+        {
+          "path": "arxiv/ideal_four_dimensional_volume_and_structure/main.bbl",
+          "bytes": 1421,
+          "sha256": "634f5b62659433a981eadd42f7f44936b77dbe0c471992a015090bfe1f125fa8",
+          "relativePath": "main.bbl",
+          "kind": "source-asset",
+          "contentType": "text/plain"
+        }
+      ],
+      "reference_pdf": {
+        "path": "arxiv/ideal_four_dimensional_volume_and_structure/main.pdf",
+        "bytes": 401872,
+        "sha256": "e7a32ed3fe4b6db7f65c1ac0bd5173b35c0a388e98bc7d4844eef7616405ec9e",
+        "upload": false
+      },
+      "source_and_pdf_hashes_match_release_manifest": true,
+      "not_before_utc_date": "2026-11-24"
+    },
+    {
+      "id": "linear_programming_dimension_bounds",
+      "title": "Linear programming certificates for dimension bounds of hyperbolic Coxeter polytopes",
+      "queue_order": 3,
+      "status": "SUBMITTED_UNDER_REVIEW",
+      "proposed_utc_day_offset": 2,
+      "remote_draft_id": null,
+      "remote_identifier": "2611.00962",
+      "remote_version_id": "2611.00962v1",
+      "submission_received_utc": "2026-11-24 02:00:26",
+      "remote_scheduled_at": null,
+      "matching_build_receipt": "release/linear_programming_dimension_bounds/build_language03_20261119.json",
+      "pages": 36,
+      "metadata_template": "linear_programming_dimension_bounds.metadata.template.json",
+      "upload_files": [
+        {
+          "path": "arxiv/linear_programming_dimension_bounds/main.tex",
+          "bytes": 113194,
+          "sha256": "9cae93ca464c7a2c101ba9dd1b47a1a192bad19cb2cc5951ac67f77f9a147517",
+          "relativePath": "main.tex",
+          "kind": "source",
+          "contentType": "text/x-tex"
+        },
+        {
+          "path": "arxiv/linear_programming_dimension_bounds/references.bib",
+          "bytes": 2014,
+          "sha256": "c542e8a58701d0e5f94b2c0b5b13ea8fde780b2825481141f53a213afee7f182",
+          "relativePath": "references.bib",
+          "kind": "source-asset",
+          "contentType": "text/plain"
+        },
+        {
+          "path": "arxiv/linear_programming_dimension_bounds/main.bbl",
+          "bytes": 1793,
+          "sha256": "af42181d0ef34697cfbaa4f5ba46ece9bff2f33fadc20256c930e54663c845e6",
+          "relativePath": "main.bbl",
+          "kind": "source-asset",
+          "contentType": "text/plain"
+        }
+      ],
+      "reference_pdf": {
+        "path": "arxiv/linear_programming_dimension_bounds/main.pdf",
+        "bytes": 497968,
+        "sha256": "162844971eada5c109f5760279762a259d66e0cb91978e24ac54c03bf8b8fc64",
+        "upload": false
+      },
+      "source_and_pdf_hashes_match_release_manifest": true,
+      "initial_not_before_utc_date": "2026-11-25",
+      "not_before_utc_date": "2026-11-24"
+    }
+  ],
+  "held_entries": [
+    {
+      "id": "dimension_bounds",
+      "title": "Dimension bounds for hyperbolic Coxeter polytopes",
+      "status": "HOLD_SOURCE_BUILD_PACKAGE_MISMATCH",
+      "current_source": {
+        "path": "arxiv/hyperbolic_coxeter_dimension_bounds/main.tex",
+        "bytes": 140957,
+        "sha256": "c8e02529110059187fe275293877bbbc0abccc59fd5ed1d6436e30751cf5eedf"
+      },
+      "current_bibliography": {
+        "path": "arxiv/hyperbolic_coxeter_dimension_bounds/references.bib",
+        "bytes": 4784,
+        "sha256": "932bf44727ddd938f4e644f3cdf584a136daa4daed9e4a8b2694e67d90f758c9"
+      },
+      "recorded_source": {
+        "path": "arxiv/hyperbolic_coxeter_dimension_bounds/main.tex",
+        "bytes": 127268,
+        "sha256": "8f9e5181274e830e172b6eab20a7845b84c186df58a9e73de60ebaa14fd03398"
+      },
+      "recorded_bibliography": {
+        "path": "arxiv/hyperbolic_coxeter_dimension_bounds/references.bib",
+        "bytes": 5049,
+        "sha256": "1783c3867925d7e93b6642ba42ee41c25a3965b9cae5b1761da51b8fd03b46e0"
+      },
+      "retained_pdf": {
+        "path": "arxiv/hyperbolic_coxeter_dimension_bounds/main.pdf",
+        "bytes": 557273,
+        "sha256": "9b42a06a6adc838cf4aa3a04050fb2ac18371d8b4e068b761fbfa7b899a0e05a"
+      },
+      "required_action": "Reconcile the revised source and bibliography with its build/PDF/package receipt through a separately authorized coordinating publication job; do not substitute stale package bytes or compile concurrently with LP work."
+    }
+  ],
+  "remote_mutations_performed": [
+    {
+      "paper": "right_angled_sharp",
+      "action": "create-private-draft",
+      "http_status": 201,
+      "private_receipt": "execution.local",
+      "sources_uploaded": [
+        "main.tex",
+        "references.bib"
+      ],
+      "static_source_check": "PASS: ready, treeChecked, no warnings, not truncated",
+      "source_digest": "250eb09191ddcce771e976872d0850d6126cc9a2001f96378ab73fb79a9f0d0e",
+      "preview": {
+        "status": "succeeded",
+        "completed_utc": "2026-11-23 04:05:50",
+        "has_pdf": true,
+        "pdf_bytes": 231354,
+        "source_digest_current": true,
+        "bibliography_reviewed": true,
+        "content_review_passed": true,
+        "only_text_difference": "Explicit title-date directive produced 2026-11-23 instead of the reference PDF's 2026-11-04; all remaining normalized text matches.",
+        "private_resolution": "right_angled_sharp.preview-resolution.local"
+      },
+      "committed": true,
+      "commit_http_status": 202,
+      "identifier": "2611.00913",
+      "version_id": "2611.00913v1",
+      "subsequent_status": "under_review"
+    }
+  ],
+  "publication_jobs_created": [
+    {
+      "id": "c26164f4-363a-43c0-aca3-c8532f106f24",
+      "kind": "screen",
+      "observed_status": "complete",
+      "completed_at_utc": "2026-11-23 04:24:24"
+    },
+    {
+      "id": "compile:2611.00913v1",
+      "kind": "compile",
+      "observed_status": "complete",
+      "completed_at_utc": "2026-11-23 04:24:35"
+    },
+    {
+      "id": "pdf-review:2611.00913v1",
+      "kind": "screen",
+      "observed_status": "complete",
+      "completed_at_utc": "2026-11-23 04:25:33"
+    }
+  ],
+  "local_scientific_or_TeX_execution_performed": false,
+  "remote_TeX_preview_performed": true,
+  "bulk_assets_uploaded": false,
+  "last_submission_status_check": {
+    "checked_at_utc": "2026-11-23T04:50:29.091097+00:00",
+    "http_status": 200,
+    "paper": "right_angled_sharp",
+    "version_id": "2611.00913v1",
+    "status": "under_review",
+    "private_receipt": "execution.local"
+  }
+}

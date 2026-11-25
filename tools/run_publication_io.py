@@ -50,6 +50,7 @@ def main() -> int:
                "tools/upload_public_data.py",
                "tools/audit_public_data_contents.py",
                "tools/revise_public_data_reference_exclusion.py",
+               "release/hexagon_submission_schedule_20261123/client.py",
                "tests/test_public_data_io_20261021.py"}
     suffix = command[1:]
     if suffix[:1] == ["-B"]:

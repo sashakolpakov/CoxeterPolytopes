@@ -1,0 +1,40 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "reviewer": "guided_search_review",
+  "status": "PASS_SOURCE_AND_PREPARED_CALENDAR_CONFIGURATION",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "53a2fec9ec17eaa6493a640f2adcc173941c77244336158dbf44f829b2728e32",
+    "release/hexagon_submission_schedule_20261123/scheduled-execution.local": "70639c5240ca7d2d33644d9291d9bc1f9632c68d1a2dba5584e297a5ed1ecc8a",
+    "release/hexagon_submission_schedule_20261123/approved_payloads.json": "2d3630d6ff28faf7ccce42e215a9cd7876b13f72e1aec3ccb39a8f25ab6b2c2c",
+    "release/hexagon_submission_schedule_20261123/launch-agent.plist.local": "6df1fc6cf94fb3e68b4cb5b44e362a24cbe843a0797e5b7836766b5e16cece8c",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "audit/hexagon_submission_first_commit_client_independent_source_review_20261123.json": "590e48e95627ad8af8bad41442a8faa9ab4284f1f1bd9597675a3756fe73c19d",
+    "release/manifest.json": "52f05e5505903469948d981ad432852c5f14169700091f795f550f7ac1445e85"
+  },
+  "method": "Complete scheduled-flow source and calendar/configuration read, inherited commit/upload/preview gate cross-check, cached official draft-idempotency specification read, and mode/owner metadata inspection. No credential, private execution/accepted receipt, PDF or log content was opened. No client, due-date test, network request, installation, TeX or scientific job was executed by this reviewer.",
+  "authorization_scope": "Root relayed the user's instruction to submit and schedule exactly the three selected ready papers with the recorded declarations. The first authorized commit was already reported HTTP202. This source schedules the two remaining selected papers and excludes the held fourth paper; no different payload or future mathematical revision is authorized here.",
+  "findings": [
+    "Runtime code, watchdog and all three metadata documents are hash bound. A separately hash-bound approved-payload snapshot fixes each selected paper's source descriptors, metadata path, reference PDF, pages, retained build record and exact active TeX-plus-BibTeX upload names. The current queue projection and actual release-manifest bytes must match before any queued remote action. Routine status bookkeeping cannot silently change the approved payload.",
+    "The actual first accepted receipt is pinned by filename, bytes and SHA, expected version and UTC day. Every accepted receipt must match its current paper metadata and full canonical file-manifest hashes, asynchronous202 state, observed outer/nested draft/title/identifier/version schema and an identical actual successful POST commit journal response. Accepted papers must be a prefix in the fixed order and their own UTC acceptance days strictly increase before any work is skipped or the job is disabled.",
+    "Date eligibility is computed from the exact first accepted UTC day. The second paper is eligible no earlier than November24UTC and the third no earlier than November25UTC; delayed work still proceeds in order with at most one accepted submission on any UTC day. The inherited commit gate separately rejects any prior commit attempt for a paper and another202 on the current day. Ineligible runs return before credential access or network work.",
+    "The scheduled queue uses the same private nonblocking mutation lock as every manual mutation. Before any eligible remote action it also acquires the shared scientific/typesetting lock nonblocking; an occupied lane defers without creating a draft. The same held scientific file descriptor is passed into preview handling, avoiding a second independent lock acquisition and retaining the lane through preview validation, artifact comparison and commit.",
+    "Creation/upload/PUT/completion resumption selects the exact current paper, metadata, file manifest, draft/upload path and relevant body SHA. All subsequent inherited upload/source/preview/commit gates remain active. Unanswered non-idempotent mutation intents stop for reconciliation; no automatic mutation retry is inferred from a transport error. Unknown draft creation is retried only within the official24-hour same-key window, and an expired known draft stops. The observed ISO-Z expiry form is parsed as explicit UTC, with malformed, naive or nonzero-offset values rejected.",
+    "A known succeeded preview may now call the already reviewed resolver automatically. Resolution still requires the exact submitted job ID and source digest, current successful terminal state, completion, PDF/log availability and allowed previewed gate before clearing the marker. Unknown/error/timeout states retain the unresolved marker and stop. The queue then requires exact bound artifact download and successful content/page/bibliography comparison before the unchanged one-shot commit path.",
+    "The prepared per-user launch agent invokes the fixed global Python through the unchanged publication watchdog with900seconds,256-MiB sampled process-group RSS, one-thread environment and existing percentage resource gates. It checks at minute5 and35 of each local hour plus load; all actual eligibility decisions use UTC. Working directory, command and log paths are fixed; no credential occurs in arguments, environment or plist. Prepared config/plist and both existing log files were mode0600 owned by sasha; the plist also sets077umask.",
+    "After all three fully validated accepted receipts exist, only the fixed same-user launch-agent label is disabled. HTTP202 remains asynchronous acceptance, not publication/screening success. The source neither assumes the computer stays awake nor guarantees an exact execution minute; busy resource/lane gates, changed inputs or uncertain results defer or hold rather than bypass checks."
+  ],
+  "corrected_findings": [
+    "The initial scheduler did not pin the mutable queue/release payload or fully bind accepted receipts; final code adds the immutable descriptor snapshot, actual first-receipt anchor and full accepted history validation.",
+    "Filename-only PUT/completion reuse was replaced by exact selected upload path/body scope. Unknown create-draft retries were limited to the primary specification's24-hour idempotency window, with explicit UTC expiry validation."
+  ],
+  "operational_requirements": [
+    "The coordinator must continue treating any unresolved remote-preview marker as a scientific admission hold even if a watchdog termination releases the process lock. Read-only/local reconciliation remains available; the scheduler does not silently clear unknown remote work.",
+    "Run the owner's due-today client check through the publication watchdog. Installation must preserve the reviewed fixed plist, config and snapshot bytes; record installation status in a separate receipt. A successful source review is not an installation or execution receipt."
+  ],
+  "remaining_findings": [],
+  "source_path_and_prepared_installation_accepted": true,
+  "scheduler_test_or_installation_performed": false,
+  "network_execution_performed": false,
+  "publication_success_claimed_here": false,
+  "mathematical_review_or_dimension_bound_change": false
+}

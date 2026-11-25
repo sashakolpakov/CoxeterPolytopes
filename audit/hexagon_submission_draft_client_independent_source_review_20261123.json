@@ -1,0 +1,35 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_NARROW_LOCAL_PREPARATION_AND_IDEMPOTENT_DRAFT_CREATION_ONLY",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "493bf891d38c70428933a855603278c42b9f55a2519c3a6b67f9d209450bd3bf",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "release/manifest.json": "52f05e5505903469948d981ad432852c5f14169700091f795f550f7ac1445e85",
+    "release/hexagon_submission_schedule_20261123/queue.json": "e593fd0050456bbd42ca90f36495783da5e5f5ae7966793f70560df5b028797c",
+    "release/hexagon_submission_schedule_20261123/right_angled_sharp.metadata.template.json": "9b0ee56571df4c4a218a5b5e3dd3e96bcea9c1b8772b20dc4cc84f17756dfd15",
+    "release/hexagon_submission_schedule_20261123/ideal_ra4_volume_and_structure.metadata.template.json": "8e15c6e6bf5240df1645aea33c044d9b51531901a7471ee42033b14f0e4e471a",
+    "release/hexagon_submission_schedule_20261123/linear_programming_dimension_bounds.metadata.template.json": "02a4624cee3399ba66b510b375347018fc8326937ded938f76c5298e8c83b177"
+  },
+  "authorization_scope": "Root reports explicit user authorization to submit/schedule the three ready manuscripts, with CC BY-SA4.0, mixed human/AI text, human understanding some, the stated referee-level review/model-origin provenance, and the required correctness/relevance/citation/rights/hosting attestations. No further user confirmation is requested by this review. The fourth held manuscript and bulk research assets remain outside scope.",
+  "method": "Read the complete client and its final corrections, the selected queue/metadata and release-manifest structure, and the publication watchdog's complete source plus actual Git diff. Verified the listed file hashes. No credential file was opened, printed or hashed; no client, test, scientific worker, native executable, compiler, TeX process or network request was run by this reviewer.",
+  "findings": [
+    "The only reachable network operation in this reviewed revision is POST to the literal https://hexagonmath.org/api/v1/submissions endpoint. The origin is fixed HTTPS, environmental proxies are disabled and redirect handling refuses redirects. All upload, status, source-check, preview and commit actions stop at the explicit release gate before credential loading or network access. They are not approved by this narrow review.",
+    "The credential is read inside the guarded process from the fixed ignored local path only. Source checks require a regular owner-owned file with owner-only permissions and a bounded supported token representation. The token is sent only in the Authorization header, never as an argument, URL or payload field. No shell syntax, browser cookie or arbitrary dotenv file is evaluated. Request exceptions produce fixed generic messages; bounded response sanitization redacts token occurrences in both JSON keys and string values and suppresses credential-like fields. Raw response headers and non-JSON bodies are not logged.",
+    "Preparation authenticates the release manifest's recorded bytes and SHA, compares selected source descriptors and the reference PDF against its paper record, and checks actual source/PDF bytes. Sources are confined to approved arxiv paths and the three reviewed relative filenames with per-file limits; there is no archive or bulk-payload route. Metadata uses the user's selected license, mixed mode and understanding some, requires a provenance statement and all four personal confirmation booleans. The three bound metadata files contain the approved review/model-origin qualification.",
+    "Draft creation uses a stable idempotency key derived from canonical finalized metadata and the exact file manifest. An intent receipt is atomically saved before the request and a sanitized response receipt afterward; an uncertain network result does not cause an automatic retry. Receipts and temporary receipt files use the ignored local format and owner-only permissions. No timer, background service or unattended schedule is installed.",
+    "The watchdog delta adds exactly the reviewed client path to the existing allowlist. Percentage resource gates, 256MiB owned process-group RSS sampling, time monitoring and process-group termination remain unchanged. This release performs publication I/O only and cannot remotely compile a preview or commit a submission while the scientific lane is active.",
+    "The initial broader client lacked dictionary-key redaction and durable paper/upload/revision bindings for later operations; the redaction is fixed, and the later operations are now hard-disabled. After the first legitimate draft response establishes its actual schema, those later steps require a separate source review tying draft to paper/metadata/source manifest, upload to draft/file, preview to the exact staged revision, and pending or unknown commit outcomes to a no-blind-retry gate. The dormant preview-reviewed flag alone supplies none of that future approval."
+  ],
+  "resolved_findings": [
+    "Redact token occurrences in JSON dictionary keys as well as values.",
+    "Hard-disable every network action except draft creation until actual response bindings are reviewed.",
+    "Verify the release-manifest/source/PDF descriptors and bytes at runtime and enforce humanUnderstanding some."
+  ],
+  "blocking_findings_for_narrow_release": [],
+  "future_upload_preview_commit_review_required": true,
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "submission_or_schedule_executed_by_this_review": false
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_LOCAL_BOUND_PDF_TEXT_PAGE_AND_BIBLIOGRAPHY_COMPARISON",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "12b53dfa75ecfee5712116af1924faf9ee05015c305e91c8e975ac3823c51b3a",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "audit/hexagon_submission_preview_artifacts_source_review_20261123.json": "7b251fb775cbb1719f3f0ac6747ffd570e669079cd85824ad0be143c888c101e"
+  },
+  "method": "Read the local inspection function and dispatch, final current-source/manifest binding correction and comparison-scope flag. Checked that credential/network/TeX paths remain absent from this action and commit remains gated. No key, private receipt, PDF/log contents, client, parser, network request, test or compiler was accessed/run by this reviewer.",
+  "findings": [
+    "Before PDF parsing, current validated staged-source digest must match both terminal proof and artifact record, and the proof's status receipt metadata/file-manifest hashes must match current inputs. This prevents relabelling an older preview with the current manifest. Fixed artifact paths, symlink rejection and exact bytes/SHA checks bind the downloaded PDF/log; the reference PDF is covered by the unchanged release preparation check.",
+    "The action locally uses pypdf text extraction to compare canonical and remote page counts, NFKC/whitespace-normalized full text and extracted bibliography. It also checks observed BibTeX execution and final-pass undefined-reference diagnostics. Mismatches remain explicit, with a bounded displayed diff in the private result; no successful comparison is assumed by this source review.",
+    "The comparison scope is extracted PDF text, page count and bibliography, and visual_layout_review_performed is explicitly false. These checks do not establish rendered-layout identity or re-prove the manuscript's mathematics. The private review record's flags describe only the named comparison, which the coordinator must inspect before any later commit release.",
+    "The result is exclusively created mode0600 and fsynced locally. Dispatch returns before credential/network handling. No TeX/compiler/scientific process or remote request is needed. Commit remains hard-disabled; its actual current-revision/preview/unknown-outcome protections remain a separate review."
+  ],
+  "resolved_findings": [
+    "Bound the terminal/artifact source and status-receipt hashes to the current metadata and canonical file manifest.",
+    "Explicitly distinguished extracted-text checks from visual-layout review."
+  ],
+  "blocking_findings_for_local_inspection": [],
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "public_commit_released": false
+}

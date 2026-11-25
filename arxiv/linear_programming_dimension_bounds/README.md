@@ -8,8 +8,8 @@
 The isolated four-step pdfLaTeX/BibTeX build passed with zero warnings,
 no undefined references or citations, and Type1 fonts. The source ZIP passed
 CRC and complete member-byte comparisons. The current records are the
-[build receipt](../../release/linear_programming_dimension_bounds/build_language03_20261119.json)
-and [package receipt](../../release/linear_programming_dimension_bounds/package_language03_20261119.json).
+[build receipt](../../release/linear_programming_dimension_bounds/build_vinberg_remark01_20261123.json)
+and [package receipt](../../release/linear_programming_dimension_bounds/package_vinberg_remark01_20261123.json).
 
 This submission derives the existing dimension bounds 57, 17 and 15 by
 combining proved local inequalities in linear programs. It states the
@@ -22,9 +22,11 @@ AI-use acknowledgment are included.
 The [completed LP proof index](../../notes/lp/README.md) and
 [exact recovery records](../../notes/lp/existing_proof_lp_recovery_results_20261118.md)
 identify the inputs and certificates for all three bounds. The subsequent
-21–23 November additional-constraint search has been removed. The manuscript,
-matching PDF and completed verification records retain their existing bytes
-and mathematical scope.
+21–23 November additional-constraint search was removed at the cleanup
+checkpoint. The 23 November prose revision adds a short remark citing
+Vinberg's $E_7$ obstruction for restricted corner weights (§6.12, p. 91).
+The bounds and proof arguments are unchanged; the completed verification
+records and previously submitted edition remain preserved.
 
 The directory follows the existing right-angled submission layout:
 

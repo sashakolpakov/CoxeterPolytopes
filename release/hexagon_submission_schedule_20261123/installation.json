@@ -1,0 +1,124 @@
+{
+  "schema": "hexagon-local-schedule-installation-v1",
+  "status": "INSTALLED_LOADED_FIRST_RUN_EXIT_0",
+  "verified_at_utc": "2026-11-23T04:49:41.255050+00:00",
+  "service": "gui/501/org.coxeterpolytopes.hexagon-submissions-20261123",
+  "installed_plist": {
+    "path": "/Users/sasha/Library/LaunchAgents/org.coxeterpolytopes.hexagon-submissions-20261123.plist",
+    "bytes": 1763,
+    "sha256": "6df1fc6cf94fb3e68b4cb5b44e362a24cbe843a0797e5b7836766b5e16cece8c",
+    "permissions": "0600"
+  },
+  "independent_source_review": {
+    "path": "audit/hexagon_submission_scheduled_queue_independent_source_review_20261123.json",
+    "sha256": "b5688718ee6ce707fa66462a8c1b2d1024da81565e20b4bb49056f04c34a4d57",
+    "status": "PASS_SOURCE_AND_PREPARED_CALENDAR_CONFIGURATION"
+  },
+  "reviewed_configuration_bytes_preserved": true,
+  "launchctl_print_exit_code": 0,
+  "launchctl_observed_fields": {
+    "path": "/Users/sasha/Library/LaunchAgents/org.coxeterpolytopes.hexagon-submissions-20261123.plist",
+    "state": "not running",
+    "program": "/Users/sasha/.venvs/global/bin/python3",
+    "runs": "1",
+    "last exit code": "0"
+  },
+  "first_calendar_invocation": {
+    "outcome": {
+      "queue_deferred": "UTC eligibility/daily allowance",
+      "paper": "ideal_ra4_volume_and_structure",
+      "not_before_utc_date": "2026-11-24"
+    },
+    "exit_code": 0,
+    "stop_reason": null,
+    "network_requests": 0,
+    "stdout_snapshot": {
+      "path": "release/hexagon_submission_schedule_20261123/scheduled-worker.stdout.local",
+      "bytes": 1088,
+      "sha256": "4b2ca79b619d579f793a8192c25af42ff45e2e4c9ef52be32e4030de3dedaa3f"
+    },
+    "stderr_bytes": 0,
+    "watchdog_receipt": {
+      "publication_io_only": true,
+      "command": [
+        "/Users/sasha/.venvs/global/bin/python3",
+        "-B",
+        "release/hexagon_submission_schedule_20261123/client.py",
+        "--action",
+        "run-queue"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "observed_peak_group_rss_bytes": 245760,
+      "rss_sampling_seconds": 1,
+      "start_resources": {
+        "free_disk_gib": 326.52,
+        "available_memory_gib": 8.48,
+        "disk_free_bytes": 350600798208,
+        "disk_total_bytes": 994610155520,
+        "available_memory_bytes": 9110470656,
+        "physical_memory_bytes": 25769803776,
+        "free_disk_percent": 35.250072,
+        "available_memory_percent": 35.353279,
+        "resource_policy": {
+          "id": "percentage-v1-20261025",
+          "admission_disk_percent": 2,
+          "admission_memory_percent": 15,
+          "abort_disk_percent": 1,
+          "abort_memory_percent": 6,
+          "cleanup_disk_percent": 2,
+          "rounding_digits": 6,
+          "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+        },
+        "free_disk_bytes": 350600798208,
+        "ram_available_bytes": 9110470656
+      },
+      "seconds": 1.25
+    }
+  },
+  "schedule": {
+    "checks_local_minutes": [
+      5,
+      35
+    ],
+    "run_at_load": true,
+    "eligibility_clock": "UTC",
+    "remaining_not_before_utc_dates": {
+      "ideal_ra4_volume_and_structure": "2026-11-24",
+      "linear_programming_dimension_bounds": "2026-11-25"
+    },
+    "max_accepted_submissions_per_utc_day": 1,
+    "disables_own_label_after_all_three_accepted": true,
+    "depends_on": "Computer availability, shared scientific lane, resource gates, exact approved file hashes and successful remote validation; dates are earliest eligibility, not promised publication dates."
+  },
+  "already_submitted": {
+    "paper": "right_angled_sharp",
+    "identifier": "2611.00913",
+    "version_id": "2611.00913v1",
+    "received_at_utc": "2026-11-23 04:24:13",
+    "commit_http_status": 202,
+    "last_observed_status": "under_review",
+    "public_record_url": "https://hexagonmath.org/abs/2611.00913",
+    "publication_confirmed": false
+  },
+  "held_papers": [
+    "dimension_bounds"
+  ],
+  "unresolved_markers_at_verification": {
+    "unresolved-preview.local": false,
+    "unresolved-commit.local": false
+  },
+  "coordinator_rule": "An unresolved-preview.local marker holds scientific admission even if a terminated worker has released the process lock; reconcile actual remote terminal state before clearing it.",
+  "credential_contents_recorded": false,
+  "local_scientific_or_TeX_jobs_run": false,
+  "bulk_assets_uploaded": false,
+  "subsequent_status_check": {
+    "checked_at_utc": "2026-11-23T04:50:29.091097+00:00",
+    "http_status": 200,
+    "paper": "right_angled_sharp",
+    "version_id": "2611.00913v1",
+    "status": "under_review",
+    "private_receipt": "execution.local",
+    "all_reported_submission_jobs_complete": true
+  }
+}

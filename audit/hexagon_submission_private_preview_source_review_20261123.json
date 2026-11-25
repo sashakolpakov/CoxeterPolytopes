@@ -1,0 +1,30 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_FIRST_BOUND_PRIVATE_PREVIEW_WITH_DURABLE_UNRESOLVED_HOLD",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "deb9545c900673db7e40331cb3309777ec8d68ceba33c504ab70903b56aab4fa",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "audit/hexagon_submission_tex_bib_adaptation_source_review_20261123.json": "bf792f6502f2070e58e397fa3b331918866d22aaf0b717d4f7a2c744800e556b"
+  },
+  "method": "Read the complete new staged-source validation, journaled exchange and lock-held preview flow, plus its final upload-ID and unresolved-marker corrections. Checked the final source and unchanged watchdog hashes against the prior reviewed credential/file/receipt code. No key or private execution-receipt contents were opened; no network, client, test or compiler was executed by this reviewer.",
+  "findings": [
+    "Preview acquires the same exclusive scientific/typesetting lock nonblocking and performs fresh authenticated draft, static-source and preview-status GETs while holding it. Current metadata and the exact two remote source paths, names, kinds, content types, expected/actual sizes, complete states and upload identities are checked against the selected reviewed paper and registration receipts.",
+    "Each CURRENT remote upload ID additionally needs its own successful exact-body-SHA PUT receipt and its own successful completion response bound to the same paper, draft, filename, metadata and full canonical file-manifest hash. This closes the possibility of satisfying the check using only an older upload ID for the same filename. The API's null remote sha256 is explicitly not claimed as a server content-hash verification; provenance is the exact local PUT body, successful response, completed immutable upload identity and current opaque source-tree digest.",
+    "Static validation must report ready, treeChecked, no truncation and no warnings. Its 64-hex source digest must equal the preview endpoint's digest for the same draft, and the configured pdflatex engine must have no refusal. The exact staged set is checked before one POST; no alternate URL receives the credential or source data.",
+    "Before POST, a new owner-only ignored unresolved-preview marker is exclusively created without following symlinks, written with paper/draft/source/metadata/manifest bindings and fsynced. An existing marker prevents another preview. Every request is journaled before I/O. The marker remains on error, uncertainty, timeout or process exit; there is no automatic POST retry.",
+    "Polling remains under the held lock with a bounded 240-second window and validates draft and digest on every response. No speculative job-status alias is interpreted as terminal. The loop can return normally only after the coordinator removes the marker following actual reviewed terminal evidence; otherwise it stops uncertain with the marker retained. Because a process lock necessarily releases on termination, root's explicit policy of no new science until confirmed terminal preview and explicit lane release is essential and has been confirmed separately.",
+    "Public commit remains hard-disabled before credential access. This stage permits only private compilation/polling and does not establish successful output, generated bibliography, a reviewed PDF, publication or scheduling. Those observations and exact same-revision commit protections remain separate requirements. Fixed-origin/no-redirect secret protections, source-release checks, owner-only receipts and the publication watchdog remain unchanged."
+  ],
+  "resolved_findings": [
+    "Bound every current remote upload ID to its own exact PUT and complete receipts.",
+    "Added a persistent exclusive unresolved-preview marker before the request and refusal of a second request while unresolved.",
+    "Removed all guessed terminal job-status aliases; coordinator-confirmed recovery is required."
+  ],
+  "blocking_findings_for_first_private_preview": [],
+  "coordinator_must_hold_scientific_lane_until_terminal_and_explicit_release": true,
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "public_commit_released": false
+}

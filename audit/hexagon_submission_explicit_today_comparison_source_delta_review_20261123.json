@@ -1,0 +1,22 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "reviewer": "guided_search_review",
+  "status": "PASS_LOCAL_EXPLICIT_TITLE_DATE_EXCEPTION_ONLY",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "de6b0fcf79bc1007bb0eebd7930c3d4b31eef19b9f144bd659d1ea2b0d59b654",
+    "audit/hexagon_submission_local_preview_inspection_source_review_20261123.json": "0afa174328d43e1ecdae4961bb5658df4e164313a02251b8ad340ed9eb7f97b6",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1"
+  },
+  "method": "Source-only review of the local inspection delta. No credential, private receipt, PDF or log was opened; no client, network request, TeX job or scientific process was run.",
+  "findings": [
+    "The inherited local inspection checks continue to bind the current authenticated release source, metadata, uploaded-file manifest, terminal preview source digest, exact downloaded artifacts and canonical reference PDF.",
+    "The exception is enabled only by an anchored uncommented whole-line date-today directive in the currently authenticated main.tex, allowing whitespace and a trailing TeX comment. A commented-out substring cannot enable the exception.",
+    "Each extracted PDF must have exactly one full-line parsable English calendar date among its first twelve lines, at the identical line index. The preview date must equal the actual terminal preview completion date retained in the bound resolution proof. Only these two title lines are replaced; every other NFKC/whitespace-normalized text character must still match.",
+    "The literal full-text equality flag and bounded difference remain visible, together with both title dates and the separately named explicit-today comparison result. Page and bibliography equality, actual BibTeX execution and absence of final-pass undefined warnings remain required. The initial review artifact is preserved; the revised result uses a fresh content-review path.",
+    "The action remains a private local document read with no key, network, compiler or rendered-layout claim; visual_layout_review_performed is explicitly false. Commit remains hard-disabled and requires a separate source-bound review."
+  ],
+  "remaining_findings": [],
+  "network_execution_performed": false,
+  "rendered_layout_or_mathematical_review_performed": false,
+  "commit_release_approved_here": false
+}

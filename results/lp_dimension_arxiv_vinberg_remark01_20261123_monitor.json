@@ -1,0 +1,38 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/build_lp_dimension_arxiv_20261118.py",
+    "--tag",
+    "vinberg_remark01_20261123"
+  ],
+  "elapsed_seconds": 2.722,
+  "peak_process_tree_rss_bytes": 132022272,
+  "initial_resources": {
+    "free_disk_gib": 325.43,
+    "available_memory_gib": 9.53,
+    "disk_free_bytes": 349432926208,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10237771776,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 35.132652,
+    "available_memory_percent": 39.727783,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 59,
+  "rss_limit_bytes": 1073741824,
+  "threads": 1,
+  "stdout_bytes": 2141,
+  "stdout": "{\n  \"status\": \"PASS_ISOLATED_TEX_BUILD_ONLY\",\n  \"source\": \"arxiv/linear_programming_dimension_bounds/main.tex\",\n  \"source_sha256\": \"01b716fcac5e98c7e57282507af9614790a454d2a33affdbc418b9f93eb7a360\",\n  \"source_bytes\": 113795,\n  \"pdf\": \"arxiv/linear_programming_dimension_bounds/main.pdf\",\n  \"passes\": [\n    {\n      \"pass\": 1,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 21170\n    },\n    {\n      \"pass\": 2,\n      \"program\": \"bibtex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 153\n    },\n    {\n      \"pass\": 3,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 10967\n    },\n    {\n      \"pass\": 4,\n      \"program\": \"pdflatex\",\n      \"exit_code\": 0,\n      \"stdout_bytes\": 9004\n    }\n  ],\n  \"builder_sha256\": \"e7c4cd97cde8bc55cc26ba7ce92f601b514833394da6782970bf8bf7fb7793f7\",\n  \"mathematical_verification_claimed\": false,\n  \"bibliography\": \"arxiv/linear_programming_dimension_bounds/references.bib\",\n  \"bibliography_sha256\": \"c542e8a58701d0e5f94b2c0b5b13ea8fde780b2825481141f53a213afee7f182\",\n  \"bibliography_bytes\": 2014,\n  \"isolated_input\": \"Only main.tex and references.bib are copied; BibTeX generates main.bbl.\",\n  \"pipeline\": [\n    \"pdflatex main.tex\",\n    \"bibtex main\",\n    \"pdflatex main.tex\",\n    \"pdflatex main.tex\"\n  ],\n  \"temporary_auxiliaries_removed\": true,\n  \"bibtex_warnings\": [],\n  \"warnings\": [],\n  \"undefined_references_or_citations\": false,\n  \"repository_inputs_read_by_tex\": [],\n  \"pages\": 36,\n  \"figure_pages\": [],\n  \"font_subtypes\": [\n    \"/Type1\"\n  ],\n  \"pdf_sha256\": \"9d3473c36dab9d32ad8258628bf28068c6813912e5c06c0b4d48de9c4dba9bba\",\n  \"pdf_bytes\": 499252,\n  \"source_figure_environments\": 0,\n  \"compiled_bibliography\": \"arxiv/linear_programming_dimension_bounds/main.bbl\",\n  \"compiled_bibliography_sha256\": \"af42181d0ef34697cfbaa4f5ba46ece9bff2f33fadc20256c930e54663c845e6\",\n  \"compiled_bibliography_bytes\": 1793\n}\n{\"status\": \"PASS_LOCAL_THREE_FILE_SOURCE_PACKAGE\", \"pages\": 36, \"package\": {\"path\": \"dist/CoxeterPolytopes-linear-programming-dimension-bounds-arxiv.zip\", \"bytes\": 38530, \"sha256\": \"0a2f6bf442dd7b04318947fd8edd93b0414d7c83d3ee7b782a283a3b767381b7\"}}\n",
+  "runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "checker_sha256": "4db0f1a517e0a7ca7c31dd26944eb705085c316ddf55441ffa2aa0ae9e84d830",
+  "lock_owner": "wrapper"
+}

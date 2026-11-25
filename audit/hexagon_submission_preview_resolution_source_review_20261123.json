@@ -1,0 +1,25 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_PURE_LOCAL_CONFIRMED_PREVIEW_RESOLUTION",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "c600989caefa6cfeef6585811e62b1f17d3fd958915d1db8292c6c522b85bfcb",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "audit/hexagon_submission_private_preview_source_review_20261123.json": "d3b11ece095d8f193be3e0af9c161673811b56e4c236e73032bedf11b76e280a"
+  },
+  "method": "Read the new resolve-preview function, its placement before credential/network handling, the terminal predicates and final nonempty-ID correction. Checked the preceding marker/poll flow and final source hash. No key or private receipt contents were opened, and no client, network, test or compilation was executed by this reviewer.",
+  "findings": [
+    "The new action is local only: it runs the existing release/source/metadata checks and returns before credential loading or network exchange. It requires the unresolved marker to match paper, draft, current source digest, metadata and complete canonical file manifest.",
+    "The exact submitted and observed preview identifiers must both be nonempty validated components and equal. The latest matching status receipt must report that job as succeeded, current, completed, without error, with positive PDF size, PDF/log availability and the matching source digest. The observed preview gate must be previewed, allowed and without warning. No speculative ready/completed alias is substituted for this actual successful-terminal schema.",
+    "Before clearing the hold, the action exclusively writes an owner-only local resolution record containing the exact status receipt and its hash, fsyncs it, rechecks that the unresolved marker bytes are unchanged, and only then unlinks the marker. The active poll can consequently exit and root may explicitly release the lane after confirming that result. Any failure preserves the unresolved hold.",
+    "The resolution explicitly records bibliography_reviewed=false. It establishes neither PDF/bibliography acceptance nor public submission. Commit remains hard-disabled. Existing fixed-origin, credential/receipt protections and publication watchdog are unchanged."
+  ],
+  "resolved_findings": [
+    "Require valid nonempty submitted and observed preview identifiers before exact equality."
+  ],
+  "blocking_findings_for_local_resolution": [],
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "public_commit_released": false
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_READ_ONLY_BOUND_PREVIEW_PDF_AND_LOG_DOWNLOAD",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "db760b7b8508e7f3574ecd3cb903b08b56f8a261ffc2a8cb297721cfb0890deb",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "audit/hexagon_submission_preview_resolution_source_review_20261123.json": "9aafbefc39ee44cd8251f323c9ad28274b05d9e4457ea8de6a298eec6594298c"
+  },
+  "method": "Read the new artifact branch in request/exchange, the complete preview-artifacts action and its dispatch gate against the preceding reviewed client. Verified final hashes. No key, private receipt, PDF or log contents were opened, and no client, network, test or compilation was executed by this reviewer.",
+  "findings": [
+    "The new action first binds the selected paper/draft and current source digest to its local successful-terminal resolution proof, then validates the same nonempty preview ID, digest, succeeded/current state, PDF/log availability and exact expected PDF byte size with authenticated GETs before and after retrieval.",
+    "Only fixed-origin GETs of the documented preview log/PDF routes are added. Existing HTTPS/no-redirect/proxy protections remain. The bounded response body is checked for literal credential bytes before artifact writing, and the PDF must have its PDF header. Requests containing no upload body cannot trigger a source upload, compile or commit in this action.",
+    "Output names are fixed from the validated paper and preview identifier within the private task directory. New artifacts are exclusively created without following links, mode0600, flushed and fsynced. Existing artifacts must be non-symlinks with identical bytes. PDF length must match the successful terminal proof. Receipts record only path, byte count and SHA, never raw PDF/log data, and the artifact summary follows the second matching live status check.",
+    "The summary keeps bibliography_reviewed=false. Successful download and a native preview status are not PDF-content/bibliography acceptance. Commit remains hard-disabled. This stage needs no local TeX, scientific process, remote compiler request or shared scientific-lane reservation; it is ordinary monitored publication I/O."
+  ],
+  "blocking_findings_for_read_only_artifact_download": [],
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "public_commit_released": false
+}

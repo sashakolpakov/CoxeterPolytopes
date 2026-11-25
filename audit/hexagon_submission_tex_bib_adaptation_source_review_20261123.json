@@ -1,0 +1,25 @@
+{
+  "schema": "publication-client-independent-source-review-v1",
+  "review_date": "2026-11-23",
+  "reviewer": "/root/guided_search_review",
+  "status": "PASS_TEX_BIB_ONLY_PLATFORM_ADAPTATION_WITH_COMPILE_AND_COMMIT_GATED",
+  "bindings": {
+    "release/hexagon_submission_schedule_20261123/client.py": "3c348b7a9c399c6596bd4dcc7c96726c48f822f8ee9cf3592a3eeaa8476b5a58",
+    "release/hexagon_submission_schedule_20261123/queue.json": "f50717817ae8d4cb383ab672548f7d3e459c1bbcd976f25bcd6ee6154354f2ed",
+    "tools/run_publication_io.py": "7d9834fc7066fc523c6f2ef9e1d2851b21735d8cf6e761bf808165eee6ff2fb1",
+    "audit/hexagon_submission_private_upload_source_delta_review_20261123.json": "8661d99947f69b8e017e4fce90aa44c005a14e8ceb0fec9cd5fa50a08de1f533"
+  },
+  "previous_client_sha256": "3e9a195dbd58278575daef449c8bdee29dfd6146b10c2995e0ebca9358521ee3",
+  "method": "Inspected the active-file constant, CLI choices, completion-set gate, unchanged canonical preparation and final preview/commit gate. Read the queue's explicit platform-file policy and confirmed the selected main TeX invokes the references BibTeX input. Verified final hashes. No key, private receipt contents, client, test, upload, network request or compiler was accessed/run by this reviewer.",
+  "findings": [
+    "The platform-specific active upload set is exactly main.tex and references.bib. The generated main.bbl remains unchanged in the canonical three-descriptor release validation and receipt file-manifest fingerprint. No manuscript, bibliography, reference PDF or release manifest is rewritten by the adaptation.",
+    "The queue records the owner's actual unsupported-BBL registration outcome as the adaptation reason. The selected TeX uses bibliographystyle and bibliography{references}, so submitting the original TeX and BibTeX inputs is a valid source-packaging path; successful bibliography generation in the eventual remote PDF remains a required observed check, not an assumed result.",
+    "The CLI prevents new BBL registrations or byte uploads, and the completion/source-check gate now requires exactly the two active files with the existing paper/draft/upload/descriptor/hash associations. The unchanged three-descriptor fingerprint preserves associations of the already completed TeX/Bib uploads instead of inventing legacy receipt bindings.",
+    "Bound source-check/status GETs can now inspect the live two-file staged set. Preview POST and public commit remain hard-disabled before credentials; exact live path/hash/digest and later bibliography/preview checks are still prerequisites to their separate release. Fixed-origin secret protections, no automatic retries and the publication watchdog remain unchanged."
+  ],
+  "blocking_findings_for_adapted_source_check": [],
+  "credential_accessed_by_reviewer": false,
+  "network_execution_performed_by_reviewer": false,
+  "remote_compilation_released": false,
+  "public_commit_released": false
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PUBLIC_REPORT_EXPORT_STOPPED_ON_OS_STATUS_FORMAT",
+  "record_type": "manual_record_of_actual_tool_failure",
+  "action": "completion-report",
+  "exit_code": 1,
+  "error": "Completed schedule is not confirmed disabled",
+  "cause": "The report parser expected a legacy launchctl boolean true. This macOS returns the enum disabled for the exact completed schedule label.",
+  "actual_schedule_label": "org.coxeterpolytopes.hexagon-submissions-20261123",
+  "actual_launchctl_state": "disabled",
+  "prior_submission_pipeline_completed": true,
+  "all_three_status_refreshes_returned_http_200": true,
+  "submission_retried": false,
+  "public_report_written_in_failed_attempt": false,
+  "subsequent_fix": "Accept the actual disabled enum and legacy true; re-export without repeating any submission."
+}
