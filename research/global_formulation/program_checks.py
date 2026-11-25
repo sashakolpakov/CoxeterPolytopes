@@ -31,6 +31,7 @@ def run(root, output):
     result = dict(status="SHARED_PROGRAM_CHECKS_PASSED",new_bound=False,
         principal_retention_checks=dict(noninitial_principal_block=True,changed_cross_entry_rejected=True),
         closure_fixture=equation_closure.self_checks(),local_Gram_lift=white_profiles.local_star_fixture(),
+        quadrilateral_Gram_lift=white_profiles.quadrilateral_star_fixture(),
         complete_family_deletions=supporting_counts.self_checks(),nesting=[])
     old = conic.read_model(models[0])
     for path in models[1:]:

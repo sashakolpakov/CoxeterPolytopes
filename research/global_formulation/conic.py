@@ -279,7 +279,7 @@ NUMBER = re.compile(r'[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[Ee][-+]?\d+)?')
 
 def native_vector(path):
     text = Path(path).read_text()
-    if len(text) > 16 * 1024**2:
+    if len(text) > 128 * 1024**2:
         raise ValueError('Oversized SDPA output')
     phase = re.search(r'phase\.value\s*=\s*(\S+)', text)
     match = re.search(r'xVec\s*=\s*\{([^}]*)\}', text, re.S)

@@ -438,6 +438,42 @@ def local_star_fixture():
         global_polytope_existence_claimed=False)
 
 
+def quadrilateral_star_fixture():
+    """Exact ideal square with its strict opposite gaps and spectator forest."""
+    from . import faces, strengthening
+    from .moments import Program
+    n,sides = 57,4
+    d = faces.face_domain(sides,n)
+    extend_face(d,sides,joint=True)
+    d.fixed.update(t=F(1,n),e=F(0)); d.equation_closure = True
+    strengthening.enrich(d,2)
+    p = Program(); face = p.measure("square",d)
+    cd = component_domain(sides,n,d,True)
+    cd.fixed.update(t=F(1,n),e=F(0)); cd.equation_closure = True
+    profile = p.measure("square_components",cd)
+    component_couplings(p,face,profile,sides,True)
+    problem = p.compile(dict(local_fixture_only=True))
+    common = dict(star_white_components=F(n-2,n))
+    for i in range(sides):
+        common.update({f"c{i}":F(1),f"eta{i}":F(1),f"star_scale{i}":F(1),f"star_edge{i}":F(1)})
+    values = dict(common)
+    for i in range(sides):
+        values.update({f"h{i}":F(1),f"inverse_h{i}":F(1),f"star_scale_inverse{i}":F(1)})
+        for j in range(i+1,sides): values[f"star_original_{i}_{j}"] = F(3 if j-i == 2 else 1)
+    values.update(opposite0=F(3),opposite1=F(3),opposite_strict_inverse0=F(1,2),opposite_strict_inverse1=F(1,2))
+    spectator = dict(common,white_type_A=F(1),white_rank=F(1,n),dihedral_parameter=F(1,2))
+    def value(monomial,point):
+        result = F(1)
+        for v in monomial: result *= point.get(v,F(0))
+        return result
+    point = {name:value(m,values) for m,name in face.moments.items()}
+    point.update({name:(n-2)*value(m,spectator) for m,name in profile.moments.items()})
+    checked = conic.check_point(problem,point)
+    return dict(moment_variables=len(problem["variables"]),equalities=checked["equalities_checked"],
+        cone_blocks=len(checked["blocks"]),strict_opposite_gaps_have_exact_local_Gram_lift=True,
+        global_polytope_existence_claimed=False)
+
+
 def self_checks():
     """Independent Gram inversions and direct small flag counts, not search cases."""
     def evaluate(q, values):

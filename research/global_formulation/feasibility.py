@@ -348,7 +348,7 @@ def reduction_checks():
 
 def native_array(path, field):
     text = Path(path).read_text()
-    if len(text) > 32*1024**2:
+    if len(text) > 128*1024**2:
         raise ValueError("Oversized native SDP answer")
     match = re.search(r"\b"+field+r"\s*=\s*\{", text)
     if not match: raise ValueError("No native "+field)
@@ -452,7 +452,7 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
     if original.get("metadata", {}).get("uniform_strengthening_level", 1) > 1:
         paths += [root/"research/global_formulation/strengthening.py",
             root/"research/global_formulation/polynomial.py"]
-    resume_path, resume_dir = None, None
+    resume_path, resume_dir, native_recovery = None, None, False
     prepared_dir = (root/prepared_from).resolve() if prepared_from else None
     if prepared_dir is not None:
         if not prepared_dir.is_relative_to(root/"results"): raise ValueError("Invalid exact preprocessing checkpoint")
@@ -465,6 +465,10 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
             paths += [resume_dir/"native.result", resume_dir/"input.dat-s"]
         elif solver == "recover":
             resume_path = resume_dir/"original_numerical_candidate.json"
+            if not resume_path.exists():
+                native_recovery = True
+                resume_path = resume_dir/"native.result"
+                paths.append(resume_dir/"input.dat-s")
             paths.append(resume_path)
         else:
             raise ValueError("A checkpoint is used by sdpa or recover")
@@ -519,8 +523,18 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
     candidate = matrices = None
     if solver == "recover":
         if resume_path is None: raise ValueError("Choose a numerical checkpoint to recover")
-        raw = json.loads(resume_path.read_text())
-        candidate = {v: F(raw[v]) for v in compiled["variables"]}
+        if native_recovery:
+            conic.write_sdpa(out/"input.dat-s",compiled)
+            if (out/"input.dat-s").read_bytes() != (resume_dir/"input.dat-s").read_bytes():
+                raise ValueError("Native recovery requires the identical ordered reduced SDP input")
+            raw,phase = conic.native_vector(resume_path)
+            if len(raw) != len(compiled["variables"]): raise ValueError("Wrong native recovery vector length")
+            candidate = dict(zip(compiled["variables"],raw,strict=True))
+            matrices = native_cones(resume_path,compiled)
+            report.update(native_checkpoint_phase=phase,ordered_reduced_input_byte_identity_checked=True)
+        else:
+            raw = json.loads(resume_path.read_text())
+            candidate = {v: F(raw[v]) for v in compiled["variables"]}
         report.update(status="NUMERICAL_CHECKPOINT_RECOVERY", resume_from=str(resume_path.relative_to(root)))
     elif solver == "sdpa":
         remaining = max(1,min(seconds,800-(time.monotonic()-started)))

@@ -1,0 +1,70 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_global_coxeter_formulation.py",
+    "solve-current",
+    "--input",
+    "results/global_shared_cusp_current/necessary_primal.exact.json",
+    "--orientation",
+    "necessary",
+    "--solver",
+    "sdpa",
+    "--prepared-from",
+    "results/global_shared_cusp_prepare",
+    "--seconds",
+    "650",
+    "--output",
+    "results/global_shared_cusp_sdpa"
+  ],
+  "elapsed_seconds": 399.946,
+  "peak_process_tree_rss_bytes": 4633690112,
+  "initial_resources": {
+    "free_disk_gib": 292.91,
+    "available_memory_gib": 10.2,
+    "disk_free_bytes": 314512064512,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10949951488,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 31.621642,
+    "available_memory_percent": 42.491404,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 2404,
+  "stdout": "{\"orientation\": \"necessary\", \"variables\": 36818, \"equalities\": 9388, \"cones\": 138476, \"elapsed_seconds\": 0.7640693749999627, \"stage\": \"frozen_model_loaded\"}\n{\"variables\": 23625, \"elapsed_seconds\": 3.6667897920124233, \"stage\": \"exact_preprocessing_checkpoint_loaded\"}\n{\"command\": [\"/Users/sasha/.local/bin/sdpa_gmp\", \"-ds\", \"/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa/input.dat-s\", \"-o\", \"/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa/native.result\", \"-p\", \"/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa/param.sdpa\"], \"encoding\": {\"free_variables\": 23625, \"full_PSD_blocks\": 3213, \"packed_scalar_constraints\": 92823, \"sparse_nonzeros\": 1059047}, \"elapsed_seconds\": 7.937105291988701, \"stage\": \"native_solver_start\"}\n{\"status\": \"NO_EXACT_FEASIBILITY_DECISION\", \"orientation\": \"necessary\", \"frozen_input\": \"results/global_shared_cusp_current/necessary_primal.exact.json\", \"frozen_input_sha256\": \"88f854280dd973e9cbf570d81329f593f745a09fd0d1a54f194eb7fc6aa290d5\", \"geometric_constraints_added\": false, \"original_variables\": 36818, \"compiled_variables\": 23625, \"compiled_cones\": 96036, \"prepared_matrix_sha256\": \"98c2cd34792b614b1babc9058f7533edefe71301708c8e172a85cce4dfcfe5ea\", \"prepared_substitutions_sha256\": \"52d043faa66a74258cbe4620d565392e836e3c16f2f93c7005b6880f9e250453\", \"accepted_bounds_changed\": false, \"exact_reduction_checks\": {\"exact_zero_diagonal_face\": true, \"exact_noncoordinate_kernel_face\": true, \"exact_multi_column_kernel\": true, \"exact_rational_proportional_column_face\": true, \"exact_original_binomial_guard_face\": true, \"universal_Lorentz_third_compound_identity\": true, \"universal_spatial_mixed_rank_minors_identity\": true, \"symbolic_checks_are_polynomial_identities_not_sampled_diagrams\": true}, \"numerical\": {\"solver\": \"SDPA-GMP\", \"command\": [\"/Users/sasha/.local/bin/sdpa_gmp\", \"-ds\", \"/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa/input.dat-s\", \"-o\", \"/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa/native.result\", \"-p\", \"/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa/param.sdpa\"], \"returncode\": 0, \"timed_out\": false, \"encoding\": {\"free_variables\": 23625, \"full_PSD_blocks\": 3213, \"packed_scalar_constraints\": 92823, \"sparse_nonzeros\": 1059047}, \"maximum_iterations\": 1, \"native_output_error\": \"Oversized SDPA output\"}, \"elapsed_seconds\": 399.7801798750297, \"stage\": \"completed\"}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "361260fa6ef7f7dc6dc69c28db02627aa2820df1a9980058cbf66e0069711390",
+  "lock_owner": "wrapper"
+}

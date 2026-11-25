@@ -33,18 +33,33 @@ Levels 3, 4 and 5 select the successive extensions; level 5 includes all
 three. Every addition has an actual-polytope lift valid uniformly in
 dimension. This export uses the established n>=58 result as an anchor.
 
-The [exact checks](../../results/global_shared_cusp_checks/result.json)
+The [exact checks](../../results/global_shared_cusp_final_checks/result.json)
 verify nested retention, family-deletion formulas, a nonzero-response
-local Gram example through all three layers, and rejection of a mixture
+local triangle through all three layers, an ideal quadrilateral with
+strict opposite gaps, and rejection of a mixture
 that satisfies only the mean of a pointwise identity. The previous
 second-level point has no extension preserving all its old moments:
-seven new equations fail. These checks do not decide global feasibility.
+seven new equations involving auxiliary inverse moments fail. This does
+not separately certify a gain from shared-support constraints. These
+checks do not decide global feasibility.
 The current SDP has no verified feasible point or infeasibility
 certificate. Before the separate cusp marginals, a
 [15-round PSD-cut search](../../results/global_shared_star_search/result.json)
 retained violated PSD blocks and supplied no certificate. An earlier
 version's SDPA-GMP run exhausted 650 seconds without a checkpoint; its
 monitor PASS means worker completion.
+
+The [current SDPA-GMP run](../../results/global_shared_cusp_sdpa/result.json)
+completed a one-iteration checkpoint batch in 391 native solver seconds,
+at phase `noINFO`. Exact presolve reduced the input to 23,625 free
+variables, 3,213 PSD blocks and 92,823 scalar rows. The 23 MB checkpoint
+exceeded the old reader's limit; the reader was enlarged and the saved
+answer was then [recovered and checked](../../results/global_shared_cusp_recovery/result.json)
+without another solver run. Recovery verified byte identity of the
+ordered reduced inputs. The candidate has large numerical cone violations and all
+seven attempted exact rounding/projection grids fail. No feasibility or
+infeasibility certificate is claimed from this initial checkpoint. The
+native data remain available for a subsequent restart.
 
 The finite truncation still relaxes integer ranks and discrete labels,
 uses rational envelopes for H3/H4, and omits many higher moments. It
