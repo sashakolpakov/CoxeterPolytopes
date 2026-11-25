@@ -9,8 +9,11 @@ unchanged unless the current task explicitly calls for a revision. The user's
 `arxiv/<paper>/main.pdf`, following PseudoArithmetic. This replaces the
 30 October `manuscripts/build/` layout. The concise dimension submission is
 canonical in `arxiv/hyperbolic_coxeter_dimension_bounds/`; its complete
-30 October proof addenda are byte-preserved under
-`manuscripts/addenda/dimension_bounds_20261030/`. Remove obsolete presentation
+30 October proof addenda are under
+`manuscripts/addenda/dimension_bounds_20261030/`. The user requested a prose
+revision of both this supplement and the concise article on 5 November.
+Preserve their mathematical content; the original 30 October edition remains
+in Git history, while the six accepted checker inputs stay unchanged. Remove obsolete presentation
 copies and assembly bookkeeping; retain exact inputs needed by current checkers.
 Consolidate improvements within those paper
 families; do not create a paper for each numerical increment.
@@ -19,6 +22,19 @@ The user's 23 November cleanup removes the subsequent finite-volume
 additional-constraint search. Keep the LP work focused on the completed
 57/17/15 bounds, their manuscript, sources and exact verification inputs.
 The published LP-manuscript checkpoint is commit `60303a81`.
+
+The user's 24–25 November correction replaces the renewed incremental
+diagram search by a global necessary-data LP/SDP. The rejected search
+since `f0ab8591` was explicitly authorized for deletion after extracting
+useful mathematics and generic tools. Keep the new research together in
+`research/global_formulation/`. Every model must have an explicit map
+from every hypothetical polytope in the stated tail. Use complete
+component schemas, shared face Gram conditions and common incidence
+marginals; do not grow lists of selected vertex forests or face diagrams.
+All 26 manuscript feature coefficients remain free dual potentials.
+Numerical feasibility of a restricted weight search is not global
+geometric coverage. The accepted bounds stay unchanged without the
+complete proof and review requirements below.
 
 ## Evidence and claims
 
@@ -69,8 +85,21 @@ capacity and physical RAM. Admit at2% free disk and15% available RAM; stop
 an active job below1% free disk or6% available RAM. Gate on exact byte
 ratios and record totals, percentages and the policy source hash. The old
 40/6GiB admission rule is historical. Keep process-tree/RSS monitoring. Scientific
-and TeX work uses the existing bounded research runner (59seconds,1GiB,
-one thread). Lean uses `scripts/run_lean_batches_signal_safe_20261018.py`,
+work uses `scripts/run_bounded_scientific_5gb_20261122.py` (300 seconds,
+5,000,000,000 bytes process-tree RSS, one thread). The user's later
+22 November request to rerun large LPs and SDPs with more time also
+authorizes `scripts/run_bounded_scientific_long_5gb_20261122.py`, with
+15-minute batches and the same memory, thread, lock and resource gates.
+The subsequent instruction, "go up to 10GB RAM usage, no worries",
+authorizes `scripts/run_bounded_scientific_long_10gb_20261123.py` for
+future research batches: 900 seconds and 10,000,000,000 bytes process-tree
+RSS. One thread, the shared lock and percentage admission/stop gates
+remain unchanged. Preserve the actual limits recorded for earlier runs.
+SDPA is requested for SDPs that fit; Gurobi may be used for LPs when an
+appropriate installation and licence are available. Preserve exact
+certificate checks independently of numerical solver status.
+The preceding one-GiB scientific runner and historical 59-second runner remain unchanged
+for retained evidence and TeX work. Lean uses `scripts/run_lean_batches_signal_safe_20261018.py`,
 one module at2048MiB and one thread, then a SEPARATE actual axiom audit.
 Never substitute a raw whole-project Lean build or launch parallel proof jobs.
 

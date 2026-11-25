@@ -90,3 +90,7 @@ restoration; recorded scientific inputs retain their original paths.
 The retained [LP documentation](notes/lp/README.md) covers the completed
 57/17/15 recoveries and their required inputs. The later search for additional
 finite-volume constraints has been removed.
+
+A new [global LP/SDP research formulation](notes/lp/global_formulation.md)
+uses shared Gram data and common incidence marginals. It is separate from
+the completed proofs and has established no improved bound.

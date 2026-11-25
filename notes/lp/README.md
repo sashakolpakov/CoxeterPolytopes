@@ -37,3 +37,10 @@ inputs. The subsequent 21–23 November search for additional finite-volume
 constraints, including its experimental code, generated models and working
 notes, was removed at the author's request. It established no new dimension
 bound. Commit `60303a81` is the published LP-manuscript checkpoint.
+
+The renewed diagram-by-diagram search was also removed at the author's
+request. The replacement is the [global necessary-data formulation](global_formulation.md),
+with [primary-source constraints](global_sources.md) and one
+[research implementation](../../research/global_formulation/README.md).
+Every hypothetical polytope must map into the relaxation before a solver
+certificate can be used. The retained bounds remain57/17/15.
