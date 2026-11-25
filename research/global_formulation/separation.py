@@ -59,7 +59,7 @@ def lift_certificate(primal_dual, outer, certificate):
         method="nonnegative rational sums of outer products; original adjoint and PSD checked")
 
 
-def explore(primal, dual, output, solve, recover, seconds=360, rounds=250):
+def explore(primal, dual, output, solve, recover, seconds=360, rounds=250,retain_outer=True,iteration_seconds=40):
     import numpy as np
     out = output
     outer = outer_LP(primal)
@@ -71,7 +71,7 @@ def explore(primal, dual, output, solve, recover, seconds=360, rounds=250):
         left = seconds-(time.monotonic()-started)
         if left < 3:
             break
-        candidate, numerical = solve(outer, seconds=min(40, left))
+        candidate, numerical = solve(outer, seconds=min(iteration_seconds, left))
         item = dict(iteration=iteration, outer_scalar_rows=len(outer["blocks"]), numerical=numerical)
         history.append(item)
         if candidate is None:
@@ -135,7 +135,15 @@ def explore(primal, dual, output, solve, recover, seconds=360, rounds=250):
             outer["metadata"]["cone_directions"].append(dict(parent_block=b, vector=vector))
     if last_point is not None:
         conic.write_json(out/"PSD_cut_last_primal_candidate.json", last_point)
-    conic.write_json(out/"PSD_cut_outer.exact.json", outer)
+    if retain_outer:
+        conic.write_json(out/"PSD_cut_outer.exact.json", outer)
+    else:
+        original_rows = sum(len(b["entries"])**2 for b in primal["blocks"])
+        conic.write_json(out/"additional_PSD_directions.exact.json",dict(
+            original_SDP_sha256=conic.digest_bytes(conic.canonical(primal)),
+            initial_directions="all e_i and e_i plus/minus e_j, in parent block order",
+            initial_row_count=original_rows,
+            additional_directions=outer["metadata"]["cone_directions"][original_rows:]))
     conic.write_json(out/"PSD_separation_history.json", history)
     report.update(PSD_separation_rounds=len(history), elapsed_seconds=time.monotonic()-started,
         all_cuts_are_rational_tests_of_original_PSD_blocks=True,

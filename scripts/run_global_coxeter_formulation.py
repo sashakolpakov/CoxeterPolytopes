@@ -12,22 +12,31 @@ def main():
     if not os.environ.get("COXETER_CHECK_OWNER"):
         raise RuntimeError("Use the repository's serial bounded scientific runner")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("stage", choices=("export", "explore-lp", "explore-sdpa", "explore-psd-cuts", "solve-current", "verify-current", "audit-strengthening"))
+    parser.add_argument("stage", choices=("export", "explore-lp", "explore-sdpa", "explore-psd-cuts", "solve-current", "verify-current", "audit-strengthening", "check-shared-program", "search-frozen-psd"))
     parser.add_argument("--threshold", type=int)
     parser.add_argument("--parity", choices=("odd", "even"))
     parser.add_argument("--output", required=True)
     parser.add_argument("--upper-dimension", type=int, choices=(57,),
         help="Use the retained n>=58 theorem to cover the complementary tail")
-    parser.add_argument("--level", type=int, choices=(1, 2), default=1)
+    parser.add_argument("--level", type=int, choices=(1, 2, 3, 4, 5), default=1)
     parser.add_argument("--input", default="results/global_tail57_current/necessary_primal.exact.json")
     parser.add_argument("--solver", choices=("prepare", "sdpa", "recover"), default="sdpa")
     parser.add_argument("--orientation", choices=("necessary", "certificate"), default="necessary")
     parser.add_argument("--seconds", type=int, default=600)
     parser.add_argument("--no-facial-reduction", action="store_true")
     parser.add_argument("--resume-from")
+    parser.add_argument("--prepared-from")
     parser.add_argument("--point", default="results/global_current_exact_recovery/original_feasible_point.exact.json")
     args = parser.parse_args()
     sys.path.insert(0, str(ROOT))
+    if args.stage == "search-frozen-psd":
+        from research.global_formulation.frozen_search import run
+        run(ROOT,args.output,args.input,args.seconds)
+        return
+    if args.stage == "check-shared-program":
+        from research.global_formulation.program_checks import run
+        run(ROOT,args.output)
+        return
     if args.stage == "audit-strengthening":
         from research.global_formulation.strengthening import audit
         audit(ROOT, args.output, args.input, args.point)
@@ -39,7 +48,7 @@ def main():
     if args.stage == "solve-current":
         from research.global_formulation.feasibility import run
         run(ROOT, args.output, args.input, args.solver, args.orientation, args.seconds,
-            facial=not args.no_facial_reduction, resume_from=args.resume_from)
+            facial=not args.no_facial_reduction, resume_from=args.resume_from,prepared_from=args.prepared_from)
         return
     if args.threshold is None or args.parity is None:
         parser.error("Model construction requires --threshold and --parity")

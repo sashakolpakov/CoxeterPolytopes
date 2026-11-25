@@ -1,0 +1,68 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_global_coxeter_formulation.py",
+    "export",
+    "--threshold",
+    "57",
+    "--parity",
+    "odd",
+    "--upper-dimension",
+    "57",
+    "--level",
+    "5",
+    "--output",
+    "results/global_shared_star_current"
+  ],
+  "elapsed_seconds": 36.214,
+  "peak_process_tree_rss_bytes": 616448000,
+  "initial_resources": {
+    "free_disk_gib": 293.01,
+    "available_memory_gib": 13.14,
+    "disk_free_bytes": 314615291904,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 14110507008,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 31.632021,
+    "available_memory_percent": 54.755974,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 1724,
+  "stdout": "{\"status\": \"GLOBAL_NECESSARY_DATA_EXPORTED\", \"threshold\": 57, \"parity\": \"odd\", \"upper_dimension\": 57, \"primal_variables\": 36128, \"primal_equalities\": 9251, \"primal_PSD_blocks\": 3643, \"primal_scalar_blocks\": 132683, \"largest_PSD_block\": 66, \"dual_variables\": 190037, \"conic_alternative_checks\": {\"exact_affine_equality_alternative\": true, \"exact_offdiagonal_trace_pairing\": true, \"SDPA_constant_sign_and_scalar_packing\": true, \"exact_rational_PSD_cut_certificate_lift\": true, \"harmonic_envelope_integral_proof_checked\": true, \"closed_angle_square_inverse_checks\": 6, \"finite_tail_regressions\": 12, \"affine_tail_regressions\": 16, \"finite_regressions_do_not_replace_the_uniform_proof\": true, \"universal_Lorentz_third_compound_identity\": true, \"universal_spatial_mixed_rank_minors_identity\": true, \"symbolic_checks_are_polynomial_identities_not_sampled_diagrams\": true, \"component_inverse_pairs_checked\": 386, \"finite_forest_flag_count_fixtures\": 3, \"product_cusp_flag_count_fixtures\": 3, \"classical_formulas_are_all_rank_identities_not_fitted_tables\": true, \"no_component_rank_or_label_cutoff\": true, \"all_connected_deletion_inputs_classified\": true, \"classical_deletion_polynomial_regressions\": 28, \"whole_vertex_family_normalization_fixtures\": 4, \"formulas_proved_by_retained_edges_and_fork_cores_not_polynomial_fitting\": true}, \"diagram_family_lists_used\": false, \"global_bound_changed\": false, \"separate_author_review\": false, \"strict_strengthening\": {\"all_original_equalities_retained\": 450, \"all_original_cones_retained\": 10588, \"old_witness_has_no_extension\": true, \"constraints_needing_new_moments\": 133993, \"old_moments\": 3598, \"shared_moments\": 3598, \"strengthened_moments\": 36128}, \"uniform_strengthening_level\": 5}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "361260fa6ef7f7dc6dc69c28db02627aa2820df1a9980058cbf66e0069711390",
+  "lock_owner": "wrapper"
+}

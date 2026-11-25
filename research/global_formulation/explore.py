@@ -7,7 +7,7 @@ import shutil
 import subprocess
 import tempfile
 
-from . import conic, data, model, separation, strengthening
+from . import conic, data, model, separation, strengthening, white_profiles, supporting_counts
 
 
 def sampled_psd_LP(problem):
@@ -166,9 +166,12 @@ def run(root, output, threshold, parity, stage, upper_dimension=None, level=1):
         root/"manuscripts/finite_volume57_consolidated.tex",
         root/"research/global_formulation/sources.json", root/data.LITERAL]
     audit_57 = level > 1 and threshold == 57 and parity == "odd" and upper_dimension == 57
+    baseline_input = root/("results/global_level2_current/necessary_primal.exact.json" if level >= 3 else
+        "results/global_tail57_current/necessary_primal.exact.json")
+    baseline_point = root/("results/global_level2_face_recovery/original_feasible_point.exact.json" if level >= 3 else
+        "results/global_current_exact_recovery/original_feasible_point.exact.json")
     if audit_57:
-        paths += [root/"results/global_tail57_current/necessary_primal.exact.json",
-            root/"results/global_current_exact_recovery/original_feasible_point.exact.json"]
+        paths += [baseline_input,baseline_point]
     bindings = {str(p.relative_to(root)): dict(bytes=p.stat().st_size,
         sha256=conic.digest_bytes(p.read_bytes())) for p in paths}
     out.mkdir()
@@ -176,6 +179,9 @@ def run(root, output, threshold, parity, stage, upper_dimension=None, level=1):
     checks = self_checks()
     if level > 1:
         checks.update(strengthening.symbolic_gram_checks())
+    if level >= 3:
+        checks.update(white_profiles.self_checks())
+        checks.update(supporting_counts.self_checks())
     tables = data.intrinsic_tables()
     primal = model.build(threshold, parity, tables, upper_dimension, level=level)
     conic.write_json(out/"necessary_primal.exact.json", primal)
@@ -191,9 +197,8 @@ def run(root, output, threshold, parity, stage, upper_dimension=None, level=1):
         diagram_family_lists_used=False, global_bound_changed=False, separate_author_review=False)
     if level > 1:
         if audit_57:
-            base = conic.read_model(root/"results/global_tail57_current/necessary_primal.exact.json")
-            point = {v: F(c) for v, c in json.loads(
-                (root/"results/global_current_exact_recovery/original_feasible_point.exact.json").read_text()).items()}
+            base = conic.read_model(baseline_input)
+            point = {v: F(c) for v,c in json.loads(baseline_point.read_text()).items()}
             audit = strengthening.compare_and_test(base, primal, point)
             conic.write_json(out/"strict_strengthening_audit.json", audit)
             report["strict_strengthening"] = {k: v for k, v in audit.items()

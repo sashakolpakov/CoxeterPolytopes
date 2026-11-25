@@ -20,6 +20,7 @@ class Domain:
     bases: list = field(default_factory=list)
     integer_counts: dict = field(default_factory=dict)
     rank_total: object = None
+    equation_closure: bool = False
 
     def variable(self, name, bounded=True, boolean=False):
         self.variables.add(name)
@@ -188,8 +189,14 @@ class Program:
     def compile(self, metadata):
         for m in self.measures:
             m.prepare()
+        if any(m.domain.equation_closure for m in self.measures):
+            from . import equation_closure
+            for m in self.measures:
+                if m.domain.equation_closure: equation_closure.variance_cliques(m)
         for m in self.measures:
             m.close_positive_monomials()
+        for m in self.measures:
+            if m.domain.equation_closure: equation_closure.existing_products(m)
         variables = [n for m in self.measures for n in m.moments.values()]
         metadata = dict(metadata, equality_labels=self.labels,
             equality_positive_divisors=self.equality_scales,
@@ -197,6 +204,9 @@ class Program:
             measure_mass_scales={m.name: m.mass_scale for m in self.measures},
             dimension_moment_variable="t entries encode the scaled variable parity_endpoint/n",
             all_measures_are_necessary_moments_not_realizability_assertions=True)
+        if any(m.domain.equation_closure for m in self.measures):
+            metadata["pointwise_equation_closure"] = {m.name:m.ideal_closure_report
+                for m in self.measures if m.domain.equation_closure}
         return conic.model(variables, self.blocks, self.equations, metadata)
 
 

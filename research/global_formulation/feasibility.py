@@ -132,7 +132,30 @@ def original_binomial_faces(problem, progress):
     return list(derived.values()), proofs
 
 
-def prepare(problem, progress, facial=True, linear_faces=True):
+def symbolic_column_kernels(matrix):
+    """Exact constant column dependencies, triangular in the original order."""
+    pivots, result = {}, []
+    for j in range(len(matrix)):
+        column = {(i,v):c for i,row in enumerate(matrix) for v,c in row[j].items()}
+        representation = {j:F(1)}
+        for pivot,(basis,coefficients) in pivots.items():
+            if pivot not in column: continue
+            factor = column[pivot]
+            column = conic.plus(column,conic.times(-factor,basis))
+            representation = conic.plus(representation,conic.times(-factor,coefficients))
+        if not column:
+            direction = sorted(representation.items())
+            if any(conic.plus(*(conic.times(c,row[k]) for k,c in direction)) for row in matrix):
+                raise ValueError("An exact symbolic column relation failed its identity check")
+            result.append(direction)
+        else:
+            pivot = min(column)
+            scale = column[pivot]
+            pivots[pivot] = (conic.times(1/scale,column),conic.times(1/scale,representation))
+    return result
+
+
+def prepare(problem, progress, facial=True, linear_faces=True, seconds=None):
     """Equivalent exact reductions: equalities, PSD zero rows, scalar faces.
 
     A scalar face is accepted only after checking a nonnegative combination
@@ -140,8 +163,10 @@ def prepare(problem, progress, facial=True, linear_faces=True):
     Every positive-weight summand must then vanish at any feasible point.
     A PSD zero diagonal forces its entire row to vanish.
     """
+    started = time.monotonic()
     initial_rows, initial_proofs = original_binomial_faces(problem, progress) if facial and linear_faces else ([], [])
     current, substitutions = conic.eliminate(problem, initial_rows)
+    progress("exact_equalities_eliminated",dict(free_variables=len(current["variables"])))
     maps = [dict(original_block=b, indices=list(range(len(block["entries"]))), scale=F(1))
         for b, block in enumerate(problem["blocks"])]
     trace = [dict(stage="original_scalar_faces", proofs=initial_proofs)] if initial_proofs else []
@@ -164,17 +189,11 @@ def prepare(problem, progress, facial=True, linear_faces=True):
         if facial:
             for b, block in enumerate(current["blocks"]):
                 M = block["entries"]
-                for j in range(1, len(M)):
-                    for i in range(j):
-                        probe = next((k for k in range(len(M)) if M[k][i]), None)
-                        if probe is None: continue
-                        v, coefficient = next(iter(M[probe][i].items()))
-                        ratio = M[probe][j].get(v, F(0))/coefficient
-                        if all(not conic.plus(row[j], conic.times(-ratio, row[i])) for row in M):
-                            zero_directions.setdefault(b, []).append([(i, -ratio), (j, F(1))])
-                            proofs.append(dict(kind="PSD_symbolic_column_dependence", block=b,
-                                retained_column=i, dependent_column=j, ratio=ratio))
-                            break
+                if len(M) > 1:
+                    directions = symbolic_column_kernels(M)
+                    zero_directions.setdefault(b,[]).extend(directions)
+                    proofs.extend(dict(kind="PSD_symbolic_column_kernel",block=b,direction=d)
+                        for d in directions)
             normalized = {}
             for ref, q in scalar_rows:
                 b, direction = ref
@@ -242,8 +261,8 @@ def prepare(problem, progress, facial=True, linear_faces=True):
                     rows = [conic.plus(*(conic.times(c, row[j]) for j, c in direction)) for row in M]
                     for q in rows:
                         if q: derived[conic.canonical(q)] = q
-                    # All two-coordinate directions express the larger
-                    # column through a smaller one; their union preserves
+                    # All recorded directions express their largest
+                    # column through earlier ones; their union preserves
                     # a principal spanning set, even when relations repeat.
                     zero.append(max(j for j, _ in direction))
                     if any(rows): proofs.append(dict(kind="PSD_zero_quadratic_direction", block=b,
@@ -277,10 +296,20 @@ def prepare(problem, progress, facial=True, linear_faces=True):
         progress("exact_presolve", {k: v for k, v in item.items() if k != "proofs"})
         if not derived:
             break
+        if seconds is not None and time.monotonic()-started >= seconds:
+            progress("exact_presolve_budget_checkpoint",dict(remaining_variables=len(current["variables"])))
+            break
     return current, substitutions, maps, trace
 
 
 def reduction_checks():
+    toy = conic.model(["x","y"],[dict(name="three_column_kernel",entries=[
+        [conic.form(x=1),{},conic.form(x=1)],
+        [{},conic.form(y=1),conic.form(y=1)],
+        [conic.form(x=1),conic.form(y=1),conic.form(x=1,y=1)]])])
+    reduced,_,_,_ = prepare(toy,lambda *_:None,linear_faces=False)
+    if len(reduced["blocks"][0]["entries"]) != 2:
+        raise ValueError("The full symbolic PSD column kernel was not removed")
     names = ("u", "v", "w", "a", "b", "c")
     toy = conic.model(list(names), [dict(name="unit_"+v, entries=[[conic.form(**{v: 1})]])
         for v in ("u", "v", "w")]+[dict(name="inactive_sum", entries=[[
@@ -313,7 +342,7 @@ def reduction_checks():
     if len(compiled["blocks"]) != 1 or len(compiled["blocks"][0]["entries"]) != 1:
         raise ValueError("The rational proportional-column PSD kernel was not reduced")
     conic.check_point(toy, {v: conic.value(q, {compiled["variables"][0]: F(1)}) for v, q in substitutions.items()})
-    return dict(exact_zero_diagonal_face=True, exact_noncoordinate_kernel_face=True,
+    return dict(exact_zero_diagonal_face=True, exact_noncoordinate_kernel_face=True,exact_multi_column_kernel=True,
         exact_rational_proportional_column_face=True, exact_original_binomial_guard_face=True)
 
 
@@ -368,7 +397,9 @@ def solve_sdpa(problem, out, seconds, progress, resume_dir=None):
     solver = shutil.which("sdpa_gmp") or shutil.which("sdpa")
     if not solver: raise RuntimeError("SDPA is unavailable")
     encoding = conic.write_sdpa(out/"input.dat-s", problem)
-    parameters = "35\n1e-12\n10\n2\n-1e12\n1e12\n0.1\n0.3\n0.9\n1e-12\n128\n"+"%+90.80Fe\n"*4
+    n = len(problem["variables"])
+    iterations = 1 if n > 16000 else 4 if n > 8000 else 12 if n > 4000 else 35
+    parameters = str(iterations)+"\n1e-12\n10\n2\n-1e12\n1e12\n0.1\n0.3\n0.9\n1e-12\n128\n"+"%+90.80Fe\n"*4
     (out/"param.sdpa").write_text(parameters)
     command = [solver, "-ds", str(out/"input.dat-s"), "-o", str(out/"native.result"), "-p", str(out/"param.sdpa")]
     initial = None
@@ -394,7 +425,7 @@ def solve_sdpa(problem, out, seconds, progress, resume_dir=None):
                 timeout=seconds, check=False).returncode
         except subprocess.TimeoutExpired: timeout = True
     numerical = dict(solver="SDPA-GMP" if "gmp" in solver else "SDPA", command=command,
-        returncode=code, timed_out=timeout, encoding=encoding)
+        returncode=code, timed_out=timeout, encoding=encoding,maximum_iterations=iterations)
     if initial is not None:
         numerical.update(native_restart_from=str(resume_dir),
             ordered_reduced_input_byte_identity_checked=True)
@@ -408,7 +439,7 @@ def solve_sdpa(problem, out, seconds, progress, resume_dir=None):
     return x, matrices, numerical
 
 
-def run(root, output, input_path, solver, orientation, seconds=600, facial=True, resume_from=None):
+def run(root, output, input_path, solver, orientation, seconds=600, facial=True, resume_from=None,prepared_from=None):
     if not 1 <= seconds <= 700: raise ValueError("Use a bounded numerical stage of at most 700 seconds")
     out, source = (root/output).resolve(), (root/input_path).resolve()
     if out.exists() or not out.is_relative_to(root/"results"): raise ValueError("Use a fresh results directory")
@@ -422,6 +453,11 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
         paths += [root/"research/global_formulation/strengthening.py",
             root/"research/global_formulation/polynomial.py"]
     resume_path, resume_dir = None, None
+    prepared_dir = (root/prepared_from).resolve() if prepared_from else None
+    if prepared_dir is not None:
+        if not prepared_dir.is_relative_to(root/"results"): raise ValueError("Invalid exact preprocessing checkpoint")
+        paths += [prepared_dir/name for name in ("result.json","compiled.exact.json",
+            "substitutions.exact.json","cone_maps.exact.json","exact_face_reduction.json")]
     if resume_from:
         resume_dir = (root/resume_from).resolve()
         if not resume_dir.is_relative_to(root/"results"): raise ValueError("Invalid numerical checkpoint")
@@ -446,7 +482,29 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
     target = original if orientation == "necessary" else conic.farkas(original)
     progress("frozen_model_loaded", dict(orientation=orientation, variables=len(target["variables"]),
         equalities=len(target["equations"]), cones=len(target["blocks"])))
-    compiled, substitutions, maps, trace = prepare(target, progress, facial=facial)
+    if prepared_dir is None:
+        compiled, substitutions, maps, trace = prepare(target,progress,facial=facial,seconds=300)
+    else:
+        prior = json.loads((prepared_dir/"result.json").read_text())
+        if prior["frozen_input_sha256"] != bindings[str(source.relative_to(root))]["sha256"] or prior["orientation"] != orientation:
+            raise ValueError("The exact preprocessing checkpoint belongs to a different frozen problem")
+        compiled = conic.read_model(prepared_dir/"compiled.exact.json")
+        substitutions = {v:{w:F(c) for w,c in q.items()} for v,q in json.loads(
+            (prepared_dir/"substitutions.exact.json").read_text()).items()}
+        maps = json.loads((prepared_dir/"cone_maps.exact.json").read_text())
+        for m in maps: m["scale"] = F(m["scale"])
+        trace = json.loads((prepared_dir/"exact_face_reduction.json").read_text())
+        if prior["prepared_matrix_sha256"] != conic.digest_bytes(conic.canonical(compiled)) or prior[
+                "prepared_substitutions_sha256"] != conic.digest_bytes(conic.canonical(substitutions)):
+            raise ValueError("An exact preprocessing checkpoint failed its retained digest")
+        progress("exact_preprocessing_checkpoint_loaded",dict(variables=len(compiled["variables"])))
+        if solver == "prepare":
+            newer,updates,new_maps,new_trace = prepare(compiled,progress,facial=facial,seconds=300)
+            substitutions = {v:substitute(q,updates) for v,q in substitutions.items()}
+            maps = [dict(original_block=maps[m["original_block"]]["original_block"],
+                indices=[maps[m["original_block"]]["indices"][i] for i in m["indices"]],
+                scale=maps[m["original_block"]]["scale"]*m["scale"]) for m in new_maps]
+            compiled = newer; trace += new_trace
     conic.write_json(out/"compiled.exact.json", compiled)
     conic.write_json(out/"substitutions.exact.json", substitutions)
     conic.write_json(out/"cone_maps.exact.json", maps)
@@ -455,6 +513,8 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
         frozen_input=str(source.relative_to(root)), frozen_input_sha256=bindings[str(source.relative_to(root))]["sha256"],
         geometric_constraints_added=False, original_variables=len(target["variables"]),
         compiled_variables=len(compiled["variables"]), compiled_cones=len(compiled["blocks"]),
+        prepared_matrix_sha256=conic.digest_bytes(conic.canonical(compiled)),
+        prepared_substitutions_sha256=conic.digest_bytes(conic.canonical(substitutions)),
         accepted_bounds_changed=False, source_bindings=bindings, exact_reduction_checks=checks)
     candidate = matrices = None
     if solver == "recover":
@@ -463,7 +523,8 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
         candidate = {v: F(raw[v]) for v in compiled["variables"]}
         report.update(status="NUMERICAL_CHECKPOINT_RECOVERY", resume_from=str(resume_path.relative_to(root)))
     elif solver == "sdpa":
-        candidate, matrices, numerical = solve_sdpa(compiled, out, seconds, progress, resume_dir=resume_dir)
+        remaining = max(1,min(seconds,800-(time.monotonic()-started)))
+        candidate, matrices, numerical = solve_sdpa(compiled,out,remaining,progress,resume_dir=resume_dir)
         report.update(status="NO_EXACT_FEASIBILITY_DECISION", numerical=numerical)
     elif solver != "prepare": raise ValueError("Unsupported solver")
     if candidate is not None:

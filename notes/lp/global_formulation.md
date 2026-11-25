@@ -552,6 +552,320 @@ Finally impose the normalization
 Its unnormalized left side is D5(P)-sum_v beta_v, strictly positive by
 the retained incidence-excess theorem.
 
+## Supporting forests and attachment responses: levels 3--5
+
+These levels retain every constraint of level 2. Level 3 adds a common
+supporting-forest response model and deletion-count marginals. Level 4
+adds joint closed-face conditioning and a shared edge statistic. Level 5
+adds sparse polynomial-ideal closure. They remain necessary-data moment
+relaxations; their feasibility is not a geometric realization claim.
+
+### A component representation of the same white block
+
+Use the original unit facet normals before projection. For an s-sided
+two-face, write its star Gram matrix as
+
+    G=[[B,C],[C^T,D]],  B=direct_sum B_alpha,
+    T=C^T*B^-1*C=sum_alpha Q_alpha,  S=D-T.
+
+Here B is the positive supporting Gram block of rank n-2. Adding one
+sidewall to B gives the positive diagram of an edge. Its connected
+components are spherical Coxeter diagrams, which are trees of maximum
+degree three. Consequently each sidewall meets at most three white
+nodes, and at most one in any one connected white component: two
+connections to the same tree would make a cycle. At most 3s white
+components have any attachment to these sidewalls. All remaining white
+components are retained as spectators, with their rank and count.
+
+For each white component, rescale its simple roots to the rational
+Cartan normalization Bbar=L*B_alpha*L, with L diagonal and L_pp^2
+equal to 2, except at short B/F roots, where it equals 1. If side i
+attaches at node p_i, put b_i=-C_(p_i,i)*L_(p_i,p_i); otherwise b_i=0.
+Then, simultaneously for all side pairs,
+
+    (Q_alpha)_ij=b_i*b_j*(Bbar^-1)_(p_i,p_j).
+
+These are the same marked nodes and amplitudes in every entry of the
+response matrix. Every Q_alpha is PSD and entrywise nonnegative. Each
+entry is at most one: its diagonal is bounded by the corresponding
+diagonal of T, and positivity of the edge block gives T_ii<1.
+
+All connected spherical families occur in the component domain:
+A_r, B_r, D_r, E6/E7/E8, F4, H3/H4 and I2(m). There is no rank cutoff.
+The final family marginals use the canonical convention I2(m), m>=5;
+labels three and four are represented by A2 and B2. Ranks and marked positions are continuous outer
+variables in this finite level, with the stated family bounds. No
+exhaustiveness claim is made for a finite sample of ranks or labels.
+
+For the growing families the Cartan inverse entries are exact:
+
+    A_r: K_ij=min(i,j)*(r+1-max(i,j))/(r+1),  1<=i,j<=r;
+    B_r: K_ij=min(i,j), with the short terminal root indexed by r;
+    D_r: K_ij=min(i,j) on the chain 1,...,r-2,
+         K_(i,leaf)=i/2,
+         K_(leaf,leaf)=r/4,
+         K_(different leaves)=(r-2)/4.
+
+For A, the second difference 2K_ij-K_(i-1,j)-K_(i+1,j) is delta_ij,
+with zero boundary values at 0 and r+1. For B, the same interior
+identity and K_rj-K_(r-1,j)=delta_rj verify the inverse. For D, the
+interior second differences, the fork row and the two leaf rows verify
+the displayed matrix. This proves the formulas at every rank. In the
+program use R=r/n, x_i=p_i/n, t=1/n and explicit ordered minima;
+multiplication by the positive denominators gives polynomial identities.
+
+The E/F inverses are exact rational matrices. For H3/H4, invert the
+fixed Cartan matrix over Q(phi), phi^2=phi+1, then enclose each inverse
+entry by rational bounds. The bracket
+
+    1618033988749894/10^15 < phi < 1618033988749895/10^15
+
+follows by evaluating x^2-x-1 at both endpoints, where it is strictly
+increasing. Each entry a+b*phi consequently has checked rational lower
+and upper bounds. Both bounds, together with PSD, are used in the model.
+This is an enclosure of the fixed H matrices, not an exact rational
+replacement of their entries.
+
+For I2, with c=cos(pi/m), K=[[1,c],[c,1]]/[2(1-c^2)]. Its polynomial
+response equation is used with 1/2<=c<=1 and c^2>=5/8 in that family.
+The latter is a necessary envelope for m>=5. The endpoint is an outer
+closure point. For each nonzero attachment, its original squared
+cosine u satisfies 1/4<=u<=1 and
+
+    (u-1/4)*(u-1/2)>=0,
+    (u-1/2)*(u-5/8)>=0.
+
+The second gap uses cos^2(pi/5)>5/8. Inactive attachments use the
+homogenized versions with their Boolean activity flag. These are
+necessary gaps, not an exact discrete-label encoding.
+
+Each face retains T, positive projection lengths a_i=sqrt(1-T_ii),
+and the original sidewall Gram entries D_ij=-d_ij. Thus
+
+    T_ii+a_i^2=1,
+    d_ij+T_ij=c_corner*a_i*a_j       (adjacent sides),
+    d_ij+T_ij=opposite*a_i*a_j       (opposite sides).
+
+The a_i have positive inverse witnesses. Adjacent d_ij is zero or in
+[1/2,1]; nonadjacent original entries have no artificial upper bound.
+The existing projected Gram matrix uses these same a_i and T entries.
+
+### Component and vertex occupation marginals
+
+For each triangle/quadrilateral, let k be its white component count,
+kap=k/n, d_i the number of attachments of side i, and w_i the number
+of white components meeting both sides at corner i. The side degrees
+belong to {0,1,2,3}. If e_i records an original edge between those two
+sidewall nodes, then
+
+    e_i+w_i<=1+eta_i,
+    (1-eta_i)*(e_i+w_i-1+right_i)=0.
+
+At a finite corner the enlarged diagram is a forest. At an ideal
+corner the selected n-node block has one affine component and otherwise
+spherical components: it is obtained by taking an edge in one simplex
+factor of the cusp link and vertices in the others. It has at most one
+cycle, giving the displayed bound. The full cusp diagram can still have
+arbitrarily many affine factors; no corank-one assertion is made for it.
+
+Adding the two corner nodes to the white forest gives, at a finite
+corner, its full normalized component count
+
+    kap_v=kap+t*(2-d_i-d_(i+1)-e_i).
+
+The shared edge along side i has normalized component count
+
+    kap_E=kap+t*(1-d_i).
+
+A component occupation measure records each connected white component
+once per actual face. Its count, rank, degree and response pushforwards
+are matched to the common face measure. For every retained common-state
+test polynomial p,
+
+    integral t*p dxi             = integral p*kap dmu,
+    integral R*p dxi             = integral p*(1-2t) dmu,
+    integral attach_i*p dxi      = integral p*d_i dmu,
+    integral (Q_alpha)_ij*p dxi  = integral p*T_ij dmu,
+    integral attach_i*attach_j*p dxi = integral p*w_corner dmu.
+
+Spectators have every attachment flag and response entry zero, but
+their positive rank and component count remain in the first two rows.
+There is also a two-port residual-corner measure for larger faces. It
+retains the same necessary corner/supporting data, without claiming to
+encode an entire face with five or more sides.
+
+The new observables are connected to the original whole-vertex
+populations by exact deletion identities. For a spherical forest on n
+nodes with k components, summing the component count after deleting
+two nodes gives
+
+    Psi=choose(n,2)*(k-2)+(2n-3)*(n-k).
+
+Indeed the count for deleted nodes u,v is k-2+deg(u)+deg(v)-[uv is
+an edge]. Sum this identity over all pairs, using sum deg=2(n-k).
+The sum after deleting one node is (n-2)k+n. Thus, with kap_v=k/n,
+the finite normalized columns used by the program are
+
+    white: t^2*(1-2t)*((1-3t)*kap_v/2+t),
+    finite component count: t^2*(1-t)*kap_v/2,
+    edge component count: t^3*((1-2t)*kap_v+t).
+
+For a cusp, let its affine factors have orders m_i=r_i+1 and unweighted
+edge counts E_i, and put V=product m_i. A two-face through it selects
+two deleted nodes in one factor and one in every other factor. Counting
+the surviving edges gives
+
+    Psi=(V/2)*((n-1)*(n-2)-(n-3)*sum_i E_i*(m_i-2)/m_i).
+
+A link vertex deletes one node in each factor. Its mean spherical
+component count is the sum of 1 for a cycle factor and 2r_i/(r_i+1)
+for a tree factor. This includes the two-node affine A1 tree. These
+expressions use exactly the existing ideal component counts, ranks and
+reciprocal tail moments. They do not replace the product cusp by an
+independent upper estimate for each statistic.
+
+The final profile formulation also matches the count and rank sum of
+**each** connected white family. This is needed because a total count
+alone could match different supporting families to the vertex data.
+Let A_(S,T,j) and B_(S,T,j) sum the T-family statistic after deleting
+one or two nodes of a connected component S; j=0 counts components,
+and j=1 sums their ranks. A finite component of rank r contributes
+
+    choose(n-r,2)*[family(S)=T]*r^j
+       +(n-r)*A_(S,T,j)+B_(S,T,j)
+
+to the whole-vertex two-deletion sum. The three terms correspond to
+zero, one and two deleted nodes in this component. They count the
+resulting white components, so deleting nodes in different components
+introduces no spurious factor two.
+
+For a product cusp the corresponding sum divided by V is
+
+    sum_S ((n-1-r_S)*A_(S,T,j)/2+B_(S,T,j))/(r_S+1).
+
+The normalization is the same as above: divide the finite sums by
+n^5, and the cusp sums divided by V by n^3. Their global totals match
+the same component profile measures: t*type_T for j=0 and
+R*type_T for j=1, with s copies per s-sided face. Thus the family
+and rank data used in inverse-Gram responses are tied to the existing
+whole-vertex spherical and affine populations.
+
+For a path A_r the one-deletion count/rank sums are
+(2(r-1),r(r-1)); the two-deletion sums are
+(3(r-1)(r-2)/2,r(r-1)(r-2)/2), all of family A. For B_r, a B
+component survives precisely when the distinguished label-four edge
+survives. Its count sums are r-2 and choose(r-2,2); its rank sums
+are r(r-1)/2-1 and (r-2)(r-3)(r+2)/6. For D_r, retain the fork
+and its three neighbors. The D count sums are r-4 and choose(r-4,2),
+and its rank sums are r(r-1)/2-6 and
+(r-4)(r-5)(r+6)/6. The other pieces are A components; subtract
+these contributions from the total forest count/rank identities.
+These arguments prove all-rank formulas, including the zero boundary
+cases, without interpolation.
+
+The affine A family is a cycle, so every proper deletion piece is A.
+Affine C is a path with label-four edges at both ends: retain either
+end edge to count B pieces. Affine B has one such edge and one fork;
+retain these respectively to count B and D pieces. Affine D has two
+forks; after a proper deletion, surviving forks belong to distinct
+spherical components. A surviving fork contributes a D piece exactly
+when its four-node core survives. Counts are binomial counts of
+deleted nodes outside these cores. Rank sums additionally sum the
+number of choices avoiding the path from the retained edge/core to
+each surviving node. These are arithmetic/binomial sums along the
+classical chains. Their resulting polynomials are implemented in
+`supporting_counts.py`. The affine tails begin at rank 25, so their
+two fork cores/end regions are distinct. All smaller and exceptional
+connected inputs instead use their complete exact labelled deletion
+histograms, including I2/G2/H2 identifications.
+
+Finite tail expressions are polynomials of degree at most three in
+component rank and use the existing U,R1,R2,R3 fields. For affine
+tails, divide the polynomial numerator by r+1; its quotient uses the
+rank moments and its remainder uses the existing reciprocal moment.
+No extra rank cutoff or independently adjustable family budget is
+introduced by these twenty global family-statistic equations.
+
+At levels 4--5 these marginals also hold separately at ideal corners.
+For each family and j=0,1, the ideal-vertex deletion sum alone equals
+the component-profile moment of
+
+    (sum_(corners i) eta_i)*type_T*(t if j=0 else R).
+
+Subtracting this equation from the combined marginal gives the finite
+corner equation. The ideal indicators belong to the same common face
+state as the attachments; the joint moment matrix includes the family
+indicators together with the face coordinates. Thus a family distribution at ideal corners
+cannot be funded by unrelated finite vertices. Its source is deletion
+of complete classified affine cusp factors. For example, their deletion
+histograms contain no H3/H4 component, so those components cannot have
+positive ideal-corner mass. This is a uniform classified-cusp marginal,
+not a selected prohibition of individual vertex forests. Full
+conditional cusp completions require further moments beyond these
+count and rank marginals.
+
+### Closed-face conditioning and the edge marginal
+
+Level 3 retains p=1. Level 4 also retains every linear common-state
+coordinate and every full corner-kind pattern. A corner has three
+categories eta_i, right_i and 1-eta_i-right_i. Products of one category
+per corner give 27 triangle patterns and 81 quadrilateral patterns.
+All component pushforwards above are matched with these same products.
+Their nonnegative masses and pattern-weighted component, total-white
+and spatial Gram PSD matrices are retained. The same response matrix
+and attachment marks therefore participate around the whole cycle.
+Finite matching of real moments still does not assert equality of the
+entire conditional distributions.
+
+Level 4 also retains the strict incidence of opposite sides. Their
+projected Gram entry is strictly less than -1. Indeed, equality would
+make the sum of their two unit normals a nonzero null vector v.
+An interior point pairs negatively with v, fixing its future direction.
+Every other side normal pairs nonpositively with v, because all
+off-diagonal Gram entries are nonpositive. Thus its ideal point is in
+the polygon's closure and on both supposed opposite sides. They would
+be incident at an ideal vertex. This contradicts their opposite
+positions in a genuine quadrilateral. Encode the strict gap with
+(opposite-1)*z=1, z>=0; no uniform positive epsilon is assumed.
+The gap also has the PSD localizer gap*(1,z)^T*(1,z). Together with
+the inverse identity this prevents a zero expected gap from being
+hidden by unconstrained inverse moments.
+
+An additional edge measure carries kap_E. Its count matches f1, and
+twice its first component moment equals the whole-vertex sum of edge
+endpoint component moments. An edge belongs to n-1 two-faces, so
+
+    t*sum_(two-face sides) kap_E = (1-t)*sum_edges kap_E.
+
+The residual-corner measure selects its outgoing edge once per corner.
+This is a common edge statistic linking faces and both endpoints. It
+does not yet match every statistic of the full edge diagram, and no
+complete three-face supporting-diagram measure is claimed.
+
+### Sparse pointwise equation closure
+
+Level 5 distinguishes pointwise domain equations q=0 from aggregate
+incidence equations between measures. Only pointwise equations can be
+multiplied by an arbitrary state polynomial. It adds L(q*x)=0 for
+every coordinate x whose product is already in the retained registry.
+
+For reduced q of degree at most four, at most eight variables and at
+most 24 terms, it also adds L(q^2)=0 and a PSD moment clique containing
+1, those variables and the monomials of q. An invertible constant
+basis change replaces the leading monomial by q itself. Its zero
+diagonal exposes the corresponding kernel explicitly. All entries use
+the same measure's monomial registry, so cliques agree on overlaps.
+The kernel equations L(q*b)=0 for the clique basis polynomials b are
+also written explicitly. They already follow from the PSD zero row,
+and give the LP outer approximation the same known linear identities.
+The resulting moments have degree at most eight. The finite sparse
+budgets and omitted multipliers are recorded for every measure; this
+is not a claim to have closed the entire polynomial ideal.
+
+Every addition in these three levels is valid in all dimensions of
+the declared domain. Their current exports are anchored at dimension
+57, with the previous n>=58 exclusion covering the complementary tail.
+
 ## Actual-polytope lift
 
 Given any hypothetical P in the specified tail, set t=1/n and the
@@ -575,6 +889,18 @@ entire necessary-data problem. Truncating to the prescribed finite
 moments preserves all equations and PSD/localizing conditions used by
 the compiler. This proves the required necessary direction for every
 polytope, without a selected list of face or vertex types.
+
+At levels 3--5 additionally record the actual white components and
+their attachment nodes in the component measures, using their common
+face state at every occurrence. Record the actual original-to-projected
+scales and sidewall entries. The inverse identities, positive edge
+blocks and forest/link counts above establish the new pointwise rows
+and additive marginals. Use the actual corner-kind patterns and edge
+supporting counts for level 4. Pointwise identities remain zero after
+multiplication and squaring, proving every level-5 closure row and
+moment clique. Integer ranks, discrete labels and exact H matrices
+satisfy the declared outer envelopes. Thus no actual polytope is
+excluded by replacing these exact data by the stated relaxations.
 
 ## Finite LP/SDP and its dual
 

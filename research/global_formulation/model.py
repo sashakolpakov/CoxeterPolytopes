@@ -1,7 +1,7 @@
 """A global tail outer relaxation; all feature and incidence ports are bound."""
 from fractions import Fraction as F
 
-from . import conic, data, faces, incidence, vertices, strengthening
+from . import conic, data, faces, incidence, vertices, strengthening, white_profiles, supporting_counts
 from .moments import Program, dimension_domain
 from .polynomial import Poly, as_poly, monomials, var
 
@@ -27,6 +27,7 @@ def build(threshold, parity, tables, upper_dimension=None, level=1):
         raise ValueError("This initial global formulation is specified for N>=40")
     if upper_dimension not in (None, 57):
         raise ValueError("The retained upper-dimension anchor available here is57")
+    if level not in (1,2,3,4,5): raise ValueError("Use a retained global hierarchy level")
     endpoint = threshold if threshold % 2 == (1 if parity == "odd" else 0) else threshold+1
     p, t, e = Program(), var("t"), var("e")
     def add_measure(name, domain, mass_scale=1):
@@ -45,16 +46,28 @@ def build(threshold, parity, tables, upper_dimension=None, level=1):
             if endpoint == upper_dimension:
                 domain.fixed["t"] = F(1, upper_dimension)
                 domain.fixed["e"] = F(int(upper_dimension == 58))
-        strengthening.enrich(domain, level)
+        strengthening.enrich(domain, min(level,2))
+        domain.equation_closure = level >= 5
         return p.measure(name, domain, mass_scale)
 
     multipliers = (as_poly(1), t, e)
     finite_d, finite_features, finite_ports = vertices.finite_domain(endpoint, parity, tables)
     ideal_d, ideal_features, ideal_ports = vertices.ideal_domain(endpoint, tables, parity)
+    supporting_statistics = white_profiles.vertex_statistics(finite_d,ideal_d) if level >= 3 else None
+    family_statistics = supporting_counts.vertex_columns() if level >= 3 else None
+    if level >= 3:
+        for domain,columns in zip((finite_d,ideal_d),family_statistics,strict=True):
+            for (T,j),q in columns.items(): domain.ge(f"supporting_family_{T}_statistic{j}",q)
     finite = add_measure("finite_vertices", finite_d, endpoint**2)
     ideal = add_measure("ideal_vertices", ideal_d, endpoint)
-    face = {s: add_measure(f"faces{s}", faces.face_domain(s, endpoint)) for s in (3, 4)}
-    remainder = add_measure("residual_corners", faces.corner_domain(endpoint, angle=True))
+    face = {}
+    for s in (3,4):
+        domain = faces.face_domain(s,endpoint)
+        if level >= 3: white_profiles.extend_face(domain,s,joint=level >= 4)
+        face[s] = add_measure(f"faces{s}",domain)
+    domain = faces.corner_domain(endpoint,angle=True)
+    if level >= 3: white_profiles.extend_face(domain,2,joint=level >= 4)
+    remainder = add_measure("residual_corners",domain)
     five = add_measure("faces_at_least5", dimension_domain("large_faces", endpoint))
     negative_excess = add_measure("large_face_excess", dimension_domain("large_face_excess", endpoint))
     atoms = data.atoms()
@@ -116,6 +129,9 @@ def build(threshold, parity, tables, upper_dimension=None, level=1):
         "E3": endpoint, "K3": endpoint}
     counts = {name: add_measure("count_"+name, dimension_domain("count", endpoint), scales.get(name, endpoint**2))
         for name in incidence.VARIABLES if name not in incidence.PORTS}
+    if level >= 3:
+        white_profiles.couple(p,finite,ideal,face,remainder,counts["f1"],add_measure,supporting_statistics,level,
+            family_statistics=family_statistics)
     for k, multiplier in enumerate(multipliers):
         p.eq(f"all_two_face_counts{k}", combine(counts["f2"].linear(multiplier),
             scaled(-1, face[3].linear(multiplier)), scaled(-1, face[4].linear(multiplier)), scaled(-1, five.linear(multiplier))))
@@ -155,4 +171,16 @@ def build(threshold, parity, tables, upper_dimension=None, level=1):
         model["metadata"]["uniform_strengthening"] = (
             "all mixed spatial rank minors; compound/tensor and weighted Gram PSD; "
             "integer factorial, gap and rank-capacity localizers for all population counters")
+    if level >= 3:
+        model["metadata"]["shared_supporting_profiles"] = dict(
+            complete_families=white_profiles.FAMILIES,
+            unbounded_A_B_D_ranks_and_I2_labels=True,
+            H_inverse_entries_use_proved_rational_envelopes=True,
+            all_sides_share_each_component_response=True,
+            white_deletion_and_finite_vertex_population_marginals=True,
+            all_white_family_count_and_rank_marginals=True,
+            separate_ideal_and_finite_family_marginals=level >= 4,
+            joint_closed_face_moment_matching=level >= 4,
+            common_edge_component_state=level >= 4,
+            full_discrete_realizability_claimed=False)
     return model

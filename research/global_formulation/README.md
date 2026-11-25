@@ -9,7 +9,51 @@ separate author's acceptance is claimed.
 The [execution manifest](experiments.json) records actual runs, their
 source and model hashes, failures and remaining work.
 
-The second-level dimension-57 model has **3,598 moment variables, 450
+The current dimension-57 formulation implements the three requested
+extensions in order:
+
+1. Common supporting forests and complete attachment families, with
+   symbolic A/B/D ranks and marked positions, shared inverse-Gram
+   responses, and component count and rank marginals tied separately to
+   finite vertices and classified complete cusps. Spectator components
+   remain in those populations.
+2. Joint triangle and quadrilateral states. All corners reuse the same
+   walls and responses; full corner-kind patterns condition their
+   component marginals. An edge component statistic links face sides to
+   both endpoints. Strict opposite-side incidence is retained.
+3. Sparse polynomial-ideal closure in a shared moment registry:
+   available products L(q*x)=0, variance equations L(q^2)=0, and explicit
+   kernel equations in the associated PSD cliques.
+
+Its [necessary-data input](../../results/global_shared_cusp_current/necessary_primal.exact.json)
+has **36,818 variables, 9,388 equalities, 3,643 PSD blocks and 134,833
+scalar inequalities**. The [normalized certificate dual](../../results/global_shared_cusp_current/certificate_dual.exact.json)
+finds all feature weights and compatibility multipliers together.
+Levels 3, 4 and 5 select the successive extensions; level 5 includes all
+three. Every addition has an actual-polytope lift valid uniformly in
+dimension. This export uses the established n>=58 result as an anchor.
+
+The [exact checks](../../results/global_shared_cusp_checks/result.json)
+verify nested retention, family-deletion formulas, a nonzero-response
+local Gram example through all three layers, and rejection of a mixture
+that satisfies only the mean of a pointwise identity. The previous
+second-level point has no extension preserving all its old moments:
+seven new equations fail. These checks do not decide global feasibility.
+The current SDP has no verified feasible point or infeasibility
+certificate. Before the separate cusp marginals, a
+[15-round PSD-cut search](../../results/global_shared_star_search/result.json)
+retained violated PSD blocks and supplied no certificate. An earlier
+version's SDPA-GMP run exhausted 650 seconds without a checkpoint; its
+monitor PASS means worker completion.
+
+The finite truncation still relaxes integer ranks and discrete labels,
+uses rational envelopes for H3/H4, and omits many higher moments. It
+matches full small-face states but only one shared edge statistic;
+complete edge-diagram matching and joint three-face states remain open
+extensions. This is a global family formulation, without selected
+vertex-forest or marked-face lists.
+
+The retained second-level dimension-57 model has **3,598 moment variables, 450
 equalities, 1,592 PSD blocks and 8,996 scalar inequalities**. Its
 [necessary-data input](../../results/global_level2_current/necessary_primal.exact.json)
 and [certificate dual](../../results/global_level2_current/certificate_dual.exact.json)
@@ -108,8 +152,30 @@ does not resolve the SDP or the geometric problem.
 
 The first-level feasible witness rules out a separator at that moment
 level. The second-level point independently gives the same conclusion
-for the stronger relaxation. Whole supporting-diagram and adjacent-star
-overlap marginals remain unimplemented, as described in the specification.
+for level 2. Neither witness establishes feasibility of levels 3--5.
+
+Run the current complete model and its dual search, using fresh output
+names and the shared watchdog:
+
+```sh
+python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
+  --ledger results/global_shared_star_export_monitor.json -- \
+  scripts/run_global_coxeter_formulation.py export --level 5 \
+  --threshold 57 --parity odd --upper-dimension 57 \
+  --output results/global_shared_star_export
+
+python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
+  --ledger results/global_shared_star_solver_monitor.json -- \
+  scripts/run_global_coxeter_formulation.py solve-current \
+  --input results/global_shared_cusp_current/necessary_primal.exact.json \
+  --orientation certificate --solver sdpa \
+  --output results/global_shared_star_solver
+```
+
+Use `search-frozen-psd` with the same `--input` and a fresh output to
+search LP approximations strengthened by rational PSD directions. Any
+recovered separator is lifted and checked in the complete original SDP.
+Failure of that search does not decide its feasibility.
 
 Verify the strengthened point and its dual implication with a fresh
 output directory:

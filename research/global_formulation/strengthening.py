@@ -83,6 +83,23 @@ def enrich(domain, level):
         domain.matrix(f"level2_spatial_localizer_gap{i}", [[(1-c)*q for q in row] for row in spatial])
 
 
+def principal_embedding(old,new):
+    """A conservative exact principal-submatrix inclusion, or no witness.
+
+    Unique diagonal forms identify the indices. Every cross entry is then
+    checked, so matching diagonals alone can never establish retention.
+    """
+    lookup = {}
+    for i,row in enumerate(new): lookup.setdefault(conic.canonical(row[i]),[]).append(i)
+    choices = [lookup.get(conic.canonical(row[i]),[]) for i,row in enumerate(old)]
+    if any(len(indices) != 1 for indices in choices): return None
+    indices = [choice[0] for choice in choices]
+    if len(set(indices)) != len(indices): return None
+    if any(entry != new[indices[i]][indices[j]] for i,row in enumerate(old) for j,entry in enumerate(row)):
+        return None
+    return indices
+
+
 def compare_and_test(base, strengthened, old_point):
     """Check literal retention and separate an old feasible point where possible.
 
@@ -96,20 +113,35 @@ def compare_and_test(base, strengthened, old_point):
             for monomial, name in moments}
     before, after = registry(base), registry(strengthened)
     inverse = {key: name for name, key in before.items()}
-    if {k: F(v) for k, v in base["metadata"]["measure_mass_scales"].items()} != {
-            k: F(v) for k, v in strengthened["metadata"]["measure_mass_scales"].items()}:
+    old_scales = {k:F(v) for k,v in base["metadata"]["measure_mass_scales"].items()}
+    new_scales = {k:F(v) for k,v in strengthened["metadata"]["measure_mass_scales"].items()}
+    if any(new_scales.get(k) != v for k,v in old_scales.items()):
         raise ValueError("Moment measure scaling changed")
     abstract = {v: repr(key) for v, key in before.items()}
     abstract_new = {v: repr(key) for v, key in after.items()}
     def rename(q, names): return {names[v] if v else "": c for v, c in q.items()}
     new_eq = {conic.canonical(rename(q, abstract_new)) for q in strengthened["equations"]}
-    new_blocks = {conic.canonical([[rename(q, abstract_new) for q in row] for row in b["entries"]])
-        for b in strengthened["blocks"]}
+    abstract_blocks = [(b["name"],[[rename(q,abstract_new) for q in row] for row in b["entries"]])
+        for b in strengthened["blocks"]]
+    new_blocks = {conic.canonical(M) for _,M in abstract_blocks}
+    by_name = {}
+    for name,M in abstract_blocks: by_name.setdefault(name,[]).append(M)
     if any(conic.canonical(rename(q, abstract)) not in new_eq for q in base["equations"]):
         raise ValueError("An original equality is absent after strengthening")
-    if any(conic.canonical([[rename(q, abstract) for q in row] for row in b["entries"]]) not in new_blocks
-            for b in base["blocks"]):
-        raise ValueError("An original cone constraint is absent after strengthening")
+    principal_witnesses = []
+    for b in base["blocks"]:
+        M = [[rename(q,abstract) for q in row] for row in b["entries"]]
+        if conic.canonical(M) in new_blocks: continue
+        candidates = [(N,principal_embedding(M,N)) for N in by_name.get(b["name"],[]) if len(N) >= len(M)]
+        included = next(((N,indices) for N,indices in candidates if indices is not None),None)
+        if included is None: raise ValueError("An original cone constraint is absent after strengthening: "+b["name"])
+        N,indices = included
+        principal_witnesses.append(dict(name=b["name"],old_order=len(M),new_order=len(N),indices=indices))
+    if old_point is None:
+        return dict(all_original_equalities_retained=len(base["equations"]),
+            all_original_cones_retained=len(base["blocks"]),old_moments=len(before),
+            shared_moments=sum(key in inverse for key in after.values()),strengthened_moments=len(after),
+            exact_principal_submatrix_retention=principal_witnesses)
     available = {v: old_point[inverse[key]] for v, key in after.items() if key in inverse}
     equality_violations, cone_violations, undecided = [], [], 0
     for i, q in enumerate(strengthened["equations"]):
@@ -133,6 +165,7 @@ def compare_and_test(base, strengthened, old_point):
         old_witness_has_no_extension=bool(equality_violations or cone_violations),
         equality_violations=equality_violations, cone_violations=cone_violations,
         constraints_needing_new_moments=undecided,
+        exact_principal_submatrix_retention=principal_witnesses,
         old_moments=len(before), shared_moments=len(available), strengthened_moments=len(after))
 
 
@@ -140,8 +173,14 @@ def audit(root, output, input_path, point_path):
     """Bind both compared models and the previously certified baseline witness."""
     out = (root/output).resolve()
     source, witness = (root/input_path).resolve(), (root/point_path).resolve()
-    base = root/"results/global_tail57_current/necessary_primal.exact.json"
-    prior = root/"results/global_current_independent_feasibility/result.json"
+    strengthened = conic.read_model(source)
+    later = strengthened.get("metadata",{}).get("uniform_strengthening_level",1) >= 3
+    base = root/("results/global_level2_current/necessary_primal.exact.json" if later else
+        "results/global_tail57_current/necessary_primal.exact.json")
+    prior = root/("results/global_level2_independent/result.json" if later else
+        "results/global_current_independent_feasibility/result.json")
+    if later and point_path == "results/global_current_exact_recovery/original_feasible_point.exact.json":
+        witness = root/"results/global_level2_face_recovery/original_feasible_point.exact.json"
     if out.exists() or not out.is_relative_to(root/"results"):
         raise ValueError("Use a fresh results directory")
     if any(not p.is_relative_to(root/"results") for p in (source, witness)):
@@ -161,7 +200,7 @@ def audit(root, output, input_path, point_path):
     point = {v: F(c) for v, c in json.loads(witness.read_text()).items()}
     if conic.digest_bytes(conic.canonical(point)) != inherited["original_point_canonical_sha256"]:
         raise ValueError("The baseline witness's canonical digest changed")
-    result = compare_and_test(conic.read_model(base), conic.read_model(source), point)
+    result = compare_and_test(conic.read_model(base), strengthened, point)
     result.update(symbolic_gram_checks())
     result.update(status="EXACT_STRICT_STRENGTHENING_OVER_RETAINED_BASELINE" if
         result["old_witness_has_no_extension"] else "NO_SEPARATION_FROM_OLD_WITNESS",

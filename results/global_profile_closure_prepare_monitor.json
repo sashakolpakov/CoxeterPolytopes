@@ -1,0 +1,66 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_global_coxeter_formulation.py",
+    "solve-current",
+    "--input",
+    "results/global_profile_closure_current/necessary_primal.exact.json",
+    "--solver",
+    "prepare",
+    "--orientation",
+    "necessary",
+    "--output",
+    "results/global_profile_closure_prepare"
+  ],
+  "elapsed_seconds": 153.073,
+  "peak_process_tree_rss_bytes": 2706227200,
+  "initial_resources": {
+    "free_disk_gib": 293.74,
+    "available_memory_gib": 11.25,
+    "disk_free_bytes": 315401535488,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 12081545216,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 31.711071,
+    "available_memory_percent": 46.882566,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 2309,
+  "stdout": "{\"orientation\": \"necessary\", \"variables\": 36112, \"equalities\": 8519, \"cones\": 136281, \"elapsed_seconds\": 0.7308545419946313, \"stage\": \"frozen_model_loaded\"}\n{\"identities\": 1, \"forced_equalities\": 4, \"elapsed_seconds\": 0.9653632089612074, \"stage\": \"verified_original_scalar_faces\"}\n{\"free_variables\": 28163, \"elapsed_seconds\": 7.530471417005174, \"stage\": \"exact_equalities_eliminated\"}\n{\"step\": 0, \"input_variables\": 28163, \"input_blocks\": 136281, \"remaining_blocks\": 112394, \"derived_equalities\": 8232, \"dropped_blocks\": 23887, \"elapsed_seconds\": 55.387676334008574, \"stage\": \"exact_presolve\"}\n{\"step\": 1, \"input_variables\": 23371, \"input_blocks\": 112394, \"remaining_blocks\": 95457, \"derived_equalities\": 657, \"dropped_blocks\": 16937, \"elapsed_seconds\": 98.32851891696919, \"stage\": \"exact_presolve\"}\n/Users/sasha/CoxeterPolytopes/research/global_formulation/feasibility.py:46: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.\n  answer = linprog(np.r_[np.zeros(m), -np.ones(m)],\n{\"step\": 2, \"input_variables\": 23082, \"input_blocks\": 95457, \"remaining_blocks\": 94073, \"derived_equalities\": 0, \"dropped_blocks\": 1384, \"elapsed_seconds\": 149.6183923339704, \"stage\": \"exact_presolve\"}\n{\"status\": \"EXACT_EQUIVALENT_FROZEN_SDP_PREPARED\", \"orientation\": \"necessary\", \"frozen_input\": \"results/global_profile_closure_current/necessary_primal.exact.json\", \"frozen_input_sha256\": \"de73f26ad6c34e0fdfbed920d5b03eb45f68bfbaad408f0e80c798fc98b546c3\", \"geometric_constraints_added\": false, \"original_variables\": 36112, \"compiled_variables\": 23082, \"compiled_cones\": 94073, \"prepared_matrix_sha256\": \"954370af15bb33435e07635d449af83fb3075b1aa2b220da7912bc64a62eec77\", \"prepared_substitutions_sha256\": \"18b49bde5eaedd1ab5f42c5fb592a719a06223817cbcdcb4af6d009eaa9ffebd\", \"accepted_bounds_changed\": false, \"exact_reduction_checks\": {\"exact_zero_diagonal_face\": true, \"exact_noncoordinate_kernel_face\": true, \"exact_multi_column_kernel\": true, \"exact_rational_proportional_column_face\": true, \"exact_original_binomial_guard_face\": true, \"universal_Lorentz_third_compound_identity\": true, \"universal_spatial_mixed_rank_minors_identity\": true, \"symbolic_checks_are_polynomial_identities_not_sampled_diagrams\": true}, \"elapsed_seconds\": 152.8822821250069, \"stage\": \"completed\"}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "2fefa84da611b8bffb42adfc5aa50e58ef86ad030d85f39747c4a660a9fdaae3",
+  "lock_owner": "wrapper"
+}
