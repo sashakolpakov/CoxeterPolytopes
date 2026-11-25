@@ -5,14 +5,9 @@
     15
   ],
   "angle_model_commit": "1ddd86e6",
-  "canonical_anchored_model": "results/global_tail57_current",
-  "canonical_unbounded_models": [
-    "results/global_unbounded_odd57_current",
-    "results/global_unbounded_even56"
-  ],
-  "cleanup_commit": "c8c86903",
-  "current_constraint_commit": "2c582359",
-  "current_feasibility": {
+  "baseline_anchored_model": "results/global_tail57_current",
+  "baseline_constraint_commit": "2c582359",
+  "baseline_feasibility": {
     "geometric_constraints_changed": false,
     "independent_verification": "results/global_current_independent_feasibility/result.json",
     "input": "results/global_tail57_current/necessary_primal.exact.json",
@@ -22,16 +17,40 @@
     "rational_point_canonical_sha256": "d6201b103b181325faf1ca3fc02aff8ab0ec9c93ade4332ab551de6aa0eaa756",
     "status": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE"
   },
+  "baseline_feasibility_commit": "e1c9b8e9",
+  "baseline_unbounded_models": [
+    "results/global_unbounded_odd57_current",
+    "results/global_unbounded_even56"
+  ],
+  "canonical_anchored_model": "results/global_level2_current",
+  "cleanup_commit": "c8c86903",
+  "current_build_receipt": "results/global_level2_current/result.json",
+  "current_feasibility": {
+    "constraints_modified_during_feasibility_verification": false,
+    "independent_verification": "results/global_level2_independent/result.json",
+    "input": "results/global_level2_current/necessary_primal.exact.json",
+    "input_sha256": "7f62e85735e146dd660594a09111401754ce0ced24c64033be67ae85b4e3df9a",
+    "normalized_dual_adjoint_equalities_checked": 18910,
+    "normalized_dual_infeasibility_certificate": "results/global_level2_independent/normalized_dual_infeasibility_certificate.exact.json",
+    "rational_point": "results/global_level2_face_recovery/original_feasible_point.exact.json",
+    "rational_point_canonical_sha256": "b59c08ee51e619c124760934cfddf2b0981b023c6c7c268334ef492356a06419",
+    "status": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE"
+  },
+  "current_feasibility_uses_upper_dimension_57_anchor": true,
   "date": "2026-11-25",
   "discovery_solver_source_checkpoint": "8f43d7f3",
   "independent_source_review_complete": false,
+  "level2_unbounded_parity_models_exported": false,
+  "new_constraint_families_uniform_in_dimension": true,
   "normalized_certificate_dual_is_provably_infeasible": true,
   "numerical_status_is_not_exact_verification": true,
   "other_recorded_diagnostic_exports_retained_locally": true,
   "public_retained_paths": [
+    "notes/lp/global_formulation.md",
     "research/global_formulation/README.md",
     "research/global_formulation/experiments.json",
     "research/global_formulation/feasibility.py",
+    "research/global_formulation/strengthening.py",
     "results/global_current_exact_recovery/exact_face_reduction.json",
     "results/global_current_exact_recovery/original_feasible_point.exact.json",
     "results/global_current_exact_recovery/progress.jsonl",
@@ -57,6 +76,58 @@
     "results/global_current_sdpa_primal/solver.stdout",
     "results/global_current_sdpa_primal/source_bindings.json",
     "results/global_current_sdpa_primal_monitor.json",
+    "results/global_level2_audit/result.json",
+    "results/global_level2_audit/source_bindings.json",
+    "results/global_level2_audit_monitor.json",
+    "results/global_level2_build/coordinator_failure.json",
+    "results/global_level2_build/source_bindings.json",
+    "results/global_level2_current/certificate_dual.exact.json",
+    "results/global_level2_current/necessary_primal.exact.json",
+    "results/global_level2_current/result.json",
+    "results/global_level2_current/source_bindings.json",
+    "results/global_level2_current/strict_strengthening_audit.json",
+    "results/global_level2_current_monitor.json",
+    "results/global_level2_dual/input.dat-s",
+    "results/global_level2_dual/native.result",
+    "results/global_level2_dual/param.sdpa",
+    "results/global_level2_dual/progress.jsonl",
+    "results/global_level2_dual/result.json",
+    "results/global_level2_dual/solver.stdout",
+    "results/global_level2_dual/source_bindings.json",
+    "results/global_level2_dual_monitor.json",
+    "results/global_level2_exact_recovery/progress.jsonl",
+    "results/global_level2_exact_recovery/result.json",
+    "results/global_level2_exact_recovery/source_bindings.json",
+    "results/global_level2_exact_recovery_monitor.json",
+    "results/global_level2_face_recovery/exact_face_reduction.json",
+    "results/global_level2_face_recovery/original_feasible_point.exact.json",
+    "results/global_level2_face_recovery/progress.jsonl",
+    "results/global_level2_face_recovery/result.json",
+    "results/global_level2_face_recovery/source_bindings.json",
+    "results/global_level2_face_recovery/substitutions.exact.json",
+    "results/global_level2_face_recovery_monitor.json",
+    "results/global_level2_independent/independent_PSD_ranks.json",
+    "results/global_level2_independent/normalized_dual_infeasibility_certificate.exact.json",
+    "results/global_level2_independent/result.json",
+    "results/global_level2_independent/source_bindings.json",
+    "results/global_level2_independent_monitor.json",
+    "results/global_level2_resumed/native.result",
+    "results/global_level2_resumed/original_numerical_candidate.json",
+    "results/global_level2_resumed/param.sdpa",
+    "results/global_level2_resumed/progress.jsonl",
+    "results/global_level2_resumed/result.json",
+    "results/global_level2_resumed/solver.stdout",
+    "results/global_level2_resumed/source_bindings.json",
+    "results/global_level2_resumed_monitor.json",
+    "results/global_level2_sdpa/input.dat-s",
+    "results/global_level2_sdpa/native.result",
+    "results/global_level2_sdpa/original_numerical_candidate.json",
+    "results/global_level2_sdpa/param.sdpa",
+    "results/global_level2_sdpa/progress.jsonl",
+    "results/global_level2_sdpa/result.json",
+    "results/global_level2_sdpa/solver.stdout",
+    "results/global_level2_sdpa/source_bindings.json",
+    "results/global_level2_sdpa_monitor.json",
     "results/global_tail57_Gram_coupled/PSD_separation_history.json",
     "results/global_tail57_Gram_coupled/result.json",
     "results/global_tail57_Gram_coupled/source_bindings.json",
@@ -672,10 +743,291 @@
       "outcome": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE",
       "peak_process_tree_rss_bytes": 129597440,
       "result": "results/global_current_independent_feasibility/result.json"
+    },
+    {
+      "elapsed_seconds": 4.119,
+      "files": {
+        "results/global_level2_current/certificate_dual.exact.json": {
+          "bytes": 4276231,
+          "sha256": "a1a68d7816ccd05c3c8f604570d66f530cc4421ba37b79d89a2c636c7d03fd84"
+        },
+        "results/global_level2_current/necessary_primal.exact.json": {
+          "bytes": 4097338,
+          "sha256": "7f62e85735e146dd660594a09111401754ce0ced24c64033be67ae85b4e3df9a"
+        },
+        "results/global_level2_current/result.json": {
+          "bytes": 4260,
+          "sha256": "a056966a635260d73660b54db95374fd2f87eeb51be14766ec335207e58590ed"
+        },
+        "results/global_level2_current/source_bindings.json": {
+          "bytes": 2903,
+          "sha256": "c0b42737d32b8487bf052e64b7c11824bf5e9f7f1433b0ec30e3737c1058d1c0"
+        },
+        "results/global_level2_current/strict_strengthening_audit.json": {
+          "bytes": 19730,
+          "sha256": "da9628137b8a9de6e006988748738523af7153813e9e76d41e4ef70e66fb49de"
+        }
+      },
+      "id": "global_level2_current",
+      "monitor": "results/global_level2_current_monitor.json",
+      "outcome": "GLOBAL_NECESSARY_DATA_EXPORTED",
+      "peak_process_tree_rss_bytes": 122585088,
+      "result": "results/global_level2_current/result.json"
+    },
+    {
+      "failure_receipt": "results/global_level2_build/coordinator_failure.json",
+      "files": {
+        "results/global_level2_build/coordinator_failure.json": {
+          "bytes": 270,
+          "sha256": "331b330e7a5390454cf6e3a13fbe3e66e06162d626b048f050cd0de6bd778821"
+        },
+        "results/global_level2_build/source_bindings.json": {
+          "bytes": 2903,
+          "sha256": "e479272dfa812d70ad2310f5738c95f22b58f3885141528ecca5a3ed23f6b1da"
+        }
+      },
+      "id": "global_level2_build",
+      "outcome": "FAILED_AUDIT_METADATA_COMPARISON",
+      "scientific_worker_PASS": false
+    },
+    {
+      "elapsed_seconds": 342.7,
+      "files": {
+        "results/global_level2_sdpa/input.dat-s": {
+          "bytes": 8436327,
+          "sha256": "e72e2b1bd3000d5d4cb109e7c0b903081323034768962046b7014b15b4e63940"
+        },
+        "results/global_level2_sdpa/native.result": {
+          "bytes": 3308947,
+          "sha256": "8205f73bfe41c309e25c40e8c6ce22dfa3092f8a0a3bfe2050bdf80e52741f79"
+        },
+        "results/global_level2_sdpa/original_numerical_candidate.json": {
+          "bytes": 335949,
+          "sha256": "260cecfd4db1e8bb33997c9361dda563b4855704976bdec836a17a61d8ac286b"
+        },
+        "results/global_level2_sdpa/param.sdpa": {
+          "bytes": 87,
+          "sha256": "f7709333a7bc732e6139dbfeabcc0339e88a7c107e53e69100836c582f5b962a"
+        },
+        "results/global_level2_sdpa/progress.jsonl": {
+          "bytes": 3873,
+          "sha256": "0eaf48112aa511bf0578d2f005debd99bf984800f87e9fdab1ba2c9094c0fc52"
+        },
+        "results/global_level2_sdpa/result.json": {
+          "bytes": 3288,
+          "sha256": "5089989ff72e469b5aca2cb4962fe34bc414a65b2f90ce37aec300b70c628750"
+        },
+        "results/global_level2_sdpa/solver.stdout": {
+          "bytes": 3481,
+          "sha256": "329d343b5d047648ab580d9d0c62ede1a77e7bfcce3c8e87c1eb9e0a3c46ddf4"
+        },
+        "results/global_level2_sdpa/source_bindings.json": {
+          "bytes": 636,
+          "sha256": "5a3f086414a50f3038e25298bf5fc4a28239f7fa6a11557841606c9ee69c7968"
+        }
+      },
+      "id": "global_level2_sdpa",
+      "monitor": "results/global_level2_sdpa_monitor.json",
+      "outcome": "NO_EXACT_FEASIBILITY_DECISION",
+      "peak_process_tree_rss_bytes": 573095936,
+      "result": "results/global_level2_sdpa/result.json"
+    },
+    {
+      "elapsed_seconds": 729.126,
+      "files": {
+        "results/global_level2_dual/input.dat-s": {
+          "bytes": 5987440,
+          "sha256": "04e076319cbcd38c2a309c5d097a3b272b776edc4ee220d69451e3b8a06cf79f"
+        },
+        "results/global_level2_dual/native.result": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "results/global_level2_dual/param.sdpa": {
+          "bytes": 87,
+          "sha256": "f7709333a7bc732e6139dbfeabcc0339e88a7c107e53e69100836c582f5b962a"
+        },
+        "results/global_level2_dual/progress.jsonl": {
+          "bytes": 5091,
+          "sha256": "a5482a8abb49785e5a788dc6a51ccbe19907f5f200bb9bda6edfc5d0de5f8db4"
+        },
+        "results/global_level2_dual/result.json": {
+          "bytes": 1962,
+          "sha256": "6f1a4cc42eaf9910a7a25723849814bfeee3c39d34fce80b5a0e807b47e61506"
+        },
+        "results/global_level2_dual/solver.stdout": {
+          "bytes": 1111,
+          "sha256": "259901347047524eb939ae226d5ed4a451dd563f0f9d74db3776c2382fafb2aa"
+        },
+        "results/global_level2_dual/source_bindings.json": {
+          "bytes": 636,
+          "sha256": "5a3f086414a50f3038e25298bf5fc4a28239f7fa6a11557841606c9ee69c7968"
+        }
+      },
+      "id": "global_level2_dual",
+      "monitor": "results/global_level2_dual_monitor.json",
+      "outcome": "NO_EXACT_FEASIBILITY_DECISION",
+      "peak_process_tree_rss_bytes": 991936512,
+      "result": "results/global_level2_dual/result.json"
+    },
+    {
+      "elapsed_seconds": 162.145,
+      "files": {
+        "results/global_level2_resumed/native.result": {
+          "bytes": 3307385,
+          "sha256": "daf6fba0d16cdc9300041068dc7db122f029473ef235c62c1be073085c3822f6"
+        },
+        "results/global_level2_resumed/original_numerical_candidate.json": {
+          "bytes": 323873,
+          "sha256": "e60007ee855025d359b7b7a2ed374b17fbcc1a50bf3610c00fbbf62433ca7c24"
+        },
+        "results/global_level2_resumed/param.sdpa": {
+          "bytes": 87,
+          "sha256": "f7709333a7bc732e6139dbfeabcc0339e88a7c107e53e69100836c582f5b962a"
+        },
+        "results/global_level2_resumed/progress.jsonl": {
+          "bytes": 4397,
+          "sha256": "a06d5629a16978a36d44d944d04f8100451182fa47a4be565961d64ddb9d6817"
+        },
+        "results/global_level2_resumed/result.json": {
+          "bytes": 4408,
+          "sha256": "ed6b33939e4dc11f3fffc485d8205594aa0a0c72668d2ec4bdf9b3a14fd324f6"
+        },
+        "results/global_level2_resumed/solver.stdout": {
+          "bytes": 1926,
+          "sha256": "a4bcb6e0a43f2524612c1940d6b98a61db524dbea110401e36c99e9ca258bcf8"
+        },
+        "results/global_level2_resumed/source_bindings.json": {
+          "bytes": 1257,
+          "sha256": "292264b6f03075a4c8d45f6d2d2480568e53eb3ea4ffd3726d011beb3c4987c4"
+        }
+      },
+      "id": "global_level2_resumed",
+      "monitor": "results/global_level2_resumed_monitor.json",
+      "native_initial_cone_arrays_derived_from": "results/global_level2_sdpa/native.result",
+      "native_ordered_matrix_input_byte_identical_to": "results/global_level2_sdpa/input.dat-s",
+      "outcome": "NO_EXACT_FEASIBILITY_DECISION",
+      "peak_process_tree_rss_bytes": 596738048,
+      "result": "results/global_level2_resumed/result.json"
+    },
+    {
+      "elapsed_seconds": 17.076,
+      "files": {
+        "results/global_level2_exact_recovery/progress.jsonl": {
+          "bytes": 3041,
+          "sha256": "95990c11833cae4be1bb7b2fd4d2ac8b59860903432afdc2367c7426b191ec93"
+        },
+        "results/global_level2_exact_recovery/result.json": {
+          "bytes": 3358,
+          "sha256": "219de7adb6649cfdb571382932c6e0ee69a939a43b0a0c4862f7b19fb3aa3d77"
+        },
+        "results/global_level2_exact_recovery/source_bindings.json": {
+          "bytes": 1125,
+          "sha256": "12e77b06432e0093329b342b496c4bf0c62660596ccbd7253edceeea29dbaeeb"
+        }
+      },
+      "id": "global_level2_exact_recovery",
+      "monitor": "results/global_level2_exact_recovery_monitor.json",
+      "outcome": "RECOVERY_FAILED_NO_EXACT_POINT",
+      "peak_process_tree_rss_bytes": 339984384,
+      "recorded_status": "NUMERICAL_CHECKPOINT_RECOVERY",
+      "result": "results/global_level2_exact_recovery/result.json"
+    },
+    {
+      "elapsed_seconds": 16.86,
+      "files": {
+        "results/global_level2_face_recovery/exact_face_reduction.json": {
+          "bytes": 634128,
+          "sha256": "e6102b152e58281661dfffb1e6beb8902eb1bb9b1468b2fa53b559ab54782bc9"
+        },
+        "results/global_level2_face_recovery/original_feasible_point.exact.json": {
+          "bytes": 157119,
+          "sha256": "da6cf402f9ba590d4a8a2082a6863b721af063a3ec2af44bfbbee0144bfc7db9"
+        },
+        "results/global_level2_face_recovery/progress.jsonl": {
+          "bytes": 2309,
+          "sha256": "b45c77f2312982b1e10c5989ed60a5a45ac8cce6043bc142a339f00e71b878b4"
+        },
+        "results/global_level2_face_recovery/result.json": {
+          "bytes": 2114013,
+          "sha256": "117d4519a2384dd713295b5fdcb2f44063c58d7d20253d2b1e94f8a81429728d"
+        },
+        "results/global_level2_face_recovery/source_bindings.json": {
+          "bytes": 1125,
+          "sha256": "06f367ce3ec6ed14ff47f9ff474bd1a1fa220b550192dbaa9a092bd5afa1a786"
+        },
+        "results/global_level2_face_recovery/substitutions.exact.json": {
+          "bytes": 285495,
+          "sha256": "0366cdcdbfb0a37bd58cc5688aef5e9db90f1e4b9634c8f38f8310fa135c94bd"
+        }
+      },
+      "id": "global_level2_face_recovery",
+      "monitor": "results/global_level2_face_recovery_monitor.json",
+      "outcome": "EXACT_ORIGINAL_SDP_FEASIBLE",
+      "peak_process_tree_rss_bytes": 349962240,
+      "result": "results/global_level2_face_recovery/result.json"
+    },
+    {
+      "elapsed_seconds": 1.618,
+      "files": {
+        "results/global_level2_independent/independent_PSD_ranks.json": {
+          "bytes": 959144,
+          "sha256": "0c10cb2946761d5240b01b49ce89af8bad232e6b889b832428db0e53eb4e3188"
+        },
+        "results/global_level2_independent/normalized_dual_infeasibility_certificate.exact.json": {
+          "bytes": 952166,
+          "sha256": "92ef76aa3e61e102e160b2cbd859951d3b77f8a0aba6e23da6909d1496381b5c"
+        },
+        "results/global_level2_independent/result.json": {
+          "bytes": 1857,
+          "sha256": "d42af742e26d7fe2fb92b4cf1379a54865edd37ca1ba0abde425575bd886fd28"
+        },
+        "results/global_level2_independent/source_bindings.json": {
+          "bytes": 994,
+          "sha256": "55d33c21b16a3c27a17855d25f24f3ff4a166be164507ac70fc99d3bd0c5ef8a"
+        }
+      },
+      "id": "global_level2_independent",
+      "monitor": "results/global_level2_independent_monitor.json",
+      "outcome": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE",
+      "peak_process_tree_rss_bytes": 145276928,
+      "result": "results/global_level2_independent/result.json"
+    },
+    {
+      "elapsed_seconds": 1.585,
+      "files": {
+        "results/global_level2_audit/result.json": {
+          "bytes": 21500,
+          "sha256": "e8b4b5f6244e50d89a98c0c539c36f5ffd65a40a315360bbd349311c22a6c9aa"
+        },
+        "results/global_level2_audit/source_bindings.json": {
+          "bytes": 1322,
+          "sha256": "267b4fd0c4e38a3c715a31a0ca71a7a254122f12add11eb41840e5ce315c6cda"
+        }
+      },
+      "id": "global_level2_audit",
+      "monitor": "results/global_level2_audit_monitor.json",
+      "outcome": "EXACT_STRICT_STRENGTHENING_OVER_RETAINED_BASELINE",
+      "peak_process_tree_rss_bytes": 110493696,
+      "result": "results/global_level2_audit/result.json"
     }
   ],
-  "schema": "global-necessary-data-exploration-v1",
+  "schema": "global-necessary-data-exploration-v2",
   "solver_certified_new_bound": false,
+  "strict_strengthening": {
+    "all_baseline_cones_retained": 8951,
+    "all_baseline_equalities_retained": 444,
+    "audit": "results/global_level2_audit/result.json",
+    "failed_PSD_family": "negative Lorentz third compound",
+    "free_feature_coefficients_retained": true,
+    "new_moment_coordinates": 7,
+    "old_witness_fails_new_PSD_blocks": 1,
+    "old_witness_fails_new_equalities": 6,
+    "old_witness_fails_new_scalar_inequalities": 96,
+    "old_witness_has_no_extension": true,
+    "stronger_model_still_exactly_feasible": true
+  },
+  "uniform_strengthening_level": 2,
   "verified_full_SDP_feasible_point_obtained": true,
   "wrapper_PASS_means_monitored_worker_completion_not_native_solver_success": true
 }

@@ -88,6 +88,50 @@ def positive_kernel(rows, progress):
     return result, info
 
 
+def original_binomial_faces(problem, progress):
+    """Expose exact positive identities before equality elimination changes sparsity.
+
+    A row can cancel a disjoint union of existing one/two-term rows.
+    Only positive weights and identically zero rational sums are accepted.
+    In particular this catches inactive-count guards and their bound rows
+    without a floating LP having to resolve small eliminated coefficients.
+    """
+    rows = {b: block["entries"][0][0] for b, block in enumerate(problem["blocks"])
+        if len(block["entries"]) == 1 and block["entries"][0][0]}
+    index = {}
+    for b, q in rows.items():
+        if len(q) <= 2:
+            for v in q: index.setdefault(v, set()).add(b)
+    derived, proofs = {}, []
+    for b, q in rows.items():
+        if not 3 <= len(q) <= 64: continue
+        remainder, combination = dict(q), [(b, F(1))]
+        while remainder:
+            candidates = set().union(*(index.get(v, set()) for v in remainder))
+            for j in sorted(candidates, key=lambda j: (-len(rows[j]), j)):
+                r = rows[j]
+                if not r.keys() <= remainder.keys(): continue
+                ratios = {-remainder[v]/c for v, c in r.items()}
+                if len(ratios) != 1: continue
+                weight = next(iter(ratios))
+                if weight <= 0: continue
+                remainder = conic.plus(remainder, conic.times(weight, r))
+                combination.append((j, weight))
+                break
+            else: break
+        if remainder: continue
+        if any(w <= 0 for _, w in combination) or conic.plus(*(
+                conic.times(w, rows[j]) for j, w in combination)):
+            raise ValueError("Invalid original-coordinate positive binomial identity")
+        for j, _ in combination: derived[conic.canonical(rows[j])] = rows[j]
+        proofs.append(dict(kind="original_positive_binomial_sum_zero",
+            original_scalar_blocks=combination, exact_identity_checked=True))
+    if proofs:
+        progress("verified_original_scalar_faces", dict(identities=len(proofs),
+            forced_equalities=len(derived)))
+    return list(derived.values()), proofs
+
+
 def prepare(problem, progress, facial=True, linear_faces=True):
     """Equivalent exact reductions: equalities, PSD zero rows, scalar faces.
 
@@ -96,10 +140,11 @@ def prepare(problem, progress, facial=True, linear_faces=True):
     Every positive-weight summand must then vanish at any feasible point.
     A PSD zero diagonal forces its entire row to vanish.
     """
-    current, substitutions = conic.eliminate(problem)
+    initial_rows, initial_proofs = original_binomial_faces(problem, progress) if facial and linear_faces else ([], [])
+    current, substitutions = conic.eliminate(problem, initial_rows)
     maps = [dict(original_block=b, indices=list(range(len(block["entries"]))), scale=F(1))
         for b, block in enumerate(problem["blocks"])]
-    trace = []
+    trace = [dict(stage="original_scalar_faces", proofs=initial_proofs)] if initial_proofs else []
     for step in range(16 if facial else 1):
         derived, proofs = {}, []
         units, scalar_rows, zero_directions = {}, [], {}
@@ -117,6 +162,19 @@ def prepare(problem, progress, facial=True, linear_faces=True):
                 v, c = next(iter(q.items()))
                 units.setdefault(v, {})[1 if c > 0 else -1] = (source_index, c)
         if facial:
+            for b, block in enumerate(current["blocks"]):
+                M = block["entries"]
+                for j in range(1, len(M)):
+                    for i in range(j):
+                        probe = next((k for k in range(len(M)) if M[k][i]), None)
+                        if probe is None: continue
+                        v, coefficient = next(iter(M[probe][i].items()))
+                        ratio = M[probe][j].get(v, F(0))/coefficient
+                        if all(not conic.plus(row[j], conic.times(-ratio, row[i])) for row in M):
+                            zero_directions.setdefault(b, []).append([(i, -ratio), (j, F(1))])
+                            proofs.append(dict(kind="PSD_symbolic_column_dependence", block=b,
+                                retained_column=i, dependent_column=j, ratio=ratio))
+                            break
             normalized = {}
             for ref, q in scalar_rows:
                 b, direction = ref
@@ -223,6 +281,17 @@ def prepare(problem, progress, facial=True, linear_faces=True):
 
 
 def reduction_checks():
+    names = ("u", "v", "w", "a", "b", "c")
+    toy = conic.model(list(names), [dict(name="unit_"+v, entries=[[conic.form(**{v: 1})]])
+        for v in ("u", "v", "w")]+[dict(name="inactive_sum", entries=[[
+            conic.form(u=-1, v=-1, w=-1, a=1, b=1, c=1)]])]+
+        [dict(name="gap_"+v, entries=[[conic.form(**{v: 1, z: -1})]])
+            for v, z in zip(("u", "v", "w"), ("a", "b", "c"), strict=True)])
+    rows, proofs = original_binomial_faces(toy, lambda *_: None)
+    if len(rows) != 4 or len(proofs) != 1:
+        raise ValueError("The exact binomial guard face was not exposed")
+    if any(conic.value(q, dict(u=2, v=3, w=5, a=2, b=3, c=5)) for q in rows):
+        raise ValueError("The exact binomial face changed valid nonzero populations")
     toy = conic.model(["x", "y"], [
         dict(name="zero_face", entries=[[conic.form(x=1), conic.form(y=1)],
                                         [conic.form(y=1), conic.form(1)]]),
@@ -238,10 +307,17 @@ def reduction_checks():
     if len(compiled["variables"]) != 1 or max(len(b["entries"]) for b in compiled["blocks"]) != 2:
         raise ValueError("The exact noncoordinate PSD kernel was not reduced")
     conic.check_point(toy, {v: conic.value(q, {compiled["variables"][0]: F(0)}) for v, q in substitutions.items()})
-    return dict(exact_zero_diagonal_face=True, exact_noncoordinate_kernel_face=True)
+    toy = conic.model(["x"], [dict(name="proportional_kernel", entries=[
+        [conic.form(x=1), conic.form(x=3)], [conic.form(x=3), conic.form(x=9)]])])
+    compiled, substitutions, _, _ = prepare(toy, lambda *_: None, linear_faces=False)
+    if len(compiled["blocks"]) != 1 or len(compiled["blocks"][0]["entries"]) != 1:
+        raise ValueError("The rational proportional-column PSD kernel was not reduced")
+    conic.check_point(toy, {v: conic.value(q, {compiled["variables"][0]: F(1)}) for v, q in substitutions.items()})
+    return dict(exact_zero_diagonal_face=True, exact_noncoordinate_kernel_face=True,
+        exact_rational_proportional_column_face=True, exact_original_binomial_guard_face=True)
 
 
-def native_cones(path, problem, field="yMat"):
+def native_array(path, field):
     text = Path(path).read_text()
     if len(text) > 32*1024**2:
         raise ValueError("Oversized native SDP answer")
@@ -252,7 +328,11 @@ def native_cones(path, problem, field="yMat"):
         depth += int(text[end] == "{")-int(text[end] == "}")
         if not depth: break
     else: raise ValueError("Unterminated native cone array")
-    values = [F(s) for s in conic.NUMBER.findall(text[start:end+1])]
+    return text[start:end+1]
+
+
+def native_cones(path, problem, field="yMat"):
+    values = [F(s) for s in conic.NUMBER.findall(native_array(path, field))]
     matrices, position = {}, 0
     for b, block in enumerate(problem["blocks"]):
         r = len(block["entries"])
@@ -284,13 +364,28 @@ def numerical_residuals(problem, point):
         worst_original_block=name, floating_diagnostics_are_not_exact_certificates=True)
 
 
-def solve_sdpa(problem, out, seconds, progress):
+def solve_sdpa(problem, out, seconds, progress, resume_dir=None):
     solver = shutil.which("sdpa_gmp") or shutil.which("sdpa")
     if not solver: raise RuntimeError("SDPA is unavailable")
     encoding = conic.write_sdpa(out/"input.dat-s", problem)
     parameters = "35\n1e-12\n10\n2\n-1e12\n1e12\n0.1\n0.3\n0.9\n1e-12\n128\n"+"%+90.80Fe\n"*4
     (out/"param.sdpa").write_text(parameters)
     command = [solver, "-ds", str(out/"input.dat-s"), "-o", str(out/"native.result"), "-p", str(out/"param.sdpa")]
+    initial = None
+    if resume_dir is not None:
+        old_input, old_native = resume_dir/"input.dat-s", resume_dir/"native.result"
+        if old_input.read_bytes() != (out/"input.dat-s").read_bytes():
+            raise ValueError("A native restart requires the identical ordered reduced SDP input")
+        raw, _ = conic.native_vector(old_native)
+        if len(raw) != len(problem["variables"]):
+            raise ValueError("Wrong native restart vector dimension")
+        for field in ("xMat", "yMat"):
+            native_cones(old_native, problem, field=field)
+        # SDPA-GMP IO::read uses this dense order (REVERSE_PRIMAL_DUAL).
+        initial = out/"initial.ini"
+        initial.write_text("\n".join(native_array(old_native, field)
+            for field in ("xVec", "xMat", "yMat"))+"\n")
+        command.extend(("-id", str(initial)))
     progress("native_solver_start", dict(command=command, encoding=encoding))
     code, timeout = None, False
     with (out/"solver.stdout").open("x") as stream:
@@ -300,6 +395,9 @@ def solve_sdpa(problem, out, seconds, progress):
         except subprocess.TimeoutExpired: timeout = True
     numerical = dict(solver="SDPA-GMP" if "gmp" in solver else "SDPA", command=command,
         returncode=code, timed_out=timeout, encoding=encoding)
+    if initial is not None:
+        numerical.update(native_restart_from=str(resume_dir),
+            ordered_reduced_input_byte_identity_checked=True)
     x, matrices = None, None
     try:
         raw, phase = conic.native_vector(out/"native.result")
@@ -317,13 +415,23 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
     if not source.is_relative_to(root/"results"): raise ValueError("Use a retained exact results input")
     out.mkdir()
     started = time.monotonic()
+    original = conic.read_model(source)
     paths = [source, Path(__file__), root/"research/global_formulation/conic.py",
         root/"scripts/run_global_coxeter_formulation.py"]
-    resume_path = None
+    if original.get("metadata", {}).get("uniform_strengthening_level", 1) > 1:
+        paths += [root/"research/global_formulation/strengthening.py",
+            root/"research/global_formulation/polynomial.py"]
+    resume_path, resume_dir = None, None
     if resume_from:
-        resume_path = (root/resume_from/"original_numerical_candidate.json").resolve()
-        if not resume_path.is_relative_to(root/"results"): raise ValueError("Invalid numerical checkpoint")
-        paths.append(resume_path)
+        resume_dir = (root/resume_from).resolve()
+        if not resume_dir.is_relative_to(root/"results"): raise ValueError("Invalid numerical checkpoint")
+        if solver == "sdpa":
+            paths += [resume_dir/"native.result", resume_dir/"input.dat-s"]
+        elif solver == "recover":
+            resume_path = resume_dir/"original_numerical_candidate.json"
+            paths.append(resume_path)
+        else:
+            raise ValueError("A checkpoint is used by sdpa or recover")
     bindings = {str(p.relative_to(root)): dict(bytes=p.stat().st_size,
         sha256=conic.digest_bytes(p.read_bytes())) for p in paths}
     conic.write_json(out/"source_bindings.json", bindings)
@@ -331,8 +439,10 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
         item = dict(data, elapsed_seconds=time.monotonic()-started, stage=stage)
         with (out/"progress.jsonl").open("a") as stream: stream.write(json.dumps(conic.plain(item))+"\n")
         print(json.dumps(conic.plain(item)), flush=True)
-    original = conic.read_model(source)
     checks = reduction_checks()
+    if original.get("metadata", {}).get("uniform_strengthening_level", 1) > 1:
+        from .strengthening import symbolic_gram_checks
+        checks.update(symbolic_gram_checks())
     target = original if orientation == "necessary" else conic.farkas(original)
     progress("frozen_model_loaded", dict(orientation=orientation, variables=len(target["variables"]),
         equalities=len(target["equations"]), cones=len(target["blocks"])))
@@ -353,7 +463,7 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
         candidate = {v: F(raw[v]) for v in compiled["variables"]}
         report.update(status="NUMERICAL_CHECKPOINT_RECOVERY", resume_from=str(resume_path.relative_to(root)))
     elif solver == "sdpa":
-        candidate, matrices, numerical = solve_sdpa(compiled, out, seconds, progress)
+        candidate, matrices, numerical = solve_sdpa(compiled, out, seconds, progress, resume_dir=resume_dir)
         report.update(status="NO_EXACT_FEASIBILITY_DECISION", numerical=numerical)
     elif solver != "prepare": raise ValueError("Unsupported solver")
     if candidate is not None:
@@ -366,7 +476,8 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
             conic.write_json(out/"original_feasible_point.exact.json", recovered)
             report.update(status="EXACT_ORIGINAL_SDP_FEASIBLE" if orientation == "necessary" else
                 "EXACT_ORIGINAL_SDP_INFEASIBILITY_CERTIFICATE", exact_check=checked)
-        except ValueError as error: report["exact_primal_recovery_failure"] = str(error)
+        except ValueError as error:
+            report.update(status="NO_EXACT_FEASIBILITY_DECISION", exact_primal_recovery_failure=str(error))
     if matrices is not None:
         conic.write_json(out/"numerical_dual_PSD_blocks.json", matrices)
         constant = sum((sum((q.get("", F(0))*Z[i][j]

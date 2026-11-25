@@ -87,7 +87,40 @@ The matrix statements follow from Cauchy or from a component measure
 on the relative ranks r/n. Fixed-bin upper bounds are u_T<=1/rank(T).
 Integer populations give u_T(u_T-t)>=0, and the same factorial-moment
 condition holds for every tail count U. These are uniform population
-constraints. Higher integer factorial moments can strengthen later levels.
+constraints.
+
+The second level applies the following additional families to **every**
+fixed component counter and every growing-family count. Write u=m*t,
+where m is a nonnegative integer, let r be the component's rank or the
+tail's minimum rank, and let q=1 at finite vertices and q=1-t at ideal
+vertices. For d=2,3,4 put
+
+    f_d(u,t)=product_(j=0)^(d-1)(u-j*t).
+
+Then f_d>=0. If m<d this product is zero; if m>=d the total rank gives
+q>=d*r*t. Therefore also
+
+    (q-d*r*t)*f_d(u,t)>=0.
+
+These conditions are valid throughout the dimension tail. They impose
+no fixed upper bound on component multiplicity. In a fixed dimension,
+when d*r exceeds the available rank, the two inequalities force the
+corresponding falling factorial to vanish.
+
+For each k=0,1,2,3 the adjacent-integer gap
+
+    g_k=(u-k*t)*(u-(k+1)*t)
+
+is nonnegative: (m-k)(m-k-1)>=0 for every integer m. The second level
+adds these scalar inequalities and the matrix localizers
+
+    [[L(g_k),L(u*g_k)],[L(u*g_k),L(u^2*g_k)]] >= 0.
+
+Their validity follows by integrating the pointwise PSD matrix
+g_k*(1,u)^T*(1,u). No independence between counters is assumed. Existing
+fixed-counter moment blocks already contain their fourth moments;
+only the seven growing-family count fourth moments are new coordinates
+in the dimension-57 export.
 
 A guard for an integer count m>=k is represented by a Boolean g with
 
@@ -269,6 +302,49 @@ For example, the formal matrix with diagonal 1, cyclic adjacent entries
 one negative direction, but its determinant is -75/16. Its rank four
 excludes it from the shared two-face Lorentz space. This is a matrix
 separation witness, not a claimed realizable star.
+
+### Second-level shared Gram constraints
+
+The second level keeps every first-level constraint and strengthens
+the shared Gram schema uniformly for both face sizes. Write C_3(A) for
+the third compound matrix: its rows and columns are indexed by triples,
+and its (I,J) entry is det A[I,J]. The pointwise rank bound for M gives
+
+    C_3(M)=0.
+
+The first level already imposed its diagonal entries. The second level
+also imposes the mixed minors; these give six additional equations on
+quadrilaterals. Although the full rank condition follows from principal
+minors for an actual PSD matrix, the additional identities need not
+follow at a truncated moment level. Each identity is integrated before
+taking moments; no rank bound on the averaged matrix is asserted.
+
+There is also a stronger signature localizer. Write H=U^T*J*U, with
+U having three rows and J=diag(1,1,-1). Cauchy--Binet gives
+
+    C_3(H)=-v*v^T,   v_I=det U[:,I].
+
+Consequently -C_3(H) is PSD. Its diagonal entries are the old principal
+three-minor tests; keeping the full matrix couples those tests. This is
+valid for singular configurations as well.
+
+Finally the pointwise positive semidefiniteness of M and 0<=c_i<=1 give
+
+    M tensor M >= 0,   c_i*M >= 0,   (1-c_i)*M >= 0.
+
+The tensor matrix has entries M_ik*M_jl, indexed by pairs (i,j),(k,l).
+It equals (W tensor W)^T*(W tensor W) when M=W^T*W. Integrating these
+polynomial matrices produces necessary PSD moment blocks. In particular
+they involve products of entries of the same actual face, rather than
+products of independently averaged Gram entries. All entries use
+existing Gram moments of degree at most four. Thus these geometric
+families add no moment coordinates in the current export.
+
+All these deductions hold in the three-dimensional residual Lorentz
+space of a two-face, independently of the ambient dimension. The
+integer-population families above are also uniform in dimension. Their
+current anchored export tests dimension 57, with the established n>=58
+exclusion covering the complementary tail.
 
 ## Binding intrinsic features to the shared geometry
 

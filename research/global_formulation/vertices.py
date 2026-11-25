@@ -13,6 +13,7 @@ def counters(d, types):
     for kind, rank in types:
         name = f"u_{kind}{rank}"
         result[kind, rank] = d.variable(name)
+        d.integer_counts[name] = rank
         d.upper_bounds[name] = F(1, rank)
         d.ge("integer_population_"+name, result[kind, rank]*(result[kind, rank]-var("t")))
         d.basis("count_"+name, ("t", "e", name), 1)
@@ -23,6 +24,7 @@ def counters(d, types):
 def tail(d, kind, minimum, reciprocal=False):
     names = [f"tail_{kind}_{suffix}" for suffix in ("count", "rank", "square", "cube")]
     u, r, s, q = (d.variable(n) for n in names)
+    d.integer_counts[names[0]] = minimum
     d.upper_bounds[names[0]] = F(1, minimum)
     t = var("t")
     d.ge(kind+"_tail_minimum", r-minimum*u)
@@ -48,6 +50,7 @@ def tail(d, kind, minimum, reciprocal=False):
 
 
 def rank_data(d, counts, tails, total):
+    d.rank_total = total
     t = var("t")
     rank = sum((r*u for (_, r), u in counts.items()), as_poly(0))+sum((v["rank"] for v in tails.values()), as_poly(0))
     sigma2 = t*sum((r*r*u for (_, r), u in counts.items()), as_poly(0))+sum((v["square"] for v in tails.values()), as_poly(0))

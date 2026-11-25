@@ -7,7 +7,7 @@ import shutil
 import subprocess
 import tempfile
 
-from . import conic, data, model, separation
+from . import conic, data, model, separation, strengthening
 
 
 def sampled_psd_LP(problem):
@@ -156,7 +156,7 @@ def self_checks():
         finite_regressions_do_not_replace_the_uniform_proof=True)
 
 
-def run(root, output, threshold, parity, stage, upper_dimension=None):
+def run(root, output, threshold, parity, stage, upper_dimension=None, level=1):
     out = (root/output).resolve()
     if out.exists() or not out.is_relative_to(root/"results"):
         raise ValueError("Use a fresh results directory")
@@ -165,13 +165,19 @@ def run(root, output, threshold, parity, stage, upper_dimension=None):
         root/"arxiv/linear_programming_dimension_bounds/main.tex",
         root/"manuscripts/finite_volume57_consolidated.tex",
         root/"research/global_formulation/sources.json", root/data.LITERAL]
+    audit_57 = level > 1 and threshold == 57 and parity == "odd" and upper_dimension == 57
+    if audit_57:
+        paths += [root/"results/global_tail57_current/necessary_primal.exact.json",
+            root/"results/global_current_exact_recovery/original_feasible_point.exact.json"]
     bindings = {str(p.relative_to(root)): dict(bytes=p.stat().st_size,
         sha256=conic.digest_bytes(p.read_bytes())) for p in paths}
     out.mkdir()
     conic.write_json(out/"source_bindings.json", bindings)
     checks = self_checks()
+    if level > 1:
+        checks.update(strengthening.symbolic_gram_checks())
     tables = data.intrinsic_tables()
-    primal = model.build(threshold, parity, tables, upper_dimension)
+    primal = model.build(threshold, parity, tables, upper_dimension, level=level)
     conic.write_json(out/"necessary_primal.exact.json", primal)
     dual = conic.farkas(primal)
     conic.write_json(out/"certificate_dual.exact.json", dual)
@@ -183,6 +189,16 @@ def run(root, output, threshold, parity, stage, upper_dimension=None):
         largest_PSD_block=max(len(b["entries"]) for b in primal["blocks"]),
         dual_variables=len(dual["variables"]), conic_alternative_checks=checks,
         diagram_family_lists_used=False, global_bound_changed=False, separate_author_review=False)
+    if level > 1:
+        if audit_57:
+            base = conic.read_model(root/"results/global_tail57_current/necessary_primal.exact.json")
+            point = {v: F(c) for v, c in json.loads(
+                (root/"results/global_current_exact_recovery/original_feasible_point.exact.json").read_text()).items()}
+            audit = strengthening.compare_and_test(base, primal, point)
+            conic.write_json(out/"strict_strengthening_audit.json", audit)
+            report["strict_strengthening"] = {k: v for k, v in audit.items()
+                if k not in ("equality_violations", "cone_violations")}
+        report["uniform_strengthening_level"] = level
     if stage == "explore-psd-cuts":
         report.update(separation.explore(primal, dual, out, linprog, exact_reconstruction))
     elif stage == "explore-lp":

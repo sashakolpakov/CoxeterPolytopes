@@ -18,6 +18,8 @@ class Domain:
     inequalities: list = field(default_factory=list)
     matrices: list = field(default_factory=list)
     bases: list = field(default_factory=list)
+    integer_counts: dict = field(default_factory=dict)
+    rank_total: object = None
 
     def variable(self, name, bounded=True, boolean=False):
         self.variables.add(name)

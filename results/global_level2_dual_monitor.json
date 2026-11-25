@@ -1,0 +1,68 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_global_coxeter_formulation.py",
+    "solve-current",
+    "--input",
+    "results/global_level2_current/necessary_primal.exact.json",
+    "--solver",
+    "sdpa",
+    "--orientation",
+    "certificate",
+    "--seconds",
+    "650",
+    "--output",
+    "results/global_level2_dual"
+  ],
+  "elapsed_seconds": 729.126,
+  "peak_process_tree_rss_bytes": 991936512,
+  "initial_resources": {
+    "free_disk_gib": 297.45,
+    "available_memory_gib": 9.1,
+    "disk_free_bytes": 319387754496,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 9767878656,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 32.111853,
+    "available_memory_percent": 37.904358,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 5324,
+  "stdout": "{\"orientation\": \"certificate\", \"variables\": 18909, \"equalities\": 3599, \"cones\": 10588, \"elapsed_seconds\": 0.5751637499779463, \"stage\": \"frozen_model_loaded\"}\n{\"step\": 0, \"input_variables\": 15268, \"input_blocks\": 10588, \"remaining_blocks\": 10588, \"derived_equalities\": 37, \"dropped_blocks\": 0, \"elapsed_seconds\": 11.888144958997145, \"stage\": \"exact_presolve\"}\n{\"step\": 1, \"input_variables\": 15231, \"input_blocks\": 10588, \"remaining_blocks\": 10565, \"derived_equalities\": 605, \"dropped_blocks\": 23, \"elapsed_seconds\": 16.80197304202011, \"stage\": \"exact_presolve\"}\n{\"step\": 2, \"input_variables\": 14657, \"input_blocks\": 10565, \"remaining_blocks\": 10492, \"derived_equalities\": 312, \"dropped_blocks\": 73, \"elapsed_seconds\": 21.566261709027458, \"stage\": \"exact_presolve\"}\n{\"step\": 3, \"input_variables\": 14353, \"input_blocks\": 10492, \"remaining_blocks\": 10365, \"derived_equalities\": 547, \"dropped_blocks\": 127, \"elapsed_seconds\": 26.531523292011116, \"stage\": \"exact_presolve\"}\n{\"step\": 4, \"input_variables\": 13851, \"input_blocks\": 10365, \"remaining_blocks\": 10196, \"derived_equalities\": 131, \"dropped_blocks\": 169, \"elapsed_seconds\": 31.505218084028456, \"stage\": \"exact_presolve\"}\n{\"step\": 5, \"input_variables\": 13720, \"input_blocks\": 10196, \"remaining_blocks\": 10060, \"derived_equalities\": 629, \"dropped_blocks\": 136, \"elapsed_seconds\": 36.655455750005785, \"stage\": \"exact_presolve\"}\n{\"step\": 6, \"input_variables\": 13184, \"input_blocks\": 10060, \"remaining_blocks\": 9718, \"derived_equalities\": 123, \"dropped_blocks\": 342, \"elapsed_seconds\": 41.76007037499221, \"stage\": \"exact_presolve\"}\n/Users/sasha/CoxeterPolytopes/research/global_formulation/feasibility.py:46: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.\n  answer = linprog(np.r_[np.zeros(m), -np.ones(m)],\n{\"status\": 0, \"message\": \"Optimization terminated successfully. (HiGHS Status 7: Optimal)\", \"test_rows\": 19505, \"proposed_support\": 856, \"rational_denominator_limit\": 1000, \"verified_nonnegative_weights\": 856, \"elapsed_seconds\": 43.40204020898091, \"stage\": \"verified_scalar_face\"}\n{\"step\": 7, \"input_variables\": 13061, \"input_blocks\": 9718, \"remaining_blocks\": 9584, \"derived_equalities\": 856, \"dropped_blocks\": 134, \"elapsed_seconds\": 48.09658795897849, \"stage\": \"exact_presolve\"}\n{\"step\": 8, \"input_variables\": 12428, \"input_blocks\": 9584, \"remaining_blocks\": 9047, \"derived_equalities\": 3674, \"dropped_blocks\": 537, \"elapsed_seconds\": 53.68517162499484, \"stage\": \"exact_presolve\"}\n{\"step\": 9, \"input_variables\": 11296, \"input_blocks\": 9047, \"remaining_blocks\": 8779, \"derived_equalities\": 431, \"dropped_blocks\": 268, \"elapsed_seconds\": 58.44398899999214, \"stage\": \"exact_presolve\"}\n{\"step\": 10, \"input_variables\": 10865, \"input_blocks\": 8779, \"remaining_blocks\": 8192, \"derived_equalities\": 139, \"dropped_blocks\": 587, \"elapsed_seconds\": 63.21156437502941, \"stage\": \"exact_presolve\"}\n{\"step\": 11, \"input_variables\": 10729, \"input_blocks\": 8192, \"remaining_blocks\": 8022, \"derived_equalities\": 444, \"dropped_blocks\": 170, \"elapsed_seconds\": 68.00992849998875, \"stage\": \"exact_presolve\"}\n{\"step\": 12, \"input_variables\": 10399, \"input_blocks\": 8022, \"remaining_blocks\": 7597, \"derived_equalities\": 36, \"dropped_blocks\": 425, \"elapsed_seconds\": 72.72306966700125, \"stage\": \"exact_presolve\"}\n{\"step\": 13, \"input_variables\": 10363, \"input_blocks\": 7597, \"remaining_blocks\": 7555, \"derived_equalities\": 27, \"dropped_blocks\": 42, \"elapsed_seconds\": 77.45160554198083, \"stage\": \"exact_presolve\"}\n{\"step\": 14, \"input_variables\": 10336, \"input_blocks\": 7555, \"remaining_blocks\": 7513, \"derived_equalities\": 0, \"dropped_blocks\": 42, \"elapsed_seconds\": 78.6028969999752, \"stage\": \"exact_presolve\"}\n{\"command\": [\"/Users/sasha/.local/bin/sdpa_gmp\", \"-ds\", \"/Users/sasha/CoxeterPolytopes/results/global_level2_dual/input.dat-s\", \"-o\", \"/Users/sasha/CoxeterPolytopes/results/global_level2_dual/native.result\", \"-p\", \"/Users/sasha/CoxeterPolytopes/results/global_level2_dual/param.sdpa\"], \"encoding\": {\"free_variables\": 10336, \"full_PSD_blocks\": 1529, \"packed_scalar_constraints\": 5984, \"sparse_nonzeros\": 77791}, \"elapsed_seconds\": 78.98113920900505, \"stage\": \"native_solver_start\"}\n{\"status\": \"NO_EXACT_FEASIBILITY_DECISION\", \"orientation\": \"certificate\", \"frozen_input\": \"results/global_level2_current/necessary_primal.exact.json\", \"frozen_input_sha256\": \"7f62e85735e146dd660594a09111401754ce0ced24c64033be67ae85b4e3df9a\", \"geometric_constraints_added\": false, \"original_variables\": 18909, \"compiled_variables\": 10336, \"compiled_cones\": 7513, \"accepted_bounds_changed\": false, \"exact_reduction_checks\": {\"exact_zero_diagonal_face\": true, \"exact_noncoordinate_kernel_face\": true, \"exact_rational_proportional_column_face\": true}, \"numerical\": {\"solver\": \"SDPA-GMP\", \"command\": [\"/Users/sasha/.local/bin/sdpa_gmp\", \"-ds\", \"/Users/sasha/CoxeterPolytopes/results/global_level2_dual/input.dat-s\", \"-o\", \"/Users/sasha/CoxeterPolytopes/results/global_level2_dual/native.result\", \"-p\", \"/Users/sasha/CoxeterPolytopes/results/global_level2_dual/param.sdpa\"], \"returncode\": null, \"timed_out\": true, \"encoding\": {\"free_variables\": 10336, \"full_PSD_blocks\": 1529, \"packed_scalar_constraints\": 5984, \"sparse_nonzeros\": 77791}, \"native_output_error\": \"SDPA output has no xVec\"}, \"elapsed_seconds\": 729.0043434170075, \"stage\": \"completed\"}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "181aed3de74e1712cce976229e2fe35c19fbc8c958460da6e730f3e815f67481",
+  "lock_owner": "wrapper"
+}

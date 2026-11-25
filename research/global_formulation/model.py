@@ -1,7 +1,7 @@
 """A global tail outer relaxation; all feature and incidence ports are bound."""
 from fractions import Fraction as F
 
-from . import conic, data, faces, incidence, vertices
+from . import conic, data, faces, incidence, vertices, strengthening
 from .moments import Program, dimension_domain
 from .polynomial import Poly, as_poly, monomials, var
 
@@ -22,7 +22,7 @@ def scaled(coefficient, form):
     return conic.times(coefficient, form)
 
 
-def build(threshold, parity, tables, upper_dimension=None):
+def build(threshold, parity, tables, upper_dimension=None, level=1):
     if threshold < 40 or parity not in ("odd", "even"):
         raise ValueError("This initial global formulation is specified for N>=40")
     if upper_dimension not in (None, 57):
@@ -45,6 +45,7 @@ def build(threshold, parity, tables, upper_dimension=None):
             if endpoint == upper_dimension:
                 domain.fixed["t"] = F(1, upper_dimension)
                 domain.fixed["e"] = F(int(upper_dimension == 58))
+        strengthening.enrich(domain, level)
         return p.measure(name, domain, mass_scale)
 
     multipliers = (as_poly(1), t, e)
@@ -149,4 +150,9 @@ def build(threshold, parity, tables, upper_dimension=None):
         finite_SDP_exact_realizability_claimed=False, finite_sparse_outer_moments=True,
         global_bound_changed=False, independent_source_review_complete=False,
         actual_polytope_lift="notes/lp/global_formulation.md"))
+    if level > 1:
+        model["metadata"]["uniform_strengthening_level"] = level
+        model["metadata"]["uniform_strengthening"] = (
+            "all mixed spatial rank minors; compound/tensor and weighted Gram PSD; "
+            "integer factorial, gap and rank-capacity localizers for all population counters")
     return model
