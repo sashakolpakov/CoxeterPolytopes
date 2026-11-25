@@ -36,7 +36,10 @@ def build(threshold, parity, tables, upper_dimension=None):
         if parity == "odd":
             domain.fixed["e"] = F(0)
         else:
-            domain.ge("even_integer_gap_after58", (1-e)*(1-60*t))
+            if endpoint >= 58:
+                domain.ge("even_integer_gap_after58", (1-e)*(1-60*t))
+            else:
+                domain.ge("even_integer_gap_around58", (1-e)*(1-56*t)*(1-60*t))
         if upper_dimension is not None:
             domain.ge("retained_dimension58_tail_anchor", t-F(1, upper_dimension))
             if endpoint == upper_dimension:
@@ -46,7 +49,7 @@ def build(threshold, parity, tables, upper_dimension=None):
 
     multipliers = (as_poly(1), t, e)
     finite_d, finite_features, finite_ports = vertices.finite_domain(endpoint, parity, tables)
-    ideal_d, ideal_features, ideal_ports = vertices.ideal_domain(endpoint, tables)
+    ideal_d, ideal_features, ideal_ports = vertices.ideal_domain(endpoint, tables, parity)
     finite = add_measure("finite_vertices", finite_d, endpoint**2)
     ideal = add_measure("ideal_vertices", ideal_d, endpoint)
     face = {s: add_measure(f"faces{s}", faces.face_domain(s, endpoint)) for s in (3, 4)}

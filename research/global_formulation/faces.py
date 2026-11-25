@@ -49,6 +49,7 @@ def face_domain(sides, threshold):
         for name, (i, j) in zip(("opposite0", "opposite1"), ((0, 2), (1, 3)), strict=True):
             value = d.variable(name, bounded=False)
             H[i][j] = H[j][i] = -value
+            d.ge(name+"_disjoint_supporting_lines", value-1)
         d.eq("shared_four_wall_rank", determinant(H))
     spatial = [[H[i][j]+h[i]*h[j] for j in range(sides)] for i in range(sides)]
     d.matrix("common_spatial_Gram", spatial)

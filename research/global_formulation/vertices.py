@@ -146,7 +146,7 @@ def finite_domain(threshold, parity, tables):
     return d, columns, ports
 
 
-def ideal_domain(threshold, tables):
+def ideal_domain(threshold, tables, parity):
     d = dimension_domain("ideal_vertex", threshold)
     t, e = var("t"), var("e")
     u = counters(d, data.affine_types())
@@ -155,6 +155,8 @@ def ideal_domain(threshold, tables):
     b, chi = d.variable("absolute_height"), d.variable("chi_fraction")
     d.ge("absolute_height_unimodal", F(1, 2)-b)
     d.ge("absolute_height_variance", sigma2+2*t*(1-t)-3*b*b)
+    d.ge("absolute_height_unimodal_variance", sigma2+2*t*(1-t)
+        +(t*t if parity == "even" else 0)-4*b*b)
     d.eq("chi_only_at58", chi*(1-e))
     q = sum((tables["affine"][c]["ordinary_per_order"]*v for c, v in u.items()), as_poly(0))
     H = sum((tables["affine"][c]["deletion_per_order"]*v for c, v in u.items()), as_poly(0))

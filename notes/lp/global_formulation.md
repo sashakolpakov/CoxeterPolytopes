@@ -15,6 +15,12 @@ each parity is represented by one problem on0<t<=1/N_parity. Artificial
 mixtures of dimensions and closure points at t=0 are permitted by the
 outer relaxation. Every actual polytope still maps into it.
 
+The exceptional indicator e=[n=58] satisfies e(58t-1)=0. The
+dimension-gap rows admit every integer dimension in the stated parity.
+In an even tail starting below 58, the additional gap uses
+(1-e)(1-56t)(1-60t)>=0; the simpler (1-e)(1-60t)>=0 is used only
+when the even endpoint is already at least 58.
+
 The completed exclusion for n>=58 remains available. An optional anchor
 restricts the new problem to N<=n<=57, or1/57<=t<=1/N. This excludes no
 hypothetical polytope left by the established theorem. It is one uniform
@@ -196,6 +202,18 @@ moment than the uniform on the full interval. Dividing by n gives the
 stated bound. These are valid envelopes; the full product distribution
 is not claimed to be characterized by these moments.
 
+The same mixture argument improves the variance bound to
+
+    4b^2<=sigma2+2t(1-t)+[n even]*t^2.
+
+For a centered uniform on an even lattice, 4(E|Y|)^2<=3 Var(Y).
+For a centered uniform on an odd lattice, equality holds after adding
+one to the right side. A symmetric unimodal law is a mixture of these
+central uniforms on its own lattice. Jensen's inequality for the
+absolute first moments gives the displayed bound, since their means
+are zero and variance averages under this mixture. The lattice is odd
+exactly when n is even. This is a uniform condition on all cusp products.
+
 The code also uses positive constant column scaling and the coordinate
 N_parity*t to improve numerical conditioning. Every row uses the same
 scaling. Its exact factors are recorded in model metadata.
@@ -232,6 +250,17 @@ at most three on a quadrilateral. These necessary conditions hold for
 every actual face, including ideal vertices. The common interior point
 prevents admitting an opposite pair of equal, oppositely oriented walls
 as a genuine polygon merely because some principal Gram tests pass.
+
+For a quadrilateral also impose -H_02>=1 and -H_13>=1. To prove
+this, suppose an opposite pair has a positive definite two-wall Gram
+block B. Project an interior point orthogonally away from that block.
+The correction has nonnegative coefficients B^-1*b, where b_i>0.
+All other wall entries are nonpositive, so the projected point still
+strictly satisfies their inequalities. Its square is the original
+negative square minus b^T*B^-1*b, hence it lies in hyperbolic space.
+It belongs to both opposite sides inside the polygon, contradicting
+their incidence. Thus their two-wall Gram cannot be positive definite.
+The weak lower bound one is sufficient here; no upper bound is imposed.
 
 The rank test adds information to separate-corner and signature tests.
 For example, the formal matrix with diagonal 1, cyclic adjacent entries
