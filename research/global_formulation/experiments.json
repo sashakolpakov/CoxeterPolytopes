@@ -12,13 +12,51 @@
   ],
   "cleanup_commit": "c8c86903",
   "current_constraint_commit": "2c582359",
+  "current_feasibility": {
+    "geometric_constraints_changed": false,
+    "independent_verification": "results/global_current_independent_feasibility/result.json",
+    "input": "results/global_tail57_current/necessary_primal.exact.json",
+    "input_sha256": "e35594b359e85a02ca706125b5e8259d372c381df3c8ed83122dbcbc3a5b5ebb",
+    "normalized_dual_infeasibility_certificate": "results/global_current_independent_feasibility/normalized_dual_infeasibility_certificate.exact.json",
+    "rational_point": "results/global_current_exact_recovery/original_feasible_point.exact.json",
+    "rational_point_canonical_sha256": "d6201b103b181325faf1ca3fc02aff8ab0ec9c93ade4332ab551de6aa0eaa756",
+    "status": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE"
+  },
   "date": "2026-11-25",
+  "discovery_solver_source_checkpoint": "8f43d7f3",
   "independent_source_review_complete": false,
+  "normalized_certificate_dual_is_provably_infeasible": true,
   "numerical_status_is_not_exact_verification": true,
   "other_recorded_diagnostic_exports_retained_locally": true,
   "public_retained_paths": [
     "research/global_formulation/README.md",
     "research/global_formulation/experiments.json",
+    "research/global_formulation/feasibility.py",
+    "results/global_current_exact_recovery/exact_face_reduction.json",
+    "results/global_current_exact_recovery/original_feasible_point.exact.json",
+    "results/global_current_exact_recovery/progress.jsonl",
+    "results/global_current_exact_recovery/result.json",
+    "results/global_current_exact_recovery/source_bindings.json",
+    "results/global_current_exact_recovery/substitutions.exact.json",
+    "results/global_current_exact_recovery_monitor.json",
+    "results/global_current_feasibility_prepare/coordinator_failure.json",
+    "results/global_current_feasibility_prepare/progress.jsonl",
+    "results/global_current_feasibility_prepare/result.json",
+    "results/global_current_feasibility_prepare/source_bindings.json",
+    "results/global_current_independent_feasibility/independent_PSD_ranks.json",
+    "results/global_current_independent_feasibility/normalized_dual_infeasibility_certificate.exact.json",
+    "results/global_current_independent_feasibility/result.json",
+    "results/global_current_independent_feasibility/source_bindings.json",
+    "results/global_current_independent_feasibility_monitor.json",
+    "results/global_current_sdpa_primal/input.dat-s",
+    "results/global_current_sdpa_primal/native.result",
+    "results/global_current_sdpa_primal/original_numerical_candidate.json",
+    "results/global_current_sdpa_primal/param.sdpa",
+    "results/global_current_sdpa_primal/progress.jsonl",
+    "results/global_current_sdpa_primal/result.json",
+    "results/global_current_sdpa_primal/solver.stdout",
+    "results/global_current_sdpa_primal/source_bindings.json",
+    "results/global_current_sdpa_primal_monitor.json",
     "results/global_tail57_Gram_coupled/PSD_separation_history.json",
     "results/global_tail57_Gram_coupled/result.json",
     "results/global_tail57_Gram_coupled/source_bindings.json",
@@ -56,13 +94,14 @@
     "results/global_unbounded_odd57_current/result.json",
     "results/global_unbounded_odd57_current/source_bindings.json",
     "results/global_unbounded_odd57_current_monitor.json",
-    "results/global_unbounded_odd57_monitor.json"
+    "results/global_unbounded_odd57_monitor.json",
+    "scripts/run_global_coxeter_formulation.py"
   ],
   "remaining_work": [
-    "Resolve numerical feasibility or recover an exact certificate for the current complete SDP; PSD-cut termination is inconclusive.",
+    "Use the certified feasible pseudomoments to identify missing global geometric compatibility.",
     "Encode common supporting-diagram populations and node-deletion pushforwards across every face star.",
     "Import old quadrilateral transfer cones only after proving their premises in the enlarged dimension range.",
-    "Assess higher uniform moment/localizer levels and the remaining Andreev incidence strata without selected diagram pricing."
+    "Assess stronger uniform moment/localizer levels and the remaining Andreev incidence strata."
   ],
   "runs": [
     {
@@ -453,10 +492,190 @@
       "scalar_blocks": 19469,
       "threshold": 57,
       "upper_dimension": null
+    },
+    {
+      "failure_receipt": "results/global_current_feasibility_prepare/coordinator_failure.json",
+      "files": {
+        "results/global_current_feasibility_prepare/compiled.exact.json": {
+          "bytes": 4251800,
+          "sha256": "b26ccd8dec02f7f23ee1993b76a3a317d5d6e5cc133eeb2d7e4074996b171c53"
+        },
+        "results/global_current_feasibility_prepare/cone_maps.exact.json": {
+          "bytes": 667692,
+          "sha256": "d24b7bb189851b908553168b9aabd59065f9e5494f542e233d9a85d732b22f28"
+        },
+        "results/global_current_feasibility_prepare/coordinator_failure.json": {
+          "bytes": 296,
+          "sha256": "b2c0d22cad6d94b976d7565c5513950b15d3f1dae49643964eb592f08a58915e"
+        },
+        "results/global_current_feasibility_prepare/exact_face_reduction.json": {
+          "bytes": 216215,
+          "sha256": "74fd7ab8c476c145f609d39aaa9729a0d5aa96a77ef4f81a37454e3f6cb347b1"
+        },
+        "results/global_current_feasibility_prepare/progress.jsonl": {
+          "bytes": 752,
+          "sha256": "321499c5c701657d1974e4406437c6805f572400bb87f7e2e3b126a4ad076eb3"
+        },
+        "results/global_current_feasibility_prepare/result.json": {
+          "bytes": 1151,
+          "sha256": "12091aa377627db697eaf94bbaa9f3be23ece77744a39254af78e839b8d9b866"
+        },
+        "results/global_current_feasibility_prepare/source_bindings.json": {
+          "bytes": 636,
+          "sha256": "bf2ef3e1c78b9c450a7d39b80887a96b977a6403cba9f7ca2cd0e4698bb5da71"
+        },
+        "results/global_current_feasibility_prepare/substitutions.exact.json": {
+          "bytes": 265911,
+          "sha256": "38a1ea138a54b13cf0fac45977eed39222f9a8b3e889169cc906941ca7d32090"
+        }
+      },
+      "frozen_input": "results/global_tail57_current/necessary_primal.exact.json",
+      "id": "global_current_feasibility_prepare",
+      "numerical_solver_started": false,
+      "outcome": "FAILED_FINAL_PROGRESS_REPORTING",
+      "result": "results/global_current_feasibility_prepare/result.json",
+      "scientific_worker_PASS": false
+    },
+    {
+      "elapsed_seconds": 340.505,
+      "files": {
+        "results/global_current_sdpa_primal/compiled.exact.json": {
+          "bytes": 4057154,
+          "sha256": "405086c0f3d62eab4669695720c5dfea8340e5b640c7fd99af2483df30b6b970"
+        },
+        "results/global_current_sdpa_primal/cone_maps.exact.json": {
+          "bytes": 652728,
+          "sha256": "9fe5fa026c7d414059815abf25ab232d4f2f8d87e6aca7710e75a44442f38dec"
+        },
+        "results/global_current_sdpa_primal/exact_face_reduction.json": {
+          "bytes": 560434,
+          "sha256": "9c57d9ae6e9da2388e046719cac03ddd6d60e180f9336460d0add23fcfeb8080"
+        },
+        "results/global_current_sdpa_primal/input.dat-s": {
+          "bytes": 3682208,
+          "sha256": "877cbd4af0e3c14b92051adc512310814161fa24bab319502585c012f1bf21a2"
+        },
+        "results/global_current_sdpa_primal/native.result": {
+          "bytes": 2780029,
+          "sha256": "037a9085d231c70e26b09096c3bf46e1cf392c3476757153ef4388a9a8d85ec9"
+        },
+        "results/global_current_sdpa_primal/numerical_dual_PSD_blocks.json": {
+          "bytes": 1978703,
+          "sha256": "eba46d0832540ffcf7e57f96ca703470d5cd3f670de1feee991abd3d2f360a5a"
+        },
+        "results/global_current_sdpa_primal/original_numerical_candidate.json": {
+          "bytes": 323985,
+          "sha256": "bea99f7126fae524a2dea5b5bd018ce73b953ee70d46fc1cc1d69eb87fdd509e"
+        },
+        "results/global_current_sdpa_primal/param.sdpa": {
+          "bytes": 87,
+          "sha256": "f7709333a7bc732e6139dbfeabcc0339e88a7c107e53e69100836c582f5b962a"
+        },
+        "results/global_current_sdpa_primal/progress.jsonl": {
+          "bytes": 3906,
+          "sha256": "11be6f968b6b3646acbe3cef6c60f3553d5e4d7a873679416d74b00527ed6959"
+        },
+        "results/global_current_sdpa_primal/result.json": {
+          "bytes": 3297,
+          "sha256": "6c43fa7e706ab6a167c6bea153746dc09363cf4ca5b7971f6a04bf9c7a94028f"
+        },
+        "results/global_current_sdpa_primal/solver.stdout": {
+          "bytes": 3505,
+          "sha256": "06357c0f511cf8716de0f2df3d1bf0503f41cd6e7edba46a75f013af30953ad5"
+        },
+        "results/global_current_sdpa_primal/source_bindings.json": {
+          "bytes": 636,
+          "sha256": "a7196ca9a31faa7308e7c0b815bff72872084e909474baf252788771cb16b19b"
+        },
+        "results/global_current_sdpa_primal/substitutions.exact.json": {
+          "bytes": 262738,
+          "sha256": "b32043b4c7fdbe617fd3f670ae9937822c19a94818fe8130e5add70feb02553e"
+        }
+      },
+      "frozen_input": "results/global_tail57_current/necessary_primal.exact.json",
+      "id": "global_current_sdpa_primal",
+      "monitor": "results/global_current_sdpa_primal_monitor.json",
+      "outcome": "NO_EXACT_FEASIBILITY_DECISION",
+      "peak_process_tree_rss_bytes": 329646080,
+      "result": "results/global_current_sdpa_primal/result.json"
+    },
+    {
+      "elapsed_seconds": 11.184,
+      "files": {
+        "results/global_current_exact_recovery/compiled.exact.json": {
+          "bytes": 3989773,
+          "sha256": "b8d70b5999e1751239ed747d326d6880fd7fa39a76118dab8955bc09f9296b3d"
+        },
+        "results/global_current_exact_recovery/cone_maps.exact.json": {
+          "bytes": 652132,
+          "sha256": "ce8d7759a7c7cd1f1c8a70f8c8edffe11f45b82b066521bf1038136667ec0150"
+        },
+        "results/global_current_exact_recovery/exact_face_reduction.json": {
+          "bytes": 561885,
+          "sha256": "7ba49f1163c9dd3e37ebb172cecbb2f3e35e7777aac16cbc3b7039d1b49709aa"
+        },
+        "results/global_current_exact_recovery/original_feasible_point.exact.json": {
+          "bytes": 154509,
+          "sha256": "b70d48b49e27c6590f51ed1ed0d32645ac9786fefcb8907089a511efb0813783"
+        },
+        "results/global_current_exact_recovery/original_numerical_candidate.json": {
+          "bytes": 323987,
+          "sha256": "5751fbbd1bcf6140e7be01910cc89260b009f8905b197a372d92d90139edccec"
+        },
+        "results/global_current_exact_recovery/progress.jsonl": {
+          "bytes": 2398,
+          "sha256": "762458c47f8ea35ce098a2f436d72f24614a3bbc854f1c87dce9e91b6f39594c"
+        },
+        "results/global_current_exact_recovery/result.json": {
+          "bytes": 1738101,
+          "sha256": "9afa551567df47a1a9e4c96356cf46f72b3401b9e7077c11b5a11ac88a9fe73c"
+        },
+        "results/global_current_exact_recovery/source_bindings.json": {
+          "bytes": 975,
+          "sha256": "d86dc00d874f8c08ad87f9928a55c57b8be78f245675d62a1126e0d2dd4381a4"
+        },
+        "results/global_current_exact_recovery/substitutions.exact.json": {
+          "bytes": 262942,
+          "sha256": "965eafa416d6dbf8687971cfd6e3687b5227ffe44755e005f0694875a2b33c9d"
+        }
+      },
+      "frozen_input": "results/global_tail57_current/necessary_primal.exact.json",
+      "id": "global_current_exact_recovery",
+      "monitor": "results/global_current_exact_recovery_monitor.json",
+      "outcome": "EXACT_ORIGINAL_SDP_FEASIBLE",
+      "peak_process_tree_rss_bytes": 295698432,
+      "result": "results/global_current_exact_recovery/result.json"
+    },
+    {
+      "elapsed_seconds": 0.858,
+      "files": {
+        "results/global_current_independent_feasibility/independent_PSD_ranks.json": {
+          "bytes": 793979,
+          "sha256": "95701001e78e6df68c3d571f31bad4da43e3e072215b7c5412ee5fe9185f10f9"
+        },
+        "results/global_current_independent_feasibility/normalized_dual_infeasibility_certificate.exact.json": {
+          "bytes": 792154,
+          "sha256": "cb4cfae2c47452d78e1efd3620df4e7cd17e0838640896a03f8aabdeb7be3526"
+        },
+        "results/global_current_independent_feasibility/result.json": {
+          "bytes": 1858,
+          "sha256": "1491068480447ad429680f45f9f6fd432f0b0138e22338689bf90fcf8e9a4e96"
+        },
+        "results/global_current_independent_feasibility/source_bindings.json": {
+          "bytes": 996,
+          "sha256": "d35b1d090bf4d889a95f3ca9408cbc97db20e2d2161b54325be8b66e433a8980"
+        }
+      },
+      "frozen_input": "results/global_tail57_current/necessary_primal.exact.json",
+      "id": "global_current_independent_feasibility",
+      "monitor": "results/global_current_independent_feasibility_monitor.json",
+      "outcome": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE",
+      "peak_process_tree_rss_bytes": 129597440,
+      "result": "results/global_current_independent_feasibility/result.json"
     }
   ],
   "schema": "global-necessary-data-exploration-v1",
   "solver_certified_new_bound": false,
-  "verified_full_SDP_feasible_point_obtained": false,
+  "verified_full_SDP_feasible_point_obtained": true,
   "wrapper_PASS_means_monitored_worker_completion_not_native_solver_success": true
 }

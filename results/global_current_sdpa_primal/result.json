@@ -1,0 +1,64 @@
+{
+  "accepted_bounds_changed": false,
+  "compiled_cones": 7435,
+  "compiled_variables": 2893,
+  "elapsed_seconds": 340.4261298329802,
+  "exact_primal_recovery_failure": "No exact PSD reconstruction: [{\"decimal_grid_digits\": 6, \"reason\": \"finite_vertices_small_a_inactive_mult0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 10, \"reason\": \"finite_vertices_small_a_inactive_mult0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 16, \"reason\": \"finite_vertices_small_a_inactive_mult0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 24, \"reason\": \"finite_vertices_small_a_inactive_mult0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 36, \"reason\": \"finite_vertices_small_a_inactive_mult0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 48, \"reason\": \"finite_vertices_small_a_inactive_mult0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 60, \"reason\": \"finite_vertices_small_a_inactive_mult0: Negative exact PSD pivot at 0\"}]",
+  "exact_reduction_checks": {
+    "exact_noncoordinate_kernel_face": true,
+    "exact_zero_diagonal_face": true
+  },
+  "frozen_input": "results/global_tail57_current/necessary_primal.exact.json",
+  "frozen_input_sha256": "e35594b359e85a02ca706125b5e8259d372c381df3c8ed83122dbcbc3a5b5ebb",
+  "geometric_constraints_added": false,
+  "native_dual_constant_pairing": "-3013368585556217838427734507466234683634443/4750000000000000000000000000000000000000000000000000000",
+  "numerical": {
+    "command": [
+      "/Users/sasha/.local/bin/sdpa_gmp",
+      "-ds",
+      "/Users/sasha/CoxeterPolytopes/results/global_current_sdpa_primal/input.dat-s",
+      "-o",
+      "/Users/sasha/CoxeterPolytopes/results/global_current_sdpa_primal/native.result",
+      "-p",
+      "/Users/sasha/CoxeterPolytopes/results/global_current_sdpa_primal/param.sdpa"
+    ],
+    "encoding": {
+      "free_variables": 2893,
+      "full_PSD_blocks": 857,
+      "packed_scalar_constraints": 6578,
+      "sparse_nonzeros": 53059
+    },
+    "phase": "pFEAS",
+    "returncode": 0,
+    "solver": "SDPA-GMP",
+    "timed_out": false
+  },
+  "orientation": "necessary",
+  "original_numerical_residuals": {
+    "floating_diagnostics_are_not_exact_certificates": true,
+    "maximum_absolute_original_equality_residual": 0.0,
+    "minimum_original_cone_eigenvalue": -7.4004193502374825e-09,
+    "minimum_scaled_original_cone_eigenvalue": -5.394670561729859e-09,
+    "worst_original_block": "finite_vertices_monomial_upper_103_guard_small_a"
+  },
+  "original_variables": 3591,
+  "source_bindings": {
+    "research/global_formulation/conic.py": {
+      "bytes": 17130,
+      "sha256": "df7d34b4aa4fb9bf2e053db5ea69c44b1fcbd959cde2ea06750783efce999af6"
+    },
+    "research/global_formulation/feasibility.py": {
+      "bytes": 16979,
+      "sha256": "0bbf63281b64bdeb0130dcda28ced42f645f57a1ba34e99213d10b8e79478665"
+    },
+    "results/global_tail57_current/necessary_primal.exact.json": {
+      "bytes": 3263516,
+      "sha256": "e35594b359e85a02ca706125b5e8259d372c381df3c8ed83122dbcbc3a5b5ebb"
+    },
+    "scripts/run_global_coxeter_formulation.py": {
+      "bytes": 1799,
+      "sha256": "b3b2fde59992ea0a0007c281533af1f8b094494d8f610cee328f23b680a35485"
+    }
+  },
+  "status": "NO_EXACT_FEASIBILITY_DECISION"
+}

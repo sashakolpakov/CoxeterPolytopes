@@ -318,7 +318,7 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
     out.mkdir()
     started = time.monotonic()
     paths = [source, Path(__file__), root/"research/global_formulation/conic.py",
-        root/"research/global_formulation/cone_backend.py", root/"scripts/run_global_coxeter_formulation.py"]
+        root/"scripts/run_global_coxeter_formulation.py"]
     resume_path = None
     if resume_from:
         resume_path = (root/resume_from/"original_numerical_candidate.json").resolve()
@@ -355,10 +355,6 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
     elif solver == "sdpa":
         candidate, matrices, numerical = solve_sdpa(compiled, out, seconds, progress)
         report.update(status="NO_EXACT_FEASIBILITY_DECISION", numerical=numerical)
-    elif solver in ("clarabel", "scs"):
-        from .cone_backend import solve
-        candidate, matrices, numerical = solve(compiled, out, seconds, progress, solver=solver)
-        report.update(status="NO_EXACT_FEASIBILITY_DECISION", numerical=numerical)
     elif solver != "prepare": raise ValueError("Unsupported solver")
     if candidate is not None:
         point = {v: conic.value(q, candidate) for v, q in substitutions.items()}
@@ -383,4 +379,114 @@ def run(root, output, input_path, solver, orientation, seconds=600, facial=True,
     report["elapsed_seconds"] = time.monotonic()-started
     conic.write_json(out/"result.json", report)
     progress("completed", {k: v for k, v in report.items() if k not in ("source_bindings", "exact_check")})
+    return report
+
+
+def bareiss_psd(matrix):
+    """Independent integer PSD test: symmetric-pivoted Bareiss elimination.
+
+    A positive common denominator first gives an integer symmetric matrix.
+    Fraction-free Schur updates must divide exactly by the preceding pivot.
+    Positive pivots preserve PSD equivalence; a zero remaining diagonal
+    requires the whole remaining block to be zero.
+    """
+    n = len(matrix)
+    denominator = math.lcm(*(v.denominator for row in matrix for v in row))
+    A = [[int(v*denominator) for v in row] for row in matrix]
+    if any(A[i][j] != A[j][i] for i in range(n) for j in range(n)):
+        raise ValueError("Nonsymmetric exact matrix")
+    previous = 1
+    for k in range(n):
+        if any(A[i][i] < 0 for i in range(k, n)):
+            raise ValueError("Negative integer Schur diagonal")
+        pivot_index = next((i for i in range(k, n) if A[i][i] > 0), None)
+        if pivot_index is None:
+            if any(A[i][j] for i in range(k, n) for j in range(k, n)):
+                raise ValueError("Nonzero row in a zero-diagonal Schur block")
+            return k
+        if pivot_index != k:
+            A[k], A[pivot_index] = A[pivot_index], A[k]
+            for row in A: row[k], row[pivot_index] = row[pivot_index], row[k]
+        pivot = A[k][k]
+        for i in range(k+1, n):
+            for j in range(i, n):
+                numerator = pivot*A[i][j]-A[i][k]*A[k][j]
+                quotient, remainder = divmod(numerator, previous)
+                if remainder: raise ValueError("Nonexact fraction-free division")
+                A[i][j] = A[j][i] = quotient
+        for i in range(k+1, n): A[i][k] = A[k][i] = 0
+        previous = pivot
+    return n
+
+
+def verify(root, output, input_path, point_path):
+    """Check a frozen primal witness and a certificate ruling out its Farkas dual."""
+    out = (root/output).resolve()
+    if out.exists() or not out.is_relative_to(root/"results"): raise ValueError("Use a fresh results directory")
+    source, witness = (root/input_path).resolve(), (root/point_path).resolve()
+    dual_source = source.with_name("certificate_dual.exact.json")
+    if not source.is_relative_to(root/"results") or not witness.is_relative_to(root/"results"):
+        raise ValueError("Use retained results inputs")
+    out.mkdir()
+    paths = [source, witness, dual_source, Path(__file__), root/"research/global_formulation/conic.py",
+        root/"scripts/run_global_coxeter_formulation.py"]
+    bindings = {str(p.relative_to(root)): dict(bytes=p.stat().st_size,
+        sha256=conic.digest_bytes(p.read_bytes())) for p in paths}
+    conic.write_json(out/"source_bindings.json", bindings)
+    for matrix, rank in (([[F(1), F(1)], [F(1), F(1)]], 1),
+            ([[F(0), F(0), F(0)], [F(0), F(1), F(1)], [F(0), F(1), F(1)]], 1),
+            ([[F(2), F(1, 3)], [F(1, 3), F(2)]], 2)):
+        if bareiss_psd(matrix) != rank: raise ValueError("Independent PSD check failed its rank fixture")
+    try:
+        bareiss_psd([[F(0), F(1)], [F(1), F(0)]])
+    except ValueError: pass
+    else: raise ValueError("Independent PSD check accepted an indefinite matrix")
+    problem = conic.read_model(source)
+    point = {v: F(c) for v, c in json.loads(witness.read_text()).items()}
+    if set(point) != set(problem["variables"]): raise ValueError("Wrong complete original variable set")
+    def evaluate(row, values):
+        return sum((c*(F(1) if v == "" else values[v]) for v, c in row.items()), F(0))
+    if any(evaluate(q, point) for q in problem["equations"]):
+        raise ValueError("An original equality failed independent verification")
+    slacks, ranks = [], []
+    for block in problem["blocks"]:
+        M = [[evaluate(q, point) for q in row] for row in block["entries"]]
+        rank = bareiss_psd(M)
+        slacks.append(M); ranks.append(dict(name=block["name"], order=len(M), rank=rank))
+    dual = conic.read_model(dual_source)
+    if conic.canonical(dual) != conic.canonical(conic.farkas(problem)):
+        raise ValueError("The retained certificate dual differs from the original primal's exact alternative")
+    alternative = conic.farkas(dual)
+    certificate = {v: F(0) for v in alternative["variables"]}
+    for i, v in enumerate(problem["variables"]): certificate[f"potential_{i}"] = -point[v]
+    certificate[f"potential_{len(problem['variables'])}"] = -F(1)
+    for b, M in enumerate(slacks):
+        for i in range(len(M)):
+            for j in range(i, len(M)):
+                certificate[f"dual_b{b}_{i}_{j}"] = M[i][j]
+    if any(evaluate(q, certificate) for q in alternative["equations"]):
+        raise ValueError("The original dual's infeasibility certificate failed its adjoint equations")
+    for b, block in enumerate(alternative["blocks"]):
+        for i, row in enumerate(block["entries"]):
+            for j, q in enumerate(row):
+                if evaluate(q, certificate) != slacks[b][i][j]:
+                    raise ValueError("Dual-certificate PSD cones do not match the verified primal slacks")
+    conic.write_json(out/"normalized_dual_infeasibility_certificate.exact.json", certificate)
+    conic.write_json(out/"independent_PSD_ranks.json", ranks)
+    report = dict(status="EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE",
+        original_variables_checked=len(point), original_equalities_checked=len(problem["equations"]),
+        original_PSD_blocks_checked=sum(r["order"] > 1 for r in ranks),
+        original_scalar_inequalities_checked=sum(r["order"] == 1 for r in ranks),
+        independent_PSD_method="integer symmetric-pivoted fraction-free Bareiss; no eigenvalue tolerances",
+        original_point_canonical_sha256=conic.digest_bytes(conic.canonical(point)),
+        normalized_dual_adjoint_equalities_checked=len(alternative["equations"]),
+        dual_certificate_cones_equal_verified_primal_slacks=True,
+        normalized_dual_certificate_potentials="minus primal coordinates, followed by -1",
+        no_geometric_constraint_changed=True, geometric_realization_asserted=False, accepted_bounds_changed=False,
+        source_bindings=bindings)
+    after = {str(p.relative_to(root)): dict(bytes=p.stat().st_size,
+        sha256=conic.digest_bytes(p.read_bytes())) for p in paths}
+    if after != bindings: raise ValueError("A verification input changed during the check")
+    conic.write_json(out/"result.json", report)
+    print(json.dumps({k: v for k, v in report.items() if k != "source_bindings"}), flush=True)
     return report

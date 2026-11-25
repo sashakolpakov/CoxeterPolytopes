@@ -15,14 +15,36 @@ and [certificate dual](../../results/global_tail57_current/certificate_dual.exac
 are retained. It uses the established n>=58 exclusion to cover the
 complementary tail; the same compiler also exported both unbounded parity models.
 
+**The frozen current SDP is exactly feasible.** A
+[rational point](../../results/global_current_exact_recovery/original_feasible_point.exact.json)
+satisfies every one of its 444 equalities, 907 PSD blocks and 8,044 scalar
+inequalities. The original matrix input has SHA256
+`e35594b359e85a02ca706125b5e8259d372c381df3c8ed83122dbcbc3a5b5ebb`.
+No geometric constraint was changed. A second
+[exact verification](../../results/global_current_independent_feasibility/result.json)
+uses integer, symmetric-pivoted Bareiss elimination, independently of the
+rational Schur/LDL checker used during point recovery.
+
+The normalized infeasibility-certificate dual is therefore infeasible.
+Its [explicit infeasibility certificate](../../results/global_current_independent_feasibility/normalized_dual_infeasibility_certificate.exact.json)
+uses potentials (-x,-1) and PSD cone matrices F_b(x), where x is the
+verified primal point. All 15,641 adjoint equalities were checked exactly;
+its cone matrices are exactly the independently verified primal slacks.
+Here the dual means the Farkas certificate problem with constant pairing
+-1. The ordinary zero-objective Lagrange dual also has its zero solution.
+
 The initial LP was numerically feasible. SDPA-GMP first failed on
 redundant dual coordinates; exact removal of 40 null coordinates got it
 through that factorization, but its ten-minute batch produced no certificate.
-The current stronger model then completed 250 rational PSD-separation
+The stronger model then completed 250 rational PSD-separation
 rounds without a verified separator or a verified full-SDP feasible point.
-These outcomes leave its SDP feasibility unresolved and establish no new
-dimension bound. The exact angle identities, tail-envelope comparisons,
-conic signs and PSD-certificate lifting checks passed in the bounded runs.
+Those runs were inconclusive. Solving the necessary-data orientation with
+exact cone-face reductions gave SDPA-GMP phase `pFEAS` in 35 iterations
+(334 seconds, 128-bit arithmetic). A further exact four-term nonnegative
+identity exposed three remaining redundant coordinates. Rounding the
+free coordinates to six decimal places and projecting onto the exact
+equalities then gave the rational witness above. Both PSD checkers passed.
+The accepted geometric dimension bound remains 57.
 
 The organizing objects are occupation measures for complete vertex
 populations, all triangles and quadrilaterals, residual corners, and
@@ -37,6 +59,27 @@ strengthened by raising moment/localizer degrees or adding proved
 uniform identities. The LP version replaces PSD blocks by declared
 necessary rational-direction tests. Its failure to find a certificate
 does not resolve the SDP or the geometric problem.
+
+The present feasible witness rules out a separator at this moment level.
+Further progress requires stronger valid constraints or a stronger
+moment level; longer solver runs on this unchanged model cannot exclude it.
+
+Verify the retained point and its implication for the normalized dual
+without running a numerical solver:
+
+```sh
+python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
+  --ledger results/global_feasibility_recheck_monitor.json -- \
+  scripts/run_global_coxeter_formulation.py verify-current \
+  --output results/global_feasibility_recheck
+```
+
+Use fresh output names. This check needs Python's standard library and
+reads the original exact matrices. `solve-current --solver sdpa
+--orientation necessary` solves that frozen input; `--orientation
+certificate` selects its normalized certificate problem. `--solver recover
+--resume-from results/global_current_sdpa_primal` reconstructs a rational
+point from the saved numerical checkpoint.
 
 From the repository root, run one monitored batch at a time:
 

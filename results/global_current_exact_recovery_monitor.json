@@ -1,0 +1,70 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_global_coxeter_formulation.py",
+    "solve-current",
+    "--threshold",
+    "57",
+    "--parity",
+    "odd",
+    "--solver",
+    "recover",
+    "--orientation",
+    "necessary",
+    "--resume-from",
+    "results/global_current_sdpa_primal",
+    "--output",
+    "results/global_current_exact_recovery"
+  ],
+  "elapsed_seconds": 11.184,
+  "peak_process_tree_rss_bytes": 295698432,
+  "initial_resources": {
+    "free_disk_gib": 298.31,
+    "available_memory_gib": 9.7,
+    "disk_free_bytes": 320306319360,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10413309952,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 32.204208,
+    "available_memory_percent": 40.408961,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 2631,
+  "stdout": "{\"orientation\": \"necessary\", \"variables\": 3591, \"equalities\": 444, \"cones\": 8951, \"elapsed_seconds\": 0.04241549997823313, \"stage\": \"frozen_model_loaded\"}\n{\"step\": 0, \"input_variables\": 3189, \"input_blocks\": 8951, \"remaining_blocks\": 8222, \"derived_equalities\": 436, \"dropped_blocks\": 729, \"elapsed_seconds\": 1.990725542011205, \"stage\": \"exact_presolve\"}\n{\"step\": 1, \"input_variables\": 2932, \"input_blocks\": 8222, \"remaining_blocks\": 7539, \"derived_equalities\": 39, \"dropped_blocks\": 683, \"elapsed_seconds\": 3.4191895829862915, \"stage\": \"exact_presolve\"}\n{\"step\": 2, \"input_variables\": 2901, \"input_blocks\": 7539, \"remaining_blocks\": 7459, \"derived_equalities\": 8, \"dropped_blocks\": 80, \"elapsed_seconds\": 4.8368785419734195, \"stage\": \"exact_presolve\"}\n/Users/sasha/CoxeterPolytopes/research/global_formulation/feasibility.py:46: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.\n  answer = linprog(np.r_[np.zeros(m), -np.ones(m)],\n{\"status\": 0, \"message\": \"Optimization terminated successfully. (HiGHS Status 7: Optimal)\", \"test_rows\": 14758, \"proposed_support\": 4, \"rational_denominator_limit\": 1000, \"verified_nonnegative_weights\": 4, \"elapsed_seconds\": 7.0384508749702945, \"stage\": \"verified_scalar_face\"}\n{\"step\": 3, \"input_variables\": 2893, \"input_blocks\": 7459, \"remaining_blocks\": 7435, \"derived_equalities\": 4, \"dropped_blocks\": 24, \"elapsed_seconds\": 8.059813125000801, \"stage\": \"exact_presolve\"}\n{\"step\": 4, \"input_variables\": 2890, \"input_blocks\": 7435, \"remaining_blocks\": 7428, \"derived_equalities\": 0, \"dropped_blocks\": 7, \"elapsed_seconds\": 9.735411332978401, \"stage\": \"exact_presolve\"}\n{\"status\": \"EXACT_ORIGINAL_SDP_FEASIBLE\", \"orientation\": \"necessary\", \"frozen_input\": \"results/global_tail57_current/necessary_primal.exact.json\", \"frozen_input_sha256\": \"e35594b359e85a02ca706125b5e8259d372c381df3c8ed83122dbcbc3a5b5ebb\", \"geometric_constraints_added\": false, \"original_variables\": 3591, \"compiled_variables\": 2890, \"compiled_cones\": 7428, \"accepted_bounds_changed\": false, \"exact_reduction_checks\": {\"exact_zero_diagonal_face\": true, \"exact_noncoordinate_kernel_face\": true}, \"resume_from\": \"results/global_current_sdpa_primal/original_numerical_candidate.json\", \"original_numerical_residuals\": {\"maximum_absolute_original_equality_residual\": 0.0, \"minimum_original_cone_eigenvalue\": -7.4004193502374825e-09, \"minimum_scaled_original_cone_eigenvalue\": -7.521015217718116e-16, \"worst_original_block\": \"residual_corner_ideal_moment_corner\", \"floating_diagnostics_are_not_exact_certificates\": true}, \"elapsed_seconds\": 11.089914999960456, \"stage\": \"completed\"}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "fcc9c2e34ac76b3ae2247029b1d7f9361898968a00e7283dd8e7a57b9db8266e",
+  "lock_owner": "wrapper"
+}
