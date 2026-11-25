@@ -6,6 +6,24 @@ The mathematical specification and actual-polytope lift are in
 This is an initial research relaxation; no improved dimension bound or
 separate author's acceptance is claimed.
 
+The [execution manifest](experiments.json) records the actual first runs,
+their source and model hashes, failures and remaining work. The current
+dimension-57 anchored model has 3,591 moment variables, 444 equalities,
+907 PSD blocks and 8,044 scalar inequalities. Its exact
+[necessary-data input](../../results/global_tail57_current/necessary_primal.exact.json)
+and [certificate dual](../../results/global_tail57_current/certificate_dual.exact.json)
+are retained. It uses the established n>=58 exclusion to cover the
+complementary tail; the same compiler also exported both unbounded parity models.
+
+The initial LP was numerically feasible. SDPA-GMP first failed on
+redundant dual coordinates; exact removal of 40 null coordinates got it
+through that factorization, but its ten-minute batch produced no certificate.
+The current stronger model then completed 250 rational PSD-separation
+rounds without a verified separator or a verified full-SDP feasible point.
+These outcomes leave its SDP feasibility unresolved and establish no new
+dimension bound. The exact angle identities, tail-envelope comparisons,
+conic signs and PSD-certificate lifting checks passed in the bounded runs.
+
 The organizing objects are occupation measures for complete vertex
 populations, all triangles and quadrilaterals, residual corners, and
 global incidence counts. A single shared Lorentz Gram schema covers
