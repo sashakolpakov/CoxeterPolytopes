@@ -1,0 +1,51 @@
+{
+  "commands": [
+    {
+      "command": [
+        "./configure",
+        "CC=/usr/bin/clang",
+        "CXX=/usr/bin/clang++",
+        "FC=/opt/homebrew/bin/gfortran",
+        "CFLAGS=-O2 -DNDEBUG -fPIC",
+        "CXXFLAGS=-O2 -DNDEBUG -fPIC",
+        "FCFLAGS=-O2 -fPIC",
+        "--with-blas=-L/opt/homebrew/opt/openblas/lib -lopenblas",
+        "--with-lapack=-L/opt/homebrew/opt/openblas/lib -lopenblas"
+      ],
+      "cwd": "/tmp/coxeter_sdpa_native_20261125/sdpa-7.3.21",
+      "returncode": 0,
+      "timeout_seconds": 759
+    },
+    {
+      "command": [
+        "make",
+        "-j1"
+      ],
+      "cwd": "/tmp/coxeter_sdpa_native_20261125/sdpa-7.3.21",
+      "returncode": 0,
+      "timeout_seconds": 754
+    }
+  ],
+  "configure_overrides": [
+    "MUMPS_VER = 5.9.0"
+  ],
+  "elapsed_seconds": 141.61658254201757,
+  "executable": "/Users/sasha/.local/opt/coxeter-sdpa-7.3.21/bin/sdpa",
+  "executable_bytes": 3635288,
+  "executable_sha256": "65292a57cc9cce3c3f206e5faf541c303802589c238a1d82722bfafbe8b0e0d7",
+  "numerical_test_run": false,
+  "serial_compilation": true,
+  "status": "NATIVE_SDPA_SERIAL_BUILD_COMPLETED_UNTESTED",
+  "upstream_archives": [
+    {
+      "path": "/tmp/coxeter_sdpa_binary_20261125/sdpa_7.3.21.tar.gz",
+      "sha256": "300cae3ac04409c2243f6a5b3fd1ee57b2b18db209a21c2472e8d837951d3db6",
+      "source": "https://downloads.sourceforge.net/project/sdpa/sdpa/sdpa_7.3.21.tar.gz"
+    },
+    {
+      "path": "/tmp/coxeter_sdpa_native_20261125/mumps_5.9.0.orig.tar.gz",
+      "sha256": "02c6efdb91749ec0f82351d40f3f860547272a1eb1d899126a4265b4d6bcc4ca",
+      "source": "https://deb.debian.org/debian/pool/main/m/mumps/mumps_5.9.0.orig.tar.gz"
+    }
+  ]
+}

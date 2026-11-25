@@ -1,0 +1,60 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_sdpa_projective_20261125.py",
+    "--check",
+    "--output",
+    "results/global_shared_cusp_sdpa_projective_fixture"
+  ],
+  "elapsed_seconds": 0.278,
+  "peak_process_tree_rss_bytes": 100073472,
+  "initial_resources": {
+    "free_disk_gib": 287.92,
+    "available_memory_gib": 9.88,
+    "disk_free_bytes": 309154701312,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10609737728,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 31.083003,
+    "available_memory_percent": 41.171201,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 5251,
+  "stdout": "/Users/sasha/.local/opt/coxeter-sdpa-python-0.2.3/sdpap/sdpap.py:6: SyntaxWarning: \"\\i\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\i\"? A raw string is also an option.\n  subject to Ax - b \\in J,  x \\in K\n{\"stage\": \"standard_SDPA_start\", \"variables\": 1, \"scalar_rows\": 3, \"PSD_blocks\": 1, \"maximum_iterations\": 80}\nSDPA start at [Wed Nov 25 14:58:53 2026]\nNumThreads  is set as 1\nSchur computation : DENSE \nConverted to SDPA internal data / Starting SDPA main loop\n   mu      thetaP  thetaD  objP      objD      alphaP  alphaD  beta \n 0 1.0e-02 1.0e+00 1.0e+00 -0.00e+00 -2.00e-01 8.4e-03 1.0e+00 5.74e+02\n 1 6.0e+00 9.9e-01 5.9e-15 -4.88e-02 -1.62e+02 2.9e-03 2.9e-03 5.80e+02\n 2 1.7e+01 9.9e-01 4.7e-13 +1.47e-02 -4.41e+02 4.5e-03 4.5e-03 4.42e+02\n 3 5.3e+01 9.8e-01 2.8e-13 -5.01e-02 -1.36e+03 4.1e-03 4.1e-03 4.42e+02\n 4 1.6e+02 9.8e-01 1.5e-12 +1.25e-02 -3.95e+03 5.8e-03 5.8e-03 3.47e+02\n 5 5.0e+02 9.7e-01 5.7e-12 -5.44e-02 -1.23e+04 5.4e-03 5.4e-03 3.39e+02\n 6 1.5e+03 9.7e-01 1.8e-11 +9.30e-03 -3.58e+04 7.6e-03 7.6e-03 2.62e+02\n 7 4.8e+03 9.6e-01 7.3e-11 -5.99e-02 -1.11e+05 7.4e-03 7.4e-03 2.46e+02\n 8 1.5e+04 9.5e-01 7.3e-11 +5.10e-03 -3.26e+05 1.1e-02 1.1e-02 1.86e+02\n 9 4.7e+04 9.4e-01 2.4e-10 -6.74e-02 -1.01e+06 1.1e-02 1.1e-02 1.65e+02\n10 1.4e+05 9.3e-01 1.9e-10 -8.58e-04 -2.99e+06 1.6e-02 1.6e-02 1.20e+02\n11 4.7e+05 9.2e-01 5.4e-09 -7.87e-02 -9.29e+06 1.9e-02 1.0e+00 9.68e+01\n12 5.3e+07 9.0e-01 9.9e-08 -1.03e-02 -9.82e+08 3.1e-02 1.0e+00 6.33e+01\n13 4.1e+09 8.7e-01 8.6e-05 -9.84e-02 -6.95e+10 4.4e-02 1.0e+00 4.24e+01\n14 2.2e+11 8.3e-01 5.9e-03 -2.93e-02 -3.35e+12 9.1e-02 1.0e+00 2.15e+01\n15 6.7e+12 7.6e-01 7.5e-02 -1.49e-01 -8.57e+13 2.8e-01 1.0e+00 7.62e+00\n16 9.5e+13 5.5e-01 8.9e-01 -1.11e-01 -8.50e+14 1.0e+00 1.0e+00 3.62e-01\n17 1.3e+14 5.0e-17 1.0e+01 -3.34e-01 -6.70e+14 4.1e+00 1.0e+00 3.00e-01\n18 4.0e+13 5.0e-17 1.3e-02 -4.83e-01 -2.01e+14 1.0e+00 1.0e+00 3.00e-01\n19 1.2e+13 1.0e-16 4.4e-01 -4.31e-01 -6.03e+13 1.0e+00 1.0e+00 3.00e-01\n20 3.6e+12 1.0e-16 3.3e-03 -4.06e-01 -1.81e+13 1.0e+00 1.0e+00 3.00e-01\n21 1.1e+12 1.0e-16 1.6e-03 -3.94e-01 -5.42e+12 1.0e+00 1.0e+00 3.00e-01\n22 3.3e+11 1.0e-16 1.0e-03 -3.88e-01 -1.63e+12 1.0e+00 1.0e+00 3.00e-01\n23 9.8e+10 1.0e-16 5.1e-04 -3.86e-01 -4.88e+11 1.0e+00 1.0e+00 3.00e-01\n24 2.9e+10 1.0e-16 5.1e-05 -3.84e-01 -1.46e+11 1.0e+00 1.0e+00 3.00e-01\n25 8.8e+09 1.0e-16 5.1e-05 -3.83e-01 -4.39e+10 1.0e+00 1.0e+00 3.00e-01\n26 2.6e+09 1.0e-16 9.5e-06 -3.83e-01 -1.32e+10 1.0e+00 1.0e+00 3.00e-01\n27 7.9e+08 2.0e-16 7.9e-07 -3.83e-01 -3.95e+09 1.0e+00 1.0e+00 3.00e-01\n28 2.4e+08 2.0e-16 4.0e-07 -3.83e-01 -1.19e+09 1.0e+00 1.0e+00 3.00e-01\n29 7.1e+07 3.0e-16 1.5e-07 -3.83e-01 -3.56e+08 1.0e+00 1.0e+00 3.00e-01\n30 2.1e+07 2.0e-16 5.0e-08 -3.83e-01 -1.07e+08 1.0e+00 1.0e+00 3.00e-01\n31 6.4e+06 2.0e-16 0.0e+00 -3.83e-01 -3.20e+07 1.0e+00 1.0e+00 1.00e-01\n32 6.4e+05 2.0e-16 0.0e+00 -3.83e-01 -3.20e+06 1.0e+00 1.0e+00 1.00e-01\n33 6.4e+04 2.0e-16 3.9e-10 -3.83e-01 -3.20e+05 1.0e+00 1.0e+00 1.00e-01\n34 6.4e+03 3.0e-16 7.3e-11 -3.83e-01 -3.20e+04 9.0e+01 1.0e+00 1.00e-01\n35 6.4e+02 3.0e-16 4.5e-12 -3.83e-01 -3.20e+03 9.0e+01 1.0e+00 1.00e-01\n36 6.4e+01 3.0e-16 9.5e-13 -3.84e-01 -3.21e+02 9.0e+01 1.0e+00 1.00e-01\n37 6.5e+00 4.0e-16 1.2e-14 -3.96e-01 -3.27e+01 9.0e+01 9.9e-01 1.00e-01\n38 6.7e-01 4.0e-16 6.7e-15 -4.70e-01 -3.84e+00 9.8e-01 9.8e-01 1.00e-01\n39 7.8e-02 4.0e-16 5.6e-16 -4.70e-01 -8.62e-01 1.2e+00 9.6e-01 1.00e-01\n40 9.4e-03 4.0e-16 1.9e-16 -4.97e-01 -5.44e-01 1.3e+00 9.8e-01 1.00e-01\n41 9.8e-04 4.0e-16 3.7e-16 -5.00e-01 -5.05e-01 1.3e+00 9.8e-01 1.00e-01\n42 1.0e-04 4.0e-16 1.9e-16 -5.00e-01 -5.00e-01 1.4e+00 9.8e-01 1.00e-01\n43 1.0e-05 4.0e-16 9.3e-17 -5.00e-01 -5.00e-01 1.4e+00 9.8e-01 1.00e-01\n44 1.0e-06 4.0e-16 0.0e+00 -5.00e-01 -5.00e-01 1.4e+00 9.8e-01 1.00e-01\nStrange behavior : primal < dual :: line 158 in sdpa_solve.cpp\n45 1.0e-07 4.0e-16 1.9e-16 -5.00e-01 -5.00e-01 9.0e-01 9.0e-01 1.00e-01\n\nphase.value  = pdFEAS    \n   Iteration = 45\n          mu =   +1.02521637242480125e-07\nrelative gap =   +5.12608186398200161e-07\n        gap  =   +5.12608186398200161e-07\n     digits  =   +5.98918466331551791e+00\nobjValPrimal =   -4.99999970045253705e-01\nobjValDual   =   -5.00000482653440104e-01\np.feas.error =   +4.44089209850062616e-16\nd.feas.error =   +2.22044604925031308e-16\ntotal time   = 0.001674\n  main loop time = 0.001673\n      total time = 0.001674\nfile  check time = 0.000000\nfile change time = 0.000001\nfile   read time = 0.000000\nConverting optimal solution to CLP format\nSDPA end at [Wed Nov 25 14:58:53 2026]\n{\"stage\": \"standard_SDPA_completed\", \"phase\": \"pdFEAS\", \"info\": {\"phasevalue\": \"pdFEAS\", \"iteration\": 45, \"primalObj\": 0.5000004826534401, \"dualObj\": 0.4999999700452537, \"primalError\": 2.220446049250313e-16, \"dualError\": 4.440892098500626e-16, \"digits\": 5.989184663315518, \"dualityGap\": 5.126081863982002e-07, \"mu\": 1.0252163724248013e-07, \"solveTime\": 0.001704, \"convertingTime\": 0.000153, \"retrievingTime\": 1e-06, \"sdpaTime\": 0.001862}}\n{\"status\": \"EXACT_PROJECTIVE_FIXTURES_PASSED\", \"phase\": \"pdFEAS\", \"all_affine_coefficient_identities_checked\": true, \"known_objective_checked\": true, \"zero_scale_recession_point_rejected\": true, \"exact_original_point\": {\"x\": \"1\"}}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "d218845332a6f51dc912e4681854c562d69d5dc4dea8b7c83c6124eb13db901a",
+  "lock_owner": "wrapper"
+}

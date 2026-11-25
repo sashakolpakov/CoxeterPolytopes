@@ -940,6 +940,62 @@ Solving this dual seeks feasibility. Infeasibility of the dual search
 does not establish geometric nonexistence. Weak SDP infeasibility can
 also prevent obtaining a separator of this normalized form.
 
+A bounded objective supplies another solver formulation after exact
+equality elimination. Choose a free coordinate x_g with an existing pure
+nonnegative scalar row. Write h=1/(1+x_g), y_i=h*x_i for i!=g, and
+y_g=1-h. The equivalent search for a positive-scale point is
+
+    maximize h,
+    F_bg + sum_(i!=g) y_i F_bi + h(F_b0-F_bg) >=0 for every b,
+    h>=0.
+
+The old nonnegative x_g row becomes a positive multiple of 1-h>=0,
+so 0<=h<=1. Each displayed matrix is exactly h*F_b(x) when h>0,
+with x_i=y_i/h and x_g=(1-h)/h. Every original feasible point maps to
+a feasible point with h>0, and every such positive-scale point maps back.
+This changes neither the global constraint families nor their feature
+coefficients. The implemented gauge is the nonnegative shared-edge
+measure mass in the prepared coordinates. Its finite positive changes
+of units are included in the recorded substitution.
+
+An h=0 point is recession data and cannot certify original feasibility.
+A numerical zero optimum cannot certify original infeasibility either;
+it still needs a checked bound or another exact infeasibility argument.
+Positive-scale numerical answers are rounded in the projective
+coordinates, divided by their exact positive h, and tested in every
+original equality and cone. The mapping identities are also checked
+coefficient by coefficient. This bounded optimization is an alternative
+to the zero-objective and normalized Farkas searches, not an extra
+geometric assumption.
+
+For numerical face discovery one can instead solve the auxiliary problem
+
+    maximize a,   a<=1,   F_b(x)-a I>=0 for every b.
+
+It has a known strictly feasible starting point: take x=0 and a=-rho,
+where rho>=1 and every constant diagonal plus rho exceeds its row's
+sum of absolute off-diagonal entries by at least one. Each shifted
+matrix is then strictly diagonally dominant with positive diagonal.
+The upper-bound cone is strictly positive as well.
+The implementation verifies this rational inequality for every row.
+
+The auxiliary dual has Z_b>=0, lambda>=0 and
+
+    sum_b <F_bi,Z_b>=0,
+    sum_b trace(Z_b)+lambda=1,
+
+and gives the upper bound a<=sum_b <F_b0,Z_b>+lambda. A positive primal
+margin gives original feasibility, subject to checking the actual original
+matrices. Exact cone weights with zero constant pairing and lambda=0
+expose a face: every positive summand in sum_b <F_b(x),Z_b>=0 must vanish.
+For a positive rational rank-one summand v v^T this forces F_b(x)v=0.
+These forced linear equations can be eliminated before another solve.
+Exact negative constant pairing gives the usual normalized Farkas
+certificate. Numerical zero margins or approximate kernel directions
+alone establish none of these conclusions. This formulation differs from
+minimizing a nonnegative common violation, whose zero objective can have
+only the trivial cone multipliers and therefore need not expose a face.
+
 The exploratory LP uses a declared outer approximation of PSD blocks
 by e_i and e_i+-e_j test directions. The complete SDP remains separately
 exported. A numerical result is only a candidate. Exact verification
@@ -960,3 +1016,12 @@ the full ideal-link product law, or all overlaps between different face
 stars along edges. Those are possible uniform refinements of this fixed
 global model. They are omitted constraints, not omitted classes of
 polytopes; the actual-polytope lift still applies.
+
+The current dimension-57 level-5 SDP is exactly feasible. The
+[rational witness](../../results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json)
+passes all 9,388 original equalities, 3,643 PSD blocks and 134,833 scalar
+inequalities. A separate [integer Bareiss verification](../../results/global_shared_cusp_independent/result.json)
+also checks all 193,440 adjoint equations in a certificate ruling out
+the normalized Farkas dual. The original input is unchanged. This
+computational conclusion concerns the stated outer relaxation and
+does not lower the accepted dimension bound.

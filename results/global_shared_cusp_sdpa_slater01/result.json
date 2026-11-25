@@ -1,0 +1,78 @@
+{
+  "accepted_bounds_changed": false,
+  "elapsed_seconds": 193.98393162497086,
+  "exact_recovery_failure": "No exact PSD reconstruction: [{\"decimal_grid_digits\": 6, \"reason\": \"supporting_components3_monomial_upper_272_attach0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 10, \"reason\": \"supporting_components3_monomial_upper_257_attach0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 16, \"reason\": \"supporting_components3_monomial_upper_272_attach0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 24, \"reason\": \"supporting_components3_monomial_upper_272_attach0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 36, \"reason\": \"supporting_components3_monomial_upper_272_attach0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 48, \"reason\": \"supporting_components3_monomial_upper_272_attach0: Negative exact PSD pivot at 0\"}, {\"decimal_grid_digits\": 60, \"reason\": \"supporting_components3_monomial_upper_272_attach0: Negative exact PSD pivot at 0\"}]",
+  "face_search": {
+    "all_rays_are_from_source_cones": true,
+    "candidate_blocks": 24025,
+    "candidate_quadratic_rows": 26888,
+    "exact_identity_verified": true,
+    "forced_kernel_rows": 3,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "positive_summands": 3,
+    "proposed_support": 3,
+    "status": 0
+  },
+  "native": {
+    "command": [
+      "/Users/sasha/.local/opt/coxeter-sdpa-7.3.21/bin/sdpa",
+      "-ds",
+      "/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa_slater01/input.dat-s",
+      "-o",
+      "/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa_slater01/native.result",
+      "-p",
+      "/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa_slater01/param.sdpa",
+      "-numThreads",
+      "1",
+      "-id",
+      "/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa_slater01/initial.dat"
+    ],
+    "executable_sha256": "65292a57cc9cce3c3f206e5faf541c303802589c238a1d82722bfafbe8b0e0d7",
+    "initial_path": "/Users/sasha/CoxeterPolytopes/results/global_shared_cusp_sdpa_slater01/initial.dat",
+    "initial_sha256": "922b2f0a2a8430bf4bc3f857997efe9a922d69e291abbfa0f06bec5b3a35a43e",
+    "input_sha256": "cb4b73a1f80ff8f6c94a17ab944075535238d7d75f379f9750173201bdc88ed9",
+    "one_thread": true,
+    "parameters_sha256": "8b2f60f69ac4cd4a19edaf6eab06a6f9171e998891b401135d51b9e10feb7b21",
+    "precision_bits": null,
+    "returncode": 0,
+    "timed_out": false
+  },
+  "native_phase": "pFEAS",
+  "numerical_margin": "-10359062882350557/625000000000000000000000",
+  "original_input_sha256": "88f854280dd973e9cbf570d81329f593f745a09fd0d1a54f194eb7fc6aa290d5",
+  "original_numerical_residuals": {
+    "floating_diagnostics_are_not_exact_certificates": true,
+    "maximum_absolute_original_equality_residual": 0.0,
+    "minimum_original_cone_eigenvalue": -1.2794e-12,
+    "minimum_scaled_original_cone_eigenvalue": -1.2794e-12,
+    "worst_original_block": "supporting_components4_monomial_upper_555_attach2"
+  },
+  "source_Farkas_completion": {
+    "count": 7867,
+    "examples": [
+      {
+        "value": "-185485447/114000000000000000000",
+        "variable": "finite_vertices_m267"
+      },
+      {
+        "value": "-5470142327/1140000000000000000000",
+        "variable": "finite_vertices_m268"
+      },
+      {
+        "value": "-10635969199/2850000000000000000000",
+        "variable": "finite_vertices_m269"
+      },
+      {
+        "value": "-27105737/14250000000000000000",
+        "variable": "finite_vertices_m270"
+      },
+      {
+        "value": "-19410813713/5700000000000000000000",
+        "variable": "finite_vertices_m271"
+      }
+    ],
+    "reason": "negative_completed_coordinate_weights"
+  },
+  "status": "EXACT_SOURCE_CONE_FACE_EXPOSED_FEASIBILITY_UNDECIDED",
+  "strictly_feasible_auxiliary": true
+}

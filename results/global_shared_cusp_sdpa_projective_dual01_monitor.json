@@ -1,0 +1,59 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/recover_sdpa_projective_dual_20261125.py",
+    "--output",
+    "results/global_shared_cusp_sdpa_projective_dual01"
+  ],
+  "elapsed_seconds": 14.905,
+  "peak_process_tree_rss_bytes": 853540864,
+  "initial_resources": {
+    "free_disk_gib": 287.77,
+    "available_memory_gib": 9.91,
+    "disk_free_bytes": 308989140992,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10637492224,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 31.066357,
+    "available_memory_percent": 41.278903,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 3808,
+  "stdout": "{\"status\": \"NO_EXACT_REDUCED_CERTIFICATE\", \"source_model\": \"results/global_shared_cusp_sdpa_equilibrated01/equilibrated.exact.json\", \"reduced_model_sha256\": \"2e9bd7c3291bb18352e83b0ecda3ee286e8f410a7c7efb5b89dd92da50710591\", \"original_infeasibility_requires_reduction_chain_review\": true, \"accepted_bounds_changed\": false, \"attempts\": [{\"reason\": \"negative_completed_coordinate_weights\", \"count\": 1193, \"examples\": [{\"variable\": \"finite_vertices_m438\", \"value\": \"-648328515493317006581743191584235418702148575932427031327/15824569242574640982061256234357949239762796446370000000000000\"}, {\"variable\": \"finite_vertices_m439\", \"value\": \"-1544012653538234284884878738114989926203542653620094855421/158245692425746409820612562343579492397627964463700000000000000\"}, {\"variable\": \"shared_edge_support_m0\", \"value\": \"-41719949047713978643497949177155916551396302822130250282590095827203341567111910454265559520338321378319/2392946850130434658689664829458728082803593332947700968786921000030201846231327725728399800000000000000\"}, {\"variable\": \"supporting_components3_m3589\", \"value\": \"-4958590312101890688938530457749597731061878913908797259144754481/211937433809500306260739544688947030267937094765873920000000000000000\"}, {\"variable\": \"supporting_components3_m3591\", \"value\": \"-45025077910226705235984459034956027568576893663498100924343/10127463745854652184294908237633059218614091592960000000000000000\"}]}, {\"reason\": \"negative_completed_coordinate_weights\", \"count\": 1233, \"examples\": [{\"variable\": \"finite_vertices_m438\", \"value\": \"-26382618261192337989548448326195531956805269915908019329518221043/659357051773943374252552343098247884990116518598750000000000000000000\"}, {\"variable\": \"finite_vertices_m439\", \"value\": \"-16577705019900333062390760906236507168594779131568209761032576009/1758285471397182331340139581595327693306977382930000000000000000000000\"}, {\"variable\": \"shared_edge_support_m0\", \"value\": \"-6953295473786106172313841583382684441177936524623976286186238648738991445120377713251377638723109641529572004931/398824475021739109781610804909788013800598888824616828131153500005033641038554620954733300000000000000000000000\"}, {\"variable\": \"supporting_components3_m3589\", \"value\": \"-1423763059263948379109042419645898618192119311135227559747879384329474653/70225300488465379257030761831456654870526775448216160000000000000000000000000\"}, {\"variable\": \"supporting_components3_m3591\", \"value\": \"-13566946468507467898906146090170657327180534906992604887847439011/2197800292069151949716776961291896531817294182500000000000000000000000\"}]}, {\"reason\": \"negative_completed_coordinate_weights\", \"count\": 1233, \"examples\": [{\"variable\": \"finite_vertices_m438\", \"value\": \"-40202081373830887884060479424344846554562237185792136010308690493095737/1004734555084104189337222618054472967603987075960000000000000000000000000000\"}, {\"variable\": \"finite_vertices_m439\", \"value\": \"-2486691539381950899466776590208502298314416868728089386702471880222876921/263742820709577349701020937239299153996046607439500000000000000000000000000000\"}, {\"variable\": \"shared_edge_support_m0\", \"value\": \"-1552845143911467939634278274799023320807439744098528937929594332183206036399199530881856006002491567538359819910947039/89067500625202282581501172312359606059687096759839986431274975187228356559478699468799000000000000000000000000000000\"}, {\"variable\": \"supporting_components3_m3589\", \"value\": \"-5979806575113235632751679658409489315535270367285777472214951126040430299414241637/294946262051554592879529199692117950456212456882507872000000000000000000000000000000000\"}, {\"variable\": \"supporting_components3_m3591\", \"value\": \"-520981622703546671454468598568157723641008098044253223038216189747930480403/84395531215455434869124235313608826821784096608000000000000000000000000000000000\"}]}], \"elapsed_seconds\": 14.733038958976977}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "8f74f5236c692ca77e6cec533a3e0fc5f9799caa2562d432527b4b7ca72f7ba5",
+  "lock_owner": "wrapper"
+}

@@ -93,4 +93,6 @@ finite-volume constraints has been removed.
 
 A new [global LP/SDP research formulation](notes/lp/global_formulation.md)
 uses shared Gram data and common incidence marginals. It is separate from
-the completed proofs and has established no improved bound.
+the completed proofs and has established no improved bound. The current
+dimension-57 SDP is [exactly feasible](results/global_shared_cusp_independent/result.json),
+as checked independently in its full original matrices.

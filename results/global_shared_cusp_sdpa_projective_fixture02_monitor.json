@@ -1,0 +1,60 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_sdpa_projective_20261125.py",
+    "--check",
+    "--output",
+    "results/global_shared_cusp_sdpa_projective_fixture02"
+  ],
+  "elapsed_seconds": 0.244,
+  "peak_process_tree_rss_bytes": 100106240,
+  "initial_resources": {
+    "free_disk_gib": 287.92,
+    "available_memory_gib": 9.69,
+    "disk_free_bytes": 309151059968,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10407903232,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 31.082637,
+    "available_memory_percent": 40.38798,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 2584,
+  "stdout": "/Users/sasha/.local/opt/coxeter-sdpa-python-0.2.3/sdpap/sdpap.py:6: SyntaxWarning: \"\\i\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\i\"? A raw string is also an option.\n  subject to Ax - b \\in J,  x \\in K\n{\"stage\": \"standard_SDPA_start\", \"variables\": 1, \"scalar_rows\": 3, \"PSD_blocks\": 1, \"maximum_iterations\": 80}\nSDPA start at [Wed Nov 25 14:59:22 2026]\nNumThreads  is set as 1\nSchur computation : DENSE \nConverted to SDPA internal data / Starting SDPA main loop\n   mu      thetaP  thetaD  objP      objD      alphaP  alphaD  beta \n 0 1.0e+00 1.0e+00 1.0e+00 -0.00e+00 -2.00e+00 1.0e+00 1.0e+00 3.00e-01\n 1 3.0e-01 2.0e-03 6.3e-16 -4.50e-01 -1.95e+00 1.0e+00 1.2e+00 3.00e-01\n 2 4.9e-02 5.6e-17 1.5e-16 -4.43e-01 -6.87e-01 9.6e-01 1.0e+00 1.00e-01\n 3 5.4e-03 0.0e+00 7.4e-17 -4.94e-01 -5.21e-01 9.9e-01 9.9e-01 1.00e-01\n 4 5.8e-04 0.0e+00 3.7e-17 -4.99e-01 -5.02e-01 1.0e+00 1.0e+00 1.00e-01\n 5 6.0e-05 5.6e-17 0.0e+00 -5.00e-01 -5.00e-01 1.0e+00 1.0e+00 1.00e-01\n 6 6.0e-06 5.6e-17 7.4e-17 -5.00e-01 -5.00e-01 1.0e+00 1.0e+00 1.00e-01\n 7 6.0e-07 5.6e-17 0.0e+00 -5.00e-01 -5.00e-01 1.0e+00 1.0e+00 1.00e-01\nStrange behavior : primal < dual :: line 158 in sdpa_solve.cpp\n 8 6.0e-08 1.1e-16 7.4e-17 -5.00e-01 -5.00e-01 9.0e-01 9.0e-01 1.00e-01\n\nphase.value  = pdFEAS    \n   Iteration = 8\n          mu =   +5.99693096073215992e-08\nrelative gap =   +2.99846548035276328e-07\n        gap  =   +2.99846548035276328e-07\n     digits  =   +6.22207103182600285e+00\nobjValPrimal =   -4.99999943221328791e-01\nobjValDual   =   -5.00000243067876826e-01\np.feas.error =   +2.22044604925031308e-16\nd.feas.error =   +2.22044604925031308e-16\ntotal time   = 0.000346\n  main loop time = 0.000346\n      total time = 0.000346\nfile  check time = 0.000000\nfile change time = 0.000000\nfile   read time = 0.000000\nConverting optimal solution to CLP format\nSDPA end at [Wed Nov 25 14:59:22 2026]\n{\"stage\": \"standard_SDPA_completed\", \"phase\": \"pdFEAS\", \"info\": {\"phasevalue\": \"pdFEAS\", \"iteration\": 8, \"primalObj\": 0.5000002430678768, \"dualObj\": 0.4999999432213288, \"primalError\": 2.220446049250313e-16, \"dualError\": 2.220446049250313e-16, \"digits\": 6.222071031826003, \"dualityGap\": 2.9984654803527633e-07, \"mu\": 5.99693096073216e-08, \"solveTime\": 0.000376, \"convertingTime\": 0.000145, \"retrievingTime\": 1e-06, \"sdpaTime\": 0.000527}}\n{\"status\": \"EXACT_PROJECTIVE_FIXTURES_PASSED\", \"phase\": \"pdFEAS\", \"all_affine_coefficient_identities_checked\": true, \"known_objective_checked\": true, \"zero_scale_recession_point_rejected\": true, \"exact_original_point\": {\"x\": \"1\"}}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "d218845332a6f51dc912e4681854c562d69d5dc4dea8b7c83c6124eb13db901a",
+  "lock_owner": "wrapper"
+}

@@ -7,7 +7,7 @@ import time
 from . import conic, feasibility
 
 
-def run(root,out,source,prepared,candidate_path):
+def run(root,out,source,prepared,candidate_path,cone_closure=False):
     out.mkdir();started=time.monotonic()
     paths=[source,prepared/"compiled.exact.json",prepared/"substitutions.exact.json",candidate_path,
         Path(__file__),root/"research/global_formulation/conic.py",root/"research/global_formulation/feasibility.py",
@@ -26,13 +26,22 @@ def run(root,out,source,prepared,candidate_path):
             q=block["entries"][0][0];value=conic.value(q,point)
             if value<0:negative.append((b,q,value))
     report=dict(status="NO_EXACT_FEASIBILITY_DECISION",negative_scalar_rows=len(negative),
-        original_input_unchanged=True,proposals_are_recovery_restrictions_only=True,attempts=[],source_bindings=before)
+        original_input_unchanged=True,proposals_are_recovery_restrictions_only=True,
+        conditional_cone_kernel_closure=cone_closure,attempts=[],source_bindings=before)
+    print(json.dumps(dict(stage="original_candidate_loaded",negative_scalar_rows=len(negative))),flush=True)
     choices=[("all_negative_scalars",negative),
         ("negative_coordinate_rows",[(b,q,v) for b,q,v in negative if len(q)==1 and "" not in q])]
+    if cone_closure:choices.reverse()
     for name,selected in choices:
         extra=[feasibility.substitute(q,subs) for _,q,_ in selected]
         try:
-            refined,updates=conic.eliminate(compiled,extra)
+            if cone_closure:
+                target=conic.model(compiled["variables"],compiled["blocks"],extra)
+                def progress(stage,data):
+                    print(json.dumps(conic.plain(dict(data,stage=stage,proposal=name))),flush=True)
+                refined,updates,_,trace=feasibility.prepare(target,progress,linear_faces=False,seconds=240)
+                conic.write_json(out/(name+"_conditional_cone_trace.exact.json"),trace)
+            else:refined,updates=conic.eliminate(compiled,extra)
             combined={v:feasibility.substitute(q,updates) for v,q in subs.items()}
             print(json.dumps(dict(stage=name,proposed_equalities=len(extra),free_variables=len(refined["variables"]))),flush=True)
             exact,checked=conic.reconstruct(original,refined,combined,[raw[v] for v in refined["variables"]])

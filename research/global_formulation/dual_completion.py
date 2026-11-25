@@ -73,7 +73,7 @@ def rational_grams(matrices,digits):
     return answer,grams
 
 
-def complete(original,compiled,matrices,digits):
+def complete(original,compiled,matrices,digits,block_scales=None,block_diagonals=None):
     weights,grams=rational_grams(matrices,digits)
     pivots={}
     for b,block in enumerate(compiled["blocks"]):
@@ -81,13 +81,15 @@ def complete(original,compiled,matrices,digits):
         row=block["entries"][0][0]
         if len(row)==1:
             v,c=next(iter(row.items()))
-            if v and c>0:pivots.setdefault(v,(b,c))
+            if v:pivots.setdefault(v,[]).append((b,c))
     if set(pivots)!=set(compiled["variables"]):
         raise ValueError("Some free moment lacks a pure nonnegative coordinate row")
-    for b,_ in pivots.values():weights[b]=[[F(0)]]
+    for options in pivots.values():
+        for b,_ in options:weights[b]=[[F(0)]]
     residual=adjoint(compiled,weights)
     negative=[]
-    for v,(b,c) in pivots.items():
+    for v,options in pivots.items():
+        b,c=next(((b,c) for b,c in options if -residual.get(v,F(0))/c>=0),options[0])
         value=-residual.get(v,F(0))/c
         if value<0:negative.append((v,value))
         weights[b]=[[value]]
@@ -96,6 +98,10 @@ def complete(original,compiled,matrices,digits):
     repaired=adjoint(compiled,weights)
     if any(v for v in repaired):raise ValueError("The pure-coordinate adjoint repair was not exact")
     if repaired.get("",F(0))>=0:return None,dict(reason="nonnegative_certificate_constant")
+    block_scales=block_scales or [F(1)]*len(weights)
+    block_diagonals=block_diagonals or [[F(1)]*len(M) for M in weights]
+    weights=[[[value*scale*d[i]*d[j] for j,value in enumerate(row)] for i,row in enumerate(M)]
+        for scale,d,M in zip(block_scales,block_diagonals,weights,strict=True)]
     potentials,constant=equality_potentials(original,adjoint(original,weights))
     if constant!=repaired[""]:raise ValueError("The equality lift changed the reduced constant")
     normalization=-constant
@@ -103,7 +109,13 @@ def complete(original,compiled,matrices,digits):
     for b,M in enumerate(weights):
         for i,row in enumerate(M):
             for j in range(i,len(row)):point[f"dual_b{b}_{i}_{j}"]=row[j]/normalization
-    for item in grams.values():item["weight"]=1/normalization
+    for b,item in grams.items():
+        # Clear the rational diagonal congruence into integer Gram factors.
+        from math import lcm
+        d=block_diagonals[b];den=lcm(*(v.denominator for v in d))
+        item["factors"]=[[int(d[i]*den)*v for v in row] for i,row in enumerate(item["factors"])]
+        item["denominator"]*=den
+        item["weight"]=block_scales[b]/normalization
     return (point,grams),dict(reason="exact_candidate_completed",coordinate_pivots=len(pivots),
         rational_Gram_digits=digits,positive_normalization=normalization)
 
@@ -118,7 +130,7 @@ def verify(original,dual,point,grams):
         if r==1:
             if conic.value(block["entries"][0][0],point)<0:raise ValueError("A scalar dual weight is negative")
             continue
-        item=grams[b];B=item["factors"];d=item["denominator"];w=item["weight"]
+        item=grams.get(b,grams.get(str(b)));B=item["factors"];d=item["denominator"];w=F(item["weight"])
         if w<=0 or d<=0 or len(B)!=r:raise ValueError("Invalid rational Gram proof")
         for i,row in enumerate(block["entries"]):
             for j,entry in enumerate(row):

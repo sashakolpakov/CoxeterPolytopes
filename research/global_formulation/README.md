@@ -42,24 +42,63 @@ second-level point has no extension preserving all its old moments:
 seven new equations involving auxiliary inverse moments fail. This does
 not separately certify a gain from shared-support constraints. These
 checks do not decide global feasibility.
-The current SDP has no verified feasible point or infeasibility
-certificate. Before the separate cusp marginals, a
-[15-round PSD-cut search](../../results/global_shared_star_search/result.json)
-retained violated PSD blocks and supplied no certificate. An earlier
-version's SDPA-GMP run exhausted 650 seconds without a checkpoint; its
-monitor PASS means worker completion.
+**The full level-5 SDP is exactly feasible.** Its
+[rational point](../../results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json)
+satisfies every one of the original 9,388 equalities, 3,643 PSD blocks and
+134,833 scalar inequalities. The original input has SHA256
+`88f854280dd973e9cbf570d81329f593f745a09fd0d1a54f194eb7fc6aa290d5`;
+the point's canonical SHA256 is
+`3ead900e576f667ecb9d9d3cbba5f2755c4e1cdc30337a5d717f4aed2cac75fc`.
 
-The [current SDPA-GMP run](../../results/global_shared_cusp_sdpa/result.json)
-completed a one-iteration checkpoint batch in 391 native solver seconds,
-at phase `noINFO`. Exact presolve reduced the input to 23,625 free
-variables, 3,213 PSD blocks and 92,823 scalar rows. The 23 MB checkpoint
-exceeded the old reader's limit; the reader was enlarged and the saved
-answer was then [recovered and checked](../../results/global_shared_cusp_recovery/result.json)
-without another solver run. Recovery verified byte identity of the
-ordered reduced inputs. The candidate has large numerical cone violations and all
-seven attempted exact rounding/projection grids fail. No feasibility or
-infeasibility certificate is claimed from this initial checkpoint. The
-native data remain available for a subsequent restart.
+The [independent check](../../results/global_shared_cusp_independent/result.json)
+uses integer symmetric-pivoted Bareiss elimination, separately from the
+rational Schur checker used during recovery. It also verifies the
+[certificate ruling out the normalized Farkas dual](../../results/global_shared_cusp_independent/normalized_dual_infeasibility_certificate.exact.json):
+all **193,440 adjoint equations** hold exactly, and its cone matrices are
+the independently checked primal slacks. Thus this strengthened relaxation
+cannot exclude dimension 57. No geometric constraint or accepted bound
+was changed, and no geometric realization is asserted.
+
+The successful [SDPA run](../../results/global_shared_cusp_sdpa_slater01/result.json)
+maximized a common PSD margin with an upper bound of one. A rational
+Gershgorin argument supplied a strictly feasible auxiliary starting point.
+Native SDPA reached phase `pFEAS` after 43 iterations; its original-point
+violations were about `1.3e-12`, so the numerical answer alone was not
+accepted. Its dual suggested a positive zero identity among three
+nonnegative moment-bound rows.
+
+The [exact recovery](../../results/global_shared_cusp_scalar_circuits01/result.json)
+finds nine positive scalar circuits throughout the existing matrix,
+forcing 27 rows to vanish. Their
+[combined rational zero identity](../../results/global_shared_cusp_scalar_circuits01/verified_order_faces.exact.json)
+is checked coefficient by coefficient. Eliminating the resulting
+18 independent equalities and rounding the remaining free coordinates to
+six decimal places gives the point above. Every original equality and
+cone is then checked again. These are implied cone-face reductions of the
+same problem, rather than additional geometric restrictions.
+
+Earlier necessary-data, normalized trace-dual, common-violation,
+projective and conditional-face runs remain in the execution manifest.
+They include `noINFO`, a rejected `pdINF` status, failed exact recoveries,
+and time limits. In particular, the higher-precision central-start batch
+exhausted its 730-second native limit without a checkpoint. A watchdog
+PASS denotes monitored worker completion, not mathematical success.
+
+The numerical tools include exact narrow-interval coordinates for H3/H4,
+positive column units and diagonal cone congruences. Both inverse affine
+identities and the full original-model acceptance checks are retained.
+The normalized certificate trace formulation uses one equation per free
+coordinate plus the constant pairing `-1`; it avoids eliminating roughly
+193,000 cone coordinates. Candidate certificates require rational positive
+Gram factors, an exact equality-potential lift and the original adjoint.
+
+The native SDPA command line supports saved-point restarts. Mixed-cone
+fixtures check free-coordinate signs, off-diagonal factors, scalar/PSD
+order and actual use of the saved initial point. Standard and GMP runs
+share the same original-model checker. Auxiliary shifts, zero projective
+scales and candidate-only population restrictions never count as original
+feasibility. The independent verification of the final rational point
+requires neither SDPA nor its installation.
 
 The finite truncation still relaxes integer ranks and discrete labels,
 uses rational envelopes for H3/H4, and omits many higher moments. It
@@ -165,9 +204,8 @@ uniform identities. The LP version replaces PSD blocks by declared
 necessary rational-direction tests. Its failure to find a certificate
 does not resolve the SDP or the geometric problem.
 
-The first-level feasible witness rules out a separator at that moment
-level. The second-level point independently gives the same conclusion
-for level 2. Neither witness establishes feasibility of levels 3--5.
+Each earlier witness applies to its own frozen input. The full level-5
+witness above is a separate point, with separate original-input checks.
 
 Run the current complete model and its dual search, using fresh output
 names and the shared watchdog:
@@ -192,8 +230,18 @@ search LP approximations strengthened by rational PSD directions. Any
 recovered separator is lifted and checked in the complete original SDP.
 Failure of that search does not decide its feasibility.
 
-Verify the strengthened point and its dual implication with a fresh
-output directory:
+Verify the **current full level-5 point** and its normalized-dual implication:
+
+```sh
+python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
+  --ledger results/global_shared_cusp_recheck_monitor.json -- \
+  scripts/run_global_coxeter_formulation.py verify-current \
+  --input results/global_shared_cusp_current/necessary_primal.exact.json \
+  --point results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json \
+  --output results/global_shared_cusp_recheck
+```
+
+Verify the retained **second-level** point with a fresh output directory:
 
 ```sh
 python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \

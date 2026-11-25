@@ -1,0 +1,59 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_sdpa_near_recovery_20261125.py",
+    "--output",
+    "results/global_shared_cusp_near_recovery01"
+  ],
+  "elapsed_seconds": 117.521,
+  "peak_process_tree_rss_bytes": 1048526848,
+  "initial_resources": {
+    "free_disk_gib": 288.95,
+    "available_memory_gib": 8.19,
+    "disk_free_bytes": 310252630016,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 8795324416,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 31.193391,
+    "available_memory_percent": 34.130351,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 2145,
+  "stdout": "{\"stage\": \"all_negative_scalars\", \"proposed_equalities\": 374, \"free_variables\": 23282}\n{\"stage\": \"negative_coordinate_rows\", \"proposed_equalities\": 51, \"free_variables\": 23574}\n{\"status\": \"NO_EXACT_FEASIBILITY_DECISION\", \"negative_scalar_rows\": 374, \"original_input_unchanged\": true, \"proposals_are_recovery_restrictions_only\": true, \"attempts\": [{\"proposal\": \"all_negative_scalars\", \"reason\": \"No exact PSD reconstruction: [{\\\"decimal_grid_digits\\\": 6, \\\"reason\\\": \\\"global_finite_apex_capacity: Negative exact PSD pivot at 0\\\"}, {\\\"decimal_grid_digits\\\": 10, \\\"reason\\\": \\\"global_finite_apex_capacity: Negative exact PSD pivot at 0\\\"}, {\\\"decimal_grid_digits\\\": 16, \\\"reason\\\": \\\"global_finite_apex_capacity: Negative exact PSD pivot at 0\\\"}, {\\\"decimal_grid_digits\\\": 24, \\\"reason\\\": \\\"global_finite_apex_capacity: Negative exact PSD pivot at 0\\\"}, {\\\"decimal_grid_digits\\\": 36, \\\"reason\\\": \\\"global_finite_apex_capacity: Negative exact PSD pivot at 0\\\"}, {\\\"decimal_grid_digits\\\": 48, \\\"reason\\\": \\\"global_finite_apex_capacity: Negative exact PSD pivot at 0\\\"}, {\\\"decimal_grid_digits\\\": 60, \\\"reason\\\": \\\"global_finite_apex_capacity: Negative exact PSD pivot at 0\\\"}]\"}, {\"proposal\": \"negative_coordinate_rows\", \"reason\": \"No exact PSD reconstruction: [{\\\"decimal_grid_digits\\\": 6, \\\"reason\\\": \\\"finite_vertices_positive_support_tail_A_count: Negative exact PSD pivot at 1\\\"}, {\\\"decimal_grid_digits\\\": 10, \\\"reason\\\": \\\"finite_vertices_positive_support_u_A13: Nonzero row at zero PSD pivot 0\\\"}, {\\\"decimal_grid_digits\\\": 16, \\\"reason\\\": \\\"finite_vertices_positive_support_u_A13: Nonzero row at zero PSD pivot 0\\\"}, {\\\"decimal_grid_digits\\\": 24, \\\"reason\\\": \\\"finite_vertices_positive_support_u_A13: Nonzero row at zero PSD pivot 0\\\"}, {\\\"decimal_grid_digits\\\": 36, \\\"reason\\\": \\\"finite_vertices_positive_support_u_A13: Nonzero row at zero PSD pivot 0\\\"}, {\\\"decimal_grid_digits\\\": 48, \\\"reason\\\": \\\"finite_vertices_positive_support_u_A13: Nonzero row at zero PSD pivot 0\\\"}, {\\\"decimal_grid_digits\\\": 60, \\\"reason\\\": \\\"finite_vertices_positive_support_u_A13: Nonzero row at zero PSD pivot 0\\\"}]\"}], \"elapsed_seconds\": 117.26419066701783}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "1ae575302facb71a555621f8ee01cf37a072d2d39456d783f41d4d85ce4d45f8",
+  "lock_owner": "wrapper"
+}
