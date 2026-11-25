@@ -17,7 +17,7 @@ def main():
     parser.add_argument("--prepared",default="results/global_shared_cusp_prepare")
     parser.add_argument("--native-input",default="results/global_shared_cusp_sdpa/input.dat-s")
     parser.add_argument("--iterations",type=int,default=100)
-    parser.add_argument("--orientation",choices=("necessary","certificate"),default="necessary")
+    parser.add_argument("--orientation",choices=("necessary","certificate","phase1"),default="necessary")
     parser.add_argument("--seconds",type=int,default=700)
     args=parser.parse_args()
     if not 1<=args.iterations<=500 or not 1<=args.seconds<=750:raise ValueError("Use bounded native stages")

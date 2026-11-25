@@ -56,6 +56,30 @@ def certificate_input(path,problem):
         for i,block in enumerate(scalar,1):entry(len(full)+1,i,i,block["entries"][0][0])
 
 
+def phase1_input(path,problem):
+    """Minimize rho>=0 with every original cone shifted by rho*I.
+
+    At rho=0 this is precisely the unshifted necessary-data problem.
+    Native cone weights have trace at most one, avoiding an unbounded
+    zero-objective multiplier search during the feasibility phase.
+    """
+    rho="_phase1_common_violation"
+    if rho in problem["variables"]:raise ValueError("Reserved auxiliary coordinate")
+    blocks=[dict(name=b["name"],entries=[[conic.plus(q,conic.form(**{rho:1})) if i==j else q
+        for j,q in enumerate(row)] for i,row in enumerate(b["entries"])]) for b in problem["blocks"]]
+    blocks.append(dict(name="phase1_nonnegative_violation",entries=[[conic.form(**{rho:1})]]))
+    augmented=conic.model([*problem["variables"],rho],blocks)
+    conic.write_sdpa(path,augmented)
+    # The final free coordinate has objective coefficient +1. All other
+    # bytes are the ordinary checked affine SDPA encoding.
+    with path.open("r+b") as stream:
+        for _ in range(4):stream.readline()
+        objective=stream.readline()
+        if not objective.endswith(b"0\n"):raise ValueError("Unexpected native objective encoding")
+        stream.seek(stream.tell()-2);stream.write(b"1")
+    return augmented
+
+
 def native_call(input_path,out,iterations):
     import numpy as np
     sdpap,api = backend()
@@ -147,6 +171,17 @@ def checks(root,out):
     report["normalized_certificate_trace_and_affine_equality_lift"]=dual_completion.verify(P,conic.farkas(P),point,grams)
     conic.write_json(certificate/"certificate.exact.json",point)
     conic.write_json(certificate/"PSD_grams.exact.json",grams)
+    phase1=out/"phase1_fixture";phase1.mkdir()
+    P1=conic.model(["x"],[dict(name="PSD",entries=[[{},conic.form(x=1)],[conic.form(x=1),{}]]),
+        dict(name="lower",entries=[[conic.form(-1,x=1)]]),dict(name="nonnegative_x",entries=[[conic.form(x=1)]])])
+    phase1_input(phase1/"input.dat-s",P1)
+    native_call(phase1/"input.dat-s",phase1,80)
+    raw,phase=conic.native_vector(phase1/"native.result")
+    if abs(raw[-1]-F(1,2))>F(1,10**7):raise ValueError("The phase-I objective does not equal its known optimum")
+    try:conic.check_point(P1,{"x":raw[0]})
+    except ValueError:pass
+    else:raise ValueError("The shifted auxiliary point was accepted as an original point")
+    report["phase1_known_positive_optimum_and_unshifted_rejection"]=True
     if binding(sources,root)!=before:raise ValueError("A native backend-check input changed")
     conic.write_json(out/"result.json",report)
     print(json.dumps({k:v for k,v in report.items() if k!="source_bindings"}),flush=True)
@@ -178,7 +213,8 @@ def run(root,out,input_path,prepared,input_native,iterations,seconds,orientation
         native_problem,native_substitutions=conic.eliminate(original)
         conic.write_json(out/"equality_only.exact.json",native_problem)
         conic.write_json(out/"equality_only_substitutions.exact.json",native_substitutions)
-        certificate_input(out/"input.dat-s",native_problem)
+        if orientation=="phase1":phase1_input(out/"input.dat-s",native_problem)
+        else:certificate_input(out/"input.dat-s",native_problem)
         input_native=out/"input.dat-s"
     command=[sys.executable,"-B",str(root/"scripts/run_sdpa_double_frozen_20261125.py"),"native",
         "--output",str(out.relative_to(root)),"--native-input",str(input_native),"--iterations",str(iterations)]
@@ -190,13 +226,16 @@ def run(root,out,input_path,prepared,input_native,iterations,seconds,orientation
         timed_out=timed_out,returncode=code,maximum_iterations=iterations,source_bindings=before,
         original_frozen_input=str(input_path.relative_to(root)),original_input_sha256=hashlib.sha256(input_path.read_bytes()).hexdigest(),
         orientation=orientation,original_ordered_reduced_input_byte_identity_checked=orientation=="necessary",
-        certificate_trace_uses_only_original_equality_elimination=orientation=="certificate",accepted_bounds_changed=False)
+        certificate_trace_uses_only_original_equality_elimination=orientation=="certificate",
+        phase1_shifts_are_auxiliary_and_not_allowed_in_original_verification=orientation=="phase1",accepted_bounds_changed=False)
     if (out/"native.result").exists():
         values,phase=conic.native_vector(out/"native.result")
-        expected=len(native_problem["variables"])+int(orientation=="certificate")
+        expected=len(native_problem["variables"])+int(orientation!="necessary")
         if len(values)!=expected:raise ValueError("Wrong standard SDPA free-vector dimension")
         report["native_phase"]=phase
-        geometric_values=values if orientation=="necessary" else ([v/values[-1] for v in values[:-1]] if values[-1]<0 else None)
+        if orientation=="phase1":report["phase1_violation"]=values[-1]
+        geometric_values=(values if orientation=="necessary" else values[:-1] if orientation=="phase1" else
+            ([v/values[-1] for v in values[:-1]] if values[-1]<0 else None))
         if geometric_values is not None:
             raw=dict(zip(native_problem["variables"],geometric_values,strict=True))
             point={v:conic.value(q,raw) for v,q in native_substitutions.items()}
@@ -207,8 +246,11 @@ def run(root,out,input_path,prepared,input_native,iterations,seconds,orientation
                 conic.write_json(out/"original_feasible_point.exact.json",exact)
                 report.update(status="EXACT_ORIGINAL_SDP_FEASIBLE",exact_check=checked)
             except ValueError as error:report["exact_recovery_failure"]=str(error)
-        if orientation=="certificate" and report["status"]!="EXACT_ORIGINAL_SDP_FEASIBLE":
-            matrices=feasibility.native_cones(out/"native.result",native_problem,field="yMat")
+        if orientation!="necessary" and report["status"]!="EXACT_ORIGINAL_SDP_FEASIBLE":
+            if orientation=="phase1":
+                shapes=conic.model(native_problem["variables"],[*native_problem["blocks"],dict(name="rho",entries=[[{}]])])
+                matrices=feasibility.native_cones(out/"native.result",shapes,field="yMat")[:-1]
+            else:matrices=feasibility.native_cones(out/"native.result",native_problem,field="yMat")
             report["certificate_completion_attempts"]=[]
             for digits in (6,10,14):
                 proposed,completion=dual_completion.complete(original,native_problem,matrices,digits)
