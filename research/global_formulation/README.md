@@ -9,7 +9,39 @@ separate author's acceptance is claimed.
 The [execution manifest](experiments.json) records actual runs, their
 source and model hashes, failures and remaining work.
 
-The current dimension-57 formulation implements the three requested
+The revised **level-7 edge compatibility formulation** is now
+[exported](../../results/global_edge_closure_current/result.json), with
+97,515 variables, 29,259 equalities, 5,322 PSD blocks and 387,685 scalar
+inequalities. It retains every frozen level-5 constraint. Its
+[exact comparison](../../results/global_edge_closure_current/strict_strengthening_audit.json)
+finds **465 violated equations involving only old moments**, so the
+previous rational point has no extension to this model. This is a
+strict strengthening, not an infeasibility decision for the new problem.
+
+The change uses complete rooted spherical component schemas. The same
+root determines both the white components touched by a sidewall and
+its projection length. All sides share one white family population;
+both endpoints and all incident faces share one spherical edge
+population. Mixed A/B inverse-response identities now receive variance
+closure, and all available retained quadratic equation multipliers are
+included. [Deductions and actual-polytope lift](../../notes/lp/global_formulation.md#complete-rooted-edge-hosts-and-shared-edge-populations-levels-6--7).
+The new primal and its complete normalized Farkas dual are exported
+together; the 26 feature coefficients remain free.
+The [final local lift checks](../../results/global_edge_schema_lifts02/result.json)
+pass exactly with the wider twelve-variable closure budget, for both
+a triangle with nonzero attachment response and an ideal quadrilateral.
+
+Of the 465 failures, 27 are automatic consequences of the complete
+rooted classification: no spherical one-node extension can have a
+deleted component of type E8, F4 or H4. The old point gave these
+components positive attachment mass. The other 438 failures come from
+the strengthened equation closure. No selected diagram list is involved.
+The [first standard-SDPA batch](../../results/global_edge_closure_sdpa01/result.json)
+completed 22 iterations before its 500-second native limit. It produced
+neither a verified point nor a certificate. Peak monitored process-tree
+RSS was 8.78 GB. Feasibility of the revised input remains undecided.
+
+The frozen level-5 dimension-57 formulation implements the three requested
 extensions in order:
 
 1. Common supporting forests and complete attachment families, with
@@ -42,7 +74,7 @@ second-level point has no extension preserving all its old moments:
 seven new equations involving auxiliary inverse moments fail. This does
 not separately certify a gain from shared-support constraints. These
 checks do not decide global feasibility.
-**The full level-5 SDP is exactly feasible.** Its
+**The frozen level-5 SDP is exactly feasible.** Its
 [rational point](../../results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json)
 satisfies every one of the original 9,388 equalities, 3,643 PSD blocks and
 134,833 scalar inequalities. The original input has SHA256
@@ -207,30 +239,64 @@ does not resolve the SDP or the geometric problem.
 Each earlier witness applies to its own frozen input. The full level-5
 witness above is a separate point, with separate original-input checks.
 
-Run the current complete model and its dual search, using fresh output
-names and the shared watchdog:
+Rebuild the revised complete family formulation and its dual, using a
+fresh output name and the shared watchdog:
 
 ```sh
 python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/global_shared_star_export_monitor.json -- \
-  scripts/run_global_coxeter_formulation.py export --level 5 \
+  --ledger results/global_edge_rebuild_monitor.json -- \
+  scripts/run_global_coxeter_formulation.py export --level 7 \
   --threshold 57 --parity odd --upper-dimension 57 \
-  --output results/global_shared_star_export
+  --output results/global_edge_rebuild
+```
+
+The frozen primal and complete certificate dual are also retained as
+byte-verified gzip archives beside the export receipt. Restore the
+original JSON files with `gzip -dk` before using their original paths.
+The [round-trip receipt](../../results/global_edge_closure_current/archive_roundtrip.json)
+records both the restored and compressed hashes.
+Large duplicate numerical inputs and transformed matrices remain local;
+the complete original research inputs are preserved in the archives.
+
+For the standard-SDPA route used on this input, run these as **separate
+serial batches**, under the same watchdog and with fresh ledger/output
+names:
+
+```sh
+python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
+  --ledger results/edge_prepare_new_monitor.json -- \
+  scripts/prepare_global_sdp_streaming_20261125.py \
+  --input results/global_edge_closure_current/necessary_primal.exact.json \
+  --output results/edge_prepare_new
 
 python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/global_shared_star_solver_monitor.json -- \
-  scripts/run_global_coxeter_formulation.py solve-current \
-  --input results/global_shared_cusp_current/necessary_primal.exact.json \
-  --orientation certificate --solver sdpa \
-  --output results/global_shared_star_solver
+  --ledger results/edge_conditioned_new_monitor.json -- \
+  scripts/condition_global_sdp_20261125.py \
+  --input results/global_edge_closure_current/necessary_primal.exact.json \
+  --prepared results/edge_prepare_new --output results/edge_conditioned_new
+
+python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
+  --ledger results/edge_sdpa_new_monitor.json -- \
+  scripts/run_sdpa_slater_margin_20261125.py \
+  --input results/global_edge_closure_current/necessary_primal.exact.json \
+  --source results/edge_conditioned_new --seconds 500 \
+  --output results/edge_sdpa_new
 ```
+
+The first preparation's optional all-pairs cone comparisons were
+interrupted; its partial progress and explicit interruption receipt are
+retained. Streaming exact reduction finished with 68,963 free variables.
+Conditioning then checked 101 narrow intervals and every affine inverse
+identity. Neither operation changes the necessary-data problem. Timing
+can affect the number of optional presolve passes, so byte-identical
+native restarts require their own retained prepared checkpoints.
 
 Use `search-frozen-psd` with the same `--input` and a fresh output to
 search LP approximations strengthened by rational PSD directions. Any
 recovered separator is lifted and checked in the complete original SDP.
 Failure of that search does not decide its feasibility.
 
-Verify the **current full level-5 point** and its normalized-dual implication:
+Verify the **frozen full level-5 point** and its normalized-dual implication:
 
 ```sh
 python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \

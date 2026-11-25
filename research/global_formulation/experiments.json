@@ -22,36 +22,31 @@
     "results/global_unbounded_odd57_current",
     "results/global_unbounded_even56"
   ],
-  "canonical_anchored_model": "results/global_shared_cusp_current",
+  "canonical_anchored_model": "results/global_edge_closure_current",
   "cleanup_commit": "c8c86903",
-  "current_build_receipt": "results/global_shared_cusp_current/result.json",
-  "current_exact_structural_checks": "results/global_shared_cusp_final_checks/result.json",
+  "current_build_receipt": "results/global_edge_closure_current/result.json",
+  "current_exact_input_archive_receipt": "results/global_edge_closure_current/archive_roundtrip.json",
+  "current_exact_structural_checks": "results/global_edge_schema_lifts02/result.json",
+  "current_export_clique_variable_budget": 12,
   "current_feasibility": {
     "accepted_bounds_changed": false,
-    "common_grid_decimal_digits": 6,
-    "constraints_modified_during_feasibility_verification": false,
-    "earlier_failures_and_time_limits_preserved": true,
-    "exact_positive_scalar_circuits": 9,
-    "exact_recovery": "results/global_shared_cusp_scalar_circuits01/result.json",
-    "forced_scalar_rows": 27,
-    "geometric_realization_asserted": false,
-    "independent_face_equalities_eliminated": 18,
-    "independent_verification": "results/global_shared_cusp_independent/result.json",
-    "input": "results/global_shared_cusp_current/necessary_primal.exact.json",
-    "input_sha256": "88f854280dd973e9cbf570d81329f593f745a09fd0d1a54f194eb7fc6aa290d5",
-    "native_iterations": 43,
-    "native_phase": "pFEAS",
-    "native_run": "results/global_shared_cusp_sdpa_slater01/result.json",
-    "native_status_alone_not_accepted": true,
-    "normalized_dual_adjoint_equalities_checked": 193440,
-    "normalized_dual_infeasibility_certificate": "results/global_shared_cusp_independent/normalized_dual_infeasibility_certificate.exact.json",
-    "original_PSD_blocks_checked": 3643,
-    "original_equalities_checked": 9388,
-    "original_scalar_inequalities_checked": 134833,
-    "rational_point": "results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json",
-    "rational_point_canonical_sha256": "3ead900e576f667ecb9d9d3cbba5f2755c4e1cdc30337a5d717f4aed2cac75fc",
-    "status": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE",
-    "verified_point_and_dual_alternative_checkpoint": "6b1d9bc3"
+    "certificate_dual_input_sha256": "24458cf816ba8054770edfbaeb2b81be7ebfc34b75d21fc6a48f7f4ecd16c88f",
+    "input": "results/global_edge_closure_current/necessary_primal.exact.json",
+    "input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
+    "native_iterations_completed": 22,
+    "native_phase_returned": false,
+    "native_result_has_no_solution_vector": true,
+    "native_run": "results/global_edge_closure_sdpa01/result.json",
+    "native_time_limit_seconds": 500,
+    "native_timed_out": true,
+    "normalized_certificate_dual_status": "UNDECIDED",
+    "original_PSD_blocks": 5322,
+    "original_equalities": 29259,
+    "original_scalar_inequalities": 387685,
+    "original_variables": 97515,
+    "peak_process_tree_rss_bytes": 8781824000,
+    "source_bound_geometric_review_complete": false,
+    "status": "NO_EXACT_FEASIBILITY_DECISION"
   },
   "current_feasibility_uses_upper_dimension_57_anchor": true,
   "current_hierarchy": [
@@ -66,9 +61,18 @@
     {
       "constraints": "Shared sparse pointwise polynomial-ideal closure, variance PSD cliques and explicit kernel products.",
       "level": 5
+    },
+    {
+      "constraints": "Complete rooted spherical edge-host schemas, common white family states, and endpoint/incident-face marginals sharing whole-edge populations.",
+      "level": 6
+    },
+    {
+      "constraints": "Variance closure through identity degree six and twelve variables; all retained quadratic equation multipliers whose product moments are present.",
+      "level": 7
     }
   ],
   "current_numerical_reduction_models_retained_locally_not_required_for_witness_verification": true,
+  "current_structural_check_clique_variable_budget": 12,
   "date": "2026-11-25",
   "discovery_solver_source_checkpoint": "8f43d7f3",
   "formulation_source_checkpoint": "89fe6d59",
@@ -98,6 +102,44 @@
     "stronger_model_still_exactly_feasible": true
   },
   "level2_unbounded_parity_models_exported": false,
+  "level5_feasibility": {
+    "accepted_bounds_changed": false,
+    "common_grid_decimal_digits": 6,
+    "constraints_modified_during_feasibility_verification": false,
+    "earlier_failures_and_time_limits_preserved": true,
+    "exact_positive_scalar_circuits": 9,
+    "exact_recovery": "results/global_shared_cusp_scalar_circuits01/result.json",
+    "forced_scalar_rows": 27,
+    "geometric_realization_asserted": false,
+    "independent_face_equalities_eliminated": 18,
+    "independent_verification": "results/global_shared_cusp_independent/result.json",
+    "input": "results/global_shared_cusp_current/necessary_primal.exact.json",
+    "input_sha256": "88f854280dd973e9cbf570d81329f593f745a09fd0d1a54f194eb7fc6aa290d5",
+    "native_iterations": 43,
+    "native_phase": "pFEAS",
+    "native_run": "results/global_shared_cusp_sdpa_slater01/result.json",
+    "native_status_alone_not_accepted": true,
+    "normalized_dual_adjoint_equalities_checked": 193440,
+    "normalized_dual_infeasibility_certificate": "results/global_shared_cusp_independent/normalized_dual_infeasibility_certificate.exact.json",
+    "original_PSD_blocks_checked": 3643,
+    "original_equalities_checked": 9388,
+    "original_scalar_inequalities_checked": 134833,
+    "rational_point": "results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json",
+    "rational_point_canonical_sha256": "3ead900e576f667ecb9d9d3cbba5f2755c4e1cdc30337a5d717f4aed2cac75fc",
+    "status": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE",
+    "verified_point_and_dual_alternative_checkpoint": "6b1d9bc3"
+  },
+  "level5_normalized_certificate_dual_is_provably_infeasible": true,
+  "level5_strict_strengthening": {
+    "all_baseline_cones_retained": 10588,
+    "all_baseline_equalities_retained": 450,
+    "audit": "results/global_shared_cusp_final_checks/result.json",
+    "current_model_feasibility": "EXACTLY_FEASIBLE",
+    "failed_equalities_include_auxiliary_inverse_moments": true,
+    "free_feature_coefficients_retained": true,
+    "old_witness_fails_new_equalities": 7,
+    "old_witness_has_no_extension": true
+  },
   "native_SDPA_backend": {
     "GMP_executable_sha256": "430440d3810d78b9b6a24f657aa84f1797ca45b2072777e92265614287f6461f",
     "GMP_warm_start_encoding_check": "results/global_sdpa_gmp_central_check/result.json",
@@ -108,7 +150,7 @@
     "warm_start_encoding_check": "results/global_sdpa_native_central_check/result.json"
   },
   "new_constraint_families_uniform_in_dimension": true,
-  "normalized_certificate_dual_is_provably_infeasible": true,
+  "normalized_certificate_dual_is_provably_infeasible": false,
   "numerical_status_is_not_exact_verification": true,
   "other_recorded_diagnostic_exports_retained_locally": true,
   "previous_levels_1_and_2_exactly_feasible": true,
@@ -120,6 +162,8 @@
     "research/global_formulation/candidate_face.py",
     "research/global_formulation/conditioning.py",
     "research/global_formulation/dual_completion.py",
+    "research/global_formulation/edge_compatibility.py",
+    "research/global_formulation/edge_hosts.py",
     "research/global_formulation/equation_closure.py",
     "research/global_formulation/equilibration.py",
     "research/global_formulation/experiments.json",
@@ -137,6 +181,7 @@
     "research/global_formulation/sdpa_double.py",
     "research/global_formulation/separation.py",
     "research/global_formulation/slater_margin.py",
+    "research/global_formulation/streaming_presolve.py",
     "research/global_formulation/strengthening.py",
     "research/global_formulation/supporting_counts.py",
     "research/global_formulation/white_profiles.py",
@@ -170,6 +215,45 @@
     "results/global_current_sdpa_primal/solver.stdout",
     "results/global_current_sdpa_primal/source_bindings.json",
     "results/global_current_sdpa_primal_monitor.json",
+    "results/global_edge_closure_conditioned01/.gitignore",
+    "results/global_edge_closure_conditioned01/interval_conditioning.exact.json",
+    "results/global_edge_closure_conditioned01/result.json",
+    "results/global_edge_closure_conditioned01_monitor.json",
+    "results/global_edge_closure_current/.gitignore",
+    "results/global_edge_closure_current/archive_roundtrip.json",
+    "results/global_edge_closure_current/certificate_dual.exact.json.gz",
+    "results/global_edge_closure_current/necessary_primal.exact.json.gz",
+    "results/global_edge_closure_current/result.json",
+    "results/global_edge_closure_current/source_bindings.json",
+    "results/global_edge_closure_current/strict_strengthening_audit.json",
+    "results/global_edge_closure_current_monitor.json",
+    "results/global_edge_closure_prepare01/interrupted.json",
+    "results/global_edge_closure_prepare01/progress.jsonl",
+    "results/global_edge_closure_prepare01/source_bindings.json",
+    "results/global_edge_closure_prepare02/.gitignore",
+    "results/global_edge_closure_prepare02/exact_face_reduction.json",
+    "results/global_edge_closure_prepare02/progress.jsonl",
+    "results/global_edge_closure_prepare02/result.json",
+    "results/global_edge_closure_prepare02/source_bindings.json",
+    "results/global_edge_closure_prepare02_monitor.json",
+    "results/global_edge_closure_sdpa01/.gitignore",
+    "results/global_edge_closure_sdpa01/initialization.json",
+    "results/global_edge_closure_sdpa01/native.result",
+    "results/global_edge_closure_sdpa01/native_metadata.json",
+    "results/global_edge_closure_sdpa01/param.sdpa",
+    "results/global_edge_closure_sdpa01/result.json",
+    "results/global_edge_closure_sdpa01/solver.stdout",
+    "results/global_edge_closure_sdpa01/source_bindings.json",
+    "results/global_edge_closure_sdpa01_monitor.json",
+    "results/global_edge_docs_cleanup_20261125.json",
+    "results/global_edge_docs_sphinx_receipt_20261125.txt",
+    "results/global_edge_model_archive01_monitor.json",
+    "results/global_edge_schema_checks01/result.json",
+    "results/global_edge_schema_checks01_monitor.json",
+    "results/global_edge_schema_lifts01/result.json",
+    "results/global_edge_schema_lifts01_monitor.json",
+    "results/global_edge_schema_lifts02/result.json",
+    "results/global_edge_schema_lifts02_monitor.json",
     "results/global_level2_audit/result.json",
     "results/global_level2_audit/source_bindings.json",
     "results/global_level2_audit_monitor.json",
@@ -514,7 +598,11 @@
     "results/global_unbounded_odd57_current/source_bindings.json",
     "results/global_unbounded_odd57_current_monitor.json",
     "results/global_unbounded_odd57_monitor.json",
+    "scripts/archive_global_model_20261125.py",
     "scripts/build_sdpa_native_serial_20261125.py",
+    "scripts/check_global_edge_compatibility_20261125.py",
+    "scripts/condition_global_sdp_20261125.py",
+    "scripts/prepare_global_sdp_streaming_20261125.py",
     "scripts/recover_sdpa_order_faces_20261125.py",
     "scripts/recover_sdpa_projective_dual_20261125.py",
     "scripts/run_global_coxeter_formulation.py",
@@ -526,11 +614,11 @@
     "scripts/run_sdpa_projective_20261125.py",
     "scripts/run_sdpa_slater_margin_20261125.py"
   ],
+  "publication_only_Sphinx_check": "results/global_edge_docs_sphinx_receipt_20261125.txt",
   "remaining_work": [
-    "Develop uniformly valid higher closure and compatibility constraints that exclude the current exact witness.",
-    "Match full shared edge diagrams and construct joint three-face supporting states.",
-    "Prove any additional old quadrilateral-transfer premises in the enlarged dimension domain.",
-    "Obtain separate author source-bound review and root acceptance before any new dimension-bound claim."
+    "Decide the new level-7 primal or obtain and rigorously verify a certificate from its dual.",
+    "Complete the separate source-bound review of the geometric lift before any bound update.",
+    "Retain fuller edge-state moments and joint three-face states if the new necessary-data relaxation remains feasible."
   ],
   "retained_source_builds_are_historical_not_a_combined_regeneration_claim": true,
   "runs": [
@@ -2854,6 +2942,256 @@
       "reported_status": "EXACT_FROZEN_PRIMAL_FEASIBLE_AND_NORMALIZED_CERTIFICATE_DUAL_INFEASIBLE",
       "result": "results/global_shared_cusp_independent/result.json",
       "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 1.355,
+      "files": {
+        "results/global_edge_schema_checks01/result.json": {
+          "bytes": 1854,
+          "sha256": "a14ab18006dc5cf10d5416b980bb5a9420d0a827b98f1c04d2479006d52cca92"
+        },
+        "results/global_edge_schema_checks01_monitor.json": {
+          "bytes": 4395,
+          "sha256": "b1ab7142f0c99cc68b2eba11a57b94d7e55b0058f420763cded47d8eb1384f1f"
+        }
+      },
+      "id": "global_edge_schema_checks01",
+      "monitor": "results/global_edge_schema_checks01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "EXACT_COMPLETE_EDGE_SCHEMA_CHECKS_PASSED",
+      "peak_process_tree_rss_bytes": 63668224,
+      "reported_status": "EXACT_COMPLETE_EDGE_SCHEMA_CHECKS_PASSED",
+      "result": "results/global_edge_schema_checks01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 151.239,
+      "files": {
+        "results/global_edge_schema_lifts01/result.json": {
+          "bytes": 2343,
+          "sha256": "17d9558152b3cc288a338cb8627794208ed943016217e1aaeb479b309887583c"
+        },
+        "results/global_edge_schema_lifts01_monitor.json": {
+          "bytes": 4877,
+          "sha256": "e47f54715f0a2b8e2e4d070c1aad9db41a1b931dc14173d618416ff50966cdbc"
+        }
+      },
+      "id": "global_edge_schema_lifts01",
+      "monitor": "results/global_edge_schema_lifts01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "EXACT_COMPLETE_EDGE_SCHEMA_CHECKS_PASSED",
+      "peak_process_tree_rss_bytes": 301285376,
+      "reported_status": "EXACT_COMPLETE_EDGE_SCHEMA_CHECKS_PASSED",
+      "result": "results/global_edge_schema_lifts01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 246.132,
+      "files": {
+        "results/global_edge_closure_current/result.json": {
+          "bytes": 11109,
+          "sha256": "c053116124c5c9dbdc239cbdc0fa6d33847a16394e64eb0ff734736e47f945a6"
+        },
+        "results/global_edge_closure_current/source_bindings.json": {
+          "bytes": 6116,
+          "sha256": "3b6c84afed745c9ec1948eee49a584f7f47d619f6ba3b00b5e9639ea9154ef51"
+        },
+        "results/global_edge_closure_current/strict_strengthening_audit.json": {
+          "bytes": 68117,
+          "sha256": "1e04f4f41c2e53c99ba467ace03fcfcb585317d6398df3489985bfcc59d02759"
+        },
+        "results/global_edge_closure_current_monitor.json": {
+          "bytes": 5872,
+          "sha256": "a6f019bee5ce1fc95f704dffc26c578db7a69871a7979000767b57df8a672d8d"
+        }
+      },
+      "id": "global_edge_closure_current",
+      "monitor": "results/global_edge_closure_current_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "GLOBAL_NECESSARY_DATA_EXPORTED",
+      "peak_process_tree_rss_bytes": 1750990848,
+      "reported_status": "GLOBAL_NECESSARY_DATA_EXPORTED",
+      "result": "results/global_edge_closure_current/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "files": {
+        "results/global_edge_closure_prepare01/interrupted.json": {
+          "bytes": 1122,
+          "sha256": "4ddaa7243f3a59391708e0e1141e6c4abebbb281f42350cbf296c69d0f0bcd98"
+        },
+        "results/global_edge_closure_prepare01/progress.jsonl": {
+          "bytes": 711,
+          "sha256": "2a3568f025b9f1b6300dd87a723729c6ce40cf5b3243e450df32367451fcc31a"
+        },
+        "results/global_edge_closure_prepare01/source_bindings.json": {
+          "bytes": 956,
+          "sha256": "93733bb3ec338fd4af42cba91b8a68f9127a5696be9c986dd59007f46d28f93a"
+        }
+      },
+      "id": "global_edge_closure_prepare01",
+      "original_feasibility_claimed": false,
+      "outcome": "INTERRUPTED_OPTIONAL_FULL_CONE_PRESOLVE",
+      "reported_status": "INTERRUPTED_OPTIONAL_FULL_CONE_PRESOLVE",
+      "result": "results/global_edge_closure_prepare01/interrupted.json",
+      "wrapper_PASS_claimed": false
+    },
+    {
+      "elapsed_seconds": 429.101,
+      "files": {
+        "results/global_edge_closure_prepare02/progress.jsonl": {
+          "bytes": 1333,
+          "sha256": "0387c43df3d5967126c589acd7d07d934729eb11b076f1a6d3bcb6b6e1ad504a"
+        },
+        "results/global_edge_closure_prepare02/result.json": {
+          "bytes": 1753,
+          "sha256": "c1802edcabcbf44f18a429204078b9819c9dbc9c265e2342c14b5983ef32339e"
+        },
+        "results/global_edge_closure_prepare02/source_bindings.json": {
+          "bytes": 813,
+          "sha256": "82cf10de3df68068060866fd1db92767e041aa5d220d911934c5d674b0792e10"
+        },
+        "results/global_edge_closure_prepare02_monitor.json": {
+          "bytes": 4083,
+          "sha256": "dc8bceea7d354b030b7ead6249ba6dca845f124b92b87defd7be00f6788329b2"
+        }
+      },
+      "id": "global_edge_closure_prepare02",
+      "monitor": "results/global_edge_closure_prepare02_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "EXACT_EQUIVALENT_FROZEN_SDP_PREPARED",
+      "peak_process_tree_rss_bytes": 5047730176,
+      "reported_status": "EXACT_EQUIVALENT_FROZEN_SDP_PREPARED",
+      "result": "results/global_edge_closure_prepare02/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 420.75,
+      "files": {
+        "results/global_edge_closure_conditioned01/interval_conditioning.exact.json": {
+          "bytes": 82630,
+          "sha256": "42fdbb4ab4849c98e96501c05eb8186465119b6baa54a0c467744e9e9ebb551b"
+        },
+        "results/global_edge_closure_conditioned01/result.json": {
+          "bytes": 1762,
+          "sha256": "4941574d9c0315104cafe3142dc69dafe6d7c0b3f2a54a4e46e10712f8ed39dc"
+        },
+        "results/global_edge_closure_conditioned01_monitor.json": {
+          "bytes": 3341,
+          "sha256": "a943c6b2e7d5e9bf1e23b29712142830d32e74607207ea4733b45ad45e9584f6"
+        }
+      },
+      "id": "global_edge_closure_conditioned01",
+      "monitor": "results/global_edge_closure_conditioned01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "EXACT_INVERTIBLE_SDP_CONDITIONING_COMPLETE",
+      "peak_process_tree_rss_bytes": 4607705088,
+      "reported_status": "EXACT_INVERTIBLE_SDP_CONDITIONING_COMPLETE",
+      "result": "results/global_edge_closure_conditioned01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 526.139,
+      "files": {
+        "results/global_edge_closure_sdpa01/initialization.json": {
+          "bytes": 277,
+          "sha256": "0eefb4e4f83d218f36820d94a7846d9bd39b539c834c4075dce4f2f25652802a"
+        },
+        "results/global_edge_closure_sdpa01/native.result": {
+          "bytes": 2458,
+          "sha256": "d927d17e6e1fa2e25f787c04986dd5b9cbafa051680b69c97aff929d31384765"
+        },
+        "results/global_edge_closure_sdpa01/native_metadata.json": {
+          "bytes": 991,
+          "sha256": "2a634bfb71d786015490de88e43878b2fa41cb361bfadfc92ad7a3065e5dc7ec"
+        },
+        "results/global_edge_closure_sdpa01/param.sdpa": {
+          "bytes": 84,
+          "sha256": "8b2f60f69ac4cd4a19edaf6eab06a6f9171e998891b401135d51b9e10feb7b21"
+        },
+        "results/global_edge_closure_sdpa01/result.json": {
+          "bytes": 1351,
+          "sha256": "95183930f55c99d4a8efddf3ff64005e61a43f6fb710de38a45e3a0c57a32e9c"
+        },
+        "results/global_edge_closure_sdpa01/solver.stdout": {
+          "bytes": 2395,
+          "sha256": "5ad987155eaa77be1dd048b814adeab1e327588f9a50b5805501b360b97aa4c8"
+        },
+        "results/global_edge_closure_sdpa01/source_bindings.json": {
+          "bytes": 1983,
+          "sha256": "b06ce0332496431546765b9f08dab6027d2c6eaaa1695263a8c4c53b4396b58e"
+        },
+        "results/global_edge_closure_sdpa01_monitor.json": {
+          "bytes": 4032,
+          "sha256": "753124bff989be4e593553a8db9ceadb37860ebca5e4d2f2f8198c8fd8193667"
+        }
+      },
+      "id": "global_edge_closure_sdpa01",
+      "monitor": "results/global_edge_closure_sdpa01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "NO_EXACT_FEASIBILITY_DECISION",
+      "peak_process_tree_rss_bytes": 8781824000,
+      "reported_status": "NO_EXACT_FEASIBILITY_DECISION",
+      "result": "results/global_edge_closure_sdpa01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 200.683,
+      "files": {
+        "results/global_edge_schema_lifts02/result.json": {
+          "bytes": 2344,
+          "sha256": "10e611070ccbbe6c3bb03c86d63b98fc4b36898f9cc94cbc428d41811f2ce7d1"
+        },
+        "results/global_edge_schema_lifts02_monitor.json": {
+          "bytes": 4880,
+          "sha256": "8b9b80c9b3b44a99cdc8a85f89407e43bede415fe63d2240d91d72fbe73ceced"
+        }
+      },
+      "id": "global_edge_schema_lifts02",
+      "monitor": "results/global_edge_schema_lifts02_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "EXACT_COMPLETE_EDGE_SCHEMA_CHECKS_PASSED",
+      "peak_process_tree_rss_bytes": 440549376,
+      "reported_status": "EXACT_COMPLETE_EDGE_SCHEMA_CHECKS_PASSED",
+      "result": "results/global_edge_schema_lifts02/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 4.594,
+      "files": {
+        "results/global_edge_closure_current/archive_roundtrip.json": {
+          "bytes": 1178,
+          "sha256": "118a9cb0f5aa0d7ba75db2847e67e2b58fafb2b8edd89bb4c28d61c81785aa12"
+        },
+        "results/global_edge_closure_current/certificate_dual.exact.json.gz": {
+          "bytes": 7243318,
+          "sha256": "18ffd632fd474cbcaea73d5f773b1823a7d81f08caab4822518ed54d4d43e44c"
+        },
+        "results/global_edge_closure_current/necessary_primal.exact.json.gz": {
+          "bytes": 5296211,
+          "sha256": "72ece51b978c328a42322688807c9640472fd384f017ad44addaedc59896961d"
+        },
+        "results/global_edge_closure_current/result.json": {
+          "bytes": 11109,
+          "sha256": "c053116124c5c9dbdc239cbdc0fa6d33847a16394e64eb0ff734736e47f945a6"
+        },
+        "results/global_edge_closure_current/source_bindings.json": {
+          "bytes": 6116,
+          "sha256": "3b6c84afed745c9ec1948eee49a584f7f47d619f6ba3b00b5e9639ea9154ef51"
+        },
+        "results/global_edge_model_archive01_monitor.json": {
+          "bytes": 3833,
+          "sha256": "d8bf0d5f6d3cadab92fe8dbcbb051386c967d94217c73deac3d8b10ec8ed18f1"
+        }
+      },
+      "id": "global_edge_model_archive01",
+      "monitor": "results/global_edge_model_archive01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED",
+      "peak_process_tree_rss_bytes": 62619648,
+      "reported_status": "RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED",
+      "result": "results/global_edge_closure_current/archive_roundtrip.json",
+      "wrapper_PASS_claimed": true
     }
   ],
   "schema": "global-necessary-data-exploration-v3",
@@ -2867,16 +3205,18 @@
     "raw_checkpoints_and_duplicate_native_inputs_retained_locally": true
   },
   "strict_strengthening": {
-    "all_baseline_cones_retained": 10588,
-    "all_baseline_equalities_retained": 450,
-    "audit": "results/global_shared_cusp_final_checks/result.json",
-    "current_model_feasibility": "EXACTLY_FEASIBLE",
-    "failed_equalities_include_auxiliary_inverse_moments": true,
+    "all_baseline_cones_retained": 138476,
+    "all_baseline_equalities_retained": 9388,
+    "audit": "results/global_edge_closure_current/strict_strengthening_audit.json",
+    "automatic_complete_host_classification_failures": 27,
+    "current_model_feasibility": "UNDECIDED",
     "free_feature_coefficients_retained": true,
-    "old_witness_fails_new_equalities": 7,
-    "old_witness_has_no_extension": true
+    "old_moments_retained": 36818,
+    "old_witness_fails_new_equalities": 465,
+    "old_witness_has_no_extension": true,
+    "quadratic_equation_closure_failures": 438
   },
-  "uniform_strengthening_level": 5,
-  "verified_full_SDP_feasible_point_obtained": true,
+  "uniform_strengthening_level": 7,
+  "verified_full_SDP_feasible_point_obtained": false,
   "wrapper_PASS_means_monitored_worker_completion_not_native_solver_success": true
 }

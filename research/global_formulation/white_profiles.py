@@ -368,6 +368,9 @@ def couple(program, finite, ideal, faces, residual, edge_count, add_measure, sta
         edge_domain.ge("edge_component_minimum", k-t)
         edge_domain.ge("edge_component_maximum", 1-t-k)
         edge_domain.basis("edge_support",("t","edge_components"),2)
+        if level >= 6:
+            from . import edge_compatibility
+            edge_compatibility.extend_edge(edge_domain)
         edge = add_measure("shared_edge_support", edge_domain)
         program.eq("shared_edge_count", conic.plus(edge.linear(1),conic.times(-1,edge_count.linear(1))))
         program.eq("shared_edge_endpoint_components", conic.plus(conic.times(2,edge.linear(k)),
@@ -380,10 +383,12 @@ def couple(program, finite, ideal, faces, residual, edge_count, add_measure, sta
             value = sum((var("star_white_components")+t*(1-var(f"star_degree{i}")) for i in indices),as_poly(0))
             terms.append(face.linear(t*value))
         program.eq("closed_face_shared_edge_components",conic.plus(*terms))
+        if level >= 6:
+            edge_compatibility.couple(program,finite,ideal,all_faces,profiles,edge)
     return profiles
 
 
-def local_star_fixture():
+def local_star_fixture(level=5):
     """An honest rational moment lift of a shared nonzero-response local star.
 
     Its supporting forest is A3 plus n-5 spectator A1 components. It is
@@ -394,21 +399,35 @@ def local_star_fixture():
     n = 57
     d = faces.face_domain(3,n)
     extend_face(d,3,joint=True)
+    if level >= 6:
+        from . import edge_hosts,edge_compatibility
+        edge_hosts.extend_face(d,3)
     d.fixed.update(t=F(1,n),e=F(0)); d.equation_closure = True
+    if level >= 7: d.equation_closure_degree=6; d.equation_closure_variables=12; d.equation_multiplier_degree=2
     strengthening.enrich(d,2)
     p = Program(); face = p.measure("local_face",d)
     cd = component_domain(3,n,d,True)
     cd.fixed.update(t=F(1,n),e=F(0)); cd.equation_closure = True
+    if level >= 7: cd.equation_closure_degree=6; cd.equation_closure_variables=12; cd.equation_multiplier_degree=2
     profile = p.measure("local_components",cd)
     component_couplings(p,face,profile,3,True)
+    if level >= 6: edge_compatibility.couple_face(p,face,profile,3)
     problem = p.compile(dict(local_fixture_only=True))
     common = dict(star_white_components=F(n-4,n))
+    if level >= 6:
+        common.update(white_population_A_0=F(n-4,n),white_population_A_1=F(n-2,n))
     for i in range(3):
         common.update({f"c{i}":F(1),f"eta{i}":F(1),f"right{i}":F(0),
             f"star_scale{i}":F(1,2) if i < 2 else F(1),
             f"star_degree{i}":F(int(i < 2)),f"star_edge{i}":F(int(i > 0)),
             f"star_common{i}":F(int(i == 0))})
     face_values = dict(common)
+    if level >= 6:
+        for i in range(3):
+            prefix=f"edge_host{i}_"
+            face_values.update({prefix+"rank":F(4 if i<2 else 1,n),
+                prefix+"position":F(4 if i<2 else 1,n),prefix+"projection_square":F(1,4) if i<2 else F(1),
+                prefix+"left":F(i<2),prefix+("B_short" if i<2 else "A"):F(1)})
     for i,h in enumerate((F(1,2),F(1,2),F(3,4))):
         face_values.update({f"h{i}":h,f"inverse_h{i}":1/h,
             f"star_scale_inverse{i}":1/common[f"star_scale{i}"]})
@@ -438,25 +457,37 @@ def local_star_fixture():
         global_polytope_existence_claimed=False)
 
 
-def quadrilateral_star_fixture():
+def quadrilateral_star_fixture(level=5):
     """Exact ideal square with its strict opposite gaps and spectator forest."""
     from . import faces, strengthening
     from .moments import Program
     n,sides = 57,4
     d = faces.face_domain(sides,n)
     extend_face(d,sides,joint=True)
+    if level >= 6:
+        from . import edge_hosts,edge_compatibility
+        edge_hosts.extend_face(d,sides)
     d.fixed.update(t=F(1,n),e=F(0)); d.equation_closure = True
+    if level >= 7: d.equation_closure_degree=6; d.equation_closure_variables=12; d.equation_multiplier_degree=2
     strengthening.enrich(d,2)
     p = Program(); face = p.measure("square",d)
     cd = component_domain(sides,n,d,True)
     cd.fixed.update(t=F(1,n),e=F(0)); cd.equation_closure = True
+    if level >= 7: cd.equation_closure_degree=6; cd.equation_closure_variables=12; cd.equation_multiplier_degree=2
     profile = p.measure("square_components",cd)
     component_couplings(p,face,profile,sides,True)
+    if level >= 6: edge_compatibility.couple_face(p,face,profile,sides)
     problem = p.compile(dict(local_fixture_only=True))
     common = dict(star_white_components=F(n-2,n))
+    if level >= 6:
+        common.update(white_population_A_0=F(n-2,n),white_population_A_1=F(n-2,n))
     for i in range(sides):
         common.update({f"c{i}":F(1),f"eta{i}":F(1),f"star_scale{i}":F(1),f"star_edge{i}":F(1)})
     values = dict(common)
+    if level >= 6:
+        for i in range(sides):
+            prefix=f"edge_host{i}_"
+            values.update({prefix+"rank":F(1,n),prefix+"position":F(1,n),prefix+"projection_square":F(1),prefix+"A":F(1)})
     for i in range(sides):
         values.update({f"h{i}":F(1),f"inverse_h{i}":F(1),f"star_scale_inverse{i}":F(1)})
         for j in range(i+1,sides): values[f"star_original_{i}_{j}"] = F(3 if j-i == 2 else 1)

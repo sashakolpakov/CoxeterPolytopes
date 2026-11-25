@@ -4,7 +4,9 @@
 The established ceilings remain57/17/15. The construction below is a
 research formulation, conditional on the stated geometric and literature
 inputs, and has not received a separate author's source-bound review.
-No numerical result is asserted by this specification.
+The separate computational sections identify the frozen inputs to which
+each exact feasibility result applies. Newly added levels require their
+own feasibility decisions.
 
 ## Target and inputs
 
@@ -1025,3 +1027,161 @@ also checks all 193,440 adjoint equations in a certificate ruling out
 the normalized Farkas dual. The original input is unchanged. This
 computational conclusion concerns the stated outer relaxation and
 does not lower the accepted dimension bound.
+
+## Complete rooted edge hosts and shared edge populations: levels 6--7
+
+These levels modify the compatibility retained by the global schemas.
+They preserve the frozen level-5 constraints and all free feature
+potentials. No new list of chosen forests or face diagrams is used.
+The geometric premises are Vinberg's face theorem and cusp theorem,
+Theorems 3.1--3.2 of [Hyperbolic reflection groups (1985)](https://www.mathnet.ru/eng/rm2140),
+and the complete spherical/affine classifications already in use.
+The deductions and their normalization are given here; separate author's
+review is still pending.
+
+### The same root controls deletion and projection
+
+For a two-face F let B be its supporting spherical forest, and let i
+be a sidewall. The edge E_i has spherical diagram B+i, of rank n-1.
+Let H_i be its connected component containing i. Deleting i from H_i
+gives exactly the white components attached to i. Every other white
+component is an unchanged spectator. This is an exact graph operation,
+simultaneously at all sides of this SAME face.
+
+Let a_i be the existing projected length. A block inverse of the unit
+Gram matrix G(H_i) gives
+
+    a_i^2 = 1/(G(H_i)^(-1))_(i,i).
+
+Indeed, the inverse entry is the reciprocal of the Schur complement of
+the white principal block; the complement is 1-T_ii=a_i^2. Spectator
+blocks are orthogonal and do not change it. Introduce v_i=a_i^2, but
+continue to use the original a_i in every face Gram equation.
+
+The complete rooted classification is finite with symbolic ranks:
+
+* For A_r with root p, deletion gives A_(p-1) and A_(r-p), omitting
+  zero ranks; v_i=(r+1)/(2p(r+1-p)).
+* For B_r with the short node numbered r, a long root p deletes to
+  A_(p-1)+B_(r-p). B_1 means A_1, and B_0 is empty. At the short
+  root the deletion is A_(r-1). The inverse equations are 2p*v_i=1
+  at a long root and r*v_i=1 at the short root.
+* In D_r number the chain 1,...,r-2 and then the two leaves. A chain
+  root p<=r-4 leaves A_(p-1)+D_(r-p). At p=r-3 the right component
+  is A_3; at the fork p=r-2 it is 2A_1. A leaf deletion leaves A_(r-1).
+  The inverse equations are 2p*v_i=1 on the chain and r*v_i=2 at a leaf.
+* E6/E7/E8, F4 and H3/H4 use every root of their complete connected
+  diagrams. Nodes are grouped only when both their deletion statistics
+  and inverse-diagonal data coincide. Rational inverse entries are exact;
+  H entries use the previously justified golden-field brackets.
+* I2(m), m>=5, deletes to A1, and v_i=sin^2(pi/m). The retained
+  envelope 0<=v_i<=3/8 covers every such label. A2 and B2 belong
+  to their canonical classical families.
+
+The classical inverse equations follow from the inverse matrices proved
+above. The deletion descriptions follow by cutting a path or fork at
+the root, with the low-rank boundaries explicitly assigned as stated.
+With R=r/n and x=p/n, for example the A equation becomes
+2*v_i*x*(R+t-x)=t*(R+t). Boolean root-case selectors and nonempty-arm
+selectors give polynomial descriptions covering all ranks. Their
+continuous rank/position relaxation is intentional.
+
+Write W_(T,0)=t*number_of_white_T_components and
+W_(T,1)=t*sum_of_their_ranks, in the common face state. All sides use
+these same variables. Let delta_(i,T,j) be the rooted deletion statistic,
+and let epsilon_(i,T) indicate the host family. Then
+
+    W_(T,j)-delta_(i,T,j)>=0,
+    E_(i,T,j)=W_(T,j)-delta_(i,T,j)
+                 +epsilon_(i,T)*(t if j=0 else R_i).
+
+The first quantity counts or sums the ranks of spectators of family T.
+The second is the statistic of the WHOLE edge diagram B+i. It retains
+the distinction between touched white components and spectators.
+The white component occupation measure is matched to W, and its
+attach_i-weighted family statistics are matched to delta_i, with the
+declared finite common-state tests. Thus the root's classification,
+projection length and actual white attachment families are coupled.
+
+Two useful consequences use only old face coordinates:
+
+    1-a_i^2-degree_i/4>=0,
+    (degree_i-1)(degree_i-2)(degree_i-3)(1-a_i^2)=0.
+
+For the inequality, each nonzero original Coxeter attachment has squared
+cosine at least 1/4. The inverse of a positive unit-diagonal block has
+diagonal at least one, by its scalar Schur complement. Distinct
+attachments meet distinct white components, so their diagonal costs
+add and T_ii>=degree_i/4. For the equality, degree_i is one of 0,1,2,3;
+when it is zero there is no response and a_i=1. A 2-by-2 PSD localizer
+of the inequality is retained as well. These are pointwise conditions,
+not products of unrelated averaged constraints.
+
+### One spherical population for every edge
+
+The existing shared-edge measure now contains a whole spherical forest
+population of rank n-1, with all fixed connected inputs and the same
+symbolic A/B/D tails. Its counters have the integer factorial, rank and
+PSD conditions used for vertex populations. Let C_(T,j)(E) denote its
+normalized family count or rank sum, both normalized by t as for W.
+Both endpoints and every incident face must produce this SAME measure.
+
+For a connected spherical S of rank r write
+A_(S,T,j)=sum_(p in S) statistic_T,j(S-p), with unnormalized statistics.
+Its contribution to the endpoint sum at a finite vertex is
+
+    (n-r)*[family(S)=T]*r^j + A_(S,T,j).
+
+At a cusp with affine factors S of orders r+1 and V=product(r+1),
+the contribution is V*A_(S,T,j)/(r+1). An edge at that cusp selects
+one deleted node in each factor, so this is an exact product-link sum.
+After normalizing the statistics by t and using the existing vertex
+measure scales, the finite column is t^5 times its unnormalized sum;
+the ideal column is t^3*sum A/(r+1). Hence, for every family and j=0,1,
+
+    2*integral C_(T,j) dmu_E
+       = integral endpoint_F_(T,j) dnu_F
+         + integral endpoint_I_(T,j) dnu_I.
+
+Each edge lies in exactly n-1 two-faces: deleting one of the n-1
+supporting nodes gives those faces, by Vinberg's positive-face theorem.
+Consequently another exact marginal is
+
+    sum_small_faces integral t*sum_sides E_(i,T,j) dmu_F
+      + integral t*E_(outgoing,T,j) dmu_R
+        = integral (1-t)*C_(T,j) dmu_E.
+
+The residual corner measure selects one outgoing side per corner; this
+visits every side of every larger face once. It does not presume a
+three-dimensional face to be Coxeter.
+
+Deleting a node of the whole edge gives the same white supporting
+forest as on the corresponding face flag. In a connected edge component
+S of rank r its deletion sum is
+
+    (n-1-r)*[family(S)=T]*r^j + A_(S,T,j).
+
+Multiplying by t^2 gives the common-edge column matched to t times
+the sum of the incident face white statistics. This provides a second
+route through the same edge population. The all-rank classical A
+polynomials and the fixed exceptional deletion tables are shared with
+the existing two-deletion implementation, rather than fitted anew.
+
+### Stronger pointwise equation closure
+
+Level 7 raises the variance-clique identity-degree budget from four to
+six and its variable budget from eight to twelve, retaining the term
+budget. In particular this admits mixed A/B inverse-response identities
+that previously received only sparse first-moment equations. Eligible
+identities also give L(q^2)=0 and PSD clique kernel equations.
+It also imposes L(q*m)=0 for every retained multiplier monomial m of
+degree two for which all product moments are present. All products use
+one measure's existing registry; aggregate equations relating different
+occupation measures are never multiplied by local state variables.
+These operations preserve every actual-polytope Dirac/counting lift.
+
+The finite common-state marginals still do not assert a discrete global
+realization. Additional edge state moments and genuinely joint three-face
+states remain possible extensions. Feasibility of levels 6 or 7 must be
+decided on their own frozen inputs; the level-5 feasible point proves
+nothing about their feasibility.

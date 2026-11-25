@@ -27,7 +27,7 @@ def build(threshold, parity, tables, upper_dimension=None, level=1):
         raise ValueError("This initial global formulation is specified for N>=40")
     if upper_dimension not in (None, 57):
         raise ValueError("The retained upper-dimension anchor available here is57")
-    if level not in (1,2,3,4,5): raise ValueError("Use a retained global hierarchy level")
+    if level not in (1,2,3,4,5,6,7): raise ValueError("Use a declared global hierarchy level")
     endpoint = threshold if threshold % 2 == (1 if parity == "odd" else 0) else threshold+1
     p, t, e = Program(), var("t"), var("e")
     def add_measure(name, domain, mass_scale=1):
@@ -48,6 +48,10 @@ def build(threshold, parity, tables, upper_dimension=None, level=1):
                 domain.fixed["e"] = F(int(upper_dimension == 58))
         strengthening.enrich(domain, min(level,2))
         domain.equation_closure = level >= 5
+        if level >= 7:
+            domain.equation_closure_degree = 6
+            domain.equation_closure_variables = 12
+            domain.equation_multiplier_degree = 2
         return p.measure(name, domain, mass_scale)
 
     multipliers = (as_poly(1), t, e)
@@ -64,9 +68,15 @@ def build(threshold, parity, tables, upper_dimension=None, level=1):
     for s in (3,4):
         domain = faces.face_domain(s,endpoint)
         if level >= 3: white_profiles.extend_face(domain,s,joint=level >= 4)
+        if level >= 6:
+            from . import edge_hosts
+            edge_hosts.extend_face(domain,s)
         face[s] = add_measure(f"faces{s}",domain)
     domain = faces.corner_domain(endpoint,angle=True)
     if level >= 3: white_profiles.extend_face(domain,2,joint=level >= 4)
+    if level >= 6:
+        from . import edge_hosts
+        edge_hosts.extend_face(domain,2)
     remainder = add_measure("residual_corners",domain)
     five = add_measure("faces_at_least5", dimension_domain("large_faces", endpoint))
     negative_excess = add_measure("large_face_excess", dimension_domain("large_face_excess", endpoint))
@@ -183,4 +193,13 @@ def build(threshold, parity, tables, upper_dimension=None, level=1):
             joint_closed_face_moment_matching=level >= 4,
             common_edge_component_state=level >= 4,
             full_discrete_realizability_claimed=False)
+    if level >= 6:
+        model["metadata"]["common_edge_diagrams"] = dict(
+            complete_rooted_spherical_host_schemas=True,
+            symbolic_classical_ranks_and_root_positions=True,
+            same_host_controls_projection_square_and_white_deletion=True,
+            same_white_family_populations_at_every_side=True,
+            endpoint_and_incident_face_family_marginals_share_whole_edge_population=True,
+            higher_dimensional_faces_assumed_Coxeter=False,
+            full_edge_state_realizability_claimed=False)
     return model

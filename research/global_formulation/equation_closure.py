@@ -5,6 +5,7 @@ identities and must never be multiplied by an arbitrary state coordinate.
 """
 from . import conic
 from .polynomial import Poly, as_poly, var
+from itertools import combinations
 
 MAX_IDENTITY_DEGREE = 4
 MAX_CLIQUE_VARIABLES = 8
@@ -13,12 +14,13 @@ MAX_IDENTITY_TERMS = 24
 
 def variance_cliques(measure):
     domain, program = measure.domain, measure.program
+    degree_budget = domain.equation_closure_degree
     selected, skipped = [], []
     for label, original in domain.equations:
         q = measure.reduce(original)
         if not q: continue
         degree = max(map(len,q))
-        if degree > MAX_IDENTITY_DEGREE or len(q.support) > MAX_CLIQUE_VARIABLES or len(q) > MAX_IDENTITY_TERMS:
+        if degree > degree_budget or len(q.support) > domain.equation_closure_variables or len(q) > MAX_IDENTITY_TERMS:
             skipped.append(label); continue
         basis = [as_poly(1)]+[var(v) for v in sorted(q.support)]
         basis += [Poly({m: 1}) for m in sorted(q,key=lambda m:(len(m),m)) if m]
@@ -39,8 +41,8 @@ def variance_cliques(measure):
         selected.append(dict(identity=label,degree=degree,basis_size=len(basis)))
     measure.ideal_closure_report = dict(variance_cliques=selected,
         identities_outside_variance_clique_budget=skipped,
-        maximum_identity_degree=MAX_IDENTITY_DEGREE,
-        maximum_clique_variables=MAX_CLIQUE_VARIABLES,
+        maximum_identity_degree=degree_budget,
+        maximum_clique_variables=domain.equation_closure_variables,
         maximum_identity_terms=MAX_IDENTITY_TERMS,
         all_cliques_use_the_same_measure_moment_registry=True)
 
@@ -60,8 +62,45 @@ def existing_products(measure):
                 program.eq(measure.name+"_ideal_times_"+label+"_"+v, measure.linear(product))
                 added += len(program.equations)-before
             else: unknown += 1
+    quadratic_added = 0
+    if domain.equation_multiplier_degree >= 2:
+        # Find every retained degree-two multiplier whose product fits the
+        # SAME moment registry. Index by a term that survives reduction;
+        # this avoids a dense identities-times-all-moments scan. Boolean
+        # factors already in that term may reappear in the multiplier.
+        by_variable = {}
+        for m in available:
+            for v in set(m): by_variable.setdefault(v,set()).add(m)
+        retained_quadratics = {m for m in available if len(m)==2}
+        for label,original in domain.equations:
+            q = measure.reduce(original)
+            if not q: continue
+            candidates = set()
+            for term in q:
+                if not term:
+                    candidates.update(retained_quadratics); continue
+                buckets = [by_variable.get(v,set()) for v in set(term)]
+                containing = set.intersection(*buckets)
+                repeatable = sorted(set(term)&domain.boolean)
+                for larger in containing:
+                    remainder = list(larger)
+                    try:
+                        for v in term: remainder.remove(v)
+                    except ValueError: continue
+                    if len(remainder)>2: continue
+                    for chosen in combinations(repeatable,2-len(remainder)):
+                        multiplier = tuple(sorted(remainder+list(chosen)))
+                        if multiplier in retained_quadratics: candidates.add(multiplier)
+            for m in sorted(candidates):
+                product = measure.reduce(q*Poly({m:1}))
+                if not product or not all(term in available for term in product): continue
+                before=len(program.equations)
+                program.eq(measure.name+"_ideal_times2_"+label+"_"+"_".join(m),measure.linear(product))
+                quadratic_added += len(program.equations)-before
     measure.ideal_closure_report.update(existing_coordinate_products_added=added,
         products_requiring_unretained_moments=unknown,
+        retained_quadratic_products_added=quadratic_added,
+        maximum_retained_multiplier_degree=domain.equation_multiplier_degree,
         aggregate_incidence_equations_were_not_multiplied=True)
 
 

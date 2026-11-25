@@ -166,9 +166,11 @@ def run(root, output, threshold, parity, stage, upper_dimension=None, level=1):
         root/"manuscripts/finite_volume57_consolidated.tex",
         root/"research/global_formulation/sources.json", root/data.LITERAL]
     audit_57 = level > 1 and threshold == 57 and parity == "odd" and upper_dimension == 57
-    baseline_input = root/("results/global_level2_current/necessary_primal.exact.json" if level >= 3 else
+    baseline_input = root/("results/global_shared_cusp_current/necessary_primal.exact.json" if level >= 6 else
+        "results/global_level2_current/necessary_primal.exact.json" if level >= 3 else
         "results/global_tail57_current/necessary_primal.exact.json")
-    baseline_point = root/("results/global_level2_face_recovery/original_feasible_point.exact.json" if level >= 3 else
+    baseline_point = root/("results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json" if level >= 6 else
+        "results/global_level2_face_recovery/original_feasible_point.exact.json" if level >= 3 else
         "results/global_current_exact_recovery/original_feasible_point.exact.json")
     if audit_57:
         paths += [baseline_input,baseline_point]
@@ -182,6 +184,10 @@ def run(root, output, threshold, parity, stage, upper_dimension=None, level=1):
     if level >= 3:
         checks.update(white_profiles.self_checks())
         checks.update(supporting_counts.self_checks())
+    if level >= 6:
+        from . import edge_hosts, edge_compatibility
+        checks.update(edge_hosts.self_checks())
+        checks.update(edge_compatibility.self_checks())
     tables = data.intrinsic_tables()
     primal = model.build(threshold, parity, tables, upper_dimension, level=level)
     conic.write_json(out/"necessary_primal.exact.json", primal)

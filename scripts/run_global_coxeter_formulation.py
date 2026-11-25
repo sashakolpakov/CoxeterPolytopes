@@ -18,7 +18,7 @@ def main():
     parser.add_argument("--output", required=True)
     parser.add_argument("--upper-dimension", type=int, choices=(57,),
         help="Use the retained n>=58 theorem to cover the complementary tail")
-    parser.add_argument("--level", type=int, choices=(1, 2, 3, 4, 5), default=1)
+    parser.add_argument("--level", type=int, choices=(1, 2, 3, 4, 5, 6, 7), default=1)
     parser.add_argument("--input", default="results/global_tail57_current/necessary_primal.exact.json")
     parser.add_argument("--solver", choices=("prepare", "sdpa", "recover"), default="sdpa")
     parser.add_argument("--orientation", choices=("necessary", "certificate"), default="necessary")

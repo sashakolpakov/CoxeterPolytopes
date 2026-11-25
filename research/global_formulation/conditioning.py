@@ -10,8 +10,9 @@ def thin_intervals(problem):
     pairs=[];chosen=set()
     for i,block in enumerate(problem["blocks"]):
         name=block["name"]
-        if "_inverse_response_lower" not in name or len(block["entries"])!=1:continue
-        other=name.replace("_inverse_response_lower","_inverse_response_upper")
+        marker=next((term for term in ("_inverse_response_lower","_root_inverse_lower") if term in name),None)
+        if marker is None or len(block["entries"])!=1:continue
+        other=name.replace(marker,marker.replace("lower","upper"))
         if other not in names:continue
         j=names[other];low=block["entries"][0][0];high=problem["blocks"][j]["entries"][0][0]
         candidates=[]

@@ -21,6 +21,9 @@ class Domain:
     integer_counts: dict = field(default_factory=dict)
     rank_total: object = None
     equation_closure: bool = False
+    equation_closure_degree: int = 4
+    equation_closure_variables: int = 8
+    equation_multiplier_degree: int = 1
 
     def variable(self, name, bounded=True, boolean=False):
         self.variables.add(name)
