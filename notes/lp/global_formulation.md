@@ -47,6 +47,10 @@ Their aggregate formulas are stated below. Coefficients of all these
 features are free dual variables, found together with the multipliers
 for the new constraints.
 
+One further common observable is the square of the intrinsic planar
+angle cosine. It couples the complete vertex Gram data directly to the
+shared face Gram variables, and has its own free dual potential.
+
 ## Complete vertex populations with finitely many coordinates
 
 For finite vertices, use fixed connected-type bins A_r for1<=r<=20,
@@ -86,6 +90,17 @@ A guard for an integer count m>=k is represented by a Boolean g with
 Apply this also to the stated sums of counters. Products and Boolean
 unions give precisely the old contextual guards. No vertex budget is
 computed from an independent maximum for each guard or each feature.
+
+There is also a uniform rank-support inequality for each old contextual
+feature. If its nonzero support needs at least R_j total rank, then
+
+    (1-R_j*t)*Phi_j>=0.
+
+When n<R_j the feature is zero; otherwise both factors are nonnegative.
+The required ranks add the ranks of the marked components and their
+disjoint witnesses, with the specified multiplicities. This gives
+R_j=58 for j=16,17,18,24, so these coordinates vanish at dimension 57.
+The code applies this construction to every contextual coordinate.
 
 Set sigma_j=sum r_i^j/n^j, including fixed and growing components.
 The rank identities and nonnegative elementary symmetric sums give
@@ -169,6 +184,10 @@ exceptional cusp-correction column is its corner-count column times a
 fraction in[0,1], supported at n=58. The ideal-corner column equals the
 whole ideal corner count; its right-corner column is zero.
 
+The additional angle-square feature is described below. Its ideal column
+also equals the whole ideal corner count, since an ideal planar angle
+has cosine one.
+
 Use3b^2<=sigma2+2t(1-t), from the exact variance of Y and Cauchy, and
 b<=1/2. For the latter, convolution preserves symmetric unimodality;
 a symmetric unimodal distribution on its lattice interval is a mixture
@@ -213,6 +232,14 @@ at most three on a quadrilateral. These necessary conditions hold for
 every actual face, including ideal vertices. The common interior point
 prevents admitting an opposite pair of equal, oppositely oriented walls
 as a genuine polygon merely because some principal Gram tests pass.
+
+The rank test adds information to separate-corner and signature tests.
+For example, the formal matrix with diagonal 1, cyclic adjacent entries
+-1/2 and both opposite entries -3/2 has eigenvalues
+-3/2,1/2,5/2,5/2. Its adjacent pairs are positive definite and it has
+one negative direction, but its determinant is -75/16. Its rank four
+excludes it from the shared two-face Lorentz space. This is a matrix
+separation witness, not a claimed realizable star.
 
 ## Binding intrinsic features to the shared geometry
 
@@ -260,6 +287,102 @@ Every group/atom and group/face pushforward is matched through degree2.
 The group's first angle moment also bounds the sum of its atom masses
 times their respective inverse-Gram lower bounds. This preserves all26
 feature channels without introducing a catalogue of marked stars.
+
+## A common inverse-Gram angle observable
+
+At a finite vertex with positive Gram G, put
+c_ab=(G^-1)_ab/sqrt((G^-1)_aa*(G^-1)_bb). This is the cosine of the
+planar angle after projecting away every other incident wall. It is
+zero between different components. Let C_T=sum_(a<b)c_ab^2 in one
+connected component. With R=r+1 and H_r^(2)=sum_(k=1)^r 1/k^2,
+
+    C_A(r)=R^2*H_r^(2)-(3R^2-R-2)/2,
+    C_B(r)=r(r-1)/4,
+    C_D(r)=r(r-1)/4-1/2-2/r+4/r^2.
+
+These formulas cover the whole families. In A, numbering by 1,...,r,
+c_ij^2=i(R-j)/(j(R-i)) for i<j. Sum first over i to obtain
+
+    sum_j (R/j-1)*(R*(H_(R-1)-H_(R-j))-j+1).
+
+Use sum_(j=1)^(R-1) H_(R-j)/j=H_R^2-H_R^(2), together with
+sum_(k=1)^(R-1)H_k=R*H_(R-1)-(R-1). Substitution gives C_A above.
+The first identity follows by induction: both sides increase by
+2H_(R-1)/R when R increases by one.
+For B, the root basis e_i-e_(i+1), e_r has inverse Gram entries
+min(i,j), so c_ij^2=i/j and the sum is r(r-1)/4.
+For D, chain pairs have c_ij^2=i/j, each chain-leaf pair has i/r,
+and the leaf pair has (r-2)^2/r^2. Summing gives C_D.
+
+All fixed crystallographic components use exact rational inverse-Gram
+calculations or these formulas. H3,H4 use the already proved path
+lower bound and the pair-count upper bound. The symbolic I2(m), m>=5,
+uses 5/8<=cos^2(pi/m)<=1, since cos^2(pi/5)=(3+sqrt(5))/8>5/8.
+These are outer bounds for the complete noncrystallographic families,
+rather than sampled labels.
+
+For the growing A family, use rational a_-=1644933/10^6 and
+a_+=1644935/10^6 with
+
+    a_-<=sum_(k>=1)1/k^2<=a_+.
+
+The exact finite sum through 1000 and the integral tail bounds
+1/1001<=sum_(k>1000)1/k^2<=1/1000 prove these inequalities;
+the checker verifies both rational comparisons. At every r>=1,
+
+    (a_--3/2)R^2-R/2-1/r <= C_A(r)
+        <= (a_+-3/2)R^2-R/2+1.
+
+In D, its correction to r(r-1)/4 lies between -1/2-2/a and -1/2
+when r>=a. The normalized whole-vertex sum is therefore enclosed by
+polynomials in the existing U,R1,R2,t fields. For example,
+sum m(r+1)^2/n^2=R2+2tR1+tU. These identities give a finite uniform
+tail representation, without imposing a maximum component rank.
+
+Let z=sum_T m_T*C_T/n^2. Keep its proved lower and upper polynomial
+bounds and 0<=z<=(sigma2-t)/2. The finite normalized feature column
+is t^2*z; the ideal column is its corner-count column. Match their
+global sum to sum_i c_i^2 on every small face and to c^2 on residual
+corners. The same observable is used on both sides, so its coefficient
+is a new unrestricted dual weight. The matrix formulas and tail
+identities above provide the actual-polytope lift for this feature.
+
+## Retaining the uniform triangle theorem
+
+The triangle proof in the retained
+[finite-volume article](../../manuscripts/finite_volume57_consolidated.tex),
+Appendix `app:routing`, selects two distinct pure ordinary-unit corners.
+Its inputs include the minimal-indefinite-core classification and the
+retained 1025 marked-core test. No new execution of that test is claimed.
+The proof treats its four exceptional marked triples and the three
+reduced small affine pairs explicitly.
+
+Its extension to this dimension range uses the content of that proof.
+A minimal indefinite core contains all three side roots and has order
+at most ten. The selected paths and their persistent features survive
+arbitrary additional supporting roots. The exceptional-case kernel and
+inverse-Gram arguments likewise allow arbitrary spectator rank. The
+small affine exclusions use only two positive deleted-factor blocks
+and the actual cusp vector. None of these steps uses n=58.
+The selected finite paths have length at most seven; all contextual
+same-component features have longer marked paths, and cross-component
+contexts cannot occur on those connected paths. Each selected corner
+therefore has exactly atom E1 or E2 in the present coordinates. Hence
+
+    sum_(three corners)(mass(atom1)+mass(atom2))>=2*mass(mu3),
+
+also multiplied by t and e, is a uniform necessary row. The source
+classification remains an explicit input, and this extension has not
+received a separate author's review. Its multiplier is free alongside
+the feature potentials.
+
+Preserving all 26 functions does not automatically preserve every old
+face theorem. Some quadrilateral transfers use equalities forced by the
+dimension-58 vertex LP. Those implications are not imported at dimension
+57 without their premises. This initial model retains the corner cone
+and the uniform triangle cover, but does not yet encode all the old
+quadrilateral transfers. Common supporting-diagram marginals are still
+needed beyond the projected-angle matching already present.
 
 ## Global incidence and the positive excess
 
@@ -360,6 +483,13 @@ entries, interior distances and inverse strictness witnesses remain
 unbounded. Sparse moments need not have representing measures. That
 enlarges the feasible set and is compatible with the lift above.
 
+For each non-Boolean nonnegative coordinate x also impose the support
+localizer [[L(x),L(x^2)],[L(x^2),L(x^3)]] PSD. If x<=u, impose
+[[L(u-x),L((u-x)x)],[L((u-x)x),L((u-x)x^2)]] PSD as well. These follow
+by integrating x vv^T and (u-x)vv^T for v=(1,x). Unbounded positive
+geometry coordinates therefore have more than nonnegative individual
+moments; no artificial upper bound is introduced.
+
 The resulting finite model is
 
     F_b(x)=F_b0+sum_i x_i F_bi >=0,   E(x)=E0+sum_i x_i Ei=0.
@@ -385,6 +515,14 @@ exported. A numerical result is only a candidate. Exact verification
 checks every original equality, the complete adjoint and cone membership.
 A new accepted global bound additionally requires the stated source
 review and root acceptance.
+
+Rational PSD separation can strengthen that LP without changing the
+global schemas. A violated matrix supplies a numerical eigenvector,
+which is rounded to a rational v; the exact row v^T M v>=0 is necessary.
+An LP certificate with nonnegative multipliers lambda lifts by
+Z_b=sum lambda*v*v^T in each original block. The checker verifies the
+complete original adjoint and PSD matrices. Failure to find a negative
+eigenvalue at a floating tolerance is not an exact feasibility proof.
 
 The initial hierarchy does not enforce every integer population relation,
 the full ideal-link product law, or all overlaps between different face

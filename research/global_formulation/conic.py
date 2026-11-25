@@ -96,11 +96,9 @@ def read_model(path):
 
 
 def eliminate(problem, extra_equations=()):
-    """Sparse rational RREF, preserving named weight variables when possible."""
+    """Sparse rational RREF with an exact original-coordinate substitution."""
     variables = problem['variables']
-    preferred = [name for name in variables if name not in ('a0', 'a1')]
-    preferred += [name for name in variables if name in ('a0', 'a1')]
-    rank = {name: i for i, name in enumerate(preferred)}
+    rank = {name: i for i, name in enumerate(variables)}
     pivots = {}
     rows = problem['equations'] + list(extra_equations)
     for original in rows:
@@ -136,8 +134,19 @@ def eliminate(problem, extra_equations=()):
 
     blocks = [dict(name=block['name'], entries=[[substitute(entry) for entry in row]
                     for row in block['entries']]) for block in problem['blocks']]
+    used = {name for block in blocks for row in block['entries'] for entry in row for name in entry if name}
+    null = [name for name in free if name not in used]
+    free = [name for name in free if name in used]
+    if null:
+        # Redundant original equalities give free dual gauges that do not
+        # change any cone entry. Fix them to zero, and preserve the full
+        # original-coordinate reconstruction with that same gauge choice.
+        removed = set(null)
+        substitutions = {name: {k: v for k, v in expression.items() if k not in removed}
+            for name, expression in substitutions.items()}
     compiled = model(free, blocks, metadata=dict(original_variables=variables,
         exact_equality_rank=len(pivots), original_model_sha256=digest_bytes(canonical(problem))))
+    compiled['metadata']['free_null_directions_fixed_to_zero'] = null
     return compiled, substitutions
 
 
@@ -153,21 +162,35 @@ def write_sdpa(path, problem):
     variables = problem['variables']
     if not variables:
         raise ValueError('SDPA needs a nonempty free variable vector')
+    # SDPA's negative block size represents a diagonal nonnegative cone.
+    # Pack scalar cones together, preserving every original constraint.
+    full = [b for b in problem['blocks'] if len(b['entries']) > 1]
+    scalar = [b for b in problem['blocks'] if len(b['entries']) == 1]
+    sizes = [len(b['entries']) for b in full]+([-len(scalar)] if scalar else [])
+    indices = {name: i+1 for i, name in enumerate(variables)}
+    indices[''] = 0
+    nonzeros = 0
     with Path(path).open('x') as stream:
         stream.write('"Global Coxeter SDP; numerical decimals, exact model is separate\n')
-        stream.write(f'{len(variables)}\n{len(problem["blocks"])}\n')
-        stream.write(' '.join(str(len(block['entries'])) for block in problem['blocks']) + '\n')
+        stream.write(f'{len(variables)}\n{len(sizes)}\n')
+        stream.write(' '.join(map(str, sizes)) + '\n')
         stream.write(' '.join('0' for _ in variables) + '\n')
-        for matrix, variable in enumerate([''] + variables):
-            for block_index, block in enumerate(problem['blocks'], 1):
-                for i, row in enumerate(block['entries']):
-                    for j in range(i, len(row)):
-                        coefficient = row[j].get(variable, ZERO)
-                        if matrix == 0:
-                            coefficient = -coefficient
-                        if coefficient:
-                            stream.write(f'{matrix} {block_index} {i+1} {j+1} '
-                                         f'{decimal_text(coefficient)}\n')
+        def entry(block, i, j, expression):
+            nonlocal nonzeros
+            for variable, coefficient in expression.items():
+                if coefficient:
+                    matrix = indices[variable]
+                    coefficient = coefficient if matrix else -coefficient
+                    stream.write(f'{matrix} {block} {i} {j} {decimal_text(coefficient)}\n')
+                    nonzeros += 1
+        for block_index, block in enumerate(full, 1):
+            for i, row in enumerate(block['entries']):
+                for j in range(i, len(row)):
+                    entry(block_index, i+1, j+1, row[j])
+        for i, block in enumerate(scalar, 1):
+            entry(len(full)+1, i, i, block['entries'][0][0])
+    return dict(free_variables=len(variables), full_PSD_blocks=len(full),
+        packed_scalar_constraints=len(scalar), sparse_nonzeros=nonzeros)
 
 
 def farkas(problem):

@@ -12,7 +12,7 @@ def main():
     if not os.environ.get("COXETER_CHECK_OWNER"):
         raise RuntimeError("Use the repository's serial bounded scientific runner")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("stage", choices=("export", "explore-lp", "explore-sdpa"))
+    parser.add_argument("stage", choices=("export", "explore-lp", "explore-sdpa", "explore-psd-cuts"))
     parser.add_argument("--threshold", required=True, type=int)
     parser.add_argument("--parity", required=True, choices=("odd", "even"))
     parser.add_argument("--output", required=True)

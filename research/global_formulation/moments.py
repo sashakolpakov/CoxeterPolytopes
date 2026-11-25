@@ -101,6 +101,16 @@ class Measure:
             p.ge(self.name+"_nonnegative_"+v, self.linear(var(v)))
             if v in d.bounded:
                 p.ge(self.name+"_upper_"+v, self.linear(d.upper_bounds[v]-var(v)))
+            if v not in d.fixed and v not in d.boolean:
+                x = var(v)
+                p.psd(self.name+"_positive_support_"+v,
+                    [[self.linear(x), self.linear(x*x)],
+                     [self.linear(x*x), self.linear(x**3)]])
+                if v in d.bounded:
+                    gap = d.upper_bounds[v]-x
+                    p.psd(self.name+"_upper_support_"+v,
+                        [[self.linear(gap), self.linear(gap*x)],
+                         [self.linear(gap*x), self.linear(gap*x*x)]])
         for name, q in d.equations:
             for k, multiplier in enumerate(multipliers):
                 p.eq(self.name+"_"+name+f"_mult{k}", self.linear(q*multiplier))

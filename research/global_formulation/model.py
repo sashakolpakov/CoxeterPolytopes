@@ -50,7 +50,7 @@ def build(threshold, parity, tables, upper_dimension=None):
     finite = add_measure("finite_vertices", finite_d, endpoint**2)
     ideal = add_measure("ideal_vertices", ideal_d, endpoint)
     face = {s: add_measure(f"faces{s}", faces.face_domain(s, endpoint)) for s in (3, 4)}
-    remainder = add_measure("residual_corners", faces.corner_domain(endpoint, angle=False))
+    remainder = add_measure("residual_corners", faces.corner_domain(endpoint, angle=True))
     five = add_measure("faces_at_least5", dimension_domain("large_faces", endpoint))
     negative_excess = add_measure("large_face_excess", dimension_domain("large_face_excess", endpoint))
     atoms = data.atoms()
@@ -63,24 +63,31 @@ def build(threshold, parity, tables, upper_dimension=None):
             channels[s, i] = atom_measures
             groups = {}
             for group, members in GROUPS.items():
-                domain = faces.corner_domain(endpoint, REPRESENTATIVE[group], angle=bool(s))
+                domain = faces.corner_domain(endpoint, REPRESENTATIVE[group], angle=True)
                 groups[group] = add_measure(tag+"_"+group, domain)
                 for j, multiplier in enumerate(monomials(("t", "e"), 2)):
                     p.eq(tag+"_atom_group_"+group+f"_{j}", combine(
                         groups[group].linear(multiplier),
                         *(scaled(-1, atom_measures[a].linear(multiplier)) for a in members)))
-                if s and group == "finite_connected":
+                if group == "finite_connected":
                     for j, multiplier in enumerate(multipliers):
                         p.ge(tag+f"_weighted_inverse_Gram_{j}", combine(
                             groups[group].linear(var("c")*multiplier),
                             *(scaled(-F(1, data.SAME_DISTANCE[a-4]+1) if a >= 4 else -F(1, 17),
                                 atom_measures[a].linear(multiplier)) for a in members)))
-            names = ("t", "e", "c", "eta", "right", "chi") if s else ("t", "e", "eta", "right", "chi")
+            names = ("t", "e", "c", "eta", "right", "chi")
             rename = {n: n+str(i) for n in names if n not in ("t", "e")} if s else {}
             for j, multiplier in enumerate(monomials(names, 2)):
                 p.eq(tag+f"_shared_corner_marginal{j}", combine(
                     common.linear(multiplier.rename(rename)),
                     *(scaled(-1, groups[g].linear(multiplier)) for g in GROUPS)))
+    # The retained minimal-indefinite-core triangle proof selects two
+    # distinct pure ordinary-unit corners. Its spectator-rank argument is
+    # uniform; see the explicit source analysis in the specification.
+    for k, multiplier in enumerate(multipliers):
+        p.ge(f"uniform_two_unit_triangle_cover{k}", combine(
+            scaled(-2, face[3].linear(multiplier)),
+            *(channels[3, i][a].linear(multiplier) for i in range(3) for a in (1, 2))))
     # Every feature, including the full old 26-vector, uses exactly these
     # same occupation measures on the vertex and face sides.
     for name in vertices.FEATURES:
@@ -92,10 +99,11 @@ def build(threshold, parity, tables, upper_dimension=None):
                     terms.extend(scaled(-atoms[a][j], atom_measures[a].linear(multiplier))
                         for a in range(26) if atoms[a][j])
             else:
-                key = {"chi58": "chi", "ideal_corner": "eta", "right_corner": "right"}[name]
-                terms.append(scaled(-1, remainder.linear(var(key)*multiplier)))
+                key = {"chi58": "chi", "ideal_corner": "eta", "right_corner": "right", "angle_square": "c"}[name]
+                power = 2 if name == "angle_square" else 1
+                terms.append(scaled(-1, remainder.linear(var(key)**power*multiplier)))
                 for s, measure in face.items():
-                    terms.append(scaled(-1, measure.linear(sum((var(key+str(i)) for i in range(s)), as_poly(0))*multiplier)))
+                    terms.append(scaled(-1, measure.linear(sum((var(key+str(i))**power for i in range(s)), as_poly(0))*multiplier)))
             p.eq(f"feature_marginal_{name}_potential{k}", combine(*terms))
     for k, multiplier in enumerate(multipliers):
         p.eq(f"large_face_corner_incidence{k}", combine(remainder.linear(multiplier),
@@ -130,6 +138,8 @@ def build(threshold, parity, tables, upper_dimension=None):
         intrinsic_feature_coordinates=26, total_feature_coordinates=len(vertices.FEATURES),
         feature_potential_basis=("1", "1/n", "[n=58]"),
         all_vertex_feature_and_Prokhorov_ports_use_same_measures=True,
+        old_uniform_two_unit_triangle_cover_included=True,
+        all_old_quadrilateral_transfer_premises_imported=False,
         face_domain="one universal Lorentz Gram schema for all triangles and quadrilaterals",
         spherical_and_affine_rank_parameters_unbounded=True,
         selected_vertex_or_face_diagram_lists_used=False,

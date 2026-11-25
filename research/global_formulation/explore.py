@@ -5,26 +5,14 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import tempfile
 
-from . import conic, data, model
+from . import conic, data, model, separation
 
 
 def sampled_psd_LP(problem):
     """A declared outer LP: test e_i and e_i+-e_j in every PSD block."""
-    blocks = []
-    for b in problem["blocks"]:
-        M, name = b["entries"], b["name"]
-        if len(M) == 1:
-            blocks.append(b); continue
-        for i in range(len(M)):
-            blocks.append(dict(name=name+f"_diag{i}", entries=[[M[i][i]]]))
-            for j in range(i):
-                for sign in (-1, 1):
-                    row = conic.plus(M[i][i], M[j][j], conic.times(2*sign, M[i][j]))
-                    blocks.append(dict(name=name+f"_pair{i}_{j}_{sign}", entries=[[row]]))
-    return conic.model(problem["variables"], blocks, problem["equations"], dict(problem["metadata"],
-        PSD_replacement="necessary rational test directions, not an equivalence",
-        parent_SDP_sha256=conic.digest_bytes(conic.canonical(problem))))
+    return separation.outer_LP(problem)
 
 
 def linprog(problem, seconds=300):
@@ -70,7 +58,7 @@ def exact_reconstruction(problem, candidate):
     # for checking every original equality and cone constraint.
     for tolerance in (F(1, 10**8), F(1, 10**11)):
         supported = {n for n, v in candidate.items() if abs(v) > tolerance}
-        if len(supported) > 400:
+        if len(supported) > 2000:
             continue
         reduced = conic.model([n for n in problem["variables"] if n in supported],
             [dict(b, entries=[[{n: v for n, v in entry.items() if not n or n in supported} for entry in row]
@@ -101,7 +89,41 @@ def self_checks():
     D = conic.farkas(P)
     conic.check_point(D, dict(potential_0=F(1), dual_b0_0_0=F(1, 2),
         dual_b0_0_1=-F(1, 2), dual_b0_1_1=F(1, 2)))
+    outer = separation.outer_LP(P)
+    proposed = {n: F(0) for n in conic.farkas(outer)["variables"]}
+    proposed.update(potential_0=F(1), dual_b2_0_0=F(1, 2))
+    conic.check_point(conic.farkas(outer), proposed)
+    separation.lift_certificate(D, outer, proposed)
+    # Check SDPA's constant sign and diagonal-cone packing independently
+    # of the exact in-memory model used by the certificate checker.
+    P = conic.model(["x"], [
+        dict(name="scalar1", entries=[[conic.form(1, x=1)]]),
+        dict(name="matrix", entries=[[conic.form(1), conic.form(x=1)],
+                                    [conic.form(x=1), conic.form(1)]]),
+        dict(name="scalar2", entries=[[conic.form(2, x=-1)]])])
+    with tempfile.TemporaryDirectory(prefix="coxeter_sdpa_encoding_") as folder:
+        path = Path(folder)/"check.dat-s"
+        encoding = conic.write_sdpa(path, P)
+        lines = path.read_text().splitlines()
+        if lines[3] != "2 -2" or encoding["packed_scalar_constraints"] != 2:
+            raise ValueError("The SDPA cone packing changed its intended product cone")
+        encoded = {}
+        for line in lines[5:]:
+            matrix, block, i, j, value = line.split()
+            key = (int(block), int(i), int(j))
+            factor = F(2) if int(matrix) else F(-1)
+            encoded[key] = encoded.get(key, F(0))+factor*F(value)
+        if encoded != {(1, 1, 1): F(1), (1, 1, 2): F(2), (1, 2, 2): F(1),
+                       (2, 1, 1): F(3), (2, 2, 2): F(0)}:
+            raise ValueError("The SDPA encoding does not evaluate to its original affine matrices")
     source = data.literal_module()
+    h1000 = sum((F(1, k*k) for k in range(1, 1001)), F(0))
+    if not (data.HARMONIC2_LOWER <= h1000+F(1, 1001) and h1000+F(1, 1000) <= data.HARMONIC2_UPPER):
+        raise ValueError("The exact integral-test harmonic bounds failed")
+    for kind, rank in (("A", 2), ("A", 7), ("B", 2), ("B", 7), ("D", 4), ("D", 12)):
+        inverse = data.inverse_angle_square_sum(data.rational_root_Gram(kind, rank))
+        if data.component_angle_bounds(kind, rank) != (inverse, inverse):
+            raise ValueError("A closed inverse-Gram angle formula failed its rational matrix check")
     finite_checks, affine_checks = 0, 0
     for kind, (minimum, intercept) in data.FINITE_TAIL.items():
         for rank in (minimum, minimum+1, 57, 80):
@@ -127,6 +149,9 @@ def self_checks():
                 raise ValueError("The symbolic affine deletion statistic disagrees with its literal graph")
             affine_checks += 1
     return dict(exact_affine_equality_alternative=True, exact_offdiagonal_trace_pairing=True,
+        SDPA_constant_sign_and_scalar_packing=True,
+        exact_rational_PSD_cut_certificate_lift=True,
+        harmonic_envelope_integral_proof_checked=True, closed_angle_square_inverse_checks=6,
         finite_tail_regressions=finite_checks, affine_tail_regressions=affine_checks,
         finite_regressions_do_not_replace_the_uniform_proof=True)
 
@@ -138,6 +163,7 @@ def run(root, output, threshold, parity, stage, upper_dimension=None):
     paths = [*sorted((root/"research/global_formulation").glob("*.py")),
         root/"notes/lp/global_formulation.md", root/"notes/lp/global_sources.md",
         root/"arxiv/linear_programming_dimension_bounds/main.tex",
+        root/"manuscripts/finite_volume57_consolidated.tex",
         root/"research/global_formulation/sources.json", root/data.LITERAL]
     bindings = {str(p.relative_to(root)): dict(bytes=p.stat().st_size,
         sha256=conic.digest_bytes(p.read_bytes())) for p in paths}
@@ -157,13 +183,17 @@ def run(root, output, threshold, parity, stage, upper_dimension=None):
         largest_PSD_block=max(len(b["entries"]) for b in primal["blocks"]),
         dual_variables=len(dual["variables"]), conic_alternative_checks=checks,
         diagram_family_lists_used=False, global_bound_changed=False, separate_author_review=False)
-    if stage == "explore-lp":
+    if stage == "explore-psd-cuts":
+        report.update(separation.explore(primal, dual, out, linprog, exact_reconstruction))
+    elif stage == "explore-lp":
         outer = sampled_psd_LP(primal)
         certificate = conic.farkas(outer)
         conic.write_json(out/"LP_outer.exact.json", outer)
         conic.write_json(out/"LP_certificate.exact.json", certificate)
         proposal, numerical = linprog(certificate)
         conic.write_json(out/"LP_certificate_numerical.json", numerical)
+        if proposal is not None:
+            conic.write_json(out/"LP_certificate_candidate.json", proposal)
         recovered = exact_reconstruction(certificate, proposal)
         report["LP_certificate_numerical"] = numerical
         if recovered:
@@ -174,6 +204,8 @@ def run(root, output, threshold, parity, stage, upper_dimension=None):
         else:
             candidate, diagnostic = linprog(outer)
             conic.write_json(out/"LP_primal_numerical.json", diagnostic)
+            if candidate is not None:
+                conic.write_json(out/"LP_primal_candidate.json", candidate)
             recovered = exact_reconstruction(outer, candidate)
             report.update(status="NO_VERIFIED_GLOBAL_CERTIFICATE_AT_THIS_LEVEL", LP_primal_numerical=diagnostic)
             if recovered:
@@ -187,25 +219,35 @@ def run(root, output, threshold, parity, stage, upper_dimension=None):
                 except ValueError as error:
                     report["full_SDP_point_not_verified"] = str(error)
     elif stage == "explore-sdpa":
+        print("Eliminating the full certificate's affine equalities over Q", flush=True)
         compiled, substitutions = conic.eliminate(dual)
         conic.write_json(out/"dual_compiled.exact.json", compiled)
         conic.write_json(out/"dual_substitutions.exact.json", substitutions)
-        conic.write_sdpa(out/"dual.dat-s", compiled)
+        encoding = conic.write_sdpa(out/"dual.dat-s", compiled)
+        print(json.dumps(dict(SDPA_encoding=encoding)), flush=True)
         solver = shutil.which("sdpa_gmp") or shutil.which("sdpa")
         if not solver:
             raise RuntimeError("SDPA is not installed")
         command = [solver, "-ds", str(out/"dual.dat-s"), "-o", str(out/"dual.result")]
+        returncode = None
         with (out/"solver.stdout").open("x") as stream:
-            result = subprocess.run(command, stdout=stream, stderr=subprocess.STDOUT, timeout=700, check=False)
-        report.update(SDPA_command=command, SDPA_returncode=result.returncode,
-            status="GLOBAL_SDPA_RESULT_REQUIRES_EXACT_RECONSTRUCTION")
+            try:
+                returncode = subprocess.run(command, stdout=stream, stderr=subprocess.STDOUT,
+                    timeout=600, check=False).returncode
+            except subprocess.TimeoutExpired:
+                report["SDPA_time_limit_reached"] = True
+        report.update(SDPA_command=command, SDPA_returncode=returncode, SDPA_encoding=encoding,
+            exact_null_directions_removed=len(compiled["metadata"]["free_null_directions_fixed_to_zero"]),
+            status=("GLOBAL_SDPA_TIME_LIMIT_NO_CERTIFICATE" if returncode is None else
+                    "GLOBAL_SDPA_NUMERICAL_FAILURE" if returncode else
+                    "GLOBAL_SDPA_RESULT_REQUIRES_EXACT_RECONSTRUCTION"))
         try:
             raw, phase = conic.native_vector(out/"dual.result")
             point, checked = conic.reconstruct(dual, compiled, substitutions, raw)
             conic.write_json(out/"SDPA_certificate.exact.json", point)
             report.update(status="EXACT_GLOBAL_SDP_INFEASIBILITY_CERTIFICATE", SDPA_phase=phase,
                 certificate_check=checked, accepted_dimension_bound_update=False)
-        except ValueError as error:
+        except (ValueError, FileNotFoundError) as error:
             report["exact_certificate_not_obtained"] = str(error)
     elif stage != "export":
         raise ValueError("Unsupported research stage")

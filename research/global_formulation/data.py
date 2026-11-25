@@ -16,6 +16,8 @@ LITERAL = "scripts/finite57_literal_weights_audit_20261024.py"
 LITERAL_SHA256 = "f6eba7af77af50b821e9e99c589388c1352f9ba5a99052aaeee64393f5ada1e0"
 FINITE_TAIL = {"A": (21, 23), "B": (21, 26), "D": (22, 30)}
 AFFINE_MINIMUM = 25
+HARMONIC2_LOWER = F(1644933, 10**6)
+HARMONIC2_UPPER = F(1644935, 10**6)
 SAME_TYPES = (("A", 13), ("A", 14), ("A", 15), ("A", 15), ("D", 15), ("D", 15),
     ("A", 16), ("A", 16), ("D", 16), ("D", 16), ("D", 14), ("D", 14),
     ("D", 13), ("D", 13), ("D", 28))
@@ -27,6 +29,18 @@ CROSS = ((19, ("A", 4), ("A", 12), 4, "has_a1"),
     (22, ("A", 1), ("D", 5), 1, "a11_or_a9_a2"),
     (23, ("A", 1), ("D", 5), 1, "a9_a2"),
     (24, ("A", 12), ("D", 16), 2, "two15"))
+
+
+def feature_minimum_ranks():
+    """Minimum total rank required by each existing contextual feature."""
+    result = {j: component[1]+extra for j, (component, extra) in
+        enumerate(zip(SAME_TYPES, [1]*12+[45, 45, 30], strict=True), 4)}
+    guard_rank = dict(has_a1=1, a1_a10=11, a1_a9=10, a11_or_a9_a2=11,
+        a9_a2=11, two15=30)
+    result.update({j: left[1]+right[1]+guard_rank[guard]
+        for j, left, right, _, guard in CROSS})
+    result[25] = 2*2+10+2*1
+    return result
 
 
 def finite_types():
@@ -100,13 +114,74 @@ def prokhorov_statistics(adjacency, deleted=None):
     return W, J
 
 
+def rational_root_Gram(kind, rank):
+    """A rational rescaling of the spherical crystallographic Gram matrix."""
+    if kind not in ("A", "B", "D", "E", "F"):
+        raise ValueError("The noncrystallographic types use declared outer bounds")
+    adjacency = graph(kind, rank)
+    matrix = [[F(2*int(i == j)-int(j in adjacency[i])) for j in range(rank)] for i in range(rank)]
+    if kind == "B":
+        matrix[-1][-1] = F(1)
+    elif kind == "F":
+        matrix[2][2] = matrix[3][3] = F(1)
+        matrix[2][3] = matrix[3][2] = -F(1, 2)
+    return matrix
+
+
+def inverse_angle_square_sum(matrix):
+    r = len(matrix)
+    augmented = [list(row)+[F(int(i == j)) for j in range(r)] for i, row in enumerate(matrix)]
+    for i in range(r):
+        pivot = augmented[i][i]
+        if pivot <= 0:
+            raise ValueError("Expected positive definite root Gram")
+        augmented[i] = [x/pivot for x in augmented[i]]
+        for j in range(r):
+            if j != i:
+                factor = augmented[j][i]
+                augmented[j] = [a-factor*b for a, b in zip(augmented[j], augmented[i], strict=True)]
+    inverse = [row[r:] for row in augmented]
+    return sum((inverse[i][j]**2/(inverse[i][i]*inverse[j][j])
+        for i, j in combinations(range(r), 2)), F(0))
+
+
+def component_angle_bounds(kind, rank):
+    if kind == "A":
+        R = rank+1
+        h = sum((F(1, k*k) for k in range(1, rank+1)), F(0))
+        value = R*R*h-F(3*R*R-R-2, 2)
+    elif kind == "B":
+        value = F(rank*(rank-1), 4)
+    elif kind == "D":
+        value = F(rank*(rank-1), 4)-F(1, 2)-F(2, rank)+F(4, rank*rank)
+    elif kind in ("E", "F"):
+        value = inverse_angle_square_sum(rational_root_Gram(kind, rank))
+    elif kind == "I":
+        return F(5, 8), F(1)
+    else:
+        # The path-distance inverse-Gram bound holds also for H3 and H4.
+        adjacency = graph(kind, rank)
+        lower = F(0)
+        for start in range(rank):
+            distances, queue = {start: 0}, deque([start])
+            while queue:
+                a = queue.popleft()
+                for b in adjacency[a]:
+                    if b not in distances:
+                        distances[b] = distances[a]+1; queue.append(b)
+            lower += sum((F(1, (distances[j]+1)**2) for j in range(start+1, rank)), F(0))
+        return lower, F(rank*(rank-1), 2)
+    return value, value
+
+
 def intrinsic_tables():
     source = literal_module()
     finite, affine, cross = {}, {}, {}
     for t in finite_types():
         S = sum((source.finite_same_weight(t, i, j) for i, j in combinations(range(t[1]), 2)), F(0))
         W, J = prokhorov_statistics(graph(*t))
-        finite[t] = dict(ordinary=S, W=W, J=J)
+        lo, hi = component_angle_bounds(*t)
+        finite[t] = dict(ordinary=S, W=W, J=J, angle_square_lower=lo, angle_square_upper=hi)
     for t in affine_types():
         order = t[1]+1
         S = sum((source.affine_weight(t[0], order, i, j) for i, j in combinations(range(order), 2)), F(0))

@@ -45,6 +45,19 @@ exact rational identities and PSD checks. Every accepted result must be
 checked in its original complete matrix; support reduction is only a
 candidate-recovery device.
 
+`explore-psd-cuts` adds rational quadratic tests from violated original
+PSD blocks. It lifts any recovered LP certificate back to the original
+SDP and checks it there. This adds constraints to the same global
+matrices, without growing a list of diagram types. The model includes
+the uniform old two-unit triangle cover, contextual rank-support rows,
+and positive-coordinate support localizers. Old quadrilateral transfers
+whose premises require the dimension-58 LP remain outside this first model.
+
+The angle-square observable couples inverse-Gram sums over all finite
+vertex components to the face cosines. Its A/B/D formulas and rational
+unbounded-tail envelopes are proved in the specification. Its dual
+coefficient is free along with the 26 old feature coefficients.
+
 The generic compiler includes affine equalities in its Farkas alternative
 and includes the factor two in off-diagonal trace pairings. It does not
 fix corner coefficients, impose coefficient boxes or silently replace a

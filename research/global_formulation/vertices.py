@@ -5,7 +5,7 @@ from . import data
 from .moments import dimension_domain
 from .polynomial import as_poly, var
 
-FEATURES = tuple(f"phi{j}" for j in range(26))+("chi58", "ideal_corner", "right_corner")
+FEATURES = tuple(f"phi{j}" for j in range(26))+("chi58", "ideal_corner", "right_corner", "angle_square")
 
 
 def counters(d, types):
@@ -115,7 +115,28 @@ def finite_domain(threshold, parity, tables):
     for j, left, right, orbit, guard in data.CROSS:
         columns[f"phi{j}"] = orbit*t*t*u[left]*u[right]*guards[guard]
     columns["phi25"] = 2*t*t*(u["A", 2]**2-t*u["A", 2])*a[10]*two_a1
+    for j, minimum in data.feature_minimum_ranks().items():
+        d.ge(f"feature{j}_whole_rank_support", (1-minimum*t)*columns[f"phi{j}"])
     columns["right_corner"] = t*t*(1-sigma2)/2
+    angle = d.variable("angle_square_total")
+    lower = t*sum((tables["finite"][c]["angle_square_lower"]*v for c, v in u.items()), as_poly(0))
+    upper = t*sum((tables["finite"][c]["angle_square_upper"]*v for c, v in u.items()), as_poly(0))
+    for kind, values in tails.items():
+        U, R, S = values["count"], values["rank"], values["square"]
+        if kind == "A":
+            square_order = S+2*t*R+t*U
+            lower += (data.HARMONIC2_LOWER-F(3, 2))*square_order-t*(R+U)/2-t*U/data.FINITE_TAIL[kind][0]
+            upper += (data.HARMONIC2_UPPER-F(3, 2))*square_order-t*(R+U)/2+t*U
+        elif kind == "B":
+            lower += (S-t*R)/4
+            upper += (S-t*R)/4
+        else:
+            lower += (S-t*R)/4-(F(1, 2)+F(2, data.FINITE_TAIL[kind][0]))*t*U
+            upper += (S-t*R)/4-t*U/2
+    d.ge("complete_inverse_Gram_angle_lower", angle-lower)
+    d.ge("complete_inverse_Gram_angle_upper", upper-angle)
+    d.ge("angle_square_rank_capacity", (sigma2-t)/2-angle)
+    columns["angle_square"] = t*t*angle
     allowance = t*t*(1-6*t+(5*t*t if parity == "odd" else 0))/8
     ports = dict(P=t*(1-t)*(1-2*t)/6, Q=as_poly(0),
         A=t*(1-3*sigma2+2*sigma3)/6, S=t*t*(W-t*J)/2,
@@ -147,6 +168,7 @@ def ideal_domain(threshold, tables):
     columns["phi0"] = t*(1-t)/2
     columns["phi2"] = t*q
     columns["ideal_corner"] = columns["phi0"]
+    columns["angle_square"] = columns["phi0"]
     columns["chi58"] = columns["phi0"]*chi
     ports = dict(P=(sigma2-t*(1-t))/6, Q=((1-t)**2-sigma2)/8,
         A=as_poly(0), S=t*H/2, edge_endpoints=t*t, allowance=t*(3*(1-t)-5*b)/4)
