@@ -1,4 +1,4 @@
-"""Exact scalar faces from all moment-order cycles modulo known equalities.
+"""Exact scalar faces from moment-order cycles and positive row circuits.
 
 An edge f->g is admitted only if g-f is a positive multiple of a retained
 source scalar cone. A circulation gives a checked positive zero identity;
@@ -103,9 +103,10 @@ def find(original,problem,substitutions):
 
 
 def three_row_circuits(problem):
-    """All positive three-row circuits with a one/two-term summand.
+    """Positive three-row circuits with a one/two-term summand.
 
-Deleting one coefficient from each of the two longer rows leaves
+    The two longer rows are searched when they have 3--64 terms.
+    Deleting one coefficient from each of those rows leaves
 opposite proportional forms. Their residual is looked up in the full
 scalar row table. Every resulting rational identity is checked afresh.
 """
@@ -172,7 +173,8 @@ def run(root,out,source,candidate_run):
         strong_components=len(proof['strong_components']))),flush=True)
     refined,updates=conic.eliminate(problem,equations)
     combined={v:feasibility.substitute(q,updates) for v,q in substitutions.items()}
-    report=dict(status='EXACT_ORDER_FACES_EXPOSED_ORIGINAL_FEASIBILITY_UNDECIDED',
+    report=dict(status=('EXACT_ORDER_FACES_EXPOSED_ORIGINAL_FEASIBILITY_UNDECIDED' if equations
+        else 'NO_NEW_SCALAR_FACE_OR_ORIGINAL_POINT'),
         original_input_sha256=before[str(original_path.relative_to(root))]['sha256'],
         forced_scalar_rows=len(equations),source_variables=len(problem['variables']),
         refined_variables=len(refined['variables']),all_reductions_implied_by_source_cones=True,

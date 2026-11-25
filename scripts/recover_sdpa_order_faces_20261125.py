@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Serial exact closure of every retained scalar moment-order cycle."""
+"""Serial exact scalar-face closure and original-model point recovery."""
 import argparse
 import os
 from pathlib import Path
