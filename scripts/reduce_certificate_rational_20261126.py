@@ -57,9 +57,26 @@ def fixture(output):
     s,r=rational.peel(residual_rows,2)
     if s or rational.exact_remainders(residual_rows,s,r,{})!={0:residual_rows[0],1:residual_rows[1]}:
         raise ValueError('A coupled residual was silently removed')
+    # Actual matrix coordinates have rational trace coefficients, even though
+    # the final numerical cone packing contains sqrt(2).
+    P=conic.model(['x'],[
+        dict(name='scalar',entries=[[{'x':F(2),'':F(-1)}]]),
+        dict(name='matrix',entries=[
+            [{'':F(4)},{'x':F(3,7)},{}],
+            [{'x':F(3,7)},{'':F(5)},{}],
+            [{},{},{'':F(6)}]])])
+    original=dict(scalar_cones=1,PSD_sizes=[3])
+    equations=rational.source_equations(P,original,np.arange(7))
+    if (equations[0]!={0:F(2),2:F(6,7)}
+            or equations[1]!={-1:F(1),0:F(-1),1:F(4),4:F(5),6:F(6)}):
+        raise ValueError('The rational trace coefficients or normalization differ')
+    packed,_,_=rational.encode({}, {}, 7, original)
+    np.testing.assert_allclose(packed['b']-packed['A']@np.arange(1.,8.),
+        [1.,2.,3.*np.sqrt(2.),4.*np.sqrt(2.),5.,6.*np.sqrt(2.),7.],rtol=0,atol=1e-14)
     return dict(status='RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED',
                 primitive_integer_rows=True, triangular_back_substitution_checked=True,
                 non_leaf_pivot_rejected=True, coupled_residual_retained=True,
+                rational_trace_factor_two_and_numerical_svec_factor_checked=True,
                 numerical_affine_encoding_checked=True)
 
 
