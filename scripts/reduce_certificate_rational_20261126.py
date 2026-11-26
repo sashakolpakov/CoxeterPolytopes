@@ -30,7 +30,7 @@ def fixture(output):
     # Both pivots must be substituted in reverse order; a non-leaf is rejected.
     rows = [rational.primitive({0:F(2,3), 1:F(1,7), 2:F(1,5)}),
             rational.primitive({1:F(3,11), 2:F(1,13), -1:F(-1,17)})]
-    steps, remaining = rational.peel(rows, 2)
+    steps, remaining = rational.peel(rows, 2, cascade=True)
     if len(steps) != 2 or remaining:
         raise ValueError('The two-stage exact fixture did not eliminate both equations')
     rational.verify_peeling(rows, 2, steps, remaining)
@@ -52,6 +52,9 @@ def fixture(output):
     np.testing.assert_allclose(data['b']-data['A']@np.asarray([2/7]), q, atol=1e-15)
     if free.tolist() != [2] or layout['zero_cones']:
         raise ValueError('Incorrect exact fixture free-coordinate map')
+    independent_steps, independent_remaining = rational.peel(rows, 2)
+    if len(independent_steps)!=1 or len(independent_remaining)!=1:
+        raise ValueError('The default reduction cascaded instead of retaining the coupled core')
     # A genuinely coupled residual is retained, including its normalization.
     residual_rows=[{0:1,1:2},{0:3,1:4,-1:1}]
     s,r=rational.peel(residual_rows,2)
@@ -76,6 +79,7 @@ def fixture(output):
     return dict(status='RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED',
                 primitive_integer_rows=True, triangular_back_substitution_checked=True,
                 non_leaf_pivot_rejected=True, coupled_residual_retained=True,
+                noncascading_default_retains_coupled_core=True,
                 rational_trace_factor_two_and_numerical_svec_factor_checked=True,
                 numerical_affine_encoding_checked=True)
 
@@ -155,6 +159,7 @@ def main():
                 save_exact(args.output/'residual.exact.json.gz',residual)
                 conic.write_json(args.output/'elimination.json',dict(
                     schema='exact-degree-one-certificate-elimination-v1',steps=steps,
+                    policy='Original degree-one scalar columns only; no cascading fill',
                     remaining_source_rows=remaining,source_model_sha256=face['exact_model_sha256'],
                     matrix_coordinates='Unscaled actual entries over Q',
                     certificate_feasibility_preserved=True))

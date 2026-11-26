@@ -77,11 +77,12 @@ def source_equations(problem, layout, embedding):
     return equations
 
 
-def peel(rows, scalar_coordinates, progress=None):
+def peel(rows, scalar_coordinates, progress=None, cascade=False):
     """Eliminate scalar columns of degree one, with exact triangular witnesses.
 
-    No row addition or dense nullspace calculation is used. Removing an equation
-    can expose more degree-one columns, so substitution is performed backwards.
+    The default uses only original degree-one columns: substitution cannot fill
+    another equation, and its total size is bounded by the source coefficient
+    count. Cascading is an explicit experiment; it can create substantial fill.
     """
     incidence = [set() for _ in range(scalar_coordinates)]
     remaining = {r for r, row in enumerate(rows) if row}
@@ -107,7 +108,8 @@ def peel(rows, scalar_coordinates, progress=None):
         for other in rows[row]:
             if 0 <= other < scalar_coordinates:
                 incidence[other].remove(row)
-                offer(other)
+                if cascade:
+                    offer(other)
         if progress and len(steps) % 10000 == 0:
             progress(stage='leaf_elimination', pivots=len(steps), remaining_rows=len(remaining))
     return steps, sorted(remaining)
