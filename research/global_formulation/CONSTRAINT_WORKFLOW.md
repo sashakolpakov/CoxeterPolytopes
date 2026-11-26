@@ -199,6 +199,29 @@ separate serial jobs:
     one-iteration job to the replayed input and private binary. Its longer `run`
     requires an explicitly authorized wall-time policy and matching monitor
     environment; the current 900-second watchdog does not authorize that run.
+    The user's subsequent 26 November approval supplies that override for this
+    SDP: use `scripts/run_bounded_gmp_hour_10gb_20261126.py`, restricted to the
+    approved native-input hash, with one thread, 10 GB process-tree RSS and the
+    unchanged percentage gates. The original watchdogs and old receipts remain
+    unchanged. The first call requests one native iteration to write a full
+    checkpoint; its 3,300-second native time limit expired during the first
+    factorization, so it returned no arrays. The new continuation adapter's
+    small `check` action passed under the serial watchdog; see
+    `results/global_gmp_continuation_checks01/result.json`.
+    `continue_gmp_checkpoint_20261126.py run`
+    verifies the bound full input and a completed native checkpoint, checks its
+    cone-state positivity, and preserves all three native arrays without a
+    binary64 conversion. Cone-state positivity alone does not assert affine
+    feasibility of the actual model. No full-model continuation was launched
+    without a completed checkpoint. Do not repeat an unchanged cold job under
+    the same budget when it cannot finish its first factorization.
+20. When a full GMP vector is available,
+    `scripts/check_gmp_literal_dual_20261126.py` is the prepared direct check of
+    every exact G(u) cone, interpreting all printed digits over Q. This adapter
+    has not yet been exercised on a full-model output. A failed check rejects
+    that vector; it does not decide feasibility. A successful check writes a
+    candidate for the separate existing `search_balanced_dual_field_20261126.py
+    verify` replay, which must check the full exact adjoint identities as well.
 
 For the smaller explicit dual, final verification checks every cone and all
 300,139 adjoint identities directly in exact matrix coordinates. For a recovered

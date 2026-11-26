@@ -1,0 +1,96 @@
+SDPA-GMP start at Thu Nov 26 17:09:38 2026
+"Global Coxeter SDP; sub-binary64 input precision fixture
+data      is /Users/sasha/CoxeterPolytopes/results/global_gmp_continuation_checks01/input.dat-s
+parameter is /Users/sasha/CoxeterPolytopes/results/global_gmp_continuation_checks01/warm/param.sdpa
+initial   is /Users/sasha/CoxeterPolytopes/results/global_gmp_continuation_checks01/warm/native_initial.dat
+out       is /Users/sasha/CoxeterPolytopes/results/global_gmp_continuation_checks01/warm/native.result
+DENSE computation
+   mu      thetaP  thetaD  objP      objD      alphaP  alphaD  beta 
+ 0 1.5e+01 0.0e+00 1.0e+00 +4.16e+01 -1.99e-01 1.2e+00 1.0e+00 3.00e-01
+ 1 2.2e+00 0.0e+00 8.7e-77 +6.86e+00 +1.53e-01 1.2e+00 1.0e+00 3.00e-01
+
+phase.value = pdFEAS    
+   Iteration = 1
+          mu = 2.2357521792636399e+00
+relative gap = 1.9128766292209618e+00
+         gap = 6.7072565377909196e+00
+      digits = -2.8168696115310798e-01
+objValPrimal = 6.8599999999999991e+00
+objValDual   = 1.5274346220907945e-01
+p.feas.error = 8.6361685550944446e-78
+d.feas.error = 1.7272337110188889e-77
+relative eps = 8.6361685550944446e-78
+total time   = 0.001
+
+
+Parameters are
+** Parameters **
+maxIteration =    1
+epsilonStar  = 1.000e-45
+lambdaStar   = 1.000e+01
+omegaStar    = 1.000e+04
+lowerBound   = -1.000e+100
+upperBound   = 1.000e+100
+betaStar     = 1.000e-01
+betaBar      = 3.000e-01
+gammaStar    = 9.000e-01
+epsilonDash  = 1.000e-45
+precision    =    256
+xPrint       = %+100.90Fe 
+XPrint       = %+100.90Fe 
+YPrint       = %+100.90Fe 
+infPrint     = %+100.90Fe 
+
+                         Time(sec)  Ratio(% : MainLoop) 
+ Predictor time  =       0.000019,  5.847953
+ Corrector time  =       0.000016,  4.897661
+ Make bMat time  =       0.000006,  1.900585
+ Make bDia time  =       0.000001,  0.365497
+ Make bF1  time  =       0.000005,  1.535088
+ Make bF2  time  =       0.000000,  0.000000
+ Make bF3  time  =       0.000000,  0.000000
+ Make bPRE time  =       0.000004,  1.242690
+ Make rMat time  =       0.000007,  2.119883
+ Make gVec Mul   =       0.000000,  0.000000
+ Make gVec time  =       0.000004,  1.169591
+ Cholesky bMat   =       0.000001,  0.292398
+ Ste Pre time    =       0.000001,  0.292398
+ Ste Cor time    =       0.000045,  13.815789
+ solve           =       0.000002,  0.584795
+ sumDz           =       0.000003,  0.950292
+ makedX          =       0.000008,  2.412281
+ symmetriseDx    =       0.000000,  0.000000
+ makedXdZ        =       0.000011,  3.362573
+ xMatTime        =       0.000019,  5.847953
+ zMatTime        =       0.000012,  3.654971
+ invzMatTime     =       0.000000,  0.000000
+ xMatzMatTime    =       0.000000,  0.000000
+ EigxMatTime     =       0.000025,  7.675439
+ EigzMatTime     =       0.000015,  4.605263
+ EigxMatzMatTime =       0.000000,  0.000000
+ updateRes       =       0.000005,  1.535088
+ EigTime         =       0.000040,  12.280702
+ sub_total_bMat  =       0.000320,  98.099415
+ Main Loop       =       0.000326,  100.000000
+ File Check      =       0.000000,  0.000000
+ File Change     =       0.000002,  0.584795
+ File Read       =       0.000379,  116.228070
+ Total           =       0.000738,  226.315789
+
+xVec = 
+{   +2.286666666666666359875037528581747346798165133994248277973614086452588956000043000000000000e+00}
+xMat = 
+{
+{ {   +2.286666666666666359875037528581747346798165133994248277973614086452588956000043000000000000e+00,   +1.000000000000000000000000000000000000000099999999999999999999999999999999999997000000000000e+00 },
+  {   +1.000000000000000000000000000000000000000099999999999999999999999999999999999997000000000000e+00,   +2.286666666666666359875037528581747346798165133994248277973614086452588956000043000000000000e+00 }   }
+{   +2.286666666666666359875037528581747346798165133994248277973614086452588956000043000000000000e+00}
+}
+yMat = 
+{
+{ {   +1.016593558087251240899293848461919057362078766686722342297897119727849771521596000000000000e+00,   -7.637173110453972708914969556640564571792209422909676385713977036939247067237024000000000000e-02 },
+  {   -7.637173110453972708914969556640564571792209422909676385713977036939247067237024000000000000e-02,   +1.016593558087251240899293848461919057362078766686722342297897119727849771521601000000000000e+00 }   }
+{   +9.668128838254975182014123030761618852758424666265553154042057605443004569567973000000000000e-01}
+}
+    main loop time = 0.000326
+        total time = 0.000738
+  file   read time = 0.000379

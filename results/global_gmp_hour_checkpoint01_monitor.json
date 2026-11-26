@@ -1,0 +1,69 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/prepare_gmp_long_checkpoint_20261126.py",
+    "run",
+    "--plan",
+    "results/global_gmp_longer_plan01",
+    "--output",
+    "results/global_gmp_hour_checkpoint01"
+  ],
+  "elapsed_seconds": 3302.115,
+  "peak_process_tree_rss_bytes": 6345277440,
+  "initial_resources": {
+    "free_disk_gib": 315.37,
+    "available_memory_gib": 7.63,
+    "disk_free_bytes": 338626682880,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 8190099456,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 34.046172,
+    "available_memory_percent": 31.781769,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 3600,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "status": "USER_AUTHORIZED_ONE_HOUR_GMP_BATCHES",
+    "date": "2026-11-26",
+    "user_approval": "yes, seems we need longer runs. at least it does not crap out.",
+    "approved_request": "May I use one-hour monitored batches for this SDP, retaining one thread and the 10 GB RSS cap?",
+    "scope": "Current full 61513-variable explicit normalized dual G(u), dimension 57",
+    "native_input_sha256": "f940354294a155d7ac136151f306505edce788b6e69d982753c71abfcb5f6711",
+    "outer_wall_limit_seconds": 3600,
+    "native_batch_limit_seconds": 3300,
+    "threads": 1,
+    "rss_limit_bytes": 10000000000,
+    "shared_lock_and_percentage_admission_abort_gates_unchanged": true,
+    "prior_wall_limit_seconds": 900,
+    "prior_limits_and_records_preserved": true,
+    "source": "Explicit user instruction, 26 November 2026",
+    "wall_limit_seconds": 3600
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 140,
+  "stdout": "{\"status\": \"SDPA_GMP_FULL_EXPLICIT_DUAL_ATTEMPT_COMPLETED\", \"output\": \"/Users/sasha/CoxeterPolytopes/results/global_gmp_hour_checkpoint01\"}\n",
+  "runner_sha256": "4776ee0d6fe0f1cbfd97bfad6e89e27d0d47f8591ec6200c36b354faf533ef96",
+  "checker_sha256": "99c9bb79d1989e695f2d253490bdd638a8d1f40818aeea117c48c82a7fc866a6",
+  "lock_owner": "wrapper"
+}

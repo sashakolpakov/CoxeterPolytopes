@@ -269,9 +269,29 @@ The [checkpoint regression](../../results/global_gmp_checkpoint_checks02/result.
 checks actual one-iteration output and a native warm restart at 256 bits. Initial
 files contain only the three unlabeled brace arrays; report headers are removed.
 A [one-iteration longer-batch plan](../../results/global_gmp_longer_plan01/result.json)
-is prepared but has not been executed or authorized. It requests a one-hour
-monitored wall limit, preserving one thread, the 10 GB RSS cap, shared lock and
-percentage resource gates. The current policy remains 900-second batches.
+was prepared before the subsequent
+[explicit user authorization](../../results/global_gmp_hour_authorization_20261126.json).
+The [first authorized hour batch](../../results/global_gmp_hour_checkpoint01/result.json)
+reached its 3,300-second native time limit during the first Newton step, without
+a completed iteration, terminal phase or solution arrays. Its
+[monitor](../../results/global_gmp_hour_checkpoint01_monitor.json) allowed 3,600
+seconds overall and measured a peak process-tree RSS of 6,345,277,440 bytes.
+Samples near minutes 40 and 54 show GMP arithmetic in sparse Cholesky. No native
+numerical error was printed. This scoped override preserves one thread, the
+10 GB RSS cap, shared lock and percentage resource gates. Historical 900-second
+records retain their actual limits. The
+[hour-batch completion record](../../results/global_gmp_hour_completion_20261126.json)
+distinguishes the time limit from solver infeasibility or convergence.
+
+The new [continuation fixture](../../results/global_gmp_continuation_checks01/result.json)
+passed actual cold and warm native calls, exact rational positive-definiteness
+checks and transfer of every printed GMP digit. It tests the restart adapter,
+not full-model feasibility. The full run has no saved state to resume; repeating
+it unchanged would repeat the first factorization. A larger uninterrupted budget
+or faster factorization is needed before this checkpoint strategy can advance.
+The direct GMP-vector checker is prepared but has not run on this model because
+there is no returned vector. Cone checks and a separate exact replay of all
+300,139 adjoint identities remain required for a certificate.
 
 The [archive receipt](../../results/global_gmp_input_archives_20261126.json)
 verifies a complete byte round trip of the 667,751,942-byte native input into

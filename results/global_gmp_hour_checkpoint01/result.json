@@ -1,0 +1,84 @@
+{
+  "accepted_bounds_changed": false,
+  "authorized_wall_seconds_from_monitor": 3600,
+  "exact_certificate_obtained": false,
+  "geometric_constraints_changed": false,
+  "longer_wall_plan": "results/global_gmp_longer_plan01/result.json",
+  "longer_wall_plan_sha256": "070f822473d6b92cafc57c54509f4af1aadf3220f7e24fc0bb28bf4bc7c44dbf",
+  "native": {
+    "command": [
+      "/tmp/coxeter_sdpa_gmp_sparse_graph_20261126/sdpa-gmp/sdpa_gmp",
+      "-ds",
+      "results/global_gmp_dual_prepare01/input.dat-s",
+      "-o",
+      "/Users/sasha/CoxeterPolytopes/results/global_gmp_hour_checkpoint01/native.result",
+      "-p",
+      "/Users/sasha/CoxeterPolytopes/results/global_gmp_hour_checkpoint01/param.sdpa"
+    ],
+    "decimal_input_significant_digits": 100,
+    "elapsed_seconds": 3300.9349095830694,
+    "feasibility_tolerance": "1e-45",
+    "full_precision_output_formats": {},
+    "gap_tolerance": "1e-45",
+    "inner_owned_memory_stop_bytes": 8800000000,
+    "last_printed_iteration": null,
+    "native_matrix_mode": "SPARSE",
+    "native_result_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "numerical_status_is_not_exact_certificate": true,
+    "observed_owned_process_tree_rss_bytes": 6330171392,
+    "phase": null,
+    "reported_precision_bits": null,
+    "requested_precision_bits": 256,
+    "returncode": -15,
+    "scientific_watchdog_memory_limit_bytes": 10000000000,
+    "solution_arrays_present": {
+      "xMat": false,
+      "xVec": false,
+      "yMat": false
+    },
+    "solver": {
+      "executable": "/tmp/coxeter_sdpa_gmp_sparse_graph_20261126/sdpa-gmp/sdpa_gmp",
+      "installation": {
+        "/Users/sasha/CoxeterPolytopes/results/global_gmp_graph_build01/installation.json": {
+          "bytes": 381,
+          "sha256": "a50c7e139bae955f708ccaf856c0554097580e11c716f97a4b9741a7a738f342"
+        }
+      },
+      "sha256": "00f02d2ae4662183fd44fbe1e49bda2fb6a5ee1685d6a826713f8a77137a758b",
+      "upstream": "https://github.com/nakatamaho/sdpa-gmp",
+      "upstream_commit": "ca110db5ea1cc46e811b70dfea9cbb25db74448d",
+      "version": "7.1.3 + marked graph union"
+    },
+    "status": "NATIVE_BATCH_TIME_LIMIT"
+  },
+  "objective": {
+    "exact_strict_dual_point": "h I on every retained cone",
+    "feasibility_constraints_unchanged": true,
+    "objective": "h * trace(G(u)); the constant is omitted from the native linear objective",
+    "objective_is_not_an_additional_geometric_condition": true,
+    "objective_lower_bound": "-599/4194304000",
+    "positive_trace_unit": "1/524288",
+    "trace_constant": "599/4194304000"
+  },
+  "original_feasibility_status": "UNDECIDED",
+  "prepared": "results/global_gmp_dual_prepare01",
+  "private_backend_build": "results/global_gmp_graph_build01/result.json",
+  "private_backend_launcher_sha256": "1de4cf8be541563705e246b26080549c769a2d3305f798042989f0290a61612f",
+  "problem_role": "Normalized dual certificate feasibility for reduced certificate search C",
+  "separate_input_replay": "results/global_gmp_dual_replay01/result.json",
+  "source_bindings": {
+    "/Users/sasha/CoxeterPolytopes/scripts/run_balanced_dual_gmp_20261126.py": {
+      "bytes": 18317,
+      "sha256": "da303ca5d15131cf101dc0a67e3776767dde832cae3647ba73cd8eeb64308be3"
+    },
+    "results/global_gmp_dual_prepare01/result.json": {
+      "bytes": 38256,
+      "sha256": "6fb0ab27ad68b8d8d0f3314c7762253fcd2b3573581a11f7a45848ae38c2742a"
+    },
+    "results/global_gmp_dual_replay01/result.json": {
+      "bytes": 37556,
+      "sha256": "0bb16d46109aa562d6ec7153fcd92ca2ded936afeaf8bef36f68807765dfcfc3"
+    }
+  },
+  "status": "SDPA_GMP_FULL_EXPLICIT_DUAL_ATTEMPT_COMPLETED"
+}

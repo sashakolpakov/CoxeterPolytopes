@@ -202,10 +202,20 @@
   "dual_field_public_index_audit_20261126": "results/global_dual_field_public_index_audit_20261126.txt",
   "dual_field_work_20261126": "results/global_dual_field_completion_20261126.json",
   "formulation_source_checkpoint": "89fe6d59",
+  "gmp_current_wall_authorization_20261126": "results/global_gmp_hour_authorization_20261126.json",
   "gmp_failed_fixture_attempts_20261126": [
     "results/global_gmp_input_checks01/result.json",
     "results/global_gmp_checkpoint_checks01/result.json"
   ],
+  "gmp_hour_public_index_audit_20261126": {
+    "final_index_must_be_audited_again": true,
+    "index_files": 34205,
+    "issues": [],
+    "observed_peak_group_rss_bytes": 220889088,
+    "path_and_blob_list_sha256": "cabfd3ce263be4ca35e972de118e5d53c94f1eb48f59e6c2248b761ce2c9b872",
+    "receipt": "results/global_gmp_hour_public_index_audit_20261126.txt",
+    "scope": "Actual Git index before adding this audit receipt and its manifest summary"
+  },
   "gmp_public_index_audit_20261126": "results/global_gmp_public_index_audit_20261126.txt",
   "historical_numerical_payload_availability": "Superseded payloads were removed under the cleanup receipt. Historical run records retain actual hashes and statuses; tracked bytes restore from the recovery tag. Untracked deleted caches are not backed up.",
   "independent_source_review_complete": false,
@@ -273,6 +283,7 @@
     "old_witness_fails_new_equalities": 7,
     "old_witness_has_no_extension": true
   },
+  "multiprecision_hour_work_20261126": "results/global_gmp_hour_completion_20261126.json",
   "multiprecision_work_20261126": "results/global_gmp_completion_20261126.json",
   "native_SDPA_backend": {
     "GMP_executable_sha256": "430440d3810d78b9b6a24f657aa84f1797ca45b2072777e92265614287f6461f",
@@ -889,6 +900,19 @@
     "results/global_gmp_checkpoint_checks02/resumed/solver.stdout",
     "results/global_gmp_checkpoint_checks02_monitor.json",
     "results/global_gmp_completion_20261126.json",
+    "results/global_gmp_continuation_checks01/first/native.result",
+    "results/global_gmp_continuation_checks01/first/native_launch.json",
+    "results/global_gmp_continuation_checks01/first/param.sdpa",
+    "results/global_gmp_continuation_checks01/first/solver.stdout",
+    "results/global_gmp_continuation_checks01/input.dat-s",
+    "results/global_gmp_continuation_checks01/result.json",
+    "results/global_gmp_continuation_checks01/warm/initial_state.json",
+    "results/global_gmp_continuation_checks01/warm/native.result",
+    "results/global_gmp_continuation_checks01/warm/native_initial.dat",
+    "results/global_gmp_continuation_checks01/warm/native_launch.json",
+    "results/global_gmp_continuation_checks01/warm/param.sdpa",
+    "results/global_gmp_continuation_checks01/warm/solver.stdout",
+    "results/global_gmp_continuation_checks01_monitor.json",
     "results/global_gmp_dual256_01/late_setup_profile.sample.txt",
     "results/global_gmp_dual256_01/native.result",
     "results/global_gmp_dual256_01/param.sdpa",
@@ -925,6 +949,16 @@
     "results/global_gmp_graph_input_checks01/result.json",
     "results/global_gmp_graph_input_checks01/solver.stdout",
     "results/global_gmp_graph_input_checks01_monitor.json",
+    "results/global_gmp_hour_authorization_20261126.json",
+    "results/global_gmp_hour_checkpoint01/launch.json",
+    "results/global_gmp_hour_checkpoint01/param.sdpa",
+    "results/global_gmp_hour_checkpoint01/progress_40min.sample.txt",
+    "results/global_gmp_hour_checkpoint01/progress_54min.sample.txt",
+    "results/global_gmp_hour_checkpoint01/result.json",
+    "results/global_gmp_hour_checkpoint01/solver.stdout",
+    "results/global_gmp_hour_checkpoint01_monitor.json",
+    "results/global_gmp_hour_completion_20261126.json",
+    "results/global_gmp_hour_public_index_audit_20261126.txt",
     "results/global_gmp_input_archive01_monitor.json",
     "results/global_gmp_input_archives_20261126.json",
     "results/global_gmp_input_checks01/input.dat-s",
@@ -1457,9 +1491,11 @@
     "scripts/check_global_edge_compatibility_20261125.py",
     "scripts/check_global_solver_gate_20261125.py",
     "scripts/check_gmp_iteration_checkpoint_20261126.py",
+    "scripts/check_gmp_literal_dual_20261126.py",
     "scripts/check_reduced_certificate_result_20261126.py",
     "scripts/check_sdpa_dual_face_20261125.py",
     "scripts/compare_conic_solvers_20261126.py",
+    "scripts/continue_gmp_checkpoint_20261126.py",
     "scripts/detect_conic_dual_rays_20261126.py",
     "scripts/diagnose_gmp_schur_20261126.py",
     "scripts/diagnose_sdpa_checkpoint_20261125.py",
@@ -1478,6 +1514,7 @@
     "scripts/register_global_constraint_change_20261125.py",
     "scripts/rescale_balanced_dual_20261126.py",
     "scripts/run_balanced_dual_gmp_20261126.py",
+    "scripts/run_bounded_gmp_hour_10gb_20261126.py",
     "scripts/run_global_coxeter_formulation.py",
     "scripts/run_sdpa_checkpoint_20261125.py",
     "scripts/run_sdpa_cli_frozen_20261125.py",
@@ -1526,10 +1563,10 @@
     "scope": "Actual Git index before adding this audit receipt and its summary"
   },
   "remaining_work": [
-    "Obtain explicit authorization before exceeding the current 900-second scientific batch wall policy.",
-    "Complete a high-precision Newton iteration and retain the full native checkpoint; then continue with the checked warm-restart transport.",
-    "Check any resulting candidate exactly in all required original equations and cones, accounting for the trace objective on the dual side.",
-    "Consider a sparsity-preserving coordinate basis or reduced pair-cache storage if the current native Schur cost remains prohibitive.",
+    "Complete the first high-precision factorization: the authorized hour batch returned no checkpoint, so avoid repeating the unchanged cold job under the same budget.",
+    "Use a faster factorization or obtain a larger uninterrupted budget; preserve the one-thread, 10 GB RSS, shared-lock and percentage gates.",
+    "Once a full GMP vector exists, check it in all exact cones and replay every required adjoint identity, accounting for the trace objective on the dual side.",
+    "Consider a sparsity-preserving coordinate basis or reduced pair-cache storage if the native Schur cost remains prohibitive.",
     "Complete the separate source-bound geometric review before changing a global bound."
   ],
   "representation_audit": "results/global_edge_closure_representation_audit01/result.json",
@@ -8077,6 +8114,118 @@
       "peak_process_tree_rss_bytes": 66600960,
       "reported_status": "RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED",
       "result": "results/global_gmp_input_archives_20261126.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 3302.115,
+      "files": {
+        "results/global_gmp_hour_checkpoint01/launch.json": {
+          "bytes": 1452,
+          "sha256": "d9d4ab4d181f683e13323ae329e8d861e50a6783a4dd1d598f4b24a2b7d325c1"
+        },
+        "results/global_gmp_hour_checkpoint01/param.sdpa": {
+          "bytes": 134,
+          "sha256": "ddf1dbb94fea94fd12c9816a6ee49ad26bb2ebacead792b32a9e1ff8f2aa2401"
+        },
+        "results/global_gmp_hour_checkpoint01/progress_40min.sample.txt": {
+          "bytes": 14859,
+          "sha256": "b9996b0b2d559592093a9826327f94261f8d82d9aae428fdbcc51ac2cd4dbc9e"
+        },
+        "results/global_gmp_hour_checkpoint01/progress_54min.sample.txt": {
+          "bytes": 14854,
+          "sha256": "986e0774e2ffa463ff83721e07a2798a0b64df577263b57d52ff4da9b369265d"
+        },
+        "results/global_gmp_hour_checkpoint01/result.json": {
+          "bytes": 3649,
+          "sha256": "db976d1ad72d6f39ad95c3f249714ce971ceb5b6fa867cfe919b3c0b2a17344d"
+        },
+        "results/global_gmp_hour_checkpoint01/solver.stdout": {
+          "bytes": 388,
+          "sha256": "97a861526caa14bd4862f7c03b4707738130042c71437baaff1152209ac3d729"
+        },
+        "results/global_gmp_hour_checkpoint01_monitor.json": {
+          "bytes": 2968,
+          "sha256": "e1fdd914608e5893d878b260ecbcab929c3828f62abc81011cbc545b122e9052"
+        }
+      },
+      "fixture_only": false,
+      "id": "global_gmp_hour_checkpoint01",
+      "mathematical_verification_claimed": false,
+      "monitor": "results/global_gmp_hour_checkpoint01_monitor.json",
+      "native_feasibility_decision_obtained": false,
+      "original_feasibility_claimed": false,
+      "outcome": "SDPA_GMP_FULL_EXPLICIT_DUAL_ATTEMPT_COMPLETED",
+      "peak_process_tree_rss_bytes": 6345277440,
+      "reported_status": "SDPA_GMP_FULL_EXPLICIT_DUAL_ATTEMPT_COMPLETED",
+      "result": "results/global_gmp_hour_checkpoint01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 1.316,
+      "files": {
+        "results/global_gmp_continuation_checks01/first/native.result": {
+          "bytes": 4320,
+          "sha256": "022d04442f7f10a4e976ef7a07d205d9f10c164063e763b8f9b22bbbba3422ee"
+        },
+        "results/global_gmp_continuation_checks01/first/native_launch.json": {
+          "bytes": 1154,
+          "sha256": "8b3e63acf68b009d2ad8a5e0a4b8b0d140b3c421f43cfc08c259323f2c8b161f"
+        },
+        "results/global_gmp_continuation_checks01/first/param.sdpa": {
+          "bytes": 134,
+          "sha256": "ddf1dbb94fea94fd12c9816a6ee49ad26bb2ebacead792b32a9e1ff8f2aa2401"
+        },
+        "results/global_gmp_continuation_checks01/first/solver.stdout": {
+          "bytes": 1081,
+          "sha256": "3d20678b6290f261d08a1ad9cd8b467f30d9fd2eb3eb9a2abb9b605f93b8153e"
+        },
+        "results/global_gmp_continuation_checks01/input.dat-s": {
+          "bytes": 213,
+          "sha256": "659bb6a9beb000fabd40a9d9d3cdb7eeba09f19f6323d67703a99e30ea0fa9a1"
+        },
+        "results/global_gmp_continuation_checks01/result.json": {
+          "bytes": 7807,
+          "sha256": "f336183fb2d4680ea06ef8a09f4fd45a7795ac69eb6a8cde9938f43fda6e9310"
+        },
+        "results/global_gmp_continuation_checks01/warm/initial_state.json": {
+          "bytes": 1052,
+          "sha256": "9e63fbda37270825fd30a0cfd2e6f2a8efc48d44c36de9df7d2406454292c2b4"
+        },
+        "results/global_gmp_continuation_checks01/warm/native.result": {
+          "bytes": 4425,
+          "sha256": "5f721a1917279e90405e8087353e09ec12bc0b12f63762fdff81552ab5db7d97"
+        },
+        "results/global_gmp_continuation_checks01/warm/native_initial.dat": {
+          "bytes": 1155,
+          "sha256": "d14e7e06ec36b4c2c9520ccc50591e7a074df8f60eebd114640c494c0103c91e"
+        },
+        "results/global_gmp_continuation_checks01/warm/native_launch.json": {
+          "bytes": 1264,
+          "sha256": "77f8f7d7738e1634600dd251baa2f0bf503ac7cf4843e51ac44b36977bdb0098"
+        },
+        "results/global_gmp_continuation_checks01/warm/param.sdpa": {
+          "bytes": 134,
+          "sha256": "ddf1dbb94fea94fd12c9816a6ee49ad26bb2ebacead792b32a9e1ff8f2aa2401"
+        },
+        "results/global_gmp_continuation_checks01/warm/solver.stdout": {
+          "bytes": 1193,
+          "sha256": "6eb65af2d737936e28ab7f20abc9abfea7224599bf963b69807ca0336a67e256"
+        },
+        "results/global_gmp_continuation_checks01_monitor.json": {
+          "bytes": 2874,
+          "sha256": "f91ec99eb4dad1cf6e827803265ca08873d0d1afedefedda972002f96b9210c6"
+        }
+      },
+      "fixture_only": true,
+      "id": "global_gmp_continuation_checks01",
+      "mathematical_verification_claimed": true,
+      "monitor": "results/global_gmp_continuation_checks01_monitor.json",
+      "native_feasibility_decision_obtained": false,
+      "original_feasibility_claimed": false,
+      "outcome": "GMP_CONTINUATION_ARRAYS_PD_AND_NATIVE_RESTART_FIXTURE_PASSED",
+      "peak_process_tree_rss_bytes": 73334784,
+      "reported_status": "GMP_CONTINUATION_ARRAYS_PD_AND_NATIVE_RESTART_FIXTURE_PASSED",
+      "result": "results/global_gmp_continuation_checks01/result.json",
       "wrapper_PASS_claimed": true
     }
   ],

@@ -1,0 +1,102 @@
+{
+  "actual_completed_monitored_units": [
+    "global_gmp_hour_checkpoint01",
+    "global_gmp_continuation_checks01"
+  ],
+  "authorization": "results/global_gmp_hour_authorization_20261126.json",
+  "date": "2026-11-26",
+  "full_model_run": {
+    "last_printed_iteration": null,
+    "monitor": "results/global_gmp_hour_checkpoint01_monitor.json",
+    "native_elapsed_seconds": 3300.9349095830694,
+    "native_limit_seconds": 3300,
+    "native_numerical_error_printed": false,
+    "native_result_bytes": 0,
+    "native_result_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native_status": "NATIVE_BATCH_TIME_LIMIT",
+    "outer_limit_seconds": 3600,
+    "peak_process_tree_rss_bytes": 6345277440,
+    "profile_samples": [
+      "results/global_gmp_hour_checkpoint01/progress_40min.sample.txt",
+      "results/global_gmp_hour_checkpoint01/progress_54min.sample.txt"
+    ],
+    "reported_precision_bits": null,
+    "requested_precision_bits": 256,
+    "result": "results/global_gmp_hour_checkpoint01/result.json",
+    "returncode": -15,
+    "returncode_reason": "SIGTERM from the native batch time watchdog",
+    "sampled_activity": "GMP multiplication/subtraction and temporary allocation in sparse Lal::getCholesky during the first Newton step",
+    "sampler_footprint_peak_string": "19.3G; separate Darwin footprint metric, not process-tree RSS",
+    "solution_arrays_present": {
+      "xMat": false,
+      "xVec": false,
+      "yMat": false
+    },
+    "terminal_phase": null
+  },
+  "limitation": "The first full-model factorization exceeded the native budget. There is no checkpoint; an unchanged cold rerun would repeat it.",
+  "literal_vector_checker": {
+    "full_model_execution_performed": false,
+    "prepared_only": true,
+    "reason": "No native full-model vector returned",
+    "required_next_check_if_candidate_passes": "Separate search_balanced_dual_field_20261126.py verify: all cones and 300139 exact adjoint identities",
+    "source": "scripts/check_gmp_literal_dual_20261126.py"
+  },
+  "mathematical_scope": {
+    "accepted_bounds_unchanged": [
+      57,
+      17,
+      15
+    ],
+    "all_26_feature_coefficients_remain_free": true,
+    "exact_feasible_point_obtained": false,
+    "exact_infeasibility_certificate_obtained": false,
+    "explicit_normalized_dual_feasibility": "UNDECIDED",
+    "full_model_field_reconstruction_performed": false,
+    "input_and_geometric_constraints_changed": false,
+    "native_input_sha256": "f940354294a155d7ac136151f306505edce788b6e69d982753c71abfcb5f6711",
+    "original_primal_feasibility": "UNDECIDED",
+    "problem_role": "Normalized dual certificate feasibility for reduced certificate search C",
+    "reduced_certificate_search_feasibility": "UNDECIDED"
+  },
+  "new_source_bindings": {
+    "scripts/check_gmp_literal_dual_20261126.py": {
+      "bytes": 4636,
+      "sha256": "ece8367709a13031ba5cc251221df2349a5920133e23e39488d29c1aee225fe0"
+    },
+    "scripts/continue_gmp_checkpoint_20261126.py": {
+      "bytes": 12077,
+      "sha256": "213db2f0968e64054dc90dd1983711dfd5a6e8e2862e002818eafe9ec5fab9c3"
+    },
+    "scripts/run_bounded_gmp_hour_10gb_20261126.py": {
+      "bytes": 8473,
+      "sha256": "4776ee0d6fe0f1cbfd97bfad6e89e27d0d47f8591ec6200c36b354faf533ef96"
+    }
+  },
+  "next_required_progress": "A faster factorization or a larger uninterrupted execution budget before warm continuation can advance.",
+  "preexisting_eight_manuscript_working_edits_preserved": true,
+  "previous_GMP_completion": "results/global_gmp_completion_20261126.json",
+  "resource_policy": {
+    "historical_900_second_runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+    "historical_900_second_runner_unchanged": true,
+    "percentage_gates_preserved": true,
+    "rss_limit_bytes": 10000000000,
+    "shared_lock_preserved": true,
+    "threads": 1,
+    "wall_time_override": "One hour for this exact GMP SDP only"
+  },
+  "restart_adapter_fixture": {
+    "actual_cold_and_native_warm_calls_completed": true,
+    "all_printed_digits_preserved": true,
+    "checkpoint_complementarity_transferred_exactly": true,
+    "exact_rational_upper_triangle_LDL_and_strict_scalar_positivity": true,
+    "fixture_only": true,
+    "full_model_checkpoint_obtained": false,
+    "full_model_continuation_launched": false,
+    "monitor": "results/global_gmp_continuation_checks01_monitor.json",
+    "result": "results/global_gmp_continuation_checks01/result.json"
+  },
+  "status": "AUTHORIZED_HOUR_GMP_BATCH_TIMED_OUT_NO_FEASIBILITY_DECISION",
+  "unchanged_successful_checks_rerun": false,
+  "upload_performed": false
+}
