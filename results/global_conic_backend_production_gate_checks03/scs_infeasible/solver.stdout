@@ -1,0 +1,26 @@
+Logging run data to results/global_conic_backend_production_gate_checks03/scs_infeasible/iterations.csv
+------------------------------------------------------------------
+	       SCS v3.2.11 - Splitting Conic Solver
+	(c) Brendan O'Donoghue, Stanford University, 2012
+------------------------------------------------------------------
+problem:  variables n: 1, constraints m: 2
+cones: 	  l: linear vars: 2
+settings: eps_abs: 1.0e-08, eps_rel: 1.0e-08, eps_infeas: 1.0e-09
+	  alpha: 1.50, scale: 1.00e-01, adaptive_scale: 1
+	  max_iters: 20000, normalize: 1, rho_x: 1.00e-06
+	  acceleration_lookback: 10, acceleration_interval: 10
+	  time_limit_secs: 1.50e+01
+lin-sys:  sparse-indirect-scs
+	  nnz(A): 2, nnz(P): 0
+------------------------------------------------------------------
+ iter | pri res | dua res |   gap   |   obj   |  scale  | time (s)
+------------------------------------------------------------------
+     0| 2.00e+00  4.24e-06  1.00e-01  5.00e-02  1.00e-01  6.72e-05 
+    50| 7.96e+07  4.03e+06  2.83e+18  1.41e+18  1.00e-01  3.45e-03 
+------------------------------------------------------------------
+status:  infeasible
+timings: total: 3.45e-03s = setup: 3.90e-05s + solve: 3.41e-03s
+	 lin-sys: 2.26e-05s, cones: 2.06e-06s, accel: 8.41e-06s
+------------------------------------------------------------------
+objective = inf
+------------------------------------------------------------------

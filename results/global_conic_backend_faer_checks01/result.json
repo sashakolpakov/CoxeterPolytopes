@@ -1,0 +1,99 @@
+{
+  "accepted_bounds_changed": false,
+  "checks": [
+    {
+      "backend": "scs",
+      "diagnostics": {
+        "actual_affine_cone_minimum_eigenvalue": -1.0226855168271598e-08,
+        "complementarity": 9.344059485243828e-17,
+        "dual_adjoint_residual_max": 5.118825840216641e-10,
+        "dual_objective": -4.96534702243423e-10,
+        "exact_certificate": false,
+        "finite_candidate": true,
+        "gap": -1.1715704926008341e-09,
+        "primal_affine_residual_max": 1.0226855168271598e-08,
+        "primal_objective": -1.6681051948442571e-09,
+        "saved_dual_cone_minimum_eigenvalue": -6.471391509313682e-17,
+        "saved_primal_cone_minimum_eigenvalue": 0.0
+      },
+      "native_status": "solved"
+    },
+    {
+      "backend": "clarabel",
+      "diagnostics": {
+        "actual_affine_cone_minimum_eigenvalue": -5.4079601907730535e-11,
+        "complementarity": 5.400000115725996e-10,
+        "dual_adjoint_residual_max": 2.1754753554148465e-10,
+        "dual_objective": -3.910843870968961e-10,
+        "exact_certificate": false,
+        "finite_candidate": true,
+        "gap": 4.3327901707651785e-10,
+        "primal_affine_residual_max": 1.1385736797819845e-10,
+        "primal_objective": 4.219462997962177e-11,
+        "saved_dual_cone_minimum_eigenvalue": 1.3885869199195861e-11,
+        "saved_primal_cone_minimum_eigenvalue": 5.26413934346904e-11
+      },
+      "native_status": "Solved"
+    },
+    {
+      "backend": "scs",
+      "infeasible_fixture_status": "infeasible",
+      "normalized_certificate": [
+        1.0000000000000906,
+        1.0000000000001332
+      ],
+      "normalized_certificate_fixture_status": "solved"
+    },
+    {
+      "backend": "clarabel",
+      "infeasible_fixture_status": "PrimalInfeasible",
+      "normalized_certificate": [
+        1.0000000000000002,
+        1.0000000000000004
+      ],
+      "normalized_certificate_fixture_status": "Solved"
+    }
+  ],
+  "elapsed_seconds": 0.2424672079505399,
+  "geometric_constraints_changed": false,
+  "installed_versions": {
+    "clarabel": "0.11.1",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "scs": "3.2.11"
+  },
+  "known_singular_margin_optimum_checked": true,
+  "nonuniform_3_by_3_triangle_order_checked": true,
+  "normalized_Farkas_alternative_checked": true,
+  "offdiagonal_trace_multiplicity_checked": true,
+  "original_margin_slice_checked": true,
+  "source_bindings": {
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/conic.py": {
+      "bytes": 17131,
+      "sha256": "098f47c00a0d1a23560e8a6916506e24ca559fd765b57134a2b8fd3db3bc949b"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/conic_backend.py": {
+      "bytes": 9433,
+      "sha256": "6cdd30850c521488ee9ee6b87074f3ca5f7104f68ff31624399dbe6117780a3f"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/feasibility.py": {
+      "bytes": 28446,
+      "sha256": "158c11d9fb48b7d1542122a6a7c86daa557e511fa02e6ded57591a7405363c79"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/slater_margin.py": {
+      "bytes": 5934,
+      "sha256": "5bc3be0918009600cf287cf6fab2695ba25e1d8705e9a361630e27620c3c9586"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/solver_gate.py": {
+      "bytes": 6341,
+      "sha256": "d781333bf30ce97d7a78201149da688140c8a013bb953a4faa43cecca2948dd1"
+    },
+    "/Users/sasha/CoxeterPolytopes/scripts/compare_conic_solvers_20261126.py": {
+      "bytes": 19117,
+      "sha256": "2d136c5981ee65af6e52b0a16c3815d47181d59160ce77173fe7b77bffa70eb5"
+    }
+  },
+  "source_bound_geometric_review_complete": false,
+  "status": "INDEPENDENT_CONIC_ENCODINGS_AND_SOLVERS_VERIFIED",
+  "verified_preflight": null
+}

@@ -6,6 +6,7 @@ import importlib.metadata
 import json
 import math
 from pathlib import Path
+import subprocess
 import sys
 import time
 
@@ -126,6 +127,12 @@ def solve(data, layout, output, name, seconds, iterations, warm=None,linear_solv
 
 def self_check(output,clarabel_method='qdldl'):
     import numpy as np
+    forbidden=output/'missing_dual_face'
+    rejected=subprocess.run([sys.executable,'-B',str(Path(__file__).resolve()),'solve',
+        '--mode','certificate','--output',str(forbidden)],capture_output=True,text=True,check=False)
+    if (rejected.returncode==0 or forbidden.exists()
+            or 'Certificate solves require --dual-face-model and --dual-face-replay' not in rejected.stderr):
+        raise ValueError('The production certificate launch did not reject missing facial proof')
     checked = []
     # Nonuniform 3x3 data distinguish lower-column and upper-column layouts.
     P = conic.model(['x','y'], [
@@ -197,6 +204,7 @@ def self_check(output,clarabel_method='qdldl'):
                         'normalized_certificate_fixture_status':meta2['native_status'],
                         'normalized_certificate':candidate['x'].tolist()})
     return {'status':'INDEPENDENT_CONIC_ENCODINGS_AND_SOLVERS_VERIFIED',
+            'production_certificate_launch_without_dual_face_replay_blocked':True,
             'offdiagonal_trace_multiplicity_checked':True,
             'nonuniform_3_by_3_triangle_order_checked':True,
             'known_singular_margin_optimum_checked':True,
@@ -217,10 +225,16 @@ def main():
     parser.add_argument('--linear-solver',choices=['auto','qdldl','faer'],default='qdldl')
     parser.add_argument('--dual-face-model',type=Path)
     parser.add_argument('--dual-face-replay',type=Path)
+    parser.add_argument('--unreduced-certificate-diagnostic',action='store_true',
+                        help='Explicitly benchmark the unreduced dual; not the production certificate path')
     parser.add_argument('--mode',choices=['auxiliary','original','certificate'],default='auxiliary')
     parser.add_argument('--seconds',type=int,default=650)
     parser.add_argument('--iterations',type=int)
     args = parser.parse_args()
+    if (args.action=='solve' and args.mode=='certificate' and args.dual_face_model is None
+            and not args.unreduced_certificate_diagnostic):
+        raise ValueError('Certificate solves require --dual-face-model and --dual-face-replay; '
+                         'unreduced benchmarking needs --unreduced-certificate-diagnostic')
     if not 1<=args.seconds<=750:
         raise ValueError('Keep time for encoding and independent residual checks')
     args.output.mkdir()

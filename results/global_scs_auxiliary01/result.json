@@ -1,0 +1,107 @@
+{
+  "accepted_bounds_changed": false,
+  "diagnostics": {
+    "actual_affine_cone_minimum_eigenvalue": -0.1711205838907344,
+    "complementarity": -6.913480204984168e-14,
+    "dual_adjoint_residual_max": 0.0011912039053776358,
+    "dual_objective": -1.0742880579376786e-12,
+    "exact_certificate": false,
+    "finite_candidate": true,
+    "gap": -0.00014273485791480356,
+    "primal_affine_residual_max": 0.24166585998915174,
+    "primal_objective": -0.00014273485898909163,
+    "saved_dual_cone_minimum_eigenvalue": -2.952345642093705e-16,
+    "saved_primal_cone_minimum_eigenvalue": -1.3716785455812343e-14
+  },
+  "elapsed_seconds": 665.8365120829549,
+  "geometric_constraints_changed": false,
+  "installed_versions": {
+    "clarabel": "0.11.1",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "scs": "3.2.11"
+  },
+  "mode": "auxiliary",
+  "native": {
+    "backend": "SCS",
+    "native_binary_sha256": "d274c68caf3512981bb13e89976f16ff1f094ba4f5ee7d6646018691be140894",
+    "native_info": {
+      "accel_time": 240.40800700000153,
+      "accepted_accel_steps": 0,
+      "comp_slack": 1.9238371339784857e-15,
+      "cone_time": 28311.174689000007,
+      "dobj": -1.0742880579376784e-12,
+      "gap": 0.00014273485791480356,
+      "iter": 1075,
+      "lin_sys_time": 578364.8040149995,
+      "pobj": -0.00014273485898909163,
+      "rejected_accel_steps": 7,
+      "res_dual": 0.0011912039053801702,
+      "res_infeas": "nan",
+      "res_pri": 0.2416658599891517,
+      "res_unbdd_a": 7005.997042925747,
+      "res_unbdd_p": 0.0,
+      "scale": 6.126644884016618e-05,
+      "scale_updates": 3,
+      "setup_time": 475.6185,
+      "solve_time": 659681.141666,
+      "status": "solved (inaccurate - reached time_limit_secs)",
+      "status_val": 2
+    },
+    "native_status": "solved (inaccurate - reached time_limit_secs)",
+    "settings": {
+      "eps_abs": 1e-08,
+      "eps_infeas": 1e-09,
+      "eps_rel": 1e-08,
+      "log_csv_filename": "results/global_scs_auxiliary01/iterations.csv",
+      "max_iters": 10000000,
+      "normalize": true,
+      "time_limit_secs": 650,
+      "use_indirect": true,
+      "verbose": true
+    },
+    "version": "3.2.11"
+  },
+  "original_feasibility_status": "UNDECIDED",
+  "solution_sha256": "f5275870d11898f432a17e18d82091bd9069efe43cca0d405ff06f824abb5fb1",
+  "source_bindings": {
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/conic.py": {
+      "bytes": 17131,
+      "sha256": "098f47c00a0d1a23560e8a6916506e24ca559fd765b57134a2b8fd3db3bc949b"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/conic_backend.py": {
+      "bytes": 9433,
+      "sha256": "6cdd30850c521488ee9ee6b87074f3ca5f7104f68ff31624399dbe6117780a3f"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/solver_gate.py": {
+      "bytes": 6341,
+      "sha256": "d781333bf30ce97d7a78201149da688140c8a013bb953a4faa43cecca2948dd1"
+    },
+    "/Users/sasha/CoxeterPolytopes/scripts/compare_conic_solvers_20261126.py": {
+      "bytes": 15203,
+      "sha256": "3c8345e9307cd54a2d103b26f3773ed9ce60697e2d48c7dac887720112020f0e"
+    },
+    "results/global_edge_closure_ready03/input.dat-s": {
+      "bytes": 328774755,
+      "sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39"
+    },
+    "results/global_edge_closure_ready03/solver_ready.json": {
+      "bytes": 39809,
+      "sha256": "5ea43d1d44c43e99e9da4f6bc500d19ddf1bc8809feb0907fa0d2ce5e7b351fd"
+    },
+    "results/global_sdpa_restart_tolerance01/native.result": {
+      "bytes": 24785605,
+      "sha256": "d0063402568a63e4a91a1687e90f9443de311b4fe659de173263a0cfa4a9c016"
+    }
+  },
+  "source_bound_geometric_review_complete": false,
+  "source_encoding": "results/global_conic_encoding01",
+  "status": "ALTERNATIVE_SOLVER_RETURNED_REQUIRES_ORIGINAL_CHECK",
+  "verified_preflight": {
+    "frozen_input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
+    "native_input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+    "preflight": "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_ready03/solver_ready.json",
+    "preflight_sha256": "5ea43d1d44c43e99e9da4f6bc500d19ddf1bc8809feb0907fa0d2ce5e7b351fd",
+    "scope": "verified_global_research_model"
+  }
+}

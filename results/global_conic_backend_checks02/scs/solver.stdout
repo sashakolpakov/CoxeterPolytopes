@@ -1,0 +1,27 @@
+Logging run data to results/global_conic_backend_checks02/scs/iterations.csv
+------------------------------------------------------------------
+	       SCS v3.2.11 - Splitting Conic Solver
+	(c) Brendan O'Donoghue, Stanford University, 2012
+------------------------------------------------------------------
+problem:  variables n: 3, constraints m: 11
+cones: 	  l: linear vars: 5
+	  s: psd vars: 6, ssize: 1
+settings: eps_abs: 1.0e-08, eps_rel: 1.0e-08, eps_infeas: 1.0e-09
+	  alpha: 1.50, scale: 1.00e-01, adaptive_scale: 1
+	  max_iters: 20000, normalize: 1, rho_x: 1.00e-06
+	  acceleration_lookback: 10, acceleration_interval: 10
+	  time_limit_secs: 1.50e+01
+lin-sys:  sparse-indirect-scs
+	  nnz(A): 16, nnz(P): 0
+------------------------------------------------------------------
+ iter | pri res | dua res |   gap   |   obj   |  scale  | time (s)
+------------------------------------------------------------------
+     0| 6.74e+00  1.50e+00  6.20e+00 -3.43e+00  1.00e-01  1.26e-04 
+   150| 1.02e-08  5.12e-10  1.17e-09 -1.08e-09  1.00e-01  1.03e-02 
+------------------------------------------------------------------
+status:  solved
+timings: total: 1.03e-02s = setup: 6.02e-05s + solve: 1.03e-02s
+	 lin-sys: 9.93e-05s, cones: 5.93e-04s, accel: 6.59e-05s
+------------------------------------------------------------------
+objective = -0.000000
+------------------------------------------------------------------

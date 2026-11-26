@@ -42,20 +42,63 @@ anchor. The general formulation can instead represent a dimension band or an
 unbounded parity tail. Changing that scope requires a corresponding uniform
 instantiation check; it is not an ordinary fixed-scope constraint extension.
 
-**Level-7 feasibility remains undecided.** The corrected, gated run completed
-16 + 16 + 2 iterations before SDPA returned
-[`step length is too short`](../../results/global_edge_closure_sdpa10/result.json).
-The saved common margin is about `-0.00603938`; the recomputed ordinary dual
-adjoint residual is `3.17e-6`. These are auxiliary-problem diagnostics.
+**Level-7 feasibility remains undecided.** The
+[26 November diagnosis](../../results/global_solver_diagnosis_completion_20261126.json)
+separates a native restart problem from genuine degeneracy of the certificate
+cone. Neither has been resolved by adding or dropping geometric constraints.
 
-The [original-model check](../../results/global_edge_closure_terminal_check04/result.json)
-found neither an exact feasible point nor an infeasibility certificate. All
-29,259 original equalities hold exactly, but the saved point violates
-`uniform_two_unit_triangle_cover0`. The attempted exact Farkas completion
-requires 34,403 negative coordinate weights. The
-[array diagnostic](../../results/global_edge_closure_iterate_diagnostics04/result.json)
-records the precise rejection and distinguishes the updated arrays from cached
-native summaries. No cutoff or geometric bound changed.
+SDPA updates both primal and dual variables. Its current input maximizes a common
+margin `alpha` subject to `F_b(x) - alpha I >= 0` and `alpha <= 1`. This auxiliary
+problem has strict primal starting points even when the original `alpha = 0`
+problem is infeasible. A native `pFEAS` label therefore does not decide the
+original problem.
+
+The [matched restart test](../../results/global_sdpa_restart_tolerance_matched02/result.json)
+used exactly the old input and initial arrays, changing only `epsilonDash` from
+`1e-10` to `1e-8`. The old run stopped after two iterations; the matched run
+completed its 16-iteration budget without the short-step error. The
+[source audit](../../results/global_sdpa_restart_mechanism_20261126.json)
+identifies inconsistent initialization and update thresholds for a tiny residual
+ratio, followed by the centering guard. Exact acceptance tolerances were unchanged.
+The new branch comprises 16 + 16 + 16 iterations, with saved margin about
+`-0.000824115`. Its [recomputed diagnostics](../../results/global_sdpa_tolerance_diagnostics02/result.json)
+give an ordinary dual adjoint residual of `4.03e-8` and an original, unshifted
+prepared-cone minimum of `-0.000823461`. It is not a feasible point. This diagnostic
+did not repeat the earlier check of all 29,259 original equalities.
+
+The [exact scalar-row minor](../../results/global_conic_rank02/result.json)
+has full column rank 61,788, so ordinary linear redundancy in that coefficient
+map does not explain the stop. Nevertheless, exact coefficient checks prove
+forced zero rows in the certificate cone. Five facial-reduction rounds verify
+274 coordinate directions and remove 767 dual coordinates. The
+[separate replay](../../results/global_dual_face_replay01/result.json) checks every
+facial implication over the rational source model and every reduced numerical
+coefficient. It preserves certificate feasibility; it does not assert that the
+minimal face has been found or that the reduced cone has a strict feasible point.
+
+Independent backends were run on the same frozen model:
+
+| Backend and problem | Native result | Verified conclusion |
+| --- | --- | --- |
+| [SCS, common-margin auxiliary](../../results/global_scs_auxiliary01/result.json) | Inaccurate solution at time limit, 1,075 iterations | Affine residual `0.242`; candidate rejected |
+| [Clarabel/QDLDL, unreduced certificate search](../../results/global_clarabel_certificate01/result.json) | `MaxTime`, 8 iterations | No decision |
+| [Clarabel/Faer, exactly reduced certificate search](../../results/global_clarabel_reduced_faer01/result.json) | `PrimalInfeasible`, 33 iterations | Numerical classification remains uncertified |
+
+The last row concerns the normalized certificate problem
+`A^T y = 0, b^T y = -1, y in K*`, for an original problem `Ax + s = b, s in K`.
+A feasible certificate would exclude the original problem. Infeasibility of the
+certificate search is a different statement. The returned ray gives a candidate
+for a compressed primal problem; its [exact check](../../results/global_clarabel_certificate_ray_check01/result.json)
+and [scalar polishing attempts](../../results/global_clarabel_certificate_ray_polish02/result.json)
+failed at `uniform_two_unit_triangle_cover0`. Even an exact compressed point
+would require a separate lift and check before establishing feasibility of the
+full original SDP. No exact feasibility or infeasibility decision, cutoff, or
+geometric bound follows from these numerical statuses.
+
+The [earlier original-model check](../../results/global_edge_closure_terminal_check04/result.json)
+and [array diagnostic](../../results/global_edge_closure_iterate_diagnostics04/result.json)
+remain historical evidence: all 29,259 original equalities held for that older
+candidate, but its cones and proposed Farkas completion failed.
 
 The [earlier representation audit](../../results/global_edge_closure_representation_audit01/result.json)
 motivated the replacement pipeline. Its old large numerical representations have
@@ -94,6 +137,17 @@ The production path consists of these separate serial jobs:
    checked initialization and matching `--preflight`
 6. `scripts/recover_sdpa_checkpoint_20261125.py`, with the new prepared source,
    native checkpoint and frozen original input explicitly supplied
+
+For the explicit certificate search, encode the same native input with
+`scripts/compare_conic_solvers_20261126.py encode`. Then run
+`scripts/prepare_dual_face_model_20261126.py prepare` on the exact prepared model,
+followed by a separate `verify` invocation. Production certificate solves through
+`scripts/compare_conic_solvers_20261126.py solve --mode certificate` require both
+`--dual-face-model` and `--dual-face-replay`. Missing proofs block launch; the
+explicit `--unreduced-certificate-diagnostic` exception is for comparison only.
+The [encoding and gate checks](../../results/global_conic_backend_production_gate_checks03/result.json)
+cover signs, both PSD triangle orders, off-diagonal trace multiplicity, known
+feasible and infeasible fixtures, and rejection of missing facial proofs.
 
 Every scientific command runs under the shared lock and the monitored runner in
 [AGENTS.md](../../AGENTS.md), with fresh output and ledger names. For example:
@@ -153,3 +207,9 @@ mathematical verification.
 
 The [completion record](../../results/global_constraint_pipeline_completion_20261126.json)
 collects the verified preparation, terminal solver status and cleanup receipts.
+The [later diagnosis record](../../results/global_solver_diagnosis_completion_20261126.json)
+adds the matched restart, exact dual-face replay and alternative solver results.
+Its [archive receipt](../../results/global_solver_diagnosis_archives_20261126.json)
+preserves both new native checkpoints by complete byte round trips. The sparse
+encoding, dual embedding and returned alternative-solver arrays are retained
+inputs for the current replay and candidate checks.

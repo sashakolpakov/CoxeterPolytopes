@@ -1,0 +1,49 @@
+{
+  "status": "MATCHED_RESTART_TEST_CONFIRMS_IMMEDIATE_SMALL_STEP_TRIGGER",
+  "source_package": {
+    "url": "https://downloads.sourceforge.net/project/sdpa/sdpa/sdpa_7.3.21.tar.gz",
+    "sha256": "300cae3ac04409c2243f6a5b3fd1ee57b2b18db209a21c2472e8d837951d3db6"
+  },
+  "compiled_executable_sha256": "65292a57cc9cce3c3f206e5faf541c303802589c238a1d82722bfafbe8b0e0d7",
+  "build_record": "results/global_sdpa_native_build01/result.json",
+  "source_files": {
+    "sdpa_parts.cpp": {
+      "path": "/tmp/coxeter_sdpa_native_20261125/sdpa-7.3.21/sdpa_parts.cpp",
+      "sha256": "fc314423c546bcb81247bcdda9458790fd0ea2a6f470bf1bedd40b3794627cf5",
+      "matches_verified_upstream_archive_member": "sdpa-7.3.21/sdpa_parts.cpp"
+    },
+    "sdpa_dataset.cpp": {
+      "path": "/tmp/coxeter_sdpa_native_20261125/sdpa-7.3.21/sdpa_dataset.cpp",
+      "sha256": "4d1f0bbcd78d018730cec0f26f99b756527d7bac93c114386560de6d647751d5",
+      "matches_verified_upstream_archive_member": "sdpa-7.3.21/sdpa_dataset.cpp"
+    },
+    "sdpa_solve.cpp": {
+      "path": "/tmp/coxeter_sdpa_native_20261125/sdpa-7.3.21/sdpa_solve.cpp",
+      "sha256": "bed18e0376c5fe0355f4912791e89f697d38457afc469926432fd4c397f5d37e",
+      "matches_verified_upstream_archive_member": "sdpa-7.3.21/sdpa_solve.cpp"
+    }
+  },
+  "initial_ratio_rule": "RatioInitResCurrentRes::initialize uses epsilonDash to classify the initial residual ratio as zero.",
+  "updated_ratio_rule": "RatioInitResCurrentRes::update_exact divides by the initial residual when it exceeds epsilonDash times 1e-2.",
+  "failure_mechanism": "A small initial residual between those thresholds is treated as zero at initialization but as the denominator of an order-one ratio after an update. A roundoff-sized increase then activates the centering guard.",
+  "centering_rule": "StepLength::MehrotraCorrector shrinks both steps while thetaMax squared times initial mu exceeds three times proposed new mu.",
+  "native_stop_rule": "Solutions::update returns failure if both step lengths are below 1e-4; this does not require proving infeasibility or rank deficiency.",
+  "historical_failure": "results/global_edge_closure_sdpa10/result.json",
+  "initial_successful_probe": "results/global_sdpa_restart_tolerance01/result.json",
+  "matched_test": "results/global_sdpa_restart_tolerance_matched02/result.json",
+  "source_inspection_is_not_a_proof_of_model_feasibility": true,
+  "intrinsic_conic_degeneracy_ruled_out": false,
+  "geometric_constraints_changed": false,
+  "accepted_bounds_changed": false,
+  "all_inspected_sources_match_verified_upstream_archive": true,
+  "matched_initial_array_bytes_equal": true,
+  "baseline_completed_iterations": 2,
+  "matched_completed_iterations": 16,
+  "matched_iteration_limit_checkpoint_is_not_a_solved_status": true,
+  "matched_saved_margin": "-412057261161408487/500000000000000000000",
+  "matched_auxiliary_dual_residual": 4.029577860986599e-08,
+  "matched_original_affine_cone_minimum_eigenvalue": -0.0008234610810003201,
+  "intrinsic_certificate_cone_degeneracy_also_proved": true,
+  "exact_dual_degeneracy_proof": "results/global_dual_face_prepare01/face_proof.json",
+  "separate_exact_dual_face_replay": "results/global_dual_face_replay01/result.json"
+}

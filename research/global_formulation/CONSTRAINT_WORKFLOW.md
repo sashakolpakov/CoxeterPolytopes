@@ -75,12 +75,50 @@ lock in `AGENTS.md`. Use a fresh output directory and monitor for each batch.
    Continue later batches with `--resume RUN`, the same input and the same
    preflight. An iteration limit is a checkpoint boundary, not a decision.
 
+The primal fixed-point audit does not establish strict feasibility of the
+certificate cone. For an explicit certificate search, continue with these
+separate serial jobs:
+
+6. Encode the unchanged native input using
+   `scripts/compare_conic_solvers_20261126.py encode`, with matching `--preflight`.
+   SCS uses lower-column PSD vectors and Clarabel uses upper-column vectors;
+   both require the square-root-of-two off-diagonal factor. The backend fixtures
+   check these conventions against nonuniform three-by-three matrices.
+7. Run `scripts/prepare_dual_face_model_20261126.py prepare --native-input INPUT
+   --preflight PREFLIGHT --encoding ENCODING --exact-model EXACT --output FACE`.
+   It discovers coordinate directions numerically but verifies every facial
+   implication over the rational source. On each already proved face, a diagonal
+   PSD coefficient direction forces the corresponding nonnegative dual weights
+   to vanish. A zero PSD diagonal forces its entire row to vanish. Iterate to the
+   recognized coordinate fixed point. Never delete a coefficient by tolerance.
+8. Run the same script with `verify --prepared FACE` and a fresh output. This
+   replays every exact implication and checks all reduced coefficients, cone
+   embeddings and deleted zero equations. Preparation alone cannot authorize a
+   certificate solve. This reduction preserves certificate feasibility; no
+   primal feasibility equivalence or minimal-face claim follows from it.
+9. Use `scripts/compare_conic_solvers_20261126.py solve --mode certificate` with
+   both `--dual-face-model FACE` and `--dual-face-replay REPLAY/result.json`.
+   The gate checks the separate replay and all its bound inputs and sources.
+   The `--unreduced-certificate-diagnostic` option is an explicit benchmark
+   exception, not the production path. Source or model changes require new
+   matching preparation/replay records.
+
 A time or memory limit never means convergence. Incomplete preparation cannot
 authorize a run. Starting arrays need the correct shape and numerically positive
 definite cones; native output must actually report all four full-precision formats.
 Missing or stale registrations, models, proofs, reconstruction maps or matrix
 hashes block launch. Do not invoke the native binary or retired wrappers manually
 to bypass the gate.
+
+For a restart, inspect the native residual-ratio thresholds as well as absolute
+residuals. In the audited SDPA release, initialization uses `epsilonDash`, while
+updates divide by the initial residual above `epsilonDash/100`. A residual
+between those thresholds can activate a centering guard and produce tiny steps.
+The matched 26 November test changed only `epsilonDash` from `1e-10` to `1e-8`:
+the same arrays advanced for 16 iterations instead of stopping after two.
+`scripts/run_sdpa_parameter_probe_20261126.py` records the actual parameter diff,
+initial-array hash and preflight. Keep this as an explicit diagnosed parameter
+choice; do not silently change historical wrappers or relax exact acceptance.
 
 The explicit fixture exception is limited to 16 variables and one MiB of input.
 It exists for sign, cone-order and restart regressions, never for research decisions.
@@ -92,6 +130,18 @@ certificates by exact coefficient identities and PSD witnesses; reduced-problem
 certificates also need the verified reduction chain. Auxiliary feasibility, an
 unfinished negative margin, a near-zero dual objective and a small-step error
 establish no original decision.
+
+Always identify which problem the solver classified. SDPA updates a coupled
+primal/dual pair for the common-margin auxiliary. The explicit normalized
+certificate feasibility problem is `A^T y = 0, b^T y = -1, y in K*`.
+Its feasibility can certify infeasibility of `Ax + s = b, s in K`; its
+infeasibility is not a geometric nonexistence result. After dual facial reduction,
+an infeasibility ray may yield only a compressed primal candidate. Check it
+exactly, then reconstruct and check the full original model before claiming a
+feasible point. `scripts/check_reduced_certificate_result_20261126.py` performs
+the compressed check and explicitly leaves the original decision open. Its
+optional scalar polishing imposes restrictions on a candidate point only;
+failure of those restrictions proves nothing about the necessary-data model.
 
 Retain scientific inputs, proof chains, current solver input and exact certificates.
 Keep compact failure receipts, with watchdog completion separate from mathematical

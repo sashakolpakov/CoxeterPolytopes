@@ -1,0 +1,65 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/audit_conic_coefficient_rank_20261126.py",
+    "--native-input",
+    "results/global_edge_closure_ready03/input.dat-s",
+    "--preflight",
+    "results/global_edge_closure_ready03/solver_ready.json",
+    "--encoding",
+    "results/global_conic_encoding01",
+    "--output",
+    "results/global_conic_rank02"
+  ],
+  "elapsed_seconds": 6.297,
+  "peak_process_tree_rss_bytes": 357203968,
+  "initial_resources": {
+    "free_disk_gib": 318.65,
+    "available_memory_gib": 10.85,
+    "disk_free_bytes": 342145736704,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 11650940928,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 34.399984,
+    "available_memory_percent": 45.211601,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 1546,
+  "stdout": "{\"status\": \"EXACT_NATIVE_TRIANGULAR_MINOR_FULL_COLUMN_RANK_VERIFIED\", \"verified_preflight\": {\"scope\": \"verified_global_research_model\", \"preflight\": \"/Users/sasha/CoxeterPolytopes/results/global_edge_closure_ready03/solver_ready.json\", \"preflight_sha256\": \"5ea43d1d44c43e99e9da4f6bc500d19ddf1bc8809feb0907fa0d2ce5e7b351fd\", \"native_input_sha256\": \"76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39\", \"frozen_input_sha256\": \"5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e\"}, \"columns\": 61788, \"independent_columns_witnessed\": 61788, \"full_column_rank\": true, \"original_pure_scalar_rows_available\": 61787, \"common_margin_column_removed_using_its_unit_upper_bound_row\": true, \"minimum_absolute_exact_pivot\": \"3249/10000\", \"maximum_absolute_exact_pivot\": \"25/8\", \"native_decimal_coefficients_checked_without_rounding\": true, \"argument\": \"The original-variable rows have distinct nonzero single-coordinate pivots and may also contain the margin column. The final row is precisely the unit margin row. The resulting square minor is triangular and has nonzero determinant.\", \"scope\": \"Rank of the coefficient map, not Slater feasibility, spectral conditioning, or geometric realizability.\", \"minor_witness\": \"scalar_minor.csv.gz\", \"minor_witness_sha256\": \"c3b9caf5a99d2a4c7833646ca6c98975346ddf72d7cd55cabc984710e0f37bdd\", \"source_sha256\": \"d8253d8a0988f9a37385fbc629f48cfa4535fb48c2fdc48eb34b8acd40c312b0\", \"geometric_constraints_changed\": false, \"accepted_bounds_changed\": false, \"elapsed_seconds\": 6.113166792085394}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "d8253d8a0988f9a37385fbc629f48cfa4535fb48c2fdc48eb34b8acd40c312b0",
+  "lock_owner": "wrapper"
+}

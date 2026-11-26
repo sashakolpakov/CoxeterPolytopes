@@ -1,0 +1,231 @@
+{
+  "accepted_bounds_unchanged": [
+    57,
+    17,
+    15
+  ],
+  "all_26_feature_coefficients_free": true,
+  "alternative_solver_runs": [
+    {
+      "backend": "SCS",
+      "elapsed_seconds": 666.047,
+      "exact_certificate": false,
+      "mode": "auxiliary",
+      "native_status": "solved (inaccurate - reached time_limit_secs)",
+      "original_feasibility_status": "UNDECIDED",
+      "peak_process_tree_rss_bytes": 740933632,
+      "result": "results/global_scs_auxiliary01/result.json"
+    },
+    {
+      "backend": "Clarabel",
+      "elapsed_seconds": 775.267,
+      "exact_certificate": false,
+      "mode": "certificate",
+      "native_status": "MaxTime",
+      "original_feasibility_status": "UNDECIDED",
+      "peak_process_tree_rss_bytes": 4443144192,
+      "result": "results/global_clarabel_certificate01/result.json"
+    },
+    {
+      "backend": "Clarabel",
+      "elapsed_seconds": 390.285,
+      "exact_certificate": false,
+      "mode": "certificate",
+      "native_status": "PrimalInfeasible",
+      "original_feasibility_status": "UNDECIDED",
+      "peak_process_tree_rss_bytes": 5455380480,
+      "result": "results/global_clarabel_reduced_faer01/result.json"
+    }
+  ],
+  "clarabel_reduced_infeasibility_ray": {
+    "check": "results/global_clarabel_certificate_ray_check01/result.json",
+    "compressed_primal_minimum_affine_cone_eigenvalue": -7.189642911482425e-09,
+    "exact_check_status": "NO_EXACT_CERTIFICATE_FEASIBILITY_DECISION_FROM_NUMERICAL_RAY",
+    "exact_grid_attempts": [
+      6,
+      10,
+      16,
+      24,
+      36,
+      48,
+      60
+    ],
+    "inconsistent_candidate_polishing_equalities_are_not_a_model_contradiction": true,
+    "original_primal_point_lift_verified": false,
+    "polishing_changes_candidate_only": true,
+    "rejected_constraint": "uniform_two_unit_triangle_cover0",
+    "scalar_polishing_check": "results/global_clarabel_certificate_ray_polish02/result.json"
+  },
+  "date": "2026-11-26",
+  "dual_facial_reduction": {
+    "certificate_feasibility_preserved": true,
+    "certificate_matrix_shape": [
+      423166,
+      361652
+    ],
+    "coordinate_directions_verified": 274,
+    "directions_per_round": [
+      91,
+      25,
+      16,
+      67,
+      75
+    ],
+    "dual_coordinates_removed": 767,
+    "exact_source_coefficients_and_all_reduced_numerical_entries_checked": true,
+    "forced_PSD_rows": 89,
+    "forced_scalar_weights": 431,
+    "minimal_face_or_strict_feasibility_after_reduction_claimed": false,
+    "original_primal_feasibility_equivalence_claimed": false,
+    "preparation": "results/global_dual_face_prepare01/result.json",
+    "proof": "results/global_dual_face_prepare01/face_proof.json",
+    "replay_status": "EXACT_DUAL_FACIAL_REDUCTION_AND_ALL_REDUCED_COEFFICIENTS_VERIFIED",
+    "retained_dual_coordinates": 361652,
+    "retained_ordinary_equations": 61513,
+    "rounds": 5,
+    "separate_replay": "results/global_dual_face_replay01/result.json"
+  },
+  "frozen_original_input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
+  "geometric_constraints_changed": false,
+  "linear_rank": {
+    "exact_native_scalar_minor_rank": 61788,
+    "result": "results/global_conic_rank02/result.json",
+    "scope": "Full column rank of the native coefficient map; no conditioning or Slater claim."
+  },
+  "matched_restart": {
+    "all_original_equalities_rechecked_for_new_checkpoint": false,
+    "alternate_six_iteration_probe_is_not_added_to_current_branch": true,
+    "baseline_completed_iterations": 2,
+    "current_branch_iterations": [
+      16,
+      16,
+      16
+    ],
+    "diagnostic": "results/global_sdpa_tolerance_diagnostics02/result.json",
+    "exact_acceptance_conditions_changed": false,
+    "initial_array_file_sha256": "2cbf458a426dd84551d08397aba5b6b230c7651791f5a7805e6afb2343bc20fc",
+    "margin": "-412057261161408487/500000000000000000000",
+    "matched_completed_iterations": 16,
+    "matched_numerical_error_messages": [],
+    "matched_reached_iteration_budget": true,
+    "only_parameter_change": [
+      {
+        "new": "1e-8",
+        "old": "1e-10",
+        "zero_based_line": 9
+      }
+    ],
+    "ordinary_dual_adjoint_residual_max": 4.029577860986599e-08,
+    "result": "results/global_sdpa_restart_tolerance_matched02/result.json",
+    "same_input_and_initial_array_bytes": true,
+    "solved_status_claimed": false,
+    "source_audit": "results/global_sdpa_restart_mechanism_20261126.json",
+    "unshifted_prepared_cone_minimum_eigenvalue": -0.0008234610810003201
+  },
+  "monitored_run_ids": [
+    "global_conic_backend_checks01",
+    "global_conic_encoding01",
+    "global_sdpa_restart_tolerance01",
+    "global_scs_auxiliary01",
+    "global_clarabel_certificate01",
+    "global_conic_backend_checks02",
+    "global_conic_rank01",
+    "global_conic_rank02",
+    "global_dual_ray_checks01",
+    "global_dual_coordinate_rays01",
+    "global_dual_face_checks01",
+    "global_dual_face_prepare01",
+    "global_dual_face_replay01",
+    "global_conic_backend_faer_checks01",
+    "global_clarabel_reduced_faer01",
+    "global_clarabel_certificate_ray_check01",
+    "global_sdpa_restart_tolerance_matched02",
+    "global_sdpa_tolerance_diagnostics02",
+    "global_clarabel_certificate_ray_polish02",
+    "global_solver_diagnosis_archives_20261126",
+    "global_conic_backend_production_gate_checks03"
+  ],
+  "native_input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+  "new_exact_feasible_point_obtained": false,
+  "new_exact_infeasibility_certificate_obtained": false,
+  "new_source_bindings": {
+    "research/global_formulation/conic_backend.py": {
+      "bytes": 9433,
+      "sha256": "6cdd30850c521488ee9ee6b87074f3ca5f7104f68ff31624399dbe6117780a3f"
+    },
+    "research/global_formulation/dual_faces.py": {
+      "bytes": 7061,
+      "sha256": "762a7447b2f1b585ff6f364adb243c78c3412358e8560545e411e4ec04ec4580"
+    },
+    "scripts/audit_conic_coefficient_rank_20261126.py": {
+      "bytes": 6097,
+      "sha256": "d8253d8a0988f9a37385fbc629f48cfa4535fb48c2fdc48eb34b8acd40c312b0"
+    },
+    "scripts/check_reduced_certificate_result_20261126.py": {
+      "bytes": 9246,
+      "sha256": "de7cb71e05977c26f0c9456b4b17c1d4bbc1b6cdfd8a0b18e952966cd85fa4be"
+    },
+    "scripts/compare_conic_solvers_20261126.py": {
+      "bytes": 20240,
+      "sha256": "58627f1ecc7828cfe2e88405946576eb5fc7830a9407021354ace3d5946f44ff"
+    },
+    "scripts/detect_conic_dual_rays_20261126.py": {
+      "bytes": 7330,
+      "sha256": "528eaa3ba9e9375ac40f7d18076b1301f7360803b5d8f96ba68e6d56fe00551b"
+    },
+    "scripts/prepare_dual_face_model_20261126.py": {
+      "bytes": 11427,
+      "sha256": "2d785fc468bc440927a54c57d95934d505d046fcd28c467be0c0ef32bc736a09"
+    },
+    "scripts/run_sdpa_parameter_probe_20261126.py": {
+      "bytes": 8303,
+      "sha256": "8a377757b1aa3c4aa3baa7a3655c87cec470db5417fadd07156264e265b9001b"
+    }
+  },
+  "normalized_certificate_feasibility_status": "UNDECIDED_AFTER_FAILED_EXACT_RAY_VERIFICATION",
+  "original_feasibility_status": "UNDECIDED",
+  "prepared_exact_model_sha256": "3f0eda6f4fff98a923d799d4ff5d3c2156d7b439280ae25283117672156756f0",
+  "prior_preparation_completion": "results/global_constraint_pipeline_completion_20261126.json",
+  "problem_orientation": {
+    "certificate_feasible_means": "The original SDP is infeasible, subject to exact certificate and reduction checks.",
+    "certificate_infeasible_means": "No normalized separator exists; this is not a geometric nonexistence proof.",
+    "native_auxiliary": "Maximize alpha with F_b(x) - alpha I PSD and alpha <= 1.",
+    "normalized_certificate": "For Ax + s = b, s in K: A^T y = 0, b^T y = -1, y in K*.",
+    "original_feasibility": "The unshifted alpha = 0 slice; a native auxiliary pFEAS label is insufficient.",
+    "sdpa_algorithm": "Coupled primal-dual predictor-corrector steps."
+  },
+  "procedure": {
+    "last_gate_and_encoding_checks": "results/global_conic_backend_production_gate_checks03/result.json",
+    "missing_face_launch_rejected_before_output_creation": true,
+    "old_preflight_bound_sources_left_unchanged": true,
+    "production_certificate_requires_exact_face_preparation_and_separate_replay": true,
+    "workflow": "research/global_formulation/CONSTRAINT_WORKFLOW.md"
+  },
+  "remaining_work": [
+    "Decide the unchanged level-7 SDP with a full original feasible point or an exact infeasibility certificate.",
+    "Coordinate dual faces are exhausted; further facial structure, strict feasibility and weak infeasibility have not been decided.",
+    "Complete separate source-bound geometric review before any bound update."
+  ],
+  "retention": {
+    "alternative_solver_arrays_retained_for_candidate_checks": true,
+    "bulk_archive_upload_performed": false,
+    "early_executed_source_snapshots": "results/global_solver_comparison_source_snapshots_20261126.json",
+    "new_native_checkpoint_archives": "results/global_solver_diagnosis_archives_20261126.json",
+    "sparse_encoding_and_dual_embedding_retained": true
+  },
+  "schema": "global-solver-diagnosis-v1",
+  "scope": "Unchanged frozen level-7 dimension-57 necessary-data SDP; the completed n >= 58 theorem remains the tail anchor.",
+  "selected_diagram_lists_added": false,
+  "solver_certified_new_bound": false,
+  "solver_diagnosis_publication_hygiene_20261126": {
+    "final_index_must_be_audited_again": true,
+    "index_files": 33936,
+    "issues": [],
+    "observed_peak_group_rss_bytes": 196771840,
+    "path_and_blob_list_sha256": "ff59a0bef1f8e59895bf6cc0ba5226d3fbbd3e865e9eb60eebf2b49575951864",
+    "receipt": "results/global_solver_diagnosis_public_index_audit_20261126.txt",
+    "scope": "Actual Git index before adding this audit receipt and its summary"
+  },
+  "source_bound_geometric_review_complete": false,
+  "status": "RESTART_TRIGGER_AND_EXACT_DUAL_FACES_VERIFIED_ORIGINAL_FEASIBILITY_UNDECIDED"
+}

@@ -97,5 +97,8 @@ the completed proofs and has established no improved bound. The current
 frozen level-5 dimension-57 SDP is [exactly feasible](results/global_shared_cusp_independent/result.json),
 as checked independently in its full original matrices. A
 [revised edge compatibility model](research/global_formulation/README.md)
-retains those constraints and excludes that witness. A continued SDPA run
-ended with a numerical stagnation error; feasibility remains undecided.
+retains those constraints and excludes that witness. An
+[exact dual-face reduction and solver comparison](results/global_solver_diagnosis_completion_20261126.json)
+diagnosed the SDPA restart stop and tested SCS and Clarabel. Feasibility of the
+stronger model remains undecided; no numerical status has passed exact
+certification.

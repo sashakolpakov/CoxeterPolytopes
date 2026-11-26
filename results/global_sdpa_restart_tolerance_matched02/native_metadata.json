@@ -1,0 +1,45 @@
+{
+  "command": [
+    "/Users/sasha/.local/opt/coxeter-sdpa-7.3.21/bin/sdpa",
+    "-ds",
+    "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_ready03/input.dat-s",
+    "-o",
+    "/Users/sasha/CoxeterPolytopes/results/global_sdpa_restart_tolerance_matched02/native.result",
+    "-p",
+    "/Users/sasha/CoxeterPolytopes/results/global_sdpa_restart_tolerance_matched02/param.sdpa",
+    "-numThreads",
+    "1",
+    "-id",
+    "/Users/sasha/CoxeterPolytopes/results/global_sdpa_restart_tolerance_matched02/native_initial.dat"
+  ],
+  "executable_sha256": "65292a57cc9cce3c3f206e5faf541c303802589c238a1d82722bfafbe8b0e0d7",
+  "initial_sha256": "2cbf458a426dd84551d08397aba5b6b230c7651791f5a7805e6afb2343bc20fc",
+  "initial_source_path": "results/global_edge_closure_sdpa09/native.result",
+  "initial_source_sha256": "36a32d3c84ec30c9cdd5e62a2ba701dfb338712a295ed6e46a6b9740db6987ba",
+  "input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+  "matched_comparison": {
+    "baseline": "results/global_edge_closure_sdpa10/result.json",
+    "baseline_numerical_error_messages": [
+      "cannot move: step length is too short :: line 190 in sdpa_solve.cpp"
+    ],
+    "identical_initial_source_bytes": true,
+    "identical_ordered_input": true,
+    "parameter_file_changes": [
+      {
+        "new": "1e-8",
+        "old": "1e-10",
+        "zero_based_line": 9
+      }
+    ]
+  },
+  "one_thread": true,
+  "parameters_sha256": "6081bfbc7a789d5890d318c469c1d5284385187b05f7b2c2efb6fd91eee3282a",
+  "preflight_check": {
+    "frozen_input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
+    "native_input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+    "preflight": "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_ready03/solver_ready.json",
+    "preflight_sha256": "5ea43d1d44c43e99e9da4f6bc500d19ddf1bc8809feb0907fa0d2ce5e7b351fd",
+    "scope": "verified_global_research_model"
+  },
+  "record_kind": "direct SDPA parameter-probe invocation"
+}

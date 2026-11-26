@@ -1,0 +1,61 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/archive_global_model_20261125.py",
+    "--output",
+    "results/global_solver_diagnosis_archives_20261126.json",
+    "results/global_sdpa_restart_tolerance01/native.result",
+    "results/global_sdpa_restart_tolerance_matched02/native.result"
+  ],
+  "elapsed_seconds": 6.89,
+  "peak_process_tree_rss_bytes": 66109440,
+  "initial_resources": {
+    "free_disk_gib": 318.24,
+    "available_memory_gib": 8.97,
+    "disk_free_bytes": 341704982528,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 9630433280,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 34.35567,
+    "available_memory_percent": 37.371,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 1022,
+  "stdout": "{\"status\": \"RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED\", \"records\": [{\"source\": \"results/global_sdpa_restart_tolerance01/native.result\", \"archive\": \"results/global_sdpa_restart_tolerance01/native.result.gz\", \"source_bytes\": 24785605, \"source_sha256\": \"d0063402568a63e4a91a1687e90f9443de311b4fe659de173263a0cfa4a9c016\", \"archive_bytes\": 8209006, \"archive_sha256\": \"539ee10eea8e577fecd39a7614749cef7bb29ccd68a60f671ce1027c80347dcd\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}, {\"source\": \"results/global_sdpa_restart_tolerance_matched02/native.result\", \"archive\": \"results/global_sdpa_restart_tolerance_matched02/native.result.gz\", \"source_bytes\": 24786352, \"source_sha256\": \"32c8b02ff9761184f6f8704794f878ef222e8481ba0cddaced2bcb5d75d82561\", \"archive_bytes\": 8233336, \"archive_sha256\": \"ad4f7a0735d3764077017691e29fdbad3c754fbc8baffd70b83797ff82e4e8b4\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}], \"mathematical_verification_asserted\": false, \"upload_performed\": false}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "b0abb9cbc1e7d7e416c8c70a78c08e4193aa845d83af65b27878c67886126b0b",
+  "lock_owner": "wrapper"
+}

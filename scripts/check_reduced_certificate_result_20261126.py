@@ -6,6 +6,7 @@ not by itself prove feasibility of the original primal before dual facial
 reduction. That requires a separate full-model lift/check.
 """
 import argparse
+from collections import Counter
 from fractions import Fraction as F
 import json
 from pathlib import Path
@@ -14,7 +15,7 @@ import time
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from research.global_formulation import conic, conic_backend as backend, solver_gate
+from research.global_formulation import conic, conic_backend as backend, cone_reduction, solver_gate
 from scripts.compare_conic_solvers_20261126 import checked_dual_face_model
 
 
@@ -55,6 +56,7 @@ def main():
     parser.add_argument('--dual-face-replay',type=Path,required=True)
     parser.add_argument('--solver-output',type=Path,required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--polish-scalars',action='store_true')
     args=parser.parse_args()
     started=time.monotonic()
     gate=solver_gate.verify_native(args.native_input,args.preflight)
@@ -62,6 +64,7 @@ def main():
     source_paths=[Path(__file__),args.solver_output/'result.json',args.solver_output/'solution.npz',
                   args.exact_model,args.dual_face_replay,args.dual_face_model/'embedding.npz',
                   ROOT/'scripts/compare_conic_solvers_20261126.py',ROOT/'research/global_formulation/conic.py']
+    source_paths.append(ROOT/'research/global_formulation/cone_reduction.py')
     def bindings():
         return {str(p):{'bytes':p.stat().st_size,'sha256':solver_gate.file_digest(p)} for p in source_paths}
     before=bindings()
@@ -118,6 +121,42 @@ def main():
         report.update(status='EXACT_REDUCED_CERTIFICATE_INFEASIBILITY_VERIFIED',
             normalized_full_certificate_search_infeasible_by_verified_face_equivalence=True,
             exact_compressed_point_sha256=checked['check']['candidate_sha256'])
+    if args.polish_scalars and report['status']!='EXACT_REDUCED_CERTIFICATE_INFEASIBILITY_VERIFIED':
+        raw_point=dict(zip(projected['variables'],raw,strict=True))
+        negative=[(block['name'],block['entries'][0][0]) for block in projected['blocks']
+                  if len(block['entries'])==1 and conic.value(block['entries'][0][0],raw_point)<0]
+        report['negative_scalar_rows_in_raw_point']=len(negative)
+        report['polishing_is_a_point_restriction_only']=True
+        report['polishing_attempts']=[]
+        choices=[('all_violated_scalars',[q for _,q in negative]),
+                 ('short_noncoordinate_violations',[q for _,q in negative if 2<=len(q)<=16])]
+        with (args.output/'polishing_progress.jsonl').open('x') as progress:
+            for name,equations in choices:
+                if not equations: continue
+                attempt={'proposal':name,'proposed_equalities':len(equations)}
+                progress.write(json.dumps(attempt)+'\n');progress.flush()
+                frequency=Counter(v for q in equations for v in q if v)
+                position={v:i for i,v in enumerate(projected['variables'])}
+                order=sorted(projected['variables'],key=lambda v:(frequency[v],position[v]))
+                try:
+                    subs,history=cone_reduction.linear_elimination(order,equations)
+                    free=[v for v in order if subs[v]=={v:F(1)}]
+                    attempt['remaining_free_coordinates']=len(free)
+                    progress.write(json.dumps(attempt)+'\n');progress.flush()
+                    point,checked=conic.reconstruct(projected,conic.model(free,[]),subs,
+                        [raw_point[v] for v in free],extra_equations=equations)
+                except ValueError as error:
+                    attempt['exact_recovery_failure']=str(error)
+                    report['polishing_attempts'].append(attempt)
+                    continue
+                conic.write_json(args.output/'compressed_feasible_point.exact.json',point)
+                conic.write_json(args.output/'compressed_point_check.json',checked)
+                conic.write_json(args.output/'point_polishing_equalities.json',equations)
+                report['polishing_attempts'].append(dict(attempt,exact_point_verified=True))
+                report.update(status='EXACT_REDUCED_CERTIFICATE_INFEASIBILITY_VERIFIED',
+                    normalized_full_certificate_search_infeasible_by_verified_face_equivalence=True,
+                    exact_compressed_point_sha256=checked['check']['candidate_sha256'])
+                break
     if bindings()!=before: raise ValueError('A candidate or exact checker input changed')
     report.update(elapsed_seconds=time.monotonic()-started,source_bindings=before)
     conic.write_json(args.output/'result.json',report)
