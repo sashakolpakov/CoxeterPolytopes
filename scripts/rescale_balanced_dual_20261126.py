@@ -40,6 +40,7 @@ def rescale(data,layout):
             all_rows.extend(np.max(M,axis=1));base+=len(i)
         return np.asarray(all_rows)
     transformed=A.copy();rhs=data['b'].copy();rounds=0
+    base=layout['scalar_cones']+sum(n*(n+1)//2 for n in layout['PSD_sizes'])
     for turn in range(12):
         current=np.maximum(np.asarray(abs(transformed).max(axis=1).toarray()).ravel(),np.abs(rhs))
         physical=matrix_row_envelopes(current);positive=physical[physical>0]
@@ -134,6 +135,8 @@ def main():
         layout=dict(zero_cones=0,scalar_cones=1,PSD_sizes=[2])
         out,e,p=rescale(data,layout)
         if p['smallest_output_positive_row_envelope']<.1:raise ValueError('Known weak cone was not balanced')
+        again,e2,_=rescale(out,layout)
+        if np.any(e2) or (out['A']!=again['A']).nnz:raise ValueError('Balanced units are not a fixed point')
         np.testing.assert_array_equal(np.ldexp(out['b'],-e),data['b'])
         # The same native configuration must solve a small PSD feasibility problem.
         folder=args.output/'native';folder.mkdir()
