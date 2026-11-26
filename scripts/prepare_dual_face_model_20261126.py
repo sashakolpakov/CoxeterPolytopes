@@ -75,7 +75,18 @@ def main():
     started=time.monotonic()
     args.output.mkdir()
     source_paths=[Path(__file__),ROOT/'research/global_formulation/dual_faces.py',
-                  ROOT/'research/global_formulation/conic_backend.py',ROOT/'research/global_formulation/solver_gate.py']
+                  ROOT/'research/global_formulation/conic_backend.py',ROOT/'research/global_formulation/solver_gate.py',
+                  ROOT/'research/global_formulation/conic.py',ROOT/'research/global_formulation/slater_margin.py']
+    source_paths.extend(p for p in [args.native_input,args.preflight,args.exact_model] if p is not None)
+    if args.encoding is not None:
+        source_paths.extend(args.encoding/p for p in ['result.json','A.npz','vectors.npz','layout.json'])
+    if args.prepared is not None:
+        source_paths.extend(args.prepared/p for p in ['result.json','face_proof.json','A.npz',
+            'vectors.npz','layout.json','embedding.npz'])
+    def bindings():
+        return {str(p):{'bytes':p.stat().st_size,'sha256':solver_gate.file_digest(p)} for p in source_paths}
+    before=bindings()
+    conic.write_json(args.output/'source_bindings.json',before)
     gate=None
     if args.action=='check':
         report=fixture(args.output)
@@ -163,10 +174,11 @@ def main():
                 'rounds_replayed':len(proof['steps']),'coordinate_face_fixed_point':True,
                 'certificate_feasibility_preserved':True,
                 'original_primal_feasibility_from_reduced_certificate_infeasibility_claimed':False}
-        source_paths.extend([args.native_input,args.preflight,args.exact_model,args.encoding/'result.json'])
+    if bindings()!=before:
+        raise ValueError('A dual face input or proof source changed during the run')
     report.update(accepted_bounds_changed=False,geometric_constraints_changed=False,
         verified_preflight=gate,elapsed_seconds=time.monotonic()-started,
-        source_bindings={str(p):{'bytes':p.stat().st_size,'sha256':solver_gate.file_digest(p)} for p in source_paths})
+        source_bindings=before)
     conic.write_json(args.output/'result.json',report)
     print(json.dumps({k:v for k,v in report.items() if k!='source_bindings'}),flush=True)
 

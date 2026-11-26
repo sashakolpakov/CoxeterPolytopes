@@ -44,7 +44,27 @@ def checked_encoding(folder, gate):
     return backend.load_encoding(folder)
 
 
-def solve(data, layout, output, name, seconds, iterations, warm=None):
+def checked_dual_face_model(folder,replay,gate):
+    verified=json.loads(replay.read_text())
+    expected='EXACT_DUAL_FACIAL_REDUCTION_AND_ALL_REDUCED_COEFFICIENTS_VERIFIED'
+    if verified.get('status')!=expected or verified.get('solver_ready') is not True:
+        raise ValueError('The dual face model has no completed separate replay')
+    if verified['source_native_sha256']!=gate['native_input_sha256']:
+        raise ValueError('The dual facial proof concerns a different full input')
+    if verified['prepared_result_sha256']!=solver_gate.file_digest(folder/'result.json'):
+        raise ValueError('The prepared dual changed after proof replay')
+    for name,h in verified['encoding_file_sha256'].items():
+        if name not in {'A.npz','vectors.npz','layout.json','embedding.npz','face_proof.json'}:
+            raise ValueError('Unexpected dual face artifact')
+        if solver_gate.file_digest(folder/name)!=h:
+            raise ValueError('A verified dual artifact changed')
+    for path,row in verified['source_bindings'].items():
+        if solver_gate.file_digest(path)!=row['sha256']:
+            raise ValueError('A dual proof input or verifier source changed')
+    return backend.load_encoding(folder)
+
+
+def solve(data, layout, output, name, seconds, iterations, warm=None,linear_solver='qdldl'):
     import numpy as np
     import scipy.sparse as sp
     log = output/'solver.stdout'
@@ -79,7 +99,7 @@ def solve(data, layout, output, name, seconds, iterations, warm=None):
     settings.max_iter = iterations
     settings.time_limit = seconds
     settings.max_threads = 1
-    settings.direct_solve_method = 'qdldl'
+    settings.direct_solve_method = linear_solver
     settings.tol_gap_abs = settings.tol_gap_rel = settings.tol_feas = 1e-8
     settings.tol_infeas_abs = settings.tol_infeas_rel = 1e-9
     settings.verbose = True
@@ -104,7 +124,7 @@ def solve(data, layout, output, name, seconds, iterations, warm=None):
     return {'x':np.asarray(result.x),'y':dual,'s':slack}, metadata
 
 
-def self_check(output):
+def self_check(output,clarabel_method='qdldl'):
     import numpy as np
     checked = []
     # Nonuniform 3x3 data distinguish lower-column and upper-column layouts.
@@ -143,7 +163,8 @@ def self_check(output):
     for name in ['scs','clarabel']:
         folder = output/name
         folder.mkdir()
-        candidate,meta = solve(data,layout,folder,name,15,20000 if name=='scs' else 100)
+        candidate,meta = solve(data,layout,folder,name,15,20000 if name=='scs' else 100,
+                              linear_solver=clarabel_method)
         if meta['native_status'].lower() != 'solved':
             raise ValueError('Known singular margin fixture was not solved: '+str(meta))
         np.testing.assert_allclose(candidate['x'],point,atol=2e-6,rtol=0)
@@ -163,12 +184,14 @@ def self_check(output):
     for name in ['scs','clarabel']:
         folder = output/(name+'_infeasible')
         folder.mkdir()
-        _,meta = solve(direct,direct_layout,folder,name,15,20000 if name=='scs' else 100)
+        _,meta = solve(direct,direct_layout,folder,name,15,20000 if name=='scs' else 100,
+                       linear_solver=clarabel_method)
         if 'infeasible' not in meta['native_status'].lower():
             raise ValueError('The inconsistent interval was not detected')
         folder2 = output/(name+'_certificate')
         folder2.mkdir()
-        candidate,meta2 = solve(certificate,certificate_layout,folder2,name,15,20000 if name=='scs' else 100)
+        candidate,meta2 = solve(certificate,certificate_layout,folder2,name,15,20000 if name=='scs' else 100,
+                                linear_solver=clarabel_method)
         np.testing.assert_allclose(candidate['x'],[1.,1.],rtol=0,atol=2e-6)
         checked.append({'backend':name,'infeasible_fixture_status':meta['native_status'],
                         'normalized_certificate_fixture_status':meta2['native_status'],
@@ -191,6 +214,9 @@ def main():
     parser.add_argument('--reference-diagnostics',type=Path)
     parser.add_argument('--encoding',type=Path)
     parser.add_argument('--backend',choices=['scs','clarabel'])
+    parser.add_argument('--linear-solver',choices=['auto','qdldl','faer'],default='qdldl')
+    parser.add_argument('--dual-face-model',type=Path)
+    parser.add_argument('--dual-face-replay',type=Path)
     parser.add_argument('--mode',choices=['auxiliary','original','certificate'],default='auxiliary')
     parser.add_argument('--seconds',type=int,default=650)
     parser.add_argument('--iterations',type=int)
@@ -210,10 +236,16 @@ def main():
         if args.encoding is not None:
             source_paths.extend([args.encoding/p for p in
                 ['result.json','A.npz','vectors.npz','layout.json']])
+        if args.dual_face_model is not None:
+            if args.mode!='certificate' or args.dual_face_replay is None:
+                raise ValueError('A reduced dual requires certificate mode and a separate proof replay')
+            source_paths.extend(args.dual_face_model/p for p in ['result.json','face_proof.json',
+                'A.npz','vectors.npz','layout.json','embedding.npz'])
+            source_paths.append(args.dual_face_replay)
     before=bindings(source_paths)
     conic.write_json(args.output/'source_bindings.json',before)
     if args.action=='check':
-        report=self_check(args.output)
+        report=self_check(args.output,args.linear_solver)
     elif args.action=='encode':
         import numpy as np
         import scipy.sparse.csgraph as graph
@@ -266,7 +298,10 @@ def main():
         if args.mode=='original':
             data,layout=backend.original_feasibility(data,layout)
         elif args.mode=='certificate':
-            data,layout=backend.certificate_feasibility(data,layout)
+            if args.dual_face_model is None:
+                data,layout=backend.certificate_feasibility(data,layout)
+            else:
+                data,layout=checked_dual_face_model(args.dual_face_model,args.dual_face_replay,gate)
         warm=None
         if args.backend=='scs' and args.mode=='auxiliary':
             if args.reference:
@@ -278,14 +313,17 @@ def main():
         conic.write_json(args.output/'problem.json',{'shape':list(data['A'].shape),
             'nonzeros':data['A'].nnz,'mode':args.mode,'layout':layout,
             'warm_start_from_verified_SDPA_arrays':warm is not None})
-        point,meta=solve(data,layout,args.output,args.backend,args.seconds,options_iterations,warm=warm)
+        point,meta=solve(data,layout,args.output,args.backend,args.seconds,options_iterations,
+                         warm=warm,linear_solver=args.linear_solver)
         np.savez_compressed(args.output/'solution.npz',**point)
         diag=backend.diagnostics(data,layout,point)
         report={'status':'ALTERNATIVE_SOLVER_RETURNED_REQUIRES_ORIGINAL_CHECK',
             'mode':args.mode,'native':meta,'diagnostics':diag,
             'original_feasibility_status':'UNDECIDED',
             'solution_sha256':solver_gate.file_digest(args.output/'solution.npz'),
-            'source_encoding':str(args.encoding)}
+            'source_encoding':str(args.encoding),
+            'verified_dual_face_model':str(args.dual_face_model) if args.dual_face_model else None,
+            'separate_dual_face_replay':str(args.dual_face_replay) if args.dual_face_replay else None}
     if bindings(source_paths)!=before:
         raise ValueError('A pinned input or source changed during comparison')
     report.update(accepted_bounds_changed=False,geometric_constraints_changed=False,
