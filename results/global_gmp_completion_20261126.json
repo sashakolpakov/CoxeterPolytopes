@@ -1,0 +1,226 @@
+{
+  "accepted_bounds_unchanged": [
+    57,
+    17,
+    15
+  ],
+  "actual_completed_monitored_units": [
+    "global_gmp_input_checks02",
+    "global_gmp_dual_prepare01",
+    "global_gmp_dual_replay01",
+    "global_gmp_dual256_01",
+    "global_gmp_graph_build01",
+    "global_gmp_graph_input_checks01",
+    "global_gmp_graph_dual256_01",
+    "global_gmp_schur_cost01",
+    "global_gmp_checkpoint_checks02",
+    "global_gmp_longer_plan01",
+    "global_gmp_input_archive01"
+  ],
+  "all_26_feature_coefficients_remain_free": true,
+  "arithmetic": {
+    "approximate_decimal_digits": 77,
+    "full_native_arithmetic_evidence": "Sampled GMP multiplication/addition in Schur assembly and sparse Cholesky",
+    "input_binary64_conversion_used": false,
+    "input_significant_decimal_digits": 100,
+    "native_coefficients_from": "Exact rational actual matrix entries with checked dyadic units",
+    "native_requested_bits": 256,
+    "precision_fixture": "results/global_gmp_input_checks02/result.json",
+    "printed_decimal_places": 90,
+    "private_precision_fixture": "results/global_gmp_graph_input_checks01/result.json",
+    "separately_checked_relative_decimal_input_error_bound": "1e-98",
+    "tolerance": "1e-45"
+  },
+  "checkpoint_protocol": {
+    "actual_one_iteration_output_and_native_warm_restart_passed": true,
+    "all_three_unlabeled_brace_arrays_preserved": true,
+    "full_problem_checkpoint_obtained": false,
+    "receipt": "results/global_gmp_checkpoint_checks02/result.json"
+  },
+  "current_wall_policy_source": "AGENTS.md:118: 900 seconds and 10,000,000,000 bytes process-tree RSS",
+  "date": "2026-11-26",
+  "exact_feasible_point_obtained": false,
+  "exact_infeasibility_certificate_obtained": false,
+  "failed_fixture_attempts": [
+    {
+      "native_research_problem_launched": false,
+      "not_counted_as_PASS": true,
+      "result": "results/global_gmp_input_checks01/result.json",
+      "watchdog_completion_receipt_obtained": false
+    },
+    {
+      "native_research_problem_launched": false,
+      "not_counted_as_PASS": true,
+      "result": "results/global_gmp_checkpoint_checks01/result.json",
+      "watchdog_completion_receipt_obtained": false
+    }
+  ],
+  "full_problem_exact_field_recovery_performed": false,
+  "geometric_constraints_changed": false,
+  "graph_backend": {
+    "build": "results/global_gmp_graph_build01/result.json",
+    "compiled_old_new_independent_graph_cases": 300,
+    "full_model_progress_evidence": "The private run reached Schur assembly and sparse GMP Cholesky.",
+    "installed_stock_solver_untouched": true,
+    "only_core_source_change": "Symbolic Chordal::makeGraph union assembly",
+    "private_binary_sha256": "00f02d2ae4662183fd44fbe1e49bda2fb6a5ee1685d6a826713f8a77137a758b",
+    "unchanged_other_numeric_source_files": 93,
+    "uniform_set_identity_argument": "notes/lp/global_formulation.md#equivalence-of-the-private-symbolic-graph-assembly",
+    "upstream": "https://github.com/nakatamaho/sdpa-gmp",
+    "upstream_commit": "ca110db5ea1cc46e811b70dfea9cbb25db74448d"
+  },
+  "input": {
+    "PSD_blocks": 4844,
+    "archive_receipt": "results/global_gmp_input_archives_20261126.json",
+    "control_against_previous_Clarabel_runs": "Objective changed; this does not isolate the effect of precision.",
+    "native_coefficients_replayed": 5231866,
+    "native_input_sha256": "f940354294a155d7ac136151f306505edce788b6e69d982753c71abfcb5f6711",
+    "objective_is_positive_scaled_trace_over_same_feasible_set": true,
+    "prepared": "results/global_gmp_dual_prepare01/result.json",
+    "proof": "notes/lp/global_formulation.md#trace-objective-for-the-multiprecision-run",
+    "scalar_cones": 284305,
+    "separate_replay": "results/global_gmp_dual_replay01/result.json",
+    "variables": 61513
+  },
+  "longer_job_executed": false,
+  "longer_job_request": {
+    "iterations": 1,
+    "native_wall_seconds": 3300,
+    "outer_wall_seconds": 3600,
+    "precision_bits": 256,
+    "purpose": "Complete the first Newton iteration and write a full-precision checkpoint.",
+    "rss_limit_bytes": 10000000000,
+    "shared_lock_and_percentage_gates_unchanged": true,
+    "threads": 1
+  },
+  "longer_wall_time_override_received": false,
+  "native_runs": [
+    {
+      "elapsed_seconds": 780.816,
+      "last_printed_iteration": null,
+      "mathematical_decision": false,
+      "native_limit_seconds": 780,
+      "native_matrix_mode": null,
+      "native_status": "NATIVE_BATCH_TIME_LIMIT",
+      "outer_watchdog_limit_seconds": 900,
+      "peak_process_tree_RSS_bytes": 2662170624,
+      "reported_precision_bits": null,
+      "requested_precision_bits": 256,
+      "result": "results/global_gmp_dual256_01/result.json",
+      "solution_arrays_present": {
+        "xMat": false,
+        "xVec": false,
+        "yMat": false
+      },
+      "terminal_phase": null
+    },
+    {
+      "elapsed_seconds": 782.204,
+      "last_printed_iteration": null,
+      "mathematical_decision": false,
+      "native_limit_seconds": 780,
+      "native_matrix_mode": "SPARSE",
+      "native_status": "NATIVE_BATCH_TIME_LIMIT",
+      "outer_watchdog_limit_seconds": 900,
+      "peak_process_tree_RSS_bytes": 5078368256,
+      "reported_precision_bits": null,
+      "requested_precision_bits": 256,
+      "result": "results/global_gmp_graph_dual256_01/result.json",
+      "solution_arrays_present": {
+        "xMat": false,
+        "xVec": false,
+        "yMat": false
+      },
+      "terminal_phase": null
+    }
+  ],
+  "new_source_bindings": {
+    "scripts/check_gmp_iteration_checkpoint_20261126.py": {
+      "bytes": 3514,
+      "sha256": "11bba7b56b83c63cc73bff605b459822f6be8df921e6e94fd7ea80f9ffe8081f"
+    },
+    "scripts/diagnose_gmp_schur_20261126.py": {
+      "bytes": 3685,
+      "sha256": "0c44efcabad0f3e9b82e470486e9166ce8172eff81c905195329a06cc5dc4845"
+    },
+    "scripts/prepare_gmp_long_checkpoint_20261126.py": {
+      "bytes": 4807,
+      "sha256": "99c9bb79d1989e695f2d253490bdd638a8d1f40818aeea117c48c82a7fc866a6"
+    },
+    "scripts/run_balanced_dual_gmp_20261126.py": {
+      "bytes": 18317,
+      "sha256": "da303ca5d15131cf101dc0a67e3776767dde832cae3647ba73cd8eeb64308be3"
+    },
+    "scripts/sdpa_gmp_sparse_graph_20261126.py": {
+      "bytes": 13996,
+      "sha256": "1de4cf8be541563705e246b26080549c769a2d3305f798042989f0290a61612f"
+    }
+  },
+  "next_job_plan": "results/global_gmp_longer_plan01/result.json",
+  "normalized_certificate_dual_feasibility_status": "UNDECIDED",
+  "normalized_certificate_feasibility_status": "UNDECIDED",
+  "normalized_dual_point_would_prove": "C infeasible; original full primal feasibility would still require its own lift/check.",
+  "original_feasibility_status": "UNDECIDED",
+  "problem_role": "Explicit normalized dual G(u) of the reduced normalized certificate search C.",
+  "profiles": [
+    {
+      "bytes": 8581,
+      "owned_unused_temporary_removed": true,
+      "retained": "results/global_gmp_dual256_01/setup_profile.sample.txt",
+      "sha256": "814908a79e3b384254f531566f32aa8e41536f162ada9b816d964190c92a9d0e",
+      "temporary_copy_byte_verified": true
+    },
+    {
+      "bytes": 8581,
+      "owned_unused_temporary_removed": true,
+      "retained": "results/global_gmp_dual256_01/late_setup_profile.sample.txt",
+      "sha256": "63bf0ac0c3a066632f940b41c93d023e0b502033f50f2d822fc715a1f85297cd",
+      "temporary_copy_byte_verified": true
+    },
+    {
+      "bytes": 11245,
+      "owned_unused_temporary_removed": true,
+      "retained": "results/global_gmp_graph_dual256_01/ordering_profile.sample.txt",
+      "sha256": "12fd7fe79a3155c9b3146769dec6771b318dbb04b99c62d8652650db58dda51f",
+      "temporary_copy_byte_verified": true
+    },
+    {
+      "bytes": 30502,
+      "owned_unused_temporary_removed": true,
+      "retained": "results/global_gmp_graph_dual256_01/Schur_assembly_profile.sample.txt",
+      "sha256": "285172b13e35f8e832936d5fb1faf082c5f950692e3866c464a60b32522a680b",
+      "temporary_copy_byte_verified": true
+    },
+    {
+      "bytes": 15785,
+      "owned_unused_temporary_removed": true,
+      "retained": "results/global_gmp_graph_dual256_01/Cholesky_profile.sample.txt",
+      "sha256": "34b19d78cde86b10e0912b009ce6084a5ddb932b74124852953aef2f7002bf0d",
+      "temporary_copy_byte_verified": true
+    }
+  ],
+  "publication_index_audit": {
+    "actual_staged_index_checked": true,
+    "issues": [],
+    "mathematical_verification_claimed": false,
+    "observed_peak_group_rss_bytes": 219250688,
+    "receipt": "results/global_gmp_public_index_audit_20261126.txt",
+    "receipt_covers_index_before_its_own_addition": true,
+    "watchdog_exit_code": 0
+  },
+  "reason_no_GMP_field_recovery": "Neither full native attempt returned solution arrays.",
+  "schema": "full-dual-sdpa-gmp-work-v1",
+  "source_bound_geometric_review_complete": false,
+  "status": "FULL_GMP_INPUT_VERIFIED_GRAPH_SETUP_FIXED_TWO_TIME_LIMITS_NO_FEASIBILITY_DECISION",
+  "structural_cost": {
+    "four_derived_index_arrays_payload_bytes": 10032412400,
+    "pair_cache_integer_payload_bytes": 12540515500,
+    "pair_cache_redesign_implemented": false,
+    "profiler_footprint_is_separate_from_RSS": true,
+    "profiler_footprint_peak_as_reported": "19.4G",
+    "receipt": "results/global_gmp_schur_cost01/result.json",
+    "temporary_formula_integer_payload_bytes": 1191875888,
+    "total_RSS_or_Cholesky_fill_not_inferred_from_pair_count": true,
+    "variable_pair_slots": 627025775
+  }
+}

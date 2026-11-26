@@ -1,0 +1,120 @@
+Analysis of sampling sdpa_gmp (pid 64727) every 10 milliseconds
+Process:         sdpa_gmp [64727]
+Path:            /private/tmp/*/sdpa_gmp
+Load Address:    0x104498000
+Identifier:      sdpa_gmp
+Version:         0
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  Python [64708]
+Target Type:     live task
+
+Date/Time:       2026-11-26 15:40:19.211 -0500
+Launch Time:     2026-11-26 15:38:52.782 -0500
+OS Version:      macOS 26.4.1 (25E253)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         1.3G
+Physical footprint (peak):  1.3G
+Idle exit:                  untracked
+----
+
+Call graph:
+    90 Thread_84360212   DispatchQueue_1: com.apple.main-thread  (serial)
+      90 start  (in dyld) + 6992  [0x188a87da4]
+        90 main  (in sdpa_gmp) + 2372  [0x1044aa74c]
+          90 sdpa::pinpal(char*, char*, char*, char*, bool, bool, bool, bool, sdpa::Parameter::parameterType, __sFILE*)  (in sdpa_gmp) + 1364  [0x1044a906c]
+            90 sdpa::Chordal::ordering_bMat(int, int, sdpa::InputData&, __sFILE*)  (in sdpa_gmp) + 400  [0x104499398]
+              90 sdpa::Chordal::Spooles_MMD(int)  (in sdpa_gmp) + 40  [0x104499048]
+                90 orderViaMMD  (in sdpa_gmp) + 600  [0x104516ae4]
+                  90 MSMD_order  (in sdpa_gmp) + 588  [0x1044fd5f0]
+                    70 MSMD_eliminateStage  (in sdpa_gmp) + 600  [0x1044fb51c]
+                    + 70 MSMD_cleanReachSet  (in sdpa_gmp) + 216  [0x1044faea8]
+                    +   70 MSMD_cleanEdgeList  (in sdpa_gmp) + 396,428,...  [0x1044fb1d0,0x1044fb1f0,...]
+                    14 MSMD_eliminateStage  (in sdpa_gmp) + 656  [0x1044fb554]
+                    + 14 MSMD_findInodes  (in sdpa_gmp) + 340  [0x1044fc62c]
+                    +   12 IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+                    +   ! 10 IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+                    +   ! : 7 IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+                    +   ! : | 6 IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+                    +   ! : | + 5 IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+                    +   ! : | + ! 2 IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+                    +   ! : | + ! : 2 IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+                    +   ! : | + ! :   1 IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+                    +   ! : | + ! :   | 1 IVqsortUp  (in sdpa_gmp) + 176  [0x10450fbac]
+                    +   ! : | + ! :   |   1 Icentervalue  (in sdpa_gmp) + 12  [0x10450fe38]
+                    +   ! : | + ! :   1 IVqsortUp  (in sdpa_gmp) + 228  [0x10450fbe0]
+                    +   ! : | + ! 2 IVqsortUp  (in sdpa_gmp) + 112,128  [0x10450fb6c,0x10450fb7c]
+                    +   ! : | + ! 1 IVqsortUp  (in sdpa_gmp) + 176  [0x10450fbac]
+                    +   ! : | + !   1 Icentervalue  (in sdpa_gmp) + 0  [0x10450fe2c]
+                    +   ! : | + 1 IVqsortUp  (in sdpa_gmp) + 356  [0x10450fc60]
+                    +   ! : | 1 IVqsortUp  (in sdpa_gmp) + 176  [0x10450fbac]
+                    +   ! : |   1 Icentervalue  (in sdpa_gmp) + 12  [0x10450fe38]
+                    +   ! : 3 IVqsortUp  (in sdpa_gmp) + 228,292  [0x10450fbe0,0x10450fc20]
+                    +   ! 1 IVqsortUp  (in sdpa_gmp) + 176  [0x10450fbac]
+                    +   ! : 1 Icentervalue  (in sdpa_gmp) + 192  [0x10450feec]
+                    +   ! 1 IVqsortUp  (in sdpa_gmp) + 228  [0x10450fbe0]
+                    +   2 IVqsortUp  (in sdpa_gmp) + 244,256  [0x10450fbf0,0x10450fbfc]
+                    6 MSMD_eliminateStage  (in sdpa_gmp) + 896  [0x1044fb644]
+                      6 MSMD_update  (in sdpa_gmp) + 884  [0x1044fdb9c]
+                        6 MSMD_exactDegree3  (in sdpa_gmp) + 316,284,...  [0x1044fe400,0x1044fe3e0,...]
+
+Total number in stack (recursive counted multiple, when >=5):
+        8       IVqsortUp  (in sdpa_gmp) + 144  [0x10450fb8c]
+        6       IVqsortUp  (in sdpa_gmp) + 0  [0x10450fafc]
+
+Sort by top of stack, same collapsed (when >= 5):
+        MSMD_cleanEdgeList  (in sdpa_gmp)        70
+        IVqsortUp  (in sdpa_gmp)        10
+        MSMD_exactDegree3  (in sdpa_gmp)        6
+
+Binary Images:
+       0x104498000 -        0x10453a327 +sdpa_gmp (0) <D1A1994B-98FE-3C7C-8A6C-07DC0496560A> /tmp/*/sdpa_gmp
+       0x104580000 -        0x104582927 +libgmpxx.4.dylib (0) <7C4656C3-4CAC-35CE-AF3E-0E3F9D822FC4> /opt/homebrew/*/libgmpxx.4.dylib
+       0x104604000 -        0x104658f67 +libgmp.10.dylib (0) <61CFD8B8-214C-314F-96F5-0489BF7A8F45> /opt/homebrew/*/libgmp.10.dylib
+       0x1889e0000 -        0x188a32b4b  libobjc.A.dylib (951.7) <2E858E25-1FF6-3DA6-84F6-911630620512> /usr/lib/libobjc.A.dylib
+       0x188a33000 -        0x188a67b34  libdyld.dylib (1376.6) <2C3C5F75-3686-39A1-9202-BD4D2133379D> /usr/lib/system/libdyld.dylib
+       0x188a68000 -        0x188b0dec7  dyld (1.0.0 - 1376.6) <9F682DCF-340C-3BFA-BCDD-DD702F30313E> /usr/lib/dyld
+       0x188b0e000 -        0x188b11228  libsystem_blocks.dylib (96) <2EA73169-CF76-3DD1-9869-F23C8B338022> /usr/lib/system/libsystem_blocks.dylib
+       0x188b12000 -        0x188b6651f  libxpc.dylib (3102.100.102) <618039C8-9965-3782-A7D2-90FD4C3DD66F> /usr/lib/system/libxpc.dylib
+       0x188b67000 -        0x188b879bf  libsystem_trace.dylib (1861.100.19) <08629650-54FC-3AA6-910E-EACA563804D0> /usr/lib/system/libsystem_trace.dylib
+       0x188b88000 -        0x188c35daf  libcorecrypto.dylib (1922.101.2) <D1EC203E-9B2E-391B-8DE3-7C58F0589437> /usr/lib/system/libcorecrypto.dylib
+       0x188c36000 -        0x188c861d7  libsystem_malloc.dylib (812.100.31) <2AD21BE3-FFDB-31D5-A3D7-2F7F672D6E92> /usr/lib/system/libsystem_malloc.dylib
+       0x188c87000 -        0x188cce23f  libdispatch.dylib (1542.100.32) <E17AA23F-DB2A-3302-B14C-F6B08C540FCF> /usr/lib/system/libdispatch.dylib
+       0x188ccf000 -        0x188cd1ffb  libsystem_featureflags.dylib (103) <0DE01F76-4B36-35A2-98F9-43DD147EDD95> /usr/lib/system/libsystem_featureflags.dylib
+       0x188cd2000 -        0x188d52ef7  libsystem_c.dylib (1752.100.10) <66EBD321-6899-3863-BA24-5CFC3076A0CB> /usr/lib/system/libsystem_c.dylib
+       0x188d53000 -        0x188de3ae7  libc++.1.dylib (2100.43) <1E9541EC-C564-38CB-BED6-46F708E8D863> /usr/lib/libc++.1.dylib
+       0x188de4000 -        0x188dfe75f  libc++abi.dylib (2100.43) <E8D325ED-3B97-325E-B494-B1B0FF93D133> /usr/lib/libc++abi.dylib
+       0x188dff000 -        0x188e3c28f  libsystem_kernel.dylib (12377.101.15) <51565B39-F595-3E96-A217-FEF29815057A> /usr/lib/system/libsystem_kernel.dylib
+       0x188e3d000 -        0x188e49b3b  libsystem_pthread.dylib (539.100.4) <E7A73008-0C09-31E3-9DD9-0C61652F0E85> /usr/lib/system/libsystem_pthread.dylib
+       0x188e4a000 -        0x188e528f3  libsystem_platform.dylib (375.100.10) <D93EC420-F465-3A3A-916D-A04AF9B023EB> /usr/lib/system/libsystem_platform.dylib
+       0x188e53000 -        0x188e826eb  libsystem_info.dylib (600) <201FD67C-3DF6-3788-B132-A69CAA2AA3D7> /usr/lib/system/libsystem_info.dylib
+       0x18ce18000 -        0x18ce21e5f  libsystem_darwin.dylib (1752.100.10) <D5BA0CAB-F283-3620-AAA9-1EEB718E1BA8> /usr/lib/system/libsystem_darwin.dylib
+       0x18d283000 -        0x18d294f5b  libsystem_notify.dylib (348.100.7) <9F46F30B-B7C0-3DD7-AC38-57B78C7971FF> /usr/lib/system/libsystem_notify.dylib
+       0x18f54d000 -        0x18f567f5b  libsystem_networkextension.dylib (2226.101.1) <85169C7B-48DD-3542-AD38-F1B88EA2A95A> /usr/lib/system/libsystem_networkextension.dylib
+       0x18f5ea000 -        0x18f601fdf  libsystem_asl.dylib (406) <6427D987-7938-3278-8C14-10FB9C06BBD5> /usr/lib/system/libsystem_asl.dylib
+       0x1911a5000 -        0x1911ad387  libsystem_symptoms.dylib (2169.100.30) <28B6E34E-9C7D-3437-A3F1-A3C979DE579A> /usr/lib/system/libsystem_symptoms.dylib
+       0x195440000 -        0x19547825f  libsystem_containermanager.dylib (725.100.37) <14750F95-BB3A-3654-8610-A05A454643A8> /usr/lib/system/libsystem_containermanager.dylib
+       0x196850000 -        0x1968545d7  libsystem_configuration.dylib (1405.100.8) <634F597D-F8BD-3C00-B967-86047FC15D14> /usr/lib/system/libsystem_configuration.dylib
+       0x196855000 -        0x19685b8cf  libsystem_sandbox.dylib (2680.100.174) <AF76231D-EADC-3399-9414-6AD90FB4EA89> /usr/lib/system/libsystem_sandbox.dylib
+       0x197e9b000 -        0x197e9e1fb  libquarantine.dylib (196.100.8) <268FEB6E-A237-3050-BFFF-AE3A66B7EAD4> /usr/lib/system/libquarantine.dylib
+       0x19863a000 -        0x198640d03  libsystem_coreservices.dylib (191.4.5) <7129349D-04F9-3C3C-BF37-3082C1468654> /usr/lib/system/libsystem_coreservices.dylib
+       0x198bbf000 -        0x198bfca77  libsystem_m.dylib (3312.100.1) <83B173CD-7F32-3901-8E67-C0B2676BE015> /usr/lib/system/libsystem_m.dylib
+       0x198bfe000 -        0x198c01527  libmacho.dylib (1376.6) <9729ECEA-0A08-32E3-8BDB-B42FC15FF258> /usr/lib/system/libmacho.dylib
+       0x198c1b000 -        0x198c283a7  libcommonCrypto.dylib (600035) <710EC5FA-F77C-3646-A9E3-C037C42E1539> /usr/lib/system/libcommonCrypto.dylib
+       0x198c29000 -        0x198c32ca3  libunwind.dylib (2100.2) <FB0518B9-DF0F-3A03-A74B-AF1B21C26F8B> /usr/lib/system/libunwind.dylib
+       0x198c3b000 -        0x198c457ff  libcopyfile.dylib (240) <0B7FF027-5579-3CBF-A12B-68A4FD36641C> /usr/lib/system/libcopyfile.dylib
+       0x198c46000 -        0x198c49987  libcompiler_rt.dylib (103.3) <65E29E6E-7042-3F73-A1D2-F2C4EBCD7524> /usr/lib/system/libcompiler_rt.dylib
+       0x198c4a000 -        0x198c4e78b  libsystem_collections.dylib (1752.100.10) <B81193DE-3BEC-3340-86D0-DB7F3683D135> /usr/lib/system/libsystem_collections.dylib
+       0x198c4f000 -        0x198c524cf  libsystem_secinit.dylib (168.100.7) <A6B77B36-195D-33F8-8058-FE0B5BFA9D37> /usr/lib/system/libsystem_secinit.dylib
+       0x198c53000 -        0x198c55bf7  libremovefile.dylib (85.100.6) <BD89B1A3-0D06-3881-B5E1-EFC6CFBDFCC1> /usr/lib/system/libremovefile.dylib
+       0x198c56000 -        0x198c56f27  libkeymgr.dylib (31) <DE8F8219-0072-35C2-8932-C065491ED15D> /usr/lib/system/libkeymgr.dylib
+       0x198c57000 -        0x198c5fe3f  libsystem_dnssd.dylib (2881.100.56.0.1) <DEC8BDD2-366C-3BF9-A123-35744DB06354> /usr/lib/system/libsystem_dnssd.dylib
+       0x198c60000 -        0x198c6509b  libcache.dylib (95) <4D6833A3-C910-3A76-AA8A-303F698B36BF> /usr/lib/system/libcache.dylib
+       0x198c66000 -        0x198c67ce3  libSystem.B.dylib (1356) <E05F5341-06B7-365E-8014-E9CD64C352FE> /usr/lib/libSystem.B.dylib
+       0x28b549000 -        0x28b550349  libRosetta.dylib (367.5) <2FC1EF06-04C4-35FC-8DC3-BEA1E9FBD63F> /usr/lib/libRosetta.dylib
+       0x28d226000 -        0x28d229a4b  libsystem_darwindirectory.dylib (122) <CCAA2170-32DD-34BD-A927-32DF30893969> /usr/lib/system/libsystem_darwindirectory.dylib
+       0x28d22a000 -        0x28d2335a7  libsystem_eligibility.dylib (319.101.1) <2D19994A-87BB-34B8-A343-CB8DD47FF110> /usr/lib/system/libsystem_eligibility.dylib
+       0x28d234000 -        0x28d23b8db  libsystem_sanitizers.dylib (26) <FCB93D2F-4437-3089-A43F-A19BC23DD65B> /usr/lib/system/libsystem_sanitizers.dylib
+       0x28d23c000 -        0x28d23cbb7  libsystem_trial.dylib (474.2.18) <5BB81430-4E33-3160-94D2-1FFB2B614DB2> /usr/lib/system/libsystem_trial.dylib

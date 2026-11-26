@@ -1242,3 +1242,60 @@ fields this checker selects `sqrt(d)>0` and decides signs by rational norm
 comparisons. An accepted candidate still requires a separate full replay.
 Such a certificate proves the balanced certificate search infeasible. It does
 not by itself prove full original-primal feasibility or geometric realizability.
+
+### Trace objective for the multiprecision run
+
+Let `G_s(u)` denote the same complete matrix family after the checked positive
+scalar units and PSD diagonal congruences. Write its coefficients as
+`G_s(u)=G_s,0+sum_j G_s,j*u_j`, and let `h>0`. Set
+
+    c_j = h*sum_blocks trace(G_s,j),
+    kappa = h*sum_blocks trace(G_s,0).
+
+The numerical optimization problem `min c^T u` subject to `G_s(u) in K` has
+exactly the previous feasible set. Every feasible point satisfies
+`c^T u+kappa=h*sum_blocks trace(G_s(u)) >= 0`. Its standard conic dual has
+the explicit strictly positive feasible point `Y_b=h*I_b` in every cone,
+since `sum_blocks <G_s,j,Y_b>=c_j`. Scalar cones use one-by-one identities.
+This objective removes the artificial zero-objective dual degeneracy; it does
+not establish strict feasibility of the matrix family itself or convergence.
+The current choice is `h=1/524288`, with `kappa=599/4194304000`.
+
+An ordinary dual iterate of this optimization is not automatically a Farkas
+certificate. Its adjoint target is `c`, rather than zero. At an exactly dual
+feasible iterate, subtracting `h*I` gives zero adjoints, but the difference must
+still pass every PSD/nonnegative condition and have the required negative
+constant before normalization. A feasible `G_s(u)` instead follows the normalized
+dual certificate interpretation established above. Every conclusion still needs
+the appropriate exact full-source verification.
+
+The SDPA-GMP exporter starts from the rational actual matrix entries, applies
+only the checked dyadic units, and writes 100 significant decimal digits. A
+separate replay checks every matrix coefficient and the trace objective over Q,
+including a relative decimal-input error bound of `1e-98`. Native arithmetic
+uses 256 bits; printing 90 decimal places does not supply 90 accurate places.
+The new regression problem has exact optimum `1+10^-40`, exercising coefficient
+input and matrix arithmetic below binary64 resolution. It is an encoding test,
+not evidence about the research problem's feasibility.
+
+### Equivalence of the private symbolic graph assembly
+
+This is a backend storage change and adds no mathematical restriction. For a
+variable coefficient matrix `i`, let `N(i)` be its incident native cone blocks,
+and let `C_b` be the variable indices meeting block `b`. In the pinned upstream
+`InputData::initialize_index`, these are inverse incidence lists. Changing the
+storage of an individual matrix to dense does not change those block indices.
+The Schur adjacency row is therefore
+
+    R_i = union_{b in N(i)} C_b.
+
+Upstream `Chordal::makeGraph` merges sorted copies of all those lists, retaining
+duplicates during assembly and discarding them at the end. The private routine
+visits the same lists through `N(i)`, marks each neighbor once, and sorts the
+result. Both give precisely `R_i`, including the diagonal whenever `i` meets a
+block and an empty row for an unused variable. Neither operation uses a numerical
+tolerance or drops an edge. The set identity applies to every input size; the
+compiled 300-case comparison is a software regression rather than its proof.
+The numeric Schur assembly, factorization and GMP arithmetic sources remain
+unchanged. Every numerical candidate still requires the same exact original
+coefficient and cone checks.

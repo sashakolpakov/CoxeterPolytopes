@@ -1,0 +1,94 @@
+{
+  "all_three_arrays_written_at_iteration_limit": true,
+  "cold": {
+    "actual_output_formats": {
+      "XPrint": "%+90.80Fe",
+      "YPrint": "%+90.80Fe",
+      "infPrint": "%+90.80Fe",
+      "xPrint": "%+90.80Fe"
+    },
+    "command": [
+      "/tmp/coxeter_sdpa_gmp_sparse_graph_20261126/sdpa-gmp/sdpa_gmp",
+      "-ds",
+      "results/global_gmp_checkpoint_checks02/input.dat-s",
+      "-o",
+      "results/global_gmp_checkpoint_checks02/first/native.result",
+      "-p",
+      "results/global_gmp_checkpoint_checks02/first/param.sdpa"
+    ],
+    "executable_sha256": "00f02d2ae4662183fd44fbe1e49bda2fb6a5ee1685d6a826713f8a77137a758b",
+    "initial_path": null,
+    "initial_sha256": null,
+    "initial_source_path": null,
+    "initial_source_sha256": null,
+    "input_sha256": "659bb6a9beb000fabd40a9d9d3cdb7eeba09f19f6323d67703a99e30ea0fa9a1",
+    "one_thread": true,
+    "parameters_sha256": "f0e5fb92e7c68db4ceecbb53fabd0ad745a0bcd4a1c6c6b3e754ebd505aebf8d",
+    "precision_bits": 256,
+    "preflight_check": {
+      "native_input_sha256": "659bb6a9beb000fabd40a9d9d3cdb7eeba09f19f6323d67703a99e30ea0fa9a1",
+      "scope": "small_explicit_regression_fixture"
+    },
+    "restart_uses_only_the_three_solution_arrays": false,
+    "returncode": 0,
+    "timed_out": false
+  },
+  "fixture_only": true,
+  "iteration_limit_per_native_call": 1,
+  "native_report_header_excluded_from_initial_state": true,
+  "precision_bits": 256,
+  "research_feasibility_decision": false,
+  "restart_contains_only_the_three_arrays": true,
+  "restarted_initial_complementarity": "15",
+  "saved_complementarity": "3712622549019607/250000000000000",
+  "source_bindings": {
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/feasibility.py": {
+      "sha256": "158c11d9fb48b7d1542122a6a7c86daa557e511fa02e6ded57591a7405363c79"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/sdpa_cli.py": {
+      "sha256": "913311b3b73d7b992a448df9317628a95a12966fd210e53acef5008c7740dad8"
+    },
+    "/Users/sasha/CoxeterPolytopes/scripts/check_gmp_iteration_checkpoint_20261126.py": {
+      "sha256": "11bba7b56b83c63cc73bff605b459822f6be8df921e6e94fd7ea80f9ffe8081f"
+    },
+    "results/global_gmp_graph_build01/result.json": {
+      "sha256": "966078c34e0618a34cf06e913e38ae36f3e4155648f2bd8fdbc4ecbc31e85e38"
+    }
+  },
+  "status": "GMP_ONE_ITERATION_CHECKPOINT_AND_WARM_RESTART_PASSED",
+  "warm": {
+    "actual_output_formats": {
+      "XPrint": "%+90.80Fe",
+      "YPrint": "%+90.80Fe",
+      "infPrint": "%+90.80Fe",
+      "xPrint": "%+90.80Fe"
+    },
+    "command": [
+      "/tmp/coxeter_sdpa_gmp_sparse_graph_20261126/sdpa-gmp/sdpa_gmp",
+      "-ds",
+      "results/global_gmp_checkpoint_checks02/input.dat-s",
+      "-o",
+      "results/global_gmp_checkpoint_checks02/resumed/native.result",
+      "-p",
+      "results/global_gmp_checkpoint_checks02/resumed/param.sdpa",
+      "-id",
+      "results/global_gmp_checkpoint_checks02/resumed/gmp_initial.dat"
+    ],
+    "executable_sha256": "00f02d2ae4662183fd44fbe1e49bda2fb6a5ee1685d6a826713f8a77137a758b",
+    "initial_path": "results/global_gmp_checkpoint_checks02/resumed/gmp_initial.dat",
+    "initial_sha256": "302cd92336b0ed0498268fab0f73ef9a128bbb03de80f0f950e7a2cf2912706c",
+    "initial_source_path": "results/global_gmp_checkpoint_checks02/first/native.result",
+    "initial_source_sha256": "3309bc2d812eced986efdbf901ff03a64e8924739dcb1bd6c49f715dcd5401d5",
+    "input_sha256": "659bb6a9beb000fabd40a9d9d3cdb7eeba09f19f6323d67703a99e30ea0fa9a1",
+    "one_thread": true,
+    "parameters_sha256": "f0e5fb92e7c68db4ceecbb53fabd0ad745a0bcd4a1c6c6b3e754ebd505aebf8d",
+    "precision_bits": 256,
+    "preflight_check": {
+      "native_input_sha256": "659bb6a9beb000fabd40a9d9d3cdb7eeba09f19f6323d67703a99e30ea0fa9a1",
+      "scope": "small_explicit_regression_fixture"
+    },
+    "restart_uses_only_the_three_solution_arrays": true,
+    "returncode": 0,
+    "timed_out": false
+  }
+}

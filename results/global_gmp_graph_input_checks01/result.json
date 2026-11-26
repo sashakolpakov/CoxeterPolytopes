@@ -1,0 +1,73 @@
+{
+  "error": "8041666666666582611218879369567/62500000000000000000000000000000000000000000000000000000000000000000000000000",
+  "exact_decimal_error_guard_and_nonzero_preservation_passed": true,
+  "expected_optimum": "10000000000000000000000000000000000000001/10000000000000000000000000000000000000000",
+  "fixture_gate": {
+    "native_input_sha256": "659bb6a9beb000fabd40a9d9d3cdb7eeba09f19f6323d67703a99e30ea0fa9a1",
+    "scope": "small_explicit_regression_fixture"
+  },
+  "input_shift": "1e-40",
+  "native": {
+    "command": [
+      "/tmp/coxeter_sdpa_gmp_sparse_graph_20261126/sdpa-gmp/sdpa_gmp",
+      "-ds",
+      "/Users/sasha/CoxeterPolytopes/results/global_gmp_graph_input_checks01/input.dat-s",
+      "-o",
+      "/Users/sasha/CoxeterPolytopes/results/global_gmp_graph_input_checks01/native.result",
+      "-p",
+      "/Users/sasha/CoxeterPolytopes/results/global_gmp_graph_input_checks01/param.sdpa"
+    ],
+    "decimal_input_significant_digits": 100,
+    "elapsed_seconds": 1.0879515409469604,
+    "feasibility_tolerance": "1e-45",
+    "full_precision_output_formats": {
+      "XPrint": "%+100.90Fe",
+      "YPrint": "%+100.90Fe",
+      "infPrint": "%+100.90Fe",
+      "xPrint": "%+100.90Fe"
+    },
+    "gap_tolerance": "1e-45",
+    "inner_owned_memory_stop_bytes": 8800000000,
+    "last_printed_iteration": 48,
+    "native_matrix_mode": "DENSE",
+    "native_result_sha256": "2b0bae451f509725cf45429454a928f48796ed1771fef7d53dc70974f976f015",
+    "numerical_status_is_not_exact_certificate": true,
+    "observed_owned_process_tree_rss_bytes": 32882688,
+    "phase": "pdOPT",
+    "reported_precision_bits": 256,
+    "requested_precision_bits": 256,
+    "returncode": 0,
+    "scientific_watchdog_memory_limit_bytes": 10000000000,
+    "solution_arrays_present": {
+      "xMat": true,
+      "xVec": true,
+      "yMat": true
+    },
+    "solver": {
+      "executable": "/tmp/coxeter_sdpa_gmp_sparse_graph_20261126/sdpa-gmp/sdpa_gmp",
+      "installation": {
+        "/Users/sasha/CoxeterPolytopes/results/global_gmp_graph_build01/installation.json": {
+          "bytes": 381,
+          "sha256": "a50c7e139bae955f708ccaf856c0554097580e11c716f97a4b9741a7a738f342"
+        }
+      },
+      "sha256": "00f02d2ae4662183fd44fbe1e49bda2fb6a5ee1685d6a826713f8a77137a758b",
+      "upstream": "https://github.com/nakatamaho/sdpa-gmp",
+      "upstream_commit": "ca110db5ea1cc46e811b70dfea9cbb25db74448d",
+      "version": "7.1.3 + marked graph union"
+    },
+    "status": "NATIVE_TERMINAL_STATUS"
+  },
+  "private_backend_build": "results/global_gmp_graph_build01/result.json",
+  "private_backend_launcher_sha256": "1de4cf8be541563705e246b26080549c769a2d3305f798042989f0290a61612f",
+  "required_absolute_accuracy": "1e-44",
+  "research_problem_not_solved_by_fixture": true,
+  "returned_optimum": "62500000000000000000000000000000000000006250008041666666666582611218879369567/62500000000000000000000000000000000000000000000000000000000000000000000000000",
+  "source_bindings": {
+    "/Users/sasha/CoxeterPolytopes/scripts/run_balanced_dual_gmp_20261126.py": {
+      "bytes": 18317,
+      "sha256": "da303ca5d15131cf101dc0a67e3776767dde832cae3647ba73cd8eeb64308be3"
+    }
+  },
+  "status": "SDPA_GMP_EXACT_EXPORT_SUB_BINARY64_INPUT_FIXTURE_PASSED"
+}

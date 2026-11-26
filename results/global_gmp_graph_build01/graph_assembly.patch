@@ -1,0 +1,143 @@
+--- a/sdpa_chordal.cpp
++++ b/sdpa_chordal.cpp
+@@ -24,6 +24,8 @@
+ #define OrderOnlyByMDO 1
+ 
+ #include <sdpa_chordal.h>
++#include <algorithm>
++#include <vector>
+ 
+ namespace sdpa {
+ 
+@@ -139,104 +141,35 @@
+ 
+ // make aggrigate sparsity pattern
+ void Chordal::makeGraph(InputData &inputData, int m) {
+-
+-    int i, j, k, l;
+-    int SDP_nBlock = inputData.SDP_nBlock;
+-    int SOCP_nBlock = inputData.SOCP_nBlock;
+-    int LP_nBlock = inputData.LP_nBlock;
+-
+-    int *counter;
+-    counter = new int[m];
+-    for (int i = 0; i < m; i++) {
+-        counter[i] = 0;
+-    }
+-
+-    // count maximum mumber of index
+-    for (l = 0; l < SDP_nBlock; l++) {
+-        int SDP_nConstraint = inputData.SDP_nConstraint[l];
+-        for (k = 0; k < SDP_nConstraint; k++) {
+-            i = inputData.SDP_constraint[l][k];
+-            counter[i] += SDP_nConstraint;
+-        }
+-    }
+-    for (l = 0; l < SOCP_nBlock; l++) {
+-        int SOCP_nConstraint = inputData.SOCP_nConstraint[l];
+-        for (k = 0; k < SOCP_nConstraint; k++) {
+-            i = inputData.SOCP_constraint[l][k];
+-            counter[i] += SOCP_nConstraint;
+-        }
+-    }
+-    for (l = 0; l < LP_nBlock; l++) {
+-        int LP_nConstraint = inputData.LP_nConstraint[l];
+-        for (k = 0; k < LP_nConstraint; k++) {
+-            i = inputData.LP_constraint[l][k];
+-            counter[i] += LP_nConstraint;
+-        }
+-    }
+-
+-    // allocate temporaly workspace
+-    int **tmp;
+-    tmp = new int *[m];
+-    for (i = 0; i < m; i++) {
+-        tmp[i] = new int[counter[i]];
+-    }
+-
+-    // merge index
+-    for (int i = 0; i < m; i++) {
+-        counter[i] = 0;
+-    }
+-    // marge index of for SDP
+-    for (l = 0; l < SDP_nBlock; l++) {
+-        for (k = 0; k < inputData.SDP_nConstraint[l]; k++) {
+-            i = inputData.SDP_constraint[l][k];
+-            margeArray(inputData.SDP_nConstraint[l], inputData.SDP_constraint[l], counter[i], tmp[i]);
+-            counter[i] += inputData.SDP_nConstraint[l];
+-        }
+-    }
+-    // marge index of for SOCP
+-    for (l = 0; l < SOCP_nBlock; l++) {
+-        for (k = 0; k < inputData.SOCP_nConstraint[l]; k++) {
+-            i = inputData.SOCP_constraint[l][k];
+-            margeArray(inputData.SOCP_nConstraint[l], inputData.SOCP_constraint[l], counter[i], tmp[i]);
+-            counter[i] += inputData.SOCP_nConstraint[l];
+-        }
+-    }
+-    // marge index of for LP
+-    for (l = 0; l < LP_nBlock; l++) {
+-        for (k = 0; k < inputData.LP_nConstraint[l]; k++) {
+-            i = inputData.LP_constraint[l][k];
+-            margeArray(inputData.LP_nConstraint[l], inputData.LP_constraint[l], counter[i], tmp[i]);
+-            counter[i] += inputData.LP_nConstraint[l];
+-        }
+-    }
+-
+-    // construct adjacency list of SPOOLES
++    // Same union of block-support cliques as upstream; mark duplicates once.
+     IVL_init1(adjIVL, IVL_CHUNKED, m);
+-    int isize, previous;
+-    int *ivec;
+-    ivec = new int[m];
+-    for (i = 0; i < m; i++) {
+-        isize = 0;
+-        previous = -1;
+-        for (j = 0; j < counter[i]; j++) {
+-            if (tmp[i][j] != previous) {
+-                ivec[isize] = tmp[i][j];
+-                previous = ivec[isize];
+-                isize++;
++    std::vector<int> marks(m, -1), row;
++    for (int i = 0; i < m; ++i) {
++        row.clear();
++        const auto append = [&](const int *members, int count) {
++            for (int k = 0; k < count; ++k) {
++                const int j = members[k];
++                if (marks[j] != i) { marks[j] = i; row.push_back(j); }
+             }
+-        }
+-        IVL_setList(adjIVL, i, isize, ivec);
+-    }
+-
+-    // constract graph of SPOOLES
+-    Graph_init2(graph, 0, m, 0, IVL_tsize(adjIVL), m, IVL_tsize(adjIVL), adjIVL, NULL, NULL);
+-
+-    delete[] counter;
+-    for (int i = 0; i < m; i++) {
+-        delete[] tmp[i];
+-    }
+-    delete[] tmp;
+-    delete[] ivec;
++        };
++        const SparseLinearSpace &A = inputData.A[i];
++        for (int k = 0; k < A.SDP_sp_nBlock; ++k) {
++            const int b = A.SDP_sp_index[k];
++            append(inputData.SDP_constraint[b], inputData.SDP_nConstraint[b]);
++        }
++        for (int k = 0; k < A.SOCP_sp_nBlock; ++k) {
++            const int b = A.SOCP_sp_index[k];
++            append(inputData.SOCP_constraint[b], inputData.SOCP_nConstraint[b]);
++        }
++        for (int k = 0; k < A.LP_sp_nBlock; ++k) {
++            const int b = A.LP_sp_index[k];
++            append(inputData.LP_constraint[b], inputData.LP_nConstraint[b]);
++        }
++        std::sort(row.begin(), row.end());
++        IVL_setList(adjIVL, i, static_cast<int>(row.size()), row.data());
++    }
++    Graph_init2(graph, 0, m, 0, IVL_tsize(adjIVL), m,
++                IVL_tsize(adjIVL), adjIVL, NULL, NULL);
+ }
+ 
+ int Chordal::countNonZero(int m, IVL *symbfacIVL) {

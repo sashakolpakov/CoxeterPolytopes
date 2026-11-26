@@ -163,6 +163,43 @@ separate serial jobs:
     sign comparisons at `sqrt(d)>0`. A rational point cannot contain a nonzero
     radical component.
 
+17. For SDPA-GMP, use `scripts/run_balanced_dual_gmp_20261126.py prepare`, a
+    separate `verify`, then `solve`. Supply the same checked exact dual and cone
+    units, balanced-certificate gate and original preparation preflight. The
+    exporter reads rational actual matrix entries; it does not reuse binary64
+    matrix values. All 100-significant-digit decimal coefficients and the exact
+    trace objective are replayed before a native launch. The objective preserves
+    the full feasible set and has the explicit strictly positive dual point
+    `h I`; see the algebraic derivation in `notes/lp/global_formulation.md`.
+    Native dual iterates now have adjoint target `c`, not zero: account for this
+    objective before any Farkas recovery. Record requested and reported precision
+    bits separately from tolerances and printed decimal places. Preserve native
+    decimal arrays without a binary64 conversion. A new tiny input-shift fixture
+    checks that the installed solver resolves a `1e-40` perturbation at 256 bits;
+    do not rerun unchanged installation tests. Memory/time stops are resource
+    outcomes, not solver infeasibility conclusions.
+
+18. Inspect the backend's structural cost as well as coefficient scales.
+    `scripts/diagnose_gmp_schur_20261126.py` counts the verified full model's
+    block-support pair slots and source-bound integer-cache payload. It does not
+    estimate actual total RSS or compute Cholesky fill. The current SDPA-GMP
+    representation has 627,025,775 pair slots and 12.54 GB of integer-cache
+    payload. `scripts/sdpa_gmp_sparse_graph_20261126.py build` prepares an isolated
+    solver with faster assembly of the same symbolic adjacency; compiled
+    old/new/independent tests and unchanged numerical-source hashes are required.
+    It adds no constraint and changes no matrix coefficient. Preserve the stock
+    attempt and identify the private executable and patch in every later run.
+19. Native iteration limits write checkpoints; an external wall-time termination
+    can leave no arrays. The actual GMP regression is
+    `scripts/check_gmp_iteration_checkpoint_20261126.py`. A restart must contain
+    exactly the three unlabeled brace arrays extracted from the report, with its
+    dates, parameter summaries and iteration table removed. The current full
+    attempt did not finish one Newton step within its native batch limit.
+    `scripts/prepare_gmp_long_checkpoint_20261126.py plan` binds a proposed
+    one-iteration job to the replayed input and private binary. Its longer `run`
+    requires an explicitly authorized wall-time policy and matching monitor
+    environment; the current 900-second watchdog does not authorize that run.
+
 For the smaller explicit dual, final verification checks every cone and all
 300,139 adjoint identities directly in exact matrix coordinates. For a recovered
 point on the opposite certificate side, verification reinserts the removed dual

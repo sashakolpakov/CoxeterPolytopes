@@ -1,0 +1,95 @@
+SDPA-GMP start at Thu Nov 26 15:56:45 2026
+"Global Coxeter SDP; sub-binary64 input precision fixture
+data      is results/global_gmp_checkpoint_checks02/input.dat-s
+parameter is results/global_gmp_checkpoint_checks02/first/param.sdpa
+out       is results/global_gmp_checkpoint_checks02/first/native.result
+DENSE computation
+   mu      thetaP  thetaD  objP      objD      alphaP  alphaD  beta 
+ 0 1.0e+02 1.0e+00 1.0e+00 +0.00e+00 +0.00e+00 1.0e+00 9.9e-01 3.00e-01
+ 1 1.5e+01 0.0e+00 7.4e-03 +4.16e+01 -1.99e-01 1.0e+00 9.9e-01 3.00e-01
+
+phase.value = pFEAS     
+   Iteration = 1
+          mu = 1.4850490196078428e+01
+relative gap = 2.0000000000000000e+00
+         gap = 4.4551470588235284e+01
+      digits = -3.0102999566398120e-01
+objValPrimal = 4.1599999999999999e+01
+objValDual   = -1.9852941176470587e-01
+p.feas.error = 0.0000000000000000e+00
+d.feas.error = 1.9852941176470522e-01
+relative eps = 8.6361685550944446e-78
+total time   = 0.001
+
+
+Parameters are
+** Parameters **
+maxIteration =    1
+epsilonStar  = 1.000e-24
+lambdaStar   = 1.000e+01
+omegaStar    = 1.000e+04
+lowerBound   = -1.000e+12
+upperBound   = 1.000e+12
+betaStar     = 1.000e-01
+betaBar      = 3.000e-01
+gammaStar    = 9.000e-01
+epsilonDash  = 1.000e-24
+precision    =    256
+xPrint       = %+90.80Fe 
+XPrint       = %+90.80Fe 
+YPrint       = %+90.80Fe 
+infPrint     = %+90.80Fe 
+
+                         Time(sec)  Ratio(% : MainLoop) 
+ Predictor time  =       0.000026,  7.665260
+ Corrector time  =       0.000017,  4.992968
+ Make bMat time  =       0.000005,  1.476793
+ Make bDia time  =       0.000000,  0.000000
+ Make bF1  time  =       0.000004,  1.125176
+ Make bF2  time  =       0.000000,  0.000000
+ Make bF3  time  =       0.000000,  0.000000
+ Make bPRE time  =       0.000003,  0.843882
+ Make rMat time  =       0.000007,  2.109705
+ Make gVec Mul   =       0.000005,  1.406470
+ Make gVec time  =       0.000009,  2.601969
+ Cholesky bMat   =       0.000004,  1.125176
+ Ste Pre time    =       0.000000,  0.000000
+ Ste Cor time    =       0.000045,  13.291139
+ solve           =       0.000002,  0.632911
+ sumDz           =       0.000004,  1.195499
+ makedX          =       0.000006,  1.758087
+ symmetriseDx    =       0.000001,  0.281294
+ makedXdZ        =       0.000011,  3.234880
+ xMatTime        =       0.000007,  2.109705
+ zMatTime        =       0.000007,  2.039381
+ invzMatTime     =       0.000000,  0.000000
+ xMatzMatTime    =       0.000000,  0.000000
+ EigxMatTime     =       0.000026,  7.665260
+ EigzMatTime     =       0.000014,  4.149086
+ EigxMatzMatTime =       0.000000,  0.000000
+ updateRes       =       0.000005,  1.476793
+ EigTime         =       0.000040,  11.814346
+ sub_total_bMat  =       0.000334,  98.523207
+ Main Loop       =       0.000339,  100.000000
+ File Check      =       0.000000,  0.000000
+ File Change     =       0.000002,  0.562588
+ File Read       =       0.000274,  80.801688
+ Total           =       0.000656,  193.459916
+
+xVec = 
+{   +1.38666666666666664557242919878869239861766630627441406250000000000000000000002900e+01}
+xMat = 
+{
+{ {   +1.38666666666666664557242919878869239861766630627441406250000000000000000000002900e+01,   +1.00000000000000000000000000000000000000009999999999999999999999999999999999999700e+00 },
+  {   +1.00000000000000000000000000000000000000009999999999999999999999999999999999999700e+00,   +1.38666666666666664557242919878869239861766630627441406250000000000000000000002900e+01 }   }
+{   +1.38666666666666664557242919878869239861766630627441406250000000000000000000002900e+01}
+}
+yMat = 
+{
+{ {   +1.09926470588235272158088704105359604856110888605876777411380800208150215008533000e+00,   +9.92647058823529326048957657616587910098025471821258583052971174460050757077288800e-02 },
+  {   +9.92647058823529326048957657616587910098025471821258583052971174460050757077288800e-02,   +1.09926470588235272158088704105359604856110888605876777411380800208150215008533000e+00 }   }
+{   +9.99999999999999777955395074968691915273666381835937500000000000000000000000044100e-01}
+}
+    main loop time = 0.000339
+        total time = 0.000656
+  file   read time = 0.000274

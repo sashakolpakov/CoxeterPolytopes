@@ -220,6 +220,65 @@ removes only the unused numerical cache of the first, superseded congruence
 export. Its execution record, exact unit description and source version remain.
 Current exact dual inputs, solver arrays and reconstruction evidence are retained.
 
+## SDPA-GMP at 256 bits
+
+The [GMP completion record](../../results/global_gmp_completion_20261126.json)
+records two full-model attempts at 256-bit arithmetic. Both reached their
+780-second native batch limit, with no completed iteration reported and no
+solution arrays returned. The original SDP and both certificate searches remain
+undecided. No new GMP field reconstruction or geometric bound is claimed.
+
+The [input export](../../results/global_gmp_dual_prepare01/result.json) uses
+100-significant-digit decimals from rational actual matrix entries, with the
+checked dyadic cone units. Its
+[separate replay](../../results/global_gmp_dual_replay01/result.json) checks all
+5,231,866 coefficients and the exact trace objective. The relative decimal-input
+error bound is `1e-98`; native arithmetic uses 256 bits, about 77 decimal digits.
+The full feasible set is retained. The
+[trace-objective argument](../../notes/lp/global_formulation.md#trace-objective-for-the-multiprecision-run)
+explains its strictly positive dual point and the distinction from a Farkas ray.
+The [input-precision fixture](../../results/global_gmp_input_checks02/result.json)
+recovers a `1e-40` perturbation that binary64 cannot resolve. Printed decimal
+places, arithmetic precision and stopping tolerances are recorded separately.
+
+The [stock solver attempt](../../results/global_gmp_dual256_01/result.json)
+spent its batch in symbolic graph construction. A
+[private build](../../results/global_gmp_graph_build01/result.json) replaces
+repeated multiset merges by marked unions of the same block-support cliques.
+Compiled old/new/independent graph checks passed 300 cases, and all 93 other
+numerical source files matched their upstream hashes. The installed solver was
+untouched. SDPA-GMP and its pinned source-subset archive are external toolchain
+inputs retained in the local installation; their source URL, commit and hashes
+are recorded in the build receipt. The repository does not bundle that solver
+executable. The [private solver attempt](../../results/global_gmp_graph_dual256_01/result.json)
+passed graph construction, selected sparse computation and reached actual GMP
+Schur assembly and Cholesky factorization. It timed out during the first Newton
+step. This is a time-limited run, not an infeasibility classification or a
+numerical-error termination. The objective and backend setup differ from the
+earlier Clarabel runs, so these runs do not isolate the effect of precision.
+
+The [structural diagnosis](../../results/global_gmp_schur_cost01/result.json)
+counts 627,025,775 cached variable pairs. Five integer arrays per pair require
+12,540,515,500 bytes of payload before matrix values and other structures.
+This is an integer-cache count, not a measurement of total RSS or Cholesky fill.
+The private run's monitored process-tree RSS peaked at 5,078,368,256 bytes;
+the macOS sampler reported a separate footprint peak of `19.4G`. These memory
+metrics are retained separately. No pair-cache redesign has been implemented.
+
+The [checkpoint regression](../../results/global_gmp_checkpoint_checks02/result.json)
+checks actual one-iteration output and a native warm restart at 256 bits. Initial
+files contain only the three unlabeled brace arrays; report headers are removed.
+A [one-iteration longer-batch plan](../../results/global_gmp_longer_plan01/result.json)
+is prepared but has not been executed or authorized. It requests a one-hour
+monitored wall limit, preserving one thread, the 10 GB RSS cap, shared lock and
+percentage resource gates. The current policy remains 900-second batches.
+
+The [archive receipt](../../results/global_gmp_input_archives_20261126.json)
+verifies a complete byte round trip of the 667,751,942-byte native input into
+its retained `.gz` archive. Restore that file before a fresh-checkout replay or
+run. Current exact inputs, all proof receipts and source-bound diagnostics remain
+available; byte restoration does not perform a mathematical check.
+
 ## Constraint and solver workflow
 
 Follow [CONSTRAINT_WORKFLOW.md](CONSTRAINT_WORKFLOW.md). It specifies the
