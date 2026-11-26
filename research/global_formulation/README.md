@@ -48,6 +48,46 @@ The [original-model check](../../results/global_edge_closure_terminal_check01/re
 recovered neither a feasible point nor an infeasibility certificate.
 Feasibility of the revised input remains undecided.
 
+The [saved-variable diagnostic](../../results/global_edge_closure_iterate_diagnostics01/result.json)
+recomputes the residuals from all three arrays. The auxiliary primal
+affine residual is `4.55e-13`, but its common margin is `-0.1389822611`.
+The reconstructed original candidate satisfies all 29,259 equalities
+exactly and violates `uniform_two_unit_triangle_cover0` exactly, with
+value about `-30.8725`. The dual's ordinary adjoint residual is
+`6.45e-4`, largest on the shared edge support moments; its original
+Farkas constant is positive, about `1.30e-8`. These multipliers therefore
+provide neither a separating certificate nor an optimum bound.
+
+The recomputed complementarity is about `0.69527`, while the candidate
+objective gap is `0.13898`. The difference is accounted for by the
+nonzero dual residual paired with the free coordinates, about `0.55629`.
+A small average complementarity across these many cones does not imply
+a small objective gap. On its failed final update SDPA also prints
+cached summary metrics from the previous iterate alongside the updated
+solution arrays; the diagnostic uses the arrays directly.
+Both saved cone arrays have positive numerical eigenvalues. The stop
+comes from the native `Solutions::update` guard, which rejects a step
+when both step lengths fall below its hard-coded `1e-4` threshold.
+
+This inspection found a separate output-format defect: native
+`Parameter::readFile` skips alternate format lines if they contain bare
+format tokens without trailing labels. Consequently these checkpoints
+saved `yMat` at only four significant digits, although `xVec` and `xMat`
+had the requested precision. The writer now labels every format line
+and checks all four formats actually reported by SDPA. The
+[native fixture](../../results/global_edge_closure_dual_face01/output_format_and_restart_fixture/result.json)
+passes with all arrays at the requested precision and verifies restart
+consistency. Earlier logs and rounded checkpoints remain unchanged;
+their lost digits cannot be recovered. The cached dual residual was
+already about `6.45e-4` inside SDPA, so this output defect alone does
+not explain the numerical stop.
+
+The [recovery search using saved dual directions](../../results/global_edge_closure_dual_face01/result.json)
+considered 80,896 quadratic cone rows. Its auxiliary LP reached its
+120-second limit without returning a point. No exact face was recovered;
+this restricted, unfinished search does not rule out further implied
+cone reductions. It added no geometric constraints.
+
 The native sparse input, valid restart checkpoint, terminal checkpoint
 and original-coordinate numerical candidate have
 [byte-verified archives](../../results/global_edge_closure_continuation_archive_20261125.json).

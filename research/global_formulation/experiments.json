@@ -50,6 +50,10 @@
     "original_scalar_inequalities": 387685,
     "original_variables": 97515,
     "peak_process_tree_rss_bytes": 9244459008,
+    "saved_candidate_original_equalities_verified_exactly": 29259,
+    "saved_candidate_original_scalar_violation": -30.87249690928624,
+    "saved_dual_face_recovery": "results/global_edge_closure_dual_face01/result.json",
+    "saved_variable_diagnostics": "results/global_edge_closure_iterate_diagnostics01/result.json",
     "source_bound_geometric_review_complete": false,
     "status": "NATIVE_NUMERICAL_FAILURE_NO_EXACT_FEASIBILITY_DECISION",
     "valid_chain_peak_process_tree_rss_bytes": 9244459008
@@ -83,7 +87,7 @@
   "discovery_solver_source_checkpoint": "8f43d7f3",
   "formulation_source_checkpoint": "89fe6d59",
   "independent_source_review_complete": false,
-  "latest_publication_only_Sphinx_check": "results/global_sdpa_continuation_sphinx_receipt_20261125.txt",
+  "latest_publication_only_Sphinx_check": "results/global_sdpa_iterate_diagnostics_sphinx_receipt_20261125.txt",
   "level2_feasibility": {
     "constraints_modified_during_feasibility_verification": false,
     "independent_verification": "results/global_level2_independent/result.json",
@@ -165,6 +169,14 @@
     "invalid_attempt": "results/global_edge_closure_sdpa03/restart_diagnosis.json",
     "prior_difference_from_cold_start_check_was_insufficient": true,
     "strip_all_log_headers_and_read_only_three_solution_arrays": true
+  },
+  "native_solution_output_format_correction": {
+    "assert_all_four_formats_in_actual_solver_output": true,
+    "does_not_by_itself_explain_saved_run_step_stagnation": true,
+    "earlier_exact_original_point_proofs_unchanged": true,
+    "label_all_four_format_lines_for_native_scanf_reader": true,
+    "native_fixture": "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/result.json",
+    "old_rounded_dual_checkpoints_preserved": true
   },
   "new_constraint_families_uniform_in_dimension": true,
   "normalized_certificate_dual_is_provably_infeasible": false,
@@ -248,6 +260,30 @@
     "results/global_edge_closure_current/source_bindings.json",
     "results/global_edge_closure_current/strict_strengthening_audit.json",
     "results/global_edge_closure_current_monitor.json",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/initial.dat",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/native.result",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/native_initial.dat",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/native_metadata.json",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/param.sdpa",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/reference.json",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/solver.stdout",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/first/native.result",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/first/native_metadata.json",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/first/param.sdpa",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/first/solver.stdout",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/input.dat-s",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/result.json",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/native.result",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/native_initial.dat",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/native_metadata.json",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/param.sdpa",
+    "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/solver.stdout",
+    "results/global_edge_closure_dual_face01/result.json",
+    "results/global_edge_closure_dual_face01/source_bindings.json",
+    "results/global_edge_closure_dual_face01_monitor.json",
+    "results/global_edge_closure_iterate_diagnostics01/result.json",
+    "results/global_edge_closure_iterate_diagnostics01/source_bindings.json",
+    "results/global_edge_closure_iterate_diagnostics01_monitor.json",
     "results/global_edge_closure_prepare01/interrupted.json",
     "results/global_edge_closure_prepare01/progress.jsonl",
     "results/global_edge_closure_prepare01/source_bindings.json",
@@ -385,6 +421,8 @@
     "results/global_sdpa_continuation_sphinx_receipt_20261125.txt",
     "results/global_sdpa_gmp_central_check/result.json",
     "results/global_sdpa_gmp_central_check_monitor.json",
+    "results/global_sdpa_iterate_diagnostics_sphinx_cleanup_20261125.json",
+    "results/global_sdpa_iterate_diagnostics_sphinx_receipt_20261125.txt",
     "results/global_sdpa_native_build01/result.json",
     "results/global_sdpa_native_build01/source_bindings.json",
     "results/global_sdpa_native_build01_monitor.json",
@@ -676,7 +714,9 @@
     "scripts/archive_global_model_20261125.py",
     "scripts/build_sdpa_native_serial_20261125.py",
     "scripts/check_global_edge_compatibility_20261125.py",
+    "scripts/check_sdpa_dual_face_20261125.py",
     "scripts/condition_global_sdp_20261125.py",
+    "scripts/diagnose_sdpa_checkpoint_20261125.py",
     "scripts/prepare_global_sdp_streaming_20261125.py",
     "scripts/recover_sdpa_checkpoint_20261125.py",
     "scripts/recover_sdpa_order_faces_20261125.py",
@@ -3562,6 +3602,128 @@
       "peak_process_tree_rss_bytes": 62750720,
       "reported_status": "RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED",
       "result": "results/global_edge_closure_continuation_archive_20261125.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 25.514,
+      "files": {
+        "results/global_edge_closure_iterate_diagnostics01/result.json": {
+          "bytes": 30558,
+          "sha256": "4f0cfcbb552e5340bd4ada082b1d97805ff4f746cc2b532d7079cf8667163b44"
+        },
+        "results/global_edge_closure_iterate_diagnostics01/source_bindings.json": {
+          "bytes": 1876,
+          "sha256": "8d9949586ba45e28a34264dc9dfc16826018def99ba6f5ebe89304f72466e84a"
+        },
+        "results/global_edge_closure_iterate_diagnostics01_monitor.json": {
+          "bytes": 8170,
+          "sha256": "5b2bfe717b1ec99d5afae683f50808d12cd95842cedbf7a5fe1756c30b070efe"
+        }
+      },
+      "id": "global_edge_closure_iterate_diagnostics01",
+      "monitor": "results/global_edge_closure_iterate_diagnostics01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED",
+      "peak_process_tree_rss_bytes": 2892054528,
+      "reported_status": "SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED",
+      "result": "results/global_edge_closure_iterate_diagnostics01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 292.696,
+      "files": {
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/initial.dat": {
+          "bytes": 378,
+          "sha256": "dc18d77c4e8713170ac83d053a8be151426e39a0182cc736dd001c4a2cee90e2"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/native.result": {
+          "bytes": 4717,
+          "sha256": "2e10ad5c0b293a7e02cb7975239b3ef8cec8ac7fb29589eaf0e7dd845f2eae20"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/native_initial.dat": {
+          "bytes": 357,
+          "sha256": "4774f38b05e6fd7402631579b4c7610c4bf91074899655856324cc3a0e965209"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/native_metadata.json": {
+          "bytes": 1534,
+          "sha256": "6ed72ce605391fa0e4f67403ed9c81f55d055e40ad21fe284b13c64eda566cc0"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/param.sdpa": {
+          "bytes": 121,
+          "sha256": "3fd2469aeda42a4b5fb234aa9dabbfe62c0b2381e0a0ded3eed49bf5192ab49a"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/reference.json": {
+          "bytes": 15,
+          "sha256": "eab9f143205effa9e4b0d387064311c7e8c011580bbf8e8691e1569af528148c"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/central/solver.stdout": {
+          "bytes": 2123,
+          "sha256": "752e70ad99b8a5f0c3b53d1db0f455dfa03c176e8135ab2b522ad2d0e8d0143b"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/first/native.result": {
+          "bytes": 4133,
+          "sha256": "c0cdc557b31d559fc092a9da5d04123f6bf468cd9062384abbfdfaef641ca44e"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/first/native_metadata.json": {
+          "bytes": 1009,
+          "sha256": "da9a083c502bf568c055461779af6a1f17f8aade42339b89857e9d6fb74a81a8"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/first/param.sdpa": {
+          "bytes": 120,
+          "sha256": "4017ae5f798d1b6fadc33591b4d02303b419dbc110c62d0d54e95fa90a48fc81"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/first/solver.stdout": {
+          "bytes": 1592,
+          "sha256": "9de08c5b84f1c5a87bd98d59313fce5b3db0bbcb49ccd7799d323f990cfdd025"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/input.dat-s": {
+          "bytes": 150,
+          "sha256": "34613e508e5621a18f2db1def9a11ef2beef08deb173da40dde3d1d13f6fac49"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/result.json": {
+          "bytes": 571,
+          "sha256": "642a410f50a6bd1d358ef3e0fe4c925f9cf5901aecaaf41c949ca4546a5f16a3"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/native.result": {
+          "bytes": 4861,
+          "sha256": "fee0ec42645e5c2c42df627e84b3c8704d66ea8881f21e2a161bc13170c06195"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/native_initial.dat": {
+          "bytes": 395,
+          "sha256": "92f12ade1ac674ef71e3afc01860ee10ed7a70075e4f028223fa11a6c615493f"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/native_metadata.json": {
+          "bytes": 1534,
+          "sha256": "338a98f4eeb0a46fbfff4cd881580807fe5f231ea79f3e3315cd15e8346b1648"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/param.sdpa": {
+          "bytes": 121,
+          "sha256": "3fd2469aeda42a4b5fb234aa9dabbfe62c0b2381e0a0ded3eed49bf5192ab49a"
+        },
+        "results/global_edge_closure_dual_face01/output_format_and_restart_fixture/resumed/solver.stdout": {
+          "bytes": 2267,
+          "sha256": "caa52df187426bd2211f433555b548e2a3234131ae6d7326a7a9b2bb35e96fb0"
+        },
+        "results/global_edge_closure_dual_face01/result.json": {
+          "bytes": 703,
+          "sha256": "083f2f77dbbb7f6d7e4e129ba902ad8d5f8bcde87de40b6b82e465f11398748e"
+        },
+        "results/global_edge_closure_dual_face01/source_bindings.json": {
+          "bytes": 1473,
+          "sha256": "e095d52380f9b0ed9fe55101b61decd6cf87affa1fb408aee301b7458a7e3fd6"
+        },
+        "results/global_edge_closure_dual_face01_monitor.json": {
+          "bytes": 4245,
+          "sha256": "0d1ad05c1a44e0beb1981d1a291114810c785ef189c341995d1e7285efaef413"
+        }
+      },
+      "id": "global_edge_closure_dual_face01",
+      "monitor": "results/global_edge_closure_dual_face01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "NO_EXACT_FACE_RECOVERED_FROM_SELECTED_SAVED_DUAL_RAYS",
+      "peak_process_tree_rss_bytes": 4135157760,
+      "reported_status": "NO_EXACT_FACE_RECOVERED_FROM_SELECTED_SAVED_DUAL_RAYS",
+      "result": "results/global_edge_closure_dual_face01/result.json",
       "wrapper_PASS_claimed": true
     }
   ],

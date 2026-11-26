@@ -2,6 +2,7 @@
 from fractions import Fraction as F
 import json
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import time
@@ -17,7 +18,12 @@ def parameters(path,iterations,precision=None):
     values=[str(iterations),accuracy,'10','10000','-1e12','1e12',
         '0.1','0.3','0.9',accuracy]
     if precision:values.append(str(precision))
-    values+=['%+90.80Fe' if precision else '%+26.17e']*4
+    # Parameter::readFile uses "%s %*[^\n]" for these four lines.  With
+    # bare tokens its whitespace directive crosses the newline and the
+    # scanset discards the NEXT format.  Keep a nonempty label on each
+    # line, as in the native parameter-file examples.
+    output_format='%+90.80Fe' if precision else '%+26.17e'
+    values += [output_format+' = '+name for name in ('xPrint','XPrint','YPrint','infPrint')]
     path.write_text('\n'.join(values)+'\n')
 
 
@@ -49,7 +55,14 @@ def call(input_path,out,iterations,seconds,initial=None,precision=None):
     with (out/'solver.stdout').open('x') as stream:
         try:code=subprocess.run(command,stdout=stream,stderr=subprocess.STDOUT,timeout=seconds,check=False).returncode
         except subprocess.TimeoutExpired:code=None;timed_out=True
-    return dict(timed_out=timed_out,returncode=code,**metadata)
+    actual_formats={}
+    if not timed_out and code==0 and (out/'native.result').exists():
+        with (out/'native.result').open() as stream:header=stream.read(32768)
+        actual_formats=dict(re.findall(r'^\s*(xPrint|XPrint|YPrint|infPrint)\s*=\s*(\S+)',header,re.M))
+        expected='%+90.80Fe' if precision else '%+26.17e'
+        if actual_formats!={name:expected for name in ('xPrint','XPrint','YPrint','infPrint')}:
+            raise ValueError('SDPA did not apply all four requested solution formats: '+str(actual_formats))
+    return dict(timed_out=timed_out,returncode=code,actual_output_formats=actual_formats,**metadata)
 
 
 def self_check(root,out,precision=None):
@@ -90,6 +103,7 @@ def self_check(root,out,precision=None):
         saved_initial_point_used=True,central_inverse_slack_seed_checked=True,
         restart_complementarity_matches_saved_terminal_value=True,
         log_header_numbers_excluded_from_initial_state=True,
+        all_four_native_solution_output_formats_verified=True,
         precision_bits=precision,
         executable_sha256=conic.digest_bytes((GMP_EXECUTABLE if precision else EXECUTABLE).read_bytes()))
     conic.write_json(out/'result.json',report);print(json.dumps(report),flush=True)
