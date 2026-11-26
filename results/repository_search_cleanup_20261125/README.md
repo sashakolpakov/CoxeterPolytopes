@@ -11,6 +11,11 @@ payloads, including 16 tracked files. The total is 11,435,280,853 logical
 bytes. Logical file lengths are not a claim about physical disk savings.
 No scientific job, solver, Lean build or TeX build was launched by cleanup.
 
+A [follow-up source cleanup](obsolete_entry_points.json) removed six superseded
+search/preparation entry points after their consumers were reviewed. The current
+mathematical helpers remain; obsolete production bodies in retained helper
+modules were removed and their execution functions reject old solve routes.
+
 The exact candidate/dependency inventory is in [`inventory.json`](inventory.json).
 The actual path, byte length and SHA-256 of each deleted legacy file is in
 [`removed_files.jsonl`](removed_files.jsonl); the later numerical payloads
@@ -55,8 +60,34 @@ search payloads were deliberately deleted under the cleanup instruction;
 their recorded hashes do not constitute backup copies. Their deletion
 removed no current accepted proof input or bulk-manifest asset.
 
-The latest `global_edge_closure_sdpa07/native.result`, the archived original
-candidate used for new scaling, every current frozen model, accepted exact
-witness/certificate, final PDF, six accepted TeX editions and all 936 bulk
-manifest paths remain preserved. Newly generated cone-reduction/pipeline
-work was outside the cleanup scope.
+The archived `global_edge_closure_sdpa07/native.result.gz`, the archived original
+candidate used for new scaling, current original primal/dual, accepted exact
+witness/certificate, final PDF and six accepted TeX editions remain preserved.
+Newly generated cone-reduction/pipeline work was outside the initial cleanup scope.
+No removed path is among the 936 bulk-manifest entries. This cleanup does not
+restore or verify those archived historical inputs.
+
+## Superseded representations, 26 November
+
+The [follow-up receipt](obsolete_representations_followup_20261126.json) records
+six removed untracked caches from `global_edge_closure_prepare02` and
+`global_edge_closure_conditioned01`, totaling 866,316,600 logical bytes. Their
+exact lengths and SHA-256 hashes were recorded before deletion, after checking
+disjointness from the current `ready03` bound artifacts and bulk-manifest entries.
+The new preparation, proof replay and post-scaling audit had completed; current
+bound-artifact paths and the explicitly retained old receipts remain present.
+
+These obsolete representations were deliberately discarded without new archives.
+The retained native07 archive does not include their old reduced model or inverse
+coordinate maps, so those caches can no longer supply that reconstruction. The
+failed candidate03 remains in original coordinates and remains checkable against
+the frozen original input. This follow-up ran no mathematical check or solver.
+
+After the corrected pipeline and native run finished, a separate
+[owned-cache cleanup](../global_constraint_pipeline_local_cleanup_20261126.json)
+removed 18 further files, totaling 2,368,162,349 logical bytes. These were
+intermediate compiled models, completed partial-replay caches, byte-verified raw
+duplicates of archived checkpoints and reproducible restart files. All current
+launch-receipt dependencies, reduction proofs and the terminal native state
+remain present. Intermediate models can be reconstructed by replaying the
+retained proofs; the terminal checkpoints have complete byte-verified archives.

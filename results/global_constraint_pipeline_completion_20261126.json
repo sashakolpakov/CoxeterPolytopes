@@ -1,0 +1,145 @@
+{
+  "accepted_bounds_changed": false,
+  "cleanup": {
+    "all_current_launch_receipt_dependencies_preserved": true,
+    "current_exact_inputs_witnesses_certificates_and_final_pdfs_preserved": true,
+    "logical_bytes_are_not_physical_disk_savings": true,
+    "receipts": [
+      "results/repository_search_cleanup_20261125/result.json",
+      "results/repository_search_cleanup_20261125/obsolete_entry_points.json",
+      "results/repository_search_cleanup_20261125/obsolete_representations_followup_20261126.json",
+      "results/global_constraint_pipeline_local_cleanup_20261126.json"
+    ],
+    "removed_files_total": 5611,
+    "removed_logical_bytes_total": 14669782195,
+    "snapshot_commit": "70b23827",
+    "snapshot_covers_committed_history_only": true,
+    "snapshot_tag": "pre-search-cleanup-20261125"
+  },
+  "combined_historical_proof_replay_claimed": false,
+  "exact_preparation": {
+    "PSD_blocks": 4878,
+    "all_recognized_reduction_counters_zero": true,
+    "complete_chain_replay": "results/global_edge_closure_replay02/result.json",
+    "complete_reduction_passes": 6,
+    "coordinate_and_all_affine_entry_inverse_identities_verified": true,
+    "current_bound_artifact_sha256_checks_passed": 31,
+    "each_source_cone_accounted_for": true,
+    "fixed_point_audit": "results/global_edge_closure_presolve06/fixed_point_audit.json",
+    "largest_PSD_block": 74,
+    "launch_receipt": "results/global_edge_closure_ready03/solver_ready.json",
+    "numerical_conditioning_or_minimal_face_guaranteed": false,
+    "numerical_input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+    "post_scaling_audit": "results/global_edge_closure_ready03/fixed_point_audit.json",
+    "replay_status": "EXACT_CONIC_REDUCTION_CHAIN_VERIFIED",
+    "scalar_cones": 284718,
+    "variables": 61787
+  },
+  "model": {
+    "all_26_manuscript_feature_coefficients_free": true,
+    "completed_tail_anchor": "n >= 58",
+    "dimension": 57,
+    "frozen_input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
+    "geometric_constraints_changed_during_preparation": false,
+    "level": 7,
+    "original_PSD_blocks": 5322,
+    "original_equalities": 29259,
+    "original_scalar_inequalities": 387685,
+    "original_variables": 97515,
+    "regeneration": "results/global_edge_closure_regenerated01/result.json"
+  },
+  "native_SDPA": {
+    "auxiliary_pFEAS_is_not_original_feasibility": true,
+    "identical_verified_input_for_all_checkpoints": true,
+    "phase": "pFEAS",
+    "reported_iterations_by_checkpoint": [
+      16,
+      16,
+      2
+    ],
+    "reported_iterations_total": 34,
+    "runs": [
+      "results/global_edge_closure_sdpa08/result.json",
+      "results/global_edge_closure_sdpa09/result.json",
+      "results/global_edge_closure_sdpa10/result.json"
+    ],
+    "saved_array_common_margin": "-150984455204487833/25000000000000000000",
+    "terminal_messages": [
+      "cannot move: step length is too short :: line 190 in sdpa_solve.cpp"
+    ],
+    "terminal_status": "NATIVE_SOLVER_NUMERICAL_STOP",
+    "wrapper_exit_zero_is_not_native_solver_success": true
+  },
+  "original_feasibility": {
+    "all_original_equalities_hold_exactly": true,
+    "array_diagnostics": "results/global_edge_closure_iterate_diagnostics04/result.json",
+    "exact_feasible_point_obtained": false,
+    "exact_infeasibility_certificate_obtained": false,
+    "failed_exact_Farkas_completion_negative_coordinate_weights": 34403,
+    "normalized_Farkas_certificate_dual_status": "UNDECIDED",
+    "ordinary_dual_Farkas_constant": 1.0930726469577695e-12,
+    "ordinary_dual_maximum_absolute_adjoint_residual": 3.1699287521162257e-06,
+    "original_equalities_checked": 29259,
+    "original_point_check": "results/global_edge_closure_terminal_check04/result.json",
+    "saved_original_candidate_rejection": {
+      "all_original_equalities_checked_exactly": 29259,
+      "all_original_equalities_zero": true,
+      "approximate_value": -130688.80273126767,
+      "block": "uniform_two_unit_triangle_cover0",
+      "exact_value": "-44277366365353488045471478451/338800000000000000000000",
+      "expression": {
+        "face3_corner0_atom1_m0": "1/2",
+        "face3_corner0_atom2_m0": "1/2",
+        "face3_corner1_atom1_m0": "1/2",
+        "face3_corner1_atom2_m0": "1/2",
+        "face3_corner2_atom1_m0": "1/2",
+        "face3_corner2_atom2_m0": "1/2",
+        "faces3_m0": "-1"
+      },
+      "interpretation": "The saved decimal candidate is infeasible; this does not decide whether another point exists.",
+      "nonzero_equality_examples": [],
+      "required_sign": "nonnegative"
+    },
+    "status": "UNDECIDED"
+  },
+  "publication_hygiene": {
+    "completed_audit": {
+      "index_files": 33778,
+      "issues": [],
+      "observed_peak_group_rss_bytes": 71958528,
+      "path_and_blob_list_sha256": "198657d2994676c2623cb47c15d27b53e3068c3a6386ce7b0766438406dffbe0",
+      "receipt": "results/global_constraint_pipeline_public_index_audit_20261126_attempt02.txt",
+      "total_blob_bytes": 1869587152
+    },
+    "final_index_must_be_audited_again_after_staging_these_receipts": true,
+    "first_attempt": {
+      "completed": false,
+      "observed_peak_group_rss_bytes": 409501696,
+      "receipt": "results/global_constraint_pipeline_public_index_audit_20261126_attempt01.txt",
+      "stop_reason": "Publication I/O exceeded 256 MiB process-group RSS"
+    },
+    "reader": "tools/audit_public_tree.py",
+    "reader_correction": "Recycle Git cat-file after 16 MiB or 256 objects while scanning every staged byte; retain the 256 MiB publication watchdog.",
+    "reader_sha256": "2474724780b621e6444ad423e701e2203adf73cf4a645c10b0518c91e633227d",
+    "scope": "actual Git index; publication hygiene only"
+  },
+  "publication_only_sphinx": "results/global_constraint_workflow_sphinx_20261125.txt",
+  "recorded_utc": "2026-11-26T05:34:06.315580+00:00",
+  "regressions": {
+    "exact_reduction": "results/global_cone_reduction_checks03/result.json",
+    "interval_coordinates_and_inverse_identities": "results/global_conditioning_checks02/result.json",
+    "solver_gate_and_native_restart": "results/global_solver_gate_checks02/result.json"
+  },
+  "retention": {
+    "archive_bytes": 114175768,
+    "archive_receipt": "results/global_constraint_pipeline_archive_20261126.json",
+    "bulk_release_upload_performed": false,
+    "complete_byte_round_trips": 17,
+    "raw_files_are_ignored_local_working_copies": true,
+    "restore_archives_before_replay_in_fresh_checkout": true,
+    "uncompressed_bytes": 1686667660
+  },
+  "schema": "global-constraint-pipeline-completion-v1",
+  "source_bound_geometric_review_complete": false,
+  "status": "PREPARATION_AND_NATIVE_RUN_COMPLETED_FEASIBILITY_UNDECIDED"
+}

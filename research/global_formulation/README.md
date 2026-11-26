@@ -42,12 +42,24 @@ anchor. The general formulation can instead represent a dimension band or an
 unbounded parity tail. Changing that scope requires a corresponding uniform
 instantiation check; it is not an ordinary fixed-scope constraint extension.
 
-**Level-7 feasibility remains undecided.** Earlier numerical small-step stops
-supplied neither an original feasible point nor an exact infeasibility
-certificate. Their compact [summary](../../results/global_edge_closure_corrected_rerun_20261125.json)
-and [representation audit](../../results/global_edge_closure_representation_audit01/result.json)
-explain why preparation was replaced. Repeated exact reduction, proof replay and
-a fresh audit after conditioning are now required before any research SDPA launch.
+**Level-7 feasibility remains undecided.** The corrected, gated run completed
+16 + 16 + 2 iterations before SDPA returned
+[`step length is too short`](../../results/global_edge_closure_sdpa10/result.json).
+The saved common margin is about `-0.00603938`; the recomputed ordinary dual
+adjoint residual is `3.17e-6`. These are auxiliary-problem diagnostics.
+
+The [original-model check](../../results/global_edge_closure_terminal_check04/result.json)
+found neither an exact feasible point nor an infeasibility certificate. All
+29,259 original equalities hold exactly, but the saved point violates
+`uniform_two_unit_triangle_cover0`. The attempted exact Farkas completion
+requires 34,403 negative coordinate weights. The
+[array diagnostic](../../results/global_edge_closure_iterate_diagnostics04/result.json)
+records the precise rejection and distinguishes the updated arrays from cached
+native summaries. No cutoff or geometric bound changed.
+
+The [earlier representation audit](../../results/global_edge_closure_representation_audit01/result.json)
+motivated the replacement pipeline. Its old large numerical representations have
+been removed; compact execution records remain historical evidence.
 
 ## Constraint and solver workflow
 
@@ -64,7 +76,12 @@ has 61,787 variables and 289,596 cones. Its
 [post-reduction audit](../../results/global_edge_closure_presolve06/fixed_point_audit.json)
 reports zero remaining recognized reductions. Each face-propagation round and
 every deleted or compressed source cone has an exact reconstruction proof.
-The separate complete-chain replay and native export gates still apply.
+The [complete-chain replay](../../results/global_edge_closure_replay02/result.json)
+passed. The [scaled export](../../results/global_edge_closure_ready03/result.json)
+has a matching [launch receipt](../../results/global_edge_closure_ready03/solver_ready.json)
+and a clean audit after conditioning. Scaling checks both coordinate inverses
+and every affine matrix entry. It uses sparse elimination and preserves shared
+population coordinates when a response-coordinate pivot is available.
 
 The production path consists of these separate serial jobs:
 
@@ -122,3 +139,17 @@ the tag does not back them up. Compact historical status and source records are
 preserved with their original scope. Current scientific inputs, exact witnesses,
 certificates and proof-chain evidence take priority over disposable numerical
 caches.
+
+The [archive receipt](../../results/global_constraint_pipeline_archive_20261126.json)
+binds every reduction proof, the final exact models/maps, numerical input,
+initialization and all three new native checkpoints by complete byte round trips.
+Large raw files are ignored local working copies. Restore their `.gz` archives
+before a replay or continuation in a fresh checkout; the regenerated input's
+[restoration note](../../results/global_edge_closure_regenerated01/README.md)
+uses the already-retained frozen archive. Intermediate compiled models are
+reconstructed from the original and reduction proofs, so their obsolete raw
+copies are not required for a fresh replay. Restoring bytes does not rerun any
+mathematical verification.
+
+The [completion record](../../results/global_constraint_pipeline_completion_20261126.json)
+collects the verified preparation, terminal solver status and cleanup receipts.

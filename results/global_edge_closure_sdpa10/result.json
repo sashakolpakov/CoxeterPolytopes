@@ -1,0 +1,125 @@
+{
+  "accepted_bounds_changed": false,
+  "auxiliary_problem": "unchanged common PSD margin",
+  "checkpoint": {
+    "complete_free_vector_and_both_cone_arrays": true,
+    "cone_array_entries": {
+      "xMat": 423869,
+      "yMat": 423869
+    },
+    "file_sha256": "91575e61d06d2b6512c82da8584b6aa666a6389b4e8ea0721e63f28d4ed6733a",
+    "free_variables": 61788,
+    "native_common_margin": "-150984455204487833/25000000000000000000",
+    "native_phase": "pFEAS",
+    "numerical_initial_cone_minimum_eigenvalues": {}
+  },
+  "elapsed_seconds": 209.25977950007655,
+  "geometric_constraints_changed": false,
+  "identical_frozen_native_input": true,
+  "iteration_limit_reached": false,
+  "native": {
+    "actual_output_formats": {
+      "XPrint": "%+26.17e",
+      "YPrint": "%+26.17e",
+      "infPrint": "%+26.17e",
+      "xPrint": "%+26.17e"
+    },
+    "command": [
+      "/Users/sasha/.local/opt/coxeter-sdpa-7.3.21/bin/sdpa",
+      "-ds",
+      "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_ready03/input.dat-s",
+      "-o",
+      "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa10/native.result",
+      "-p",
+      "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa10/param.sdpa",
+      "-numThreads",
+      "1",
+      "-id",
+      "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa10/native_initial.dat"
+    ],
+    "executable_sha256": "65292a57cc9cce3c3f206e5faf541c303802589c238a1d82722bfafbe8b0e0d7",
+    "initial_path": "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa10/native_initial.dat",
+    "initial_sha256": "2cbf458a426dd84551d08397aba5b6b230c7651791f5a7805e6afb2343bc20fc",
+    "initial_source_path": "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa09/native.result",
+    "initial_source_sha256": "36a32d3c84ec30c9cdd5e62a2ba701dfb338712a295ed6e46a6b9740db6987ba",
+    "input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+    "one_thread": true,
+    "parameters_sha256": "094bdfa179a79868301b55c29685934e5619e738ab3f3f634f70ae26d605c1ae",
+    "precision_bits": null,
+    "preflight_check": {
+      "frozen_input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
+      "native_input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+      "preflight": "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_ready03/solver_ready.json",
+      "preflight_sha256": "5ea43d1d44c43e99e9da4f6bc500d19ddf1bc8809feb0907fa0d2ce5e7b351fd",
+      "scope": "verified_global_research_model"
+    },
+    "restart_uses_only_the_three_solution_arrays": true,
+    "returncode": 0,
+    "timed_out": false
+  },
+  "native_terminal": true,
+  "numerical_error_messages": [
+    "cannot move: step length is too short :: line 190 in sdpa_solve.cpp"
+  ],
+  "requested_iterations": 16,
+  "requested_native_seconds": 800,
+  "resume_from": "results/global_edge_closure_sdpa09",
+  "source_bindings": {
+    "/Users/sasha/.local/opt/coxeter-sdpa-7.3.21/bin/sdpa": {
+      "bytes": 3635288,
+      "sha256": "65292a57cc9cce3c3f206e5faf541c303802589c238a1d82722bfafbe8b0e0d7"
+    },
+    "research/global_formulation/checkpoint_solver.py": {
+      "bytes": 6146,
+      "sha256": "80cb2646f88df812d5c1c66b5306d4edb0045829593413972b99567cd7d1ad2f"
+    },
+    "research/global_formulation/conic.py": {
+      "bytes": 17131,
+      "sha256": "098f47c00a0d1a23560e8a6916506e24ca559fd765b57134a2b8fd3db3bc949b"
+    },
+    "research/global_formulation/feasibility.py": {
+      "bytes": 28446,
+      "sha256": "158c11d9fb48b7d1542122a6a7c86daa557e511fa02e6ded57591a7405363c79"
+    },
+    "research/global_formulation/sdpa_cli.py": {
+      "bytes": 9991,
+      "sha256": "913311b3b73d7b992a448df9317628a95a12966fd210e53acef5008c7740dad8"
+    },
+    "research/global_formulation/solver_gate.py": {
+      "bytes": 6341,
+      "sha256": "d781333bf30ce97d7a78201149da688140c8a013bb953a4faa43cecca2948dd1"
+    },
+    "results/global_edge_closure_ready03/input.dat-s": {
+      "bytes": 328774755,
+      "sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39"
+    },
+    "results/global_edge_closure_ready03/solver_ready.json": {
+      "bytes": 39809,
+      "sha256": "5ea43d1d44c43e99e9da4f6bc500d19ddf1bc8809feb0907fa0d2ce5e7b351fd"
+    },
+    "results/global_edge_closure_sdpa09/native.result": {
+      "bytes": 24786313,
+      "sha256": "36a32d3c84ec30c9cdd5e62a2ba701dfb338712a295ed6e46a6b9740db6987ba"
+    },
+    "results/global_edge_closure_sdpa09/native_metadata.json": {
+      "bytes": 1723,
+      "sha256": "7f85e25ca28c367e55ba580bd387c0a2df8f6176355c2788d2a191344baf748e"
+    },
+    "results/global_edge_closure_sdpa09/result.json": {
+      "bytes": 5401,
+      "sha256": "49a5550b256a8289219ae1858c62847de629e53d12a4fc54061487eaba3e0555"
+    },
+    "scripts/run_sdpa_checkpoint_20261125.py": {
+      "bytes": 1649,
+      "sha256": "5296e8731e268cadb911da2d50eb79de55ca674f04f49dc37ee8e7e40d454a33"
+    }
+  },
+  "status": "NATIVE_SOLVER_NUMERICAL_STOP",
+  "verified_preflight": {
+    "frozen_input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
+    "native_input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+    "preflight": "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_ready03/solver_ready.json",
+    "preflight_sha256": "5ea43d1d44c43e99e9da4f6bc500d19ddf1bc8809feb0907fa0d2ce5e7b351fd",
+    "scope": "verified_global_research_model"
+  }
+}

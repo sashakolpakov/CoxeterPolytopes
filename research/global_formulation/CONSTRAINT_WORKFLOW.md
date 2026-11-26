@@ -60,7 +60,14 @@ lock in `AGENTS.md`. Use a fresh output directory and monitor for each batch.
    --verified VERIFIED --reference POINT.json.gz --output READY`. The reference
    selects units only and adds no feasible-point restrictions. Exact interval
    coordinates and positive column/block/diagonal units have checked inverse
-   identities. A new fixed-point audit runs after conditioning. Further exposed
+   identities. Interval coordinates use sparse exact elimination and prefer
+   response coordinates with equal-and-opposite coefficients, preserving shared
+   populations when that option exists. Check homogeneous and overlapping
+   intervals, including dependent selected pivots, with
+   `scripts/check_global_conditioning_20261125.py`. Every affine entry is checked
+   under the inverse transformation. Progress and an equivalent representation
+   checkpoint are saved before the final audit; that checkpoint is not solver-ready.
+   A new fixed-point audit runs after conditioning. Further exposed
    reductions block export rather than authorizing a partial model.
 5. Only a matching `SOLVER_READY` receipt authorizes production SDPA. Use
    `scripts/run_sdpa_checkpoint_20261125.py --native-input READY/input.dat-s

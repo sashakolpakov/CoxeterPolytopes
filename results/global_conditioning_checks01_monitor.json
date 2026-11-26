@@ -1,0 +1,59 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/check_global_conditioning_20261125.py",
+    "--output",
+    "results/global_conditioning_checks01"
+  ],
+  "elapsed_seconds": 0.151,
+  "peak_process_tree_rss_bytes": 62701568,
+  "initial_resources": {
+    "free_disk_gib": 317.18,
+    "available_memory_gib": 9.24,
+    "disk_free_bytes": 340569739264,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 9922723840,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 34.24153,
+    "available_memory_percent": 38.505236,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 1163,
+  "stdout": "{\"status\": \"SPARSE_INTERVAL_CONDITIONING_REGRESSIONS_PASSED\", \"shared_population_preserved\": true, \"legacy_bad_pivot_exhibited\": true, \"exact_original_and_transformed_points_checked\": true, \"out_of_interval_point_rejected\": true, \"affine_interval_regression\": {\"exact_inverse_identities\": true, \"positive_cone_scales\": true, \"feasible_point_preserved\": true, \"outside_interval_point_rejected\": true}, \"equilibration_regression\": {\"all_affine_inverse_identities\": true, \"positive_congruences\": true, \"exact_point_preserved\": true}, \"source_bindings\": {\"scripts/check_global_conditioning_20261125.py\": \"e8236cb272bc4c012743154b3545ae19e4ac68ccac6b86750adea9417df73ba6\", \"research/global_formulation/conditioning.py\": \"3e13ffb3411f8d970af9dc6e31848f691889fdb373ace5731e4d447a7e01e9cf\", \"research/global_formulation/equilibration.py\": \"b08ba3b3919625aef784c6ff0227a228e0c18b40cd911fe2fb33aacaa6e954fe\", \"research/global_formulation/conic.py\": \"098f47c00a0d1a23560e8a6916506e24ca559fd765b57134a2b8fd3db3bc949b\", \"research/global_formulation/feasibility.py\": \"158c11d9fb48b7d1542122a6a7c86daa557e511fa02e6ded57591a7405363c79\"}, \"scientific_feasibility_claimed\": false}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "e8236cb272bc4c012743154b3545ae19e4ac68ccac6b86750adea9417df73ba6",
+  "lock_owner": "wrapper"
+}

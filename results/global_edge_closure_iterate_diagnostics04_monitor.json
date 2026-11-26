@@ -1,0 +1,67 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/diagnose_sdpa_checkpoint_20261125.py",
+    "--source",
+    "results/global_edge_closure_ready03",
+    "--checkpoint",
+    "results/global_edge_closure_sdpa10",
+    "--original",
+    "results/global_edge_closure_regenerated01/necessary_primal.exact.json",
+    "--original-candidate",
+    "results/global_edge_closure_terminal_check04/original_numerical_candidate.json",
+    "--output",
+    "results/global_edge_closure_iterate_diagnostics04"
+  ],
+  "elapsed_seconds": 52.884,
+  "peak_process_tree_rss_bytes": 2748284928,
+  "initial_resources": {
+    "free_disk_gib": 316.99,
+    "available_memory_gib": 11.07,
+    "disk_free_bytes": 340360663040,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 11891621888,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 34.22051,
+    "available_memory_percent": 46.145566,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 5269,
+  "stdout": "Loading the frozen conditioned model and all three saved arrays.\nIndependently evaluated 50000 source cones.\nIndependently evaluated 100000 source cones.\nIndependently evaluated 150000 source cones.\nIndependently evaluated 200000 source cones.\nIndependently evaluated 250000 source cones.\n{\"primal\": {\"objective\": 0.006039378208179513, \"maximum_absolute_affine_residual\": 5.4569682106375694e-12, \"affine_residual_frobenius_norm\": 4.72421875691741e-11, \"upper_bound_slack\": 1.0060393782081805, \"upper_bound_affine_residual\": 8.881784197001252e-16}, \"dual\": {\"objective\": -2.8879528790705746e-07, \"original_Farkas_constant\": 1.0930726469577695e-12, \"margin_upper_multiplier\": 2.887941948344105e-07, \"source_multiplier_trace\": 0.9999997112053728, \"trace_normalization_residual\": -4.3243186809149847e-13, \"ordinary_adjoint_maximum_absolute_residual\": 3.1699287521162257e-06, \"ordinary_adjoint_euclidean_residual\": 8.662374501759703e-06, \"ordinary_adjoint_maximum_residual_divided_by_one_plus_absolute_terms\": 2.3606939190620813e-06, \"worst_coordinates\": [{\"variable\": \"shared_edge_support_m292\", \"residual\": -3.1699287521162257e-06, \"absolute_terms\": 0.3427953223921796, \"value\": 0.01858395500199467}, {\"variable\": \"shared_edge_support_m291\", \"residual\": -2.4912371587064783e-06, \"absolute_terms\": 0.26376070775658, \"value\": 0.004035332428736246}, {\"variable\": \"shared_edge_support_m290\", \"residual\": -2.3960714591304377e-06, \"absolute_terms\": 0.252685464154297, \"value\": 0.003904497482711531}, {\"variable\": \"shared_edge_support_m272\", \"residual\": -2.367300195664821e-06, \"absolute_terms\": 0.26920908699387247, \"value\": 0.003380809028203186}, {\"variable\": \"shared_edge_support_m289\", \"residual\": -2.2995874950994434e-06, \"absolute_terms\": 0.24167010709575212, \"value\": 0.0036947708731217103}, {\"variable\": \"shared_edge_support_m270\", \"residual\": -2.2738340233715074e-06, \"absolute_terms\": 0.2570344005639462, \"value\": 0.0032584089864073967}, {\"variable\": \"shared_edge_support_m253\", \"residual\": -2.1743838425309037e-06, \"absolute_terms\": 0.23733660281821914, \"value\": 0.003057710868057037}, {\"variable\": \"shared_edge_support_m251\", \"residual\": -2.086933686932972e-06, \"absolute_terms\": 0.2273268228159144, \"value\": 0.003054618983315317}, {\"variable\": \"supporting_components4_m10009\", \"residual\": 1.5109353344472045e-06, \"absolute_terms\": 0.0002745431583490173, \"value\": 44.83546195783359}, {\"variable\": \"supporting_components4_m10010\", \"residual\": 1.264663216776783e-06, \"absolute_terms\": 0.00023923946688347373, \"value\": 58.78675172052117}, {\"variable\": \"supporting_components4_m10014\", \"residual\": 1.0859286235662532e-06, \"absolute_terms\": 0.00010482630156216656, \"value\": 54.14015194284018}, {\"variable\": \"supporting_components2_m2891\", \"residual\": 9.531621650949037e-07, \"absolute_terms\": 8.975058647997972e-06, \"value\": 90.94275301661303}, {\"variable\": \"supporting_components2_m2892\", \"residual\": 7.663200341532562e-07, \"absolute_terms\": 7.1827034746146685e-06, \"value\": 119.4438413906483}, {\"variable\": \"supporting_components4_m3081\", \"residual\": 6.451663663256299e-07, \"absolute_terms\": 7.09054336859621e-06, \"value\": 48.861983124014756}, {\"variable\": \"supporting_components2_m2893\", \"residual\": 6.379072348698502e-07, \"absolute_terms\": 6.014686018902351e-06, \"value\": 203.3118130193298}, {\"variable\": \"supporting_components2_m2897\", \"residual\": 5.978093938691849e-07, \"absolute_terms\": 5.278215667764162e-06, \"value\": 97.93830000011823}]}, \"cone_statistics\": {\"saved_primal_slack\": {\"minimum_eigenvalue\": 2.8848938191327112e-05, \"maximum_eigenvalue\": 18224.97946731117, \"negative_eigenvalues\": 0, \"relatively_small_eigenvalues\": 0, \"worst_block\": {\"block\": 3662, \"name\": \"faces3_moment_shared_supporting_state\", \"size\": 23}, \"largest_absolute_entry\": 18224.25917568425}, \"saved_dual_multiplier\": {\"minimum_eigenvalue\": 7.305139134041185e-11, \"maximum_eigenvalue\": 0.04389591857537077, \"negative_eigenvalues\": 0, \"relatively_small_eigenvalues\": 0, \"worst_block\": {\"block\": 1404, \"name\": \"ideal_vertices_upper_u_B13\", \"size\": 1}, \"largest_absolute_entry\": 0.021933485693817395}, \"unshifted_source_slack\": {\"minimum_eigenvalue\": -0.006010529269988257, \"maximum_eigenvalue\": 18224.973427932957, \"negative_eigenvalues\": 4207, \"relatively_small_eigenvalues\": 12, \"worst_block\": {\"block\": 3662, \"name\": \"faces3_moment_shared_supporting_state\", \"size\": 23}, \"largest_absolute_entry\": 18224.25313630604}}, \"gap\": 0.00603966700346742, \"complementarity\": 0.12625800254376815}\n{\"status\": \"SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED\", \"exact_candidate_rejection\": {\"block\": \"uniform_two_unit_triangle_cover0\", \"expression\": {\"face3_corner0_atom1_m0\": \"1/2\", \"face3_corner0_atom2_m0\": \"1/2\", \"face3_corner1_atom1_m0\": \"1/2\", \"face3_corner1_atom2_m0\": \"1/2\", \"face3_corner2_atom1_m0\": \"1/2\", \"face3_corner2_atom2_m0\": \"1/2\", \"faces3_m0\": \"-1\"}, \"exact_value\": \"-44277366365353488045471478451/338800000000000000000000\", \"approximate_value\": -130688.80273126767, \"required_sign\": \"nonnegative\", \"all_original_equalities_checked_exactly\": 29259, \"all_original_equalities_zero\": true, \"nonzero_equality_examples\": [], \"interpretation\": \"The saved decimal candidate is infeasible; this does not decide whether another point exists.\"}, \"elapsed_seconds\": 52.55898508394603}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "511a1b659dcbfd764a0396e9a23e4492445a67bb540d39054965884008b8e8a8",
+  "lock_owner": "wrapper"
+}
