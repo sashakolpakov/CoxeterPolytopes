@@ -20,7 +20,8 @@ def bindings(paths):
 
 def sources():
     return [Path(__file__), ROOT/'research/global_formulation/conic_backend.py',
-            ROOT/'research/global_formulation/solver_gate.py', ROOT/'research/global_formulation/conic.py']
+            ROOT/'research/global_formulation/solver_gate.py', ROOT/'research/global_formulation/conic.py',
+            ROOT/'research/global_formulation/feasibility.py',ROOT/'research/global_formulation/slater_margin.py']
 
 
 def safe_json(value):
@@ -31,6 +32,16 @@ def safe_json(value):
     if isinstance(value, float) and not math.isfinite(value):
         return str(value)
     return value
+
+
+def checked_encoding(folder, gate):
+    encoded=json.loads((folder/'result.json').read_text())
+    if encoded['source_native_sha256']!=gate['native_input_sha256']:
+        raise ValueError('The comparison cache describes a different frozen input')
+    for p,h in encoded['encoding_file_sha256'].items():
+        if solver_gate.file_digest(folder/p)!=h:
+            raise ValueError('An encoding cache changed: '+p)
+    return backend.load_encoding(folder)
 
 
 def solve(data, layout, output, name, seconds, iterations, warm=None):
@@ -56,6 +67,7 @@ def solve(data, layout, output, name, seconds, iterations, warm=None):
                     'settings':settings, 'native_status':info['status'], 'native_info':info}
         return {k:np.asarray(solution[k]) for k in ['x','y','s']}, metadata
     import clarabel
+    import clarabel.clarabel as implementation
     permutation = backend.upper_permutation(layout)
     cones = []
     if layout.get('zero_cones',0):
@@ -80,6 +92,7 @@ def solve(data, layout, output, name, seconds, iterations, warm=None):
     dual[permutation] = result.z
     slack[permutation] = result.s
     metadata = {'backend':'Clarabel', 'version':clarabel.__version__,
+                'native_binary_sha256':solver_gate.file_digest(implementation.__file__),
                 'settings':str(settings), 'native_status':str(result.status),
                 'reported_iterations':result.iterations,
                 'reported_primal_residual':result.r_prim,
@@ -170,7 +183,7 @@ def self_check(output):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=['check','encode','solve'])
+    parser.add_argument('action', choices=['check','encode','solve','diagnose'])
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--native-input',type=Path)
     parser.add_argument('--preflight',type=Path)
@@ -194,6 +207,9 @@ def main():
         gate=solver_gate.verify_native(args.native_input,args.preflight)
         source_paths.extend([args.native_input,args.preflight])
         source_paths.extend(p for p in [args.reference,args.reference_diagnostics] if p is not None)
+        if args.encoding is not None:
+            source_paths.extend([args.encoding/p for p in
+                ['result.json','A.npz','vectors.npz','layout.json']])
     before=bindings(source_paths)
     conic.write_json(args.output/'source_bindings.json',before)
     if args.action=='check':
@@ -228,17 +244,25 @@ def main():
                 np.testing.assert_allclose(diag['gap'],previous['recomputed_gap'],atol=2e-11,rtol=0)
                 report['complete_existing_iterate_primal_dual_residual_crosscheck_passed']=True
             report['native_diagnostics']=diag
+    elif args.action=='diagnose':
+        import numpy as np
+        if args.encoding is None or args.reference is None:
+            raise ValueError('Supply the checked encoding and native checkpoint')
+        data,layout=checked_encoding(args.encoding,gate)
+        point=backend.native_arrays(args.reference,layout)
+        auxiliary=backend.diagnostics(data,layout,point)
+        original,original_layout=backend.original_feasibility(data,layout)
+        x=point['x'][:-1]
+        y=np.delete(point['y'],layout['scalar_cones']-1)
+        original_point={'x':x,'y':y,'s':original['b']-original['A']@x}
+        report={'status':'COMMON_MARGIN_AND_ORIGINAL_FEASIBILITY_DIAGNOSED',
+                'auxiliary':auxiliary,'original':backend.diagnostics(original,original_layout,original_point),
+                'source_checkpoint':str(args.reference),'original_feasibility_status':'UNDECIDED'}
     else:
         import numpy as np
         if args.encoding is None or args.backend is None:
             raise ValueError('Supply the checked encoding and backend')
-        encoded=json.loads((args.encoding/'result.json').read_text())
-        if encoded['source_native_sha256']!=gate['native_input_sha256']:
-            raise ValueError('The comparison cache describes a different frozen input')
-        for p,h in encoded['encoding_file_sha256'].items():
-            if solver_gate.file_digest(args.encoding/p)!=h:
-                raise ValueError('An encoding cache changed: '+p)
-        data,layout=backend.load_encoding(args.encoding)
+        data,layout=checked_encoding(args.encoding,gate)
         if args.mode=='original':
             data,layout=backend.original_feasibility(data,layout)
         elif args.mode=='certificate':

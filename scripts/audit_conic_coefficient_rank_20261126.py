@@ -39,7 +39,8 @@ def main():
             raise ValueError('Changed encoding cache')
     data,layout=backend.load_encoding(args.encoding)
     A=data['A']
-    scalar=A[:layout['scalar_cones']].tocsr()
+    original,original_layout=backend.original_feasibility(data,layout)
+    scalar=original['A'][:original_layout['scalar_cones']].tocsr()
     rows=np.flatnonzero(np.diff(scalar.indptr)==1)
     positions=scalar.indptr[rows]
     columns=scalar.indices[positions]
@@ -50,6 +51,9 @@ def main():
         if abs(value)>strength[col]:
             strength[col]=abs(value)
             selected[col]=row
+    margin_column=A.shape[1]-1
+    selected[margin_column]=layout['scalar_cones']-1
+    strength[margin_column]=1
     wanted={int(row):int(col) for col,row in enumerate(selected) if row>=0}
     if len(wanted)!=int(np.count_nonzero(selected>=0)):
         raise ValueError('Selected scalar rows are not distinct')
@@ -60,6 +64,7 @@ def main():
             bases[block]=total
             total-=size
     witnessed={}
+    margin_entries={}
     with args.native_input.open() as stream:
         for _ in range(5):
             stream.readline()
@@ -74,7 +79,14 @@ def main():
             if row not in wanted:
                 continue
             col=wanted[row]
-            if i!=j or k!=col+1 or col in witnessed:
+            if i!=j:
+                raise ValueError('Off-diagonal scalar entry')
+            if k-1==margin_column and col!=margin_column:
+                if row in margin_entries:
+                    raise ValueError('Duplicate common-margin coefficient')
+                margin_entries[row]=-F(fields[4])
+                continue
+            if k!=col+1 or col in witnessed:
                 raise ValueError('The proposed native row is not a unique pure-coordinate row')
             coefficient=-F(fields[4])
             if not coefficient:
@@ -82,20 +94,23 @@ def main():
             witnessed[col]=(row,block,i,coefficient)
     if set(witnessed)!=set(wanted.values()):
         raise ValueError('Some proposed pivot was not found in the native input')
+    if any(margin_entries.get(row)!=1 for col,(row,_,_,_) in witnessed.items() if col!=margin_column):
+        raise ValueError('Expected the common-margin unit coefficient in each selected source row')
     with gzip.open(args.output/'scalar_minor.csv.gz','wt',newline='') as stream:
         writer=csv.writer(stream)
         writer.writerow(['column_0_based','canonical_scalar_row_0_based','native_block_1_based',
-                         'native_row_1_based','exact_canonical_coefficient'])
+                         'native_row_1_based','exact_canonical_coefficient','common_margin_coefficient'])
         for col,(row,block,i,c) in sorted(witnessed.items()):
-            writer.writerow([col,row,block,i,str(c)])
+            writer.writerow([col,row,block,i,str(c),str(margin_entries.get(row,0))])
     full=len(witnessed)==A.shape[1]
-    report={'status':'EXACT_NATIVE_SCALAR_MINOR_FULL_COLUMN_RANK_VERIFIED' if full else 'PARTIAL_EXACT_SCALAR_MINOR_VERIFIED',
+    report={'status':'EXACT_NATIVE_TRIANGULAR_MINOR_FULL_COLUMN_RANK_VERIFIED' if full else 'PARTIAL_EXACT_SCALAR_MINOR_VERIFIED',
         'verified_preflight':gate,'columns':A.shape[1],'independent_columns_witnessed':len(witnessed),
-        'full_column_rank':full,'pure_scalar_rows_available':len(rows),
+        'full_column_rank':full,'original_pure_scalar_rows_available':len(rows),
+        'common_margin_column_removed_using_its_unit_upper_bound_row':True,
         'minimum_absolute_exact_pivot':str(min(abs(v[3]) for v in witnessed.values())),
         'maximum_absolute_exact_pivot':str(max(abs(v[3]) for v in witnessed.values())),
         'native_decimal_coefficients_checked_without_rounding':True,
-        'argument':'The selected distinct scalar rows form a diagonal square minor with every diagonal entry nonzero.',
+        'argument':'The original-variable rows have distinct nonzero single-coordinate pivots and may also contain the margin column. The final row is precisely the unit margin row. The resulting square minor is triangular and has nonzero determinant.',
         'scope':'Rank of the coefficient map, not Slater feasibility, spectral conditioning, or geometric realizability.',
         'minor_witness':'scalar_minor.csv.gz',
         'minor_witness_sha256':solver_gate.file_digest(args.output/'scalar_minor.csv.gz'),

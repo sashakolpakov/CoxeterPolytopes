@@ -27,6 +27,8 @@ def main():
     parser.add_argument('--iterations', type=int, default=6)
     parser.add_argument('--seconds', type=int, default=780)
     parser.add_argument('--epsilon-dash', default='1e-8')
+    parser.add_argument('--baseline', type=Path,
+                        help='Require the identical restart and all other parameter bytes of this prior run')
     args = parser.parse_args()
     if not 1 <= args.iterations <= 1000 or not 1 <= args.seconds <= 800:
         raise ValueError('Invalid numerical diagnostic limits')
@@ -39,6 +41,8 @@ def main():
     paths = [Path(__file__), args.native_input, args.preflight, args.initial,
              sdpa_cli.EXECUTABLE, *[ROOT/'research/global_formulation'/f'{n}.py'
              for n in ['checkpoint_solver', 'conic', 'feasibility', 'sdpa_cli', 'solver_gate']]]
+    if args.baseline:
+        paths.extend([args.baseline,args.baseline.parent/'param.sdpa'])
     def bindings():
         return {str(p): {'bytes': p.stat().st_size, 'sha256': solver_gate.file_digest(p)}
                 for p in paths}
@@ -59,12 +63,39 @@ def main():
                for i, (x, y) in enumerate(zip(original_parameters.splitlines(), lines, strict=True)) if x != y]
     if any(p['zero_based_line'] != 9 for p in changes):
         raise ValueError('Changed a parameter other than epsilonDash')
+    matched = None
+    if args.baseline:
+        baseline = json.loads(args.baseline.read_text())
+        if baseline['native']['input_sha256'] != gate['native_input_sha256']:
+            raise ValueError('Baseline used different problem data')
+        if baseline['native']['initial_source_sha256'] != solver_gate.file_digest(args.initial):
+            raise ValueError('Baseline used a different initial state')
+        baseline_parameters = (args.baseline.parent/'param.sdpa').read_text().splitlines()
+        if len(baseline_parameters) != len(lines):
+            raise ValueError('Baseline parameter layout differs')
+        baseline_changes = [{'zero_based_line': i,'old':x,'new':y}
+            for i,(x,y) in enumerate(zip(baseline_parameters,lines,strict=True)) if x!=y]
+        if any(v['zero_based_line'] != 9 for v in baseline_changes):
+            raise ValueError('Matched comparison changed more than epsilonDash')
+        matched = {'baseline':str(args.baseline),'identical_ordered_input':True,
+                   'identical_initial_source_bytes':True,
+                   'parameter_file_changes':baseline_changes,
+                   'baseline_numerical_error_messages':baseline.get('numerical_error_messages',[])}
     initial_path = args.output/'native_initial.dat'
     initial_path.write_text('\n'.join(feasibility.native_array(args.initial, field)
                                      for field in ['xVec', 'xMat', 'yMat'])+'\n')
     command = [str(sdpa_cli.EXECUTABLE), '-ds', str(args.native_input.resolve()),
                '-o', str((args.output/'native.result').resolve()), '-p', str(parameters.resolve()),
                '-numThreads', '1', '-id', str(initial_path.resolve())]
+    metadata = {'record_kind':'direct SDPA parameter-probe invocation',
+                'command':command,'input_sha256':gate['native_input_sha256'],
+                'preflight_check':gate,'initial_source_path':str(args.initial),
+                'initial_source_sha256':solver_gate.file_digest(args.initial),
+                'initial_sha256':solver_gate.file_digest(initial_path),
+                'parameters_sha256':solver_gate.file_digest(parameters),
+                'executable_sha256':solver_gate.file_digest(sdpa_cli.EXECUTABLE),
+                'one_thread':True,'matched_comparison':matched}
+    conic.write_json(args.output/'native_metadata.json',metadata)
     timed_out = False
     with (args.output/'solver.stdout').open('x') as stream:
         try:
@@ -82,6 +113,7 @@ def main():
               'source_bound_geometric_review_complete': False,
               'parameter_sha256': solver_gate.file_digest(parameters),
               'initial_array_file_sha256': solver_gate.file_digest(initial_path),
+              'matched_comparison':matched,
               'source_bindings': before}
     errors = [s for s in text.splitlines() if re.search(r'cannot move:|Strange behavior|Cholesky.*failed|\bERROR\b', s)]
     record['numerical_error_messages'] = errors
