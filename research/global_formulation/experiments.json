@@ -123,6 +123,11 @@
     "latest_alternative_exact_verification": "results/global_clarabel_certificate_ray_polish02/result.json",
     "latest_alternative_native_status": "PrimalInfeasible",
     "latest_alternative_solver": "results/global_clarabel_reduced_faer01/result.json",
+    "latest_certificate_solver_input": "results/global_rational_certificate_ready01/result.json",
+    "latest_exact_constraint_reduction": "results/global_rational_certificate_replay01/result.json",
+    "latest_solver_input_has_been_numerically_solved": false,
+    "literal_binary64_ray_diagnosis": "results/global_clarabel_exact_ray_diagnosis01/result.json",
+    "native_PrimalInfeasible_is_not_solver_NumericalError": true,
     "native_iterations_completed_on_current_branch": 48,
     "native_numerical_error_messages": [],
     "native_phase": "pFEAS",
@@ -147,7 +152,8 @@
     "saved_variable_diagnostics": "results/global_sdpa_tolerance_diagnostics02/result.json",
     "source_bound_geometric_review_complete": false,
     "status": "RESTART_TRIGGER_AND_EXACT_DUAL_FACES_VERIFIED_ORIGINAL_FEASIBILITY_UNDECIDED",
-    "unshifted_prepared_cone_minimum_eigenvalue": -0.0008234610810003201
+    "unshifted_prepared_cone_minimum_eigenvalue": -0.0008234610810003201,
+    "unsuccessful_reconstruction_does_not_refute_native_infeasibility_classification": true
   },
   "current_feasibility_uses_upper_dimension_57_anchor": true,
   "current_hierarchy": [
@@ -314,6 +320,7 @@
     "research/global_formulation/order_faces.py",
     "research/global_formulation/program_checks.py",
     "research/global_formulation/projective_phase.py",
+    "research/global_formulation/rational_certificate.py",
     "research/global_formulation/sdpa_cli.py",
     "research/global_formulation/sdpa_double.py",
     "research/global_formulation/separation.py",
@@ -337,6 +344,9 @@
     "results/global_clarabel_certificate_ray_polish02/result.json",
     "results/global_clarabel_certificate_ray_polish02/source_bindings.json",
     "results/global_clarabel_certificate_ray_polish02_monitor.json",
+    "results/global_clarabel_exact_ray_diagnosis01/result.json",
+    "results/global_clarabel_exact_ray_diagnosis01/source_bindings.json",
+    "results/global_clarabel_exact_ray_diagnosis01_monitor.json",
     "results/global_clarabel_reduced_faer01/problem.json",
     "results/global_clarabel_reduced_faer01/result.json",
     "results/global_clarabel_reduced_faer01/solution.npz",
@@ -803,6 +813,45 @@
     "results/global_profile_closure_sdpa/solver.stdout",
     "results/global_profile_closure_sdpa/source_bindings.json",
     "results/global_profile_closure_sdpa_monitor.json",
+    "results/global_rational_certificate_balance_checks01/result.json",
+    "results/global_rational_certificate_balance_checks01/source_bindings.json",
+    "results/global_rational_certificate_balance_checks01_monitor.json",
+    "results/global_rational_certificate_checks01/result.json",
+    "results/global_rational_certificate_checks01/source_bindings.json",
+    "results/global_rational_certificate_checks01_monitor.json",
+    "results/global_rational_certificate_checks02/result.json",
+    "results/global_rational_certificate_checks02/source_bindings.json",
+    "results/global_rational_certificate_checks02_monitor.json",
+    "results/global_rational_certificate_checks03/result.json",
+    "results/global_rational_certificate_checks03/source_bindings.json",
+    "results/global_rational_certificate_checks03_monitor.json",
+    "results/global_rational_certificate_completion_20261126.json",
+    "results/global_rational_certificate_prepare01/progress.jsonl",
+    "results/global_rational_certificate_prepare01/result.json",
+    "results/global_rational_certificate_prepare01/source_bindings.json",
+    "results/global_rational_certificate_prepare02/A.npz",
+    "results/global_rational_certificate_prepare02/elimination.json",
+    "results/global_rational_certificate_prepare02/free.npz",
+    "results/global_rational_certificate_prepare02/layout.json",
+    "results/global_rational_certificate_prepare02/progress.jsonl",
+    "results/global_rational_certificate_prepare02/residual.exact.json.gz",
+    "results/global_rational_certificate_prepare02/result.json",
+    "results/global_rational_certificate_prepare02/source_bindings.json",
+    "results/global_rational_certificate_prepare02/substitutions.exact.json.gz",
+    "results/global_rational_certificate_prepare02/vectors.npz",
+    "results/global_rational_certificate_prepare02_monitor.json",
+    "results/global_rational_certificate_public_index_audit_20261126.txt",
+    "results/global_rational_certificate_ready01/A.npz",
+    "results/global_rational_certificate_ready01/layout.json",
+    "results/global_rational_certificate_ready01/result.json",
+    "results/global_rational_certificate_ready01/source_bindings.json",
+    "results/global_rational_certificate_ready01/units.exact.json",
+    "results/global_rational_certificate_ready01/vectors.npz",
+    "results/global_rational_certificate_ready01_monitor.json",
+    "results/global_rational_certificate_replay01/progress.jsonl",
+    "results/global_rational_certificate_replay01/result.json",
+    "results/global_rational_certificate_replay01/source_bindings.json",
+    "results/global_rational_certificate_replay01_monitor.json",
     "results/global_scs_auxiliary01/iterations.csv",
     "results/global_scs_auxiliary01/problem.json",
     "results/global_scs_auxiliary01/result.json",
@@ -1186,6 +1235,7 @@
     "scripts/archive_global_model_20261125.py",
     "scripts/audit_conic_coefficient_rank_20261126.py",
     "scripts/audit_sdpa_representation_20261125.py",
+    "scripts/balance_rational_certificate_20261126.py",
     "scripts/build_sdpa_native_serial_20261125.py",
     "scripts/check_cone_reduction_20261125.py",
     "scripts/check_global_conditioning_20261125.py",
@@ -1203,6 +1253,7 @@
     "scripts/recover_sdpa_checkpoint_20261125.py",
     "scripts/recover_sdpa_order_faces_20261125.py",
     "scripts/recover_sdpa_projective_dual_20261125.py",
+    "scripts/reduce_certificate_rational_20261126.py",
     "scripts/regenerate_global_constraints_20261125.py",
     "scripts/register_global_constraint_change_20261125.py",
     "scripts/run_global_coxeter_formulation.py",
@@ -1239,9 +1290,20 @@
     "scope": "actual Git index; publication hygiene only"
   },
   "publication_only_Sphinx_check": "results/global_edge_docs_sphinx_receipt_20261125.txt",
+  "rational_certificate_reduction_20261126": "results/global_rational_certificate_completion_20261126.json",
+  "rational_reduction_publication_hygiene_20261126": {
+    "final_index_must_be_audited_again": true,
+    "index_files": 33981,
+    "issues": [],
+    "observed_peak_group_rss_bytes": 220020736,
+    "path_and_blob_list_sha256": "def2ec8f2aee9502bedf3540a9aa54f18e742005cf471be7945eb66cdcb9265c",
+    "receipt": "results/global_rational_certificate_public_index_audit_20261126.txt",
+    "scope": "Actual Git index before adding this audit receipt and its summary"
+  },
   "remaining_work": [
-    "Decide the unchanged level-7 SDP with a full original feasible point or an exact infeasibility certificate.",
-    "Coordinate dual faces are exhausted; further facial structure, strict feasibility and weak infeasibility have not been decided.",
+    "Solve the exactly reduced and balanced certificate problem, recording actual arithmetic precision and the inverse units.",
+    "Refine or reconstruct candidates using justified kernel and field information; current numerical status remains uncertified.",
+    "Decide the original necessary-data SDP with an exact certificate or a fully lifted and checked original feasible point.",
     "Complete separate source-bound geometric review before any bound update."
   ],
   "representation_audit": "results/global_edge_closure_representation_audit01/result.json",
@@ -6430,6 +6492,282 @@
       "peak_process_tree_rss_bytes": 107331584,
       "reported_status": "INDEPENDENT_CONIC_ENCODINGS_AND_SOLVERS_VERIFIED",
       "result": "results/global_conic_backend_production_gate_checks03/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 0.536,
+      "files": {
+        "results/global_rational_certificate_checks01/result.json": {
+          "bytes": 1631,
+          "sha256": "cd895dfd37e1b16fdb5f227d0c74883fe348152f0bd7fc3ed8ba944ec3699e5b"
+        },
+        "results/global_rational_certificate_checks01/source_bindings.json": {
+          "bytes": 1125,
+          "sha256": "651bb0ed8b0b91d5b173ff78163472fd0da8fc8b9e242e4d651da1519e717344"
+        },
+        "results/global_rational_certificate_checks01_monitor.json": {
+          "bytes": 3023,
+          "sha256": "75bc65530db1d68e32ec89f01246cfab50354f9407e7db4e69745f7d47dd7008"
+        }
+      },
+      "id": "global_rational_certificate_checks01",
+      "monitor": "results/global_rational_certificate_checks01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED",
+      "peak_process_tree_rss_bytes": 90963968,
+      "reported_status": "RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED",
+      "result": "results/global_rational_certificate_checks01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 0.4,
+      "files": {
+        "results/global_rational_certificate_checks02/result.json": {
+          "bytes": 1702,
+          "sha256": "4d0cca42262132e1ad51f223c9905786cf207a40e30a2dc855e79438fbbbe8d8"
+        },
+        "results/global_rational_certificate_checks02/source_bindings.json": {
+          "bytes": 1125,
+          "sha256": "e9ce0547bb9188c5ec42436805b2ed306f27961c2320eab096c61b207a1e7621"
+        },
+        "results/global_rational_certificate_checks02_monitor.json": {
+          "bytes": 3093,
+          "sha256": "a220b3051ad0c871cc4e254a7fb868a13a601df96dcce37f3b782d9c6ad3a6db"
+        }
+      },
+      "id": "global_rational_certificate_checks02",
+      "monitor": "results/global_rational_certificate_checks02_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED",
+      "peak_process_tree_rss_bytes": 91389952,
+      "reported_status": "RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED",
+      "result": "results/global_rational_certificate_checks02/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "actual_wrapper_exit_code": 1,
+      "files": {
+        "results/global_rational_certificate_prepare01/progress.jsonl": {
+          "bytes": 1047,
+          "sha256": "0e477c99c24d890f19af297f3cdee5f82c58fd4044d4c95303f77c009141c999"
+        },
+        "results/global_rational_certificate_prepare01/result.json": {
+          "bytes": 1030,
+          "sha256": "ba893ae641b9571861a6d8fc56017aef4def7c0c7aea3f40c1ffab713808b317"
+        },
+        "results/global_rational_certificate_prepare01/source_bindings.json": {
+          "bytes": 1944,
+          "sha256": "426b19526579a1b0bc499043040de8036b083e8c19c08a403cd4ef5c5d9be3fa"
+        }
+      },
+      "full_runtime_or_peak_RSS_not_available": true,
+      "id": "global_rational_certificate_prepare01",
+      "original_feasibility_claimed": false,
+      "outcome": "EXACT_RECONSTRUCTION_FILL_GUARD_REACHED_NOT_SOLVER_READY",
+      "reported_status": "EXACT_RECONSTRUCTION_FILL_GUARD_REACHED_NOT_SOLVER_READY",
+      "result": "results/global_rational_certificate_prepare01/result.json",
+      "wrapper_PASS_claimed": false
+    },
+    {
+      "elapsed_seconds": 0.552,
+      "files": {
+        "results/global_rational_certificate_checks03/result.json": {
+          "bytes": 1755,
+          "sha256": "a86ef937b09fd12a7dbe453a171a67667a88f301b4057c3c0a2b29d57e21524c"
+        },
+        "results/global_rational_certificate_checks03/source_bindings.json": {
+          "bytes": 1126,
+          "sha256": "e074ca1386cab2db257ba1d85c31409443da0a133fed1ac67f6e52a9fe541661"
+        },
+        "results/global_rational_certificate_checks03_monitor.json": {
+          "bytes": 3148,
+          "sha256": "b4cbedbb72d3d73571c657e314367d0c52c54fdfd74941a855c694c02c1f7500"
+        }
+      },
+      "id": "global_rational_certificate_checks03",
+      "monitor": "results/global_rational_certificate_checks03_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED",
+      "peak_process_tree_rss_bytes": 91111424,
+      "reported_status": "RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED",
+      "result": "results/global_rational_certificate_checks03/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 143.782,
+      "files": {
+        "results/global_rational_certificate_prepare02/A.npz": {
+          "bytes": 8925088,
+          "sha256": "d3ed21da0d850e9b6ed266ad247d87ca6fb1d3ccf6312488bfeef10b35b7e131"
+        },
+        "results/global_rational_certificate_prepare02/elimination.json": {
+          "bytes": 3775596,
+          "sha256": "74be49f96a30df84c692eb7a32114d49662dcb1f095a6384ec87f48af640dfcb"
+        },
+        "results/global_rational_certificate_prepare02/free.npz": {
+          "bytes": 455076,
+          "sha256": "4d490715fe68ee87745d6ffd59e881d3229680d09c2469f4ef357987c932536f"
+        },
+        "results/global_rational_certificate_prepare02/layout.json": {
+          "bytes": 34438,
+          "sha256": "80000d00ae88669bed670d109118b8aa1698072129168b63a60ca265adf4bb4c"
+        },
+        "results/global_rational_certificate_prepare02/progress.jsonl": {
+          "bytes": 1669,
+          "sha256": "e1e502065d451fbee610b441e4386eee7cea7e7adad614bc8a65c41d2c8bb0b6"
+        },
+        "results/global_rational_certificate_prepare02/residual.exact.json.gz": {
+          "bytes": 114,
+          "sha256": "84e46d723e3ba5f8da2e7d84a11f572397b45b43324c48e0cad84708a6af6055"
+        },
+        "results/global_rational_certificate_prepare02/result.json": {
+          "bytes": 4838,
+          "sha256": "bf0d83ac5bcfa50370425602fc5ab23722bb3e5b43f309e602295f4a551afedd"
+        },
+        "results/global_rational_certificate_prepare02/source_bindings.json": {
+          "bytes": 1945,
+          "sha256": "c417824d8d9cc7acdd1e1104f22615fde231a34b9a6e75dfe98ebf23bc84407d"
+        },
+        "results/global_rational_certificate_prepare02/substitutions.exact.json.gz": {
+          "bytes": 18655763,
+          "sha256": "776d16e247da780c10fe9ec98055fb028aae929a3aac91e05dcdef7abcf39dd8"
+        },
+        "results/global_rational_certificate_prepare02/vectors.npz": {
+          "bytes": 5575,
+          "sha256": "0fa22b0c9b38019a480e23838d543d12482b687fa16e12d72e9d5912e2399209"
+        },
+        "results/global_rational_certificate_prepare02_monitor.json": {
+          "bytes": 5106,
+          "sha256": "9868c2b71138edd5c9dad5a7e924b97204f58005ef87b4f0d54a5db054c1a2f5"
+        }
+      },
+      "id": "global_rational_certificate_prepare02",
+      "monitor": "results/global_rational_certificate_prepare02_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RATIONAL_CERTIFICATE_REDUCTION_REQUIRES_SEPARATE_REPLAY",
+      "peak_process_tree_rss_bytes": 2636496896,
+      "reported_status": "RATIONAL_CERTIFICATE_REDUCTION_REQUIRES_SEPARATE_REPLAY",
+      "result": "results/global_rational_certificate_prepare02/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 102.976,
+      "files": {
+        "results/global_rational_certificate_replay01/progress.jsonl": {
+          "bytes": 625,
+          "sha256": "05dd7598251e4c6bb06e1b6c304b824bfae4e47cf0909002782637ecadaf57f2"
+        },
+        "results/global_rational_certificate_replay01/result.json": {
+          "bytes": 6463,
+          "sha256": "df69b223fd72b79f5962e67826146676b9c1c261ae23740beb27059739b58094"
+        },
+        "results/global_rational_certificate_replay01/source_bindings.json": {
+          "bytes": 3340,
+          "sha256": "ea574cee58bee42db56f8f568df4714dbc01d08a939b6c714dea5fcf89472d1e"
+        },
+        "results/global_rational_certificate_replay01_monitor.json": {
+          "bytes": 5343,
+          "sha256": "1365adaacccbdc649a500ee5ddcad093fdab394413ede864b2ca43bea30f455b"
+        }
+      },
+      "id": "global_rational_certificate_replay01",
+      "monitor": "results/global_rational_certificate_replay01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RATIONAL_CERTIFICATE_REDUCTION_AND_ALL_EQUATIONS_VERIFIED",
+      "peak_process_tree_rss_bytes": 3475914752,
+      "reported_status": "RATIONAL_CERTIFICATE_REDUCTION_AND_ALL_EQUATIONS_VERIFIED",
+      "result": "results/global_rational_certificate_replay01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 30.244,
+      "files": {
+        "results/global_clarabel_exact_ray_diagnosis01/result.json": {
+          "bytes": 7299,
+          "sha256": "a6a5688fa277b0555ec8b8b6ff046af823333b41ed8be9a428c34d252db6ada4"
+        },
+        "results/global_clarabel_exact_ray_diagnosis01/source_bindings.json": {
+          "bytes": 2470,
+          "sha256": "4780042fc01c4eea921e678fd11c2b2bc002bf9ae7cb8f3224607cf08488f7c1"
+        },
+        "results/global_clarabel_exact_ray_diagnosis01_monitor.json": {
+          "bytes": 7499,
+          "sha256": "e0bcbc9af21449933e989b7c2c518087fa1302bfdfbce97f708fc3baa51a9e98"
+        }
+      },
+      "id": "global_clarabel_exact_ray_diagnosis01",
+      "monitor": "results/global_clarabel_exact_ray_diagnosis01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "APPROXIMATE_RAY_EXACT_SCALAR_RESIDUALS_DIAGNOSED",
+      "peak_process_tree_rss_bytes": 2057486336,
+      "reported_status": "APPROXIMATE_RAY_EXACT_SCALAR_RESIDUALS_DIAGNOSED",
+      "result": "results/global_clarabel_exact_ray_diagnosis01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 0.355,
+      "files": {
+        "results/global_rational_certificate_balance_checks01/result.json": {
+          "bytes": 1115,
+          "sha256": "015e581fc36ca1f2466271f2879a28ea26ad890362ba428d48d5194deccf3ad2"
+        },
+        "results/global_rational_certificate_balance_checks01/source_bindings.json": {
+          "bytes": 746,
+          "sha256": "8e2b3b429a74f8a74118fcd2a63d8f2a6678f272d8c8886058c8bb08e2919baf"
+        },
+        "results/global_rational_certificate_balance_checks01_monitor.json": {
+          "bytes": 2913,
+          "sha256": "013f382b0d0f507e78f4560d9a5f1612b98569ee668aa43710bd24f79f0ae604"
+        }
+      },
+      "id": "global_rational_certificate_balance_checks01",
+      "monitor": "results/global_rational_certificate_balance_checks01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RATIONAL_NORMALIZATION_BALANCE_FIXTURES_VERIFIED",
+      "peak_process_tree_rss_bytes": 89423872,
+      "reported_status": "RATIONAL_NORMALIZATION_BALANCE_FIXTURES_VERIFIED",
+      "result": "results/global_rational_certificate_balance_checks01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 4.014,
+      "files": {
+        "results/global_rational_certificate_ready01/A.npz": {
+          "bytes": 8925082,
+          "sha256": "328ac6a2325876d7db16059bba42843f44528f99c5f560eb0aa32be314a4484c"
+        },
+        "results/global_rational_certificate_ready01/layout.json": {
+          "bytes": 34438,
+          "sha256": "80000d00ae88669bed670d109118b8aa1698072129168b63a60ca265adf4bb4c"
+        },
+        "results/global_rational_certificate_ready01/result.json": {
+          "bytes": 4200,
+          "sha256": "1c4883b3c0cd173411a74584eda7c04cdb632364f4a9a97550adc1b83b8990bd"
+        },
+        "results/global_rational_certificate_ready01/source_bindings.json": {
+          "bytes": 2310,
+          "sha256": "b0231f547d68d01f96ac4c203137ce92447b627d87ede03674d78c781ff234b4"
+        },
+        "results/global_rational_certificate_ready01/units.exact.json": {
+          "bytes": 575,
+          "sha256": "c45fcab96d7e2674b8519f910d3af3fa9b6f342964f084479b8aecb6bd1e3c87"
+        },
+        "results/global_rational_certificate_ready01/vectors.npz": {
+          "bytes": 5571,
+          "sha256": "426df2f602080e56b6f40e02c1f15c8ce89361a8f63542bdc5e9c889a081ee0f"
+        },
+        "results/global_rational_certificate_ready01_monitor.json": {
+          "bytes": 4087,
+          "sha256": "d19aaad07f6ff8d4d1cbf60516cf905433fc931f1bda527f755f89fd0ad72990"
+        }
+      },
+      "id": "global_rational_certificate_ready01",
+      "monitor": "results/global_rational_certificate_ready01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RATIONAL_CERTIFICATE_POSITIVE_UNITS_VERIFIED_SOLVER_READY",
+      "peak_process_tree_rss_bytes": 844546048,
+      "reported_status": "RATIONAL_CERTIFICATE_POSITIVE_UNITS_VERIFIED_SOLVER_READY",
+      "result": "results/global_rational_certificate_ready01/result.json",
       "wrapper_PASS_claimed": true
     }
   ],

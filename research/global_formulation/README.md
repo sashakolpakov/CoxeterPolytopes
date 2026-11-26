@@ -88,9 +88,11 @@ The last row concerns the normalized certificate problem
 `A^T y = 0, b^T y = -1, y in K*`, for an original problem `Ax + s = b, s in K`.
 A feasible certificate would exclude the original problem. Infeasibility of the
 certificate search is a different statement. The returned ray gives a candidate
-for a compressed primal problem; its [exact check](../../results/global_clarabel_certificate_ray_check01/result.json)
+for a compressed primal problem; its [exact rounding attempts](../../results/global_clarabel_certificate_ray_check01/result.json)
 and [scalar polishing attempts](../../results/global_clarabel_certificate_ray_polish02/result.json)
-failed at `uniform_two_unit_triangle_cover0`. Even an exact compressed point
+did not produce an exact point. This does not disprove the numerical infeasibility
+classification. `PrimalInfeasible` and `NumericalError` are separate native statuses.
+Even an exact compressed point
 would require a separate lift and check before establishing feasibility of the
 full original SDP. No exact feasibility or infeasibility decision, cutoff, or
 geometric bound follows from these numerical statuses.
@@ -103,6 +105,55 @@ candidate, but its cones and proposed Farkas completion failed.
 The [earlier representation audit](../../results/global_edge_closure_representation_audit01/result.json)
 motivated the replacement pipeline. Its old large numerical representations have
 been removed; compact execution records remain historical evidence.
+
+## Rational certificate reduction and the saved ray
+
+The [rational reduction record](../../results/global_rational_certificate_completion_20261126.json)
+adds an exact reduction of the certificate equalities, after the proved dual-face
+reduction. It uses actual symmetric-matrix entries and the trace factor two;
+there are no svec square roots in the exact arithmetic. Clearing denominators
+and removing integer content gives primitive integer equations.
+
+The [separate replay](../../results/global_rational_certificate_replay01/result.json)
+checks all source equalities and the complete reconstruction map:
+
+| Quantity | Before | After |
+| --- | ---: | ---: |
+| Nonzero certificate equalities | 61,514 | 1 |
+| Certificate variables | 361,652 | 300,139 |
+| Largest denominator, in bits | 205 | 203 in the reconstruction map |
+
+The remaining normalization has nine terms, including its constant. All scalar
+and PSD cones are retained through the exact map. The largest primitive integer
+coefficient has 261 bits. Selecting scalar columns that occur in only one
+original equation prevents substitution into other equations and bounds map
+size by the source coefficient count. The earlier cascading attempt hit its
+[15-million-term guard](../../results/global_rational_certificate_prepare01/result.json);
+it is retained as an unsuccessful preparation record and authorizes no solve.
+
+The [balanced export](../../results/global_rational_certificate_ready01/result.json)
+uses the exact positive unit `62,500,000` for the free variables and the entire
+homogeneous cone. Dividing the normalization by `125,000,000,000` gives right
+side `-1` and maximum absolute coefficient `1`. All homogeneous cone coefficients
+remain unchanged. This is a change of units, with an exact inverse, and preserves
+certificate feasibility. No new solver run is claimed for this export.
+
+The [saved-ray diagnosis](../../results/global_clarabel_exact_ray_diagnosis01/result.json)
+evaluates the binary64 values as exact rationals, before decimal-grid rounding.
+The derived compressed point has 2,726 negative scalar rows. Its triangle-cover
+value is about `-1.5695e-10`; the worst scalar value is about `-7.1896e-9`, or
+7.44% of that row's absolute term sum. Thus the saved ray needs refinement or
+structured reconstruction. Its exact interpretation already violates necessary
+scalar conditions, while the truth of Clarabel's infeasibility classification
+remains undecided. Finer decimal grids of the same binary64 output do not add
+solver precision.
+
+For reconstruction, [Dostert–de Laat–Moustrou, Section 3](https://optimization-online.org/wp-content/uploads/2020/01/7553.pdf)
+combine exact affine projection with kernel recognition, including quadratic
+fields. The rational constraint parametrization remains valid over real number
+fields. No field has been identified from this saved ray, and no number-field
+certificate has yet been computed. Candidate kernel relations may guide rounding;
+they require a separate proof before becoming constraints on every feasible point.
 
 ## Constraint and solver workflow
 
@@ -148,6 +199,13 @@ explicit `--unreduced-certificate-diagnostic` exception is for comparison only.
 The [encoding and gate checks](../../results/global_conic_backend_production_gate_checks03/result.json)
 cover signs, both PSD triangle orders, off-diagonal trace multiplicity, known
 feasible and infeasible fixtures, and rejection of missing facial proofs.
+
+Continue the explicit certificate path with
+`scripts/reduce_certificate_rational_20261126.py prepare` and a separate `verify`,
+then `scripts/balance_rational_certificate_20261126.py export`. Each export binds
+the prior proof replay and checks its source and artifact hashes. These steps
+change the representation of the certificate problem; they add no geometric
+restriction and do not alter the frozen necessary-data model.
 
 Every scientific command runs under the shared lock and the monitored runner in
 [AGENTS.md](../../AGENTS.md), with fresh output and ledger names. For example:

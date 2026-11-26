@@ -1,0 +1,60 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/reduce_certificate_rational_20261126.py",
+    "check",
+    "--output",
+    "results/global_rational_certificate_checks02"
+  ],
+  "elapsed_seconds": 0.4,
+  "peak_process_tree_rss_bytes": 91389952,
+  "initial_resources": {
+    "free_disk_gib": 318.45,
+    "available_memory_gib": 8.21,
+    "disk_free_bytes": 341928779776,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 8819408896,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 34.378171,
+    "available_memory_percent": 34.223811,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 481,
+  "stdout": "{\"status\": \"RATIONAL_CERTIFICATE_ELIMINATION_FIXTURES_VERIFIED\", \"primitive_integer_rows\": true, \"triangular_back_substitution_checked\": true, \"non_leaf_pivot_rejected\": true, \"coupled_residual_retained\": true, \"rational_trace_factor_two_and_numerical_svec_factor_checked\": true, \"numerical_affine_encoding_checked\": true, \"elapsed_seconds\": 0.15102779190056026, \"accepted_bounds_changed\": false, \"geometric_constraints_changed\": false, \"original_feasibility_status\": \"UNDECIDED\"}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "a7182535c837364a577858e8bba169c7172c1dface91f81836219263a884a13d",
+  "lock_owner": "wrapper"
+}

@@ -1,0 +1,143 @@
+{
+  "accepted_bounds_unchanged": [
+    57,
+    17,
+    15
+  ],
+  "actual_attempt_ids": [
+    "global_rational_certificate_checks01",
+    "global_rational_certificate_checks02",
+    "global_rational_certificate_prepare01",
+    "global_rational_certificate_checks03",
+    "global_rational_certificate_prepare02",
+    "global_rational_certificate_replay01",
+    "global_clarabel_exact_ray_diagnosis01",
+    "global_rational_certificate_balance_checks01",
+    "global_rational_certificate_ready01"
+  ],
+  "all_26_feature_coefficients_remain_free": true,
+  "balanced_export": {
+    "global_free_variable_scale": "62500000",
+    "homogeneous_cone_coefficients_unchanged": true,
+    "inverse_units_and_positive_cone_scaling_verified": true,
+    "matrix_shape": [
+      361653,
+      300139
+    ],
+    "maximum_absolute_normalization_coefficient": 1.0,
+    "new_solver_run_performed_on_this_export": false,
+    "normalization_divisor": "125000000000",
+    "normalization_right_side": -1.0,
+    "result": "results/global_rational_certificate_ready01/result.json",
+    "sparse_nonzeros": 5470492,
+    "status": "RATIONAL_CERTIFICATE_POSITIVE_UNITS_VERIFIED_SOLVER_READY"
+  },
+  "date": "2026-11-26",
+  "exact_model_sha256": "3f0eda6f4fff98a923d799d4ff5d3c2156d7b439280ae25283117672156756f0",
+  "field_reconstruction": {
+    "a_particular_certificate_field_identified": false,
+    "candidate_kernel_relations_are_not_universal_constraints_without_proof": true,
+    "new_number_field_certificate_computed": false,
+    "rational_parametrization_remains_valid_over_real_number_fields": true,
+    "reference": {
+      "accessible_preprint": "https://optimization-online.org/wp-content/uploads/2020/01/7553.pdf",
+      "authors": "Maria Dostert, David de Laat, Philippe Moustrou",
+      "doi": "10.1137/20M1351692",
+      "section": "3",
+      "title": "Exact semidefinite programming bounds for packing problems"
+    }
+  },
+  "geometric_constraints_changed": false,
+  "guarded_attempt": {
+    "full_runtime_or_peak_RSS_not_available": true,
+    "limit_terms": 15000000,
+    "new_default_avoids_cascading_expansion": true,
+    "result": "results/global_rational_certificate_prepare01/result.json",
+    "status": "EXACT_RECONSTRUCTION_FILL_GUARD_REACHED_NOT_SOLVER_READY",
+    "wrapper_PASS_claimed": false
+  },
+  "meaning_of_unsuccessful_reconstruction": {
+    "classified_problem": "Certificate feasibility on the verified dual face",
+    "evaluated_as": "Each saved binary64 ray component is converted exactly; division by the saved normalizer is then performed over Q.",
+    "exact_binary64_ray_diagnosis": "results/global_clarabel_exact_ray_diagnosis01/result.json",
+    "failure_scope": "The literal saved ray and the tested reconstructions provide no exact separator. This does not refute infeasibility of the certificate problem.",
+    "native_status": "PrimalInfeasible",
+    "native_status_is_not_NumericalError": true,
+    "negative_scalar_rows": 2726,
+    "numerical_classification_disproved_by_this_check": false,
+    "precision_limit": "Different decimal grids of the same binary64 output do not add solver precision.",
+    "saved_values_are_an_exact_certificate": false,
+    "triangle_cover_exact_value": "-116880934675289265778131465627/744698304873129879409786880000000000000",
+    "triangle_cover_float": -1.5695071938588825e-10,
+    "worst_scalar_relative_to_absolute_term_sum": 0.074431858030912,
+    "worst_scalar_value": -7.1896429114824304e-09
+  },
+  "new_exact_feasible_point_obtained": false,
+  "new_exact_infeasibility_certificate_obtained": false,
+  "no_new_solver_or_geometric_bound_claimed": true,
+  "normalized_certificate_feasibility_status": "UNDECIDED",
+  "original_feasibility_status": "UNDECIDED",
+  "prior_diagnosis": "results/global_solver_diagnosis_completion_20261126.json",
+  "rational_reduction_publication_hygiene_20261126": {
+    "final_index_must_be_audited_again": true,
+    "index_files": 33981,
+    "issues": [],
+    "observed_peak_group_rss_bytes": 220020736,
+    "path_and_blob_list_sha256": "def2ec8f2aee9502bedf3540a9aa54f18e742005cf471be7945eb66cdcb9265c",
+    "receipt": "results/global_rational_certificate_public_index_audit_20261126.txt",
+    "scope": "Actual Git index before adding this audit receipt and its summary"
+  },
+  "reduction": {
+    "affine_solution_dimension": 300138,
+    "all_source_equalities_and_exported_entries_checked": true,
+    "arithmetic_field": "Q; actual matrix entries with off-diagonal trace factor two",
+    "certificate_feasibility_preserved": true,
+    "coefficient_growth": "Reconstruction denominator maximum is 203 bits; source maximum was 205 bits.",
+    "eliminated_equations": 61513,
+    "exact_nonzero_equality_rank": 61514,
+    "further_conic_redundancy_or_minimal_face_claimed": false,
+    "method": "Clear each row over Q, divide integer content, and eliminate only original degree-one scalar columns. Retain coupled normalization explicitly.",
+    "original_primal_feasibility_equivalence_claimed": false,
+    "preparation": "results/global_rational_certificate_prepare02/result.json",
+    "primitive_integer_heights": {
+      "maximum_denominator_bits": 1,
+      "maximum_numerator_bits": 261,
+      "maximum_row_terms": 9752,
+      "nonzero_coefficients": 5231867
+    },
+    "rank_argument": "The 61,513 selected scalar columns occur in only one original row each; the one residual equation has a nonzero free-coordinate coefficient.",
+    "reconstruction_heights": {
+      "maximum_denominator_bits": 203,
+      "maximum_numerator_bits": 170,
+      "maximum_row_terms": 9751,
+      "nonzero_coefficients": 5170345
+    },
+    "reduced_certificate_variables": 300139,
+    "remaining_equations": 1,
+    "replay_status": "RATIONAL_CERTIFICATE_REDUCTION_AND_ALL_EQUATIONS_VERIFIED",
+    "residual_heights": {
+      "maximum_denominator_bits": 1,
+      "maximum_numerator_bits": 37,
+      "maximum_row_terms": 9,
+      "nonzero_coefficients": 9
+    },
+    "retained_PSD_blocks": 4844,
+    "retained_scalar_cones": 284305,
+    "scalar_and_PSD_cones_retained_through_exact_map": true,
+    "separate_replay": "results/global_rational_certificate_replay01/result.json",
+    "source_certificate_variables": 361652,
+    "source_equations": 61788,
+    "source_nonzero_equations": 61514,
+    "source_rational_heights": {
+      "maximum_denominator_bits": 205,
+      "maximum_numerator_bits": 173,
+      "maximum_row_terms": 9752,
+      "nonzero_coefficients": 5231867
+    }
+  },
+  "schema": "rational-certificate-reduction-v1",
+  "scope": "Exact parametrization of the normalized certificate search on the previously proved dual face.",
+  "source_bound_geometric_review_complete": false,
+  "source_native_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+  "status": "RATIONAL_REDUCTION_REPLAY_AND_POSITIVE_UNITS_VERIFIED_ORIGINAL_FEASIBILITY_UNDECIDED"
+}

@@ -103,6 +103,28 @@ separate serial jobs:
    exception, not the production path. Source or model changes require new
    matching preparation/replay records.
 
+10. Reduce the certificate equalities over Q with
+    `scripts/reduce_certificate_rational_20261126.py prepare`, supplying the
+    exact prepared source, numerical encoding and separate dual-face replay.
+    Use actual matrix entries and off-diagonal trace multiplicity two. Clear
+    each equality's denominators and divide its integer content. The default
+    eliminates only scalar columns occurring in one original equation, so
+    reconstruction cannot fill other equations. Preserve any coupled core.
+    Record numerator and denominator bit lengths, total map terms and surviving
+    equations. A growth guard stops preparation; it does not authorize a solver.
+11. Run the same script with `verify --prepared Q_MODEL` in a separate batch.
+    Replay the triangular witnesses, check every source equation over Q, compare
+    the full rational reconstruction, and check every exported numerical entry.
+    This is equivalence of certificate feasibility. It neither decides that
+    problem nor proves feasibility of the original necessary-data model.
+12. For the current homogeneous model with one remaining normalization, run
+    `scripts/balance_rational_certificate_20261126.py export --prepared Q_MODEL
+    --verified Q_REPLAY/result.json`. This verifies the exact homogeneous
+    reconstruction and uses positive units to balance the normalization. Keep
+    its inverse when interpreting solver variables and infeasibility rays.
+    Do not silently reuse the old native SDPA layout or its common-margin role
+    for this explicit certificate problem.
+
 A time or memory limit never means convergence. Incomplete preparation cannot
 authorize a run. Starting arrays need the correct shape and numerically positive
 definite cones; native output must actually report all four full-precision formats.
@@ -142,6 +164,22 @@ feasible point. `scripts/check_reduced_certificate_result_20261126.py` performs
 the compressed check and explicitly leaves the original decision open. Its
 optional scalar polishing imposes restrictions on a candidate point only;
 failure of those restrictions proves nothing about the necessary-data model.
+
+Distinguish an unsuccessful reconstruction from a refuted solver classification.
+`PrimalInfeasible` is a numerical infeasibility conclusion; `NumericalError` is a
+separate status. Check the saved binary64 ray in exact source coefficients before
+blaming rational rounding. Report scalar violations relative to their row's
+absolute term sum as well as global residuals. Increasing the decimal grid for
+the same saved binary64 values adds no solver precision. Record actual arithmetic
+precision, solver tolerances and positive units in every refinement run.
+
+Keep exact constraint reduction separate from certificate-field selection. A
+Q-coefficient parametrization works over any chosen real extension. Recovering
+kernel relations over Q or a justified number field can guide a new candidate;
+final verification needs exact identities and PSD checks at the specified real
+embedding. Such candidate relations are not universal constraints unless proved
+independently. No rational or quadratic feasible point is guaranteed merely
+because the input coefficients are rational.
 
 Retain scientific inputs, proof chains, current solver input and exact certificates.
 Keep compact failure receipts, with watchdog completion separate from mathematical
