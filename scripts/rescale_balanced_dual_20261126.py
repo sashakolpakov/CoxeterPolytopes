@@ -30,23 +30,35 @@ def rescale(data,layout):
     import numpy as np
     if layout['zero_cones']:raise ValueError('This cone rescaling handles the explicit dual with no equalities')
     A=data['A'].tocsr();envelope=np.maximum(np.asarray(abs(A).max(axis=1).toarray()).ravel(),np.abs(data['b']))
-    exponents=np.zeros(A.shape[0],dtype=np.int64);diagonals=[]
+    exponents=np.zeros(A.shape[0],dtype=np.int64)
+    diagonals=[[0]*n for n in layout['PSD_sizes']]
     def scalar_exponent(value):return 0 if not value else -math.ceil(math.log2(value))
-    for r in range(layout['scalar_cones']):exponents[r]=scalar_exponent(envelope[r])
-    base=layout['scalar_cones']
-    for n in layout['PSD_sizes']:
-        i,j=np.triu_indices(n)
-        diagonal_rows=base+np.flatnonzero(i==j)
-        d=[0 if not envelope[r] else -round(.5*math.log2(envelope[r])) for r in diagonal_rows]
-        diagonals.append(d)
-        exponents[base:base+len(i)]=np.asarray(d)[i]+np.asarray(d)[j]
-        base+=len(i)
+    def matrix_row_envelopes(values):
+        all_rows=list(values[:layout['scalar_cones']]);base=layout['scalar_cones']
+        for n in layout['PSD_sizes']:
+            i,j=np.triu_indices(n);M=np.zeros((n,n));M[i,j]=values[base:base+len(i)];M[j,i]=M[i,j]
+            all_rows.extend(np.max(M,axis=1));base+=len(i)
+        return np.asarray(all_rows)
+    transformed=A.copy();rhs=data['b'].copy();rounds=0
+    for turn in range(12):
+        current=np.maximum(np.asarray(abs(transformed).max(axis=1).toarray()).ravel(),np.abs(rhs))
+        physical=matrix_row_envelopes(current);positive=physical[physical>0]
+        if np.min(positive)>=.5 and np.max(positive)<=2:break
+        increment=np.zeros(A.shape[0],dtype=np.int64)
+        for r in range(layout['scalar_cones']):increment[r]=scalar_exponent(current[r])
+        base=layout['scalar_cones']
+        for block,n in enumerate(layout['PSD_sizes']):
+            i,j=np.triu_indices(n);M=np.zeros((n,n));M[i,j]=current[base:base+len(i)];M[j,i]=M[i,j]
+            maximum=np.max(M,axis=1)
+            d=np.array([0 if not v else -round(.5*math.log2(v)) for v in maximum],dtype=np.int64)
+            diagonals[block]=[a+int(b) for a,b in zip(diagonals[block],d,strict=True)]
+            increment[base:base+len(i)]=d[i]+d[j];base+=len(i)
+        exponents+=increment;rounds+=1
+        transformed.data=np.ldexp(A.data,np.repeat(exponents,np.diff(A.indptr)))
+        rhs=np.ldexp(data['b'],exponents)
     if base!=len(exponents) or np.max(np.abs(exponents))>900:raise ValueError('Unsafe cone unit exponent')
     units=np.ldexp(np.ones(len(exponents)),exponents)
-    transformed=A.copy()
     entry_exponents=np.repeat(exponents,np.diff(A.indptr))
-    transformed.data=np.ldexp(A.data,entry_exponents)
-    rhs=np.ldexp(data['b'],exponents)
     if (not np.isfinite(transformed.data).all() or not np.isfinite(rhs).all()
             or not np.array_equal(np.ldexp(transformed.data,-entry_exponents),A.data)
             or not np.array_equal(np.ldexp(rhs,-exponents),data['b'])):
@@ -55,6 +67,9 @@ def rescale(data,layout):
     # exponent of the positive diagonal congruence diag(2^d_i) M diag(2^d_i).
     if not np.all(units>0):raise ValueError('A cone unit is not positive')
     after=np.maximum(np.asarray(abs(transformed).max(axis=1).toarray()).ravel(),np.abs(rhs))
+    physical_after=matrix_row_envelopes(after)
+    if np.min(physical_after[physical_after>0])<.5 or np.max(physical_after)>2:
+        raise ValueError('Cone row units have not reached the numerical readiness range')
     proof=dict(scalar_positive_units_verified=True,PSD_positive_diagonal_congruences_verified=True,
         dyadic_numeric_inverse_verified_for_every_entry=True,coefficients_removed_by_tolerance=0,
         scalar_cone_exponents=exponents[:layout['scalar_cones']].tolist(),PSD_diagonal_exponents=diagonals,
@@ -62,6 +77,10 @@ def rescale(data,layout):
         smallest_output_positive_row_envelope=float(np.min(after[after>0])),
         maximum_output_coefficient=float(np.max(np.abs(transformed.data))),
         minimum_row_exponent=int(np.min(exponents)),maximum_row_exponent=int(np.max(exponents)))
+    proof.update(congruence_rounds=rounds,
+        minimum_positive_scalar_or_PSD_matrix_row_envelope=float(np.min(physical_after[physical_after>0])),
+        maximum_scalar_or_PSD_matrix_row_envelope=float(np.max(physical_after)),
+        PSD_row_maxima_used_instead_of_diagonals_only=True)
     return dict(A=transformed.tocsc(),b=rhs,c=data['c'].copy()),exponents,proof
 
 
