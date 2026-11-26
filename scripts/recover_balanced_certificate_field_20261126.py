@@ -15,7 +15,7 @@ import time
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from research.global_formulation import conic, conic_backend as backend, field_rounding as rounding, solver_gate
 from scripts.solve_balanced_certificate_20261126 import verified_balanced_model
-from scripts.search_balanced_dual_field_20261126 import checked_model, proposals, save_point
+from scripts.search_balanced_dual_field_20261126 import checked_model, checked_cone_units, proposals, save_point
 
 
 def homogeneous_forms(rational,field):
@@ -35,22 +35,36 @@ def homogeneous_forms(rational,field):
     return forms,free
 
 
-def normalize(point,field,units,free):
+def dyadic(field,e):return field.Q(1<<int(e)) if e>=0 else field.Q(1,1<<int(-e))
+
+
+def normalize(point,field,units,free,free_exponents=None):
     inverse={int(col):i for i,col in enumerate(free)}
     row={int(col):field.Q(c) for col,c in units['source_normalization'].items()}
     largest=max(abs(c) for col,c in row.items() if col>=0)
     value=field.zero
     for col,c in row.items():
-        if col>=0:value=field.add(value,field.scale(c/largest,point[inverse[col]]))
+        if col>=0:
+            k=inverse[col];weight=field.Q(1) if free_exponents is None else dyadic(field,free_exponents[k])
+            value=field.add(value,field.scale(c*weight/largest,point[k]))
     if field.sign(value)>=0:raise ValueError('The homogeneous point has no negative normalization')
     factor=field.div(field.neg(field.one),value)
     if field.sign(factor)<=0:raise ValueError('Normalization must preserve the PSD cones')
     result=[field.mul(factor,v) for v in point]
     checked=field.zero
     for col,c in row.items():
-        if col>=0:checked=field.add(checked,field.scale(c/largest,result[inverse[col]]))
+        if col>=0:
+            k=inverse[col];weight=field.Q(1) if free_exponents is None else dyadic(field,free_exponents[k])
+            checked=field.add(checked,field.scale(c*weight/largest,result[k]))
     if checked!=field.neg(field.one):raise ValueError('Exact normalization failed')
     return result,dict(positive_normalization_factor=field.text(factor),exact_normalization=-1)
+
+
+def transform_units(forms,free,exponents,field):
+    free_exponents=exponents[free]
+    for j,row in enumerate(forms):
+        for k in row:row[k]*=dyadic(field,int(free_exponents[k])-int(exponents[j]))
+    return free_exponents
 
 
 def source_adjoint(forms,point,field,exact_model,face,encoding,tau):
@@ -104,6 +118,7 @@ def main():
     parser.add_argument('--source-role',choices=['balanced-primal','explicit-dual-ray'],default='explicit-dual-ray')
     parser.add_argument('--candidate',type=Path)
     parser.add_argument('--fields',default='0,2,5')
+    parser.add_argument('--conditioned',type=Path)
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args();started=time.monotonic()
     paths=[Path(__file__),ROOT/'research/global_formulation/field_rounding.py',
@@ -116,6 +131,8 @@ def main():
         if args.action=='attempt':paths += [args.solver_output/'result.json',args.solver_output/'solution.npz']
         if args.action=='verify':paths += [args.candidate/'result.json',args.candidate/'field_point.exact.json.gz',
             args.exact_model,args.face/'embedding.npz',args.encoding/'layout.json']
+        if args.conditioned is not None:paths += [args.conditioned/'result.json',args.conditioned/'units.npz',
+            ROOT/'scripts/rescale_balanced_dual_20261126.py']
     def bindings():return {str(p):dict(bytes=p.stat().st_size,sha256=solver_gate.file_digest(p)) for p in paths}
     before=bindings();args.output.mkdir();conic.write_json(args.output/'source_bindings.json',before)
     def progress(**event):
@@ -149,13 +166,36 @@ def main():
         try:source_adjoint(q,[witness[0],witness[0]],f,source,face,encoding,f.Q(1))
         except ValueError:pass
         else:raise ValueError('A wrong field certificate normalization was accepted')
+        free=np.arange(3);exponents=np.array([-4,-1,2])
+        q=[{0:f.Q(1)},{1:f.Q(1)},{2:f.Q(1)}]
+        e=transform_units(q,free,exponents,f)
+        if q!=[{0:f.Q(1)},{1:f.Q(1)},{2:f.Q(1)}]:raise ValueError('Wrong inverse cone/free units')
+        v=[f.element(16),f.element(0,2),f.element('1/2')]
+        v,_=normalize(v,f,dict(source_normalization={'-1':'1','0':'-1'}),free,e)
+        restored=[f.scale(dyadic(f,x),y) for x,y in zip(e,v,strict=True)]
+        if restored!=[f.one,f.element(0,1),f.element(2)]:raise ValueError('Cone-unit field inverse failed')
         report=dict(status='HOMOGENEOUS_FIELD_CERTIFICATE_NORMALIZATION_FIXTURES_VERIFIED',
-            nonrational_Farkas_source_identity_checked=True,tampered_normalization_rejected=True)
+            nonrational_Farkas_source_identity_checked=True,tampered_normalization_rejected=True,
+            inverse_congruence_and_free_units_checked=True)
     else:
         data,layout,_,balanced=verified_balanced_model(args.balanced,args.native_input,args.preflight)
-        checked_model(args.dual_model,args.dual_verified)
+        dual_proof=checked_model(args.dual_model,args.dual_verified)
+        if Path(dual_proof['balanced_model']).resolve()!=args.balanced.resolve():
+            raise ValueError('The field certificate concerns a different balanced problem')
+        if args.action=='verify':
+            if solver_gate.file_digest(args.exact_model)!=balanced['exact_model_sha256']:
+                raise ValueError('The full Farkas check was given a different source model')
+            proved={str(Path(p).resolve()):row['sha256'] for p,row in dual_proof['source_bindings'].items()}
+            for path in [args.face/'embedding.npz',args.encoding/'layout.json']:
+                if proved.get(str(path.resolve()))!=solver_gate.file_digest(path):
+                    raise ValueError('A source face or cone layout differs from its exact replay')
         units=balanced['exact_units'];field=rounding.Field(0)
         forms,free=homogeneous_forms(args.rational,field)
+        exponents=None;free_exponents=None
+        if args.conditioned is not None and args.action=='attempt':
+            dual_data,dual_layout=backend.load_encoding(args.dual_model)
+            _,exponents=checked_cone_units(args.conditioned,dual_data,dual_layout,args.dual_model)
+            free_exponents=transform_units(forms,free,exponents,field)
         with gzip.open(args.dual_model/'blocks.json.gz','rt') as stream:blocks=json.load(stream)
         if args.action=='verify':
             recorded=json.loads((args.candidate/'result.json').read_text());path=args.candidate/'field_point.exact.json.gz'
@@ -172,21 +212,51 @@ def main():
         else:
             arrays=np.load(args.solver_output/'solution.npz',allow_pickle=False)
             native=json.loads((args.solver_output/'result.json').read_text())
-            if args.source_role=='balanced-primal':approximate=arrays['x']
+            if args.source_role=='balanced-primal':
+                approximate=arrays['x']
+                if free_exponents is not None:approximate=np.ldexp(approximate,-free_exponents)
+                raw_coordinates=approximate.copy();offdiag=np.zeros(len(free),dtype=bool)
             else:
                 values=arrays['y'].copy();base=layout['scalar_cones']
+                if exponents is not None:values=np.ldexp(values,-exponents)
+                raw_coordinates=values[free].copy();all_offdiag=np.zeros(len(values),dtype=bool)
                 for n in layout['PSD_sizes']:
-                    i,j=np.triu_indices(n);values[base:base+len(i)][i!=j]/=2**.5;base+=len(i)
+                    i,j=np.triu_indices(n)
+                    all_offdiag[base:base+len(i)]=i!=j
+                    values[base:base+len(i)][i!=j]/=2**.5;base+=len(i)
                 approximate=values[free]
+                offdiag=all_offdiag[free]
             if len(approximate)!=len(free) or not np.isfinite(approximate).all():raise ValueError('Incomplete field seed')
             cone_data=dict(A=data['A'][1:].tocsc(),b=data['b'][1:].copy(),c=data['c'])
+            if exponents is not None:
+                A=cone_data['A'].tocoo()
+                A.data=np.ldexp(A.data,free_exponents[A.col]-exponents[A.row])
+                cone_data['A']=A.tocsc()
+                cone_data['b']=np.ldexp(cone_data['b'],-exponents)
             report=dict(status='SOURCE_FIELD_CERTIFICATE_ATTEMPTS_NO_EXACT_CERTIFICATE',
                 source_role=args.source_role,native_status=native['native']['native_status'],attempts=[],exact_certificate_obtained=False)
             accepted=None
-            for denominator in [2**32,2**44,2**50]:
+            literal_modes=['exact_binary_rational_unpack']
+            if np.any(offdiag):literal_modes.append('exact_binary_Qsqrt2_unpack')
+            for mode in literal_modes:
+                field=rounding.Field(2 if mode.endswith('Qsqrt2_unpack') else 0)
+                root=F.from_float(2**.5);point=[]
+                for value,is_off in zip(raw_coordinates,offdiag,strict=True):
+                    a,b=float(value).as_integer_ratio();q=field.Q(a,b)
+                    if is_off and field.d:point.append((field.Q(0),q/2))
+                    elif is_off:point.append((q/field.Q(root.numerator,root.denominator),field.Q(0)))
+                    else:point.append((q,field.Q(0)))
+                try:
+                    point,norm=normalize(point,field,units,free,free_exponents)
+                    test=rounding.check_point(forms,blocks,point,field,progress)
+                except ValueError as error:test=dict(valid=False,reason=str(error))
+                report['attempts'].append(dict(method=mode,check=test))
+                progress(stage='literal_field_candidate_checked',method=mode,valid=test['valid'])
+                if test['valid']:accepted=(field,point,test);break
+            for denominator in ([] if accepted is not None else [2**32,2**44,2**50]):
                 field=rounding.Field(0);point=rounding.rational_point(approximate,field,denominator)
                 try:
-                    point,norm=normalize(point,field,units,free)
+                    point,norm=normalize(point,field,units,free,free_exponents)
                     test=rounding.check_point(forms,blocks,point,field,progress)
                 except ValueError as error:test=dict(valid=False,reason=str(error))
                 report['attempts'].append(dict(method='common_grid_and_positive_normalization',grid=denominator,check=test))
@@ -199,8 +269,8 @@ def main():
                         attempt=dict(method='field_kernel_projection',radicand=d,tolerance=tolerance,kernel_blocks=len(kernels),
                             scalar_equations=scalar,candidate_term_limit_reached=limited)
                         try:
-                            point,info=rounding.project(eqs,approximate,field,denominator=2**48)
-                            point,norm=normalize(point,field,units,free)
+                            point,info=rounding.project(eqs,approximate,field,denominator=2**48,progress=progress)
+                            point,norm=normalize(point,field,units,free,free_exponents)
                             test=rounding.check_point(forms,blocks,point,field,progress)
                             attempt.update(projection=info,normalization=norm,check=test)
                         except ValueError as error:test={'valid':False};attempt['candidate_failure']=str(error)
@@ -208,7 +278,10 @@ def main():
                         if test['valid']:accepted=(field,point,test);break
                     if accepted is not None:break
             if accepted is not None:
-                field,point,test=accepted;save_point(args.output/'field_point.exact.json.gz',point,field)
+                field,point,test=accepted
+                if free_exponents is not None:
+                    point=[field.scale(dyadic(field,e),v) for e,v in zip(free_exponents,point,strict=True)]
+                save_point(args.output/'field_point.exact.json.gz',point,field)
                 report.update(status='EXACT_SOURCE_FIELD_CERTIFICATE_CANDIDATE_REQUIRES_SEPARATE_REPLAY',
                     radicand=field.d,field_point_sha256=solver_gate.file_digest(args.output/'field_point.exact.json.gz'),
                     all_cones_checked=test,separate_replay_still_required=True)

@@ -185,14 +185,16 @@ def split_equations(equations,variables,field):
     return answer
 
 
-def project(equations,approximate,field,denominator=10**8,maximum_terms=12000000,maximum_bits=4096):
+def project(equations,approximate,field,denominator=10**8,maximum_terms=12000000,maximum_bits=4096,progress=None):
     """Sparse exact affine solve with pointwise triangular backsubstitution."""
     from collections import Counter
     Q=field.Q;variables=len(approximate)
     rows=split_equations(equations,variables,field)
     frequency=Counter(k for row in rows for k in row if k>=0)
     basis={};order=[];terms=0
-    for incoming in sorted(rows,key=len):
+    for count,incoming in enumerate(sorted(rows,key=len)):
+        if progress and count%10000==0:
+            progress(stage='exact_candidate_elimination',rows=count,rank=len(basis),basis_terms=terms)
         row=dict(incoming)
         while True:
             old=next((k for k in row if k in basis),None)

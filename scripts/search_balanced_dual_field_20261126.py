@@ -29,6 +29,26 @@ def checked_model(folder,replay):
     return verified
 
 
+def checked_cone_units(folder,original,layout,model):
+    import numpy as np
+    from scripts.rescale_balanced_dual_20261126 import rescale
+    receipt=json.loads((folder/'result.json').read_text())
+    if (receipt.get('status')!='DYADIC_EXPLICIT_DUAL_CONE_UNITS_VERIFIED_SOLVER_READY'
+            or receipt['source_model_result_sha256']!=solver_gate.file_digest(model/'result.json')):
+        raise ValueError('Missing or mismatched cone-unit proof')
+    for path,row in receipt['source_bindings'].items():
+        if solver_gate.file_digest(path)!=row['sha256']:raise ValueError('A cone-unit verifier source changed')
+    for name,h in receipt['encoding_file_sha256'].items():
+        if solver_gate.file_digest(folder/name)!=h:raise ValueError('A cone-unit artifact changed')
+    expected,exponents,proof=rescale(original,layout)
+    saved,saved_layout=backend.load_encoding(folder)
+    if (saved_layout!=layout or (saved['A']!=expected['A']).nnz or not np.array_equal(saved['b'],expected['b'])
+            or not np.array_equal(np.load(folder/'units.npz',allow_pickle=False)['cone_row_exponents'],exponents)
+            or json.loads((folder/'congruence.exact.json').read_text())!=proof):
+        raise ValueError('A scalar unit or PSD diagonal congruence differs from its replay')
+    return saved,exponents
+
+
 def exact_dual_identities(forms,blocks,point,field,rational,balanced,coordinates):
     """Check every reduced adjoint identity using exact trace multiplicities."""
     import numpy as np
@@ -98,7 +118,7 @@ def proposals(forms,blocks,data,approximate,field,tolerance,progress):
                 kernels.append(dict(block=block['name'],vectors=vectors))
                 equations.extend(proposed);terms+=added
             else:limited=True
-        if count%10000==0:progress(stage='kernel_proposals',field=field.d,blocks=count,kernel_blocks=len(kernels))
+        if count%500==0:progress(stage='kernel_proposals',field=field.d,blocks=count,kernel_blocks=len(kernels))
     return equations,kernels,scalar,limited
 
 
@@ -157,6 +177,7 @@ def main():
     parser.add_argument('--preflight',type=Path)
     parser.add_argument('--solver-output',type=Path)
     parser.add_argument('--candidate',type=Path)
+    parser.add_argument('--conditioned',type=Path)
     parser.add_argument('--seconds',type=int,default=650)
     parser.add_argument('--fields',default='0,2,5')
     parser.add_argument('--output',type=Path,required=True)
@@ -171,6 +192,8 @@ def main():
             args.model/'blocks.json.gz',args.verified,args.balanced/'result.json',args.rational/'result.json']
         if args.action=='attempt':paths += [args.solver_output/'result.json',args.solver_output/'solution.npz']
         if args.action=='verify':paths += [args.candidate/'result.json',args.candidate/'field_point.exact.json.gz']
+        if args.conditioned is not None:paths += [args.conditioned/'result.json',args.conditioned/'units.npz',
+            ROOT/'scripts/rescale_balanced_dual_20261126.py']
     def bindings():
         return {str(p):dict(bytes=p.stat().st_size,sha256=solver_gate.file_digest(p)) for p in paths}
     before=bindings();args.output.mkdir();conic.write_json(args.output/'source_bindings.json',before)
@@ -180,8 +203,13 @@ def main():
     if args.action=='check':report=fixture(args.output)
     else:
         checked=checked_model(args.model,args.verified)
+        if Path(checked['balanced_model']).resolve()!=args.balanced.resolve():
+            raise ValueError('The explicit dual proof concerns a different balanced problem')
         balanced_data,balanced_layout,_,_=verified_balanced_model(args.balanced,args.native_input,args.preflight)
         data,layout=backend.load_encoding(args.model)
+        exponents=None
+        if args.conditioned is not None:
+            data,exponents=checked_cone_units(args.conditioned,data,layout,args.model)
         if args.action=='audit':
             def units(data):
                 A=abs(data['A'])
@@ -210,6 +238,11 @@ def main():
         else:
             meta=json.loads((args.model/'coordinates.json').read_text())
             forms=balanced_dual.read_forms(args.model/'forms.exact.jsonl.gz',meta['forms'])
+            if args.action=='attempt' and exponents is not None:
+                Q=rounding.Field(0).Q
+                for row,e in zip(forms,exponents,strict=True):
+                    scale=Q(1<<int(e)) if e>=0 else Q(1,1<<int(-e))
+                    for col in row:row[col]*=scale
             with gzip.open(args.model/'blocks.json.gz','rt') as stream:blocks=json.load(stream)
             if args.action=='verify':
                 candidate=json.loads((args.candidate/'result.json').read_text())
@@ -234,7 +267,12 @@ def main():
                 report=dict(status='FIELD_RECONSTRUCTION_ATTEMPTS_NO_EXACT_CERTIFICATE',
                     native_status=native['native']['native_status'],attempts=[],exact_certificate_obtained=False)
                 accepted=None
-                for denominator in [2**32,2**44,2**50]:
+                field=rounding.Field(0)
+                point=[(field.Q(*float(v).as_integer_ratio()),field.Q(0)) for v in approximate]
+                test=rounding.check_point(forms,blocks,point,field,progress)
+                report['attempts'].append(dict(method='literal_binary64_dyadics',check=test))
+                if test['valid']:accepted=(field,point,test)
+                for denominator in ([] if accepted is not None else [2**32,2**44,2**50]):
                     field=rounding.Field(0);point=rounding.rational_point(approximate,field,denominator)
                     test=rounding.check_point(forms,blocks,point,field,progress)
                     report['attempts'].append(dict(method='common_grid_candidate',common_denominator=denominator,check=test))
@@ -250,7 +288,7 @@ def main():
                                 candidate_proposal_term_limit_reached=limited,
                                 nonrational_kernel_vectors=sum(any(b for a,b in v) for k in kernels for v in k['vectors']))
                             try:
-                                point,info=rounding.project(equations,approximate,field,denominator=2**48)
+                                point,info=rounding.project(equations,approximate,field,denominator=2**48,progress=progress)
                                 test=rounding.check_point(forms,blocks,point,field,progress)
                                 attempt.update(projection=info,check=test)
                             except ValueError as error:attempt['candidate_failure']=str(error);test={'valid':False}
@@ -268,6 +306,7 @@ def main():
                         field_point_sha256=solver_gate.file_digest(args.output/'field_point.exact.json.gz'),
                         all_cones_checked=test,exact_certificate_obtained=False,separate_replay_still_required=True)
         report.update(model=str(args.model),separate_dual_parametrization_replay=str(args.verified),
+            cone_unit_conditioning=None if args.conditioned is None else str(args.conditioned),
             interpretation='An exact normalized dual certificate proves the reduced certificate search infeasible; it alone does not establish original primal feasibility.')
     if before!=bindings():raise ValueError('A field source, input or proof changed during the run')
     report.update(source_bindings=before,elapsed_seconds=time.monotonic()-started,
