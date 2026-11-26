@@ -7,7 +7,7 @@ import shutil
 import subprocess
 import time
 
-from . import conic,feasibility,sdpa_double
+from . import conic,feasibility,sdpa_double,solver_gate
 
 EXECUTABLE=Path.home()/'.local/opt/coxeter-sdpa-7.3.21/bin/sdpa'
 GMP_EXECUTABLE=Path.home()/'.local/opt/sdpa-gmp/bin/sdpa_gmp'
@@ -27,7 +27,8 @@ def parameters(path,iterations,precision=None):
     path.write_text('\n'.join(values)+'\n')
 
 
-def call(input_path,out,iterations,seconds,initial=None,precision=None):
+def call(input_path,out,iterations,seconds,initial=None,precision=None,*,preflight=None,fixture=False):
+    checked=solver_gate.verify_native(input_path,preflight,fixture=fixture)
     executable=GMP_EXECUTABLE if precision else EXECUTABLE
     parameters(out/'param.sdpa',iterations,precision)
     command=[str(executable),'-ds',str(input_path),'-o',str(out/'native.result'),
@@ -42,7 +43,7 @@ def call(input_path,out,iterations,seconds,initial=None,precision=None):
         initial=dense
     if not precision:command+=['-numThreads','1']
     if initial is not None:command+=['-id',str(initial)]
-    metadata=dict(command=command,input_sha256=conic.digest_bytes(input_path.read_bytes()),
+    metadata=dict(command=command,input_sha256=checked['native_input_sha256'],preflight_check=checked,
         executable_sha256=conic.digest_bytes(executable.read_bytes()),precision_bits=precision,
         initial_path=str(initial) if initial else None,
         initial_sha256=conic.digest_bytes(initial.read_bytes()) if initial else None,
@@ -72,8 +73,8 @@ def self_check(root,out,precision=None):
         dict(name='lower',entries=[[conic.form(-1,x=1)]]),
         dict(name='upper',entries=[[conic.form(1,x=-1)]])])
     conic.write_sdpa(out/'input.dat-s',P)
-    first=out/'first';first.mkdir();call(out/'input.dat-s',first,4,20,precision=precision)
-    resumed=out/'resumed';resumed.mkdir();call(out/'input.dat-s',resumed,60,20,first/'native.result',precision)
+    first=out/'first';first.mkdir();call(out/'input.dat-s',first,4,20,precision=precision,fixture=True)
+    resumed=out/'resumed';resumed.mkdir();call(out/'input.dat-s',resumed,60,20,first/'native.result',precision,fixture=True)
     raw,phase=conic.native_vector(resumed/'native.result')
     if abs(raw[0]-1)>F(1,10**7):raise ValueError('The native warm start changed the free-vector sign')
     matrices=feasibility.native_cones(resumed/'native.result',P,field='xMat')
@@ -95,7 +96,7 @@ def self_check(root,out,precision=None):
     conic.write_json(central/'reference.json',{'x':F(1)})
     initialization=proposed_initial(P,central,central/'reference.json',central/'initial.dat',1e-3,1e-3)
     if initialization['maximum_relative_centrality_error']>1e-8:raise ValueError('The proposed central seed failed its matrix identity')
-    call(out/'input.dat-s',central,60,20,central/'initial.dat',precision)
+    call(out/'input.dat-s',central,60,20,central/'initial.dat',precision,fixture=True)
     central_raw,_=conic.native_vector(central/'native.result')
     if abs(central_raw[0]-1)>F(1,10**7):raise ValueError('The centrally initialized fixture failed its known point')
     report=dict(status='NATIVE_SDPA_WARM_START_AND_ENCODING_CHECK_PASSED',phase=phase,
@@ -157,47 +158,4 @@ def proposed_initial(problem,source,reference_path,path,epsilon=1e-4,tau=1e-12):
 
 
 def run(root,out,source,reference_path,iterations,seconds,resume=None,epsilon=1e-3,tau=1e-3,precision=None):
-    out.mkdir();started=time.monotonic()
-    original_path=root/'results/global_shared_cusp_current/necessary_primal.exact.json'
-    if (source/'equilibrated.exact.json').exists():
-        model_path=source/'equilibrated.exact.json';subs_path=source/'equilibrated_substitutions.exact.json'
-    else:model_path=source/'compiled.exact.json';subs_path=source/'substitutions.exact.json'
-    paths=[original_path,model_path,subs_path,reference_path,GMP_EXECUTABLE if precision else EXECUTABLE,Path(__file__),
-        root/'scripts/run_sdpa_cli_frozen_20261125.py',root/'research/global_formulation/conic.py',
-        root/'research/global_formulation/feasibility.py']
-    if resume:paths.append(resume/'native.result')
-    before=sdpa_double.binding(paths,root);conic.write_json(out/'source_bindings.json',before)
-    original=conic.read_model(original_path);problem=conic.read_model(model_path)
-    substitutions={v:{w:F(c) for w,c in q.items()} for v,q in json.loads(subs_path.read_text()).items()}
-    conic.write_sdpa(out/'input.dat-s',problem)
-    if resume:
-        prior=json.loads((resume/'native_metadata.json').read_text())
-        if prior['input_sha256']!=conic.digest_bytes((out/'input.dat-s').read_bytes()):
-            raise ValueError('A native restart requires byte-identical ordered input')
-        shutil.copyfile(resume/'native.result',out/'initial.dat')
-        initialization=dict(kind='native_restart',byte_identical_input_checked=True)
-    else:initialization=proposed_initial(problem,source,reference_path,out/'initial.dat',epsilon,tau)
-    conic.write_json(out/'initialization.json',initialization)
-    native=call(out/'input.dat-s',out,iterations,seconds,out/'initial.dat',precision)
-    report=dict(status='NO_EXACT_FEASIBILITY_DECISION',native=native,initialization=initialization,
-        original_input_sha256=before[str(original_path.relative_to(root))]['sha256'],
-        source_model=str(source.relative_to(root)),accepted_bounds_changed=False)
-    if (out/'native.result').exists():
-        try:raw,phase=conic.native_vector(out/'native.result')
-        except ValueError as error:report['native_reader_failure']=str(error)
-        else:
-            report['native_phase']=phase
-            if len(raw)!=len(problem['variables']):raise ValueError('Wrong native free dimension')
-            native_values=dict(zip(problem['variables'],raw,strict=True))
-            point={v:conic.value(q,native_values) for v,q in substitutions.items()}
-            conic.write_json(out/'original_numerical_candidate.json',point)
-            report['original_numerical_residuals']=feasibility.numerical_residuals(original,point)
-            try:
-                exact,checked=conic.reconstruct(original,problem,substitutions,raw)
-                conic.write_json(out/'original_feasible_point.exact.json',exact)
-                report.update(status='EXACT_ORIGINAL_SDP_FEASIBLE',exact_check=checked)
-            except ValueError as error:report['exact_recovery_failure']=str(error)
-    if sdpa_double.binding(paths,root)!=before:raise ValueError('A native warm-start input changed')
-    report['elapsed_seconds']=time.monotonic()-started
-    conic.write_json(out/'result.json',report)
-    print(json.dumps(conic.plain({k:v for k,v in report.items() if k!='exact_check'})),flush=True)
+    raise ValueError('Retired solver path: use the verified preparation pipeline and run_sdpa_checkpoint_20261125.py')

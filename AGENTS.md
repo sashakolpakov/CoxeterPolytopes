@@ -36,6 +36,29 @@ Numerical feasibility of a restricted weight search is not global
 geometric coverage. The accepted bounds stay unchanged without the
 complete proof and review requirements below.
 
+## Global constraint preparation and solver gate
+
+The user's 25 November correction requires the verified workflow in
+`research/global_formulation/CONSTRAINT_WORKFLOW.md`. Freeze and register each
+changed scientific model with its uniform actual-polytope lift, complete family
+scope, current local-lift regressions and exact retention of the parent model's
+constraints. Keep all 26 feature coefficients free. Scope changes need separate
+validation rather than a false fixed-scope retention claim.
+
+Run exact cone reductions to a verified fixed point. A partial pass or resource
+limit must remain `NOT_SOLVER_READY`; resume it in a fresh bounded batch. Replay
+the full reduction chain from the frozen scientific input, check the conditioning
+identities, and audit again after conditioning. A production SDPA launch requires
+a matching `solver_ready.json` through `scripts/run_sdpa_checkpoint_20261125.py
+--preflight`. Do not manually bypass this gate through the native executable or
+retired exploratory wrappers. Tiny explicit solver fixtures are only regression
+tests, never research decisions. Preserve exact tiny coefficients; a numerical
+tolerance cannot remove a mathematical constraint.
+
+Check all candidates and certificates against the original scientific input.
+Numerical statuses, auxiliary margins and watchdog PASS records do not update a
+geometric bound. The source-review requirements below still apply.
+
 ## Evidence and claims
 
 The selected Lean publication gate passed: two modules, two separate actual

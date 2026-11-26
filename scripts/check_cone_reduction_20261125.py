@@ -39,7 +39,11 @@ def main():
         scalar('w',conic.form(w=1)),scalar('duplicate',conic.form(w=2)),
         scalar('upper',conic.form(2,w=-1)),scalar('tiny_is_real',conic.form(1,w=-tiny))])
     Q,maps,stages=reduce(P)
-    if len(stages)<2 or Q['variables']!=['w']: raise ValueError('Cascading elimination failed')
+    if Q['variables']!=['w'] or len(stages[0][2]['face_rounds'])<2:
+        raise ValueError('Internal exact face propagation failed')
+    try:cr.verify_source_faces(P,stages[0][2]['face_rounds'][1]['faces'])
+    except ValueError:pass
+    else:raise ValueError('A later face was accepted without its preceding equations')
     point={v:conic.value(q,{'w':F(1)}) for v,q in maps.items()}
     conic.check_point(P,point)
     if not any(abs(c)==tiny for b in Q['blocks'] for row in b['entries'] for q in row for c in q.values()):
@@ -71,13 +75,15 @@ def main():
         scalar('must_positive',conic.form(-1,z=1))])
     try: cr.pass_once(impossible)
     except cr.Contradiction as error:
-        if error.proof['kind']!='negative_constant_after_elimination': raise
+        if error.proof['kind'] not in ('negative_constant_after_elimination','negative_diagonal_constant'): raise
     else: raise ValueError('The forced-zero contradiction was missed')
     paths=[Path(__file__),ROOT/'research/global_formulation/cone_reduction.py',
            ROOT/'research/global_formulation/conic.py',ROOT/'research/global_formulation/feasibility.py']
     report=dict(status='EXACT_CONE_REDUCTION_REGRESSIONS_PASSED',cascade_passes=len(stages),
+        internal_face_rounds=len(stages[0][2]['face_rounds']),
         affine_opposite_passes=len(other),unproved_equation_rejected=True,tampered_constraint_rejected=True,
         tiny_exact_coefficients_retained=True,original_witnesses_checked=True,
+        later_face_requires_preceding_equalities=True,
         source_bindings={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths})
     conic.write_json(out/'result.json',report);print(json.dumps(report),flush=True)
 

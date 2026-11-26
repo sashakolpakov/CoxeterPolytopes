@@ -35,9 +35,10 @@ def thin_intervals(problem):
     augmented=conic.model(order,problem["blocks"],equations)
     transformed,all_subs=conic.eliminate(augmented)
     change={v:all_subs[v] for v in problem["variables"]}
-    inverse={v:conic.form(**{v:1}) for v in transformed["variables"] if v in problem["variables"]}
+    original_names=set(problem["variables"]);transformed_names=set(transformed["variables"])
+    inverse={v:conic.form(**{v:1}) for v in transformed["variables"] if v in original_names}
     inverse.update({p["coordinate"]:conic.times(1/p["delta"],p["defining_row"])
-        for p in pairs if p["coordinate"] in transformed["variables"]})
+        for p in pairs if p["coordinate"] in transformed_names})
     # These are polynomial identities, not checks at sampled points.
     for v,q in change.items():
         if feasibility.substitute(q,inverse)!=conic.form(**{v:1}):

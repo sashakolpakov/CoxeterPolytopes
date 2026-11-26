@@ -65,18 +65,18 @@ def require_clean_audit(audit):
         raise ValueError('Presolve has not reached a verified fixed point')
 
 
-def native_shape(path):
+def native_shape(path,*,fixture=False):
     with Path(path).open() as stream:
         comment=stream.readline();m=int(stream.readline());n=int(stream.readline())
         sizes=[int(v) for v in stream.readline().split()]
-    if not comment.startswith('"Global Coxeter SDP') or len(sizes)!=n or not all(sizes):
+    if (not comment.startswith('"Global Coxeter SDP') and not (fixture and comment.startswith('"Auxiliary trace-one face problem'))) or len(sizes)!=n or not all(sizes):
         raise ValueError('Unexpected native input shape')
     return m,sizes
 
 
 def verify_native(input_path,receipt_path,*,fixture=False):
     input_path=Path(input_path).resolve()
-    m,sizes=native_shape(input_path)
+    m,sizes=native_shape(input_path,fixture=fixture)
     if fixture:
         if m>16 or max(abs(r) for r in sizes)>64 or input_path.stat().st_size>1024**2:
             raise ValueError('Only small regression fixtures may bypass the research preflight')

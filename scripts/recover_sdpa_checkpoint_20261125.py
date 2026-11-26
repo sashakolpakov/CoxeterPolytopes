@@ -16,14 +16,18 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output",required=True)
     parser.add_argument("--checkpoint",required=True)
-    parser.add_argument("--source",default="results/global_edge_closure_conditioned01")
-    parser.add_argument("--input",default="results/global_edge_closure_current/necessary_primal.exact.json")
+    parser.add_argument("--source",required=True)
+    parser.add_argument("--input",required=True)
     args=parser.parse_args();out=(ROOT/args.output).resolve();source=(ROOT/args.source).resolve()
     original_path=(ROOT/args.input).resolve();native=(ROOT/args.checkpoint).resolve()/"native.result"
     if out.exists() or any(not p.is_relative_to(ROOT/"results") for p in (out,source,original_path,native)):
         raise ValueError("Use retained results inputs and fresh output")
     sys.path.insert(0,str(ROOT))
-    from research.global_formulation import conic,dual_completion,feasibility,slater_margin
+    from research.global_formulation import conic,dual_completion,feasibility,slater_margin,solver_gate
+    gate=solver_gate.verify_native(source/'input.dat-s',source/'solver_ready.json')
+    checkpoint_metadata=json.loads((native.parent/'native_metadata.json').read_text())
+    if checkpoint_metadata['input_sha256']!=gate['native_input_sha256']:
+        raise ValueError('The checkpoint belongs to a different native input')
     started=time.monotonic();out.mkdir()
     model_path=source/"equilibrated.exact.json";subs_path=source/"equilibrated_substitutions.exact.json"
     paths=[original_path,model_path,subs_path,native,source/"result.json",Path(__file__),

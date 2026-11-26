@@ -45,7 +45,7 @@ def self_check(out):
         [conic.form(1),conic.form(x=1)],[conic.form(x=1),conic.form(1)]]),
         dict(name="lower",entries=[[conic.form(-1,x=1)]])])
     face_input(out/"input.dat-s",P)
-    sdpa_double.native_call(out/"input.dat-s",out,80,.1,1e-9)
+    sdpa_double.native_call(out/"input.dat-s",out,80,.1,1e-9,fixture=True)
     values,phase=conic.native_vector(out/"native.result")
     matrices=feasibility.native_cones(out/"native.result",P,field="yMat")
     candidate,report=exposure(P,matrices,20)
@@ -140,47 +140,4 @@ def exposure(problem,matrices,seconds=120):
 
 
 def run(root,out,source,prepared,seconds=550):
-    out.mkdir();started=time.monotonic()
-    original_path=root/"results/global_shared_cusp_current/necessary_primal.exact.json"
-    model_path=source/"equilibrated.exact.json"
-    subs_path=source/"equilibrated_substitutions.exact.json"
-    paths=[original_path,model_path,subs_path,Path(__file__),root/"scripts/run_sdpa_face_phase_20261125.py",
-        root/"research/global_formulation/sdpa_double.py",root/"research/global_formulation/conic.py",
-        root/"research/global_formulation/feasibility.py"]
-    before=sdpa_double.binding(paths,root);conic.write_json(out/"source_bindings.json",before)
-    original=conic.read_model(original_path);problem=conic.read_model(model_path)
-    substitutions={v:{w:F(c) for w,c in q.items()} for v,q in json.loads(subs_path.read_text()).items()}
-    face_input(out/"input.dat-s",problem)
-    command=[sys.executable,"-B",str(root/"scripts/run_sdpa_double_frozen_20261125.py"),"native",
-        "--output",str(out),"--native-input",str(out/"input.dat-s"),"--iterations","120",
-        "--initial-scale","0.1","--epsilon","1e-8"]
-    timed_out=False
-    with (out/"solver.stdout").open("x") as stream:
-        try:subprocess.run(command,stdout=stream,stderr=subprocess.STDOUT,timeout=seconds,check=False)
-        except subprocess.TimeoutExpired:timed_out=True
-    report=dict(status="NO_EXACT_FEASIBILITY_DECISION",auxiliary_face_problem=True,timed_out=timed_out,
-        original_input_sha256=before[str(original_path.relative_to(root))]["sha256"],accepted_bounds_changed=False)
-    if (out/"native.result").exists():
-        values,phase=conic.native_vector(out/"native.result");report["native_phase"]=phase
-        if len(values)!=len(problem["variables"])+2:raise ValueError("Wrong auxiliary trace dimensions")
-        if values[-2]<0:
-            free=[v/values[-2] for v in values[:-2]];raw=dict(zip(problem["variables"],free,strict=True))
-            point={v:conic.value(q,raw) for v,q in substitutions.items()}
-            conic.write_json(out/"original_numerical_candidate.json",point)
-            report["original_numerical_residuals"]=feasibility.numerical_residuals(original,point)
-            try:
-                exact,checked=conic.reconstruct(original,problem,substitutions,free)
-                conic.write_json(out/"original_feasible_point.exact.json",exact)
-                report.update(status="EXACT_ORIGINAL_SDP_FEASIBLE",exact_check=checked)
-            except ValueError as error:report["exact_recovery_failure"]=str(error)
-        if report["status"]!="EXACT_ORIGINAL_SDP_FEASIBLE":
-            matrices=feasibility.native_cones(out/"native.result",problem,field="yMat")
-            candidate,checked=exposure(problem,matrices)
-            report["exposure_search"]=checked
-            if candidate is not None:
-                equations,proof=candidate
-                conic.write_json(out/"verified_face.exact.json",dict(equations=equations,nonnegative_zero_identity=proof))
-                report["status"]="EXACT_CONE_FACE_EXPOSED_ORIGINAL_FEASIBILITY_UNDECIDED"
-    if sdpa_double.binding(paths,root)!=before:raise ValueError("A face-search source changed")
-    report["elapsed_seconds"]=time.monotonic()-started
-    conic.write_json(out/"result.json",report);print(json.dumps(conic.plain(report)),flush=True)
+    raise ValueError('Retired solver path: use the verified preparation pipeline and run_sdpa_checkpoint_20261125.py')

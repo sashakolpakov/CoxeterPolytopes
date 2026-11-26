@@ -59,7 +59,7 @@ def main():
         old_subs={v:{v:F(1)} for v in P['variables']};chain=[]
         contract=solver_gate.scientific_contract(P)
     progress('loaded_source',variables=len(P['variables']),cones=len(P['blocks']),pass_number=len(chain)+1)
-    try: Q,proof=cr.pass_once(P)
+    try: Q,proof=cr.pass_once(P,lambda **d:progress('exact_face_closure',**d))
     except cr.Contradiction as error:
         # Keep the exact obstruction and its source binding for independent
         # verification; a global geometric bound is never changed here.

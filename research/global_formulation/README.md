@@ -1,541 +1,124 @@
 # Global Coxeter LP/SDP research
 
-The mathematical specification and actual-polytope lift are in
-[global_formulation.md](../../notes/lp/global_formulation.md). The retained
-[source notes](../../notes/lp/global_sources.md) identify literature inputs.
-This is an initial research relaxation; no improved dimension bound or
-separate author's acceptance is claimed.
+This is the global necessary-data relaxation for a hypothetical finite-volume
+Coxeter polytope. The [mathematical specification](../../notes/lp/global_formulation.md)
+contains the actual-polytope lift; the [source notes](../../notes/lp/global_sources.md)
+record the literature and hypotheses. The accepted 57/17/15 bounds are unchanged.
+Independent geometric review remains pending for the research formulation.
 
-The [execution manifest](experiments.json) records actual runs, their
-source and model hashes, failures and remaining work.
+The [execution manifest](experiments.json) distinguishes actual execution,
+exact verification and numerical solver status. Historical failures are retained
+there as compact records, rather than as current search instructions.
 
-The revised **level-7 edge compatibility formulation** is now
-[exported](../../results/global_edge_closure_current/result.json), with
-97,515 variables, 29,259 equalities, 5,322 PSD blocks and 387,685 scalar
-inequalities. It retains every frozen level-5 constraint. Its
+## Current scientific model
+
+The frozen **level-7 edge compatibility model** has 97,515 moment variables,
+29,259 equalities, 5,322 PSD blocks and 387,685 scalar inequalities. Its
+[primal and normalized Farkas dual](../../results/global_edge_closure_current/result.json)
+are preserved in [byte-verified archives](../../results/global_edge_closure_current/archive_roundtrip.json).
+All 26 manuscript feature coefficients, including contextual and cross-component
+terms, remain free in the dual. There are no selected lists of vertex forests or
+marked face diagrams.
+
+The occupation measures retain complete supporting-component populations,
+attachment profiles and shared inverse-Gram responses. Every triangle or
+quadrilateral uses the same supporting walls at all its corners. Common edge
+populations link face sides to their two endpoints. Complete rooted spherical
+schemas tie these attachments to edge diagrams, while classified complete cusps
+supply the ideal vertex data. Sparse moment and polynomial-ideal closure use a
+consistent registry for each measure. Unbounded A/B/D ranks and labels remain
+symbolic within the proved envelopes.
+
+The model retains every level-5 constraint. Its
 [exact comparison](../../results/global_edge_closure_current/strict_strengthening_audit.json)
-finds **465 violated equations involving only old moments**, so the
-previous rational point has no extension to this model. This is a
-strict strengthening, not an infeasibility decision for the new problem.
+finds 465 violated equations involving only the previous witness's moments, so
+that witness has no extension. The
+[local lift checks](../../results/global_edge_schema_lifts02/result.json) cover
+nonzero attachment responses and an ideal quadrilateral. These checks establish
+neither global feasibility nor geometric nonexistence.
 
-The change uses complete rooted spherical component schemas. The same
-root determines both the white components touched by a sidewall and
-its projection length. All sides share one white family population;
-both endpoints and all incident faces share one spherical edge
-population. Mixed A/B inverse-response identities now receive variance
-closure, and all available retained quadratic equation multipliers are
-included. [Deductions and actual-polytope lift](../../notes/lp/global_formulation.md#complete-rooted-edge-hosts-and-shared-edge-populations-levels-6--7).
-The new primal and its complete normalized Farkas dual are exported
-together; the 26 feature coefficients remain free.
-The [final local lift checks](../../results/global_edge_schema_lifts02/result.json)
-pass exactly with the wider twelve-variable closure budget, for both
-a triangle with nonzero attachment response and an ideal quadrilateral.
+This export treats dimension 57, using the completed n >= 58 theorem as an
+anchor. The general formulation can instead represent a dimension band or an
+unbounded parity tail. Changing that scope requires a corresponding uniform
+instantiation check; it is not an ordinary fixed-scope constraint extension.
 
-Of the 465 failures, 27 are automatic consequences of the complete
-rooted classification: no spherical one-node extension can have a
-deleted component of type E8, F4 or H4. The old point gave these
-components positive attachment mass. The other 438 failures come from
-the strengthened equation closure. No selected diagram list is involved.
-The [first standard-SDPA batch](../../results/global_edge_closure_sdpa01/result.json)
-completed 22 iterations before its 500-second native limit. It produced
-neither a verified point nor a certificate. Peak monitored process-tree
-RSS was 8.78 GB. The [continued run](../../results/global_edge_closure_continuation_20261125.json)
-saved a complete checkpoint at iteration 16 and continued for ten more
-iterations, until SDPA itself stopped with
-`cannot move: step length is too short`. Its relative gap was about
-0.139. The `pFEAS` phase concerns the auxiliary margin problem.
-The [original-model check](../../results/global_edge_closure_terminal_check01/result.json)
-recovered neither a feasible point nor an infeasibility certificate.
-Feasibility of the revised input remains undecided.
+**Level-7 feasibility remains undecided.** Earlier numerical small-step stops
+supplied neither an original feasible point nor an exact infeasibility
+certificate. Their compact [summary](../../results/global_edge_closure_corrected_rerun_20261125.json)
+and [representation audit](../../results/global_edge_closure_representation_audit01/result.json)
+explain why preparation was replaced. Repeated exact reduction, proof replay and
+a fresh audit after conditioning are now required before any research SDPA launch.
 
-The [saved-variable diagnostic](../../results/global_edge_closure_iterate_diagnostics01/result.json)
-recomputes the residuals from all three arrays. The auxiliary primal
-affine residual is `4.55e-13`, but its common margin is `-0.1389822611`.
-The reconstructed original candidate satisfies all 29,259 equalities
-exactly and violates `uniform_two_unit_triangle_cover0` exactly, with
-value about `-30.8725`. The dual's ordinary adjoint residual is
-`6.45e-4`, largest on the shared edge support moments; its original
-Farkas constant is positive, about `1.30e-8`. These multipliers therefore
-provide neither a separating certificate nor an optimum bound.
+## Constraint and solver workflow
 
-The recomputed complementarity is about `0.69527`, while the candidate
-objective gap is `0.13898`. The difference is accounted for by the
-nonzero dual residual paired with the free coordinates, about `0.55629`.
-A small average complementarity across these many cones does not imply
-a small objective gap. On its failed final update SDPA also prints
-cached summary metrics from the previous iterate alongside the updated
-solution arrays; the diagnostic uses the arrays directly.
-Both saved cone arrays have positive numerical eigenvalues. The stop
-comes from the native `Solutions::update` guard, which rejects a step
-when both step lengths fall below its hard-coded `1e-4` threshold.
+Follow [CONSTRAINT_WORKFLOW.md](CONSTRAINT_WORKFLOW.md). It specifies the
+uniform family argument, parent-constraint retention, source-bound checks,
+exact reduction to a fixed point, proof replay, numerical units and mandatory
+native launch receipt. Aggregate incidence equations must not be treated as
+pointwise identities when multiplying by state coordinates.
 
-This inspection found a separate output-format defect: native
-`Parameter::readFile` skips alternate format lines if they contain bare
-format tokens without trailing labels. Consequently these checkpoints
-saved `yMat` at only four significant digits, although `xVec` and `xMat`
-had the requested precision. The writer now labels every format line
-and checks all four formats actually reported by SDPA. The
-[native fixture](../../results/global_edge_closure_dual_face01/output_format_and_restart_fixture/result.json)
-passes with all arrays at the requested precision and verifies restart
-consistency. Earlier logs and rounded checkpoints remain unchanged;
-their lost digits cannot be recovered. The cached dual residual was
-already about `6.45e-4` inside SDPA, so this output defect alone does
-not explain the numerical stop.
+The [completed regeneration](../../results/global_edge_closure_regenerated01/result.json)
+exactly matches the frozen scientific input. The
+[fixed-point preparation](../../results/global_edge_closure_presolve06/result.json)
+has 61,787 variables and 289,596 cones. Its
+[post-reduction audit](../../results/global_edge_closure_presolve06/fixed_point_audit.json)
+reports zero remaining recognized reductions. Each face-propagation round and
+every deleted or compressed source cone has an exact reconstruction proof.
+The separate complete-chain replay and native export gates still apply.
 
-The [corrected full-precision cold run](../../results/global_edge_closure_sdpa05/result.json)
-saved its first checkpoint after sixteen iterations. Its
-[continuation](../../results/global_edge_closure_sdpa06/result.json) again
-stopped after ten more iterations with the small-step guard, at margin
-`-0.1390142645`. All four requested output formats were verified in
-both native reports. Its cached dual balance residual remained about
-`6.45e-4`. Correcting checkpoint precision alone did not resolve this
-stagnation.
+The production path consists of these separate serial jobs:
 
-A [different interior initialization](../../results/global_edge_closure_recentered_seed01/result.json)
-reuses the terminal ordinary coordinates, moves the margin to `-2`, and
-resets the dual to normalized inverse slacks. Every nonscalar primal
-slack passes numerical Cholesky; the minimum shifted eigenvalue is
-about `1.861`, and the dual trace normalization residual is `1.11e-16`.
-These are checks of an auxiliary initialization, not of original
-feasibility. The native input matrices and every geometric constraint
-remain unchanged.
+1. `scripts/regenerate_global_constraints_20261125.py`
+2. `scripts/prepare_conic_model_20261125.py`, repeated using `--previous` until
+   the recorded fixed-point audit passes
+3. `scripts/verify_conic_reduction_chain_20261125.py`
+4. `scripts/export_ready_global_sdp_20261125.py`
+5. `scripts/run_sdpa_checkpoint_20261125.py`, with explicit native input,
+   checked initialization and matching `--preflight`
+6. `scripts/recover_sdpa_checkpoint_20261125.py`, with the new prepared source,
+   native checkpoint and frozen original input explicitly supplied
 
-The [recentered run](../../results/global_edge_closure_sdpa07/result.json)
-also reached the native small-step guard, after nine iterations, at
-margin `-1.3832305778`. Its cached dual balance residual was about
-`7.53e-3`. The two different stopping margins are not certified optima;
-neither small-step error establishes original infeasibility.
+Every scientific command runs under the shared lock and the monitored runner in
+[AGENTS.md](../../AGENTS.md), with fresh output and ledger names. For example:
 
-The recomputed [cold-run variables](../../results/global_edge_closure_iterate_diagnostics02/result.json)
-and [recentered variables](../../results/global_edge_closure_iterate_diagnostics03/result.json)
-have dual trace normalization residuals below `2.1e-11`, but ordinary
-adjoint residuals about `6.45e-4` and `7.53e-3`. Both original-coordinate
-candidates satisfy all 29,259 equalities exactly. Their exact
-triangle-cover slacks are approximately `-30.8756` and `-68.3929`, so
-neither is feasible. The attempted Farkas completions require 28,654
-and 31,183 negative coordinate multipliers, respectively. The
-[rerun summary](../../results/global_edge_closure_corrected_rerun_20261125.json)
-records both initialization paths and their original-model checks.
-Their starting states, full-precision checkpoints and rejected original
-candidates have [complete byte-verified archives](../../results/global_edge_closure_corrected_rerun_archive_20261125.json).
-The revised SDP remains undecided; no constraint or bound was changed.
+```sh
+python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
+  --ledger results/research_prepare_pass1_monitor.json -- \
+  scripts/prepare_conic_model_20261125.py \
+  --original results/global_edge_closure_current/necessary_primal.exact.json \
+  --output results/research_prepare_pass1
+```
 
-An [exact representation audit](../../results/global_edge_closure_representation_audit01/result.json)
-finds unfinished simplifications in the actual solver source: 6,142 zero
-scalar cones, 3,085 duplicate scalar rays, 649 opposite scalar ray pairs,
-and 197 zero PSD diagonals. The latter already have zero off-diagonals.
-More importantly, 1,400 checked nonnegative sum-zero identities force
-6,547 remaining coordinates to vanish. These are consequences of the
-existing constraints. No contradiction was found among the constant
-scalar rows or the checked sign-bound combinations.
+Restore the frozen JSON from its retained `.gz` archive if needed. A completed
+pass can still be `NOT_SOLVER_READY`; repeat it until no recognized reductions
+remain. Neither a timeout nor a strictly feasible auxiliary starting point
+substitutes for this test. Original candidates must pass every original equation
+and cone. Certificates require exact identities, PSD witnesses and the verified
+reduction chain. The gate does not promise a well-conditioned Schur system or
+that all possible cone faces have been found.
 
-The recorded streaming presolve ended after one pass at its time budget,
-after deriving 2,936 additional equalities. It did not revisit the
-resulting model until no further immediate reductions remained. The
-audit identifies avoidable redundancy and forced cone faces; it does
-not prove that they alone caused the numerical stops. The reduced
-representation still has 68,963 free coordinates, 319,116 scalar
-blocks and 5,004 nonscalar PSD blocks, with largest size 75.
-Each retained tautology `0>=0` becomes `-alpha>=0` in the common-margin
-auxiliary. Those rows therefore cap the margin at zero independently
-of the geometric constraints. Removing them preserves original
-feasibility while changing the auxiliary optimization.
+The old exploratory solve wrappers are retired. Their mathematical helpers
+remain where current reduction or recovery needs them. Sign, cone-order,
+full-precision output and restart checks use explicitly marked tiny fixtures.
 
-The next numerical step is to eliminate these exactly forced coordinates,
-remove the resulting zero rows and duplicates, and repeat the reductions
-before selecting new units. This preserves the original feasibility
-question and all its geometric restrictions. The strict auxiliary seed
-does not remove forced faces of the unshifted problem: its negative
-common margin only shifts those faces into the cone interior. This is
-the setting addressed by [Permenter and Parrilo's partial facial reduction](https://arxiv.org/abs/1408.4685),
-which simplifies SDPs by identifying and working over smaller cone faces.
-No further solver run or reduced-model export is claimed by this audit.
+## Retained exact obstruction to weaker formulations
 
-The [recovery search using saved dual directions](../../results/global_edge_closure_dual_face01/result.json)
-considered 80,896 quadratic cone rows. Its auxiliary LP reached its
-120-second limit without returning a point. No exact face was recovered;
-this restricted, unfinished search does not rule out further implied
-cone reductions. It added no geometric constraints.
-
-The native sparse input, valid restart checkpoint, terminal checkpoint
-and original-coordinate numerical candidate have
-[byte-verified archives](../../results/global_edge_closure_continuation_archive_20261125.json).
-The continuation changes neither the input matrices nor the tolerances.
-
-The frozen level-5 dimension-57 formulation implements the three requested
-extensions in order:
-
-1. Common supporting forests and complete attachment families, with
-   symbolic A/B/D ranks and marked positions, shared inverse-Gram
-   responses, and component count and rank marginals tied separately to
-   finite vertices and classified complete cusps. Spectator components
-   remain in those populations.
-2. Joint triangle and quadrilateral states. All corners reuse the same
-   walls and responses; full corner-kind patterns condition their
-   component marginals. An edge component statistic links face sides to
-   both endpoints. Strict opposite-side incidence is retained.
-3. Sparse polynomial-ideal closure in a shared moment registry:
-   available products L(q*x)=0, variance equations L(q^2)=0, and explicit
-   kernel equations in the associated PSD cliques.
-
-Its [necessary-data input](../../results/global_shared_cusp_current/necessary_primal.exact.json)
-has **36,818 variables, 9,388 equalities, 3,643 PSD blocks and 134,833
-scalar inequalities**. The [normalized certificate dual](../../results/global_shared_cusp_current/certificate_dual.exact.json)
-finds all feature weights and compatibility multipliers together.
-Levels 3, 4 and 5 select the successive extensions; level 5 includes all
-three. Every addition has an actual-polytope lift valid uniformly in
-dimension. This export uses the established n>=58 result as an anchor.
-
-The [exact checks](../../results/global_shared_cusp_final_checks/result.json)
-verify nested retention, family-deletion formulas, a nonzero-response
-local triangle through all three layers, an ideal quadrilateral with
-strict opposite gaps, and rejection of a mixture
-that satisfies only the mean of a pointwise identity. The previous
-second-level point has no extension preserving all its old moments:
-seven new equations involving auxiliary inverse moments fail. This does
-not separately certify a gain from shared-support constraints. These
-checks do not decide global feasibility.
-**The frozen level-5 SDP is exactly feasible.** Its
+The full **level-5 SDP is exactly feasible**. Its
 [rational point](../../results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json)
-satisfies every one of the original 9,388 equalities, 3,643 PSD blocks and
-134,833 scalar inequalities. The original input has SHA256
-`88f854280dd973e9cbf570d81329f593f745a09fd0d1a54f194eb7fc6aa290d5`;
-the point's canonical SHA256 is
-`3ead900e576f667ecb9d9d3cbba5f2755c4e1cdc30337a5d717f4aed2cac75fc`.
+satisfies all 9,388 original equalities, 3,643 PSD blocks and 134,833 scalar
+inequalities. An [independent integer Bareiss check](../../results/global_shared_cusp_independent/result.json)
+also verifies the certificate ruling out its normalized Farkas certificate dual,
+including all 193,440 adjoint equations. This witness proves that the weaker
+relaxation cannot exclude dimension 57; it asserts no geometric realization.
+These accepted research inputs and certificates remain intact.
 
-The [independent check](../../results/global_shared_cusp_independent/result.json)
-uses integer symmetric-pivoted Bareiss elimination, separately from the
-rational Schur checker used during recovery. It also verifies the
-[certificate ruling out the normalized Farkas dual](../../results/global_shared_cusp_independent/normalized_dual_infeasibility_certificate.exact.json):
-all **193,440 adjoint equations** hold exactly, and its cone matrices are
-the independently checked primal slacks. Thus this strengthened relaxation
-cannot exclude dimension 57. No geometric constraint or accepted bound
-was changed, and no geometric realization is asserted.
+## Cleanup and restoration
 
-The successful [SDPA run](../../results/global_shared_cusp_sdpa_slater01/result.json)
-maximized a common PSD margin with an upper bound of one. A rational
-Gershgorin argument supplied a strictly feasible auxiliary starting point.
-Native SDPA reached phase `pFEAS` after 43 iterations; its original-point
-violations were about `1.3e-12`, so the numerical answer alone was not
-accepted. Its dual suggested a positive zero identity among three
-nonnegative moment-bound rows.
-
-The [exact recovery](../../results/global_shared_cusp_scalar_circuits01/result.json)
-finds nine positive scalar circuits throughout the existing matrix,
-forcing 27 rows to vanish. Their
-[combined rational zero identity](../../results/global_shared_cusp_scalar_circuits01/verified_order_faces.exact.json)
-is checked coefficient by coefficient. Eliminating the resulting
-18 independent equalities and rounding the remaining free coordinates to
-six decimal places gives the point above. Every original equality and
-cone is then checked again. These are implied cone-face reductions of the
-same problem, rather than additional geometric restrictions.
-
-Earlier necessary-data, normalized trace-dual, common-violation,
-projective and conditional-face runs remain in the execution manifest.
-They include `noINFO`, a rejected `pdINF` status, failed exact recoveries,
-and time limits. In particular, the higher-precision central-start batch
-exhausted its 730-second native limit without a checkpoint. A watchdog
-PASS denotes monitored worker completion, not mathematical success.
-
-The numerical tools include exact narrow-interval coordinates for H3/H4,
-positive column units and diagonal cone congruences. Both inverse affine
-identities and the full original-model acceptance checks are retained.
-The normalized certificate trace formulation uses one equation per free
-coordinate plus the constant pairing `-1`; it avoids eliminating roughly
-193,000 cone coordinates. Candidate certificates require rational positive
-Gram factors, an exact equality-potential lift and the original adjoint.
-
-The native SDPA command line supports saved-point restarts. Its dense
-reader scans numeric tokens from the beginning of the file; a complete
-solver report includes dates and diagnostics before the actual solution.
-Restarts must extract only the `xVec`, `xMat` and `yMat` arrays.
-The [corrected restart check](../../results/global_sdpa_restart_header_check/result.json)
-also compares the resumed initial complementarity with the saved terminal
-value. The earlier check that it merely differed from a cold start was
-insufficient; its historical receipts remain preserved. The failed
-full-report restart and [diagnosis](../../results/global_edge_closure_sdpa03/restart_diagnosis.json)
-are separate from the subsequent valid numerical stop.
-
-Mixed-cone fixtures check free-coordinate signs, off-diagonal factors,
-scalar/PSD order and the restored complementarity. Standard and GMP runs
-share the same original-model checker. Auxiliary shifts, zero projective
-scales and candidate-only population restrictions never count as original
-feasibility. The independent verification of the final rational point
-requires neither SDPA nor its installation.
-
-The finite truncation still relaxes integer ranks and discrete labels,
-uses rational envelopes for H3/H4, and omits many higher moments. It
-matches full small-face states but only one shared edge statistic;
-complete edge-diagram matching and joint three-face states remain open
-extensions. This is a global family formulation, without selected
-vertex-forest or marked-face lists.
-
-The retained second-level dimension-57 model has **3,598 moment variables, 450
-equalities, 1,592 PSD blocks and 8,996 scalar inequalities**. Its
-[necessary-data input](../../results/global_level2_current/necessary_primal.exact.json)
-and [certificate dual](../../results/global_level2_current/certificate_dual.exact.json)
-retain every baseline constraint and every free feature coefficient.
-The new families apply to every existing face or component-count schema:
-
-* All mixed order-three spatial Gram minors, the full negative third
-  compound of the Lorentz Gram matrix, a spatial tensor-square PSD
-  block, and cosine-weighted spatial PSD localizers.
-* Integer falling factorials, total-rank support inequalities, and
-  adjacent-integer-gap PSD localizers for all fixed and tail counters.
-
-The [source-bound exact comparison](../../results/global_level2_audit/result.json)
-checks retention of all 444 baseline equalities and 8,951 baseline cone
-constraints. It proves that the old feasible witness has **no extension**
-to the stronger model: some new equations and inequalities involving only
-old moments already fail (six equations, 96 scalar inequalities and one
-PSD block). The PSD failure is in the full negative Lorentz third compound.
-Only seven new moments are needed. The
-[specification](../../notes/lp/global_formulation.md) gives uniform
-pointwise proofs, before taking moments; the additions are not selected
-diagram exclusions. Universal polynomial checks also verify the compound
-sign and every spatial mixed minor for arbitrary matrix entries.
-
-**The second-level SDP is also exactly feasible.** A different
-[rational point](../../results/global_level2_face_recovery/original_feasible_point.exact.json)
-satisfies all 450 equalities, 1,592 PSD blocks and 8,996 scalar
-inequalities. The original strengthened input has SHA256
-`7f62e85735e146dd660594a09111401754ce0ced24c64033be67ae85b4e3df9a`.
-The [independent integer Bareiss check](../../results/global_level2_independent/result.json)
-passed, and an [explicit certificate](../../results/global_level2_independent/normalized_dual_infeasibility_certificate.exact.json)
-rules out the normalized Farkas dual: all 18,910 adjoint equations pass
-exactly. These additions therefore do not lower the dimension ceiling.
-
-The first 35-iteration necessary-data run was inconclusive; the direct
-certificate-dual run reached its 650-second numerical limit. A native
-restart with an identical reduced input reached `pdOPT` after 12 further
-iterations, but its relative errors still allowed a failed original
-scalar row. An exact four-term positive identity among that inactive-count
-row and three existing bound rows exposes the required face. Rounding
-free coordinates to six decimal places and projecting onto the exact
-equalities gives the point above. Both original-input PSD checkers pass;
-the numerical status alone was not accepted.
-
-The retained first-level dimension-57 model has 3,591 moment variables, 444 equalities,
-907 PSD blocks and 8,044 scalar inequalities. Its exact
-[necessary-data input](../../results/global_tail57_current/necessary_primal.exact.json)
-and [certificate dual](../../results/global_tail57_current/certificate_dual.exact.json)
-are retained. It uses the established n>=58 exclusion to cover the
-complementary tail; the same compiler also exported both unbounded parity models.
-
-**The frozen first-level SDP is exactly feasible.** A
-[rational point](../../results/global_current_exact_recovery/original_feasible_point.exact.json)
-satisfies every one of its 444 equalities, 907 PSD blocks and 8,044 scalar
-inequalities. The original matrix input has SHA256
-`e35594b359e85a02ca706125b5e8259d372c381df3c8ed83122dbcbc3a5b5ebb`.
-No geometric constraint was changed. A second
-[exact verification](../../results/global_current_independent_feasibility/result.json)
-uses integer, symmetric-pivoted Bareiss elimination, independently of the
-rational Schur/LDL checker used during point recovery.
-
-Its normalized infeasibility-certificate dual is therefore infeasible.
-Its [explicit infeasibility certificate](../../results/global_current_independent_feasibility/normalized_dual_infeasibility_certificate.exact.json)
-uses potentials (-x,-1) and PSD cone matrices F_b(x), where x is the
-verified primal point. All 15,641 adjoint equalities were checked exactly;
-its cone matrices are exactly the independently verified primal slacks.
-Here the dual means the Farkas certificate problem with constant pairing
--1. The ordinary zero-objective Lagrange dual also has its zero solution.
-
-The initial LP was numerically feasible. SDPA-GMP first failed on
-redundant dual coordinates; exact removal of 40 null coordinates got it
-through that factorization, but its ten-minute batch produced no certificate.
-A later first-level model then completed 250 rational PSD-separation
-rounds without a verified separator or a verified full-SDP feasible point.
-Those runs were inconclusive. Solving the necessary-data orientation with
-exact cone-face reductions gave SDPA-GMP phase `pFEAS` in 35 iterations
-(334 seconds, 128-bit arithmetic). A further exact four-term nonnegative
-identity exposed three remaining redundant coordinates. Rounding the
-free coordinates to six decimal places and projecting onto the exact
-equalities then gave the rational witness above. Both PSD checkers passed.
-The accepted geometric dimension bound remains 57.
-
-The organizing objects are occupation measures for complete vertex
-populations, all triangles and quadrilaterals, residual corners, and
-global incidence counts. A single shared Lorentz Gram schema covers
-every small face. Complete component families have symbolic rank tails.
-All26 intrinsic manuscript features remain common marginals, with free
-dual coefficients. This code contains no selected list of vertex forests
-or marked face diagrams and performs no diagram-family pricing.
-
-The initial sparse moment level is deliberately explicit. It can be
-strengthened by raising moment/localizer degrees or adding proved
-uniform identities. The LP version replaces PSD blocks by declared
-necessary rational-direction tests. Its failure to find a certificate
-does not resolve the SDP or the geometric problem.
-
-Each earlier witness applies to its own frozen input. The full level-5
-witness above is a separate point, with separate original-input checks.
-
-Rebuild the revised complete family formulation and its dual, using a
-fresh output name and the shared watchdog:
-
-```sh
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/global_edge_rebuild_monitor.json -- \
-  scripts/run_global_coxeter_formulation.py export --level 7 \
-  --threshold 57 --parity odd --upper-dimension 57 \
-  --output results/global_edge_rebuild
-```
-
-The frozen primal and complete certificate dual are also retained as
-byte-verified gzip archives beside the export receipt. Restore the
-original JSON files with `gzip -dk` before using their original paths.
-The [round-trip receipt](../../results/global_edge_closure_current/archive_roundtrip.json)
-records both the restored and compressed hashes.
-Large duplicate numerical inputs and transformed matrices remain local;
-the complete original research inputs are preserved in the archives.
-
-For the standard-SDPA route used on this input, run these as **separate
-serial batches**, under the same watchdog and with fresh ledger/output
-names:
-
-```sh
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/edge_prepare_new_monitor.json -- \
-  scripts/prepare_global_sdp_streaming_20261125.py \
-  --input results/global_edge_closure_current/necessary_primal.exact.json \
-  --output results/edge_prepare_new
-
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/edge_conditioned_new_monitor.json -- \
-  scripts/condition_global_sdp_20261125.py \
-  --input results/global_edge_closure_current/necessary_primal.exact.json \
-  --prepared results/edge_prepare_new --output results/edge_conditioned_new
-
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/edge_sdpa_new_monitor.json -- \
-  scripts/run_sdpa_slater_margin_20261125.py \
-  --input results/global_edge_closure_current/necessary_primal.exact.json \
-  --source results/edge_conditioned_new --seconds 500 \
-  --output results/edge_sdpa_new
-```
-
-The first preparation's optional all-pairs cone comparisons were
-interrupted; its partial progress and explicit interruption receipt are
-retained. Streaming exact reduction finished with 68,963 free variables.
-Conditioning then checked 101 narrow intervals and every affine inverse
-identity. Neither operation changes the necessary-data problem. Timing
-can affect the number of optional presolve passes, so byte-identical
-native restarts require their own retained prepared checkpoints.
-
-To continue a saved common-margin state on the identical native input,
-restore the archived native input and checkpoint, then use a fresh batch:
-
-```sh
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/edge_checkpoint_new_monitor.json -- \
-  scripts/run_sdpa_checkpoint_20261125.py \
-  --resume results/global_edge_closure_sdpa02 --iterations 16 --seconds 800 \
-  --output results/edge_checkpoint_new
-```
-
-An iteration-limit exit saves a checkpoint and is not a mathematical
-decision. The retained continuation ran until a numerical stop. The
-`recover_sdpa_checkpoint_20261125.py` script separately tests a saved point
-in the frozen original input and attempts exact Farkas recovery.
-
-Use `search-frozen-psd` with the same `--input` and a fresh output to
-search LP approximations strengthened by rational PSD directions. Any
-recovered separator is lifted and checked in the complete original SDP.
-Failure of that search does not decide its feasibility.
-
-Verify the **frozen full level-5 point** and its normalized-dual implication:
-
-```sh
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/global_shared_cusp_recheck_monitor.json -- \
-  scripts/run_global_coxeter_formulation.py verify-current \
-  --input results/global_shared_cusp_current/necessary_primal.exact.json \
-  --point results/global_shared_cusp_scalar_circuits01/original_feasible_point.exact.json \
-  --output results/global_shared_cusp_recheck
-```
-
-Verify the retained **second-level** point with a fresh output directory:
-
-```sh
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/global_level2_recheck_monitor.json -- \
-  scripts/run_global_coxeter_formulation.py verify-current \
-  --input results/global_level2_current/necessary_primal.exact.json \
-  --point results/global_level2_face_recovery/original_feasible_point.exact.json \
-  --output results/global_level2_recheck
-```
-
-Verify the retained **first-level** point and its implication for the normalized dual
-without running a numerical solver:
-
-```sh
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/global_feasibility_recheck_monitor.json -- \
-  scripts/run_global_coxeter_formulation.py verify-current \
-  --output results/global_feasibility_recheck
-```
-
-Use fresh output names. This check needs Python's standard library and
-reads the original exact matrices. `solve-current --solver sdpa
---orientation necessary` solves that frozen input; `--orientation
-certificate` selects its normalized certificate problem. `--solver recover
---resume-from results/global_current_sdpa_primal` reconstructs a rational
-point from the saved numerical checkpoint.
-With `--solver sdpa`, `--resume-from` instead restarts from the checkpoint's
-native vector and both cone arrays; it requires byte-identical ordered
-reduced matrix inputs. `audit-strengthening --input
-results/global_level2_current/necessary_primal.exact.json` repeats the
-constraint-retention and old-witness separation audit, using the pinned
-completed baseline verification. Both commands use the same watchdog and
-a fresh `--output` directory.
-
-From the repository root, run one monitored batch at a time:
-
-```sh
-python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
-  --ledger results/global_tail57_export_monitor.json -- \
-  scripts/run_global_coxeter_formulation.py export \
-  --threshold 57 --parity odd --upper-dimension 57 \
-  --output results/global_tail57_export
-```
-
-Use fresh output names. `--upper-dimension57` is written as
-`--upper-dimension 57` on the command line. It uses the completed
-n>=58 theorem as an anchor. Thus one global model for the band N<=n<=57
-suffices for a proposed cutoff N; separate diagram families or separate
-runs for each dimension are not needed. Omitting the option keeps the
-whole unbounded parity tail in the new model itself.
-
-Use `--level 2` when exporting the stronger model. The default remains
-level 1, preserving the baseline formulation. To solve the retained
-second-level input, use `solve-current --input
-results/global_level2_current/necessary_primal.exact.json --solver sdpa
---orientation necessary` inside the same watchdog. The certificate
-orientation selects the normalized Farkas problem for that same input.
-
-After the source/cleanup commit is pushed, `explore-lp` exports both the
-necessary-data problem and its certificate dual and searches the latter.
-`explore-sdpa` sends the complete conic certificate problem to SDPA after
-exact equality elimination. Both retain numerical status separately from
-exact rational identities and PSD checks. Every accepted result must be
-checked in its original complete matrix; support reduction is only a
-candidate-recovery device.
-
-`explore-psd-cuts` adds rational quadratic tests from violated original
-PSD blocks. It lifts any recovered LP certificate back to the original
-SDP and checks it there. This adds constraints to the same global
-matrices, without growing a list of diagram types. The model includes
-the uniform old two-unit triangle cover, contextual rank-support rows,
-and positive-coordinate support localizers. Old quadrilateral transfers
-whose premises require the dimension-58 LP remain outside this first model.
-
-The angle-square observable couples inverse-Gram sums over all finite
-vertex components to the face cosines. Its A/B/D formulas and rational
-unbounded-tail envelopes are proved in the specification. Its dual
-coefficient is free along with the 26 old feature coefficients.
-
-The generic compiler includes affine equalities in its Farkas alternative
-and includes the factor two in off-diagonal trace pairings. It does not
-fix corner coefficients, impose coefficient boxes or silently replace a
-partial vertex/face list by an exhaustive one. Results store source hashes
-instead of duplicating the whole source tree at every run.
+The [25 November cleanup record](../../results/repository_search_cleanup_20261125/README.md)
+lists the removed obsolete searches, notes and numerical payloads. Superseded
+tracked payloads restore from the pushed tag `pre-search-cleanup-20261125` at
+`70b23827`. Untracked obsolete generated searches were deliberately deleted;
+the tag does not back them up. Compact historical status and source records are
+preserved with their original scope. Current scientific inputs, exact witnesses,
+certificates and proof-chain evidence take priority over disposable numerical
+caches.

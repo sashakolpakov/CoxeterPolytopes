@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 import time
 
-from . import conic,feasibility,sdpa_cli
+from . import conic,feasibility,sdpa_cli,solver_gate
 
 TERMINAL_PHASES={"pdOPT","pdINF","pINF_dFEAS","pFEAS_dINF","pUNBD","dUNBD"}
 
@@ -24,24 +24,39 @@ def shape(path):
     return variables,sizes
 
 
-def checkpoint(path,variables,sizes):
+def checkpoint(path,variables,sizes,require_interior=False):
     values,phase=conic.native_vector(path)
     if len(values)!=variables: raise ValueError("Wrong checkpoint free-vector dimension")
     expected=sum(n*n if n>0 else -n for n in sizes)
-    lengths={}
+    lengths={};minimum_eigenvalues={}
     for field in ("xMat","yMat"):
-        lengths[field]=len(conic.NUMBER.findall(feasibility.native_array(path,field)))
+        tokens=conic.NUMBER.findall(feasibility.native_array(path,field))
+        lengths[field]=len(tokens)
         if lengths[field]!=expected: raise ValueError("Wrong checkpoint cone dimension: "+field)
+        if require_interior:
+            import numpy as np
+            array=np.asarray([float(c) for c in tokens]);position=0;minimum=float('inf')
+            for size in sizes:
+                if size<0:
+                    minimum=min(minimum,float(np.min(array[position:position-size])));position-=size
+                else:
+                    M=array[position:position+size*size].reshape((size,size));position+=size*size
+                    minimum=min(minimum,float(np.linalg.eigvalsh((M+M.T)/2)[0]))
+            if not np.all(np.isfinite(array)) or minimum<=0:
+                raise ValueError('Starting cone arrays are not numerically positive definite: '+field)
+            minimum_eigenvalues[field]=minimum
     return dict(native_phase=phase,free_variables=len(values),cone_array_entries=lengths,
         native_common_margin=str(values[-1]),complete_free_vector_and_both_cone_arrays=True,
+        numerical_initial_cone_minimum_eigenvalues=minimum_eigenvalues,
         file_sha256=conic.digest_bytes(path.read_bytes()))
 
 
-def run(root,out,input_path,initial,iterations,seconds,resume=None):
+def run(root,out,input_path,initial,iterations,seconds,resume=None,preflight=None):
+    gate=solver_gate.verify_native(input_path,preflight)
     started=time.monotonic();out.mkdir()
-    paths=[input_path,initial,Path(__file__),root/"scripts/run_sdpa_checkpoint_20261125.py",
+    paths=[input_path,initial,Path(preflight),Path(__file__),root/"scripts/run_sdpa_checkpoint_20261125.py",
         sdpa_cli.EXECUTABLE,*[root/"research/global_formulation"/(name+".py")
-        for name in ("conic","feasibility","sdpa_cli")]]
+        for name in ("conic","feasibility","sdpa_cli","solver_gate")]]
     if resume is not None: paths.extend([resume/"native_metadata.json",resume/"result.json"])
     def bindings():
         return {str(p.relative_to(root)) if p.is_relative_to(root) else str(p):
@@ -55,14 +70,15 @@ def run(root,out,input_path,initial,iterations,seconds,resume=None):
         previous_state=json.loads((resume/"result.json").read_text())
         if not previous_state.get("checkpoint",{}).get("complete_free_vector_and_both_cone_arrays"):
             raise ValueError("The previous batch did not produce a complete restart point")
-    initial_check=checkpoint(initial,variables,sizes)
+    initial_check=checkpoint(initial,variables,sizes,require_interior=True)
     conic.write_json(out/"initial_checkpoint_check.json",initial_check)
-    native=sdpa_cli.call(input_path,out,iterations,seconds,initial)
+    native=sdpa_cli.call(input_path,out,iterations,seconds,initial,preflight=preflight)
     stdout=(out/"solver.stdout").read_text()
     report=dict(status="NO_EXACT_FEASIBILITY_DECISION",native=native,
         requested_iterations=iterations,requested_native_seconds=seconds,
         identical_frozen_native_input=True,geometric_constraints_changed=False,
         auxiliary_problem="unchanged common PSD margin",accepted_bounds_changed=False,
+        verified_preflight=gate,
         resume_from=str(resume.relative_to(root)) if resume is not None else None,
         native_terminal=False,source_bindings=before)
     if native["timed_out"]:

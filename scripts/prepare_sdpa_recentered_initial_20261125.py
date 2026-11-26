@@ -23,7 +23,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', required=True)
     parser.add_argument('--checkpoint', required=True)
-    parser.add_argument('--source', default='results/global_edge_closure_conditioned01')
+    parser.add_argument('--source', required=True)
     args = parser.parse_args()
     sys.path.insert(0, str(ROOT))
     import numpy as np

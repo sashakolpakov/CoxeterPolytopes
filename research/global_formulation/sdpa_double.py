@@ -82,7 +82,9 @@ def phase1_input(path,problem):
     return augmented
 
 
-def native_call(input_path,out,iterations,initial_scale=10.,epsilon=1e-9,search_region=2.):
+def native_call(input_path,out,iterations,initial_scale=10.,epsilon=1e-9,search_region=2.,*,preflight=None,fixture=False):
+    from . import solver_gate
+    checked=solver_gate.verify_native(input_path,preflight,fixture=fixture)
     import numpy as np
     sdpap,api = backend()
     A,b,c,K,J = sdpap.importsdpa(str(input_path),flipsign=True)
@@ -93,7 +95,7 @@ def native_call(input_path,out,iterations,initial_scale=10.,epsilon=1e-9,search_
         betaStar=.1,betaBar=.3,gammaStar=.9,print="display",isDimacs=False,
         sdpaResult=str(out/"backend.result"),xPrint="%+26.17e",yPrint="%+26.17e",
         sPrint="%+26.17e",infPrint="%+26.17e"))
-    meta = dict(backend=api.get_backend_info(),input=str(input_path),
+    meta = dict(preflight_check=checked,backend=api.get_backend_info(),input=str(input_path),
         input_sha256=hashlib.sha256(input_path.read_bytes()).hexdigest(),
         dimensions=dict(equalities=A.shape[0],cone_coordinates=A.shape[1],
             scalar_rows=K.l,PSD_blocks=list(K.s)),options=options,
@@ -145,7 +147,7 @@ def checks(root,out):
         [conic.form(x=1),conic.form(2)]]),dict(name="lower",entries=[[conic.form(-1,x=1)]]),
         dict(name="upper",entries=[[conic.form(1,x=-1)]])])
     conic.write_sdpa(out/"input.dat-s",toy)
-    native_call(out/"input.dat-s",out,60)
+    native_call(out/"input.dat-s",out,60,fixture=True)
     values,phase=conic.native_vector(out/"native.result")
     if abs(values[0]-1)>F(1,10**7): raise ValueError("Native import changed the free-vector sign")
     # A point with a unique free coordinate checks sign, a mixed scalar/PSD
@@ -166,7 +168,7 @@ def checks(root,out):
         [conic.form(-1,x=1,z=-2),conic.form(2,w=1,x=-3,z=1)])
     E,subs=conic.eliminate(P)
     certificate_input(certificate/"input.dat-s",E)
-    native_call(certificate/"input.dat-s",certificate,80)
+    native_call(certificate/"input.dat-s",certificate,80,fixture=True)
     matrices=feasibility.native_cones(certificate/"native.result",E,field="yMat")
     proposed,completion=dual_completion.complete(P,E,matrices,8)
     if proposed is None:raise ValueError("Native certificate completion failed: "+str(completion))
@@ -178,7 +180,7 @@ def checks(root,out):
     P1=conic.model(["x"],[dict(name="PSD",entries=[[{},conic.form(x=1)],[conic.form(x=1),{}]]),
         dict(name="lower",entries=[[conic.form(-1,x=1)]]),dict(name="nonnegative_x",entries=[[conic.form(x=1)]])])
     phase1_input(phase1/"input.dat-s",P1)
-    native_call(phase1/"input.dat-s",phase1,80)
+    native_call(phase1/"input.dat-s",phase1,80,fixture=True)
     raw,phase=conic.native_vector(phase1/"native.result")
     if abs(raw[-1]-F(1,2))>F(1,10**7):raise ValueError("The phase-I objective does not equal its known optimum")
     try:conic.check_point(P1,{"x":raw[0]})
@@ -198,7 +200,7 @@ def checks(root,out):
     Q,_,unit_scales,diagonals,_=equilibration.equilibrate(Q,{})
     scales=[a*b for a,b in zip(scales,unit_scales,strict=True)]
     certificate_input(band/"input.dat-s",Q)
-    native_call(band/"input.dat-s",band,80)
+    native_call(band/"input.dat-s",band,80,fixture=True)
     matrices=feasibility.native_cones(band/"native.result",Q,field="yMat")
     proposed,completion=dual_completion.complete(P2,Q,matrices,8,scales,diagonals)
     if proposed is None:raise ValueError("Conditioned certificate completion failed: "+str(completion))
@@ -213,113 +215,4 @@ def checks(root,out):
 def run(root,out,input_path,prepared,input_native,iterations,seconds,orientation="necessary",
         condition_intervals=False,initial_scale=10.,epsilon=1e-9,equilibrate=False,
         reference_path=None,search_region=2.):
-    out.mkdir(); started=time.monotonic()
-    inputs=[input_path,prepared/"compiled.exact.json",prepared/"substitutions.exact.json",prepared/"result.json",input_native,
-        Path(__file__),root/"scripts/run_sdpa_double_frozen_20261125.py",
-        root/"research/global_formulation/conic.py",root/"research/global_formulation/feasibility.py",
-        root/"research/global_formulation/dual_completion.py",root/"research/global_formulation/conditioning.py",
-        root/"research/global_formulation/equilibration.py",
-        input_path.with_name("certificate_dual.exact.json")]
-    if equilibrate:inputs.append(reference_path)
-    inputs += sorted(PACKAGE.rglob("*.so"))+sorted(PACKAGE.rglob("METADATA"))
-    before=binding(inputs,root);conic.write_json(out/"source_bindings.json",before)
-    original=conic.read_model(input_path); compiled=conic.read_model(prepared/"compiled.exact.json")
-    prior=json.loads((prepared/"result.json").read_text())
-    if prior["orientation"]!="necessary" or prior["frozen_input_sha256"]!=hashlib.sha256(input_path.read_bytes()).hexdigest():
-        raise ValueError("Wrong original frozen problem")
-    if prior["prepared_matrix_sha256"]!=conic.digest_bytes(conic.canonical(compiled)):
-        raise ValueError("Changed exact prepared matrix")
-    substitutions={v:{w:F(c) for w,c in q.items()} for v,q in json.loads((prepared/"substitutions.exact.json").read_text()).items()}
-    if prior["prepared_substitutions_sha256"]!=conic.digest_bytes(conic.canonical(substitutions)):
-        raise ValueError("Changed exact substitutions")
-    native_problem=compiled;native_substitutions=substitutions
-    if orientation!="necessary":
-        native_problem,native_substitutions=conic.eliminate(original)
-        conic.write_json(out/"equality_only.exact.json",native_problem)
-        conic.write_json(out/"equality_only_substitutions.exact.json",native_substitutions)
-    block_scales=[F(1)]*len(native_problem["blocks"])
-    block_diagonals=None
-    conditioning_report=None
-    if condition_intervals:
-        native_problem,change,block_scales,conditioning_report=conditioning.thin_intervals(native_problem)
-        native_substitutions={v:feasibility.substitute(q,change) for v,q in native_substitutions.items()}
-        conic.write_json(out/"interval_conditioning.exact.json",conditioning_report)
-        conic.write_json(out/"conditioned_substitutions.exact.json",native_substitutions)
-        conic.write_json(out/"conditioned.exact.json",native_problem)
-        conic.write_json(out/"positive_block_scales.exact.json",block_scales)
-    if equilibrate:
-        reference={v:F(c) for v,c in json.loads(reference_path.read_text()).items()}
-        if conditioning_report:
-            for pair in conditioning_report["pairs"]:
-                reference[pair["coordinate"]]=abs(conic.value(pair["width"],reference))/(2*pair["delta"])
-        native_problem,change,unit_scales,block_diagonals,unit_report=equilibration.equilibrate(native_problem,reference)
-        block_scales=[a*b for a,b in zip(block_scales,unit_scales,strict=True)]
-        native_substitutions={v:feasibility.substitute(q,change) for v,q in native_substitutions.items()}
-        conic.write_json(out/"equilibration.exact.json",unit_report)
-        conic.write_json(out/"equilibrated.exact.json",native_problem)
-        conic.write_json(out/"equilibrated_substitutions.exact.json",native_substitutions)
-    if orientation=="necessary":conic.write_sdpa(out/"input.dat-s",native_problem)
-    elif orientation=="phase1":phase1_input(out/"input.dat-s",native_problem)
-    else:certificate_input(out/"input.dat-s",native_problem)
-    if orientation=="necessary" and not condition_intervals and not equilibrate:
-        if (out/"input.dat-s").read_bytes()!=input_native.read_bytes():
-            raise ValueError("The standard SDPA run is not the identical ordered reduced input")
-    else:
-        input_native=out/"input.dat-s"
-    command=[sys.executable,"-B",str(root/"scripts/run_sdpa_double_frozen_20261125.py"),"native",
-        "--output",str(out.relative_to(root)),"--native-input",str(input_native),"--iterations",str(iterations),
-        "--initial-scale",str(initial_scale),"--epsilon",str(epsilon),"--search-region",str(search_region)]
-    timed_out=False;code=None
-    with (out/"solver.stdout").open("x") as stream:
-        try: code=subprocess.run(command,stdout=stream,stderr=subprocess.STDOUT,timeout=seconds,check=False).returncode
-        except subprocess.TimeoutExpired: timed_out=True
-    report=dict(status="NO_EXACT_FEASIBILITY_DECISION",solver="SDPA binary64 through sdpa-python 0.2.3",
-        timed_out=timed_out,returncode=code,maximum_iterations=iterations,source_bindings=before,
-        original_frozen_input=str(input_path.relative_to(root)),original_input_sha256=hashlib.sha256(input_path.read_bytes()).hexdigest(),
-        orientation=orientation,original_ordered_reduced_input_byte_identity_checked=orientation=="necessary" and not condition_intervals and not equilibrate,
-        exact_invertible_diagonal_equilibration=equilibrate,
-        exact_invertible_interval_conditioning=condition_intervals,
-        conditioned_pairs=len(conditioning_report["pairs"]) if conditioning_report else 0,
-        certificate_trace_uses_only_original_equality_elimination=orientation=="certificate",
-        phase1_shifts_are_auxiliary_and_not_allowed_in_original_verification=orientation=="phase1",accepted_bounds_changed=False)
-    if (out/"native.result").exists():
-        values,phase=conic.native_vector(out/"native.result")
-        expected=len(native_problem["variables"])+int(orientation!="necessary")
-        if len(values)!=expected:raise ValueError("Wrong standard SDPA free-vector dimension")
-        report["native_phase"]=phase
-        if orientation=="phase1":report["phase1_violation"]=values[-1]
-        geometric_values=(values if orientation=="necessary" else values[:-1] if orientation=="phase1" else
-            ([v/values[-1] for v in values[:-1]] if values[-1]<0 else None))
-        if geometric_values is not None:
-            raw=dict(zip(native_problem["variables"],geometric_values,strict=True))
-            point={v:conic.value(q,raw) for v,q in native_substitutions.items()}
-            conic.write_json(out/"original_numerical_candidate.json",point)
-            report["original_numerical_residuals"]=feasibility.numerical_residuals(original,point)
-            try:
-                if (condition_intervals or equilibrate) and orientation=="necessary":
-                    exact,checked=conic.reconstruct(original,native_problem,native_substitutions,geometric_values)
-                else:
-                    exact,checked=conic.reconstruct(original,compiled,substitutions,[point[v] for v in compiled["variables"]])
-                conic.write_json(out/"original_feasible_point.exact.json",exact)
-                report.update(status="EXACT_ORIGINAL_SDP_FEASIBLE",exact_check=checked)
-            except ValueError as error:report["exact_recovery_failure"]=str(error)
-        if orientation!="necessary" and report["status"]!="EXACT_ORIGINAL_SDP_FEASIBLE":
-            if orientation=="phase1":
-                shapes=conic.model(native_problem["variables"],[*native_problem["blocks"],dict(name="rho",entries=[[{}]])])
-                matrices=feasibility.native_cones(out/"native.result",shapes,field="yMat")[:-1]
-            else:matrices=feasibility.native_cones(out/"native.result",native_problem,field="yMat")
-            report["certificate_completion_attempts"]=[]
-            for digits in (6,10,14):
-                proposed,completion=dual_completion.complete(original,native_problem,matrices,digits,block_scales,block_diagonals)
-                report["certificate_completion_attempts"].append(completion)
-                if proposed is None:continue
-                point,grams=proposed
-                checked=dual_completion.verify(original,conic.read_model(input_path.with_name("certificate_dual.exact.json")),point,grams)
-                conic.write_json(out/"original_infeasibility_certificate.exact.json",point)
-                conic.write_json(out/"PSD_grams.exact.json",grams)
-                report.update(status="EXACT_ORIGINAL_SDP_INFEASIBILITY_CERTIFICATE",exact_check=checked)
-                break
-    if binding(inputs,root)!=before:raise ValueError("A fixed standard SDPA source or input changed")
-    report["elapsed_seconds"]=time.monotonic()-started
-    conic.write_json(out/"result.json",report)
-    print(json.dumps(conic.plain({k:v for k,v in report.items() if k not in ("source_bindings","exact_check")})),flush=True)
+    raise ValueError('Retired solver path: use the verified preparation pipeline and run_sdpa_checkpoint_20261125.py')

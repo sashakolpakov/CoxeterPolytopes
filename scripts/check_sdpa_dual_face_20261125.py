@@ -16,8 +16,8 @@ def main():
         raise RuntimeError('Use the serial scientific watchdog')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', required=True)
-    parser.add_argument('--source', default='results/global_edge_closure_conditioned01')
-    parser.add_argument('--checkpoint', default='results/global_edge_closure_sdpa04')
+    parser.add_argument('--source', required=True)
+    parser.add_argument('--checkpoint', required=True)
     args = parser.parse_args()
     sys.path.insert(0, str(ROOT))
     from research.global_formulation import conic, feasibility, sdpa_cli, slater_margin

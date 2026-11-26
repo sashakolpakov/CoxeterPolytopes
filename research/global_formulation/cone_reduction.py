@@ -85,9 +85,11 @@ def test_row(problem,ref):
     return problem['blocks'][b]['entries'][i][i]
 
 
-def discover(problem):
+def discover(problem,substitutions=None):
     """Cheap exact face tests, including every PSD diagonal as a nonnegative row."""
-    rows,units,seen,equations,proofs = [],{},{},{},[]
+    rows,units,seen,equations,proofs,current = [],{},{},{},[],{}
+    def transform(q):return substitute(q,substitutions) if substitutions is not None else q
+    def nonnegative(ref):return current[tuple(ref)]
     def equation(q):
         if q:
             first = q[min(q)]
@@ -95,25 +97,26 @@ def discover(problem):
             equations.setdefault(conic.canonical(normalized),normalized)
     def circuit(combination):
         if any(w<=0 for _,w in combination) or conic.plus(*(
-                conic.times(w,test_row(problem,ref)) for ref,w in combination)):
+                conic.times(w,nonnegative(ref)) for ref,w in combination)):
             raise ValueError('Invalid positive cone identity')
         proofs.append(dict(kind='positive_zero_sum',combination=combination))
-        for ref,_ in combination: equation(test_row(problem,ref))
+        for ref,_ in combination: equation(nonnegative(ref))
     for b,block in enumerate(problem['blocks']):
         M = block['entries']
         for i,row in enumerate(M):
-            q = row[i]
+            q = transform(row[i])
             if not q:
-                if any(row):
+                transformed_row=[transform(entry) for entry in row]
+                if any(transformed_row):
                     proofs.append(dict(kind='PSD_zero_diagonal',block=b,index=i))
-                    for entry in row: equation(entry)
+                    for entry in transformed_row: equation(entry)
                 continue
             if not any(qv for qv in q):
                 if q.get('',F(0))<0:
                     raise Contradiction(dict(kind='negative_diagonal_constant',ref=(b,i),row=q))
                 continue
             ref = (b,i)
-            rows.append((ref,q))
+            rows.append((ref,q));current[ref]=q
             if len(q)==1 and '' not in q:
                 v,c = next(iter(q.items()))
                 units.setdefault(v,{})[1 if c>0 else -1] = (ref,c)
@@ -135,12 +138,60 @@ def discover(problem):
             other,a = option
             combination.append((other,-c/a))
         else:
-            total = conic.plus(*(conic.times(w,test_row(problem,r)) for r,w in combination))
+            total = conic.plus(*(conic.times(w,nonnegative(r)) for r,w in combination))
             if total.get('',F(0))<0:
                 raise Contradiction(dict(kind='negative_positive_combination',combination=combination,
                                          constant=total['']))
             circuit(combination)
     return list(equations.values()),proofs
+
+
+def verify_source_faces(source,faces,substitutions=None):
+    """Check source-cone implications on the preceding exact affine subspace."""
+    allowed={}
+    def transform(q):return substitute(q,substitutions) if substitutions is not None else q
+    def allow(q):
+        if q:
+            normalized=conic.times(1/q[min(q)],q)
+            allowed[conic.canonical(normalized)]=normalized
+    for item in faces:
+        if item['kind']=='positive_zero_sum':
+            combination=item['combination']
+            if any(w<=0 for _,w in combination) or conic.plus(*(
+                    conic.times(w,transform(test_row(source,r))) for r,w in combination)):
+                raise ValueError('Invalid retained positive-face proof')
+            for r,_ in combination:allow(test_row(source,r))
+        elif item['kind']=='PSD_zero_diagonal':
+            row=source['blocks'][item['block']]['entries'][item['index']]
+            if transform(row[item['index']]):raise ValueError('A claimed zero diagonal is nonzero')
+            for q in row:allow(q)
+        else:raise ValueError('Unknown cone-face proof')
+    return allowed
+
+
+def close_faces(problem,progress=None):
+    """Propagate faces using original rows, without rewriting all cone matrices."""
+    inferred,rounds=[],[]
+    updates,history=linear_elimination(problem['variables'],problem['equations'])
+    for turn in range(len(problem['variables'])+1):
+        try:mapped,faces=discover(problem,updates)
+        except Contradiction as error:
+            error.proof=dict(error.proof,face_rounds=rounds,inferred_equations=inferred,
+                             preceding_substitutions=updates,preceding_elimination=history)
+            raise
+        if not mapped:return inferred,rounds,updates,history
+        allowed=verify_source_faces(problem,faces,updates)
+        added=[q for q in allowed.values() if substitute(q,updates)]
+        if not added:raise ValueError('Face discovery made no affine progress')
+        rank=len(history);inferred.extend(added)
+        rounds.append(dict(faces=faces,inferred_equations=added))
+        try:updates,history=linear_elimination(problem['variables'],[*problem['equations'],*inferred])
+        except Contradiction as error:
+            error.proof=dict(error.proof,face_rounds=rounds,inferred_equations=inferred)
+            raise
+        if len(history)<=rank:raise ValueError('A face round failed to increase the exact equality rank')
+        if progress:progress(round=turn+1,new_equations=len(added),equality_rank=len(history))
+    raise ValueError('Exact face propagation did not terminate')
 
 
 def column_compression(M):
@@ -184,10 +235,9 @@ def block_key(M):
     return conic.digest_bytes(conic.canonical(normalized)),scale
 
 
-def pass_once(problem):
-    inferred,faces = discover(problem)
+def pass_once(problem,progress=None):
+    inferred,rounds,updates,history = close_faces(problem,progress)
     equations = [*problem['equations'],*inferred]
-    updates,history = linear_elimination(problem['variables'],equations)
     blocks,maps,seen = [],[],{}
     counts = dict(forced_equations=len(inferred),eliminated_variables=len(history),
                   removed_constant_cones=0,removed_duplicate_cones=0,removed_PSD_dimensions=0)
@@ -202,7 +252,7 @@ def pass_once(problem):
             try: pivots = conic.psd_pivots(matrix)
             except ValueError as error:
                 raise Contradiction(dict(kind='negative_constant_after_elimination',block=b,matrix=matrix,
-                    faces=faces,equations=equations,elimination=history,substitutions=updates)) from error
+                    face_rounds=rounds,equations=equations,elimination=history,substitutions=updates)) from error
             maps.append(dict(source=b,kind='constant_PSD',pivots=pivots))
             counts['removed_constant_cones']+=1
             continue
@@ -230,7 +280,7 @@ def pass_once(problem):
         removed = set(null)
         updates = {v:{w:c for w,c in q.items() if w not in removed} for v,q in updates.items()}
     output = conic.model([v for v in free if v in used],blocks)
-    proof = dict(schema='exact-cone-reduction-pass-v1',faces=faces,inferred_equations=inferred,
+    proof = dict(schema='exact-cone-reduction-pass-v2',face_rounds=rounds,inferred_equations=inferred,
                  elimination=history,substitutions=updates,null_directions_fixed_zero=null,
                  block_maps=maps,counts=counts)
     verify_pass(problem,output,proof)
@@ -238,24 +288,24 @@ def pass_once(problem):
 
 
 def verify_pass(source,target,proof):
-    # Independently replay source-cone identities before trusting any substitution.
-    allowed = set()
-    for item in proof['faces']:
-        if item['kind']=='positive_zero_sum':
-            combination = item['combination']
-            if any(w<=0 for _,w in combination) or conic.plus(*(
-                    conic.times(w,test_row(source,r)) for r,w in combination)):
-                raise ValueError('Invalid retained positive-face proof')
-            allowed.update(conic.canonical(conic.times(1/q[min(q)],q))
-                           for r,_ in combination if (q:=test_row(source,r)))
-        elif item['kind']=='PSD_zero_diagonal':
-            row = source['blocks'][item['block']]['entries'][item['index']]
-            if row[item['index']]: raise ValueError('A claimed zero diagonal is nonzero')
-            allowed.update(conic.canonical(conic.times(1/q[min(q)],q)) for q in row if q)
-        else: raise ValueError('Unknown cone-face proof')
-    if any(conic.canonical(q) not in allowed for q in proof['inferred_equations']):
-        raise ValueError('Unproved equation inserted in presolve')
-    equations = [*source['equations'],*proof['inferred_equations']]
+    # Each cascade round is valid on the affine subspace proved before it.
+    equations=list(source['equations'])
+    if proof['schema']=='exact-cone-reduction-pass-v2':
+        flattened=[]
+        for item in proof['face_rounds']:
+            preceding,_=linear_elimination(source['variables'],equations)
+            allowed=verify_source_faces(source,item['faces'],preceding)
+            if any(conic.canonical(q) not in allowed for q in item['inferred_equations']):
+                raise ValueError('Unproved equation inserted in a face round')
+            flattened.extend(item['inferred_equations']);equations.extend(item['inferred_equations'])
+        if flattened!=proof['inferred_equations']:
+            raise ValueError('Changed flattened face-round equations')
+    elif proof['schema']=='exact-cone-reduction-pass-v1':
+        allowed=verify_source_faces(source,proof['faces'])
+        if any(conic.canonical(q) not in allowed for q in proof['inferred_equations']):
+            raise ValueError('Unproved equation inserted in presolve')
+        equations.extend(proof['inferred_equations'])
+    else:raise ValueError('Unknown exact reduction proof schema')
     raw_updates,replayed = linear_elimination(source['variables'],equations)
     if conic.canonical(replayed)!=conic.canonical(proof['elimination']):
         raise ValueError('Changed retained elimination history')

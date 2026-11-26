@@ -157,6 +157,8 @@ def self_checks():
 
 
 def run(root, output, threshold, parity, stage, upper_dimension=None, level=1):
+    if stage!='export':
+        raise RuntimeError('This exploratory solver route is retired; use fixed-point preparation and the gated native driver')
     out = (root/output).resolve()
     if out.exists() or not out.is_relative_to(root/"results"):
         raise ValueError("Use a fresh results directory")
@@ -210,74 +212,6 @@ def run(root, output, threshold, parity, stage, upper_dimension=None, level=1):
             report["strict_strengthening"] = {k: v for k, v in audit.items()
                 if k not in ("equality_violations", "cone_violations")}
         report["uniform_strengthening_level"] = level
-    if stage == "explore-psd-cuts":
-        report.update(separation.explore(primal, dual, out, linprog, exact_reconstruction))
-    elif stage == "explore-lp":
-        outer = sampled_psd_LP(primal)
-        certificate = conic.farkas(outer)
-        conic.write_json(out/"LP_outer.exact.json", outer)
-        conic.write_json(out/"LP_certificate.exact.json", certificate)
-        proposal, numerical = linprog(certificate)
-        conic.write_json(out/"LP_certificate_numerical.json", numerical)
-        if proposal is not None:
-            conic.write_json(out/"LP_certificate_candidate.json", proposal)
-        recovered = exact_reconstruction(certificate, proposal)
-        report["LP_certificate_numerical"] = numerical
-        if recovered:
-            point, checked = recovered
-            conic.write_json(out/"LP_infeasibility_certificate.exact.json", point)
-            report.update(status="EXACT_GLOBAL_OUTER_LP_INFEASIBILITY_CERTIFICATE", certificate_check=checked,
-                accepted_dimension_bound_update=False)
-        else:
-            candidate, diagnostic = linprog(outer)
-            conic.write_json(out/"LP_primal_numerical.json", diagnostic)
-            if candidate is not None:
-                conic.write_json(out/"LP_primal_candidate.json", candidate)
-            recovered = exact_reconstruction(outer, candidate)
-            report.update(status="NO_VERIFIED_GLOBAL_CERTIFICATE_AT_THIS_LEVEL", LP_primal_numerical=diagnostic)
-            if recovered:
-                point, checked = recovered
-                conic.write_json(out/"LP_outer_feasible_point.exact.json", point)
-                report.update(status="EXACT_GLOBAL_OUTER_LP_FEASIBLE", outer_point_check=checked)
-                try:
-                    full = conic.check_point(primal, point)
-                    report.update(status="EXACT_GLOBAL_OUTER_SDP_FEASIBLE",
-                        full_PSD_blocks_checked=len(full["blocks"]), no_strict_Farkas_certificate_at_this_level=True)
-                except ValueError as error:
-                    report["full_SDP_point_not_verified"] = str(error)
-    elif stage == "explore-sdpa":
-        print("Eliminating the full certificate's affine equalities over Q", flush=True)
-        compiled, substitutions = conic.eliminate(dual)
-        conic.write_json(out/"dual_compiled.exact.json", compiled)
-        conic.write_json(out/"dual_substitutions.exact.json", substitutions)
-        encoding = conic.write_sdpa(out/"dual.dat-s", compiled)
-        print(json.dumps(dict(SDPA_encoding=encoding)), flush=True)
-        solver = shutil.which("sdpa_gmp") or shutil.which("sdpa")
-        if not solver:
-            raise RuntimeError("SDPA is not installed")
-        command = [solver, "-ds", str(out/"dual.dat-s"), "-o", str(out/"dual.result")]
-        returncode = None
-        with (out/"solver.stdout").open("x") as stream:
-            try:
-                returncode = subprocess.run(command, stdout=stream, stderr=subprocess.STDOUT,
-                    timeout=600, check=False).returncode
-            except subprocess.TimeoutExpired:
-                report["SDPA_time_limit_reached"] = True
-        report.update(SDPA_command=command, SDPA_returncode=returncode, SDPA_encoding=encoding,
-            exact_null_directions_removed=len(compiled["metadata"]["free_null_directions_fixed_to_zero"]),
-            status=("GLOBAL_SDPA_TIME_LIMIT_NO_CERTIFICATE" if returncode is None else
-                    "GLOBAL_SDPA_NUMERICAL_FAILURE" if returncode else
-                    "GLOBAL_SDPA_RESULT_REQUIRES_EXACT_RECONSTRUCTION"))
-        try:
-            raw, phase = conic.native_vector(out/"dual.result")
-            point, checked = conic.reconstruct(dual, compiled, substitutions, raw)
-            conic.write_json(out/"SDPA_certificate.exact.json", point)
-            report.update(status="EXACT_GLOBAL_SDP_INFEASIBILITY_CERTIFICATE", SDPA_phase=phase,
-                certificate_check=checked, accepted_dimension_bound_update=False)
-        except (ValueError, FileNotFoundError) as error:
-            report["exact_certificate_not_obtained"] = str(error)
-    elif stage != "export":
-        raise ValueError("Unsupported research stage")
     after = {str(p.relative_to(root)): dict(bytes=p.stat().st_size,
         sha256=conic.digest_bytes(p.read_bytes())) for p in paths}
     if after != bindings:

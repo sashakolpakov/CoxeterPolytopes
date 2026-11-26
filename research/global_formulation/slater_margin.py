@@ -94,7 +94,7 @@ def self_check(root,out):
         dict(name='lower',entries=[[conic.form(-1,x=1)]]),dict(name='nonnegative_x',entries=[[conic.form(x=1)]])])
     Q=augmented(P);write_input(out/'input.dat-s',Q)
     initialization=strict_initial(P,out/'initial.dat')
-    sdpa_cli.call(out/'input.dat-s',out,80,20,out/'initial.dat')
+    sdpa_cli.call(out/'input.dat-s',out,80,20,out/'initial.dat',fixture=True)
     raw,phase=conic.native_vector(out/'native.result')
     if abs(raw[-1])>F(1,10**6):raise ValueError('The known singular fixture has the wrong margin optimum')
     matrices=feasibility.native_cones(out/'native.result',Q,field='yMat')[:-1]
@@ -108,65 +108,4 @@ def self_check(root,out):
 
 
 def run(root,out,source,seconds,input_path=None):
-    out.mkdir();started=time.monotonic()
-    original_path=(root/input_path).resolve() if input_path else root/'results/global_shared_cusp_current/necessary_primal.exact.json'
-    equilibrated=(source/'equilibrated.exact.json').exists()
-    model_path=source/('equilibrated.exact.json' if equilibrated else 'compiled.exact.json')
-    subs_path=source/('equilibrated_substitutions.exact.json' if equilibrated else 'substitutions.exact.json')
-    paths=[original_path,model_path,subs_path,Path(__file__),root/'scripts/run_sdpa_slater_margin_20261125.py',
-        *[root/'research/global_formulation'/(name+'.py') for name in
-            ('conic','feasibility','sdpa_cli','face_phase','dual_completion')],sdpa_cli.EXECUTABLE]
-    receipt_path=source/'result.json'
-    if receipt_path.exists(): paths.append(receipt_path)
-    before=sdpa_double.binding(paths,root);conic.write_json(out/'source_bindings.json',before)
-    problem=conic.read_model(model_path)
-    if receipt_path.exists():
-        receipt=json.loads(receipt_path.read_text())
-        if receipt.get('frozen_input_sha256') and receipt['frozen_input_sha256']!=before[str(original_path.relative_to(root))]['sha256']:
-            raise ValueError('The prepared SDP belongs to a different original input')
-        if receipt.get('prepared_matrix_sha256') and receipt['prepared_matrix_sha256']!=conic.digest_bytes(conic.canonical(problem)):
-            raise ValueError('The prepared margin matrix changed')
-    Q=augmented(problem);write_input(out/'input.dat-s',Q)
-    initialization=strict_initial(problem,out/'initial.dat');conic.write_json(out/'initialization.json',initialization)
-    native=sdpa_cli.call(out/'input.dat-s',out,100,seconds,out/'initial.dat')
-    report=dict(status='NO_EXACT_FEASIBILITY_DECISION',native=native,strictly_feasible_auxiliary=True,
-        original_input_sha256=before[str(original_path.relative_to(root))]['sha256'],accepted_bounds_changed=False)
-    if (out/'native.result').exists() and not native['timed_out']:
-        raw,phase=conic.native_vector(out/'native.result');report.update(native_phase=phase,numerical_margin=raw[-1])
-        if len(raw)!=len(Q['variables']):raise ValueError('Wrong margin free dimension')
-        # Keep the frozen original and reconstruction maps out of RAM while
-        # SDPA owns its Schur complement. They are needed only afterwards.
-        original=conic.read_model(original_path)
-        substitutions={v:{w:F(c) for w,c in q.items()} for v,q in json.loads(subs_path.read_text()).items()}
-        if receipt_path.exists() and receipt.get('prepared_substitutions_sha256') and receipt['prepared_substitutions_sha256']!=conic.digest_bytes(conic.canonical(substitutions)):
-            raise ValueError('The prepared margin substitutions changed')
-        values=dict(zip(problem['variables'],raw[:-1],strict=True))
-        point={v:conic.value(q,values) for v,q in substitutions.items()}
-        conic.write_json(out/'original_numerical_candidate.json',point)
-        report['original_numerical_residuals']=feasibility.numerical_residuals(original,point)
-        try:
-            exact,checked=conic.reconstruct(original,problem,substitutions,raw[:-1])
-            conic.write_json(out/'original_feasible_point.exact.json',exact)
-            report.update(status='EXACT_ORIGINAL_SDP_FEASIBLE',exact_check=checked)
-        except ValueError as error:report['exact_recovery_failure']=str(error)
-        if report['status']!='EXACT_ORIGINAL_SDP_FEASIBLE':
-            matrices=feasibility.native_cones(out/'native.result',Q,field='yMat')[:-1]
-            proposed,checked=dual_completion.complete(problem,problem,matrices,10)
-            report['source_Farkas_completion']=checked
-            if proposed is not None:
-                certificate,grams=proposed
-                checked=dual_completion.verify(problem,conic.farkas(problem),certificate,grams)
-                conic.write_json(out/'source_infeasibility_certificate.exact.json',certificate)
-                conic.write_json(out/'source_PSD_grams.exact.json',grams)
-                report.update(status='EXACT_SOURCE_SDP_INFEASIBILITY_CERTIFICATE',source_exact_check=checked,
-                    original_infeasibility_requires_verified_reduction_chain=True)
-            else:
-                proposed,checked=sparse_exposure(problem,matrices);report['face_search']=checked
-                if proposed is not None:
-                    equations,proof=proposed
-                    conic.write_json(out/'verified_face.exact.json',dict(equations=equations,positive_zero_identity=proof))
-                    report.update(status='EXACT_SOURCE_CONE_FACE_EXPOSED_FEASIBILITY_UNDECIDED')
-    if sdpa_double.binding(paths,root)!=before:raise ValueError('A margin source changed')
-    report['elapsed_seconds']=time.monotonic()-started
-    conic.write_json(out/'result.json',report)
-    print(json.dumps(conic.plain({k:v for k,v in report.items() if k not in ('exact_check','source_exact_check')})),flush=True)
+    raise ValueError('Retired solver path: use the verified preparation pipeline and run_sdpa_checkpoint_20261125.py')
