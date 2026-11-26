@@ -1,0 +1,14 @@
+{
+  "attempt": "results/global_edge_closure_sdpa03",
+  "cause": "SDPA IO::readInit scans all numeric tokens from the beginning; a complete native result includes timestamps, parameters and iteration diagnostics before xVec. Only the xVec,xMat,yMat arrays form a restart file.",
+  "continue_from_unmodified_valid_checkpoint": "results/global_edge_closure_sdpa02/native.result",
+  "corrected_implementation": "research/global_formulation/sdpa_cli.py",
+  "invalid_attempt_is_not_evidence_of_model_infeasibility": true,
+  "mathematical_feasibility_decided": false,
+  "preserved_original_error_messages": [
+    "cannot cholesky decomposition",
+    "getMinEigenValue:: cannot decomposition"
+  ],
+  "status": "RESTART_FORMAT_ERROR_DIAGNOSED_AND_CORRECTED",
+  "stronger_restart_check": "results/global_sdpa_restart_header_check/result.json"
+}

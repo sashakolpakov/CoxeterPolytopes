@@ -39,7 +39,19 @@ the strengthened equation closure. No selected diagram list is involved.
 The [first standard-SDPA batch](../../results/global_edge_closure_sdpa01/result.json)
 completed 22 iterations before its 500-second native limit. It produced
 neither a verified point nor a certificate. Peak monitored process-tree
-RSS was 8.78 GB. Feasibility of the revised input remains undecided.
+RSS was 8.78 GB. The [continued run](../../results/global_edge_closure_continuation_20261125.json)
+saved a complete checkpoint at iteration 16 and continued for ten more
+iterations, until SDPA itself stopped with
+`cannot move: step length is too short`. Its relative gap was about
+0.139. The `pFEAS` phase concerns the auxiliary margin problem.
+The [original-model check](../../results/global_edge_closure_terminal_check01/result.json)
+recovered neither a feasible point nor an infeasibility certificate.
+Feasibility of the revised input remains undecided.
+
+The native sparse input, valid restart checkpoint, terminal checkpoint
+and original-coordinate numerical candidate have
+[byte-verified archives](../../results/global_edge_closure_continuation_archive_20261125.json).
+The continuation changes neither the input matrices nor the tolerances.
 
 The frozen level-5 dimension-57 formulation implements the three requested
 extensions in order:
@@ -124,9 +136,19 @@ coordinate plus the constant pairing `-1`; it avoids eliminating roughly
 193,000 cone coordinates. Candidate certificates require rational positive
 Gram factors, an exact equality-potential lift and the original adjoint.
 
-The native SDPA command line supports saved-point restarts. Mixed-cone
-fixtures check free-coordinate signs, off-diagonal factors, scalar/PSD
-order and actual use of the saved initial point. Standard and GMP runs
+The native SDPA command line supports saved-point restarts. Its dense
+reader scans numeric tokens from the beginning of the file; a complete
+solver report includes dates and diagnostics before the actual solution.
+Restarts must extract only the `xVec`, `xMat` and `yMat` arrays.
+The [corrected restart check](../../results/global_sdpa_restart_header_check/result.json)
+also compares the resumed initial complementarity with the saved terminal
+value. The earlier check that it merely differed from a cold start was
+insufficient; its historical receipts remain preserved. The failed
+full-report restart and [diagnosis](../../results/global_edge_closure_sdpa03/restart_diagnosis.json)
+are separate from the subsequent valid numerical stop.
+
+Mixed-cone fixtures check free-coordinate signs, off-diagonal factors,
+scalar/PSD order and the restored complementarity. Standard and GMP runs
 share the same original-model checker. Auxiliary shifts, zero projective
 scales and candidate-only population restrictions never count as original
 feasibility. The independent verification of the final rational point
@@ -290,6 +312,22 @@ Conditioning then checked 101 narrow intervals and every affine inverse
 identity. Neither operation changes the necessary-data problem. Timing
 can affect the number of optional presolve passes, so byte-identical
 native restarts require their own retained prepared checkpoints.
+
+To continue a saved common-margin state on the identical native input,
+restore the archived native input and checkpoint, then use a fresh batch:
+
+```sh
+python3 -B scripts/run_bounded_scientific_long_10gb_20261123.py --parent-lock \
+  --ledger results/edge_checkpoint_new_monitor.json -- \
+  scripts/run_sdpa_checkpoint_20261125.py \
+  --resume results/global_edge_closure_sdpa02 --iterations 16 --seconds 800 \
+  --output results/edge_checkpoint_new
+```
+
+An iteration-limit exit saves a checkpoint and is not a mathematical
+decision. The retained continuation ran until a numerical stop. The
+`recover_sdpa_checkpoint_20261125.py` script separately tests a saved point
+in the frozen original input and attempts exact Farkas recovery.
 
 Use `search-frozen-psd` with the same `--input` and a fresh output to
 search LP approximations strengthened by rational PSD directions. Any

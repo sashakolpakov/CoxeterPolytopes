@@ -26,8 +26,12 @@ def call(input_path,out,iterations,seconds,initial=None,precision=None):
     parameters(out/'param.sdpa',iterations,precision)
     command=[str(executable),'-ds',str(input_path),'-o',str(out/'native.result'),
         '-p',str(out/'param.sdpa')]
-    if precision and initial is not None:
-        dense=out/'gmp_initial.dat'
+    initial_source=initial
+    if initial is not None:
+        # IO::readInit scans numbers from the beginning of its input. Full
+        # solver reports contain dates, parameters and iteration tables
+        # BEFORE xVec; passing the report directly silently corrupts state.
+        dense=out/('gmp_initial.dat' if precision else 'native_initial.dat')
         dense.write_text('\n'.join(feasibility.native_array(initial,field) for field in ('xVec','xMat','yMat'))+'\n')
         initial=dense
     if not precision:command+=['-numThreads','1']
@@ -36,6 +40,9 @@ def call(input_path,out,iterations,seconds,initial=None,precision=None):
         executable_sha256=conic.digest_bytes(executable.read_bytes()),precision_bits=precision,
         initial_path=str(initial) if initial else None,
         initial_sha256=conic.digest_bytes(initial.read_bytes()) if initial else None,
+        initial_source_path=str(initial_source) if initial_source else None,
+        initial_source_sha256=conic.digest_bytes(initial_source.read_bytes()) if initial_source else None,
+        restart_uses_only_the_three_solution_arrays=initial is not None,
         parameters_sha256=conic.digest_bytes((out/'param.sdpa').read_bytes()),one_thread=True)
     conic.write_json(out/'native_metadata.json',metadata)
     timed_out=False
@@ -68,6 +75,9 @@ def self_check(root,out,precision=None):
     second_mu=re.search(r'^\s*0\s+(\S+)',second_text,re.M)
     if first_mu is None or second_mu is None or abs(float(second_mu[1])-float(first_mu[1]))<1:
         raise ValueError('The second native call did not use its saved initial point')
+    first_end=re.search(r'^\s*mu\s*=\s*(\S+)',(first/'native.result').read_text(),re.M)
+    if first_end is None or abs(float(second_mu[1])-float(first_end[1]))>0.06*abs(float(first_end[1])):
+        raise ValueError('The restart did not preserve the saved complementarity')
     central=out/'central';central.mkdir()
     conic.write_json(central/'reference.json',{'x':F(1)})
     initialization=proposed_initial(P,central,central/'reference.json',central/'initial.dat',1e-3,1e-3)
@@ -78,6 +88,8 @@ def self_check(root,out,precision=None):
     report=dict(status='NATIVE_SDPA_WARM_START_AND_ENCODING_CHECK_PASSED',phase=phase,
         free_coordinate_sign=True,original_scalar_PSD_order=True,offdiagonal_convention=True,
         saved_initial_point_used=True,central_inverse_slack_seed_checked=True,
+        restart_complementarity_matches_saved_terminal_value=True,
+        log_header_numbers_excluded_from_initial_state=True,
         precision_bits=precision,
         executable_sha256=conic.digest_bytes((GMP_EXECUTABLE if precision else EXECUTABLE).read_bytes()))
     conic.write_json(out/'result.json',report);print(json.dumps(report),flush=True)

@@ -1,0 +1,65 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/run_sdpa_checkpoint_20261125.py",
+    "--resume",
+    "results/global_edge_closure_sdpa02",
+    "--iterations",
+    "16",
+    "--seconds",
+    "800",
+    "--output",
+    "results/global_edge_closure_sdpa04"
+  ],
+  "elapsed_seconds": 256.144,
+  "peak_process_tree_rss_bytes": 9244459008,
+  "initial_resources": {
+    "free_disk_gib": 279.77,
+    "available_memory_gib": 12.09,
+    "disk_free_bytes": 300402429952,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 12983042048,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 30.203033,
+    "available_memory_percent": 50.380834,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 2079,
+  "stdout": "{\"status\": \"NATIVE_SOLVER_NUMERICAL_STOP\", \"native\": {\"timed_out\": false, \"returncode\": 0, \"command\": [\"/Users/sasha/.local/opt/coxeter-sdpa-7.3.21/bin/sdpa\", \"-ds\", \"/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa01/input.dat-s\", \"-o\", \"/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa04/native.result\", \"-p\", \"/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa04/param.sdpa\", \"-numThreads\", \"1\", \"-id\", \"/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa04/native_initial.dat\"], \"input_sha256\": \"c02bc5f3bd949a88165a35abffd46b57197b32377d30b9cd5bb75ca2e97bea9f\", \"executable_sha256\": \"65292a57cc9cce3c3f206e5faf541c303802589c238a1d82722bfafbe8b0e0d7\", \"precision_bits\": null, \"initial_path\": \"/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa04/native_initial.dat\", \"initial_sha256\": \"b1a698c9e7d92f712faf2c648866bdf1e66cd9e1cbc85633a4a3440e7b892862\", \"initial_source_path\": \"/Users/sasha/CoxeterPolytopes/results/global_edge_closure_sdpa02/native.result\", \"initial_source_sha256\": \"5eb4584ba9ddbeac0ede98fa80cade51e928a13caf9f80af730c360bc69900ea\", \"restart_uses_only_the_three_solution_arrays\": true, \"parameters_sha256\": \"0e67009792482d1a2b871a58ebb7c4bffe313d1f8eee2b973026142856dee9b4\", \"one_thread\": true}, \"requested_iterations\": 16, \"requested_native_seconds\": 800, \"identical_frozen_native_input\": true, \"geometric_constraints_changed\": false, \"auxiliary_problem\": \"unchanged common PSD margin\", \"accepted_bounds_changed\": false, \"resume_from\": \"results/global_edge_closure_sdpa02\", \"native_terminal\": true, \"checkpoint\": {\"native_phase\": \"pFEAS\", \"free_variables\": 68964, \"cone_array_entries\": {\"xMat\": 468921, \"yMat\": 468921}, \"native_common_margin\": \"-13898226113591497/100000000000000000\", \"complete_free_vector_and_both_cone_arrays\": true, \"file_sha256\": \"4c12bd7cdbbc81da482c4f7778f61b90c6dc1101557575a2c4f2465f9f2ab8f0\"}, \"iteration_limit_reached\": false, \"numerical_error_messages\": [\"cannot move: step length is too short :: line 190 in sdpa_solve.cpp\"], \"elapsed_seconds\": 256.0758616249659}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "beb7380ffb1fc88faa6976287e2fab2ac1169f4f4f1d72232d1f9e83e3af0eef",
+  "lock_owner": "wrapper"
+}

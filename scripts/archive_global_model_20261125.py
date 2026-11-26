@@ -31,7 +31,8 @@ def main():
     records=[]
     for name in args.inputs:
         source=(ROOT/name).resolve();target=source.with_suffix(source.suffix+".gz")
-        if not source.is_relative_to(ROOT/"results") or source.suffix!=".json" or target.exists(): raise ValueError("Use fresh JSON archive names in results/")
+        if not source.is_relative_to(ROOT/"results") or source.suffix not in (".json",".result",".dat-s",".dat") or target.exists():
+            raise ValueError("Use fresh research-model or SDPA checkpoint archive names in results/")
         with source.open("rb") as stream: before=digest(stream)
         with source.open("rb") as stream,target.open("xb") as raw:
             with gzip.GzipFile(filename="",mode="wb",fileobj=raw,compresslevel=9,mtime=0) as compressed:
