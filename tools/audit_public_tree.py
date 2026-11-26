@@ -60,11 +60,21 @@ def main() -> None:
     blob_list = hashlib.sha256()
     # Bound Git's mapped pack windows and delta cache after the first commit
     # has packed the repository. Default caches can exceed the I/O watchdog.
-    child = subprocess.Popen(["git", "-c", "core.packedGitLimit=16m",
-                              "-c", "core.packedGitWindowSize=1m",
-                              "-c", "core.deltaBaseCacheLimit=8m",
-                              "cat-file", "--batch"], stdin=subprocess.PIPE,
-                             stdout=subprocess.PIPE)
+    def open_batch():
+        return subprocess.Popen(["git", "-c", "core.packedGitLimit=8m",
+                                 "-c", "core.packedGitWindowSize=1m",
+                                 "-c", "core.deltaBaseCacheLimit=4m",
+                                 "cat-file", "--batch"], stdin=subprocess.PIPE,
+                                stdout=subprocess.PIPE)
+
+    def close_batch(process):
+        process.stdin.close()
+        process.stdout.close()
+        if process.wait():
+            raise RuntimeError("Git blob audit failed")
+
+    child = open_batch()
+    batch_bytes = batch_objects = 0
     try:
         for name, mode, oid in entries:
             if mode not in {b"100644", b"100755"}:
@@ -99,12 +109,19 @@ def main() -> None:
                 raise RuntimeError("Invalid Git blob terminator")
             if payload:
                 manifest = json.loads(payload)
+            # Git's allocator can retain buffers from successive loose blobs
+            # even with small pack/delta caches. Recycle the reader after a
+            # bounded amount of content; every staged byte is still scanned.
+            batch_bytes += size
+            batch_objects += 1
+            if batch_bytes >= 16 * 1024**2 or batch_objects >= 256:
+                close_batch(child)
+                child = None
+                child = open_batch()
+                batch_bytes = batch_objects = 0
     finally:
-        child.stdin.close()
-        child.stdout.close()
-        child.wait()
-    if child.returncode:
-        raise RuntimeError("Git blob audit failed")
+        if child is not None:
+            close_batch(child)
     names = {name for name, _, _ in entries}
     for name in sorted(PAPERS - names):
         issues.append([name, "required current paper PDF absent from index"])
