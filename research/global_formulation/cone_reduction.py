@@ -286,7 +286,8 @@ def verify_pass(source,target,proof):
             referenced.add(item['target'])
         else: raise ValueError('Unknown block deletion rule')
     if referenced!=set(range(len(target['blocks']))): raise ValueError('Unproved target cone')
-    if any(v not in target['variables'] for q in expected.values() for v in q if v):
+    target_variables=set(target['variables'])
+    if any(v not in target_variables for q in expected.values() for v in q if v):
         raise ValueError('A reconstruction variable is missing')
     for v in target['variables']:
         if expected[v]!={v:F(1)}: raise ValueError('A target coordinate is not free')
