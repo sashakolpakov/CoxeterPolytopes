@@ -241,6 +241,17 @@ def main():
         raise ValueError('Missing original scalar witness row')
     row = matches[0]['entries'][0][0]
     scalar = conic.value(row, point)
+    if scalar >= 0:
+        # A different initialization can violate a different source row.
+        # The previous checkpoint's first failure is only a fast path.
+        for block in original['blocks']:
+            if len(block['entries']) != 1:
+                continue
+            q = block['entries'][0][0]
+            proposed = conic.value(q, point)
+            if proposed < 0:
+                row_name, row, scalar = block['name'], q, proposed
+                break
     eq_count = 0
     nonzero = []
     for k, q in enumerate(original['equations']):
@@ -248,19 +259,22 @@ def main():
         eq_count += 1
         if v and len(nonzero) < 10:
             nonzero.append(dict(equation=k, value=v))
-    if scalar >= 0:
-        raise ValueError('The expected exact scalar-row violation was not reproduced')
-    report['exact_saved_original_candidate_rejection'] = dict(block=row_name, expression=row,
-        exact_value=scalar, approximate_value=float(scalar), required_sign='nonnegative',
-        all_original_equalities_checked_exactly=eq_count, all_original_equalities_zero=not nonzero,
-        nonzero_equality_examples=nonzero,
-        interpretation='The saved decimal candidate is infeasible; this does not decide whether another point exists.')
+    report['exact_saved_original_equalities'] = dict(checked=eq_count, all_zero=not nonzero,
+                                                    nonzero_examples=nonzero)
+    if scalar < 0:
+        report['exact_saved_original_candidate_rejection'] = dict(block=row_name, expression=row,
+            exact_value=scalar, approximate_value=float(scalar), required_sign='nonnegative',
+            all_original_equalities_checked_exactly=eq_count, all_original_equalities_zero=not nonzero,
+            nonzero_equality_examples=nonzero,
+            interpretation='The saved decimal candidate is infeasible; this does not decide whether another point exists.')
+    else:
+        report['exact_scalar_witness_search'] = 'No negative scalar row; original PSD verification is still required.'
     if {str(p.relative_to(ROOT)) if p.is_relative_to(ROOT) else str(p): digest(p) for p in paths} != bindings:
         raise ValueError('A diagnostic input changed')
     report['elapsed_seconds'] = time.monotonic()-started
     conic.write_json(out/'result.json', report)
     print(json.dumps(conic.plain(dict(status=report['status'],
-        exact_candidate_rejection=report['exact_saved_original_candidate_rejection'],
+        exact_candidate_rejection=report.get('exact_saved_original_candidate_rejection'),
         elapsed_seconds=report['elapsed_seconds']))), flush=True)
 
 

@@ -24,6 +24,8 @@
   ],
   "canonical_anchored_model": "results/global_edge_closure_current",
   "cleanup_commit": "c8c86903",
+  "corrected_native_rerun": "results/global_edge_closure_corrected_rerun_20261125.json",
+  "corrected_native_rerun_source_checkpoint": "2e80bd2e",
   "current_build_receipt": "results/global_edge_closure_current/result.json",
   "current_exact_input_archive_receipt": "results/global_edge_closure_current/archive_roundtrip.json",
   "current_exact_structural_checks": "results/global_edge_schema_lifts02/result.json",
@@ -31,32 +33,37 @@
   "current_feasibility": {
     "accepted_bounds_changed": false,
     "certificate_dual_input_sha256": "24458cf816ba8054770edfbaeb2b81be7ebfc34b75d21fc6a48f7f4ecd16c88f",
-    "continuation_summary": "results/global_edge_closure_continuation_20261125.json",
+    "continuation_summary": "results/global_edge_closure_corrected_rerun_20261125.json",
+    "corrected_cold_path_iterations_completed": 26,
+    "corrected_output_initializations_tested": 2,
+    "corrected_recentered_path_iterations_completed": 9,
+    "corrected_rerun_summary": "results/global_edge_closure_corrected_rerun_20261125.json",
     "first_native_run": "results/global_edge_closure_sdpa01/result.json",
     "input": "results/global_edge_closure_current/necessary_primal.exact.json",
     "input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
-    "native_iterations_completed": 26,
+    "native_iterations_completed": 9,
     "native_phase": "pFEAS",
     "native_phase_returned": true,
     "native_result_has_no_solution_vector": false,
-    "native_run": "results/global_edge_closure_sdpa04/result.json",
+    "native_run": "results/global_edge_closure_sdpa07/result.json",
     "native_terminal_message": "cannot move: step length is too short",
     "native_time_limit_seconds": 800,
     "native_timed_out": false,
     "normalized_certificate_dual_status": "UNDECIDED",
     "original_PSD_blocks": 5322,
     "original_equalities": 29259,
-    "original_point_check": "results/global_edge_closure_terminal_check01/result.json",
+    "original_point_check": "results/global_edge_closure_terminal_check03/result.json",
     "original_scalar_inequalities": 387685,
     "original_variables": 97515,
-    "peak_process_tree_rss_bytes": 9244459008,
+    "peak_process_tree_rss_bytes": 8968323072,
+    "preceding_continuation_summary": "results/global_edge_closure_continuation_20261125.json",
     "saved_candidate_original_equalities_verified_exactly": 29259,
-    "saved_candidate_original_scalar_violation": -30.87249690928624,
+    "saved_candidate_original_scalar_violation": -68.39291790960738,
     "saved_dual_face_recovery": "results/global_edge_closure_dual_face01/result.json",
-    "saved_variable_diagnostics": "results/global_edge_closure_iterate_diagnostics01/result.json",
+    "saved_variable_diagnostics": "results/global_edge_closure_iterate_diagnostics03/result.json",
     "source_bound_geometric_review_complete": false,
     "status": "NATIVE_NUMERICAL_FAILURE_NO_EXACT_FEASIBILITY_DECISION",
-    "valid_chain_peak_process_tree_rss_bytes": 9244459008
+    "valid_chain_peak_process_tree_rss_bytes": 9133965312
   },
   "current_feasibility_uses_upper_dimension_57_anchor": true,
   "current_hierarchy": [
@@ -87,7 +94,7 @@
   "discovery_solver_source_checkpoint": "8f43d7f3",
   "formulation_source_checkpoint": "89fe6d59",
   "independent_source_review_complete": false,
-  "latest_publication_only_Sphinx_check": "results/global_sdpa_iterate_diagnostics_sphinx_receipt_20261125.txt",
+  "latest_publication_only_Sphinx_check": "results/global_sdpa_corrected_rerun_sphinx_receipt_20261125.txt",
   "level2_feasibility": {
     "constraints_modified_during_feasibility_verification": false,
     "independent_verification": "results/global_level2_independent/result.json",
@@ -252,6 +259,9 @@
     "results/global_edge_closure_continuation_20261125.json",
     "results/global_edge_closure_continuation_archive_20261125.json",
     "results/global_edge_closure_continuation_archive_monitor_20261125.json",
+    "results/global_edge_closure_corrected_rerun_20261125.json",
+    "results/global_edge_closure_corrected_rerun_archive_20261125.json",
+    "results/global_edge_closure_corrected_rerun_archive_monitor_20261125.json",
     "results/global_edge_closure_current/.gitignore",
     "results/global_edge_closure_current/archive_roundtrip.json",
     "results/global_edge_closure_current/certificate_dual.exact.json.gz",
@@ -284,6 +294,12 @@
     "results/global_edge_closure_iterate_diagnostics01/result.json",
     "results/global_edge_closure_iterate_diagnostics01/source_bindings.json",
     "results/global_edge_closure_iterate_diagnostics01_monitor.json",
+    "results/global_edge_closure_iterate_diagnostics02/result.json",
+    "results/global_edge_closure_iterate_diagnostics02/source_bindings.json",
+    "results/global_edge_closure_iterate_diagnostics02_monitor.json",
+    "results/global_edge_closure_iterate_diagnostics03/result.json",
+    "results/global_edge_closure_iterate_diagnostics03/source_bindings.json",
+    "results/global_edge_closure_iterate_diagnostics03_monitor.json",
     "results/global_edge_closure_prepare01/interrupted.json",
     "results/global_edge_closure_prepare01/progress.jsonl",
     "results/global_edge_closure_prepare01/source_bindings.json",
@@ -293,7 +309,13 @@
     "results/global_edge_closure_prepare02/result.json",
     "results/global_edge_closure_prepare02/source_bindings.json",
     "results/global_edge_closure_prepare02_monitor.json",
+    "results/global_edge_closure_recentered_seed01/.gitignore",
+    "results/global_edge_closure_recentered_seed01/initial.dat.gz",
+    "results/global_edge_closure_recentered_seed01/result.json",
+    "results/global_edge_closure_recentered_seed01/source_bindings.json",
+    "results/global_edge_closure_recentered_seed01_monitor.json",
     "results/global_edge_closure_sdpa01/.gitignore",
+    "results/global_edge_closure_sdpa01/initial.dat.gz",
     "results/global_edge_closure_sdpa01/initialization.json",
     "results/global_edge_closure_sdpa01/input.dat-s.gz",
     "results/global_edge_closure_sdpa01/native.result",
@@ -330,11 +352,48 @@
     "results/global_edge_closure_sdpa04/solver.stdout",
     "results/global_edge_closure_sdpa04/source_bindings.json",
     "results/global_edge_closure_sdpa04_monitor.json",
+    "results/global_edge_closure_sdpa05/.gitignore",
+    "results/global_edge_closure_sdpa05/initial_checkpoint_check.json",
+    "results/global_edge_closure_sdpa05/native.result.gz",
+    "results/global_edge_closure_sdpa05/native_metadata.json",
+    "results/global_edge_closure_sdpa05/param.sdpa",
+    "results/global_edge_closure_sdpa05/result.json",
+    "results/global_edge_closure_sdpa05/solver.stdout",
+    "results/global_edge_closure_sdpa05/source_bindings.json",
+    "results/global_edge_closure_sdpa05_monitor.json",
+    "results/global_edge_closure_sdpa06/.gitignore",
+    "results/global_edge_closure_sdpa06/initial_checkpoint_check.json",
+    "results/global_edge_closure_sdpa06/native.result.gz",
+    "results/global_edge_closure_sdpa06/native_metadata.json",
+    "results/global_edge_closure_sdpa06/param.sdpa",
+    "results/global_edge_closure_sdpa06/result.json",
+    "results/global_edge_closure_sdpa06/solver.stdout",
+    "results/global_edge_closure_sdpa06/source_bindings.json",
+    "results/global_edge_closure_sdpa06_monitor.json",
+    "results/global_edge_closure_sdpa07/.gitignore",
+    "results/global_edge_closure_sdpa07/initial_checkpoint_check.json",
+    "results/global_edge_closure_sdpa07/native.result.gz",
+    "results/global_edge_closure_sdpa07/native_metadata.json",
+    "results/global_edge_closure_sdpa07/param.sdpa",
+    "results/global_edge_closure_sdpa07/result.json",
+    "results/global_edge_closure_sdpa07/solver.stdout",
+    "results/global_edge_closure_sdpa07/source_bindings.json",
+    "results/global_edge_closure_sdpa07_monitor.json",
     "results/global_edge_closure_terminal_check01/.gitignore",
     "results/global_edge_closure_terminal_check01/original_numerical_candidate.json.gz",
     "results/global_edge_closure_terminal_check01/result.json",
     "results/global_edge_closure_terminal_check01/source_bindings.json",
     "results/global_edge_closure_terminal_check01_monitor.json",
+    "results/global_edge_closure_terminal_check02/.gitignore",
+    "results/global_edge_closure_terminal_check02/original_numerical_candidate.json.gz",
+    "results/global_edge_closure_terminal_check02/result.json",
+    "results/global_edge_closure_terminal_check02/source_bindings.json",
+    "results/global_edge_closure_terminal_check02_monitor.json",
+    "results/global_edge_closure_terminal_check03/.gitignore",
+    "results/global_edge_closure_terminal_check03/original_numerical_candidate.json.gz",
+    "results/global_edge_closure_terminal_check03/result.json",
+    "results/global_edge_closure_terminal_check03/source_bindings.json",
+    "results/global_edge_closure_terminal_check03_monitor.json",
     "results/global_edge_docs_cleanup_20261125.json",
     "results/global_edge_docs_sphinx_receipt_20261125.txt",
     "results/global_edge_model_archive01_monitor.json",
@@ -419,6 +478,8 @@
     "results/global_profile_closure_sdpa_monitor.json",
     "results/global_sdpa_continuation_sphinx_cleanup_20261125.json",
     "results/global_sdpa_continuation_sphinx_receipt_20261125.txt",
+    "results/global_sdpa_corrected_rerun_sphinx_cleanup_20261125.json",
+    "results/global_sdpa_corrected_rerun_sphinx_receipt_20261125.txt",
     "results/global_sdpa_gmp_central_check/result.json",
     "results/global_sdpa_gmp_central_check_monitor.json",
     "results/global_sdpa_iterate_diagnostics_sphinx_cleanup_20261125.json",
@@ -718,6 +779,7 @@
     "scripts/condition_global_sdp_20261125.py",
     "scripts/diagnose_sdpa_checkpoint_20261125.py",
     "scripts/prepare_global_sdp_streaming_20261125.py",
+    "scripts/prepare_sdpa_recentered_initial_20261125.py",
     "scripts/recover_sdpa_checkpoint_20261125.py",
     "scripts/recover_sdpa_order_faces_20261125.py",
     "scripts/recover_sdpa_projective_dual_20261125.py",
@@ -3724,6 +3786,323 @@
       "peak_process_tree_rss_bytes": 4135157760,
       "reported_status": "NO_EXACT_FACE_RECOVERED_FROM_SELECTED_SAVED_DUAL_RAYS",
       "result": "results/global_edge_closure_dual_face01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 632.701,
+      "files": {
+        "results/global_edge_closure_sdpa05/.gitignore": {
+          "bytes": 35,
+          "sha256": "49be6743a26031ef33a175b4b5a9f0da8f79785404e9a0ff38648934a022b536"
+        },
+        "results/global_edge_closure_sdpa05/initial_checkpoint_check.json": {
+          "bytes": 330,
+          "sha256": "51e33eab08faaa50c3bd744f44470e7b38054fbe253e553d0eda5734fb61f5ad"
+        },
+        "results/global_edge_closure_sdpa05/native.result.gz": {
+          "bytes": 8815314,
+          "sha256": "c3c9925c6074cb10335e824720a117cfe3de525adda4bc1ddf8f277dc63be1dd"
+        },
+        "results/global_edge_closure_sdpa05/native_metadata.json": {
+          "bytes": 1260,
+          "sha256": "6fd49414030512a0a4dc1ff8b2285346a5598c0c94416a65cc586bd4321dc74e"
+        },
+        "results/global_edge_closure_sdpa05/param.sdpa": {
+          "bytes": 121,
+          "sha256": "094bdfa179a79868301b55c29685934e5619e738ab3f3f634f70ae26d605c1ae"
+        },
+        "results/global_edge_closure_sdpa05/result.json": {
+          "bytes": 3689,
+          "sha256": "f88888afc2f7eca3c6c2eda8f03bde575d0c0acc877b25d2386c85d5a1ce9f37"
+        },
+        "results/global_edge_closure_sdpa05/solver.stdout": {
+          "bytes": 2637,
+          "sha256": "8ff5c5fda6bff71372164fc591ab3e7f08dce117e9c3904eb717532a59e8b01a"
+        },
+        "results/global_edge_closure_sdpa05/source_bindings.json": {
+          "bytes": 1270,
+          "sha256": "851081716216b17ef2253fc33678abc460ccd4cc717f734fcbd263488f19a7fc"
+        },
+        "results/global_edge_closure_sdpa05_monitor.json": {
+          "bytes": 4919,
+          "sha256": "3f8a2cd30d2509a83f5c859b7c9d1f249d004960566c45affd169cbe17008d2d"
+        }
+      },
+      "id": "global_edge_closure_sdpa05",
+      "monitor": "results/global_edge_closure_sdpa05_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "COMPLETE_CHECKPOINT_CONTINUE",
+      "peak_process_tree_rss_bytes": 8134967296,
+      "reported_status": "COMPLETE_CHECKPOINT_CONTINUE",
+      "result": "results/global_edge_closure_sdpa05/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 449.173,
+      "files": {
+        "results/global_edge_closure_sdpa06/.gitignore": {
+          "bytes": 35,
+          "sha256": "49be6743a26031ef33a175b4b5a9f0da8f79785404e9a0ff38648934a022b536"
+        },
+        "results/global_edge_closure_sdpa06/initial_checkpoint_check.json": {
+          "bytes": 332,
+          "sha256": "d2099b89324f4438d2b41f2b43b29c2656f9b338ab931263d9728a53ca9d53c1"
+        },
+        "results/global_edge_closure_sdpa06/native.result.gz": {
+          "bytes": 8830739,
+          "sha256": "6f3f0de214dfacc5545f08c11dbc422fe84357e73d64050e4be6a1b85b8c734b"
+        },
+        "results/global_edge_closure_sdpa06/native_metadata.json": {
+          "bytes": 1262,
+          "sha256": "e744e273809ad796f13dedd882e8d55dfe8395befec3987ac74d98880084fb23"
+        },
+        "results/global_edge_closure_sdpa06/param.sdpa": {
+          "bytes": 121,
+          "sha256": "094bdfa179a79868301b55c29685934e5619e738ab3f3f634f70ae26d605c1ae"
+        },
+        "results/global_edge_closure_sdpa06/result.json": {
+          "bytes": 4146,
+          "sha256": "9fce5d5089a02454d90623e970dee9decf18d1716920d96c03b234a39f73d0b3"
+        },
+        "results/global_edge_closure_sdpa06/solver.stdout": {
+          "bytes": 2350,
+          "sha256": "7b2147f5af0a9be4213b3f5672d5533fd51d494bd4053f80533cf49edb1b94b6"
+        },
+        "results/global_edge_closure_sdpa06/source_bindings.json": {
+          "bytes": 1599,
+          "sha256": "dbf0398d9ad1b737ff9170c108d743c478ac1adf4788a9f572e337888e3ca101"
+        },
+        "results/global_edge_closure_sdpa06_monitor.json": {
+          "bytes": 5015,
+          "sha256": "81d64fde0c2e96e3f27f7b77e75f485116058a09e47e5bda05cbfa70a9aa116f"
+        }
+      },
+      "id": "global_edge_closure_sdpa06",
+      "monitor": "results/global_edge_closure_sdpa06_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "NATIVE_SOLVER_NUMERICAL_STOP",
+      "peak_process_tree_rss_bytes": 9133965312,
+      "reported_status": "NATIVE_SOLVER_NUMERICAL_STOP",
+      "result": "results/global_edge_closure_sdpa06/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 437.202,
+      "files": {
+        "results/global_edge_closure_sdpa07/.gitignore": {
+          "bytes": 35,
+          "sha256": "49be6743a26031ef33a175b4b5a9f0da8f79785404e9a0ff38648934a022b536"
+        },
+        "results/global_edge_closure_sdpa07/initial_checkpoint_check.json": {
+          "bytes": 294,
+          "sha256": "137e6a625cfb8be3b06df843e97a55a3acc1f6e7d8e032adac44de270abee008"
+        },
+        "results/global_edge_closure_sdpa07/native.result.gz": {
+          "bytes": 8784573,
+          "sha256": "556a3b48efcdf40407296703d846e9c2ee00f774e6bdd37f83aba5eb3086a952"
+        },
+        "results/global_edge_closure_sdpa07/native_metadata.json": {
+          "bytes": 1271,
+          "sha256": "7c440733bf269704ef3a8856207a250809f26250117dfbc356e297f070e6d0ec"
+        },
+        "results/global_edge_closure_sdpa07/param.sdpa": {
+          "bytes": 121,
+          "sha256": "094bdfa179a79868301b55c29685934e5619e738ab3f3f634f70ae26d605c1ae"
+        },
+        "results/global_edge_closure_sdpa07/result.json": {
+          "bytes": 3785,
+          "sha256": "324fafaf14adf39f2bb6293b39f46e24360ac8a643da5d373abdcb325c4cf0dc"
+        },
+        "results/global_edge_closure_sdpa07/solver.stdout": {
+          "bytes": 2277,
+          "sha256": "87b36f7581027381e70d716563ed728252d8ddb12acedaf1b5975901a6150fbd"
+        },
+        "results/global_edge_closure_sdpa07/source_bindings.json": {
+          "bytes": 1281,
+          "sha256": "44d117d279ad4264b62a6e7a3307e6e2ccb8ed267862c1431799cfc8bdc8e90b"
+        },
+        "results/global_edge_closure_sdpa07_monitor.json": {
+          "bytes": 5010,
+          "sha256": "1d07a723ca563c58287bde0557f98f17d9f0d7396f6539d982843f63fdb5cd76"
+        }
+      },
+      "id": "global_edge_closure_sdpa07",
+      "monitor": "results/global_edge_closure_sdpa07_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "NATIVE_SOLVER_NUMERICAL_STOP",
+      "peak_process_tree_rss_bytes": 8968323072,
+      "reported_status": "NATIVE_SOLVER_NUMERICAL_STOP",
+      "result": "results/global_edge_closure_sdpa07/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 28.259,
+      "files": {
+        "results/global_edge_closure_recentered_seed01/.gitignore": {
+          "bytes": 13,
+          "sha256": "762a3c2cf11c52f2f2e73fcf25cf74ebdd888ea1a54bf86034a109b2130e4256"
+        },
+        "results/global_edge_closure_recentered_seed01/initial.dat.gz": {
+          "bytes": 8663785,
+          "sha256": "d615b93d8492f04e88ca67da7627d3449c6189764ebc0b249f6a0bca72d4ebd0"
+        },
+        "results/global_edge_closure_recentered_seed01/result.json": {
+          "bytes": 1197,
+          "sha256": "5f8ad15fb5bffdf94d898325aea97b59900ee6b944b486e1372c606dc6299787"
+        },
+        "results/global_edge_closure_recentered_seed01/source_bindings.json": {
+          "bytes": 776,
+          "sha256": "ec046fa148accb8829a9d7689e7ec32d0f94b904ea511bad001a06754d9179ff"
+        },
+        "results/global_edge_closure_recentered_seed01_monitor.json": {
+          "bytes": 3857,
+          "sha256": "495c1a8f5f0152bbec613c9abc3803a870852e83652e1b8cc0fd313935c520bb"
+        }
+      },
+      "id": "global_edge_closure_recentered_seed01",
+      "monitor": "results/global_edge_closure_recentered_seed01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "NUMERICALLY_VALIDATED_RECENTERED_AUXILIARY_SEED",
+      "peak_process_tree_rss_bytes": 2904883200,
+      "reported_status": "NUMERICALLY_VALIDATED_RECENTERED_AUXILIARY_SEED",
+      "result": "results/global_edge_closure_recentered_seed01/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 74.02,
+      "files": {
+        "results/global_edge_closure_terminal_check02/.gitignore": {
+          "bytes": 35,
+          "sha256": "4c903ea2597cfb62d2bf6e124761809c99472e7eb9f5d24efbfa46fb63c5d689"
+        },
+        "results/global_edge_closure_terminal_check02/original_numerical_candidate.json.gz": {
+          "bytes": 1255291,
+          "sha256": "2aa1256776915e529baff3adb4ec30a4fa32027f097db262298423030dd1f4f1"
+        },
+        "results/global_edge_closure_terminal_check02/result.json": {
+          "bytes": 3538,
+          "sha256": "b08a09802802ff33b72c45bbcef5d7f6b2e4b8dd21703c2eef621ae4330a3067"
+        },
+        "results/global_edge_closure_terminal_check02/source_bindings.json": {
+          "bytes": 1262,
+          "sha256": "9f1d6cc93bd233cba1263e52594c481f22ac892d3d4a6a24f7468ad5bb115b42"
+        },
+        "results/global_edge_closure_terminal_check02_monitor.json": {
+          "bytes": 4823,
+          "sha256": "65ef4dcf498a824ec4bae88527ec6cd85326460ceff88e992539c267d3477308"
+        }
+      },
+      "id": "global_edge_closure_terminal_check02",
+      "monitor": "results/global_edge_closure_terminal_check02_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "NO_EXACT_FEASIBILITY_DECISION",
+      "peak_process_tree_rss_bytes": 3002155008,
+      "reported_status": "NO_EXACT_FEASIBILITY_DECISION",
+      "result": "results/global_edge_closure_terminal_check02/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 66.365,
+      "files": {
+        "results/global_edge_closure_terminal_check03/.gitignore": {
+          "bytes": 35,
+          "sha256": "4c903ea2597cfb62d2bf6e124761809c99472e7eb9f5d24efbfa46fb63c5d689"
+        },
+        "results/global_edge_closure_terminal_check03/original_numerical_candidate.json.gz": {
+          "bytes": 1246854,
+          "sha256": "e896870787a0db317f406bf4bfc643ed16e09d040f1adcb5708a6ab2f213c981"
+        },
+        "results/global_edge_closure_terminal_check03/result.json": {
+          "bytes": 3537,
+          "sha256": "fd6c97f6ca4cfc668b61f9d2fccdbbfd63ed609343c211c65d60571d1f4d73db"
+        },
+        "results/global_edge_closure_terminal_check03/source_bindings.json": {
+          "bytes": 1262,
+          "sha256": "7be83a322f638e0384aff7551da6b611ec96edf14c35d8493624901d96eed430"
+        },
+        "results/global_edge_closure_terminal_check03_monitor.json": {
+          "bytes": 4823,
+          "sha256": "325c3cfdc1e90b537792371152f692f1baf6c19ab6e30b030ad5b4da35438d2f"
+        }
+      },
+      "id": "global_edge_closure_terminal_check03",
+      "monitor": "results/global_edge_closure_terminal_check03_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "NO_EXACT_FEASIBILITY_DECISION",
+      "peak_process_tree_rss_bytes": 3082223616,
+      "reported_status": "NO_EXACT_FEASIBILITY_DECISION",
+      "result": "results/global_edge_closure_terminal_check03/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 56.023,
+      "files": {
+        "results/global_edge_closure_iterate_diagnostics02/result.json": {
+          "bytes": 31131,
+          "sha256": "4847b48da408413e76397532209a04b6d45410156d1e81717f4d1010c053cd3e"
+        },
+        "results/global_edge_closure_iterate_diagnostics02/source_bindings.json": {
+          "bytes": 1876,
+          "sha256": "e717aaa2bc55891d4fc77d4dde6d9ec17633e6e7307b51a55a370d1187285ab8"
+        },
+        "results/global_edge_closure_iterate_diagnostics02_monitor.json": {
+          "bytes": 8398,
+          "sha256": "37319cfc90163e8f5246fac8968b17f31d38e39e2e349e9f586849ffaa2430e0"
+        }
+      },
+      "id": "global_edge_closure_iterate_diagnostics02",
+      "monitor": "results/global_edge_closure_iterate_diagnostics02_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED",
+      "peak_process_tree_rss_bytes": 2909863936,
+      "reported_status": "SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED",
+      "result": "results/global_edge_closure_iterate_diagnostics02/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 51.663,
+      "files": {
+        "results/global_edge_closure_iterate_diagnostics03/result.json": {
+          "bytes": 30817,
+          "sha256": "e128e942ba218dd1357d4059476d4486ff1fe39512e0bda2cc4cf308fd34cdff"
+        },
+        "results/global_edge_closure_iterate_diagnostics03/source_bindings.json": {
+          "bytes": 1876,
+          "sha256": "1d1d2260b27074d144b7633482ddf5e116f34f69aaec5ebc9e4a4d58ea7ea739"
+        },
+        "results/global_edge_closure_iterate_diagnostics03_monitor.json": {
+          "bytes": 8345,
+          "sha256": "2243cf32f538a5b8a267de52b7ed449d66e192e45f3c33d8f32054032974e293"
+        }
+      },
+      "id": "global_edge_closure_iterate_diagnostics03",
+      "monitor": "results/global_edge_closure_iterate_diagnostics03_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED",
+      "peak_process_tree_rss_bytes": 2904719360,
+      "reported_status": "SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED",
+      "result": "results/global_edge_closure_iterate_diagnostics03/result.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 18.226,
+      "files": {
+        "results/global_edge_closure_corrected_rerun_archive_20261125.json": {
+          "bytes": 3656,
+          "sha256": "170040cba05aa59ba43f7d477feb5dd035fa676240a524e6f31cf585731da914"
+        },
+        "results/global_edge_closure_corrected_rerun_archive_monitor_20261125.json": {
+          "bytes": 6465,
+          "sha256": "4e08ad4471e1606936e62662d05b022955e4f28f64fc25c52a5cb5a00a627e7d"
+        }
+      },
+      "id": "global_edge_closure_corrected_rerun_archive_20261125",
+      "monitor": "results/global_edge_closure_corrected_rerun_archive_monitor_20261125.json",
+      "original_feasibility_claimed": false,
+      "outcome": "RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED",
+      "peak_process_tree_rss_bytes": 67928064,
+      "reported_status": "RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED",
+      "result": "results/global_edge_closure_corrected_rerun_archive_20261125.json",
       "wrapper_PASS_claimed": true
     }
   ],

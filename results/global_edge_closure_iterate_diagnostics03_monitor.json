@@ -1,0 +1,63 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/diagnose_sdpa_checkpoint_20261125.py",
+    "--output",
+    "results/global_edge_closure_iterate_diagnostics03",
+    "--checkpoint",
+    "results/global_edge_closure_sdpa07",
+    "--original-candidate",
+    "results/global_edge_closure_terminal_check03/original_numerical_candidate.json"
+  ],
+  "elapsed_seconds": 51.663,
+  "peak_process_tree_rss_bytes": 2904719360,
+  "initial_resources": {
+    "free_disk_gib": 275.36,
+    "available_memory_gib": 10.41,
+    "disk_free_bytes": 295669657600,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 11172724736,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 29.727191,
+    "available_memory_percent": 43.355878,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 5252,
+  "stdout": "Loading the frozen conditioned model and all three saved arrays.\nIndependently evaluated 50000 source cones.\nIndependently evaluated 100000 source cones.\nIndependently evaluated 150000 source cones.\nIndependently evaluated 200000 source cones.\nIndependently evaluated 250000 source cones.\nIndependently evaluated 300000 source cones.\n{\"primal\": {\"objective\": 1.3832305777541718, \"maximum_absolute_affine_residual\": 1.5916157281026244e-12, \"affine_residual_frobenius_norm\": 6.836359293912594e-12, \"upper_bound_slack\": 2.3832305777541722, \"upper_bound_affine_residual\": 4.440892098500626e-16}, \"dual\": {\"objective\": -4.307338253564851e-06, \"original_Farkas_constant\": 8.91833040117639e-10, \"margin_upper_multiplier\": 4.306446420524733e-06, \"source_multiplier_trace\": 0.9999956935448651, \"trace_normalization_residual\": -8.714362564887779e-12, \"ordinary_adjoint_maximum_absolute_residual\": 0.007528018746836851, \"ordinary_adjoint_euclidean_residual\": 0.03283830554858559, \"ordinary_adjoint_maximum_residual_divided_by_one_plus_absolute_terms\": 0.0073460357197542596, \"worst_coordinates\": [{\"variable\": \"shared_edge_support_m60\", \"residual\": 0.007528018746836851, \"absolute_terms\": 0.024772957010434807, \"value\": -0.2074860627116288}, {\"variable\": \"shared_edge_support_m59\", \"residual\": 0.005969445764133019, \"absolute_terms\": 0.018968785334601206, \"value\": -0.06688800741214486}, {\"variable\": \"shared_edge_support_m41\", \"residual\": 0.005946809195835243, \"absolute_terms\": 0.018923465102217884, \"value\": -0.23975094600858943}, {\"variable\": \"shared_edge_support_m58\", \"residual\": 0.005746053254305861, \"absolute_terms\": 0.018147809628887495, \"value\": -0.08095494912105805}, {\"variable\": \"shared_edge_support_m40\", \"residual\": 0.005708163666616952, \"absolute_terms\": 0.01802934115937195, \"value\": -0.2573035276034891}, {\"variable\": \"shared_edge_support_m21\", \"residual\": 0.0056051081764777735, \"absolute_terms\": 0.017456889459574312, \"value\": -0.42982899795708623}, {\"variable\": \"shared_edge_support_m57\", \"residual\": 0.00552250171920866, \"absolute_terms\": 0.017329178347125343, \"value\": -0.09862649881194686}, {\"variable\": \"shared_edge_support_m39\", \"residual\": 0.005469958499617926, \"absolute_terms\": 0.01714106819988051, \"value\": -0.2483832989749826}, {\"variable\": \"shared_edge_support_m20\", \"residual\": 0.005382013791158958, \"absolute_terms\": 0.016683231093391582, \"value\": -0.3982478923069232}, {\"variable\": \"shared_edge_support_m56\", \"residual\": 0.005298790470938245, \"absolute_terms\": 0.0165125372578053, \"value\": -0.10552801006516466}, {\"variable\": \"shared_edge_support_m38\", \"residual\": 0.0052321833937854605, \"absolute_terms\": 0.01625870362270595, \"value\": -0.2421323181576016}, {\"variable\": \"shared_edge_support_m19\", \"residual\": 0.00515891814922598, \"absolute_terms\": 0.015909535999888258, \"value\": -0.35335273821261004}, {\"variable\": \"shared_edge_support_m55\", \"residual\": 0.005074912541811694, \"absolute_terms\": 0.015697948585099524, \"value\": -0.12279252752063721}, {\"variable\": \"shared_edge_support_m37\", \"residual\": 0.004994837011048929, \"absolute_terms\": 0.015382208938268228, \"value\": -0.2334778624095091}, {\"variable\": \"shared_edge_support_m18\", \"residual\": 0.004935816310420519, \"absolute_terms\": 0.015135873205595578, \"value\": -0.31749359194621457}, {\"variable\": \"shared_edge_support_m54\", \"residual\": 0.004850867617591158, \"absolute_terms\": 0.01488537968090156, \"value\": -0.13678372713501422}]}, \"cone_statistics\": {\"saved_primal_slack\": {\"minimum_eigenvalue\": 7.282989531672483e-06, \"maximum_eigenvalue\": 3845.2056434592005, \"negative_eigenvalues\": 0, \"relatively_small_eigenvalues\": 0, \"worst_block\": {\"block\": 31452, \"name\": \"faces3_monomial_positive_7035\", \"size\": 1}, \"largest_absolute_entry\": 3845.2056434592005}, \"saved_dual_multiplier\": {\"minimum_eigenvalue\": 1.0267164498649801e-14, \"maximum_eigenvalue\": 0.0005765669009050094, \"negative_eigenvalues\": 0, \"relatively_small_eigenvalues\": 0, \"worst_block\": {\"block\": 6231, \"name\": \"supporting_components3_positive_support_dihedral_parameter\", \"size\": 2}, \"largest_absolute_entry\": 0.0005765669009050094}, \"unshifted_source_slack\": {\"minimum_eigenvalue\": -1.3832232947646403, \"maximum_eigenvalue\": 3843.8224128814463, \"negative_eigenvalues\": 27765, \"relatively_small_eigenvalues\": 6428, \"worst_block\": {\"block\": 31452, \"name\": \"faces3_monomial_positive_7035\", \"size\": 1}, \"largest_absolute_entry\": 3843.8224128814463}}, \"gap\": 1.3832348850924254, \"complementarity\": 4.9456104738170446}\n{\"status\": \"SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED\", \"exact_candidate_rejection\": {\"block\": \"uniform_two_unit_triangle_cover0\", \"expression\": {\"face3_corner0_atom1_m0\": \"1/2\", \"face3_corner0_atom2_m0\": \"1/2\", \"face3_corner1_atom1_m0\": \"1/2\", \"face3_corner1_atom2_m0\": \"1/2\", \"face3_corner2_atom1_m0\": \"1/2\", \"face3_corner2_atom2_m0\": \"1/2\", \"faces3_m0\": \"-1\"}, \"exact_value\": \"-4634304117554995698588017/67760000000000000000000\", \"approximate_value\": -68.39291790960738, \"required_sign\": \"nonnegative\", \"all_original_equalities_checked_exactly\": 29259, \"all_original_equalities_zero\": true, \"nonzero_equality_examples\": [], \"interpretation\": \"The saved decimal candidate is infeasible; this does not decide whether another point exists.\"}, \"elapsed_seconds\": 51.36074320808984}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "830120dc2a0965a700572fc0223310c038c01f62949d0de49349adbd29fdb29e",
+  "lock_owner": "wrapper"
+}

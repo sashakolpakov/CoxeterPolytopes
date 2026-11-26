@@ -1,0 +1,63 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/diagnose_sdpa_checkpoint_20261125.py",
+    "--output",
+    "results/global_edge_closure_iterate_diagnostics02",
+    "--checkpoint",
+    "results/global_edge_closure_sdpa06",
+    "--original-candidate",
+    "results/global_edge_closure_terminal_check02/original_numerical_candidate.json"
+  ],
+  "elapsed_seconds": 56.023,
+  "peak_process_tree_rss_bytes": 2909863936,
+  "initial_resources": {
+    "free_disk_gib": 275.38,
+    "available_memory_gib": 10.74,
+    "disk_free_bytes": 295691300864,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 11530469376,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 29.729367,
+    "available_memory_percent": 44.74411,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 5306,
+  "stdout": "Loading the frozen conditioned model and all three saved arrays.\nIndependently evaluated 50000 source cones.\nIndependently evaluated 100000 source cones.\nIndependently evaluated 150000 source cones.\nIndependently evaluated 200000 source cones.\nIndependently evaluated 250000 source cones.\nIndependently evaluated 300000 source cones.\n{\"primal\": {\"objective\": 0.13901426449966967, \"maximum_absolute_affine_residual\": 4.547473508864641e-13, \"affine_residual_frobenius_norm\": 2.3343815024258227e-12, \"upper_bound_slack\": 1.139014264499669, \"upper_bound_affine_residual\": -6.661338147750939e-16}, \"dual\": {\"objective\": -9.666794793399063e-07, \"original_Farkas_constant\": 1.2974942713337378e-08, \"margin_upper_multiplier\": 9.53704536626569e-07, \"source_multiplier_trace\": 0.9999990462752718, \"trace_normalization_residual\": -2.019151512655526e-11, \"ordinary_adjoint_maximum_absolute_residual\": 0.0006447310145962204, \"ordinary_adjoint_euclidean_residual\": 0.0032949708211391674, \"ordinary_adjoint_maximum_residual_divided_by_one_plus_absolute_terms\": 0.0006103289729780466, \"worst_coordinates\": [{\"variable\": \"shared_edge_support_m60\", \"residual\": 0.0006447310145962204, \"absolute_terms\": 0.056366391145273795, \"value\": -0.07769263510203021}, {\"variable\": \"shared_edge_support_m59\", \"residual\": 0.0005127809297779324, \"absolute_terms\": 0.04298205727000446, \"value\": -0.045090034721151875}, {\"variable\": \"shared_edge_support_m41\", \"residual\": 0.0005094164279762201, \"absolute_terms\": 0.041642991354157374, \"value\": -0.06000415503455431}, {\"variable\": \"shared_edge_support_m58\", \"residual\": 0.0004938503754537075, \"absolute_terms\": 0.04110974822577099, \"value\": -0.04225329157165682}, {\"variable\": \"shared_edge_support_m40\", \"residual\": 0.0004893101288259219, \"absolute_terms\": 0.039728273182246414, \"value\": -0.05406389366904542}, {\"variable\": \"shared_edge_support_m21\", \"residual\": 0.0004843464235453782, \"absolute_terms\": 0.039228722988571454, \"value\": -0.0687524169496142}, {\"variable\": \"shared_edge_support_m57\", \"residual\": 0.0004749028755254613, \"absolute_terms\": 0.039247667109071314, \"value\": -0.039769459105871055}, {\"variable\": \"shared_edge_support_m39\", \"residual\": 0.00046923359535742465, \"absolute_terms\": 0.037826229982894866, \"value\": -0.04913089027103097}, {\"variable\": \"shared_edge_support_m20\", \"residual\": 0.0004653388042290693, \"absolute_terms\": 0.037550823929946985, \"value\": -0.06535432682220117}, {\"variable\": \"shared_edge_support_m56\", \"residual\": 0.0004559384102689906, \"absolute_terms\": 0.037395442138029936, \"value\": -0.03686820734245893}, {\"variable\": \"shared_edge_support_m38\", \"residual\": 0.000449186235866707, \"absolute_terms\": 0.0359369275397847, \"value\": -0.045572891959705104}, {\"variable\": \"shared_edge_support_m19\", \"residual\": 0.0004463311257563101, \"absolute_terms\": 0.03587289002002616, \"value\": -0.06120610888673807}, {\"variable\": \"shared_edge_support_m55\", \"residual\": 0.00043695638803685743, \"absolute_terms\": 0.035553138174696644, \"value\": -0.03441654983106636}, {\"variable\": \"shared_edge_support_m37\", \"residual\": 0.0004291680377160513, \"absolute_terms\": 0.03406033155125985, \"value\": -0.0425327782116471}, {\"variable\": \"shared_edge_support_m18\", \"residual\": 0.00042732279646463497, \"absolute_terms\": 0.03419499102873317, \"value\": -0.05750488813925403}, {\"variable\": \"shared_edge_support_m54\", \"residual\": 0.00041795679620056954, \"absolute_terms\": 0.033720721801651254, \"value\": -0.03167892593312056}]}, \"cone_statistics\": {\"saved_primal_slack\": {\"minimum_eigenvalue\": 8.19278217025811e-09, \"maximum_eigenvalue\": 1487.7562020038324, \"negative_eigenvalues\": 0, \"relatively_small_eigenvalues\": 0, \"worst_block\": {\"block\": 28410, \"name\": \"faces3_monomial_upper_6045_edge_host0_left\", \"size\": 1}, \"largest_absolute_entry\": 1487.7562020038324}, \"saved_dual_multiplier\": {\"minimum_eigenvalue\": 1.1809720456717152e-12, \"maximum_eigenvalue\": 0.006571526804536921, \"negative_eigenvalues\": 0, \"relatively_small_eigenvalues\": 0, \"worst_block\": {\"block\": 106432, \"name\": \"supporting_components3_monomial_upper_3605_white_rank\", \"size\": 1}, \"largest_absolute_entry\": 0.0054457259976605984}, \"unshifted_source_slack\": {\"minimum_eigenvalue\": -0.13901425630688316, \"maximum_eigenvalue\": 1487.6171877393324, \"negative_eigenvalues\": 19163, \"relatively_small_eigenvalues\": 6428, \"worst_block\": {\"block\": 28410, \"name\": \"faces3_monomial_upper_6045_edge_host0_left\", \"size\": 1}, \"largest_absolute_entry\": 1487.6171877393324}}, \"gap\": 0.139015231179149, \"complementarity\": 0.6954918153819494}\n{\"status\": \"SAVED_ITERATE_DIAGNOSED_ORIGINAL_FEASIBILITY_UNDECIDED\", \"exact_candidate_rejection\": {\"block\": \"uniform_two_unit_triangle_cover0\", \"expression\": {\"face3_corner0_atom1_m0\": \"1/2\", \"face3_corner0_atom2_m0\": \"1/2\", \"face3_corner1_atom1_m0\": \"1/2\", \"face3_corner1_atom2_m0\": \"1/2\", \"face3_corner2_atom1_m0\": \"1/2\", \"face3_corner2_atom2_m0\": \"1/2\", \"faces3_m0\": \"-1\"}, \"exact_value\": \"-13075825075040246636442559/423500000000000000000000\", \"approximate_value\": -30.875620011901407, \"required_sign\": \"nonnegative\", \"all_original_equalities_checked_exactly\": 29259, \"all_original_equalities_zero\": true, \"nonzero_equality_examples\": [], \"interpretation\": \"The saved decimal candidate is infeasible; this does not decide whether another point exists.\"}, \"elapsed_seconds\": 55.74058766697999}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "830120dc2a0965a700572fc0223310c038c01f62949d0de49349adbd29fdb29e",
+  "lock_owner": "wrapper"
+}

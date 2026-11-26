@@ -82,6 +82,44 @@ their lost digits cannot be recovered. The cached dual residual was
 already about `6.45e-4` inside SDPA, so this output defect alone does
 not explain the numerical stop.
 
+The [corrected full-precision cold run](../../results/global_edge_closure_sdpa05/result.json)
+saved its first checkpoint after sixteen iterations. Its
+[continuation](../../results/global_edge_closure_sdpa06/result.json) again
+stopped after ten more iterations with the small-step guard, at margin
+`-0.1390142645`. All four requested output formats were verified in
+both native reports. Its cached dual balance residual remained about
+`6.45e-4`. Correcting checkpoint precision alone did not resolve this
+stagnation.
+
+A [different interior initialization](../../results/global_edge_closure_recentered_seed01/result.json)
+reuses the terminal ordinary coordinates, moves the margin to `-2`, and
+resets the dual to normalized inverse slacks. Every nonscalar primal
+slack passes numerical Cholesky; the minimum shifted eigenvalue is
+about `1.861`, and the dual trace normalization residual is `1.11e-16`.
+These are checks of an auxiliary initialization, not of original
+feasibility. The native input matrices and every geometric constraint
+remain unchanged.
+
+The [recentered run](../../results/global_edge_closure_sdpa07/result.json)
+also reached the native small-step guard, after nine iterations, at
+margin `-1.3832305778`. Its cached dual balance residual was about
+`7.53e-3`. The two different stopping margins are not certified optima;
+neither small-step error establishes original infeasibility.
+
+The recomputed [cold-run variables](../../results/global_edge_closure_iterate_diagnostics02/result.json)
+and [recentered variables](../../results/global_edge_closure_iterate_diagnostics03/result.json)
+have dual trace normalization residuals below `2.1e-11`, but ordinary
+adjoint residuals about `6.45e-4` and `7.53e-3`. Both original-coordinate
+candidates satisfy all 29,259 equalities exactly. Their exact
+triangle-cover slacks are approximately `-30.8756` and `-68.3929`, so
+neither is feasible. The attempted Farkas completions require 28,654
+and 31,183 negative coordinate multipliers, respectively. The
+[rerun summary](../../results/global_edge_closure_corrected_rerun_20261125.json)
+records both initialization paths and their original-model checks.
+Their starting states, full-precision checkpoints and rejected original
+candidates have [complete byte-verified archives](../../results/global_edge_closure_corrected_rerun_archive_20261125.json).
+The revised SDP remains undecided; no constraint or bound was changed.
+
 The [recovery search using saved dual directions](../../results/global_edge_closure_dual_face01/result.json)
 considered 80,896 quadratic cone rows. Its auxiliary LP reached its
 120-second limit without returning a point. No exact face was recovered;

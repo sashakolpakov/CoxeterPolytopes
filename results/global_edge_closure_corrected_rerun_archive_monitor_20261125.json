@@ -1,0 +1,66 @@
+{
+  "status": "PASS_BOUNDED_RESEARCH_CHECK",
+  "command": [
+    "scripts/archive_global_model_20261125.py",
+    "--output",
+    "results/global_edge_closure_corrected_rerun_archive_20261125.json",
+    "results/global_edge_closure_sdpa01/initial.dat",
+    "results/global_edge_closure_sdpa05/native.result",
+    "results/global_edge_closure_sdpa06/native.result",
+    "results/global_edge_closure_sdpa07/native.result",
+    "results/global_edge_closure_recentered_seed01/initial.dat",
+    "results/global_edge_closure_terminal_check02/original_numerical_candidate.json",
+    "results/global_edge_closure_terminal_check03/original_numerical_candidate.json"
+  ],
+  "elapsed_seconds": 18.226,
+  "peak_process_tree_rss_bytes": 67928064,
+  "initial_resources": {
+    "free_disk_gib": 275.37,
+    "available_memory_gib": 9.58,
+    "disk_free_bytes": 295676579840,
+    "disk_total_bytes": 994610155520,
+    "available_memory_bytes": 10287824896,
+    "physical_memory_bytes": 25769803776,
+    "free_disk_percent": 29.727887,
+    "available_memory_percent": 39.922015,
+    "resource_policy": {
+      "id": "percentage-v1-20261025",
+      "admission_disk_percent": 2,
+      "admission_memory_percent": 15,
+      "abort_disk_percent": 1,
+      "abort_memory_percent": 6,
+      "cleanup_disk_percent": 2,
+      "rounding_digits": 6,
+      "source_sha256": "51ff53ece114b805c50a79f1e69a72ba4f275296b4239679232fda2c3430114f"
+    }
+  },
+  "wall_limit_seconds": 900,
+  "rss_limit_bytes": 10000000000,
+  "threads": 1,
+  "wall_time_policy": {
+    "source": "User instruction, 22 November 2026",
+    "request": "even LPs if large enough may need more time, though you can use gurobi instead",
+    "preceding_request": "we need to rerun the previous tasks if they are not too large RAM-wise. this is because they are relatively large SDPs and we may need more time for them. also use SDPA on them",
+    "wall_limit_seconds": 900,
+    "duration_selection": "15-minute research batches chosen for the requested longer LP/SDP runs",
+    "supersedes_scientific_default_seconds": 300,
+    "thread_lock_and_resource_gates_unchanged": true,
+    "memory_policy": "separate explicit 10GB user authorization, 23 November UTC"
+  },
+  "memory_policy": {
+    "source": "User instruction, 23 November 2026 UTC (22 November local)",
+    "request": "go up to 10GB RAM usage, no worries",
+    "rss_limit_bytes": 10000000000,
+    "units": "decimal GB; 10,000,000,000 bytes",
+    "supersedes_previous_authorized_rss_bytes": 5000000000,
+    "supersedes_scientific_default_rss_bytes": 1073741824,
+    "thread_lock_and_resource_gates_unchanged": true
+  },
+  "historical_runner_sha256": "4d8a2a74fa9fddcac796ca60f59505e633eb1f9912d4418a4e563debf4594132",
+  "previous_runner_sha256": "596d6ce951bfe028977b520b8277ad4ce1dfafb8830cd67a45c70467838c8aaf",
+  "stdout_bytes": 3236,
+  "stdout": "{\"status\": \"RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED\", \"records\": [{\"source\": \"results/global_edge_closure_sdpa01/initial.dat\", \"archive\": \"results/global_edge_closure_sdpa01/initial.dat.gz\", \"source_bytes\": 24677883, \"source_sha256\": \"5ed6eb5a7a1213311dace9df0580a1d7bab0ede3f9be715331c19928eea0b690\", \"archive_bytes\": 89554, \"archive_sha256\": \"f4a5c5b9fac3ce4fa566488bef86a98dd66bad28b40b523e3e04c249938eab3e\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}, {\"source\": \"results/global_edge_closure_sdpa05/native.result\", \"archive\": \"results/global_edge_closure_sdpa05/native.result.gz\", \"source_bytes\": 27419701, \"source_sha256\": \"75f2ea1176de11b03d93f5755d4558927fe927597622cbae2af0530da5632a13\", \"archive_bytes\": 8815314, \"archive_sha256\": \"c3c9925c6074cb10335e824720a117cfe3de525adda4bc1ddf8f277dc63be1dd\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}, {\"source\": \"results/global_edge_closure_sdpa06/native.result\", \"archive\": \"results/global_edge_closure_sdpa06/native.result.gz\", \"source_bytes\": 27419339, \"source_sha256\": \"6a57f62aa4a8844f28b47518fc904867754ed4125aa6e835f75c5d71215fb58a\", \"archive_bytes\": 8830739, \"archive_sha256\": \"6f3f0de214dfacc5545f08c11dbc422fe84357e73d64050e4be6a1b85b8c734b\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}, {\"source\": \"results/global_edge_closure_sdpa07/native.result\", \"archive\": \"results/global_edge_closure_sdpa07/native.result.gz\", \"source_bytes\": 27419266, \"source_sha256\": \"bdf85f2d71fe5317ddae3bb48e282c6aee719cd5899b1c69192fb9ff0b6205a9\", \"archive_bytes\": 8784573, \"archive_sha256\": \"556a3b48efcdf40407296703d846e9c2ee00f774e6bdd37f83aba5eb3086a952\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}, {\"source\": \"results/global_edge_closure_recentered_seed01/initial.dat\", \"archive\": \"results/global_edge_closure_recentered_seed01/initial.dat.gz\", \"source_bytes\": 26264036, \"source_sha256\": \"69c107acaeb1dff5651577756707fe23436b4b7695c447d3a66227be00cca1cd\", \"archive_bytes\": 8663785, \"archive_sha256\": \"d615b93d8492f04e88ca67da7627d3449c6189764ebc0b249f6a0bca72d4ebd0\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}, {\"source\": \"results/global_edge_closure_terminal_check02/original_numerical_candidate.json\", \"archive\": \"results/global_edge_closure_terminal_check02/original_numerical_candidate.json.gz\", \"source_bytes\": 6450705, \"source_sha256\": \"8f0a60d6471e3833823f4e6b9486b148d4d7540df50d938052584cc7b4ef97ad\", \"archive_bytes\": 1255291, \"archive_sha256\": \"2aa1256776915e529baff3adb4ec30a4fa32027f097db262298423030dd1f4f1\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}, {\"source\": \"results/global_edge_closure_terminal_check03/original_numerical_candidate.json\", \"archive\": \"results/global_edge_closure_terminal_check03/original_numerical_candidate.json.gz\", \"source_bytes\": 6392279, \"source_sha256\": \"8f76081ec10c90d666ebeffb04822d821386662e9718d8bb5d89c8a9e4be2359\", \"archive_bytes\": 1246854, \"archive_sha256\": \"e896870787a0db317f406bf4bfc643ed16e09d040f1adcb5708a6ab2f213c981\", \"complete_byte_round_trip_verified\": true, \"original_preserved\": true}], \"mathematical_verification_asserted\": false, \"upload_performed\": false}\n",
+  "runner_sha256": "5072aba45b69ab58cb35111dfc909ef4c5256d8faec888572f104ad93d5cd2fd",
+  "checker_sha256": "b0abb9cbc1e7d7e416c8c70a78c08e4193aa845d83af65b27878c67886126b0b",
+  "lock_owner": "wrapper"
+}
