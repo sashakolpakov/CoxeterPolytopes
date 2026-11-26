@@ -41,8 +41,15 @@ def thin_intervals(problem,progress=None):
     if not pairs:return problem,{v:conic.form(**{v:1}) for v in problem["variables"]},[F(1)]*len(problem["blocks"]),dict(pairs=[])
     order=[p["pivot"] for p in pairs]+[v for v in problem["variables"] if v not in chosen]+[p["coordinate"] for p in pairs]
     equations=[conic.plus(p["defining_row"],conic.form(**{p["coordinate"]:-p["delta"]})) for p in pairs]
-    augmented=conic.model(order,problem["blocks"],equations)
-    transformed,all_subs=conic.eliminate(augmented)
+    # Reuse sparse triangular elimination; full RREF repeatedly densifies
+    # the shared population rows. Most affine entries are unchanged.
+    from . import cone_reduction as cr
+    all_subs,_=cr.linear_elimination(order,equations)
+    changed={v for v in problem['variables'] if all_subs[v]!={v:F(1)}}
+    free=[v for v in order if all_subs[v]=={v:F(1)}]
+    blocks=[dict(b,entries=[[q if changed.isdisjoint(q) else cr.substitute(q,all_subs)
+                            for q in row] for row in b['entries']]) for b in problem['blocks']]
+    transformed=conic.model(free,blocks)
     if progress:progress(stage="interval_elimination_completed",variables=len(transformed["variables"]))
     change={v:all_subs[v] for v in problem["variables"]}
     original_names=set(problem["variables"]);transformed_names=set(transformed["variables"])
@@ -56,6 +63,13 @@ def thin_intervals(problem,progress=None):
     for v,q in inverse.items():
         if feasibility.substitute(q,change)!=conic.form(**{v:1}):
             raise ValueError("The inverse interval change does not compose to the identity")
+    inverse_changed={v for v,q in inverse.items() if q!={v:F(1)}}
+    for old,new in zip(problem['blocks'],transformed['blocks'],strict=True):
+        for old_row,new_row in zip(old['entries'],new['entries'],strict=True):
+            for q,r in zip(old_row,new_row,strict=True):
+                recovered=r if inverse_changed.isdisjoint(r) else feasibility.substitute(r,inverse)
+                if recovered!=q:raise ValueError('An interval affine-entry inverse failed')
+    if progress:progress(stage='interval_affine_entry_inverses_verified')
     scales=[F(1)]*len(problem["blocks"])
     for p in pairs:
         scales[p["lower"]]=1/p["delta"]
@@ -70,7 +84,8 @@ def thin_intervals(problem,progress=None):
         exact_invertible_interval_coordinates=True,positive_cone_scalings=True))
     report=dict(pivot_policy="equal-and-opposite coefficients, then minimum column occurrence count",
         pairs=pairs,old_variables=len(problem["variables"]),new_variables=len(result["variables"]),
-        both_affine_inverse_identities_checked=True,original_feasible_set_preserved=True)
+        both_affine_inverse_identities_checked=True,all_affine_entry_inverse_identities_checked=True,
+        original_feasible_set_preserved=True)
     return result,change,scales,report
 
 
