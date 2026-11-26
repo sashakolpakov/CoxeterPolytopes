@@ -120,6 +120,37 @@ Their starting states, full-precision checkpoints and rejected original
 candidates have [complete byte-verified archives](../../results/global_edge_closure_corrected_rerun_archive_20261125.json).
 The revised SDP remains undecided; no constraint or bound was changed.
 
+An [exact representation audit](../../results/global_edge_closure_representation_audit01/result.json)
+finds unfinished simplifications in the actual solver source: 6,142 zero
+scalar cones, 3,085 duplicate scalar rays, 649 opposite scalar ray pairs,
+and 197 zero PSD diagonals. The latter already have zero off-diagonals.
+More importantly, 1,400 checked nonnegative sum-zero identities force
+6,547 remaining coordinates to vanish. These are consequences of the
+existing constraints. No contradiction was found among the constant
+scalar rows or the checked sign-bound combinations.
+
+The recorded streaming presolve ended after one pass at its time budget,
+after deriving 2,936 additional equalities. It did not revisit the
+resulting model until no further immediate reductions remained. The
+audit identifies avoidable redundancy and forced cone faces; it does
+not prove that they alone caused the numerical stops. The reduced
+representation still has 68,963 free coordinates, 319,116 scalar
+blocks and 5,004 nonscalar PSD blocks, with largest size 75.
+Each retained tautology `0>=0` becomes `-alpha>=0` in the common-margin
+auxiliary. Those rows therefore cap the margin at zero independently
+of the geometric constraints. Removing them preserves original
+feasibility while changing the auxiliary optimization.
+
+The next numerical step is to eliminate these exactly forced coordinates,
+remove the resulting zero rows and duplicates, and repeat the reductions
+before selecting new units. This preserves the original feasibility
+question and all its geometric restrictions. The strict auxiliary seed
+does not remove forced faces of the unshifted problem: its negative
+common margin only shifts those faces into the cone interior. This is
+the setting addressed by [Permenter and Parrilo's partial facial reduction](https://arxiv.org/abs/1408.4685),
+which simplifies SDPs by identifying and working over smaller cone faces.
+No further solver run or reduced-model export is claimed by this audit.
+
 The [recovery search using saved dual directions](../../results/global_edge_closure_dual_face01/result.json)
 considered 80,896 quadratic cone rows. Its auxiliary LP reached its
 120-second limit without returning a point. No exact face was recovered;

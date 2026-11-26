@@ -57,6 +57,7 @@
     "original_variables": 97515,
     "peak_process_tree_rss_bytes": 8968323072,
     "preceding_continuation_summary": "results/global_edge_closure_continuation_20261125.json",
+    "representation_audit": "results/global_edge_closure_representation_audit01/result.json",
     "saved_candidate_original_equalities_verified_exactly": 29259,
     "saved_candidate_original_scalar_violation": -68.39291790960738,
     "saved_dual_face_recovery": "results/global_edge_closure_dual_face01/result.json",
@@ -94,7 +95,7 @@
   "discovery_solver_source_checkpoint": "8f43d7f3",
   "formulation_source_checkpoint": "89fe6d59",
   "independent_source_review_complete": false,
-  "latest_publication_only_Sphinx_check": "results/global_sdpa_corrected_rerun_sphinx_receipt_20261125.txt",
+  "latest_publication_only_Sphinx_check": "results/global_sdpa_representation_audit_sphinx_receipt_20261125.txt",
   "level2_feasibility": {
     "constraints_modified_during_feasibility_verification": false,
     "independent_verification": "results/global_level2_independent/result.json",
@@ -314,6 +315,9 @@
     "results/global_edge_closure_recentered_seed01/result.json",
     "results/global_edge_closure_recentered_seed01/source_bindings.json",
     "results/global_edge_closure_recentered_seed01_monitor.json",
+    "results/global_edge_closure_representation_audit01/result.json",
+    "results/global_edge_closure_representation_audit01/source_bindings.json",
+    "results/global_edge_closure_representation_audit01_monitor.json",
     "results/global_edge_closure_sdpa01/.gitignore",
     "results/global_edge_closure_sdpa01/initial.dat.gz",
     "results/global_edge_closure_sdpa01/initialization.json",
@@ -491,6 +495,8 @@
     "results/global_sdpa_native_central_check_monitor.json",
     "results/global_sdpa_native_warm_check/result.json",
     "results/global_sdpa_native_warm_check_monitor.json",
+    "results/global_sdpa_representation_audit_sphinx_cleanup_20261125.json",
+    "results/global_sdpa_representation_audit_sphinx_receipt_20261125.txt",
     "results/global_sdpa_restart_header_check/central/initial.dat",
     "results/global_sdpa_restart_header_check/central/native.result",
     "results/global_sdpa_restart_header_check/central/native_initial.dat",
@@ -773,6 +779,7 @@
     "results/global_unbounded_odd57_current_monitor.json",
     "results/global_unbounded_odd57_monitor.json",
     "scripts/archive_global_model_20261125.py",
+    "scripts/audit_sdpa_representation_20261125.py",
     "scripts/build_sdpa_native_serial_20261125.py",
     "scripts/check_global_edge_compatibility_20261125.py",
     "scripts/check_sdpa_dual_face_20261125.py",
@@ -795,10 +802,12 @@
   ],
   "publication_only_Sphinx_check": "results/global_edge_docs_sphinx_receipt_20261125.txt",
   "remaining_work": [
-    "Improve numerical scaling or equivalent exact cone-face reduction for the unchanged current SDP; the prolonged native run ended in step-length stagnation.",
+    "Complete equivalent presolve: the exact audit found 6,142 zero scalar cones, 3,085 duplicate scalar rays and nonnegative sum-zero identities forcing 6,547 remaining coordinates to zero.",
+    "Repeat exact cone reductions until no further immediate consequences remain, then choose numerical units and retry the unchanged feasibility question.",
     "Decide the current primal or recover and rigorously verify an infeasibility certificate.",
     "Complete a separate source-bound review before any geometric bound update."
   ],
+  "representation_audit": "results/global_edge_closure_representation_audit01/result.json",
   "retained_source_builds_are_historical_not_a_combined_regeneration_claim": true,
   "runs": [
     {
@@ -4103,6 +4112,35 @@
       "peak_process_tree_rss_bytes": 67928064,
       "reported_status": "RESEARCH_MODEL_BYTE_ROUND_TRIPS_PASSED",
       "result": "results/global_edge_closure_corrected_rerun_archive_20261125.json",
+      "wrapper_PASS_claimed": true
+    },
+    {
+      "elapsed_seconds": 48.786,
+      "files": {
+        "results/global_edge_closure_representation_audit01/result.json": {
+          "bytes": 20214,
+          "sha256": "a976a12725d9d6d2ef6e3eb3214a45b2c210a6c2bda361951e34f42e5daa24aa"
+        },
+        "results/global_edge_closure_representation_audit01/source_bindings.json": {
+          "bytes": 788,
+          "sha256": "65cc87da6c234fbcdb48bc31c74ebb9b7fa1325c2bd3ea3e10d5e19fd2b8bb0d"
+        },
+        "results/global_edge_closure_representation_audit01_monitor.json": {
+          "bytes": 4654,
+          "sha256": "0f47eaa4cb1425b1a720df0b93a9995caf159108a5db879c44b5b8a64c5499e5"
+        },
+        "scripts/audit_sdpa_representation_20261125.py": {
+          "bytes": 8265,
+          "sha256": "4d1d8e016e8cbda15a40eb7aec53b07814e7e87849cc08f011541a040df7ba00"
+        }
+      },
+      "id": "global_edge_closure_representation_audit01",
+      "monitor": "results/global_edge_closure_representation_audit01_monitor.json",
+      "original_feasibility_claimed": false,
+      "outcome": "EXACT_REPRESENTATION_AUDIT_COMPLETE_FEASIBILITY_UNDECIDED",
+      "peak_process_tree_rss_bytes": 2516385792,
+      "reported_status": "EXACT_REPRESENTATION_AUDIT_COMPLETE_FEASIBILITY_UNDECIDED",
+      "result": "results/global_edge_closure_representation_audit01/result.json",
       "wrapper_PASS_claimed": true
     }
   ],
