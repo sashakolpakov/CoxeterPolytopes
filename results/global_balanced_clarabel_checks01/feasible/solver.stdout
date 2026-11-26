@@ -1,0 +1,39 @@
+-------------------------------------------------------------
+           Clarabel.rs v0.11.1  -  Clever Acronym                
+
+                   (c) Paul Goulart                          
+                University of Oxford, 2022                   
+-------------------------------------------------------------
+
+problem:
+  variables     = 1
+  constraints   = 2
+  nnz(P)        = 0
+  nnz(A)        = 2
+  cones (total) = 2
+    :        Zero = 1,  numel = 1
+    : Nonnegative = 1,  numel = 1
+
+settings:
+  linear algebra: direct / faer, precision: 64 bit (1 thread)
+  max iter = 100, time limit = 15.0,  max step = 0.990
+  tol_feas = 1.0e-11, tol_gap_abs = 1.0e-11, tol_gap_rel = 1.0e-11,
+  static reg : on, ϵ1 = 1.0e-8, ϵ2 = 4.9e-32
+  dynamic reg: on, ϵ = 1.0e-13, δ = 2.0e-7
+  iter refine: on, reltol = 1.0e-13, abstol = 1.0e-12,
+               max iter = 10, stop ratio = 5.0
+  equilibrate: on, min_scale = 1.0e-4, max_scale = 1.0e4
+               max iter = 10
+
+iter    pcost        dcost       gap       pres      dres      k/t        μ       step      
+---------------------------------------------------------------------------------------------
+  0  +0.0000e+00  -0.0000e+00  0.00e+00  0.00e+00  5.00e-01  1.00e+00  1.00e+00   ------   
+  1  +0.0000e+00  +1.0912e-17  1.09e-17  7.40e-17  9.90e-03  1.00e-02  1.00e-02  9.90e-01  
+  2  +0.0000e+00  +4.3599e-19  4.36e-19  3.70e-17  1.00e-04  1.00e-04  1.00e-04  9.90e-01  
+  3  +0.0000e+00  +6.6462e-21  6.65e-21  3.30e-13  1.00e-06  1.00e-06  1.00e-06  9.90e-01  
+  4  +0.0000e+00  +4.2508e-23  4.25e-23  6.74e-15  1.00e-08  1.00e-08  1.00e-08  9.90e-01  
+  5  +0.0000e+00  -7.5548e-26  7.55e-26  1.85e-16  1.00e-10  1.00e-10  1.00e-10  9.90e-01  
+  6  +0.0000e+00  -1.1571e-26  1.16e-26  7.40e-17  1.00e-12  1.00e-12  1.00e-12  9.90e-01  
+---------------------------------------------------------------------------------------------
+Terminated with status = Solved
+solve time = 1.51075ms

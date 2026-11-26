@@ -125,6 +125,52 @@ separate serial jobs:
     Do not silently reuse the old native SDPA layout or its common-margin role
     for this explicit certificate problem.
 
+13. To work on the normalized dual of that reduced certificate search, use
+    `scripts/prepare_balanced_dual_20261126.py prepare` and a separate `verify`.
+    The parametrization and exact trace calculation are in
+    `notes/lp/global_formulation.md`, under “Dual certificate after exact equality
+    reduction”. Every source coefficient, pivot inverse, cone partition and
+    numerical entry is replayed. Its 61,513 coordinates enforce the dual linear
+    identities before solving; only cone membership remains to be established.
+14. Audit scalar row scales and PSD matrix-row scales, including constants.
+    Bounded column norms do not ensure that small constraints are numerically
+    resolved. `scripts/rescale_balanced_dual_20261126.py export` uses positive
+    dyadic scalar units and repeated PSD diagonal congruences based on complete
+    matrix-row envelopes. It checks every inverse and drops no coefficient.
+    Readiness requires nonzero scalar and PSD matrix-row envelopes in `[0.5,2]`.
+    This is a coefficient-scale condition, not strict feasibility or an
+    eigenvalue bound. Diagonal-only scaling can enlarge off-diagonal entries;
+    the retained first attempt illustrates why full matrix rows are used.
+15. `scripts/solve_balanced_certificate_20261126.py` solves the balanced
+    certificate search. `scripts/search_balanced_dual_field_20261126.py solve`
+    solves its smaller explicit dual. The cone-rescaled variant uses
+    `scripts/rescale_balanced_dual_20261126.py solve`. Record chordal-decomposition
+    settings, actual arithmetic, all tolerances and returned arrays. The latter
+    saves native scaled arrays and separately maps primal slacks and dual
+    variables back to the original explicit-dual units.
+16. Field reconstruction is a separate job. The explicit-dual point is checked
+    by `scripts/search_balanced_dual_field_20261126.py attempt`, followed by
+    `verify` if it produces a candidate. The opposite certificate side can be
+    checked by `scripts/recover_balanced_certificate_field_20261126.py`, with its
+    source role specified. A cone-rescaled seed must use the checked inverse
+    cone/free-coordinate units. Kernel proposals restrict candidate recovery
+    only. LLL height bounds and the tested quadratic fields are search choices,
+    not exhaustive field classifications or new geometric constraints.
+    Free coefficients use a shared denominator grid to avoid unrelated
+    denominators across a large matrix. Exact affine projection has fill and
+    coefficient-height guards; a stopped proposal is not a mathematical
+    infeasibility result. Quadratic PSD checks use exact LDL and rational norm
+    sign comparisons at `sqrt(d)>0`. A rational point cannot contain a nonzero
+    radical component.
+
+For the smaller explicit dual, final verification checks every cone and all
+300,139 adjoint identities directly in exact matrix coordinates. For a recovered
+point on the opposite certificate side, verification reinserts the removed dual
+rows as zero and checks every prepared-source Farkas coefficient and its negative
+constant. Both require the retained reduction proofs. A successful exact check
+would still not authorize a geometric bound update before the separate source
+review required above.
+
 A time or memory limit never means convergence. Incomplete preparation cannot
 authorize a run. Starting arrays need the correct shape and numerically positive
 definite cones; native output must actually report all four full-precision formats.

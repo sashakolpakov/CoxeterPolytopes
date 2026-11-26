@@ -1185,3 +1185,60 @@ realization. Additional edge state moments and genuinely joint three-face
 states remain possible extensions. Feasibility of levels 6 or 7 must be
 decided on their own frozen inputs; the level-5 feasible point proves
 nothing about their feasibility.
+
+## Dual certificate after exact equality reduction
+
+This is an algebraic change of representation of the frozen research model.
+It adds no geometric condition. All matrices below are restricted to the
+previously proved face of the certificate cone; extending a point of the
+corresponding compressed primal to the full original primal is a separate task.
+
+Write the prepared source blocks as
+`F(x)=F_0+sum_j F_j*x_j`. Pack symmetric matrices by their actual upper-triangle
+entries. Let `S` multiply off-diagonal entries by `sqrt(2)`, so `W=S^T*S` has
+diagonal weights one and off-diagonal weights two. In these coordinates the
+source certificate equalities are `E_j q=0`, where `E_j=vec(F_j)^T W`, and
+`1+E_0 q=0`.
+
+The verified rational elimination gives a homogeneous map `q=Tz` with
+`E_j T=0` for all ordinary coordinates. Its free coordinates occur as identity
+rows of `T`. The positive common unit is `tau=62,500,000`. The balanced
+certificate feasibility problem is
+
+    tau*E_0*T*z = -1,       S*T*z in K.
+
+Its canonical matrix is the vertical concatenation of `tau*E_0*T` and `-S*T`.
+For each ordinary source coordinate `j`, the exact elimination witness selects
+a scalar diagonal `p_j` such that `F_0[p_j]=0`, `F_j[p_j]=c_j != 0`, and
+`F_i[p_j]=0` for `i != j`. The checked source scan verifies these statements.
+Define
+
+    G(u) = tau*F_0 + sum_j (F_j/c_j)*u_j.
+
+Every `u` for which all blocks `G(u)` are PSD yields a normalized dual
+infeasibility certificate for the balanced problem:
+
+    y_equal = 1,             y_cone = S*vec(G(u)).
+
+Indeed its right-side pairing is `-1`, and its adjoint is identically zero:
+
+    tau*(E_0*T)^T - T^T*W*vec(G(u))
+      = tau*T^T*E_0^T - T^T*(tau*E_0^T + sum_j E_j^T*u_j/c_j)
+      = 0.
+
+Thus all dual linear identities hold over any real field before choosing `u`.
+Only the PSD conditions remain. The chosen diagonal of `G(u)` is exactly `u_j`,
+which provides a numerical coordinate inverse. This parametrization uses 61,513
+coordinates, compared with the balanced certificate problem's 300,139 free
+variables. Preparation and a separate replay check every source coefficient,
+cone partition, pivot and numerical export. The field-certificate checker also
+recomputes all 300,139 adjoint identities directly from `T`, with exact trace
+weights; it does not accept floating residuals as identities.
+
+Kernel relations inferred from a numerical candidate restrict reconstruction
+only. After exact affine projection over `Q` or `Q(sqrt(d))`, every scalar and
+PSD block must be checked at the specified real embedding. For quadratic
+fields this checker selects `sqrt(d)>0` and decides signs by rational norm
+comparisons. An accepted candidate still requires a separate full replay.
+Such a certificate proves the balanced certificate search infeasible. It does
+not by itself prove full original-primal feasibility or geometric realizability.

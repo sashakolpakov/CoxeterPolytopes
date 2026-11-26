@@ -136,7 +136,8 @@ uses the exact positive unit `62,500,000` for the free variables and the entire
 homogeneous cone. Dividing the normalization by `125,000,000,000` gives right
 side `-1` and maximum absolute coefficient `1`. All homogeneous cone coefficients
 remain unchanged. This is a change of units, with an exact inverse, and preserves
-certificate feasibility. No new solver run is claimed for this export.
+certificate feasibility. Its [Clarabel rerun](../../results/global_balanced_clarabel01/result.json)
+ended with `NumericalError` at iteration 45; it obtained no exact decision.
 
 The [saved-ray diagnosis](../../results/global_clarabel_exact_ray_diagnosis01/result.json)
 evaluates the binary64 values as exact rationals, before decimal-grid rounding.
@@ -154,6 +155,70 @@ fields. The rational constraint parametrization remains valid over real number
 fields. No field has been identified from this saved ray, and no number-field
 certificate has yet been computed. Candidate kernel relations may guide rounding;
 they require a separate proof before becoming constraints on every feasible point.
+
+## Explicit dual and field reconstruction
+
+The [completed retry record](../../results/global_dual_field_completion_20261126.json)
+records the next actual runs and exact reconstruction attempts. Denote the
+balanced certificate search by `C`. Its explicit normalized dual has an exact
+[61,513-coordinate parametrization](../../results/global_balanced_dual_prepare01/result.json),
+whose [separate replay](../../results/global_balanced_dual_replay01/result.json)
+checks every source coefficient and cone. The
+[algebraic proof](../../notes/lp/global_formulation.md#dual-certificate-after-exact-equality-reduction)
+shows that cone membership in this parametrization gives a normalized dual
+certificate proving `C` infeasible. It does not assert full original-primal
+feasibility. The original certificate side remains available as well.
+
+| Actual Clarabel/Faer run | Native result | Exact decision |
+| --- | --- | --- |
+| [Balanced `C`](../../results/global_balanced_clarabel01/result.json), 300,139 variables | `NumericalError`, iteration 45 | None |
+| [Explicit dual](../../results/global_explicit_dual_clarabel01/result.json), 61,513 variables | `InsufficientProgress`, iteration 41 | None |
+| [Cone-rescaled explicit dual](../../results/global_cone_balanced_dual_clarabel01/result.json), full PSD blocks | `NumericalError`, iteration 54 | None |
+
+All three used binary64. The requested feasibility tolerance was `1e-11` and
+the requested infeasibility tolerance was `1e-12`; the native residuals and
+returned-array diagnostics remain separate. These runs do not confirm the
+earlier numerical `PrimalInfeasible` classification.
+
+The [unit audit](../../results/global_primal_dual_units01/result.json) found
+moderate column maxima but whole rows as small as `1.4e-15`. The
+[current cone-unit export](../../results/global_dual_cone_units02/result.json)
+uses positive dyadic scalar units and PSD diagonal congruences. Four rounds
+bring every nonzero scalar or PSD matrix-row envelope, measured in the solver's
+symmetric-entry units, into `[0.5,2]`, with
+maximum coefficient `2`. All numerical entries have checked inverses and no
+coefficient was discarded. This is a coefficient-scale test, not an eigenvalue
+bound or a proof of strict feasibility. The final native configuration disabled
+chordal decomposition and retained full PSD blocks. It made further progress
+before stopping; the simultaneous configuration changes do not isolate a single
+cause of the numerical failure.
+
+Exact reconstruction was actually attempted on both sides, over `Q`,
+`Q(sqrt(2))`, `Q(sqrt(3))` and `Q(sqrt(5))`. It included literal binary64 dyadics,
+exact rational and quadratic unpacking, common grids, LLL kernel proposals and
+exact affine projection. Shared grids avoid unrelated rational denominators.
+The FLINT arithmetic uses the positive square-root embedding and exact LDL;
+its [fixtures](../../results/global_dual_field_checks03/result.json) reconstruct
+a nonrational rank-one matrix and reject an indefinite one. A
+[separate fixture](../../results/global_source_field_checks02/result.json)
+checks nonrational Farkas identities, positive normalization and inverse units.
+These fixtures are not certificates for the research model.
+
+The [certificate-side attempts](../../results/global_source_field_attempt01/result.json)
+reject all 13 candidates at `finite_vertices_nonnegative_guard_a1`, with value
+about `-0.0015467`. The
+[explicit-dual attempts](../../results/global_dual_field_attempt01/result.json)
+also reject all 12 candidates. The literal dyadic point has triangle-cover value
+about `-0.0201117`; stricter kernel projection gives about `-0.0127193`.
+Candidate algebraic kernels were detected, but none produced a globally feasible
+point. Failed reconstruction does not prove infeasibility in the tested fields,
+nor exclude other fields. No full-problem field certificate passed, so no full
+candidate-certificate replay or new geometric bound is claimed.
+
+The [local cleanup receipt](../../results/global_dual_field_local_cleanup_20261126.json)
+removes only the unused numerical cache of the first, superseded congruence
+export. Its execution record, exact unit description and source version remain.
+Current exact dual inputs, solver arrays and reconstruction evidence are retained.
 
 ## Constraint and solver workflow
 

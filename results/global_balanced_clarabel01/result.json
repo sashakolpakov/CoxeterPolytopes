@@ -1,0 +1,78 @@
+{
+  "accepted_bounds_changed": false,
+  "diagnostics": {
+    "actual_affine_cone_minimum_eigenvalue": -1.4593344537791655e-05,
+    "complementarity": 31.45638603149267,
+    "dual_adjoint_residual_max": 0.0009785747725289363,
+    "dual_objective": 6.898860662496219e-05,
+    "exact_certificate": false,
+    "finite_candidate": true,
+    "gap": -6.898860662496219e-05,
+    "primal_affine_residual_max": 2.8638319368654927e-05,
+    "primal_objective": 0.0,
+    "saved_dual_cone_minimum_eigenvalue": 1.5659729938661348e-07,
+    "saved_primal_cone_minimum_eigenvalue": 9.692799851106321e-10
+  },
+  "elapsed_seconds": 588.5601216659416,
+  "exact_certificate_obtained": false,
+  "geometric_constraints_changed": false,
+  "interpretation": "Primal is the reduced certificate search; its infeasibility ray is a dual-certificate candidate.",
+  "model": "results/global_rational_certificate_ready01",
+  "model_result_sha256": "1c4883b3c0cd173411a74584eda7c04cdb632364f4a9a97550adc1b83b8990bd",
+  "native": {
+    "arithmetic": "IEEE binary64",
+    "backend": "Clarabel",
+    "linear_solver": "faer",
+    "native_binary_sha256": "2f1df54fdd8828c2acc4a55023a03d6a38d05c58ff398e541d68828c72e10f24",
+    "native_status": "NumericalError",
+    "reported_dual_objective": 6.898860662496219e-05,
+    "reported_dual_residual": 1.7313221101419783e-08,
+    "reported_iterations": 45,
+    "reported_primal_objective": 0.0,
+    "reported_primal_residual": 2.9962904727594526e-07,
+    "settings": "DefaultSettings {\n    max_iter: 500,\n    time_limit: 650.0,\n    verbose: true,\n    max_step_fraction: 0.99,\n    tol_gap_abs: 1e-11,\n    tol_gap_rel: 1e-11,\n    tol_feas: 1e-11,\n    tol_infeas_abs: 1e-12,\n    tol_infeas_rel: 1e-12,\n    tol_ktratio: 1e-6,\n    reduced_tol_gap_abs: 5e-5,\n    reduced_tol_gap_rel: 5e-5,\n    reduced_tol_feas: 0.0001,\n    reduced_tol_infeas_abs: 5e-12,\n    reduced_tol_infeas_rel: 5e-5,\n    reduced_tol_ktratio: 0.0001,\n    equilibrate_enable: true,\n    equilibrate_max_iter: 10,\n    equilibrate_min_scaling: 0.0001,\n    equilibrate_max_scaling: 10000.0,\n    linesearch_backtrack_step: 0.8,\n    min_switch_step_length: 0.1,\n    min_terminate_step_length: 0.0001,\n    max_threads: 1,\n    direct_kkt_solver: true,\n    direct_solve_method: \"faer\",\n    static_regularization_enable: true,\n    static_regularization_constant: 1e-8,\n    static_regularization_proportional: 4.930380657631324e-32,\n    dynamic_regularization_enable: true,\n    dynamic_regularization_eps: 1e-13,\n    dynamic_regularization_delta: 2e-7,\n    iterative_refinement_enable: true,\n    iterative_refinement_reltol: 1e-13,\n    iterative_refinement_abstol: 1e-12,\n    iterative_refinement_max_iter: 10,\n    iterative_refinement_stop_ratio: 5.0,\n    presolve_enable: true,\n    input_sparse_dropzeros: false,\n    chordal_decomposition_enable: true,\n    chordal_decomposition_merge_method: \"clique_graph\",\n    chordal_decomposition_compact: true,\n    chordal_decomposition_complete_dual: true,\n    pardiso_iparm: iparm array [i32; 64],\n    pardiso_verbose: false,\n}",
+    "significand_bits": 53,
+    "version": "0.11.1",
+    "warm_start_used": false
+  },
+  "original_feasibility_status": "UNDECIDED",
+  "solution_sha256": "4a89640af73234a9e753a10c6d32914c51a6da28454cfa55567e9e43a7955472",
+  "source_bindings": {
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/conic.py": {
+      "bytes": 17131,
+      "sha256": "098f47c00a0d1a23560e8a6916506e24ca559fd765b57134a2b8fd3db3bc949b"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/conic_backend.py": {
+      "bytes": 9433,
+      "sha256": "6cdd30850c521488ee9ee6b87074f3ca5f7104f68ff31624399dbe6117780a3f"
+    },
+    "/Users/sasha/CoxeterPolytopes/research/global_formulation/solver_gate.py": {
+      "bytes": 6341,
+      "sha256": "d781333bf30ce97d7a78201149da688140c8a013bb953a4faa43cecca2948dd1"
+    },
+    "/Users/sasha/CoxeterPolytopes/scripts/compare_conic_solvers_20261126.py": {
+      "bytes": 20240,
+      "sha256": "58627f1ecc7828cfe2e88405946576eb5fc7830a9407021354ace3d5946f44ff"
+    },
+    "/Users/sasha/CoxeterPolytopes/scripts/solve_balanced_certificate_20261126.py": {
+      "bytes": 8263,
+      "sha256": "e06373d685ae199abea7dd86f342bd19bac93f50465ff93ce6e40d563ff73072"
+    },
+    "results/global_rational_certificate_ready01/result.json": {
+      "bytes": 4200,
+      "sha256": "1c4883b3c0cd173411a74584eda7c04cdb632364f4a9a97550adc1b83b8990bd"
+    },
+    "results/global_rational_certificate_ready01/units.exact.json": {
+      "bytes": 575,
+      "sha256": "c45fcab96d7e2674b8519f910d3af3fa9b6f342964f084479b8aecb6bd1e3c87"
+    }
+  },
+  "status": "BALANCED_CERTIFICATE_CLARABEL_RETURNED_REQUIRES_EXACT_CHECK",
+  "verified_preflight": {
+    "frozen_input_sha256": "5b99b7df65df257f597905888a416a1753024d5f1d83d4ff84ff8f277eda550e",
+    "native_input_sha256": "76674748c8fee7fa0bfbcc2388079d4673edf6c5ec7a018d4686184f45c11b39",
+    "preflight": "/Users/sasha/CoxeterPolytopes/results/global_edge_closure_ready03/solver_ready.json",
+    "preflight_sha256": "5ea43d1d44c43e99e9da4f6bc500d19ddf1bc8809feb0907fa0d2ce5e7b351fd",
+    "scope": "verified_global_research_model"
+  }
+}

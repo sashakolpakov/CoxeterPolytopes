@@ -1,0 +1,39 @@
+-------------------------------------------------------------
+           Clarabel.rs v0.11.1  -  Clever Acronym                
+
+                   (c) Paul Goulart                          
+                University of Oxford, 2022                   
+-------------------------------------------------------------
+
+problem:
+  variables     = 1
+  constraints   = 2
+  nnz(P)        = 0
+  nnz(A)        = 2
+  cones (total) = 1
+    : Nonnegative = 1,  numel = 2
+
+settings:
+  linear algebra: direct / faer, precision: 64 bit (1 thread)
+  max iter = 100, time limit = 15.0,  max step = 0.990
+  tol_feas = 1.0e-11, tol_gap_abs = 1.0e-11, tol_gap_rel = 1.0e-11,
+  static reg : on, ϵ1 = 1.0e-8, ϵ2 = 4.9e-32
+  dynamic reg: on, ϵ = 1.0e-13, δ = 2.0e-7
+  iter refine: on, reltol = 1.0e-13, abstol = 1.0e-12,
+               max iter = 10, stop ratio = 5.0
+  equilibrate: on, min_scale = 1.0e-4, max_scale = 1.0e4
+               max iter = 10
+
+iter    pcost        dcost       gap       pres      dres      k/t        μ       step      
+---------------------------------------------------------------------------------------------
+  0  +0.0000e+00  -1.0000e+00  1.00e+00  2.43e-01  0.00e+00  1.00e+00  1.00e+00   ------   
+  1  +0.0000e+00  -1.4464e-01  1.45e-01  2.37e-02  0.00e+00  7.15e-03  1.06e-01  9.08e-01  
+  2  +0.0000e+00  -1.3497e-03  1.35e-03  2.35e-04  0.00e+00  1.15e-04  1.10e-03  9.90e-01  
+  3  +0.0000e+00  -1.3488e-05  1.35e-05  2.34e-06  6.07e-18  1.15e-06  1.10e-05  9.90e-01  
+  4  +0.0000e+00  -1.3488e-07  1.35e-07  2.34e-08  6.25e-18  1.15e-08  1.10e-07  9.90e-01  
+  5  +0.0000e+00  -1.3488e-09  1.35e-09  2.34e-10  6.44e-20  1.15e-10  1.10e-09  9.90e-01  
+  6  +0.0000e+00  -1.3488e-11  1.35e-11  2.34e-12  1.39e-19  1.15e-12  1.10e-11  9.90e-01  
+  7  +0.0000e+00  -1.3488e-13  1.35e-13  2.35e-14  1.39e-21  1.15e-14  1.10e-13  9.90e-01  
+---------------------------------------------------------------------------------------------
+Terminated with status = Solved
+solve time = 623.335µs

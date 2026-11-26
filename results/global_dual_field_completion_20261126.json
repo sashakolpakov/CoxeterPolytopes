@@ -1,0 +1,211 @@
+{
+  "accepted_bounds_unchanged": [
+    57,
+    17,
+    15
+  ],
+  "actual_monitored_run_ids": [
+    "global_balanced_clarabel_checks01",
+    "global_balanced_clarabel01",
+    "global_balanced_dual_checks01",
+    "global_balanced_dual_prepare01",
+    "global_dual_field_checks01",
+    "global_balanced_dual_replay01",
+    "global_explicit_dual_clarabel01",
+    "global_primal_dual_units01",
+    "global_dual_field_checks02",
+    "global_source_field_checks01",
+    "global_dual_cone_units_checks01",
+    "global_dual_cone_units01",
+    "global_dual_cone_units_checks02",
+    "global_dual_cone_units_checks03",
+    "global_dual_cone_units02",
+    "global_cone_balanced_dual_clarabel01",
+    "global_dual_field_checks03",
+    "global_source_field_checks02",
+    "global_source_field_attempt01",
+    "global_dual_field_attempt01"
+  ],
+  "all_26_feature_coefficients_remain_free": true,
+  "arithmetic": {
+    "exact_field_arithmetic": "FLINT fmpq pairs in Q(sqrt(d)), sqrt(d)>0",
+    "feasibility_tolerance": 1e-11,
+    "higher_precision_native_solver_used": false,
+    "infeasibility_tolerance": 1e-12,
+    "native": "IEEE binary64",
+    "significand_bits": 53
+  },
+  "date": "2026-11-26",
+  "field_attempts": {
+    "LLL_proposals_are_not_proved_universal_kernels": true,
+    "candidate_failures_do_not_refute_problem_feasibility": true,
+    "explicit_dual_candidate_count": 12,
+    "explicit_dual_side": "results/global_dual_field_attempt01/result.json",
+    "fields": [
+      "Q",
+      "Q(sqrt(2))",
+      "Q(sqrt(3))",
+      "Q(sqrt(5))"
+    ],
+    "full_candidate_adjoint_equations_checked": 0,
+    "full_candidate_certificate_replay_performed": false,
+    "infeasibility_in_tested_fields_not_proved": true,
+    "literal_dual_triangle_cover": -0.020111664061046346,
+    "methods": [
+      "Literal binary64 dyadics",
+      "Exact rational unpacking",
+      "Exact Qsqrt2 unpacking",
+      "Shared denominator grids",
+      "LLL kernel proposals",
+      "Exact affine projection",
+      "Exact scalar/PSD rejection"
+    ],
+    "no_full_problem_field_certificate_passed": true,
+    "quadratic_field_search_is_not_exhaustive": true,
+    "source_certificate_side": "results/global_source_field_attempt01/result.json",
+    "source_side_candidate_count": 13,
+    "source_side_failed_scalar_value": -0.0015466971798658252,
+    "source_side_first_failed_scalar": "finite_vertices_nonnegative_guard_a1",
+    "strict_kernel_projection_triangle_cover": -0.012719257199433976
+  },
+  "field_checker_fixtures": {
+    "dual": "results/global_dual_field_checks03/result.json",
+    "fixtures_are_not_certificates_for_research_model": true,
+    "nonrational_matrix_and_Farkas_fixtures_passed": true,
+    "source": "results/global_source_field_checks02/result.json"
+  },
+  "geometric_constraints_changed": false,
+  "local_cleanup": "results/global_dual_field_local_cleanup_20261126.json",
+  "native_runs": [
+    {
+      "elapsed_seconds": 588.876,
+      "exact_feasibility_decision": false,
+      "native_status": "NumericalError",
+      "native_stopped_before_time_limit": true,
+      "peak_process_tree_rss_bytes": 5108137984,
+      "reported_iterations": 45,
+      "result": "results/global_balanced_clarabel01/result.json",
+      "watchdog_stopped_job": false
+    },
+    {
+      "elapsed_seconds": 580.593,
+      "exact_feasibility_decision": false,
+      "native_status": "InsufficientProgress",
+      "native_stopped_before_time_limit": true,
+      "peak_process_tree_rss_bytes": 4356259840,
+      "reported_iterations": 41,
+      "result": "results/global_explicit_dual_clarabel01/result.json",
+      "watchdog_stopped_job": false
+    },
+    {
+      "elapsed_seconds": 650.797,
+      "exact_feasibility_decision": false,
+      "native_status": "NumericalError",
+      "native_stopped_before_time_limit": true,
+      "peak_process_tree_rss_bytes": 5301256192,
+      "reported_iterations": 54,
+      "result": "results/global_cone_balanced_dual_clarabel01/result.json",
+      "watchdog_stopped_job": false
+    }
+  ],
+  "new_exact_feasible_point_obtained": false,
+  "new_exact_infeasibility_certificate_obtained": false,
+  "new_source_bindings": {
+    "research/global_formulation/balanced_dual.py": {
+      "bytes": 5907,
+      "sha256": "9b1ab65889717ccbbcc89bb018f1cf31ab53188345200b7c6084735b197498b4"
+    },
+    "research/global_formulation/field_rounding.py": {
+      "bytes": 10346,
+      "sha256": "9fd115ffa17830e5b5f509853455584a2dca33546ec4d71758f1a70ddbf4c685"
+    },
+    "scripts/prepare_balanced_dual_20261126.py": {
+      "bytes": 8351,
+      "sha256": "b92691ac12e073213a00d14c6b65e28a5c798cd8963d9ee8dedc75b3b7c520fc"
+    },
+    "scripts/recover_balanced_certificate_field_20261126.py": {
+      "bytes": 18620,
+      "sha256": "be38cba6cb32c5c5d220a00e718714f0336138db0b8d903cec565f792b0d9c85"
+    },
+    "scripts/rescale_balanced_dual_20261126.py": {
+      "bytes": 13066,
+      "sha256": "0967483dec41df2d1e7c0ca9940378da86048b62bc9906610ddcf4bdf13ff7e9"
+    },
+    "scripts/search_balanced_dual_field_20261126.py": {
+      "bytes": 19788,
+      "sha256": "380c67c3817b9446634bf61c6c09c6be7904579c904700ebfca44082f67cbc0a"
+    },
+    "scripts/solve_balanced_certificate_20261126.py": {
+      "bytes": 8263,
+      "sha256": "e06373d685ae199abea7dd86f342bd19bac93f50465ff93ce6e40d563ff73072"
+    }
+  },
+  "normalized_certificate_feasibility_status": "UNDECIDED",
+  "normalized_dual_certificate_feasibility_status": "UNDECIDED",
+  "numerical_units": {
+    "audit": "results/global_primal_dual_units01/result.json",
+    "coefficients_dropped_by_tolerance": 0,
+    "congruence_rounds": 4,
+    "current_export": "results/global_dual_cone_units02/result.json",
+    "envelope_convention": "Solver symmetric-entry units, including constants.",
+    "inverse_checked_for_every_numerical_entry": true,
+    "last_run_chordal_decomposition": false,
+    "maximum_exported_coefficient": 2.0,
+    "maximum_scalar_or_PSD_matrix_row_envelope": 2.0,
+    "minimum_scalar_or_PSD_matrix_row_envelope": 0.5,
+    "positive_dyadic_scalar_units_and_PSD_congruences_verified": true,
+    "scaling_and_chordal_changes_do_not_isolate_one_cause_of_failure": true,
+    "smallest_initial_positive_row_envelope": 1.4142135623730953e-15,
+    "strict_feasibility_or_eigenvalue_bound_claimed": false
+  },
+  "original_feasibility_status": "UNDECIDED",
+  "parametric_dual": {
+    "PSD_blocks": 4844,
+    "all_source_coefficients_cone_partitions_pivots_and_numerical_entries_checked": true,
+    "matrix_shape": [
+      361652,
+      61513
+    ],
+    "no_field_point_cone_membership_inferred_from_parameterization": true,
+    "parametric_dual_linear_identities_follow_from_replayed_rational_map": true,
+    "preparation": "results/global_balanced_dual_prepare01/result.json",
+    "proof": "notes/lp/global_formulation.md#dual-certificate-after-exact-equality-reduction",
+    "replay_status": "BALANCED_DUAL_PARAMETRIZATION_ALL_COEFFICIENTS_VERIFIED",
+    "scalar_cones": 284305,
+    "separate_replay": "results/global_balanced_dual_replay01/result.json",
+    "source_exact_model_sha256": "3f0eda6f4fff98a923d799d4ff5d3c2156d7b439280ae25283117672156756f0",
+    "variables": 61513
+  },
+  "problem_orientation": {
+    "C": "Normalized Farkas certificate feasibility for P, after exact cone/equality reduction.",
+    "C_feasible_would_mean": "The prepared research necessary-data primal is infeasible, subject to full exact source checks.",
+    "D_C": "Normalized dual certificate feasibility for C; its feasible point would prove C infeasible.",
+    "D_C_feasible_would_mean": "The C certificate search is infeasible; original P feasibility still requires a separate lift/check.",
+    "P": "Frozen necessary-data primal for dimension 57, with the completed n>=58 tail as anchor."
+  },
+  "publication_index_audit": {
+    "actual_index_audited": true,
+    "issues": [],
+    "mathematical_verification_claimed": false,
+    "observed_peak_group_rss_bytes": 219758592,
+    "receipt": "results/global_dual_field_public_index_audit_20261126.txt",
+    "receipt_covers_index_before_its_own_addition": true,
+    "watchdog_exit_code": 0
+  },
+  "remaining_work": [
+    "Obtain a sufficiently accurate feasible point or separating certificate for one side of the replayed reduced primal/dual pair.",
+    "Investigate remaining noncoordinate cone faces or sparse higher-precision refinement; numerical unit balancing alone did not settle the problem.",
+    "Run a complete exact candidate replay only after all source cones pass. The implemented full candidate checkers have not yet been executed successfully on the research model.",
+    "Complete separate source-bound geometric review before changing a global bound."
+  ],
+  "runtime_versions_observed_after_runs": {
+    "clarabel": "0.11.1",
+    "numpy": "2.4.4",
+    "python-flint": "0.9.0",
+    "scipy": "1.17.1"
+  },
+  "schema": "reduced-dual-field-work-v1",
+  "solver_certified_new_bound": false,
+  "source_bound_geometric_review_complete": false,
+  "status": "EXPLICIT_DUAL_REPLAY_VERIFIED_NUMERICAL_STOPS_AND_FIELD_REJECTIONS_NO_EXACT_DECISION"
+}
