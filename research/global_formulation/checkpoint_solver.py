@@ -91,4 +91,3 @@ def run(root,out,input_path,initial,iterations,seconds,resume=None):
     report["elapsed_seconds"]=time.monotonic()-started
     conic.write_json(out/"result.json",report)
     print(json.dumps(conic.plain({k:v for k,v in report.items() if k!="source_bindings"})),flush=True)
-
