@@ -28,6 +28,10 @@ def main():
          'sdpa_cli','checkpoint_solver')],ROOT/'scripts/run_sdpa_checkpoint_20261125.py']
     before={str(p.relative_to(ROOT)):solver_gate.file_digest(p) for p in executed_sources}
     started=time.monotonic();out.mkdir()
+    def progress(stage,**details):
+        item=dict(stage=stage,elapsed_seconds=time.monotonic()-started,**details)
+        with (out/'progress.jsonl').open('a') as stream:stream.write(json.dumps(item)+'\n')
+        print(json.dumps(item),flush=True)
     check=json.loads((verified/'result.json').read_text())
     if check.get('status')!='EXACT_CONIC_REDUCTION_CHAIN_VERIFIED':raise ValueError('The reduction chain has not been verified')
     solver_gate.require_clean_audit(check['fixed_point_audit'])
@@ -39,19 +43,30 @@ def main():
     substitutions={v:{w:F(c) for w,c in q.items()} for v,q in json.loads((prepared/'substitutions.exact.json').read_text()).items()}
     with (gzip.open(reference,'rt') if reference.suffix=='.gz' else reference.open()) as stream:
         supplied={v:F(c) for v,c in json.load(stream).items()}
-    P,change,_,intervals=conditioning.thin_intervals(P)
+    progress('verified_input_loaded',variables=len(P['variables']),cones=len(P['blocks']))
+    P,change,_,intervals=conditioning.thin_intervals(P,progress=lambda **d:progress(**d))
+    progress('interval_inverse_identities_verified',pairs=len(intervals['pairs']))
     substitutions={v:cr.substitute(q,change) for v,q in substitutions.items()}
     for item in intervals['pairs']:
         supplied[item['coordinate']]=conic.value(item['defining_row'],supplied)/item['delta']
     # A failed candidate only selects units. It adds no feasible-point restrictions.
     reference_units={v:max(F(1,10**6),min(F(10**6),abs(supplied.get(v,F(1))))) for v in P['variables']}
     P,change,_,_,units=equilibration.equilibrate(P,reference_units)
+    progress('unit_inverse_identities_verified')
     substitutions={v:cr.substitute(q,change) for v,q in substitutions.items()}
-    audit=cr.audit(P)
     conic.write_json(out/'equilibrated.exact.json',P)
     conic.write_json(out/'equilibrated_substitutions.exact.json',substitutions)
     conic.write_json(out/'interval_conditioning.exact.json',intervals)
     conic.write_json(out/'equilibration.exact.json',units)
+    checkpoint=dict(status='EQUIVALENT_REPRESENTATION_AWAITING_FINAL_AUDIT',solver_ready=False,
+        frozen_input_sha256=check['frozen_input_sha256'],verified_reduction_receipt=str((verified/'result.json').relative_to(ROOT)),
+        all_scaling_inverse_identities_verified=True,source_bindings=before,
+        bound_artifacts={str((out/name).relative_to(ROOT)):solver_gate.file_digest(out/name) for name in
+            ('equilibrated.exact.json','equilibrated_substitutions.exact.json','interval_conditioning.exact.json','equilibration.exact.json')})
+    conic.write_json(out/'representation_checkpoint.json',checkpoint)
+    progress('equivalent_representation_checkpoint_written')
+    audit=cr.audit(P)
+    progress('post_conditioning_audit_completed',passed=audit['passed'],**audit['counts'])
     conic.write_json(out/'fixed_point_audit.json',audit)
     if not audit['passed']:
         conic.write_json(out/'result.json',dict(status='POST_CONDITIONING_REDUCTION_REQUIRED',solver_ready=False,audit=audit))

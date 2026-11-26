@@ -4,9 +4,15 @@ from fractions import Fraction as F
 from . import conic, feasibility
 
 
-def thin_intervals(problem):
+def thin_intervals(problem,progress=None):
     if problem["equations"]:raise ValueError("Eliminate equalities before interval conditioning")
     names={b["name"]:i for i,b in enumerate(problem["blocks"])}
+    usage={}
+    for block in problem['blocks']:
+        for row in block['entries']:
+            for q in row:
+                for v in q:
+                    if v:usage[v]=usage.get(v,0)+1
     pairs=[];chosen=set()
     for i,block in enumerate(problem["blocks"]):
         name=block["name"]
@@ -23,17 +29,21 @@ def thin_intervals(problem):
             delta=max((abs(c) for c in width.values()),default=F(0))
             magnitude=max(max(abs(c) for c in low.values()),max(abs(ratio*c) for c in high.values()))
             if 0<delta<F(1,10**10)*magnitude:
-                candidates.append((delta/magnitude,v,ratio,delta,width))
+                candidates.append((ratio!=1,usage[v],delta/magnitude,v,ratio,delta,width))
         if not candidates:continue
-        _,pivot,ratio,delta,width=min(candidates)
+        _,_,_,pivot,ratio,delta,width=min(candidates)
         chosen.add(pivot)
         pairs.append(dict(lower=i,upper=j,pivot=pivot,ratio=ratio,delta=delta,
-            coordinate="conditioned_interval_"+str(len(pairs)),defining_row=low,width=width))
+            coordinate="conditioned_interval_"+str(len(pairs)),defining_row=low,width=width,
+            pivot_occurrences=usage[pivot],equal_and_opposite_pivot_coefficients=ratio==1))
+    if progress:progress(stage='interval_pairs_selected',pairs=len(pairs),
+        equal_and_opposite_pivots=sum(p['equal_and_opposite_pivot_coefficients'] for p in pairs))
     if not pairs:return problem,{v:conic.form(**{v:1}) for v in problem["variables"]},[F(1)]*len(problem["blocks"]),dict(pairs=[])
     order=[p["pivot"] for p in pairs]+[v for v in problem["variables"] if v not in chosen]+[p["coordinate"] for p in pairs]
     equations=[conic.plus(p["defining_row"],conic.form(**{p["coordinate"]:-p["delta"]})) for p in pairs]
     augmented=conic.model(order,problem["blocks"],equations)
     transformed,all_subs=conic.eliminate(augmented)
+    if progress:progress(stage="interval_elimination_completed",variables=len(transformed["variables"]))
     change={v:all_subs[v] for v in problem["variables"]}
     original_names=set(problem["variables"]);transformed_names=set(transformed["variables"])
     inverse={v:conic.form(**{v:1}) for v in transformed["variables"] if v in original_names}
@@ -58,7 +68,8 @@ def thin_intervals(problem):
     result=conic.model(transformed["variables"],blocks,metadata=dict(
         original_model_sha256=conic.digest_bytes(conic.canonical(problem)),
         exact_invertible_interval_coordinates=True,positive_cone_scalings=True))
-    report=dict(pairs=pairs,old_variables=len(problem["variables"]),new_variables=len(result["variables"]),
+    report=dict(pivot_policy="equal-and-opposite coefficients, then minimum column occurrence count",
+        pairs=pairs,old_variables=len(problem["variables"]),new_variables=len(result["variables"]),
         both_affine_inverse_identities_checked=True,original_feasible_set_preserved=True)
     return result,change,scales,report
 
