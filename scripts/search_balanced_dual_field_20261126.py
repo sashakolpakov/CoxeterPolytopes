@@ -112,6 +112,9 @@ def fixture(output):
     import numpy as np
     import scipy.sparse as sp
     f=rounding.Field(2)
+    try:rounding.Field(0).element(0,1)
+    except ValueError:pass
+    else:raise ValueError('A rational point accepted an extraneous radical component')
     if f.sign(f.element(3,-2))!=1 or f.sign(f.element(1,-1))!=-1:
         raise ValueError('Incorrect exact quadratic sign')
     root=f.element(0,1)
@@ -138,13 +141,14 @@ def fixture(output):
     return dict(status='EXACT_REAL_FIELD_KERNEL_PROJECTION_AND_DUAL_SOLVER_FIXTURES_VERIFIED',
         positive_embedding_sign_checked=True,indefinite_matrix_rejected=True,
         quadratic_LLL_kernel_detected=True,nonrational_point_reconstructed=True,
+        extraneous_rational_radical_rejected=True,
         all_proposed_kernel_equations_checked=True,zero_equality_solver_checked=True)
 
 
 def main():
     import numpy as np
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action',choices=['check','solve','attempt','verify'])
+    parser.add_argument('action',choices=['check','audit','solve','attempt','verify'])
     parser.add_argument('--model',type=Path)
     parser.add_argument('--verified',type=Path)
     parser.add_argument('--balanced',type=Path)
@@ -176,9 +180,27 @@ def main():
     if args.action=='check':report=fixture(args.output)
     else:
         checked=checked_model(args.model,args.verified)
-        verified_balanced_model(args.balanced,args.native_input,args.preflight)
+        balanced_data,balanced_layout,_,_=verified_balanced_model(args.balanced,args.native_input,args.preflight)
         data,layout=backend.load_encoding(args.model)
-        if args.action=='solve':
+        if args.action=='audit':
+            def units(data):
+                A=abs(data['A'])
+                cols=np.asarray(A.max(axis=0).toarray()).ravel()
+                rows=np.asarray(A.max(axis=1).toarray()).ravel()
+                return dict(shape=list(A.shape),nonzeros=A.nnz,
+                    minimum_nonzero_absolute_coefficient=float(np.min(A.data)),
+                    maximum_absolute_coefficient=float(np.max(A.data)),
+                    minimum_column_maximum=float(np.min(cols)),maximum_column_maximum=float(np.max(cols)),
+                    minimum_positive_row_maximum=float(np.min(rows[rows>0])),
+                    maximum_row_maximum=float(np.max(rows)),
+                    maximum_absolute_rhs=float(np.max(np.abs(data['b']))))
+            meta=json.loads((args.model/'coordinates.json').read_text())
+            pivots=[abs(float(F(v))) for v in meta['source_pivot_coefficients']]
+            report=dict(status='BALANCED_PRIMAL_DUAL_NUMERICAL_UNITS_AUDITED',
+                balanced_certificate=units(balanced_data),explicit_dual=units(data),
+                smallest_absolute_source_pivot=min(pivots),largest_absolute_source_pivot=max(pivots),
+                source_pivots_below_one_millionth=sum(c<1e-6 for c in pivots))
+        elif args.action=='solve':
             solution,native=solve(data,layout,args.output,args.seconds,500,1e-11)
             np.savez_compressed(args.output/'solution.npz',**solution)
             report=dict(status='EXPLICIT_BALANCED_DUAL_CLARABEL_RETURNED_REQUIRES_FIELD_CHECK',

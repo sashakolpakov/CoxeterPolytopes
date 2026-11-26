@@ -9,11 +9,15 @@ from math import isqrt
 
 class Field:
     def __init__(self,d=0):
-        from flint import fmpq
+        from flint import fmpq,ctx
+        ctx.threads=1
         if d and (d<2 or isqrt(d)**2==d):raise ValueError('Use a positive nonsquare radicand')
         self.d=d;self.Q=fmpq;self.zero=(fmpq(0),fmpq(0));self.one=(fmpq(1),fmpq(0))
 
-    def element(self,a=0,b=0):return self.Q(str(a)),self.Q(str(b))
+    def element(self,a=0,b=0):
+        result=self.Q(str(a)),self.Q(str(b))
+        if not self.d and result[1]:raise ValueError('A rational point cannot have a radical component')
+        return result
     def add(self,x,y):return x[0]+y[0],x[1]+y[1]
     def neg(self,x):return -x[0],-x[1]
     def sub(self,x,y):return x[0]-y[0],x[1]-y[1]
